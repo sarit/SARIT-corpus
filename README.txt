@@ -2,7 +2,7 @@
                          ====================
 
 Author: patrick mc allister
-Date: 2011-03-31 13:26:38 CEST
+Date: 2011-04-01 15:03:32 CEST
 
 
 Welcome, you are reading the description of the SARIT archive of Indic
@@ -22,6 +22,11 @@ of these files, and of files you wish to add.
 Table of Contents
 =================
 1 What to do next? 
+    1.1 Get a copy of the collection you want 
+        1.1.1 run `git clone git://indology.info/sarit' if you are using standard git, or 
+        1.1.2 or consult the documentation of your git interface on how to point it at  git://indology.info/sarit 
+    1.2 Learn about  git 
+    1.3 Learn about TEI P5 
 2 Where can I get help? 
     2.1 Editing files 
     2.2 Sharing/organizing files 
@@ -34,6 +39,41 @@ Table of Contents
 1 What to do next? 
 ~~~~~~~~~~~~~~~~~~~
 
+1.1 Get a copy of the collection you want 
+==========================================
+
+Getting the first copy is called ``cloning." Depending on your
+platform, you can either
+
+1.1.1 run `git clone git://indology.info/sarit' if you are using standard git, or 
+----------------------------------------------------------------------------------
+
+1.1.2 or consult the documentation of your git interface on how to point it at  git://indology.info/sarit 
+----------------------------------------------------------------------------------------------------------
+
+A graphical interface that runs on every platform with Java installed,
+can be downloaded from [http://www.syntevo.com/smartgit/index.html] (for
+non-commercial use, it is free of charge).
+
+1.2 Learn about  git 
+=====================
+
+We have found the following introductions very helpful:
+
+1) Comparing git to a computer game (and a good read):
+   [http://www-cs-students.stanford.edu/~blynn/gitmagic/] (notice also
+   the various translations)
+2) Basic git commands, short and to the point:
+   [http://www.kernel.org/pub/software/scm/git/docs/everyday.html]
+3) More links can be found here: [http://git-scm.com/documentation]
+
+1.3 Learn about TEI P5 
+=======================
+
+The full guidelines can be found here:
+[http://www.tei-c.org/Guidelines/P5/], and a simplified version, TEI
+Lite: [http://www.tei-c.org/Guidelines/Customization/Lite/].
+
 2 Where can I get help? 
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -42,9 +82,37 @@ That depends on the area you need help with:
 2.1 Editing files 
 ==================
 
+You probably do need an [XML aware editor]. There are many, and with
+many different features, just as there are many tastes. Some popular
+choices include:
+
+1) [Jedit], with appropriate plugins (all platforms with Java installed)
+2)  [http://www.oxygenxml.com/] (all platforms, not free)
+3) [Emacs] + [nxml mode] (all platforms)
+
+For a list to choose from,
+cf. [http://en.wikipedia.org/wiki/List\_of\_XML\_editors] or
+[http://www.xml.com/pub/rg/XML\_Editors].
+
+
+[XML aware editor]: http://en.wikipedia.org/wiki/XML_editor
+[Jedit]: http://www.jedit.org/index.php?page%3Ddownload
+[Emacs]: http://www.gnu.org/software/emacs/
+[nxml mode]: http://www.thaiopensource.com/nxml-mode/
+[http://en.wikipedia.org/wiki/List\_of\_XML\_editors]: http://en.wikipedia.org/wiki/List_of_XML_editors
+[http://www.xml.com/pub/rg/XML\_Editors]: http://www.xml.com/pub/rg/XML_Editors
+
 2.2 Sharing/organizing files 
 =============================
 
+This is done via the program git: see [Learn about git] above for links
+to documentation, and see [How does sharing work?] below for a general
+description.
+
+
+
+[Learn about git]: sec-1_2
+[How does sharing work?]: sec-3
 
 3 How does sharing work? 
 ~~~~~~~~~~~~~~~~~~~~~~~~~
