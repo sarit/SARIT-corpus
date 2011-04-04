@@ -2,7 +2,7 @@
                          ====================
 
 Author: patrick mc allister
-Date: 2011-04-01 15:03:32 CEST
+Date: 2011-04-04 20:52:57 CEST
 
 
 Welcome, you are reading the description of the SARIT archive of Indic
@@ -22,11 +22,16 @@ of these files, and of files you wish to add.
 Table of Contents
 =================
 1 What to do next? 
-    1.1 Get a copy of the collection you want 
-        1.1.1 run `git clone git://indology.info/sarit' if you are using standard git, or 
-        1.1.2 or consult the documentation of your git interface on how to point it at  git://indology.info/sarit 
-    1.2 Learn about  git 
-    1.3 Learn about TEI P5 
+    1.1 Installing git 
+        1.1.1 Linux 
+        1.1.2 MacOS X 
+        1.1.3 Recent Windows 
+    1.2 Getting a Graphical User Interface (GUI) 
+    1.3 Get a copy of the collection you want 
+        1.3.1 run `git clone git://indology.info/sarit' if you are using standard git, or 
+        1.3.2 or consult the documentation of your git interface on how to point it at  git://indology.info/sarit 
+    1.4 Learn about TEI P5 
+    1.5 Learn about  git 
 2 Where can I get help? 
     2.1 Editing files 
     2.2 Sharing/organizing files 
@@ -39,23 +44,88 @@ Table of Contents
 1 What to do next? 
 ~~~~~~~~~~~~~~~~~~~
 
-1.1 Get a copy of the collection you want 
+1.1 Installing git 
+===================
+
+In order to make full use of the SARIT library, you need to install
+[git]. Installation procedures are described in some detail in [Pro Git, chap. 4].
+
+In a nutshell:
+
+
+[git]: http://git-scm.org/
+[Pro Git, chap. 4]: http://progit.org/book/ch1-4.html
+
+1.1.1 Linux 
+------------
+
+Use your software manager to install git. On debian, e.g., this would
+mean running `aptitude install git-core'.
+
+1.1.2 MacOS X 
+--------------
+
+Download and run [Git OSX Installer].
+
+
+[Git OSX Installer]: http://code.google.com/p/git-osx-installer
+
+1.1.3 Recent Windows 
+---------------------
+
+Download and run [Git for Windows]. 
+
+
+[Git for Windows]: http://code.google.com/p/msysgit/
+
+1.2 Getting a Graphical User Interface (GUI) 
+=============================================
+
+The above step provides you with the full git program. If you do not
+like working on a command line, you can use a GUI for git. The
+standard GUI that is installed automatically by the steps above is
+gitk on linux, and git gui on mac and windows.
+
+These are stable but rather basic programs, and there are quite a few
+other options you might want to explore if you're not happy with gitk
+or git gui. In the following, we will give examples for [Smart Git], a
+Java program that is free of charge for non-commercial use, and that
+will run any platform that Java runs on (i.e., Linux, Windows, Mac).
+
+
+
+[Smart Git]: http://www.syntevo.com/smartgit/index.html
+
+1.3 Get a copy of the collection you want 
 ==========================================
 
 Getting the first copy is called ``cloning." Depending on your
 platform, you can either
 
-1.1.1 run `git clone git://indology.info/sarit' if you are using standard git, or 
+1.3.1 run `git clone git://indology.info/sarit' if you are using standard git, or 
 ----------------------------------------------------------------------------------
 
-1.1.2 or consult the documentation of your git interface on how to point it at  git://indology.info/sarit 
+1.3.2 or consult the documentation of your git interface on how to point it at  git://indology.info/sarit 
 ----------------------------------------------------------------------------------------------------------
 
-A graphical interface that runs on every platform with Java installed,
-can be downloaded from [http://www.syntevo.com/smartgit/index.html] (for
-non-commercial use, it is free of charge).
+For [Smart Git], do this:
 
-1.2 Learn about  git 
+1) Project --> Clone
+2) Under "Remote Git or SVN repository", enter the name of the
+   collection, e.g., ``git://sarit.indology.info/sarit", click Next.
+3) Choose a directory where to put your files. This should be
+   somewhere where you usually store your files, i.e., not in
+   ``C:\Programs" or so. Clck Next.
+4) Accept or choose the project name (sarit should be the default).
+
+1.4 Learn about TEI P5 
+=======================
+
+The full guidelines can be found here:
+[http://www.tei-c.org/Guidelines/P5/], and a simplified version, TEI
+Lite: [http://www.tei-c.org/Guidelines/Customization/Lite/].
+
+1.5 Learn about  git 
 =====================
 
 We have found the following introductions very helpful:
@@ -67,12 +137,7 @@ We have found the following introductions very helpful:
    [http://www.kernel.org/pub/software/scm/git/docs/everyday.html]
 3) More links can be found here: [http://git-scm.com/documentation]
 
-1.3 Learn about TEI P5 
-=======================
 
-The full guidelines can be found here:
-[http://www.tei-c.org/Guidelines/P5/], and a simplified version, TEI
-Lite: [http://www.tei-c.org/Guidelines/Customization/Lite/].
 
 2 Where can I get help? 
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -111,7 +176,7 @@ description.
 
 
 
-[Learn about git]: sec-1_2
+[Learn about git]: sec-1_5
 [How does sharing work?]: sec-3
 
 3 How does sharing work? 
