@@ -1,0 +1,355 @@
+default namespace = "http://www.loc.gov/mods/v3"
+namespace xlink = "http://www.w3.org/1999/xlink"
+namespace xsi = "http://www.w3.org/2001/XMLSchema-instance"
+namespace xml = "http://www.w3.org/XML/1998/namespace"
+
+start = mods.mods | mods.modsCollection
+
+mods.languageType =
+   attribute objectPart { xsd:string }?,
+   element languageTerm {
+      attribute authority {
+         xsd:string "iso639-2b" | xsd:string "rfc3066"
+      }?,
+      attribute type { xsd:string "code" | xsd:string "text" }?,
+      xsd:string
+   }+
+
+mods.dateType =
+   attribute keyDate { xsd:string "yes" }?,
+   mods.baseDateType
+
+mods.languageAttributes =
+   attribute transliteration { xsd:string }?,
+   attribute script { xsd:string }?,
+   attribute xml:lang { xsd:language | xsd:string "" }?,
+   attribute lang { xsd:string }?
+
+mods.titleInfoType =
+   attribute displayLabel { xsd:string }?,
+   attribute authority { xsd:string }?,
+   mods.languageAttributes,
+   mods.simpleLinkAttributes,
+   attribute ID { xsd:ID }?,
+   attribute type {
+      xsd:string "uniform"
+    | xsd:string "alternative"
+    | xsd:string "abbreviated"
+    | xsd:string "translated"
+   }?,
+   (element title { xsd:string }
+    | element subTitle { xsd:string }
+    | element partNumber { xsd:string }
+    | element partName { xsd:string }
+    | element nonSort { xsd:string })*
+
+mods.mods =
+   element mods {
+      attribute version { xsd:string "3.2" }?,
+      attribute ID { xsd:ID }?,
+      attribute xsi:schemaLocation { string }?,
+      mods.modsGroupType+
+   }
+
+mods.nameType =
+   mods.languageAttributes,
+   mods.simpleLinkAttributes,
+   attribute authority { xsd:string }?,
+   attribute type {
+      xsd:string "corporate"
+    | xsd:string "conference"
+    | xsd:string "personal"
+   }?,
+   attribute ID { xsd:ID }?,
+   (element namePart {
+      attribute type {
+         xsd:string "family"
+       | xsd:string "given"
+       | xsd:string "date"
+       | xsd:string "termsOfAddress"
+      }?,
+      xsd:string
+   }
+    | element displayForm { xsd:string }
+    | element affiliation { xsd:string }
+    | element role {
+       element roleTerm {
+          attribute authority { xsd:string }?,
+          attribute type { xsd:string "code" | xsd:string "text" }?,
+          xsd:string
+       }+
+    }
+    | element description { xsd:string })*
+
+mods.authorizedStringType =
+   attribute authority { xsd:string }?,
+   mods.languageAttributes,
+   xsd:string
+
+mods.modsCollection =
+   element modsCollection { 
+      attribute xsi:schemaLocation { string }?,
+      mods.mods+
+   }
+
+mods.anything =
+   element * {
+      mixed {
+         (attribute * { text }
+          | mods.anything)*
+      }
+   }
+
+mods.baseDateType =
+   attribute encoding {
+      xsd:string "iso8601" | xsd:string "marc" | xsd:string "w3cdtf"
+   }?,
+   attribute qualifier {
+      xsd:string "questionable"
+    | xsd:string "inferred"
+    | xsd:string "approximate"
+   }?,
+   attribute point { xsd:string "start" | xsd:string "end" }?,
+   xsd:string
+
+mods.modsGroupType =
+   element titleInfo { mods.titleInfoType }
+ | element name { mods.nameType }
+ | element typeOfResource {
+    attribute collection { xsd:string "yes" }?,
+    attribute manuscript { xsd:string "yes" }?,
+    (xsd:string "sound recording-nonmusical"
+     | xsd:string "mixed material"
+     | xsd:string "notated music"
+     | xsd:string "three dimensional object"
+     | xsd:string "sound recording"
+     | xsd:string "cartographic"
+     | xsd:string "text"
+     | xsd:string "software, multimedia"
+     | xsd:string "sound recording-musical"
+     | xsd:string "still image"
+     | xsd:string "moving image")
+ }
+ | element genre {
+    attribute type { xsd:string }?,
+    attribute authority { xsd:string }?,
+    mods.languageAttributes,
+    xsd:string
+ }
+ | element originInfo {
+    mods.languageAttributes,
+    (element place {
+       element placeTerm {
+          attribute authority {
+             xsd:string "marcgac"
+           | xsd:string "iso3166"
+           | xsd:string "marccountry"
+          }?,
+          attribute type { xsd:string "code" | xsd:string "text" }?,
+          xsd:string
+       }+
+    }
+     | element publisher { xsd:string }
+     | element dateIssued { mods.dateType }
+     | element dateCreated { mods.dateType }
+     | element dateCaptured { mods.dateType }
+     | element dateValid { mods.dateType }
+     | element dateModified { mods.dateType }
+     | element copyrightDate { mods.dateType }
+     | element dateOther {
+        attribute type { xsd:string }?,
+        mods.dateType
+     }
+     | element edition { xsd:string }
+     | element issuance {
+        xsd:string "monographic" | xsd:string "continuing"
+     }
+     | element frequency { xsd:string })+
+ }
+ | element language { mods.languageType }
+ | element physicalDescription {
+    mods.languageAttributes,
+    (element form {
+       attribute type { xsd:string }?,
+       attribute authority { xsd:string }?,
+       xsd:string
+    }
+     | element reformattingQuality {
+        xsd:string "access"
+      | xsd:string "preservation"
+      | xsd:string "replacement"
+     }
+     | element internetMediaType { xsd:string }
+     | element extent { xsd:string }
+     | element digitalOrigin {
+        xsd:string "reformatted digital"
+      | xsd:string "digitized microfilm"
+      | xsd:string "born digital"
+      | xsd:string "digitized other analog"
+     }
+     | element note { mods.noteType })+
+ }
+ | element abstract { mods.unstructuredTextType }
+ | element tableOfContents { mods.unstructuredTextType }
+ | element targetAudience {
+    attribute authority { xsd:string }?,
+    mods.languageAttributes,
+    xsd:string
+ }
+ | element note { mods.noteType }
+ | element subject {
+    mods.languageAttributes,
+    attribute authority { xsd:string }?,
+    mods.simpleLinkAttributes,
+    attribute ID { xsd:ID }?,
+    (element topic { xsd:string }
+     | element geographic { xsd:string }
+     | element temporal { mods.dateType }
+     | element titleInfo { mods.titleInfoType }
+     | element name { mods.nameType }
+     | element geographicCode {
+        attribute authority {
+           xsd:string "marcgac"
+         | xsd:string "iso3166"
+         | xsd:string "marccountry"
+        }?,
+        xsd:string
+     }
+     | element hierarchicalGeographic {
+        (element continent { xsd:string }
+         | element country { xsd:string }
+         | element province { xsd:string }
+         | element region { xsd:string }
+         | element state { xsd:string }
+         | element territory { xsd:string }
+         | element county { xsd:string }
+         | element city { xsd:string }
+         | element island { xsd:string }
+         | element area { xsd:string })+
+     }
+     | element cartographics {
+        element scale { xsd:string }?,
+        element projection { xsd:string }?,
+        element coordinates { xsd:string }*
+     }
+     | element occupation { xsd:string }
+     | element genre { xsd:string })*
+ }
+ | element classification {
+    attribute authority { xsd:string }?,
+    attribute edition { xsd:string }?,
+    mods.languageAttributes,
+    attribute displayLabel { xsd:string }?,
+    xsd:string
+ }
+ | element relatedItem {
+    mods.simpleLinkAttributes,
+    attribute ID { xsd:ID }?,
+    attribute displayLabel { xsd:string }?,
+    attribute type {
+       xsd:string "otherVersion"
+     | xsd:string "host"
+     | xsd:string "original"
+     | xsd:string "succeeding"
+     | xsd:string "otherFormat"
+     | xsd:string "preceding"
+     | xsd:string "constituent"
+     | xsd:string "series"
+     | xsd:string "isReferencedBy"
+    }?,
+    mods.modsGroupType*
+ }
+ | element identifier {
+    attribute type { text }?,
+    attribute displayLabel { xsd:string }?,
+    attribute invalid { xsd:string "yes" }?,
+    mods.languageAttributes,
+    xsd:string
+ }
+ | element location {
+    element physicalLocation {
+       attribute type { xsd:string }?,
+       attribute displayLabel { xsd:string }?,
+       mods.authorizedStringType
+    }*,
+    element url {
+       attribute dateLastAccessed { text }?,
+       attribute displayLabel { xsd:string }?,
+       attribute note { xsd:string }?,
+       attribute access {
+          xsd:string "raw object"
+        | xsd:string "preview"
+        | xsd:string "object in context"
+       }?,
+       attribute usage { xsd:string "primary display" }?,
+       xsd:anyURI
+    }*
+ }
+ | element accessCondition { mods.unstructuredTextType }
+ | element part {
+    attribute order { xsd:integer }?,
+    attribute type { xsd:string }?,
+    attribute ID { xsd:ID }?,
+    (element detail {
+       attribute level { xsd:positiveInteger }?,
+       attribute type { xsd:string }?,
+       (element number { xsd:string }
+        | element caption { xsd:string }
+        | element title { xsd:string })+
+    }
+     | element extent {
+        attribute unit { xsd:string }?,
+        element start { xsd:string }?,
+        element end { xsd:string }?,
+        element total { xsd:positiveInteger }?,
+        element list { xsd:string }?
+     }
+     | element date { mods.baseDateType }
+     | element text { mods.unstructuredTextType })*
+ }
+ | element extension {
+    mixed { mods.anything+ }
+ }
+ | element recordInfo {
+    mods.languageAttributes,
+    (element recordContentSource { mods.authorizedStringType }
+     | element recordCreationDate { mods.dateType }
+     | element recordChangeDate { mods.dateType }
+     | element recordIdentifier {
+        attribute source { xsd:string }?,
+        xsd:string
+     }
+     | element languageOfCataloging { mods.languageType }
+     | element recordOrigin { xsd:string })+
+ }
+
+mods.simpleLinkAttributes =
+   attribute xlink:actuate {
+      xsd:string "other"
+    | xsd:string "none"
+    | xsd:string "onRequest"
+    | xsd:string "onLoad"
+   }?,
+   attribute xlink:show {
+      xsd:string "other"
+    | xsd:string "embed"
+    | xsd:string "none"
+    | xsd:string "new"
+    | xsd:string "replace"
+   }?,
+   attribute xlink:title { xsd:string }?,
+   attribute xlink:arcrole { xsd:string }?,
+   attribute xlink:role { xsd:string }?,
+   attribute xlink:href { xsd:anyURI }?,
+   attribute xlink:type { xsd:string "simple" }?
+
+mods.noteType =
+   attribute ID { xsd:ID }?,
+   mods.unstructuredTextType
+
+mods.unstructuredTextType =
+   mods.simpleLinkAttributes,
+   mods.languageAttributes,
+   attribute displayLabel { xsd:string }?,
+   attribute type { xsd:string }?,
+   xsd:string
