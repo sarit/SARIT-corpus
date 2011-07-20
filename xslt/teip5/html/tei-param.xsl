@@ -88,13 +88,27 @@ Display figures.
     <xd:short>[html] Hook where HTML can be inserted just after &lt;body&gt;</xd:short>
     <xd:detail>  </xd:detail>
   </xd:doc>
-  <xsl:template name="bodyHook"/>
+  <xsl:template name="bodyHook">
+        <p class="sarit-claim">This file is a result of <a
+        href="{$homeURL}">SARIT</a> (Search and Retrieval of Indic
+        Texts). This revision, <xsl:call-template
+        name="generateRevDate"/>, is due to <xsl:call-template
+        name="generateRevAuthor"/>. For more information about this
+        document, please visit <a href="{$homeURL}"><xsl:value-of
+        select="$homeURL"/></a>.</p>
+  </xsl:template>
   <xd:doc class="hook">
     <xd:short>[html] Hook where HTML can be inserted just before the
     &lt;body&gt; ends.</xd:short>
     <xd:detail>This can be used to add a page-wide footer block.</xd:detail>
   </xd:doc>
-  <xsl:template name="bodyEndHook"/>
+  <xsl:template name="bodyEndHook">
+    <p class="sarit-claim">This file is a result of <a href="{$homeURL}">SARIT</a> (Search and Retrieval of Indic
+    Texts). This revision, dated <xsl:call-template
+    name="generateRevDate"/>, is due to <xsl:call-template
+    name="generateRevAuthor"/>. For more information about this
+    document, please visit <a href="{$homeURL}"><xsl:value-of select="$homeURL"/></a>.</p>
+  </xsl:template>
   <xd:doc class="hook">
     <xd:short>[html] Hook where Javascript calls can be inserted  just after &lt;body&gt;</xd:short>
     <xd:detail> </xd:detail>

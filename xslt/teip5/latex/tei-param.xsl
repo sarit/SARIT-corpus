@@ -72,7 +72,7 @@ Whether or not to load LaTeX packages which attempt to
 process the UTF-8 characters. Set to "false" if you are
 using XeTeX or similar.
 </xd:doc>
-<xsl:param name="reencode">true</xsl:param>
+<xsl:param name="reencode">false</xsl:param>
 
 <xd:doc type="string" class="userpackage">
 The name of a LaTeX style package which should be loaded
@@ -199,9 +199,9 @@ capable of dealing with UTF-8 directly.
 \usepackage{xunicode}
 \def\textJapanese{\fontspec{Kochi Mincho}}
 \def\textChinese{\fontspec{HAN NOM A}\XeTeXlinebreaklocale "zh"\XeTeXlinebreakskip = 0pt plus 1pt }
-\setmonofont{DejaVu Sans Mono}
-%\setsansfont{Arial}
-%\setromanfont{Times New Roman}
+\setmonofont{FreeMono}
+\setsansfont{TeXGyreBonum}
+\setromanfont{TeXGyrePagella}
 \catcode`⃥=\active \def⃥{\textbackslash}
 \catcode`❴=\active \def❴{\{}
 \catcode`❵=\active \def❵{\}}
@@ -460,8 +460,12 @@ capable of dealing with UTF-8 directly.
 \fvset{frame=single,numberblanklines=false,xleftmargin=5mm,xrightmargin=5mm}
 \fancyhf{} 
 \setlength{\headheight}{14pt}
-\fancyhead[LE]{\bfseries\leftmark} 
-\fancyhead[RO]{\bfseries\rightmark} 
+\fancyhead[LE]{\bfseries\leftmark}
+\fancyhead[RE]{</xsl:text>\href{
+<xsl:value-of select="$homeURL"/><xsl:text>}{SARIT}} 
+\fancyhead[RO]{\bfseries\rightmark}
+\fancyhead[LO]{</xsl:text>\href{
+<xsl:value-of select="$homeURL"/><xsl:text>}{SARIT}} 
 \fancyfoot[RO]{\TheFullDate}
 \fancyfoot[CO]{\thepage}
 \fancyfoot[LO]{\TheID}
@@ -486,12 +490,29 @@ capable of dealing with UTF-8 directly.
     <xd:detail>&#160;</xd:detail>
 </xd:doc>
 <xsl:template name="printTitleAndLogo">
-\noindent\parbox[b]{.75\textwidth}{\fontsize{14pt}{16pt}\bfseries\raggedright\sffamily\selectfont \@title}
+\noindent\parbox[b]{\textwidth}{\fontsize{14pt}{16pt}\bfseries\raggedright\sffamily\selectfont \@title}
 \vskip20pt
 \par\noindent{\fontsize{11pt}{13pt}\sffamily\itshape\raggedright\selectfont\@author\hfill\TheDate}
+
+\vspace{10pt}
+
+<xsl:call-template name="sarit-statement"/>
+
 \vspace{18pt}
+
+
 </xsl:template>
 
-  
+  <xd:doc>
+    <xd:short>[latex] Statement that SARIT is responsible for this file.</xd:short>
+  </xd:doc>
+<xsl:template name="sarit-statement">
+This file is a result of \href{<xsl:value-of
+select="$homeURL"/>}{SARIT} (Search and Retrieval of Indic
+Texts). This revision, <xsl:call-template name="generateRevDate"/>, is
+due to <xsl:call-template name="generateRevAuthor"/>. For more
+information about this document, please visit \href{<xsl:value-of
+select="$homeURL"/>}{<xsl:value-of select="$homeURL"/>}.
+</xsl:template>
 
 </xsl:stylesheet>

@@ -147,7 +147,7 @@
 <xsl:call-template name="generateTitle"/>
 <xsl:text>}
 \author{</xsl:text>
-<xsl:call-template name="generateAuthor"/>
+  <xsl:call-template name="generateAuthor"/>
 <xsl:text>}
 \begin{document}&#10;</xsl:text>
 <xsl:call-template name="latexBegin"/>
@@ -286,6 +286,10 @@
       <xsl:when test="ancestor::tei:quote and following-sibling::tei:l">
           <xsl:apply-templates/>\\
       </xsl:when>
+      <!-- break lines within line groups (lg) -->
+      <xsl:when test="ancestor::tei:lg and following-sibling::tei:l">
+          <xsl:apply-templates/>\\
+      </xsl:when>
       <xsl:otherwise>\leftline{<xsl:apply-templates/>}
       </xsl:otherwise>
     </xsl:choose>
@@ -327,12 +331,14 @@
     <xd:detail> </xd:detail>
   </xd:doc>
   <xsl:template match="tei:titlePage">
-  \begin{titlepage}
-<xsl:apply-templates/>
-  \maketitle
-  \end{titlepage}
-  \cleardoublepage
-</xsl:template>
+    \begin{titlepage}
+    <xsl:apply-templates/>
+    \maketitle
+    \end{titlepage}
+    <!-- if there's a titlepage, we need to claim the doc for SARIT -->
+    <xsl:call-template name="sarit-statement"/>
+    \cleardoublepage
+  </xsl:template>
   <xsl:template match="tei:trailer">
     <xsl:text>&#10;&#10;\begin{raggedleft}</xsl:text>
     <xsl:apply-templates/>

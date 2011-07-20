@@ -75,21 +75,22 @@
     <xsl:text> </xsl:text>
   </xsl:param>
   <xd:doc class="links" type="string"> Name of department within institution</xd:doc>
-  <xsl:param name="department"/>
+  <xsl:param name="department">SARIT—Search and Retrieval of Indic Texts</xsl:param> <!---->
   <xd:doc class="links" type="string"> Name of link to home page of application</xd:doc>
-  <xsl:param name="homeLabel">Home</xsl:param>
+  <xsl:param name="homeLabel">SARIT</xsl:param>
   <xd:doc class="links" type="anyURI">Project Home</xd:doc>
-  <xsl:param name="homeURL">http://www.tei-c.org/</xsl:param>
+  <xsl:param name="homeURL">http://sarit.indology.info/top.shtml</xsl:param>
   <xd:doc class="links" type="string">Project</xd:doc>
-  <xsl:param name="homeWords">TEI</xsl:param>
+  <xsl:param name="homeWords">SARIT</xsl:param>
   <xd:doc class="links" type="string"> Institution</xd:doc>
-  <xsl:param name="institution">A TEI Project</xsl:param>
+  <xsl:param name="institution">INDOLOGY: Resources for Indological Scholarship</xsl:param>
   <xd:doc class="links" type="anyURI"> Institution link</xd:doc>
-  <xsl:param name="parentURL">http://www.tei-c.org/</xsl:param>
+  <xsl:param name="parentURL">http://indology.info</xsl:param>
   <xd:doc class="links" type="string"> Name of overall institution</xd:doc>
-  <xsl:param name="parentWords">Parent Institution</xsl:param>
+  <xsl:param name="parentWords">Indology.info
+  </xsl:param>
   <xd:doc class="links" type="anyURI"> Link to search application</xd:doc>
-  <xsl:param name="searchURL">http://www.google.com</xsl:param>
+  <xsl:param name="searchURL">http://sarit.indology.info/advanced.shtml</xsl:param>
   <xd:doc class="misc" type="anyURI"> The home page for these stylesheets</xd:doc>
   <xsl:param name="teixslHome">http://www.tei-c.org/Stylesheets/</xsl:param>
   <xd:doc class="misc" type="boolean"> Process elements according to assumptions

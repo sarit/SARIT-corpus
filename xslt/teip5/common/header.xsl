@@ -12,7 +12,6 @@
       received a copy of the GNU Lesser General Public License along with this library; if not, write to the
       Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA </xd:detail>
     <xd:author>See AUTHORS</xd:author>
-    <xd:cvsId>$Id: header.xsl 8359 2011-01-08 17:46:28Z rahtz $</xd:cvsId>
     <xd:copyright>2008, TEI Consortium</xd:copyright>
   </xd:doc>
 
@@ -55,13 +54,13 @@
   <xsl:template name="generateRevAuthor">
     <xsl:variable name="who">
       <xsl:choose>
-        <xsl:when test="ancestor-or-self::tei:TEI/tei:teiHeader/tei:revisionDesc/@vcwho">
-          <xsl:apply-templates select="ancestor-or-self::tei:TEI/tei:teiHeader/tei:revisionDesc/@vcwho"/>
+        <xsl:when test="ancestor-or-self::tei:TEI/tei:teiHeader/tei:revisionDesc/tei:change[1]/@who">
+	  <xsl:apply-templates select="ancestor-or-self::tei:TEI/tei:teiHeader/tei:revisionDesc/tei:change[1]/@who"/>
         </xsl:when>
         <xsl:when
-          test="ancestor-or-self::tei:TEI/tei:teiHeader/tei:revisionDesc/tei:change[1]/tei:respStmt/tei:name">
+          test="ancestor-or-self::tei:TEI/tei:teiHeader/tei:revisionDesc/tei:change[1]/tei:respStmt/tei:persName">
           <xsl:value-of
-            select="ancestor-or-self::tei:TEI/tei:teiHeader/tei:revisionDesc/tei:change[1]/tei:respStmt/tei:name/text()"
+            select="ancestor-or-self::tei:TEI/tei:teiHeader/tei:revisionDesc/tei:change[1]/tei:respStmt/tei:persName/text()"
           />
         </xsl:when>
       </xsl:choose>
@@ -76,6 +75,14 @@
         <!-- it's Subversion -->
         <xsl:value-of select="normalize-space(substring-before(substring-after($who,'LastChangedBy:'),'$'))"/>
       </xsl:when>
+      <!-- assume we have an ID -->
+      <xsl:when  test="starts-with($who,'#')">
+	<!-- get id -->
+	<xsl:variable name="my-id">
+	  <!-- we need to strip the # at the start of the string -->
+	  <xsl:value-of  select="normalize-space(substring-after($who,'#'))"/>
+	</xsl:variable>
+	<xsl:value-of select="//tei:*[@xml:id=$my-id]"/> (id: <xsl:value-of select="$my-id"/>)</xsl:when>
       <xsl:otherwise>
         <xsl:value-of select="$who"/>
       </xsl:otherwise>
@@ -117,8 +124,11 @@
   <xsl:template name="generateRevDate">
     <xsl:variable name="when">
       <xsl:choose>
-        <xsl:when test="ancestor-or-self::tei:TEI/tei:teiHeader/tei:revisionDesc/@vcdate">
-          <xsl:apply-templates select="ancestor-or-self::tei:TEI/tei:teiHeader/tei:revisionDesc/@vcdate"/>
+        <xsl:when test="ancestor-or-self::tei:TEI/tei:teiHeader/tei:revisionDesc/tei:change[1]/@date">
+          <xsl:apply-templates select="ancestor-or-self::tei:TEI/tei:teiHeader/tei:revisionDesc/tei:change[1]/@date"/>
+        </xsl:when>
+        <xsl:when test="ancestor-or-self::tei:TEI/tei:teiHeader/tei:revisionDesc/tei:change[1]/@when">
+          <xsl:apply-templates select="ancestor-or-self::tei:TEI/tei:teiHeader/tei:revisionDesc/tei:change[1]/@when"/>
         </xsl:when>
         <xsl:when test="ancestor-or-self::tei:TEI/tei:teiHeader/tei:revisionDesc/descendant::tei:date">
           <xsl:value-of
