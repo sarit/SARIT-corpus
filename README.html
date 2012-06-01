@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>The SARIT library</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2011-06-01 13:21:22 CEST"/>
+<meta name="author" content="patrick mc allister"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+
+<h1 class="title">The SARIT library</h1>
+
+<p>Welcome to SARIT's library of Indic e-texts. SARIT is short for
+"Search and Retrieval of Indic Texts"
+(cf. <a href="http://sarit.indology.info/">http://sarit.indology.info/</a>). 
+</p>
+<p>
+This collection of files is special in that any changes you make to
+your files can, if you choose so, be shared with other people. So if
+you correct, annotate, or otherwise improve any file in this directory
+or one of the directories below it, you might consider sharing your
+work with others (and hope that they will share their work with you).
+</p>
+<p>
+We, people administering SARIT and working with it, hope that this
+will lead to incremental but continuous improvement of these files,
+and of any files you wish to add. We plan to periodically update
+SARIT's search interface with the texts changed or added in this
+repository. At the moment, this library is an experiment in online
+collaboration on this sort of material.
+</p>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 What to do next? </a>
+<ul>
+<li><a href="#sec-1.1">1.1 Installing git </a>
+<ul>
+<li><a href="#sec-1.1.1">1.1.1 Linux </a></li>
+<li><a href="#sec-1.1.2">1.1.2 MacOS X </a></li>
+<li><a href="#sec-1.1.3">1.1.3 Recent Windows </a></li>
+</ul>
+</li>
+<li><a href="#sec-1.2">1.2 Getting a Graphical User Interface (GUI) </a></li>
+<li><a href="#sec-1.3">1.3 Get a copy of the collection you want </a>
+<ul>
+<li><a href="#sec-1.3.1">1.3.1 run `git clone git://github.com/paddymcall/SARIT.git' if you are using standard git, </a></li>
+<li><a href="#sec-1.3.2">1.3.2 or consult the documentation of your git interface on how to point it at  git://github.com/paddymcall/SARIT </a></li>
+</ul>
+</li>
+<li><a href="#sec-1.4">1.4 Learn about TEI P5 </a></li>
+<li><a href="#sec-1.5">1.5 Learn about  git </a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2 Where can I get help? </a>
+<ul>
+<li><a href="#sec-2.1">2.1 Editing files </a></li>
+<li><a href="#sec-2.2">2.2 Sharing/organizing files </a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3 How does sharing work? </a>
+<ul>
+<li><a href="#sec-3.1">3.1 General idea </a>
+<ul>
+<li><a href="#sec-3.1.1">3.1.1 You changed different parts of a file </a></li>
+<li><a href="#sec-3.1.2">3.1.2 You changed the same part of a file </a></li>
+</ul>
+</li>
+<li><a href="#sec-3.2">3.2 github specific information </a>
+<ul>
+<li><a href="#sec-3.2.1">3.2.1 Collaboration </a></li>
+<li><a href="#sec-3.2.2">3.2.2 Forking and Sending Pull Requests </a></li>
+</ul></li>
+</ul>
+</li>
+<li><a href="#sec-4">4 What are these XML files? </a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> What to do next? </h2>
+<div class="outline-text-2" id="text-1">
+
+
+
+</div>
+
+<div id="outline-container-1.1" class="outline-3">
+<h3 id="sec-1.1"><span class="section-number-3">1.1</span> Installing git </h3>
+<div class="outline-text-3" id="text-1.1">
+
+
+<p>
+In order to make full use of the SARIT library, you need to install
+<a href="http://git-scm.org/">git</a>. Installation procedures are described in some detail in <a href="http://progit.org/book/ch1-4.html">Pro Git, chap. 4</a>.
+</p>
+<p>
+In a nutshell:
+</p>
+
+</div>
+
+<div id="outline-container-1.1.1" class="outline-4">
+<h4 id="sec-1.1.1"><span class="section-number-4">1.1.1</span> Linux </h4>
+<div class="outline-text-4" id="text-1.1.1">
+
+
+<p>
+Use your software manager to install git. On debian, e.g., this would
+mean running `aptitude install git-core'.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1.1.2" class="outline-4">
+<h4 id="sec-1.1.2"><span class="section-number-4">1.1.2</span> MacOS X </h4>
+<div class="outline-text-4" id="text-1.1.2">
+
+
+<p>
+Download and run <a href="http://code.google.com/p/git-osx-installer">Git OSX Installer</a>.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1.1.3" class="outline-4">
+<h4 id="sec-1.1.3"><span class="section-number-4">1.1.3</span> Recent Windows </h4>
+<div class="outline-text-4" id="text-1.1.3">
+
+
+<p>
+Download and run <a href="http://code.google.com/p/msysgit/">Git for Windows</a>. 
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-1.2" class="outline-3">
+<h3 id="sec-1.2"><span class="section-number-3">1.2</span> Getting a Graphical User Interface (GUI) </h3>
+<div class="outline-text-3" id="text-1.2">
+
+
+<p>
+The above step provides you with the full git program. If you do not
+like working on a command line, you can use a GUI for git. The
+standard GUI that is installed automatically by the steps above is
+"gitk" on Linux, and "git gui" on mac and windows.
+</p>
+<p>
+These are stable but rather basic programs, and there are quite a few
+other options you might want to explore if you're not happy with gitk
+or git gui. In the following, we will give examples for <a href="http://www.syntevo.com/smartgit/index.html">Smart Git</a>, a
+Java program that is free of charge for non-commercial use, and that
+will run any platform that Java runs on (i.e., Linux, Windows, Mac).
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-1.3" class="outline-3">
+<h3 id="sec-1.3"><span class="section-number-3">1.3</span> Get a copy of the collection you want </h3>
+<div class="outline-text-3" id="text-1.3">
+
+
+<p>
+Getting the first copy is called ``cloning." Depending on your
+platform, you can either
+</p>
+
+</div>
+
+<div id="outline-container-1.3.1" class="outline-4">
+<h4 id="sec-1.3.1"><span class="section-number-4">1.3.1</span> run `git clone git://github.com/paddymcall/SARIT.git' if you are using standard git, </h4>
+<div class="outline-text-4" id="text-1.3.1">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1.3.2" class="outline-4">
+<h4 id="sec-1.3.2"><span class="section-number-4">1.3.2</span> or consult the documentation of your git interface on how to point it at  git://github.com/paddymcall/SARIT </h4>
+<div class="outline-text-4" id="text-1.3.2">
+
+
+<p>
+For <a href="#sec-1.2">Smart Git</a>, do this:
+</p>
+<ol>
+<li>
+Project &ndash;&gt; Clone
+</li>
+<li>
+Under "Remote Git or SVN repository", enter the name of the
+collection, e.g., ``git://github.com/paddymcall/SARIT", click Next.
+</li>
+<li>
+Choose a directory where to put your files. This should be
+somewhere where you usually store your files, i.e., not in
+``C:\Programs" or so. Click Next.
+</li>
+<li>
+Accept or choose the project name (SARIT should be the default).
+
+
+</li>
+</ol>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-1.4" class="outline-3">
+<h3 id="sec-1.4"><span class="section-number-3">1.4</span> Learn about TEI P5 </h3>
+<div class="outline-text-3" id="text-1.4">
+
+
+<p>
+The full guidelines can be found here:
+<a href="http://www.tei-c.org/Guidelines/P5/">http://www.tei-c.org/Guidelines/P5/</a>, and a simplified version, TEI
+Lite: <a href="http://www.tei-c.org/Guidelines/Customization/Lite/">http://www.tei-c.org/Guidelines/Customization/Lite/</a>.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1.5" class="outline-3">
+<h3 id="sec-1.5"><span class="section-number-3">1.5</span> Learn about  git </h3>
+<div class="outline-text-3" id="text-1.5">
+
+
+<p>
+We have found the following introductions very helpful:
+</p>
+<ol>
+<li>
+Comparing git to a computer game (and a good read):
+<a href="http://www-cs-students.stanford.edu/~blynn/gitmagic/">http://www-cs-students.stanford.edu/~blynn/gitmagic/</a> (notice also
+the various translations)
+</li>
+<li>
+Basic git commands, short and to the point:
+<a href="http://www.kernel.org/pub/software/scm/git/docs/everyday.html">http://www.kernel.org/pub/software/scm/git/docs/everyday.html</a>
+</li>
+<li>
+More links can be found here: <a href="http://git-scm.com/documentation">http://git-scm.com/documentation</a>
+
+
+
+
+</li>
+</ol>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Where can I get help? </h2>
+<div class="outline-text-2" id="text-2">
+
+
+<p>
+That depends on the area you need help with:
+</p>
+
+</div>
+
+<div id="outline-container-2.1" class="outline-3">
+<h3 id="sec-2.1"><span class="section-number-3">2.1</span> Editing files </h3>
+<div class="outline-text-3" id="text-2.1">
+
+
+<p>
+You probably do need an <a href="http://en.wikipedia.org/wiki/XML_editor">XML aware editor</a>. There are many, and with
+many different features, just as there are many tastes. Some popular
+choices include:
+</p>
+<ol>
+<li>
+<a href="http://www.jedit.org/index.php?page=download">Jedit</a>, with appropriate plug-ins (runs on all computers where Java is installed)
+</li>
+<li>
+ <a href="http://www.oxygenxml.com/">http://www.oxygenxml.com/</a> (on all platforms, not free)
+</li>
+<li>
+<a href="http://www.gnu.org/software/emacs/">Emacs</a> + <a href="http://www.thaiopensource.com/nxml-mode/">nxml mode</a> (all platforms, free)
+
+</li>
+</ol>
+
+<p>For a list to choose from,
+cf. <a href="http://en.wikipedia.org/wiki/List_of_XML_editors">http://en.wikipedia.org/wiki/List_of_XML_editors</a> or
+<a href="http://www.xml.com/pub/rg/XML_Editors">http://www.xml.com/pub/rg/XML_Editors</a>.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2.2" class="outline-3">
+<h3 id="sec-2.2"><span class="section-number-3">2.2</span> Sharing/organizing files </h3>
+<div class="outline-text-3" id="text-2.2">
+
+
+<p>
+This is done via the program git: see <a href="#sec-1.5">Learn about git</a> above for links
+to documentation, and see <a href="#sec-2.2">How does sharing work?</a> below for a general
+description.
+</p>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> How does sharing work? </h2>
+<div class="outline-text-2" id="text-3">
+
+
+</div>
+
+<div id="outline-container-3.1" class="outline-3">
+<h3 id="sec-3.1"><span class="section-number-3">3.1</span> General idea </h3>
+<div class="outline-text-3" id="text-3.1">
+
+<p>Three steps are involved in sharing these files:
+</p>
+<ol>
+<li>
+Getting <a name="what==other==people==changed" class="target">what other people changed</a> .
+</li>
+<li>
+Letting other people <a name="get==what==you==changed" class="target">get what you changed</a> .
+</li>
+<li>
+<a name="Merging==the==changes" class="target">Merging the changes</a> together.
+
+</li>
+</ol>
+
+<p>To do this in an organised fashion, we are using a program called
+<a href="http://git-scm.com/">git</a>. It keeps track of changes to the files in this directory, and can
+`pull' (<a href="#what==other==people==changed">point 1 above</a>) and `push' (<a href="#get==what==you==changed">point 2 above</a>) from or to another
+instance of these files likewise controlled by git. What it pushes are
+the changes you have made to these files, and what it pulls are the
+changes another person (or a group of other persons) has made to these
+files.
+</p>
+<p>
+When it does this, two things can happen:
+</p>
+
+</div>
+
+<div id="outline-container-3.1.1" class="outline-4">
+<h4 id="sec-3.1.1"><span class="section-number-4">3.1.1</span> You changed different parts of a file </h4>
+<div class="outline-text-4" id="text-3.1.1">
+
+
+<p>
+When, say, Jane corrects paragraph 1, and Jack corrects paragraph 2 of
+the same file, git will be able to `merge' (<a href="#Merging==the==changes">point 3 above</a>) . So if
+Jack `pulls' Jane's changes, paragraph 1 of his file will
+automatically be changed to paragraph 1 of Jane's file. Likewise, if
+Jane `pulls' Jack's changes, her file will automatically be changed in
+paragraph 2 according to Jack's changes. So they each edited only one
+paragraph, but both have the same version of the file now, with both
+paragraphs corrected.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3.1.2" class="outline-4">
+<h4 id="sec-3.1.2"><span class="section-number-4">3.1.2</span> You changed the same part of a file </h4>
+<div class="outline-text-4" id="text-3.1.2">
+
+
+<p>
+In case both Jane and Jack change the same part of a file, git will
+refuse to `merge' the files (since it doesn't know which change is the
+correct one). In this situation, either Jack or Jane will have to
+review the other person's changes, and decide which version to keep
+(or make a third version that contains the changes of both). After
+making these changes, git will understand that either Jack or Jane
+have resolved the conflict, and they can continue to work in the
+normal fashion.
+</p>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3.2" class="outline-3">
+<h3 id="sec-3.2"><span class="section-number-3">3.2</span> github specific information </h3>
+<div class="outline-text-3" id="text-3.2">
+
+
+<p>
+On github, there are two ways in which you can get your changes back
+to SARIT:
+</p>
+<ol>
+<li>
+by being a collaborator, or
+</li>
+<li>
+by creating your own copy of the SARIT library (forking) and
+telling us about your changes (pull request)
+
+</li>
+</ol>
+
+<p>In both cases, you need to sign up on <a href="http://github.com">http://github.com</a>.
+</p>
+
+</div>
+
+<div id="outline-container-3.2.1" class="outline-4">
+<h4 id="sec-3.2.1"><span class="section-number-4">3.2.1</span> Collaboration </h4>
+<div class="outline-text-4" id="text-3.2.1">
+
+
+<p>
+Please send an email to pma@rdorte.org with your github account name
+and mentioning that you'd like to collaborate.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3.2.2" class="outline-4">
+<h4 id="sec-3.2.2"><span class="section-number-4">3.2.2</span> Forking and Sending Pull Requests </h4>
+<div class="outline-text-4" id="text-3.2.2">
+
+
+<p>
+This is the preferred way to go if you want to be a little more
+independent from the main SARIT library, e.g., for working on your own
+set of files, or for general experimentation. Basically, you copy the
+whole project at a particular moment in its history, and then work
+independently on that copy. If you are happy with your changes, you
+can send us a pull request, and we will try to merge your changes back
+into the main repository.
+</p>
+<p>
+These two pieces of information will get you started:
+</p>
+<ol>
+<li>
+forking <a href="http://help.github.com/fork-a-repo/">http://help.github.com/fork-a-repo/</a>
+</li>
+<li>
+Sending pull requests: <a href="http://help.github.com/pull-requests/">http://help.github.com/pull-requests/</a>
+
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> What are these XML files? </h2>
+<div class="outline-text-2" id="text-4">
+
+
+<p>
+The files in this directory try to adhere to the Text Encoding
+Initiatives standards in version P5 (<a href="http://www.tei-c.org/Guidelines/P5/">TEI P5</a>). These standards define a
+vocabulary for describing things about a text: who is its author,
+which other texts is it referring to, which page of a printed edition
+is this paragraph on, who is "asya" referring to, etc.
+</p></div>
+</div>
+<div id="postamble">
+<p class="author"> Author: patrick mc allister
+<a href="mailto:pma@rdorte.org">&lt;pma@rdorte.org&gt;</a>
+</p>
+<p class="date"> Date: 2011-06-01 13:21:22 CEST</p>
+<p class="creator">HTML generated by org-mode 6.33x in emacs 23</p>
+</div>
+</div>
+</body>
+</html>
