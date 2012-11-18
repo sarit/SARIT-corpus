@@ -448,7 +448,7 @@ Display navigation panel at bottom of pages
   <xd:doc type="anyURI" class="links">
 Link for feedback
 </xd:doc>
-  <xsl:param name="feedbackURL">mailto:feedback</xsl:param>
+  <xsl:param name="feedbackURL">http://sarit.indology.info</xsl:param>
   <xd:doc type="string" class="links">
 Fixed string to insert before normal page title in HTML meta
 &lt;title&gt; element
@@ -472,12 +472,12 @@ be specified.</xd:detail>
   <xd:doc type="boolean" class="misc">
 Show a title and author at start of document
 </xd:doc>
-  <xsl:param name="showTitleAuthor">false</xsl:param>
+  <xsl:param name="showTitleAuthor">true</xsl:param>
   <xd:doc type="boolean" class="misc">
 Be talkative while working.
 </xd:doc>
 
-  <xsl:param name="verbose">false</xsl:param>
+  <xsl:param name="verbose">true</xsl:param>
   <xd:doc type="boolean" class="layout">
     Make all notes into endnotes
   </xd:doc>

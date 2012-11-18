@@ -2461,10 +2461,14 @@ $requestedID: requests a particular page
     <xsl:choose>
       <xsl:when test="$pageLayout='Simple'">
         <h2 class="institution">
+          <a href="{$parentURL}">
           <xsl:value-of select="$institution"/>
+	</a>
         </h2>
         <h2 class="department">
-          <xsl:value-of select="$department"/>
+          <a href="{$homeURL}">
+	    <xsl:value-of select="$department"/>
+	  </a>
         </h2>
 
 	<xsl:call-template name="makeHTMLHeading">
