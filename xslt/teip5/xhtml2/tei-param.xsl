@@ -479,7 +479,7 @@ Display navigation panel at bottom of pages
 Link for feedback
 </desc>
    </doc>
-  <xsl:param name="feedbackURL">mailto:feedback</xsl:param>
+  <xsl:param name="feedbackURL">mailto:wujastyk@gmail.com</xsl:param>
   <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl" class="links" type="string">
       <desc>
 Fixed string to insert before normal page title in HTML meta

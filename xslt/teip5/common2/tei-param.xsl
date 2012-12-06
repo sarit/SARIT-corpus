@@ -95,31 +95,31 @@
   <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl" class="links" type="string">
     <desc> Name of link to home page of application</desc>
   </doc>
-  <xsl:param name="homeLabel">Home</xsl:param>
+  <xsl:param name="homeLabel">SARIT</xsl:param>
   <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl" class="links" type="anyURI">
     <desc>Project Home</desc>
   </doc>
-  <xsl:param name="homeURL">http://www.tei-c.org/</xsl:param>
+  <xsl:param name="homeURL">http://sarit.indology.info/</xsl:param>
   <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl" class="links" type="string">
     <desc>Project</desc>
   </doc>
-  <xsl:param name="homeWords">TEI</xsl:param>
+  <xsl:param name="homeWords">SARIT</xsl:param>
   <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl" class="links" type="string">
     <desc> Institution</desc>
   </doc>
-  <xsl:param name="institution">A TEI Project</xsl:param>
+  <xsl:param name="institution">Search and Retrieval of Indian Texts</xsl:param>
   <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl" class="links" type="anyURI">
     <desc> Institution link</desc>
   </doc>
-  <xsl:param name="parentURL">http://www.tei-c.org/</xsl:param>
+  <xsl:param name="parentURL">http://indology.info/</xsl:param>
   <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl" class="links" type="string">
     <desc> Name of overall institution</desc>
   </doc>
-  <xsl:param name="parentWords">Parent Institution</xsl:param>
+  <xsl:param name="parentWords">Indology.info</xsl:param>
   <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl" class="links" type="anyURI">
     <desc> Link to search application</desc>
   </doc>
-  <xsl:param name="searchURL">http://www.google.com</xsl:param>
+  <xsl:param name="searchURL">http://sarit.indology.info/</xsl:param>
   <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl" class="misc" type="anyURI">
     <desc> The home page for these stylesheets</desc>
   </doc>
