@@ -567,6 +567,16 @@
       </xsl:if>
       <xsl:apply-templates/>
   </xsl:template>
+
+  <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
+    <desc>Process element &lt;lg&gt;</desc>
+   </doc>
+  <xsl:template match="tei:lg">
+    <xsl:text>\begin{verse}</xsl:text>
+    <xsl:apply-templates/>
+    <xsl:text>\end{verse}</xsl:text>
+  </xsl:template>
+
   
   <doc xmlns="http://www.oxygenxml.com/ns/doc/xsl">
       <desc>How to number a paragraph</desc>
