@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <!-- this is where you describe this e-text (i.e.,
+        the computer file, not the book from which it was derived.) -->
+            <titleStmt>
+                <title>
+                    <!-- Title --> [a machine-readable transcription]</title>
+                <author><!-- Author --></author>
+                <author><!-- Author 2 --></author>
+                <respStmt>
+                    <persName><!-- Encoder's name --></persName>
+                    <resp>Creation of machine-readable version.</resp>
+                </respStmt>
+            </titleStmt>
+
+            <publicationStmt>
+                <idno><!-- ID of this e-file  e.g., today's date in reverse form: "2013-01-15" --></idno>
+                <authority>SARIT: Search and Retrieval of Indic Texts</authority>
+                <availability status="restricted">
+                    <p>Copyright Notice</p>
+                    <p>Copyright (C)
+                        <!-- Who typed it?  And SARIT.
+                    There has to be a copyright-holder, because only the copyright-holder
+                    can give permission for the file to be distributed under a Creative Commons license. --></p>
+                    <p>
+                        <ref target="http://creativecommons.org/licenses/by-sa/3.0/" type="licence"
+                            >Distributed by <ref target="http://sarit.indology.info" type="url"
+                                >SARIT</ref> under a Creative Commons Attribution-ShareAlike 3.0
+                            Unported License. </ref>
+                    </p>
+                    <p>Under this licence, you are free <list>
+                            <item>to Share — to copy, distribute and transmit the work</item>
+                            <item>to Remix — to adapt the work </item>
+                        </list></p>
+                    <p>Under the following conditions:</p>
+                    <p>
+                        <list>
+                            <item>Attribution — You must attribute the work in the manner specified
+                                by the author or licensor (but not in any way that suggests that
+                                they endorse you or your use of the work).</item>
+                            <item>Share Alike — If you alter, transform, or build upon this work,
+                                you may distribute the resulting work only under the same or similar
+                                license to this one.</item>
+                        </list>
+                    </p>
+                    <p>More information and fuller details of this license are given on the Creative
+                        Commons website.</p>
+                    <p>SARIT assumes no responsibility for unauthorised use that infringes the
+                        rights of any copyright owners, known or unknown.</p>
+                </availability>
+                <date>2013</date>
+            </publicationStmt>
+            
+            <notesStmt>
+                <note><!-- This gets printed by Philologic as a trailing note to the main bibliographical entry.
+            A good place to give brief info. on what this e-text is (because Philologic annoyingly
+            prints the sourceDesc not the fileDesc for each file.)--></note>
+            </notesStmt>
+
+            <sourceDesc>
+                <!-- this is where you describe the physical edition
+            or manuscript from which the e-text is derived. -->
+                <bibl>
+                    <title><!--  --></title>
+                    <editor><!--  --></editor>
+                    <publisher><!--  --></publisher>
+                    <pubPlace><!--  --></pubPlace>
+                    <date><!--  --></date>
+                    <note><!--  --></note>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+
+        <encodingDesc>
+
+            <!--  Pick and choose bits of the following, as appropriate -->
+
+            <editorialDecl>
+                <p>The published edition from which this e-text was transcribed is printed in the
+                    Devanāgarī script. The electronic text below is in a lossless transliteration
+                    using the Latin alphabet. The transliteration scheme used is the IAST (<ref
+                        target="http://en.wikipedia.org/wiki/International_Alphabet_of_Sanskrit_Transliteration"
+                        >The International Alphabet of Sanskrit Transliteration</ref>). IAST differs
+                    in small ways from ISO 15919, but is preferred by most working Sanskrit
+                    scholars. Conversion of this file to ISO 15919 can be achieved by performing the
+                    following replacements throughout the file: <code> ṛ -> r̥ and ṃ -> ṁ </code>
+                </p>
+                <p>Text divison is as Devanāgarī ("ityevam" not "ity evam".) </p>
+                <normalization>
+                    <p>Initial vowel elision for avagraha is reversed and marked with a + sign:
+                        e.g., "prathamo+adhyāyaḥ"</p>
+                </normalization>
+                <p>Similarly, external sandhis are undone and marked: "yathā+amarā"</p>
+                <p>The ampersand (&amp;) was used by the inputters as an anchor to mark places in
+                    the e-text where the printed edition has a footnote, and again with the text of
+                    the related footnote being placed nearby in the e-text. I have regularized these
+                    footnotes in many, but not all, cases, changing them to <tag>note</tag>s. The
+                    use of the ampersand may still be irregular in places, and needs to be checked
+                    against the edition, and some notes have been omitted and need to be added from
+                    the edition.</p>
+                <p>The notes by Trivikramātmaja Ācārya are included in the e-text . using the
+                        <tag>note</tag> element. </p>
+                <segmentation>
+                    <p>A first cut has been made at distinguishing verse and prose. Prose passages
+                        are enclosed in the normal <tag>p</tag> tags. Verse passages are grouped
+                        within the line-group tag, <tag>lg</tag>, and individually tagged as verse
+                        lines, <tag>l</tag>.</p>
+                    <p>Inserted comments <tag>!-- subdivision --</tag> and <tag>!-- /subdivision
+                            --</tag> around passages where the text section is subdivided into a
+                        level below that of the surrounding text. These comment tags need to be
+                        replaced with something better, but we can't use <tag>div3</tag>, for
+                        example, because of the problem of TEI's policy on tessellation. See TEI
+                        Guidelines P5, section 4.3.2, et passim. Nor are these subdivisions floating
+                        text, or groups, or other obvious units. They could be marked with
+                            <tag>span</tag>s (<tag>span type="interesting" spanTo="#xy"</tag>
+                            ...<tag>anchor xml:id="xy"</tag>) or <tag>milestone</tag>s, but these
+                        mechanisms seem clumsy. The question stands for now. </p>
+                </segmentation>
+            </editorialDecl>
+        </encodingDesc>
+
+        <revisionDesc><!-- This is really important.  Keep track of who has done what to this file, and when. -->
+            <change when="2011-07-07" who="???">
+                <!-- I did this and that. -->
+            </change>
+            <!-- or you can make a list of changes for one date and person, if you like: -->
+            <change>
+                <list>
+                    <item>Added TEI encoding.</item>
+                    <item><!--  other changes -->
+                    </item>
+                </list>
+            </change>
+        </revisionDesc>
+
+    </teiHeader>
+
+
+    <text xml:lang="sa-Deva">
+        <!-- or sa-Latn -->
+        <body>
+
+            <p>
+                <!-- The encoded e-text itself -->
+            </p>
+
+        </body>
+    </text>
+</TEI>
