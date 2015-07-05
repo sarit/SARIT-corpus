@@ -48,15 +48,15 @@ run any platform that Java runs on (i.e., Linux, Windows, Mac).
 Getting the first copy is called ``cloning." Depending on your
 platform, you can either
 
-***  run `git clone git://github.com/paddymcall/SARIT.git' if you are using standard git, 
+***  run `git clone https://github.com/sarit/SARIT-corpus.git' if you are using standard git, 
 
-*** or consult the documentation of your git interface on how to point it at  git://github.com/paddymcall/SARIT
+*** or consult the documentation of your git interface on how to point it at  https://github.com/sarit/SARIT-corpus.git
 
 For [[Smart Git]], do this:
 
 1) Project --> Clone
 2) Under "Remote Git or SVN repository", enter the name of the
-   collection, e.g., ``git://github.com/paddymcall/SARIT", click Next.
+   collection, e.g., ``https://github.com/sarit/SARIT-corpus.git", click Next.
 3) Choose a directory where to put your files. This should be
    somewhere where you usually store your files, i.e., not in
    ``C:\Programs" or so. Click Next.
@@ -196,7 +196,40 @@ element, instead of [[http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-TE
 You can use this to easily operate on the whole corpus, e.g.:
 
 #+BEGIN_SRC 
-xmllint --encode UTF-8  --xinclude saritcorpus.xml  > /temp/saritcorpus.xml
-jing -c schemas/tei_all.rnc /temp/saritcorpus.xml
+xmllint --encode UTF-8  --xinclude saritcorpus.xml  > /tmp/saritcorpus.xml
+jing -c schemas/tei_all.rnc /tmp/saritcorpus.xml
 #+END_SRC
 
+** Git and XML
+
+Git treats XML files as text files; it does not know anything specific
+about the `logic' of the XML files. For example, git would think that
+the two strings ~<p xml:id="firstpar" n="1"/>~ and ~<p n="1"
+xml:id="firstpar" />~ are pretty different from each other, whereas
+they probably should be considered the same.
+
+Due to this, there might be some problems when trying to see what
+(important) changes there are beteween files.  The proper solution for
+this problem is to compare the [[http://www.w3.org/2008/xmlsec/Drafts/xml-norm/Overview.html][normalized versions]] of the two files
+that have differences, and base your merge decisions on this.
+
+In order to see what git thinks changed, it's useful to change
+git-diff's understanding of what constitutes a word by changing the
+word-diff to work on xml tags (and spaces). Taking
+file:./pramanavarttikavrtti.xml as an example, we could look at
+various things that changed in the last month in the following ways:
+
+*** view all changes to xml tags
+
+#+BEGIN_SRC 
+git diff --word-diff-regex="<[^>]+>|[^[:space:]]" \
+--word-diff=porcelain "master@{1 month ago}" HEAD pramanavarttikavrtti.xml | \
+egrep "^[-+]<" 
+#+END_SRC
+
+The ~--word-diff=porcelain~ option makes it really easy to grep
+through the results. If you leave it out, it's easier to see the
+changes in context.
+
+Running this through further grep expressions or ~sort~ and ~uniq~
+filters, you can get a quick overview of what happened.
