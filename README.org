@@ -189,15 +189,16 @@ is this paragraph on, who is "asya" referring to, etc.
 
 ** saritcorpus.xml
 
-This file is an exception in that it aggregates all the invidual text
+This file is an exception in that it aggregates all the individual text
 files into a corpus. Correspondingly, it has [[http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-teiCorpus.html][teiCorpus]] as its root
 element, instead of [[http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-TEI.html][TEI]] like all the others.
 
 You can use this to easily operate on the whole corpus, e.g.:
 
-#+BEGIN_SRC 
-xmllint --encode UTF-8  --xinclude saritcorpus.xml  > /tmp/saritcorpus.xml
-jing -c schemas/tei_all.rnc /tmp/saritcorpus.xml
+#+BEGIN_SRC sh
+  xmllint --encode UTF-8  --xinclude saritcorpus.xml  > /tmp/saritcorpus.xml \
+      && \
+      jing -c schemas/tei_all.rnc /tmp/saritcorpus.xml
 #+END_SRC
 
 ** Git and XML
@@ -209,7 +210,7 @@ xml:id="firstpar" />~ are pretty different from each other, whereas
 they probably should be considered the same.
 
 Due to this, there might be some problems when trying to see what
-(important) changes there are beteween files.  The proper solution for
+(important) changes there are between files.  The proper solution for
 this problem is to compare the [[http://www.w3.org/2008/xmlsec/Drafts/xml-norm/Overview.html][normalized versions]] of the two files
 that have differences, and base your merge decisions on this.
 
