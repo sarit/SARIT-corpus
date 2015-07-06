@@ -221,10 +221,10 @@ various things that changed in the last month in the following ways:
 
 *** view all changes to xml tags
 
-#+BEGIN_SRC 
-git diff --word-diff-regex="<[^>]+>|[^[:space:]]" \
---word-diff=porcelain "master@{1 month ago}" HEAD pramanavarttikavrtti.xml | \
-egrep "^[-+]<" 
+#+BEGIN_SRC sh
+  git diff --word-diff-regex="<[^>]+>|[^[:space:]]" \
+  --word-diff=porcelain "master@{1 month ago}" HEAD pramanavarttikavrtti.xml | \
+  egrep "^[-+]<" 
 #+END_SRC
 
 The ~--word-diff=porcelain~ option makes it really easy to grep
@@ -233,3 +233,49 @@ changes in context.
 
 Running this through further grep expressions or ~sort~ and ~uniq~
 filters, you can get a quick overview of what happened.
+
+*** inspect content changes
+
+To see only what content changed, you could also convert your files
+into a line based xml representation, like the [[http://www.ibm.com/developerworks/library/x-matters17/][PyX]] format. 
+
+Assume you've encountered a merge conflict for the
+file:./tattvasangrahapanjika.xml. You could convert the files to pyx
+formats like this (with the help of http://xmlstar.sourceforge.net/):
+
+#+BEGIN_SRC sh
+  git show :2:tattvasangrahapanjika.xml | \
+      xmlstarlet c14n | \
+      xmlstarlet pyx | \
+      grep "^-" | \
+      sed 's/^-//g' > /tmp/tsp_ours.pyx
+
+  git show :3:tattvasangrahapanjika.xml | \
+      xmlstarlet c14n | \
+      xmlstarlet pyx | \
+      grep "^-" | \
+      sed 's/^-//g' > /tmp/tsp_theirs.pyx
+#+END_SRC
+
+You can then compare ~/tmp/tsp_theirs.pyx~ and ~/tmp/tsp_theirs.pyx~
+to find out about the differences in the text portions of the file.
+
+Alternatively, line-based XML representations can also be created with
+tools found here: http://www.ofb.net/~egnor/xml2/ref. It might look
+like this:
+
+#+BEGIN_SRC sh
+  git show :2:tattvasangrahapanjika.xml | \
+      # standardize, sort attributes, and format 
+      xmllint --exc-c14n --format | \
+      xml2 | \
+      # remove uninteresting stuff 
+      egrep "^/[^@\\!]+=" | \
+      cut -d= -f 2- > /tmp/tsp_ours.xml2
+
+  git show :3:tattvasangrahapanjika.xml | \
+      xmllint --exc-c14n --format | \
+      xml2 | \
+      egrep "^/[^@\\!]+=" | \
+      cut -d= -f 2- > /tmp/tsp_theirs.xml2
+#+END_SRC
