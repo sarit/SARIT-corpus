@@ -48,15 +48,15 @@ run any platform that Java runs on (i.e., Linux, Windows, Mac).
 Getting the first copy is called ``cloning." Depending on your
 platform, you can either
 
-***  run `git clone git://github.com/paddymcall/SARIT.git' if you are using standard git, 
+***  run `git clone https://github.com/sarit/SARIT-corpus.git' if you are using standard git, 
 
-*** or consult the documentation of your git interface on how to point it at  git://github.com/paddymcall/SARIT
+*** or consult the documentation of your git interface on how to point it at  https://github.com/sarit/SARIT-corpus.git
 
 For [[Smart Git]], do this:
 
 1) Project --> Clone
 2) Under "Remote Git or SVN repository", enter the name of the
-   collection, e.g., ``git://github.com/paddymcall/SARIT", click Next.
+   collection, e.g., ``https://github.com/sarit/SARIT-corpus.git", click Next.
 3) Choose a directory where to put your files. This should be
    somewhere where you usually store your files, i.e., not in
    ``C:\Programs" or so. Click Next.
@@ -189,15 +189,16 @@ is this paragraph on, who is "asya" referring to, etc.
 
 ** saritcorpus.xml
 
-This file is an exception in that it aggregates all the invidual text
+This file is an exception in that it aggregates all the individual text
 files into a corpus. Correspondingly, it has [[http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-teiCorpus.html][teiCorpus]] as its root
 element, instead of [[http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ref-TEI.html][TEI]] like all the others.
 
 You can use this to easily operate on the whole corpus, e.g.:
 
-#+BEGIN_SRC 
-xmllint --encode UTF-8  --xinclude saritcorpus.xml  > /temp/saritcorpus.xml
-jing -c schemas/tei_all.rnc /temp/saritcorpus.xml
+#+BEGIN_SRC sh
+  xmllint --encode UTF-8  --xinclude saritcorpus.xml  > /tmp/saritcorpus.xml \
+      && \
+      jing -c schemas/tei_all.rnc /tmp/saritcorpus.xml
 #+END_SRC
 
 ** Git and XML
@@ -209,7 +210,7 @@ xml:id="firstpar" />~ are pretty different from each other, whereas
 they probably should be considered the same.
 
 Due to this, there might be some problems when trying to see what
-(important) changes there are beteween files.  The proper solution for
+(important) changes there are between files.  The proper solution for
 this problem is to compare the [[http://www.w3.org/2008/xmlsec/Drafts/xml-norm/Overview.html][normalized versions]] of the two files
 that have differences, and base your merge decisions on this.
 
@@ -221,10 +222,10 @@ various things that changed in the last month in the following ways:
 
 *** view all changes to xml tags
 
-#+BEGIN_SRC 
-git diff --word-diff-regex="<[^>]+>|[^[:space:]]" \
---word-diff=porcelain "master@{1 month ago}" HEAD pramanavarttikavrtti.xml | \
-egrep "^[-+]<" 
+#+BEGIN_SRC sh
+  git diff --word-diff-regex="<[^>]+>|[^[:space:]]" \
+  --word-diff=porcelain "master@{1 month ago}" HEAD pramanavarttikavrtti.xml | \
+  egrep "^[-+]<" 
 #+END_SRC
 
 The ~--word-diff=porcelain~ option makes it really easy to grep
@@ -233,3 +234,49 @@ changes in context.
 
 Running this through further grep expressions or ~sort~ and ~uniq~
 filters, you can get a quick overview of what happened.
+
+*** inspect content changes
+
+To see only what content changed, you could also convert your files
+into a line based xml representation, like the [[http://www.ibm.com/developerworks/library/x-matters17/][PyX]] format. 
+
+Assume you've encountered a merge conflict for the
+file:./tattvasangrahapanjika.xml. You could convert the files to pyx
+formats like this (with the help of http://xmlstar.sourceforge.net/):
+
+#+BEGIN_SRC sh
+  git show :2:tattvasangrahapanjika.xml | \
+      xmlstarlet c14n | \
+      xmlstarlet pyx | \
+      grep "^-" | \
+      sed 's/^-//g' > /tmp/tsp_ours.pyx
+
+  git show :3:tattvasangrahapanjika.xml | \
+      xmlstarlet c14n | \
+      xmlstarlet pyx | \
+      grep "^-" | \
+      sed 's/^-//g' > /tmp/tsp_theirs.pyx
+#+END_SRC
+
+You can then compare ~/tmp/tsp_theirs.pyx~ and ~/tmp/tsp_theirs.pyx~
+to find out about the differences in the text portions of the file.
+
+Alternatively, line-based XML representations can also be created with
+tools found here: http://www.ofb.net/~egnor/xml2/ref. It might look
+like this:
+
+#+BEGIN_SRC sh
+  git show :2:tattvasangrahapanjika.xml | \
+      # standardize, sort attributes, and format 
+      xmllint --exc-c14n --format | \
+      xml2 | \
+      # remove uninteresting stuff 
+      egrep "^/[^@\\!]+=" | \
+      cut -d= -f 2- > /tmp/tsp_ours.xml2
+
+  git show :3:tattvasangrahapanjika.xml | \
+      xmllint --exc-c14n --format | \
+      xml2 | \
+      egrep "^/[^@\\!]+=" | \
+      cut -d= -f 2- > /tmp/tsp_theirs.xml2
+#+END_SRC
