@@ -1,20 +1,13 @@
-The file file:./sarit.bib contains the current intermediate for
-SARIT's bibliography.  The aim is of course to get everything we need
-from the TEI files themselves. There is, however, currently no
-simple/dependable mechanism that can do this.
+#+TITLE: Readme SARIT bibliography
 
-For the moment, it seems easiest to have a bibliography file in a more
-useful format (biblatex, at the moment).  Feel free to add other
-formats that seem useful to you.  The only requirement is that the
-keys correspond to the xml:id-s of the various bibliographic items in
-the SARIT corpus (e.g., bibl, biblStruct, msDesc).
+The file [[./sarit.bib]] contains the current SARIT bibliography.  The aim
+is to eventually get everything we need from the TEI files
+themselves. There is, however, currently no simple/dependable
+mechanism that can do this.
 
-The bibutils commands can be used to convert the .bib file to
-different formats, for example MODS:
-
-#+BEGIN_SRC bash
-  bib2xml -i unicode -u sarit.bib > sarit.xml
-#+END_SRC
-
-This complains a bit, because the .bib file is for biblatex, and the
-bibutils don't really support that yet.
+For the moment, it seems easiest to have a bibliography in a more
+useful format ([[https://www.ctan.org/pkg/biblatex?lang=en][biblatex]]).  Please feel free to transform the .bib file
+into other formats that seem useful to you.  The only requirements are
+that the keys stay the same in all formats, and that they correspond
+to the xml:id-s of the various bibliographic items in the SARIT corpus
+(e.g., bibl, biblStruct, msDesc).
