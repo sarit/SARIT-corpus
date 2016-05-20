@@ -2,7 +2,7 @@ language: bash
 
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -y jing openjdk-8-jre xmlstarlet
+  - sudo apt-get install -qq jing xmlstarlet libxml2-utils
 
 script:
   - xmlstarlet sel -N xi="http://www.w3.org/2001/XInclude"  -t -v //xi:include/@href "./saritcorpus.xml" | parallel jing -c "./schemas/tei_all.rnc" {}
