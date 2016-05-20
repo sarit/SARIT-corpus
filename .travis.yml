@@ -5,7 +5,9 @@ before_install:
   - sudo apt-get install -qq jing xmlstarlet libxml2-utils parallel
 
 script:
-  - xmlstarlet sel -N xi="http://www.w3.org/2001/XInclude"  -t -v //xi:include/@href "./saritcorpus.xml" > /tmp/files.ls
-  - cat /tmp/files.ls
-  - parallel jing -c "./schemas/tei_all.rnc" < /tmp/files.ls
-  - xmllint --stream --encode UTF-8  --xinclude ./saritcorpus.xml | jing -c "./schemas/tei_all.rnc"
+  - xmlstarlet sel -N xi="http://www.w3.org/2001/XInclude"  -t -v "//xi:include/@href" "./saritcorpus.xml" > "/tmp/files.ls"
+  - pwd
+  - cat "/tmp/files.ls"
+  - parallel --version
+  - parallel --gnu jing -c "./schemas/tei_all.rnc" < "/tmp/files.ls"
+  - xmllint --stream --encode UTF-8  --xinclude "./saritcorpus.xml" | jing -c "./schemas/tei_all.rnc"
