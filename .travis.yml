@@ -6,8 +6,5 @@ before_install:
 
 script:
   - xmlstarlet sel -N xi="http://www.w3.org/2001/XInclude" -t -m "//xi:include/@href" -o "echo Validating " -v "." -n -o "jing -c \"./schemas/tei_all.rnc\" \"" -v "." -o "\"" -n "./saritcorpus.xml"  > "/tmp/files.ls"
-  - pwd
-  - cat "/tmp/files.ls"
-  - parallel --version
   - parallel --gnu < "/tmp/files.ls"
   - xmllint --stream  --xinclude "./saritcorpus.xml" | jing -c "./schemas/tei_all.rnc"
