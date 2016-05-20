@@ -2,12 +2,12 @@ language: bash
 
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -qq jing xmlstarlet libxml2-utils parallel
+  - sudo apt-get install -qq jing xmlstarlet libxml2-utils parallel libxml2
 
 script:
-  - xmlstarlet sel -N xi="http://www.w3.org/2001/XInclude"  -t -v "//xi:include/@href" "./saritcorpus.xml" > "/tmp/files.ls"
+  - xmlstarlet sel -N xi="http://www.w3.org/2001/XInclude" -t -m "//xi:include/@href" -o "echo Validating " -v "." -n -o "jing -c \"./schemas/tei_all.rnc\" \"" -v "." -o "\"" -n "./saritcorpus.xml"  > "/tmp/files.ls"
   - pwd
   - cat "/tmp/files.ls"
   - parallel --version
-  - parallel --gnu jing -c "./schemas/tei_all.rnc" < "/tmp/files.ls"
-  - xmllint --stream --encode UTF-8  --xinclude "./saritcorpus.xml" | jing -c "./schemas/tei_all.rnc"
+  - parallel --gnu < "/tmp/files.ls"
+  - xmllint --stream  --xinclude "./saritcorpus.xml" | jing -c "./schemas/tei_all.rnc"
