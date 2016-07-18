@@ -97,6 +97,7 @@
                 </p>
                 <p>Text divison is as Devanāgarī ("ityevam" not "ity evam".) </p>
                 <p>Only some of the footnotes from the edition have been typed in this file.</p>
+		<p>Prose passages are enclosed in ab-elements. Verses were enclosed in lg- and l-elements, but this is not consistent. So it is possible to find verses that are either not marked up as such or enclosed in an ab-element.</p>
                 <normalization>
                     <p>Initial vowel elision for avagraha is reversed and marked with a + sign:
                         e.g., "prathamo+adhyāyaḥ"</p>
@@ -121,6 +122,13 @@
                         floating, when the corresponding footnote has not been typed.</item>
                 </list>
             </change>
+	    <change when="2016-07-18" who="Liudmila Olalde">
+	      <list>
+		<item>Wrapped prose elements in ab-elements and l-elements in lg's.</item>
+		<item>Wrapped passage numbers in label-elements.</item>
+		<item>Added subtype-attribute to head-elements.</item>
+		<item>Wrapped trailers in trailer-elements.</item>
+	      </list></change>
         </revisionDesc>
     </teiHeader>
     <text xml:id="suśrutasaṃhitā" xml:lang="sa-Latn">
@@ -2808,13 +2816,13 @@
                         sannipātānnārikelodakairvārukarasakāñjikaprasādārukodakapriyaṅguphalayakṛnmudgayūṣasavarṇatvānīti
                         // </ab>
                     <ab xml:id="Su.1.22.9"><label>Su.1.22.9</label> ślokau cātra bhavataḥ / </ab>
-                    <ab xml:id="Su.1.22.9ab"><label>Su.1.22.9ab</label> pakvāśayādasādhyastu pulākodakasannibhiḥ / </ab>
-                    <ab xml:id="Su.1.22.9cd"><label>Su.1.22.9cd</label> kṣārodakanibhaḥ srāvo varjyo
-                        raktāśayātsravan // </ab>
-                    <ab xml:id="Su.1.22.10ab"><label>Su.1.22.10ab</label> āmāśayāt kalāyāmbhonibhaśca
-                        trikasandhijaḥ / </ab>
-                    <ab xml:id="Su.1.22.10cd"><label>Su.1.22.10cd</label> srāvānetān parīkṣyādau tataḥ
-                        karmācaredbhiṣak // </ab>
+                    <lg><l xml:id="Su.1.22.9ab"><label>Su.1.22.9ab</label> pakvāśayādasādhyastu pulākodakasannibhiḥ /</l>
+                    <l xml:id="Su.1.22.9cd"><label>Su.1.22.9cd</label> kṣārodakanibhaḥ srāvo varjyo
+                        raktāśayātsravan // </l></lg>
+                    <lg><l xml:id="Su.1.22.10ab"><label>Su.1.22.10ab</label> āmāśayāt kalāyāmbhonibhaśca
+                        trikasandhijaḥ /</l>
+                    <l xml:id="Su.1.22.10cd"><label>Su.1.22.10cd</label> srāvānetān parīkṣyādau tataḥ
+                        karmācaredbhiṣak //</l></lg>
                     <ab xml:id="Su.1.22.11"><label>Su.1.22.11</label> ata ūrdhvaṃ sarvavraṇavedanā vakṣyāmaḥ
                         todanabhedanatāḍanacchedanāyamanamanthanavikṣepaṇacum
                         cumāyananirdahanāvabhañjanasphoṭanavidāraṇotpāṭanakampanavividhaśūlaviśleṣaṇavikiraṇapūraṇastambhanasvapnākuñcanāṅkuśikāḥ
@@ -10514,8 +10522,9 @@
                         pārthivāstu---gandho gandhendriyaṁ sarvamūrtasamūho gurutā ceti// </ab>
                     <ab xml:id="Su.3.1.20"><label>Su.3.1.20</label> tatra sattvabahulamākāśaṁ, rajobahulo vāyuḥ,
                         sattvarajobahulo+agniḥ, sattvatamobahulā āpaḥ, tamobahulā pṛthivīti// </ab>
-                    <ab xml:id="Su.3.1.21"><label>Su.3.1.21</label> ślokau cātra bhavataḥ/ anyonyānupraviṣṭāni
-                        sarvāṇyetāni nirdiśet// sve sve dravye tu sarveṣāṁ vyaktaṁ lakṣaṇamiṣyate// </ab>
+                    <ab xml:id="Su.3.1.21"><label>Su.3.1.21</label> ślokau cātra bhavataḥ/</ab>
+		    <lg><l xml:id="Su.3.1.21ab">anyonyānupraviṣṭāni sarvāṇyetāni nirdiśet/</l>
+		    <l xml:id="Su.3.1.21cd">sve sve dravye tu sarveṣāṁ vyaktaṁ lakṣaṇamiṣyate//</l></lg>
                     <ab xml:id="Su.3.1.22"><label>Su.3.1.22</label> aṣṭau prakṛtayaḥ proktā vikārāḥ ṣoḍaśaiva tu//
                         kṣetrajñaśca samāsena <ref rend="superscript footnote marker"
                             >&#x2020;</ref>svatantraparatantrayoḥ<note type="footnote"
@@ -11541,8 +11550,9 @@
                     <ab xml:id="Su.3.5.50"><label>Su.3.5.50</label> <ref rend="superscript footnote marker"
                             >&#x2020;</ref>(ślokau cātra bhavataḥ/)[<ref
                             rend="superscript footnote marker">&#x2020;</ref>ayaṁ pāṭho
-                        hastalikhitapustake nopalabhyate/] na śakyaścakṣuṣā draṣṭuṁ dehe sūkṣmatamo
-                        vibhuḥ// dṛśyate jñānacakṣurbhistapaścakṣurbhireva ca// </ab>
+                        hastalikhitapustake nopalabhyate/]</ab>
+			<lg><l>na śakyaścakṣuṣā draṣṭuṁ dehe sūkṣmatamo vibhuḥ/</l>
+			<l>dṛśyate jñānacakṣurbhistapaścakṣurbhireva ca//</l></lg>
                     <ab xml:id="Su.3.5.51"><label>Su.3.5.51</label> śarīre caiva śāstre ca dṛṣṭārthaḥ
                         syādviśāradaḥ// dṛṣṭaśrutābhayāṁ sandehamavāpohyācaret kriyāḥ//</ab>
 	<trailer>iti suśrutasaṁhitāyāṁ śārīrasthāne śarīrasaṁkhyāvyākaraṇaśārīraṁ nāma
