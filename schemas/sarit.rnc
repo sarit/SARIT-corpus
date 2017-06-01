@@ -6,7 +6,7 @@ default namespace tei = "http://www.tei-c.org/ns/1.0"
 namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2017-06-01T14:39:08Z. .
+# Schema generated from ODD source 2017-06-01T15:17:48Z. .
 # TEI Edition: Version 3.1.0. Last updated on
 #	15th December 2016, revision d3f5e70
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.1.0/
@@ -507,12 +507,6 @@ att.naming.attribute.role =
     list {
       xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
     }
-  }?
-att.naming.attribute.nymRef =
-  
-  ## (reference to the canonical name) provides a means of locating the canonical form (nym) of the names associated with the object named by the element bearing it.
-  attribute nymRef {
-    list { xsd:anyURI+ }
   }?
 att.placement.attributes = att.placement.attribute.place
 att.placement.attribute.place =
@@ -2022,7 +2016,7 @@ author =
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
     att.naming.attribute.role,
-    att.naming.attribute.nymRef,
+    att.canonical.attribute.ref,
     empty
   }
 editor =
@@ -2038,8 +2032,8 @@ editor =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
-    att.naming.attribute.nymRef,
     att.canonical.attribute.key,
+    att.canonical.attribute.ref,
     empty
   }
 respStmt =
@@ -2845,6 +2839,7 @@ orgName =
     att.ranging.attribute.min,
     att.ranging.attribute.max,
     att.ranging.attribute.confidence,
+    att.canonical.attribute.ref,
     empty
   }
 persName =
@@ -2873,7 +2868,6 @@ persName =
     att.ranging.attribute.min,
     att.ranging.attribute.max,
     att.ranging.attribute.confidence,
-    att.naming.attribute.nymRef,
     att.canonical.attribute.key,
     att.canonical.attribute.ref,
     empty
