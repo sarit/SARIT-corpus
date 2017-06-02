@@ -93,16 +93,15 @@
   </egXML></p>
   <p>Elements can be nested within each other:</p>
   <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 
 !!!<p>This is !!!<hi>highlighted text!!!</hi>.!!!</p>
-]]></egXML>
+</egXML>
         <p>Elements can also be given
 	<hi rendition="simple:bold">attributes</hi>:</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 		 <p>This is <hi rend="bold">an element</hi>.</p>
-	]]>
 	</egXML>
         <p>In a <hi rendition="simple:bold">well-formed</hi> XML document,
   every starting tag corresponds to an ending tag, and vice versa, and
@@ -161,8 +160,8 @@
     <hi rendition="simple:bold">why</hi> it is rendered that way, and
     then encode the structural reasons for that presentational choice.
     Thus, if a text is centered on the page because it represents a
-    colophon, use <egXML xmlns="http://www.tei-c.org/ns/Examples"><![CDATA[<trailer>]]></egXML> rather than
-    <egXML xmlns="http://www.tei-c.org/ns/Examples"><![CDATA[<p rend="center">]]></egXML>. </p>
+    colophon, use <gi>trailer</gi> rather than
+    <egXML xmlns="http://www.tei-c.org/ns/Examples"><p rend="center"/></egXML>. </p>
         </div>
         <div type="level2">
           <head>Getting started</head>
@@ -170,32 +169,32 @@
     <hi rendition="simple:bold">XML declaration</hi>, a processing
     instruction that tells whatever program opens the document that it
     is written in XML. This XML declaration is always the same:</p>
-          <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
-           <?xml version="1.0" encoding="utf-8"?>
-	]]>
-	  </egXML>
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <![CDATA[
+               <?xml version="1.0" encoding="utf-8"?>
+      ]]>
+    </egXML>
           <p>All valid XML files must have one, and only one,
     <hi rendition="simple:bold">top-level element</hi>. Since SARIT
     documents are TEI documents, this top-level element is going to be
-    <egXML xmlns="http://www.tei-c.org/ns/Examples"><![CDATA[<TEI/>]]></egXML>. This means that the second line of the file, after the
+    <gi>TEI</gi>. This means that the second line of the file, after the
     XML declaration, will look something like the following:
-          <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
-          <TEI xml:id="sarit__XML-ID_HERE" xmlns="http://www.tei-c.org/ns/1.0"/>
-	]]>
-	  </egXML></p>
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+      <![CDATA[
+               <TEI xml:id="sarit__XML-ID_HERE" xmlns="http://www.tei-c.org/ns/1.0"/>
+      ]]>
+	</egXML></p>
           <p>This element has two attributes. The
     <att>xml:id</att> is a unique identifier for the
     document. Your choice for this unique identifier will depend on your
     project. The <att>xmlns</att> attribute tells whatever
     program opens the document that the names of the XML elements are
     the names defined by the Text Encoding Initiative: for example, that
-    the element <egXML xmlns="http://www.tei-c.org/ns/Examples"><p/></egXML> is what the TEI defines
-    as <egXML xmlns="http://www.tei-c.org/ns/Examples"><p/></egXML>, and not what any other
-    authority defines as <egXML xmlns="http://www.tei-c.org/ns/Examples"><p/></egXML>.</p>
+    the element <gi>p</gi> is what the TEI defines
+    as <gi>p</gi>, and not what any other
+    authority defines as <gi>p</gi>.</p>
           <p>The last line of the document will close the
-    <egXML xmlns="http://www.tei-c.org/ns/Examples"><TEI/></egXML> element, and hence it will always
+    <gi>TEI</gi> element, and hence it will always
     be <tag><![CDATA[</TEI>]]></tag>. </p>
         </div>
         <div type="level2">
@@ -264,16 +263,16 @@
       certain element is in a certain language, then all of the children
       of that element are assumed to be in the language as well. Thus we
       need to specify a language at the highest level of its occurrence:
-      <egXML xmlns="http://www.tei-c.org/ns/Examples"><teiHeader/></egXML> will almost always take
+      <gi>teiHeader</gi> will almost always take
       the attribute
-      <att>xml:lang</att> with value <val>en</val>, and <egXML xmlns="http://www.tei-c.org/ns/Examples"><text/></egXML>
+      <att>xml:lang</att> with value <val>en</val>, and <gi>text</gi>
       will almost always take the attribute
       <att>xml:lang</att> with value <val>sa-Deva</val> or <val>sa-Latn</val>
       (see above). Apart from this initial specification, we only need
       to specify the language of an element if it is different from the
       language of its parent element: for example, if you have an
       English note to a Sanskrit text, you will generally give the
-      <egXML xmlns="http://www.tei-c.org/ns/Examples"><note/></egXML> element the
+      <gi>note</gi> element the
       <att>xml:lang</att> attribute the value <val>en</val>.</p>
           </div>
           <div type="level3">
@@ -295,18 +294,16 @@
       spaces <hi rendition="simple:bold">outside</hi> of the inline tags
       rather than inside the tags, thus:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<element>XYZ !!!<element>ABC!!!</element> XYZ!!!</element>
-]]>
-	    </egXML>
+</egXML>
             <p>Rather than:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 
 !!!<element>XYZ!!!<element> ABC !!!</element>XYZ!!!</element>
 
-]]>
-	    </egXML>
+</egXML>
             <p>which will lose the spaces when it is processed.</p>
             <p/>
           </div>
@@ -350,16 +347,16 @@
         <p>the course of its history.</p>
         <p>All of this information is provided in a section of the document
   called the <hi rendition="simple:bold">header</hi>, which is contained
-  in the element <egXML xmlns="http://www.tei-c.org/ns/Examples"><teiHeader/></egXML>.
-  <egXML xmlns="http://www.tei-c.org/ns/Examples"><teiHeader/></egXML> is a direct child of the
-  top-level element <egXML xmlns="http://www.tei-c.org/ns/Examples"><TEI/></egXML>. And since the
+  in the element <gi>teiHeader</gi>.
+  <gi>teiHeader</gi> is a direct child of the
+  top-level element <gi>TEI</gi>. And since the
   metadata will typically be in English, we typically specify the
-  language of the <egXML xmlns="http://www.tei-c.org/ns/Examples"><teiHeader/></egXML> element with
+  language of the <gi>teiHeader</gi> element with
   <egXML xmlns="http://www.tei-c.org/ns/Examples">xml:lang="en"</egXML> TEI Header has three obligatory sections: one for
-  the description of the file (<egXML xmlns="http://www.tei-c.org/ns/Examples"><fileDesc/></egXML>), one for the
+  the description of the file (<gi>fileDesc</gi>), one for the
   description of the file’s encoding
-  (<egXML xmlns="http://www.tei-c.org/ns/Examples"><encodingDesc/></egXML>), and one to record the
-  file’s history (<egXML xmlns="http://www.tei-c.org/ns/Examples"><revisionDesc/></egXML>). We’ll
+  (<gi>encodingDesc</gi>), and one to record the
+  file’s history (<gi>revisionDesc</gi>). We’ll
   talk about these three sections in order. But SARIT also provides a
   template document that shows how the header should be structured
   (<ref target="https://github.com/sarit/SARIT-corpus/blob/master/00-sarit-tei-header-template.xml">https://github.com/sarit/SARIT-corpus/blob/master/00-sarit-tei-header-template.xml</ref>).</p>
@@ -380,14 +377,14 @@
         <div type="level2">
           <head>The file description</head>
           <p>The file description element
-    (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<fileDesc/></egXML>) contains the most
+    (<gi>fileDesc</gi>) contains the most
     essential metadata: a statement of the title and author of the text,
     which is essential for cataloguing and indexing
-    (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<titleStmt/></egXML>); a statement of how,
+    (<gi>titleStmt</gi>); a statement of how,
     under what authority, and under what license the digital text is
-    published (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<publicationStmt/></egXML>), and a
+    published (<gi>publicationStmt</gi>), and a
     description of the digital text’s sources
-    (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<sourceDesc/></egXML>). </p>
+    (<gi>sourceDesc</gi>). </p>
           <div type="level3">
             <head>The title statement</head>
             <p>The title statement supplies the title and author
@@ -395,13 +392,12 @@
       cases this will be the same as the title and author
       <hi rendition="simple:bold">of the work</hi>. For example:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<titleStmt>
   !!!<title>Sarasvatīkaṇṭhābharaṇa!!!</title>
   !!!<author>Bhoja!!!</author>
 !!!</titleStmt>
-]]>
-	    </egXML>
+</egXML>
             <p>Very often, however, the SARIT edition will present a work
       along with one or more commentaries (see
       “<ref target="base-texts-and-commentaries">Base texts and
@@ -443,11 +439,11 @@
       text. This includes funding agencies, principal investigators,
       data enterers, and so on.</p>
             <p>The funding agency and principal investigator have their own
-      TEI elements (<egXML xmlns="http://www.tei-c.org/ns/Examples"><funder/></egXML> and
-      <egXML xmlns="http://www.tei-c.org/ns/Examples"><principal/></egXML>), but it is good practice
+      TEI elements (<gi>funder</gi> and
+      <gi>principal</gi>), but it is good practice
       to encode the names of persons with the general-purpose element
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<persName/></egXML> (further uses of
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<persName/></egXML> will be discussed in the
+      <gi>persName</gi> (further uses of
+      <gi>persName</gi> will be discussed in the
       full version of the guidelines):</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 !!!<titleStmt>
@@ -459,11 +455,11 @@
 !!!</titleStmt>
 	    </egXML>
             <p>Other responsible parties should be identified with the
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<respStmt/></egXML>, a “responsibility
+      <gi>respStmt</gi>, a “responsibility
       statement” that includes two further elements:
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<resp/></egXML>, which explains the nature of
+      <gi>resp</gi>, which explains the nature of
       the responsibility, and an element, usually
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<persName/></egXML>, that identifies the
+      <gi>persName</gi>, that identifies the
       responsible party:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 !!!<titleStmt>
@@ -502,15 +498,14 @@
             </list>
             <p>Texts that are made available through SARIT should include:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<publisher>SARIT!!!</publisher>
-]]>
-	    </egXML>
+</egXML>
             <p>The availability of a text can either be
       <hi rendition="simple:bold">free</hi> or
       <hi rendition="simple:bold">restricted</hi>, which are the two
       possible values of the attribute <att>status</att> in
-      the element <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<availability/></egXML>. Unless
+      the element <gi>availability</gi>. Unless
       there are special circumstances, SARIT texts are made available
       under a Creative Commons licence. This means that their
       availability is <hi rendition="simple:bold">restricted</hi>, since
@@ -518,7 +513,7 @@
       documents. (<hi rendition="simple:bold">Free</hi> in this case
       does not refer to cost; all SARIT texts are available free of
       cost.) SARIT texts will therefore usually include a
-      <egXML xmlns="http://www.tei-c.org/ns/Examples"><licence/></egXML> element that either links
+      <gi>licence</gi> element that either links
       to or reproduces this licence. Here is an example of an element
       that links to the CC license:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -532,7 +527,7 @@ Commons Attribution-ShareAlike 4.0 International licence</ref>.
 </availability>
 	    </egXML>
             <p>The <hi rendition="simple:bold">date</hi> of publication is
-      simply contained in the <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<date/></egXML>
+      simply contained in the <gi>date</gi>
       element:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 	      !!!<date>2014!!!</date>
@@ -553,28 +548,28 @@ Commons Attribution-ShareAlike 4.0 International licence</ref>.
       description is understood to be the main source. In order to be
       completely explicit, however, SARIT recommends that the role of
       each source in the constitution of the digital document should be
-      briefly explained with a <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<note/></egXML>.</p>
+      briefly explained with a <gi>note</gi>.</p>
             <p>TEI provides a number of ways of tagging bibliographic
       information, but SARIT recommends the use of
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<bibl/></egXML>. This is a relatively flexible
+      <gi>bibl</gi>. This is a relatively flexible
       element which should accommodate book, articles in journals, and
       articles in collections. The following are examples for different
       kinds of printed sources. The most common is a book, which has one
-      or more titles (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<title/></egXML>), one or more
-      authors (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<author/></egXML>), usually one or
-      more editors (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<editor/></egXML>), and the
+      or more titles (<gi>title</gi>), one or more
+      authors (<gi>author</gi>), usually one or
+      more editors (<gi>editor</gi>), and the
       standard publication information
-      (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<publisher/></egXML>,
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<pubPlace/></egXML>, and
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<date/></egXML>). Note that it is best
+      (<gi>publisher</gi>,
+      <gi>pubPlace</gi>, and
+      <gi>date</gi>). Note that it is best
       practice to encode <hi rendition="simple:bold">names</hi> of
       modern-day authors and editors using the
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<name/></egXML> element and its sub-elements,
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<surname/></egXML> and
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<forename/></egXML>, in order to make it
+      <gi>name</gi> element and its sub-elements,
+      <gi>surname</gi> and
+      <gi>forename</gi>, in order to make it
       easier to sort and reformat bibliographic entries.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<bibl>
   !!!<title type="main">Tattvasaṅgraha of Śāntarakṣita With the Commentary of Kamalaśīla.!!!</title>
   !!!<title type="sub">Edited with an Introduction in Sanskrit by Embar Krishnamacharya with a foreword by the general editor. In two volumes!!!</title>
@@ -590,17 +585,16 @@ Commons Attribution-ShareAlike 4.0 International licence</ref>.
   !!!<pubPlace>Baroda!!!</pubPlace>
   !!!<date>1926!!!</date>
 !!!</bibl>
-]]>
 </egXML>            <p>Here is an example for journal articles, demonstrating the use
       of the <egXML xmlns="http://www.tei-c.org/ns/Examples">level</egXML> attribute to distinguish
       between the title of the article (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<title
       level="a"/></egXML>) and the title of the journal
       (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<title
       level="j"/></egXML>). Note also the use of the
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<biblScope/></egXML> element to represent a
+      <gi>biblScope</gi> element to represent a
       page range.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<sourceDesc>
   !!!<bibl type="article" subtype="journal_article">
     !!!<author>
@@ -615,7 +609,6 @@ Commons Attribution-ShareAlike 4.0 International licence</ref>.
     !!!<biblScope unit="pp" from="165" to="200">165-200!!!</biblScope>
   !!!</bibl>
 !!!</sourceDesc>
-]]>
 </egXML>            <p>And this is an example of an article in a collection, again
       demonstrating the use of the <egXML xmlns="http://www.tei-c.org/ns/Examples">level</egXML>
       attribute to distinguish between the title of the article
@@ -624,7 +617,7 @@ Commons Attribution-ShareAlike 4.0 International licence</ref>.
       (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<title level="m"/></egXML> for
       monograph):</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<bibl type="article" subtype="book_chapter">
   !!!<author>
     !!!<name>!!!<forename>Jin-Il!!!</forename>!!!<surname>Chung!!!</surname>!!!</name>
@@ -641,19 +634,18 @@ Commons Attribution-ShareAlike 4.0 International licence</ref>.
   !!!<biblScope unit="pp" from="105" to="124">105-124!!!</biblScope>.
   !!!<series>!!!<title level="s"/>!!!<biblScope unit="Beiheft">9!!!</biblScope>!!!</series>
 !!!</bibl>
-]]>
 </egXML>            <p>The sources for our printed editions are almost always
       manuscript sources. And when the printed editions refer to these
       manuscript sources, as responsible editions do, it is useful to
       provide a description of the manuscript that readers of the
       digital text will be able to refer to. The proper element for this
-      description is <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<msDesc/></egXML>, and it is
+      description is <gi>msDesc</gi>, and it is
       contained directly within the
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<sourceDesc/></egXML> element, alongside any
-      bibliographic sources (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<bibl/></egXML>).</p>
+      <gi>sourceDesc</gi> element, alongside any
+      bibliographic sources (<gi>bibl</gi>).</p>
             <p>Here is one example:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<msDesc>
   !!!<msIdentifier xml:id="msK">
     !!!<idno>Kun-de-ling-Manuscript!!!</idno>
@@ -673,14 +665,13 @@ Commons Attribution-ShareAlike 4.0 International licence</ref>.
     !!!<p>In June 1934, Sāṅkṛtyāyana found this manuscript in the monastery of Kun-de-ling (Lhasa). !!!</p>
   !!!</history>
 !!!</msDesc>
-]]>
 </egXML>            <p/>
           </div>
         </div>
         <div type="level2">
           <head>The encoding description</head>
           <p>After the file description, TEI documents require an encoding
-    description (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<encodingDesc/></egXML>). The
+    description (<gi>encodingDesc</gi>). The
     purpose of the encoding description is to document the choices that
     were made in encoding the text, especially if there may be
     uncertainty or ambiguity, for instance regarding how the different
@@ -688,37 +679,36 @@ Commons Attribution-ShareAlike 4.0 International licence</ref>.
     document.</p>
           <p><hi rendition="simple:bold">At the moment SARIT provides no
     specific guidelines for the encoding description.</hi> The
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<encodingDesc/></egXML> element of SARIT texts
+    <gi>encodingDesc</gi> element of SARIT texts
     generally consists of prose paragraphs
-    (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<p/></egXML>) that explain the encoding choices
+    (<gi>p</gi>) that explain the encoding choices
     specific to the text. There should be no need of noting encoding
     decisions that conform to these guidelines. We do, however,
     recommend the use of three elements that are available in the
-    encoding description: <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<projectDesc/></egXML>,
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<tagsDecl/></egXML>, and
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<refsDecl/></egXML>.</p>
+    encoding description: <gi>projectDesc</gi>,
+    <gi>tagsDecl</gi>, and
+    <gi>refsDecl</gi>.</p>
           <p>The project description
-    (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<projectDesc/></egXML>) is a paragraph or two
+    (<gi>projectDesc</gi>) is a paragraph or two
     that describes the project or projects which resulted in the
     creation of the digital text:</p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<projectDesc>
   !!!<p>Producing as part of the NEH-DFG project “Enriching Digital Texts Collections in Indology” from 2012 to 2015.!!!</p>
 !!!</projectDesc>
-]]>
-</egXML>          <p>The tagging declaration (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<tagsDecl/></egXML>)
+</egXML>          <p>The tagging declaration (<gi>tagsDecl</gi>)
     may be used to document the usage of specific tags in the text and
     their rendition if applicable (see the TEI P5 guidelines: <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD57">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD57</ref>).
     Most projects will not use the tagging declaration.</p>
           <p>The reference declaration
-    (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<refsDecl/></egXML>), however, is important: it
+    (<gi>refsDecl</gi>), however, is important: it
     describes the reference system used in the text. It may be a pattern
     of canonical references (see the full guidelines for more details),
     or it may simply describe the structure of the text in English
     prose, as follows:</p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<refsDecl>
   !!!<p>References in this text are either in the format w.x.z or w.x.y.z.!!!</p>
   !!!<p>w represents the !!!<att>n!!!</att> attribute of the highest-level
@@ -732,22 +722,21 @@ Commons Attribution-ShareAlike 4.0 International licence</ref>.
 any portion of the commentary that specifically concerns that
 sūtra.!!!</p>
 !!!</refsDecl>
-]]>
 </egXML>          <p/>
         </div>
         <div type="level2">
           <head>The revision description</head>
           <p>This is the last obligatory portion of the TEI header. It
-    consists of a number of <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<change/></egXML>
+    consists of a number of <gi>change</gi>
     elements, each of which has a <egXML xmlns="http://www.tei-c.org/ns/Examples">who</egXML> and a
     <egXML xmlns="http://www.tei-c.org/ns/Examples">when</egXML> attribute. The
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<change/></egXML> elements will typically
+    <gi>change</gi> elements will typically
     include a list of changes, as below (note that
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<list/></egXML> should be a child of
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<change/></egXML>, not
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<revisionDesc/></egXML>):</p>
+    <gi>list</gi> should be a child of
+    <gi>change</gi>, not
+    <gi>revisionDesc</gi>):</p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<revisionDesc>
   !!!<change who="lo" when="2014-10-29">
     !!!<list>
@@ -756,7 +745,6 @@ sūtra.!!!</p>
     !!!</list>
   !!!</change>
 !!!</revisionDesc>
-]]>
 </egXML>          <p>Prose paragraphs (<gi>p</gi>) are also permitted in !!!<gi>change</gi>
     elements, but lists are preferred.</p>
         </div>
@@ -766,36 +754,34 @@ sūtra.!!!</p>
         <p/>
         <p>The rest of these guidelines will concern the text’s data rather
   than its metadata. All of this data is contained in the element
-  <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<text/></egXML> that immediately follows the TEI
-  Header. The <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<text/></egXML> element must contain a
-  <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<body/></egXML> element which represents the body
+  <gi>text</gi> that immediately follows the TEI
+  Header. The <gi>text</gi> element must contain a
+  <gi>body</gi> element which represents the body
   of the text; it might also contain
-  <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<front/></egXML> and
-  <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<back/></egXML> elements, representing any front
+  <gi>front</gi> and
+  <gi>back</gi> elements, representing any front
   matter or back matter, respectively. The
-  <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<text/></egXML> element must also have an
+  <gi>text</gi> element must also have an
   <egXML xmlns="http://www.tei-c.org/ns/Examples">xml:lang</egXML> attribute that tells us what language
   and what script the text contained therein is written in. Here is an
   example for a text encoded in Roman transliteration:</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<text xml:lang="sa-Latn">
   !!!<body>
 ....
 !!!</body>
 !!!</text>
-]]>
 </egXML>        <p>And an example for a text encoded in Devanāgarī:</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<text xml:lang="sa-Deva">
   !!!<body>
 ....
 !!!</body>
 !!!</text>
-]]>
-</egXML>        <p>The <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<text/></egXML> element is the last child
-  element of <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<TEI/></egXML>.</p>
+</egXML>        <p>The <gi>text</gi> element is the last child
+  element of <gi>TEI</gi>.</p>
         <p>A single document might contain more than one text. In particular,
   a single document will very often contain a commentary together with
   the text that it is a commentary on, hence known as the “base text.”
@@ -869,7 +855,7 @@ sūtra.!!!</p>
           <p>When a base text is included or embedded within a commentary,
     SARIT treats it as a special kind of
     <hi rendition="simple:bold">quotation</hi>. It should therefore be
-    enclosed within the tag <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<quote/></egXML>, which
+    enclosed within the tag <gi>quote</gi>, which
     TEI uses for quoted material, and this tag will have the attribute
     ~type="base-text"~. Theoretically we should be able to
     extract the base text from the commentary by pulling out all of the
@@ -878,7 +864,7 @@ sūtra.!!!</p>
     the base text, because it is contained within the <egXML xmlns="http://www.tei-c.org/ns/Examples"><quote
     type="base-text"/></egXML> element:</p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<div>
   !!!<p>इदं प्रकरणं दशरूपज्ञानफलम् । दशरूपज्ञानं किंफलमित्याह—!!!</p>
   !!!<quote type="base-text">
@@ -888,13 +874,12 @@ sūtra.!!!</p>
     !!!</lg>
   !!!</quote>
 !!!</div>
-]]>
 </egXML>          <p>As in the above example, we recommend making the
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<quote/></egXML> element that contains the base
+    <gi>quote</gi> element that contains the base
     text a <hi rendition="simple:bold">sibling</hi> rather than a
     <hi rendition="simple:bold">child</hi> of the elements of the
-    commentary (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<p/></egXML> and so on). That is,
-    the <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<quote/></egXML> element should be a child
+    commentary (<gi>p</gi> and so on). That is,
+    the <gi>quote</gi> element should be a child
     of the same structural division (see below) as the elements of the
     commentary. </p>
         </div>
@@ -941,7 +926,7 @@ sūtra.!!!</p>
     the section of the commentary with the verse-number of the base text
     that it comments upon (which is identical with the
     <egXML xmlns="http://www.tei-c.org/ns/Examples">n</egXML> attribute of the quoted
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<lg/></egXML> element). The enclosing division
+    <gi>lg</gi> element). The enclosing division
     may also have a <egXML xmlns="http://www.tei-c.org/ns/Examples">type</egXML> attribute, such as
     ~type="sūtra"~, which tells us that it gathers the portion
     of the commentary that concerns a given sūtra. This attribute, too,
@@ -949,7 +934,7 @@ sūtra.!!!</p>
           <p>Here is an example without an
     <hi rendition="simple:bold">avataraṇikā</hi>:</p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<div n="7">
   !!!<quote type="base-text">
     !!!<lg n="7">
@@ -959,7 +944,6 @@ sūtra.!!!</p>
   !!!</quote>
   !!!<p>यदशेषाभिर्महदादिकार्यग्रामजनिकाभिरात्मभूताभिः शक्तिभिः, प्रचितम्—युक्तं सत्वरजस्तमसां साम्यावस्थालक्षणं प्रधानम्, तत एवैते महदादयः कार्यभेदाः प्रवर्त्तन्ते इति कापिलाः । ...!!!</p>
 !!!</div>
-]]>
 </egXML>          <p/>
         </div>
         <div type="level2">
@@ -1004,7 +988,7 @@ sūtra.!!!</p>
     enclosing division; the only difference is that this division will
     not contain any base text elements.</p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<div>
   !!!<lg>
     !!!<l>सृष्टाविद्यानिशाध्वंसिनिबन्धमयवासरम् ।!!!</l>
@@ -1023,7 +1007,6 @@ sūtra.!!!</p>
     !!!<l>व्याख्या प्राचां निबन्धॄणामिति नाहमदूदुषम् ॥ ४ ॥!!!</l>
   !!!</lg>
 !!!</div>
-]]>
 </egXML>          <p/>
         </div>
         <div type="level2">
@@ -1069,7 +1052,7 @@ sūtra.!!!</p>
         </list>
         <p>sections.</p>
         <p>These considerations lead us to recommend the use of
-  <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<div/></egXML> for all "parts,"
+  <gi>div</gi> for all "parts,"
   "sections," and "divisions" in the text, whatever
   their Sanskrit name is, and at whatever depth they occur. Do
   <hi rendition="simple:bold">not</hi> use the numbered divisions
@@ -1078,18 +1061,18 @@ sūtra.!!!</p>
   <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<div2/></egXML>, etc.).</p>
         <p>Before encoding a text, you should figure out a strategy for
   representing all of the relevant levels of the text as
-  <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<div/></egXML> elements. Some Mīmāṃsā texts, for
+  <gi>div</gi> elements. Some Mīmāṃsā texts, for
   example, are organized according to the hierarchical organization of
   the Mīmāṃsā Sūtras into adhyāyas, pādas, and adhikaraṇas. The first
-  <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<div/></egXML> beneath the
-  <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<body/></egXML> element
+  <gi>div</gi> beneath the
+  <gi>body</gi> element
   (<egXML xmlns="http://www.tei-c.org/ns/Examples">body/div</egXML>) will thus correspond to an adhyāya,
-  the first <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<div/></egXML> below this to a pāda
+  the first <gi>div</gi> below this to a pāda
   (<egXML xmlns="http://www.tei-c.org/ns/Examples">body/div/div</egXML>), and the first
-  <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<div/></egXML> below this
+  <gi>div</gi> below this
   (<egXML xmlns="http://www.tei-c.org/ns/Examples">body/div/div/div</egXML>) to an adhikaraṇa. If this
   schema is applied consistently, there is no need for assigning a type
-  to the <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<div/></egXML> elements themselves (e.g.,
+  to the <gi>div</gi> elements themselves (e.g.,
   <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<div type="adhyāya"/></egXML>,
   <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<div
   type="pāda"/></egXML>,
@@ -1098,8 +1081,8 @@ sūtra.!!!</p>
   to make the XML easier to read.</p>
         <p>The strategy followed in the text can be, and should be, documented
   in the reference declaration
-  (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<refsDecl/></egXML>), which is part of the
-  encoding description (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<encodingDesc/></egXML>) in
+  (<gi>refsDecl</gi>), which is part of the
+  encoding description (<gi>encodingDesc</gi>) in
   the TEI Header (see above). </p>
         <div type="level2">
           <head>Labelling sections</head>
@@ -1109,12 +1092,12 @@ sūtra.!!!</p>
     trailer (see below). In order to be identifiable to machines,
     sections carry a numeric <hi rendition="simple:bold">label</hi> that
     is represented by the <egXML xmlns="http://www.tei-c.org/ns/Examples">n</egXML> attribute of the
-    corresponding <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<div/></egXML> element. The value
+    corresponding <gi>div</gi> element. The value
     of <egXML xmlns="http://www.tei-c.org/ns/Examples">@n</egXML> will usually be the serial number of
     the section: <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<div
     n="2"/></egXML> represents the second division (adhyāya,
     pāda, adhikaraṇa, etc.), even if it's not actually the second
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<div/></egXML> element within its parent
+    <gi>div</gi> element within its parent
     element. For division that comprises more than one such section, we
     simply put all of the corresponding numbers in the
     <egXML xmlns="http://www.tei-c.org/ns/Examples">n</egXML> attribute:
@@ -1122,13 +1105,13 @@ sūtra.!!!</p>
     4"/></egXML>.</p>
           <p>Divisions (!!!<gi>div</gi>s) are block-level elements, and they
     constitute the text hierarchy, together with other block-level
-    elements like paragraphs (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<p/></egXML>), verses
-    (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<lg/></egXML>), and the “anonymous blocks” used
-    for sūtras and the like (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<ab/></egXML>). The
+    elements like paragraphs (<gi>p</gi>), verses
+    (<gi>lg</gi>), and the “anonymous blocks” used
+    for sūtras and the like (<gi>ab</gi>). The
     overall reference system of the text will therefore usually include
-    the numbering of <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<div/></egXML> elements at the
-    upper levels and the numbering of <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<lg/></egXML>
-    or <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<ab/></egXML> elements at the lower levels.
+    the numbering of <gi>div</gi> elements at the
+    upper levels and the numbering of <gi>lg</gi>
+    or <gi>ab</gi> elements at the lower levels.
     </p>
         </div>
         <div type="level2">
@@ -1147,17 +1130,16 @@ sūtra.!!!</p>
             <p>Some sections of the text will begin with a heading, most often
       a short introductory phrase (e.g., अथ भावाधिकरणम्). We encode
       these heading with the TEI element
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<head/></egXML>. There can be more than one
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<head/></egXML> element at the beginning of a
+      <gi>head</gi>. There can be more than one
+      <gi>head</gi> element at the beginning of a
       section:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<text xml:lang="sa-Deva">
   !!!<body>!!!<head>श्रीः!!!</head>!!!<head>अभिनवभारती!!!</head>
 ...
 !!!</body>
 !!!</text>
-]]>
 </egXML>            <p>In addition to the headings printed in the text, the heading
       element is a convenient place to put chapter or section titles for
       a table of contents, especially if there are no printed headings,
@@ -1171,19 +1153,18 @@ sūtra.!!!</p>
       contents, but which is itself suppressed in the browsing display
       on the SARIT website. For example:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<div n="1">!!!<head>अथ प्रथमपरिच्छेदः!!!</head>!!!<head type="toc" xml:lang="en">First chapter!!!</head>
 ...
 !!!</div>
-]]>
 </egXML>            <p/>
           </div>
           <div type="level3">
             <head>Trailers</head>
             <p>SARIT uses the TEI element
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<trailer/></egXML> for those short pieces of
+      <gi>trailer</gi> for those short pieces of
       text (often called colophons) that come at the end of a section.
-      <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<trailer/></egXML> should typically be the
+      <gi>trailer</gi> should typically be the
       final element in the element that it closes.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
 	      <trailer>॥ इति बृहत्यां प्रथमाध्यायस्य प्रथमः पादः समाप्तः ॥</trailer>
@@ -1274,7 +1255,7 @@ sūtra.!!!</p>
           <p>The pagination of the source edition is encoded by placing the
     element <gi>pb</gi> (for "page
     break") at the beginning of every new page. In contrast to
-    line-breaks, SARIT requires the <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<pb/></egXML>
+    line-breaks, SARIT requires the <gi>pb</gi>
     element to have a numeric label (<egXML xmlns="http://www.tei-c.org/ns/Examples">n</egXML>) that
     corresponds to the page number. But like line-breaks, SARIT uses the
     <egXML xmlns="http://www.tei-c.org/ns/Examples">break</egXML> attribute to distinguish between page
@@ -1291,14 +1272,13 @@ sūtra.!!!</p>
           <head>Folios</head>
           <p>Manuscript folios are treated as pages, so the beginning of a new
     manuscript folio (or a new side of a manuscript folio) is encoded
-    with the <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<pb/></egXML> element. These elements
+    with the <gi>pb</gi> element. These elements
     have an <egXML xmlns="http://www.tei-c.org/ns/Examples">@ed</egXML> attribute that refers to the
     manuscript (the manuscript itself should be mentioned in the source
     description of the TEI header).</p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<pb ed="msK" n="2a"/>
-]]>
 </egXML>          <p/>
         </div>
       </div>
@@ -1313,104 +1293,99 @@ sūtra.!!!</p>
       </div>
       <div type="level1">
         <head>Verse</head>
-        <p>SARIT uses the <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<lg/></egXML> element, a “line
+        <p>SARIT uses the <gi>lg</gi> element, a “line
   group,” for metrical verses. A verse contains a number of metrical
   <hi rendition="simple:bold">lines</hi>, which are encoded with the
-  <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<l/></egXML> element. You can think of a
+  <gi>l</gi> element. You can think of a
   <hi rendition="simple:bold">line</hi> in the context of verse as
   anything that ends in a daṇḍa or a double daṇḍa. The only elements
-  permitted in the <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<lg/></egXML> element are line
-  elements (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<l/></egXML>) and labels
-  (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<label/></egXML>), besides milestone elements
-  (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<pb/></egXML> and
-  <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<lb/></egXML>). Verses that are numbered in the
+  permitted in the <gi>lg</gi> element are line
+  elements (<gi>l</gi>) and labels
+  (<gi>label</gi>), besides milestone elements
+  (<gi>pb</gi> and
+  <gi>lb</gi>). Verses that are numbered in the
   edition should also be given a label (<egXML xmlns="http://www.tei-c.org/ns/Examples">n</egXML>) by
   which they can be easily identified. Generally the verse numbers in
   the printed text, however, should also be represented as text. That
   is, the number of the verse is included both in the
   <egXML xmlns="http://www.tei-c.org/ns/Examples">n</egXML> attribute of the verse element
-  <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<lg/></egXML>, and at the end of the second line,
+  <gi>lg</gi>, and at the end of the second line,
   as follows:</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<lg n="1">
   !!!<l>वागर्थाविव संपृक्तौ वागर्थप्रतिपत्तये ।!!!</l>
   !!!<l>जगतः पितरौ वन्दे पार्वतीपरमेश्वरौ ॥ १ ॥!!!</l>
 !!!</lg>
-]]>
 </egXML>        <p><hi rendition="simple:bold">Metrical lines are not typographic
   lines</hi>. A typographic line break, encoded as
-  <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<lb/></egXML>, might occur in the middle of, or
+  <gi>lb</gi>, might occur in the middle of, or
   at the end of, a metrical line. A metrical line usually consists of
   two metrical quarters (pādas), and thus a verse usually consists of
   four quarters. The juncture between two quarters is a kind of break or
   pause, and therefore we encode it using the TEI element
-  <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<caesura/></egXML>.</p>
-        <p>Why do we use both <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<caesura/></egXML> and
-  <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<lb/></egXML>? The
-  <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<caesura/></egXML> element encodes an element of
+  <gi>caesura</gi>.</p>
+        <p>Why do we use both <gi>caesura</gi> and
+  <gi>lb</gi>? The
+  <gi>caesura</gi> element encodes an element of
   metrical structure that often motivates or explains the way the verse
   has been set on the page in the source edition. The
-  <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<lb/></egXML> element may thus coincide with a
-  <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<caesura/></egXML> element, but its primary
+  <gi>lb</gi> element may thus coincide with a
+  <gi>caesura</gi> element, but its primary
   purpose is to <hi rendition="simple:bold">count the number of line
   breaks on a page</hi>. For example, a digital text that does not
   render line-breaks at all might encode the following verse:</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<lg>
   !!!<l>स्वसुखनिरभिलाषः खिद्यसे लोकहेतोः!!!<caesura/> प्रतिदिनमथवा ते वृत्तिरेवंविधैव ।!!!</l>
   !!!<l>अनुभवति हि मूर्ध्ना पादपस्तीव्रमुष्णं!!!<caesura/> शमयति परितापं छाययोपाश्रितानाम् ॥!!!</l>
 !!!</lg>
-]]>
 </egXML>        <p>The lineation of the source edition does not always reflect this
   structure. Here is one possible representation:</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<lg>
   !!!<l>स्वसुखनिरभिलाषः खिद्यसे !!!<lb/>
 लोकहेतोः!!!<caesura/> प्रतिदिनमथवा ते वृत्तिरेवंविधैव ।!!!</l>
   !!!<l>अनुभवति हि मूर्ध्ना पादपस्तीव्रमुष्णं!!!<caesura/>!!!<lb/>
 शमयति परितापं छाययोपाश्रितानाम् ॥!!!</l>
 !!!</lg>
-]]>
 </egXML>        <p>When the line is broken in the middle of a word, use the
   ~break="no"~ attribute rather than hard-coding a hyphen into
   the text, as noted in the section on milestones above:</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<lg>
   !!!<l>तिष्ठन् भाति पितुः पुरो भुवि यथा सिंहासने किं तथा!!!<caesura/>!!!<lb/>यत् संवाहयतः सुखं हि चरणौ तातस्य किं राज्यतः ।!!!</l>
   !!!<l>किं भुक्ते भुवनत्रये धृतिरसौ भुक्तोज्झिते या गुरो!!!<caesura/>!!!<lb break="no"/>रायासः खलु राज्यमुज्झितगुरोस्तत्रास्ति कश्चिद् गुणः ॥!!!</l>
 !!!</lg>
-]]>
 </egXML>        <p>The common <hi rendition="simple:bold">āryā</hi> meter and its
   relatives call for some comment: they are sometimes thought of as
   having four quarters, and sometimes not. SARIT recommends the use of
-  the <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<caesura/></egXML> element to represent the
+  the <gi>caesura</gi> element to represent the
   <hi rendition="simple:bold">yati</hi> between the first and second
   half of the line, when it is present; when the
   <hi rendition="simple:bold">yati</hi> is absent, the
-  <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<caesura/></egXML> element may be omitted. For
+  <gi>caesura</gi> element may be omitted. For
   example:</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<lg n="87">
   !!!<l>हुअवह-पडित्त-णूमिअ-!!!<caesura/>णिअ-णणुम्हा-विसंठुल-मह-ग्गाहं ।!!!</l>
   !!!<l>परिवड्ढिएक्कमेक्काणुराअ-सर-पहर-णिव्वलिअ-सङ्ख-उलं ॥ ८७ ॥!!!</l>
 !!!</lg>
-]]>
 </egXML>        <p/>
         <div type="level2">
           <head>Groups of verses</head>
           <p>Groups of verses should simply be put into another
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<lg/></egXML> element that encloses the
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<lg/></egXML> elements corresponding to
+    <gi>lg</gi> element that encloses the
+    <gi>lg</gi> elements corresponding to
     individual verses. If there is a label for the group in the printed
     text (e.g., kulaka, yugalaka, etc.), it should be included with the
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<label/></egXML> element, as follows:</p>
+    <gi>label</gi> element, as follows:</p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<lg>
   !!!<label>जुग्गं!!!</label>
   !!!<lg n="34">
@@ -1422,7 +1397,6 @@ sūtra.!!!</p>
     !!!<l>रामस्स अईसन्ते !!!<caesura/>आसा-बन्धे व्व चिर-गे हणुमन्ते ॥ ३५ ॥!!!</l>
   !!!</lg>
 !!!</lg>
-]]>
 </egXML>          <p/>
         </div>
         <div type="level2">
@@ -1430,7 +1404,7 @@ sūtra.!!!</p>
           <p>Sometimes the parts of a verse are broken up within a text, for
     example when a commentator breaks up a verse to discuss its
     components separately. In these cases, every verse-fragment should
-    be contained in an <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<lg/></egXML> element with
+    be contained in an <gi>lg</gi> element with
     the attributes <egXML xmlns="http://www.tei-c.org/ns/Examples">next</egXML>,
     <egXML xmlns="http://www.tei-c.org/ns/Examples">prev</egXML>, or both.</p>
           <p>All of the verse-fragments should have an identifying label (a,
@@ -1442,9 +1416,9 @@ sūtra.!!!</p>
     “verse 27” as the sum of its parts in case there is no element
     <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<lg n="27"/></egXML> to be found.
     However, it will not join fragmentary
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<l/></egXML> elements into a single element.
+    <gi>l</gi> elements into a single element.
     Therefore it is recommended to use the <egXML xmlns="http://www.tei-c.org/ns/Examples">part</egXML>
-    attribute on any fragmentary <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<l/></egXML>
+    attribute on any fragmentary <gi>l</gi>
     attributes: <egXML xmlns="http://www.tei-c.org/ns/Examples">I</egXML> for an initial fragment (e.g.,
     pādas a or c) and <egXML xmlns="http://www.tei-c.org/ns/Examples">F</egXML> for a final fragment
     (e.g., pādas b or d), or <egXML xmlns="http://www.tei-c.org/ns/Examples">M</egXML> for a medial
@@ -1456,7 +1430,7 @@ sūtra.!!!</p>
             <hi rendition="simple:italic">~/webstuff/eXist-stuff/sarit-pm/resources/img//part-img1-coloured.png</hi>
           </p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<div>
   !!!<div type="section" n="27c">
     !!!<p>!!!<hi>परिन्यास!!!</hi>माह—!!!</p>
@@ -1486,7 +1460,6 @@ sūtra.!!!</p>
   !!!</div>
   !!!<!-- section -->
 !!!</div>
-]]>
 </egXML>          <p>
             <hi rendition="simple:bold">Example 9</hi>
           </p>
@@ -1498,7 +1471,7 @@ sūtra.!!!</p>
             </figure>
           </p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<div n="210">
   !!!<quote type="base-text">
     !!!<lg n="210a" next="210b">
@@ -1521,14 +1494,13 @@ sūtra.!!!</p>
   !!!</quote>
   !!!<p>!!!<q>यदीद!!!</q>मताद्रूप्येपि ताद्रूप्यप्रथनमर्थानां भासमानानां नीलादीनां स्वयमपरप्रेरणया रोचते । तत्र तथाप्रतिभासे के वयमसहमानाऽ(? अ) पि निषेद्धुं । अवस्तु च प्रतिभासते चेति व्यक्तमालीक्यं । (२१०)!!!</p>
 !!!</div>
-]]>
 </egXML>          <p/>
         </div>
         <div type="level2">
           <head>Verses within prose paragraphs</head>
           <p>Often verses are “embedded” into paragraphs, and we reflect this
-    fact by embedding the <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<lg/></egXML> element into
-    the <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<p/></egXML> element.</p>
+    fact by embedding the <gi>lg</gi> element into
+    the <gi>p</gi> element.</p>
           <p/>
         </div>
       </div>
@@ -1537,9 +1509,9 @@ sūtra.!!!</p>
         <p>Sūtras are like paragraphs, but they are often formatted
   differently (without indentation, for example) and they do not have
   the “semantic baggage” of a prose paragraph. SARIT recommends the use
-  of the <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<ab/></egXML> element (“anonymous block”)
+  of the <gi>ab</gi> element (“anonymous block”)
   with the attribute ~type="sutra"~.</p>
-        <p>In the following example, the <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<ab/></egXML>
+        <p>In the following example, the <gi>ab</gi>
   element includes, in addition to the text of the sutra, two typed
   labels that provide, respectively, the serial number of the adhikaraṇa
   in which the sutra occurs, and the position
@@ -1569,14 +1541,14 @@ sūtra.!!!</p>
         <p>SARIT uses the core elements of the TEI’s drama module for Sanskrit
   plays. Plays usually consist of divisions, such as an aṅka, in which
   various characters speak lines in prose or verse. The standard element
-  for a “line” in this sense is <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<sp/></egXML>: this
+  for a “line” in this sense is <gi>sp</gi>: this
   contains the lines spoken by the character, either as prose
-  (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<p/></egXML>) or verse
-  (<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<lg/></egXML>).</p>
-        <p>The <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<sp/></egXML> element may also contain a
+  (<gi>p</gi>) or verse
+  (<gi>lg</gi>).</p>
+        <p>The <gi>sp</gi> element may also contain a
   label for the speaker and stage directions. The speaker is encoded in
-  the element <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<speaker/></egXML>, and stage
-  directions in the element <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<stage/></egXML>. You
+  the element <gi>speaker</gi>, and stage
+  directions in the element <gi>stage</gi>. You
   should omit any formatting the editor has used to distinguish these
   elements.</p>
         <p>
@@ -1585,7 +1557,7 @@ sūtra.!!!</p>
         <p><hi rendition="simple:italic">~/webstuff/eXist-stuff/sarit-pm/resources/img/stage-img1-coloured.png</hi>
   alt=""</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<sp>
   !!!<speaker>राजा!!!</speaker>
   !!!<stage>स्वगतम!!!</stage>
@@ -1598,7 +1570,6 @@ sūtra.!!!</p>
   !!!</lg>
   !!!<stage>अस्मृतिनिमित्तमुन्मनस्कत्वं रूपयति!!!</stage>
 !!!</sp>
-]]>
 </egXML>        <p/>
       </div>
       <div type="level1">
@@ -1606,15 +1577,15 @@ sūtra.!!!</p>
         <p>The source edition will sometimes have
   <hi rendition="simple:bold">labels</hi> added by the editor, which
   help to identify sections (below the level of the sections explicitly
-  encoded as <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<div/></egXML> elements), positions in
+  encoded as <gi>div</gi> elements), positions in
   an argument (<hi rendition="simple:bold">pūrvapakṣa</hi>,
   <hi rendition="simple:bold">uttarapakṣa</hi>,
   <hi rendition="simple:bold">siddhānta</hi>), or other features of the
   text. It will also sometimes have
   <hi rendition="simple:bold">notes</hi>, whether those are represented
   as footnotes, endnotes, or otherwise. It is possible to represent both
-  labels and notes using TEI’s <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<label/></egXML> and
-  <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<note/></egXML> elements.</p>
+  labels and notes using TEI’s <gi>label</gi> and
+  <gi>note</gi> elements.</p>
         <p>Because SARIT recommends encoding
   <hi rendition="simple:bold">structure</hi> rather than
   <hi rendition="simple:bold">presentation</hi>, it is important to have
@@ -1626,12 +1597,12 @@ sūtra.!!!</p>
   <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<note type="reference"/></egXML>.
   Similarly, it is recommended to find consistent
   <egXML xmlns="http://www.tei-c.org/ns/Examples">type</egXML> attributes for
-  <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<label/></egXML> elements as well, and to avoid
+  <gi>label</gi> elements as well, and to avoid
   the use of formatting-specific attributes (like
   <egXML xmlns="http://www.tei-c.org/ns/Examples">place</egXML> and <egXML xmlns="http://www.tei-c.org/ns/Examples">rend</egXML>).</p>
         <p>In the example below the labels might be encoded as follows:</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<div>
   !!!<label type="position">2!!!</label>
   !!!<label type="position-person">भामहः!!!</label>
@@ -1640,7 +1611,6 @@ sūtra.!!!</p>
     !!!<l>गोशब्दं शृण्वतः पूर्वमगौः स्फुरतु चेतसि ॥ ५ ॥!!!</l>
   !!!</lg>
 !!!</div>
-]]>
 </egXML>        <p>
           <hi rendition="simple:bold">Example 12</hi>
         </p>
@@ -1658,11 +1628,11 @@ sūtra.!!!</p>
   endnotes). <hi rendition="simple:bold">SARIT embeds notes into the
   text in their proper place.</hi> That is, wherever you see a note
   marker in the text, that is where you should place the
-  <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<note/></egXML> element.</p>
-        <p>The content of the <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<note/></egXML> element
+  <gi>note</gi> element.</p>
+        <p>The content of the <gi>note</gi> element
   depends on the <egXML xmlns="http://www.tei-c.org/ns/Examples">type</egXML> of note that it represents.
   Typically, however, notes will contain a
-  <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<p/></egXML> element. For text-critical notes, the
+  <gi>p</gi> element. For text-critical notes, the
   simple version of the guidelines recommends the use of prose
   paragraphs; more sophisticated methods are available in the full
   version of the guidelines.</p>
@@ -1672,22 +1642,21 @@ sūtra.!!!</p>
   good practice to use the <egXML xmlns="http://www.tei-c.org/ns/Examples">xml:lang</egXML> attribute to
   identify the language of any element that differs from its parent
   element. This also includes sections of Sanskrit text quoted in notes,
-  for which you may use the <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<foreign/></egXML>
+  for which you may use the <gi>foreign</gi>
   element. For example:</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<p>यं नाट्यवेदं वेदेभ्यः सारमादाय ब्रह्मा कृतवान्, यत्संबद्धमभिनयं भरतश्चकार
 करणाङ्गहारानकरोत्!!!<note xml:lang="en">!!!<p>A.T.A. !!!<foreign
 xml:lang="sa-Latn">hārān anekān akarot!!!</foreign>.!!!</p>!!!</note> ... !!!</p>
-]]>
 </egXML>        <p>Note, finally, that editors will often insert references
   <hi rendition="simple:bold">into the text itself</hi>, and you are
-  encouraged to use the <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<note/></egXML> element for
+  encouraged to use the <gi>note</gi> element for
   these additions, as in the following example. (See the full version of
   the guidelines for instructions regarding pointing references and
   canonical reference schemes.)</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<div>
   !!!<p>यथा तत्रैव (!!!<note type="reference">रत्ना॰ १।८!!!</note>—!!!</p>
   !!!<lg>
@@ -1695,7 +1664,6 @@ xml:lang="sa-Latn">hārān anekān akarot!!!</foreign>.!!!</p>!!!</note> ... !!!
     !!!<l>सिद्धेर्भ्रान्तिर्नास्ति सत्यं तथापि स्वेच्छाकारी भीत एवास्मि भर्तुः ॥’!!!</l>
   !!!</lg>
 !!!</div>
-]]>
 </egXML>        <p/>
       </div>
       <div type="level1">
@@ -1704,7 +1672,7 @@ xml:lang="sa-Latn">hārān anekān akarot!!!</foreign>.!!!</p>!!!</note> ... !!!
   quotations “as-is.” That is, if the editor has used quotation marks or
   double quotation marks, put them into the digital text; if the editor
   has used bold-face text to represent quotations, use the
-  <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<hi/></egXML> tag (for “highlighted”). The reason
+  <gi>hi</gi> tag (for “highlighted”). The reason
   for encoding quotations “as-is” is the possibility that identifying
   the beginning and end of quotations may require extensive checking by
   skilled readers, and the frequency with which quotations are
@@ -1723,9 +1691,9 @@ xml:lang="sa-Latn">hārān anekān akarot!!!</foreign>.!!!</p>!!!</note> ... !!!
     straightforward principle: <hi rendition="simple:bold">follow the
     typography of the printed edition.</hi></p>
           <p>If the edition prints इति on the same line as the verse, include
-    it there, within the <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<l/></egXML> element; if it
+    it there, within the <gi>l</gi> element; if it
     prints इति on a following line, then put it outside of the
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<lg/></egXML> element.</p>
+    <gi>lg</gi> element.</p>
           <p>
             <hi rendition="simple:bold">Example 14: इति on the same
     line</hi>
@@ -1738,12 +1706,11 @@ xml:lang="sa-Latn">hārān anekān akarot!!!</foreign>.!!!</p>!!!</note> ... !!!
             </figure>
           </p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<lg>
   !!!<l>"वस्तूपलक्षणं यत्र सर्वाम् प्रसज्यते ।!!!</l>
   !!!<l>द्रव्यमित्युच्यते सोऽर्थो भेद्यत्वेन विवक्षितः ॥" इति ।!!!</l>
 !!!</lg>
-]]>
 </egXML>          <p>
             <hi rendition="simple:bold">Example 15: इति merged with the last
     word in a verse</hi>
@@ -1757,12 +1724,11 @@ xml:lang="sa-Latn">hārān anekān akarot!!!</foreign>.!!!</p>!!!</note> ... !!!
             </figure>
           </p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<lg>
   !!!<l>एकप्रत्यवमर्षस्य हेतुत्वाद्धीरभेदिनी!!!</l>
   !!!<l>एकधा हेतुभावेन व्यक्तीनामप्यभिन्नतेति ॥ (२५)!!!</l>
 !!!</lg>
-]]>
 </egXML>          <p>
             <hi rendition="simple:bold">Example 16: इति on the following
     line</hi>
@@ -1775,13 +1741,12 @@ xml:lang="sa-Latn">hārān anekān akarot!!!</foreign>.!!!</p>!!!</note> ... !!!
             </figure>
           </p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
-	<![CDATA[
+	
 !!!<p>तदयुक्तं ।
 !!!<lg>!!!<l>"तद्गतावेव शब्देभ्यो गम्यतेऽन्यनिवर्त्तनं ।!!!</l>!!!<l>न तत्र गम्यते कश्चिद्विशिष्टः केनचित्पर" ॥!!!</l>!!!</lg> (प्र. वा. १ । १२८)
 इति ग्रन्थविरोधात् । नीरूपस्य चास्तित्वविरोधाच्छशविषाणवत् । नीरूपत्वा-
 देव च न तस्याः प्रत्यक्षं ग्राहकं नाप्यनुमानं । सम्बन्धाभावात् ।!!!</p>
-]]>
-	  </egXML>
+</egXML>
           <p/>
         </div>
       </div>
