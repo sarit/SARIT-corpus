@@ -7,12 +7,34 @@
         <author>Liudmila Olalde, Andrew Ollett, Patrick McAllister</author>
       </titleStmt>
       <publicationStmt>
-        <p/>
+        <publisher>"Project SARIT: Enriching Digital Text Collections in Indology" (Bilalteral Digital Humanities Programme DFG/NEH), 2013-2017.</publisher>
+        <availability status="restricted">
+          <p>Copyright Notice:</p>
+          <p>Copyright 2017 SARIT</p>
+          <licence>
+            <p>Distributed under a <ref target="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International licence.</ref> Under this licence, you are free to:</p>
+            <list>
+              <item>Share — copy and redistribute the material in any medium or format.</item>
+              <item>Adapt — remix, transform, and build upon the material for any purpose, even commercially.</item>
+            </list>
+            <p>The licensor cannot revoke these freedoms as long as you follow the license terms.</p>
+            <p>Under the following terms:</p>
+            <list>
+              <item>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.</item>
+              <item>ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.</item>
+            </list>
+            <p>More information and fuller details of this license are given on the Creative Commons website.</p>
+          </licence>
+          <p>SARIT assumes no responsibility for unauthorised use that infringes the rights of any copyright owners, known or unknown.</p>
+        </availability>
       </publicationStmt>
       <sourceDesc>
-        <p>Produced by pandoc.</p>
+        <p>TEI-ish version produced by pandoc and manual editing from <ref target="https://github.com/sarit/sarit-pm/blob/91f6ea5d78c2385e10a7c3a85ac36968df853abe/docs/encoding-guidelines-simple.html">sarit-pm/91f6ea5d78c2385e10a7c3a85ac36968df853abe/docs/encoding-guidelines-simple.html</ref>.</p>
       </sourceDesc>
     </fileDesc>
+    <revisionDesc>
+      <change who="../../saritcorpus.xml#patmcall" when="2017-06"><p>TEI-ish version produced by pandoc and manual editing from <ref target="https://github.com/sarit/sarit-pm/blob/91f6ea5d78c2385e10a7c3a85ac36968df853abe/docs/encoding-guidelines-simple.html">sarit-pm/91f6ea5d78c2385e10a7c3a85ac36968df853abe/docs/encoding-guidelines-simple.html</ref>.</p></change>
+    </revisionDesc>
   </teiHeader>
   <text>
     <body>
@@ -66,14 +88,14 @@
         </list>
         <p>Texts that are encoded according to the simple guidelines can
   always be “enhanced” at a later stage with the markup described in the
-  full guidelines. </p>
+  full guidelines.</p>
       </div>
       <div type="level1">
         <head>Introduction</head>
         <p>Digital texts come in a variety of formats, but the texts
   distributed by SARIT are XML files that conform to standards of the
   Text Encoding Initiative (TEI).</p>
-        <p/>
+        
       </div>
       <div type="level1">
         <head>What is XML?</head>
@@ -88,8 +110,7 @@
   tags in angle-brackets, and signal some
   <hi rendition="simple:bold">editorial</hi> intention relating to the
   text:
-  <egXML xmlns="http://www.tei-c.org/ns/Examples"><p>This is a paragraph.</p></egXML>
-	</p>
+  <egXML xmlns="http://www.tei-c.org/ns/Examples"><p>This is a paragraph.</p></egXML></p>
         <p>Elements can be nested within each other:</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
           <p>This is <hi>highlighted text</hi>.</p>
@@ -120,7 +141,7 @@
   that human beings can read: HTML, RTF, or PDF. XML texts can be
   converted into almost any other format, or processed in many
   complicated ways using a super-strength version of search-and-replace
-  called XSLT. </p>
+  called XSLT.</p>
         <div type="level2">
           <head>How do I type XML texts?</head>
           <p>An XML document has no hidden codes, and can be typed with
@@ -130,7 +151,7 @@
     syntax-highlighting or online help; others have been created
     specifically for typing XML. Several of these programs have XML
     Parsers built in to them, so that they can check your input as you
-    go along and perhaps even format it nicely on the screen. </p>
+    go along and perhaps even format it nicely on the screen.</p>
         </div>
         <div type="level2">
           <head>What is TEI?</head>
@@ -140,7 +161,7 @@
     hundreds of text-encoding projects, and form the basis of many other
     subprojects (such as EpiDoc). They are actively maintained and
     well-supported by a growing number of applications, and hence they
-    currently represent “The Right Way” to produce digital texts. </p>
+    currently represent “The Right Way” to produce digital texts.</p>
         </div>
         <div type="level2">
           <head>Structure, not presentation</head>
@@ -157,7 +178,7 @@
     then encode the structural reasons for that presentational choice.
     Thus, if a text is centered on the page because it represents a
     colophon, use <gi>trailer</gi> rather than
-    <egXML xmlns="http://www.tei-c.org/ns/Examples"><p rend="center"/></egXML>. </p>
+    <egXML xmlns="http://www.tei-c.org/ns/Examples"><p rend="center"/></egXML>.</p>
         </div>
         <div type="level2">
           <head>Getting started</head>
@@ -179,8 +200,7 @@
       <![CDATA[
                <TEI xml:id="sarit__XML-ID_HERE" xmlns="http://www.tei-c.org/ns/1.0"/>
       ]]>
-    </code>
-    </p>
+    </code></p>
           <p>This element has two attributes. The
     <att>xml:id</att> is a unique identifier for the
     document. Your choice for this unique identifier will depend on your
@@ -192,15 +212,15 @@
     authority defines as <gi>p</gi>.</p>
           <p>The last line of the document will close the
     <gi>TEI</gi> element, and hence it will always
-    be <tag><![CDATA[</TEI>]]></tag>. </p>
+    be <tag><![CDATA[</TEI>]]></tag>.</p>
         </div>
         <div type="level2">
           <head>Further details</head>
-          <p/>
+          
           <div type="level3">
             <head>Comments</head>
             <p>The XML processor will ignore anything that is contained
-      between <code><![CDATA[<!--]]></code> and <code><![CDATA[-->]]></code>. </p>
+      between <code><![CDATA[<!--]]></code> and <code><![CDATA[-->]]></code>.</p>
           </div>
           <div type="level3">
             <head>The xml:id and xml:lang attributes</head>
@@ -236,19 +256,19 @@
           default);</p>
               </item>
               <item>
-                <p><egXML xmlns="http://www.tei-c.org/ns/Examples">sa-Latn</egXML>: Sanskrit in the Latin
+                <p><val>sa-Latn</val>: Sanskrit in the Latin
           script (Roman transliteration);</p>
               </item>
               <item>
-                <p><egXML xmlns="http://www.tei-c.org/ns/Examples">sa-Deva</egXML>: Sanskrit in the Devanāgarī
+                <p><val>sa-Deva</val>: Sanskrit in the Devanāgarī
           script.</p>
               </item>
               <item>
-                <p><egXML xmlns="http://www.tei-c.org/ns/Examples">pra-Latn</egXML>: Prakrit in the Latin
+                <p><val>pra-Latn</val>: Prakrit in the Latin
           script (Roman transliteration);</p>
               </item>
               <item>
-                <p><egXML xmlns="http://www.tei-c.org/ns/Examples">pra-Deva</egXML>: Prakrit in the Devanāgarī
+                <p><val>pra-Deva</val>: Prakrit in the Devanāgarī
           script.</p>
               </item>
             </list>
@@ -298,7 +318,7 @@
               <element>XYZ<element> ABC </element>XYZ</element>
             </egXML>
             <p>which will lose the spaces when it is processed.</p>
-            <p/>
+            
           </div>
         </div>
       </div>
@@ -366,7 +386,7 @@
   must be acknowledged as such. Since printed editions are protected by
   copyright laws—although not to the same degree in all
   jurisdictions—you must ensure that you are legally entitled to use the
-  printed edition as the source of the digital edition. </p>
+  printed edition as the source of the digital edition.</p>
         <div type="level2">
           <head>The file description</head>
           <p>The file description element
@@ -377,7 +397,7 @@
     under what authority, and under what license the digital text is
     published (<gi>publicationStmt</gi>), and a
     description of the digital text’s sources
-    (<gi>sourceDesc</gi>). </p>
+    (<gi>sourceDesc</gi>).</p>
           <div type="level3">
             <head>The title statement</head>
             <p>The title statement supplies the title and author
@@ -465,7 +485,7 @@
                 </respStmt>
               </titleStmt>
             </egXML>
-            <p/>
+            
           </div>
           <div type="level3">
             <head>The publication statement</head>
@@ -511,9 +531,8 @@
               <availability status="restricted">
                 <licence>
                   <p>Distributed under a
-<ref target="https://creativecommons.org/licenses/by-sa/4.0/">Creative
-Commons Attribution-ShareAlike 4.0 International licence</ref>.
-</p>
+		  <ref target="https://creativecommons.org/licenses/by-sa/4.0/">Creative
+		  Commons Attribution-ShareAlike 4.0 International licence</ref>.</p>
                 </licence>
               </availability>
             </egXML>
@@ -523,7 +542,7 @@ Commons Attribution-ShareAlike 4.0 International licence</ref>.
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
               <date>2014</date>
             </egXML>
-            <p/>
+            
           </div>
           <div type="level3">
             <head>The source description</head>
@@ -633,15 +652,15 @@ Commons Attribution-ShareAlike 4.0 International licence</ref>.
                 </msContents>
                 <physDesc>
                   <objectDesc>
-                    <p>Palm-leaf manuscript. 89 leaves in Kuṭilā script. Apparently written in 1152 A.C. </p>
+                    <p>Palm-leaf manuscript. 89 leaves in Kuṭilā script. Apparently written in 1152 A.C.</p>
                   </objectDesc>
                 </physDesc>
                 <history>
-                  <p>In June 1934, Sāṅkṛtyāyana found this manuscript in the monastery of Kun-de-ling (Lhasa). </p>
+                  <p>In June 1934, Sāṅkṛtyāyana found this manuscript in the monastery of Kun-de-ling (Lhasa).</p>
                 </history>
               </msDesc>
             </egXML>
-            <p/>
+            
           </div>
         </div>
         <div type="level2">
@@ -698,7 +717,7 @@ any portion of the commentary that specifically concerns that
 sūtra.</p>
             </refsDecl>
           </egXML>
-          <p/>
+          
         </div>
         <div type="level2">
           <head>The revision description</head>
@@ -727,7 +746,7 @@ sūtra.</p>
       </div>
       <div type="level1">
         <head>Base texts and commentaries</head>
-        <p/>
+        
         <p>The rest of these guidelines will concern the text’s data rather
   than its metadata. All of this data is contained in the element
   <gi>text</gi> that immediately follows the TEI
@@ -844,7 +863,7 @@ sūtra.</p>
     commentary (<gi>p</gi> and so on). That is,
     the <gi>quote</gi> element should be a child
     of the same structural division (see below) as the elements of the
-    commentary. </p>
+    commentary.</p>
         </div>
         <div type="level2">
           <head>Enclose the base text and commentary in a division</head>
@@ -901,7 +920,7 @@ sūtra.</p>
               <p>यदशेषाभिर्महदादिकार्यग्रामजनिकाभिरात्मभूताभिः शक्तिभिः, प्रचितम्—युक्तं सत्वरजस्तमसां साम्यावस्थालक्षणं प्रधानम्, तत एवैते महदादयः कार्यभेदाः प्रवर्त्तन्ते इति कापिलाः । ...</p>
             </div>
           </egXML>
-          <p/>
+          
         </div>
         <div type="level2">
           <head>Several sections of the base text corresponding to one section
@@ -956,7 +975,7 @@ sūtra.</p>
               </lg>
             </div>
           </egXML>
-          <p/>
+          
         </div>
         <div type="level2">
           <head>Sections of base text that are distributed across several
@@ -971,7 +990,7 @@ sūtra.</p>
     allow the structure of the base text to be reconstituted. Thus the
     elements of the base text should be labelled as specified below (in
     the “verse fragments” section).</p>
-          <p/>
+          
         </div>
       </div>
       <div type="level1">
@@ -1031,7 +1050,7 @@ sūtra.</p>
   in the reference declaration
   (<gi>refsDecl</gi>), which is part of the
   encoding description (<gi>encodingDesc</gi>) in
-  the TEI Header (see above). </p>
+  the TEI Header (see above).</p>
         <div type="level2">
           <head>Labelling sections</head>
           <p>Sections of the text should be
@@ -1057,8 +1076,7 @@ sūtra.</p>
     overall reference system of the text will therefore usually include
     the numbering of <gi>div</gi> elements at the
     upper levels and the numbering of <gi>lg</gi>
-    or <gi>ab</gi> elements at the lower levels.
-    </p>
+    or <gi>ab</gi> elements at the lower levels.</p>
         </div>
         <div type="level2">
           <head>Headings and trailers</head>
@@ -1070,7 +1088,7 @@ sūtra.</p>
     in fact responsible for adding some or all of these “paratexts,” TEI
     allows you to hold him responsible and ultimately filter out such
     interventions if desired. See “holding people responsible” in the
-    SARIT Full guidelines. </p>
+    SARIT Full guidelines.</p>
           <div type="level3">
             <head>Headings</head>
             <p>Some sections of the text will begin with a heading, most often
@@ -1082,8 +1100,8 @@ sūtra.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
               <text xml:lang="sa-Deva">
                 <body><head>श्रीः</head><head>अभिनवभारती</head>
-...
-</body>
+		...
+		</body>
               </text>
             </egXML>
             <p>In addition to the headings printed in the text, the heading
@@ -1100,10 +1118,10 @@ sūtra.</p>
       on the SARIT website. For example:</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
               <div n="1"><head>अथ प्रथमपरिच्छेदः</head><head type="toc" xml:lang="en">First chapter</head>
-...
-</div>
+	      ...
+	      </div>
             </egXML>
-            <p/>
+            
           </div>
           <div type="level3">
             <head>Trailers</head>
@@ -1133,7 +1151,7 @@ sūtra.</p>
   that is, single elements that mark the transition from one unit to the
   text. Sometimes other kinds of milestones besides lines and pages are
   noted in source editions, for example manuscript folios. Specific
-  guidelines for the use of these elements are provided below. </p>
+  guidelines for the use of these elements are provided below.</p>
         <div type="level2">
           <head>Lines</head>
           <p><hi rendition="simple:bold">If you choose to encode line-breaks
@@ -1153,15 +1171,14 @@ sūtra.</p>
     section on internal references in the full version of the
     guidelines.)</p>
           <p>SARIT distinguishes two types of line breaks:
-          <list type="unordered"><item><p>a <gi>lb</gi> between words: e.g.,
-              <egXML xmlns="http://www.tei-c.org/ns/Examples">उक्तं <lb/>च</egXML></p></item><item><p>a <gi>lb</gi> in the middle of a
+          <list type="unordered"><item><p>an <gi>lb</gi> between words: e.g.,
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">उक्तं <lb/>च</egXML></p></item><item><p>an <gi>lb</gi> in the middle of a
               word, and thus after an end-of-line
               hyphen. SARIT uses the <att>break</att> attribute to
     specify that the element "is considered not to mark the end of
     any adjacent orthographic token"; the hyphen itself is
     <hi rendition="simple:bold">not</hi> encoded. For example:
-    <egXML xmlns="http://www.tei-c.org/ns/Examples">शं<lb break="no"/>करः</egXML></p></item></list>
-	  </p>
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">शं<lb break="no"/>करः</egXML></p></item></list></p>
           
             <figure n="6" xml:id="fig6">
               <head>Example 6: <gi>lb</gi> and <gi>pb</gi></head>
@@ -1190,7 +1207,7 @@ sūtra.</p>
     <egXML xmlns="http://www.tei-c.org/ns/Examples">उपप<pb n="2" break="no"/>न्नम् । यदि च</egXML>). And also like
     line-breaks, we assume that the breaking element and the
     corresponding number refer by default to the principal source
-    edition. </p>
+    edition.</p>
         </div>
         <div type="level2">
           <head>Folios</head>
@@ -1203,7 +1220,7 @@ sūtra.</p>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <pb ed="msK" n="2a"/>
           </egXML>
-          <p/>
+          
         </div>
       </div>
       <div type="level1">
@@ -1213,7 +1230,7 @@ sūtra.</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
           <p>देवमुनिगुरुनृपपुत्रविषया तु भाव एव न पुना रसः ।</p>
         </egXML>
-        <p/>
+        
       </div>
       <div type="level1">
         <head>Verse</head>
@@ -1299,7 +1316,7 @@ sūtra.</p>
             <l>परिवड्ढिएक्कमेक्काणुराअ-सर-पहर-णिव्वलिअ-सङ्ख-उलं ॥ ८७ ॥</l>
           </lg>
         </egXML>
-        <p/>
+        
         <div type="level2">
           <head>Groups of verses</head>
           <p>Groups of verses should simply be put into another
@@ -1321,7 +1338,7 @@ sūtra.</p>
               </lg>
             </lg>
           </egXML>
-          <p/>
+          
         </div>
         <div type="level2">
           <head>Fragments of verses</head>
@@ -1364,8 +1381,7 @@ sūtra.</p>
                 <p>यथा तत्रैव <note>(रत्ना॰ १।८)</note>—<lg><l>प्रारम्भेऽस्मिन् स्वामिनो वृद्धिहेतौ दैवे चेत्थं दत्तहस्तावलम्बने ।</l>
 		<l>सिद्धेर्भ्रान्तिर्नास्ति सत्यं तथापि स्वेच्छाकारी भीत एवास्मि भर्तुः ॥</l>
 	      </lg>
-	      इत्यनेन यौगन्धरायणः स्वव्यापारस्य दैवयोगात् निष्पत्तिमुक्तवानिति परिन्यासः ।
-		</p>
+	      इत्यनेन यौगन्धरायणः स्वव्यापारस्य दैवयोगात् निष्पत्तिमुक्तवानिति परिन्यासः ।</p>
               </div>
               <div type="section" n="27d">
                 <p><term>विलोभन</term>माह—</p>
@@ -1407,14 +1423,14 @@ sūtra.</p>
               <p><q>यदीद</q>मताद्रूप्येपि ताद्रूप्यप्रथनमर्थानां भासमानानां नीलादीनां स्वयमपरप्रेरणया रोचते । तत्र तथाप्रतिभासे के वयमसहमानाऽ(? अ) पि निषेद्धुं । अवस्तु च प्रतिभासते चेति व्यक्तमालीक्यं । (२१०)</p>
             </div>
           </egXML>
-          <p/>
+          
         </div>
         <div type="level2">
           <head>Verses within prose paragraphs</head>
           <p>Often verses are “embedded” into paragraphs, and we reflect this
     fact by embedding the <gi>lg</gi> element into
     the <gi>p</gi> element.</p>
-          <p/>
+          
         </div>
       </div>
       <div type="level1">
@@ -1439,13 +1455,11 @@ sūtra.</p>
 
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
           <div>
-            <ab type="sutra" n="2"><label type="adhikarana">2</label><label type="position">सि॰</label>
-	    एकस्यैवं पुनः श्रुतिरविशेषादनर्थकं हि स्यात् ॥ २
-	    </ab>
-            <p> समिधो यजति, तनूनपातं यजति इत्येवमादिः पञ्चकृत्वोऽभ्यस्तो ...</p>
+            <ab type="sutra" n="2"><label type="adhikarana">2</label><label type="position">सि॰</label>एकस्यैवं पुनः श्रुतिरविशेषादनर्थकं हि स्यात् ॥ २</ab>
+            <p>समिधो यजति, तनूनपातं यजति इत्येवमादिः पञ्चकृत्वोऽभ्यस्तो ...</p>
           </div>
         </egXML>
-        <p/>
+        
       </div>
       <div type="level1">
         <head>Dramatic elements</head>
@@ -1478,7 +1492,7 @@ sūtra.</p>
             <stage>अस्मृतिनिमित्तमुन्मनस्कत्वं रूपयति</stage>
           </sp>
         </egXML>
-        <p/>
+        
       </div>
       <div type="level1">
         <head>Labels and notes</head>
@@ -1550,7 +1564,7 @@ sūtra.</p>
   element. For example:</p>
         <egXML xmlns="http://www.tei-c.org/ns/Examples">
           <p>यं नाट्यवेदं वेदेभ्यः सारमादाय ब्रह्मा कृतवान्, यत्संबद्धमभिनयं भरतश्चकार
-करणाङ्गहारानकरोत्<note xml:lang="en"><p>A.T.A. <foreign xml:lang="sa-Latn">hārān anekān akarot</foreign>.</p></note> ... </p>
+	  करणाङ्गहारानकरोत्<note xml:lang="en"><p>A.T.A. <foreign xml:lang="sa-Latn">hārān anekān akarot</foreign>.</p></note> ...</p>
         </egXML>
         <p>Note, finally, that editors will often insert references
   <hi rendition="simple:bold">into the text itself</hi>, and you are
@@ -1567,7 +1581,7 @@ sūtra.</p>
             </lg>
           </div>
         </egXML>
-        <p/>
+        
       </div>
       <div type="level1">
         <head>Quotations</head>
@@ -1581,7 +1595,7 @@ sūtra.</p>
   skilled readers, and the frequency with which quotations are
   represented inconsistently in printed editions. Of course, if project
   resources allow, quotations can be encoded by following the
-  suggestions in the full version of the guidelines. </p>
+  suggestions in the full version of the guidelines.</p>
         <div type="level2">
           <head>Where do I put इति?</head>
           <p>The particle इति, which marks quotations in Sanskrit, can be
@@ -1624,11 +1638,15 @@ sūtra.</p>
             </figure>
           <egXML xmlns="http://www.tei-c.org/ns/Examples">
             <p>तदयुक्तं ।
-<lg><l>"तद्गतावेव शब्देभ्यो गम्यतेऽन्यनिवर्त्तनं ।</l><l>न तत्र गम्यते कश्चिद्विशिष्टः केनचित्पर" ॥</l></lg> (प्र. वा. १ । १२८)
-इति ग्रन्थविरोधात् । नीरूपस्य चास्तित्वविरोधाच्छशविषाणवत् । नीरूपत्वा-
-देव च न तस्याः प्रत्यक्षं ग्राहकं नाप्यनुमानं । सम्बन्धाभावात् ।</p>
+	    <lg>
+	      <l>"तद्गतावेव शब्देभ्यो गम्यतेऽन्यनिवर्त्तनं ।</l>
+	      <l>न तत्र गम्यते कश्चिद्विशिष्टः केनचित्पर" ॥</l>
+	    </lg>
+	    (प्र. वा. १ । १२८)
+	    इति ग्रन्थविरोधात् । नीरूपस्य चास्तित्वविरोधाच्छशविषाणवत् । नीरूपत्वा-
+	    देव च न तस्याः प्रत्यक्षं ग्राहकं नाप्यनुमानं । सम्बन्धाभावात् ।</p>
           </egXML>
-          <p/>
+          
         </div>
       </div>
       <div type="level1">
