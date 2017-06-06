@@ -139,7 +139,7 @@ apparatus. Typically, variation at the level of the letter, word and
 phrase will be encoded in a structured apparatus entry (<gi>app</gi> with
 one or more <gi>rdg</gi> elements), and variation at or above the level
 of a structural unit (a verse or prose paragraph) will be signalled in a
-<ref target="text-crit-note">text-critical note</ref> (<gi>app</gi> with
+<ref target="#text-crit-note">text-critical note</ref> (<gi>app</gi> with
 a <gi>note</gi> element).</p>
 <p>An apparatus entry consists of two obligatory parts: the
 <hi rendition="simple:italic">reading</hi>, and the
@@ -171,7 +171,7 @@ editions, the authority might be one of the following:</p>
 <list type="unordered">
   <item>
     <p>a <hi rendition="simple:italic">manuscript</hi> (in the cast of
-    most <ref target="reading1">variant readings</ref> );</p>
+    most <ref target="#reading1">variant readings</ref> );</p>
   </item>
   <item>
     <p>a modern <hi rendition="simple:italic">edition</hi> of the work,
@@ -181,11 +181,11 @@ editions, the authority might be one of the following:</p>
   <item>
     <p>a <hi rendition="simple:italic">parallel text</hi> (e.g., a
     quotation of the text in another work, in the case of
-    <ref target="restorations">restorations</ref>);</p>
+    <ref target="#restorations">restorations</ref>);</p>
   </item>
   <item>
     <p>the editor or reviewer of the digital text himself/herself (in
-    the case of <ref target="corrections">corrections</ref>).</p>
+    the case of <ref target="#corrections">corrections</ref>).</p>
   </item>
 </list>
 <p>Generally we refer to manuscript readings in the apparatus by a
@@ -194,7 +194,7 @@ manuscript (e.g., “म”). For modern editions, the most common practice is
 to also use a <hi rendition="simple:italic">siglum</hi> (e.g., “KM”).
 For books and articles, one common practice is to use the scholar's name
 in the apparatus (e.g., “Kangle”). For
-<ref target="restorations">parallel texts</ref> (including testimonia),
+<ref target="#restorations">parallel texts</ref> (including testimonia),
 apparatus entries may refer to simply the author of the parallel text
 (e.g., “Hemacandra”), its title (e.g., “Kāvyānuśāsana” or “KA”), or they
 might employ a more specific citation (“KA p. 200 l. 5”). Some editions
@@ -232,7 +232,7 @@ should be interpreted as a reference to an element that defines the
 authority and tells readers where and how it might be consulted. Those
 elements will be contained in the source description
 (<gi>sourceDesc</gi>); see the appendix,
-<ref target="appendix">Describing Witnesses</ref> , for more
+<ref target="#appendix">Describing Witnesses</ref> , for more
 information.</p>
 <p>Most of the time, a reference to the authority itself - a manuscript,
 say, or a printed edition - is sufficient; sometimes, more information,
@@ -249,7 +249,7 @@ cases, the additional information should be supplied within a
 which is a printed edition of a text rather than a manuscript, and to
 the precise location in <hi rendition="simple:italic">K</hi> where the
 quoted reading is found. See
-<ref target="restorations">restorations</ref> below.</p>
+<ref target="#restorations">restorations</ref> below.</p>
 </div>
       </div>
 <div>
@@ -306,7 +306,7 @@ such a case, the text might read:</p>
 <p>2. म.भ. नटभेदमुखप्रेक्षकमति ।</p>
 <p>The apparatus entry is embedded in the text, and refers to the
 witnesses by their xml:id, which will have been assigned already in the
-source description (see <ref target="manuscripts">below</ref> ):</p>
+source description (see <ref target="#manuscripts">below</ref> ):</p>
 <egXML xmlns="http://www.tei-c.org/ns/Examples">
   
   <p>न<app><rdg wit="#म
@@ -410,7 +410,7 @@ read:</p>
 <p>In this case, we have the option of either reproducing the exact
 wording of the editor of the printed text by placing it in a
 text-critical note, as discussed
-<ref target="text-crit-note">below</ref>, or “translating” his short
+<ref target="#text-crit-note">below</ref>, or “translating” his short
 comment in Sanskrit into TEI. We generally recommend the latter
 strategy, when the comment is unambiguous. Here, the editor is clearly
 referring to an omission, and we encode omissions with an
@@ -430,7 +430,7 @@ information about the reading of the base text (its witnesses, sources,
 etc.). If we want to represent the fact that one or more witnesses
 include material that is not found in the base text, we do not present
 it as an “omission” in the base text but as an “interpolation” in the
-witnesses (see below).</p>
+witnesses (see <ref target="#appendix">below</ref>).</p>
 </div>
 <div>
   <head>Reporting lacunae</head>
@@ -500,7 +500,7 @@ available, we must refer to a <gi>name</gi> entity somewhere in the
 header). Note that we use <att>source</att> rather than <att>wit</att>, because the scholars
 are not relying on any particular “witnesses” (the case of restorations
 from parallel texts is different and will be discussed
-<ref target="restorations">below</ref> ). Hence the following text and
+<ref target="#restorations">below</ref> ). Hence the following text and
 apparatus entry</p>
 <p>स चोभयोर3पि</p>
 <p>3. उभयोऽपि - De</p>
@@ -643,7 +643,7 @@ the correction occurs in a reading that the editor does not accept:</p>
   </app>
 </egXML>
 </div>
-<div>
+<div xml:id="restorations">
   <head>Restorations from parallel passages</head>
   <p>The term “parallel texts” includes anything that is not in the direct
 manuscript tradition of the text under consideration. Parallel texts
