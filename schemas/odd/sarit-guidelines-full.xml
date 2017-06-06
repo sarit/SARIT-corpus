@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>SARIT Encoding Guidelines</title>
+	<title type="sub">Full Version</title>
+        <author>Liudmila Olalde, Andrew Ollett, Patrick McAllister</author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>"Project SARIT: Enriching Digital Text Collections in Indology" (Bilalteral Digital Humanities Programme DFG/NEH), 2013-2017.</publisher>
+        <availability status="restricted">
+          <p>Copyright Notice:</p>
+          <p>Copyright 2017 SARIT</p>
+          <licence>
+            <p>Distributed under a <ref target="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International licence.</ref> Under this licence, you are free to:</p>
+            <list>
+              <item>Share — copy and redistribute the material in any medium or format.</item>
+              <item>Adapt — remix, transform, and build upon the material for any purpose, even commercially.</item>
+            </list>
+            <p>The licensor cannot revoke these freedoms as long as you follow the license terms.</p>
+            <p>Under the following terms:</p>
+            <list>
+              <item>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.</item>
+              <item>ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.</item>
+            </list>
+            <p>More information and fuller details of this license are given on the Creative Commons website.</p>
+          </licence>
+          <p>SARIT assumes no responsibility for unauthorised use that infringes the rights of any copyright owners, known or unknown.</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>TEI version produced by pandoc and manual editing based on <ref target="https://github.com/sarit/sarit-pm/blob/91f6ea5d78c2385e10a7c3a85ac36968df853abe/docs/encoding-guidelines-full.html">sarit-pm/91f6ea5d78c2385e10a7c3a85ac36968df853abe/docs/encoding-guidelines-full.html</ref>.</p>
+      </sourceDesc>
+    </fileDesc>
+    <revisionDesc>
+      <change who="../../saritcorpus.xml#patmcall" when="2017-06"><p>This document is based on <ref target="https://github.com/sarit/sarit-pm/blob/91f6ea5d78c2385e10a7c3a85ac36968df853abe/docs/encoding-guidelines-full.html">sarit-pm/91f6ea5d78c2385e10a7c3a85ac36968df853abe/docs/encoding-guidelines-full.html</ref>.</p></change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>This is a <hi rendition="simple:italic">preliminary</hi> set of
+guidelines for using TEI to encode textual variation for Indic texts.
+The TEI recommendations on textual criticism are
+<ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TC.html">here</ref>.
+In addition, there is a
+<ref target="http://marjorie.burghart.online.fr/?q=en/content/tei-critical-apparatus-cheatsheet">cheatsheet</ref>
+for TEI critical apparatuses written by Marjorie Burghart. If you are
+new to TEI encoding, we recommend that you take a few minutes to read
+<ref target="http://tei.oucs.ox.ac.uk/GettingStarted/html/in.html">Getting
+Started with TEI</ref>, and then Marjorie Burghart's cheatsheet for a
+quick familiarization with encoding textual variation in particular. The
+motivation for this document is that the general TEI guidelines are not
+specific enough to guarantee consistent encoding within a project, and
+other sets of guidelines are too specialized.</p>
+<p>The immediate goal of this document is to inventory the basic types
+of text-critical markup that will be included in
+<ref target="http://sarit.indology.info">SARIT</ref> texts. SARIT is a
+project that collects TEI versions of Sanskrit and Prakrit texts,
+promotes standards for their encoding, and develops applications for
+their use. At present, most texts included in SARIT have very minimal
+text-critical markup, or none at all. But we would like to include
+text-critical markup in future phases of the project and add related
+functionality to the website.</p>
+<p>This document will therefore allow us</p>
+<list>
+  <item>
+    <p>to render this markup correctly and consistently in any
+    SARIT-related applications;</p>
+  </item>
+  <item>
+    <p>to design applications that produce and interact with this kind
+    of markup on behalf of the end-user, and especially an
+    <hi rendition="simple:bold">online editor</hi> for TEI-based texts;
+    and</p>
+  </item>
+  <item>
+    <p>to document and promote standards for text-critical markup in the
+    field of Indology.</p>
+  </item>
+</list>
+<p>Encoding an existing critical edition in TEI and producing a new
+critical edition from scratch are very different tasks.
+<hi rendition="simple:bold">This document is primarily concerned with
+encoding editions that already exist in print.</hi> This means,
+<hi rendition="simple:italic">inter alia</hi>, that we produce digital
+facsimiles of print editions, which may differ radically from the
+editions that we <hi rendition="simple:italic">would</hi> produce if we
+were starting from scratch. Although these texts may be improved
+subsequently - indeed such digital editions are intended as a
+<hi rendition="simple:italic">starting point</hi> for future editorial
+work - we want to ensure that the digital edition presents
+<hi rendition="simple:italic">all</hi> of the information that is
+presented in the printed edition.</p>
+<p>This document provides guidelines for an
+<hi rendition="simple:italic">analytic</hi> apparatus, in which the
+information of the textual apparatus is highly structured, using the
+text-critical module of the TEI guidelines. This is not the only way to
+encode textual variation. In many editions, text-critical information is
+presented in unstructured footnotes or endnotes. There are benefits to
+such unstructured apparatus entries: people can easily read them and
+understand them. However, there are also benefits to using a structured
+and analytic apparatus. For example, the analytic approach permits the
+reconstitution of entire witnesses, and also allows the readings of
+particular witnesses (or editors) to be aggregated and systematically
+compared.</p>
+<p>The <hi rendition="simple:bold">language</hi> and
+<hi rendition="simple:bold">script</hi> depends on the project, but we
+insist in these guidelines that texts can be converted from one script
+to another. Thus, even if you are preparing a TEI edition in Roman
+transliteration, you should prepare it in such a way that it can easily
+be converted into Indic scripts such as Devanāgarī. Be particularly
+careful of “orphaning” combining signs such as vowel-marks
+(<hi rendition="simple:italic">mātrā</hi>s) and anusvāra:
+<egXML xmlns="http://www.tei-c.org/ns/Examples"><rdg>ṃ</rdg></egXML> might look fine in transliteration, but in
+Devanāgarī it will appear as <egXML xmlns="http://www.tei-c.org/ns/Examples"><rdg>ं</rdg></egXML>. Such conversions
+are never perfect because of the different word-separation conventions
+for Indic scripts.</p>
+<p>Please <hi rendition="simple:bold">contribute</hi> ideas and
+suggestions based on your experience, and please identify yourself in
+any contributions to this document. Thank you!</p>
+<p>Text-critical markup will generally take the form of entries in a
+critical apparatus. Most of the traditional means of representing
+textual variation, such as the “critical apparatus” itself at the bottom
+of a printed page, relate to variation at the level of the letter, word,
+and phrase. Higher-level variation (such as the addition, omission or
+rearrangement of whole chapters or sections) is usually discussed in
+text-critical notes, which may be printed with or in the critical
+apparatus. Typically, variation at the level of the letter, word and
+phrase will be encoded in a structured apparatus entry (<gi>app</gi> with
+one or more <gi>rdg</gi> elements), and variation at or above the level
+of a structural unit (a verse or prose paragraph) will be signalled in a
+<ref target="text-crit-note">text-critical note</ref> (<gi>app</gi> with
+a <gi>note</gi> element).</p>
+<p>An apparatus entry consists of two obligatory parts: the
+<hi rendition="simple:italic">reading</hi>, and the
+<hi rendition="simple:italic">authority</hi> on which the reading is
+based. In this context, the <hi rendition="simple:italic">lemma</hi> is
+another word for the <hi rendition="simple:italic">reading</hi> of the
+base text, which may or may not be repeated explicitly in the apparatus
+entry, depending on the encoding strategy used.</p>
+<p>The <hi rendition="simple:italic">reading</hi>, as noted above,
+should generally be no longer than a few words.
+<hi rendition="simple:bold">The reading must not be shorter than a
+syllable.</hi> The reason for this restriction is that we want to avoid
+TEI elements that begin with combining letters in Indic scripts ( े, ो,
+ा, ृ, etc.). In cases where the variation is “really” at the level of
+the diacritical mark, or <hi rendition="simple:italic">mātrā</hi>, we
+recommend encoding the rest of the syllable anyway (e.g., when there is
+variation between ke and ko, encode
+<hi rendition="simple:italic">ke</hi> or
+<hi rendition="simple:italic">ko</hi> and not
+<hi rendition="simple:italic">k</hi>+<hi rendition="simple:italic">e</hi>
+or <hi rendition="simple:italic">o</hi>).</p>
+<p>One of the two main parts of the apparatus entry is the
+<hi rendition="simple:italic">authority</hi> on which the reading is
+based. If we confine ourselves to digital transcriptions of printed
+editions, the authority might be one of the following:</p>
+<list type="unordered">
+  <item>
+    <p>a <hi rendition="simple:italic">manuscript</hi> (in the cast of
+    most <ref target="reading1">variant readings</ref> );</p>
+  </item>
+  <item>
+    <p>a modern <hi rendition="simple:italic">edition</hi> of the work,
+    or some other piece of modern scholarship (in the case of
+    emendations);</p>
+  </item>
+  <item>
+    <p>a <hi rendition="simple:italic">parallel text</hi> (e.g., a
+    quotation of the text in another work, in the case of
+    <ref target="restorations">restorations</ref>);</p>
+  </item>
+  <item>
+    <p>the editor or reviewer of the digital text himself/herself (in
+    the case of <ref target="corrections">corrections</ref>).</p>
+  </item>
+</list>
+<p>Generally we refer to manuscript readings in the apparatus by a
+<hi rendition="simple:italic">siglum</hi> that uniquely identifies the
+manuscript (e.g., “म”). For modern editions, the most common practice is
+to also use a <hi rendition="simple:italic">siglum</hi> (e.g., “KM”).
+For books and articles, one common practice is to use the scholar's name
+in the apparatus (e.g., “Kangle”). For
+<ref target="restorations">parallel texts</ref> (including testimonia),
+apparatus entries may refer to simply the author of the parallel text
+(e.g., “Hemacandra”), its title (e.g., “Kāvyānuśāsana” or “KA”), or they
+might employ a more specific citation (“KA p. 200 l. 5”). Some editions
+include a separate apparatus for parallel texts.</p>
+<p>We want all of the references in the critical apparatus to be clear
+and unambiguous, and we want to make it easy for readers to look up the
+full bibliographic entry that the reference corresponds to. For this
+reason, <hi rendition="simple:bold">all authorities referenced in the
+apparatus must be defined elsewhere in the document</hi>, or
+alternatively <hi rendition="simple:bold">in an external authority
+file</hi>. At the moment, we suggest referring to these authorities by
+<hi rendition="simple:italic">xml:id</hi>. That is, if you want to
+report the readings of a manuscript “K,” then your apparatus entry must
+refer to an XML element identified by the ID “K”, as follows:</p>
+<p>In the <hi rendition="simple:italic">text</hi>:</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  !!!<app>!!!<lem
+    source="#ed">mai!!!</lem>!!!<rdg
+    wit="#K">nai!!!</rdg>!!!</app>vaṃ
+</egXML>
+<p>In the <hi rendition="simple:italic">header</hi> :</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  !!!<listWit>
+  !!!<witness xml:id="K">Manuscript
+    K!!!</witness>
+    </listWit>
+</egXML>
+
+<p>In this system, every reference to an “authority” in the apparatus
+should be interpreted as a reference to an element that defines the
+authority and tells readers where and how it might be consulted. Those
+elements will be contained in the source description
+(<gi>sourceDesc</gi>); see the appendix,
+<ref target="appendix">Describing Witnesses</ref> , for more
+information.</p>
+<p>Most of the time, a reference to the authority itself - a manuscript,
+say, or a printed edition - is sufficient; sometimes, more information,
+such as page, folio, or line numbers, will have to be added. In those
+cases, the additional information should be supplied within a
+<gi>ref</gi> element inside the apparatus entry:</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+    !!!<app>!!!<rdg source="#K">!!!<ref>p.
+    100 l. 10!!!</ref>naivaṃ!!!</rdg>!!!</app>
+</egXML>
+<p>This entry refers to a “source” <hi rendition="simple:italic">K</hi>,
+which is a printed edition of a text rather than a manuscript, and to
+the precise location in <hi rendition="simple:italic">K</hi> where the
+quoted reading is found. See
+<ref target="restorations">restorations</ref> below.</p>
+<p>Printed texts almost always have an
+<hi rendition="simple:italic">external</hi> apparatus, which is printed
+either at the bottom of the page or in an appendix. SARIT recommends the
+use of an <hi rendition="simple:italic">internal</hi> apparatus, in
+which the apparatus entries are embedded directly into the text. Adding
+TEI encoding to a text will therefore mean converting an external
+apparatus to an internal apparatus.</p>
+<p>The TEI P5 guidelines distinguish three strategies for
+<ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TC.html#TCAPLK">linking</ref>
+the critical apparatus to the text:</p>
+<list type="unordered">
+  <item>
+    <p>the <hi rendition="simple:italic">location-referenced</hi>
+    method, in which the apparatus entry is embedded in the text at a
+    certain point;</p>
+  </item>
+  <item>
+    <p>the <hi rendition="simple:italic">double-end-point-attached</hi>
+    method, which embeds the apparatus entry in the text at a certain
+    point <hi rendition="simple:italic">but also</hi> refers to another
+    point of reference where the “lemma” of the apparatus begins or
+    ends.</p>
+  </item>
+  <item>
+    <p>the <hi rendition="simple:italic">parallel-segmentation</hi>
+    method, where the “lemma” is placed inside the apparatus entry.</p>
+  </item>
+</list>
+<p>Because we will generally be converting footnotes into apparatus
+entries, the <hi rendition="simple:italic">location-referenced</hi>
+method will generally be most appropriate. For some projects, the
+parallel-segmentation method might be desirable and feasible, because it
+encodes all of the relevant information into the apparatus entry itself.
+However, it is often difficult to determine the lemma to which a reading
+given in the apparatus of a printed texts corresponds (and impossible to
+isolate the lemma programmatically); moreover, the
+<hi rendition="simple:italic">location-referenced</hi> and
+<hi rendition="simple:italic">double-end-point attached</hi> method
+allow for the possibility of conflicting apparatus entries, and the
+<hi rendition="simple:italic">parallel-segmentation</hi> method
+generally does not. Examples will be given in the following cases.</p>
+<p>This is perhaps the most common situation. The apparatus (or a
+text-critical footnote) refers to the reading of another witness. In
+such a case, the text might read:</p>
+<p>न2 तदेकमुखप्रेक्षितामतिवर्तते ।</p>
+<p>And the apparatus or footnote reads:</p>
+<p>2. म.भ. नटभेदमुखप्रेक्षकमति ।</p>
+<p>The apparatus entry is embedded in the text, and refers to the
+witnesses by their xml:id, which will have been assigned already in the
+source description (see <ref target="manuscripts">below</ref> ):</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  <p>न!!!<app>!!!<rdg wit="#म
+    #भ">नटभेदमुखप्रेक्षकमति ।!!!</rdg>!!!</app>
+    तदेकमुखप्रेक्षितामतिवर्तते ।</p>
+</egXML>
+
+<p>This example uses the
+<hi rendition="simple:italic">location-referenced</hi> method. The
+<hi rendition="simple:italic">parallel-segmentation</hi> method would
+be:</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  !!!<app>
+  !!!<lem source="#ed">न तदेकमुखप्रेक्षितामतिवर्तते
+    ।!!!</lem>
+    <rdg wit="#म #भ">नटभेदमुखप्रेक्षकमति
+    ।!!!</rdg></app>
+</egXML>
+
+<p>Since projects often need to convert hundreds or thousands of
+apparatus entries, this method is generally not feasible, since it
+requires a human editor to determine the beginning and ending of the
+apparatus entry.</p>
+<p>In both cases, we are using an <gi>app</gi> element to contain the
+entire apparatus entry, and each distinct reading within the apparatus
+entry is given by the <gi>rdg</gi> element. The
+<hi rendition="simple:italic">witness</hi> of the reading is referred to
+in the value of the @wit attribute, if it is a manuscript; if the
+reading is based on a printed text, that text is referred to in the
+value of the @source attribute. The <gi>lem</gi> element is required in
+the parallel-segmentation method, but optional in the
+location-referenced method; its primary purpose in the
+location-referenced method is to supply information (such as witnesses
+or responsibility) about the reading of the base text.</p>
+<p>Here is another example. The text and apparatus read:</p>
+<p>अवराहेहि1</p>
+<p>1. B अवराहो वि.</p>
+<p>The encoding would be (again using the location-referenced
+method):</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  अवराहेहि!!!<app>!!!<rdg wit="#B">अवराहो
+    वि!!!</rdg>!!!</app>
+</egXML>
+<p>Now suppose we have two different readings. The text and apparatus
+read:</p>
+<p>7चैव तत्त्वतः</p>
+<p>7. अ. चापि । क्ष.म. चाभिधत्स्व नः</p>
+<p>Here we have to use the location-referenced method, because the scope
+of the given readings is different:</p>
+
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  <app>
+    !!!<rdg wit="#अ">चापि!!!</rdg>
+    !!!<rdg wit="#क्ष #म">चाभिधत्स्व नः!!!</rdg>
+    !!!</app>चैव तत्त्वतः
+</egXML>
+
+<p>Note in this case that the different witnesses to the same reading,
+क्ष and म, are referred to in the same @wit attribute of the same
+<gi>rdg</gi> element, since they have an identical reading.</p>
+<p>If two scholars read the same witness (say, a manuscript)
+differently, we may use the @source attribute on the <gi>rdg</gi> element
+<hi rendition="simple:italic">together with</hi> the @wit element. The
+value of @source, although typically the name of the scholar in
+apparatus entries, should point to the bibliographic citation in which
+the scholar presented the reading (usually an edition).</p>
+<p>This is exactly parallel to the case of reporting the reading of a
+manuscript. The only difference is that we refer to a printed text
+rather than to a manuscript. And to refer to printed texts, we use the
+attribute @source rather than @wit. Hence for a text and apparatus that
+read:</p>
+<p>विज्जुप्फुरियं2</p>
+<p>2. Laber विज्जुप्फुरिओ.</p>
+<p>We write:</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  विज्जुप्फुरियं!!!<app>!!!<rdg source="#Laber">विज्जुप्फुरिओ!!!</rdg>!!!</app>
+</egXML>
+
+<p>Suppose we have in the text and apparatus:</p>
+<p>रामादौ4</p>
+<p>4. म.भ. अयं भागो नास्ति ।</p>
+<p>In this case, we have the option of either reproducing the exact
+wording of the editor of the printed text by placing it in a
+text-critical note, as discussed
+<ref target="text-crit-note">below</ref>, or “translating” his short
+comment in Sanskrit into TEI. We generally recommend the latter
+strategy, when the comment is unambiguous. Here, the editor is clearly
+referring to an omission, and we encode omissions with an
+<hi rendition="simple:italic">empty</hi> <gi>rdg</gi> element:</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  रामादौ!!!<app>!!!<rdg wit="#म
+    #भ"/>!!!</app>
+</egXML>
+
+<p>Note that when we use the location-referenced method, an empty
+<gi>lem</gi> element is not interpreted in the same way as an empty
+<gi>rdg</gi> element. The latter means that the witness referred to lacks
+the reading of the base text; the former simply gives us additional
+information about the reading of the base text (its witnesses, sources,
+etc.). If we want to represent the fact that one or more witnesses
+include material that is not found in the base text, we do not present
+it as an “omission” in the base text but as an “interpolation” in the
+witnesses (see below).</p>
+<p>Lacunae are not omissions, but places in which the manuscript (or its
+exemplar) has been damaged. Encoding lacunae using the
+location-referenced method of apparatus attachment is difficult. If the
+exact locations of the lacunae are known, the beginnings and ends can be
+marked with a !!!<gi>lacunaStart</gi> and <gi>lacunaEnd</gi> element, which
+must be contained within a <gi>lem</gi> or <gi>rdg</gi> element. Further
+details might be provided in a <gi>note</gi> element contained within the
+<gi>lem</gi> or <gi>rdg</gi> element. Here is one example that uses the
+<att>type</att> attribute to show that the given readings represent lacunae:</p>
+<p>[तव]8 लोलं मनः</p>
+<p>8 A: ••• (lacuna marked by 3 points); B: (lacuna marked by a blank of
+two spaces); C: ••••• (lacuna marked by 5 points): तव supplied from
+D.</p>
+<p>According to the location-referenced method:</p>
+
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  तव!!!<app>
+  !!!<lem wit="#D">तव!!!</lem>
+  !!!<rdg wit="#A"
+    type="lacuna">•••!!!</rdg>
+  !!!<rdg wit="#B" type="lacuna">
+    !!!</rdg>
+   !!!<rdg wit="#C"
+    type="lacuna">•••••!!!</rdg>
+   !!!</app> लोलं मनः
+</egXML>
+
+<p>According to the parallel-segmentation method:</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  !!!<app>
+!!!<lem wit="#D">तव!!!</lem>
+!!!<rdg wit="#A"
+    type="lacuna">•••!!!</rdg>
+!!!<rdg wit="#B" type="lacuna">
+    !!!</rdg>
+!!!<rdg wit="#C"
+    type="lacuna">•••••!!!</rdg>
+!!!</app>लोलं मनः
+</egXML>
+<p>An interpolation, in this context, is a reading that is found in one
+or more manuscript witnesses but has been excluded from the base text
+because the editors have judged it to be not original.</p>
+<p>Examples - the <hi rendition="simple:italic">Raghupañjikā</hi>
+edition?</p>
+<p>Emendations are traditionally referred to the
+<hi rendition="simple:italic">name</hi> of the scholar who proposed the
+reading. However, it is generally more helpful to readers to refer to a
+specific bibliographic item (a book or article) in which the scholar has
+proposed the reading. Thus we refer to emendations with the @source
+attribute, and we make the value of this attribute point towards a
+bibliographic citation (in cases where a bibliographic citation is not
+available, we must refer to a <gi>name</gi> entity somewhere in the
+header). Note that we use @source rather than @wit, because the scholars
+are not relying on any particular “witnesses” (the case of restorations
+from parallel texts is different and will be discussed
+<ref target="restorations">below</ref> ). Hence the following text and
+apparatus entry</p>
+<p>स चोभयोर3पि</p>
+<p>3. उभयोऽपि - De</p>
+<p>would be encoded as follows:</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  !!स चोभयोर!!!<app>!!!<rdg
+  source="#De">उभयोऽपि!!!</rdg>!!!</app>पि
+</egXML>
+<p>Another example:</p>
+<p>वासनात्मनेह1</p>
+<p>1. ते - De</p>
+<p>would be encoded as follows:</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">
+  !!वासनात्मनेह!!!<app>!!!<rdg
+  source="#De">ते!!!</rdg>!!!</app>
+</egXML>
+<p>This example shows how the readings reported in the editions often do
+not make sense without further information, and hence require us to use
+the <hi rendition="simple:italic">location-referenced</hi> method rather
+than the <hi rendition="simple:italic">parallel-segmentation</hi>
+method.</p>
+<p>Another example includes some additional information about the lemma
+as well as a reading ascribed to “RK,” or Ramakrishna Kavi. We are not
+told whether this is Kavi's <hi rendition="simple:italic">reading</hi>
+of the manuscript, or his <hi rendition="simple:italic">emendation</hi>
+, but he will appear in the @source attribute in any case. We are also
+not told where Ramakrishna Kavi proposed this reading, and thus what
+bibliographic citation #RK should point to, but this questions need to
+be settled on a project-by-project basis.</p>
+<p>स्थायी भवत्य2नुपचितः</p>
+<p>2. H.Ms.; भवत्यनुपचितः RK.</p>
+<p>The encoding would be:</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">!!स्थायी भवत्य!!!<app>!!!<lem
+    wit="#HMs"/>!!!<rdg
+    source="#RK">भवत्यनुपचितः!!!</rdg>!!!</app>नुपचितः
+</egXML>
+
+
+<p>In this case, the attribution of the
+<hi rendition="simple:italic">lemma</hi> to the Hoshiarpur manuscript is
+given through the empty element <gi>lem</gi> with the attribute
+@wit="#HMs". This simply provides information about the
+reading of the base text. We do not, however, know exactly where the
+reading of the Hoshiarpur manuscript begins and ends.</p>
+<p>Sometimes the exact nature of the scholar's responsibility is not
+clear from the editor's note or the apparatus entry. We should generally
+try to translate these into TEI-compliant forms. Hence in the following
+example, where the reading of the base text is “supported” by De but no
+alternative readings are given, we make De a “source” for the lemma:</p>
+<p>कालात्तु8</p>
+<p>8. supported by De.</p>
+<p>as follows:</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">!!कालात्तु!!!<app>!!!<lem
+source="#De"/>!!!</app></egXML>
+
+<p>One more example involves manuscript readings and emendations
+reported both in the text and in the apparatus:</p>
+<p>चक्कस(ना)8मवहू का(क)9न्तसहाइणिआ ।</p>
+<p>8. Kavi - सना(णा) 9. क-not read by Kavi;</p>
+<p>This is an unfortunately typical example. We are given to know in an
+earlier note that corrections to the text, as well as the footnotes, are
+the responsibility of V.M. Kulkarni, the editor (of the second edition
+of this part of the <hi rendition="simple:italic">Nāṭyaśāstra</hi> ). We
+must figure out that the readings that Kulkarni regards as correct are
+those <hi rendition="simple:italic">in</hi> the parenthesis, and the
+incorrect readings of the manuscript(s) are outside of the parentheses;
+we must also be aware that parentheses are also used for
+<hi rendition="simple:italic">Kulkarni's</hi> additions to the text
+(readings not found in M. Ramakrishna Kavi's earlier edition), as well
+as <hi rendition="simple:italic">Kavi's</hi> additions to the text. The
+apparatus entry might look like this, assuming we simply want to encode,
+and not correct, Kulkarni's text:</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">चक्कसना!!!<app>
+!!!<lem resp="#VMK">ना!!!</lem>
+!!!<rdg wit="#MRK">णा!!!</rdg>
+!!!<rdg wit="#mss"/>
+!!!</app>मवहू क!!!<app>
+!!!<lem resp="#VMK">क!!!</lem>
+!!!<rdg wit="#MRK"/>
+!!!<rdg wit="#mss">का!!!</rdg>
+!!!</app>न्तसहाइणिआ
+</egXML>
+
+
+<p>The first apparatus entry shows that Kavi added णा after स and
+Kulkarni changed it to ना (incorrectly); the second shows that Kavi
+failed to read the का of the manuscript(s), which Kulkarni has emended
+to क. None of the manuscripts are actually referred to in the apparatus
+entry, so we have to use the dummy-referent #mss. In the
+parallel-segmentation method this line would read:</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">चक्कस!!!<app>
+!!!<lem resp="#VMK">ना!!!</lem>
+!!!<rdg wit="#MRK">णा!!!</rdg>
+!!!<rdg wit="#mss"/>
+!!!</app>मवहू !!!<app>
+!!!<lem resp="#VMK">क!!!</lem>
+!!!<rdg wit="#MRK"/>
+!!!<rdg wit="#mss">का!!!</rdg>
+!!!</app>न्तसहाइणिआ</egXML>
+
+<p>The editor or reviewer will sometimes want to communicate that the
+witness <hi rendition="simple:italic">reads</hi> X, where X is clearly a
+mistake or corruption for Y. In such cases, the editor's reading is not
+an <hi rendition="simple:italic">emendation</hi> (especially when the
+editor does not accept the corrected reading as original), but simply a
+<hi rendition="simple:italic">correction</hi>. For such cases we use the
+<gi>choice</gi> element, which has two children: <gi>sic</gi> reporting
+the reading as given, and <gi>corr</gi> reporting the corrected reading.
+<gi>corr</gi> should have a resp (responsibility) attribute that
+identifies the person who made the correction. Here is an example where
+the correction occurs in a reading that the editor does not accept:</p>
+<p>सुयणा वि दुज्जणा इह विणिम्मिया भुयणे1</p>
+<p>1. <hi rendition="simple:bold">B</hi> सुयणा वि णिम्मिआ दुज्जणाइ इह
+सुवणे [ = दुज्जणा इह भुवणे ]</p>
+<p>This would be encoded as:</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<app>
+!!!<lem>सुयणा वि दुज्जणा इह विणिम्मिया भुयणे!!!</lem>
+!!!<rdg wit="#B">सुयणा वि णिम्मिआ
+!!!<choice>
+!!!<sic>दुज्जणाइ इह सुवणे!!!</sic>
+!!!<corr resp="#ed">दुज्जणा इह
+    भुवणे!!!</corr>
+!!!</choice>
+!!!</rdg>
+!!!</app></egXML>
+<p>The term “parallel texts” includes anything that is not in the direct
+manuscript tradition of the text under consideration. Parallel texts
+might be:</p>
+<list type="unordered">
+  <item>
+    <p>quotations of the text in a later text, either anonymously or
+    attributed (e.g., a verse from Dharmakīrti's
+    <hi rendition="simple:italic">Pramāṇavārttika</hi> in
+    Śālikanāthamiśra's
+    <hi rendition="simple:italic">Prakaraṇapañcikā</hi> );</p>
+  </item>
+  <item>
+    <p>anthologizations of the text (e.g., a verse from Rājaśekhara's
+    <hi rendition="simple:italic">Bālarāmāyaṇa</hi> in the
+    <hi rendition="simple:italic">Saduktikarṇāmṛta</hi> )</p>
+  </item>
+  <item>
+    <p>reworkings or adaptations of the text (e.g., Hemacandra's
+    adaptation of Abhinavagupta's discussion of
+    <hi rendition="simple:italic">rasa</hi> in his
+    <hi rendition="simple:italic">Kāvyānuśāsana</hi> ).</p>
+  </item>
+</list>
+<p>In these cases, the reading is referred to another text, and
+preferably with a pointer to a location in that text (either a page
+number or a canonical reference such as chapter and verse). The parallel
+text thus serves as a <hi rendition="simple:italic">source</hi> , and
+should be referred to in the @source attribute. (In some cases, the
+parallel text is read from a manuscript, in which case the @wit
+attribute should be used.) <hi rendition="simple:italic">References</hi>
+to locations within the parallel text should be encoded using a
+<gi>ref</gi> element inside of the reading element.</p>
+<p>Hence the apparatus entry:</p>
+<p>गता6</p>
+<p>6. याता for गता KA., p. 89.</p>
+<p>should be encoded as follows:</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">!!गता!!!<app>!!!<rdg
+    source="#KA">!!!<ref>p.
+89!!!</ref>याता!!!</rdg>!!!</app>
+</egXML>
+
+<p>In this case, there is also the possibility of using the
+parallel-segmentation method:</p>
+
+<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<app>
+!!!<lem source="#ed">गता!!!</lem>
+!!!<rdg source="#KA">!!!<ref>p.
+    89!!!</ref>याता!!!</rdg>
+!!!</app></egXML>
+<p>Here is another example, where the parallel text was a source of the
+reading of the base text (lemma):</p>
+<p>7स्फीतदशायां</p>
+<p>7. KLV.</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!!!<app>!!!<lem
+source="#KLV"/>!!!</app>स्फीतदशायां
+</egXML>
+<p></p>
+<p>The person who is <hi rendition="simple:italic">responsible</hi> for
+identifying the parallel might also be referred to in the @resp
+attribute. Thus, if we want to say that V. M. Kulkarni (VMK) found a
+parallel passage in the Kāvyakalpalatāviveka (KLV), we might make #VMK
+point to the bibliographic entry for Kulkarni's article, and #KLV to the
+bibliographic entry for the edition of the KLV, and encode as
+follows:</p>
+<egXML  xmlns="http://www.tei-c.org/ns/Examples">
+  !!!<app>
+!!!<lem source="#KLV"
+    resp="#VMK">भावो!!!</lem>
+!!!</app>
+</egXML>
+<p>Sometimes a parallel text is adduced in favor of a reading, although
+the parallel text itself is not a “witness” to the reading. Here is one
+example:</p>
+<p>अनुकार्येऽनुकर्तर्यपि चानु5सन्धानबलात् - इति ।</p>
+<p>5. विचारा - De; but रामादिरूपता Hemacandro,KA,p. 89</p>
+<p>In this case, Hemacandra's
+<hi rendition="simple:italic">Kāvyānuśāsana</hi> has a passage that
+corroborates the reading अनुसन्धान॰ rather than De's विचारा॰ (although
+it is difficult to see this, and indeed difficult to see exactly what
+De's reading corresponds to in the edition). This information should be
+put into a <gi>note</gi> element that qualifies the reading proposed by
+De. When we convert this entry to TEI, and correct some of the
+typographic mistakes, we get:</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">अनुकार्येऽनुकर्तर्यपि चानु!!!<app>
+!!!<rdg resp="#De">विचारा!!!<note
+    xml:lang="en">but !!!<ref target="#KA"/>
+    p. 89 has !!!<foreign
+    xml:lang="sa-Deva">रामादिरूपता!!!</foreign>!!!</note>!!!</rdg>
+!!!</app>सन्धानबलात् - इति ।</egXML>
+<p>An editor might refer to the reading of a commentary - either the
+reading that the commentator <hi rendition="simple:italic">accepts</hi>
+, or a reading that he <hi rendition="simple:italic">mentions</hi> . [No
+examples of an apparatus entry that features such readings.]</p>
+<p>It will often make sense to
+<hi rendition="simple:italic">classify</hi> the readings (whether they
+are manuscript readings, conjectures, emendations, etc.) based on the
+kind of variation that they index. For example, there may be a group of
+variants that are orthographic in nature: one group of manuscripts
+consistently reads अ where another group consistently reads य. Depending
+on the needs of the project, this variation can be “typed” as
+orthographic with an attribute of the <gi>app</gi> element.</p>
+<p><hi rendition="simple:italic">[SARIT will probably need a constrained
+list of apparatus “types” if this attribute is to be of any
+use.]</hi></p>
+<p>Some editions provide references in the body of the text, for example
+in parenthesis, and other editions provide references in footnotes that
+are found together with variant readings at the bottom of the page.
+Since these references are not strictly speaking apparatus entries, we
+do not use the TEI element <gi>app</gi> for them. Instead, we encode them
+as notes, with the <gi>note</gi> element. Further recommendations are
+beyond the scope of this document.</p>
+<p>Text-critical notes such as are found in the critical apparatus of a
+printed text should also be encoded as apparatus entries. A <gi>note</gi>
+element within an <gi>app</gi> element will be interpreted as such a
+text-critical note.</p>
+<p>The language of the apparatus may be
+<hi rendition="simple:italic">the same as</hi> or
+<hi rendition="simple:italic">different from</hi> the language of the
+encoded text. In the latter case, it is necessary to specify in the TEI
+Header that all text-critical notes (app/note) should have a certain
+@xml:lang attribute: en for English, sa-Deva for Sanskrit in the
+Devanāgarī script, etc. (See the
+<ref target="http://sarit.indology.info/exist/apps/sarit/docs/encoding-guidelines.html">SARIT
+Guidelines</ref> for a discussion of language attributes.) Sometimes,
+for example when a text has been edited several times, there might be
+text-critical notes in two languages; in such cases, one will be the
+“default” language defined in the TEI Header, and the other must be
+noted with an @xml:lang attribute on each <gi>note</gi> element. Take
+care, however, to enclose any Sanskrit text or readings in the
+<gi>note</gi> element within an element with the appropriate @xml:lang
+attribute. (The default TEI element for foreign text is
+<gi>foreign</gi>).</p>
+<p>The <gi>note</gi> element may can contain any of the elements allowed
+in the TEI P5 DTD. Typically, notes found in the apparatus will not have
+paragraph-level formatting, so they should contain text rather than
+elements such as <gi>p</gi>. Here is an example:</p>
+<p>1 सदाचारं प्रमाणयता ...</p>
+<p>1 The following verse is found in the beginning of the
+<hi rendition="simple:italic">Avaloka</hi> only in the Adyar Telugu
+Manuscript:</p>
+<p><hi rendition="simple:italic">vācakaḥ praṇavo yasya krīḍāvastv
+akhilaṃ jagat |</hi></p>
+<p><hi rendition="simple:italic">śrutir ājñā, vapur jñānaṃ, taṃ vande
+devakīsutam ||</hi></p>
+<p>F. Hall noted in his Preface (p. 5, fn.) to his edition of the
+<hi rendition="simple:italic">Daśarūpaka</hi> that in one of the
+manuscripts of the <hi rendition="simple:italic">Avaloka</hi> the
+following verse, which is different from the one now seen, was
+found:</p>
+<p><hi rendition="simple:italic">praṇipatya śivaṃ sāmbam ācāryaṃ
+bharataṃ tathā |</hi></p>
+<p><hi rendition="simple:italic">kriyate daśarūpasya vyākhyānaṃ
+dhanikena vai ||</hi></p>
+<p>This was however rejected by F. Hall as spurious.</p>
+<p>I would encode this note as follows (the @xml:lang attribute of the
+<gi>note</gi> element may be omitted if it is specified elsewhere):</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<app>
+!!!<note xml:lang="en">The following verse is found
+    in the beginning of the !!!<hi
+    rend="italics">Avaloka!!!</hi> only in the Adyar
+    Telugu Manuscript:
+!!!<quote>
+!!!<lg xml:lang="sa-Latn">
+!!!<l>vācakaḥ praṇavo yasya krīḍāvastv akhilaṃ jagat
+    |!!!</l>
+!!!<l>śrutir ājñā, vapur jñānaṃ, taṃ vande devakīsutam
+    ||!!!</l>
+!!!</lg>
+!!!</quote>
+F. Hall noted in his Preface (p. 5, fn.) to his edition of the
+    !!!<hi rend="italics">Daśarūpaka!!!</hi> that in one
+    of the manuscripts of the !!!<hi
+    rend="italics">Avaloka!!!</hi> the following verse,
+    which is different from the one now seen, was found:
+!!!<quote>
+!!!<lg xml:lang="sa-Latn">
+!!!<l>praṇipatya śivaṃ sāmbam ācāryaṃ bharataṃ tathā
+    |!!!</l>
+!!!<l>kriyate daśarūpasya vyākhyānaṃ dhanikena vai
+    ||!!!</l>
+!!!</lg>
+!!!</quote>
+This was however rejected by F. Hall as
+    spurious.!!!</note>
+!!!</app>सदाचारं प्रमाणयता ...</egXML>
+<p>By “witnesses” we mean any source that attests to a given reading
+supplied in the apparatus. Thus “witnesses” includes
+<hi rendition="simple:italic">manuscripts</hi> as well as printed
+editions, scholarly books and articles, and so on. All of these
+witnesses should be described in the <hi rendition="simple:bold">source
+description</hi> (<gi>sourceDesc</gi>) in the TEI Header, but manuscript
+sources and printed sources will generally be described differently.
+Each witness must be assigned a unique @xml:id by which it is referred
+in the apparatus entries.</p>
+<p>Manuscripts may be defined and referred to in a number of ways
+according to the TEI guidelines. We recommend the use of the
+<gi>listWit</gi> element within the source description, for several
+reasons: this can include <gi>witness</gi> elements that refer to
+manuscripts as well as groups of manuscripts, whereas the alternatives
+(e.g., defining manuscripts in <gi>listBibl</gi> with <gi>msDesc</gi>) do
+not allow for the possibility of defining a group of manuscripts. The
+children of the <gi>listWit</gi> element might be manuscripts (defined
+either through <gi>msDesc</gi> or <gi>witness</gi>) or groups of
+manuscripts (defined through <gi>witness</gi>). In any case, the @xml:id
+of the manuscript(s) should serve as the siglum by which the witness is
+referred to in the apparatus. Here is an example:</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<listWit>
+!!!<witness xml:id="HMs">Hoshiarpur
+    manuscript.!!!</witness>
+!!!<witness xml:id="म">Kavi's manuscript
+    "म."!!!</witness>
+!!!<witness xml:id="भ">Kavi's manuscript
+    "भ."!!!</witness>
+!!!<witness xml:id="mss">All of the
+    manuscripts.!!!</witness>
+!!!</listWit></egXML>
+
+<p>The TEI guidelines
+<ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TC.html#TCAPWL">recommend</ref>
+that manuscripts defined in the list of witnesses by supplied with a
+pointer to a complete description of the manuscript elsewhere, either
+within the same project (using the <gi>msDesc</gi> element) or in an
+external resource.</p>
+<p>Printed sources should be defined in a <gi>listBibl</gi> element in
+the source description. For the content and structure of the
+<gi>listBibl</gi> element, please consult the TEI P5 Guidelines
+<ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#COBITY">on
+this topic</ref>. Additionally, we recommend the @type attribute of
+<gi>bibl</gi> or <gi>biblStruct</gi>, with the values of article, book,
+incollection, phdthesis, etc., so the TEI bibliography entry can easily
+be converted into other formats. Here are a few examples:</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<listBibl>
+!!!<bibl xml:id="VMK"
+    type="incollection">
+!!!<author>
+!!!<name>!!!<surname>Kulkarni!!!</surname>
+    !!!<forename>V. M.!!!</forename>!!!</name>
+!!!</author>
+!!!<title level="a">Abhinavabhāratī Text: Professor
+    Kangle's Emendations!!!</title>
+!!!<biblScope unit="pp" from="113"
+    to="123">113-123!!!</biblScope>
+!!!<title level="m">Vidyopaasanaa: Studies in Honour
+    of Harivallabh C. Bhayani!!!</title>
+!!!<editor>
+!!!<name>
+!!!<surname>Mistry!!!</surname>
+!!!<forename>P. J.!!!</forename>
+!!!</name>
+!!!</editor>
+!!!<editor>
+!!!<name>
+!!!<surname>Modi!!!</surname>
+!!!<forename>Bharati!!!</forename>
+!!!</name>
+!!!</editor>
+!!!<pubPlace>Mumbai!!!</pubPlace>
+!!!<pubPlace>Ahmedabad!!!</pubPlace>
+!!!<publisher>Image Publications!!!</publisher>
+!!!<date when="1999">1999!!!</date>
+!!!</bibl>
+!!!<bibl xml:id="KA" type="book">
+!!!<title level="m">Kāvyānuśāsana [with
+    Alaṃkāracūḍāmaṇi
+and Viveka] of Ācārya Hemacandra with Two Anonymous
+Ṭippaṇas!!!</title>
+!!!<editor>
+!!!<name>
+!!!<surname>Parikh!!!</surname>
+!!!<forename>Rasiklal!!!</forename>
+!!!</name>
+!!!</editor>
+!!!<editor>
+!!!<name>
+!!!<surname>Kulkarni!!!</surname>
+!!!<forename>V. M.!!!</forename>
+!!!</name>
+!!!</editor>
+!!!<pubPlace>Bombay!!!</pubPlace>
+!!!<publisher>Śrī Mahāvīra Jaina
+    Vidyālaya!!!</publisher>
+!!!<date when="1964">1964!!!</date>
+!!!</bibl>
+!!!</listBibl></egXML>
+<p>Normally, the “people” referred to in the critical apparatus are
+scholars who have published their readings, corrections, emendations
+etc. in a book or article. And thus these “people” are generally treated
+as “sources” in the apparatus, and their names should point to a
+bibliographic entry as exemplified above.</p>
+<p>The “default” place for such information is a list of persons, which
+is contained in the <gi>particDesc</gi> (the description of
+participants), which is contained in the <gi>profileDesc</gi> (profile
+description) of the TEI Header. For instance, a reading which the editor
+attributes to S. K. De but which is not presented in any publication
+(since it was communicated to the editor personally, for example) should
+might refer to #De, which would be defined in the Header as follows:</p>
+<egXML xmlns="http://www.tei-c.org/ns/Examples">!!!<listPerson>
+!!!<person xml:id="#De">
+!!!<name>
+!!!<surname>De!!!</surname>
+!!!<forename>S. K.!!!</forename>
+!!!</name>
+!!!</person>
+!!!</listPerson></egXML>
+
+<p><hi rendition="simple:bold">Discussions on TEI-L:</hi></p>
+<p><ref target="https://listserv.brown.edu/?A1=ind1505&amp;L=tei-l#7">https://listserv.brown.edu/?A1=ind1505&amp;L=tei-l#7</ref></p>
+<p><ref target="https://listserv.brown.edu/archives/cgi-bin/wa?A1=ind1505&amp;L=TEI-L#18">https://listserv.brown.edu/archives/cgi-bin/wa?A1=ind1505&amp;L=TEI-L#18</ref></p>
+<p><hi rendition="simple:bold">Chapter 12 of the TEI P5
+Guidelines:</hi></p>
+<p><ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TC.html">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/TC.html</ref></p>
+<p><hi rendition="simple:bold">Marjorie Burghart's Cheat Sheet:</hi></p>
+<p><ref target="http://marjorie.burghart.online.fr/?q=en/content/tei-critical-apparatus-cheatsheet">http://marjorie.burghart.online.fr/?q=en/content/tei-critical-apparatus-cheatsheet</ref></p>
+<p><hi rendition="simple:bold">SARIT Encoding Guidelines:</hi></p>
+<p><ref target="http://sarit.indology.info/exist/apps/sarit/docs/encoding-guidelines.html">http://sarit.indology.info/exist/apps/sarit/docs/encoding-guidelines.html</ref></p>
+    </body>
+  </text>
+</TEI>
