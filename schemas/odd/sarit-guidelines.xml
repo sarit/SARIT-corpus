@@ -1,0 +1,1678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>SARIT Encoding Guidelines</title>
+        <author>Liudmila Olalde, Andrew Ollett, Patrick McAllister</author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>"Project SARIT: Enriching Digital Text Collections in Indology" (Bilalteral Digital Humanities Programme DFG/NEH), 2013-2017.</publisher>
+        <availability status="restricted">
+          <p>Copyright Notice:</p>
+          <p>Copyright 2017 SARIT</p>
+          <licence>
+            <p>Distributed under a <ref target="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International licence.</ref> Under this licence, you are free to:</p>
+            <list>
+              <item>Share — copy and redistribute the material in any medium or format.</item>
+              <item>Adapt — remix, transform, and build upon the material for any purpose, even commercially.</item>
+            </list>
+            <p>The licensor cannot revoke these freedoms as long as you follow the license terms.</p>
+            <p>Under the following terms:</p>
+            <list>
+              <item>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.</item>
+              <item>ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.</item>
+            </list>
+            <p>More information and fuller details of this license are given on the Creative Commons website.</p>
+          </licence>
+          <p>SARIT assumes no responsibility for unauthorised use that infringes the rights of any copyright owners, known or unknown.</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>TEI-ish version produced by pandoc and manual editing from <ref target="https://github.com/sarit/sarit-pm/blob/91f6ea5d78c2385e10a7c3a85ac36968df853abe/docs/encoding-guidelines-simple.html">sarit-pm/91f6ea5d78c2385e10a7c3a85ac36968df853abe/docs/encoding-guidelines-simple.html</ref>.</p>
+      </sourceDesc>
+    </fileDesc>
+    <revisionDesc>
+      <change who="../../saritcorpus.xml#patmcall" when="2017-06"><p>TEI-ish version produced by pandoc and manual editing from <ref target="https://github.com/sarit/sarit-pm/blob/91f6ea5d78c2385e10a7c3a85ac36968df853abe/docs/encoding-guidelines-simple.html">sarit-pm/91f6ea5d78c2385e10a7c3a85ac36968df853abe/docs/encoding-guidelines-simple.html</ref>.</p></change>
+    </revisionDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div type="level1">
+        <head>Preface</head>
+        <p>This document presents guidelines for the creation of digital texts
+  in Sanskrit, Prakrit, and other Indian languages.</p>
+        <p>These guidelines are maintained by SARIT
+  (<ref target="http://sarit.indology.info">http://sarit.indology.info</ref>).
+  SARIT maintains a collection of digital texts that conform to the
+  standards of the Text Encoding Initiative (TEI) and provides tools for
+  browsing and seaching these texts. These guidelines have two main
+  purposes:</p>
+        <list type="unordered">
+          <item>
+            <p>to document the standards that the SARIT project has followed
+      in the creation of its own digital texts;</p>
+          </item>
+          <item>
+            <p>to provide guidance for how to apply the TEI standards to texts
+      in Sanskrit and other Indian languages;</p>
+          </item>
+          <item>
+            <p>to promote the production of TEI-conformant digital texts in
+      the community of Indian studies.</p>
+          </item>
+        </list>
+        <p>The guidelines come in two varieties:
+	<hi rendition="simple:bold">simple</hi> and
+	<hi rendition="simple:bold">full</hi>.</p>
+        <list type="unordered">
+          <item>
+            <p>The <hi rendition="simple:bold">simple</hi> guidelines (this
+      document) document the minimal level of encoding that SARIT
+      requires of texts in its collections. These guidelines provide a
+      straightforward path “from printed edition to digital text,” and
+      should suffice for the purposes of most projects.</p>
+          </item>
+          <item>
+            <p>The <hi rendition="simple:bold">full</hi> guidelines supplement
+      the simple guidelines. The TEI standards that SARIT follows allow
+      for encoding features of a text that aren’t typically included in
+      “plain” digital texts. The full guidelines provide guidance for
+      these advanced features. If you want your digital text to reflect
+      textual variation (in the form of a critical apparatus or
+      otherwise), cross-references within the text or references to
+      other texts, or any kind of controlled vocabulary (persons, works,
+      places, etc.), then the <hi rendition="simple:bold">full</hi>
+      guidelines are for you.</p>
+          </item>
+        </list>
+        <p>Texts that are encoded according to the simple guidelines can
+  always be “enhanced” at a later stage with the markup described in the
+  full guidelines.</p>
+      </div>
+      <div type="level1">
+        <head>Introduction</head>
+        <p>Digital texts come in a variety of formats, but the texts
+  distributed by SARIT are XML files that conform to standards of the
+  Text Encoding Initiative (TEI).</p>
+        
+      </div>
+      <div type="level1">
+        <head>What is XML?</head>
+        <p>In the days of publishing before word-processing, copy editors used
+  to "mark up" an author's typed or handwritten manuscript for
+  the printer, using written abbreviations to indicate structural points
+  in the text, like headings, indents or font changes. XML is simply a
+  collection of markup conventions for digital documents. Most web pages
+  use XML or an XML-like form of markup. HTML is a special case of XML.
+  The key feature of XML is its use of
+  <hi rendition="simple:bold">elements</hi>, which start and end with
+  tags in angle-brackets, and signal some
+  <hi rendition="simple:bold">editorial</hi> intention relating to the
+  text:
+  <egXML xmlns="http://www.tei-c.org/ns/Examples"><p>This is a paragraph.</p></egXML></p>
+        <p>Elements can be nested within each other:</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <p>This is <hi>highlighted text</hi>.</p>
+        </egXML>
+        <p>Elements can also be given
+	<hi rendition="simple:bold">attributes</hi>:</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <p>This is <hi rend="bold">an element</hi>.</p>
+        </egXML>
+        <p>In a <hi rendition="simple:bold">well-formed</hi> XML document,
+  every starting tag corresponds to an ending tag, and vice versa, and
+  all of the elements are arranged hierarchically and without
+  overlapping. But in order to be useful, the document must use elements
+  in a well-defined and standardized way. A document that formally
+  defines what elements may be used in an XML document, and how they may
+  be used, is called a <hi rendition="simple:bold">schema</hi>.</p>
+        <p>Once you have well-formed and valid XML, what can you do with it?
+  There are many computer programs that can read an XML text and do all
+  sorts of interesting things. One of the first things you may want to
+  do is to check that the file you have painstakingly prepared really is
+  well-formed. That is the work of a so-called "XML Parser."
+  It can check your text and flag up inconsistencies in the markup,
+  making sure that it validates against a schema. But that is only the
+  beginning.</p>
+        <p>Since XML provides a structure that computers can easily navigate,
+  it is easy to find any part of a document. You can index these parts
+  in a database for searching, or you can transform them into a format
+  that human beings can read: HTML, RTF, or PDF. XML texts can be
+  converted into almost any other format, or processed in many
+  complicated ways using a super-strength version of search-and-replace
+  called XSLT.</p>
+        <div type="level2">
+          <head>How do I type XML texts?</head>
+          <p>An XML document has no hidden codes, and can be typed with
+    <hi rendition="simple:bold">any</hi> writing program from the
+    simplest editor to the most feature-rich word processor. Many modern
+    programs have XML "modes" that provide things like
+    syntax-highlighting or online help; others have been created
+    specifically for typing XML. Several of these programs have XML
+    Parsers built in to them, so that they can check your input as you
+    go along and perhaps even format it nicely on the screen.</p>
+        </div>
+        <div type="level2">
+          <head>What is TEI?</head>
+          <p>The Text Encoding Initiative produces guidelines for encoding
+    texts as XML documents and schemas for validating those documents.
+    The TEI guidelines have been used, and continue to be used, in
+    hundreds of text-encoding projects, and form the basis of many other
+    subprojects (such as EpiDoc). They are actively maintained and
+    well-supported by a growing number of applications, and hence they
+    currently represent “The Right Way” to produce digital texts.</p>
+        </div>
+        <div type="level2">
+          <head>Structure, not presentation</head>
+          <p>We want to reflect the <hi rendition="simple:bold">structure</hi>
+    of text, and not the <hi rendition="simple:bold">presentation</hi>
+    of the text on the pages of a printed edition. This means that we
+    typically do not encode formatting such as bold face, italics,
+    centered text, and so on. Rather, we encode the logical features of
+    the text that these formatting decisions represent. Although TEI
+    provides a rendering attribute (<att>rend</att>) for
+    many elements, we do not recommend using it: if text is rendered in
+    a certain way, try to figure out
+    <hi rendition="simple:bold">why</hi> it is rendered that way, and
+    then encode the structural reasons for that presentational choice.
+    Thus, if a text is centered on the page because it represents a
+    colophon, use <gi>trailer</gi> rather than
+    <egXML xmlns="http://www.tei-c.org/ns/Examples"><p rend="center"/></egXML>.</p>
+        </div>
+        <div type="level2">
+          <head>Getting started</head>
+          <p>All SARIT documents start the same way. The file begins with an
+    <hi rendition="simple:bold">XML declaration</hi>, a processing
+    instruction that tells whatever program opens the document that it
+    is written in XML. This XML declaration is always the same:
+    <code>
+      <![CDATA[
+               <?xml version="1.0" encoding="utf-8"?>
+      ]]>
+    </code></p>
+    <p>All valid XML files must have one, and only one,
+    <hi rendition="simple:bold">top-level element</hi>. Since SARIT
+    documents are TEI documents, this top-level element is going to be
+    <gi>TEI</gi>. This means that the second line of the file, after the
+    XML declaration, will look something like the following:
+    <code>
+      <![CDATA[
+               <TEI xml:id="sarit__XML-ID_HERE" xmlns="http://www.tei-c.org/ns/1.0"/>
+      ]]>
+    </code></p>
+          <p>This element has two attributes. The
+    <att>xml:id</att> is a unique identifier for the
+    document. Your choice for this unique identifier will depend on your
+    project. The <att>xmlns</att> attribute tells whatever
+    program opens the document that the names of the XML elements are
+    the names defined by the Text Encoding Initiative: for example, that
+    the element <gi>p</gi> is what the TEI defines
+    as <gi>p</gi>, and not what any other
+    authority defines as <gi>p</gi>.</p>
+          <p>The last line of the document will close the
+    <gi>TEI</gi> element, and hence it will always
+    be <tag><![CDATA[</TEI>]]></tag>.</p>
+        </div>
+        <div type="level2">
+          <head>Further details</head>
+          
+          <div type="level3">
+            <head>Comments</head>
+            <p>The XML processor will ignore anything that is contained
+      between <code><![CDATA[<!--]]></code> and <code><![CDATA[-->]]></code>.</p>
+          </div>
+          <div type="level3">
+            <head>The xml:id and xml:lang attributes</head>
+            <p>The <att>xml:id</att> attribute assigns a unique
+      identifier to an element, so that the element can be referenced
+      from anywhere else in the document, or even in a corpus of
+      documents. But the functions that depend on unique
+      identifiers—indexing and cataloguing, for example—are better left
+      to automatic processes. And since <att>xml:id</att> attributes need to be unique, and
+      need to have a certain format (NCName), it’s easy for humans to
+      introduce errors that will throw a wrench into these automatic
+      processes. That’s why SARIT recommends
+      <hi rendition="simple:bold">against</hi> the use of <att>xml:id</att>
+      attributes within a document. If <att>xml:id</att> attributes are needed for
+      technical reasons, it’s better to let those technical reasons
+      determine how these <att>xml:id</att> attributes are to be generated and assigned. A
+      document will still be valid if you use <att>xml:id</att> attributes, and there are
+      certain cases (such as referencing readings in a critical
+      apparatus to the main text) where you might find <att>xml:id</att> attributes useful.
+      But in general, nothing is lost by omitting <att>xml:id</att> attributes, and often
+      compatability with certain programs (such as SARIT’s XML database)
+      is gained by omitting them.</p>
+            <p>The <att>xml:lang</att> attribute, on the other
+      hand, should be used systematically and carefully when preparing a
+      SARIT document. This attribute tells us what language is
+      represented by the text of the element to which it is attached.
+      SARIT follows the two-letter language codes defined by <ref target="http://loc.gov/standards/iso639-2/">http://loc.gov/standards/iso639-2/</ref>,
+      and in most cases these language codes are followed by a code for
+      the script, as follows:</p>
+            <list type="unordered">
+              <item>
+                <p><val>en</val>: English (in the Latin script by
+          default);</p>
+              </item>
+              <item>
+                <p><val>sa-Latn</val>: Sanskrit in the Latin
+          script (Roman transliteration);</p>
+              </item>
+              <item>
+                <p><val>sa-Deva</val>: Sanskrit in the Devanāgarī
+          script.</p>
+              </item>
+              <item>
+                <p><val>pra-Latn</val>: Prakrit in the Latin
+          script (Roman transliteration);</p>
+              </item>
+              <item>
+                <p><val>pra-Deva</val>: Prakrit in the Devanāgarī
+          script.</p>
+              </item>
+            </list>
+            <p>See SARIT’s <hi rendition="simple:bold">character-encoding
+      guidelines</hi> regarding issues of script and
+      transliteration.</p>
+            <p>The <att>xml:lang</att> attribute is
+      <hi rendition="simple:bold">heritable</hi>: if you say that a
+      certain element is in a certain language, then all of the children
+      of that element are assumed to be in the language as well. Thus we
+      need to specify a language at the highest level of its occurrence:
+      <gi>teiHeader</gi> will almost always take
+      the attribute
+      <att>xml:lang</att> with value <val>en</val>, and <gi>text</gi>
+      will almost always take the attribute
+      <att>xml:lang</att> with value <val>sa-Deva</val> or <val>sa-Latn</val>
+      (see above). Apart from this initial specification, we only need
+      to specify the language of an element if it is different from the
+      language of its parent element: for example, if you have an
+      English note to a Sanskrit text, you will generally give the
+      <gi>note</gi> element the
+      <att>xml:lang</att> attribute the value <val>en</val>.</p>
+          </div>
+          <div type="level3">
+            <head>Dealing with whitespace</head>
+            <p>Because XML uses tags rather than whitespace elements
+      (line-breaks and indentation) to mark the logical structure of the
+      document, XML has no hard-and-fast rules for whitespace: a single
+      element, consisting of a starting-tag, content, and an ending-tag,
+      might occur on one, three, or forty lines. Different text editors
+      also have different conventions for putting whitespace into XML
+      documents.</p>
+            <p>XML processors usually trim the whitespace at the beginning and
+      end of an element. (See <ref target="http://wiki.tei-c.org/index.php/XML_Whitespace#Trimming">http://wiki.tei-c.org/index.php/XML_Whitespace#Trimming</ref>.)
+      Usually this will not change the actual text that you wish to
+      encode. Whitespace requires attention, however, when within an
+      element text and XML elements occur side-by-side, that is, when
+      using inline XML elements (elements which have text before or
+      after them). In cases like this, it’s important to put meaningful
+      spaces <hi rendition="simple:bold">outside</hi> of the inline tags
+      rather than inside the tags, thus:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <element>XYZ <element>ABC</element> XYZ</element>
+            </egXML>
+            <p>Rather than:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <element>XYZ<element> ABC </element>XYZ</element>
+            </egXML>
+            <p>which will lose the spaces when it is processed.</p>
+            
+          </div>
+        </div>
+      </div>
+      <div type="level1">
+        <head>The TEI Header</head>
+        <p>One of the advantages of using TEI is the ability to include all
+  kinds of structured metadata. When we create a SARIT document, we are
+  not just transcribing the text, but also providing the following:</p>
+        <list type="unordered">
+          <item>
+            <p><hi rendition="simple:bold">cataloguing</hi> information, for
+      example the title and author of the text;</p>
+          </item>
+          <item>
+            <p>information about the document’s
+      <hi rendition="simple:bold">source</hi>, such as the edition that
+      the</p>
+          </item>
+        </list>
+        <p>digital text is based upon;</p>
+        <list type="unordered">
+          <item>
+            <p><hi rendition="simple:bold">legal</hi> information, such as the
+      license and authority under which the text</p>
+          </item>
+        </list>
+        <p>is made available;</p>
+        <list type="unordered">
+          <item>
+            <p>information about the <hi rendition="simple:bold">encoding</hi>
+      of the document; and</p>
+          </item>
+          <item>
+            <p>information about the
+      <hi rendition="simple:bold">revisions</hi> that have been made to
+      the document over</p>
+          </item>
+        </list>
+        <p>the course of its history.</p>
+        <p>All of this information is provided in a section of the document
+  called the <hi rendition="simple:bold">header</hi>, which is contained
+  in the element <gi>teiHeader</gi>.
+  <gi>teiHeader</gi> is a direct child of the
+  top-level element <gi>TEI</gi>. And since the
+  metadata will typically be in English, we typically specify the
+  language of the <gi>teiHeader</gi> element with
+  <att>xml:lang</att> set to <val>en</val>.  The TEI Header has three obligatory sections: one for
+  the description of the file (<gi>fileDesc</gi>), one for the
+  description of the file’s encoding
+  (<gi>encodingDesc</gi>), and one to record the
+  file’s history (<gi>revisionDesc</gi>). We’ll
+  talk about these three sections in order. But SARIT also provides a
+  template document that shows how the header should be structured
+  (<ref target="https://github.com/sarit/SARIT-corpus/blob/master/00-sarit-tei-header-template.xml">https://github.com/sarit/SARIT-corpus/blob/master/00-sarit-tei-header-template.xml</ref>).</p>
+        <p>It is important to distinguish between the
+  <hi rendition="simple:bold">work</hi> and a specific
+  <hi rendition="simple:bold">representation</hi> of that work. A
+  <hi rendition="simple:bold">work</hi> is an abstract object, such as
+  <hi rendition="simple:bold">Hamlet</hi> or
+  <hi rendition="simple:bold">Abhijñānaśakuntalā</hi> considered as
+  ideas in the mind. A printed edition of a work and a digital edition
+  of a work are both <hi rendition="simple:bold">representations</hi>.
+  In most cases a specific printed edition will be the
+  <hi rendition="simple:bold">source</hi> of the digital edition and
+  must be acknowledged as such. Since printed editions are protected by
+  copyright laws—although not to the same degree in all
+  jurisdictions—you must ensure that you are legally entitled to use the
+  printed edition as the source of the digital edition.</p>
+        <div type="level2">
+          <head>The file description</head>
+          <p>The file description element
+    (<gi>fileDesc</gi>) contains the most
+    essential metadata: a statement of the title and author of the text,
+    which is essential for cataloguing and indexing
+    (<gi>titleStmt</gi>); a statement of how,
+    under what authority, and under what license the digital text is
+    published (<gi>publicationStmt</gi>), and a
+    description of the digital text’s sources
+    (<gi>sourceDesc</gi>).</p>
+          <div type="level3">
+            <head>The title statement</head>
+            <p>The title statement supplies the title and author
+      <hi rendition="simple:bold">of the digital text</hi>. In most
+      cases this will be the same as the title and author
+      <hi rendition="simple:bold">of the work</hi>. For example:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <titleStmt>
+                <title>Sarasvatīkaṇṭhābharaṇa</title>
+                <author>Bhoja</author>
+              </titleStmt>
+            </egXML>
+            <p>Very often, however, the SARIT edition will present a work
+      along with one or more commentaries (see
+      “<ref target="base-texts-and-commentaries">Base texts and
+      commentaries</ref>” below). In this case, there are two (or more)
+      titles, and two (or more) authors. To reflect the fact that the
+      title of the base text will be the main title of the document, we
+      use the attributes <att>type</att> and
+      <att>subtype</att>, and the authors are distinguished
+      by their <att>role</att> attribute, as follows:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <titleStmt>
+                <title type="main" subtype="base-text">Tattvasaṅgraha</title>
+                <title type="sub" subtype="commentary">Tattvasaṅgrahapañjikā</title>
+                <author role="base-author">Śāntarakṣita</author>
+                <author role="commentator">Kamalaśīla</author>
+              </titleStmt>
+            </egXML>
+            <p>In the following example we have a base text and two
+      commentaries. When there is only one author for each
+      <att>role</att>, it is easy to link authors with the
+      titles of their works. But when there are more than one author for
+      each role—as is the case with multiple commentaries—we need to
+      supply extra an extra <att>n</att> attribute.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <titleStmt>
+                <title type="main" subtype="base-text">Aṣṭāṅgahṛdayasaṃhitā</title>
+                <title type="sub" subtype="commentary" n="1">Sarvāṅgasundarā</title>
+                <title type="sub" subtype="commentary" n="2">Āyurvedarasāyana</title>
+                <author role="base-author">Vāgbhaṭa</author>
+                <author role="commentator" n="1">Aruṇadatta</author>
+                <author role="commentator" n="2">Hemādri</author>
+              </titleStmt>
+            </egXML>
+            <p>In addition to providing information about
+      <hi rendition="simple:bold">who</hi> produced the work that forms
+      the basis of the digital text, namely the author, the title
+      statement also provides information about
+      <hi rendition="simple:bold">who</hi> helped to produce the digital
+      text. This includes funding agencies, principal investigators,
+      data enterers, and so on.</p>
+            <p>The funding agency and principal investigator have their own
+      TEI elements (<gi>funder</gi> and
+      <gi>principal</gi>), but it is good practice
+      to encode the names of persons with the general-purpose element
+      <gi>persName</gi> (further uses of
+      <gi>persName</gi> will be discussed in the
+      full version of the guidelines):</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <titleStmt>
+                <funder>Deutsche Forschungsgemeinschaft</funder>
+                <funder>The National Endowment for the Humanities</funder>
+                <principal>
+                  <persName>Birgit Kellner</persName>
+                </principal>
+              </titleStmt>
+            </egXML>
+            <p>Other responsible parties should be identified with the
+      <gi>respStmt</gi>, a “responsibility
+      statement” that includes two further elements:
+      <gi>resp</gi>, which explains the nature of
+      the responsibility, and an element, usually
+      <gi>persName</gi>, that identifies the
+      responsible party:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <titleStmt>
+                <respStmt>
+                  <resp>data entry by</resp>
+                  <name>SWIFT Information Technologies, Mumbai</name>
+                </respStmt>
+                <respStmt>
+                  <resp>prepared for SARIT by</resp>
+                  <persName>Liudmila Olalde</persName>
+                </respStmt>
+              </titleStmt>
+            </egXML>
+            
+          </div>
+          <div type="level3">
+            <head>The publication statement</head>
+            <p>The publication statement tells us how the digital text
+      (<hi rendition="simple:bold">not</hi> the sources of the digital
+      text) is published. SARIT editions will have a publication
+      statement with the following structure, although the TEI P5 
+<ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD24">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD24</ref>
+      offer additional possibilities:</p>
+            <list type="unordered">
+              <item>
+                <p>the <hi rendition="simple:bold">publisher</hi> of the
+          digital text (typically SARIT);</p>
+              </item>
+              <item>
+                <p>its <hi rendition="simple:bold">availability</hi>;</p>
+              </item>
+              <item>
+                <p>the <hi rendition="simple:bold">date</hi> of its
+          publication;</p>
+              </item>
+            </list>
+            <p>Texts that are made available through SARIT should include:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <publisher>SARIT</publisher>
+            </egXML>
+            <p>The availability of a text can either be
+      <hi rendition="simple:bold">free</hi> or
+      <hi rendition="simple:bold">restricted</hi>, which are the two
+      possible values of the attribute <att>status</att> in
+      the element <gi>availability</gi>. Unless
+      there are special circumstances, SARIT texts are made available
+      under a Creative Commons licence. This means that their
+      availability is <hi rendition="simple:bold">restricted</hi>, since
+      CC licences put restrictions on the further use and reuse of
+      documents. (<hi rendition="simple:bold">Free</hi> in this case
+      does not refer to cost; all SARIT texts are available free of
+      cost.) SARIT texts will therefore usually include a
+      <gi>licence</gi> element that either links
+      to or reproduces this licence. Here is an example of an element
+      that links to the CC license:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <availability status="restricted">
+                <licence>
+                  <p>Distributed under a
+		  <ref target="https://creativecommons.org/licenses/by-sa/4.0/">Creative
+		  Commons Attribution-ShareAlike 4.0 International licence</ref>.</p>
+                </licence>
+              </availability>
+            </egXML>
+            <p>The <hi rendition="simple:bold">date</hi> of publication is
+      simply contained in the <gi>date</gi>
+      element:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <date>2014</date>
+            </egXML>
+            
+          </div>
+          <div type="level3">
+            <head>The source description</head>
+            <p>The last obligatory portion of the file description is the
+      source description, which tells us the sources on which the
+      digital text is based. This will often be the most extensive and
+      detailed part of the TEI Header. Usually, there will be one
+      edition that the digital text is primarily based on. We want to
+      distinguish this “main source” from other sources that supplement
+      the main source, or “second-level” sources (the sources of the
+      digital document’s sources). Thus, by convention, the
+      <hi rendition="simple:bold">first</hi> element in the source
+      description is understood to be the main source. In order to be
+      completely explicit, however, SARIT recommends that the role of
+      each source in the constitution of the digital document should be
+      briefly explained with a <gi>note</gi>.</p>
+            <p>TEI provides a number of ways of tagging bibliographic
+      information, but SARIT recommends the use of
+      <gi>bibl</gi>. This is a relatively flexible
+      element which should accommodate book, articles in journals, and
+      articles in collections. The following are examples for different
+      kinds of printed sources. The most common is a book, which has one
+      or more titles (<gi>title</gi>), one or more
+      authors (<gi>author</gi>), usually one or
+      more editors (<gi>editor</gi>), and the
+      standard publication information
+      (<gi>publisher</gi>,
+      <gi>pubPlace</gi>, and
+      <gi>date</gi>). Note that it is best
+      practice to encode <hi rendition="simple:bold">names</hi> of
+      modern-day authors and editors using the
+      <gi>name</gi> element and its sub-elements,
+      <gi>surname</gi> and
+      <gi>forename</gi>, in order to make it
+      easier to sort and reformat bibliographic entries.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <bibl>
+                <title type="main">Tattvasaṅgraha of Śāntarakṣita With the Commentary of Kamalaśīla.</title>
+                <title type="sub">Edited with an Introduction in Sanskrit by Embar Krishnamacharya with a foreword by the general editor. In two volumes</title>
+                <author>Śāntarakṣita</author>
+                <author>Kamalaśīla</author>
+                <editor>
+                  <name>
+                    <forename>Embar</forename>
+                    <surname>Krishnamacharya</surname>
+                  </name>
+                </editor>
+                <publisher>Central Library</publisher>
+                <pubPlace>Baroda</pubPlace>
+                <date>1926</date>
+              </bibl>
+            </egXML>
+            <p>Here is an example for journal articles, demonstrating the use
+      of the <att>level</att> attribute to distinguish
+      between the title of the article (<egXML xmlns="http://www.tei-c.org/ns/Examples"><title level="a"/></egXML>) and the title of the journal
+      (<egXML xmlns="http://www.tei-c.org/ns/Examples"><title level="j"/></egXML>). Note also the use of the
+      <gi>biblScope</gi> element to represent a
+      page range.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <sourceDesc>
+                <bibl type="article" subtype="journal_article">
+                  <author>
+                    <name>
+                      <forename>Iwata</forename>
+                      <surname>Takashi</surname>
+                    </name>
+                  </author>
+                  <title level="a">Pramāṇaviniścaya III 64-67: Die Reduzierung richtiger Gründe auf den svabhāva- und kāryahetu</title>
+                  <title level="j">Wiener Zeitschrift für die Kunde Südasiens</title>
+                  <date when="1993">1993</date>
+                  <biblScope unit="pp" from="165" to="200">165-200</biblScope>
+                </bibl>
+              </sourceDesc>
+            </egXML>
+            <p>And this is an example of an article in a collection, again
+      demonstrating the use of the <att>level</att>
+      attribute to distinguish between the title of the article
+      (<egXML xmlns="http://www.tei-c.org/ns/Examples"><title level="a"/></egXML>) and the
+      title of the collection
+      (<egXML xmlns="http://www.tei-c.org/ns/Examples"><title level="m"/></egXML> for
+      monograph):</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <bibl type="article" subtype="book_chapter"><author><name><forename>Jin-Il</forename><surname>Chung</surname></name></author><author><name><forename>Klaus</forename><surname>Wille</surname></name></author><title level="a">Fragmente aus dem Bhaiṣajyavastu der Sarvāstivādins in der Sammlung Pelliot (Paris)</title><title level="m">Sanskrit- Texte aus dem buddhistischen Kanon: Neuentdeckungen und Neueditionen</title><biblScope unit="Folge">4</biblScope><pubPlace>Göttingen</pubPlace>,
+  <publisher>Vandenhoeck &amp;amp;amp; Ruprecht</publisher><date when="2003">2003</date><biblScope unit="pp" from="105" to="124">105-124</biblScope>.
+  <series><title level="s"/><biblScope unit="Beiheft">9</biblScope></series></bibl>
+            </egXML>
+            <p>The sources for our printed editions are almost always
+      manuscript sources. And when the printed editions refer to these
+      manuscript sources, as responsible editions do, it is useful to
+      provide a description of the manuscript that readers of the
+      digital text will be able to refer to. The proper element for this
+      description is <gi>msDesc</gi>, and it is
+      contained directly within the
+      <gi>sourceDesc</gi> element, alongside any
+      bibliographic sources (<gi>bibl</gi>).</p>
+            <p>Here is one example:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <msDesc>
+                <msIdentifier xml:id="msK">
+                  <idno>Kun-de-ling-Manuscript</idno>
+                </msIdentifier>
+                <msContents>
+                  <msItem>
+                    <author>Śāntarakṣita</author>
+                    <title>Vipañcitārthā</title>
+                  </msItem>
+                </msContents>
+                <physDesc>
+                  <objectDesc>
+                    <p>Palm-leaf manuscript. 89 leaves in Kuṭilā script. Apparently written in 1152 A.C.</p>
+                  </objectDesc>
+                </physDesc>
+                <history>
+                  <p>In June 1934, Sāṅkṛtyāyana found this manuscript in the monastery of Kun-de-ling (Lhasa).</p>
+                </history>
+              </msDesc>
+            </egXML>
+            
+          </div>
+        </div>
+        <div type="level2">
+          <head>The encoding description</head>
+          <p>After the file description, TEI documents require an encoding
+    description (<gi>encodingDesc</gi>). The
+    purpose of the encoding description is to document the choices that
+    were made in encoding the text, especially if there may be
+    uncertainty or ambiguity, for instance regarding how the different
+    layers of base text and commentary are represented in the TEI
+    document.</p>
+          <p><hi rendition="simple:bold">At the moment SARIT provides no
+    specific guidelines for the encoding description.</hi> The
+    <gi>encodingDesc</gi> element of SARIT texts
+    generally consists of prose paragraphs
+    (<gi>p</gi>) that explain the encoding choices
+    specific to the text. There should be no need of noting encoding
+    decisions that conform to these guidelines. We do, however,
+    recommend the use of three elements that are available in the
+    encoding description: <gi>projectDesc</gi>,
+    <gi>tagsDecl</gi>, and
+    <gi>refsDecl</gi>.</p>
+          <p>The project description
+    (<gi>projectDesc</gi>) is a paragraph or two
+    that describes the project or projects which resulted in the
+    creation of the digital text:</p>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <projectDesc>
+              <p>Producing as part of the NEH-DFG project “Enriching Digital Texts Collections in Indology” from 2012 to 2015.</p>
+            </projectDesc>
+          </egXML>
+          <p>The tagging declaration (<gi>tagsDecl</gi>)
+    may be used to document the usage of specific tags in the text and
+    their rendition if applicable (see the TEI P5 guidelines: <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD57">http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html#HD57</ref>).
+    Most projects will not use the tagging declaration.</p>
+          <p>The reference declaration
+    (<gi>refsDecl</gi>), however, is important: it
+    describes the reference system used in the text. It may be a pattern
+    of canonical references (see the full guidelines for more details),
+    or it may simply describe the structure of the text in English
+    prose, as follows:</p>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <refsDecl>
+              <p>References in this text are either in the format w.x.z or w.x.y.z.</p>
+              <p>w represents the <att>n</att> attribute of the highest-level
+<gi>div</gi> element (an adhyāya).</p>
+              <p>x represents the <att>n</att> attribute of the second-highest-level
+<gi>div</gi> element (a pāda).</p>
+              <p>y represents the <att>n</att> attribute of the third-highest-level
+<gi>div</gi> element (an adhikaraṇa).</p>
+              <p>z represents the <att>n</att> attribute of the fourth-highest-level
+<gi>div</gi> element, which contains the text of a sūtra along with
+any portion of the commentary that specifically concerns that
+sūtra.</p>
+            </refsDecl>
+          </egXML>
+          
+        </div>
+        <div type="level2">
+          <head>The revision description</head>
+          <p>This is the last obligatory portion of the TEI header. It
+    consists of a number of <gi>change</gi>
+    elements, each of which has a <att>who</att> and a
+    <att>when</att> attribute. The
+    <gi>change</gi> elements will typically
+    include a list of changes, as below (note that
+    <gi>list</gi> should be a child of
+    <gi>change</gi>, not
+    <gi>revisionDesc</gi>):</p>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <revisionDesc>
+              <change who="lo" when="2014-10-29">
+                <list>
+                  <item>I corrected folio number 46b to 49b on p. 73.</item>
+                  <item>I added folio number 53b, which was missing in the printed edition.</item>
+                </list>
+              </change>
+            </revisionDesc>
+          </egXML>
+          <p>Prose paragraphs (<gi>p</gi>) are also permitted in <gi>change</gi>
+    elements, but lists are preferred.</p>
+        </div>
+      </div>
+      <div type="level1">
+        <head>Base texts and commentaries</head>
+        
+        <p>The rest of these guidelines will concern the text’s data rather
+  than its metadata. All of this data is contained in the element
+  <gi>text</gi> that immediately follows the TEI
+  Header. The <gi>text</gi> element must contain a
+  <gi>body</gi> element which represents the body
+  of the text; it might also contain
+  <gi>front</gi> and
+  <gi>back</gi> elements, representing any front
+  matter or back matter, respectively. The
+  <gi>text</gi> element must also have an
+  <att>xml:lang</att> attribute that tells us what language
+  and what script the text contained therein is written in. Here is an
+  example for a text encoded in Roman transliteration:</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <text xml:lang="sa-Latn">
+            <body>
+	      ....
+	    </body>
+          </text>
+        </egXML>
+        <p>And an example for a text encoded in Devanāgarī:</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <text xml:lang="sa-Deva">
+            <body>
+	      ....
+	    </body>
+          </text>
+        </egXML>
+        <p>The <gi>text</gi> element is the last child
+  element of <gi>TEI</gi>.</p>
+        <p>A single document might contain more than one text. In particular,
+  a single document will very often contain a commentary together with
+  the text that it is a commentary on, hence known as the “base text.”
+  You may only be interested in the base text, or only in the
+  commentary. But you may also want to encode
+  <hi rendition="simple:bold">both</hi> texts, and in that case you will
+  also want to make the relationship between the texts explicit. There
+  are, in general, two options for encoding a base text with its
+  commentary:</p>
+        <list type="unordered">
+          <item>
+            <p><hi rendition="simple:bold">Together</hi>. The base text and
+      the commentary are encoded in a single</p>
+          </item>
+        </list>
+        <p>document.</p>
+        <list type="unordered">
+          <item>
+            <p><hi rendition="simple:bold">Separate</hi>. The base text and
+      the commentary are encoded in separate</p>
+          </item>
+        </list>
+        <p>documents. They are linked to each other (i.e., the commentary
+  includes references to the base text) through the procedures described
+  in the full version of the guidelines.</p>
+        <p>For example, SARIT includes a text of the
+  <hi rendition="simple:bold">Daśarūpaka</hi> of Dhanañjaya, together
+  with the <hi rendition="simple:bold">Avaloka</hi> commentary by
+  Dhanañjaya’s brother Dhanika. These two texts are encoded in a single
+  document. A further commentary on the two texts, the
+  <hi rendition="simple:bold">Laghuṭīkā</hi> of Bhaṭṭa Nṛsiṃha, is
+  encoded in a separate document that refers back to the original
+  document.</p>
+        <p>Generally speaking, if the base text and commentary are printed in
+  the same register on the page (the base text being in a larger font or
+  in bold, see below <ref target="#fig1">example 1)</ref>, it makes sense to encode them together;
+  if the base text and commentary are printed in separate registers (see
+  below <ref target="#fig2">example 2)</ref>, it is easier to encode them separately.</p>
+        <p>These guidelines will tell you how to encode the base text and the
+  commentary <hi rendition="simple:bold">together</hi>. Please consult
+  the full version for guidance on how to encode them
+  <hi rendition="simple:bold">separately</hi>.</p>
+  <figure n="1" xml:id="fig1">
+    <head>Example 1: Base text embedded in commentary</head>
+    <graphic url="https://github.com/sarit/sarit-pm/raw/master/resources/img/ex-embedded-base-pvv.jpg"/>
+  </figure>
+  <figure n="2" xml:id="fig2" >
+    <head>Example 2: Base text and commentary</head>
+    <graphic url="https://github.com/sarit/sarit-pm/raw/master/resources/img/ex-base-text_commentary.jpg"/>
+  </figure>
+  
+  <div type="level2">
+          <head>The base text is a quotation</head>
+          <p>SARIT recommends a model in which the base text is “embedded” in
+    the commentary. In other words, we presume that everything in the
+    <gi>text</gi> element represents the commentary
+    <hi rendition="simple:bold">unless specified otherwise</hi>. The
+    rest of this section will deal with how to specify otherwise.</p>
+          <p>When a base text is included or embedded within a commentary,
+    SARIT treats it as a special kind of
+    <hi rendition="simple:bold">quotation</hi>. It should therefore be
+    enclosed within the tag <gi>quote</gi>, which
+    TEI uses for quoted material, and this tag will have the attribute
+    <att>type</att> with a value of <val>base-text</val>. Theoretically we should be able to
+    extract the base text from the commentary by pulling out all of the
+    <egXML xmlns="http://www.tei-c.org/ns/Examples"><quote type="base-text"/></egXML> elements. In the following
+    example the verse आनन्दनिष्यन्दिषु etc. is marked as belonging to
+    the base text, because it is contained within the <egXML xmlns="http://www.tei-c.org/ns/Examples"><quote type="base-text"/></egXML> element:</p>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <div>
+              <p>इदं प्रकरणं दशरूपज्ञानफलम् । दशरूपज्ञानं किंफलमित्याह—</p>
+              <quote type="base-text">
+                <lg n="6">
+                  <l>आनन्दनिष्यन्दिषु रूपकेषु व्युत्पत्तिमात्रं फलमल्पबुद्धिः ।</l>
+                  <l>योऽपीतिहासादिवदाह साधुस्तस्मै नमः स्वादपराङ्मुखाय ॥</l>
+                </lg>
+              </quote>
+            </div>
+          </egXML>
+          <p>As in the above example, we recommend making the
+    <gi>quote</gi> element that contains the base
+    text a <hi rendition="simple:bold">sibling</hi> rather than a
+    <hi rendition="simple:bold">child</hi> of the elements of the
+    commentary (<gi>p</gi> and so on). That is,
+    the <gi>quote</gi> element should be a child
+    of the same structural division (see below) as the elements of the
+    commentary.</p>
+        </div>
+        <div type="level2">
+          <head>Enclose the base text and commentary in a division</head>
+          <p>In almost every case, the structure of the base text and
+    commentary will be the same. This means that a given reference, such
+    as 1.4.5, should be able to identify both the base text and the
+    corresponding section of commentary. The easiest way to accomplish
+    this is to <hi rendition="simple:bold">put the base text and the
+    corresponding section of commentary within a single structural
+    division</hi>. This enclosing division is meant to gather the two
+    texts together for the purposes of display and reference.</p>
+          <p>The “section of a commentary” that corresponds to a section of
+    the base text will often take the form of an optional
+    <hi rendition="simple:bold">avataraṇikā</hi>, the base text, and
+    then a more extensive commentary. This should all be enclosed within
+    a <gi>div</gi> element, as follows:</p>
+    <figure n="3" xml:id="fig3">
+      <head>Example 3: Base text and commentary</head>
+      <graphic url="https://github.com/sarit/sarit-pm/raw/master/resources/img/ex-base-text-commentary-div3.jpg"/>
+    </figure>
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <div n="249">
+              <p>स्वसम्वेदनमाख्यातुमाह (।)</p>
+              <quote type="base-text">
+                <lg n="249">
+                  <l>अशक्यसमयो ह्यात्मा रागादीनामनन्यभाक् ।</l>
+                  <l>तेषामतः स्वसंवित्तिर्न्नाभिजल्पानुषङ्गिणी ॥ २४९ ॥</l>
+                </lg>
+              </quote>
+              <p>रागद्वेषसुखदुःखादीनां सर्व्वचित्तचैत्तानामात्मसंवेदनं प्रत्यक्षमविकल्पत्वात् ।</p>
+              <p>तथा हि । ... न शब्दसंगतः । (२४९)</p>
+            </div>
+          </egXML>
+          <p>Note that an <att>n</att> attribute is assigned to
+    the enclosing division. This is optional, but it helps to identify
+    the section of the commentary with the verse-number of the base text
+    that it comments upon (which is identical with the
+    <att>n</att> attribute of the quoted
+    <gi>lg</gi> element). The enclosing division
+    may also have a <att>type</att> attribute, such as
+    <code>type="sūtra"</code>, which tells us that it gathers the portion
+    of the commentary that concerns a given sūtra. This attribute, too,
+    is optional.</p>
+          <p>Here is an example without an
+    <hi rendition="simple:bold">avataraṇikā</hi>:</p>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <div n="7">
+              <quote type="base-text">
+                <lg n="7">
+                  <l>अशेषशक्तिप्रचितात्प्रधानादेव केवलात् ।</l>
+                  <l>कार्यभेदाः प्रवर्त्तन्ते तद्रूपा एव भावतः ॥ ७ ॥</l>
+                </lg>
+              </quote>
+              <p>यदशेषाभिर्महदादिकार्यग्रामजनिकाभिरात्मभूताभिः शक्तिभिः, प्रचितम्—युक्तं सत्वरजस्तमसां साम्यावस्थालक्षणं प्रधानम्, तत एवैते महदादयः कार्यभेदाः प्रवर्त्तन्ते इति कापिलाः । ...</p>
+            </div>
+          </egXML>
+          
+        </div>
+        <div type="level2">
+          <head>Several sections of the base text corresponding to one section
+    of commentary</head>
+          <p>It may be the case that a commentary will skip one section of the
+    base text, or comment on several sections of the base text at the
+    same time. In such cases, the enclosing division will simply include
+    more than one section of the base text. The label
+    (<att>n</att>) for this division will include all of the
+    sections of the base text that are comprised in the division. For
+    example, a section of commentary that comments upon two sūtras of
+    the base text:</p>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <div n="10 11" type="sūtra">
+              <quote type="base-text">
+                <ab n="10" type="sūtra">प्रकृतिविकृत्योश्च ॥</ab>
+                <ab n="11" type="sūtra">वृद्धिश्च कर्तृभूम्नास्य ॥</ab>
+              </quote>
+              <p>प्रकृतिविकारभावञ्च शब्दज्ञाः स्मरन्ति ; न चायं नित्यस्योपपद्यते ; तस्मात् स्मृतिरपि पूर्वोक्तहेत्वनुगुणैव । सादृश्यमप्यनुगुणमुपलभामह इत्युपपन्नं कार्यत्वम् ॥</p>
+            </div>
+          </egXML>
+          <figure n="4" xml:id="fig4">
+            <head>Example 4: <gi>quote</gi> for base text</head>
+            <graphic url="https://github.com/sarit/sarit-pm/raw/master/resources/img/ex-embedded-base-text2.jpg"/>
+          </figure>
+        </div>
+        <div type="level2">
+          <head>Sections of commentary that don’t correspond to any section of
+    the base text</head>
+          <p>Commentaries sometimes have material that doesn’t correspond to a
+    particular section of the base text: the most common example is
+    introductory material. This material, too, must be put in an
+    enclosing division; the only difference is that this division will
+    not contain any base text elements.</p>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <div>
+              <lg>
+                <l>सृष्टाविद्यानिशाध्वंसिनिबन्धमयवासरम् ।</l>
+                <l>उज्जासितजगज्जाड्यं नमस्यामः प्रभाकरम् ॥ १ ॥</l>
+              </lg>
+              <lg>
+                <l>प्रभाकरमयीं दृष्टिं दक्षिणां दधतं सदा ।</l>
+                <l>वामदर्शनतापन्नचन्द्रं वन्देऽपराजितम् ॥ २ ॥</l>
+              </lg>
+              <lg>
+                <l>प्रभाकरगुरोर्भावमतिगम्भीरभाषिणः ।</l>
+                <l>अञ्जसा व्यञ्जयिष्यन्ती पञ्चिका क्रियते मया ॥ ३ ॥</l>
+              </lg>
+              <lg>
+                <l>उपन्यासनिरासाभ्यां व्यासेनैषा विदूषिता ।</l>
+                <l>व्याख्या प्राचां निबन्धॄणामिति नाहमदूदुषम् ॥ ४ ॥</l>
+              </lg>
+            </div>
+          </egXML>
+          
+        </div>
+        <div type="level2">
+          <head>Sections of base text that are distributed across several
+    sections of commentary</head>
+          <p>Sometimes what we think of as a single section of the base text
+    (a verse, paragraph, etc.) is split up between several sections of
+    commentary: for example, the commentary might take individual words
+    from the base text in turn. Although the underlying principle is the
+    same—put the base text elements within an enclosing division that
+    also includes the commentary—the base text elements in this case
+    will be fragmented, and we need to provide enough information to
+    allow the structure of the base text to be reconstituted. Thus the
+    elements of the base text should be labelled as specified below (in
+    the “verse fragments” section).</p>
+          
+        </div>
+      </div>
+      <div type="level1">
+        <head>Sections of the text</head>
+        <p>There are many Sanskrit words for sections of a text: sarga,
+  adhyāya, aṅka, pariccheda, ucchvāsa, etc. The encoding of these
+  sections should meet several requirements:</p>
+        <list type="unordered">
+          <item>
+            <p>the XML document itself should be valid;</p>
+          </item>
+          <item>
+            <p>the structure of the XML document reflects the logical
+      structure of the text;</p>
+          </item>
+          <item>
+            <p>a standard reference system should be able to use the structure
+      of the XML document</p>
+          </item>
+        </list>
+        <p>as a proxy for the structure of the text;</p>
+        <list type="unordered">
+          <item>
+            <p>texts in the corpus are broadly consistent in the encoding
+      strategy used for these</p>
+          </item>
+        </list>
+        <p>sections.</p>
+        <p>These considerations lead us to recommend the use of
+  <gi>div</gi> for all "parts,"
+  "sections," and "divisions" in the text, whatever
+  their Sanskrit name is, and at whatever depth they occur. Do
+  <hi rendition="simple:bold">not</hi> use the numbered divisions
+  available in earlier versions of the TEI Guidelines
+  (<egXML xmlns="http://www.tei-c.org/ns/Examples"><div1/></egXML>,
+  <egXML xmlns="http://www.tei-c.org/ns/Examples"><div2/></egXML>, etc.).</p>
+        <p>Before encoding a text, you should figure out a strategy for
+  representing all of the relevant levels of the text as
+  <gi>div</gi> elements. Some Mīmāṃsā texts, for
+  example, are organized according to the hierarchical organization of
+  the Mīmāṃsā Sūtras into adhyāyas, pādas, and adhikaraṇas. The first
+  <gi>div</gi> beneath the
+  <gi>body</gi> element
+  (<code>body/div</code>) will thus correspond to an adhyāya,
+  the first <gi>div</gi> below this to a pāda
+  (<code>body/div/div</code>), and the first
+  <gi>div</gi> below this
+  (<code>body/div/div/div</code>) to an adhikaraṇa. If this
+  schema is applied consistently, there is no need for assigning a type
+  to the <gi>div</gi> elements themselves (e.g.,
+  <egXML xmlns="http://www.tei-c.org/ns/Examples"><div type="adhyāya"/></egXML>,
+  <egXML xmlns="http://www.tei-c.org/ns/Examples"><div type="pāda"/></egXML>,
+  <egXML xmlns="http://www.tei-c.org/ns/Examples"><div type="adhikaraṇa"/></egXML>), but
+  these <att>type</att> attributes may be included in order
+  to make the XML easier to read.</p>
+        <p>The strategy followed in the text can be, and should be, documented
+  in the reference declaration
+  (<gi>refsDecl</gi>), which is part of the
+  encoding description (<gi>encodingDesc</gi>) in
+  the TEI Header (see above).</p>
+        <div type="level2">
+          <head>Labelling sections</head>
+          <p>Sections of the text should be
+    <hi rendition="simple:bold">identifiable</hi>. In order to be
+    identifiable to humans, sections generally carry a heading and/or a
+    trailer (see below). In order to be identifiable to machines,
+    sections carry a numeric <hi rendition="simple:bold">label</hi> that
+    is represented by the <att>n</att> attribute of the
+    corresponding <gi>div</gi> element. The value
+    of <att>n</att> will usually be the serial number of
+    the section: <egXML xmlns="http://www.tei-c.org/ns/Examples"><div n="2"/></egXML> represents the second division (adhyāya,
+    pāda, adhikaraṇa, etc.), even if it's not actually the second
+    <gi>div</gi> element within its parent
+    element. For division that comprises more than one such section, we
+    simply put all of the corresponding numbers in the
+    <att>n</att> attribute:
+    <egXML xmlns="http://www.tei-c.org/ns/Examples"><div n="2 3 4"/></egXML>.</p>
+          <p>Divisions (<gi>div</gi>s) are block-level elements, and they
+    constitute the text hierarchy, together with other block-level
+    elements like paragraphs (<gi>p</gi>), verses
+    (<gi>lg</gi>), and the “anonymous blocks” used
+    for sūtras and the like (<gi>ab</gi>). The
+    overall reference system of the text will therefore usually include
+    the numbering of <gi>div</gi> elements at the
+    upper levels and the numbering of <gi>lg</gi>
+    or <gi>ab</gi> elements at the lower levels.</p>
+        </div>
+        <div type="level2">
+          <head>Headings and trailers</head>
+          <p>Headings and trailers are short “paratexts” that announce the
+    beginning or end of a section. These may be original to the text, or
+    added by scribes or even the editor: the general rule, however, is
+    that if it is included in the printed text, it should be included in
+    the digital text; if you determine that the editor or a scribe was
+    in fact responsible for adding some or all of these “paratexts,” TEI
+    allows you to hold him responsible and ultimately filter out such
+    interventions if desired. See “holding people responsible” in the
+    SARIT Full guidelines.</p>
+          <div type="level3">
+            <head>Headings</head>
+            <p>Some sections of the text will begin with a heading, most often
+      a short introductory phrase (e.g., अथ भावाधिकरणम्). We encode
+      these heading with the TEI element
+      <gi>head</gi>. There can be more than one
+      <gi>head</gi> element at the beginning of a
+      section:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <text xml:lang="sa-Deva">
+                <body><head>श्रीः</head><head>अभिनवभारती</head>
+		...
+		</body>
+              </text>
+            </egXML>
+            <p>In addition to the headings printed in the text, the heading
+      element is a convenient place to put chapter or section titles for
+      a table of contents, especially if there are no printed headings,
+      or if they would be unsuitable for a table of contents. This is
+      also a way to use English or transliterated titles within a
+      Sanskrit text (using, of course, the relevant
+      <att>xml:lang</att> attribute). You are therefore
+      encouraged to use the special element
+      <egXML xmlns="http://www.tei-c.org/ns/Examples"><head type="toc"/></egXML>, which
+      will supply the title of the section in question to the table of
+      contents, but which is itself suppressed in the browsing display
+      on the SARIT website. For example:</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <div n="1"><head>अथ प्रथमपरिच्छेदः</head><head type="toc" xml:lang="en">First chapter</head>
+	      ...
+	      </div>
+            </egXML>
+            
+          </div>
+          <div type="level3">
+            <head>Trailers</head>
+            <p>SARIT uses the TEI element
+      <gi>trailer</gi> for those short pieces of
+      text (often called colophons) that come at the end of a section.
+      <gi>trailer</gi> should typically be the
+      final element in the element that it closes.</p>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <trailer>॥ इति बृहत्यां प्रथमाध्यायस्य प्रथमः पादः समाप्तः ॥</trailer>
+            </egXML>
+
+              <figure n="5" xml:id="fig5">
+                <head>Example 5: <gi>trailer</gi> elements</head>
+                <graphic url="https://github.com/sarit/sarit-pm/raw/master/resources/img/ex-trailer.jpg"/>
+              </figure>
+
+          </div>
+        </div>
+      </div>
+      <div type="level1">
+        <head>Milestones</head>
+        <p>SARIT recommends encoding the page and, where possible, line
+  numbers of the source edition for purposes of reference. (The digital
+  text will have its own lineation and pagination depending on the media
+  in which it is viewed.) These are encoded as “milestone” elements,
+  that is, single elements that mark the transition from one unit to the
+  text. Sometimes other kinds of milestones besides lines and pages are
+  noted in source editions, for example manuscript folios. Specific
+  guidelines for the use of these elements are provided below.</p>
+        <div type="level2">
+          <head>Lines</head>
+          <p><hi rendition="simple:bold">If you choose to encode line-breaks
+    at all, every single line-break of the source edition must be
+    explicitly represented in the digital texts.</hi> Whenever a new
+    line begins in the source edition, the element
+    <gi>lb</gi> must appear, whether it occurs
+    within a prose paragraph, or at the end of a prose paragraph; within
+    a metrical line of verse, or at the end of such a line. If
+    line-breaks are encoded consistently, there is no need to assign
+    them a numeric label, because the line-number can be automatically
+    determined</p>
+          <p>The <gi>lb</gi> element is assumed to
+    refer to line-breaks in the principal source of the digital text.
+    (If you wish to encode line-breaks of another edition, use the
+    <att>ed</att> attribute to refer to it, and see the
+    section on internal references in the full version of the
+    guidelines.)</p>
+          <p>SARIT distinguishes two types of line breaks:
+          <list type="unordered"><item><p>an <gi>lb</gi> between words: e.g.,
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">उक्तं <lb/>च</egXML></p></item><item><p>an <gi>lb</gi> in the middle of a
+              word, and thus after an end-of-line
+              hyphen. SARIT uses the <att>break</att> attribute to
+    specify that the element "is considered not to mark the end of
+    any adjacent orthographic token"; the hyphen itself is
+    <hi rendition="simple:bold">not</hi> encoded. For example:
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">शं<lb break="no"/>करः</egXML></p></item></list></p>
+          
+            <figure n="6" xml:id="fig6">
+              <head>Example 6: <gi>lb</gi> and <gi>pb</gi></head>
+              <graphic url="https://github.com/sarit/sarit-pm/raw/master/resources/img/ex-lbs-and-pbs-3pvv.jpg"/>
+              
+            </figure>
+
+          
+            <figure n="7" xml:id="fig7">
+              <head>Example 7: <gi>lb</gi> and <gi>pb</gi></head>
+              <graphic url="https://github.com/sarit/sarit-pm/raw/master/resources/img/ex-lbs-and-pbs-4vnt.jpg"/>
+            </figure>
+        </div>
+        <div type="level2">
+          <head>Pages</head>
+          <p>The pagination of the source edition is encoded by placing the
+    element <gi>pb</gi> (for "page
+    break") at the beginning of every new page. In contrast to
+    line-breaks, SARIT requires the <gi>pb</gi>
+    element to have a numeric label (<att>n</att>) that
+    corresponds to the page number. But like line-breaks, SARIT uses the
+    <att>break</att> attribute to distinguish between page
+    breaks that occur between words (e.g.,
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">उपपन्नम् । <pb n="2"/>यदि च</egXML>)
+    and page breaks that occur within a word (e.g.,
+    <egXML xmlns="http://www.tei-c.org/ns/Examples">उपप<pb n="2" break="no"/>न्नम् । यदि च</egXML>). And also like
+    line-breaks, we assume that the breaking element and the
+    corresponding number refer by default to the principal source
+    edition.</p>
+        </div>
+        <div type="level2">
+          <head>Folios</head>
+          <p>Manuscript folios are treated as pages, so the beginning of a new
+    manuscript folio (or a new side of a manuscript folio) is encoded
+    with the <gi>pb</gi> element. These elements
+    have an <att>ed</att> attribute that refers to the
+    manuscript (the manuscript itself should be mentioned in the source
+    description of the TEI header).</p>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <pb ed="msK" n="2a"/>
+          </egXML>
+          
+        </div>
+      </div>
+      <div type="level1">
+        <head>Prose</head>
+        <p>Prose paragraphs should be encoded using TEI’s <gi>p</gi>
+	element.</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <p>देवमुनिगुरुनृपपुत्रविषया तु भाव एव न पुना रसः ।</p>
+        </egXML>
+        
+      </div>
+      <div type="level1">
+        <head>Verse</head>
+        <p>SARIT uses the <gi>lg</gi> element, a “line
+  group,” for metrical verses. A verse contains a number of metrical
+  <hi rendition="simple:bold">lines</hi>, which are encoded with the
+  <gi>l</gi> element. You can think of a
+  <hi rendition="simple:bold">line</hi> in the context of verse as
+  anything that ends in a daṇḍa or a double daṇḍa. The only elements
+  permitted in the <gi>lg</gi> element are line
+  elements (<gi>l</gi>) and labels
+  (<gi>label</gi>), besides milestone elements
+  (<gi>pb</gi> and
+  <gi>lb</gi>). Verses that are numbered in the
+  edition should also be given a label (<att>n</att>) by
+  which they can be easily identified. Generally the verse numbers in
+  the printed text, however, should also be represented as text. That
+  is, the number of the verse is included both in the
+  <att>n</att> attribute of the verse element
+  <gi>lg</gi>, and at the end of the second line,
+  as follows:</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <lg n="1">
+            <l>वागर्थाविव संपृक्तौ वागर्थप्रतिपत्तये ।</l>
+            <l>जगतः पितरौ वन्दे पार्वतीपरमेश्वरौ ॥ १ ॥</l>
+          </lg>
+        </egXML>
+        <p><hi rendition="simple:bold">Metrical lines are not typographic
+  lines</hi>. A typographic line break, encoded as
+  <gi>lb</gi>, might occur in the middle of, or
+  at the end of, a metrical line. A metrical line usually consists of
+  two metrical quarters (pādas), and thus a verse usually consists of
+  four quarters. The juncture between two quarters is a kind of break or
+  pause, and therefore we encode it using the TEI element
+  <gi>caesura</gi>.</p>
+        <p>Why do we use both <gi>caesura</gi> and
+  <gi>lb</gi>? The
+  <gi>caesura</gi> element encodes an element of
+  metrical structure that often motivates or explains the way the verse
+  has been set on the page in the source edition. The
+  <gi>lb</gi> element may thus coincide with a
+  <gi>caesura</gi> element, but its primary
+  purpose is to <hi rendition="simple:bold">count the number of line
+  breaks on a page</hi>. For example, a digital text that does not
+  render line-breaks at all might encode the following verse:</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <lg>
+            <l>स्वसुखनिरभिलाषः खिद्यसे लोकहेतोः<caesura/> प्रतिदिनमथवा ते वृत्तिरेवंविधैव ।</l>
+            <l>अनुभवति हि मूर्ध्ना पादपस्तीव्रमुष्णं<caesura/> शमयति परितापं छाययोपाश्रितानाम् ॥</l>
+          </lg>
+        </egXML>
+        <p>The lineation of the source edition does not always reflect this
+  structure. Here is one possible representation:</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <lg>
+            <l>स्वसुखनिरभिलाषः खिद्यसे <lb/>
+लोकहेतोः<caesura/> प्रतिदिनमथवा ते वृत्तिरेवंविधैव ।</l>
+            <l>अनुभवति हि मूर्ध्ना पादपस्तीव्रमुष्णं<caesura/><lb/>
+शमयति परितापं छाययोपाश्रितानाम् ॥</l>
+          </lg>
+        </egXML>
+        <p>When the line is broken in the middle of a word, use the
+  <att>break</att> attribute with a value of <val>no</val> rather than hard-coding a hyphen into
+  the text, as noted in the section on milestones above:</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <lg>
+            <l>तिष्ठन् भाति पितुः पुरो भुवि यथा सिंहासने किं तथा<caesura/><lb/>यत् संवाहयतः सुखं हि चरणौ तातस्य किं राज्यतः ।</l>
+            <l>किं भुक्ते भुवनत्रये धृतिरसौ भुक्तोज्झिते या गुरो<caesura/><lb break="no"/>रायासः खलु राज्यमुज्झितगुरोस्तत्रास्ति कश्चिद् गुणः ॥</l>
+          </lg>
+        </egXML>
+        <p>The common <hi rendition="simple:bold">āryā</hi> meter and its
+  relatives call for some comment: they are sometimes thought of as
+  having four quarters, and sometimes not. SARIT recommends the use of
+  the <gi>caesura</gi> element to represent the
+  <hi rendition="simple:bold">yati</hi> between the first and second
+  half of the line, when it is present; when the
+  <hi rendition="simple:bold">yati</hi> is absent, the
+  <gi>caesura</gi> element may be omitted. For
+  example:</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <lg n="87">
+            <l>हुअवह-पडित्त-णूमिअ-<caesura/>णिअ-णणुम्हा-विसंठुल-मह-ग्गाहं ।</l>
+            <l>परिवड्ढिएक्कमेक्काणुराअ-सर-पहर-णिव्वलिअ-सङ्ख-उलं ॥ ८७ ॥</l>
+          </lg>
+        </egXML>
+        
+        <div type="level2">
+          <head>Groups of verses</head>
+          <p>Groups of verses should simply be put into another
+    <gi>lg</gi> element that encloses the
+    <gi>lg</gi> elements corresponding to
+    individual verses. If there is a label for the group in the printed
+    text (e.g., kulaka, yugalaka, etc.), it should be included with the
+    <gi>label</gi> element, as follows:</p>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <lg>
+              <label>जुग्गं</label>
+              <lg n="34">
+                <l>इअ पहसिअ-कुमुअ-सरे <caesura/>भडि-मुह-पङ्क-विरुद्ध-चन्दालोए ।</l>
+                <l>जाए फुरन्त-तारे <caesura/>लच्छि-संगाह-णव-पोसे सरे ॥ ३४ ॥</l>
+              </lg>
+              <lg n="35">
+                <l>झिज्जइ झीणा वि तणू <caesura/>अट्ठिअ-बाहं पुणो परुण्णं व मुहं ।</l>
+                <l>रामस्स अईसन्ते <caesura/>आसा-बन्धे व्व चिर-गे हणुमन्ते ॥ ३५ ॥</l>
+              </lg>
+            </lg>
+          </egXML>
+          
+        </div>
+        <div type="level2">
+          <head>Fragments of verses</head>
+          <p>Sometimes the parts of a verse are broken up within a text, for
+    example when a commentator breaks up a verse to discuss its
+    components separately. In these cases, every verse-fragment should
+    be contained in an <gi>lg</gi> element with
+    the attributes <att>next</att>,
+    <att>prev</att>, or both.</p>
+          <p>All of the verse-fragments should have an identifying label (a,
+    b, c, etc.), e.g.
+    <egXML xmlns="http://www.tei-c.org/ns/Examples"><lg n="27c"/></egXML>. The value of <att>next</att> and
+    <att>prev</att> should refer to these identifying
+    labels, e.g., <egXML xmlns="http://www.tei-c.org/ns/Examples"><lg n="27c" next="27d"/></egXML>.</p>
+          <p>The labelling convention will allow applications to identify
+    “verse 27” as the sum of its parts in case there is no element
+    <egXML xmlns="http://www.tei-c.org/ns/Examples"><lg n="27"/></egXML> to be found.
+    However, it will not join fragmentary
+    <gi>l</gi> elements into a single element.
+    Therefore it is recommended to use the <att>part</att>
+    attribute on any fragmentary <gi>l</gi>
+    elements: <val>I</val> for an initial fragment (e.g.,
+    pādas a or c) and <val>F</val> for a final fragment
+    (e.g., pādas b or d), or <val>M</val> for a medial
+    fragment if such a case occurs.</p>
+
+          <figure n="8" xml:id="fig8">
+	    <head>Example 8: Partial verses (<gi>l</gi> with <att>next</att> and/or <att>prev</att>)</head>
+            <graphic url="https://github.com/sarit/sarit-pm/raw/master/resources/img/part-img1-coloured.png"/>
+	  </figure>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <div>
+              <div type="section" n="27c">
+                <p><hi>परिन्यास</hi>माह—</p>
+                <quote type="base-text">
+                  <lg n="27c" prev="27b" next="27d">
+                    <l part="I">तन्निष्पत्तिः परिन्यासोn</l>
+                  </lg>
+                </quote>
+                <p>यथा तत्रैव <note>(रत्ना॰ १।८)</note>—<lg><l>प्रारम्भेऽस्मिन् स्वामिनो वृद्धिहेतौ दैवे चेत्थं दत्तहस्तावलम्बने ।</l>
+		<l>सिद्धेर्भ्रान्तिर्नास्ति सत्यं तथापि स्वेच्छाकारी भीत एवास्मि भर्तुः ॥</l>
+	      </lg>
+	      इत्यनेन यौगन्धरायणः स्वव्यापारस्य दैवयोगात् निष्पत्तिमुक्तवानिति परिन्यासः ।</p>
+              </div>
+              <div type="section" n="27d">
+                <p><term>विलोभन</term>माह—</p>
+                <quote type="base-text">
+                  <lg n="27d" prev="27c">
+                    <l part="F">गुणाख्यानाद् विलोभनम् ॥ २७ ॥</l>
+                  </lg>
+                </quote>
+              </div>
+            </div>
+          </egXML>
+          
+            <figure n="9" xml:id="fig9">
+              <head>Example 9: Fragments of verses</head>
+              <graphic url="https://github.com/sarit/sarit-pm/raw/master/resources/img/ex-base-text-commentary-div2.jpg"/>
+            </figure>
+
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <div n="210">
+              <quote type="base-text">
+                <lg n="210a" next="210b">
+                  <l>किं स्यात् सा चित्रतैकस्यां;</l>
+                </lg>
+              </quote>
+              <p>ननु यदि सा चित्रता बुद्धावेकस्यां स्यात् तया च चित्रमेकं द्रव्यं व्यवस्थाप्येत (।) तदा कि दूषणं स्यात् ।</p>
+              <p>आह (।)</p>
+              <quote type="base-text">
+                <lg n="210b" prev="210a" next="210c">
+                  <l>न स्यात्तस्यां मतावपि ।</l>
+                </lg>
+              </quote>
+              <p>न केवलं द्रव्ये तस्यां मतावप्येकस्यां न स्या च्चित्रता । आकारनानात्वलक्षणत्वाद् भेदस्य । नानात्वेपि चित्रता कथम् (।) अनेकपुरुषप्रतीतिवत् ।</p>
+              <p>कथन्तर्हि प्रतीतिरित्याह (।)</p>
+              <quote type="base-text">
+                <lg n="210c" prev="210b">
+                  <l>यदीदं स्वयमर्थानां रोचते तत्र के वयम् ॥ २१० ॥</l>
+                </lg>
+              </quote>
+              <p><q>यदीद</q>मताद्रूप्येपि ताद्रूप्यप्रथनमर्थानां भासमानानां नीलादीनां स्वयमपरप्रेरणया रोचते । तत्र तथाप्रतिभासे के वयमसहमानाऽ(? अ) पि निषेद्धुं । अवस्तु च प्रतिभासते चेति व्यक्तमालीक्यं । (२१०)</p>
+            </div>
+          </egXML>
+          
+        </div>
+        <div type="level2">
+          <head>Verses within prose paragraphs</head>
+          <p>Often verses are “embedded” into paragraphs, and we reflect this
+    fact by embedding the <gi>lg</gi> element into
+    the <gi>p</gi> element.</p>
+          
+        </div>
+      </div>
+      <div type="level1">
+        <head>Sūtras</head>
+        <p>Sūtras are like paragraphs, but they are often formatted
+  differently (without indentation, for example) and they do not have
+  the “semantic baggage” of a prose paragraph. SARIT recommends the use
+  of the <gi>ab</gi> element (“anonymous block”)
+  with the attribute <att>type</att> set to <val>sutra</val>.</p>
+        <p>In the following example, the <gi>ab</gi>
+  element includes, in addition to the text of the sūtra, two typed
+  labels that provide, respectively, the serial number of the adhikaraṇa
+  in which the sutra occurs, and the position
+  (<hi rendition="simple:bold">pūrvapakṣa</hi>,
+  <hi rendition="simple:bold">uttarapakṣa</hi>, or
+  <hi rendition="simple:bold">siddhānta</hi>) that the sūtra
+  represents.</p>
+        <figure n="10" xml:id="fig10">
+	  <head>Example 10</head>
+	  <graphic url="https://github.com/sarit/sarit-pm/raw/master/resources/img/sutra-img1-coloured.png"/>
+	</figure>
+
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <div>
+            <ab type="sutra" n="2"><label type="adhikarana">2</label><label type="position">सि॰</label>एकस्यैवं पुनः श्रुतिरविशेषादनर्थकं हि स्यात् ॥ २</ab>
+            <p>समिधो यजति, तनूनपातं यजति इत्येवमादिः पञ्चकृत्वोऽभ्यस्तो ...</p>
+          </div>
+        </egXML>
+        
+      </div>
+      <div type="level1">
+        <head>Dramatic elements</head>
+        <p>SARIT uses the core elements of the TEI’s drama module for Sanskrit
+  plays. Plays usually consist of divisions, such as an aṅka, in which
+  various characters speak lines in prose or verse. The standard element
+  for a “line” in this sense is <gi>sp</gi>: this
+  contains the lines spoken by the character, either as prose
+  (<gi>p</gi>) or verse
+  (<gi>lg</gi>).</p>
+        <p>The <gi>sp</gi> element may also contain a
+  label for the speaker and stage directions. The speaker is encoded in
+  the element <gi>speaker</gi>, and stage
+  directions in the element <gi>stage</gi>. You
+  should omit any formatting the editor has used to distinguish these
+  elements.</p>
+	<figure n="11" xml:id="fig11">
+	  <head>Example 11</head>
+	  <graphic url="https://github.com/sarit/sarit-pm/raw/master/resources/img/stage-img1-coloured.png"/>
+        </figure>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <sp>
+            <speaker>राजा</speaker>
+            <stage>स्वगतम</stage>
+            <p>किं नि खलु गीतमेवंविधमाकर्ण्येष्टजनविरहादृते ऽपि बलवदुत्कण्ठितो ऽस्मि । अथ वा ।</p>
+            <lg>
+              <l>रम्याणि वीक्ष्य मुधरांश्च निशम्य शब्दा<caesura/>न्पर्युत्सुको भवति यत्सुखितो ऽपि जन्तुः ।</l>
+              <l>तच्चेतसा स्मरति नूनमबोधपूर्वं<caesura/> भावस्थिराणि जननान्तरसौहृदानि ॥ ९ ॥</l>
+            </lg>
+            <stage>अस्मृतिनिमित्तमुन्मनस्कत्वं रूपयति</stage>
+          </sp>
+        </egXML>
+        
+      </div>
+      <div type="level1">
+        <head>Labels and notes</head>
+        <p>The source edition will sometimes have
+  <hi rendition="simple:bold">labels</hi> added by the editor, which
+  help to identify sections (below the level of the sections explicitly
+  encoded as <gi>div</gi> elements), positions in
+  an argument (<hi rendition="simple:bold">pūrvapakṣa</hi>,
+  <hi rendition="simple:bold">uttarapakṣa</hi>,
+  <hi rendition="simple:bold">siddhānta</hi>), or other features of the
+  text. It will also sometimes have
+  <hi rendition="simple:bold">notes</hi>, whether those are represented
+  as footnotes, endnotes, or otherwise. It is possible to represent both
+  labels and notes using TEI’s <gi>label</gi> and
+  <gi>note</gi> elements.</p>
+        <p>Because SARIT recommends encoding
+  <hi rendition="simple:bold">structure</hi> rather than
+  <hi rendition="simple:bold">presentation</hi>, it is important to have
+  an encoding strategy for representing various types of notes and
+  labels, and to document this strategy in the encoding declaration of
+  the header. For example, your text might list variant readings and
+  references in the footnotes, and hence you might encode these notes as
+  <egXML xmlns="http://www.tei-c.org/ns/Examples"><note type="text-critical"/></egXML> or
+  <egXML xmlns="http://www.tei-c.org/ns/Examples"><note type="reference"/></egXML>.
+  Similarly, it is recommended to find consistent
+  <att>type</att> attributes for
+  <gi>label</gi> elements as well, and to avoid
+  the use of formatting-specific attributes (like
+  <att>place</att> and <att>rend</att>).</p>
+        <p>In the example below the labels might be encoded as follows:</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <div>
+            <label type="position">2</label>
+            <label type="position-person">भामहः</label>
+            <lg>
+              <l>अगोनिवृत्तिः शब्दार्थो यदि गौः केन गम्यताम् ।</l>
+              <l>गोशब्दं शृण्वतः पूर्वमगौः स्फुरतु चेतसि ॥ ५ ॥</l>
+            </lg>
+          </div>
+        </egXML>
+        
+          <figure n="12" xml:id="fig12">
+            <head>Example 12: <gi>label</gi> with <att>place</att> and <att>type</att></head>
+            <graphic url="https://github.com/sarit/sarit-pm/raw/master/resources/img/ex-label-tss.jpg"/>
+          </figure>
+
+        <p>Notes are often represented in printed editions with a
+  <hi rendition="simple:bold">note marker</hi> in the main text, and the
+  <hi rendition="simple:bold">note text</hi> either at the bottom of the
+  page (as footnotes) or at the end of the chapter or text (as
+  endnotes). <hi rendition="simple:bold">SARIT embeds notes into the
+  text in their proper place.</hi> That is, wherever you see a note
+  marker in the text, that is where you should place the
+  <gi>note</gi> element.</p>
+        <p>The content of the <gi>note</gi> element
+  depends on the <att>type</att> of note that it represents.
+  Typically, however, notes will contain a
+  <gi>p</gi> element. For text-critical notes, the
+  simple version of the guidelines recommends the use of prose
+  paragraphs; more sophisticated methods are available in the full
+  version of the guidelines.</p>
+        <p>Attention must also be paid to the
+  <hi rendition="simple:bold">language</hi> of the note, since in many
+  cases it will differ from the language of the surrounding text. It is
+  good practice to use the <att>xml:lang</att> attribute to
+  identify the language of any element that differs from its parent
+  element. This also includes sections of Sanskrit text quoted in notes,
+  for which you may use the <gi>foreign</gi>
+  element. For example:</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <p>यं नाट्यवेदं वेदेभ्यः सारमादाय ब्रह्मा कृतवान्, यत्संबद्धमभिनयं भरतश्चकार
+	  करणाङ्गहारानकरोत्<note xml:lang="en"><p>A.T.A. <foreign xml:lang="sa-Latn">hārān anekān akarot</foreign>.</p></note> ...</p>
+        </egXML>
+        <p>Note, finally, that editors will often insert references
+  <hi rendition="simple:bold">into the text itself</hi>, and you are
+  encouraged to use the <gi>note</gi> element for
+  these additions, as in the following example. (See the full version of
+  the guidelines for instructions regarding pointing references and
+  canonical reference schemes.)</p>
+        <egXML xmlns="http://www.tei-c.org/ns/Examples">
+          <div>
+            <p>यथा तत्रैव (<note type="reference">रत्ना॰ १।८</note>—</p>
+            <lg>
+              <l>‘प्रारम्भेऽस्मिन् स्वामिनो वृद्धिहेतौ दैवे चेत्थं दत्तहस्तावलभ्बे ।</l>
+              <l>सिद्धेर्भ्रान्तिर्नास्ति सत्यं तथापि स्वेच्छाकारी भीत एवास्मि भर्तुः ॥’</l>
+            </lg>
+          </div>
+        </egXML>
+        
+      </div>
+      <div type="level1">
+        <head>Quotations</head>
+        <p>For the simple level of text encoding, we recommend encoding
+  quotations “as-is.” That is, if the editor has used quotation marks or
+  double quotation marks, put them into the digital text; if the editor
+  has used bold-face text to represent quotations, use the
+  <gi>hi</gi> tag (for “highlighted”). The reason
+  for encoding quotations “as-is” is the possibility that identifying
+  the beginning and end of quotations may require extensive checking by
+  skilled readers, and the frequency with which quotations are
+  represented inconsistently in printed editions. Of course, if project
+  resources allow, quotations can be encoded by following the
+  suggestions in the full version of the guidelines.</p>
+        <div type="level2">
+          <head>Where do I put इति?</head>
+          <p>The particle इति, which marks quotations in Sanskrit, can be
+    tricky: it often combines with the previous or following word, which
+    can often mean that there is no typographic separation between a
+    “verse” and the prose it’s embedded in. While there are ways of
+    marking the beginning and ending of quotations, discussed more
+    extensively in the SARIT Full guidelines, we don’t worry about
+    quotations in SARIT Simple, and we are free to adopt the following
+    straightforward principle: <hi rendition="simple:bold">follow the
+    typography of the printed edition.</hi></p>
+          <p>If the edition prints इति on the same line as the verse, include
+    it there, within the <gi>l</gi> element; if it
+    prints इति on a following line, then put it outside of the
+    <gi>lg</gi> element.</p>
+
+    <figure n="13" xml:id="fig13">
+              <head>Example 13: इति on the same line</head>
+              <graphic url="https://github.com/sarit/sarit-pm/raw/master/resources/img/ex-iti-dp2.jpg"/>
+            </figure>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <lg>
+              <l>"वस्तूपलक्षणं यत्र सर्वाम् प्रसज्यते ।</l>
+              <l>द्रव्यमित्युच्यते सोऽर्थो भेद्यत्वेन विवक्षितः ॥" इति ।</l>
+            </lg>
+          </egXML>
+            <figure n="14" xml:id="fig14">
+              <head>Example 14: इति merged with the last  word in a verse</head>
+              <graphic url="https://github.com/sarit/sarit-pm/raw/master/resources/img/ex-iti-vnt3.jpg"/>
+            </figure>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <lg>
+              <l>एकप्रत्यवमर्षस्य हेतुत्वाद्धीरभेदिनी</l>
+              <l>एकधा हेतुभावेन व्यक्तीनामप्यभिन्नतेति ॥ (२५)</l>
+            </lg>
+          </egXML>
+            <figure n="15" xml:id="fig15">
+              <head>Example 15: इति on the following line</head>
+              <graphic url="https://github.com/sarit/sarit-pm/raw/master/resources/img/ex-iti-pvsvt.jpg"/>
+            </figure>
+          <egXML xmlns="http://www.tei-c.org/ns/Examples">
+            <p>तदयुक्तं ।
+	    <lg>
+	      <l>"तद्गतावेव शब्देभ्यो गम्यतेऽन्यनिवर्त्तनं ।</l>
+	      <l>न तत्र गम्यते कश्चिद्विशिष्टः केनचित्पर" ॥</l>
+	    </lg>
+	    (प्र. वा. १ । १२८)
+	    इति ग्रन्थविरोधात् । नीरूपस्य चास्तित्वविरोधाच्छशविषाणवत् । नीरूपत्वा-
+	    देव च न तस्याः प्रत्यक्षं ग्राहकं नाप्यनुमानं । सम्बन्धाभावात् ।</p>
+          </egXML>
+          
+        </div>
+      </div>
+      <div type="level1">
+        <head>Glossary</head>
+        <list type="unordered">
+          <item>
+            <p><hi rendition="simple:bold">base text</hi>: The text on which
+      the current text is a commentary.</p>
+          </item>
+        </list>
+        <p>Since a <hi rendition="simple:bold">base text</hi> only makes sense
+  in relation to a commentary on it, this term is only used within a
+  commentary. Sections of the <hi rendition="simple:bold">base text</hi>
+  that are quoted in the commentary (the current text) are enclosed in
+  <gi>quote</gi> elements with the @type="base-text".</p>
+        <list type="unordered">
+          <item>
+            <p><hi rendition="simple:bold">mūla</hi>: see
+	    <hi rendition="simple:bold">base text</hi>.</p>
+          </item>
+          <item>
+            <p><hi rendition="simple:bold">root text</hi>: see
+	    <hi rendition="simple:bold">base text</hi>.</p>
+          </item>
+        </list>
+      </div>
+    </body>
+  </text>
+</TEI>
