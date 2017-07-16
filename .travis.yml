@@ -7,8 +7,8 @@ before_install:
 script:
   - xmlstarlet sel -N xi="http://www.w3.org/2001/XInclude" -t -m "//xi:include/@href" -o "echo Validating " -v "." -n -o "jing -c \"./schemas/sarit.rnc\" \"" -v "." -o "\"" -n "./saritcorpus.xml"  > "/tmp/files.ls"
   - parallel --gnu < "/tmp/files.ls"
-  - xmllint --xinclude "./saritcorpus.xml" > all.xml
-  - jing -c "./schemas/sarit.rnc" > all.xml
+  - xmllint --xinclude --encode UTF-8 "./saritcorpus.xml" > all.xml
+  - jing -c "./schemas/sarit.rnc" all.xml
   - xmlstarlet sel -N xi="http://www.w3.org/2001/XInclude" -t -m "//xi:include/@href" -v "." -n "./saritcorpus.xml" | awk 'NF' - > "/tmp/files.ls"
   - xmlstarlet sel -N xi="http://www.w3.org/2001/XInclude" -t -m "//xi:include/@href" -v "." -n "./saritcorpus.xml" | wc
   - xmlstarlet sel -N xi="http://www.w3.org/2001/XInclude" -t -m "//xi:include/@href" -v "." -n "./saritcorpus.xml" | awk 'NF' - | wc
