@@ -1,0 +1,133 @@
+#+TITLE: SARIT’s ODD
+
+* Prerequisites
+
+Note: most of this is geared toward a Debian testing system
+approx. <2017-06-01 Thu>.
+
+You will need to have a clone of the TEI stylesheets and the SARIT
+corpus:
+
+#+BEGIN_SRC bash
+cd /tmp
+git clone https://github.com/sarit/SARIT-corpus.git
+git clone https://github.com/TEIC/Stylesheets.git
+#+END_SRC
+
+You’ll need a copy of libsaxonhe (libsaxonb didn’t work for me).  You
+can either use the one distributed with the TEI Stylesheets
+(~Stylesheets/lib/saxon9he.jar~,
+~Stylesheets/lib/lib/Saxon-HE-9.4.0.6.jar~), or install one:
+
+#+BEGIN_SRC bash
+sudo aptitude update && sudo aptitude install libsaxonhe-java
+#+END_SRC
+
+Be sure to adjust the scripts below accordingly.
+
+* Generating the ODD from the XML documents
+
+- This roughly corresponds to
+  https://teic.github.io/TCW/howtoGenerate.html, and I follow the
+  section heads there for easier orientation.
+
+You need to know where your local clone of the [[https://github.com/TEIC/Stylesheets.git][TEI XSL stylesheets]] and
+your copy of the [[https://github.com/sarit/SARIT-corpus.git][SARIT-corpus]] are.  Then, with the appropriate
+replacements for ~TEI_STYLESHEETS~ (e.g., ~/tmp/Stylesheets~) and
+~$SARIT_CORPUS~ (e.g., ~/tmp/SARIT-corpus~), run:
+
+The following command runs the oddbyexample stylesheet against
+~saritcorpus.xml~ (well, all files starting with ~saritcorpus~), with
+some messages:
+
+#+BEGIN_SRC bash
+  TEI_STYLESHEETS=/tmp/Stylesheets \
+		 SARIT_CORPUS=/tmp/SARIT-corpus \
+		 bash -c 'java -jar /usr/share/java/Saxon-HE.jar \
+		 -xsl:$TEI_STYLESHEETS/tools/oddbyexample.xsl \
+		 -o:/tmp/sarit.odd \
+		 -it:main \
+		 -xi:on \
+		 corpus=$SARIT_CORPUS \
+		 prefix=saritcorpus \
+		 enumerateRend=true \
+		 verbose=true'
+#+END_SRC
+
+This will give you file:/tmp/sarit.odd, an ODD for ~saritcorpus.xml~
+in the SARIT repository.[fn:1]
+
+
+** Understanding the ODD file 
+
+See Lou’s description (https://teic.github.io/TCW/howtoGenerate.html)
+for what to do with the ODD file.  For example, we get the following
+~moduleRef~ results:
+
+#+BEGIN_SRC nxml
+ <moduleRef xmlns="http://www.tei-c.org/ns/1.0" key="tei"/>
+ <moduleRef xmlns="http://www.tei-c.org/ns/1.0" key="textcrit" include="app listApp lem rdg witDetail listWit witness"/>
+ <moduleRef xmlns="http://www.tei-c.org/ns/1.0" key="namesdates" include="orgName persName surname forename addName roleName placeName settlement affiliation"/>
+ <moduleRef xmlns="http://www.tei-c.org/ns/1.0" key="tagdocs" include="code ident tag"/>
+ <moduleRef xmlns="http://www.tei-c.org/ns/1.0" key="core" include="p foreign emph hi quote q term sic corr choice gap add del unclear name rs email address addrLine num date ptr ref list item label head note graphic pb lb analytic monogr series author editor respStmt resp title imprint publisher biblScope citedRange pubPlace bibl biblStruct listBibl l lg sp speaker stage teiCorpus"/>
+ <moduleRef xmlns="http://www.tei-c.org/ns/1.0" key="header" include="teiHeader fileDesc titleStmt funder principal editionStmt edition extent publicationStmt authority idno availability licence seriesStmt notesStmt sourceDesc encodingDesc projectDesc editorialDecl correction normalization segmentation interpretation refsDecl classDecl taxonomy profileDesc langUsage language textClass keywords calendarDesc calendar revisionDesc change listChange"/>
+ <moduleRef xmlns="http://www.tei-c.org/ns/1.0" key="verse" include="caesura"/>
+ <moduleRef xmlns="http://www.tei-c.org/ns/1.0" key="msdescription" include="msDesc locus msIdentifier repository altIdentifier msName msContents msItem physDesc objectDesc history"/>
+ <moduleRef xmlns="http://www.tei-c.org/ns/1.0" key="transcr" include="space supplied surplus listTranspose transpose"/>
+ <moduleRef xmlns="http://www.tei-c.org/ns/1.0" key="linking" include="ab anchor seg"/>
+ <moduleRef xmlns="http://www.tei-c.org/ns/1.0" key="analysis" include="s w c span"/>
+ <moduleRef xmlns="http://www.tei-c.org/ns/1.0" key="textstructure" include="TEI text body div trailer byline epigraph titlePage docTitle titlePart docAuthor docImprint docDate front back"/>
+ <moduleRef xmlns="http://www.tei-c.org/ns/1.0" key="figures" include="table row cell figure figDesc"/>
+#+END_SRC
+
+** Using and improving a generated ODD
+
+To use the ODD for correcting/improving our encoding, we want to get a
+schema that an editior can actually use.  Commonly, Relax NG Compact
+schemas are very useful, so let’s try to get that (the following
+assumes you still have everything in your ~/tmp~ directory:
+
+#+BEGIN_SRC bash
+  cd /tmp
+  bash ./Stylesheets/bin/teitornc /tmp/sarit.odd /tmp/sarit.rnc
+#+END_SRC
+
+And then run something like this:
+
+#+BEGIN_SRC bash
+  xmllint  --xinclude /tmp/SARIT-corpus/saritcorpus.xml > /tmp/sc.xml
+  jing -c /tmp/sarit.rnc /tmp/sc.xml
+#+END_SRC
+
+Jing should not complain here.
+
+* Resources
+
+** Lou Burnard’s tutorials
+<<odd-burnard-tutorials>>
+
+Lou wrote some tutorials, mentioned in this email:
+https://listserv.brown.edu/?A2=ind1701&L=tei-l&F=&S=&P=4825 The links
+given there have to switched to https, it seems, i.e.:
+
+1) https://teic.github.io/TCW/howtoGenerate.html
+2) https://teic.github.io/TCW/howtoChain.html
+3) https://teic.github.io/TCW/purifyDoc.html
+
+* Footnotes
+
+[fn:1]  A more generic form is this, which will go through *all* ~xml~ files
+ in the corpus directory:
+
+ #+BEGIN_SRC bash
+   TEI_STYLESHEETS=/tmp/Stylesheets \
+		  SARIT_CORPUS=/tmp/SARIT-corpus \
+		  bash -c 'java -jar /usr/share/java/Saxon-HE.jar \
+		  -xsl:$TEI_STYLESHEETS/tools/oddbyexample.xsl \
+		  -o:/tmp/sarit.odd \
+		  -it:main \
+		  corpus=$SARIT_CORPUS'
+ #+END_SRC
+
+ This will give you file:/tmp/sarit.odd, an ODD for all (xml) files
+ in the SARIT repository.
