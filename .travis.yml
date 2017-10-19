@@ -14,10 +14,9 @@ script:
   - xmlstarlet sel -N xi="http://www.w3.org/2001/XInclude" -t -m "//xi:include/@href" -v "." -n "./saritcorpus.xml" | awk 'NF' - | wc
   - cat "/tmp/files.ls"
   - wc -l "/tmp/files.ls" | grep -o -E "^[0-9]+"
-  - for i in `cat /tmp/files.ls`; do head -n 1 "$i" | grep -o -E  "^<\?xml.*encoding=\"UTF-8\".*>"; done | wc
-  - for i in `cat /tmp/files.ls`; do head -n 1 "$i" | grep -o -E  "^<\?xml.*encoding=\"UTF-8\".*>"; done | awk 'NF' - | wc
+  - for i in `cat /tmp/files.ls`; do head -n 1 "$i" | grep -o -E  "^<\?xml.*encoding=\"UTF-8\".*>" || echo "***** No encoding spec: $i *****"; done
   - for i in `cat /tmp/files.ls`; do head -n 1 "$i" | grep -o -E  "^<\?xml.*encoding=\"UTF-8\".*>"; done | awk 'NF' - > "/tmp/matches"
   - cat "/tmp/matches"
   - wc -l "/tmp/matches" | grep -o -E "^[0-9]+"
-  - if [ $( wc -l "/tmp/matches" | grep -o -E "^[0-9]+" ) -eq $( wc -l "/tmp/files.ls" | grep -o -E "^[0-9]+" ) ]; then true; else false; fi;
+  - if [ $( wc -l "/tmp/matches" | grep -o -E "^[0-9]+" ) -eq $( wc -l "/tmp/files.ls" | grep -o -E "^[0-9]+" ) ]; then true && echo "All docs have encoding spec"; else echo "Some files don't have encoding spec!" && false ; fi;
 
