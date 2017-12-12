@@ -6,10 +6,10 @@ default namespace tei = "http://www.tei-c.org/ns/1.0"
 namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2017-06-01T15:17:48Z. .
-# TEI Edition: Version 3.1.0. Last updated on
-#	15th December 2016, revision d3f5e70
-# TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.1.0/
+# Schema generated from ODD source 2017-12-12T15:33:36Z. .
+# TEI Edition: Version 3.2.0. Last updated on
+#	10th July 2017, revision 0fcf651
+# TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
 #
 
 #
@@ -548,6 +548,14 @@ att.placement.attribute.place =
        | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" })+
     }
   }?
+att.typed.attributes =
+  att.typed.attribute.type, att.typed.attribute.subtype
+att.typed.attribute.type =
+  
+  ## characterizes the element in some sense, using any convenient classification scheme or typology.
+  attribute type {
+    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+  }?
 att.typed.attribute.subtype =
   
   ## provides a sub-categorization of the element, if needed
@@ -656,8 +664,8 @@ att.citing.attributes =
   att.citing.attribute.to
 att.citing.attribute.unit =
   
-  ## identifies the unit of information conveyed by the element, e.g. columns, pages, volume.
-  ## Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] part; 7] column
+  ## identifies the unit of information conveyed by the element, e.g. columns, pages, volume, entry.
+  ## Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] part; 7] column; 8] entry
   attribute unit {
     
     ## the element contains a volume number.
@@ -678,8 +686,11 @@ att.citing.attribute.unit =
       ## the element identifies a part of a book or collection.
       "part"
     | 
-      ## the element identifies a column.
+      ## the element identifies an entry number or label in a list of entries.
       "column"
+    | 
+      ## the element identifies a column.
+      "entry"
     | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
   }?
 att.citing.attribute.from =
@@ -842,7 +853,7 @@ model.placeStateLike_sequenceRepeatable =
   model.placeNamePart_sequenceRepeatable+
 model.publicationStmtPart.agency = publisher | authority
 model.publicationStmtPart.detail =
-  address | date | pubPlace | idno | availability
+  model.ptrLike | address | date | pubPlace | idno | availability
 model.availabilityPart = licence
 model.certLike = notAllowed
 model.descLike = notAllowed
@@ -1023,7 +1034,7 @@ p =
            "               "
            sch:report [
              test =
-               "(ancestor::tei:p or ancestor::tei:ab)          and not(parent::tei:exemplum                |parent::tei:item                |parent::tei:note                |parent::tei:q                |parent::tei:quote                |parent::tei:remarks                |parent::tei:said                |parent::tei:sp                |parent::tei:stage                |parent::tei:cell                |parent::tei:figure)"
+               "not(ancestor::floatingText) and (ancestor::tei:p or ancestor::tei:ab)          and not(parent::tei:exemplum                |parent::tei:item                |parent::tei:note                |parent::tei:q                |parent::tei:quote                |parent::tei:remarks                |parent::tei:said                |parent::tei:sp                |parent::tei:stage                |parent::tei:cell                |parent::tei:figure                )"
              "\x{a}" ~
              "        Abstract model violation: Paragraphs may not contain other paragraphs or ab elements.\x{a}" ~
              "      "
@@ -1066,6 +1077,7 @@ p =
     att.global.rendition.attribute.rendition,
     att.global.linking.attribute.corresp,
     att.global.analytic.attribute.ana,
+    att.global.responsibility.attribute.resp,
     att.declaring.attributes,
     att.written.attributes,
     empty
@@ -1083,6 +1095,7 @@ foreign =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 emph =
@@ -1098,6 +1111,7 @@ emph =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 hi =
@@ -1113,6 +1127,7 @@ hi =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.written.attributes,
     empty
   }
@@ -1151,6 +1166,9 @@ quote =
       | 
         ##
         "commentary1"
+      | 
+        ##
+        "commentary2"
       | 
         ##
         "sutra"
@@ -1212,6 +1230,7 @@ term =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.declaring.attributes,
     att.canonical.attributes,
     att.sortable.attributes,
@@ -1230,6 +1249,7 @@ sic =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 corr =
@@ -1287,6 +1307,7 @@ gap =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.global.source.attribute.source,
     att.timed.attributes,
     att.dimensions.attribute.unit,
@@ -1298,10 +1319,32 @@ gap =
     att.ranging.attribute.max,
     att.ranging.attribute.confidence,
     
-    ## gives the reason for omission. Sample values include sampling, inaudible, irrelevant, cancelled.
+    ## gives the reason for omission
+    ## Suggested values include: 1] cancelled; 2] deleted; 3] editorial; 4] illegible; 5] inaudible; 6] irrelevant; 7] sampling
     attribute reason {
       list {
-        xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+        (
+         ##
+         "cancelled"
+         | 
+           ##
+           "deleted"
+         | 
+           ## for features omitted from transcription due to editorial policy
+           "editorial"
+         | 
+           ##
+           "illegible"
+         | 
+           ##
+           "inaudible"
+         | 
+           ##
+           "irrelevant"
+         | 
+           ##
+           "sampling"
+         | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" })+
       }
     }?,
     
@@ -1350,6 +1393,7 @@ del =
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
     att.global.responsibility.attribute.cert,
+    att.global.responsibility.attribute.resp,
     att.ranging.attribute.atLeast,
     att.ranging.attribute.atMost,
     att.ranging.attribute.min,
@@ -1417,6 +1461,7 @@ name =
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
     att.global.linking.attribute.sameAs,
+    att.global.responsibility.attribute.resp,
     att.canonical.attribute.key,
     att.datable.custom.attribute.when-custom,
     att.datable.custom.attribute.notBefore-custom,
@@ -1452,6 +1497,7 @@ rs =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     
     ## characterizes the element in some sense, using any convenient classification scheme or typology.
     attribute type {
@@ -1474,6 +1520,7 @@ email =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 address =
@@ -1489,6 +1536,7 @@ address =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 addrLine =
@@ -1504,6 +1552,7 @@ addrLine =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 num =
@@ -1520,6 +1569,7 @@ num =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.ranging.attributes,
     empty
   }
@@ -1536,6 +1586,7 @@ date =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.datable.attributes,
     att.ranging.attribute.atLeast,
     att.ranging.attribute.atMost,
@@ -1585,6 +1636,7 @@ ptr =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.pointing.attributes,
     att.internetMedia.attributes,
     att.declaring.attributes,
@@ -1687,6 +1739,7 @@ ref =
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
     att.global.analytic.attribute.ana,
+    att.global.responsibility.attribute.resp,
     att.sortable.attributes,
     
     ## describes the nature of the items in the list.
@@ -1710,6 +1763,7 @@ item =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.sortable.attributes,
     empty
   }
@@ -1726,6 +1780,7 @@ label =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.placement.attributes,
     att.written.attributes,
     
@@ -1763,6 +1818,7 @@ head =
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
     att.global.responsibility.attribute.resp,
+    att.placement.attributes,
     att.written.attributes,
     
     ## characterizes the element in some sense, using any convenient classification scheme or typology.
@@ -1860,6 +1916,7 @@ graphic =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.media.attributes,
     att.resourced.attributes,
     att.declaring.attributes,
@@ -1867,7 +1924,7 @@ graphic =
   }
 pb =
   
-  ## (page break) marks the start of a new page in a paginated document. [3.10.3. Milestone
+  ## (page beginning) marks the beginning of a new page in a paginated document. [3.10.3. Milestone
   ## Elements]
   element pb {
     empty,
@@ -1899,7 +1956,7 @@ pb =
   }
 lb =
   
-  ## (line break) marks the start of a new (typographic) line in some edition or version of a text. [3.10.3. Milestone
+  ## (line beginning) marks the beginning of a new (typographic) line in some edition or version of a text. [3.10.3. Milestone
   ## Elements 7.2.5. Speech Contents]
   element lb {
     empty,
@@ -1913,6 +1970,7 @@ lb =
     att.global.rendition.attribute.rendition,
     att.global.linking.attribute.corresp,
     att.global.facs.attribute.facs,
+    att.global.responsibility.attribute.resp,
     att.edition.attributes,
     att.spanning.attributes,
     att.breaking.attributes,
@@ -1951,6 +2009,7 @@ analytic =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 monogr =
@@ -1976,6 +2035,7 @@ monogr =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 series =
@@ -2000,6 +2060,7 @@ series =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 author =
@@ -2015,6 +2076,7 @@ author =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.naming.attribute.role,
     att.canonical.attribute.ref,
     empty
@@ -2032,6 +2094,7 @@ editor =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.canonical.attribute.key,
     att.canonical.attribute.ref,
     empty
@@ -2040,7 +2103,8 @@ respStmt =
   
   ## (statement of responsibility) supplies a statement of responsibility for the intellectual content of a text, edition, recording, or series, where the specialized elements for authors, editors, etc. do not suffice or do not apply. May also be used to encode information about individuals or organizations which have played a role in the production or distribution of a bibliographic work. [3.11.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement 2.2.2. The Edition Statement 2.2.5. The Series Statement]
   element respStmt {
-    ((resp+, model.nameLike.agent+) | (model.nameLike.agent+, resp+)),
+    (((resp+, model.nameLike.agent+) | (model.nameLike.agent+, resp+)),
+     note*),
     att.global.attribute.xmlid,
     att.global.attribute.n,
     att.global.attribute.xmllang,
@@ -2049,6 +2113,7 @@ respStmt =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 resp =
@@ -2064,6 +2129,7 @@ resp =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.datable.custom.attribute.when-custom,
     att.datable.custom.attribute.notBefore-custom,
     att.datable.custom.attribute.notAfter-custom,
@@ -2086,6 +2152,7 @@ title =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.typed.attribute.subtype,
     att.datable.custom.attribute.when-custom,
     att.datable.custom.attribute.notBefore-custom,
@@ -2142,6 +2209,7 @@ imprint =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 publisher =
@@ -2157,6 +2225,7 @@ publisher =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 biblScope =
@@ -2172,6 +2241,7 @@ biblScope =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.citing.attributes,
     empty
   }
@@ -2188,6 +2258,7 @@ citedRange =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.citing.attribute.unit,
     empty
   }
@@ -2204,6 +2275,7 @@ pubPlace =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 bibl =
@@ -2229,6 +2301,7 @@ bibl =
     att.global.rendition.attribute.rendition,
     att.global.linking.attribute.corresp,
     att.global.linking.attribute.sameAs,
+    att.global.responsibility.attribute.resp,
     att.declarable.attributes,
     att.sortable.attributes,
     att.docStatus.attributes,
@@ -2257,6 +2330,7 @@ biblStruct =
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
     att.global.linking.attribute.sameAs,
+    att.global.responsibility.attribute.resp,
     att.declarable.attributes,
     att.sortable.attributes,
     att.docStatus.attributes,
@@ -2282,6 +2356,7 @@ listBibl =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.sortable.attributes,
     att.declarable.attributes,
     empty
@@ -2458,6 +2533,7 @@ sp =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 speaker =
@@ -2473,6 +2549,7 @@ speaker =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 stage =
@@ -2488,6 +2565,7 @@ stage =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 teiCorpus =
@@ -2505,6 +2583,7 @@ teiCorpus =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     
     ## The version of the TEI scheme
     [ a:defaultValue = "5.0" ]
@@ -2717,6 +2796,7 @@ witDetail =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     
     ## (witnesses) indicates the sigil or sigla identifying the witness or witnesses to which the detail refers.
     attribute wit {
@@ -2738,6 +2818,7 @@ listWit =
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
     att.global.responsibility.attribute.cert,
+    att.global.responsibility.attribute.resp,
     att.sortable.attributes,
     empty
   }
@@ -2755,6 +2836,7 @@ witness =
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
     att.global.linking.attribute.sameAs,
+    att.global.responsibility.attribute.resp,
     att.sortable.attributes,
     empty
   }
@@ -2827,6 +2909,7 @@ orgName =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.datable.custom.attribute.when-custom,
     att.datable.custom.attribute.notBefore-custom,
     att.datable.custom.attribute.notAfter-custom,
@@ -2856,6 +2939,7 @@ persName =
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
     att.global.linking.attribute.sameAs,
+    att.global.responsibility.attribute.resp,
     att.datable.custom.attribute.when-custom,
     att.datable.custom.attribute.notBefore-custom,
     att.datable.custom.attribute.notAfter-custom,
@@ -2885,6 +2969,7 @@ surname =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 forename =
@@ -2900,6 +2985,7 @@ forename =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 addName =
@@ -2915,6 +3001,7 @@ addName =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 roleName =
@@ -2930,6 +3017,7 @@ roleName =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 placeName =
@@ -2957,6 +3045,7 @@ placeName =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 settlement =
@@ -2972,6 +3061,7 @@ settlement =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.datable.custom.attribute.when-custom,
     att.datable.custom.attribute.notBefore-custom,
     att.datable.custom.attribute.notAfter-custom,
@@ -2994,6 +3084,7 @@ affiliation =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.ranging.attribute.atLeast,
     att.ranging.attribute.atMost,
     att.ranging.attribute.min,
@@ -3006,6 +3097,13 @@ affiliation =
     att.datable.custom.attribute.to-custom,
     att.datable.custom.attribute.datingPoint,
     att.datable.custom.attribute.datingMethod,
+    att.typed.attribute.subtype,
+    
+    ## characterizes the element in some sense, using any convenient classification scheme or typology.
+    ## Sample values include: 1] sponsor; 2] recommend; 3] discredit; 4] pledged
+    attribute type {
+      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    }?,
     empty
   }
 code =
@@ -3021,6 +3119,7 @@ code =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 ident =
@@ -3036,6 +3135,7 @@ ident =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 tag =
@@ -3051,6 +3151,7 @@ tag =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 teiHeader =
@@ -3066,6 +3167,7 @@ teiHeader =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 fileDesc =
@@ -3087,6 +3189,7 @@ fileDesc =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 titleStmt =
@@ -3102,6 +3205,7 @@ titleStmt =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 funder =
@@ -3117,6 +3221,7 @@ funder =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 principal =
@@ -3132,6 +3237,7 @@ principal =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 editionStmt =
@@ -3147,6 +3253,7 @@ editionStmt =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 edition =
@@ -3162,6 +3269,7 @@ edition =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 extent =
@@ -3177,6 +3285,7 @@ extent =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 publicationStmt =
@@ -3194,6 +3303,7 @@ publicationStmt =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 authority =
@@ -3209,6 +3319,7 @@ authority =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 idno =
@@ -3258,6 +3369,7 @@ availability =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.declarable.attributes,
     
     ## supplies a code identifying the current availability of the text.
@@ -3282,6 +3394,7 @@ licence =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.pointing.attributes,
     att.datable.custom.attribute.when-custom,
     att.datable.custom.attribute.notBefore-custom,
@@ -3306,6 +3419,7 @@ seriesStmt =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 notesStmt =
@@ -3321,6 +3435,7 @@ notesStmt =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 sourceDesc =
@@ -3337,6 +3452,7 @@ sourceDesc =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.declarable.attributes,
     empty
   }
@@ -3353,6 +3469,7 @@ encodingDesc =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 projectDesc =
@@ -3368,6 +3485,7 @@ projectDesc =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.declarable.attributes,
     empty
   }
@@ -3384,6 +3502,7 @@ editorialDecl =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.declarable.attributes,
     empty
   }
@@ -3417,6 +3536,7 @@ normalization =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.declarable.attributes,
     empty
   }
@@ -3433,6 +3553,7 @@ segmentation =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.declarable.attributes,
     empty
   }
@@ -3449,6 +3570,7 @@ interpretation =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.declarable.attributes,
     empty
   }
@@ -3465,6 +3587,7 @@ refsDecl =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.declarable.attributes,
     empty
   }
@@ -3481,6 +3604,7 @@ classDecl =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 taxonomy =
@@ -3498,6 +3622,7 @@ taxonomy =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 profileDesc =
@@ -3513,6 +3638,7 @@ profileDesc =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 langUsage =
@@ -3528,6 +3654,7 @@ langUsage =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.declarable.attributes,
     empty
   }
@@ -3544,6 +3671,7 @@ language =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     
     ## (identifier) Supplies a language code constructed as defined in BCP 47 which is used to identify the language documented by this element, and which is referenced by the global xml:lang attribute.
     attribute ident {
@@ -3570,6 +3698,7 @@ textClass =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.declarable.attributes,
     empty
   }
@@ -3586,6 +3715,7 @@ keywords =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     
     ## identifies the controlled vocabulary within which the set of keywords concerned is defined, for example by a taxonomy element, or by some other resource.
     attribute scheme { xsd:anyURI }?,
@@ -3604,6 +3734,7 @@ calendarDesc =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 calendar =
@@ -3619,6 +3750,7 @@ calendar =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 revisionDesc =
@@ -3634,6 +3766,7 @@ revisionDesc =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.docStatus.attributes,
     empty
   }
@@ -3663,6 +3796,7 @@ change =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     
     ## characterizes the element in some sense, using any convenient classification scheme or typology.
     attribute type {
@@ -3685,6 +3819,7 @@ listChange =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.sortable.attributes,
     empty
   }
@@ -3725,6 +3860,7 @@ caesura =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 att.msExcerpt.attributes = att.msExcerpt.attribute.defective
@@ -3759,13 +3895,14 @@ msDesc =
     att.global.responsibility.attribute.resp,
     att.sortable.attributes,
     att.declaring.attributes,
+    att.docStatus.attributes,
     empty
   }
 locus =
   
   ## defines a location within a manuscript or manuscript part, usually as a (possibly discontinuous) sequence of folio references. [10.3.5. References to Locations within a Manuscript]
   element locus {
-    macro.xtext,
+    (text | model.gLike | hi | locus)*,
     att.global.attribute.xmlid,
     att.global.attribute.n,
     att.global.attribute.xmllang,
@@ -3774,6 +3911,8 @@ locus =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
+    att.typed.attributes,
     empty
   }
 msIdentifier =
@@ -3810,6 +3949,7 @@ msIdentifier =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 repository =
@@ -3825,6 +3965,7 @@ repository =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 altIdentifier =
@@ -3840,13 +3981,14 @@ altIdentifier =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 msName =
   
   ## (alternative name) contains any form of unstructured alternative name used for a manuscript, such as an ocellus nominum, or nickname. [10.4. The Manuscript Identifier]
   element msName {
-    macro.xtext,
+    (text | model.gLike | rs | name)*,
     att.global.attribute.xmlid,
     att.global.attribute.n,
     att.global.attribute.xmllang,
@@ -3855,6 +3997,7 @@ msName =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 msContents =
@@ -3871,6 +4014,7 @@ msContents =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.msExcerpt.attributes,
     empty
   }
@@ -3889,6 +4033,7 @@ msItem =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.msExcerpt.attributes,
     empty
   }
@@ -3905,6 +4050,7 @@ physDesc =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 objectDesc =
@@ -3920,6 +4066,7 @@ objectDesc =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 history =
@@ -3935,6 +4082,7 @@ history =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 space =
@@ -3955,6 +4103,11 @@ space =
     att.ranging.attribute.min,
     att.ranging.attribute.max,
     att.ranging.attribute.confidence,
+    
+    ## (responsible party) (responsible party) indicates the individual responsible for identifying and measuring the space
+    attribute resp {
+      list { xsd:anyURI+ }
+    }?,
     empty
   }
 supplied =
@@ -4020,6 +4173,7 @@ listTranspose =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 transpose =
@@ -4035,6 +4189,7 @@ transpose =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 ab =
@@ -4053,7 +4208,7 @@ ab =
            "               "
            sch:report [
              test =
-               "(ancestor::tei:p or ancestor::tei:ab)          and not(parent::tei:exemplum         |parent::tei:item         |parent::tei:note         |parent::tei:q         |parent::tei:quote         |parent::tei:remarks         |parent::tei:said         |parent::tei:sp         |parent::tei:stage         |parent::tei:cell         |parent::tei:figure)"
+               "not(ancestor::floatingText) and (ancestor::tei:p or ancestor::tei:ab)          and not(parent::tei:exemplum         |parent::tei:item         |parent::tei:note         |parent::tei:q         |parent::tei:quote         |parent::tei:remarks         |parent::tei:said         |parent::tei:sp         |parent::tei:stage         |parent::tei:cell         |parent::tei:figure)"
              "\x{a}" ~
              "        Abstract model violation: ab may not contain paragraphs or other ab elements.\x{a}" ~
              "      "
@@ -4093,6 +4248,7 @@ ab =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.declaring.attributes,
     att.written.attributes,
     
@@ -4136,6 +4292,7 @@ seg =
     att.global.rendition.attribute.rendition,
     att.global.analytic.attribute.ana,
     att.global.responsibility.attribute.cert,
+    att.global.responsibility.attribute.resp,
     att.metrical.attribute.met,
     att.metrical.attribute.real,
     att.metrical.attribute.rhyme,
@@ -4192,6 +4349,7 @@ s =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.metrical.attribute.met,
     att.metrical.attribute.real,
     att.metrical.attribute.rhyme,
@@ -4220,6 +4378,7 @@ w =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.metrical.attribute.met,
     att.metrical.attribute.real,
     att.metrical.attribute.rhyme,
@@ -4240,6 +4399,7 @@ c =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.metrical.attribute.met,
     att.metrical.attribute.real,
     att.metrical.attribute.rhyme,
@@ -4348,6 +4508,7 @@ span =
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
     att.global.responsibility.attribute.cert,
+    att.global.responsibility.attribute.resp,
     att.interpLike.attributes,
     
     ## gives the identifier of the node which is the starting point of the span of text being annotated; if not accompanied by a to attribute, gives the identifier of the node of the entire span of text being annotated.
@@ -4376,6 +4537,7 @@ TEI =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     
     ## specifies the major version number of the TEI Guidelines against which this document is valid.
     attribute version {
@@ -4401,6 +4563,7 @@ TEI =
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
     att.global.analytic.attribute.ana,
+    att.global.responsibility.attribute.resp,
     att.declaring.attributes,
     att.written.attributes,
     empty
@@ -4427,6 +4590,7 @@ body =
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
     att.global.analytic.attribute.ana,
+    att.global.responsibility.attribute.resp,
     att.declaring.attributes,
     empty
   }
@@ -4492,6 +4656,7 @@ body =
     att.global.rendition.attribute.rendition,
     att.global.linking.attribute.corresp,
     att.global.analytic.attribute.ana,
+    att.global.responsibility.attribute.resp,
     att.metrical.attribute.met,
     att.metrical.attribute.real,
     att.metrical.attribute.rhyme,
@@ -4646,6 +4811,7 @@ trailer =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 byline =
@@ -4661,6 +4827,7 @@ byline =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 epigraph =
@@ -4676,6 +4843,7 @@ epigraph =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 titlePage =
@@ -4693,6 +4861,7 @@ titlePage =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 docTitle =
@@ -4708,6 +4877,7 @@ docTitle =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 titlePart =
@@ -4723,6 +4893,7 @@ titlePart =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     
     ## specifies the role of this subdivision of the title.
     [ a:defaultValue = "main" ]
@@ -4746,6 +4917,7 @@ docAuthor =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 docImprint =
@@ -4767,6 +4939,7 @@ docImprint =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 docDate =
@@ -4782,6 +4955,7 @@ docDate =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 front =
@@ -4831,6 +5005,7 @@ back =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.declaring.attributes,
     empty
   }
@@ -4850,6 +5025,7 @@ table =
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
     att.global.analytic.attribute.ana,
+    att.global.responsibility.attribute.resp,
     empty
   }
 row =
@@ -4865,6 +5041,7 @@ row =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 cell =
@@ -4880,6 +5057,7 @@ cell =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     att.tableDecoration.attributes,
     empty
   }
@@ -4901,6 +5079,7 @@ figure =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 figDesc =
@@ -4916,6 +5095,7 @@ figDesc =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.responsibility.attribute.resp,
     empty
   }
 att.witnessed.attributes = att.witnessed.attribute.wit
