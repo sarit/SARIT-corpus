@@ -29,18 +29,19 @@ Be sure to adjust the scripts below accordingly.
 
 - This roughly corresponds to
   https://teic.github.io/TCW/howtoGenerate.html, and I follow the
-  section heads there for easier orientation.
+  section heads there for easier orientation.  It should work in
+  Debian-like environments, and tries to avoid proprietary tools.
+
+** Setting up the ODD by Example Stylesheet
 
 You need to know where your local clone of the [[https://github.com/TEIC/Stylesheets.git][TEI XSL stylesheets]] and
 your copy of the [[https://github.com/sarit/SARIT-corpus.git][SARIT-corpus]] are.  Then, with the appropriate
 replacements for ~TEI_STYLESHEETS~ (e.g., ~/tmp/Stylesheets~) and
-~$SARIT_CORPUS~ (e.g., ~/tmp/SARIT-corpus~), run:
+~$SARIT_CORPUS~ (e.g., ~/tmp/SARIT-corpus~), apply the
+~oddbyexample.xsl~ stylesheet on ~saritcorpus.xml~ (actually, all
+files starting with ~saritcorpus~) by running the following command:
 
-The following command runs the oddbyexample stylesheet against
-~saritcorpus.xml~ (well, all files starting with ~saritcorpus~), with
-some messages:
-
-#+BEGIN_SRC bash
+#+BEGIN_SRC sh
   TEI_STYLESHEETS=/tmp/Stylesheets \
 		 SARIT_CORPUS=/tmp/SARIT-corpus \
 		 bash -c 'java -jar /usr/share/java/Saxon-HE.jar \
@@ -60,7 +61,7 @@ in the SARIT repository.[fn:1]
 
 ** Understanding the ODD file 
 
-See Lou’s description (https://teic.github.io/TCW/howtoGenerate.html)
+See Lou Burnard’s description (https://teic.github.io/TCW/howtoGenerate.html)
 for what to do with the ODD file.  For example, we get the following
 ~moduleRef~ results:
 
