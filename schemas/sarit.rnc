@@ -6,7 +6,7 @@ default namespace tei = "http://www.tei-c.org/ns/1.0"
 namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2017-12-12T15:33:36Z. .
+# Schema generated from ODD source 2017-12-15T13:17:32Z. .
 # TEI Edition: Version 3.2.0. Last updated on
 #	10th July 2017, revision 0fcf651
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.2.0/
@@ -32,6 +32,11 @@ macro.specialPara =
    | model.divPart
    | model.global)*
 macro.xtext = (text | model.gLike)*
+anyElement-egXML =
+  element * - (tei:* | teix:egXML) {
+    attribute * { text }*,
+    (text | anyElement-egXML)*
+  }
 att.ascribed.attributes = att.ascribed.attribute.who
 att.ascribed.attribute.who =
   
@@ -363,6 +368,9 @@ att.docStatus.attribute.status =
   attribute status {
     xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
   }?
+att.global.responsibility.attributes =
+  att.global.responsibility.attribute.cert,
+  att.global.responsibility.attribute.resp
 att.global.responsibility.attribute.cert =
   
   ## (certainty) signifies the degree of certainty associated with the intervention or interpretation.
@@ -405,6 +413,10 @@ att.editLike.attribute.evidence =
        | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" })+
     }
   }?
+att.global.rendition.attributes =
+  att.global.rendition.attribute.rend,
+  att.global.rendition.attribute.style,
+  att.global.rendition.attribute.rendition
 att.global.rendition.attribute.rend =
   
   ## (rendition) indicates how the element in question was rendered or presented in the source text.
@@ -423,12 +435,26 @@ att.global.rendition.attribute.rendition =
   attribute rendition {
     list { xsd:anyURI+ }
   }?
+att.global.source.attributes = att.global.source.attribute.source
 att.global.source.attribute.source =
   
   ## specifies the source from which some aspect of this element is drawn.
   attribute source {
     list { xsd:anyURI+ }
   }?
+att.global.attributes =
+  att.global.rendition.attributes,
+  att.global.linking.attributes,
+  att.global.analytic.attributes,
+  att.global.facs.attributes,
+  att.global.change.attributes,
+  att.global.responsibility.attributes,
+  att.global.source.attributes,
+  att.global.attribute.xmlid,
+  att.global.attribute.n,
+  att.global.attribute.xmllang,
+  att.global.attribute.xmlbase,
+  att.global.attribute.xmlspace
 att.global.attribute.xmlid =
   
   ## (identifier) provides a unique identifier for the element bearing the attribute.
@@ -742,12 +768,12 @@ model.measureLike_sequence = num
 model.measureLike_sequenceOptional = num?
 model.measureLike_sequenceOptionalRepeatable = num*
 model.measureLike_sequenceRepeatable = num+
-model.egLike = notAllowed
-model.egLike_alternation = notAllowed
-model.egLike_sequence = empty
-model.egLike_sequenceOptional = empty
-model.egLike_sequenceOptionalRepeatable = empty
-model.egLike_sequenceRepeatable = notAllowed
+model.egLike = egXML
+model.egLike_alternation = egXML
+model.egLike_sequence = egXML
+model.egLike_sequenceOptional = egXML?
+model.egLike_sequenceOptionalRepeatable = egXML*
+model.egLike_sequenceRepeatable = egXML+
 model.graphicLike = graphic
 model.offsetLike = notAllowed
 model.offsetLike_alternation = notAllowed
@@ -786,7 +812,7 @@ model.oddDecl_sequence = empty
 model.oddDecl_sequenceOptional = empty
 model.oddDecl_sequenceOptionalRepeatable = empty
 model.oddDecl_sequenceRepeatable = notAllowed
-model.phrase.xml = tag
+model.phrase.xml = att | gi | tag | val
 model.specDescLike = notAllowed
 model.biblLike = bibl | biblStruct | listBibl | msDesc
 model.biblLike_alternation = bibl | biblStruct | listBibl | msDesc
@@ -3106,6 +3132,21 @@ affiliation =
     }?,
     empty
   }
+att =
+  
+  ## (attribute) contains the name of an attribute appearing within running text. [22. Documentation Elements]
+  element att {
+    xsd:Name,
+    att.global.attributes,
+    
+    ## supplies an identifier for the scheme in which this name is defined.
+    ## Sample values include: 1] TEI(text encoding initiative) ; 2] DBK(docbook) ; 3] XX(unknown) ; 4] imaginary; 5] XHTML; 6] XML; 7] XI
+    [ a:defaultValue = "TEI" ]
+    attribute scheme {
+      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    }?,
+    empty
+  }
 code =
   
   ## contains literal code from some formal language such as a programming language. [22.1.1. Phrase Level Terms]
@@ -3120,6 +3161,43 @@ code =
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
     att.global.responsibility.attribute.resp,
+    empty
+  }
+egXML =
+  
+  ## (example of XML) a single XML fragment demonstrating the use of some XML, such as elements, attributes, or processing instructions, etc., in which the egXML element functions as the root element. [22.1.1. Phrase Level Terms]
+  element teix:egXML {
+    (text | anyElement-egXML)*,
+    att.global.attributes,
+    
+    ## indicates the intended validity of the example with respect to a schema.
+    [ a:defaultValue = "true" ]
+    attribute valid {
+      
+      ## the example is intended to be fully valid, assuming that its root element, or a provided root element, could have been used as a possible root element in the schema concerned.
+      "true"
+      | 
+        ## the example could be transformed into a valid document by inserting any number of valid attributes and child elements anywhere within it; or it is valid against a version of the schema concerned in which the provision of character data, list, element, or attribute values has been made optional.
+        "feasible"
+      | 
+        ## the example is not intended to be valid, and contains deliberate errors.
+        "false"
+    }?,
+    empty
+  }
+gi =
+  
+  ## (element name) contains the name (generic identifier) of an element. [22. Documentation Elements 22.5. Element Specifications]
+  element gi {
+    xsd:Name,
+    att.global.attributes,
+    
+    ## supplies the name of the scheme in which this name is defined.
+    ## Sample values include: 1] TEI; 2] DBK(docbook) ; 3] XX(unknown) ; 4] Schematron; 5] HTML
+    [ a:defaultValue = "TEI" ]
+    attribute scheme {
+      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    }?,
     empty
   }
 ident =
@@ -3154,6 +3232,10 @@ tag =
     att.global.responsibility.attribute.resp,
     empty
   }
+val =
+  
+  ## (value) contains a single attribute value. [22. Documentation Elements 22.5.4. Attribute List Specification]
+  element val { text, att.global.attributes, empty }
 teiHeader =
   
   ## (TEI header) supplies descriptive and declarative metadata associated with a digital resource or set of resources. [2.1.1. The TEI Header and Its Components 15.1. Varieties of Composite Text]
@@ -4674,9 +4756,6 @@ body =
         "adhikāra"
       | 
         ##
-        "adhyaya"
-      | 
-        ##
         "adhyāya"
       | 
         ##
@@ -4780,9 +4859,6 @@ body =
       | 
         ##
         "sūtra_with_bhāṣya"
-      | 
-        ##
-        "text"
       | 
         ##
         "unknown"
@@ -5133,18 +5209,25 @@ model.persNamePart_sequenceRepeatable =
   surname+, forename+, addName+, roleName+
 model.entryLike = notAllowed
 model.ptrLike.form = notAllowed
+att.global.change.attributes = att.global.change.attribute.change
 att.global.change.attribute.change =
   
   ## points to one or more change elements documenting a state or revision campaign to which the element bearing this attribute and its children have been assigned by the encoder.
   attribute change {
     list { xsd:anyURI+ }
   }?
+att.global.facs.attributes = att.global.facs.attribute.facs
 att.global.facs.attribute.facs =
   
   ## (facsimile) points to all or part of an image which corresponds with the content of the element.
   attribute facs {
     list { xsd:anyURI+ }
   }?
+att.global.linking.attributes =
+  att.global.linking.attribute.corresp,
+  att.global.linking.attribute.sameAs,
+  att.global.linking.attribute.next,
+  att.global.linking.attribute.prev
 att.global.linking.attribute.corresp =
   
   ## (corresponds) points to elements that correspond to the current element in some way.
@@ -5163,6 +5246,7 @@ att.global.linking.attribute.prev =
   
   ## (previous) points to the previous element of a virtual aggregate of which the current element is part.
   attribute prev { xsd:anyURI }?
+att.global.analytic.attributes = att.global.analytic.attribute.ana
 att.global.analytic.attribute.ana =
   
   ## (analysis) indicates one or more elements containing interpretations of the element on which the ana attribute appears.
