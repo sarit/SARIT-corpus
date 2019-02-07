@@ -101,10 +101,12 @@
                   <attDef ident="ana" mode="delete"/>
                   <attDef ident="change" mode="delete"/>
                   <attDef ident="type" mode="change">
-                     <valList mode="add" type="closed">
-                        <valItem ident="conjecture"/>
-                        <valItem ident="typo"/>
-                        <valItem ident="variant"/>
+                    <valList mode="add" type="closed">
+                      <!-- probably just synonyms -->
+                       <valItem ident="conjecture"/>
+                       <valItem ident="emendation"/>
+                       <valItem ident="typo"/>
+                       <valItem ident="variant"/>
                      </valList>
                   </attDef>
                </attList>
@@ -1144,8 +1146,6 @@
             </elementSpec>
             <elementSpec ident="editor" mode="change">
                <attList>
-                  <attDef ident="corresp" mode="delete"/>
-                  <attDef ident="sameAs" mode="delete"/>
                   <attDef ident="next" mode="delete"/>
                   <attDef ident="prev" mode="delete"/>
                   <attDef ident="ana" mode="delete"/>
@@ -1525,6 +1525,8 @@
                   <attDef ident="ref" mode="delete"/>
                </attList>
             </elementSpec>
+            <!-- Patrick McAllister, 2019-02-07: Added tei:quote. Not
+                 sure if mode=“change” is correct here. -->
             <elementSpec ident="editionStmt" mode="change">
                <attList>
                   <attDef ident="corresp" mode="delete"/>
@@ -2360,7 +2362,6 @@
                   <attDef ident="next" mode="delete"/>
                   <attDef ident="prev" mode="delete"/>
                   <attDef ident="ana" mode="delete"/>
-                  <attDef ident="facs" mode="delete"/>
                   <attDef ident="change" mode="delete"/>
                   <attDef ident="source" mode="delete"/>
                   <attDef ident="target" mode="delete"/>
