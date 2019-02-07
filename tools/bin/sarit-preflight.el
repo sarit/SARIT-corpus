@@ -9,7 +9,6 @@
 ;; Official (?) ODD intro: http://www.tei-c.org/guidelines/customization/getting-started-with-p5-odds/
 
 (eval-when-compile
-  (require 'subr-x)
   (require 'xmltok)
   (require 'cl-seq))
 
@@ -53,7 +52,8 @@
   (if noninteractive
       (apply
        #'error
-       (string-join `(,message "\n\nDump of current logs" "\n\n%s") "::")
+       ;; (string-join `(,message "\n\nDump of current logs" "\n\n%s") "::")
+       (mapconcat 'identity `(,message "\n\nDump of current logs" "\n\n%s") "::")
        `(,@params
          ,(with-current-buffer (sarit-log-buffer)
             (or (buffer-string) "[[ end of log ]]"))))
