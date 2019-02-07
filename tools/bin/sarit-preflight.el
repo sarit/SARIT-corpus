@@ -8,9 +8,8 @@
 ;; ODD overview: http://tei.oucs.ox.ac.uk/Talks/2014-10-odds/talk-04-tagdocs.xml
 ;; Official (?) ODD intro: http://www.tei-c.org/guidelines/customization/getting-started-with-p5-odds/
 
-(eval-when-compile
-  (require 'xmltok)
-  (require 'cl-seq))
+(require 'xmltok)
+(require 'cl-lib)
 
 ;; A set of functions that should ease maintenance of the SARIT
 ;; library.
