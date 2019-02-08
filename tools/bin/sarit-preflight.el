@@ -128,11 +128,9 @@ Override STYLESHEETS-DIR and PREFIX-DIR (vars in Makefile aren’t that great)."
         process)
     (message "Current directory is %s" default-directory)
     (message "Makefile is present: %s" (file-exists-p (expand-file-name "Makefile")))
-    (message "Its content is:\n\n############\n\n")
     (with-temp-buffer
-      (insert-file-contents (expand-file-name "Makefile"))
+      (call-process "pwd" nil t nil)
       (princ (buffer-string)))
-    (message"\n\n############\n\n")
     (setf process
           (start-process
            "sp-p5-make-clean"
@@ -149,9 +147,16 @@ Override STYLESHEETS-DIR and PREFIX-DIR (vars in Makefile aren’t that great)."
 
 
 (defun sp-clean-and-build-tei-p5 ()
-  "Build ODD->RNG for the TEI P5."
-  (let* ((default-directory (expand-file-name "tools/TEI/P5" sarit-default-dir))
-         (tei-stylesheet-dir (expand-file-name "tools/TEI-Stylesheets" sarit-default-dir))
+  "Build ODD->RNG for the TEI P5.
+
+You need to let-bind ‘sarit-default-dir’ correctly for this
+function to work properly."
+  (let* ((default-directory
+           (file-name-as-directory
+            (expand-file-name "tools/TEI/P5" sarit-default-dir)))
+         (tei-stylesheet-dir
+          (file-name-as-directory
+           (expand-file-name "tools/TEI-Stylesheets" sarit-default-dir)))
          (prefix-dir temporary-file-directory)
          (log-buffer (sarit-log-buffer))
          process)
@@ -309,8 +314,10 @@ Override STYLESHEETS-DIR and PREFIX-DIR (vars in Makefile aren’t that great)."
 
 (when noninteractive
   (let* ((sarit-default-dir
-	  (progn (message "sarit-default-dir set to %s" (expand-file-name default-directory))
-		 (expand-file-name default-directory)))
+	  (progn (message "sarit-default-dir set to %s"
+                          (file-name-as-directory
+                           (expand-file-name default-directory)))
+		 (file-name-as-directory (expand-file-name default-directory))))
          (corp (expand-file-name sarit-corpus sarit-default-dir))
          (schema (expand-file-name "schemas/sarit.rnc" sarit-default-dir))
          (docs-for-validation
