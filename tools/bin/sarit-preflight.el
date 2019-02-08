@@ -83,7 +83,7 @@
       (message "Process “%s” completed without apparent problems" process)
     (error "Process “%s” did not go well, stopping here" process)))
 
-(defun sp-check-and-fix-set-up! ()
+(defun sp-check-and-fix-set-up! (&optional verbose)
   "Make sure that all expected files are there."
   (when (and
          (file-exists-p sarit-default-dir)
@@ -100,7 +100,9 @@
            (symbol-value x)
            (file-exists-p (expand-file-name (symbol-value x)))
            (file-readable-p (expand-file-name (symbol-value x)))
-           (setf x (expand-file-name (symbol-value x))))
+	   (progn
+	     (when verbose (message "Setting %s to %s" x (expand-file-name (symbol-value x))))
+	     (setf x (expand-file-name (symbol-value x)))))
           (error "Could not access file (config option: %s): %s" x (symbol-value x))))
        to-check-and-set)
       (message "Set up looks good"))))
@@ -286,7 +288,9 @@ Override STYLESHEETS-DIR and PREFIX-DIR (vars in Makefile aren’t that great)."
 
 
 (when noninteractive
-  (let* ((sarit-default-dir default-directory)
+  (let* ((sarit-default-dir
+	  (progn (message "sarit-default-dir set to %s" (expand-file-name default-directory))
+		 (expand-file-name default-directory)))
          (corp (expand-file-name sarit-corpus sarit-default-dir))
          (schema (expand-file-name "schemas/sarit.rnc" sarit-default-dir))
          (docs-for-validation
@@ -294,7 +298,7 @@ Override STYLESHEETS-DIR and PREFIX-DIR (vars in Makefile aren’t that great)."
          (missing-encoding (sp-find-missing-xml-encoding-declaration docs-for-validation))
          sarit-all-file
          process)
-    (sp-check-and-fix-set-up!)
+    (sp-check-and-fix-set-up! 'verbose)
     (if (null missing-encoding)
         (message "Checked encoding declarations, looks good")
       (error "Encoding declaration missing here: %s" missing-encoding))
