@@ -1,5 +1,5 @@
 #! /bin/bash
-":"; exec emacs -Q --no-site-file --script "$0" -- "$@" # -*-emacs-lisp-*-
+":"; exec emacs24 -Q --no-site-file --script "$0" -- "$@" # -*-emacs-lisp-*-
 
 
 ;; Some useful resources:
@@ -126,6 +126,13 @@
 Override STYLESHEETS-DIR and PREFIX-DIR (vars in Makefile aren’t that great)."
   (let ((default-directory  p5-dir)
         process)
+    (message "Current directory is %s" default-directory)
+    (message "Makefile is present: %s" (file-exists-p (expand-file-name "Makefile")))
+    (message "Its content is:\n\n############\n\n")
+    (with-temp-buffer
+      (insert-file-contents (expand-file-name "Makefile"))
+      (princ (buffer-string)))
+    (message"\n\n############\n\n")
     (setf process
           (start-process
            "sp-p5-make-clean"
