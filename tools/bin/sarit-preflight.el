@@ -223,8 +223,6 @@ Override STYLESHEETS-DIR and PREFIX-DIR (vars in Makefile aren’t that great)."
            xmltok-attributes)))
       (nreverse docs))))
 
-;; (sp-find-xml-docs-for-validation "/home/beta/webstuff/indology.info/SARIT-corpus/saritcorpus.xml")
-
 (defun sp-sarit-corpus-with-xinclude (sarit-corpus-file)
   "Process xinclude directives in SARIT-CORPUS-FILE. Returns
   name of file containing the resulting document."
@@ -268,11 +266,6 @@ Override STYLESHEETS-DIR and PREFIX-DIR (vars in Makefile aren’t that great)."
       (pop-to-buffer (process-buffer process)))
     process))
 
-;; (let* ((sarit-default-dir "/home/beta/webstuff/indology.info/SARIT-corpus")
-;;        (default-dir sarit-default-dir))
-;;   (sp-rnc-validate-xml-docs
-;;    "/home/beta/webstuff/indology.info/SARIT-corpus/schemas/sarit.rnc"
-;;    (sp-find-xml-docs-for-validation "saritcorpus.xml")))
 
 (defun sp-find-missing-xml-encoding-declaration (xml-docs)
   "Return list of those XML-DOCS that don’t an encoding declaration."
@@ -291,9 +284,6 @@ Override STYLESHEETS-DIR and PREFIX-DIR (vars in Makefile aren’t that great)."
             doc))))
     xml-docs)))
 
-
-(sp-find-missing-xml-encoding-declaration
- '("~/webstuff/indology.info/SARIT-corpus/ratnakirti-nibandhavali.xml"))
 
 (when noninteractive
   (let* ((sarit-default-dir default-directory)
