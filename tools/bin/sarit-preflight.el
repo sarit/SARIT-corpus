@@ -101,10 +101,23 @@
            (file-exists-p (expand-file-name (symbol-value x)))
            (file-readable-p (expand-file-name (symbol-value x)))
 	   (progn
-	     (when verbose (message "Setting %s to %s" x (expand-file-name (symbol-value x))))
+	     (when verbose
+               (message "Setting %s to %s" x (expand-file-name (symbol-value x))))
 	     (setf x (expand-file-name (symbol-value x)))))
           (error "Could not access file (config option: %s): %s" x (symbol-value x))))
        to-check-and-set)
+      ;; some other tests
+      (mapc
+       (lambda (file)
+         (if (file-exists-p (expand-file-name file default-directory))
+             (when verbose
+               (message "File %s found in expected location: %s"
+                        file
+                        (expand-file-name file default-directory) ))
+           (error  "File %s not found in expected location: %s"
+                   file
+                   (expand-file-name file default-directory))))
+       '("tools/TEI/P5/Makefile"))
       (message "Set up looks good"))))
 
 (defun sp-p5-start-make (target p5-dir stylesheets-dir prefix-dir)
