@@ -14,35 +14,25 @@
 ;; A set of functions that should ease maintenance of the SARIT
 ;; library.
 
-(defcustom sarit-default-dir default-directory
+(defcustom sarit-default-dir nil
   "The base directory for the SARIT library.  This should be
   where you cloned the git repository to."
   :group 'sarit-preflight
   :type 'dir)
 
 
-(defcustom sarit-corpus "saritcorpus.xml"
-  "The main teiCorpus file is."
-  :group 'sarit-preflight
-  :type 'file)
 
-(defcustom sarit-odd "schemas/odd/sarit.odd"
-  "SARIT’s ODD file."
-  :group 'sarit-preflight
-  :type 'file)
+(defvar sarit-corpus "saritcorpus.xml"
+  "Set name of the main teiCorpus file, relative to ‘sarit-default-dir’.")
 
-(defcustom sarit-rnc "schemas/sarit.rnc"
-  "SARIT’s RNC file."
-  :group 'sarit-preflight
-  :type 'file)
+(defvar sarit-odd "schemas/odd/sarit.odd"
+  "SARIT’s ODD file, relative to ‘sarit-default-dir’.")
 
-(defcustom sarit-rng "schemas/sarit.rng"
-  "SARIT’s RNG file."
-  :group 'sarit-preflight
-  :type 'file)
+(defvar sarit-tei-p5-makefile "tools/TEI/P5/Makefile"
+  "Makefile of the TEI (P5) Guidelines, relative to ‘sarit-default-dir’.")
 
 
-;; Main functions:
+;; Helper functions
 
 (defun sarit-log-buffer ()
   (get-buffer-create "* sarit preflight logs *"))
@@ -83,16 +73,20 @@
       (message "Process “%s” completed without apparent problems" process)
     (error "Process “%s” did not go well, stopping here" process)))
 
+;; Main functions:
+
 (defun sp-check-and-fix-set-up! (&optional verbose)
   "Make sure that all expected files are there."
   (when (and
          (file-exists-p sarit-default-dir)
          (file-directory-p sarit-default-dir))
-    (let ((default-directory sarit-default-dir)
+    (let ((default-directory (or sarit-default-dir
+				 (progn
+				   (warn "sarit-default-dir not set, using current directory")
+				   default-directory)))
           (to-check-and-set '(sarit-corpus
                               sarit-odd
-                              sarit-rnc
-                              sarit-rng)))
+			      sarit-tei-p5-makefile)))
       (mapc
        (lambda (x)
          (or
@@ -100,17 +94,20 @@
            (symbol-value x)
            (file-exists-p (expand-file-name (symbol-value x)))
            (file-readable-p (expand-file-name (symbol-value x)))
-	   (progn
-	     (when verbose (message "Setting %s to %s" x (expand-file-name (symbol-value x))))
-	     (setf x (expand-file-name (symbol-value x)))))
+	   (setf x (expand-file-name (symbol-value x))))
           (error "Could not access file (config option: %s): %s" x (symbol-value x))))
        to-check-and-set)
+      (when verbose
+	(mapc
+	 (lambda (x)
+	   (message "Variable %s set to %s" x (expand-file-name (symbol-value x))))
+	 to-check-and-set))
       (message "Set up looks good"))))
 
 (defun sp-p5-start-make (target p5-dir stylesheets-dir prefix-dir)
   "Return a process for ‘make TARGET’ in P5-DIR.
 
-Override STYLESHEETS-DIR and PREFIX-DIR (vars in Makefile aren’t that great)."
+Override STYLESHEETS-DIR and PREFIX-DIR in Makefile."
   (let ((default-directory  p5-dir)
         process)
     (setf process
@@ -303,7 +300,7 @@ Override STYLESHEETS-DIR and PREFIX-DIR (vars in Makefile aren’t that great)."
         (message "Checked encoding declarations, looks good")
       (error "Encoding declaration missing here: %s" missing-encoding))
     (sp-clean-and-build-tei-p5)
-    (sp-make-schema  (expand-file-name "schemas/odd/sarit.odd" sarit-default-dir))
+    (sp-make-schema  (expand-file-name sarit-odd sarit-default-dir))
     (message "Validating %s docs: %s" (length docs-for-validation) docs-for-validation)
     (sp-wait-till-finished
      (sp-rnc-validate-xml-docs
