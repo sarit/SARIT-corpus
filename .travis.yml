@@ -1,8 +1,16 @@
 language: bash
+dist: xenial
 
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -qq jing xmlstarlet libxml2-utils parallel libxml2 emacs24 emacs24-common
+  - sudo apt-get install --quiet --yes --no-install-recommends \
+  jing \
+  xmlstarlet \
+  libxml2-utils \
+  parallel \
+  libxml2 \
+  emacs24 \
+  emacs24-common
 
 script:
   - bash ./tools/bin/sarit-preflight.el

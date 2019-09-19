@@ -1,5 +1,5 @@
 #! /bin/bash
-":"; exec emacs -Q --no-site-file --script "$0" -- "$@" # -*-emacs-lisp-*-
+":"; exec emacs24 -Q --no-site-file --script "$0" -- "$@" # -*-emacs-lisp-*-
 
 
 ;; Some useful resources:
@@ -94,14 +94,24 @@
            (symbol-value x)
            (file-exists-p (expand-file-name (symbol-value x)))
            (file-readable-p (expand-file-name (symbol-value x)))
-	   (setf x (expand-file-name (symbol-value x))))
+	   (progn
+	     (when verbose
+               (message "Setting %s to %s" x (expand-file-name (symbol-value x))))
+	     (setf x (expand-file-name (symbol-value x)))))
           (error "Could not access file (config option: %s): %s" x (symbol-value x))))
        to-check-and-set)
-      (when verbose
-	(mapc
-	 (lambda (x)
-	   (message "Variable %s set to %s" x (expand-file-name (symbol-value x))))
-	 to-check-and-set))
+      ;; some other tests
+      (mapc
+       (lambda (file)
+         (if (file-exists-p (expand-file-name file default-directory))
+             (when verbose
+               (message "File %s found in expected location: %s"
+                        file
+                        (expand-file-name file default-directory) ))
+           (error  "File %s not found in expected location: %s"
+                   file
+                   (expand-file-name file default-directory))))
+       '("tools/TEI/P5/Makefile"))
       (message "Set up looks good"))))
 
 (defun sp-p5-start-make (target p5-dir stylesheets-dir prefix-dir)
@@ -110,6 +120,11 @@
 Override STYLESHEETS-DIR and PREFIX-DIR in Makefile."
   (let ((default-directory  p5-dir)
         process)
+    (message "Current directory is %s" default-directory)
+    (message "Makefile is present: %s" (file-exists-p (expand-file-name "Makefile")))
+    (with-temp-buffer
+      (call-process "pwd" nil t nil)
+      (princ (buffer-string)))
     (setf process
           (start-process
            "sp-p5-make-clean"
@@ -126,9 +141,16 @@ Override STYLESHEETS-DIR and PREFIX-DIR in Makefile."
 
 
 (defun sp-clean-and-build-tei-p5 ()
-  "Build ODD->RNG for the TEI P5."
-  (let* ((default-directory (expand-file-name "tools/TEI/P5" sarit-default-dir))
-         (tei-stylesheet-dir (expand-file-name "tools/TEI-Stylesheets" sarit-default-dir))
+  "Build ODD->RNG for the TEI P5.
+
+You need to let-bind ‘sarit-default-dir’ correctly for this
+function to work properly."
+  (let* ((default-directory
+           (file-name-as-directory
+            (expand-file-name "tools/TEI/P5" sarit-default-dir)))
+         (tei-stylesheet-dir
+          (file-name-as-directory
+           (expand-file-name "tools/TEI-Stylesheets" sarit-default-dir)))
          (prefix-dir temporary-file-directory)
          (log-buffer (sarit-log-buffer))
          process)
@@ -286,8 +308,10 @@ Override STYLESHEETS-DIR and PREFIX-DIR in Makefile."
 
 (when noninteractive
   (let* ((sarit-default-dir
-	  (progn (message "sarit-default-dir set to %s" (expand-file-name default-directory))
-		 (expand-file-name default-directory)))
+	  (progn (message "sarit-default-dir set to %s"
+                          (file-name-as-directory
+                           (expand-file-name default-directory)))
+		 (file-name-as-directory (expand-file-name default-directory))))
          (corp (expand-file-name sarit-corpus sarit-default-dir))
          (schema (expand-file-name "schemas/sarit.rnc" sarit-default-dir))
          (docs-for-validation
