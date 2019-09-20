@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<grammar ns="http://www.tei-c.org/ns/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:ns1="http://www.isocat.org/ns/dcr" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+<grammar ns="http://www.tei-c.org/ns/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:ns2="http://www.isocat.org/ns/dcr" xmlns:ns1="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
   <!--
-    Schema generated from ODD source 2019-02-07T12:41:38Z. .
-    TEI Edition: Version 3.5.0. Last updated on
-    	4th February 2019, revision ffea433ab
-    TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
+    Schema generated from ODD source 2019-09-20T09:47:21Z. .
+    TEI Edition: Version 3.6.0. Last updated on
+    	16th July 2019, revision daa3cc0b9
+    TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.6.0/
     
   -->
   <!---->
@@ -212,7 +212,9 @@
   <define name="att.ranging.attribute.confidence">
     <optional>
       <attribute name="confidence">
-        <a:documentation>specifies the degree of statistical confidence (between zero and one) that a value falls within the range specified by min and max, or the proportion of observed values that fall within that range.</a:documentation>
+        <a:documentation>specifies the degree of statistical confidence (between zero and one) that a value falls within the range specified by <ns1:code>@min</ns1:code>
+ and <ns1:code>@max</ns1:code>
+, or the proportion of observed values that fall within that range.</a:documentation>
         <data type="double"/>
       </attribute>
     </optional>
@@ -221,7 +223,7 @@
     <optional>
       <attribute name="unit">
         <a:documentation>names the unit used for the measurement
-Suggested values include: 1] cm (centimetres) ; 2] mm (millimetres) ; 3] in (inches) ; 4] lines; 5] chars (characters) </a:documentation>
+Suggested values include: 1] cm (centimetres); 2] mm (millimetres); 3] in (inches); 4] line; 5] char (characters)</a:documentation>
         <choice>
           <value>cm</value>
           <a:documentation>(centimetres) </a:documentation>
@@ -229,9 +231,9 @@ Suggested values include: 1] cm (centimetres) ; 2] mm (millimetres) ; 3] in (inc
           <a:documentation>(millimetres) </a:documentation>
           <value>in</value>
           <a:documentation>(inches) </a:documentation>
-          <value>lines</value>
+          <value>line</value>
           <a:documentation>lines of text</a:documentation>
-          <value>chars</value>
+          <value>char</value>
           <a:documentation>(characters) characters of text</a:documentation>
           <data type="token">
             <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
@@ -268,7 +270,8 @@ Suggested values include: 1] cm (centimetres) ; 2] mm (millimetres) ; 3] in (inc
   <define name="att.written.attribute.hand">
     <optional>
       <attribute name="hand">
-        <a:documentation>points to a handNote element describing the hand considered responsible for the content of the element concerned.</a:documentation>
+        <a:documentation>points to a <ns1:code>&lt;handNote&gt;</ns1:code>
+ element describing the hand considered responsible for the content of the element concerned.</a:documentation>
         <data type="anyURI"/>
       </attribute>
     </optional>
@@ -292,7 +295,8 @@ Suggested values include: 1] cm (centimetres) ; 2] mm (millimetres) ; 3] in (inc
   <define name="att.cReferencing.attribute.cRef">
     <optional>
       <attribute name="cRef">
-        <a:documentation>(canonical reference) specifies the destination of the pointer by supplying a canonical reference expressed using the scheme defined in a refsDecl element in the TEI header</a:documentation>
+        <a:documentation>(canonical reference) specifies the destination of the pointer by supplying a canonical reference expressed using the scheme defined in a <ns1:code>&lt;refsDecl&gt;</ns1:code>
+ element in the TEI header</a:documentation>
         <data type="string"/>
       </attribute>
     </optional>
@@ -400,7 +404,7 @@ Suggested values include: 1] cm (centimetres) ; 2] mm (millimetres) ; 3] in (inc
    </sch:pattern>
   <define name="att.datcat.attribute.datcat">
     <optional>
-      <attribute name="ns1:datcat">
+      <attribute name="ns2:datcat">
         <a:documentation>contains a PID (persistent identifier) that aligns the given element with the appropriate Data Category (or categories) in ISOcat.</a:documentation>
         <list>
           <oneOrMore>
@@ -412,7 +416,7 @@ Suggested values include: 1] cm (centimetres) ; 2] mm (millimetres) ; 3] in (inc
   </define>
   <define name="att.datcat.attribute.valueDatcat">
     <optional>
-      <attribute name="ns1:valueDatcat">
+      <attribute name="ns2:valueDatcat">
         <a:documentation>contains a PID (persistent identifier) that aligns the content of the given element or the value of the given attribute with the appropriate simple Data Category (or categories) in ISOcat.</a:documentation>
         <list>
           <oneOrMore>
@@ -635,7 +639,8 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
   <define name="att.global.attribute.xmllang">
     <optional>
       <attribute name="xml:lang">
-        <a:documentation>(language) indicates the language of the element content using a tag generated according to BCP 47.</a:documentation>
+        <a:documentation>(language) indicates the language of the element content using a tag generated according to <ns1:a href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">BCP 47</ns1:a>
+.</a:documentation>
         <choice>
           <data type="language"/>
           <value/>
@@ -955,7 +960,8 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
   <define name="att.citing.attribute.from">
     <optional>
       <attribute name="from">
-        <a:documentation>specifies the starting point of the range of units indicated by the unit attribute.</a:documentation>
+        <a:documentation>specifies the starting point of the range of units indicated by the <ns1:code>@unit</ns1:code>
+ attribute.</a:documentation>
         <data type="token">
           <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
         </data>
@@ -965,7 +971,8 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
   <define name="att.citing.attribute.to">
     <optional>
       <attribute name="to">
-        <a:documentation>specifies the end-point of the range of units indicated by the unit attribute.</a:documentation>
+        <a:documentation>specifies the end-point of the range of units indicated by the <ns1:code>@unit</ns1:code>
+ attribute.</a:documentation>
         <data type="token">
           <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
         </data>
@@ -2236,7 +2243,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
     <element name="p">
       <a:documentation>(paragraph) marks paragraphs in prose. [3.1. Paragraphs 7.2.5. Speech Contents]</a:documentation>
       <ref name="macro.paraContent"/>
-      <sch:pattern id="oddbyexample-p-abstractModel-structure-p-constraint-report-5">
+      <sch:pattern id="oddbyexample-p-abstractModel-structure-p-constraint-report-4">
             <sch:rule context="tei:p">
                <sch:report test="not(ancestor::tei:floatingText) and (ancestor::tei:p or ancestor::tei:ab)          and not(parent::tei:exemplum                |parent::tei:item                |parent::tei:note                |parent::tei:q                |parent::tei:quote                |parent::tei:remarks                |parent::tei:said                |parent::tei:sp                |parent::tei:stage                |parent::tei:cell                |parent::tei:figure                )">
         Abstract model violation: Paragraphs may not occur inside other paragraphs or ab elements.
@@ -2245,7 +2252,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
             </sch:rule>
 
          </sch:pattern>
-      <sch:pattern id="oddbyexample-p-abstractModel-structure-l-constraint-report-6">
+      <sch:pattern id="oddbyexample-p-abstractModel-structure-l-constraint-report-5">
             <sch:rule context="tei:p">
                <sch:report test="ancestor::tei:l[not(.//tei:note//tei:p[. = current()])]">
         Abstract model violation: Lines may not contain higher-level structural elements such as div, p, or ab.
@@ -2831,7 +2838,7 @@ Measures]</a:documentation>
     <element name="ptr">
       <a:documentation>(pointer) defines a pointer to another location. [3.6. Simple Links and Cross-References 16.1. Links]</a:documentation>
       <empty/>
-      <sch:pattern id="oddbyexample-ptr-ptrAtts-constraint-report-7">
+      <sch:pattern id="oddbyexample-ptr-ptrAtts-constraint-report-6">
             <sch:rule context="tei:ptr">
                <sch:report test="@target and @cRef">Only one of the
 attributes @target and @cRef may be supplied on <sch:name/>
@@ -2859,7 +2866,7 @@ attributes @target and @cRef may be supplied on <sch:name/>
     <element name="ref">
       <a:documentation>(reference) defines a reference to another location, possibly modified by additional text or comment. [3.6. Simple Links and Cross-References 16.1. Links]</a:documentation>
       <ref name="macro.paraContent"/>
-      <sch:pattern id="oddbyexample-ref-refAtts-constraint-report-8">
+      <sch:pattern id="oddbyexample-ref-refAtts-constraint-report-7">
             <sch:rule context="tei:ref">
                <sch:report test="@target and @cRef">Only one of the
 	attributes @target' and @cRef' may be supplied on <sch:name/>
@@ -2938,7 +2945,7 @@ attributes @target and @cRef may be supplied on <sch:name/>
           </zeroOrMore>
         </zeroOrMore>
       </group>
-      <sch:pattern id="oddbyexample-list-gloss-list-must-have-labels-constraint-rule-8">
+      <sch:pattern id="oddbyexample-list-gloss-list-must-have-labels-constraint-rule-7">
             <sch:rule context="tei:list[@type='gloss']">
 	              <sch:assert test="tei:label">The content of a "gloss" list should include a sequence of one or more pairs of a label element followed by an item element</sch:assert>
 
@@ -3728,7 +3735,7 @@ Elements 7.2.5. Speech Contents]</a:documentation>
           <ref name="model.global"/>
         </choice>
       </zeroOrMore>
-      <sch:pattern id="oddbyexample-l-abstractModel-structure-l-constraint-report-9">
+      <sch:pattern id="oddbyexample-l-abstractModel-structure-l-constraint-report-8">
             <sch:rule context="tei:l">
                <sch:report test="ancestor::tei:l[not(.//tei:note//tei:l[. = current()])]">
         Abstract model violation: Lines may not contain lines or lg elements.
@@ -3798,12 +3805,12 @@ Elements 7.2.5. Speech Contents]</a:documentation>
       <sch:pattern id="oddbyexample-lg-atleast1oflggapl-constraint-assert-5">
             <sch:rule context="tei:lg">
                <sch:assert test="count(descendant::tei:lg|descendant::tei:l|descendant::tei:gap) &gt; 0">An lg element
-        must contain at least one child l, lg or gap element.</sch:assert>
+        must contain at least one child l, lg, or gap element.</sch:assert>
 
             </sch:rule>
 
          </sch:pattern>
-      <sch:pattern id="oddbyexample-lg-abstractModel-structure-l-constraint-report-10">
+      <sch:pattern id="oddbyexample-lg-abstractModel-structure-l-constraint-report-9">
             <sch:rule context="tei:lg">
                <sch:report test="ancestor::tei:l[not(.//tei:note//tei:lg[. = current()])]">
         Abstract model violation: Lines may not contain line groups.
@@ -3929,7 +3936,8 @@ Elements 7.2.5. Speech Contents]</a:documentation>
   </define>
   <define name="teiCorpus">
     <element name="teiCorpus">
-      <a:documentation>contains the whole of a TEI encoded corpus, comprising a single corpus header and one or more TEI elements, each containing a single text header and a text. [4. Default Text Structure 15.1. Varieties of Composite Text]</a:documentation>
+      <a:documentation>contains the whole of a TEI encoded corpus, comprising a single corpus header and one or more <ns1:code>&lt;TEI&gt;</ns1:code>
+ elements, each containing a single text header and a text. [4. Default Text Structure 15.1. Varieties of Composite Text]</a:documentation>
       <group>
         <ref name="teiHeader"/>
         <choice>
@@ -4245,7 +4253,14 @@ Elements 7.2.5. Speech Contents]</a:documentation>
   <define name="witness">
     <element name="witness">
       <a:documentation>contains either a description of a single witness referred to within the critical apparatus, or a list of witnesses which is to be referred to by a single sigil. [12.1. The Apparatus Entry, Readings, and Witnesses]</a:documentation>
-      <ref name="macro.limitedContent"/>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="model.limitedPhrase"/>
+          <ref name="model.inter"/>
+          <ref name="note"/>
+        </choice>
+      </zeroOrMore>
       <ref name="att.global.attribute.xmlid"/>
       <ref name="att.global.attribute.n"/>
       <ref name="att.global.attribute.xmllang"/>
@@ -4350,7 +4365,8 @@ Elements 7.2.5. Speech Contents]</a:documentation>
   <define name="att.datable.custom.attribute.datingMethod">
     <optional>
       <attribute name="datingMethod">
-        <a:documentation>supplies a pointer to a calendar element or other means of interpreting the values of the custom dating attributes.</a:documentation>
+        <a:documentation>supplies a pointer to a <ns1:code>&lt;calendar&gt;</ns1:code>
+ element or other means of interpreting the values of the custom dating attributes.</a:documentation>
         <data type="anyURI"/>
       </attribute>
     </optional>
@@ -4556,7 +4572,7 @@ Sample values include: 1] sponsor; 2] recommend; 3] discredit; 4] pledged</a:doc
       <optional>
         <attribute name="scheme" a:defaultValue="TEI">
           <a:documentation>supplies an identifier for the scheme in which this name is defined.
-Sample values include: 1] TEI (Text Encoding Initiative) ; 2] DBK (Docbook) ; 3] XX (unknown) ; 4] imaginary; 5] XHTML; 6] XML; 7] XI</a:documentation>
+Sample values include: 1] TEI (Text Encoding Initiative); 2] DBK (Docbook); 3] XX (unknown); 4] imaginary; 5] XHTML; 6] XML; 7] XI</a:documentation>
           <data type="token">
             <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
           </data>
@@ -4583,7 +4599,8 @@ Sample values include: 1] TEI (Text Encoding Initiative) ; 2] DBK (Docbook) ; 3]
   </define>
   <define name="egXML">
     <element name="teix:egXML">
-      <a:documentation>(example of XML) a single XML fragment demonstrating the use of some XML, such as elements, attributes, or processing instructions, etc., in which the egXML element functions as the root element. [22.1.1. Phrase Level Terms]</a:documentation>
+      <a:documentation>(example of XML) a single XML fragment demonstrating the use of some XML, such as elements, attributes, or processing instructions, etc., in which the <ns1:code>&lt;egXML&gt;</ns1:code>
+ element functions as the root element. [22.1.1. Phrase Level Terms]</a:documentation>
       <zeroOrMore>
         <choice>
           <text/>
@@ -4615,7 +4632,7 @@ Sample values include: 1] TEI (Text Encoding Initiative) ; 2] DBK (Docbook) ; 3]
       <optional>
         <attribute name="scheme" a:defaultValue="TEI">
           <a:documentation>supplies the name of the scheme in which this name is defined.
-Sample values include: 1] TEI; 2] DBK (docbook) ; 3] XX (unknown) ; 4] Schematron; 5] HTML</a:documentation>
+Sample values include: 1] TEI; 2] DBK (docbook); 3] XX (unknown); 4] Schematron; 5] HTML</a:documentation>
           <data type="token">
             <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
           </data>
@@ -4626,7 +4643,8 @@ Sample values include: 1] TEI; 2] DBK (docbook) ; 3] XX (unknown) ; 4] Schematro
   </define>
   <define name="ident">
     <element name="ident">
-      <a:documentation>(identifier) contains an identifier or name for an object of some kind in a formal language. ident is used for tokens such as variable names, class names, type names, function names etc. in formal programming languages. [22.1.1. Phrase Level Terms]</a:documentation>
+      <a:documentation>(identifier) contains an identifier or name for an object of some kind in a formal language. <ns1:code>&lt;ident&gt;</ns1:code>
+ is used for tokens such as variable names, class names, type names, function names etc. in formal programming languages. [22.1.1. Phrase Level Terms]</a:documentation>
       <text/>
       <ref name="att.global.attribute.xmlid"/>
       <ref name="att.global.attribute.n"/>
@@ -4882,7 +4900,7 @@ Sample values include: 1] TEI; 2] DBK (docbook) ; 3] XX (unknown) ; 4] Schematro
   </define>
   <define name="idno">
     <element name="idno">
-      <a:documentation>(identifier) supplies any form of identifier used to identify some object, such as a bibliographic item, a person, a title, an organization, etc. in a standardized way. [2.2.4. Publication, Distribution, Licensing, etc. 2.2.5. The Series Statement 3.11.2.4. Imprint, Size of a Document, and Reprint Information]</a:documentation>
+      <a:documentation>(identifier) supplies any form of identifier used to identify some object, such as a bibliographic item, a person, a title, an organization, etc. in a standardized way. [13.3.1. Basic Principles 2.2.4. Publication, Distribution, Licensing, etc. 2.2.5. The Series Statement 3.11.2.4. Imprint, Size of a Document, and Reprint Information]</a:documentation>
       <zeroOrMore>
         <choice>
           <text/>
@@ -5327,7 +5345,9 @@ Sample values include: 1] TEI; 2] DBK (docbook) ; 3] XX (unknown) ; 4] Schematro
       <ref name="att.global.rendition.attribute.rendition"/>
       <ref name="att.global.responsibility.attribute.resp"/>
       <attribute name="ident">
-        <a:documentation>(identifier) Supplies a language code constructed as defined in BCP 47 which is used to identify the language documented by this element, and which is referenced by the global xml:lang attribute.</a:documentation>
+        <a:documentation>(identifier) Supplies a language code constructed as defined in <ns1:a href="https://tools.ietf.org/html/bcp47">BCP 47</ns1:a>
+ which is used to identify the language documented by this element, and which is referenced by the global <ns1:code>@xml:lang</ns1:code>
+ attribute.</a:documentation>
         <choice>
           <data type="language"/>
           <value/>
@@ -5382,7 +5402,8 @@ Sample values include: 1] TEI; 2] DBK (docbook) ; 3] XX (unknown) ; 4] Schematro
       <ref name="att.global.responsibility.attribute.resp"/>
       <optional>
         <attribute name="scheme">
-          <a:documentation>identifies the controlled vocabulary within which the set of keywords concerned is defined, for example by a taxonomy element, or by some other resource.</a:documentation>
+          <a:documentation>identifies the controlled vocabulary within which the set of keywords concerned is defined, for example by a <ns1:code>&lt;taxonomy&gt;</ns1:code>
+ element, or by some other resource.</a:documentation>
           <data type="anyURI"/>
         </attribute>
       </optional>
@@ -5674,7 +5695,7 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
           </choice>
         </zeroOrMore>
       </group>
-      <sch:pattern id="oddbyexample-msIdentifier-msId_minimal-constraint-report-11">
+      <sch:pattern id="oddbyexample-msIdentifier-msId_minimal-constraint-report-10">
             <sch:rule context="tei:msIdentifier">
                <sch:report test="not(parent::tei:msPart) and (local-name(*[1])='idno' or local-name(*[1])='altIdentifier' or normalize-space(.)='')">An msIdentifier must contain either a repository or location.</sch:report>
 
@@ -6022,7 +6043,7 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
     <element name="ab">
       <a:documentation>(anonymous block) contains any arbitrary component-level unit of text, acting as an anonymous container for phrase or inter level elements analogous to, but without the semantic baggage of, a paragraph. [16.3. Blocks, Segments, and Anchors]</a:documentation>
       <ref name="macro.paraContent"/>
-      <sch:pattern id="oddbyexample-ab-abstractModel-structure-ab-constraint-report-12">
+      <sch:pattern id="oddbyexample-ab-abstractModel-structure-ab-constraint-report-11">
             <sch:rule context="tei:ab">
                <sch:report test="not(ancestor::tei:floatingText) and (ancestor::tei:p or ancestor::tei:ab)          and not(parent::tei:exemplum         |parent::tei:item         |parent::tei:note         |parent::tei:q         |parent::tei:quote         |parent::tei:remarks         |parent::tei:said         |parent::tei:sp         |parent::tei:stage         |parent::tei:cell         |parent::tei:figure)">
         Abstract model violation: ab may not occur inside paragraphs or other ab elements.
@@ -6031,7 +6052,7 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
             </sch:rule>
 
          </sch:pattern>
-      <sch:pattern id="oddbyexample-ab-abstractModel-structure-l-constraint-report-13">
+      <sch:pattern id="oddbyexample-ab-abstractModel-structure-l-constraint-report-12">
             <sch:rule context="tei:ab">
                <sch:report test="ancestor::tei:l or ancestor::tei:lg">
         Abstract model violation: Lines may not contain higher-level divisions such as p or ab.
@@ -6129,7 +6150,9 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
   <define name="att.linguistic.attribute.msd">
     <optional>
       <attribute name="msd">
-        <a:documentation>(morphosyntactic description) supplies morphosyntactic information for a token, usually according to some official reference vocabulary (e.g. for German: STTS-large tagset; for a feature description system designed as (pragmatically) universal, see Universal Features).</a:documentation>
+        <a:documentation>(morphosyntactic description) supplies morphosyntactic information for a token, usually according to some official reference vocabulary (e.g. for German: <ns1:a href="http://www.ims.uni-stuttgart.de/forschung/ressourcen/lexika/TagSets/stts-1999.pdf">STTS-large tagset</ns1:a>
+; for a feature description system designed as (pragmatically) universal, see <ns1:a href="http://universaldependencies.org/u/feat/index.html">Universal Features</ns1:a>
+).</a:documentation>
         <data type="string"/>
       </attribute>
     </optional>
@@ -6157,7 +6180,7 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
     <element name="s">
       <a:documentation>(s-unit) contains a sentence-like division of a text. [17.1. Linguistic Segment Categories 8.4.1. Segmentation]</a:documentation>
       <ref name="macro.phraseSeq"/>
-      <sch:pattern id="oddbyexample-s-noNestedS-constraint-report-14">
+      <sch:pattern id="oddbyexample-s-noNestedS-constraint-report-13">
             <sch:rule context="tei:s">
                <sch:report test="tei:s">You may not nest one s element within
       another: use seg instead</sch:report>
@@ -6246,7 +6269,7 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
     <element name="span">
       <a:documentation>associates an interpretative annotation directly with a span of text. [17.3. Spans and Interpretations]</a:documentation>
       <ref name="macro.phraseSeq.limited"/>
-      <sch:pattern id="oddbyexample-span-targetfrom-constraint-report-15">
+      <sch:pattern id="oddbyexample-span-targetfrom-constraint-report-14">
             <sch:rule context="tei:span">
                <sch:report test="@from and @target">
 Only one of the attributes @target and @from may be supplied on <sch:name/>
@@ -6256,7 +6279,7 @@ Only one of the attributes @target and @from may be supplied on <sch:name/>
             </sch:rule>
 
          </sch:pattern>
-      <sch:pattern id="oddbyexample-span-targetto-constraint-report-16">
+      <sch:pattern id="oddbyexample-span-targetto-constraint-report-15">
             <sch:rule context="tei:span">
                <sch:report test="@to and @target">
 Only one of the attributes @target and @to may be supplied on <sch:name/>
@@ -6266,7 +6289,7 @@ Only one of the attributes @target and @to may be supplied on <sch:name/>
             </sch:rule>
 
          </sch:pattern>
-      <sch:pattern id="oddbyexample-span-tonotfrom-constraint-report-17">
+      <sch:pattern id="oddbyexample-span-tonotfrom-constraint-report-16">
             <sch:rule context="tei:span">
                <sch:report test="@to and not(@from)">
 If @to is supplied on <sch:name/>
@@ -6275,7 +6298,7 @@ If @to is supplied on <sch:name/>
             </sch:rule>
 
          </sch:pattern>
-      <sch:pattern id="oddbyexample-span-tofrom-constraint-report-18">
+      <sch:pattern id="oddbyexample-span-tofrom-constraint-report-17">
             <sch:rule context="tei:span">
                <sch:report test="contains(normalize-space(@to),' ') or contains(normalize-space(@from),' ')">
 The attributes @to and @from on <sch:name/>
@@ -6298,7 +6321,8 @@ The attributes @to and @from on <sch:name/>
       <ref name="att.interpLike.attributes"/>
       <optional>
         <attribute name="from">
-          <a:documentation>gives the identifier of the node which is the starting point of the span of text being annotated; if not accompanied by a to attribute, gives the identifier of the node of the entire span of text being annotated.</a:documentation>
+          <a:documentation>gives the identifier of the node which is the starting point of the span of text being annotated; if not accompanied by a <ns1:code>@to</ns1:code>
+ attribute, gives the identifier of the node of the entire span of text being annotated.</a:documentation>
           <data type="anyURI"/>
         </attribute>
       </optional>
@@ -6313,7 +6337,9 @@ The attributes @to and @from on <sch:name/>
   </define>
   <define name="TEI">
     <element name="TEI">
-      <a:documentation>(TEI document) contains a single TEI-conformant document, combining a single TEI header with one or more members of the model.resourceLike class. Multiple TEI elements may be combined to form a teiCorpus element. [4. Default Text Structure 15.1. Varieties of Composite Text]</a:documentation>
+      <a:documentation>(TEI document) contains a single TEI-conformant document, combining a single TEI header with one or more members of the model.resourceLike class. Multiple <ns1:code>&lt;TEI&gt;</ns1:code>
+ elements may be combined to form a <ns1:code>&lt;teiCorpus&gt;</ns1:code>
+ element. [4. Default Text Structure 15.1. Varieties of Composite Text]</a:documentation>
       <group>
         <ref name="teiHeader"/>
         <oneOrMore>
@@ -6525,7 +6551,7 @@ The attributes @to and @from on <sch:name/>
           </zeroOrMore>
         </optional>
       </group>
-      <sch:pattern id="oddbyexample-div-abstractModel-structure-l-constraint-report-19">
+      <sch:pattern id="oddbyexample-div-abstractModel-structure-l-constraint-report-18">
             <sch:rule context="tei:div">
                <sch:report test="ancestor::tei:l">
         Abstract model violation: Lines may not contain higher-level structural elements such as div.
@@ -6534,7 +6560,7 @@ The attributes @to and @from on <sch:name/>
             </sch:rule>
 
          </sch:pattern>
-      <sch:pattern id="oddbyexample-div-abstractModel-structure-p-constraint-report-20">
+      <sch:pattern id="oddbyexample-div-abstractModel-structure-p-constraint-report-19">
             <sch:rule context="tei:div">
                <sch:report test="ancestor::tei:p or ancestor::tei:ab and not(ancestor::tei:floatingText)">
         Abstract model violation: p and ab may not contain higher-level structural elements such as div.
@@ -6673,6 +6699,8 @@ The attributes @to and @from on <sch:name/>
       <ref name="att.global.rendition.attribute.style"/>
       <ref name="att.global.rendition.attribute.rendition"/>
       <ref name="att.global.responsibility.attribute.resp"/>
+      <ref name="att.placement.attributes"/>
+      <ref name="att.written.attributes"/>
       <empty/>
     </element>
   </define>
@@ -7235,7 +7263,8 @@ Suggested values include: 1] label; 2] data</a:documentation>
   <define name="att.global.change.attribute.change">
     <optional>
       <attribute name="change">
-        <a:documentation>points to one or more change elements documenting a state or revision campaign to which the element bearing this attribute and its children have been assigned by the encoder.</a:documentation>
+        <a:documentation>points to one or more <ns1:code>&lt;change&gt;</ns1:code>
+ elements documenting a state or revision campaign to which the element bearing this attribute and its children have been assigned by the encoder.</a:documentation>
         <list>
           <oneOrMore>
             <data type="anyURI"/>
@@ -7307,7 +7336,8 @@ Suggested values include: 1] label; 2] data</a:documentation>
   <define name="att.global.analytic.attribute.ana">
     <optional>
       <attribute name="ana">
-        <a:documentation>(analysis) indicates one or more elements containing interpretations of the element on which the ana attribute appears.</a:documentation>
+        <a:documentation>(analysis) indicates one or more elements containing interpretations of the element on which the <ns1:code>@ana</ns1:code>
+ attribute appears.</a:documentation>
         <list>
           <oneOrMore>
             <data type="anyURI"/>

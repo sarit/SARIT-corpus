@@ -1,5 +1,5 @@
 #! /bin/bash
-":"; exec emacs24 -Q --no-site-file --script "$0" -- "$@" # -*-emacs-lisp-*-
+":"; exec emacs -Q --no-site-file --script "$0" -- "$@" # -*-emacs-lisp-*-
 
 
 ;; Some useful resources:
@@ -162,7 +162,11 @@ function to work properly."
          (sleep-for 2))
        (or (= 0 (process-exit-status process))
 	   (sp-error-and-show-log "Make %s failed for P5" x)))
-     '("clean" "validate"))))
+     '("clean"
+       "schemas"
+       ;;; This was failing (2019-09-20, for P5_Release_3.5.0)
+       ;; "validate"
+       ))))
 
 (defun sp-make-schema (odd-file)
   "Produce an RNG and RNC schema from ODD-FILE."
