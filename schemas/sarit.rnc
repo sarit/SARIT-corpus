@@ -8,10 +8,10 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2020-06-19T19:33:28Z. .
-# TEI Edition: Version 3.6.0. Last updated on
-#	16th July 2019, revision daa3cc0b9
-# TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.6.0/
+# Schema generated from ODD source 2020-06-19T19:54:58Z. .
+# TEI Edition: Version 4.0.0. Last updated on
+#	13th February 2020, revision ccd19b0ba
+# TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 4.0.0/
 #
 
 #
@@ -136,7 +136,7 @@ att.dimensions.attribute.unit =
     | 
       ## (characters) characters of text
       "char"
-    | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.dimensions.attribute.quantity =
   
@@ -165,7 +165,7 @@ att.breaking.attribute.break =
   
   ## indicates whether or not the element bearing this attribute should be considered to mark the end of an orthographic token in the same way as whitespace.
   attribute break {
-    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.cReferencing.attributes = att.cReferencing.attribute.cRef
 att.cReferencing.attribute.cRef =
@@ -371,7 +371,7 @@ att.docStatus.attribute.status =
   ## Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] draft; 6] embargoed; 7] expired; 8] frozen; 9] galley; 10] proposed; 11] published; 12] recommendation; 13] submitted; 14] unfinished; 15] withdrawn
   [ a:defaultValue = "draft" ]
   attribute status {
-    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.global.responsibility.attributes =
   att.global.responsibility.attribute.cert,
@@ -416,7 +416,7 @@ att.editLike.attribute.evidence =
        | 
          ## the intervention or interpretation has been made by the editor, cataloguer, or scholar on the basis of their expertise.
          "conjecture"
-       | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" })+
+       | xsd:token { pattern = "[^\p{C}\p{Z}]+" })+
     }
   }?
 att.global.rendition.attributes =
@@ -428,7 +428,7 @@ att.global.rendition.attribute.rend =
   ## (rendition) indicates how the element in question was rendered or presented in the source text.
   attribute rend {
     list {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
     }
   }?
 att.global.rendition.attribute.style =
@@ -507,7 +507,7 @@ att.internetMedia.attribute.mimeType =
   ## (MIME media type) specifies the applicable multimedia internet mail extension (MIME) media type
   attribute mimeType {
     list {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
     }
   }?
 att.media.attributes =
@@ -532,7 +532,7 @@ att.interpLike.attribute.type =
   ## indicates what kind of phenomenon is being noted in the passage.
   ## Sample values include: 1] image; 2] character; 3] theme; 4] allusion
   attribute type {
-    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.interpLike.attribute.inst =
   
@@ -545,7 +545,7 @@ att.naming.attribute.role =
   ## may be used to specify further information about the entity referenced by this name in the form of a set of whitespace-separated values, for example the occupation of a person, or the status of a place.
   attribute role {
     list {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
     }
   }?
 att.notated.attributes = att.notated.attribute.notation
@@ -553,7 +553,7 @@ att.notated.attribute.notation =
   
   ## names the notation used for the content of the element.
   attribute notation {
-    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.placement.attributes = att.placement.attribute.place
 att.placement.attribute.place =
@@ -592,7 +592,7 @@ att.placement.attribute.place =
        | 
          ## in a predefined space, for example left by an earlier scribe.
          "inspace"
-       | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" })+
+       | xsd:token { pattern = "[^\p{C}\p{Z}]+" })+
     }
   }?
 att.typed.attributes =
@@ -601,13 +601,13 @@ att.typed.attribute.type =
   
   ## characterizes the element in some sense, using any convenient classification scheme or typology.
   attribute type {
-    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.typed.attribute.subtype =
   
   ## provides a sub-categorization of the element, if needed
   attribute subtype {
-    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 sch:pattern [
   id = "oddbyexample-att.typed-subtypeTyped-constraint-rule-5"
@@ -641,7 +641,7 @@ att.sortable.attribute.sortKey =
   
   ## supplies the sort key for this element in an index, list or group which contains it.
   attribute sortKey {
-    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.edition.attributes =
   att.edition.attribute.ed, att.edition.attribute.edRef
@@ -650,7 +650,7 @@ att.edition.attribute.ed =
   ## (edition) supplies a sigil or other arbitrary identifier for the source edition in which the associated feature (for example, a page, column, or line break) occurs at this point in the text.
   attribute ed {
     list {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
     }
   }?
 att.edition.attribute.edRef =
@@ -723,7 +723,7 @@ att.citing.attribute.unit =
     | 
       ## the element identifies an entry number or label in a list of entries.
       "entry"
-    | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.citing.attribute.from =
   [
@@ -734,7 +734,7 @@ att.citing.attribute.from =
     ]
   ]
   attribute from {
-    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 att.citing.attribute.to =
   [
@@ -745,7 +745,7 @@ att.citing.attribute.to =
     ]
   ]
   attribute to {
-    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 model.nameLike.agent = name | orgName | persName
 model.nameLike.agent_alternation = name | orgName | persName
@@ -1063,7 +1063,8 @@ model.editorialDeclPart =
   correction | normalization | quotation | segmentation | interpretation
 model.profileDescPart =
   langUsage | textClass | calendarDesc | listTranspose
-model.resourceLike = \text
+model.resource = \text
+model.describedResource = teiCorpus | TEI
 p =
   
   ## (paragraph) marks paragraphs in prose. [3.1. Paragraphs 7.2.5. Speech Contents]
@@ -1408,14 +1409,14 @@ gap =
          | 
            ##
            "sampling"
-         | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" })+
+         | xsd:token { pattern = "[^\p{C}\p{Z}]+" })+
       }
     }?,
     
     ## in the case of text omitted because of damage, categorizes the cause of the damage, if it can be identified.
     ## Sample values include: 1] rubbing; 2] mildew; 3] smoke
     attribute agent {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -1516,14 +1517,14 @@ unclear =
          | 
            ##
            "eccentric_ductus"
-         | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" })+
+         | xsd:token { pattern = "[^\p{C}\p{Z}]+" })+
       }
     }?,
     
     ## Where the difficulty in transcription arises from damage, categorizes the cause of the damage, if it can be identified.
     ## Sample values include: 1] rubbing; 2] mildew; 3] smoke
     attribute agent {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -1645,6 +1646,7 @@ num =
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
     att.global.responsibility.attribute.resp,
+    att.typed.attribute.subtype,
     att.ranging.attributes,
     empty
   }
@@ -2658,9 +2660,7 @@ teiCorpus =
     ]
   ]
   element teiCorpus {
-    (teiHeader,
-     ((model.resourceLike+, (TEI | teiCorpus)*)
-      | (TEI | teiCorpus)+)),
+    (teiHeader, model.resource*, model.describedResource+),
     att.global.attribute.xmlid,
     att.global.attribute.n,
     att.global.attribute.xmllang,
@@ -2693,75 +2693,11 @@ app =
     att.global.analytic.attribute.ana,
     att.global.change.attribute.change,
     att.global.responsibility.attribute.resp,
+    att.typed.attribute.subtype,
     
     ## classifies the variation contained in this element according to some convenient typology.
     attribute type {
-      
-      ##
-      "ce2"
-      | 
-        ##
-        "comment"
-      | 
-        ##
-        "corr"
-      | 
-        ##
-        "correction"
-      | 
-        ##
-        "em"
-      | 
-        ##
-        "emendation"
-      | 
-        ##
-        "misprint"
-      | 
-        ##
-        "note"
-      | 
-        ##
-        "orth"
-      | 
-        ##
-        "parallel"
-      | 
-        ##
-        "punct"
-      | 
-        ##
-        "punctuation"
-      | 
-        ##
-        "sandhi"
-      | 
-        ##
-        "tib"
-      | 
-        ##
-        "tibdiff"
-      | 
-        ##
-        "tibvar"
-      | 
-        ##
-        "typo"
-      | 
-        ##
-        "unclear"
-      | 
-        ##
-        "var"
-      | 
-        ##
-        "var-capv-ngmpp"
-      | 
-        ##
-        "var-jna"
-      | 
-        ##
-        "var-thakur"
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     
     ## identifies the beginning of the lemma in the base text.
@@ -2885,6 +2821,7 @@ witDetail =
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
     att.global.responsibility.attribute.resp,
+    att.typed.attribute.subtype,
     
     ## (witnesses) indicates the sigil or sigla identifying the witness or witnesses to which the detail refers.
     attribute wit {
@@ -2941,7 +2878,7 @@ att.datable.custom.attribute.when-custom =
   ## supplies the value of a date or time in some custom standard form.
   attribute when-custom {
     list {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
     }
   }?
 att.datable.custom.attribute.notBefore-custom =
@@ -2949,7 +2886,7 @@ att.datable.custom.attribute.notBefore-custom =
   ## specifies the earliest possible date for the event in some custom standard form.
   attribute notBefore-custom {
     list {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
     }
   }?
 att.datable.custom.attribute.notAfter-custom =
@@ -2957,7 +2894,7 @@ att.datable.custom.attribute.notAfter-custom =
   ## specifies the latest possible date for the event in some custom standard form.
   attribute notAfter-custom {
     list {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
     }
   }?
 att.datable.custom.attribute.from-custom =
@@ -2965,7 +2902,7 @@ att.datable.custom.attribute.from-custom =
   ## indicates the starting point of the period in some custom standard form.
   attribute from-custom {
     list {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
     }
   }?
 att.datable.custom.attribute.to-custom =
@@ -2973,7 +2910,7 @@ att.datable.custom.attribute.to-custom =
   ## indicates the ending point of the period in some custom standard form.
   attribute to-custom {
     list {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
     }
   }?
 att.datable.custom.attribute.datingPoint =
@@ -3175,7 +3112,7 @@ affiliation =
     ## characterizes the element in some sense, using any convenient classification scheme or typology.
     ## Sample values include: 1] sponsor; 2] recommend; 3] discredit; 4] pledged
     attribute type {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -3190,7 +3127,7 @@ att =
     ## Sample values include: 1] TEI (Text Encoding Initiative); 2] DBK (Docbook); 3] XX (unknown); 4] imaginary; 5] XHTML; 6] XML; 7] XI
     [ a:defaultValue = "TEI" ]
     attribute scheme {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -3248,7 +3185,7 @@ gi =
     ## Sample values include: 1] TEI; 2] DBK (docbook); 3] XX (unknown); 4] Schematron; 5] HTML
     [ a:defaultValue = "TEI" ]
     attribute scheme {
-      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
     }?,
     empty
   }
@@ -3287,6 +3224,7 @@ tag =
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
     att.global.responsibility.attribute.resp,
+    att.typed.attribute.subtype,
     empty
   }
 val =
@@ -3579,7 +3517,7 @@ notesStmt =
   }
 sourceDesc =
   
-  ## (source description) describes the source from which an electronic text was derived or generated, typically a bibliographic description in the case of a digitized text, or a phrase such as "born digital" for a text which has no previous existence. [2.2.7. The Source Description]
+  ## (source description) describes the source(s) from which an electronic text was derived or generated, typically a bibliographic description in the case of a digitized text, or a phrase such as "born digital" for a text which has no previous existence. [2.2.7. The Source Description]
   element sourceDesc {
     (model.pLike+
      | (model.biblLike | model.sourceDescPart | model.listLike)+),
@@ -4040,7 +3978,7 @@ att.enjamb.attribute.enjamb =
   ## (enjambement) indicates that the end of a verse line is marked by enjambement.
   ## Sample values include: 1] no; 2] yes; 3] weak; 4] strong
   attribute enjamb {
-    xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 caesura =
   
@@ -4073,7 +4011,7 @@ att.msExcerpt.attribute.defective =
   }?
 msDesc =
   
-  ## (manuscript description) contains a description of a single identifiable manuscript or other text-bearing object. [10.1. Overview]
+  ## (manuscript description) contains a description of a single identifiable manuscript or other text-bearing object such as early printed books. [10.1. Overview]
   element msDesc {
     (msIdentifier,
      model.headLike*,
@@ -4150,7 +4088,7 @@ repository =
   
   ## contains the name of a repository within which manuscripts or other objects are stored, possibly forming part of an institution. [10.4. The Manuscript Identifier]
   element repository {
-    macro.xtext,
+    macro.phraseSeq.limited,
     att.global.attribute.xmlid,
     att.global.attribute.n,
     att.global.attribute.xmllang,
@@ -4328,7 +4266,7 @@ supplied =
     ## one or more words indicating why the text has had to be supplied, e.g. overbinding, faded-ink, lost-folio, omitted-in-original.
     attribute reason {
       list {
-        xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+        xsd:token { pattern = "[^\p{C}\p{Z}]+" }+
       }
     }?,
     empty
@@ -4773,15 +4711,18 @@ span =
 TEI =
   [
     a:documentation [
-      "(TEI document) contains a single TEI-conformant document, combining a single TEI header with one or more members of the model.resourceLike class. Multiple "
+      "(TEI document) contains a single TEI-conformant document, combining a single TEI header with one or more members of the model.resource class. Multiple "
       ns1:code [ "<TEI>" ]
-      " elements may be combined to form a "
+      " elements may be combined within a "
+      ns1:code [ "<TEI>" ]
+      " (or "
       ns1:code [ "<teiCorpus>" ]
-      " element. [4. Default Text Structure 15.1. Varieties of Composite Text]"
+      ") element. [4. Default Text Structure 15.1. Varieties of Composite Text]"
     ]
   ]
   element TEI {
-    (teiHeader, model.resourceLike+)
+    (teiHeader,
+     ((model.resource+, TEI*) | TEI+))
     >> sch:ns [ prefix = "tei" uri = "http://www.tei-c.org/ns/1.0" ]
     >> sch:ns [ prefix = "xs" uri = "http://www.w3.org/2001/XMLSchema" ]
     >> sch:ns [
@@ -4996,6 +4937,7 @@ titlePage =
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
     att.global.responsibility.attribute.resp,
+    att.typed.attribute.subtype,
     empty
   }
 docTitle =
@@ -5028,6 +4970,7 @@ titlePart =
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
     att.global.responsibility.attribute.resp,
+    att.typed.attribute.subtype,
     
     ## specifies the role of this subdivision of the title.
     [ a:defaultValue = "main" ]
@@ -5156,7 +5099,7 @@ att.tableDecoration.attribute.role =
     | 
       ## data values.
       "data"
-    | xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    | xsd:token { pattern = "[^\p{C}\p{Z}]+" }
   }?
 table =
   
