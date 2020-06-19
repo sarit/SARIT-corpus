@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <grammar ns="http://www.tei-c.org/ns/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:ns2="http://www.isocat.org/ns/dcr" xmlns:ns1="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
   <!--
-    Schema generated from ODD source 2020-06-19T19:33:28Z. .
-    TEI Edition: Version 3.6.0. Last updated on
-    	16th July 2019, revision daa3cc0b9
-    TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.6.0/
+    Schema generated from ODD source 2020-06-19T19:54:58Z. .
+    TEI Edition: Version 4.0.0. Last updated on
+    	13th February 2020, revision ccd19b0ba
+    TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 4.0.0/
     
   -->
   <!---->
@@ -236,7 +236,7 @@ Suggested values include: 1] cm (centimetres); 2] mm (millimetres); 3] in (inche
           <value>char</value>
           <a:documentation>(characters) characters of text</a:documentation>
           <data type="token">
-            <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+            <param name="pattern">[^\p{C}\p{Z}]+</param>
           </data>
         </choice>
       </attribute>
@@ -284,7 +284,7 @@ Suggested values include: 1] cm (centimetres); 2] mm (millimetres); 3] in (inche
       <attribute name="break">
         <a:documentation>indicates whether or not the element bearing this attribute should be considered to mark the end of an orthographic token in the same way as whitespace.</a:documentation>
         <data type="token">
-          <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+          <param name="pattern">[^\p{C}\p{Z}]+</param>
         </data>
       </attribute>
     </optional>
@@ -485,7 +485,7 @@ Suggested values include: 1] cm (centimetres); 2] mm (millimetres); 3] in (inche
         <a:documentation>describes the status of a document either currently or, when associated with a dated element, at the time indicated.
 Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] draft; 6] embargoed; 7] expired; 8] frozen; 9] galley; 10] proposed; 11] published; 12] recommendation; 13] submitted; 14] unfinished; 15] withdrawn</a:documentation>
         <data type="token">
-          <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+          <param name="pattern">[^\p{C}\p{Z}]+</param>
         </data>
       </attribute>
     </optional>
@@ -544,7 +544,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
               <value>conjecture</value>
               <a:documentation>the intervention or interpretation has been made by the editor, cataloguer, or scholar on the basis of their expertise.</a:documentation>
               <data type="token">
-                <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                <param name="pattern">[^\p{C}\p{Z}]+</param>
               </data>
             </choice>
           </oneOrMore>
@@ -564,7 +564,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
         <list>
           <oneOrMore>
             <data type="token">
-              <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+              <param name="pattern">[^\p{C}\p{Z}]+</param>
             </data>
           </oneOrMore>
         </list>
@@ -680,7 +680,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
         <list>
           <oneOrMore>
             <data type="token">
-              <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+              <param name="pattern">[^\p{C}\p{Z}]+</param>
             </data>
           </oneOrMore>
         </list>
@@ -724,7 +724,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
         <a:documentation>indicates what kind of phenomenon is being noted in the passage.
 Sample values include: 1] image; 2] character; 3] theme; 4] allusion</a:documentation>
         <data type="token">
-          <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+          <param name="pattern">[^\p{C}\p{Z}]+</param>
         </data>
       </attribute>
     </optional>
@@ -748,7 +748,7 @@ Sample values include: 1] image; 2] character; 3] theme; 4] allusion</a:document
         <list>
           <oneOrMore>
             <data type="token">
-              <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+              <param name="pattern">[^\p{C}\p{Z}]+</param>
             </data>
           </oneOrMore>
         </list>
@@ -763,7 +763,7 @@ Sample values include: 1] image; 2] character; 3] theme; 4] allusion</a:document
       <attribute name="notation">
         <a:documentation>names the notation used for the content of the element.</a:documentation>
         <data type="token">
-          <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+          <param name="pattern">[^\p{C}\p{Z}]+</param>
         </data>
       </attribute>
     </optional>
@@ -800,7 +800,7 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
               <value>inspace</value>
               <a:documentation>in a predefined space, for example left by an earlier scribe.</a:documentation>
               <data type="token">
-                <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                <param name="pattern">[^\p{C}\p{Z}]+</param>
               </data>
             </choice>
           </oneOrMore>
@@ -817,7 +817,7 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
       <attribute name="type">
         <a:documentation>characterizes the element in some sense, using any convenient classification scheme or typology.</a:documentation>
         <data type="token">
-          <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+          <param name="pattern">[^\p{C}\p{Z}]+</param>
         </data>
       </attribute>
     </optional>
@@ -827,7 +827,7 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
       <attribute name="subtype">
         <a:documentation>provides a sub-categorization of the element, if needed</a:documentation>
         <data type="token">
-          <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+          <param name="pattern">[^\p{C}\p{Z}]+</param>
         </data>
       </attribute>
     </optional>
@@ -863,7 +863,7 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
       <attribute name="sortKey">
         <a:documentation>supplies the sort key for this element in an index, list or group which contains it.</a:documentation>
         <data type="token">
-          <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+          <param name="pattern">[^\p{C}\p{Z}]+</param>
         </data>
       </attribute>
     </optional>
@@ -879,7 +879,7 @@ Suggested values include: 1] below; 2] bottom; 3] margin; 4] top; 5] opposite; 6
         <list>
           <oneOrMore>
             <data type="token">
-              <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+              <param name="pattern">[^\p{C}\p{Z}]+</param>
             </data>
           </oneOrMore>
         </list>
@@ -951,7 +951,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
           <value>entry</value>
           <a:documentation>the element identifies an entry number or label in a list of entries.</a:documentation>
           <data type="token">
-            <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+            <param name="pattern">[^\p{C}\p{Z}]+</param>
           </data>
         </choice>
       </attribute>
@@ -963,7 +963,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
         <a:documentation>specifies the starting point of the range of units indicated by the <ns1:code>@unit</ns1:code>
  attribute.</a:documentation>
         <data type="token">
-          <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+          <param name="pattern">[^\p{C}\p{Z}]+</param>
         </data>
       </attribute>
     </optional>
@@ -974,7 +974,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
         <a:documentation>specifies the end-point of the range of units indicated by the <ns1:code>@unit</ns1:code>
  attribute.</a:documentation>
         <data type="token">
-          <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+          <param name="pattern">[^\p{C}\p{Z}]+</param>
         </data>
       </attribute>
     </optional>
@@ -2281,8 +2281,14 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <ref name="listTranspose"/>
     </choice>
   </define>
-  <define name="model.resourceLike">
+  <define name="model.resource">
     <ref name="text"/>
+  </define>
+  <define name="model.describedResource">
+    <choice>
+      <ref name="teiCorpus"/>
+      <ref name="TEI"/>
+    </choice>
   </define>
   <define name="p">
     <element name="p">
@@ -2613,7 +2619,7 @@ Suggested values include: 1] cancelled; 2] deleted; 3] editorial; 4] illegible; 
                 <value>sampling</value>
                 <a:documentation/>
                 <data type="token">
-                  <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                  <param name="pattern">[^\p{C}\p{Z}]+</param>
                 </data>
               </choice>
             </oneOrMore>
@@ -2625,7 +2631,7 @@ Suggested values include: 1] cancelled; 2] deleted; 3] editorial; 4] illegible; 
           <a:documentation>in the case of text omitted because of damage, categorizes the cause of the damage, if it can be identified.
 Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
           <data type="token">
-            <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+            <param name="pattern">[^\p{C}\p{Z}]+</param>
           </data>
         </attribute>
       </optional>
@@ -2727,7 +2733,7 @@ Suggested values include: 1] illegible; 2] inaudible; 3] faded; 4] background_no
                 <value>eccentric_ductus</value>
                 <a:documentation/>
                 <data type="token">
-                  <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                  <param name="pattern">[^\p{C}\p{Z}]+</param>
                 </data>
               </choice>
             </oneOrMore>
@@ -2739,7 +2745,7 @@ Suggested values include: 1] illegible; 2] inaudible; 3] faded; 4] background_no
           <a:documentation>Where the difficulty in transcription arises from damage, categorizes the cause of the damage, if it can be identified.
 Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
           <data type="token">
-            <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+            <param name="pattern">[^\p{C}\p{Z}]+</param>
           </data>
         </attribute>
       </optional>
@@ -2873,6 +2879,7 @@ Measures]</a:documentation>
       <ref name="att.global.rendition.attribute.style"/>
       <ref name="att.global.rendition.attribute.rendition"/>
       <ref name="att.global.responsibility.attribute.resp"/>
+      <ref name="att.typed.attribute.subtype"/>
       <ref name="att.ranging.attributes"/>
       <empty/>
     </element>
@@ -4020,25 +4027,12 @@ Elements 7.2.5. Speech Contents]</a:documentation>
  elements, each containing a single text header and a text. [4. Default Text Structure 15.1. Varieties of Composite Text]</a:documentation>
       <group>
         <ref name="teiHeader"/>
-        <choice>
-          <group>
-            <oneOrMore>
-              <ref name="model.resourceLike"/>
-            </oneOrMore>
-            <zeroOrMore>
-              <choice>
-                <ref name="TEI"/>
-                <ref name="teiCorpus"/>
-              </choice>
-            </zeroOrMore>
-          </group>
-          <oneOrMore>
-            <choice>
-              <ref name="TEI"/>
-              <ref name="teiCorpus"/>
-            </choice>
-          </oneOrMore>
-        </choice>
+        <zeroOrMore>
+          <ref name="model.resource"/>
+        </zeroOrMore>
+        <oneOrMore>
+          <ref name="model.describedResource"/>
+        </oneOrMore>
       </group>
       <ref name="att.global.attribute.xmlid"/>
       <ref name="att.global.attribute.n"/>
@@ -4086,55 +4080,13 @@ Elements 7.2.5. Speech Contents]</a:documentation>
       <ref name="att.global.analytic.attribute.ana"/>
       <ref name="att.global.change.attribute.change"/>
       <ref name="att.global.responsibility.attribute.resp"/>
+      <ref name="att.typed.attribute.subtype"/>
       <optional>
         <attribute name="type">
           <a:documentation>classifies the variation contained in this element according to some convenient typology.</a:documentation>
-          <choice>
-            <value>ce2</value>
-            <a:documentation/>
-            <value>comment</value>
-            <a:documentation/>
-            <value>corr</value>
-            <a:documentation/>
-            <value>correction</value>
-            <a:documentation/>
-            <value>em</value>
-            <a:documentation/>
-            <value>emendation</value>
-            <a:documentation/>
-            <value>misprint</value>
-            <a:documentation/>
-            <value>note</value>
-            <a:documentation/>
-            <value>orth</value>
-            <a:documentation/>
-            <value>parallel</value>
-            <a:documentation/>
-            <value>punct</value>
-            <a:documentation/>
-            <value>punctuation</value>
-            <a:documentation/>
-            <value>sandhi</value>
-            <a:documentation/>
-            <value>tib</value>
-            <a:documentation/>
-            <value>tibdiff</value>
-            <a:documentation/>
-            <value>tibvar</value>
-            <a:documentation/>
-            <value>typo</value>
-            <a:documentation/>
-            <value>unclear</value>
-            <a:documentation/>
-            <value>var</value>
-            <a:documentation/>
-            <value>var-capv-ngmpp</value>
-            <a:documentation/>
-            <value>var-jna</value>
-            <a:documentation/>
-            <value>var-thakur</value>
-            <a:documentation/>
-          </choice>
+          <data type="token">
+            <param name="pattern">[^\p{C}\p{Z}]+</param>
+          </data>
         </attribute>
       </optional>
       <optional>
@@ -4291,6 +4243,7 @@ Elements 7.2.5. Speech Contents]</a:documentation>
       <ref name="att.global.rendition.attribute.style"/>
       <ref name="att.global.rendition.attribute.rendition"/>
       <ref name="att.global.responsibility.attribute.resp"/>
+      <ref name="att.typed.attribute.subtype"/>
       <attribute name="wit">
         <a:documentation>(witnesses) indicates the sigil or sigla identifying the witness or witnesses to which the detail refers.</a:documentation>
         <list>
@@ -4371,7 +4324,7 @@ Elements 7.2.5. Speech Contents]</a:documentation>
         <list>
           <oneOrMore>
             <data type="token">
-              <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+              <param name="pattern">[^\p{C}\p{Z}]+</param>
             </data>
           </oneOrMore>
         </list>
@@ -4385,7 +4338,7 @@ Elements 7.2.5. Speech Contents]</a:documentation>
         <list>
           <oneOrMore>
             <data type="token">
-              <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+              <param name="pattern">[^\p{C}\p{Z}]+</param>
             </data>
           </oneOrMore>
         </list>
@@ -4399,7 +4352,7 @@ Elements 7.2.5. Speech Contents]</a:documentation>
         <list>
           <oneOrMore>
             <data type="token">
-              <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+              <param name="pattern">[^\p{C}\p{Z}]+</param>
             </data>
           </oneOrMore>
         </list>
@@ -4413,7 +4366,7 @@ Elements 7.2.5. Speech Contents]</a:documentation>
         <list>
           <oneOrMore>
             <data type="token">
-              <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+              <param name="pattern">[^\p{C}\p{Z}]+</param>
             </data>
           </oneOrMore>
         </list>
@@ -4427,7 +4380,7 @@ Elements 7.2.5. Speech Contents]</a:documentation>
         <list>
           <oneOrMore>
             <data type="token">
-              <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+              <param name="pattern">[^\p{C}\p{Z}]+</param>
             </data>
           </oneOrMore>
         </list>
@@ -4637,7 +4590,7 @@ Elements 7.2.5. Speech Contents]</a:documentation>
           <a:documentation>characterizes the element in some sense, using any convenient classification scheme or typology.
 Sample values include: 1] sponsor; 2] recommend; 3] discredit; 4] pledged</a:documentation>
           <data type="token">
-            <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+            <param name="pattern">[^\p{C}\p{Z}]+</param>
           </data>
         </attribute>
       </optional>
@@ -4654,7 +4607,7 @@ Sample values include: 1] sponsor; 2] recommend; 3] discredit; 4] pledged</a:doc
           <a:documentation>supplies an identifier for the scheme in which this name is defined.
 Sample values include: 1] TEI (Text Encoding Initiative); 2] DBK (Docbook); 3] XX (unknown); 4] imaginary; 5] XHTML; 6] XML; 7] XI</a:documentation>
           <data type="token">
-            <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+            <param name="pattern">[^\p{C}\p{Z}]+</param>
           </data>
         </attribute>
       </optional>
@@ -4714,7 +4667,7 @@ Sample values include: 1] TEI (Text Encoding Initiative); 2] DBK (Docbook); 3] X
           <a:documentation>supplies the name of the scheme in which this name is defined.
 Sample values include: 1] TEI; 2] DBK (docbook); 3] XX (unknown); 4] Schematron; 5] HTML</a:documentation>
           <data type="token">
-            <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+            <param name="pattern">[^\p{C}\p{Z}]+</param>
           </data>
         </attribute>
       </optional>
@@ -4751,6 +4704,7 @@ Sample values include: 1] TEI; 2] DBK (docbook); 3] XX (unknown); 4] Schematron;
       <ref name="att.global.rendition.attribute.style"/>
       <ref name="att.global.rendition.attribute.rendition"/>
       <ref name="att.global.responsibility.attribute.resp"/>
+      <ref name="att.typed.attribute.subtype"/>
       <empty/>
     </element>
   </define>
@@ -5129,7 +5083,7 @@ Sample values include: 1] TEI; 2] DBK (docbook); 3] XX (unknown); 4] Schematron;
   </define>
   <define name="sourceDesc">
     <element name="sourceDesc">
-      <a:documentation>(source description) describes the source from which an electronic text was derived or generated, typically a bibliographic description in the case of a digitized text, or a phrase such as "born digital" for a text which has no previous existence. [2.2.7. The Source Description]</a:documentation>
+      <a:documentation>(source description) describes the source(s) from which an electronic text was derived or generated, typically a bibliographic description in the case of a digitized text, or a phrase such as "born digital" for a text which has no previous existence. [2.2.7. The Source Description]</a:documentation>
       <choice>
         <oneOrMore>
           <ref name="model.pLike"/>
@@ -5678,7 +5632,7 @@ On <sch:name/>
         <a:documentation>(enjambement) indicates that the end of a verse line is marked by enjambement.
 Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
         <data type="token">
-          <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+          <param name="pattern">[^\p{C}\p{Z}]+</param>
         </data>
       </attribute>
     </optional>
@@ -5720,7 +5674,7 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
   </define>
   <define name="msDesc">
     <element name="msDesc">
-      <a:documentation>(manuscript description) contains a description of a single identifiable manuscript or other text-bearing object. [10.1. Overview]</a:documentation>
+      <a:documentation>(manuscript description) contains a description of a single identifiable manuscript or other text-bearing object such as early printed books. [10.1. Overview]</a:documentation>
       <group>
         <ref name="msIdentifier"/>
         <zeroOrMore>
@@ -5830,7 +5784,7 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
   <define name="repository">
     <element name="repository">
       <a:documentation>contains the name of a repository within which manuscripts or other objects are stored, possibly forming part of an institution. [10.4. The Manuscript Identifier]</a:documentation>
-      <ref name="macro.xtext"/>
+      <ref name="macro.phraseSeq.limited"/>
       <ref name="att.global.attribute.xmlid"/>
       <ref name="att.global.attribute.n"/>
       <ref name="att.global.attribute.xmllang"/>
@@ -6083,7 +6037,7 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
           <list>
             <oneOrMore>
               <data type="token">
-                <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                <param name="pattern">[^\p{C}\p{Z}]+</param>
               </data>
             </oneOrMore>
           </list>
@@ -6452,14 +6406,25 @@ The attributes @to and @from on <sch:name/>
   </define>
   <define name="TEI">
     <element name="TEI">
-      <a:documentation>(TEI document) contains a single TEI-conformant document, combining a single TEI header with one or more members of the model.resourceLike class. Multiple <ns1:code>&lt;TEI&gt;</ns1:code>
- elements may be combined to form a <ns1:code>&lt;teiCorpus&gt;</ns1:code>
- element. [4. Default Text Structure 15.1. Varieties of Composite Text]</a:documentation>
+      <a:documentation>(TEI document) contains a single TEI-conformant document, combining a single TEI header with one or more members of the model.resource class. Multiple <ns1:code>&lt;TEI&gt;</ns1:code>
+ elements may be combined within a <ns1:code>&lt;TEI&gt;</ns1:code>
+ (or <ns1:code>&lt;teiCorpus&gt;</ns1:code>
+) element. [4. Default Text Structure 15.1. Varieties of Composite Text]</a:documentation>
       <group>
         <ref name="teiHeader"/>
-        <oneOrMore>
-          <ref name="model.resourceLike"/>
-        </oneOrMore>
+        <choice>
+          <group>
+            <oneOrMore>
+              <ref name="model.resource"/>
+            </oneOrMore>
+            <zeroOrMore>
+              <ref name="TEI"/>
+            </zeroOrMore>
+          </group>
+          <oneOrMore>
+            <ref name="TEI"/>
+          </oneOrMore>
+        </choice>
       </group>
       <sch:ns prefix="tei" uri="http://www.tei-c.org/ns/1.0"/>
       <sch:ns prefix="xs" uri="http://www.w3.org/2001/XMLSchema"/>
@@ -6801,6 +6766,7 @@ The attributes @to and @from on <sch:name/>
       <ref name="att.global.rendition.attribute.style"/>
       <ref name="att.global.rendition.attribute.rendition"/>
       <ref name="att.global.responsibility.attribute.resp"/>
+      <ref name="att.typed.attribute.subtype"/>
       <empty/>
     </element>
   </define>
@@ -6843,6 +6809,7 @@ The attributes @to and @from on <sch:name/>
       <ref name="att.global.rendition.attribute.style"/>
       <ref name="att.global.rendition.attribute.rendition"/>
       <ref name="att.global.responsibility.attribute.resp"/>
+      <ref name="att.typed.attribute.subtype"/>
       <optional>
         <attribute name="type" a:defaultValue="main">
           <a:documentation>specifies the role of this subdivision of the title.</a:documentation>
@@ -7044,7 +7011,7 @@ Suggested values include: 1] label; 2] data</a:documentation>
           <value>data</value>
           <a:documentation>data values.</a:documentation>
           <data type="token">
-            <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+            <param name="pattern">[^\p{C}\p{Z}]+</param>
           </data>
         </choice>
       </attribute>
