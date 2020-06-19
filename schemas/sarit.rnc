@@ -5,9 +5,10 @@ namespace rng = "http://relaxng.org/ns/structure/1.0"
 namespace sch = "http://purl.oclc.org/dsdl/schematron"
 default namespace tei = "http://www.tei-c.org/ns/1.0"
 namespace teix = "http://www.tei-c.org/ns/Examples"
+namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2019-09-20T09:47:21Z. .
+# Schema generated from ODD source 2020-06-19T19:33:28Z. .
 # TEI Edition: Version 3.6.0. Last updated on
 #	16th July 2019, revision daa3cc0b9
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.6.0/
@@ -760,16 +761,18 @@ model.hiLike_sequence = hi
 model.hiLike_sequenceOptional = hi?
 model.hiLike_sequenceOptionalRepeatable = hi*
 model.hiLike_sequenceRepeatable = hi+
-model.emphLike = foreign | emph | term | title | code | ident
+model.emphLike =
+  foreign | emph | mentioned | term | title | code | ident
 model.emphLike_alternation =
-  foreign | emph | term | title | code | ident
-model.emphLike_sequence = foreign, emph, term, title, code, ident
+  foreign | emph | mentioned | term | title | code | ident
+model.emphLike_sequence =
+  foreign, emph, mentioned, term, title, code, ident
 model.emphLike_sequenceOptional =
-  foreign?, emph?, term?, title?, code?, ident?
+  foreign?, emph?, mentioned?, term?, title?, code?, ident?
 model.emphLike_sequenceOptionalRepeatable =
-  foreign*, emph*, term*, title*, code*, ident*
+  foreign*, emph*, mentioned*, term*, title*, code*, ident*
 model.emphLike_sequenceRepeatable =
-  foreign+, emph+, term+, title+, code+, ident+
+  foreign+, emph+, mentioned+, term+, title+, code+, ident+
 model.highlighted = model.hiLike | model.emphLike
 model.dateLike = date
 model.dateLike_alternation = date
@@ -804,17 +807,17 @@ model.pPart.editorial_sequenceOptional = choice?
 model.pPart.editorial_sequenceOptionalRepeatable = choice*
 model.pPart.editorial_sequenceRepeatable = choice+
 model.pPart.transcriptional =
-  sic | corr | add | del | unclear | supplied | surplus
+  sic | corr | orig | add | del | unclear | supplied | surplus
 model.pPart.transcriptional_alternation =
-  sic | corr | add | del | unclear | supplied | surplus
+  sic | corr | orig | add | del | unclear | supplied | surplus
 model.pPart.transcriptional_sequence =
-  sic, corr, add, del, unclear, supplied, surplus
+  sic, corr, orig, add, del, unclear, supplied, surplus
 model.pPart.transcriptional_sequenceOptional =
-  sic?, corr?, add?, del?, unclear?, supplied?, surplus?
+  sic?, corr?, orig?, add?, del?, unclear?, supplied?, surplus?
 model.pPart.transcriptional_sequenceOptionalRepeatable =
-  sic*, corr*, add*, del*, unclear*, supplied*, surplus*
+  sic*, corr*, orig*, add*, del*, unclear*, supplied*, surplus*
 model.pPart.transcriptional_sequenceRepeatable =
-  sic+, corr+, add+, del+, unclear+, supplied+, surplus+
+  sic+, corr+, orig+, add+, del+, unclear+, supplied+, surplus+
 model.pPart.edit = model.pPart.editorial | model.pPart.transcriptional
 model.ptrLike = ptr | ref
 model.lPart = caesura
@@ -875,6 +878,7 @@ model.stageLike_sequence = stage
 model.stageLike_sequenceOptional = stage?
 model.stageLike_sequenceOptionalRepeatable = stage*
 model.stageLike_sequenceRepeatable = stage+
+model.entryPart = notAllowed
 model.global.edit = gap | app | witDetail | space
 model.divPart = model.lLike | model.pLike | lg | sp
 model.placeNamePart = placeName | settlement
@@ -899,12 +903,12 @@ model.availabilityPart = licence
 model.certLike = notAllowed
 model.descLike = notAllowed
 model.glossLike = notAllowed
-model.quoteLike = quote
-model.quoteLike_alternation = quote
-model.quoteLike_sequence = quote
-model.quoteLike_sequenceOptional = quote?
-model.quoteLike_sequenceOptionalRepeatable = quote*
-model.quoteLike_sequenceRepeatable = quote+
+model.quoteLike = quote | cit
+model.quoteLike_alternation = quote | cit
+model.quoteLike_sequence = quote, cit
+model.quoteLike_sequenceOptional = quote?, cit?
+model.quoteLike_sequenceOptionalRepeatable = quote*, cit*
+model.quoteLike_sequenceRepeatable = quote+, cit+
 model.qLike = model.quoteLike | q
 model.qLike_alternation = model.quoteLike_alternation | q
 model.qLike_sequence = model.quoteLike_sequence, q
@@ -945,7 +949,7 @@ model.msItemPart =
   | model.msQuoteLike
   | idno
   | msItem
-model.choicePart = sic | corr | unclear | supplied | seg
+model.choicePart = sic | corr | orig | unclear | supplied | seg
 model.imprintPart = publisher | biblScope | pubPlace
 model.addressLike = email | address | affiliation
 model.addressLike_alternation = email | address | affiliation
@@ -1056,7 +1060,7 @@ model.sourceDescPart = notAllowed
 model.encodingDescPart =
   projectDesc | editorialDecl | refsDecl | classDecl
 model.editorialDeclPart =
-  correction | normalization | segmentation | interpretation
+  correction | normalization | quotation | segmentation | interpretation
 model.profileDescPart =
   langUsage | textClass | calendarDesc | listTranspose
 model.resourceLike = \text
@@ -1260,6 +1264,24 @@ q =
     }?,
     empty
   }
+cit =
+  
+  ## (cited quotation) contains a quotation from some other document, together with a bibliographic reference to its source. In a dictionary it may contain an example text with at least one occurrence of the word form, used in the sense being described, or a translation of the headword, or an example. [3.3.3. Quotation 4.3.1. Grouped Texts 9.3.5.1. Examples]
+  element cit {
+    (model.qLike
+     | model.egLike
+     | model.biblLike
+     | model.ptrLike
+     | model.global
+     | model.entryPart)+,
+    att.global.attributes,
+    att.typed.attributes,
+    empty
+  }
+mentioned =
+  
+  ## marks words or phrases mentioned, not used. [3.3.3. Quotation]
+  element mentioned { macro.phraseSeq, att.global.attributes, empty }
 term =
   
   ## contains a single-word, multi-word, or symbolic designation which is regarded as a technical term. [3.3.4. Terms, Glosses, Equivalents, and Descriptions]
@@ -1331,6 +1353,11 @@ choice =
     att.global.responsibility.attribute.resp,
     empty
   }
+orig =
+  
+  ## (original form) contains a reading which is marked as following the original, rather than being normalized or corrected. [3.4.2. Regularization and
+  ## Normalization 12. Critical Apparatus]
+  element orig { macro.paraContent, att.global.attributes, empty }
 gap =
   
   ## indicates a point where material has been omitted in a transcription, whether for editorial reasons described in the TEI header, as part of sampling practice, or because the material is illegible, invisible, or inaudible. [3.4.3. Additions, Deletions, and Omissions]
@@ -3652,6 +3679,50 @@ normalization =
     att.declarable.attributes,
     empty
   }
+quotation =
+  
+  ## specifies editorial practice adopted with respect to quotation marks in the original. [2.3.3. The Editorial Practices Declaration 15.3.2. Declarable Elements]
+  element quotation {
+    (model.pLike*)
+    >> sch:pattern [
+         id =
+           "oddbyexample-quotation-quotationContents-constraint-report-10"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:quotation"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "not(@marks) and not (tei:p)"
+             "\x{a}" ~
+             "On "
+             sch:name [ ]
+             ", either the @marks attribute should be used, or a paragraph of description provided"
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ],
+    att.global.attributes,
+    att.declarable.attributes,
+    
+    ## (quotation marks) indicates whether or not quotation marks have been retained as content within the text.
+    attribute marks {
+      
+      ## no quotation marks have been retained
+      "none"
+      | 
+        ## some quotation marks have been retained
+        "some"
+      | 
+        ## all quotation marks have been retained
+        "all"
+    }?,
+    empty
+  }
 segmentation =
   
   ## describes the principles according to which the text has been segmented, for example into sentences, tone-units, graphemic strata, etc. [2.3.3. The Editorial Practices Declaration 15.3.2. Declarable Elements]
@@ -4046,7 +4117,7 @@ msIdentifier =
      (msName | altIdentifier)*)
     >> sch:pattern [
          id =
-           "oddbyexample-msIdentifier-msId_minimal-constraint-report-10"
+           "oddbyexample-msIdentifier-msId_minimal-constraint-report-11"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -4322,7 +4393,7 @@ ab =
     macro.paraContent
     >> sch:pattern [
          id =
-           "oddbyexample-ab-abstractModel-structure-ab-constraint-report-11"
+           "oddbyexample-ab-abstractModel-structure-ab-constraint-report-12"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -4344,7 +4415,7 @@ ab =
        ]
     >> sch:pattern [
          id =
-           "oddbyexample-ab-abstractModel-structure-l-constraint-report-12"
+           "oddbyexample-ab-abstractModel-structure-l-constraint-report-13"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -4438,6 +4509,9 @@ seg =
       | 
         ##
         "sutra"
+      | 
+        ##
+        "pakṣa"
     }?,
     empty
   }
@@ -4489,7 +4563,7 @@ s =
   element s {
     macro.phraseSeq
     >> sch:pattern [
-         id = "oddbyexample-s-noNestedS-constraint-report-13"
+         id = "oddbyexample-s-noNestedS-constraint-report-14"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -4585,7 +4659,7 @@ span =
   element span {
     macro.phraseSeq.limited
     >> sch:pattern [
-         id = "oddbyexample-span-targetfrom-constraint-report-14"
+         id = "oddbyexample-span-targetfrom-constraint-report-15"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -4607,7 +4681,7 @@ span =
          "         "
        ]
     >> sch:pattern [
-         id = "oddbyexample-span-targetto-constraint-report-15"
+         id = "oddbyexample-span-targetto-constraint-report-16"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -4629,7 +4703,7 @@ span =
          "         "
        ]
     >> sch:pattern [
-         id = "oddbyexample-span-tonotfrom-constraint-report-16"
+         id = "oddbyexample-span-tonotfrom-constraint-report-17"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -4650,7 +4724,7 @@ span =
          "         "
        ]
     >> sch:pattern [
-         id = "oddbyexample-span-tofrom-constraint-report-17"
+         id = "oddbyexample-span-tofrom-constraint-report-18"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -4790,7 +4864,7 @@ body =
       (model.divBottom, model.global*)*)?)
     >> sch:pattern [
          id =
-           "oddbyexample-div-abstractModel-structure-l-constraint-report-18"
+           "oddbyexample-div-abstractModel-structure-l-constraint-report-19"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -4811,7 +4885,7 @@ body =
        ]
     >> sch:pattern [
          id =
-           "oddbyexample-div-abstractModel-structure-p-constraint-report-19"
+           "oddbyexample-div-abstractModel-structure-p-constraint-report-20"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -4845,133 +4919,9 @@ body =
     att.metrical.attribute.met,
     att.metrical.attribute.real,
     att.metrical.attribute.rhyme,
-    att.typed.attribute.subtype,
+    att.typed.attributes,
     att.declaring.attributes,
     att.written.attributes,
-    
-    ## characterizes the element in some sense, using any convenient classification scheme or typology.
-    attribute type {
-      
-      ##
-      "adhikaraṇa"
-      | 
-        ##
-        "adhikāra"
-      | 
-        ##
-        "adhyāya"
-      | 
-        ##
-        "appendix"
-      | 
-        ##
-        "base-text"
-      | 
-        ##
-        "book"
-      | 
-        ##
-        "canto"
-      | 
-        ##
-        "chapter"
-      | 
-        ##
-        "closing"
-      | 
-        ##
-        "commentary"
-      | 
-        ##
-        "commentary1"
-      | 
-        ##
-        "commentary2"
-      | 
-        ##
-        "conclusion"
-      | 
-        ##
-        "div1"
-      | 
-        ##
-        "glossary"
-      | 
-        ##
-        "inferred"
-      | 
-        ##
-        "introduction"
-      | 
-        ##
-        "kārika"
-      | 
-        ##
-        "kārikā"
-      | 
-        ##
-        "leve1"
-      | 
-        ##
-        "level"
-      | 
-        ##
-        "level1"
-      | 
-        ##
-        "level2"
-      | 
-        ##
-        "level3"
-      | 
-        ##
-        "level4"
-      | 
-        ##
-        "notInBook"
-      | 
-        ##
-        "notes"
-      | 
-        ##
-        "pariccheda"
-      | 
-        ##
-        "part"
-      | 
-        ##
-        "prakāśa"
-      | 
-        ##
-        "pāda"
-      | 
-        ##
-        "samuddeśa"
-      | 
-        ##
-        "section"
-      | 
-        ##
-        "subchapter"
-      | 
-        ##
-        "sutra"
-      | 
-        ##
-        "sūtra"
-      | 
-        ##
-        "sūtra_with_bhāṣya"
-      | 
-        ##
-        "sthāna"
-      | 
-        ##
-        "unknown"
-      | 
-        ##
-        "unnumbered"
-    }?,
     empty
   }
 trailer =
