@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<grammar ns="http://www.tei-c.org/ns/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:ns2="http://www.isocat.org/ns/dcr" xmlns:ns1="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+<grammar ns="http://www.tei-c.org/ns/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:ns2="http://www.isocat.org/ns/dcr" xmlns:ns1="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
   <!--
-    Schema generated from ODD source 2019-09-20T09:47:21Z. .
+    Schema generated from ODD source 2020-06-19T19:33:28Z. .
     TEI Edition: Version 3.6.0. Last updated on
     	16th July 2019, revision daa3cc0b9
     TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.6.0/
@@ -1067,6 +1067,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
     <choice>
       <ref name="foreign"/>
       <ref name="emph"/>
+      <ref name="mentioned"/>
       <ref name="term"/>
       <ref name="title"/>
       <ref name="code"/>
@@ -1077,6 +1078,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
     <choice>
       <ref name="foreign"/>
       <ref name="emph"/>
+      <ref name="mentioned"/>
       <ref name="term"/>
       <ref name="title"/>
       <ref name="code"/>
@@ -1086,6 +1088,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
   <define name="model.emphLike_sequence">
     <ref name="foreign"/>
     <ref name="emph"/>
+    <ref name="mentioned"/>
     <ref name="term"/>
     <ref name="title"/>
     <ref name="code"/>
@@ -1097,6 +1100,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
     </optional>
     <optional>
       <ref name="emph"/>
+    </optional>
+    <optional>
+      <ref name="mentioned"/>
     </optional>
     <optional>
       <ref name="term"/>
@@ -1119,6 +1125,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <ref name="emph"/>
     </zeroOrMore>
     <zeroOrMore>
+      <ref name="mentioned"/>
+    </zeroOrMore>
+    <zeroOrMore>
       <ref name="term"/>
     </zeroOrMore>
     <zeroOrMore>
@@ -1137,6 +1146,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
     </oneOrMore>
     <oneOrMore>
       <ref name="emph"/>
+    </oneOrMore>
+    <oneOrMore>
+      <ref name="mentioned"/>
     </oneOrMore>
     <oneOrMore>
       <ref name="term"/>
@@ -1281,6 +1293,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
     <choice>
       <ref name="sic"/>
       <ref name="corr"/>
+      <ref name="orig"/>
       <ref name="add"/>
       <ref name="del"/>
       <ref name="unclear"/>
@@ -1292,6 +1305,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
     <choice>
       <ref name="sic"/>
       <ref name="corr"/>
+      <ref name="orig"/>
       <ref name="add"/>
       <ref name="del"/>
       <ref name="unclear"/>
@@ -1302,6 +1316,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
   <define name="model.pPart.transcriptional_sequence">
     <ref name="sic"/>
     <ref name="corr"/>
+    <ref name="orig"/>
     <ref name="add"/>
     <ref name="del"/>
     <ref name="unclear"/>
@@ -1314,6 +1329,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
     </optional>
     <optional>
       <ref name="corr"/>
+    </optional>
+    <optional>
+      <ref name="orig"/>
     </optional>
     <optional>
       <ref name="add"/>
@@ -1339,6 +1357,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <ref name="corr"/>
     </zeroOrMore>
     <zeroOrMore>
+      <ref name="orig"/>
+    </zeroOrMore>
+    <zeroOrMore>
       <ref name="add"/>
     </zeroOrMore>
     <zeroOrMore>
@@ -1360,6 +1381,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
     </oneOrMore>
     <oneOrMore>
       <ref name="corr"/>
+    </oneOrMore>
+    <oneOrMore>
+      <ref name="orig"/>
     </oneOrMore>
     <oneOrMore>
       <ref name="add"/>
@@ -1704,6 +1728,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <ref name="stage"/>
     </oneOrMore>
   </define>
+  <define name="model.entryPart">
+    <notAllowed/>
+  </define>
   <define name="model.global.edit">
     <choice>
       <ref name="gap"/>
@@ -1813,27 +1840,43 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
     <notAllowed/>
   </define>
   <define name="model.quoteLike">
-    <ref name="quote"/>
+    <choice>
+      <ref name="quote"/>
+      <ref name="cit"/>
+    </choice>
   </define>
   <define name="model.quoteLike_alternation">
-    <ref name="quote"/>
+    <choice>
+      <ref name="quote"/>
+      <ref name="cit"/>
+    </choice>
   </define>
   <define name="model.quoteLike_sequence">
     <ref name="quote"/>
+    <ref name="cit"/>
   </define>
   <define name="model.quoteLike_sequenceOptional">
     <optional>
       <ref name="quote"/>
+    </optional>
+    <optional>
+      <ref name="cit"/>
     </optional>
   </define>
   <define name="model.quoteLike_sequenceOptionalRepeatable">
     <zeroOrMore>
       <ref name="quote"/>
     </zeroOrMore>
+    <zeroOrMore>
+      <ref name="cit"/>
+    </zeroOrMore>
   </define>
   <define name="model.quoteLike_sequenceRepeatable">
     <oneOrMore>
       <ref name="quote"/>
+    </oneOrMore>
+    <oneOrMore>
+      <ref name="cit"/>
     </oneOrMore>
   </define>
   <define name="model.qLike">
@@ -1955,6 +1998,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
     <choice>
       <ref name="sic"/>
       <ref name="corr"/>
+      <ref name="orig"/>
       <ref name="unclear"/>
       <ref name="supplied"/>
       <ref name="seg"/>
@@ -2224,6 +2268,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
     <choice>
       <ref name="correction"/>
       <ref name="normalization"/>
+      <ref name="quotation"/>
       <ref name="segmentation"/>
       <ref name="interpretation"/>
     </choice>
@@ -2407,6 +2452,32 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <empty/>
     </element>
   </define>
+  <define name="cit">
+    <element name="cit">
+      <a:documentation>(cited quotation) contains a quotation from some other document, together with a bibliographic reference to its source. In a dictionary it may contain an example text with at least one occurrence of the word form, used in the sense being described, or a translation of the headword, or an example. [3.3.3. Quotation 4.3.1. Grouped Texts 9.3.5.1. Examples]</a:documentation>
+      <oneOrMore>
+        <choice>
+          <ref name="model.qLike"/>
+          <ref name="model.egLike"/>
+          <ref name="model.biblLike"/>
+          <ref name="model.ptrLike"/>
+          <ref name="model.global"/>
+          <ref name="model.entryPart"/>
+        </choice>
+      </oneOrMore>
+      <ref name="att.global.attributes"/>
+      <ref name="att.typed.attributes"/>
+      <empty/>
+    </element>
+  </define>
+  <define name="mentioned">
+    <element name="mentioned">
+      <a:documentation>marks words or phrases mentioned, not used. [3.3.3. Quotation]</a:documentation>
+      <ref name="macro.phraseSeq"/>
+      <ref name="att.global.attributes"/>
+      <empty/>
+    </element>
+  </define>
   <define name="term">
     <element name="term">
       <a:documentation>contains a single-word, multi-word, or symbolic designation which is regarded as a technical term. [3.3.4. Terms, Glosses, Equivalents, and Descriptions]</a:documentation>
@@ -2480,6 +2551,15 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <ref name="att.global.rendition.attribute.style"/>
       <ref name="att.global.rendition.attribute.rendition"/>
       <ref name="att.global.responsibility.attribute.resp"/>
+      <empty/>
+    </element>
+  </define>
+  <define name="orig">
+    <element name="orig">
+      <a:documentation>(original form) contains a reading which is marked as following the original, rather than being normalized or corrected. [3.4.2. Regularization and
+Normalization 12. Critical Apparatus]</a:documentation>
+      <ref name="macro.paraContent"/>
+      <ref name="att.global.attributes"/>
       <empty/>
     </element>
   </define>
@@ -5175,6 +5255,39 @@ Sample values include: 1] TEI; 2] DBK (docbook); 3] XX (unknown); 4] Schematron;
       <empty/>
     </element>
   </define>
+  <define name="quotation">
+    <element name="quotation">
+      <a:documentation>specifies editorial practice adopted with respect to quotation marks in the original. [2.3.3. The Editorial Practices Declaration 15.3.2. Declarable Elements]</a:documentation>
+      <zeroOrMore>
+        <ref name="model.pLike"/>
+      </zeroOrMore>
+      <sch:pattern id="oddbyexample-quotation-quotationContents-constraint-report-10">
+            <sch:rule context="tei:quotation">
+               <sch:report test="not(@marks) and not (tei:p)">
+On <sch:name/>
+, either the @marks attribute should be used, or a paragraph of description provided</sch:report>
+
+            </sch:rule>
+
+         </sch:pattern>
+      <ref name="att.global.attributes"/>
+      <ref name="att.declarable.attributes"/>
+      <optional>
+        <attribute name="marks">
+          <a:documentation>(quotation marks) indicates whether or not quotation marks have been retained as content within the text.</a:documentation>
+          <choice>
+            <value>none</value>
+            <a:documentation>no quotation marks have been retained</a:documentation>
+            <value>some</value>
+            <a:documentation>some quotation marks have been retained</a:documentation>
+            <value>all</value>
+            <a:documentation>all quotation marks have been retained</a:documentation>
+          </choice>
+        </attribute>
+      </optional>
+      <empty/>
+    </element>
+  </define>
   <define name="segmentation">
     <element name="segmentation">
       <a:documentation>describes the principles according to which the text has been segmented, for example into sentences, tone-units, graphemic strata, etc. [2.3.3. The Editorial Practices Declaration 15.3.2. Declarable Elements]</a:documentation>
@@ -5695,7 +5808,7 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
           </choice>
         </zeroOrMore>
       </group>
-      <sch:pattern id="oddbyexample-msIdentifier-msId_minimal-constraint-report-10">
+      <sch:pattern id="oddbyexample-msIdentifier-msId_minimal-constraint-report-11">
             <sch:rule context="tei:msIdentifier">
                <sch:report test="not(parent::tei:msPart) and (local-name(*[1])='idno' or local-name(*[1])='altIdentifier' or normalize-space(.)='')">An msIdentifier must contain either a repository or location.</sch:report>
 
@@ -6043,7 +6156,7 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
     <element name="ab">
       <a:documentation>(anonymous block) contains any arbitrary component-level unit of text, acting as an anonymous container for phrase or inter level elements analogous to, but without the semantic baggage of, a paragraph. [16.3. Blocks, Segments, and Anchors]</a:documentation>
       <ref name="macro.paraContent"/>
-      <sch:pattern id="oddbyexample-ab-abstractModel-structure-ab-constraint-report-11">
+      <sch:pattern id="oddbyexample-ab-abstractModel-structure-ab-constraint-report-12">
             <sch:rule context="tei:ab">
                <sch:report test="not(ancestor::tei:floatingText) and (ancestor::tei:p or ancestor::tei:ab)          and not(parent::tei:exemplum         |parent::tei:item         |parent::tei:note         |parent::tei:q         |parent::tei:quote         |parent::tei:remarks         |parent::tei:said         |parent::tei:sp         |parent::tei:stage         |parent::tei:cell         |parent::tei:figure)">
         Abstract model violation: ab may not occur inside paragraphs or other ab elements.
@@ -6052,7 +6165,7 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
             </sch:rule>
 
          </sch:pattern>
-      <sch:pattern id="oddbyexample-ab-abstractModel-structure-l-constraint-report-12">
+      <sch:pattern id="oddbyexample-ab-abstractModel-structure-l-constraint-report-13">
             <sch:rule context="tei:ab">
                <sch:report test="ancestor::tei:l or ancestor::tei:lg">
         Abstract model violation: Lines may not contain higher-level divisions such as p or ab.
@@ -6133,6 +6246,8 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
             <a:documentation/>
             <value>sutra</value>
             <a:documentation/>
+            <value>pakṣa</value>
+            <a:documentation/>
           </choice>
         </attribute>
       </optional>
@@ -6180,7 +6295,7 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
     <element name="s">
       <a:documentation>(s-unit) contains a sentence-like division of a text. [17.1. Linguistic Segment Categories 8.4.1. Segmentation]</a:documentation>
       <ref name="macro.phraseSeq"/>
-      <sch:pattern id="oddbyexample-s-noNestedS-constraint-report-13">
+      <sch:pattern id="oddbyexample-s-noNestedS-constraint-report-14">
             <sch:rule context="tei:s">
                <sch:report test="tei:s">You may not nest one s element within
       another: use seg instead</sch:report>
@@ -6269,7 +6384,7 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
     <element name="span">
       <a:documentation>associates an interpretative annotation directly with a span of text. [17.3. Spans and Interpretations]</a:documentation>
       <ref name="macro.phraseSeq.limited"/>
-      <sch:pattern id="oddbyexample-span-targetfrom-constraint-report-14">
+      <sch:pattern id="oddbyexample-span-targetfrom-constraint-report-15">
             <sch:rule context="tei:span">
                <sch:report test="@from and @target">
 Only one of the attributes @target and @from may be supplied on <sch:name/>
@@ -6279,7 +6394,7 @@ Only one of the attributes @target and @from may be supplied on <sch:name/>
             </sch:rule>
 
          </sch:pattern>
-      <sch:pattern id="oddbyexample-span-targetto-constraint-report-15">
+      <sch:pattern id="oddbyexample-span-targetto-constraint-report-16">
             <sch:rule context="tei:span">
                <sch:report test="@to and @target">
 Only one of the attributes @target and @to may be supplied on <sch:name/>
@@ -6289,7 +6404,7 @@ Only one of the attributes @target and @to may be supplied on <sch:name/>
             </sch:rule>
 
          </sch:pattern>
-      <sch:pattern id="oddbyexample-span-tonotfrom-constraint-report-16">
+      <sch:pattern id="oddbyexample-span-tonotfrom-constraint-report-17">
             <sch:rule context="tei:span">
                <sch:report test="@to and not(@from)">
 If @to is supplied on <sch:name/>
@@ -6298,7 +6413,7 @@ If @to is supplied on <sch:name/>
             </sch:rule>
 
          </sch:pattern>
-      <sch:pattern id="oddbyexample-span-tofrom-constraint-report-17">
+      <sch:pattern id="oddbyexample-span-tofrom-constraint-report-18">
             <sch:rule context="tei:span">
                <sch:report test="contains(normalize-space(@to),' ') or contains(normalize-space(@from),' ')">
 The attributes @to and @from on <sch:name/>
@@ -6551,7 +6666,7 @@ The attributes @to and @from on <sch:name/>
           </zeroOrMore>
         </optional>
       </group>
-      <sch:pattern id="oddbyexample-div-abstractModel-structure-l-constraint-report-18">
+      <sch:pattern id="oddbyexample-div-abstractModel-structure-l-constraint-report-19">
             <sch:rule context="tei:div">
                <sch:report test="ancestor::tei:l">
         Abstract model violation: Lines may not contain higher-level structural elements such as div.
@@ -6560,7 +6675,7 @@ The attributes @to and @from on <sch:name/>
             </sch:rule>
 
          </sch:pattern>
-      <sch:pattern id="oddbyexample-div-abstractModel-structure-p-constraint-report-19">
+      <sch:pattern id="oddbyexample-div-abstractModel-structure-p-constraint-report-20">
             <sch:rule context="tei:div">
                <sch:report test="ancestor::tei:p or ancestor::tei:ab and not(ancestor::tei:floatingText)">
         Abstract model violation: p and ab may not contain higher-level structural elements such as div.
@@ -6583,96 +6698,9 @@ The attributes @to and @from on <sch:name/>
       <ref name="att.metrical.attribute.met"/>
       <ref name="att.metrical.attribute.real"/>
       <ref name="att.metrical.attribute.rhyme"/>
-      <ref name="att.typed.attribute.subtype"/>
+      <ref name="att.typed.attributes"/>
       <ref name="att.declaring.attributes"/>
       <ref name="att.written.attributes"/>
-      <optional>
-        <attribute name="type">
-          <a:documentation>characterizes the element in some sense, using any convenient classification scheme or typology.</a:documentation>
-          <choice>
-            <value>adhikaraṇa</value>
-            <a:documentation/>
-            <value>adhikāra</value>
-            <a:documentation/>
-            <value>adhyāya</value>
-            <a:documentation/>
-            <value>appendix</value>
-            <a:documentation/>
-            <value>base-text</value>
-            <a:documentation/>
-            <value>book</value>
-            <a:documentation/>
-            <value>canto</value>
-            <a:documentation/>
-            <value>chapter</value>
-            <a:documentation/>
-            <value>closing</value>
-            <a:documentation/>
-            <value>commentary</value>
-            <a:documentation/>
-            <value>commentary1</value>
-            <a:documentation/>
-            <value>commentary2</value>
-            <a:documentation/>
-            <value>conclusion</value>
-            <a:documentation/>
-            <value>div1</value>
-            <a:documentation/>
-            <value>glossary</value>
-            <a:documentation/>
-            <value>inferred</value>
-            <a:documentation/>
-            <value>introduction</value>
-            <a:documentation/>
-            <value>kārika</value>
-            <a:documentation/>
-            <value>kārikā</value>
-            <a:documentation/>
-            <value>leve1</value>
-            <a:documentation/>
-            <value>level</value>
-            <a:documentation/>
-            <value>level1</value>
-            <a:documentation/>
-            <value>level2</value>
-            <a:documentation/>
-            <value>level3</value>
-            <a:documentation/>
-            <value>level4</value>
-            <a:documentation/>
-            <value>notInBook</value>
-            <a:documentation/>
-            <value>notes</value>
-            <a:documentation/>
-            <value>pariccheda</value>
-            <a:documentation/>
-            <value>part</value>
-            <a:documentation/>
-            <value>prakāśa</value>
-            <a:documentation/>
-            <value>pāda</value>
-            <a:documentation/>
-            <value>samuddeśa</value>
-            <a:documentation/>
-            <value>section</value>
-            <a:documentation/>
-            <value>subchapter</value>
-            <a:documentation/>
-            <value>sutra</value>
-            <a:documentation/>
-            <value>sūtra</value>
-            <a:documentation/>
-            <value>sūtra_with_bhāṣya</value>
-            <a:documentation/>
-            <value>sthāna</value>
-            <a:documentation/>
-            <value>unknown</value>
-            <a:documentation/>
-            <value>unnumbered</value>
-            <a:documentation/>
-          </choice>
-        </attribute>
-      </optional>
       <empty/>
     </element>
   </define>
