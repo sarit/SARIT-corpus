@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <grammar ns="http://www.tei-c.org/ns/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:sch="http://purl.oclc.org/dsdl/schematron" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:ns2="http://www.isocat.org/ns/dcr" xmlns:ns1="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
   <!--
-    Schema generated from ODD source 2020-06-19T19:54:58Z. .
-    TEI Edition: Version 4.0.0. Last updated on
-    	13th February 2020, revision ccd19b0ba
-    TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 4.0.0/
+    Schema generated from ODD source 2020-10-15T11:56:17Z. .
+    TEI Edition: Version 4.1.0. Last updated on
+    	19th August 2020, revision b414ba550
+    TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.1.0/
     
   -->
   <!---->
@@ -35,7 +35,7 @@
       <choice>
         <text/>
         <ref name="model.gLike"/>
-        <ref name="model.qLike"/>
+        <ref name="model.attributable"/>
         <ref name="model.phrase"/>
         <ref name="model.global"/>
       </choice>
@@ -715,19 +715,7 @@ Suggested values include: 1] internal; 2] external; 3] conjecture</a:documentati
     </attribute>
   </define>
   <define name="att.interpLike.attributes">
-    <ref name="att.interpLike.attribute.type"/>
     <ref name="att.interpLike.attribute.inst"/>
-  </define>
-  <define name="att.interpLike.attribute.type">
-    <optional>
-      <attribute name="type">
-        <a:documentation>indicates what kind of phenomenon is being noted in the passage.
-Sample values include: 1] image; 2] character; 3] theme; 4] allusion</a:documentation>
-        <data type="token">
-          <param name="pattern">[^\p{C}\p{Z}]+</param>
-        </data>
-      </attribute>
-    </optional>
   </define>
   <define name="att.interpLike.attribute.inst">
     <optional>
@@ -1040,27 +1028,43 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
     </choice>
   </define>
   <define name="model.hiLike">
-    <ref name="hi"/>
+    <choice>
+      <ref name="hi"/>
+      <ref name="q"/>
+    </choice>
   </define>
   <define name="model.hiLike_alternation">
-    <ref name="hi"/>
+    <choice>
+      <ref name="hi"/>
+      <ref name="q"/>
+    </choice>
   </define>
   <define name="model.hiLike_sequence">
     <ref name="hi"/>
+    <ref name="q"/>
   </define>
   <define name="model.hiLike_sequenceOptional">
     <optional>
       <ref name="hi"/>
+    </optional>
+    <optional>
+      <ref name="q"/>
     </optional>
   </define>
   <define name="model.hiLike_sequenceOptionalRepeatable">
     <zeroOrMore>
       <ref name="hi"/>
     </zeroOrMore>
+    <zeroOrMore>
+      <ref name="q"/>
+    </zeroOrMore>
   </define>
   <define name="model.hiLike_sequenceRepeatable">
     <oneOrMore>
       <ref name="hi"/>
+    </oneOrMore>
+    <oneOrMore>
+      <ref name="q"/>
     </oneOrMore>
   </define>
   <define name="model.emphLike">
@@ -1405,6 +1409,19 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
     <choice>
       <ref name="model.pPart.editorial"/>
       <ref name="model.pPart.transcriptional"/>
+    </choice>
+  </define>
+  <define name="model.linePart">
+    <choice>
+      <ref name="model.hiLike"/>
+      <ref name="choice"/>
+      <ref name="add"/>
+      <ref name="del"/>
+      <ref name="unclear"/>
+      <ref name="zone"/>
+      <ref name="seg"/>
+      <ref name="w"/>
+      <ref name="c"/>
     </choice>
   </define>
   <define name="model.ptrLike">
@@ -1879,44 +1896,28 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <ref name="cit"/>
     </oneOrMore>
   </define>
-  <define name="model.qLike">
-    <choice>
-      <ref name="model.quoteLike"/>
-      <ref name="q"/>
-    </choice>
+  <define name="model.attributable">
+    <ref name="model.quoteLike"/>
   </define>
-  <define name="model.qLike_alternation">
-    <choice>
-      <ref name="model.quoteLike_alternation"/>
-      <ref name="q"/>
-    </choice>
+  <define name="model.attributable_alternation">
+    <ref name="model.quoteLike_alternation"/>
   </define>
-  <define name="model.qLike_sequence">
+  <define name="model.attributable_sequence">
     <ref name="model.quoteLike_sequence"/>
-    <ref name="q"/>
   </define>
-  <define name="model.qLike_sequenceOptional">
+  <define name="model.attributable_sequenceOptional">
     <optional>
       <ref name="model.quoteLike_sequenceOptional"/>
     </optional>
-    <optional>
-      <ref name="q"/>
-    </optional>
   </define>
-  <define name="model.qLike_sequenceOptionalRepeatable">
+  <define name="model.attributable_sequenceOptionalRepeatable">
     <zeroOrMore>
       <ref name="model.quoteLike_sequenceOptionalRepeatable"/>
     </zeroOrMore>
-    <zeroOrMore>
-      <ref name="q"/>
-    </zeroOrMore>
   </define>
-  <define name="model.qLike_sequenceRepeatable">
+  <define name="model.attributable_sequenceRepeatable">
     <oneOrMore>
       <ref name="model.quoteLike_sequenceRepeatable"/>
-    </oneOrMore>
-    <oneOrMore>
-      <ref name="q"/>
     </oneOrMore>
   </define>
   <define name="model.respLike">
@@ -2202,13 +2203,14 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <ref name="model.labelLike"/>
       <ref name="model.listLike"/>
       <ref name="model.stageLike"/>
-      <ref name="model.qLike"/>
+      <ref name="model.attributable"/>
     </choice>
   </define>
   <define name="model.common">
     <choice>
       <ref name="model.divPart"/>
       <ref name="model.inter"/>
+      <ref name="q"/>
       <ref name="model.entryLike"/>
     </choice>
   </define>
@@ -2282,7 +2284,10 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
     </choice>
   </define>
   <define name="model.resource">
-    <ref name="text"/>
+    <choice>
+      <ref name="facsimile"/>
+      <ref name="text"/>
+    </choice>
   </define>
   <define name="model.describedResource">
     <choice>
@@ -2463,12 +2468,14 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <a:documentation>(cited quotation) contains a quotation from some other document, together with a bibliographic reference to its source. In a dictionary it may contain an example text with at least one occurrence of the word form, used in the sense being described, or a translation of the headword, or an example. [3.3.3. Quotation 4.3.1. Grouped Texts 9.3.5.1. Examples]</a:documentation>
       <oneOrMore>
         <choice>
-          <ref name="model.qLike"/>
-          <ref name="model.egLike"/>
           <ref name="model.biblLike"/>
-          <ref name="model.ptrLike"/>
-          <ref name="model.global"/>
+          <ref name="model.egLike"/>
           <ref name="model.entryPart"/>
+          <ref name="model.global"/>
+          <ref name="model.graphicLike"/>
+          <ref name="model.ptrLike"/>
+          <ref name="model.attributable"/>
+          <ref name="q"/>
         </choice>
       </oneOrMore>
       <ref name="att.global.attributes"/>
@@ -2650,8 +2657,10 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
       <ref name="att.global.rendition.attribute.rend"/>
       <ref name="att.global.rendition.attribute.style"/>
       <ref name="att.global.rendition.attribute.rendition"/>
+      <ref name="att.global.facs.attribute.facs"/>
       <ref name="att.global.responsibility.attribute.cert"/>
       <ref name="att.global.responsibility.attribute.resp"/>
+      <ref name="att.global.source.attribute.source"/>
       <ref name="att.written.attribute.hand"/>
       <ref name="att.placement.attributes"/>
       <ref name="att.ranging.attribute.atLeast"/>
@@ -2934,6 +2943,7 @@ attributes @target and @cRef may be supplied on <sch:name/>
             </sch:rule>
 
          </sch:pattern>
+      <ref name="att.declaring.attributes"/>
       <ref name="att.global.attribute.xmlid"/>
       <ref name="att.global.attribute.n"/>
       <ref name="att.global.attribute.xmllang"/>
@@ -2943,9 +2953,8 @@ attributes @target and @cRef may be supplied on <sch:name/>
       <ref name="att.global.rendition.attribute.style"/>
       <ref name="att.global.rendition.attribute.rendition"/>
       <ref name="att.global.responsibility.attribute.resp"/>
-      <ref name="att.pointing.attributes"/>
       <ref name="att.internetMedia.attributes"/>
-      <ref name="att.declaring.attributes"/>
+      <ref name="att.pointing.attributes"/>
       <empty/>
     </element>
   </define>
@@ -2963,6 +2972,8 @@ attributes @target and @cRef may be supplied on <sch:name/>
             </sch:rule>
 
          </sch:pattern>
+      <ref name="att.cReferencing.attributes"/>
+      <ref name="att.declaring.attributes"/>
       <ref name="att.global.attribute.xmlid"/>
       <ref name="att.global.attribute.n"/>
       <ref name="att.global.attribute.xmllang"/>
@@ -2975,10 +2986,8 @@ attributes @target and @cRef may be supplied on <sch:name/>
       <ref name="att.global.linking.attribute.sameAs"/>
       <ref name="att.global.responsibility.attribute.cert"/>
       <ref name="att.global.responsibility.attribute.resp"/>
-      <ref name="att.pointing.attributes"/>
       <ref name="att.internetMedia.attributes"/>
-      <ref name="att.declaring.attributes"/>
-      <ref name="att.cReferencing.attributes"/>
+      <ref name="att.pointing.attributes"/>
       <optional>
         <attribute name="type">
           <a:documentation>characterizes the element in some sense, using any convenient classification scheme or typology.</a:documentation>
@@ -3968,11 +3977,14 @@ Elements 7.2.5. Speech Contents]</a:documentation>
             <ref name="model.pLike"/>
             <ref name="model.listLike"/>
             <ref name="model.stageLike"/>
-            <ref name="model.qLike"/>
+            <ref name="model.attributable"/>
           </choice>
-          <zeroOrMore>
-            <ref name="model.global"/>
-          </zeroOrMore>
+          <choice>
+            <zeroOrMore>
+              <ref name="model.global"/>
+            </zeroOrMore>
+            <ref name="q"/>
+          </choice>
         </oneOrMore>
       </group>
       <ref name="att.global.attribute.xmlid"/>
@@ -4140,6 +4152,14 @@ Elements 7.2.5. Speech Contents]</a:documentation>
           <text/>
           <ref name="model.divLike"/>
           <ref name="model.divPart"/>
+          <ref name="titlePage"/>
+          <ref name="byline"/>
+          <ref name="docAuthor"/>
+          <ref name="docDate"/>
+          <ref name="docImprint"/>
+          <ref name="docTitle"/>
+          <ref name="epigraph"/>
+          <ref name="titlePart"/>
           <ref name="model.gLike"/>
           <ref name="model.phrase"/>
           <ref name="model.inter"/>
@@ -4181,6 +4201,14 @@ Elements 7.2.5. Speech Contents]</a:documentation>
           <text/>
           <ref name="model.divLike"/>
           <ref name="model.divPart"/>
+          <ref name="titlePage"/>
+          <ref name="byline"/>
+          <ref name="docAuthor"/>
+          <ref name="docDate"/>
+          <ref name="docImprint"/>
+          <ref name="docTitle"/>
+          <ref name="epigraph"/>
+          <ref name="titlePart"/>
           <ref name="model.gLike"/>
           <ref name="model.phrase"/>
           <ref name="model.inter"/>
@@ -4753,9 +4781,9 @@ Sample values include: 1] TEI; 2] DBK (docbook); 3] XX (unknown); 4] Schematron;
             <ref name="extent"/>
           </optional>
           <ref name="publicationStmt"/>
-          <optional>
+          <zeroOrMore>
             <ref name="seriesStmt"/>
-          </optional>
+          </zeroOrMore>
           <optional>
             <ref name="notesStmt"/>
           </optional>
@@ -5060,6 +5088,7 @@ Sample values include: 1] TEI; 2] DBK (docbook); 3] XX (unknown); 4] Schematron;
       <ref name="att.global.rendition.attribute.style"/>
       <ref name="att.global.rendition.attribute.rendition"/>
       <ref name="att.global.responsibility.attribute.resp"/>
+      <ref name="att.declarable.attributes"/>
       <empty/>
     </element>
   </define>
@@ -5538,7 +5567,7 @@ On <sch:name/>
   </define>
   <define name="change">
     <element name="change">
-      <a:documentation>documents a change or set of changes made during the production of a source document, or during the revision of an electronic file. [2.6. The Revision Description 2.4.1. Creation 11.7. Identifying Changes and Revisions]</a:documentation>
+      <a:documentation>documents a change or set of changes made during the production of a source document, or during the revision of an electronic file. [2.6. The Revision Description 2.4.1. Creation 11.6. Identifying Changes and Revisions]</a:documentation>
       <ref name="macro.specialPara"/>
       <ref name="att.ascribed.attributes"/>
       <ref name="att.datable.w3c.attribute.when"/>
@@ -5574,7 +5603,7 @@ On <sch:name/>
   </define>
   <define name="listChange">
     <element name="listChange">
-      <a:documentation>groups a number of change descriptions associated with either the creation of a source text or the revision of an encoded text. [2.6. The Revision Description 11.7. Identifying Changes and Revisions]</a:documentation>
+      <a:documentation>groups a number of change descriptions associated with either the creation of a source text or the revision of an encoded text. [2.6. The Revision Description 11.6. Identifying Changes and Revisions]</a:documentation>
       <oneOrMore>
         <choice>
           <ref name="listChange"/>
@@ -5977,9 +6006,199 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
       <empty/>
     </element>
   </define>
+  <define name="att.coordinated.attributes">
+    <ref name="att.coordinated.attribute.start"/>
+    <ref name="att.coordinated.attribute.ulx"/>
+    <ref name="att.coordinated.attribute.uly"/>
+    <ref name="att.coordinated.attribute.lrx"/>
+    <ref name="att.coordinated.attribute.lry"/>
+    <ref name="att.coordinated.attribute.points"/>
+  </define>
+  <define name="att.coordinated.attribute.start">
+    <optional>
+      <attribute name="start">
+        <a:documentation>indicates the element within a transcription of the text containing at least the start of the writing represented by this zone or surface.</a:documentation>
+        <data type="anyURI"/>
+      </attribute>
+    </optional>
+  </define>
+  <define name="att.coordinated.attribute.ulx">
+    <optional>
+      <attribute name="ulx">
+        <a:documentation>gives the x coordinate value for the upper left corner of a rectangular space.</a:documentation>
+        <choice>
+          <data type="double"/>
+          <data type="token">
+            <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+          </data>
+          <data type="decimal"/>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+  <define name="att.coordinated.attribute.uly">
+    <optional>
+      <attribute name="uly">
+        <a:documentation>gives the y coordinate value for the upper left corner of a rectangular space.</a:documentation>
+        <choice>
+          <data type="double"/>
+          <data type="token">
+            <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+          </data>
+          <data type="decimal"/>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+  <define name="att.coordinated.attribute.lrx">
+    <optional>
+      <attribute name="lrx">
+        <a:documentation>gives the x coordinate value for the lower right corner of a rectangular space.</a:documentation>
+        <choice>
+          <data type="double"/>
+          <data type="token">
+            <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+          </data>
+          <data type="decimal"/>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+  <define name="att.coordinated.attribute.lry">
+    <optional>
+      <attribute name="lry">
+        <a:documentation>gives the y coordinate value for the lower right corner of a rectangular space.</a:documentation>
+        <choice>
+          <data type="double"/>
+          <data type="token">
+            <param name="pattern">(\-?[\d]+/\-?[\d]+)</param>
+          </data>
+          <data type="decimal"/>
+        </choice>
+      </attribute>
+    </optional>
+  </define>
+  <define name="att.coordinated.attribute.points">
+    <optional>
+      <attribute name="points">
+        <a:documentation>identifies a two dimensional area by means of a series of pairs of numbers, each of which gives the x,y coordinates of a point on a line enclosing the area.</a:documentation>
+        <list>
+          <data type="token">
+            <param name="pattern">(-?[0-9]+(\.[0-9]+)?,-?[0-9]+(\.[0-9]+)?)</param>
+          </data>
+          <data type="token">
+            <param name="pattern">(-?[0-9]+(\.[0-9]+)?,-?[0-9]+(\.[0-9]+)?)</param>
+          </data>
+          <data type="token">
+            <param name="pattern">(-?[0-9]+(\.[0-9]+)?,-?[0-9]+(\.[0-9]+)?)</param>
+          </data>
+          <zeroOrMore>
+            <data type="token">
+              <param name="pattern">(-?[0-9]+(\.[0-9]+)?,-?[0-9]+(\.[0-9]+)?)</param>
+            </data>
+          </zeroOrMore>
+        </list>
+      </attribute>
+    </optional>
+  </define>
+  <define name="facsimile">
+    <element name="facsimile">
+      <a:documentation>contains a representation of some written source in the form of a set of images rather than as transcribed or encoded text. [11.1. Digital Facsimiles]</a:documentation>
+      <group>
+        <optional>
+          <ref name="front"/>
+        </optional>
+        <oneOrMore>
+          <choice>
+            <ref name="model.graphicLike"/>
+            <ref name="surface"/>
+          </choice>
+        </oneOrMore>
+        <optional>
+          <ref name="back"/>
+        </optional>
+      </group>
+      <ref name="att.global.attributes"/>
+      <ref name="att.declaring.attributes"/>
+      <empty/>
+    </element>
+  </define>
+  <define name="surface">
+    <element name="surface">
+      <a:documentation>defines a written surface as a two-dimensional coordinate space, optionally grouping one or more graphic representations of that space, zones of interest within that space, and transcriptions of the writing within them. [11.1. Digital Facsimiles 11.2.2. Embedded Transcription]</a:documentation>
+      <group>
+        <zeroOrMore>
+          <choice>
+            <ref name="model.global"/>
+            <ref name="model.labelLike"/>
+            <ref name="model.graphicLike"/>
+          </choice>
+        </zeroOrMore>
+        <zeroOrMore>
+          <choice>
+            <ref name="zone"/>
+            <ref name="surface"/>
+          </choice>
+          <zeroOrMore>
+            <ref name="model.global"/>
+          </zeroOrMore>
+        </zeroOrMore>
+      </group>
+      <ref name="att.global.attributes"/>
+      <ref name="att.coordinated.attributes"/>
+      <ref name="att.declaring.attributes"/>
+      <ref name="att.typed.attributes"/>
+      <optional>
+        <attribute name="attachment">
+          <a:documentation>describes the method by which this surface is or was connected to the main surface
+Sample values include: 1] glued; 2] pinned; 3] sewn</a:documentation>
+          <data type="token">
+            <param name="pattern">[^\p{C}\p{Z}]+</param>
+          </data>
+        </attribute>
+      </optional>
+      <optional>
+        <attribute name="flipping">
+          <a:documentation>indicates whether the surface is attached and folded in such a way as to provide two writing surfaces</a:documentation>
+          <data type="boolean"/>
+        </attribute>
+      </optional>
+      <empty/>
+    </element>
+  </define>
+  <define name="zone">
+    <element name="zone">
+      <a:documentation>defines any two-dimensional area within a <ns1:code>&lt;surface&gt;</ns1:code>
+ element. [11.1. Digital Facsimiles 11.2.2. Embedded Transcription]</a:documentation>
+      <zeroOrMore>
+        <choice>
+          <text/>
+          <ref name="model.gLike"/>
+          <ref name="model.graphicLike"/>
+          <ref name="model.global"/>
+          <ref name="surface"/>
+          <ref name="model.linePart"/>
+        </choice>
+      </zeroOrMore>
+      <ref name="att.global.attributes"/>
+      <ref name="att.coordinated.attributes"/>
+      <ref name="att.typed.attributes"/>
+      <ref name="att.written.attributes"/>
+      <optional>
+        <attribute name="rotate" a:defaultValue="0">
+          <a:documentation>indicates the amount by which this zone has been rotated clockwise, with respect to the normal orientation of the parent <ns1:code>&lt;surface&gt;</ns1:code>
+ element as implied by the dimensions given in the <ns1:code>&lt;msDesc&gt;</ns1:code>
+ element or by the coordinates of the <ns1:code>&lt;surface&gt;</ns1:code>
+ itself. The orientation is expressed in arc degrees.</a:documentation>
+          <data type="nonNegativeInteger"/>
+        </attribute>
+      </optional>
+      <empty/>
+    </element>
+  </define>
   <define name="space">
     <element name="space">
-      <a:documentation>indicates the location of a significant space in the text. [11.5.1. Space]</a:documentation>
+      <a:documentation>indicates the location of a significant space in the text. [11.4.1. Space]</a:documentation>
       <zeroOrMore>
         <choice>
           <ref name="model.descLike"/>
@@ -6090,9 +6309,10 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
       <a:documentation>describes a single textual transposition as an ordered list of at least two pointers specifying the order in which the elements indicated should be re-combined. [11.3.4.5. Transpositions]</a:documentation>
       <group>
         <ref name="ptr"/>
-        <oneOrMore>
+        <ref name="ptr"/>
+        <zeroOrMore>
           <ref name="ptr"/>
-        </oneOrMore>
+        </zeroOrMore>
       </group>
       <ref name="att.global.attribute.xmlid"/>
       <ref name="att.global.attribute.n"/>
@@ -6208,6 +6428,22 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
       <empty/>
     </element>
   </define>
+  <define name="att.lexicographic.normalized.attribute.norm">
+    <optional>
+      <attribute name="norm">
+        <a:documentation>(normalized) provides the normalized/standardized form of information present in the source text in a non-normalized form</a:documentation>
+        <data type="string"/>
+      </attribute>
+    </optional>
+  </define>
+  <define name="att.lexicographic.normalized.attribute.orig">
+    <optional>
+      <attribute name="orig">
+        <a:documentation>(original) gives the original string or is the empty string when the element does not appear in the source text.</a:documentation>
+        <data type="string"/>
+      </attribute>
+    </optional>
+  </define>
   <define name="att.linguistic.attribute.pos">
     <optional>
       <attribute name="pos">
@@ -6308,6 +6544,8 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
       <ref name="att.linguistic.attribute.pos"/>
       <ref name="att.linguistic.attribute.msd"/>
       <ref name="att.linguistic.attribute.join"/>
+      <ref name="att.lexicographic.normalized.attribute.norm"/>
+      <ref name="att.lexicographic.normalized.attribute.orig"/>
       <ref name="att.notated.attributes"/>
       <empty/>
     </element>
@@ -6388,6 +6626,7 @@ The attributes @to and @from on <sch:name/>
       <ref name="att.global.responsibility.attribute.cert"/>
       <ref name="att.global.responsibility.attribute.resp"/>
       <ref name="att.interpLike.attributes"/>
+      <ref name="att.typed.attributes"/>
       <optional>
         <attribute name="from">
           <a:documentation>gives the identifier of the node which is the starting point of the span of text being annotated; if not accompanied by a <ns1:code>@to</ns1:code>

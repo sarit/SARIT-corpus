@@ -8,10 +8,10 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2020-06-19T19:54:58Z. .
-# TEI Edition: Version 4.0.0. Last updated on
-#	13th February 2020, revision ccd19b0ba
-# TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 4.0.0/
+# Schema generated from ODD source 2020-10-15T11:56:17Z. .
+# TEI Edition: Version 4.1.0. Last updated on
+#	19th August 2020, revision b414ba550
+# TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.1.0/
 #
 
 #
@@ -25,7 +25,11 @@ macro.paraContent =
    | model.lLike)*
 macro.limitedContent = (text | model.limitedPhrase | model.inter)*
 macro.phraseSeq =
-  (text | model.gLike | model.qLike | model.phrase | model.global)*
+  (text
+   | model.gLike
+   | model.attributable
+   | model.phrase
+   | model.global)*
 macro.phraseSeq.limited = (text | model.limitedPhrase | model.global)*
 macro.specialPara =
   (text
@@ -525,15 +529,7 @@ att.resourced.attribute.url =
   
   ## (uniform resource locator) specifies the URL from which the media concerned may be obtained.
   attribute url { xsd:anyURI }
-att.interpLike.attributes =
-  att.interpLike.attribute.type, att.interpLike.attribute.inst
-att.interpLike.attribute.type =
-  
-  ## indicates what kind of phenomenon is being noted in the passage.
-  ## Sample values include: 1] image; 2] character; 3] theme; 4] allusion
-  attribute type {
-    xsd:token { pattern = "[^\p{C}\p{Z}]+" }
-  }?
+att.interpLike.attributes = att.interpLike.attribute.inst
 att.interpLike.attribute.inst =
   
   ## (instances) points to instances of the analysis or interpretation represented by the current element.
@@ -755,12 +751,12 @@ model.nameLike.agent_sequenceOptionalRepeatable =
   name*, orgName*, persName*
 model.nameLike.agent_sequenceRepeatable = name+, orgName+, persName+
 model.segLike = seg | s | w | c
-model.hiLike = hi
-model.hiLike_alternation = hi
-model.hiLike_sequence = hi
-model.hiLike_sequenceOptional = hi?
-model.hiLike_sequenceOptionalRepeatable = hi*
-model.hiLike_sequenceRepeatable = hi+
+model.hiLike = hi | q
+model.hiLike_alternation = hi | q
+model.hiLike_sequence = hi, q
+model.hiLike_sequenceOptional = hi?, q?
+model.hiLike_sequenceOptionalRepeatable = hi*, q*
+model.hiLike_sequenceRepeatable = hi+, q+
 model.emphLike =
   foreign | emph | mentioned | term | title | code | ident
 model.emphLike_alternation =
@@ -819,6 +815,8 @@ model.pPart.transcriptional_sequenceOptionalRepeatable =
 model.pPart.transcriptional_sequenceRepeatable =
   sic+, corr+, orig+, add+, del+, unclear+, supplied+, surplus+
 model.pPart.edit = model.pPart.editorial | model.pPart.transcriptional
+model.linePart =
+  model.hiLike | choice | add | del | unclear | zone | seg | w | c
 model.ptrLike = ptr | ref
 model.lPart = caesura
 model.global.meta = listTranspose | span
@@ -909,13 +907,14 @@ model.quoteLike_sequence = quote, cit
 model.quoteLike_sequenceOptional = quote?, cit?
 model.quoteLike_sequenceOptionalRepeatable = quote*, cit*
 model.quoteLike_sequenceRepeatable = quote+, cit+
-model.qLike = model.quoteLike | q
-model.qLike_alternation = model.quoteLike_alternation | q
-model.qLike_sequence = model.quoteLike_sequence, q
-model.qLike_sequenceOptional = model.quoteLike_sequenceOptional?, q?
-model.qLike_sequenceOptionalRepeatable =
-  model.quoteLike_sequenceOptionalRepeatable*, q*
-model.qLike_sequenceRepeatable = model.quoteLike_sequenceRepeatable+, q+
+model.attributable = model.quoteLike
+model.attributable_alternation = model.quoteLike_alternation
+model.attributable_sequence = model.quoteLike_sequence
+model.attributable_sequenceOptional = model.quoteLike_sequenceOptional?
+model.attributable_sequenceOptionalRepeatable =
+  model.quoteLike_sequenceOptionalRepeatable*
+model.attributable_sequenceRepeatable =
+  model.quoteLike_sequenceRepeatable+
 model.respLike = author | editor | respStmt | funder | principal
 model.divWrapper = byline | epigraph | docAuthor | docDate
 model.divTopPart = model.headLike
@@ -1030,8 +1029,8 @@ model.inter =
   | model.labelLike
   | model.listLike
   | model.stageLike
-  | model.qLike
-model.common = model.divPart | model.inter | model.entryLike
+  | model.attributable
+model.common = model.divPart | model.inter | q | model.entryLike
 model.phrase =
   model.segLike
   | model.highlighted
@@ -1063,7 +1062,7 @@ model.editorialDeclPart =
   correction | normalization | quotation | segmentation | interpretation
 model.profileDescPart =
   langUsage | textClass | calendarDesc | listTranspose
-model.resource = \text
+model.resource = facsimile | \text
 model.describedResource = teiCorpus | TEI
 p =
   
@@ -1269,12 +1268,14 @@ cit =
   
   ## (cited quotation) contains a quotation from some other document, together with a bibliographic reference to its source. In a dictionary it may contain an example text with at least one occurrence of the word form, used in the sense being described, or a translation of the headword, or an example. [3.3.3. Quotation 4.3.1. Grouped Texts 9.3.5.1. Examples]
   element cit {
-    (model.qLike
+    (model.biblLike
      | model.egLike
-     | model.biblLike
-     | model.ptrLike
+     | model.entryPart
      | model.global
-     | model.entryPart)+,
+     | model.graphicLike
+     | model.ptrLike
+     | model.attributable
+     | q)+,
     att.global.attributes,
     att.typed.attributes,
     empty
@@ -1433,8 +1434,10 @@ add =
     att.global.rendition.attribute.rend,
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
+    att.global.facs.attribute.facs,
     att.global.responsibility.attribute.cert,
     att.global.responsibility.attribute.resp,
+    att.global.source.attribute.source,
     att.written.attribute.hand,
     att.placement.attributes,
     att.ranging.attribute.atLeast,
@@ -1706,6 +1709,7 @@ ptr =
          "\x{a}" ~
          "         "
        ],
+    att.declaring.attributes,
     att.global.attribute.xmlid,
     att.global.attribute.n,
     att.global.attribute.xmllang,
@@ -1715,9 +1719,8 @@ ptr =
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
     att.global.responsibility.attribute.resp,
-    att.pointing.attributes,
     att.internetMedia.attributes,
-    att.declaring.attributes,
+    att.pointing.attributes,
     empty
   }
 ref =
@@ -1747,6 +1750,8 @@ ref =
          "\x{a}" ~
          "         "
        ],
+    att.cReferencing.attributes,
+    att.declaring.attributes,
     att.global.attribute.xmlid,
     att.global.attribute.n,
     att.global.attribute.xmllang,
@@ -1759,10 +1764,8 @@ ref =
     att.global.linking.attribute.sameAs,
     att.global.responsibility.attribute.cert,
     att.global.responsibility.attribute.resp,
-    att.pointing.attributes,
     att.internetMedia.attributes,
-    att.declaring.attributes,
-    att.cReferencing.attributes,
+    att.pointing.attributes,
     
     ## characterizes the element in some sense, using any convenient classification scheme or typology.
     attribute type {
@@ -2604,8 +2607,8 @@ sp =
        | model.pLike
        | model.listLike
        | model.stageLike
-       | model.qLike),
-      model.global*)+),
+       | model.attributable),
+      (model.global* | q))+),
     att.global.attribute.xmlid,
     att.global.attribute.n,
     att.global.attribute.xmllang,
@@ -2732,6 +2735,14 @@ lem =
     (text
      | model.divLike
      | model.divPart
+     | titlePage
+     | byline
+     | docAuthor
+     | docDate
+     | docImprint
+     | docTitle
+     | epigraph
+     | titlePart
      | model.gLike
      | model.phrase
      | model.inter
@@ -2768,6 +2779,14 @@ rdg =
     (text
      | model.divLike
      | model.divPart
+     | titlePage
+     | byline
+     | docAuthor
+     | docDate
+     | docImprint
+     | docTitle
+     | epigraph
+     | titlePart
      | model.gLike
      | model.phrase
      | model.inter
@@ -3255,7 +3274,7 @@ fileDesc =
       editionStmt?,
       extent?,
       publicationStmt,
-      seriesStmt?,
+      seriesStmt*,
       notesStmt?),
      sourceDesc+),
     att.global.attribute.xmlid,
@@ -3497,6 +3516,7 @@ seriesStmt =
     att.global.rendition.attribute.style,
     att.global.rendition.attribute.rendition,
     att.global.responsibility.attribute.resp,
+    att.declarable.attributes,
     empty
   }
 notesStmt =
@@ -3905,7 +3925,7 @@ revisionDesc =
   }
 change =
   
-  ## documents a change or set of changes made during the production of a source document, or during the revision of an electronic file. [2.6. The Revision Description 2.4.1. Creation 11.7. Identifying Changes and Revisions]
+  ## documents a change or set of changes made during the production of a source document, or during the revision of an electronic file. [2.6. The Revision Description 2.4.1. Creation 11.6. Identifying Changes and Revisions]
   element change {
     macro.specialPara,
     att.ascribed.attributes,
@@ -3941,7 +3961,7 @@ change =
   }
 listChange =
   
-  ## groups a number of change descriptions associated with either the creation of a source text or the revision of an encoded text. [2.6. The Revision Description 11.7. Identifying Changes and Revisions]
+  ## groups a number of change descriptions associated with either the creation of a source text or the revision of an encoded text. [2.6. The Revision Description 11.6. Identifying Changes and Revisions]
   element listChange {
     (listChange | change)+,
     att.global.attribute.xmlid,
@@ -4217,9 +4237,135 @@ history =
     att.global.responsibility.attribute.resp,
     empty
   }
+att.coordinated.attributes =
+  att.coordinated.attribute.start,
+  att.coordinated.attribute.ulx,
+  att.coordinated.attribute.uly,
+  att.coordinated.attribute.lrx,
+  att.coordinated.attribute.lry,
+  att.coordinated.attribute.points
+att.coordinated.attribute.start =
+  
+  ## indicates the element within a transcription of the text containing at least the start of the writing represented by this zone or surface.
+  attribute start { xsd:anyURI }?
+att.coordinated.attribute.ulx =
+  
+  ## gives the x coordinate value for the upper left corner of a rectangular space.
+  attribute ulx {
+    xsd:double
+    | xsd:token { pattern = "(\-?[\d]+/\-?[\d]+)" }
+    | xsd:decimal
+  }?
+att.coordinated.attribute.uly =
+  
+  ## gives the y coordinate value for the upper left corner of a rectangular space.
+  attribute uly {
+    xsd:double
+    | xsd:token { pattern = "(\-?[\d]+/\-?[\d]+)" }
+    | xsd:decimal
+  }?
+att.coordinated.attribute.lrx =
+  
+  ## gives the x coordinate value for the lower right corner of a rectangular space.
+  attribute lrx {
+    xsd:double
+    | xsd:token { pattern = "(\-?[\d]+/\-?[\d]+)" }
+    | xsd:decimal
+  }?
+att.coordinated.attribute.lry =
+  
+  ## gives the y coordinate value for the lower right corner of a rectangular space.
+  attribute lry {
+    xsd:double
+    | xsd:token { pattern = "(\-?[\d]+/\-?[\d]+)" }
+    | xsd:decimal
+  }?
+att.coordinated.attribute.points =
+  
+  ## identifies a two dimensional area by means of a series of pairs of numbers, each of which gives the x,y coordinates of a point on a line enclosing the area.
+  attribute points {
+    list {
+      xsd:token {
+        pattern = "(-?[0-9]+(\.[0-9]+)?,-?[0-9]+(\.[0-9]+)?)"
+      },
+      xsd:token {
+        pattern = "(-?[0-9]+(\.[0-9]+)?,-?[0-9]+(\.[0-9]+)?)"
+      },
+      xsd:token {
+        pattern = "(-?[0-9]+(\.[0-9]+)?,-?[0-9]+(\.[0-9]+)?)"
+      },
+      xsd:token {
+        pattern = "(-?[0-9]+(\.[0-9]+)?,-?[0-9]+(\.[0-9]+)?)"
+      }*
+    }
+  }?
+facsimile =
+  
+  ## contains a representation of some written source in the form of a set of images rather than as transcribed or encoded text. [11.1. Digital Facsimiles]
+  element facsimile {
+    (front?, (model.graphicLike | surface)+, back?),
+    att.global.attributes,
+    att.declaring.attributes,
+    empty
+  }
+surface =
+  
+  ## defines a written surface as a two-dimensional coordinate space, optionally grouping one or more graphic representations of that space, zones of interest within that space, and transcriptions of the writing within them. [11.1. Digital Facsimiles 11.2.2. Embedded Transcription]
+  element surface {
+    ((model.global | model.labelLike | model.graphicLike)*,
+     ((zone | surface), model.global*)*),
+    att.global.attributes,
+    att.coordinated.attributes,
+    att.declaring.attributes,
+    att.typed.attributes,
+    
+    ## describes the method by which this surface is or was connected to the main surface
+    ## Sample values include: 1] glued; 2] pinned; 3] sewn
+    attribute attachment {
+      xsd:token { pattern = "[^\p{C}\p{Z}]+" }
+    }?,
+    
+    ## indicates whether the surface is attached and folded in such a way as to provide two writing surfaces
+    attribute flipping { xsd:boolean }?,
+    empty
+  }
+zone =
+  [
+    a:documentation [
+      "defines any two-dimensional area within a "
+      ns1:code [ "<surface>" ]
+      " element. [11.1. Digital Facsimiles 11.2.2. Embedded Transcription]"
+    ]
+  ]
+  element zone {
+    (text
+     | model.gLike
+     | model.graphicLike
+     | model.global
+     | surface
+     | model.linePart)*,
+    att.global.attributes,
+    att.coordinated.attributes,
+    att.typed.attributes,
+    att.written.attributes,
+    [
+      a:defaultValue = "0"
+      a:documentation [
+        "indicates the amount by which this zone has been rotated clockwise, with respect to the normal orientation of the parent "
+        ns1:code [ "<surface>" ]
+        " element as implied by the dimensions given in the "
+        ns1:code [ "<msDesc>" ]
+        " element or by the coordinates of the "
+        ns1:code [ "<surface>" ]
+        " itself. The orientation is expressed in arc degrees."
+      ]
+    ]
+    attribute rotate { xsd:nonNegativeInteger }?,
+    empty
+  }
 space =
   
-  ## indicates the location of a significant space in the text. [11.5.1. Space]
+  ## indicates the location of a significant space in the text. [11.4.1. Space]
   element space {
     (model.descLike | model.certLike)*,
     att.global.attribute.xmlid,
@@ -4312,7 +4458,7 @@ transpose =
   
   ## describes a single textual transposition as an ordered list of at least two pointers specifying the order in which the elements indicated should be re-combined. [11.3.4.5. Transpositions]
   element transpose {
-    (ptr, ptr+),
+    (ptr, ptr, ptr*),
     att.global.attribute.xmlid,
     att.global.attribute.n,
     att.global.attribute.xmllang,
@@ -4453,6 +4599,14 @@ seg =
     }?,
     empty
   }
+att.lexicographic.normalized.attribute.norm =
+  
+  ## (normalized) provides the normalized/standardized form of information present in the source text in a non-normalized form
+  attribute norm { xsd:string }?
+att.lexicographic.normalized.attribute.orig =
+  
+  ## (original) gives the original string or is the empty string when the element does not appear in the source text.
+  attribute orig { xsd:string }?
 att.linguistic.attribute.pos =
   
   ## (part of speech) indicates the part of speech assigned to a token (i.e. information on whether it is a noun, adjective, or verb), usually according to some official reference vocabulary (e.g. for German: STTS, for English: CLAWS, for Polish: NKJP, etc.).
@@ -4566,6 +4720,8 @@ w =
     att.linguistic.attribute.pos,
     att.linguistic.attribute.msd,
     att.linguistic.attribute.join,
+    att.lexicographic.normalized.attribute.norm,
+    att.lexicographic.normalized.attribute.orig,
     att.notated.attributes,
     empty
   }
@@ -4695,6 +4851,7 @@ span =
     att.global.responsibility.attribute.cert,
     att.global.responsibility.attribute.resp,
     att.interpLike.attributes,
+    att.typed.attributes,
     [
       a:documentation [
         "gives the identifier of the node which is the starting point of the span of text being annotated; if not accompanied by a "
