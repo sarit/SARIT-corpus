@@ -796,12 +796,12 @@ model.offsetLike_sequenceOptional = empty
 model.offsetLike_sequenceOptionalRepeatable = empty
 model.offsetLike_sequenceRepeatable = notAllowed
 model.pPart.msdesc = locus
-model.pPart.editorial = choice
-model.pPart.editorial_alternation = choice
-model.pPart.editorial_sequence = choice
-model.pPart.editorial_sequenceOptional = choice?
-model.pPart.editorial_sequenceOptionalRepeatable = choice*
-model.pPart.editorial_sequenceRepeatable = choice+
+model.pPart.editorial = choice | subst
+model.pPart.editorial_alternation = choice | subst
+model.pPart.editorial_sequence = choice, subst
+model.pPart.editorial_sequenceOptional = choice?, subst?
+model.pPart.editorial_sequenceOptionalRepeatable = choice*, subst*
+model.pPart.editorial_sequenceRepeatable = choice+, subst+
 model.pPart.transcriptional =
   sic | corr | orig | add | del | unclear | supplied | surplus
 model.pPart.transcriptional_alternation =
@@ -4386,6 +4386,35 @@ space =
     attribute resp {
       list { xsd:anyURI+ }
     }?,
+    empty
+  }
+subst =
+  
+  ## (substitution) groups one or more deletions with one or more additions when the combination is to be regarded as a single intervention in the text. [11.3.1.5. Substitutions]
+  element subst {
+    ((add | del | model.milestoneLike)+)
+    >> sch:pattern [
+         id = "tei_all-subst-substContents1-constraint-assert-24"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:subst"
+           "\x{a}" ~
+           "               "
+           sch:assert [
+             test = "child::tei:add and child::tei:del"
+             "\x{a}" ~
+             "                  "
+             sch:name [ ]
+             " must have at least one child add and at least one child del"
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ],
+    att.global.attributes,
     empty
   }
 supplied =
