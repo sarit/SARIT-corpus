@@ -8,7 +8,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2020-10-15T11:56:17Z. .
+# Schema generated from ODD source 2021-05-27T09:45:48Z. .
 # TEI Edition: Version 4.1.0. Last updated on
 #	19th August 2020, revision b414ba550
 # TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 4.1.0/
@@ -120,6 +120,12 @@ att.ranging.attribute.confidence =
     ]
   ]
   attribute confidence { xsd:double }?
+att.dimensions.attributes =
+  att.ranging.attributes,
+  att.dimensions.attribute.unit,
+  att.dimensions.attribute.quantity,
+  att.dimensions.attribute.extent,
+  att.dimensions.attribute.precision
 att.dimensions.attribute.unit =
   
   ## names the unit used for the measurement
@@ -154,6 +160,23 @@ att.dimensions.attribute.extent =
   
   ## indicates the size of the object concerned using a project-specific vocabulary combining quantity and units in a single string of words.
   attribute extent { xsd:string }?
+att.dimensions.attribute.precision =
+  
+  ## characterizes the precision of the values specified by the other attributes.
+  attribute precision {
+    
+    ##
+    "high"
+    | 
+      ##
+      "medium"
+    | 
+      ##
+      "low"
+    | 
+      ##
+      "unknown"
+  }?
 att.written.attributes = att.written.attribute.hand
 att.written.attribute.hand =
   [
@@ -686,6 +709,8 @@ sch:pattern [
   "   "
 ]
 att.timed.attributes = empty
+att.transcriptional.attributes =
+  att.editLike.attributes, att.written.attributes
 att.citing.attributes =
   att.citing.attribute.unit,
   att.citing.attribute.from,
@@ -4390,11 +4415,11 @@ space =
   }
 subst =
   
-  ## (substitution) groups one or more deletions with one or more additions when the combination is to be regarded as a single intervention in the text. [11.3.1.5. Substitutions]
+  ## (substitution) groups one or more deletions (or surplus text) with one or more additions when the combination is to be regarded as a single intervention in the text. [11.3.1.5. Substitutions]
   element subst {
-    ((add | del | model.milestoneLike)+)
+    ((add | surplus | del | model.milestoneLike)+)
     >> sch:pattern [
-         id = "tei_all-subst-substContents1-constraint-assert-24"
+         id = "oddbyexample-subst-substContents1-constraint-assert-6"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -4402,11 +4427,12 @@ subst =
            "\x{a}" ~
            "               "
            sch:assert [
-             test = "child::tei:add and child::tei:del"
+             test =
+               "child::tei:add and (child::tei:del or child::tei:surplus)"
              "\x{a}" ~
              "                  "
              sch:name [ ]
-             " must have at least one child add and at least one child del"
+             " must have at least one child add and at least one child del or surplus"
            ]
            "\x{a}" ~
            "            "
@@ -4415,6 +4441,8 @@ subst =
          "         "
        ],
     att.global.attributes,
+    att.transcriptional.attributes,
+    att.dimensions.attributes,
     empty
   }
 supplied =
