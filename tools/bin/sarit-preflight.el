@@ -16,7 +16,7 @@
 ;; If you’re not working with Emacs, you can call this file from the
 ;; command line to perform a set of checks of the SARIT library.
 ;; Simply run ./tools/bin/sarit-preflight.el from the base directory
-;; (where most of the XML files are).  This will 
+;; (where most of the XML files are).
 
 ;; Further resources:
 
