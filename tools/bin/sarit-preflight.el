@@ -6,12 +6,17 @@
 
 ;; This is a collection of emacs-lisp functions to help with managing
 ;; the SARIT library of e-texts
-;; (https://github.com/sarit/sarit-corpus).
+;; (https://github.com/sarit/sarit-corpus).  Currently, it allows you
+;; to:
+
+;; - Build the schema for SARIT: ‘sp-make-schema’
+;; - Build ODD->RNG for the TEI P5: ‘sp-clean-and-build-tei-p5’
+;; - Validate SARIT’s XML documents: ‘sp-rnc-validate-xml-docs’ (uses jing)
 
 ;; If you’re not working with Emacs, you can call this file from the
 ;; command line to perform a set of checks of the SARIT library.
 ;; Simply run ./tools/bin/sarit-preflight.el from the base directory
-;; (where most of the XML files are).
+;; (where most of the XML files are).  This will 
 
 ;; Further resources:
 
@@ -137,7 +142,7 @@ When VERBOSE is set, list the settings for all configuration directives."
            (file-readable-p (expand-file-name (symbol-value x)))
 	   (progn
 	     (when verbose
-               (message "Setting %s to %s" x (expand-file-name (symbol-value x))))
+               (message "	- Setting %s to %s" x (expand-file-name (symbol-value x))))
 	     (setf x (expand-file-name (symbol-value x)))))
           (error "Could not access file (config option: %s): %s" x (symbol-value x))))
        to-check-and-set)
@@ -146,14 +151,14 @@ When VERBOSE is set, list the settings for all configuration directives."
        (lambda (file)
          (if (file-exists-p (expand-file-name file default-directory))
              (when verbose
-               (message "File %s found in expected location: %s"
+               (message "	- File %s found in expected location: %s"
                         file
                         (expand-file-name file default-directory) ))
            (error  "File %s not found in expected location: %s"
                    file
                    (expand-file-name file default-directory))))
        '("tools/TEI/P5/Makefile"))
-      (message "Set up looks good"))))
+      (message "\n\n*Setup looks good!*\n\n"))))
 
 (defun sp-p5-start-make (target p5-dir stylesheets-dir prefix-dir)
   "Return a process for ‘make TARGET’ in P5-DIR.
@@ -367,37 +372,49 @@ Returns name of file containing the resulting document."
 
 (when noninteractive
   (message "Command line arguments are: %s" argv)
-  (let* ((sarit-default-dir
-	  (progn (message "sarit-default-dir set to %s"
-                          (file-name-as-directory
-                           (expand-file-name default-directory)))
-		 (file-name-as-directory (expand-file-name default-directory))))
-         (corp (expand-file-name sarit-corpus sarit-default-dir))
-         (schema (expand-file-name "schemas/sarit.rnc" sarit-default-dir))
-         (docs-for-validation
-          (sp-find-xml-docs-for-validation corp))
-         (missing-encoding (sp-find-missing-xml-encoding-declaration docs-for-validation))
-         sarit-all-file
-         process)
+  (cond
+   ((<= 2 (length argv))
+    (message "Usage: sarit-preflight.el [-h|--help]\n")
+    (message "    This script builds the TEI P5 distro, generates the
+    SARIT schemas, and validates SARIT’s XML documents against
+    the resulting RNC schema.  This file can also be used from
+    within Emacs, see the comments at the beginning of the
+    file.")
+    (message "\nYour current configuration looks like this:\n")
     (sp-check-and-fix-set-up! 'verbose)
-    (if (null missing-encoding)
-        (message "Checked encoding declarations, looks good")
-      (error "Encoding declaration missing here: %s" missing-encoding))
-    (sp-clean-and-build-tei-p5)
-    (sp-make-schema  (expand-file-name sarit-odd sarit-default-dir))
-    (message "Validating %s docs:" (length docs-for-validation))
-    (mapc
-     (lambda (doc)
-       (message "- %s" doc))
-     docs-for-validation)
-    (sp-wait-till-finished
-     (sp-rnc-validate-xml-docs
-      schema
-      docs-for-validation))
-    (setf sarit-all-file (sp-sarit-corpus-with-xinclude corp))
-    (sp-wait-till-finished
-     (sp-rnc-validate-xml-docs schema (list sarit-all-file)))
-    (delete-file sarit-all-file)))
+    (kill-emacs 0))
+   (t
+    (let* ((sarit-default-dir
+	    (progn (message "sarit-default-dir set to %s"
+                            (file-name-as-directory
+                             (expand-file-name default-directory)))
+		   (file-name-as-directory (expand-file-name default-directory))))
+           (corp (expand-file-name sarit-corpus sarit-default-dir))
+           (schema (expand-file-name "schemas/sarit.rnc" sarit-default-dir))
+           (docs-for-validation
+            (sp-find-xml-docs-for-validation corp))
+           (missing-encoding (sp-find-missing-xml-encoding-declaration docs-for-validation))
+           sarit-all-file
+           process)
+      (sp-check-and-fix-set-up! 'verbose)
+      (if (null missing-encoding)
+          (message "Checked encoding declarations, looks good")
+        (error "Encoding declaration missing here: %s" missing-encoding))
+      (sp-clean-and-build-tei-p5)
+      (sp-make-schema  (expand-file-name sarit-odd sarit-default-dir))
+      (message "Validating %s docs:" (length docs-for-validation))
+      (mapc
+       (lambda (doc)
+         (message "- %s" doc))
+       docs-for-validation)
+      (sp-wait-till-finished
+       (sp-rnc-validate-xml-docs
+        schema
+        docs-for-validation))
+      (setf sarit-all-file (sp-sarit-corpus-with-xinclude corp))
+      (sp-wait-till-finished
+       (sp-rnc-validate-xml-docs schema (list sarit-all-file)))
+      (delete-file sarit-all-file)))))
 
 (provide 'sarit-preflight)
 ;;; sarit-preflight.el ends here
