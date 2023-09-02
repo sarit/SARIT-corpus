@@ -1,0 +1,1779 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_vimalakIrtinirdeza">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Vimalakīrtinirdeśa</title>
+	<author></author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>Klaus Wille</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Klaus Wille</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/vimkn_u.htm">vimkn_u.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Vimalakirtinirdesa = Vkn
+<lb/>Based on the edition by the Study Group on Buddhist Sanskrit Literature:
+<lb/>Vimalakīrtinirdeśa, A Sanskrit Edition Based upon the Manuscript Newly Found at the Potala Palace,
+<lb/>Tokyo 2006 (The Institute for Comprehensive Studies of Buddhism, Taisho University)
+<lb/>
+<lb/>Input by Klaus Wille (Göttingen, Germany)
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>the Study Group on Buddhist Sanskrit Literature: Vimalakīrtinirdeśa, A Sanskrit Edition Based upon the Manuscript Newly Found at the Potala Palace, Tokyo 2006 (The Institute for Comprehensive Studies of Buddhism, Taisho University)</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Vimalakīrtinirdeśa = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Religious Literature -- Buddhist</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+
+<p>Vimalakīrtinirdeśa</p>
+
+<p>namaḥ sarvabuddhabodhisatvebhyaḥ //</p>
+
+<p>Vkn 1.1 evaṃ mayā śrutam / ekasmin samaye bhagavān vaiśālyāṃ viharati sma, āmrapālīvane mahatā bhikṣusamghena sārdham aṣṭābhir bhikṣusahasraiḥ,</p>
+
+<p>Vkn 1.2 sarvair arhadbhiḥ kṣīṇāsravair niḥkleśair vaśībhūtaiḥ suvimuktacittaiḥ suvimuktaprajñair ājāneyair mahānāgaiḥ kṛtakṛtyaiḥ kṛtakaraṇīyair apahṛtabhārair anuprāptasvakārthaiḥ parikṣīṇabhavasamyojanaiḥ samyagājñāsuvimuktacittaiḥ sarvacetovaśiparamapāramiprāptaiḥ,</p>
+
+<p>Vkn 1.3 dvātriṃśatā ca bodhisatvasahasrair abhijñānābhijñātaiḥ sarvair mahābhijñāparikarmaniryātaiḥ, buddhādhiṣṭhānādhiṣṭhitaiḥ, saddharmanagarapālaiḥ, saddharmaparigrāhakaiḥ, mahāsiṃhanādanādibhiḥ, daśadigvighuṣṭaśabdaiḥ, sarvasatvānadhyeṣitakalyāṇamitraiḥ, triratnavaṃśānupacchetṛbhiḥ, nihatamārapratyarthikaiḥ, sarvaparapravādyanabhibhūtaiḥ, smṛtisamādhidhāraṇīsaṃpannaiḥ, sarvanivaraṇaparyutthānavigataiḥ, anāvaraṇavimokṣapratiṣṭhitaiḥ, anācchedyapratibhānaiḥ, dānadamaniyamasaṃyamaśīlakṣāntivīryadhyānaprajñopāyaniryātaiḥ, anupalambhānutpattikadharmakṣāntisamanvāgataiḥ, avaivartikadharmacakrapravartakaiḥ, alakṣaṇamudrāmudritaiḥ, sarvasatvendriyajñānakuśalaiḥ, sarvaparṣadanabhibhūtavaiśāradyavikrāmibhiḥ, mahāpuṇyajñānasaṃbhāropacitaiḥ, lakṣaṇānuvyañjanasamalaṃkṛtakāyaiḥ, paramarūpadhāribhiḥ, apagatabhūṣaṇaiḥ, meruśikharābhyudgatayaśaḥkīrtisamudgataiḥ, dṛḍhavajrādhyāśayābhedyabuddhadharmaprasādapratilabdhaiḥ, dharmaratnavikaraṇāmṛtajalasaṃpravarṣakaiḥ, sarvasatvarutaravitasvarāṅgaghoṣaviśuddhasvaraiḥ, gambhīradharmapratītyāvatārāntānantadṛṣṭivāsanānusaṃdhisamucchinnaiḥ, vigatabhayasiṃhopamanādibhiḥ, tulyātulyasamatikrāntaiḥ, dharmaratnaprajñāsamudānītamahāsārthavāhaiḥ ṛjusūkṣmamṛdudurdṛśaduranubodhasarvadharmakuśalaiḥ, āgatisatvāśayamatimanupraviṣṭajñānaviṣayibhiḥ,
+asamasamabuddhajñānābhiṣekābhiṣiktaiḥ, daśabalavaiśāradyāveṇikabuddhadharmādhyāśayagataiḥ sarvāpāyadurgativinipātotkṣiptaparikhaiḥ, saṃcintyabhavagatyupapattisaṃdarśayitṛbhiḥ, mahāvaidyarājaiḥ, sarvasatvavinayavidhijñaiḥ, yathārhadharmabhaiṣajyaprayogaprayuktaiḥ, anantaguṇākarasamanvāgataiḥ, anantabuddhakṣetraguṇavyūhasamalaṃkṛtaiḥ, amoghaśravaṇadarśanaiḥ, amoghapadavikramaiḥ, aparimitakalpakoṭīniyutaśatasahasraguṇaparikīrtanāparyantaguṇaughaiḥ /</p>
+
+<p>Vkn 1.4 tadyathā samadarśinā ca nāma bodhisatvena mahāsatvena samaviṣamadarśinā ca, samādhivikurvaṇarājena ca, dharmeśvareṇa ca, dharmaketunā ca, prabhāketunā ca, prabhāvyūhena ca, mahāvyūhena ca, ratnakūṭena ca, pratibhānakūṭena ca, ratnamudrāhastena ca, nityotkṣiptahastena ca, nityotpalakṛtahastena ca, nityotkaṇṭhitena ca, nityaprahasitapramuditendriyeṇa ca, prāmodyarājena ca, devarājena ca, praṇidhiprayātaprāptena ca, pratisaṃvitpraṇādaprāptena ca, gaganagañjena ca, ratnolkādhāriṇā ca, ratnavīreṇa ca, ratnaśriyā ca, ratnanandinā ca, indrajālinā ca, jāliniprabheṇa ca, anāraṃbaṇadhyāyinā ca, prajñākūṭena ca, ratnajahena ca, mārapramardinā ca, vidyuddevena ca, vikurvaṇarājena ca, lakṣaṇakūṭena ca, lakṣaṇakūṭasamatikrāntena ca, siṃhaghoṣābhigarjitasvareṇa ca, śailaśikharasaṃghaṭṭanarājena ca, gandhahastinā ca, gajagandhahastinā ca, satatodyuktena ca, anikṣiptadhureṇa ca, sumatinā ca, sujātena ca, padmaśrīgarbheṇa ca, padmavyūhena ca, avalokiteśvareṇa ca, mahāsthāmaprāptena ca, brahmajālinā ca, ratnayaṣṭinā ca, mārajitena ca, kṣetrālaṃkṛtena ca, maṇiratnacchatreṇa ca, suvarṇacūḍena ca, maṇicūḍena ca, maitreyeṇa ca, mañjuśriyā ca kumārabhūtena bodhisatvena mahāsatvena, evaṃpramukhair dvātriṃśatā bodhisatvasahasraiḥ /</p>
+
+<p>Vkn 1.5 daśabhiś ca brahmasahasrair jaṭibrahmapramukhaiḥ, anekāc caturmahādvīpakāl lokadhātor abhyāgatair bhagavato darśanāyai vandanāyai paryupāsanāyai dharmaśravaṇāya ca / te tatraiva parṣadi saṃnipatitāḥ / dvādaśa ca śakrasahasrāṇy anyānyebhyaś caturmahādvīpakebhyo 'bhyāgatāni tatraiva parṣadi saṃnipatitāny abhūvan / tathānye 'pi maheśākhyamaheśākhyāḥ śakrabrahmalokapāladevanāgayakṣagandharvāsuragaruḍakinnaramahoragās tatraiva parṣadi saṃnipatitā abhūvan saṃnisaṇṇāḥ / tathā catasraḥ parṣado bhikṣubhiksūṇyupāsakopāsikāś copasaṃkrāntā abhūvan /</p>
+
+<p>Vkn 1.6 tatra bhagavān anekaśatasahasrayā parṣadā parivṛtaḥ puraskṛto dharmaṃ deśayati sma / sumerur iva parvatarājaḥ sāgaramadhyād abhyudgataḥ sarvaparṣadam abhibhūya bhāsate tapati virocate śrīgarbhe siṃhāsane niṣaṇnaḥ /</p>
+
+<p>Vkn 1.7 atha ratnākaro bodhisatvo licchavikumāraḥ sārdhaṃ pañcamātrair licchavikumāraśataiḥ saptaratnamayāni cchatrāṇi gṛhītvā vaiśālyāṃ mahānagaryāṃ niṣkramya yenāmrapālīvanaṃ yena ca bhagavāṃs tenopasaṃkrāmat / upasaṃkramya bhagavataḥ pādau śirasā vanditvā bhagavantaṃ saptakṛtvaḥ pradakṣiṇīkṛtya yathā parigṛhītais taiś chatrair bhagavantam abhicchādayati sma / abhicchādyaikānte sthito 'bhūt /</p>
+
+<p>Vkn 1.8 samantaraniḥsṛṣṭāni ca tāni ratnacchatrāṇy atha tāvad eva buddhānubhāvenaikaṃ mahāratnacchatraṃ saṃsthitam / tena ca mahāratnacchatreṇāyaṃ trisāhasramahāsāhasro lokadhātuḥ sarvaḥ saṃchāditaḥ saṃdṛśyate sma / yaś cāsmiṃs trisāhasramahāsāhasre lokadhātāv āyāmavistāraḥ, sa tasmin mahāratnacchatre saṃdṛśyate sma / ye ceha trisāhasramahāsāhasre lokadhātau sumeravo mahāparvatarājā himavanmucilindamahāmucilindagandhamādanaratnaparvatā vā cakravāḍamahācakravāḍāḥ, te 'pi sarve tasminn evaikamahāratnacchatre saṃdṛśyante sma / ye 'pīha trisāhasramahāsāhasre lokadhātau mahāsamudrā vā sarastaḍāgāni vā nadīkunadyaḥ sravantyo vā pravahanti, tā api sarvās tasminn evaikamahāratnacchatre saṃdṛśyante sma / yāny apīha trisāhasramahāsāhasre lokadhātau sūryācandramasāṃ vimānāni tārārūpāṇi vā devabhavanāni vā nāgabhavanāni vā yakṣabhavanāni vā gandharvāsuragaruḍakinnaramahoragabhavanāni vā cāturmahārājabhavanāni vā grāmanagaranigamarāṣṭrarājadhānyo vā, tāny api sarvāṇi tasminn evaikamahāratnacchatre saṃdṛśyante sma / yāpi ca daśadiśi loke buddhānāṃ bhagavatāṃ dharmadeśanā pravartate, sāpi tasmād evaikamahāratnacchatrān niścarantī śrūyate sma /</p>
+
+<p>Vkn 1.9 tatra sā sarvā parṣad āścaryaprāptā bhagavato 'ntikād idam evaṃrūpaṃ mahāprātihāryaṃ dṛṣṭvā tuṣṭodagrāttamanāḥ pramuditā prītisaumanasyajātā tathāgataṃ namasyatī sthitānimiṣaṃ prekṣamāṇā /</p>
+
+<p>Vkn 1.10 atha khalu ratnākaro licchavikumāro bhagavato 'ntikād idam evaṃrūpaṃ mahāprātihāryaṃ dṛṣṭvaikāṃsam uttarāsaṅgaṃ kṛtvā dakṣiṇaṃ jānumaṇḍalaṃ pṛthivyāṃ pratiṣṭhāpya yena bhagavāṃs tenāñjaliṃ praṇamya bhagavantaṃ gāthābhir abhyaṣṭāvīt:</p>
+
+<p>śubhaśuddhakamalavarapatraviśālanetra śuddhāśayā śamathapāramitāgraprāpta / śubhakarmasaṃcaya viśālaguṇāprameya vandāmi tvāṃ śramaṇaśāntipathapraṇetum // 1 //</p>
+
+<lg>
+<l>paśyatha ṛddhi puruṣarṣabhanāyakasya saṃdṛśyate sugatakṣetravaraprakāśāḥ /</l>
+<l>amṛtaṃgamā ca varadharmakathā udārā sā sarva śrūyati ito gaganatalātaḥ // 2 //</l>
+</lg>
+
+<lg>
+<l>dharmeṇa te jitam idaṃ varadharmarājyaṃ dharmaṃ dhanaṃ ca dadase jagato jitāre /</l>
+<l>dharmaprabhedakuśalaṃ paramārthadarśin dharmeśvaraṃ śirasi vandami dharmarājam // 3 //</l>
+</lg>
+
+<lg>
+<l>na ca nāma asti na ca nāsti giraṃ prabhāṣi hetuṃ pratītya imi saṃbhavi sarvadharmāḥ /</l>
+<l>naivātra ātmana ca kāraku vedako vā na ca karmu naśyati śubham aśubhaṃ ca kiṃcit // 4 //</l>
+</lg>
+
+<lg>
+<l>māras tvayāstu vijitas sabalo munīndraḥ prāptā śivā amṛtaśāntavarāgrabodhiḥ /</l>
+<l>yasminn avedita na cittamanaḥpracārā sarvakutīrthikagaṇāś ca na yānti gāhaṃ // 5 //</l>
+</lg>
+
+<lg>
+<l>cakraṃ ca te triparivarti bahuprakāraṃ prāvartitaṃ praśamanaṃ prakṛtīviśuddham /</l>
+<l>pratyakṣa devamanujādbhutadharmarājā ratnāni trīṇi upadarśita tatra kāle // 6 //</l>
+</lg>
+
+<lg>
+<l>ye tubhya dharmaratanena vinīta samyak teṣām akalpana punaḥ satate praśāntā /</l>
+<l>vaidyottamaṃ maraṇajātijarāntakāriṃ śirasā nato 'smi guṇasāgaram aprameyam // 7 //</l>
+</lg>
+
+<lg>
+<l>satkārasatkṛta na vedhasi merukalpa duḥśīlaśīlavati tulyagatādhimaitrī /</l>
+<l>gaganaprakāśamanase samatāvihārī ko nāma satvaratane 'smi na kuryu pūjām // 8 //</l>
+</lg>
+
+<lg>
+<l>samāgatā te janatā mahāmune mukham udīkṣanti prasannamānasā /</l>
+<l>sarve ca paśyanti jinaṃ purastāj jinasya āveṇikabuddhalakṣaṇam // 9 //</l>
+</lg>
+
+<lg>
+<l>ekāṃ ca vācaṃ bhagavān pramuñcase nānārutaṃ ca pariṣad vijānati /</l>
+<l>yathāsvakaṃ cārtha vijānate jano jinasya āveṇikabuddhalakṣaṇam // 10 //</l>
+</lg>
+
+<lg>
+<l>ekāya vācāya udīritāya vāsesi eke apare nividyasi /</l>
+<l>ākāṅkṣatāṃ kāṅkṣa śamesir nāyako jinasya āveṇikabuddhalakṣaṇam // 11 //</l>
+</lg>
+
+<lg>
+<l>vandāmi tvāṃ daśabala satyavikramaṃ vandāmi tvām abhayagataṃ viśāradam /</l>
+<l>dharmeṣu āveṇikaniścayaṃ gataṃ vandāmi tvāṃ sarvajagatpraṇāyakam // 12 //</l>
+</lg>
+
+<lg>
+<l>vandāmi samyojanabandhanacchidaṃ vandāmi tvāṃ pāragataṃ sthale sthitam /</l>
+<l>vandāmi khinnasya janasya tārakaṃ vandāmi saṃsāragatāv aniśritam // 13 //</l>
+</lg>
+
+<lg>
+<l>satvair samādhānagataṃ gatīgatam gatīṣu sarvāsu vimuktamānasam /</l>
+<l>jaleruhaṃ vā salile na lipyase niṣevitā te munipadma śūnyatā // 14 //</l>
+</lg>
+
+<lg>
+<l>vibhāvitā sarvanimitta sarvaśo na te kahiṃcit praṇidhāna vidyate /</l>
+<l>acintiyaṃ buddhamahānubhāvaṃ vande 'ham ākāśasamam aniśritam // 15 //</l>
+</lg>
+
+<p>Vkn 1.11 atha ratnākaro licchavikumāro bhagavantam ābhir gāthābhir abhiṣṭutya bhagavantam etad avocat: imāni bhagavan pañcamātrāṇi licchavikumāraśatāni sarvāṇy anuttarāyāṃ samyaksaṃbodhau saṃprasthitāni / tāni cemāni buddhakṣetrapariśuddhiṃ paripṛcchanti ḥ katamā bodhisatvānāṃ buddhakṣetrapariśuddhir iti / tat sādhu bhagavan deśayatu tathāgato 'mīṣāṃ bodhisatvānāṃ buddhakṣetrapariśuddhim /</p>
+
+<p>evam ukte bhagavān ratnākarāya licchavikumārāya sādhukāram adāt: sādhu sādhu kumāra / sādhu khalu punas tvaṃ kumāra yas tvaṃ buddhakṣetrapariśuddhim ārabhya tathāgataṃ paripṛcchasi / tena hi kumāra śṛṇu sādhu ca suṣṭhu ca manasikuru / bhāṣiṣye 'haṃ te yathā bodhisatvānāṃ buddhakṣetrapariśuddhim ārabhya /</p>
+
+<p>sādhu bhagavann iti ratnākaro licchavikumāras tāni ca pañcamātrāṇi licchavikumāraśatāni bhagavataḥ pratyaśrauṣuḥ /</p>
+
+<p>bhagavāṃs teṣām etad avocat:</p>
+
+<p>Vkn 1.12 satvakṣetraṃ kulaputra bodhisatvasya buddhakṣetram / tat kasya hetoḥ / yāvantaṃ bodhisatvaḥ satveṣūpacayaṃ karoti tāvad buddhakṣetraṃ parigṛhṇāti / yādṛśaḥ satvānāṃ vinayo bhavati tādṛśaṃ buddhakṣetraṃ parigṛhnāti / yādṛśena buddhakṣetrāvatāreṇa satvā buddhajñānam avataranti tādṛśaṃ buddhakṣetraṃ parigṛhnāti / yādṛśena buddhakṣetrāvatāreṇa satvānām āryākārāṇīndriyāṇy utpadyante tādṛśaṃ buddhakṣetraṃ parigṛhṇāti / tat kasya hetoḥ / satvārthanirjātaṃ hi kulaputra bodhisatvānāṃ buddhakṣetram / tadyathā ratnākara yādṛśam icched ākāśaṃ māpayituṃ tādṛśaṃ māpayeta, na cākāśaṃ śakyate māpayituṃ nāpy alaṃkartum / evam eva ratnākara ākāśasamān sarvadharmāñ jñātvā / yādṛśam icched bodhisatvaḥ satvaparipākāya buddhakṣetraṃ māpayituṃ tādṛśaṃ buddhakṣetraṃ māpayati, na ca buddhakṣetrākāśatā śakyaṃ māpayituṃ nāpy alaṃkartum /</p>
+
+<p>Vkn 1.13 api ca ratnākara,</p>
+
+<p>āśayakṣetraṃ bodhisatvasya buddhakṣetram, tasya bodhiprāptasyāśaṭhā amāyāvinaḥ satvā buddhakṣetra upapadyante /</p>
+
+<p>adhyāśayakṣetraṃ kulaputra bodhisatvasya buddhakṣetram, tasya bodhiprāptasya sarvakuśalasaṃbhāropacitāḥ satvā buddhakṣetre saṃbhavanti /</p>
+
+<p>prayogakṣetraṃ bodhisatvasya buddhakṣetram, tasya bodhiprāptasya sarvakuśaladharmopasthitāḥ satvās tatra buddhakṣetra upapadyante /</p>
+
+<p>udāro bodhisatvasya bodhicittotpādo buddhakṣetram, tasya bodhiprāptasya mahāyānasaṃprasthitāḥ satvās tatra buddhakṣetre saṃbhavanti /</p>
+
+<p>dānakṣetraṃ bodhisatvasya buddhakṣetram, tasya bodhiprāptasya sarvaparityāginaḥ satvās tatra buddhakṣetre saṃbhavanti /</p>
+
+<p>śīlakṣetraṃ bodhisatvasya buddhakṣetram, tasya bodhiprāptasya sarvābhiprāyasaṃpannā daśakuśalakarmapathasaṃrakṣakāḥ satvās tatra buddhakṣetre saṃbhavanti /</p>
+
+<p>kṣāntikṣetraṃ kulaputra bodhisatvasya buddhakṣetram, tasya bodhiprāptasya dvātriṃśallakṣanālaṃkṛtāḥ kṣāntidamaśamathapāramiprāptāḥ satvā buddhakṣetre saṃbhavanti /</p>
+
+<p>vīryakṣetraṃ bodhisatvasya buddhakṣetram, tasya bodhiprāptasya sarvakuśalaparyeṣṭiṣv ārabdhavīryāḥ satvā buddhakṣetre saṃbhavanti /</p>
+
+<p>dhyānakṣetraṃ bodhisatvasya buddhakṣetram, tasya bodhiprāptasya smṛtisaṃprajanyasamāhitāḥ satvā buddhakṣetre saṃbhavanti /</p>
+
+<p>prajñākṣetraṃ bodhisatvasya buddhakṣetram, tasya bodhiprāptasya samyaktvaniyatāḥ satvā buddhakṣetre saṃbhavanti /</p>
+
+<p>catvāry apramāṇāni ca bodhisatvasya buddhakṣetram, tasya bodhiprāptasya maitrīkaruṇāmuditopekṣāvihārinaḥ satvā buddhakṣetre saṃbhavanti /</p>
+
+<p>catvāri saṃgrahavastūni kulaputra bodhisatvasya buddhakṣetram, tasya bodhiprāptasya sarvavimuktisaṃgṛhītāḥ satvā buddhakṣetre saṃbhavanti /</p>
+
+<p>upāyakauśalyaṃ bodhisatvasya buddhakṣetram, tasya bodhiprāptasya sarvopāyamīmāṃsākuśalāḥ satvā buddhakṣetre saṃbhavanti /</p>
+
+<p>saptatriṃśadbodhipakṣā dharmā bodhisatvasya buddhakṣetram, tasya bodhiprāptasya samyaksmṛtyupasthānasamyakprahāṇarddhipādendriyabalabodhyaṅgamārgavidhijñāḥ satvā buddhakṣetre saṃbhavanti /</p>
+
+<p>pariṇāmanācittaṃ bodhisatvasya buddhakṣetram, tasya bodhiprāptasya sarvaguṇālaṃkāraṃ buddhakṣetraṃ dṛśyate /</p>
+
+<p>aṣṭākṣaṇapraśamadeśanā kulaputra bodhisatvasya buddhakṣetram, tasya bodhiprāptasya sarvāpāyasamucchinnam aṣṭākṣaṇavigataṃ buddhakṣetraṃ saṃbhavanti /</p>
+
+<p>svayaṃ śikṣāpadeṣu vartamānā parāpattyacodanatā bodhisatvasya buddhakṣetram, tasya bodhiprāptasyāpattiśabdo 'pi buddhakṣetre na saṃbhavati /</p>
+
+<p>daśakuśalakarmapathapariśuddhiḥ kulaputra bodhisatvasya buddhakṣetram, tasya bodhiprāptasya niyatāyuṣo mahābhogā brahmacāriṇaḥ satyānuparivartinyā vācālaṃkṛtā madhuravacanā abhinnaparṣado bhinnasaṃdhānakuśalā īrṣyāvigatā avyāpannacittāḥ samyagdṛṣṭisamanvāgatāḥ satvā buddhakṣetre saṃbhavanti /</p>
+
+<p>Vkn 1.14 iti hi kulaputra, yāvanto bodhisatvasya prayogās tāvanta āśayāḥ / yāvanta āśayās tāvanto 'dhyāśayāḥ / yāvanto 'dhyāśayās tāvantyo nidhyaptayaḥ / yāvantyo nidhyaptayas tāvantyaḥ pratipattayaḥ / yāvantyaḥ pratipattayas tāvantyaḥ pariṇāmanāḥ / yāvantyaḥ pariṇāmanās tāvanta upāyāḥ / yāvanta upāyās tāvantyaḥ kṣetrapariśuddhayaḥ / yādṛśī kṣetrapariśuddhis tādṛśī satvapariśuddhiḥ / yādṛśī satvapariśuddhis tādṛśī jñānapariśuddhiḥ / yādṛśī jñānapariśuddhis tādṛśī deśanāpariśuddhiḥ / yādṛśī deśanāpariśuddhis tādṛśī jñānapratipattipariśuddhiḥ / yādṛśī jñānapratipattipariśuddhis tādṛśī svacittapariśuddhiḥ /</p>
+
+<p>tasmāt tarhi kulaputra buddhakṣetraṃ pariśodhayitukāmena bodhisatvena svacittapariśodhane yatnaḥ karaṇīyaḥ / tat kasya hetoḥ / yādṛśī bodhisatvasya cittapariśuddhis tādṛśī buddhakṣetrapariśuddhiḥ saṃbhavati /</p>
+
+<p>Vkn 1.15 atha buddhānubhāvenāyuṣmataḥ śāriputrasyaitad abhavat: yadi yādṛśī cittapariśuddhis tādṛśī bodhisatvasya buddhakṣetrapariśuddhiḥ saṃbhavati, tan mā āhaiva bhagavataḥ śākyamuner bodhisatvacaryāṃ carataś cittam apariśuddhaṃ yenedaṃ buddhakṣetram evam apariśuddhaṃ saṃdṛśyate /</p>
+
+<p>atha khalu bhagavān āyuṣmataḥ śāriputrasya cetasaiva cetaḥparivitarkam ājñāyāyuṣmantaṃ śāriputram etad avocat: tat kiṃ manyase, śāriputra mā āhaiva sūryācandramasāv apariśuddhau yaj jātyandho na paśyati /</p>
+
+<p>āha: no hīdaṃ bhagavan jātyandhāparādha eṣa na sūryacandramasoḥ /</p>
+
+<p>āha: evam eva śāriputra satvānām ajñānāparādha eṣa yas tathāgatasya buddhakṣetraguṇālaṃkāravyūhaṃ kecit satvā na paśyanti, na tatra tathāgatasyāparādhaḥ / pariśuddhaṃ hi śāriputra tathāgatasya buddhakṣetraṃ yūyaṃ punar idaṃ na paśyatha /</p>
+
+<p>Vkn 1.16 atha khalu jaṭī brahmā sthaviraṃ śāriputram etad avocat: mā bhadantaśāriputra tathāgatasyāpariśuddhaṃ buddhakṣetram idaṃ vyāhārṣīt / pariśuddhaṃ hi bhadantaśāriputra bhagavato buddhakṣetram / tadyathāpi nāma śāriputra vaśavartināṃ devānāṃ bhavanavyūhāḥ / īdṛśān vayaṃ buddhakṣetraguṇavyūhān bhagavataḥ śākyamuneḥ paśyāmaḥ /</p>
+
+<p>atha khalu sthaviraḥ śāriputro jaṭinaṃ brahmāṇam etad avocat: vayaṃ punar brahmann imāṃ mahāpṛthivīm utkūlanikūlāṃ kaṇṭakaprapātagiriśekharaśvabhragūthoḍigallapratipūrṇāṃ paśyāmaḥ /</p>
+
+<p>jaṭī brahmāha: nūnaṃ bhadantaśāriputrasyotkūlanikūlaṃ cittam apariśuddhabuddhajñānāśayaṃ yenedṛśaṃ buddhakṣetraṃ paśyasi / ye punas te bhadantaśāriputra bodhisatvāḥ sarvasatvasamacittāḥ pariśuddhabuddhajñānāśayās ta imaṃ buddhakṣetraṃ pariśuddhaṃ paśyanti /</p>
+
+<p>Vkn 1.17 atha bhagavān pādāṅguṣṭhena imaṃ trisāhasramahāsāhasraṃ lokadhātuṃ parāhanti sma / atha khalu tasmin samaye 'yaṃ trisāhasramahāsāhasro lokadhātur anekaratnaśatasahasrasaṃcito 'nekaratnaśatasahasrapratyarpitaḥ saṃsthito 'bhūt / tadyathāpi nāma ratnavyūhasya tathāgatasyānantaguṇaratnavyūho lokadhātus tādṛśo 'yaṃ lokadhātuḥ saṃdṛśyate sma / tatra sā sarvāvatī parṣad āścaryaprāptā ratnapadmaniṣaṇnam ātmānaṃ saṃjānīte sma /</p>
+
+<p>Vkn 1.18 tatra bhagavān āyuṣmantaṃ śāriputram āmantrayate sma: paśyasi tvaṃ śāriputra imān buddhakṣetraguṇavyūhān /</p>
+
+<p>āha: paśyāmi bhagavan adṛṣṭāśrutapūrvā ime vyūhāḥ saṃdṛśyante /</p>
+
+<p>āha: īdṛśaṃ mama śāriputra sadā buddhakṣetram / hīnasatvaparipākāya tu tathāgata evaṃ bahudoṣaduṣṭaṃ buddhakṣetram upadarśayati / tadyathā śāriputra devaputrāṇām ekapātryāṃ bhuñjānānāṃ yathā puṇyopacayaviśeṣeṇa sudhādevabhojanam upatiṣṭhataḥ, evam eva śāriputra ekabuddhakṣetropapannā yathā cittapariśuddhyā satvā buddhānāṃ buddhakṣetraguṇavyūhān paśyanti /</p>
+
+<p>Vkn 1.19 asmin khalu punar buddhakṣetraguṇavyūhālaṃkāre saṃdarśyamāne caturaśīteḥ prāṇisahasrāṇām anuttarāyāṃ samyaksaṃbodhau cittāny utpannāni / yāni ca tāni ratnākareṇa licchavikumāreṇa sārdhaṃ pañca licchavikumāraśatāny āgatāni teṣām apy ānulomikyāḥ kṣānteḥ pratilaṃbho 'bhūt /</p>
+
+<p>Vkn 1.20 atha bhagavān punar eva tām ṛddhiṃ pratisaṃharati sma / tataḥ punar evedaṃ buddhakṣetraṃ tatsvabhāvam eva saṃvṛtam, tatra śrāvakayānikānāṃ devamanuṣyāṇām ḥ anityā bateme sarvasaṃskārā iti viditvā dvātriṃśatā prāṇisahasrāṇāṃ virajovigatamalaṃ dharmeṣu dharmacakṣur viśuddham / aṣṭānāṃ ca bhikṣusahasrāṇām anupādāyāsravebhyaś cittāni vimuktāni / caturaśīteś ca prāṇisahasrāṇām udārabuddhadharmādhimuktānāṃ Ō viṭhapanapratyupasthānalakṣaṇāḥ sarvadharmā iti viditvānuttarasyāṃ samyaksaṃbodhau cittāny utpannāni // //</p>
+
+<p>buddhakṣetrapariśuddhinidānaparivartaḥ prathamaḥ //</p>
+
+<p>Vkn 2.1 tena khalu punaḥ samayena vaiśālyāṃ mahānagaryāṃ vimalakīrtir nāma licchaviḥ prativasati sma / pūrvajinakṛtādhikāraḥ, avaropitakuśalamūlaḥ, bahubuddhaparyupāsitaḥ, pratilabdhakṣāntikaḥ, labdhapratibhānaḥ, mahābhijñāvikrīḍitaḥ, dhāraṇīpratilabdhaḥ, vaiśāradyaprāptaḥ, nihatamārapratyarthikaḥ, gambhīradharmanayasupraviṣṭaḥ, prajñāpāramitānirjātaḥ, upāyakauśalyagatiṃgataḥ, pratibhānasamanvāgataḥ, satvāśayacaritakuśalaḥ, indriyaparāparajñānaniryātaḥ, yathāpratyarhadharmadeśakaḥ, kṛtaniścayaḥ kṛtaśrama iha mahāyāne, suparīkṣitakarmakārī, buddheryāpathapratiṣṭhitaḥ, sāgaravarabuddhyanupraviṣṭaḥ, sarvabuddhastutastomitapraśaṃsitaḥ, sarvaśakrabrahmalokapālanamaskṛtaḥ, sa satvaparipākāyopāyakauśalyena vaiśālyāṃ mahānagaryāṃ prativasati sma /</p>
+
+<p>Vkn 2.2 akṣayabhogo daridrānāthasatvasaṃgrahāya / pariśuddhaśīlo duḥśīlasaṃgrahāya / kṣamadamaprāpto duṣṭapraduṣṭavyāpannakrudhacittānāṃ satvānāṃ saṃgrahāya / uttaptavīryaḥ kusīdānāṃ satvānāṃ saṃgrahāya / dhyānasmṛtisamādhisthito vibhrāntacittānāṃ satvānāṃ saṃgrahāya / prajñāniścayaprāpto duḥprajñānāṃ satvānāṃ saṃgrahāya /</p>
+
+<p>Vkn 2.3 avadātavastradhārī śramaṇeryāpathasaṃpannaḥ / gṛhavāsasthitaḥ kāmadhāturūpadhātvārūpyadhātvasaṃsṛṣṭaḥ / bhāryāputradārāṃś ca saṃdarśayati, sadā ca brahmacārī / parivāraparivṛtaś ca bhavati, sadā ca vivekacārī / ābharaṇavibhūṣitaś ca saṃdṛśyate, sadā ca lakṣaṇaparicchinnaḥ / annapānabhojanajīvaḥ saṃdṛśyate, sadā ca dhyānāhāraḥ / sarvadyūtakaraśālāsu ca saṃdṛśyate, dyūtakrīḍāsaktacittāṃś ca satvān paripācayati, sadā cāpramādacārī / sarvapāṣaṇḍapratyeṣakaś ca / buddhe cābhedyāśayaḥ / sarvalaukikalokottaraśāstravidhijñaś ca / sadā ca dharmārāmaratirataḥ / sarvasaṃgaṇikāsu ca saṃdṛśyate, sarvatra cāgrapūjitaḥ /</p>
+
+<p>Vkn 2.4 dharmavādī ca vṛddhamadhyadahrasahāyakaś ca lokānuvartanāya /</p>
+
+<p>sarvavyavahārodyuktaś ca na ca lābhabhogābhilāṣī /</p>
+
+<p>sarvacatvaraśrṅgāṭakeṣu ca saṃdṛśyate sarvasatvavainayikatāyai /</p>
+
+<p>rājakāryānupraviṣṭaś ca satvārakṣāyai /</p>
+
+<p>sarvadharmaśravaṇasāṃkathyeṣu ca saṃdṛśyate hīnayānavicchandanāya mahāyāne samādāpanatayā /</p>
+
+<p>sarvalipiśālāsu copasaṃkrāmati dārakaparipācanāya /</p>
+
+<p>sarvagaṇikākulāni ca praviśati kāmadoṣasaṃdarśanāya /</p>
+
+<p>sarvakallavālagṛhāṇi ca praviśati smṛtisaṃprajanyopasthāpanāya /</p>
+
+<p>Vkn 2.5 śreṣṭhiṣu ca śreṣṭhisaṃmataḥ śreṣṭhadharmārocanatāyai /</p>
+
+<p>gṛhapatiṣu ca gṛhapatisaṃmataḥ sarvagrāhodgrahaparicchedāya /</p>
+
+<p>kṣatriyeṣu ca kṣatriyasaṃmataḥ kṣāntisauratyabalapratiṣṭhāpanāya /</p>
+
+<p>brāhmaṇeṣu ca brāhmaṇasaṃmato mānamadadarpanirghātanāya /</p>
+
+<p>āmātyeṣu cāmātyasaṃmataḥ sarvarājakāryasahadharmamyojanāya /</p>
+
+<p>kumāreṣu ca kumārasaṃmato rājabhogaiśvaryābhilāṣavinivartanāya /</p>
+
+<p>antaḥpureṣu ca kāñcukīyasaṃmataḥ strīkumārikāparipācanāya /</p>
+
+<p>Vkn 2.6 prākṛtajanānuvartakaś ca sāmānyapuṇyaviśiṣṭādhyālaṃbanāya /</p>
+
+<p>śakreṣu ca śakrasaṃmata aiśvaryānityatvasaṃdarśanāyau /</p>
+
+<p>brahmasu ca brahmasaṃmato viśeṣajñānasaṃdarśanāya /</p>
+
+<p>lokapāleṣu ca lokapālasaṃmataḥ sarvasatvaparipālanāya /</p>
+
+<p>iti hi vimalakīrtir licchavir evam apramāṇopāyakauśalajñānasamanvāgato vaiśālyāṃ mahānagaryāṃ prativasati sma /</p>
+
+<p>Vkn 2.7 sa upāyakauśalyena glānam ātmānam upadarśayati sma / tasya glānasya vaiśālyāṃ mahānagaryāṃ rājarājamahāmātrāmātyakumārapāriṣadyā brāhmaṇagṛhapatayaḥ śreṣṭhinaigamajānapadās tadanyāni ca bahūni prāṇisahasrāṇi glānaparipṛcchakāny upasaṃkrāmanti sma /</p>
+
+<p>Vkn 2.8 teṣām upasaṃkrāntānāṃ vimalakīrtir licchaviḥ / imam eva cāturmahābhautikaṃ kāyam ārabhya dharmaṃ deśayati sma: evam anityo 'yaṃ mārṣāḥ kāyaḥ / evam adhruvaḥ, evam anāsvāsikaḥ, evaṃ durbalaḥ, evam asāraḥ / evaṃ jarjaraḥ, evam itvaraḥ, evaṃ duḥkhaḥ, evam ābādhikaḥ, evaṃ vipariṇāmadharmā, evaṃ bahurogabhājano 'yaṃ mārṣāḥ kāyaḥ / tatra paṇḍitena niśrayo na kartavyaḥ /</p>
+
+<p>Vkn 2.9 phenapiṇḍopamo 'yaṃ mārṣāḥ kāyo 'parimardanakṣamaḥ /</p>
+
+<p>budbudopamo 'yaṃ kāyo 'cirasthitikaḥ /</p>
+
+<p>marīcyupamo 'yaṃ kāyaḥ kleśatṛṣṇāsaṃbhūtaḥ /</p>
+
+<p>kadalīskandhopamo 'yaṃ kāyo 'sārakatvāt /</p>
+
+<p>yantrabhūto batāyaṃ kāyo 'sthisnāyuvinibaddhaḥ /</p>
+
+<p>māyopamo 'yaṃ kāyo viparyāsasaṃbhūtaḥ /</p>
+
+<p>svapnopamo 'yaṃ kāyo vitathadarśanaḥ /</p>
+
+<p>pratibhāsopamo 'yaṃ kāyaḥ pūrvakarmapratibhāsatayā saṃdṛśyate /</p>
+
+<p>pratiśrutkopamo 'yaṃ kāyaḥ pratyayādhīnatvāt /</p>
+
+<p>meghopamo 'yaiḥ kāyaś cittākulavigamalakṣaṇaḥ /</p>
+
+<p>vidyutsadṛśo 'yaṃ kāyaḥ kṣaṇabhaṅgayukto 'navasthitaḥ /</p>
+
+<p>asvāmiko 'yaṃ kāyo nānāpratyayasaṃbhūtaḥ /</p>
+
+<p>Vkn 2.10 nirvyāpāro 'yaṃ kāyaḥ pṛthivīsadṛśaḥ /</p>
+
+<p>anātmo 'yaṃ kāyo 'psadṛśaḥ /</p>
+
+<p>nirjīvo 'yaṃ kāyas tejaḥsadṛśaḥ /</p>
+
+<p>niṣpudgalo 'yaṃ kāyo vāyusadṛśaḥ /</p>
+
+<p>niḥsvabhāvo 'yaṃ kāya ākāśasadṛśaḥ /</p>
+
+<p>Vkn 2.11 asaṃbhūto 'yaṃ kāyo mahābhūtānām ālayaḥ /</p>
+
+<p>śūnyo 'yaṃ kāya ātmātmīyavigataḥ /</p>
+
+<p>jaḍo 'yaṃ kāyas tṛṇakāṣṭhakuḍyaloṣṭapratibhāsasadṛśaḥ /</p>
+
+<p>niśceṣṭo 'yaṃ kāyo vātayantrayukto vartate /</p>
+
+<p>rikto 'yaṃ kāyo 'śucipūtisaṃcayaḥ /</p>
+
+<p>tuccho 'yaṃ kāya ucchādanaparimardanavikiraṇavidhvansanadharmā /</p>
+
+<p>upadruto 'yaṃ kāyaś caturuttaraiś caturbhī rogaśataiḥ /</p>
+
+<p>jīrṇodapānasadṛśo 'yaṃ kāyaḥ sadā jarābhibhūtaḥ /</p>
+
+<p>paryantasthāyī batāyaṃ kāyo maraṇaparyavasānaḥ /</p>
+
+<p>vadhakāśīviṣaśūnyagrāmopamo 'yaṃ kāyaḥ skandhadhātvāyatanaparigṛhītaḥ /</p>
+
+<p>tatra yuṣmābhir evaṃrūpe kāye nirvidvirāga utpādayitavyas tathāgatakāye ca spṛhotpādayitavyā /</p>
+
+<p>Vkn 2.12 dharmakāyo hi mārṣāḥ tathāgatakāyo dānanirjātaḥ śīlanirjātaḥ samādhinirjātaḥ prajñānirjāto vimuktinirjāto vimuktijñānadarśananirjātaḥ / maitrīkaruṇāmuditopekṣānirjātaḥ / dānadamasaṃyamanirjātaḥ kṣāntisauratyanirjāto dṛḍhavīryakuśalamūlanirjāto dhyānavimokṣasamādhisamāpattinirjātaḥ śrutaprajñopāyanirjātaḥ / saptatriṃśadbodhipakṣyanirjātaḥ śamathavidarśanānirjāto daśabalanirjātaś caturvaiśāradyanirjātaḥ / aṣṭādaśāveṇikabuddhadharmanirjātaḥ sarvapāramitānirjātaḥ / abhijñāvidyānirjātaḥ sarvākuśaladharmaprahāṇāya nirjātaḥ sarvakuśaladharmaparigrahanirjātaḥ satyanirjāto bhūtanirjāto 'pramādanirjātaḥ / apramāṇaśubhakarmanirjāto mārṣās tathāgatakāyas tatra yuṣmābhiḥ spṛhā kartavyā / sarvasatvānāṃ ca sarvakleśavyādhiprahāṇāyānuttarāyāṃ samyaksaṃbodhau cittāny utpādayitavyāni /</p>
+
+<p>Vkn 2.13 evaṃ vimalakīrtir licchavis tathā saṃnipatitānāṃ teṣāṃ glānaparipṛcchakānāṃ tathā tathā dharmaṃ deśayati yad bahūni satvaśatasahasrāṇy anuttarāyāṃ samyaksaṃbodhau cittāny utpādayanti // //</p>
+
+<p>acintyopāyakauśalyaparivarto nāma dvitīyaḥ //</p>
+
+<p>Vkn 3.1 atha vimalakīrter licchaver etad abhavat: ahaṃ ca glāna ābādhiko mañcasamārūḍhaḥ, na ca māṃ tathāgato 'rhan samyaksaṃbuddhaḥ samanvāharati, na ca me glānaparipṛcchakaṃ kaṃcit preṣayaty anukaṃpām upādāya /</p>
+
+<p>Vkn 3.2 samanvāhṛtaś ca bhagavatā vimalakīrtir licchaviḥ / atha bhagavān āyuṣmantaṃ śāriputram āmantrayate sma: gaccha tvaṃ śāriputra vimalakīrter licchaver glānaparipṛcchakaḥ /</p>
+
+<p>evam ukta āyuṣmāñ śāriputro bhagavantam etad avocat: nāhaṃ bhagavan utsahe vimalakīrter licchaver glānaparipṛcchako gantum / tat kasya hetoḥ / abhijānāmy ahaṃ bhagavan: ekasmin samaye 'nyatamasmin vṛkṣamūle pratisaṃlīno 'bhūvam /
+vimalakīrtiś ca licchavir yena tad vṛkṣamūlaṃ tenopasaṃkramya mām etad avocat:
+Vkn 3.3 na bhadantaśāriputra evaṃ pratisaṃlayanaṃ saṃlātavyaṃ yathā tvaṃ pratisaṃlīnaḥ / api tu tathā pratisaṃlīyaś ca yathā traidhātuke na kāyaś cittaṃ vā saṃdṛśyate / tathā pratisaṃlīyaś ca yathā nirodhāc ca na vyuttiṣṭhasi sarveryāpatheṣu ca saṃdṛśyase / tathā pratisaṃlīyaś ca yathā prāptilakṣaṇaṃ ca na vijahāsi pṛthagjanalakṣaṇeṣu ca saṃdṛśyase / tathā pratisaṃlīyaś ca yathā te na cādhyātmaṃ cittam avasthitaṃ bhaven na bahirdhopavicaret / tathā pratisaṃlīyaś ca yathā sarvadṛṣṭigatebhyaś ca na calasi saptatriṃśatsu ca bodhipakṣyeṣu dharmeṣu saṃdṛśyase / tathā pratisaṃlīyaś ca yathā saṃsārāvacarāṃś ca kleśān na prajahāsi nirvāṇasamavasaraṇaś ca bhavasi / ye bhadantaśāriputra evaṃ pratisaṃlayanaṃ pratisaṃlīyante teṣāṃ bhagavān pratisaṃlayanam anujānāti /</p>
+
+<p>Vkn 3.4 so 'haṃ bhagavan etāṃ śrutvā tūṣṇīm evābhūvam / na tasya śaknomy uttare prativacanaṃ dātum / tan nāham utsahe tasya kulaputrasya glānaparipṛcchako gantum /</p>
+
+<p>Vkn 3.5 tatra bhagavān āyuṣmantaṃ mahāmaudgalyāyanam āmantrayate sma: gaccha tvaṃ maudgalyāyana vimalakīrter licchaver glānaparipṛcchakaḥ /</p>
+
+<p>maudgalyāyano 'py āha: nāhaṃ bhagavan utsahe tasya satpuruṣasya glānaparipṛcchako gantum / tat kasya hetoḥ / abhijānāmy ahaṃ bhagavan: ekasmin samaye vaiśālyāṃ mahānagaryām anyatamasmin vīthīmukhe gṛhapatibhyo dharmaṃ deśayāmi / tatra māṃ vimalakīrtir licchavir upasaṃkrāmyaivam āha:</p>
+
+<p>Vkn 3.6 na bhadantamaudgalyāyana gṛhibhyo 'vadātavasanebhya evaṃ dharmo deśayitavyo yathā bhadanto deśayati / api tu tathā bhadantamaudgalyāyana dharmo deśayitavyo yathaiva sa dharmaḥ / dharmo hi bhadantamaudgalyāyana asatvaḥ satvarajovigataḥ, nairātmyo rāgarajovigataḥ, nirjīvo jāticyutivigataḥ, niṣpudgalaḥ pūrvāntāparāntaparicchinnaḥ, śānta upaśāntalakṣaṇaḥ, virāgo 'nārambaṇagatikaḥ, anakṣaraḥ sarvavākyacchedaḥ, anudāhāraḥ sarvormivigataḥ, sarvatrānugata ākāśasamasadṛśaḥ, avarṇaliṅgasaṃsthānaḥ sarvapracāravigataḥ, amamo mamakāravigataḥ, avijñaptiś cittamanovijñānavigataḥ, asadṛśo niṣpratipakṣatvāt, hetuvilakṣaṇaḥ pratyayāsamāropaḥ, dharmadhātusamavasaraṇaḥ sarvadharmasamāhitaḥ, tathatānugato 'nanugamanayogena, bhūtakoṭipratiṣṭhito 'tyantācalitatvāt, acalitaḥ ṣaḍviṣayāniśritatvāt, na kvacid gamanāgamano 'navasthitatvāt, śūnyatāsamāhita ānimittaprabhāvito 'praṇihitalakṣaṇaḥ, ūhāpohavigataḥ, anutkṣepo 'prakṣepaḥ, utpādabhaṅgavigataḥ, anālayaś cakṣuḥśrotraghrāṇajihvākāyamanaḥpathasamatikrāntaḥ, anunnato 'navanataḥ, sthito 'neñjyaṃ prāptaḥ, sarvapracāravigataḥ /</p>
+
+<p>Vkn 3.7 īdṛśasya bhadantamahāmaudgalyāyana dharmasya kīdṛśī deśanā / dharmadeśaneti bhadantamahāmaudgalyāyana samāropapadam etat / ye 'pi śṛṇvanti te 'pi samāropenaiva śṛṇvanti / yatra bhadantamaudgalyāyana asamāropapadaṃ na tatra deśyate na śrūyate na vijñāyate / tadyathā māyāpuruṣo māyāpuruṣebhyo dharmaṃ deśayati /</p>
+
+<p>Vkn 3.8 evaṃ hi cittāvasthānena dharmo deśayitavyaḥ / satvendriyakuśalena ca te bhavitavyam, sudṛṣṭaprajñādarśanena mahākaruṇāmukhībhūtena mahāyānasaṃvarṇakena buddhekṛtajñena śuddhāśayena dharmaniruktividhijñena, triratnavaṃśānupacchedāya ca te dharmo deśayitavyaḥ /</p>
+
+<p>Vkn 3.9 tena bhagavan tathā tathā dharmo deśito yathā tato gṛhapatiparsado 'ṣṭānāṃ gṛhapatiśatānām anuttarāyāṃ samyaksaṃbodhau cittāny utpannāni / ahaṃ ca niṣpratibhāno 'bhūvam / tan nāhaṃ bhagavan utsahe tasya satpuruṣasya glānaparipṛcchako gantum /</p>
+
+<p>Vkn 3.10 tatra bhagavān āyuṣmantaṃ mahākāśyapam āmantrayate sma: gaccha tvaṃ mahākāśyapa vimalakīrter licchaver glānaparipṛcchakaḥ /</p>
+
+<p>mahākāśyapo 'py āha: nāhaṃ bhagavan utsahe tasya satpuruṣasya glānaparipṛcchako gantum / tat kasmād dhetoḥ / abhijānāmy ahaṃ bhagavan daridravīthyāṃ piṇḍāya carāmi / tatra māṃ vimalakirtir licchavir upasaṃkramyaivam āha:</p>
+
+<p>Vkn 3.11 prādeśikī bhadantamahākāśyapasya karuṇāmaitrī, yan mahākulāny utsṛjya daridrakulāny upasaṃkrāmasi / api tu bhadantamahākāśyapa dharmasamatāpratiṣṭhitena te bhavitavyam / sarvadā sarvasatvasamanvāhāreṇa piṇḍapātaḥ paryeṣṭavyaḥ / anāhāreṇa cāhāraḥ paryeṣṭavyaḥ / parapiṇḍagrāhāpanayāya ca te piṇḍāya caritavyam / śūnyagrāmādhiṣṭhitena ca grāmaḥ praveṣṭavyaḥ / naranārīparipākāya ca te nagaraṃ praveṣṭavyam / buddhakulakulīnena ca te kulāny upasaṃkramitavyāni /</p>
+
+<p>Vkn 3.12 apratigrahaṇatayā ca piṇḍapātaḥ pratigrāhyaḥ / jātyandhasamatayā ca rūpāṇi draṣṭavyāni / pratiśrutakopamatayā ca śabdāḥ śrotavyāḥ / vātasamatayā ca gandhā ghrātavyāḥ / avijñaptito rasā āsvādayitavyāḥ / jñānāsparśanatayā ca sparśāḥ spraṣṭavyāḥ / māyāpuruṣavijñāptyā ca dharmā vijñātavyāḥ / yo 'svabhāvo 'parabhāvaś ca tad anujjvalitam / yad anujjvalitaṃ tan na śāmyati /</p>
+
+<p>Vkn 3.13 yadi sthaviro mahākāśyapo 'ṣṭau ca mithyātvāni samatikrāmet, aṣṭau ca vimokṣān samāpadyeta, mithyāsamatayā ca samyaktvasamatām avataret, ekena ca piṇḍapātena sarvasatvān pratipādayet, sarvabuddhān sarvāryāṃś ca pratipādya paścād ātmanā paribhuñjīta, tathā ca paribhuñjīta yathā na saṃkleśo na vigatakleśaḥ, paribhuñjīta na samāhito na vyutthitaḥ, na saṃsārasthito na nirvāṇasthitaḥ paribhuñjīta / ye ca bhadantāya piṇḍapātaṃ dadati te teṣāṃ nālpaphalaṃ na mahāphalaiḥ bhavet / na ca hānāya na viśeṣāya gacchet, buddhagatisamavasaraṇāya ca bhaveta na śrāvakagatisamavasaraṇāya / evaṃ sthaviro mahākāśyapo 'moghaṃ rāṣṭrapiṇḍaṃ paribhuñjīta /</p>
+
+<p>Vkn 3.14 so 'haṃ bhagavan imaṃ dharmanirdeśaṃ śrutvāścaryaprāptaḥ sarvabodhisatvān namasyāmi / gṛhiṇo 'pi nāmaivaṃrūpaṃ pratibhānam, ko 'nuttarāyāṃ samyaksaṃbodhau cittaṃ notpādayet / tataḥ prabhṛti me na kaścit satvaḥ śrāvakayāne pratyekabuddhayāne vā samādāpitapūrvo 'nyatra mahāyānāt / tan nāhaṃ bhagavan utsahe tasya kulaputrasya glānaparipṛcchako gantum /</p>
+
+<p>Vkn 3.15 tatra bhagavān āyuṣmantaṃ subhūtim āmantrayate sma: gaccha tvaṃ subhūte vimalakīrter licchaver glānaparipṛcchakaḥ /</p>
+
+<p>subhūtir apy āha: nāhaṃ bhagavan utsahe tasya satpuruṣasya glānaparipṛcchako gantum / tat kasya hetoḥ / abhijānāmy ahaṃ bhagavan: ekasmin samaye vaiśālyāṃ mahānagaryāṃ piṇḍāya carāmi / vimalakīrter licchaver niveśanaṃ piṇḍāya praviṣṭaḥ / tasya me vimalakīrtir licchaviḥ pātraṃ gṛhītvā praṇītena bhojanena pratipūryaivam āha:</p>
+
+<p>Vkn 3.16 sacet tvaṃ bhadantasubhūte āmiṣasamatayā sarvadharmasamatām anugataḥ sarvadharmasamatayā ca buddhadharmasamatām anugata eva, tvam imaṃ piṇḍapātaṃ pratigṛhnīṣva / sacet tvaṃ bhadantasubhūte na rāgadoṣamohaprahīṇo na ca taiḥ sārdhaṃ saṃvasasi / saced evam asy avikopya satkāyam ekāyanaṃ mārgam anugataḥ / na ca te 'vidyā bhavatṛṣṇā ca samudghātitā na ca vidyāvimuktī utpādite / ānantaryasamatayā ca te samādhivimuktiḥ / na cāsi mukto na baddhaḥ / na ca te catvāry āryasatyāni dṛṣṭāni na ca na dṛṣṭasatyaḥ / na prāptaphalo na pṛthagjanasamavasaraṇaḥ / na cāsy āryo nānāryaḥ / na sarvadharmasamanvāgataś ca sarvadharmasamadhigataś ca /</p>
+
+<p>Vkn 3.17 na ca te śāstā dṛṣṭo na dharmaḥ śruto na saṃghaḥ paryupāsitaḥ / ye ca te ṣaṭ śāstāras tadyathā pūraṇaḥ kāśyapaḥ, maskarī gośālīputraḥ, saṃjayo vairāṣṭrikaputraḥ, kakudaḥ kātyāyanaḥ, ajitaḥ keśakambalaḥ, nirgrantho jñātiputraḥ, te ca bhadantasya śāstāras tāṃś ca niśritya pravrajito yadgāminas te ṣaṭ śāstāras tadgāmy evāryasubhūtiḥ,</p>
+
+<p>Vkn 3.18 sarvadṛṣṭigateṣu cāryaman antargato na cāntamadhyaprāptaḥ, aṣṭākṣaṇasamavasaraṇaś cāsi na cāsi lakṣaṇam anuprāptaḥ, saṃkleśena cāsi samo 'vyavadānam adhigataḥ, yā ca sarvasatvānām araṇā sā bhadantasyāpy araṇā, na ca tvayā dakṣiṇā viśodhyate, ye ca bhadantāya piṇḍapātaṃ dadati tāṃś ca vinipātayasi, sarvamāraiś ca te sārdham ekahastaḥ kṛtaḥ / sarvakleśāś ca te sahāyāḥ, yatsvabhāvāś ca kleśās tatsvabhāvo bhadantaḥ, sarvasatveṣu te vadhakacittaṃ pratyupasthitam, sarvabuddhāś ca te 'bhyākhyātāḥ, sarvabuddhadharmāṃś ca pratikrośasi, na cāsi saṃghapratisaraṇaḥ, na ca jātu parinirvāsyasi / evaṃ tvam imaṃ piṇḍapātaṃ pratigṛhīṇa /</p>
+
+<p>Vkn 3.19 tasya me bhagavan imaṃ dharmanirdeśaṃ śrutvāndhakāraprāptā diśo 'bhūvan ḥ tat kim asmai nirdiśāmi, katham vā pratipadya iti / so 'haṃ tat pātram utsṛjya tato gṛhān niṣkramiṣyāmīti /</p>
+
+<p>vimalakīrtir Iicchavir mām evam āha: mā bhadantasubhūte akṣarebhya uttrasīḥ, pratigṛhāṇedaṃ pātram / tat kiṃ manyase bhadantasubhūte, yadi tathāgatanirmita evam ucyeta kaccit sa uttraset /</p>
+
+<p>so 'ham avocam: no hīdaṃ kulaputra /</p>
+
+<p>sa mām evam āha: nirmitamāyāsvabhāvebhyo bhadantasubhūte sarvadharmebhyo nottrasitavyam / tat kasmād dhetoḥ / sarvāṇi hi tāni vacanāni tatsvabhāvāni, evaṃ paṇḍitā akṣareṣu na sajjanti na tebhya uttrasyanti / tat kasmād dhetoḥ / sarvāṇi tāny akṣarāṇy anakṣarāṇi sthāpayitvā vimuktiṃ vimuktilakṣaṇāṃś ca sarvadharmān /</p>
+
+<p>Vkn 3.20 iha nirdeśe nirdiśyamāne dvayor devaputraśatayor virajo vigatamalaṃ dharmeṣu dharmacakṣur viśuddham, pañcānāṃ ca devaputraśatānām ānulomikyāḥ kṣānteḥ pratilambho 'bhūt / ahaṃ ca niṣpratibhāno 'bhūvam, na cāsya śaknomy uttare prativacanaṃ dātum / tan nāham utsahe tasya satpuruṣasya glānaparipṛcchako gantum /</p>
+
+<p>Vkn 3.21 atha khalu bhagavān āyuṣmantaṃ pūrṇaṃ maitrāyaṇīputram āmantrayate sma: gaccha tvaṃ pūrṇa vimalakīrter licchaver glānaparipṛcchakaḥ /</p>
+
+<p>pūrṇo 'py āha: nāhaṃ bhagavan utsahe tasya satpuruṣasya glānaparipṛcchako gantum / tat kasmād dhetoḥ / abhijānāmy ahaṃ bhagavan: ekasmin samaye vanasyānyatamasmin pṛthivīpradeśa ādikarmikāṇāṃ bhikṣūṇāṃ dharmaṃ deśayāmi /</p>
+
+<p>tatra vimalakīrtir licchavir upasaṃkramya mām evam āha:</p>
+
+<p>Vkn 3.22 samāpadya bhadantapūrṇa eteṣāṃ bhikṣūṇāṃ cittaṃ vyavalokya dharmaṃ deśaya / mā mahāratnabhājaneṣu prati kulmāṣān prākṣaipsīḥ / jāniṣva tāvat kimāśayā ete bhikṣava iti / mā vaiḍūryaratnaṃ kācamaṇikaiḥ samānīkārṣīḥ / mā bhadantapūrṇa apratyavekṣyā satvendriyeṣu prādeśikendriyatvam upasaṃhārṣīḥ / mā akṣatāṃ kṣiṇuṣva / mā mahāmārgam avatartukāmān bhandarathyāṃ praveśaya / mā mahāsāgaraṃ goṣpade praveśaya / mā sūryaprabhāṃ khadyotakair nirvartaya / mā siṃhanādasaṃprasthitān sṛgālanāde niyojaya / api bhadantapūrṇa sarve hy ete bhikṣavo mahāyānasaṃprasthitā amuṣitabodhicittāḥ / teṣāṃ bhadantapūrṇa mā śrāvakayānam upadarśaya / kaṣṭaṃ hi śrāvakayānam / jātyandhā iva me śrāvakāḥ pratibhānti satvendriyavimātratājñāne /</p>
+
+<p>Vkn 3.23 atha vimalakīrtir licchavis tasyāṃ velāyāṃ tathārūpaṃ samādhiṃ samāpadyate sma / yathā te bhikṣavo 'nekavidhaṃ pūrvenivāsam anusmaraṇti sma / te pañcabuddhaśataparyupāsitakuśalamūlāḥ samyaksaṃbodhaye, teṣāṃ tad bodhicittam āmukhībhūtam / te tasya satpuruṣasya pādau śirobhiḥ praṇamya tatraiva niṣaṇṇāḥ prāñjalayo bhūtvā, teṣāṃ tādṛśī dharmadeśanā kṛtā yathāvaivartikāḥ saṃvṛttā anuttarasyāṃ samyaksaṃbodhau /</p>
+
+<p>Vkn 3.24 tan nāhaṃ bhagavan utsahe tasya satpuruṣasya glānaparipṛcchako gantum /</p>
+
+<p>Vkn 3.25 tatra bhagavān āyuṣmantaṃ kātyāyanam āmantrayate sma: gaccha tvaṃ kātyāyana vimalakīrter licchaver glānaparipṛcchakaḥ /</p>
+
+<p>kātyāyano 'py āha: nāhaṃ bhagavan utsahe tasya satpuruṣasya glānaparipṛcchako gantum / tat kasmād dhetoḥ / abhijānāmy ahaṃ bhagavan: bhagavatā saṃkṣiptena bhikṣūṇām avavādo dattaḥ / teṣāṃ sūtrapadaviniścayāya dharmaṃ deśayāmi, yad idam anityārthaṃ duḥkhārtham anātmārthaṃ śāntārtham /</p>
+
+<p>tatra vimalakīrtir licchavir upasaṃkramya mām evam āha:</p>
+
+<p>Vkn 3.26 mā bhadantakātyāyana sapracārām utpādabhaṅgayuktāṃ dharmatāṃ nirdiśa / yo bhadantamahākātyāyana atyantatayā na jāto na janiṣyati notpanno na niruddho na nirotsyate 'yam anityārthaḥ / yaḥ pañcānāṃ skandhānāṃ śūnyatānugamānutpādānirodhārtho 'yaṃ duḥkhārthaḥ / yad ātmānātmayor advayatvam ayam anātmārthaḥ / yo 'svabhāvo 'parabhāvas tad anujjvalitam, yad anujvalitaṃ na tac chāmyati, yo 'tyantopaśamo 'yaṃ śāntārthaḥ /</p>
+
+<p>Vkn 3.27 asmin khalu punar nirdeśe nirdiśyamāne teṣāṃ bhikṣūṇām anupādāyāsravebhyaś cittāni vimuktāni / tan nāhaṃ bhagavan utsahe tasya satpuruṣasya glānaparipṛcchako gantum /</p>
+
+<p>Vkn 3.28 tatra bhagavān āyuṣmantam aniruddham āmantrayate sma: gaccha tvam aniruddha vimalakīrter licchaver glānaparipṛcchakaḥ /</p>
+
+<p>aniruddho 'py āha: nāhaṃ bhagavan utsahe tasya satpuruṣasya glānaparipṛcchako gantum / tat kasmād dhetoḥ /</p>
+
+<p>Vkn 3.29 abhijānāmy ahaṃ bhagavan: anyatamasmiṃś caṅkrame caṅkramāmi / tatra śubhavyūho nāma brahmā daśabhir brahmasahasraiḥ sārdhaṃ taṃ pradeśam avabhāsya yenāhaṃ tenopasaṃkramya mama pādau śirasābhivandyaikānte sthitvā mām etad avocat: kiyad āyuṣmān aniruddho divyena cakṣuṣā paśyati /</p>
+
+<p>tam enam aham etad avocam: ahaṃ mārṣa imaṃ triṃ sāhasramahāsāhasraṃ lokadhātuṃ bhagavataḥ śākyamuner buddhakṣetraṃ tad yathāpi nāma karatale nyastam āmalakaphalam evaṃ paśyāmi /</p>
+
+<p>Vkn 3.30 iyaṃ ca kathā pravṛttā vimalakīrtiś ca licchavis taṃ pradeśam upasaṃkrāmat / upasaṃkramya mama pādau śirasā vanditvaivam āha: kiṃ bhadantāniruddha divyaṃ cakṣur abhisaṃskāralakṣaṇam utānabhisaṃskāralakṣaṇam / yady abhisaṃskāralakṣaṇaṃ tad bāhyaiḥ pañcābhijñaiḥ samam, athānabhisaṃskāralakṣaṇaṃ anabhisaṃskāro 'saṃskṛtas tena na śakyaṃ draṣṭum / tat kathaṃ sthaviraḥ paśyati /</p>
+
+<p>so 'haṃ tūṣṇīm abhūvam /</p>
+
+<p>Vkn 3.31 sa ca brahmā tasya satpuruṣasyemaṃ nirdeśaṃ śrutvāścaryaprāptas taṃ namaskṛtyaitad avocat: ke loke divyacakṣuṣaḥ /</p>
+
+<p>āha: buddhā bhagavanto loke divyacakṣuṣo ye samāhitāvasthāṃ ca na vijahati sarvabuddhakṣetrāṇi ca paśyanti / na ca dvayaprabhāvitāḥ /</p>
+
+<p>Vkn 3.32 atha sa brahmemaṃ nirdeśaṃ śrutvā daśasahasraparivāro 'dhyāśayenānuttarāyāṃ samyaksaṃbodhau cittam utpādayati sma / sa māṃ vanditvā taṃ ca satpuruṣam abhivādya tatraivāntarhitaḥ / ahaṃ ca niṣpratibhāno 'bhūvam / tan nāham utsahe tasya satpuruṣasya glānaparipṛcchako gantum /</p>
+
+<p>Vkn 3.33 tatra bhagavān āyuṣmantam upālim āmantrayate sma: gaccha tvam upāle vimalakīrter licchaver glānaparipṛcchakaḥ /</p>
+
+<p>upālir apy āha: nāhaṃ bhagavan utsahe tasya satpuruṣasya glānaparipṛcchako gantum / tat kasmād dhetoḥ / abhijānāmy ahaṃ bhagavan: anyatamau dvau bhikṣū āpattim āpannau, tau bhagavataḥ paryapatrapamāṇau bhagavantaṃ nopasaṃkrāmataḥ / tau yenāhaṃ tenopasaṃkrāntāv upasaṃkrāmya mām etad avocatām / āvāṃ bhadantopāle āpattim āpannau, tāv āvāṃ paryapatrapamāṇau bhagavantam upasaṃkramituṃ notsahāvahe / utsāhāya āyuṣmann upāle vinodayasvāvayoḥ kaukṛtyaṃ vyutthāpayasvāvām āpatteḥ /</p>
+
+<p>Vkn 3.34 so 'haṃ bhagavaṃs tau bhikṣū dharmyayā kathayā saṃdarśayāmi / vimalakīrtiś ca licchavis taṃ pradeśam anuprāptaḥ sa mām etad avocat: mā bhadantopāle etau bhikṣū āgāḍhīkārṣīḥ, vinodayānayor āpattim, mā āvilīkārṣīḥ / na hi bhadantopāle āpattir adhyātmapratiṣṭhitā na bahirdhāsaṃkrānto nobhayam antareṇopalabhyate / tat kasmād dhetoḥ / uktaṃ hi bhagavatā cittasaṃkleśāt satvāḥ saṃkliśyante cittavyavadānād viśudhyante / cittaṃ ca bhadantopāle nādhyātmapratiṣṭhitaṃ na bahirdhā nobhayam antareṇopalabhyate / yathā cittaṃ tathāpattiḥ, yathāpattis tathā sarvadharmāḥ, tathatāṃ na vyativartante / yā bhadantopāle cittasya prakṛtir yayā cittaprakṛtyā bhadantasya cittaṃ vimuktam, kiṃ jātu sā cittaprakṛtiḥ saṃkliṣṭā /</p>
+
+<p>āha: no hidam /</p>
+
+<p>āha: tatprakṛtikāni bhadantopāle sarvasatvānāṃ cittāni /</p>
+
+<p>Vkn 3.35 saṃkalpo bhadantopāle kleśaḥ / akalpāvikalpā ca prakṛtiḥ / viparyāsaḥ saṃkleśaḥ, aviparyastā ca prakṛtiḥ / ātmasamāropaḥ saṃkleśaḥ, nairātmyā ca prakṛtiḥ / utpannabhagnānavasthitā bhadantopāle sarvadharmā māyāmeghavidyutsadṛśāḥ / nirapekṣāḥ sarvadharmāḥ kṣaṇam api nāvatiṣṭhante / svapnamarīcisadṛśāḥ sarvadharmā vitathadarśanāḥ / dakacandrapratibimbasadṛśāḥ sarvadharmāś cittaparikalpenotpadyante / ye tv evaṃ jānanti te vinayadharā ity ucyante / ya evaṃ vinītās te suvinītāḥ /</p>
+
+<p>Vkn 3.36 atha tau bhikṣu etad avocatām: prajñādharo vinayadharo 'yam upāsakaḥ / na tv ayaṃ bhadantopālir yo bhagavatā vinayadharāṇām agro nirdiṣṭaḥ /</p>
+
+<p>tāv aham evaṃ vadāmi: mā bhikṣū atra gṛhapatisaṃjñām utpādayatām / tat kasmād dhetoḥ / tathāgataṃ sthāpayitvā nāsti kaścic chrāvako vā bodhisatvo vā, ya etasya pratibhānam ācchindyāt / tādṛśa etasya prajñālokaḥ /</p>
+
+<p>Vkn 3.37 atha tau bhikṣū vinītakaukṛtyāv adhyāśayena tatraivānuttarāyāṃ samyaksaṃbodhau cittam utpāditavantau, taṃ ca satpuruṣam abhivandyaivam āhatuḥ: sarvasatvā īdṛśasya pratibhānasya lābhino bhavantu / tan nāham utsahe tasya satpuruṣasya glānaparipṛcchako gantum /</p>
+
+<p>Vkn 3.38 tatra bhagavān āyuṣmantaṃ rāhulam āmantrayate sma: gaccha tvaṃ rāhula vimalakīrter licchaver glānaparipṛcchakaḥ /</p>
+
+<p>rāhulo 'py āha: nāhaṃ bhagavan utsahe tasya satpuruṣasya glānaparipṛcchako gantum / tat kasmād dhetoḥ / abhijānāmy ahaṃ bhagavan: ekasmin samaye saṃbahulā licchavikumārakā yenāhaṃ tenopasaṃkramya mām etad avocan: tvaṃ rāhula tasya bhagavataḥ putraś cakravartirājyam utsṛjya pravrajitaḥ, tatra ke te pravrajyāyā guṇānuśaṃsāḥ /</p>
+
+<p>teṣām ahaṃ yathārūpaṃ pravrajyāyā guṇānuśaṃsā nirdiśāmi, vimalakīrtir licchavir yenāhaṃ tenopasaṃkrāntaḥ / sa mām abhivandyaitad avocat:</p>
+
+<p>Vkn 3.39 na bhadantarāhula evaṃ pravrajyāyā guṇānuśaṃsā nirdeṣṭavyā yathā tvaṃ nirdiśasi / tat kasmād dhetoḥ / nirguṇā niranuśaṃsā hi pravrajyā / yatra bhadantarāhula saṃskṛtapravṛttis tatra guṇānuśaṃsā / pravrajyā cāsaṃskṛtā, asaṃskṛte ca na guṇā nānuśāṃsā / pravrajyā bhadantarāhula arūpiṇi rūpavigatā, panthā nirvāṇasya, praśaṃsitā paṇḍitaiḥ, parigṛhītāryaiḥ, parājayaḥ sarvamārāṇām, pañcagatyuttāraṇī, pañcacakṣuviśodhanī, pañcabalapratilambhā, pañcendriyapratiṣṭhā, pareṣām anupaghātaḥ, pāpadharmāsaṃsṛṣṭā, paratīrthyapramardanī, prajñaptisamatikrāntā, paṅke saṃkramaḥ, amamā mamakāravigatā, aparigrahā, anupādānā, anākulā, ākulaprahīṇā, svacittadarśanī paracittasaṃrakṣaṇī, śamathānukūlā, sarvato 'navadyā / iyam ucyate pravrajyā / ya evaṃ pravrajitās te supravrajitāḥ /</p>
+
+<p>Vkn 3.40 pravrajata yūyaṃ kumārakāḥ svākhyāte dharmavinaye / durlabho hi buddhotpādaḥ, durlabhā kṣaṇasaṃpat, durlabho manuṣyapratilambhaḥ /</p>
+
+<p>te kumārakā evam āhuḥ: śrutam asmābhir gṛhapate, na tathāgato 'navasṛṣṭaṃ mātāpitṛbhyāṃ pravrājayatīti /</p>
+
+<p>sa tān āha: utpādayata yūyaṃ kumārakāḥ anuttarāyāṃ samyaksaṃbodhau cittam / pratipattyā ca saṃpādayata, saiva yuṣmākaṃ bhaviṣyati pravrajyā sopasaṃpat /</p>
+
+<p>Vkn 3.41 tatra dvātriṃśatā licchavikumārair anuttarāyāṃ samyaksaṃbodhau cittāny utpāditāni / tan nāhaṃ bhagavan utsahe tasya satpuruṣasya glānaparipṛcchako gantum /</p>
+
+<p>Vkn 3.42 tatra bhagavān āyuṣmantam ānandam āmantrayate sma: gaccha tvam ānanda vimalakīrter licchaver glānaparipṛcchakaḥ /</p>
+
+<p>ānanda āha: nāhaṃ bhagavan utsahe tasya satpuruṣasya glānaparipṛcchako gantum / tat kasmād dhetoḥ / abhijānāmy ahaṃ bhagavan: ekasmin samaye bhagavataḥ kāyasya kaścid evābādhaḥ / tatra ca kṣīreṇa kṛtyam āsīt / so 'ham anyatamasmin brāhmaṇamahāśālasya gṛhamūle pātraṃ gṛhītvā sthitaḥ /</p>
+
+<p>vimalakīrtir licchavis taṃ pradeśam anuprāptaḥ / sa māṃ vanditvaivam āha:</p>
+
+<p>Vkn 3.43 kiṃ bhadantānanda kālyam eva pātram ādāyāsmin gṛhadvārasamīpe tiṣṭhasi /</p>
+
+<p>tam enam aham etad avocam: bhagavato gṛhapate kāyasya kaścid evābādhaḥ / tatra ca kṣīreṇa kṛtyam, tat paryeṣāmi /</p>
+
+<p>sa mām evam āha: alaṃ bhadantānanda mā evaṃ vocaḥ / vajrasaṃhatano hi bhadantānanda tathāgatakāyaḥ sarvākuśalavāsanāprahīṇaḥ sarvamahaujaskakuśaladharmasamanvāgataḥ / kutas tasya vyādhiḥ kuta upadravaḥ /</p>
+
+<p>Vkn 3.44 tūṣṇīṃbhūto bhadantānanda gaccha / mā bhagavantam abhyācakṣva / mā kasyacid bhūya evaṃ vocaḥ / mā mahaujaskā devaputrā anyabuddhakṣetrasaṃnipatitāś ca bodhisatvāḥ śroṣyanti / rājñas tāvad bhadantānanda cakravartina itvarakuśalamūlasamanvāgatasya vyādhir na saṃvidyate / kutas tasya bhagavato 'pramāṇakuśalasamanvāgatasya vyādhir bhaviṣyati / nedaṃ sthānaṃ vidyate / gaccha gaccha bhadantānanda / mā mām adhyapatrāpaya, mā anyatīrthikacarakaparivrājakanigranthājīvāḥ śroṣyanti, mā teṣām evaṃ bhaviṣyati / kīdṛśo bata ayam eṣāṃ śāstā yaḥ svayam eva tāvad ātmānaṃ glānaṃ na śaknoti paritrātum, kutaḥ punar glānānāṃ satvānāṃ trāṇaṃ bhaviṣyati / tataḥ pracchannaṃ bhadantānanda gaccha śīghram / mā kaścic chṛṇuyāt /</p>
+
+<p>Vkn 3.45 api tu bhadantānanda dharmakāyās tathāgatā nāmiṣakāyāḥ / lokottarakāyās tathāgatāḥ sarvalokadharmasamatikrāntāḥ / anābādhas tathāgatasya kāyaḥ sarvāsravavinivṛtaḥ / asaṃskṛtas tathāgatasya kāyaḥ sarvasaṃkhyāvigataḥ / tasya bhadanto vyādhim icchatīty ayuktam asadṛśam /</p>
+
+<p>Vkn 3.46 tasya me bhagavan mahadapatrāpyaṃ jātam / mā me bhagavato 'ntikād duḥśrutaṃ durgṛhītaṃ vā kṛtam iti / so 'ham antarīkṣāc chabdam aśrauṣam /</p>
+
+<p>evam etad ānanda yathā gṛhapatir nirdiśati / atha ca punaḥ pañcakaṣāye bhagavān utpannaḥ, tenānarthalūhadaridracaryayā satvā vinetavyāḥ / tad gaccha tvam ānanda kṣīraṃ gṛhītvā, mā paryapatrapaś ceti /</p>
+
+<p>Vkn 3.47 īdṛśā bhagavan vimalakīrter licchaveḥ praśnavyākaraṇanirdeśāḥ / tan nāhaṃ bhagavan utsahe tasya kulaputrasya glānaparipṛcchako gantum /</p>
+
+<p>Vkn 3.48 evaṃ tāni pañcamātrāṇi śrāvakaśatāny anutsahamānāni bhagavate nivedayanti / ye ca tair vimalakīrtinā licchavinā sārdhaṃ kathāsaṃlāpāḥ kṛtās tān sarvān bhagavate nivedayanti sma /</p>
+
+<p>Vkn 3.49 tatra bhagavān maitreyaṃ bodhisatvam āmantrayate sma: gaccha tvaṃ maitreya vimalakīrter licchaver glānaparipṛcchakaḥ /</p>
+
+<p>maitreyo 'py āha: nāhaṃ bhagavan utsahe tasya satpuruṣasya glānaparipṛcchako gantum / tat kasmād dhetoḥ / abhijānāmy ahaṃ bhagavan: ekasmin samaye saṃtuṣitena devaputreṇa sārdhaṃ tuṣitakāyikaiś ca devaputraiḥ sārdhaṃ dharmyāṃ kathāṃ kathayāmi yad idaṃ bodhisatvānāṃ mahāsatvānām avivartyāṃ bhūmim ārabhya / tatra ca vimalakīrtir licchavis taṃ pradeśam upasaṃkrāntaḥ / sa mām etad avocata:</p>
+
+<p>Vkn 3.50 tvaṃ maitreya ekajātipratibaddho bhagavatā vyākṛto 'nuttarāyāṃ samyaksaṃbodhau / tat katamayāsi maitreya jātyāu vyākṛtaḥ, kim atītayā vānāgatayota pratyutpannayā / tatra yātītā jātiḥ sā kṣīṇā, yāpy anāgatā sāpy asaṃprāptā, pratyutpannāyāḥ sthitir nāsti jāteḥ / yathoktaṃ bhagavatā: tathā hi tvaṃ bhikṣaḥ kṣaṇe kṣaṇe jāyase jīryasi mriyase cyavase upapadyase ceti / ajātitaś ca niyāmāvakrāntiḥ / na cājātir vyākriyate / nāpy ajātir abhisaṃbudhyate /</p>
+
+<p>Vkn 3.51 tat kathaṃ tvaṃ maitreya vyākṛtas tathatotpādena tathatānirodhena vā / na ca tathatotpadyate na nirudhyate, na nirotsyate / yā ca sarvasatvānāṃ tathatā, yā ca sarvadharmāṇāṃ tathatā, saiva maitreyasyāpi tathatā / evaṃ yadi tvaṃ vyākṛtaḥ sarvasatvā api vyākṛtā bhavanti / tat kasmād dhetoḥ / na hi tathatā dvayaprabhāvitā nānātvaprabhāvitā / tad yadā maitreyo bodhim abhisaṃbhotsyate, sarvasatvā api tasmin samaye tādṛśīm eva bodhim abhisaṃbhotsyante / tat kasmād dhetoḥ / sarvasatvānubodho hi bodhiḥ / yadā ca maitreyaḥ parinirvāsyati, sarvasatvā api tadā parinirvāsyanti / tat kasmād dhetoḥ / na hy aparinirvṛtānāṃ sarvasatvānāṃ tathāgatāḥ parinirvānti / parinirvṛtāni te satvāni paśyanti nirvāṇaprakṛtikāni / tasmād iha maitreya mā etān devaputrān ullāpaya mā visaṃvādaya /</p>
+
+<p>Vkn 3.52 na bodhau kaścit pratiṣṭhate, na nivartate / api tu khalu punar maitreya yaiṣāṃ devaputrāṇāṃ bodhiparikalpanadṛṣṭis tām etām utsarjaya /</p>
+
+<p>na hi bodhiḥ kāyenābhisaṃbudhyate, na cittena / vyupaśamo bodhiḥ sarvanimittānām, asamāropo bodhiḥ sarvārambaṇānām, apracāro bodhiḥ sarvamanaskārāṇām, paricchedo bodhiḥ sarvadṛṣṭigatānām, vigamo bodhiḥ sarvaparikalpānām, visaṃyogo bodhiḥ sarveñjitamanyasyanditānām, anadhiṣṭhānaṃ bodhiḥ sarvapraṇidhānānām, asaṅgapraveśo bodhiḥ sarvodgrahavigatā, sthitā bodhir dharmadhātusthāne, anugatā bodhis tathatāyām, pratiṣṭhitā bodhir bhūtakoṭyām, advayā bodhir manodharmavigatā / samā bodhir ākāśasamatayā, asaṃskṛtā bodhir utpādabhaṅgasthityanyathātvavigatā, parijñā bodhiḥ sarvasatvacittacaritāśayānām, advārā bodhir āyatanānām, asaṃsṛṣṭā bodhiḥ sarvavāsanānusaṃdhikleśavigatā, na deśasthā na pradeśasthā bodhiḥ sthānāsthānavigatā, tathatāpratiṣṭhitā bodhiḥ sarvato 'dṛśyā / nāmadheyamātraṃ bodhis tac ca nāma nirīhakam, nirātmikā bodhir āyūhaniryūhavigatā, anākulā bodhiḥ prakṛtipariśuddhā, prakāśā bodhiḥ svabhāvapariśuddhā, anudgrahā bodhir adhyālambanavigatā, nirnānātvā bodhiḥ sarvadharmasamatāvabodhatvāt, anupamā bodhir upamopanyāsavigatāḥ, sūkṣmā bodhir duranubodhatvāt, sarvatrānugatā bodhir ākāśasvabhāvatvāt / sā na śakyā kāyena vācā cittenābhisaṃboddhum /</p>
+
+<p>Vkn 3.53 iha bhagavan nirdeśe nirdiśyamāne tataḥ pariṣado dvayor devaputraśatayor anutpattikeṣu dharmeṣu kṣāntipratilambho 'bhūt / ahaṃ ca niṣpratibhāno 'bhūvam / tan nāhaṃ bhagavan utsahe tasya satpuruṣasya glānaparipṛcchako gantum /</p>
+
+<p>Vkn 3.54 tatra bhagavān prabhāvyūhaṃ licchavikumāram āmantrayate sma: gaccha tvaṃ satpuruṣa vimalakīrter licchaver glānaparipṛcchakaḥ /</p>
+
+<p>prabhāvyūho 'py āha: nāhaṃ bhagavan utsahe tasya satpuruṣasya glānaparipṛcchako gantum / tat kasmād dhetoḥ / abhijānāmy ahaṃ bhagavan: ekasmin samaye bhagavan vaiśālyā mahānagaryā niṣkramāmi / vimalakīrtiś ca licchaviḥ praviśati / so 'haṃ tam abhivādyaivam avocam: kutas tvaṃ gṛhapate āgacchasīti /</p>
+
+<p>sa mām evam āha: āgacchāmi bodhimaṇḍād iti /</p>
+
+<p>tam aham etad avocam: bodhimaṇḍa iti kasyaitan nāma /</p>
+
+<p>sa mām etad avocat:</p>
+
+<p>Vkn 3.55 bodhimaṇḍa iti kulaputra āśayamaṇḍa eṣo 'kṛtrimatayā, prayogamaṇḍa eṣa ārambhottāraṇatayā, adhyāśayamaṇḍa eṣa viśeṣādhigamatayā, bodhicittamaṇḍa eṣo 'saṃpramoṣanatayā,</p>
+
+<p>Vkn 3.56 dānamaṇḍa eṣa vipākāpratikāṅkṣaṇatayā, śīlamaṇḍa eṣa praṇidhānaparipūraṇatayā, kṣāntimaṇḍa eṣa sarvasatvāpratihatacittatayā, vīryamaṇḍa eṣo 'vinivartanatayā, dhyānamaṇḍa eṣa cittakarmaṇyatayā, prajñāmaṇḍa eṣa pratyakṣadarśitayā,</p>
+
+<p>Vkn 3.57 maitrīmaṇḍa eṣa sarvasatvasamacittatayā, karuṇāmaṇḍa eṣa khedasahiṣṇutayā, muditāmaṇḍa eṣa dharmārāmaratiratatayā, upekṣāmaṇḍa eṣo 'nunayapratighaprahāṇatayā,</p>
+
+<p>Vkn 3.58 abhijñāmaṇḍa eṣa ṣaḍabhijñatayā, vimokṣamaṇḍa eṣo 'kalpanatayā, upāyamaṇḍa eṣa satvaparipācanatayā, saṃgrahavastumaṇḍa eṣa sarvasatvasaṃgrahanatayā, śrutamaṇḍa eṣa pratipattisārakatvāt, nidhyaptimaṇḍa eṣa yoniśaḥpratyavekṣaṇatayā, bodhipakṣyadharmamaṇḍa eṣa saṃskṛtāsaṃskṛtotsarjanatayā, satyamaṇḍa eṣa sarvalokāvisaṃvādanatayā, pratītyasamutpādamaṇḍa eṣo 'vidyāsravakṣayatayā yāvaj jarāmaraṇāsravakṣayatayā, sarvakleśapraśamanamaṇḍa eṣa yathābhūtābhisaṃbodhanatayā,</p>
+
+<p>Vkn 3.59 sarvasatvamaṇḍa eṣa satvāsvabhāvatayā, sarvadharmamaṇḍa eṣa śūnyatābhisaṃbodhanatayā, sarvamāranirghātanamaṇḍa eso 'calanatayā, traidhātukamaṇḍa eṣa prasthānavigamanatayā, siṃhanādanadanavīryamaṇḍa eṣo 'bhītānutrāsanatayā, balavaiśāradyāveṇikasarvabuddhadharmamaṇḍa esa sarvato 'nupākruṣṭatvāt, traividyavidyāmaṇḍa esa niravaśeṣatvāt kleśānām, ekacittaniravaśeṣasarvadharmānubodhamaṇḍa eṣa sarvajñajñānasamudāgamatvāt /</p>
+
+<p>Vkn 3.60 iti hi kulaputra yāvanto bodhisatvāḥ pāramitāpratisaṃyuktaṃ satvaparipākapratisaṃyuktaṃ saddharmaparigrahapratisaṃyuktaṃ kuśalamūlapratisaṃyuktaṃ kramam utkṣipanti nikṣipanti ca / sarve te bodhimaṇḍād āgacchanti, buddhadharmebhya āgacchanti, buddhadharmeṣu ca pratiṣṭhante /</p>
+
+<p>Vkn 3.61 iha bhagavan nirdeśe nirdiśyamāne pañcamātrair devamanuṣyaśatair bodhāya cittāny utpāditāni / ahaṃ ca niṣpratibhāno 'bhūvam / tan nāhaṃ bhagavan utsahe tasya satpuruṣasya glānaparipṛcchako gantum /</p>
+
+<p>Vkn 3.62 tatra bhagavān jagatindharaṃ bodhisatvam āmantrayate sma: gaccha tvaṃ jagatindhara vimalakīrter licchaver glānaparipṛcchakaḥ /</p>
+
+<p>jagatindharo 'py āha: nāhaṃ bhagavan utsahe tasya satpuruṣasya glānaparipṛcchako gantum / tat kasmād dhetoḥ / abhijānāmy ahaṃ bhagavan: ekasmin samaye svake vihāre viharāmi / atha māraḥ pāpīyān dvādaśabhir apsaraḥsahasraiḥ parivṛtaḥ śakraveṣeṇa tūryasaṃgītisaṃpravāditena yenāhaṃ tenopasaṃkramya mama pādau śirasā vanditvā saparivāro māṃ puraskṛtyaikānte 'sthāt / tam enam ahaṃ jānāmi ḥ śakra eṣa devendra iti /</p>
+
+<p>tam aham etad avocam: svāgataṃ te kauśika, apramattena te bhavitavyaṃ sarvakāmaratiṣu, anityapratyavekṣanābahulenāttasāreṇa te bhavitavyaṃ kāyajīvitabhogebhyaḥ /</p>
+
+<p>sa mām evam āha: pratīccha tvaṃ satpuruṣa imāni dvādaśāpsaraḥsahasrāṇi mamāntikāt, etās te paricārikā bhavantām /</p>
+
+<p>tam aham etad avocam: mā tvaṃ kauṣika akalpikena vastunā śramaṇān śākyaputrīyān nimantraya, yathā na hy etā asmākaṃ kalpyanta iti /</p>
+
+<p>Vkn 3.63 eṣā ca kathā pravṛttā, vimalakīrtir licchavir upasaṃkrāntaḥ / sa mām evam āha: mā atra kulaputra śakrasaṃjñām utpādaya / māra eṣa pāpīyāṃs tava viheṭhanābhiprāya upasaṃkrāntaḥ, naiṣa śakra iti /</p>
+
+<p>atha vimalakīrtir licchavis taṃ māraṃ pāpīyāṃsam etad avocat: asmabhyaṃ pāpīyan etā apsaraso niryātaya / asmākam etāḥ kalpyante, na śramaṇānāṃ śākyaputrīyāṇām iti /</p>
+
+<p>atha māraḥ pāpīyān bhītas trastaḥ saṃvignaḥ / mā vimalakīrtinā licchavinā vipralapsya iti, icchati cāntardhātum, na ca śaknoti sarvarddhim api darśayitvāntardhātum / so 'ntarīkṣāc chabdam aśrauṣīt: niryātaya tvam etāḥ pāpīyan apsarasa etasmai satpuruṣāya, tataḥ śakṣyasi svabhavanaṃ gantum / atha māro bhītas trasto 'kāmako 'smai tā apsaraso niryātayati /</p>
+
+<p>Vkn 3.64 pratigṛhya ca vimalakīrtis tā apsarasa etad avocat: niryātitā yūyaṃ mahyaṃ māreṇa pāpīyasā, utpādayatedānīm anuttarāyāṃ samyaksaṃbodhau cittam / sa tāsāṃ tadānulomikīṃ bodhiparipācanīṃ kathāṃ kṛtvā bodhau cittam utpādayati sma /</p>
+
+<p>sa tā evam āha: utpāditam idānīṃ yuṣmābhir bodhicittam, dharmārāmaratiratābhir idānīṃ yuṣmābhir bhavitavyam, na kāmaratiratābhiḥ /</p>
+
+<p>tāhuḥ: katamā ca punar dharmārāmaratiḥ /</p>
+
+<p>sa āha: buddhe 'bhedyaprasādaratiḥ, dharme śuśrūṣaṇaratiḥ, saṃgha upasthānaratiḥ, guruṣu gauravopasthānaratiḥ, traidhātukān niḥsaraṇaratiḥ, viṣayeṣv aniśritaratiḥ, skandheṣu vadhakānityapratyavekṣaṇāratiḥ, dhātuṣv āśīviṣaparitulanāratiḥ, āyataneṣu śūnyagrāmavivekaratiḥ, bodhicittārakṣaṇaratiḥ, satveṣu hitavastutāratiḥ, dāne saṃvibhāgaratiḥ, śīleṣv aśaithilyaratiḥ, kṣāntyāṃ kṣamadamaratiḥ, vīrye kuśalasamudānayanaratiḥ, dhyāneṣu parikarmaratiḥ, prajñāyām apagatakleśāvabhāsaratiḥ, bodhau vistīrṇaratiḥ, mārasya nigraharatiḥ, kleśānāṃ praghātanāratiḥ, buddhakṣetrasya viśodhanāratiḥ, lakṣaṇānuvyañjanapariniṣpattyarthaṃ sarvakuśalamūlopacayaratiḥ, gambhīradharmaśravaṇānuttrāsaratiḥ, trivimokṣamukhaparijayaratiḥ, nirvāṇārambaṇaratiḥ, bodhimaṇḍālaṃkāraratiḥ, na cākālaprāptiratiḥ, sabhāgajanasevanāratiḥ, viṣabhāgeṣv adoṣāpratighātaratiḥ, kalyāṇamitreṣu sevāratiḥ, pāpamitreṣu visarjanāratiḥ, dharmaprītiprāmodyaratiḥ, upāye saṃgraharatiḥ, apramādabodhipakṣyadharmasevanāratiḥ / evaṃ hi bodhisatvo dharmārāmaratirato bhavati /</p>
+
+<p>Vkn 3.65 atha māraḥ pāpīyāṃs tā apsarasa etad avocat: āgacchata / idānīṃ gamiṣyāmaḥ svabhavanam iti /</p>
+
+<p>tā evam āhuḥ: niryātitā idānīṃ tvayā vayam asmai gṛhapataye / dharmārāmaratiratābhir asmābhir idānīṃ bhavitavyam, na kāmaratiratābhiḥ /</p>
+
+<p>atha māraḥ pāpīyān vimalakīrtiṃ licchavim evam āha: niḥsṛja tvaṃ gṛhapate imā apsarasaḥ / sarvasvaparityāgino bodhisatvā mahāsatvā bhavanti /</p>
+
+<p>vimalakīrtir āha: avasṛṣṭā bhavantu / gaccha pāpīyan / sarvasatvānāṃ dhārmikā abhiprāyāḥ paripūryantām /</p>
+
+<p>atha tā apsaraso vimalakīrtiṃ namaskṛtyaivam āhuḥ: kathaṃ vayaṃ gṛhapate mārabhavane 'vatiṣṭhema /</p>
+
+<p>Vkn 3.66 āha: asti bhaginyaḥ akṣayapradīpaṃ nāma dharmamukham / tatra pratipadyadhvam / tat punaḥ katamat / tadyathā bhaginyaḥ ekasmāt tailapradīpād dīpaśatasahasrāṇy ādīpyante / na ca tasya dīpasya parihāṇir bhavati / evam eva bhaginyaḥ eko bodhisatvo bahūni satvaśatasahasrāṇi bodhau pratiṣṭhāpayati / na ca tasya bodhisatvasya cittasmṛtir hīyate, na parihīyate, uta ca vardhate / evaṃ sarvān kuśalān dharmān yathā yathā pareṣām ārocayati deśayati, tathā tathā vivardhate sarvaiḥ kuśalair dharmaiḥ / idaṃ tad akṣayapradīpaṃ nāma dharmamukham / tatra yuṣmābhir mārabhavane sthitābhir aparimāṇānāṃ devaputrāṇām apsarasāṃ ca bodhicittaṃ rocayitavyam / evaṃ yūyaṃ tathāgatasya kṛtajñā bhaviṣyatha / sarvasatvānāṃ copajīvyā bhaviṣyatha /</p>
+
+<p>Vkn 3.67 atha tā apsaraso vimalakīrter licchaveḥ pādau śirasā vanditvā sārdhaṃ māreṇa prakrāntāḥ / ime bhagavan vimalakīrter licchaver vikurvaṇaviśeṣāḥ, yān ahaṃ nājñāsiṣam / tan nāhaṃ bhagavan utsahe tasya satpuruṣasya glānaparipṛcchako gantum /</p>
+
+<p>Vkn 3.68 tatra bhagavān sudattaṃ śreṣṭhiputram āmantrayate sma: gaccha tvaṃ kulaputra vimalakīrter licchaver glānaparipṛcchakaḥ /</p>
+
+<p>sudatto 'py āha: nāhaṃ bhagavan utsahe tasya satpuruṣasya glānaparipṛcchako gantum / tat kasmād dhetoḥ / abhijānāmy ahaṃ bhagavan: svake paitṛke niveśane mahāyajñaṃ yajāmi / sarvadaridraduḥkhitebhyaḥ sarvaśramaṇabrāhmaṇakṛpaṇavanīyakayācanakebhyo dānaṃ dadāmi / saptadivasān mahāyajñaṃ yajāmi /</p>
+
+<p>tatra saptame divase vimalakīrtir licchavis tāṃ mahāyajñaśālāṃ praviśya mām etad avocat: na śreṣṭhiputra evaṃ yajño yaṣṭavyo yathā tvaṃ yajase / dharmayajñas te yaṣṭavyaḥ / kiṃ ta āmiṣayajñena /</p>
+
+<p>tam aham etad avocam: kathaṃ punar dharmayajño yaṣṭavyaḥ /</p>
+
+<p>sa mām evam āha:</p>
+
+<p>Vkn 3.69 yena dharmayajñenāpūrvācaramaṃ sarvasatvāḥ paripācyante, ayaṃ dharmayajñaḥ / sa punaḥ katamaḥ / yad idaṃ bodhyākārābhinirhṛtā mahāmaitrī, saddharmasaṃgrahābhinirhṛtā mahākaruṇā, sarvasatvaprāmodyārambanābhinirhṛtā mahāmuditā, jñānasaṃgrahābhinirhṛtā mahopekṣā,</p>
+
+<p>Vkn 3.70 śāntadāntābhinirhṛtā dānapāramitā, duḥśīlasatvaparipācanābhinirhṛtā śīlapāramitā, nairātmyadharmābhinirhṛtā kṣāntipāramitā, bodhyaṅgābhinirhṛtā vīryapāramitā, kāyacittavivekābhinirhṛtā dhyānapāramitā, sarvajñajñānābhinirhṛtā prajñāpāramitā,</p>
+
+<p>Vkn 3.71 sarvasatvaparipācanābhinirhṛtā śūnyatābhāvanā, saṃskṛtaparikarmābhinirhṛtānimittabhāvanā, saṃcintyopapattyabhinirhṛtāpraṇihitabhāvanā,</p>
+
+<p>Vkn 3.72 saddharmaparigrahābhinirhṛto balaparākramaḥ, saṃgrahavastv abhinirhṛtaṃ jīvitendriyam, sarvasatvānāṃ dāsatvaśiṣyatvābhinirhṛtā nirmānatā, asārāt sārādānābhinirhṛtaḥ kāyajīvitabhogapratilambhaḥ, ṣaḍanusmṛtyabhinirhṛtā smṛtiḥ, saṃrañjaniyadharmābhinirhṛto 'dhyāśayaḥ, samyakpratipattyabhinirhṛtājīvapariśuddhiḥ, prasādaprāmodyasevanābhinirhṛtāryaparyupāsanā, anāryeṣv apratighātābhinirhṛtā cittanidhyaptiḥ, pravrajyābhinirhṛto 'dhyāśayaḥ, pratipattyabhinirhṛtaṃ śrutakauśalam, araṇādharmaprativedhābhinirhṛto 'raṇyavāsaḥ, buddhajñānasaṃprāpaṇābhinirhṛtaṃ saṃlayanam, sarvasatvakleśamocanayogābhinirhṛtā yogācārabhūmiḥ,</p>
+
+<p>Vkn 3.73 lakṣaṇānuvyañjanasaṃbhārābhinirhṛtaḥ satvaparipākaḥ, buddhakṣetrālaṃkārābhinirhṛtaḥ puṇyasaṃbhāraḥ, sarvasatvacittacaritayathāśayadharmadeśanābhinirhṛto jñānasaṃbhāraḥ, sarvadharmānāyūhāniryūhaikanayajñanābhinirhṛtaḥ prajñāsaṃbhāraḥ, sarvakleśasarvāvaraṇasarvākuśaladharmaprahāṇābhinirhṛtaḥ sarvakuśalamūlasaṃbhāraḥ,</p>
+
+<p>Vkn 3.74 sarvajñajñānānubodhanasarvakuśaladharmābhinirhṛtaḥ sarvabodhipakṣyadharmasamudgamaḥ /</p>
+
+<p>ayaṃ sa kulaputra dharmayajñaḥ, yatra dharmayajñe pratiṣṭhitā bodhisatvā iṣṭayajñayājūkā dakṣiṇīyā bhavanti sadevakasya lokasya / evaṃ hi bhagavan tasya gṛhapater nirdiśatas tasyā brāhmaṇaparṣado dvayor brāhmaṇaśatayor anuttarāyāṃ samyaksaṃbodhau cittāny utpannāni /</p>
+
+<p>Vkn 3.75 ahaṃ cāścaryaprasādapratilabdhas tasya satpuruṣasya caraṇau praṇamya śatasahasramūlyaṃ muktāhāraṃ kaṇṭhād avatārya dadāmi / sa taiḥ muktāhāraṃ na pratigṛhṇāti sma / tam aham etad avocam: pratigṛhyemam, yatra te prasādo bhavati tasmai prayaccheti /</p>
+
+<p>tena sa muktāhāro gṛhītvā dvidhākṛtaḥ / eko bhāgo yas tatra yajñaśālāyāṃ sarvalokajugupsito nagaradaridras tasmai dattaḥ / dvitīyaś ca bhāgo duṣprasahāya tathāgatāya dattaḥ / yathā ca sarvā parṣat paśyati taṃ ca marīciṃ lokadhātuṃ taṃ ca duṣprasahaṃ tathāgataṃ taṃ ca muktāhāraṃ duṣprasahasya mūrdhasaṃdhau muktāhārakūṭāgāraṃ prādurbhūtaṃ citraṃ darśanīyaṃ caturasraṃ catuḥsthūṇaṃ samaṃbhāgaśaḥ suvibhaktam /</p>
+
+<p>Vkn 3.76 sa idaṃ prātihāryaṃ saṃdarśyemāṃ vācam abhāṣata: yasya dāyakasya dānapater yādṛśī tathāgate dakṣiṇīyasaṃjñā tādṛśī nagaradaridre nirnānātvena samā, mahākaruṇācittena vipākāpratikāṅkṣaṇatayā parityāgaḥ / iyaṃ dharmayajñasya paripūriḥ /</p>
+
+<p>Vkn 3.77 tatrāsau nagaradaridra idaṃ prātihāryaṃ dṛṣṭvā, imaṃ ca dharmanirdeśaṃ śrutvā, anuttarāyāṃ samyaksaṃbodhau cittam utpādayati sma / tan nāhaṃ bhagavan utsahe tasya satpuruṣasya glānaparipṛcchako gantum /</p>
+
+<p>Vkn 3.78 iti hi sarve te bodhisatvā mahāsatvāḥ svakasvakān nirdeśān nirdiśanti sma, ye caiṣāṃ tena satpuruṣeṇa sārdham antarākathāsamudāhārā abhūvan, na cotsahante gantum // //</p>
+
+<p>śrāvakabodhisatvavisarjanapraśno nāma tṛtīyaḥ parivartaḥ //</p>
+
+<p>Vkn 4.1 tatra bhagavān mañjuśriyaṃ kumārabhūtam āmantrayate sma: gaccha tvaṃ mañjuśrīḥ vimalakīrter licchaver glānaparipṛcchakaḥ /</p>
+
+<p>mañjuśrīr apy āha: kiṃ cāpi durāsado 'sau bhagavan vimalakīrtir licchaviḥ, gambhīranayapratibhānapraviṣṭaḥ, vyastasamastavacananirhārakuśalaḥ, aviṣṭhitapratibhānaḥ, apratimabuddhiḥ sarvasatveṣu, sarvabodhisatvakriyāsu niryātaḥ, sarvabodhisatvasarvabuddhaguhyasthāneṣu supraviṣṭaḥ, sarvamārasthānavivartanakuśalamahābhijñāvikrīḍitaḥ, advayāsaṃbhedadharmadhātugocaraparamapāramiprāptaḥ, ekavyūhadharmadhātvanantākāravyūhadharmanirdeśakaḥ, sarvasatvendriyavyūhasaṃprāpaṇajñānakuśalaḥ, upāyakauśalyagatiṃgataḥ, prāptapraśnaviniścayaḥ / sa na śakyo 'lpakena saṃnāhenābhirādhayitum / atha ca punar gamiṣyāmi buddhādhiṣṭhānena, tatra yathāśakti yathābalaṃ nirdekṣyāmi /</p>
+
+<p>Vkn 4.2 atha tataḥ parṣadas teṣāṃ bodhisatvānāṃ teṣāṃ ca śrāvakāṇāṃ teṣāṃ ca śakrabrahmalokapālānāṃ teṣāṃ ca devaputrāṇām etad abhavat: niścayena tatra mahādharmaśravaṇasāṃkathyaṃ bhaviṣyati, yatra mañjuśrīḥ kumārabhūtaḥ sa ca satpuruṣa ubhau saṃlapiṣyataḥ / tatrāṣṭau ca bodhisatvasahasrāṇi pañcamātrāṇi ca śrāvakaśatāni saṃbahulāś ca śakrabrahmalokapālāḥ saṃbahulāni ca devaputraśatasahasrāṇi mañjuśriyam anubaddhāni dharmaśravaṇāya / atha mañjuśrīḥ kumārabhūtas tair bodhisatvair mahāsatvais taiś ca śrāvakais taiś ca śakrabrahmalokapālair devaputraiś ca parivṛto vaiśālīṃ mahānagarīṃ praviśati sma /</p>
+
+<p>Vkn 4.3 atha vimalakīrter etad abhavat: ayaṃ mañjuśrīḥ kumārabhūta āgacchati mahatā parivāreṇa / yan nv ahaṃ śūnyaṃ gṛham adhitiṣṭheyam / tena taṃ gṛhaṃ śūnyam adhiṣṭhitam apagatadvārapālam / na tatra mañcā vā pīṭhā vāsanāni vā saṃdṛśyante 'nyatraikasmān mañcāt, yatrātmanā glānaḥ samārūḍhaḥ śayitaḥ /
+Vkn 4.4 atha mañjuśrīḥ saparivāro yena vimalakīrter niveśanaṃ tenopasaṃkrāmat / upasaṃkramya praviśati sma / sa taṃ gṛhaṃ śūnyam apaśyad vigatadvārapālam / na cātra mañcān vā pīṭhān vāpaśyad anyatraikamañcāt, yatra vimalakīrtiḥ śayitaḥ / atha vimalakīrtir licchavir mañjuśriyaṃ kumārabhūtam adrākṣīt / dṛṣṭvā ca punar evam āha: svāgataṃ mañjuśriyo 'svāgataṃ mañjuśriyo 'nāgatasyādṛṣṭaśrutapūrvasya darśanam /</p>
+
+<p>mañjuśrir āha: evam etad gṛhapate yathā vadasi / ya āgato na sa bhūya āgamiṣyati / yaś ca gato na sa bhūyo gamiṣyati / tat kasmād dhetoḥ / na cāgatasyāgamanaṃ prajñāyate, na ca gatasya gamanam, yaś ca dṛṣṭo na bhūyo draṣṭavyaḥ /</p>
+
+<p>Vkn 4.5 api tu kaccit te satpuruṣa kṣapaṇīyam, kaccid yāpanīyam, kaccid vātena pratikupyanti dhātavaḥ, kaccid apagacchati vyādhir na vivardhate / bhagavāṃs te 'lpābādhatāṃ paripṛcchati, alpātaṅkatāṃ cālpaglānyatāṃ ca laghūtthānatāṃ ca yatrāṃ ca balaṃ ca sukhaṃ cānavadyatāṃ ca sparśavihāratāṃ ca /</p>
+
+<p>Vkn 4.6 kutra te gṛhapate idaṃ vyādhisamutthānam / kiyacciram upādāya te vyādhiḥ / kadā copaśamiṣyati /</p>
+
+<p>vimalakirtir āha: yāvacciram upādāya mañjuśrīḥ avidyā bhavatṛṣṇā ca tāvacciram upādāya mamaiṣa vyādhiḥ / yadā ca sarvasatvā vigatavyādhayo bhaviṣyanti tadā mama vyādhiḥ praśrabdho bhaviṣyati / tat kasmād dhetoḥ / satvādhiṣṭhāno hi mañjuśrīḥ bodhisatvasya saṃsāraḥ / saṃsāraniśritaś ca vyādhiḥ / yadā sarvasatvā vigatavyādhayo bhaviṣyanti tadā bodhisatvo 'rogo bhaviṣyati /</p>
+
+<p>Vkn 4.7 tadyathā mañjuśrīḥ śreṣṭhina ekaputrako glāno bhavet / tasya mātāpitarāv api glānau syātām / tāvac ca duḥkhitau bhavetāṃ yāvan nāsāv ekaputrakas tayor vigatavyādhiḥ syāt / evaṃ mañjuśrīḥ bodhisatvasya sarvasatveṣv ekaputrakaprema / sa satvaglānyena glāno bhavati, satvārogyāt tv arogaḥ / yat punar mañjuśriḥ evaṃ vadasi ḥ kutaḥ samutthito vyādhir iti, mahākaruṇāsamutthito bodhisatvānāṃ vyādhiḥ /</p>
+
+<p>Vkn 4.8 mañjuśrīr āha: śūnyaṃ te gṛhapate gṛham / na ca te kaścid upasthāyakaḥ /</p>
+
+<p>āha: sarvabuddhakṣetrāṇy api mañjuśriḥ śūnyāni /</p>
+
+<p>āha: kena śūnyāni /</p>
+
+<p>āha: śūnyatayā śūnyāni /</p>
+
+<p>āha: śūnyatāyāḥ kā śūnyatā /</p>
+
+<p>āha: aparikalpanāś ca śūnyatāyāḥ śūnyatāḥ /</p>
+
+<p>āha: śakyā punaḥ śūnyatā parikalpayitum /</p>
+
+<p>āha: yenāpi parikalpyeta tad api śūnyam / na ca śūnyatā śūnyatāṃ parikalpayati /</p>
+
+<p>āha: śūnyatā gṛhapate kuto mārgitavyā /</p>
+
+<p>āha: śūnyatā mañjuśrīḥ dvāṣaṣṭibhyo dṛṣṭigatebhyo mārgitavyā /</p>
+
+<p>āha: dvāṣaṣṭiḥ punar dṛṣṭigatāni kuto mārgitavyāni /</p>
+
+<p>āha: tathāgatavimuktito mārgitavyāni /</p>
+
+<p>āha: tathāgatavimuktiḥ punaḥ kuto mārgitavyā /</p>
+
+<p>āha: sarvasatvacittacaritebhyo mārgitavyā / yat punar mañjuśrīḥ evaṃ vadasi ḥ kas ta upasthāyaka iti / sarvamārāḥ sarvaparapravādinaś ca mamopasthāyakāḥ / tat kasmād dhetoḥ / mārā hi saṃsārasya varṇavādinaḥ / saṃsāraś ca bodhisatvasyopasthāyakaḥ / parapravādino dṛṣṭigatānāṃ varṇavādinaḥ / bodhisatvaś ca sarvadṛṣṭigatebhyo na calati / tasmāt sarvamārāḥ sarvaparapravādinaś ca mamopasthāyakāḥ /</p>
+
+<p>Vkn 4.9 mañjuśrīr āha: kidṛśo 'yaṃ te gṛhapate vyādhiḥ /</p>
+
+<p>āha: adṛśyo 'nidarśanaḥ /</p>
+
+<p>āha: kim eṣa vyādhiḥ kāyasaṃprayukta uta cittasaṃprayuktaḥ /</p>
+
+<p>āha: na kāyasaṃprayuktaḥ kāyaviviktatayā / na cittasaṃprayukto māyādharmatayā cittasya /</p>
+
+<p>āha: catvāra ime gṛhapate dhātavaḥ / katame catvāraḥ, yad uta pṛthivīdhātur abdhātus tejodhātur vāyudhātur iti / tat katamas tatra dhātur bādhate /</p>
+
+<p>āha: ya evaṃ dhātuko mañjuśrīḥ sarvasatvānāṃ vyādhis tenāhaṃ vyādhitaḥ /</p>
+
+<p>Vkn 4.10 api tu khalu punar mañjuśrīḥ kathaṃ bodhisatvena glānako bodhisatvaḥ pratisaṃmoditavyaḥ /</p>
+
+<p>mañjuśrīr āha: kāyānityatayā na ca nirvidvirāgatayā, kāyaduḥkhatayā na ca nirvāṇābhinandanatayā, kāyānātmatayā satvaparipācanatayā ca, kāyaśāntatayā na cātyantaśamatayā, sarvaduścaritadeśanatayā na ca saṃkrāntitaḥ, svaglānyena parasatvaglānakaruṇatayā, pūrvāntakoṭīduḥkhānusmaraṇatayā, satvārthakriyānusmaraṇatayā, kuśalamūlābhimukhīkaraṇatayā, ādiviśuddhatayā, aparitarṣaṇatayā, sadāvīryāraṃbhāc ca, vaidyarājo bhaviṣyasi sarvavyādhīnāṃ śamayiteti / evaṃ bodhisatvena bodhisatvo glānaḥ pratisaṃmoditavyaḥ /</p>
+
+<p>Vkn 4.11 mañjuśrīr āha: kathaṃ kulaputra bodhisatvena glānena svacittaṃ nidhyapayitavyam /</p>
+
+<p>vimalakīrtir āha: iha mañjuśrīḥ bodhisatvena glānenaivaṃ svacittaṃ nidhyapayitavyam / pūrvāntāsadviparyāsakarmasamutthānasamutthito 'yaṃ vyādhir abhūtaparikalpakleśasamutthitaḥ / na punar atra kaścit paramārthato dharma upalabhyate yasyaiṣa vyādhiḥ / tat kasmād dhetoḥ / cāturmahābhautiko 'yaṃ samucchrayaḥ / na caiṣāṃ dhātūnāṃ kaścit svāmī na samutthāpayitā / anātmā hy ayaṃ samucchrayaḥ / yo 'yaṃ vyādhir nāma nāyaṃ paramārthata upalabhyate, anyatrātmābhiniveśāt / uta nātmany abhiviniṣṭā vihariṣyāmo vyādhimūlaparijñātāvinaḥ / tenātmasaṃjñāṃ viṣṭhāpya dharmasaṃjñotpādayitavyā / dharmasaṃghāto 'yaṃ kāyaḥ / dharmā evotpadyamānā utpadyante / dharmā eva nirudhyamānā nirudhyante / te ca dharmāḥ parasparaṃ na cetayanti na jānanti / na ca teṣām utpadyamānānām evaṃ bhavaty utpadyāmaha iti / na nirudhyamānānām evaṃ bhavati nirudhyāmaha iti /</p>
+
+<p>Vkn 4.12 tena dharmasaṃjñāyā evaṃ cittam utpādayitavyam / yāpy eṣā dharmasaṃjñā so 'pi viparyāsaḥ / viparyāsaś ca mahāvyādhiḥ / vigatavyādhikena ca mayā bhavitavyam / vyādhiprahāṇāya ca yogaḥ karaṇīyaḥ / tatra katamad vyādhiprahāṇam, yad idam ahaṃkāramamakāraprahāṇam / tac ca katamad ahaṃkāramamakāraprahāṇam, yad idaṃ dvayavigamaḥ / tatra katamo dvayavigamaḥ, yad idam adhyātmaṃ bahirdhā ca samudācāraḥ / tatra katamo 'dhyātmaṃ bahirdhā samudācāraḥ, yad uta samatayācalanatāpracalanatā / katamā ca samatā / ātmasamatayā ca nirvāṇasamatā / tat kasmād dhetoḥ / ubhe 'py ete śūnye, yad utātmā nirvāṇaṃ ca / kenaite śūnye / nāmodāhāreṇaite śūnye / ubhāv apy etāv apariniṣpannau, yad utātmā nirvāṇaṃ ca / tena samadarśinā nānyo vyādhir nānyā śūnyatā kartavyā / vyādhir eva śūnyatā /</p>
+
+<p>Vkn 4.13 aviditā ca sā vedanā veditavyā / na cānena vedanānirodhaḥ sākṣātkartavyaḥ / aparipūrṇeṣu buddhadharmeṣūbhe vedane notsraṣṭavye / na ca durgatyupapannānāṃ satvānām antike mahākaruṇā notpādayitavyā / tathā kariṣyāmo yathaiṣāṃ satvānām evam ayoniśonidhyaptyā vyādhim apaneṣyāmaḥ /</p>
+
+<p>Vkn 4.14 na caiṣāṃ kaṃcid dharmam upaneṣyāmo nāpaneṣyāmaḥ / yato nidānāc ca punar vyādhir utpadyate tasya parijñāyai tebhyo dharmaṃ deśayiṣyāmaḥ / katamac ca punar nidānam, yad idam adhyālambananidānam / yāvatādhyālambananidānam adhyālambate, tāvad vyādhinidānam / kiṃ cādhyālambate, traidhātukam adhyālambate / tasyādhyālambanatayā kā parijñā, yad idam ālambanānupalambhaḥ / yaṃ hi nopalabhyate taṃ nālambate / kiṃ ca nopalabhate, ubhe dṛṣṭī nopalabhate, yad idam ātmadṛṣṭiṃ paradṛṣṭiṃ ca / tad ucyate 'nupalambha iti / evaṃ hi mañjuśrīḥ glānena bodhisatvena svacittaṃ nidhyapayitavyaṃ jarāvyādhimaraṇopapattiprahāṇāya / evaṃ ca mañjuśrīḥ bodhisatvānāṃ bodhir yadi na bhavet, nirarthako nanu vyāyāmo bhavet / yathā pratyarthikanirghātāc churā ity ucyante, evam eva jarāvyādhimaraṇaduḥkhopaśamanād bodhisatvā ity ucyante /</p>
+
+<p>Vkn 4.15 tena bodhisatvena vyādhitenaivaṃ pratyavekṣitavyam / yathā mama vyādhir abhūto 'sann evaṃ sarvasatvānām api vyādhir abhūto 'sann iti / tasyaivaṃ pratyavekṣamāṇasya nānuśaṃsādṛṣṭipatitā satveṣu mahākaruṇotpadyate, anyatrāgantukakleśaprahāṇābhiyuktyā satveṣu mahākaruṇotpadyate / tat kasmād dhetoḥ / anuśaṃsadṛṣṭipatitayaiva hi mahākaruṇayā bodhisatvasya khedo bhavaty upapattiṣu / anuśaṃsadṛṣṭiparyutthānavigatayā punar mahākaruṇayā bodhisatvasya khedo na bhavaty upapattiṣu / so 'yam upapadyate, na ca dṛṣṭiparyutthānaparyutthita upapadyate / so 'paryutthitacitta upapadyamāno mukta evotpadyate mukta eva jāyate / sa mukta evotpadyamāno mukta eva jāyamāno baddhānāṃ satvānāṃ śaktaḥ pratibalo bandhamokṣāya dharmaṃ deśayitum / yathoktaṃ bhagavatā sa tāvad ātmanā baddhaḥ paraṃ bandhanān mocayiṣyatīti nādaṃ sthānaṃ vidyate / yas tv ātmanā muktaḥ paraṃ bandhanān mocayiṣyatīti sthānam etad vidyate tasmān muktena bodhisatvena bhavitavyam, na baddhena /</p>
+
+<p>Vkn 4.16 tatra katamo bandhaḥ, katamo mokṣaḥ / anupāyād bhavagatiparigraho bodhisatvasya bandhaḥ, upāyād bhavagatigamanaṃ mokṣaḥ / anupāyād dhyānasamādhyāsvādanatā bodhisatvasya bandhaḥ, upāyena dhyānasamādhyāsvādanatā mokṣaḥ / anupāyasaṃgṛhītā prajñā bandhaḥ, upāyasaṃgṛhītā prajñā mokṣaḥ / prajñayāsaṃgṛhīta upāyo bandhanam, prajñāsaṃgṛhīta upāyo mokṣaḥ /</p>
+
+<p>Vkn 4.17 tatra katamo 'nupāyasaṃgṛhītā prajñā bandhaḥ, yad idaṃ śūnyatānimittāpraṇihitanidhyaptiḥ, na ca lakṣaṇānuvyañjanabuddhakṣetrālaṃkārasatvaparipācananidhyaptiḥ / iyam anupāyasaṃgṛhītā prajñā bandhaḥ / tatra katamopāyasaṃgṛhītā prajñā mokṣaḥ, yad idaṃ lakṣanānuvyañjanabuddhakṣetrālaṃkārasatvaparipācananidhyapticittaṃ ca śūnyatānimittāpraṇihitaparijayaś ca / iyam upāyasaṃgṛhītā prajñā mokṣaḥ / tatra katamaḥ prajñayāsaṃgṛhīta upāyo bandhaḥ, yad idaṃ sarvadṛṣṭikleśaparyutthānānuśayānunayapratighapratiṣṭhitasya sarvakuśalamūlārambho bodhau cāpariṇāmanā / ayaṃ prajñayāsaṃgṛhīta upāyo bandhaḥ / tatra katamaḥ prajñāsaṃgṛhīta upāyo mokṣaḥ, yad idaṃ sarvadṛṣṭikleśaparyutthānānuśayānunayapratighaprahīṇasya sarvakuśalamūlārambho bodhau pariṇāmitas tasya cāparāmarśaḥ / ayaṃ bodhisatvasya prajñāsaṃgṛhīta upāyo mokṣaḥ /</p>
+
+<p>Vkn 4.18 tatra mañjuśrīḥ glānena bodhisatvenaivam ime dharmā nidhyapayitavyāḥ / yatl kāyasya cittasya ca vyādheś cānityaduḥkhaśūnyānātmapratyavekṣaṇā, iyam asya prajñā / yat punaḥ kāyavyādhipariharaṇatayā na khidyate, na pratibadhnāti saṃsāram, satvārthayogam anuyuktaḥ, ayam asyopāyaḥ / punar aparaṃ yat kāyasya vyādheś cittasya cānyonyaparāparatāṃ na nirnavatāniḥpurāṇatāṃ pratyavekṣate, iyam asya prajñā / yat punaḥ kāyasya vyādheś cittasya ca nātyantopaśamaṃ nirodham atyayati, ayam asyopāyaḥ /</p>
+
+<p>Vkn 4.19 evaṃ hi mañjuśriḥ glānena bodhisatvena cittaṃ nidhyapayitavyam / na ca tena nidhyaptau vānidhyaptau vā sthātavyam / tat kasmād dhetoḥ / yadi hy anidhyaptau tiṣṭhed bāladharma eṣaḥ / atha nidhyaptau tiṣṭhec chrāvakadharma eṣaḥ / tasmād bodhisatvena na nidhyaptau sthātavyam / yad atrāsthānam ayaṃ bodhisatvasya gocaraḥ /</p>
+
+<p>Vkn 4.20 yan na pṛthagjanagocaro nāryagocaraḥ, ayaṃ bodhisatvasya gocaraḥ / yat saṃsāragocaraś ca na ca kleśagocaraḥ, ayaṃ bodhisatvasya gocaraḥ / yan nirvāṇapratyavekṣaṇagocaraś ca na cātyantaparinirvāṇagocaraḥ, ayaṃ bodhisatvasya gocaraḥ / yac caturmārasaṃdarśanagocaraś ca sarvamāraviṣayātikrāntagocaraś ca, ayaṃ bodhisatvasya gocaraḥ / yat sarvajñajñānaparyeṣṭigocaraś ca na cākāle jñānaprāptigocaraḥ, ayaṃ bodhisatvasya gocaraḥ / yac catuḥsatyajñānagocaraś ca na cākāle satyaprativedhagocaraḥ, ayaṃ bodhisatvasya gocaraḥ / yad adhyātmapratyavekṣaṇagocaraś ca saṃcintyabhavopapattiparigrahagocaraś ca, ayaṃ bodhisatvasya gocaraḥ / yad ajātipratyavekṣaṇagocaraś ca na ca niyāmāvakrāntigocaraḥ, ayaṃ bodhisatvasya gocaraḥ / yat pratītyasamutpādagocaraś ca sarvadṛṣṭivigatagocaraś ca, ayaṃ bodhisatvasya gocaraḥ / yat sarvasatvasaṃgaṇikāgocaraś ca na ca kleśānuśayagocaraḥ, ayaṃ bodhisatvasya gocaraḥ / yad vivekagocaraś ca na ca kāyacittakṣayaniśrayagocaraḥ, ayaṃ bodhisatvasya gocaraḥ / yat traidhātukagocaraś ca na ca dharmadhātusaṃbhedagocaraḥ, ayaṃ bodhisatvasya gocaraḥ / yac chūnyatāgocaraś ca sarvākāraguṇaparyeṣṭigocaraś ca, ayaṃ bodhisatvasya gocaraḥ / yad ānimittagocaraś ca satvapramocanārambaṇavitarkagocaraś ca, ayaṃ bodhisatvasya gocaraḥ / yad apraṇihitagocaraś ca saṃcintyabhavagatisaṃdarśanagocaraś ca, ayaṃ bodhisatvasya gocaraḥ / yad anabhisaṃskāragocaraś ca sarvakuśalamūlābhisaṃskārāpratiprasrabdhigocaraś ca, ayaṃ bodhisatvasya gocaraḥ / yat ṣaṭpāramitāgocaraś ca sarvasatvacittacaritapāragamanagocaraś ca, ayaṃ bodhisatvasya gocaraḥ / yat ṣaḍanusmṛtigocaraś ca na ca sarvāsravakṣayagocaraḥ, ayaṃ bodhisatvasya gocaraḥ / yat saddharmapratiṣṭhānagocaraś ca na ca kumārgādhyālambanagocaraḥ, ayaṃ bodhisatvasya gocaraḥ / yat ṣaḍabhijñāgocaraś ca na cāsravakṣayagocaraḥ, ayaṃ bodhisatvasya gocaraḥ / yac caturapramāṇagocaraś ca na ca brahmalokopapattisparśanagocaraḥ, ayaṃ bodhisatvasya gocaraḥ / yad dhyānasamādhisamāpattigocaraś ca na ca samādhisamāpattivaśenopapattigocaraḥ, ayaṃ bodhisatvasya gocaraḥ / yat smṛtyupasthānagocaraś ca na ca kāyavedanācittadharmātyarthagocaraḥ, ayaṃ bodhisatvasya gocaraḥ / yat samyakprahāṇagocaraś ca na ca kuśalākuśaladvayopalambhagocaraḥ, ayaṃ bodhisatvasya gocaraḥ / yad ṛddhipādābhinirhāragocaraś cānābhogarddhipādavaśavartigocaraś ca, ayaṃ bodhisatvasya gocaraḥ / yat pañcendriyagocaraś ca sarvasatvendriyaparāparajñānagocaraś ca, ayaṃ bodhisatvasya gocaraḥ / yat pañcabalapratiṣṭhānagocaraś ca daśatathāgatabalābhisaṃdarśanagocaraś ca, ayaṃ bodhisatvasya gocaraḥ / yat saptabodhyaṅgapariniṣpattigocaraś ca buddhiprabhedajñānakauśalyagocaraś ca, ayaṃ bodhisatvasya gocaraḥ / yan mārgapratiṣṭhānagocaraś ca kumārgānadhyālambanagocaraś ca,
+ayaṃ bodhisatvasya gocaraḥ / yac chamathavidarśanāsaṃbhāraparyeṣṭigocaraś ca na cātyantaśāntipatanagocaraḥ, ayaṃ bodhisatvasya gocaraḥ / yad anutpādalakṣaṇasarvadharmamīmāṃsanagocaraś ca rūpalakṣanānuvyañjanabuddhakāyālaṃkārapariniṣpattigocaraḥ, ayaṃ bodhisatvasya gocaraḥ / yac chrāvakapratyekabuddhākalpasaṃdarśanagocaraś ca buddhadharmātyajanagocaraś ca, ayaṃ bodhisatvasya gocaraḥ / yad atyantaviśuddhiprakṛtisamāpannasarvadharmānugamanagocaraś ca yathādhimuktisarvasatveryāpathasaṃdarśanagocaraś ca, ayaṃ bodhisatvasya gocaraḥ / yad atyantāsaṃvartavivartākāśasvabhāvasarvabuddhakṣetrapratyavekṣaṇagocaraś ca nānāvyūhānekavyūhabuddhakṣetraguṇavyūhasaṃdarśanagocaraś ca, ayaṃ bodhisatvasya gocaraḥ / yad dharmacakrapravartanamahāparinirvāṇasaṃdarśanagocaraś ca bodhisatvacaryātyajanagocaraś ca, ayam api bodhisatvasya gocaraḥ /</p>
+
+<p>iha nirdeśe nirdiśyamāne ye mañjuśriyā kumārabhūtena sārdham āgatā devaputrās tato 'ṣṭānāṃ devaputrasahasrāṇām anuttarāyāṃ samyaksaṃbodhau cittāny utpannāni // //</p>
+
+<p>glānapratisaṃmodanāparivartaś caturthaḥ //</p>
+
+<p>Vkn 5.1 athāyuṣmataḥ śāriputrasyaitad abhavat: kutreme bodhisatvā niṣatsyanti, ime ca mahāśrāvakāḥ / neha gṛha āsanāni saṃvidyante /</p>
+
+<p>atha vimalakīrtir licchavir āyuṣmataḥ śāriputrasya cetovitarkam ājñāyāyuṣmantaṃ śāriputram etad avocat: kiṃ bhadantaśāriputro dharmārthika āgata utāsanārthikaḥ /</p>
+
+<p>āha: dharmārthikā vayam āgatā nāsanārthikāḥ /</p>
+
+<p>Vkn 5.2 āha: tena hi bhadantaśāriputra yo dharmarthiko bhavati, nāsau svakāyārthiko bhavati / kiṃ punar āsanārthiko bhaviṣyati / yo bhadantaśāriputra dharmārthiko bhavati, na sa rūpavedanāsaṃjñāsaṃskāravijñānārthiko bhavati, na skandhadhātvāyatanārthikaḥ / yo dharmārthikaḥ, na sa kāmadhāturupadhātvārūpyadhātvarthiko bhavati, nāsau buddhābhiniveśārthiko bhavati, na dharmasaṃghābhiniveśārthikaḥ /</p>
+
+<p>Vkn 5.3 punar aparaṃ bhadantaśāriputra yo dharmārthikaḥ, nāsau duḥkhaparijñānārthiko na samudayaprahāṇārthiko na nirodhasākṣātkriyārthiko na mārgabhāvanārthiko bhavati / tat kasmād dhetoḥ / aprapañco hi dharmo nirakṣaraḥ / tatra yaḥ prapañcayati ḥ duḥkhaṃ parijñāsyāmi samudayaṃ prahāsyāmi nirodhaṃ sākṣātkariṣyāmi mārgaṃ bhāvayiṣyāmīti, nasau dharmārthikaḥ, prapañcārthiko 'sau / dharmo hi bhadantaśāriputra upaśāntaḥ / tatra ya utpādavyaye caranti, na te dharmārthikā na vivekārthikāḥ, utpādavyayārthikās te / dharmo hy arajo rajo'pagataḥ / tatra ye kvacid dharme rakṣante 'ntaśo nirvāṇe 'pi, na te dharmārthikāḥ, rajo'rthikās te / dharmo hy aviṣayaḥ / ye viṣayasaṃkhyātāḥ, na te dharmārthikāḥ, viṣayārthikās te / dharmo nāyūho niryūhaḥ / ye kecid dharmaṃ gṛhṇanti vā muñcanti vā, na te dharmārthikāḥ, udgrahaniḥsargārthikās te /</p>
+
+<p>Vkn 5.4 dharmo 'nālayaḥ / ya ālayārāmāḥ, na te dharmārthikāḥ, ālayārthikās te / dharmo nirnimittaḥ / yeṣāṃ nimittānusārivijñānam, na te dharmārthikāḥ, nimittārthikās te / dharmo 'saṃvāsaḥ / ye kecid dharmeṇa sārdhaṃ saṃvasanti, na te dharmārthikāḥ, saṃvāsārthikās te / dharmo 'dṛṣṭaśrutamatavijñātaḥ / ye dṛṣṭaśrutamatavijñāteṣu caranti, na te dharmārthikāḥ, dṛṣṭaśrutamatavijñātārthikās te /</p>
+
+<p>Vkn 5.5 dharmo bhadantaśāriputra asaṃskṛtaḥ saṃskṛtāpagataḥ / ye saṃskṛtagocarāḥ, na te dharmārthikāḥ, saṃskṛtodgrahaṇārthikās te / tasmād iha bhadantaśāriputra dharmārthikena te bhavitukāmena sarvadharmānarthikena bhavitavyam / iha dharmanirdeśe nirdiśyamāne pañcānāṃ devaputraśatānāṃ dharmeṣu dharmacakṣur viśuddham /</p>
+
+<p>Vkn 5.6 atha vimalakīrtir licchavir mañjuśriyaṃ kumārabhūtam āmantrayate sma: tvaṃ mañjuśrīḥ daśasu dikṣv asaṃkhyeyeṣu buddhakṣetraśatasahasreṣu buddhakṣetracārikāṃ carasi / tat katarasmin buddhakṣetre tvayā sarvaviśiṣṭāni sarvaguṇopetāni siṃhāsanāni dṛṣṭāni / evam ukte mañjuśrīḥ kumārabhūto vimalakīrtiṃ licchavim etad avocat: asti kulaputra pūrve digbhāge ṣaṭtriṃśadgaṅgānadīvālikāsamāni buddhakṣetrāṇy atikramya merudhvajā nāma lokadhātuḥ / tatra merupradīparājo nāma tathāgato 'rhan samyaksaṃbuddhas tiṣṭhati dhriyate yāpayati / tasya tathāgatasya caturaśītiyojanaśatasahasra ātmabhāvaḥ / aṣṭaṣaṣṭiyojanaśatasahasraṃ tasya bhagavataḥ siṃhāsanam / teṣāṃ ca bodhisatvānāṃ catvāriṃśadyojanaśatasahasra ātmabhāvaḥ / catustriṃśadyojanaśatasahāsrāni teṣāṃ bodhisatvānāṃ siṃhāsanāni / merudhvajāyāṃ lokadhātau tasya bhagavato merupradīparājasya tathāgatasya buddhakṣetre sarvaviśiṣṭāni sarvagunopetāni siṃhāsanāni /</p>
+
+<p>Vkn 5.7 atha vimalakīrtir licchavis tasyāṃ velāyāṃ tathārūpaṃ samanvāhāraṃ samanvāharati sma / tādṛśaṃ carddhyabhisaṃskāram abhisaṃskṛtavān, yat tato merudhvajālokadhātor dvātriṃśatsiṃhāsanaśatasahasrāṇi tena bhagavatā merupradīparājena tathāgatena preṣitāni / tāvad udviddhāni tāvad vistīrṇāni tāvad darśanīyāni yad apūrvāṇi tair bodhisatvais taiś ca mahāśrāvakais taiś ca śakrabrahmalokapālair devaputraiś ca / tāny upary antarīkṣeṇāgatya vimalakirter licchaver niveśane pratyatiṣṭhan / tac ca gṛhaṃ tāvad vistīrṇaṃ saṃdṛśyate, yatra tāni dvātriṃśatsiṃhāsanaśatasahasrāṇi vicitrāṇy anutpīḍanatayā / na ca vaiśālyā mahānagaryā āvaraṇaṃ kṛtam, na jambūdvīpasya, na cāturdvīpikasyāvaraṇam / sarve te tathaiva saṃdṛśyante yathā pūrvaṃ tathā paścāt /</p>
+
+<p>Vkn 5.8 atha vimalakīrtir licchavir mañjuśriyaṃ kumārabhūtam etad avocat: niṣida tvaṃ mañjuśrīḥ siṃhāsane sārdham etair bodhisatvaiḥ / tādṛśāṃś cātmabhāvān adhitiṣṭhata yat siṃhāsaneṣv anurūpāḥ syuḥ /</p>
+
+<p>atha ye 'bhijñāpratilabdhā bodhisatvās te dvācatvāriṃśadyojanaśatasahasram ātmabhāvam adhiṣṭhāya teṣu siṃhāsaneṣu nisīdanti sma / ye cādikarmikā bodhisatvās te na śaknuvanti sma teṣu siṃhāsaneṣu niṣattum /</p>
+
+<p>atha vimalakīrtir licchavir āyuṣmantaṃ śāriputram āmantrayate sma: niṣīda bhadantaśāriputra siṃhāsane /</p>
+
+<p>āha: na śaknomi satpuruṣa niṣattum uccāni pragṛhitāni cemāni siṃhāsanāni /</p>
+
+<p>āha: tena hi bhadantaśāriputra tasyaiva bhagavato merupradīparājasya tathāgatasya namaskāraṃ kuru / tataḥ śakṣyasi niṣattum /</p>
+
+<p>atha te mahāśrāvakās tasya bhagavato merupradīparājasya tathāgatasya namaskāraṃ kurvanti sma / te tatra paścāt teṣu siṃhāsaneṣu nyaṣīdan /</p>
+
+<p>Vkn 5.9 athāyuṣmāñ śāriputro vimalakirtiṃ licchavim evam āha: āścaryaṃ kulaputra yad ihaivaṃ parītte gṛha imānīyanti siṃhāsanasahasrāṇy evam uccāny evaṃ pragṛhītāni vicitrāṇi / na ca vaiśālyā mahānagaryā āvaraṇaṃ kṛtam, na jambūdvīpasya, na grāmanagaranigamajanapadarāṣṭrarājadhānīnām, na cāturmahādvīpikasya kiṃcid āvaraṇam, na devanāgayakṣagandharvāsuragaruḍakinnaramahoragāṇām āvaraṇaṃ kṛtam / tathaiva saṃdṛśyante yathā pūrvaṃ tathā paścāt /</p>
+
+<p>Vkn 5.10 vimalakīrtir āha: asti bhadantaśāriputra tathāgatānāṃ bodhisatvānāṃ cācintyo nāma vimokṣaḥ, yatrācintyavimokṣe pratiṣṭhito bodhisatvaḥ sumeruṃ parvatarājaṃ tāvad uccaṃ tāvat pragṛhītaṃ tāvad udviddhaṃ tāvad vistīrṇaṃ sarṣapaphalakośe praveśayet / na ca sarṣapaphalakośaṃ vivardhayet / na ca sumeruṃ hāpayet / tāṃ ca kriyām ādarśayet / na cāturmahārājakāyikā devās trayastriṃśato vā jānīran ḥ kasmin vayaṃ prakṣiptāḥ / anye ca satvā ṛddhivineyā jānīyuḥ paśyeyus taṃ sumeruṃ parvatarājaṃ sarśapaphalakośapraviṣṭam / ayaṃ bhadantaśāriputra bodhisatvānām acintyasya vimokṣasya viṣayapraveśaḥ /</p>
+
+<p>Vkn 5.11 punar aparaṃ bhadantaśāriputra acintyavimokṣapratiṣṭhito bodhisatvo yaś caturṣu mahāsamudreṣv apskandhas tam ekasmin romakūpe prakṣipet / na ca matsyakacchapaśiśumāramaṇḍūkānām anyeṣāṃ vaudakānāṃ prāṇināṃ pīḍā bhavet / na ca nāgayakṣagandharvāsurāṇām evaṃ bhavet ḥ kasmin vayaṃ prakṣiptāḥ / sā ca kriyā prajñāyeta / na ca kaścit satvo vihiṃsito viheṭhito vā bhavet /</p>
+
+<p>Vkn 5.12 imaṃ ca trisāhasramahāsāhasraṃ lokadhātuṃ bhārgavacakram iva parigṛhya dakṣiṇe pāṇāv avabhrāmya gaṅgānadīvālikāsamān lokadhātūn kṣipet / na ca satvā jānīran ḥ kasmin vayaṃ nītāḥ, kuto vāgatā iti / punar api cānāyya yathāsthānaṃ sthāpayet / na ca gamanāgamanaṃ saṃjānīran / sā ca kriyā saṃdṛśyeta /</p>
+
+<p>Vkn 5.13 punar aparaṃ bhadantaśāriputra santi satvā apramāṇasaṃsāravainayikāḥ / santi saṃkṣiptasaṃsāravainayikāḥ / tatrācintyavimokṣapratiṣṭhito bodhisatvo 'pramāṇasaṃsāravainayikānāṃ satvānāṃ vainayikavaśam upādāya saptarātraṃ kalpam atikrāntam ādarśayet / saṃkṣiptasaṃsāravainayikānāṃ satvānāṃ vainayikavaśam upādāya kalpaṃ saptarātram atikrāntam ādarśayet / tatrāpramāṇasaṃsāravineyāḥ satvāḥ saptarātraṃ kalpam atikrāntaṃ saṃjānīran I saṃkṣiptasaṃsāravineyāḥ satvāḥ kalpaṃ saptarātram atikrāntaṃ saṃjānīran /</p>
+
+<p>Vkn 5.14 iti hy acintyavimokṣapratiṣṭhito bodhisatvaḥ sarvabuddhakṣetraguṇavyūhān ekasmin buddhakṣetre saṃdarśayati / sarvasatvān api dakṣiṇe karatale pratiṣṭhāpya cittajāyikayarddhyā kramet / sarvabuddhakṣetreṣu ca saṃdarśanaṃ dadyāt / na caikato 'pi kṣetrāc calet / yāvatyaś ca daśasu dikṣu buddhānāṃ bhagavatāṃ pūjā vartante, tāḥ sarvā ekaromakūpa ādarśayet / yāvantaś ca daśasu dikṣu candrasūryās tārārūpāni ca, tāny api sarvāṇy ekaromakūpa ādarśayet / yāvatyaś ca daśasu dikṣu vātamaṇḍalyaḥ pravānti, tā api sarvā mukhadvāre praveśayet / na cāsya kāyo vikīryeta / na ca tatra buddhakṣetre tṛṇavanaspatayo nameyuḥ /</p>
+
+<p>Vkn 5.15 yāni ca daśasu dikṣu buddhakṣetrāṇy uddahyante kalpoddāhena, tad api sarvam agniskandhaṃ svamukhe prakṣipet / yac ca tena karma kartavyaṃ bhavet, tac ca kuryāt / yac cāvastād gaṅgānadīvālikākoṭīsameṣu buddhakṣetreṣv atikramya buddhakṣetram, tad abhyutkṣipyordhaṃ digbhāgaṃ gaṅgānadīvālikākoṭīsameṣu buddhakṣetreṣu pratiṣṭhāpayet / tadyathāpi nāma balavān puruṣaḥ sūcyagreṇa badarīpatram utkṣipet /</p>
+
+<p>Vkn 5.16 evam acṃtyavimokṣapratiṣṭhito bodhisatvaḥ sarvasatvāni cakravartyādirūpāṇy adhitiṣṭhet /</p>
+
+<p>Vkn 5.17 yāvantaś ca daśasu dikṣu śabdāvabhāsāḥ śabdaprajñāptayaḥ, tāḥ sarvā hīnamadhyaviśiṣṭānāṃ satvānāṃ sarvabuddhaghoṣarutaracitāny adhitiṣṭhan, tataś ca rutaghoṣād anityaduḥkhaśūnyānātmaśabdarutāni niścārayet / yāvadbhiś cākāranirdeśair daśasu dikṣu buddhā bhagavanto dharmaṃ deśayanti, tāṃs tato rutanirghoṣān niścārayet /</p>
+
+<p>Vkn 5.18 ayaṃ bhadantaśāriputra acintyavimokṣapratiṣṭhitānāṃ bodhisatvānāṃ yatkiṃcinmātro viṣayāvatāranirdeśaḥ / api tu kalpam ahaṃ bhadantaśāriputra kalpāvaśesaṃ vācintyavimokṣapratiṣṭhitānāṃ bodhisatvānāṃ viṣayānāṃ viṣayāvatāranirdeśaṃ nirdiśeyam, ato vottari /</p>
+
+<p>Vkn 5.19 atha khalu sthaviro mahākāśyapa imaṃ bodhisatvānām acintyavimokṣaṃ śrutvāścaryaprāptaḥ sthaviraṃ śāriputram etad avocat: tadyathāpi nāma āyuṣmañ śāriputra jātyandhasya puruṣasya purastāt kaścid eva sarvarūpagatāny upadarśayet / na ca tatra sa jātyandha ekarūpam api paśyet / evam eva āyuṣmañ śāriputra ihācintyavimokṣe nirdiśyamāne sarvaśrāvakapratyekabuddhā iha jātyandhā iva cakṣurvihīnā ekasminn apy acintyakāraṇe na pratyakṣāḥ / ko nāma vidvān imam acintyaṃ vimokṣaṃ śrutvānuttarāyāṃ samyaksaṃbodhau cittaṃ notpādayet / tat kiṃ nu bhūyaḥ kariṣyāmo 'tyantopahatendriyā dagdhavinaṣṭānīva bījāny abhājanībhūtā iha mahāyāne / sarvaśrāvakapratyekabuddhair imaṃ dharmanirdeśaṃ śrutvā rudadbhis trisāhasramahāsāhasro lokadhātur vijñāpayitavyaḥ / sarvabodhisatvaiś ca pramuditair imam acintyavimokṣaṃ śrutvā mūrdhnā saṃpratyetavyaḥ, adhimuktibalaṃ ca saṃjanayitavyam / yasyaiṣācintyavimokṣādhimuktiḥ sarvamārās tasya kiṃ kariṣyanti / imaṃ nirdeśaṃ nirdiśataḥ sthavirasya mahākāśyapasya dvātriṃśatā devaputrasahasrair anuttarāyāṃ samyaksaṃbodhau cittāny utpannāni /</p>
+
+<p>Vkn 5.20 atha vimalakīrtir licchaviḥ sthaviraṃ mahākāśyapam evam āha: yāvanto bhadantamahākāśyapa daśasu dikṣv aprameyeṣu lokadhātuṣu mārā māratvaṃ kārayanti, sarve te yadbhūyasācintyavimokṣapratiṣṭhitā bodhisatvā upāyakauśalyena satvaparipācanāya māratvaṃ kārayanti / yāvadbhir bhadantamahākāśyapa daśasu dikṣv aprameyeṣu lokadhātuṣu bodhisatvā yācanakair yācyante hastapādān vā karṇanāsaṃ vā śoṇitaṃ snāyuṃ vāsthimajjānaṃ vā netrāṇi vottamāṅgāni śirāṃsi vāṅgapratyaṅgāni vā rājyarāṣṭrajanapadān vā bhāryāputraduhitṝr vā dāsadāsīr vā hayagajarathavāhanāni vā suvarṇamaṇimuktāvaiḍūryaśaṅkhaśilāpravāḍamaṇiratnajātaṃ vānnapānāni rasān vā, vastrāṇi cotpīḍya yācyante, sarve te yācanakā yadbhūyasācintyavimokṣapratiṣṭhitā bodhisatvā upāyakauśalyenemāṃ dṛḍhādhyāśayatāṃ darśayanti / tat kasmād dhetoḥ / ugratapaso hi bhadantamahākāśyapa bodhisatvās ta evaṃ darśayanti / nāsti hi prākṛtajanasyāsthānānavakāśakṛtasya bodhisatvam utpīḍayitum /</p>
+
+<p>tadyathāpi nāma bhadantamahākāśyapa na śaktir asti khadyotakasya sūryamaṇḍalaprabhām abhibhavitum / evam eva bhadantamahākāśyapa na śaktir asti prākṛtasya janasya bodhisatvenānavakāśakṛtasyopasaṃkramituṃ yācituṃ vā / tadyathā bhadantamahākāśyapa yo hastināgasya prahāro na sa śakyo gardabhena soḍhum / evam eva bhadantamahākāśyapa na śakyam abodhisatvena bodhisatvasyotpīḍanaṃ soḍhum / bodhisatva eva bodhisatvotpīḍāṃ sahate / ayaṃ bhadantamahākāśyapa acintyavimokṣapratiṣṭhitānāṃ bodhisatvānām upāyajñānabalapraveśaḥ // //</p>
+
+<p>acintyavimokṣasaṃdarśanaparivartaḥ pañcamaḥ //</p>
+
+<p>Vkn 6.1 atha khalu mañjuśrīḥ kumārabhūto vimalakīrtiṃ licchavim etad avocat: kathaṃ satpuruṣa bodhisatvena sarvasatvā avekṣitavyāḥ /</p>
+
+<p>āha: tadyathāpi nāma mañjuśrīḥ vijñapuruṣa udakacandram avekṣeta, evaṃ bodhisatvena sarvasatvā avekṣitavyāḥ / tadyathāpi nāma mañjuśrīḥ ādarśamaṇḍale mukhamaṇḍalam ālokayet, evaṃ bodhisatvena sarvasatvā avekṣitavyāḥ / tadyathā mañjuśrīḥ marīcikāyām udakam, evaṃ bodhisatvena sarvasatvā avekṣitavyāḥ / tadyathā mañjuśrīḥ māyākāro māyākāranirmitaṃ puruṣam avekṣeta, evaṃ bodhisatvena sarvasatvā avekṣitavyāḥ / tadyathā mañjuśrīḥ pratiśrutkāyā rutaghoṣaḥ, evaṃ bodhisatvena sarvasatvā avekṣitavyāḥ / tadyathā mañjuśrīḥ gagane 'bhrakūṭam, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ phenapiṇḍasya pūrvāntaḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśriḥ udakabudbudānām utpādavyayaḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ kadalyāḥ sāradarśanam, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ vidyutaḥ saṃkrāntiḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ pañcamo dhātuḥ / evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ saptamam āyatanam, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ ārūpyeṣu rūpāvabhāsaḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ paritaptānāṃ bījānām aṅkurapariniṣpattiḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ maṇḍūkaromapravāraḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ mṛtasya kāmakrīḍāratiḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ srotaāpannasya satkāyadṛṣṭiḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśriḥ sakṛdāgāminas tṛtīyo bhavaḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ anāgāmino garbhāvakrāntiḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśriḥ arhataḥ rāgadoṣamohāḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ kṣāntipratilabdhasya bodhisatvasya mātsaryadauḥśīlyavyāpādavihiṃsācittāni, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ tathāgatasya kleśavāsanā, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ jātyandhasya puruṣasya rūpadarśanam, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ nirodhasamāpannasyāśvāsāḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ ākāśe śakunipadam, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ paṇḍakasyendriyasya prādurbhāvaḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ bandhyāyāḥ putrapratilambhaḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ tathāgatanirmitasyānutpannāḥ kleśāḥ, evaṃ bodhisatvena
+sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ svapnadarśanapratibuddhasya darśanam, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśriḥ aparikalpayataḥ kleśāḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ anupādānasyāgneḥ saṃbhavaḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / tadyathā mañjuśrīḥ parinirvṛtasya pratisaṃdhiḥ, evaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ / evaṃ hi mañjuśrīr bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ /</p>
+
+<p>Vkn 6.2 āha: yadi kulaputraivaṃ bodhisatvena sarvasatvāḥ pratyavekṣitavyāḥ, kathaṃ punar asya mahāmaitrī bhavati sarvasatveṣu /</p>
+
+<p>āha: yadā mañjuśrīḥ bodhisatva evaṃ pratyavekṣate, mayā hy eṣāṃ satvānām evaṃ dharmaparijñāyai dharmo deśayitavya iti, ato 'sya bhūtā satvatrāṇamaitrī sarvasatveṣūtpadyate 'nārambaṇatayā, upaśamamaitry anutpādanatayā, niṣparidāhamaitrī niḥkleśatayā, yathāvadmaitrī tryadhvasamatayā, avirodhamaitry aparyupasthānatayā, advayamaitry adhyātmabahirdhāsaṃsṛṣṭatayā, akopyamaitry atyantaniṣṭhatayā, dṛḍhamaitrī vajradṛḍhābhedyāśayatayā, śuddhamaitrī prakṛtiśuddhatayā, samamaitry ākāśasamatayā, arhanmaitry arinirghātanatayā, bodhisatvamaitrī satvaparipākāsraṃsanatayā, tathāgatamaitrī tathatānubodhanatayā, buddhamaitrī suptasatvaprabodhanatayā, svayambhumaitrī svayamabhisaṃbodhanatayā bodhimaitri samarasatayā, asamāropamaitry anunayapratighaprahāṇatayā, mahākaruṇāmaitrī mahāyānaparidīpanatayā, aparikhedamaitrī śūnyanairātmyapratyavekṣaṇatayā, dharmadānamaitry anācāryamuṣṭitayā, śīlamaitrī duḥśīlasatvāvekṣaṇatayā, kṣāntimaitry ātmaparākṣaṇyanatayā, vīryamaitrī sarvasatvabhāravahanatayā, dhyānamaitry anāsvādanatayā, prajñāmaitrī kālasaṃprāpaṇatayā, upāyamaitrī sarvatramukhoddarśanatayā, akuhanamaitry āśayapariśuddhitayā, aśāṭhyamaitry āśayatayā, adhyāśayamaitrī niraṅgaṇatayā, amāyāmaitry akṛtrimatayā, saukhyamaitrī buddhasaukhyapratiṣṭhāpanatayā / iyaṃ mañjuśrīḥ bodhisatvasya mahāmaitrī /</p>
+
+<p>Vkn 6.3 āha: katarā punar asya mahākaruṇā /</p>
+
+<p>āha: yat kṛtaṃ kṛtaṃ kuśalamūlaṃ sarvasatvebhya utsṛjati /</p>
+
+<p>āha: katarā punar asya mahāmuditā /</p>
+
+<p>āha: yad datvāttamanā bhavati, na vipratisārī /</p>
+
+<p>āha: katarā punar asya mahopekṣā /</p>
+
+<p>āha: yobhayato 'rthatā /</p>
+
+<p>Vkn 6.4 āha: saṃsārabhayabhītena kiṃ pratipattavyam /</p>
+
+<p>āha: saṃsārabhayabhītena mañjuśriḥ bodhisatvena buddhamāhātmyaṃ pratipattavyam /</p>
+
+<p>āha: buddhamāhātmye sthātukāmena kutra sthātavyam /</p>
+
+<p>āha: buddhamāhātmye sthātukāmena sarvasatvasamatāyāṃ sthātavyam /</p>
+
+<p>āha: sarvasatvasamatāyāṃ sthātukāmena kutra sthātavyam /</p>
+
+<p>āha: sarvasatvasamatāyāṃ sthātukāmena sarvasatvapramokṣāya sthātavyam /</p>
+
+<p>Vkn 6.5 āha: sarvasatvapramokṣaṃ kartukāmena kiṃ kartavyam /</p>
+
+<p>āha: sarvasatvapramokṣaṃ kartukāmena kleśapramokṣaḥ kartavyaḥ /</p>
+
+<p>āha: kleśān utsraṣṭukāmena kathaṃ prayuktena bhavitavyam /</p>
+
+<p>āha: kleśān utsraṣṭukāmena yoniśaḥ prayuktena bhavitavyam /</p>
+
+<p>āha: kathaṃ prayuktaḥ punar yoniśaḥ prayukto bhavati /</p>
+
+<p>āha: anutpādānirodhaprayukto yoniśaḥ prayukto bhavati /</p>
+
+<p>āha: kiṃ notpādayati, kiṃ na nirodhayati /</p>
+
+<p>āha: akuśalaṃ notpādayati, kuśalaṃ na nirodhayati /</p>
+
+<p>āha: kuśalasyākuśalasya ca kiṃ mūlam /</p>
+
+<p>āha: satkāyo mūlam /</p>
+
+<p>āha: satkāyasya ca punaḥ kiṃ mūlam /</p>
+
+<p>āha: satkāyasyecchālobhau mūlam /</p>
+
+<p>āha: icchālobhayoḥ kiṃ mūlam /</p>
+
+<p>āha: icchālobhayor abhūtaparikalpo mūlam /</p>
+
+<p>Vkn 6.6 āha: abhūtaparikalpasya kiṃ mūlam /</p>
+
+<p>āha: abhūtaparikalpasya viparyastā saṃjñā mūlam /</p>
+
+<p>āha: viparyastāyāḥ saṃjñāyāḥ kiṃ mūlam /</p>
+
+<p>āha: viparyastāyāḥ saṃjñāyā apratiṣṭhā mūlam /</p>
+
+<p>āha: apratiṣṭhāyāḥ kiṃ mūlam /</p>
+
+<p>āha: yan mañjuśrīḥ apratiṣṭhānaṃ tasya kiṃ mūlaṃ bhaviṣyati / iti hy apratiṣṭhānamūlapratiṣṭhitāḥ sarvadharmāḥ /</p>
+
+<p>Vkn 6.7 atha yā tatra gṛhe devatā prativasati, sā teṣāṃ bodhisatvānāṃ mahāsatvānām imaṃ dharmanirdeśaṃ śrutvā tuṣṭodagrāttamanā, audārikam ātmabhāvaṃ saṃdarśya divyaiḥ puṣpais tān mahāsatvāṃs tāṃś ca mahāśrāvakān abhyavakirati sma / abhyavakīrṇānāṃ ca tatra yāni bodhisatvānāṃ kāye puṣpāṇi patitāni, tāni dharaṇitale pratiṣṭhitāni / yāni punar mahāśrāvakāṇāṃ kāye puṣpāṇi patitāni, tāni tatraiva sthitāni na bhūmau patitāni / tatas te mahāśrāvakā ṛddhiprātihāryaiḥ tāni puṣpāṇy utsṛjanti, na ca patanti /</p>
+
+<p>Vkn 6.8 atha sā devatāyuṣmantaṃ śāriputram evam āha: kiṃ bhadantaśāriputra, etāni puṣpāṇy utsṛjasi /</p>
+
+<p>āha: akalpikāni devate etāni puṣpāṇi / tasmād aham etāni puṣpāṇy apanayāmi /</p>
+
+<p>devatāha: mā bhadantaśāriputra evaṃ vocaḥ / tat kasmād dhetoḥ / etāni hi puṣpāṇi kalpikāni / kiṃ kāraṇam / tathā hy etāni puṣpāṇi na kalpayanti na vikalpayanti / sthaviraḥ punaḥ śāriputraḥ kalpayati vikalpayati ca / ye bhadantaśāriputra svākhyāte dharmavinaye pravrajyāṃ kalpayanti vikalpayanti ca, te 'kalpikāḥ / sthaviras tu kalpayati vikalpayati ca / ye punar na kalpayanti na vikalpayanti, te kalpikāḥ / paśya bhadantaśāriputra eṣāṃ mahāsatvānāṃ kāye puṣpāṇi na śliṣyanti / yathāpi nāma sarvakalpavikalpaprahīṇatvāt / tadyathāpi nāma bhīrukajātīyasya puruṣasyāmanuṣyā avatāraṃ Iabhante / evam eva saṃsārabhayabhītānāṃ rūpaśabdagandharasaspraṣṭavyāny avatāraṃ labhante / ye punaḥ sarvasaṃsārakleśabhayavigatāḥ, kiṃ teṣāṃ rūpaśabdagandharasaspraṣṭavyāni kariṣyanti / yeṣāṃ vāsanāprahīṇā, teṣāṃ kāye puṣpāṇi śliṣyanti / tasmāt sarvavāsanāprahīṇānāṃ kāye puṣpāṇi na śliṣyanti /</p>
+
+<p>Vkn 6.9 atha khalv āyuṣmāñ śāriputras tāṃ devatām etad avocat: kiyacciraniviṣṭā punas tvaṃ devate iha gṛhe /</p>
+
+<p>āha: yāvacciraniviṣṭā sthavirasyāryā vimuktiḥ /</p>
+
+<p>āha: na cirasthitā tvaṃ devate iha gṛhe /</p>
+
+<p>āha: kiyacciraniviṣṭā punaḥ sthavirasyāryā vimuktiḥ /</p>
+
+<p>tataḥ sthaviras tūṣṇīm abhūt /</p>
+
+<p>āha: kim idānīṃ mahāprajñānām agryaḥ sthaviras tūṣṇīm abhūt / prāptakālaṃ praśnaṃ na visarjayati /</p>
+
+<p>āha: apravyāhārā hi devate vimuktiḥ / tan na jāne kiṃ vyāharāmīti /</p>
+
+<p>āha: yad yad eva sthaviro 'kṣaram udāharati, sarvāṇy etāny akṣarāṇi vimuktilakṣaṇāni / tat kasmād dhetoḥ / yā hi sā vimuktiḥ, sā nādhyātmaṃ na bahir nobhayam antareṇopalabhyate / evam akṣarāṇy api / tasmāt tarhi bhadantaśāriputra mā akṣarāpanayena vimuktiṃ nirdiśa / tat kasmād dhetoḥ / sarvadharmasamatā hi vimuktiḥ /</p>
+
+<p>āha: nanu devate rāgadoṣamohavigamād vimuktiḥ /</p>
+
+<p>devatāha: abhimānikānām eṣa nirdeṣo rāgadoṣamohavigamād vimuktir iti / ye nirabhimānikāḥ, teṣāṃ rāgadoṣamohaprakṛtir eva vimuktiḥ /</p>
+
+<p>Vkn 6.10 atha khalv āyuṣmāñ śāriputras tāṃ devatām etad avocat: sādhu sādhu devate kiṃ tvayā prāptaṃ kiṃ vā sākṣātkṛtam, yasyās ta īdṛśaṃ pratibhānam /</p>
+
+<p>āha: na mayā bhadantaśāriputra kiṃcit prāptaṃ sākṣātkṛtaṃ vā / tena ma īdṛśaṃ pratibhānam / yeṣām evaṃ bhavaty asmābhiḥ prāptaṃ vā sākṣātkṛtaṃ ceti, te svākhyāte dharmavinaya ābhimānikā ity ucyante /</p>
+
+<p>Vkn 6.11 āha: kiṃ tvaṃ devate śrāvakayānikā pratyekabuddhayānikā mahāyānikā vā /</p>
+
+<p>āha: śrāvakāyānikāsmi śrāvakayānasūcanatayā, pratyekabuddhayānikāsmi pratītyadharmāvatāreṇa, mahāyānikāsmi mahākaruṇānutsṛjanatayā /</p>
+
+<p>Vkn 6.12 api tu khalu punar bhadantaśāriputra na campakavanaṃ praviṣṭā eraṇḍagandhaṃ jighranti / campakavanaṃ tu praviṣṭāś campakagandham eva jighranti / evam eva bhadantaśāriputra neha gṛhe buddhadharmaguṇagandhike vasantaḥ śrāvakapratyekabuddhagandhaiḥ jighranti / ye 'pi bhadantaśāriputra śakrabrahmalokapālā devanāgayakṣagandharvāsuragaruḍakinnaramahoragā idaṃ gṛhaṃ praviśanti, te 'py asya satpuruṣasya dharmaśravaṇena buddhadharmaguṇagandhenotpāditabodhicittā niṣkrāmanti / dvādaśavarṣāṇy upādāya bhadantaśāriputra prativasantyā me na jātu śrāvakapratyekabuddhasaṃprayuktā kathā śrutapūrvā, nānyatra mahāmaitrīmahākaruṇāpratisaṃyuktaivācintyadharmapratisaṃyuktaiva /</p>
+
+<p>Vkn 6.13 iha bhadantaśāriputra gṛhe 'ṣṭāv āścaryādbhutā dharmāḥ satatasamitaṃ saṃdṛśyante / katame 'ṣṭau /</p>
+
+<p>neha rātrir vā divaso vā prajñāyate sadāvabhāsitam idaṃ gṛhaṃ suvarṇavarṇayā prabhayā / neha sūryācandramasau prajñāyete, na bhrājete / ayaṃ prathama āścaryādbhuto dharmaḥ /</p>
+
+<p>punar aparaṃ bhadantaśāriputra ye praviśantīdaṃ gṛham, teṣāṃ samanantarapraviṣṭānāṃ sarvakleśā na bādhante / ayaṃ dvitīya āścaryādbhuto dharmaḥ /</p>
+
+<p>punar aparaṃ bhadantaśāriputra idaṃ gṛham avirahitaṃ śakrabrahmalokapālair anyabuddhakṣetrasaṃnipatitaiś ca bodhisatvaiḥ / ayaṃ tṛtīya āścaryādbhuto dharmaḥ /</p>
+
+<p>punar aparaṃ bhadantaśāriputra idaṃ gṛhaṃ satatasamitam avirahitaṃ dharmaśravaṇena ṣaṭpāramitāpratisaṃyuktayā kathayāvivartyadharmakathayā ca / ayaṃ caturtha āścaryādbhuto dharmaḥ /
+punar aparaṃ bhadantaśāriputra iha gṛhe yās tūryasaṃgītayo divyamānuṣyakāṇi vā vādyāni vādyante, tebhyas tūryebhyo 'pramāṇo dharmaśabdanirhāro niścarati sārvakālikaḥ / ayaṃ pañcama āścaryādbhuto dharmaḥ /</p>
+
+<p>punar aparaṃ bhadantaśāriputra iha gṛhe catvāri mahānidhānāni sarvaratnaparipūrṇāny akṣayāṇi yato niṣyandaṃ sarvadaridrakṛpaṇā ādāya prakrāmanti, na ca kṣīyante / ayaṃ ṣaṣṭha āścaryādbhuto dharmaḥ /</p>
+
+<p>punar aparaṃ bhadantaśāriputra iha gṛhe śākyamunis tathāgato 'mitābho 'kṣobhyo ratnaśrī ratnārcī ratnacandro ratnavyūho duḥprasahaḥ sarvārthasiddhaḥ prabhūtaratnaḥ siṃhanādanādī siṃhaghoṣas tathāgata evaṃ pramukhā daśasu dikṣv apramāṇās tathāgatā ye 'sya satpuruṣasya cintitamātreṇāgacchanti / āgatya ca tathāgataguhyaṃ nāma dharmamukhapraveśaṃ deśayitvā prakrāmanti / ayaṃ saptama āścaryādbhuto dharmaḥ /</p>
+
+<p>punar aparaṃ bhadantaśāriputra iha gṛhe sarvadevabhavanavyūhāḥ sarvabuddhakṣetraguṇavyūhāś ca saṃdṛśyante / ayam aṣṭama āścaryādbhuto dharmaḥ /</p>
+
+<p>ime bhadantaśāriputra aṣṭāv āścaryādbhutā dharmāḥ satatasamitam iha gṛhe saṃdṛśyante / tat kasmād dhetoḥ / ka imām acintyadharmatāṃ paśyañ śrāvakadharmatāyai spṛhayet /</p>
+
+<p>Vkn 6.14 āha: kiṃ tvaṃ devate strībhāvaṃ na nivartayasi /</p>
+
+<p>āha: paripūrṇāni me dvādaśavarṣāṇy upādāya strībhāvaṃ paryeṣamāṇāyā na cainaṃ labhe / api ca bhadantaśāriputra yā māyākāreṇa strīnirmitā yas tām evaṃ vadet: kiṃ tvaṃ strībhāvaṃ na nivartayasīti, sa kiṃ vadet /</p>
+
+<p>āha: na tasyāḥ kācit bhūtā pariniṣpattiḥ /</p>
+
+<p>āha: evam eva bhadantaśāriputra apariniṣpanneṣu sarvadharmeṣu māyānirmitasvabhāveṣu kutas tavaivaṃ bhavati: kiṃ tvaṃ strībhāvaṃ na nivartayasīti /</p>
+
+<p>Vkn 6.15 atha sā devatā tādṛśam adhiṣṭhānam adhitiṣṭhati sma / yathā sthaviraḥ śāriputro yādṛśī sā devatā tādṛśaḥ saṃdṛśyate, sā devatā yādṛśaḥ sthaviras tādṛśī saṃdṛśyate / atha sā devatā śāriputrarūpā śāriputraṃ devatārūpadhāriṇam apṛcchat: kiṃ bhadantaśāriputra strībhāvaṃ na nivartayasi /</p>
+
+<p>śāriputro devatārūpy āha: na jāne kiṃ vinivartayāmīti / puruṣarūpam antarhitaṃ strīrūpaṃ me nirvṛttam /</p>
+
+<p>āha: yadi sthaviraḥ śakṣyati strībhāvaṃ vinivartayitum, tataḥ sarvāḥ striyo 'pi strībhāvaṃ vinivartayiṣyanti / yathā sthaviro na strī strīva saṃdṛśyate, evaṃ sarvastrīṇām api strīrūpaṃ na ca striyaḥ strīrūpāś ca saṃdṛśyante / idaṃ saṃdhāya bhagavān āha: ḥsarvadharmā na strī na puruṣaḥ iti /</p>
+
+<p>atha sā devatā tad adhiṣṭhānam avāsṛjat / athāyuṣmāñ śāriputraḥ punar eva svarūpasamanvāgato babhūva / atha sā devatāyuṣmantaṃ śāriputram evam āha: kva nu te bhadantaśāriputra strīrūpaṃ kṛtaṃ gatam /</p>
+
+<p>āha: na tat kṛtaṃ na vikṛtam /</p>
+
+<p>āha: evam eva sarvadharmā na kṛtā na vikṛtāḥ / yatra ca na kṛtir na vikṛtis tad buddhavacanam /</p>
+
+<p>Vkn 6.16 āha: itas tvaṃ devate cyutā kutropapatsyase /</p>
+
+<p>āha: yatraiva tathāgatanirmita upapatsyate, tatraivāham upapatsye /</p>
+
+<p>āha: tathāgatanirmitasya na cyutir nopapattiḥ /</p>
+
+<p>āha: evam eva sarvadharmāṇāṃ na cyutir nopapattiḥ /</p>
+
+<p>āha: kiyaccireṇa punar devate bodhim abhisaṃbhotsyase /</p>
+
+<p>āha: yadā sthaviraḥ pṛthagjanadharmasamanvāgato bhaviṣyati, tadāhaṃ bodhim abhisaṃbhotsye /</p>
+
+<p>āha: asthānam etad devate yad ahaṃ pṛthagjanadharmasamanvāgataḥ syām /</p>
+
+<p>āha: evam eva bhadantaśāriputra asthānam etad yad ahaṃ bodhim abhisaṃbhotsye / tat kasmād dhetoḥ / asthānasthitaiva hi bodhiḥ / tasmād asthānaṃ na kaścid abhisaṃbhotsyate /</p>
+
+<p>sthavira āha: uktaṃ devate tathāgatena ḥgaṅgānadīvālikāsamās tathāgatā abhisaṃbuddhā abhisaṃbudhyante 'bhisaṃbhotsyante caḥ /</p>
+
+<p>devatāha: akṣaragaṇanāsaṃketādhivacanam etad bhadantaśāriputra atītānāgatapratyutpannā buddhā iti / na punar buddhā atītā vānāgatā vā vartamānā vā / tryadhvasamatikrāntā hi bodhiḥ / api ca prāptaṃ sthavireṇārhatvam /</p>
+
+<p>āha: prāptam asaṃprāptikāraṇena /</p>
+
+<p>āha: evam evābhisaṃbodhir anabhisaṃbodhikāraṇena /</p>
+
+<p>Vkn 6.17 atha vimalakīrtir licchavir āyuṣmantaṃ śāriputram evam āha: dvānavatibuddhakoṭīparyupāsitā bhadantaśāriputra eṣā devatābhijñājñānavikrīḍitā praṇidhānasamucchritā kṣāntipratilabdhāvaivartikasamavasaraṇā praṇidhānavaśena yathecchati tathā tiṣṭhati satvaparipākāya // //</p>
+
+<p>devatāparivartaḥ ṣaṣṭhaḥ //</p>
+
+<p>Vkn 7.1 atha khalu mañjuśrīḥ kumārabhūto vimalakīrtiṃ licchavim evam āha: kathaṃ kulaputra bodhisatvo gatiṃgato bhavati buddhadharmeṣu /</p>
+
+<p>āha: yadā mañjuśrīḥ bodhisatvo 'gatigamanaṃ gacchati, tadā bodhisatvo gatiṃgato bhavati buddhadharmeṣu /</p>
+
+<p>āha: katamac ca bodhisatvasyāgatigamanam /</p>
+
+<p>āha: yadā pañcānantaryagatiṃ ca gacchati, na ca vyāpādavihiṃsāpraduṣṭo bhavati / nirayagatiṃ ca gacchati, sarvarajaḥkleśavigataś ca bhavati / tiryagyonigatiṃ ca gacchati, vigatatamo'ndhakāraś ca bhavati / asuragatiṃ ca gacchati, mānamadadarpavigataś ca bhavati / yamalokagatiṃ ca gacchati, sarvapuṇyajñānasaṃbhāropāttaś ca bhavati / aneñjyarūpagatiṃ ca gacchati, na ca tadgatisamavasaraṇo bhavati / rāgagatiṃ ca gacchati, vigatarāgaś ca bhavati sarvakāmabhogeṣu / doṣagatiṃ ca gacchati, apratihataś ca bhavati sarvasatveṣu / mohagatiṃ ca gacchati, prajñānidhyapticittaś ca bhavati sarvadharmeṣu / mātsaryagatiṃ ca gacchati, sarvādhyātmabāhyavastuparityāgī ca bhavati kāyajīvitānapekṣaḥ / duḥśīlagatiṃ ca gacchati, sarvaśīlaśikṣādhutaguṇasaṃlekhapratiṣṭhitaś ca bhavaty anumātreṣv avadyeṣu bhayadarśī / vyāpādakhilakrodhagatiṃ ca gacchati, maitrīvihāri ca bhavaty atyantāvyāpannacittaḥ / kausīdyagatiṃ ca gacchati, sarvakuśalamūlaparyeṣṭyabhiyuktaś ca bhavaty apratiprasrabdhavīryārambhaḥ / vibhrāntendriyagatiṃ ca gacchati, ariktadhyānaś ca bhavati prakṛtisamāpannaḥ / dauḥprajñagatiṃ ca gacchati, sarvalokikalokottaraśāstrakuśalaś ca bhavati prajñāpāramitāgatiṃgataḥ / kuhanalapanacaryāgatiṃ gacchati, upāyakauśalacaryāniryātaś ca bhavati saṃdhābhāṣyakuśalaḥ / mānagatiṃ ca darśayati, setusaṃkrāmabhṛtaś ca bhavati sarvalokasya / kleśagatiṃ ca gacchati, prakṛtipariśuddhaś ca bhavaty atyantāsaṃkliṣṭaḥ / māragatiṃ ca gacchati, aparapratyayaś ca bhavati sarvabuddhadharmeṣu / śrāvakagatiṃ ca gacchati, aśrutadharmaśrāvayitā ca bhavati satvānām / pratyekabuddhagatiṃ ca gacchati, mahākaruṇāniryātaś ca bhavati satvaparipākāya / daridragatiṃ ca gacchati, ratnapāṇitāpratilabdhaś
+ca bhavaty akṣayabhogaḥ / vikalendriyagatiṃ ca gacchati, lakṣaṇasamalaṃkṛtaś ca bhavaty abhirūpaḥ / hīnakulopapattigatiṃ ca gacchati, tathāgatakulagotrasaṃbhṛtaś ca bhavati puṇyajñānopacitasaṃbhāraḥ / durbaladurvarṇāvahoṭimakagatiṃ ca gacchati, nārāyaṇātmabhāvapratilabdhaś ca bhavati priyadarśanaḥ sarvasatvānām / jīrṇavyādhitoglānacaryāṃ ca darśayati, atyantavyādhisamudghātitaś ca bhavati maraṇabhayasamatikrāntaḥ / bhogagatiṃ ca darśayati, anityasaṃjñāpratyavekṣaṇābahulaś ca bhavati sarvaiṣaṇāpratiprasrabdhaḥ / antaḥpuranāṭakavyūhāś ca bodhisatvo darśayati, uttīrṇakāmapaṅkaś ca bhavaty aniketacārī / dhandhāyatanagatiṃ ca gacchati, vicitrapratibhānālaṃkāraś ca bhavati dhāraṇīpratilabdhaḥ / tīrthikagatiṃ ca gacchati, tīrthabhūtaś ca bhavati / sarvalokagatiṃ ca gacchati, sarvagatinivṛttaś ca bhavati / nirvāṇagatiṃ ca gacchati, saṃsāraprabandhaṃ ca na jahāti / evaṃ mañjuśrīḥ bodhisatvo 'gatigamanaṃ gacchati, gatiṃgataś ca bhavati sarvabuddhadharmeṣu /</p>
+
+<p>Vkn 7.2 atha vimalakīrtir licchavir mañjuśriyaṃ kumārabhūtam evam āha: kataman mañjuśrīḥ tathāgatānāṃ gotram /</p>
+
+<p>āha: satkāyaḥ kulaputra tathāgatānāṃ gotram, avidyā bhavatṛṣṇā ca gotram, rāgadoṣamohā gotram, catvāro viparyāsā gotram, pañca nivaraṇāni gotram, ṣaḍ āyatanaṃ gotram, sapta vijñānasthitayo gotram, aṣṭau mithyātvāni gotram, navāghātavastūni gotram, daśākuśalāḥ karmapathā gotram / idaṃ kulaputra tathāgatānāṃ gotram / saṃkṣepeṇa kulaputra dvāṣaṣṭir dṛṣṭigatāni tathāgatānāṃ gotram /</p>
+
+<p>Vkn 7.3 āha: kiṃ saṃdhāya mañjuśrīḥ evaṃ vadasi /</p>
+
+<p>āha: na śakyaṃ kulaputra asaṃskṛtadarśinā niyāmāvakrāntisthitenānuttarāyāṃ samyaksaṃbodhau cittam utpādayitum / kleśāgārasaṃskṛtasthitenādṛṣṭisatyena śakyam anuttarāyāṃ samyaksaṃbodhau cittam utpādayitum / tadyathā kulaputra nojjaṅgaleṣu pṛthivīpraveśeṣūtpalapadmakumudapuṇḍarīkasaugandhikāni virohanti / kardamapulinaprakṣiptāny utpalapadmakumudapuṇḍarīkasaugandhikāni virohanti / evam eva kulaputra nāsaṃskṛtaniyāmaprāpteṣu satveṣu buddhadharmā virohanti / kleśapulinakardamaprāpteṣu satveṣu buddhadharmā virohanti / tadyathāpi nāma nākāśe bījāni virohanti / dharaṇitalapratiṣṭhitāni virohanti / evam eva nāsaṃskṛtaniyāmaprāpteṣu buddhadharmā virohanti / sumerusamāṃ satkāyadṛṣṭim utpādya bodhicittam utpadyate / tataś ca buddhadharmā virohanti / tad anenāpi te kulaputra paryāyeṇaivaṃ veditavyam / yathā sarvakleśās tathā tathāgatānāṃ gotram / tadyathāpi nāma kulaputra nānavatīrya mahāsamudraṃ śakyam anarghaṃ ratnam utkṣeptum / evam eva nānavatīrṇena kleśasāgaraṃ śakyaṃ sarvajñatācittaratnam utpādayitum /</p>
+
+<p>Vkn 7.4 atha sthaviro mahākāśyapo mañjuśriye kumārabhūtāya sādhukāram adāt: sādhu sādhu mañjuśrīḥ subhāṣitā ta iyaṃ vāg bhūtam / etat kleśā gotraṃ tathāgatānām / kuto hy asmadvidhānāṃ śaktir asti bodhicittam idānīm utpādayitum / pañcānantaryaprāptaḥ śakto bodhicittam utpādayitum, śakto buddhadharmān abhisaṃboddhum, na punar aham /</p>
+
+<p>Vkn 7.5 tadyathā vikalendriyasya puruṣasya pañcakāmaguṇā nirguṇā niḥsamarthāḥ / evam eva sarvasaṃyojanaprahīṇasya śrāvakasya sarvabuddhadharmā nirguṇā niḥsamarthāḥ / na tasya bhūyaḥ śaktir asti tān adhyālambitum* / tasmān mañjuśrīḥ pṛthagjanās tathāgatasya kṛtajñāḥ, na śrāvakāḥ / tat kasmād dhetoḥ / pṛthagjanā hi buddhaguṇāñ śrutvā triratnavaṃśānupacchedāyānuttarāyāṃ samyaksaṃbodhau cittam utpādayanti / śrāvakāḥ punar yāvajjīvam api buddhadharmabalavaiśāradyāni śrutvānuttarāyāṃ samyaksaṃbodhau na śaktāś cittam utpādayitum /</p>
+
+<p>Vkn 7.6 atha sarvarūpasaṃdarśano nāma bodhisatvas tasyām eva parṣadi saṃnipatito 'bhūt saṃniṣaṇṇaḥ / sa vimalakīrtiṃ licchavim evam āha: kasmin punas te gṛhapate mātāpitarau dāsīdāsakarmakarapauruṣeyam, kutra mitrajñātisālohitāḥ, kutra parivāro hayagajarathapativāhanaṃ vā / evam ukte vimalakīrtir licchaviḥ sarvarūpasaṃdarśanaṃ bodhisatvaṃ gāthābhir adhyabhāṣat:</p>
+
+<lg>
+<l>prajñāpāramitā mātā bodhisatvāna māriṣa /</l>
+<l>pitā copāyakauśalyaṃ yato jāyanti nāyakāḥ // (1)</l>
+</lg>
+<lg>
+<l>bhāryā dharmaratis teṣāṃ maitri karuṇā ca duhitarau /</l>
+<l>satyadharmāv ubhau putrau gṛhaṃ śūnyārthacintanā // (2)</l>
+</lg>
+<lg>
+<l>sarvakleśās tathā śiṣyā yatheṣṭavaśavartinaḥ /</l>
+<l>bodhyaṅgāś caiva mitrāṇi bodhiṃ budhyanti yair varām // (3)</l>
+</lg>
+<lg>
+<l>sahāyāś cānubaddhā hi ṣaḍ imāḥ pāramitāḥ sadā /</l>
+<l>stryāgāraḥ saṃgrahas teṣāra dharmāḥ saṃgītivāditam // (4)</l>
+</lg>
+<lg>
+<l>udyānaṃ dhāraṇī teṣāṃ bodhyaṅgakusumaiś citam /</l>
+<l>phalaṃ vimuktijñānaṃ ca vṛkṣā dharmadhanaṃ mahat // (5)</l>
+</lg>
+<lg>
+<l>vimokṣāḥ puṣkiriṇyaś ca samādhijālapūritāḥ /</l>
+<l>viśuddhipadmasaṃchannā yatra snāyanti nirmalāḥ // (6)</l>
+</lg>
+<lg>
+<l>abhijñā vāhanaṃ teṣāṃ mahāyānam anuttamam /</l>
+<l>sārathir bodhicittaṃ tu sanmārgo 'ṣṭāṅgikaḥ śivaḥ // (7)</l>
+</lg>
+<lg>
+<l>bhūṣanā lakṣaṇāny eṣām aśītiś cānuvyañjanāḥ /</l>
+<l>hrīrapatrāpyavastrās te kalyāṇādhyāśayāḥ śubhāḥ // (8)</l>
+</lg>
+<lg>
+<l>saddharmadhanavantas te prayogo dharmadeśanā /</l>
+<l>pratipattir mahālābhaḥ pariṇāmaś ca bodhaye // (9)</l>
+</lg>
+<lg>
+<l>śayanaṃ caturo dhyānāḥ śuddhājīvena saṃstṛtāḥ /</l>
+<l>prajñā vibodhanaṃ teṣāṃ nityaṃ śrutasamāhitā // (10)</l>
+</lg>
+<lg>
+<l>amṛtaṃ bhojanaṃ teṣāṃ vimuktirasapānakam /</l>
+<l>viśuddhāśayatā snānaṃ śīlaṃ gandhānulepanam // (11)</l>
+</lg>
+<lg>
+<l>kleśaśatruvinirghātāc chūrās te hy aparājitāḥ /</l>
+<l>dharṣenti caturo mārān bodhimaṇḍadhvajāśritāḥ // (12)</l>
+</lg>
+<lg>
+<l>saṃcintyajāti darśenti ajātāś ca asaṃbhavāḥ /</l>
+<l>dṛśyante sarvakṣetreṣu raśmirājavad udgatāḥ // (13)</l>
+</lg>
+<lg>
+<l>buddhakoṭyo hi pūjitvā sarvapūjāhi nāyakān /</l>
+<l>na caivātmani buddhe vā jātu kurvanti niśrayam // (14)</l>
+</lg>
+<lg>
+<l>buddhakṣetrāṇi śodhenti satvānāṃ caritaṃ yathā /</l>
+<l>ākāśakṣetrānuprāptā na satve satvasaṃjñinaḥ // (15)</l>
+</lg>
+<lg>
+<l>sarvasatvāna ye rūpā rutaghoṣāś ca īritāḥ /</l>
+<l>ekakṣanena darśenti bodhisatvā viśāradāḥ // (16)</l>
+</lg>
+<lg>
+<l>mārakarma ca budhyante mārāṇāṃ cānuvartakāḥ /</l>
+<l>upāyapāramiprāptāḥ sarvāṃ darśenti te kriyām // (17)</l>
+</lg>
+<lg>
+<l>te jīrṇavyādhitā bhonti mṛtam ātmānu darśayī /</l>
+<l>satvānāṃ paripākāya māyādharmavihāriṇaḥ // (18)</l>
+</lg>
+<lg>
+<l>kalpoddāhaṃ ca darśenti uddahya tāṃ vasundharām /</l>
+<l>nityasaṃjñīna satvānām anityam iti darśayī // (19)</l>
+</lg>
+<lg>
+<l>satvakoṭīsahasrebhir ekarāṣṭre nimantritāḥ /</l>
+<l>sarveṣāṃ gṛhi bhuñjanti sarvān nāmenti bodhaye // (20)</l>
+</lg>
+<lg>
+<l>ye kecin mantravidyā vā śilpasthānā bahūvidhāḥ /</l>
+<l>sarvatra pāramiprāptāḥ sarvasatvasukhāvahāḥ // (21)</l>
+</lg>
+<lg>
+<l>yāvanto loki pāṣaṇḍāḥ sarvatra pravrajanti te /</l>
+<l>nānādṛṣṭigataprāptān satvān hi parimocayi // (22)</l>
+</lg>
+<lg>
+<l>candrā bhavanti sūryā vā śakrabrahmaprajeśvarāḥ /</l>
+<l>bhavanti āpas tejaś ca pṛthivī mārutas tathā // (23)</l>
+</lg>
+<lg>
+<l>roga-antarakalpeṣu bhaiṣajyaṃ bhonti uttamam /</l>
+<l>yehi satvā vimucyanti sukhī bhonti anāmayāḥ // (24)</l>
+</lg>
+<lg>
+<l>durbhikṣāntarakalpeṣu bhavanti pānabhojanam /</l>
+<l>kṣudhāpipāsām apanetvān dharmaṃ deśenti prāṇinām // (25)</l>
+</lg>
+<lg>
+<l>śastra-antarakalpeṣu maitryādhyāyī bhavanti te /</l>
+<l>avyāpāde niyojenti satvakoṭīśatān bahūn // (26)</l>
+</lg>
+<lg>
+<l>mahāsaṃgrāmamadhye ca samapakṣā bhavanti te /</l>
+<l>saṃdhisāmagri rocenti bodhisatvā mahābalāḥ // (27)</l>
+</lg>
+<lg>
+<l>ye cāpi nirayāḥ kecid buddhakṣetreṣv acintiyāḥ /</l>
+<l>saṃcintya tatra gacchanti satvānāṃ hitakāraṇāt // (28)</l>
+</lg>
+<lg>
+<l>yāvantyo gatayaḥ kāścit tiryagyonau prakāśitāḥ /</l>
+<l>sarvatra dharmaṃ deśenti tena ucyanti nāyakāḥ // (29)</l>
+</lg>
+<lg>
+<l>kāmabhogāṃ pi darśenti dhyānaṃ darśenti dhyāyinām /</l>
+<l>vihastaṃ māraṃ kurvanti avatāraṃ na denti te // (30)</l>
+</lg>
+<lg>
+<l>agnimadhye yathā padmam adbhutaṃ pi vidarśayet /</l>
+<l>evaṃ kāmāṃś ca dhyānaṃ ca adbhutaṃ te vidarśayi // (31)</l>
+</lg>
+<lg>
+<l>saṃcintya gaṇikā bhonti puṃsām ākarṣaṇāya te /</l>
+<l>rāgāṅkuśena lobhetvā buddhajñāne sthapenti te // (32)</l>
+</lg>
+<lg>
+<l>grāmikāś ca sadā bhonti sārthavāhāḥ purohitāḥ /</l>
+<l>agrāmātyo 'tha cāmātyāḥ satvānāṃ hitakāraṇāt // (33)</l>
+</lg>
+<lg>
+<l>daridrāṇāṃ ca satvānāṃ nidhānaṃ bhonti akṣayam /</l>
+<l>yeṣāṃ dānāni datvā hi bodhicittaṃ janenti te // (34)</l>
+</lg>
+<lg>
+<l>mānastabdheṣu satveṣu mahānagnā bhavanti te /</l>
+<l>sarvamānasamudghātāṃ bodhiṃ prārthenti uttamām // (35)</l>
+</lg>
+<lg>
+<l>bhayārditānāṃ satvānāṃ saṃtiṣṭhante 'grataḥ sadā /</l>
+<l>abhayaṃ teṣu datvā ca paripācenti bodhaye // (36)</l>
+</lg>
+<lg>
+<l>pañcābhijñā hi bhūtvā te ṛṣayo brahmacāriṇaḥ /</l>
+<l>śīle satvān niyojenti kṣāntisauratyasaṃyame // (37)</l>
+</lg>
+<lg>
+<l>upasthānagurūn satvān saṃpaśyeha vināyakāḥ /</l>
+<l>ceṭā bhavanti dāsā vā śiṣyatvam upayānti ca // (38)</l>
+</lg>
+<lg>
+<l>yena yenaiva cāṅgena satvā dharmaratā bhave /</l>
+<l>darśenti hi kriyāḥ sarvā mahopāyasuśikṣitāḥ // (39)</l>
+</lg>
+<lg>
+<l>teṣām anantaśikṣā hi anantaś cāpi gocaraḥ /</l>
+<l>anantajñānasaṃpannā anantaprāṇimocakāḥ // (40)</l>
+</lg>
+<lg>
+<l>na teṣāṃ kalpakoṭībhiḥ kalpakoṭīśatais tathā /</l>
+<l>bhāṣadbhiḥ sarvabuddhais tu guṇāntaḥ suvaco bhavet // (41)</l>
+</lg>
+<lg>
+<l>bodhiṃ na prārthayet ko 'gryāṃ śrutvā dharmān imān budhaḥ /</l>
+<l>anyatra hīnasatvebhyo yeṣāṃ prajñā na vidyate // (42)</l>
+</lg>
+<p>iti // //</p>
+
+<p>tathāgatagotraparivartaḥ saptamaḥ //</p>
+
+<p>Vkn 8.1 atha vimalakīrtir licchavis tān bodhisatvān āmantrayate sma: pratibhātu satpuruṣāḥ katamo bodhisatvānām advayadharmamukhapraveśaḥ /</p>
+
+<p>tatra dharmavikurvaṇo nāma bodhisatvaḥ saṃnipatitaḥ / sa evam āha: utpādabhaṅgau kulaputra dvayam / yan na jātaṃ notpannaṃ na tasya kaścid bhaṅgaḥ / anutpādadharmakṣāntipratilambho 'dvayapraveśaḥ /</p>
+
+<p>Vkn 8.2 śrīgupto bodhisatva āha: ahaṃ mameti dvayam etat / ātmāsamāropān mameti na bhavati / yaś cāsamāropo 'yam advayapraveśaḥ /</p>
+
+<p>Vkn 8.3 śrīkūṭo bodhisatva āha: saṃkleśo vyavadānam iti dvayam etat / saṃkleśaparijñānād vyavadānamananā na bhavati / sarvamananāsamudghātā sārūpyagāminī pratipad ayam advayapraveśaḥ /</p>
+
+<p>Vkn 8.4 sunakṣatro bodhisatva āha: iñjanā mananeti dvayam etat / yat punar nāñjate na manasikaroty anadhikāraḥ, adhikāravirahito 'yam advayapraveśaḥ /</p>
+
+<p>Vkn 8.5 subāhur bodhisatva āha: bodhicittaṃ śrāvakacittam iti dvayam etat / yā punar māyācittasamadarśanatā tatra na bodhicittaṃ na śrāvakacittam / yā cittasamalakṣaṇatāyam advayapraveśaḥ /</p>
+
+<p>Vkn 8.6 animiṣo bodhisatva āha: upādānam anupādānam iti dvayam etat / yan nopādadāti tan nopalabhate, tatrohāpohaṃ na karoti / akaraṇam avyāpattiḥ sarvadharmāṇām ayam advayapraveśaḥ /</p>
+
+<p>Vkn 8.7 sunetro bodhisatva āha: ekalakṣaṇam alakṣaṇam iti dvayam etat / yat punar na lakṣayati na vikalpayati, naikalakṣaṇaṃ karoti nālakṣaṇam / yal lakṣaṇavilakṣaṇasamalakṣaṇapraveśo 'yam advayapraveśaḥ /</p>
+
+<p>Vkn 8.8 puṣyo bodhisatva āha: kuśalam akuśalam iti dvayam etat / yā kuśalākuśalasyānupasthānatā tad animittam / animittakoṭyāś cādvayatā / yatra nistīraṇatāyam advayapraveśaḥ /</p>
+
+<p>Vkn 8.9 siṃho bodhisatva āha: avadyatānavadyateti dvayam etat / yat punar vajranibaddhajñānatayā na badhyate na mucyate 'yam advayapraveśaḥ /</p>
+
+<p>Vkn 8.10 siṃhamatir bodhisatva āha: idaṃ sāsravam idam anāsravam iti dvayam etat / yat punaḥ samatādharmaprāptaḥ sāsravānāsravasaṃjñaṃ na karoti, na vāsaṃjñāprāptaḥ, na cāsaṃjñāsamatāyāṃ samatāprāptaḥ, na saṃjñāgrathitaḥ / ya evaṃ praveśo 'yam advayapraveśaḥ /</p>
+
+<p>Vkn 8.11 sukhādhimukto bodhisatva āha: idaṃ sukham idam asukham iti dvayam etat / yat punaḥ sarvasaukhyāpagato gaganasamabuddhiḥ suviśuddhajñānatayā na sañjaty ayam advayapraveśaḥ /</p>
+
+<p>Vkn 8.12 nārāyaṇo bodhisatva āha: idaṃ laukikam idaṃ lokottaram iti dvayam etat / yā laukikasya prakṛtiśūnyatā, na tatra kiṃcid uttīryate nāvatīryate na sāryate na visāryate / yatra nottaraṇaṃ nāvataraṇaṃ na saraṇaṃ na visaraṇam ayam advayapraveśaḥ /</p>
+
+<p>Vkn 8.13 dāntamatir bodhisatva āha: saṃsāro nirvāṇam iti dvayam etat / saṃsārasvabhāvadarśanān na saṃsarati na parinirvāti / yaivaṃ budhyanāyam advayapraveśaḥ /</p>
+
+<p>Vkn 8.14 pratyakṣadarśī bodhisatva āha: kṣayo 'kṣaya iti dvayam etat / kṣayo 'tyantakṣīṇaḥ / yaś cātyantakṣīṇaḥ sa na kṣapayitavyaḥ / tenocyate 'kṣaya iti / yaś cākṣayaḥ sa kṣaṇikaḥ / kṣanikasya nāsti kṣayaḥ / evaṃ praviṣṭo 'dvayadharmamukhapraviṣṭo vaktavyaḥ /</p>
+
+<p>Vkn 8.15 samantagupto bodhisatva āha: ātmā nirātmeti dvayam etat / yas tām ātmatāṃ nopalabhate, sa kiṃ nirātmīkariṣyati / ātmasvabhāvadarśī dvayaṃ na karoty ayam advayapraveśaḥ /</p>
+
+<p>Vkn 8.16 vidyuddevo bodhisatva āha: vidyāvidyeti dvayam etat / avidyāprakṛtikaiva vidyā / yā cāvidyā sāprakṛtikāgaṇanā gaṇanāpathasamatikrāntā / yo 'trābhisamayo 'dvayābhisamayo 'yam advayapraveśaḥ /</p>
+
+<p>Vkn 8.17 priyadarśano bodhisatva āha: rūpaṃ śūnyam iti dvayam etat / rupam eva hi śūnyatā / na rūpavināśāc chūnyatā, rūpaprakṛtir eva śūnyatā / evaṃ vedanā saṃjñā saṃskārā vijñānaṃ śūnyam iti dvayam etat / vijñānam eva hi śūnyatā / na vijñānavināśāc chūnyatā, vijñānaprakṛtir eva śūnyatā / yo 'tra pañcasūpādānaskandheṣv evaṃ jñānānubodho 'yam advayapraveśaḥ /</p>
+
+<p>Vkn 8.18 prabhāketur bodhisatva āha: anye catvāro dhātavo 'nya ākāśadhātur iti dvayam etat / ākāśasvabhāvā eva catvāro dhātavaḥ / pūrvāntata ākāśasvabhāvā aparāntata ākāśasvabhāvās tathā pratyutpannato 'py ākāśasvabhāvāḥ / yac caivaṃ dhātupraveśajñānam ayam advayapraveśaḥ /</p>
+
+<p>Vkn 8.19 sumatir bodhisatva āha: cakṣū rūpaṃ ca dvayam etat / yat punaś cakṣuḥparijñātāvī rūpeṣu na rajyati na duṣyati na muhyati, sa ucyate śānta iti / śrotraṃ śabdāś ca ghrāṇaṃ gandhāś ca jihvā rasāś ca kāyaḥ spraṣṭavyāni ca mano dharmāś ca dvayam etat / yat punar manaḥparijñātāvī dharmeṣu na rajyate na duṣyati na muhyati, sa ucyate śānta iti / evaṃ śāntasthitasyādvayapraveśaḥ /</p>
+
+<p>Vkn 8.20 akṣayamatir bodhisatva āha: dānaṃ sarvajñatāyāṃ pariṇāmayatīti dvayam etat / dānasvabhāvaiva sarvajñatā, sarvajñatāsvabhāva eva pariṇāmaḥ / evaṃ śīlaṃ kṣāntiṃ vīryaṃ dhyānaṃ prajñāṃ sarvajñatāyāṃ pariṇāmayatīti dvayam etat / prajñāsvabhāvaiva sarvajñatā, sarvajñatāsvabhāva eva pariṇāmaḥ / yo 'traikanayapraveśo 'yam advayapraveśaḥ /</p>
+
+<p>Vkn 8.21 gambhīrabuddhir bodhisatva āha: anyā śūnyatānyad animittam anyad apraṇihitam iti dvayam etat / yad dhi śūnyaṃ tatra na kiṃcin nimittam / animitte 'praṇihitam / apraṇihite na cittaṃ na mano na manovijñānaṃ pracarati / yatraikaṃ vimokṣamukhaṃ tatra sarvāṇi vimokṣamukhāni draṣṭavyāny ayam advayapraveśaḥ /</p>
+
+<p>Vkn 8.22 śāntendriyo bodhisatva āha: buddho dharmaḥ saṃgha iti dvayam etat / buddhasya hi dharmaḥ, dharmaprakṛtikaś ca saṃghaḥ / sarvāṇy etāni ratnāny asaṃskṛtāni, asaṃskṛtaṃ cākāśam, ākāśasamaś ca sarvadharmanayaḥ / ya evam anugamo 'yam advayapraveśaḥ /</p>
+
+<p>Vkn 8.23 apratihatacakṣur bodhisatva āha: satkāyaḥ satkāyanirodha iti dvayam etat / satkāya eva hi nirodhaḥ / tat kasmād dhetoḥ / tathā hi sa satkāya iti dṛṣṭiṃ nopasthāpayati, yayā dṛṣṭyā satkāya iti vā satkāyanirodha iti vā kalpayati / so 'kalpo 'vikalpo 'tyantāvikalpo nirodhasvabhāvaprāptaḥ, na saṃbhavati na vibhavaty ayam advayapraveśaḥ /</p>
+
+<p>Vkn 8.24 suvinīto bodhisatva āha: kāyavāṅmanaḥsaṃvara iti dvayam etat / tat kasmād dhetoḥ / anabhisaṃskāralakṣanā hy ete dharmāḥ / yā kāyasyānabhisaṃskāratā tallakṣaṇaiva vāganabhisaṃskāratā tallakṣaṇaiva mano'nabhisaṃskāratā / yā ca sarvadharmāṇām anabhisaṃskāratā, sā jñātavyānugantavyā / yad atrānabhisaṃskārajñānam ayam advayapraveśaḥ /</p>
+
+<p>Vkn 8.25 puṇyakṣetro bodhisatva āha: puṇyapuṇyāniñjyān saṃskāran abhisaṃskarotīti dvayam etat / yat punaḥ puṇyāpuṇyāniñjyānabhisaṃskāratā sādvayā / yā ca puṇyāpuṇyāniñjyānāṃ saṃskārāṇāṃ svalakṣaṇaśūnyatā na tatra puṇyāpuṇyāniñjyāḥ saṃskārāḥ / yaivam anumārjanāyam advayapraveśaḥ /</p>
+
+<p>Vkn 8.26 padmavyūho bodhisatva āha: ātmasamutthānasamutthitaṃ dvayam / ātmaparijñātāvī dvayaṃ notthāpayati / advayasthitasya vijñāptir nāsti / avijñaptikaś cādvayapraveśaḥ /</p>
+
+<p>Vkn 8.27 śrīgarbho bodhisatva āha: upalambhaprabhāvitaṃ dvayam / yan na labhate tan nopalabhate, tan nāyūhati na niryūhati / tatra nāyūho na niryūho 'yam advayapraveśaḥ /</p>
+
+<p>Vkn 8.28 candrottaro bodhisatva āha: tamaḥ prakāśa iti dvayam etat / atamo 'prakāśa ity advayam / tat kasmād dhetoḥ / tathā hi nirodhasamāpannasya na tamo na prakāśaḥ / evaṃlakṣaṇāś ca sarvadharmāḥ / yo 'tra samatāpraveśo 'yam advayapraveśaḥ /</p>
+
+<p>Vkn 8.29 ratnamudrāhasto bodhisatva āha: nirvāṇe 'bhiratiḥ saṃsāre 'nabhiratir iti dvayam etat / yasya na nirvāṇe 'bhiratir na saṃsāre 'nabhiratir idam advayam / tat kasmād dhetoḥ / baddhasya hi sato mokṣaḥ prabhāvyate / yo 'tyantam evābaddhaḥ sa kiṃ mokṣaṃ paryeṣiṣyate / abaddho 'mukto bhikṣur na ratim utpādayati nāratim ayam advayapraveśaḥ /</p>
+
+<p>Vkn 8.30 maṇikūṭarājo bodhisatva āha: mārgaḥ kumārga iti dvayam etat / mārgapratipannasya na kumārgaḥ samudācarati / asamudācārasthitasya na mārgasaṃjñā bhavati na kumārgasaṃjñā / saṃjñāparijñātāvino hi dvaye buddhir nākrāmaty ayam asyādvayapraveśaḥ /</p>
+
+<p>Vkn 8.31 satyanandī bodhisatva āha: satyaṃ mṛṣeti dvayam etat / satyadarśī satyam eva na samanupaśyati, kuto mṛṣā drakṣyati / tat kasmād dhetoḥ / na hi sa māṃsacakṣuṣā paśyati, prajñācakṣuṣā paśyati / tathā ca paśyati, na vipaśyati / yatra ca na paśyanā na vipaśyanāyam advayapraveśaḥ /</p>
+
+<p>Vkn 8.32 ity evaṃ te bodhisatvāḥ svakasvakān nirdeśān nirdiśya mañjuśriyam kumārabhūtam etad avocat: katamo mañjuśriḥ bodhisatvasyādvayapraveśaḥ /</p>
+
+<p>mañjuśrīr āha: subhāṣitaṃ yuṣmākaṃ satpuruṣāḥ sarveṣām / api tu yāvad yuṣmābhir nirdiṣṭaṃ sarvam etad dvayam / ekanirdeśaṃ sthāpayitvā yaḥ sarvadharmāṇām anudāhāro 'pravyāhāro 'nudīranākīrtanānabhilapanam aprajñapanam ayam advayapraveśaḥ /</p>
+
+<p>Vkn 8.33 atha khalu mañjuśrīḥ kumārabhūto vimalakīrtiṃ licchavim etad avocat: nirdiṣṭo 'smābhiḥ kulaputra svakasvako nirdeśaḥ / pratibhātu tavāpy advayadharmapraveśanirdeśaḥ /</p>
+
+<p>atha vimalakīrtir licchavis tūṣṇīm abhūt /</p>
+
+<p>atha mañjuśrīḥ kumārabhūto vimalakīrter licchaveḥ sādhukāram adāt: sādhu sādhu kulaputra ayaṃ bodhisatvānām advayadharmamukhapraveśo yatra nākṣararutaravitavijñaptipracāraḥ /</p>
+
+<p>iha nirdeśe nirdiśyamāne pañcānāṃ bodhisatvasahasrāṇām advayadharmamukhapraveśād anutpattikadharmakṣāntipratilambho 'bhūt // //</p>
+
+<p>advayadharmamukhapraveśaparivarto 'ṣṭamaḥ //</p>
+
+<p>Vkn 9.1 athāyuṣmataḥ śāriputrasyaitad abhūt: kālaḥ paryantībhūtaḥ / ime ca mahāsatvā nottiṣṭhanti / kutraite paribhokṣyante /</p>
+
+<p>atha vimalakīrtir licchavir āyuṣmataḥ śāriputrasya cetasā cetaḥparivitarkam ājñāyāyuṣmantaṃ śāriputram evam āha: ye te bhadantaśāriputra tathāgatenāṣṭau vimokṣā ākhyātās tair vimokṣair vihara / tvaṃ mā āmiṣamrakṣitayā saṃtatyā dharmaṃ śrauṣīḥ / api tu khalu punar bhadantaśāriputra muhūrtam āgamayasva, yāvad anāsvāditapūrvabhojanaṃ bhokṣyase /</p>
+
+<p>Vkn 9.2 atha vimalakīrtir licchavis tasyāṃ velāyāṃ tathārūpaṃ samādhisamāpannaḥ tādṛśaṃ carddhyabhisaṃskāram abhisaṃskṛtavān / yad ūrdhve digbhāga ito buddhakṣetrād dvācatvāriṃśad gaṅgānadīvālikāsamāni buddhakṣetrāṇy atikramya sarvagandhasugandhaṃ nāma lokadhātuṃ teṣāṃ bodhisatvānāṃ teṣāṃ ca mahāśrāvakāṇām upadarśayati / tatra gandhottamakūṭo nāma tathāgata etarhi tiṣṭhati dhriyate yāpayati / tatra ca lokadhātau yādṛśā daśasu dikṣu sarvabuddhakṣetreṣu divyā mānuṣyakāś ca gandhā vānti / te tatra lokadhātau vṛkṣebhyo viśiṣṭatamā gandhā vānti / tatra lokadhātau nāsti śrāvakapratyekabuddhānāṃ nāmadheyam api / śuddhānām eva bodhisatvānāṃ saṃnipātaḥ / sa tebhyo gandhottamakūṭas tathāgato dharmaṃ deśayati / tatra ca lokadhātau sarvagandhamayāḥ kūṭāgārāḥ, sarvagandhamayāś caṅkramā udyānavimānāni / yaṃ ca te bodhisatvā āhāram āharanti tasya bhojanasya yo gandhaḥ so 'pramāṇāl lokadhātūn spharati /</p>
+
+<p>tasmiṃś ca samaye bhagavān gandhottamakūṭas tathāgato bhaktāya niṣaṇṇo 'bhut sārdhaṃ tair bodhisatvaiḥ / tatra gandhavyuhāhārā nāma devaputrā mahāyānasaṃprasthitās tasya bhagavatas teṣāṃ bodhisatvānām upasthānaparicaryāyā udyuktāḥ / tatra sā sarvā parṣat taṃ lokadhātuṃ paśyati taṃ ca bhagavantaṃ tāṃś ca bodhisatvān bhaktāgraniṣaṇnān /</p>
+
+<p>Vkn 9.3 atha vimalakīrtir licchavis tān sarvān bodhisatvān āmantrayate sma: ko yuṣmākaṃ satpuruṣāḥ utsahate 'to buddhakṣetrād bhojanam ānetum / tatra mañjuśriyo 'dhiṣṭhānena na kaścid utsahate /</p>
+
+<p>atha vimalakīrtir licchavir mañjuśriyaṃ kumārabhūtam evam āha: na tvaṃ mañjuśrīḥ paryapatrapasa īdṛśyā parṣadā /</p>
+
+<p>āha: nanūktaṃ kulaputra tathāgatenāśikṣito na paribhavitavya iti /</p>
+
+<p>Vkn 9.4 atha vimalakīrtir licchavir anuttiṣṭhann etataḥ śayanāt puratas teṣāṃ bodhisatvānāṃ nirmitaṃ bodhisatvaṃ nirmimīte sma / suvarṇavarṇena kāyena lakṣaṇānuvyañjanasamalaṃkṛtena tasya tādṛśo rūpāvabhāso 'bhūd yena sā sarvā parṣad dhyāmīkṛtā bhavet /</p>
+
+<p>atha vimalakīrtir licchavis taṃ nirmitaṃ bodhisatvam evam āha: gaccha kulaputra ūrdhaṃdigbhāge dvācatvāriṃśad gaṅgānadīvālikāsamāni buddhakṣetrāṇy atikramya sarvagandhasugandho nāma lokadhātuḥ / tatra gandhottamakūṭo nāma tathāgataḥ, sa etarhi bhaktāya niṣaṇṇaḥ / tatra gatvā madvacanāt tasya tathāgatasya pādau śirasā vanditvaivaṃ vada ḥ vimalakīrtir licchavir bhagavataḥ pādau śirasā vanditvā bhagavato 'lpābādhatāṃ ca paripṛcchaty alpātaṅkatāṃ ca laghutthānatāṃ ca yātrāṃ ca balaṃ ca sukhaṃ cānavadyatāṃ ca sparśavihāratāṃ ca / evaṃ ca vadati ḥ dehi me bhagavan bhuktāvaśeṣaṃ yat sahe lokadhātau buddhakṛtyaṃ kariṣyati / eṣāṃ ca hīnādhimuktikanāṃ satvānam udārāṃ matiṃ rocayiṣyati / tathāgatasya nāmadheyaṃ vaistārikaṃ kṛtaṃ bhaviṣyati /</p>
+
+<p>Vkn 9.5 atha sa nirmito bodhisatvo vimalakīrter licchaveḥ sādhv iti pratiśrutya teṣāṃ bodhisatvānāṃ purata ūrdhamukhaḥ saṃdṛśyate / na cainaṃ te bodhisatvāḥ paśyanti gacchantam /</p>
+
+<p>atha sa nirmito bodhisatvas taṃ sarvagandhasugandhaṃ lokadhātum anuprāptaḥ / sa tatra bhagavato gandhottamakūṭasya tathāgatasya pādau śirasā vanditvaivam āha: vimalakīrtir bhagavan bodhisatvo bhagavataḥ pādau śirasā vandate / alpābādhatāṃ ca paripṛcchaty alpātaṅkatāṃ ca laghūtthānatāṃ ca yātrāṃ ca balaṃ ca sukhaṃ cānavadyatāṃ ca sparśavihāratāṃ ca /</p>
+
+<p>sa ca bhagavataḥ pādau śirasā vanditvaivam āha: dehi me bhagavan bhuktāvaśeṣaṃ bhojanaṃ yad idaṃ sahe lokadhātau buddhakṛtyaṃ kariṣyati / teṣāṃ hīnādhimuktānāṃ satvānām udāreṣu buddhadharmeṣu matiṃ rocayiṣyati / bhagavataś ca nāmadheyaṃ vaistārikaṃ kṛtaṃ bhaviṣyati /</p>
+
+<p>Vkn 9.6 atha khalu ye tasya bhagavato gandhottamakūṭasya tathāgatasya buddhakṣetre bodhisatvās te vismitās taṃ bhagavantaṃ gandhottamakūṭaṃ tathāgatam evam āhuḥ: kuto 'yaṃ bhagavan īdṛśo mahāsatva āgacchati, kva vā sa saho lokadhātuḥ, kaiṣā hīnādhimuktikatā nāma / evaṃ te bodhisatvās taṃ tathāgataṃ paripṛcchanti /</p>
+
+<p>atha sa bhagavāṃs tān bodhisatvān evam āha: asti kulaputrāḥ adhodigbhāga ito buddhakṣetrād dvācatvāriṃśad gaṅgānadīvālikāsamāni buddhakṣetrāṇy atikramya saho lokadhātuḥ / tatra śākyamunir nāma tathāgato dharmaṃ deśayati hīnādhimuktikānāṃ satvānāṃ pañcakaṣāye buddhakṣetre / tatra vimalakīrtir nāma bodhisatvo 'cintyavimokṣapratiṣṭhito bodhisatvebhyo dharmaṃ deśayati / tenaiṣa nirmito bodhisatvo 'nupreṣito mama nāmadheyaparikīrtanāyāsya ca lokadhātor varṇasaṃprakāśanāya teṣāṃ ca bodhisatvānāṃ kuśalamūlottānatāyai /</p>
+
+<p>Vkn 9.7 atha te bodhisatvā evam āhuḥ: kiyan mahātmā sa bhagavan bodhisatvo yasyāyaṃ nirmita evam ṛddhibalavaiśāradyaprāptaḥ /</p>
+
+<p>sa bhagavān āha: tathā mahātmā sa bodhisatvo yat sarvabuddhakṣetreṣu nirmitān preṣayati / te ca nirmitā buddhakṛtyena satvānāṃ pratyupasthitā bhavanti /</p>
+
+<p>Vkn 9.8 atha sa bhagavān gandhottamakūṭas tathāgataḥ sarvagandhasamīhite bhājane taṃ sarvagandhaparivāsitaṃ bhojanaṃ tasmai bodhisatvāya prādāt / tatra navatir bodhisatvasahasrāṇi saṃprasthitāni: gamiṣyāmo vayaṃ bhagavan taṃ sahaṃ lokadhātuṃ taṃ bhagavantaṃ śākyamuniṃ vandanāyaitaṃ ca vimalakīrtiṃ tāṃś ca bodhisatvān darśanāya /</p>
+
+<p>sa bhagavān āha: gacchata kulaputrāḥ yasyedānīṃ kālaṃ manyadhve / api tu gandhān kulaputrāḥ pratisaṃhṛtya taṃ lokadhātuṃ praviśata, mā te satvā madapramādam āpatsyante / svarūpaṃ ca pratisaṃharata, mā te sahe lokadhātau satvā madgubhūtā bhaveyuḥ / mā ca tasmin !okadhātau hīnasaṃjñām utpādya pratighasaṃjñām utpādayata / tat kasmād dhetoḥ / ākāśakṣetrāṇi hi buddhakṣetrāṇi, satvaparipākāya tu buddhā bhagavanto na sarvaṃ buddhaviṣayaṃ saṃdarśayanti /</p>
+
+<p>Vkn 9.9 atha nirmito bodhisatvas tad bhojanam ādāya sārdhaṃ tair navatyā bodhisatvasahasrair buddhānubhāvena vimalakīrtyadhiṣṭhānena ca tenaiva kṣaṇalavamuhūrtena sarvagandhasugandhe lokadhātāv antarhito vimalakīrter licchaver gṛhe pratyaṣṭhāt /</p>
+
+<p>Vkn 9.10 tatra vimalakirtir navatisiṃhāsanasahasrāṇy adhitiṣṭhati yādṛśāny eva tāni prathamakāni siṃhāsanāni / tatra te bodhisatvā niṣaṇṇāḥ / sa ca nirmitas tad bhojanaparipūrṇaṃ bhājanaṃ vimalakīrter licchaver upanāmayati sma / tasya bhojanasya gandhena sarvā vaiśālī mahānagarī nirdhūpitābhūd yāvat sāhasro lokadhātuḥ sugandhagandhīkṛto 'bhūt / tatra vaiśālakā brāhmaṇagṛhapatayaḥ somacchatraś ca nāma licchavīnām adhipatis taṃ gandham āghrāyāścaryaprāpto 'dbhutaprāptaḥ prahlāditakāyacetāḥ sārdhaṃ paripūrṇaiś caturaśītyā licchavisahasraiḥ / tenaiva ca bhojanagandhena bhūmāvacarā devaputrāḥ kāmāvacarā rūpāvacarāś ca devāḥ saṃcoditā vimalakīrter licchaver gṛham upasaṃkrāntā abhūvan /</p>
+
+<p>Vkn 9.11 atha vimalakīrtir licchaviḥ sthaviraṃ śāriputraṃ tāṃś ca mahāśrāvakān etad avocat: paribhuṅgdhvaṃ bhadantāḥ idaṃ tathāgatāmṛtabhojanaṃ mahākaruṇābhāvitam / mā ca pradeśacaryāyāṃ cittam upanibandhata, mā na śakyata dakṣiṇāṃ śodhayitum /</p>
+
+<p>Vkn 9.12 tatra keṣāṃcic chrāvakāṇām etad abhavat: ita evaṃ parīttād bhojanāt katham iyam īdṛśī parṣat paribhokṣyata iti /</p>
+
+<p>tān sa nirmito bodhisatvaḥ śrāvakān etad avocat: mā yūyam āyuṣmantaḥ svaprajñāpuṇyais tathāgataprajñāpuṇyāni samīkārṣṭa / syāc caturṇāṃ mahāsamudrāṇāṃ kṣayaḥ, na tv evāsya bhojanasya kaścit parikṣayaḥ / sacet sarvasatvā api sumerumātrair ālopaiḥ kalpaṃ paribhuñjīran, tathāpy asya kṣayo na syāt / tat kasmād dhetoḥ / akṣayaśīlasamādhiprajñānirjātasyedaṃ tathāgatasya pātrāvaśeṣaṃ bhojanaṃ naitac chakyaṃ kṣapayitum /</p>
+
+<p>Vkn 9.13 atha tato bhojanāt sarvā sā parṣat tṛptā kṛtā / na ca tāvad bhojanaṃ kṣīyate / yaiś ca bodhisatvaiḥ śrāvakaiḥ śakrabrahmalokapālais tadanyaiś ca satvais tad bhojanaṃ bhuktam, teṣāṃ tādṛśaṃ sukhaṃ kāye 'vakrāntaṃ yādṛśaṃ sarvasukhapratimaṇḍite lokadhātau bodhisatvānāṃ sukham / sarvaromakūpebhyaś ca teṣāṃ tādṛśo gandhaḥ pravāti / tadyathāpi nāma tasminn eva sarvagandhasugandhe lokadhātau vṛkṣāṇāṃ gandhaḥ /</p>
+
+<p>Vkn 9.14 atha vimalakīrtir licchavir jānann eva tān bhagavato gandhottamakūṭasya tathāgatasya buddhakṣetrād āgatān bodhisatvān etad avocat: kidṛśī kulaputrāḥ gandhottamakūṭasya tathāgatasya dharmadeśanā /</p>
+
+<p>ta evam āhuḥ: na sa tathāgato 'kṣaraniruktyā dharmaṃ deśayati / tenaiva gandhena te bodhisatvā vinayaṃ gacchanti / yatra yatraiva gandhavṛkṣe te bodhisatvā niṣīdanti, tatas tatas tādṛśo gandhaḥ pravāti yat samanantarāghrāte gandhe sarvabodhisatvaguṇākaraṃ nāma samādhiṃ pratilabhante yasya samādheḥ samanantarapratilambhāt sarveṣāṃ bodhisatvaguṇā jāyante /</p>
+
+<p>Vkn 9.15 atha te bodhisatvā vimalakīrtiṃ licchavim etad avocan: iha punar bhagavāñ śākyamuniḥ kīdṛśīṃ dharmadeśanāṃ prakāśayati /</p>
+
+<p>āha: durdamāḥ satpuruṣāḥ ime satvāḥ / teṣāṃ durdamānāṃ satvānāṃ khaṭuṅkadurdamadamathakathām eva prakāśayati / katamaḥ punaḥ khaṭuṅkadurdamānāṃ damathaḥ, katamā ca khaṭuṅkadurdamadamathakathā / tadyatheme nirayāḥ, iyaṃ tiryagyoniḥ, ayaṃ yamalokaḥ, ime 'kṣaṇāḥ, iyaṃ hīnendriyopapartiḥ, idaṃ kāyaduścaritam, ayaṃ kāyaduścaritasya vipākaḥ, idaṃ vāgduścaritam, ayaṃ vāgduścaritasya vipākaḥ, idaṃ manoduścaritam, ayaṃ manoduścaritasya vipākaḥ, ayaṃ prāṇātipātaḥ, idam adattādānam, ayaṃ kāmamithyācāraḥ, ayaṃ mṛṣāvādaḥ, iyaṃ piśunā vāk / iyaṃ paruṣā vācā, ayaṃ saṃbhinnapralāpaḥ, iyam abhidhyā, ayaṃ vyāpādaḥ, iyaṃ mithyādṛṣṭiḥ, ayam eṣām eṣa vipākaḥ, idaṃ mātsaryam, idaṃ dauḥśīlyam, ayaṃ krodhaḥ, idaṃ kauśīdyam, ayaṃ vikṣepaḥ, idaṃ dauḥprajñyam, idaṃ dauḥprajñyasya phalam / ayaṃ prātimokṣaśikṣāvyatikramaḥ, ayaṃ prātimokṣaḥ, idaṃ karaṇīyam, idam akaraṇīyam, ayaṃ yogaḥ / idaṃ pradhānam, idam āvaraṇam, idam anāvaraṇam, iyam āpattiḥ, iyam anāpattiḥ, idam āpattivyutthānam, ayaṃ mārgaḥ / ayaṃ kumārgaḥ, idaṃ kuśalam, idam akuśalam, idaṃ sāvadyam, idam anavadyam, idaṃ sāsravam, idam anāsravam, idaṃ laukikam, idaṃ lokottaram, idaṃ saṃskṛtam, idam asaṃskṛtam, ayaṃ saṃkleśaḥ, idaṃ vyavadānam, ayaṃ saṃsāraḥ, idaṃ nirvāṇam /</p>
+
+<p>ity evam anekadharmaparibhāṣaṇatayā khaṭuṅkāśvasadṛśacittāḥ satvā avasthāpyante / tadyathā khaṭuṅko hayo gajo vā yāvan marmavedhena damathaṃ gacchati, evam eveha durdamāḥ khaṭuṅkāḥ satvās te sarvaduḥkhaparibhāṣaṇakathābhir damathaṃ gacchanti /</p>
+
+<p>Vkn 9.16 te bodhisatvā āhuḥ: āścaryaṃ bhagavataḥ śākyamuner yatra hi nāma pratisaṃhṛtya buddhamāhātmyaṃ daridralūhatayā khaṭuṅkān satvān vinayati / ye 'pi bodhisatvā ihaivaṃ pratikaṣṭe buddhakṣetre prativasanti teṣām apy acintyā mahākaruṇā /</p>
+
+<p>vimalakīrtir āha: evam eva satpuruṣāḥ tathaitad yathā vadatha / ye 'pīha bodhisatvāḥ pratyājātāḥ, dṛḍhā teṣāṃ mahākaruṇā / te bahutaram iha lokadhātāv ekajanmanā kariṣyanti satvārtham / na tv eva tatra sarvagandhasugandhe lokadhātau kalpasahasreṇa satvārthaḥ /</p>
+
+<p>Vkn 9.17 tat kasmād dhetoḥ / iha hi satpuruṣāḥ sahe lokadhātau daśa kuśaloccayā dharmāḥ, ye 'nyeṣu buddhakṣetreṣu na saṃvidyante, yāṃś ca te parigṛhṇanti / katame daśa / yad idaṃ dānasaṃgraho daridreṣu, śīlasaṃgraho duḥśīleṣu, kṣāntisaṃgrahaḥ pratihateṣu, vīryasaṃgrahaḥ kuśīdeṣu, dhyānasaṃgraho vikṣiptacitteṣu, prajñāsaṃgraho duḥprajñeṣu, aṣṭākṣaṇasamatikramadeśanākṣaṇaprāpteṣu, mahāyānadeśanā prādeśikacaryāsu, kuśalamūlasaṃgraho 'navaropitakuśalamūleṣu, satatasamitaṃ satvaparipākaś caturbhiḥ saṃgrahavastubhiḥ / imān daśa kuśaloccayān dharmān pratigṛhṇanti ye tadanyeṣu buddhakṣetreṣu na saṃvidyante /</p>
+
+<p>Vkn 9.18 te bodhisatvā āhuḥ: katamair dharmaiḥ samanvāgato bodhisatvo 'kṣaṭo 'nupahataḥ sahāl lokadhātoś cyutvā pariśuddhaṃ buddhakṣetraṃ gacchati /</p>
+
+<p>vimalakīrtir āha: aṣṭābhiḥ kulaputraḥ dharmaiḥ samanvāgato bodhisatvaḥ sahāl lokadhātoś cyutvākṣaṭo 'nupahataḥ pariśuddhaṃ buddhakṣetraṃ gacchati / katamair aṣṭābhiḥ / yad uta sarvasatvānāṃ mayā hitaṃ kartavyam, na caiṣāṃ sakāśāt kiṃcid dhitaṃ paryeṣitavyam, sarvasatvaduḥkhaṃ cānenotsoḍhavyaṃ sarvaṃ cānena kuśalamūlaṃ sarvasatvānām utsraṣṭavyam, sarvasatveṣv apratighātaḥ, sarvabodhisatveṣu śāstṛprema, aśrutānāṃ ca dharmāṇāṃ śrutānāṃ ca śravaṇād apratikṣepaḥ, anīrṣukatā paralābheṣu svalābhenānabhimananācittanidhyaptiḥ, ātmaskhalitapratyavekṣā parasyāpattyacodanatā apramādaratasya ca sarvaguṇasamādanam / ebhir aṣṭābhir dharmaiḥ samanvāgato bodhisatvaḥ sahāl lokadhātoś cyutvākṣaṭo 'nupahataḥ pariśuddhaṃ buddhakṣetraṃ gacchati /</p>
+
+<p>atha vimalakīrtir licchavir mañjuśrīś ca kumārabhūtas tasyāṃ parṣadi saṃnipatitāyāṃ tathā dharmaṃ deśayato yathā paripūrṇasya prāṇisahasrasyānuttarāyāṃ samyaksaṃbodhau cittāny utpannāni, daśānāṃ ca bodhisatvasahasrāṇām anutpattikadharmakṣāntipratilambho 'bhūt // //</p>
+
+<p>nirmitabhojanānayanaparivarto nāma navamaḥ //</p>
+
+<p>Vkn 10.1 tena khalu punaḥ samayena bhagavata āmrapālīvane dharmaṃ deśayataḥ sa maṇḍalamāḍo vipulaś ca vistīrṇaś ca saṃsthito 'bhūt / sā ca parṣat suvarṇavarṇā saṃdṛśyate sma / athāyuṣmān ānando bhagavantam etad avocat: kasyedaṃ bhagavan pūrvanimittaṃ yad idam āmrapālīvanam evaṃ vistīrṇaṃ saṃsthitaṃ sarvā ca parṣat suvarṇavarṇā saṃdṛśyate /</p>
+
+<p>bhagavān āha: eṣa ānanda vimalakīrtir licchavir mañjuśrīś ca kumārabhūto mahatyā parṣadā parivṛtau tathāgatasyāntikam upasaṃkramiṣyataḥ /</p>
+
+<p>Vkn 10.2 atha vimalakīrtir licchavir mañjuśriyaṃ kumārabhūtam etad avocat: gamiṣyāmo vayaṃ mañjuśrīḥ bhagavato 'ntikam / ime ca mahāsatvās tathāgataṃ drakṣyanti vandiṣyante ca /</p>
+
+<p>āha: gacchāma kulaputra yasyedānīṃ kālaṃ manyase /</p>
+
+<p>atha vimalakīrtir licchavis tādṛśam ṛddhyabhisaṃskāram abhisaṃskaroti sma / yathā tāṃ sarvāvatīṃ parṣadaṃ sārdhaṃ taiḥ siṃhāsanair dakṣiṇe pāṇau pratiṣṭhāpya yena bhagavāṃs tenopasaṃkrāmat / upasaṃkramya tāṃ parṣadaṃ dharaṇitale pratiṣṭhāpya bhagavataḥ pādau śirasā vanditvā bhagavantaṃ saptakṛtvaḥ pradakṣiṇīkṛtyaikānte 'sthāt /</p>
+
+<p>atha ye te bodhisatvā gandhottamakūṭasya tathāgatasya buddhakṣetrād āgatāḥ, te cānye ca tebhyaḥ siṃhāsanebhyo 'vatīrya bhagavataḥ pādau śirobhir vanditvaikānte pratyatiṣṭhan / evaṃ śakrabrahmalokapālā devaputrāś ca bhagavataḥ pādau śirobhir vanditvaikānte pratyatiṣṭhan /</p>
+
+<p>atha sa bhagavāṃs tān bodhisatvān dharmyayā kathaya pratisaṃmodyaivam āha: nisīdata kulaputrāḥ sveṣu sveṣu siṃhāsaneṣu /</p>
+
+<p>te bhagavatānujñātā nyaṣidan /</p>
+
+<p>Vkn 10.3 tatra bhagavān āyuṣmantaṃ śāriputram āmantrayate sma: dṛṣṭaṃ te śāriputra eṣām agrasatvānāṃ bodhisatvānāṃ vikrīḍitam /</p>
+
+<p>āha: dṛṣṭaṃ bhagavan /</p>
+
+<p>bhagavān āha: tataḥ kā te saṃjñotpannā /</p>
+
+<p>āha: acintyā saṃjñā me bhagavan tatrodapadyata yathā cintayituṃ tulayituṃ gaṇayituṃ na śaknomi tādṛśīṃ teṣām acintyāṃ kriyāṃ paśyāmi /</p>
+
+<p>Vkn 10.4 athāyuṣmān ānando bhagavantam etad avocat: anāghrātapūrvaṃ bhagavan gandham ājighrāmi / kasyaiṣa īdṛśo gandhaḥ /</p>
+
+<p>āha: eṣām eva ānanda bodhisatvānāṃ sarvaromakūpebhyo gandhaḥ kāyāt pravāti /</p>
+
+<p>śāriputro 'py āha: asmākam apy āyuṣmann ānanda sarvaromakūpebhya īdṛśo gandhaḥ pravāti /</p>
+
+<p>āha: kuto 'sya gandhasya prādurbhāvaḥ /</p>
+
+<p>āha: vimalakīrtinā licchavinā gandhottamakūṭasya tathāgatasya buddhakṣetrāt sarvagandhasugandhāl lokadhātor bhojanam ānītam / tad yāvadbhir bhuktaṃ sarveṣām īdṛśo gandhaḥ kāyāt pravāti /</p>
+
+<p>Vkn 10.5 athāyuṣmān ānando vimalakīrtiṃ bodhisatvam evam āha: kiyacciraṃ punar eṣa kulaputra gandho 'nuvartiṣyate /</p>
+
+<p>āha: yāvad etad bhojanaṃ na pariṇataṃ bhaviṣyati /</p>
+
+<p>ānanda āha: kiyaccireṇa punar etad bhojanaṃ pariṇaṃsyati /</p>
+
+<p>āha: saptabhiḥ saptāhaiḥ pariṇaṃsyati / upari cāsya saptāham ojaḥ sphariṣyati / na cājīrṇadoso bhaviṣyati /</p>
+
+<p>Vkn 10.6 yaiś ca bhadantānanda bhikṣubhir anavakrāntaniyāmair etad bhojanaṃ bhuktaṃ teṣām avakrāntaniyāmānāṃ pariṇaṃsyati / yaiḥ punar avakrāntaniyāmair bhuktaṃ teṣāṃ nāparimuktacittānāṃ pariṇaṃsyati / yair anutpāditabodhicittaiḥ satvaiḥ paribhuktaṃ teṣām utpāditabodhicittānām pariṇaṃsyati / yair utpāditabodhicittair bhuktaṃ teṣāṃ nāpratilabdhakṣāntikānāṃ pariṇaṃsyati / yaiḥ punaḥ pratilabdhakṣāntikair bhuktaṃ teṣām ekajātipratibaddhānāṃ pariṇaṃsyati /</p>
+
+<p>Vkn 10.7 tadyathāpi nāma bhadantānanda svādur nāma bhaiṣajyam, tat tāvat kauṣṭhagataṃ na pariṇamati yāvan na sarvagataṃ viṣam apagataṃ bhavati / tataḥ paścāt tad bhaiṣajyaṃ pariṇamati / evam eva bhadantānanda tāvad eva tad bhojanaṃ na pariṇataṃ bhavati yāvat sarvakleśaviṣaṃ na nirviṣaṃ bhavati / tataḥ paścāt tad bhojanaṃ pariṇamati /</p>
+
+<p>athāyuṣmān ānando bhagavantam etad avocat: buddhakṛtyaṃ bhagavan etad bhojanaṃ karoti /</p>
+
+<p>āha: evam etad ānanda evam etad yathā vadasi /</p>
+
+<p>Vkn 10.8 santy ānanda buddhakṣetrāṇi yeṣu bodhisatvā buddhakṛtyaṃ kurvanti / santi buddhakṣetrāṇi yeṣu bodhivṛkṣo buddhakṛtyaṃ karoti / santi buddhakṣetrāṇi yeṣu tathāgatalakṣaṇarūpadarśanaṃ buddhakṛtyaṃ karoti / evaṃ gaganam antarīkṣaṃ buddhakṛtyaṃ karoti / tādṛśas teṣāṃ satvānāṃ vinayo bhavati /</p>
+
+<p>Vkn 10.9 evaṃ svapnapratibhāsadakacandrapratiśrutkāmāyāmarīcyupamopanyāsākṣaravibhaktinirdeśāḥ satvānāṃ buddhakṛtyaṃ kurvanti / santi buddhakṣetrāṇi yatrākṣaravijñaptir buddhakṛtyaṃ karoti / santy ānanda buddhakṣetrāṇi tādṛśāni pariśuddhāni yatrānudāhāratāpravyāhāratānirdeśatānabhilāpyatā teṣāṃ satvānāṃ buddhakṛtyaṃ karoti /</p>
+
+<p>Vkn 10.10 na kaścid ānanda īryāpatho na kaścid upabhogo yo buddhānāṃ bhagavatāṃ satvavinayāya buddhakṛtyaṃ na karoti / ye cema ānanda catvāro mārāś caturāśītiś ca kleśamukhaśatasahasrāṇi yaiḥ satvāḥ saṃkliśyante, sarvais tair buddhā bhagavanto buddhakṛtyaṃ kurvanti /</p>
+
+<p>Vkn 10.11 idam ānanda sarvabuddhadharmapraveśaṃ nāma dharmamukhaṃ yatra yatra dharmamukhe praviṣṭo bodhisatvaḥ sarvodāravyūhaguṇasamanvāgateṣu buddhakṣetreṣu nāvalīyate nāvanamati / sarvodāravyūhaguṇasamanvāgateṣu ca buddhakṣetreṣu na kṛṣyati nonnamati / tathāgatānāṃ ca sakāśe so 'dhimātraṃ gauravam utpādayati / āścaryam idaṃ buddhānāṃ bhagavatāṃ sarvadharmasamatādhimuktānāṃ satvaparipācanatayā buddhakṣetranānātvadarśanam /</p>
+
+<p>Vkn 10.12 tadyathā ānanda bhavati buddhakṣetrāṇām aparāparaguṇanānātvam, na punaḥ khagapathasaṃchāditasya buddhakṣetrasyākāśanānātvam / evam eva ānanda bhavati tathāgatānaṃ rupakāyanānātvam, na punas tathāgatānām asaṅgajñānanānātvam /</p>
+
+<p>Vkn 10.13 samā hy ānanda sarvabuddhā rūpeṇa varṇena tejasā vapuṣā lakṣaṇaiḥ kulamāhātmyena śīlena samādhinā prajñayā vimuktyā vimuktijñānadarśanena balair vaiśāradyair buddhadharmair mahāmaitryā mahākaruṇayā hitaiṣitayeryayā caryayā pratipadāyuḥpramāṇena dharmadeśanayā satvaparipākena satvavimuktyā kṣetrapariśuddhyā sarvabuddhadharmaparipūrayā / tenocyate samyaksaṃbuddha iti tathāgata iti buddha iti /</p>
+
+<p>eṣām ānanda trayāṇāṃ padānāṃ yo 'rthavistarapadavibhaṅgaḥ sa tvayā kalpasthitikenāpi na sukaraḥ paryavāptum / trisāhasraparyāpannā apy ānanda satvās tvatsadṛśā bhaveyur agrā bahuśrutānāṃ smṛtidhāriṇīpratilabdhānām, te 'pi sarve satvā ānandasadṛśā eṣāṃ trayāṇāṃ padānām arthaviniścayaṃ śrutasmṛtidhāriṇīlabdhānām arthaviniścayanirdeśaṃ kalpenāpi na śaknuyuḥ paryavāptum, yad idaṃ samyaksaṃbuddha iti tathāgata iti buddha iti / evam apramāṇā hy ānanda buddhabodhiḥ, evam acintyaṃ tathāgatānāṃ prajñāpratibhānam /</p>
+
+<p>Vkn 10.14 athāyuṣmān ānando bhagavantam etad avocat: adyāgreṇāhaṃ bhagavan na bhūyo 'gro bahuśrutānām ity ātmānaṃ pratijñāsyāmi /</p>
+
+<p>bhagavān āha: mā tvam ānanda avalīnacittam utpādaya / tat kasmād dhetoḥ / śrāvakān saṃdhāya tvaṃ mayā ānanda agro bahuśrutānāṃ nirdiṣṭaḥ, na bodhisatvān / tiṣṭhantv ānanda bodhisatvāḥ / na te paṇḍitenāvagāhayitavyāḥ / śakyo hy ānanda sarvasāgarāṇāṃ gādhaḥ pramātum, na tv eva śakyo bodhisatvānāṃ prajñājñānasmṛtidhāraṇīpratibhānasya gādhaḥ pramātum / upekṣakā yūyam ānanda bodhisatvacaryāyāṃ bhavatha / tat kasmād dhetoḥ / ya ima ānanda vimalakīrtinā licchavinaikapūrvabhakte vyūhāḥ saṃdarśitāḥ, te sarvaśrāvakapratyekabuddhair ṛddhiprāptaiḥ sarvarddhivikurvitaprātihāryaiḥ kalpakoṭīśatasahasrāṇi na śakyāḥ saṃdarśayitum /</p>
+
+<p>Vkn 10.15 atha ye te bodhisatvā bhagavato gandhottamakūṭasya tathāgatasya buddhakṣetrāt sarvagandhasugandhāl lokadhātor agataḥ, te sarve prāñjalībhūtvā tathāgatasya namasyantaḥ, evaṃ ca vācam abhāsanta: pratiniḥsṛjāmo vayaṃ bhagavan tān manasikārān yair asmābhir iha buddhakṣetre hīnasaṃjñotpāditā / tat kasmād dhetoḥ / acintyo hi bhagavan buddhānāṃ bhagavatāṃ buddhaviṣayaḥ / upāyakauśalyena satvaparipākāya yathā yathecchanti tathā tathā kṣetravyūhān ādarśayanti / dehi bhagavan asmabhyaṃ dharmaprābhṛtaṃ yathā vayaṃ tatra sarvagandhasugandhe lokadhātau gatā bhagavantam anusmarema /</p>
+
+<p>Vkn 10.16 bhagavān āha: asti kulaputrāḥ kṣayākṣayo nāma bodhisatvānāṃ vimokṣaḥ / tatra yuṣmābhiḥ śikṣitavyam / sa punaḥ katamaḥ / kṣayam ucyate saṃskṛtam, akṣayam asaṃskṛtam / tad bodhisatvena saṃskṛtaṃ ca na kṣapayitavyam, asaṃskṛte ca na pratiṣṭhātavyam /</p>
+
+<p>Vkn 10.17 tatra saṃskṛtasyākṣayatā, yad idaṃ mahāmaitryā acyavanatā, mahākaruṇāyā anutsargaḥ, adhyāśayasaṃprasthitasarvajñatācittasyāsaṃpramoṣaḥ, satvaparipākeṣv aparikhedaḥ, saṃgrahavastūnām ariñcanā, saddharmaparigrahāya kāyajīvitaparityāgaḥ, kuśalamūleṣv atṛptiḥ, pariṇāmanākauśalyapratiṣṭhā, dharmaparyeṣṭāv akauśīdyam, dharmadeśanāsv anācāryamuṣṭiḥ, tathāgatadarśanapūjāvastuny autsukyam, saṃcintyopapattiṣv anuttrāsaḥ, saṃpattivipattiṣv anunnāmāvanāmatā, aśikṣiteṣv aparibhavaḥ, śikṣiteṣu śāstṛpremā, kleśākīrṇānāṃ yoniśa upasaṃhāraḥ, vivekaratiṣv atanmayatā, ātmasaukhye 'nadhyavasānam, parasaukhyena tanmayatā, dhyānasamādhisamāpattiṣv avīcisaṃjñā, saṃsāra udyānavimānasaṃjñā, yācanakeṣu kalyāṇamitrasaṃjñā, sarvasvaparityāge sarvajñatāparipūrisaṃjñā, duḥśīleṣu paritrāṇasaṃjñā, pāramitāsu mātāpitṛsaṃjñā, bodhipakṣyeṣu dharmeṣu svaparivārasaṃjñā, aparyāptīkṛtāḥ sarvakuśalamūlasaṃbhārāḥ, sarvabuddhakṣetraguṇānāṃ svakṣetraniṣpādanatā, lakṣaṇānuvyañjanaparipūryai nirargaḍayajñayajanatā, kāyavākcittālaṃkāratā sarvapāpākaraṇatayā, kāyavākpariśuddhyā cittapariśuddhyā cāsaṃkhyeyakalpasaṃsaraṇatā, cittaśūratayāpramāṇabuddhaguṇaśravaṇenāsaṃsīdanatā, kleśaśatrunigrahāya prajñāśastragrahaṇatā, sarvasatvabhārodvahanatāyai skandhadhātvāyatanaparijñā, uttaptavīryatā mārasainyadharṣaṇārtham, nirmānatā dharmaparyeṣṭyai, jñānaparyeṣṭidharmagrāhyatāyā alpecchasaṃtuṣṭitā, sarvalokapriyatāyai sarvalokadharmāsaṃsṛṣṭatā, lokānuvartanatāyai sarveryāpathāvikopanatā, sarvakriyāsaṃdarśanatāyā abhijñotpādanatā, sarvaśrutadhāraṇatāyai dhāraṇīsmṛtijñānatā, sarvasatvasaṃśayacchedanatāyā indriyaparāparajñānatā, asaṅgādhiṣṭhānatā dharmadeśanatāyai, asaṅgapratibhānatā pratibhānaprāptapratilambhatayā, devamanuṣyasaṃpattyanubhavatā daśakuśalakarmapariśuddhitayā, brahmapathapratiṣṭhānatā caturapramāṇotpādanatāyai,
+buddhasvarapratilambhatā dharmadeśanādhyeṣaṇānumodanāsādhukārapradānena, buddheryāpathapratilambhatā kāyavāṅmanaḥsamyamaviśeṣagāmitayā sarvadharmātanmayatayā, bodhisatvasaṃghakarṣaṇatayā mahāyānasamādāpanatā, sarvaguṇāvipraṇāśatayā cāpramādaḥ / evaṃ hi kulaputrāḥ etaddharmādhimukto bodhisatvaḥ saṃskṛtaṃ na kṣapayati /</p>
+
+<p>Vkn 10.18 kathaṃ punar asaṃskṛte na pratitiṣṭhate / yadā śūnyatāparijayaṃ ca karoti / na ca śūnyatāṃ sākṣātkaroti / ānimittaparijayaṃ ca karoti / na cānimittaṃ sākṣātkaroti / apraṇihitaparijayaṃ ca karoti, na cāpraṇihitaṃ sākṣātkaroti / anabhisaṃskāraparijayaṃ ca karoti, na cānabhisaṃskāraṃ sākṣātkaroti / anityam iti ca pratyavekṣate, na ca kuśalamūlais tṛpyate / duḥkham iti ca pratyavekṣate, saṃcintya copapadyate / anātmeti ca pratyavekṣate, na catmatāṃ parityajati / śāntam iti ca pratyavekṣate, na cātyantaśāntim utpādayati / viviktam iti ca pratyavekṣate, kāyacittena codyujyate / anālayam iti ca pratyavekṣate, śukladharmālayaṃ ca na vijahāti / anupādānam iti ca pratyavekṣate, upāttaṃ ca satvānāṃ bhāraṃ vahati / anāsravam iti ca pratyavekṣate, saṃsārapravṛttiṃ copayāti / apracāram iti ca pratyavekṣate, pracarati satvaparipākāya / nairātmyam iti ca pratyavekṣate, satvamahākaruṇāṃ ca notsṛjati / ajātiṃ ca pratyavekṣate, śrāvakaniyāme ca na patati / riktam iti ca tuccham iti cāsārakam iti cāsvāmikam iti cāniketam iti ca pratyavekṣate, ariktapuṇyaś
+cātucchajñānaś ca paripūrṇasaṃkalpaś ca svayambhūjñānābhiṣiktaś ca svayambhūjñāne cābhiyukto nītārtho buddhavaṃśe pratiṣṭhito bhavati / evaṃ hi kulaputrāḥ evaṃ dharmādhimukto bodhisatvo 'saṃskṛte na pratitiṣṭhate saṃskṛtaṃ na kṣapayati /</p>
+
+<p>Vkn 10.19 puṇyasaṃbhārābhiyuktatvad asaṃskṛte na pratitiṣṭhati, jñanasaṃbhārābhiyuktatvāt saṃskṛtaṃ na kṣapayati / mahāmaitrīsamanvāgatatvād asaṃskṛte na pratitiṣṭhati, mahākaruṇāsamanvāgatatvāt saṃskṛtaṃ na kṣapayati / satvaparipācanatvād asaṃskṛte na pratitiṣṭhati, buddhadharmābhilāṣitvāt saṃskṛtaṃ na kṣapayati / buddhalakṣaṇaparipūraṇatvād asaṃskṛte na pratitiṣṭhati, sarvajñajñānaparipūraṇārthaṃ saṃskṛtaṃ na kṣapayati / upāyakuśalatvād asaṃskṛte na pratitiṣṭhati, prajñāsunirīkṣitatvāt saṃskṛtaṃ na kṣapayati / buddhakṣetrapariśuddhyartham asaṃskṛte na pratitiṣṭhati, buddhādhiṣṭhānatvāt saṃskṛtaṃ na kṣapayati / satvārthānubhavanād asaṃskṛte na pratitiṣṭhati, dharmārthasaṃdarśanāt saṃskṛtaṃ na kṣapayati / kuśalamūlasaṃbhāratvād asaṃskṛte na pratitiṣṭhati, kuśalamūlavāsanatvāt saṃskṛtaṃ na kṣapayati / praṇidhānaparipūraṇārtham asaṃskṛte na pratitiṣṭhati, apraṇihitatvāt saṃskṛtaṃ na kṣapayati / āśayapariśuddhatvād asaṃskṛte na pratitiṣṭhati, adhyāśayapariśuddhatvāt saṃskṛtaṃ na kṣapayati / pañcābhijñāvikrīḍitatvād asaṃskṛte na pratitiṣṭhati, buddhajñānaṣaḍabhijñatvāt saṃskṛtaṃ na kṣapayati / pāramitāsaṃbhāraparipūraṇārtham asaṃskṛte na pratitiṣṭhati, aparipūrṇakālatvāt saṃskṛtaṃ na kṣapayati / dharmadhanasamudānayanatvād asaṃskṛte na pratitiṣṭhati, prādeśikadharmānarthikatvāt saṃskṛtaṃ na kṣapayati / sarvabhaiṣajyasamudānayanatvād asaṃskṛte na pratitiṣṭhati, yathārhabhaiṣajyaprayojanāt saṃskṛtaṃ na kṣapayati / dṛḍhapratijñayā asaṃskṛte na pratitiṣṭhati, pratijñottāraṇatvāt saṃskṛtaṃ na kṣapayati / dharmabhaiṣajyasamudānayanatvād asaṃskṛte na pratitiṣṭhati, yathāpītvaradharmabhaiṣajyaprayojanāt saṃskṛtaṃ na kṣapayati / sarvasatvakleśavyādhiparijñānām asaṃskṛte na pratitiṣṭhati, sarvavyādhiśamanāt saṃskṛtaṃ na kṣapayati / evaṃ hi kulaputrāḥ bodhisatvaḥ saṃskṛtaṃ na kṣapayati, asaṃskṛte na pratitiṣṭhati
+/ ayam ucyate kṣayākṣayo nāma bodhisatvānāṃ vimokṣaḥ / tatra yuṣmābhiḥ satpuruṣāḥ yogaḥ karaṇīyaḥ /</p>
+
+<p>Vkn 10.20 atha khalu te bodhisatvā imaṃ nirdeśaṃ śrutvā tuṣṭā udagra āttamanasaḥ pramuditāḥ prītisaumanasyajātā bhagavataḥ pūjākarmaṇe teṣāṃ ca bodhisatvānām asya dharmaparyāyasya pūjākarmaṇe sarvam imaṃ trisāhasramahāsāhasraṃ lokadhātuṃ sarvacūrṇagandhadhupavyūhaiḥ puṣpaiś ca jānumātraṃ saṃchādya bhagavataś ca parṣanmaṇḍalam abhikīrtiṃ kṛtvā bhagavataḥ pādau śirobhir vanditvā bhagavantaṃ triṣpradakṣiṇīkṛtyodānam udānayanta iha buddhakṣetre 'ntarhitās tena kṣaṇalavamuhūrtena tatra sarvagandhasugandhe lokadhātau pratyupasthitāḥ // //</p>
+
+<p>kṣayākṣayo nāma dharmaprābhṛtaparivarto daśamaḥ //</p>
+
+<p>Vkn 11.1 atha khalu bhagavān vimalakīrtiṃ licchavim etad avocat: yadā tvaṃ kulaputra tathāgatasya darśanakāmo bhavasi, tadā kathaṃ tvaṃ tathāgataṃ paśyasi /</p>
+
+<p>evam ukte vimalakīrtir licchavir bhagavantam etad avocat: yadāhaṃ bhagavan tathāgatasya darśanakāmo bhavāmi, tadā tathāgatam apaśyanayā paśyāmi / pūrvāntato 'jātam aparāntato 'saṃkrāntaṃ pratyutpanne 'dhvany asaṃsthitaṃ paśyāmi / tat kasya hetoḥ / rūpatathatāsvabhāvam arūpam, vedanātathatāsvabhāvam avedanām, saṃjñātathatāsvabhāvam asaṃjñam, saṃskāratathatāsvabhāvam asaṃskāram, vijñānatathatāsvabhāvam avijñānam, caturdhātvasaṃprāptam ākāśadhātusamam, ṣaḍāyatanānutpannaṃ cakṣuḥpathasamatikrāntaṃ śrotrapathasamatikrāntaṃ ghrāṇapathasamatikrāntaṃ jihvāpathasamatikrāntaṃ kāyapathasamatikrāntaṃ manaḥpathasamatikrāntam, traidhātukāsaṃsṛṣṭam, trimalāpagatam, trivimokṣānugatam, trividyānuprāptam, aprāptaṃ saṃprāptam, sarvadharmeṣv asaṅgakoṭīgataṃ bhūtakoṭyakoṭikam, tathatāpratiṣṭhitaṃ tadanyonyavisaṃyuktam, na hetujanitaṃ na pratyayādhīnam, na vilakṣaṇaṃ na salakṣaṇam, naikalakṣaṇaṃ na nānālakṣaṇam /</p>
+
+<p>na lakṣyate na saṃlakṣyate na vilakṣyate, nārvāṅ na pāre na madhye, neha na tatra, neto nānyataḥ, na jñānavijñeyo na vijñānapratiṣṭhitaḥ, atamo 'prakāśaḥ, anāmānimittam, na durbalo na balavān, na deśastho na pradeśasthaḥ, na śubho nāśubhaḥ, na saṃskṛto nāsaṃskṛtaḥ /</p>
+
+<p>nāpi kenacid arthena vacanīyaḥ, na dānato na mātsaryataḥ, na śīlato na dauḥśīlyataḥ, na kṣāntito na vyāpādataḥ, na vīryato na kauśīdyataḥ, na dhyānato na vikṣepataḥ, na prajñāto na dauḥprajñyataḥ, na vacanīyo nāvacanīyaḥ, na satyato na mṛṣātaḥ, na nairyāṇikato nānairyāṇikataḥ /</p>
+
+<p>na gamānīyo nāgamanīyaḥ, sarvarutavyāhārasamucchinnaḥ, na kṣetrabhūto nākṣetrabhūtaḥ, na dakṣiṇārho na dakṣiṇāśodhayitā, agrāhyaḥ, aparāmṛṣṭaḥ, aniketaḥ, asaṃskṛtaḥ, saṃkhyāpagataḥ, samatayā samaḥ, dharmatayā tulyaḥ, atulyavīryaḥ, tulanāsamatikrāntaḥ, na krānto na cākrāntaḥ, na samatikrāntaḥ, na dṛṣṭaśrutaparijñātaḥ, sarvagranthivigataḥ, sarvajñajñānasamatāprāptaḥ, sarvasatvasamaḥ, sarvadharmanirviśeṣaprāptaḥ, sarvato 'navadyaḥ, niṣkiṃcanaḥ, niṣkaṣāyaḥ, niṣkalaḥ, nirvikalpaḥ, akṛtaḥ, ajātaḥ, anutpannaḥ, abhūtaḥ, asaṃbhūtaḥ, na bhaviṣyati, nirbhayaḥ, niṣkleśaḥ, niḥśokaḥ, niṣprītikaḥ, nīrūrmikaḥ, sarvavyavahāranirdeśair avacanīyaḥ /</p>
+
+<p>īdṛśo bhagavan tathāgatasya kāyaḥ / sa tathaiva draṣṭavyaḥ / ya evaṃ paśyanti, te samyak paśyanti / ye tv anyathā paśyanti, te mithyā paśyanti /</p>
+
+<p>Vkn 11.2 athāyuṣmāñ śāriputro bhagavantam etad avocat: katamasmād bhagavan buddhakṣetrāc cyutau vimalakīrtiḥ kulaputra idaṃ buddhakṣetram āgataḥ /</p>
+
+<p>bhagavān āha: etam eva tvaṃ śāriputra satpuruṣaṃ paripṛccha ḥ kutas tvaṃ cyutvehopapanna iti /</p>
+
+<p>athāyuṣmāñ śāriputro vimalakīrtiṃ licchavim etad avocat: kutas tvaṃ kulaputra cyutyehopapannaḥ /</p>
+
+<p>vimalakīrtir āha: yaḥ sthavireṇa dharmaḥ sākṣātkṛtaḥ, kaccit tasya dharmasya cyutir upapattir vā /</p>
+
+<p>āha: na tasya dharmasya kācic cyutir upapattir vā /</p>
+
+<p>āha: evam acyutikānām anutpattikānāṃ bhadantaśāriputra sarvadharmāṇāṃ kutas tavaivaṃ bhavati ḥ kutas tvaṃ cyutvehopapanna iti / yaṃ bhadantaśāriputra nirmitāṃ striyaṃ puruṣaṃ vā pṛccheḥ ḥ kutas tvaṃ cyutvehopapanna iti / sa kiṃ vyākuryāt /</p>
+
+<p>āha: na kulaputra nirmitasya cyutir nopapattiḥ, sa kiṃ vyākariṣyati /</p>
+
+<p>āha: nanu bhadantaśāriputra nirmitasvabhāvāḥ sarvadharmās tathāgatena nirdiṣṭāḥ /</p>
+
+<p>āha: evam etat kulaputra /</p>
+
+<p>āha: nirmitasvabhāveṣu bhadantaśāriputra sarvadharmeṣu ḥ kutas tvaṃ cyutvehopapanna iti / cyutir iti bhadantaśāriputra abhisaṃskārakṣanaIakṣaṇapadam etat / upapattir ity abhisaṃskāraprabandha eṣaḥ / tatra bodhisatvaś cyavate, na kuśalamūlābhisaṃskāraṃ kṣapayati / upapadyate ca, na cākuśalaṃ prabadhnāti /</p>
+
+<p>Vkn 11.3 tatra bhagavān āyuṣmantaṃ śāriputram āmantrayate sma: akṣobhyasya śāriputra tathāgatasya sakāśād āgata eṣa kulaputro 'bhiratyā Iokadhātoḥ /</p>
+
+<p>āha: āścaryaṃ bhagavan yad eṣa satpuruṣas tāvatpariśuddhād buddhakṣetrād āgatyehaivaṃ bahudoṣaduṣṭe buddhakṣetre 'bhiramate /</p>
+
+<p>vimalakīrtir āha: tat kiṃ manyase bhadantaśāriputra api nu sūryaraśmayo 'ndhakāreṇa sārdhaṃ ramante /</p>
+
+<p>āha: no hīdaṃ kulaputra, na tayor yogo 'sti / sahodgate hi sūryamaṇḍale sarvaṃ tamo 'payānti /</p>
+
+<p>āha: kiṃ kāraṇaṃ punaḥ sūryo jambūdvīpa udayate /</p>
+
+<p>āha: yāvad evāvabhāsakaraṇāya tamo'paghātaya ca /</p>
+
+<p>āha: evam eva śāriputra saṃcintya bodhisatvā apariśuddheṣu buddhakṣetreṣūpapadyante satvānāṃ pariśodhanāya / na ca kleśaiḥ sārdhaṃ saṃvasanti, kleśāndhakāraṃ ca vidhamanti sarvasatvānām /</p>
+
+<p>Vkn 11.4 atha sā sarvā parṣat paritṛṣitābhut: paśyema vayaṃ tam abhiratiṃ lokadhātuṃ taṃ cākṣobhyaṃ tathāgataṃ tāṃś ca bodhisatvāṃs tāṃś ca mahāśrāvakān /</p>
+
+<p>atha bhagavāṃs tasyāḥ sarvasyāḥ parṣadaś cetasa cetaḥparivitarkam ājñāya vimalakīrtiṃ licchavim etad avocat: darśaya kulaputra asyāḥ parṣadas tām abhiratiṃ lokadhātuṃ taṃ cākṣobhyaṃ tathāgatam / draṣṭukameyam parsat /</p>
+
+<p>atha vimalakīrter licchaver etad abhavat: yan nv aham itaś cāsanān nottiṣṭheyam / tāṃ cābhiratiṃ lokadhātum anekabodhisatvaśatasahasrāṃ devanāgayakṣagandharvāsurādhyuṣitāṃ sacakravāḍaparikhāṃ sanadītaḍāgotsasaraḥsamudraparikhāṃ sasumerugirikūṭaparvatāṃ sacandrasūryajyotiṣāṃ sadevanāgayakṣagandharvabhavanāṃ sabrahmabhavanapārisadyāṃ sagrāmanagaranigamajanapadarāṣṭramanuṣyāṃ sastryāgārāṃ sabodhisatvasaśrāvakaparṣadam, akṣobhyasya tathāgatasya bodhivṛkṣam, akṣobhyaṃ ca tathāgataṃ sāgaropamāyāṃ mahāparṣadi niṣaṇṇaṃ dharmaṃ deśayamānam, api tāni padmāni yāni daśasu dikṣu buddhakṛtyaṃ kurvanti satvānām, api tāni trīṇi ratnamayāni sopānāni yāni jambūdvīpam upādāya trayastriṃśadbhavanam abhyudgatāni yaiḥ sopānair devās trayastriṃśato jambūdvīpam avataranty akṣobhyaṃ tathāgataṃ darśanāya vandanāyai paryupāsanāya dharmaśravaṇāya jāmbudvīpakāś ca manuṣyās trayastriṃśadbhavanam abhirohanti devāṃs trayastriṃśato darśanāya / evam apramāṇaguṇasamuditāṃ tām abhiratiṃ lokadhātum apskandham upādāya yāvad akaniṣṭhabhavanaṃ bhārgavacakram iva paricchidya dakṣiṇena pāṇinā puṣpadāmam ivādāyemāṃ lokadhātuṃ praveśayeyam / praveśya cāsyāḥ sarvasyāḥ parṣado darśayeyam /</p>
+
+<p>Vkn 11.5 atha vimalakīrtir licchavis tasyāṃ velāyāṃ tathārūpaṃ samādhim samāpannaḥ, tādṛśaṃ carddhyabhisaṃskāram abhisaṃskṛtavān yas tam abhiratiṃ lokadhatuṃ paricchidya dakṣiṇena pāninā gṛhītvemaṃ sahaṃ lokadhātuṃ praveśayati sma /</p>
+
+<p>Vkn 11.6 tatra ye divyacakṣuṣo 'bhijñāpratilabdhāḥ śrāvakā bodhisatvā devamanuṣyāś ca, te mahāntam utkrośam utkrośanti sma: knyāmahe bhagavan kriyāmahe sugata / trāya ca tathāgata iti /</p>
+
+<p>tān bhagavān vinayanārtham evam āha: na mamātra vṛṣabhitā vimalakīrtinā bodhisatvena kriyamāṇānām /</p>
+
+<p>tatra ye punar anye devamanuṣyāḥ, te na jānanti na paśyanti ḥ kuto vayaṃ kriyāmaha iti / na hy abhiratyā lokadhātor imaṃ sahaṃ lokadhātuṃ praveśitāyā ūnatvaṃ na pūrṇatvam abhūt / na cāsya lokadhātor utpīḍo na saṃbādhaḥ / nāpy abhiratyā lokadhātor ūnabhāvaḥ / yathā pūrvaṃ tathā paścāt saṃdṛśyate /</p>
+
+<p>Vkn 11.7 atha bhagavāñ śākyamunis tāṃ sarvāṃ parṣadam āmantrayate sma: paśyata mārṣāḥ abhiratiṃ lokadhātum akṣobhyaṃ ca tathāgatam etāṃś ca kṣetravyūhāñ śrāvakavyūhān bodhisatvavyūhāṃś ca /</p>
+
+<p>ta āhuḥ: paśyāmo bhagavan iti /</p>
+
+<p>āha: īdṛśaṃ mārsāḥ buddhakṣetraṃ parigrahītukāmena bodhisatvenākṣobhyasya tathāgatasya bodhisatvacaryāyām anuśikṣitavyam /</p>
+
+<p>asmin punar abhiratilokadhātusaṃdarśanarddhiprātihārye 'kṣobhyasya ca tathāgatasya saṃdarśane 'smin sahe lokadhātau caturdaśānām ayutānāṃ devamānuṣikāyāḥ prajāyā anuttarāyāṃ samyaksaṃbodhau cittāny utpannāni / sarvaiś cābhiratyāṃ lokadhātau praṇidhānam utpāditam upapattaye / te sarve bhagavatā vyākṛtā abhiratyāṃ lokadhātāv upapattaye / iti hi vimalakīrtir licchavir yāvān iha sahe lokadhātau satvaparipākaḥ kartavyas taṃ sarvaṃ kṛtvā punar eva tām abhiratiṃ lokadhātuṃ yathasthāne sthāpayamāsa /</p>
+
+<p>Vkn 11.8 tatra bhagavān āyuṣmantaṃ śāriputram āmantrayate sma: dṛṣṭā te śāriputra abhiratir lokadhātuḥ sa cākṣobhyas tathagataḥ /</p>
+
+<p>āha: dṛṣṭā me bhagavan / sarvasatvānāṃ tādṛśā buddhakṣetraguṇavyūhā bhavantu / sarvasatvāś cedṛśyarddhyā samanvāgatā bhavantāṃ yādṛśyā vimalakīrtir licchaviḥ kulaputraḥ / ebhir api ca sulabdhā lābhāḥ / ye vayam īdṛśān satpuruṣān labhāmahe darśanāya / teṣam api satvānāṃ sulabdhā lābhā bhaviṣyanti, ya etarhi tathāgatasya tiṣṭhato vā parinirvṛtasya vemaṃ dharmaparyāyam antaśaḥ śroṣyanti / kaḥ punar vādaḥ, ye śrutvādhimokṣyante pratyeṣyanty udgrahīṣyanti dhārayiṣyanti vācayiṣyanti paryavāpsyanty adhimokṣyanti pravartayiṣyanti parebhyaś ca vistareṇa saṃprakāśayiṣyanti bhāvanāyogam anuyuktāś ca bhaviṣyanti /</p>
+
+<p>Vkn 11.9 te dharmaratnanidhānaprāptā bhaviṣyanti, yeṣām ayaṃ dharmaparyāyo hastagato bhaviṣyati / tathāgatasahāyās te bhaviṣyanti, ya imaṃ dharmaparyāyaṃ svādhyāsyante / dharmasaṃrakṣakās te bhaviṣyanti, ya etaddharmādhimuktānām upasthānaparicaryāṃ kariṣyanti / gṛhagatas teṣāṃ tathāgato bhaviṣyati, ya imaṃ dharmaparyāyaṃ sulikhitaṃ kṛtvā dhārayiṣyanti satkariṣyanti / sarvapuṇyaparigṛhītās te bhaviṣyanti, ya imaṃ dharmaparyāyam anumodiṣyante / mahādharmayajñaṃ te yajiṣyanti, ya ito dharmaparyāyād antaśaś catuṣpadikām api gāthāṃ saṃvaram api parebhyo vistareṇa deśayiṣyanti / tad eva teṣāṃ bhagavan vyākaraṇaṃ yeṣām iha dharmaparyāye kṣāntī rucir matiḥ prekṣā dṛṣṭir adhimuktir muktiś ca bhaviṣyati // //</p>
+
+<p>abhiratilokadhātvānayanākṣobhyatathāgatadarśanaparivarta ekādaśaḥ //</p>
+
+<p>Vkn 12.1 atha khalu śakro devānām indro bhagavantam etad avocat: bahuni me bhagavan tathāgatasyāntikān mañjuśriyaś ca kumārabhūtasyāntikād dharmaparyāyaśatasahasrāṇi śrutāni / na ca me jātv evam acintyavimokṣavikurvitadharmanayapraveśaśrutapūrvo yādṛśa iha dharmaparyāye nirdiṣṭaḥ /</p>
+
+<p>Vkn 12.2 niḥsaṃśayaṃ te satvā evaṃ dharmabhājanā bhaviṣyanti, ya imaṃ dharmaparyāyam udgrahīṣyanti dhārayiṣyanti vācayiṣyanti paryavāpsyanti / kaḥ punar vādaḥ / ye bhāvanāyogam anuyuktā bhaviṣyanti, pithitās teṣāṃ sarvāpāyāḥ, anāvṛtās teṣāṃ sarve sugatipathāḥ, dṛṣṭās te sarvabuddhaiḥ, nihatās taiḥ sarvaparapravādinaḥ, parājitās taiḥ sarvamārāḥ, viśodhitās tair bodhimārgāḥ, pratiṣṭhitās te bodhimaṇḍe, tathāgatagatisamavasaraṇās te bhaviṣyanti /</p>
+
+<p>Vkn 12.3 ya imaṃ dharmaparyāyaṃ dhārayiṣyanti, aham api bhagavan teṣāṃ kulaputrāṇām upasthānaparicaryāṃ kariṣyāmi sārdhaṃ sarvaparivāreṇa / yatra ca grāmanagaranigamajanapadarāṣṭrarājadhānīṣv ayaṃ dharmaparyāyaḥ pracariṣyati deśayiṣyati saṃprakāśayiṣyati, tatrāhaṃ saparivāro dharmaśravaṇāyopasaṃkrāmiṣyāmi / aprasannānāṃ ca kulaputrāṇāṃ prasādam utpādayiṣyāmi, prasannānāṃ ca dhārmikiṃ rakṣāvaraṇaguptiṃ kariṣyāmi /</p>
+
+<p>Vkn 12.4 evam ukte bhagavāñ śakraṃ devānām indram etad avocat: sādhu sādhu devānam indra, subhāṣitaṃ te 'numodate tathāgataḥ / yā devānām indra atītānāgatapratyutpannānāṃ buddhānāṃ bhagavatāṃ bodhir iha dharmaparyāya uddiṣṭā / tasmād iha devendra atītānāgatapratyutpannās tena kulaputreṇa va kuladuhitrā vā buddhā bhagavantaḥ pūjitā bhaviṣyanti, ya imaṃ dharmaparyāyam udgrahīṣyaty antaśaḥ pustakalikhitam api kariṣyati vācayiṣyati likhiṣyati paryavāpsyati /</p>
+
+<p>Vkn 12.5 yaś ca punar devendra kulaputro vā kuladuhitā vemaṃ trisāhasramahāsāhasraṃ lokadhātuṃ tathāgatapūrṇaṃ tadyathāpi nāmekṣuvanaṃ vā naḍavanaṃ vā veṇuvanaṃ vā tilavanaṃ vaivaṃ śālivanaṃ vā pratipūrṇaṃ kalpaṃ vā kalpāvaśeṣaṃ vā satkuryād gurukuryān mānayet pūjayet tāṃs tathāgatān sarvapūjābhiḥ sarvasukhopadhānaiḥ, parinirvṛtānāṃ ca teṣāṃ tathāgatānām ekaikasya tathāgatasya pūjākarmaṇa ekaghanasyāvikopitasya śarīrasya sarvaratnamayaṃ stūpaṃ pratiṣṭhāpayec caturmahādvīpikalokadhātupramāṇaṃ yāvad brahmalokam uccaistvena yaṣṭicchatrapatākābhir udviddhopaśobhitam evaṃ sarvatathāgatānāṃ pratyekaṃ stūpaṃ kārayet, sa ca tatra kalpaṃ vā kalpāvaśeṣaṃ vā pūjāṃ kuryāt sarvapuṣpaiḥ sarvagandhaiḥ sarvadhvajapatākābhiḥ sarvatūryatāḍāvacarasaṃpravāditena pūjāṃ kuryāt, tat kiṃ manyase devānām indra api nu sa kulaputro vā kuladuhitā vā tato nidānaṃ bahu puṇyaṃ prasunuyāt /</p>
+
+<p>āha: bahu bhagavan bahu sugata, nāsya puṇyaskandhasya śakyaḥ paryanto 'dhigantuṃ kalpakoṭīśatasahasrair api /</p>
+
+<p>Vkn 12.6 bhagavān āha: ārocayāmi te devānām indra, prativedaya / ataḥ sa kulaputro vā kuladuhitā vā bahutaraṃ puṇyaṃ prasunuyāt, ya imam acintyavimokṣanirdeśaṃ dharmaparyāyam udgṛhṇīyād dhārayed vācayet paryavāpnuyāt / tat kasmād dhetoḥ / dharmanirjātā hi devendra buddhānāṃ bhagavatāṃ bodhiḥ, sā dharmeṇaiva śakyā pūjayitum, nāmiṣeṇa / tad anenāpi te devendra paryāyeṇaivaṃ veditavyam /</p>
+
+<p>Vkn 12.7 bhūtapūrvaṃ devānām indra atīte 'dhvany asaṃkhyeye kalpe 'saṃkhyeyatare vipule 'pramāṇe 'cintye yad āsīt tena kālena tena samayena bhaisajyarājo nāma tathāgato 'rhan samyaksaṃbuddho vidyācaraṇasaṃpannaḥ sugato lokavid anuttaraḥ puruṣadamyasārathiḥ śāstā devamanuṣyāṇāṃ buddho bhagavān mahāvyūhe lokadhātau viśodhane kalpe / tasya khalu punar devānām indra bhaiṣajyarājasya tathāgatasyārhataḥ samyaksaṃbuddhasya viṃśatir antarakalpa āyuḥpramāṇam abhūt / ṣaṭtriṃśac cāsya koṭīniyutāni śrāvakānāṃ saṃgho 'bhūt / dvādaśakoṭyo bodhisatvānāṃ saṃgho 'bhūt / tena ca devānām indra kālena tena samayena ratnacchatro nāma rājābhūc cakravartī saptaratnasamanvāgataś caturdvīpeśvaraḥ / paripūrṇaṃ cāsya putrasahasram abhūc chūrāṇāṃ varāṅgarūpiṇāṃ parasainyapramardakānām /</p>
+
+<p>Vkn 12.8 tena khalu punaḥ samayena rājñā ratnacchatreṇa sa bhagavān bhaiṣajyarājas tathāgataḥ pañcāntarakalpān satkṛtaḥ saparivāraḥ sarvasukhopadhānena / iti hi devānām indra teṣāṃ pañcānām antarakalpānām atyayena sa rājā ratnacchatras tat putrasahasram āmantrayate sma: yat khalu mārṣāḥ jānīta, kṛtā mayā tathāgatasya pūjā, yūyam idānīṃ tathāgatasya pūjāṃ kuruta / iti hi devānām indra te rājakumārāḥ pitū rājño ratnacchatrasya ḥ sādhv iti pratiśrutya sarve sahitāḥ samagrā aparān pañcāntarakalpāṃs taṃ bhagavantaṃ bhaiṣajyarājaṃ tathāgataṃ satkurvanti sarvasukhopadhānaiḥ /</p>
+
+<p>Vkn 12.9 tataś caiko rājakumāraḥ somacchatro nāma / tasyaikākino rahogatasyaitad abhūt: asti tv asyāḥ pujāyā anyodāratā viśiṣṭatarā pūjeti /</p>
+
+<p>tasyāntarīkṣād devatā buddhādhiṣṭhānenaivam āha: dharmapūjā satpuruṣa sarvapūjābhyo viśiṣyate /</p>
+
+<p>sa evam āha: katamā punaḥ sā dharmapūjeti /</p>
+
+<p>devatāha: etam eva tvaṃ satpuruṣa tathāgataṃ bhaiṣajyarājam upasaṃkramya paripṛccha ḥ katamā sā dharmapūjeti / sa te bhagavān vyākariṣyati /</p>
+
+<p>atha devānām indra sa somacchatro rājakumāro yena bhagavān bhaiṣajyarājas tathāgato 'rhan samyaksaṃbuddhas tenopasaṃkrāmat / upasaṃkramya tasya bhagavataḥ pādau śirasā vanditvaikānte 'sthāt / ekāntasthitaś ca somacchatro rājakumāras taṃ bhagavantaṃ bhaiṣajyarājaṃ tathāgatam etad avocat: dharmapūjā dharmapūjeti bhagavan ucyate / katamā sā dharmapūjeti /</p>
+
+<p>Vkn 12.10 sa bhagavān āha: dharmapūjā kulaputra yā tathāgatabhāṣitānāṃ sūtrāntānāṃ gambhīrāṇāṃ gambhīrāvabhāsānāṃ sarvalokapratyanīkānāṃ duravagāhānāṃ durdṛśānāṃ duranubodhānāṃ sūkṣmāṇāṃ nipuṇānāṃ nirupalambhānām bodhisatvapiṭakāntargatānāṃ dhāraṇīsūtrāntarājamudrāmudritānām avivartacakrasūcakānām ṣaṭpāramitānirjātānāṃ saṃgṛhītagrahāṇāṃ bodhipakṣyadharmānugatānāṃ / bodhyaṅgāhārāṇāṃ satvamahākaruṇāvatārāṇāṃ mahāmaitrīnirdeśānāṃ māradṛṣṭigatavigatānāṃ pratītyasamutpādanirdiṣṭānām</p>
+
+<p>Vkn 12.11 nirātmaniḥsatvanirjīvaniṣpudgalānāṃ śūnyatānimittāpraṇihitānabhisaṃskārāṇāṃ bodhimaṇḍāhārakāṇāṃ dharmacakrapravartakānāṃ devanāgayakṣagandharvasaṃstutapraśastānāṃ saddharmavaṃśānupaccherttṝṇāṃ dharmagañjasaṃdhārakānāṃ dharmāgrapūjāvatīrṇānāṃ sarvāryajanaparigṛhītānāṃ sarvabodhisatvacaryāpraśāsakānāṃ bhūtārthadharmapratisaṃcitāvatārāṇāṃ dharmoddānānityaduḥkhānātmaśāntanirjātānāṃ duḥśīlaujoghaṭṭakānāṃ sarvaparapravādikudṛṣṭyupalambhābhiniviṣṭatrāsakarāṇāṃ sarvabuddhapraśastānāṃ saṃsāravipakṣāṇāṃ nirvāṇasukhasaṃdarśakānām / evaṃrūpāṇāṃ sūtrāntānāṃ yā deśanā saṃprakāśanā dhāraṇā pratyavekṣaṇā saddharmasaṃgrahaḥ, iyam ucyate dharmapūjeti /</p>
+
+<p>Vkn 12.12 punar aparaṃ kulaputra dharmapūjā yā dhārmeṣu dharmanidhyaptiḥ, dharmapratipattiḥ, pratītyasamutpādānulomatā, sarvāntadṛṣṭivigamaḥ, ajātānutpādakṣāntiḥ, nairātmyaniḥsatvatāvatāraḥ, hetupratyayāvirodhaḥ, avigrahaḥ, avivādaḥ, amamatvam, mamakāravigamaḥ, arthapratiśaraṇatā na vyañjanapratiśaraṇatā, jñanapratiśaraṇatā na vijñanapratiśaraṇatā, nītārthasūtrāntapratiśaraṇatā na neyārthasaṃvṛtyabhiniveśaḥ, dharmatāpratiśaraṇatā na pudgaladṛṣṭyupalambho na grāhyābhiniviṣṭatā, yathāvaddharmānugamaḥ, anālayapraveśaḥ, ālayasamudghātaḥ, avidyāvyupaśamo yāvaj jarāmaraṇaśokaparidevaduḥkhadaurmanasyopāyāsavyupaśamaḥ / evaṃ ca dvādaśāṅgaṃ pratītyasamutpādam avekṣyate, akṣayābhinirhāreṇa cābhinirharati, satvāvekṣayā ca dṛṣṭinirapekṣaḥ / iyam api kulaputra ucyate 'nuttarā dharmapūjeti /</p>
+
+<p>Vkn 12.13 iti hi devānām indra sa somacchatro rājakumāras tasya bhagavato bhaiṣajyarājasya tathāgatasyāntikād imāṃ dharmapūjāṃ śrutvānulomikīṃ dharmakṣāntiṃ pratilabhate sma / yathāprāvṛtaiś ca vastrābharaṇais taṃ bhagavantaṃ chādayati, evaṃ vācam abhāṣat: ahaṃ bhagavan utsahe tathāgatasya saddharmaparigrahāya saddharmapūjākaraṇatāyai saddharmaṃ parirakṣitum / tasya me bhagavāṃs tathādhiṣṭhānaṃ karotu / yathāhaṃ nihatamārapratyarthiko bhagavataḥ saddharmaṃ parigṛhnīyām /</p>
+
+<p>tasya sa tathāgato 'dhyāśayaṃ viditvā vyākṛtavān paścime kāle saddharmanagarapālarakṣāyai /</p>
+
+<p>Vkn 12.14 sa khalu punar devānām indra somacchatro rājakumāras tasya tathāgatasya tiṣṭhata eva śraddhayāgārād anagārikāṃ pravrajitaḥ sann ārabdhavīryo viharati sma kuśaleṣu dharmeṣu / tenārabdhavīryeṇa kuśaladharmapratiṣṭhitena na cirāt pañcābhijñā utpāditāḥ / gatiṃgataś ca dhāraṇīnām abhūd anācchedyapratibhānaḥ / sa tasya bhagavataḥ parinirvṛtasyābhijñādhāraṇībalena paripūrṇān daśāntarakalpāṃs tasya bhagavato bhaiṣajyarājasya tathāgatasya pravṛttaṃ dharmacakram anuvartayati sma / tena khalu punar devānām indra somacchatreṇa bhikṣuṇā saddharmaparigrahābhiyuktena daśakoṭīśatāni satvānām avaivartikāni kṛtāny abhūvann anuttarāyāṃ samyaksaṃbodhau, caturdaśa ca prāṇiniyutāni śrāvakapratyekabuddhayānikāni, apramāṇāś ca satvāḥ svargopagāḥ kṛtāḥ /</p>
+
+<p>Vkn 12.15 syāt khalu punas te devānām indra anyaḥ sa tena kālena tena samayena ratnacchatro nāma rājābhūc cakravartī, na khalu punas te devānām indra evaṃ draṣṭavyam / tat kasmād dhetoḥ / ratnārciḥ sa tathāgatas tena kālena tena samayena ratnacchatro nāma rājābhūc cakravartī / yat punas tad rājño ratnacchatrasya putrasahasram abhūt / ime te bhādrakalpikā bodhisatvā abhūvan / yad iha bhadrakalpe paripūrṇaṃ buddhasahasram utpatsyate yataś catvāra utpannāḥ śeṣā utpatsyante, krakucchandapramukhā yāvad rocaparyavasānāḥ, roco nāma tathāgataḥ paścimako bhaviṣyati /</p>
+
+<p>syāt khalu punas te devānām indra evam anyaḥ sa tena kālena tena samayena somacchatro nāma rājakumāro 'bhūd yena tasya bhagavato bhaiṣajyarājasya tathāgatasya saddharmaḥ parigṛhīta iti / na khalu punas ta evaṃ draṣṭavyam / tat kasmād dhetoḥ / ahaṃ sa tena kālena tena samayena somacchatro nāma rājakumāro 'bhūvam / tad anenāpi te devendra paryāyeṇaivaṃ veditavyam / yāvatyas tathāgatānāṃ pūjāḥ, dharmapūjā tāsām agryākhyāyate, jyeṣṭhā śreṣṭhā varā pravarā praṇītottarā niruttarākhyāyata iti / tasmād iha devānām indra dharmapūjayā māṃ pūjayata, mā āmiṣapūjayā / dharmasatkāreṇa māṃ satkuruta, mā āmiṣasatkāreṇa /</p>
+
+<p>Vkn 12.16 tatra bhagavān maitreyaṃ bodhisatvam āmantrayate sma: imāṃ te 'haṃ maitreya asaṃkhyeyakalpakoṭīsamudānītām anuttarāṃ samyaksaṃbodhim anuparīndāmi, yathema evaṃrūpā dharmaparyāyā yuṣmadadhiṣṭhānena parigraheṇa tathāgatasya parinirvṛtasya paścime kāle paścime samaye jambūdvīpe vaistārikā bhaveyuḥ, nāntardhīyeran / tat kasmād dhetoḥ / bhaviṣyanti maitreya anāgate 'dhvani kulaputrāḥ kuladuhitaraś ca devanāgayakṣagandharvāś cāvaropitakuśalā anuttarāṃ samyaksaṃbodhiṃ saṃprasthitāḥ / te 'śravaṇād asya dharmaparyāyasya mā parihāsyanta iti / imān evaṃrūpān sūtrāntāñ śrutvātīva prema ca prasādaṃ ca pratilapsyante, mūrdhnā ca pratigrahīṣyanti / teṣāṃ tvaṃ maitreya tathārūpāṇāṃ kulaputrāṇāṃ kuladuhitṝṇāṃ cānurakṣāyā imān evaṃrūpān sūtrāntāṃs tasmin kāle vaistārikān kuryāḥ /</p>
+
+<p>Vkn 12.17 dve ime maitreya bodhisatvānāṃ mudre / katame dve / vicitrapadavyañjanaprasādamudrā ca gambhīradharmanayānuttrāsayathābhūtāvatārapraveśamudrā ca / ime maitreya bodhisatvānāṃ dve mudre / tatra maitreya ye bodhisatvā vicitrapadavyañjanaprasādagurukāḥ, ta ādikarmikā bodhisatvā veditavyāḥ / ye punar imaṃ maitreya gambhīraṃ sūtrāntam arūpalepaṃ yamakavyatyastanihārapadapuṭaprabhedaṃ pravartayiṣyanti śrosyanty adhimokṣyante vedayiṣyanti, ime bodhisatvāś ciracaritabrahmacaryā veditavyāḥ /</p>
+
+<p>Vkn 12.18 tatra maitreya dvābhyāṃ kāraṇābhyām ādikarmikā bodhisatvā ātmānaṃ kṣiṇvanti / na ca gambhīreṣu dharmeṣu nidhyaptiṃ gacchanti / katamābhyāṃ dvābhyām / aśrutapūrvāṃś ca gambhīrān sūtrāntāñ śrutvottrasyanti / saṃśayaprāptāś ca bhavanti, nānumodante / uttari ca pratikṣipante: ya ete 'smābhiḥ pūrvaṃ na śrutapūrvāḥ kuta ime 'dhunāgatāḥ / ye ca te kulaputrā gambhīradharmasūtrāntadhārakā gambhīradharmabhājanā gambhīradharmadeśayitāraḥ, tān na sevante na bhajante na paryupāsante, agauravāś ca teṣu bhavanti, antarāntarā ca teṣām avarṇam api niścārayanti / ābhyāṃ maitreya dvābhyāṃ kāraṇābhyām ādikarmikā bodhisatvā ātmānaṃ kṣiṇvanti / na ca gambhīreṣu dharmeṣu nidhyaptiṃ gacchanti /
+Vkn 12.19 dvābhyāṃ maitreya kāraṇābhyāṃ gambhīrādhimuktiko bodhisatva ātmānaṃ kṣiṇoti / na cānutpattikeṣu dharmeṣu kṣāntiṃ pratilabhate / katamābhyāṃ dvābhyām / tāṃś cādikarmikān aciracaritān bodhisatvān avamanyate paribhavati na grāhayati na vivecayati nānuśāsti / tayaiva ca gambhīrādhimuktyā śikṣāyām agauravo bhavati / lokāmiṣadānena ca satvān anugṛhṇāti, na dharmadānena / ābhyāṃ maitreya dvābhyāṃ kāraṇābhyāṃ gambhīrādhimuktiko bodhisatva ātmānaṃ kṣiṇoti / na ca kṣipram anutpattikeṣu dharmeṣu kṣāntiṃ pratilabhate /</p>
+
+<p>Vkn 12.20 evam ukte maitreyo bodhisatvo bhagavantam etad avocat: āścaryaṃ bhagavan yāvat subhāṣitaṃ bhagavataḥ / vayaṃ bhagavan etāṃś ca doṣān vivarjayiṣyāmaḥ / imāṃ ca tathāgatasyāsaṃkhyeyakalpakoṭīniyutaśatasahasrasamudānītām anuttarāṃ samyaksaṃbodhiṃ parirakṣiṣyāmo dhārayiṣyāmaḥ / teṣāṃ cānāgatānāṃ kulaputrāṇāṃ kuladuhitṝṇāṃ bhājanībhūtānām imān evaṃrūpān sūtrāntān hastagatān kariṣyāmaḥ / smṛtiṃ caiṣām upasaṃhariṣyāmo yayā smṛtyemān evaṃrūpān sūtrāntān rocayiṣyanty udgrahīṣyanti paryavāpsyanti dhārayiṣyanti pravartayiṣyanti likhiṣyanti pareṣāṃ ca vistareṇa deśayiṣyanti / teṣāṃ ca vayaṃ bhagavan upastambhaṃ kariṣyāmaḥ / ye ca khalu punar bhagavan tasmin kāla imān evaṃrupān sūtrāntān rocayiṣyanti pravartayiṣyanti / veditavyam etad bhagavan maitreyasya bodhisatvasyādhiṣṭhānam iti /</p>
+
+<p>atha bhagavān maitreyasya bodhisatvasya sādhukāram adāt: sādhu sādhu maitreya, subhāṣitā ta iyaṃ vāk / anumodate tathāgato 'nujānāti ca subhāsitam /</p>
+
+<p>Vkn 12.21 atha te bodhisatvā ekasvareṇa vācam abhāṣanta: vayam api bhagavan tathāgatasya parinirvṛtasyānyonyebhyo buddhakṣetrebhya āgatyemāṃ tathāgatabuddhabodhiṃ vaistārikīṃ kariṣyāmaḥ / teṣāṃ ca kulaputrāṇām ārocayiṣyāmaḥ /</p>
+
+<p>Vkn 12.22 atha catvāro mahārājāno bhagavantam etad avocan: yatra yatra bhagavan grāmanagaranigamarāṣṭrarājadhānīṣv ima evaṃrūpā dharmaparyāyāḥ pracariṣyanti deśayiṣyanti prakāśayiṣyanti, tatra tatra vayaṃ bhagavan catvāro mahārājāḥ sabalāḥ savāhanāḥ saparivārā dharmaśravaṇāyopasaṃkramiṣyāmaḥ / tasya ca dharmabhāṇakasya samantato yojanaśataṃ rakṣāṃ saṃvidhāṣyāmaḥ, yathā tasya dharmabhāṇakasya na kaścid avatāraprekṣy avatāragaveṣy avatāraṃ lapsyate /</p>
+
+<p>Vkn 12.23 tatra bhagavān āyuṣmantam ānandam āmantrayate sma: udgṛhāṇa tvam ānanda imaṃ dharmaparyāyaṃ dhāraya vācaya pareṣāṃ ca vistareṇa saṃprakāśaya /</p>
+
+<p>āha: udgṛhīto me bhagavan ayaṃ dharmaparyāyaḥ / kiṃ bhagavan asya dharmaparyāyasya nāmadheyam / kathaṃ caainaṃ dhārayāmi /</p>
+
+<p>bhagavān āha: tasmāt tarhi tvam ānanda imaṃ dharmaparyāyaṃ vimalakīrtinirdeśaṃ yamakapuṭavyatyastanihāram acintyadharmavimokṣaparivartam ity api dhārayemaṃ dharmaparyāyam // //</p>
+
+<p>idam avocad bhagavān / āttamanā vimalakīrtir licchavir mañjuśrīś ca kumārabhūta āyuṣmāṃś cānandas te ca mahāśrāvakāḥ sā ca sarvāvatī parṣat sadevamānuṣāsuragandharvaś ca loko bhagavato bhāṣitam abhyanandann iti // //</p>
+
+<p>nigamanaparīndanāparivarto nāma dvādaśaḥ //</p>
+
+<lg>
+<l>ye dharmā hetuprabhavā hetuṃ teṣāṃ tathāgato hy avadat /</l>
+<l>teṣāṃ ca yo nirodho evaṃvādī mahāśramaṇaḥ //</l>
+</lg>
+
+<p>deyadharmo 'yaṃ pravaramahāyānayāyino bhikṣuśīladhvajasya yad atra puṇyaṃ tad bhavatv ācāryopādhyāyamātāpitṛpūrvaṃgamaṃ kṛtvā sakalasatvarāśer anuttarajñānaphalāvāptaya iti //</p>
+
+<p>śrīmadgopāladevarājye saṃvat 12 bhādradine 29 likhiteyam upasthāyakacāṇḍokasyeti //</p>
+
+  </body>
+</text>
+</TEI>

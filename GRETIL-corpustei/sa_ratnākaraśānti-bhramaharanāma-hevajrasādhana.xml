@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_ratnAkarazAnti-bhramaharanAma-hevajrasAdhana">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Bhramaharanāma Hevajrasādhana</title>
+	<author>Ratnākaraśānti</author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>Klaus Wille</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Klaus Wille</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/rabhramu.htm">rabhramu.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Ratnakarasanti: Bhramaharanama Hevajrasadhana = BhrHe
+<lb/>Based on the ed. by Harunaga Isaacson, "Ratnākaraśānti's Bhramaharanāma Hevajrasādhana: Critical Edition
+<lb/>(Studies in Ratnākaraśānti's tantric works III)",
+<lb/>Journal of the International College for Advanced Buddhist Studies 5 (March 2002),
+<lb/>Akira Hirakawa Memorial Volume, pp. 151-176.
+<lb/>
+<lb/>Input by Klaus Wille (Göttingen)
+<lb/>
+<lb/>STRUCTURE OF REFERENCES:
+<lb/>BhrHe nnn = pagination of ed.
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>Harunaga Isaacson, "Ratnākaraśānti's Bhramaharanāma Hevajrasādhana: Critical Edition (Studies in Ratnākaraśānti's tantric works III)",Journal of the International College for Advanced Buddhist Studies 5 (March 2002), Akira Hirakawa Memorial Volume, pp. 151-176.</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Bhramaharanāma Hevajrasādhana = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Religious Literature -- Buddhist</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+
+<p>Ratnākaraśānti: Bhramaharanāma Hevajrasādhana</p>
+
+<note><hi rend="bold">BhrHe 157</hi></note>
+<lg>
+<l>padabharanamitorvīvegavikṣiptasindhu</l>
+<l>pralayaghanasamānair ānanair muktanādam /</l>
+<l>bhujavanapavanāstaprasthabandhaṃ girīṇāṃ</l>
+<l>bhavatu bhayaharaṃ vas tāṇḍavaṃ herukasya //</l>
+</lg>
+
+<lg>
+<l>aṣṭānanasya racayāmi sādhanaṃ pratimukhaṃ trinayanasya /</l>
+<l>hevajrasya catuścaraṇacāriṇaḥ ṣoḍaśabhujasya //</l>
+</lg>
+
+<p>iha bhāvanādhikṛto mantrī prātar utthāya hṛdayārkanyastanijabījaḥ kṛtamukhaśaucādiḥ</p>
+
+<p>oṃ rakṣa rakṣa hūṃ hūṃ hūṃ phaṭ svāhā</p>
+
+<p>iti sthānātmayogarakṣāṃ kṛtvā gandhapuṣpādisurabhitāṃ dhyānabhūmiṃ praviśya, sukhāsane paryaṅkam ābhujya, arghaṃ parijapya, hṛnmantrakiraṇākṛṣṭam abhimukham ākāśe saparivāraṃ bhagavantam avalokya, hṛdbījanirgatābhir gauryādidevībhir aṣṭābhiḥ pūjayet. tatra gaurī śaśinaṃ bibharti, caurī raviṃ, vettālī jalam, ghasmarī palalam, pukkasī candanam, śabarī madhu, caṇḍālī ḍamarukaṃ vādayati, ḍombī kaṇṭhalagnā puruṣāyate. tatas tasyaiva bhagavato 'grataḥ pāpadeśanādikam iti kuryāt -</p>
+
+<note><hi rend="bold">BhrHe 158</hi></note>
+<p>sarvam ātmanaḥ pāpaṃ bhagavataḥ purataḥ pratideśayāmi, sarvabuddhabodhisattvāryapṛthagjanānāṃ sarvakuśalam anumode, sarvaṃ cātmanaḥ kuśalam anuttarāyāṃ samyaksaṃbodhau pariṇāmayāmi. eṣo 'ham ā bodher buddhaṃ bhagavantaṃ śaraṇaṃ gacchāmi dvipadānām agryam. dharmaṃ śaraṇaṃ gacchāmi samagraṃ mahāyānam. saṃghaṃ śaraṇaṃ gacchāmy avaivartikabodhisattvagaṇam. aho batāham anuttarāṃ samyaksaṃbodhiṃ abhisaṃbudheya sarvasattvānām arthāya hitāya sukhāya yāvad atyantaniṣṭhe nirvāṇe buddhabodhau pratiṣṭhāpanāya. eṣo 'ham anuttaraṃ bodhimārgam āśrayāmi yad uta vajrayānam.</p>
+
+<p>tataḥ sarvasattveṣu divyasukhopasaṃhārākārāṃ maitrīm, sarvaduḥkhāpanayanākārāṃ karuṇām, divyasukhāviyoganiyamākārāṃ muditām, kleśapratipakṣamārgopasaṃhārākārām upekṣāṃ ca bhāvayet. tataḥ sarvadharmān manasālambya vicārayet ḥ cittam evaitat tena tenākāreṇa bhrāntaṃ pratibhāsate yathāsvapne.</p>
+
+<note><hi rend="bold">BhrHe 159</hi></note>
+<p>nāsti cittād bāhyaṃ cittagrāhyam. grāhyābhāvāc cittam api grāhakaṃ na bhavati. tasmāc cittaśarīrāḥ sarvadharmāḥ, teṣāṃ grāhyagrāhakaśūnyatā paramārtha iti. evam ekāntena niścitya bhrāntisamāropitaṃ bhrānticihnaṃ sarvadharmāṇām ākāraṃ vihāya teṣāṃ prakṛtim eva kevalām advayavijñaptilakṣaṇāṃ śuddhasphaṭikasaṃkāśāṃ śaradamalamadhyāhnagaganopamām anantāṃ paśyet. idam ucyate pāramārthikaṃ bodhicittaṃ lokottaraṃ śūnyatājñānaṃ niṣprapañcaṃ nirvikalpam. tatas tan mantreṇādhitiṣṭhet</p>
+
+<p>oṃ śūnyatājñānavajrasvabhāvātmako 'ham.</p>
+
+<p>saiva bhagavatī prajñāpāramitā, saiva paramā rakṣā.</p>
+
+<p>tatas tanniṣyandabhūtām ākāravatīṃ rakṣāṃ śuddhalaukikajñānasvabhāvāṃ bhāvayet.</p>
+
+<lg>
+<l>repheṇa sūryaṃ purato vibhāvya tasmin ravau hūṃbhavaviśvavajram /</l>
+<l>tenaiva vajreṇa vibhāvayec ca prākārakaṃ pañjarabandhanaṃ ca //</l>
+</lg>
+
+<p>viśvavajrakiraṇaiḥ pralayānaladuḥsahaiḥ sarvataḥ spharitvā (<hi rend="bold">BhrHe 160</hi>) ghanībhūya racitaṃ tiryak caturasraṃjvaladvajraprākāram, upariṣṭād vajrapañjaram, adhastād vajramayīṃ bhūmim ārasātalaviracitāṃ paśyet. tato raviviśvavajrābhyāṃ raśmībhūya diśi diśi spharitvā ghanībhūya bahir dūre sīmābandhaḥ karaṇīya iti ślokārthaḥ.</p>
+
+<p>tatas tanniṣyandatayaiva viśuddhāni pañca mahābhūtāni cintayet. tatrākāśamahābhūtaṃ dharmodayākhyaṃ mahāvajradharasvabhāvaṃ śaracchaśadharadhavalam adhaḥ sūkṣmam upari viśālaṃ trikoṇam antar gaganasvarūpaṃ abhyantarodgataviśvadaIakamalakarṇikāvasthitavipulaviśvavajram. tadvedikāyāṃ catvāri mahābhūtāni caturmaṇḍalākārāṇi caturdevīsvabhāvāny upary upari paśyet. ādau laṃkāreṇa māhendramaṇḍalaṃ caturasraṃ pītaṃ koṇeṣu triśūkavajrāṅkam. tato vaṃkāreṇa vāruṇaṃ vartulaṃ sitaṃ ghaṭāṅkam. tato raṃkāreṇāgneyaṃ trikoṇaṃ raktaṃ koṇeṣu rephāṅkam. tato yaṃkāreṇa vāyavyaṃ dhanurākāraṃ kṛṣṇaṃ koṭidvaye calatpatākāṅkam. bhāvakas tu tadānīṃ tad eva lokottarajñānaṃ (<hi rend="bold">BhrHe 161</hi>) vyāpakatvena sthitam. tato viśvavajravedikāmadhye caturmahābhūtapariṇāmajaṃ pariśuddhabuddhakṣetrasaṃkṣeparūpaṃ mahāmokṣapuraṃ vairocanasvabhāvaṃ nānāratnamayaṃ kūṭāgāram aṣṭābhiḥ śmaśānaiḥ sarvalokadhātunairātmyasūcakaiḥ parivṛtaṃ dhyāyāt.</p>
+
+<lg>
+<l>caturasraṃ caturdvāram aṣṭastambhopaśobhitam /</l>
+<l>caturvedīparikṣiptaṃ catustoraṇamaṇḍitam //</l>
+</lg>
+
+<lg>
+<l>hārārdhahārapaṭṭasragvitānādarśacāmaraiḥ /</l>
+<l>ruciraṃ vajrasūtraiś ca spharadbuddhaughaṃ aṃśubhiḥ //</l>
+</lg>
+
+<lg>
+<l>calaccitrapatākāgraghaṇṭāmukharadiṅmukham /</l>
+<l>paramaiḥ pañcabhiḥ kāmair upahāraiś ca harṣaṇam //</l>
+</lg>
+
+<lg>
+<l>tasya garbhapuṭe padmam aṣṭapatraṃ sakeśaram /</l>
+<l>caturdvāracatuṣkoṇakarṇikāsv āsanāni tu //</l>
+</lg>
+
+<lg>
+<l>brahmendropendrarudrāś ca yamo yakṣādhipas tathā /</l>
+<l>naiṛtir vemacitrī ca madhye māracatuṣṭayam //</l>
+</lg>
+
+<lg>
+<l>uttarottaram uttānaṃ bhītaṃ māracatuṣṭayam /</l>
+<l>bhānunākrāntahṛdayaṃ śaśinānye tu kātarāḥ //</l>
+</lg>
+
+<p>tatra madhyāsanasyopari pañcadaśabhiḥ svaraiś candramaṇḍalam ādarśajñānasvabhāvam, tadupari catustriṃśadvyañjanaiḥ sūryamaṇḍalaṃ samatājñānasvabhāvam, tanmadhye aṃkārahūṃkārapariṇatau (<hi rend="bold">BhrHe 162</hi>) karttikapālau saṃyuktau svabījamadhyagatau pratyavekṣaṇājñānātmakau cintayet. tato bījadvayād yoginīcakrākāreṇa sarvatathāgatān saṃsphārya, tān saṃhṛtya, taiḥ sahaikīkṛtaṃ bījaṃ kṛtyānuṣṭhānajñānam, tataś candrasūryacihnabījapariṇāmajaṃ bhagavantaṃ vajrasattvaṃ vakṣyamāṇavarṇākṛticihnādinā śrīherukarūpeṇāvirbhūtaṃ tathaiva nairātmyāśliṣṭakandharaṃ suviśuddhadharmadhātujñānātmakaṃ paśyet. iti pañcākārābhisaṃbodhiḥ.</p>
+
+<lg>
+<l>tasyānandina āsyena dvihoḥkāravidarbhitam /</l>
+<l>jvalad bījadvayaṃ rāgāt padmāntaḥ praviśad dravet //</l>
+</lg>
+
+<lg>
+<l>tato vajrī mahārāgād vilīya saha vidyayā /</l>
+<l>śaraccandradravanibhāṃ tiṣṭhen maṇḍalatāṃ gataḥ //</l>
+</lg>
+
+<lg>
+<l>athotthānāya taṃ devyaḥ sthitvā koṇāsanenduṣu /</l>
+<l>codayeyuś catasṛbhiś catasro vajragītibhiḥ //</l>
+</lg>
+
+<p>uṭṭha bharāḍo karuṇamaṇu pukkasi mahuṃ paritāhi /
+<note><hi rend="bold">BhrHe 163</hi></note>
+mahasuhajoeṃ kāma mahuṃ cchaḍḍahi suṇṇasamāhi //</p>
+
+<lg>
+<l>tojjha vihuṇṇe marami haüṃ uṭṭhahi tuhuṃ hevajja /</l>
+<l>cchaḍḍahi suṇṇasahāvaḍā savariha sijjhaü kajja /</l>
+<l>loa nimantia suraapahu suṇṇe acchasi kīsa /</l>
+<l>haüṃ caṇḍālī viṇṇamami taï viṇu uhami na dīsa //</l>
+</lg>
+
+<lg>
+<l>indīālī uṭṭha tuhuṃ haüṃ jāṇami tuhu citta /</l>
+<l>aṃhe ḍombī cchea maṇu mā karu karuṇavicchitta //</l>
+</lg>
+
+<p>atha gītikānurodhāc candradravasaṃhārajābhyāṃ tatkālajaravimaṇḍalasthitābhyām aṃkārahūṃkārābhyāṃ devatānāṃ cihnadehādikam ākāśopamaṃ māyopamaṃ ca niścitya, tatpariṇāmayoḥ karttikapālayoḥ saṃyuktayor dṛḍhasamādhirūpayor garbhe tad eva
+(<hi rend="bold">BhrHe 164</hi>) bījadvayaṃ yathābhūtaparijñānasvabhāvaṃ paśyet. tata eva spharaṇayogena yoginīcakrākārānantatathāgatamayaṃ cittādhīnaṃ ca viśvaṃ nirūpya saṃharaṇayogena sarvaṃ tan māyopamaṃ gaganopamaṃ ca parijñāya dvitīyaravicihnabījapariṇāmajaṃ śrīherukam ātmānaṃ paśyet.</p>
+
+<lg>
+<l>āsphālayantaṃ caraṇāṃs tarjayantaṃ surāsurān /</l>
+<l>kruddhaṃ vartularaktākṣaṃ lalitaṃ navayauvanam //</l>
+</lg>
+
+<lg>
+<l>catuścaraṇam aṣṭāsyaṃ dviraṣṭabhujabhūṣitam /</l>
+<l>caturmārasamākrāntam ardhaparyaṅkatāṇḍavam //</l>
+</lg>
+
+<lg>
+<l>muṇḍamālāmahāhāraṃ ravisthaṃ bhīmabhīṣaṇam /</l>
+<l>viśvavajradharaṃ mūrdhni kṛṣṇaṃ sūryajvalatprabham //</l>
+</lg>
+
+<lg>
+<l>hūṃkārasphārivadanaṃ bhasmoddhūlitavigraham /</l>
+<l>mūlānanaṃ mahākṛṣṇaṃ dakṣiṇaṃ kundasannibham //</l>
+</lg>
+
+<lg>
+<l>vāmaṃ raktaṃ mahāghoraṃ mūrdhāsyaṃ vikarālinam /</l>
+<l>bhrṅgasannibhaśeṣāsyaṃ prativaktraṃ trilocanam //</l>
+</lg>
+
+<note><hi rend="bold">BhrHe 165</hi></note>
+<lg>
+<l>śṛṅgāravīrabībhatsaraudrahāsyabhayānakaiḥ /</l>
+<l>karuṇādbhutaśāntaiś ca navanāṭyarasair yutam //</l>
+</lg>
+
+<lg>
+<l>piṅgordhvakeśavartmānaṃ pañcamudrair alaṃkṛtam /</l>
+<l>cakrī kuṇḍala kaṇṭhā ca haste rucaka mekhalam //</l>
+</lg>
+
+<lg>
+<l>hastyaśvakharagāvoṣṭramanujaśarabhotukas tathā /</l>
+<l>dakṣiṇāṣṭakapāleṣu kramair jñeyā dvipādayaḥ //</l>
+</lg>
+
+<lg>
+<l>pṛthivī varuṇa vāyuś ca tejaś candrārka eva ca /</l>
+<l>antako dhanadaś caiva tadvāmāṣṭakapālake //</l>
+</lg>
+
+<lg>
+<l>nairātmyayā samāpannaḥ svābhayā pañcamudrayā /</l>
+<l>dvibhujaikamukhī dvyaṅghriḥ sā tu karttikapālabhṛt //</l>
+</lg>
+
+<p>atha bhagavato hṛtsūryasthitakapālasūrye hūṃkāram, bhagavatyās tu hṛccandrasthitakarttimuṣṭicandre aṃkāraṃ cintayet. tato 'sya śrotre nairātmyām, cakṣuṣi vajrām, ghrāṇe guhyagaurīm, (<hi rend="bold">BhrHe 167</hi>) jihvāyāṃ vāriyoginīm, kāyendriye vajraḍākīm, manasi nairātmyām adhimuñcet. etad eva vajrādipañcakaṃ yathākramaṃ rūpavedanāsaṃjñāsaṃskāravijñānaskandheṣu, tathā mohamātsaryarāgerṣyādveṣeṣu. rūpaśabdagandharasaspraṣṭavyadharmāyataneṣu bāhyagaurī caurī vettālī ghasmarī bhūcarī khecarī, pṛthivyaptejovāyudhātuṣu pukkasī śabarī caṇḍālī ḍombī, kāyavākcitteṣu bhūcarīkhecarīnairātmyāḥ, māṃse pukkasī, rudhire śabarī, śukre caṇḍālī, majjamedayor ḍombī, carmaṇi sapta bodhyaṅgāni, asthiṣu satyacatuṣṭayam. evaṃ devatābhiḥ sakalīkṛtya tadaparāḥ śuddhīr adhimuñcet.</p>
+
+<lg>
+<l>kṛpayā locane rakte kṛṣṇāṅgo maitracittataḥ /</l>
+<l>pādāḥ saṃgrahavastūni bhujāḥ ṣoḍaśa śūnyatāḥ //</l>
+</lg>
+
+<lg>
+<l>mukhāny aṣṭau vimokṣās tu tribhis tattvais trilocanaḥ /</l>
+<l>pañca mudrā jināḥ pañca kruddho duṣṭānuśāsanam //</l>
+</lg>
+
+<p>kaṇṭhahṛdbhagamasteṣu catuścakraṃ yathākramam /
+<note><hi rend="bold">BhrHe 167</hi></note>
+saṃbhogadharmanirmāṇamahāsukham iti smṛtam //</p>
+
+<lg>
+<l>ṣoḍaśāṣṭacatuḥṣaṣṭidvātriṃśaddalaṃ ambujam /</l>
+<l>madhye maṇḍitaṃ oṃkārahūṃkārākārahaṃkṛtaiḥ //</l>
+</lg>
+
+<p>tadanu svahṛdbījaraśmispharaṇāṅkuśair daśadiggatāṃs tathāgatān ākṛṣya nabhasi saṃsthāpya tān aṣṭamātṛbhiḥ saṃpūjya</p>
+
+<p>abhiṣiñcantu māṃ sarvatathāgatāḥ</p>
+
+<p>iti prārthayet. taiḥ śrīherukarūpāpannaiḥ pañcāmṛtabhṛtapañcatathāgatātmakaiḥ kalaśair abhiṣicyate. abhiṣicyamānasya śirasi bhagavān akṣobhya utpadyate, puṣpavṛṣṭiḥ kuṅkumavṛṣṭiś ca bhavati, dundubhiśabdaś ca śrūyate, rūpavajrādibhiḥ saṃpūjyate, vajragītyā locanādibhiḥ stūyate.</p>
+
+<p>ity ādiyogo nāma samādhiḥ, svābhāvikaś ca kāyaḥ.</p>
+
+<p>atha padmādhiṣṭhānam.</p>
+
+<lg>
+<l>oṃ padma sukhādhāra mahārāga sukhaṃdada /</l>
+<l>caturānandabhāg viśva hūṃ hūṃ kāryaṃ kuruṣva me //</l>
+</lg>
+
+<note><hi rend="bold">BhrHe 168</hi></note>
+<p>atha vajrādhiṣṭhānam.</p>
+
+<lg>
+<l>oṃ vajra mahādveṣa caturānandadāyaka /</l>
+<l>khagamukhaikaraso nātha hūṃ hūṃ kāryaṃ kuruṣva me //</l>
+</lg>
+
+<p>tataḥ</p>
+
+<p>oṃ śī 3 ha 3 svāhā</p>
+
+<p>iti ratim ārabhet. tataḥ kamalodarapatitacandradravabindupariṇāmena gaṃkāreṇa niṣpannāṃ gaurīṃ kṛṣṇavarṇāṃ karttirohitadharāṃ pūrvadvārāsanacandre cintayet. tathā caṃkāreṇa caurīṃ māñjiṣṭhavarṇāṃ kṛpīṭaśūkaradharāṃ dakṣiṇadvārāsanacandre, tathā vaṃkāreṇa vettālīṃ kanakavarṇāṃ kūrmakapāladharāṃ paścimadvārāsanacandre, tathā ghaṃkāreṇa ghasmarīṃ maraktābhām. bhujagayogapātrīdharām uttaradvārāsanacandre, tathā paṃkāreṇa pukkasīm indranīlanibhāṃ keśariparśudharāṃ aiśānakoṇāsanacandre, tathā śaṃkāreṇa śabarīṃ candrakāntanibhāṃ bhikṣukhikkhirikādharām āgneyakoṇāsanacandre, (<hi rend="bold">BhrHe 169</hi>)</p>
+
+<p>tathā laṃkāreṇa caṇḍālīṃ nabhaḥśyāmāṃ cakralāṅgaladharāṃ naiṛtikoṇāsanacandre, tathā ḍaṃkāreṇa ḍombīṃ karburavarṇāṃ vajratarjanikādharāṃ vāyavyakoṇāsanacandre dhyāyāt.</p>
+
+<lg>
+<l>ardhaparyaṅkanāṭyasthā vṛttaraktatrilocanāḥ /</l>
+<l>piṅgordhvakeśā dvibhujāḥ pañcamudrādharāś ca tāḥ //</l>
+</lg>
+
+<p>atha parito niṣpannaṃ maṇḍalam avalokya hṛdbījakiraṇāṅkuśair jñānamaṇḍalam ākṛṣya, pūrvadvārābhimukham antarīkṣe 'vasthāpya, aṣṭānanahūṃkārair vighnān utsārya, arghapādyaṃ dattvā,</p>
+
+<p>jaḥ hūṃ vaṃ hoḥ</p>
+
+<p>ity ebhir yathākramam ākarṣaṇapraveśanabandhanavaśīkaraṇāni kṛtvā, samayajñānamaṇḍalayor ekalolībhāvaṃ vibhāvya, hṛnmantrakiraṇaiḥ sarvatathāgatān ākṛṣya saṃpūjya prārthya tayor abhiṣekaṃ dāpayet. abhiṣicyamānānām abhiṣekajinaḥ śirasi jāyate. atra ślokau:</p>
+
+<lg>
+<l>pukkasyādyāś catasras tu gauryādyāś ca yathākramam /</l>
+<l>akṣobhyabuddharatneśavāgīśair iha mudrayet //</l>
+</lg>
+
+<p>kuleśaiḥ kāyavākcittair bhavanirvāṇaherukān /
+<note><hi rend="bold">BhrHe 170</hi></note>
+vajrādyāḥ svakuleśais tu jinair akṣobhyapañcakaiḥ //</p>
+
+<p>tato devatātattvaṃ manasikuryāt. iha sarvadharmāḥ kāyavākcittajñānaiḥ saṃgṛhītāḥ. teṣāṃ kāyādīnāṃ yā dharmatā vijñaptimātratā dvayaśūnyatā tasyāḥ pratyavekṣaṇaṃ yathāyogaṃ dvārapālīnāṃ tattvam. tasyā eva śūnyatāyāḥ samyagjñānaṃ niṣprapañcam anāsravā prajñā vajrayānam anuttaraṃ yathāyogaṃ pukkasyādīnāṃ catasṛṇāṃ tattvam. tasyaiva vajrayānasya phalaṃ mahāvajradharapadaṃ niruttarā bodhir maṇḍalādhipates tattvam.</p>
+
+<p>tataḥ svahṛdbījād aṣṭau pūjādevīḥ saṃsphārya tāsāṃ spharaṇameghair gaganam āpūrya sanāyakaṃ maṇḍalaṃ pūjayet. tato māyopamān sarvadharmān adhimucya gītidvayena bhagavantaṃ stūyāt.</p>
+
+<p>vividhavicitravibhramālokitaiḥ pramodya
+vividhavicitracumbanāliṅganaiḥ pramodya /
+<note><hi rend="bold">BhrHe 171</hi></note>
+vividhavicitrasukhabhojanaiḥ prabhakṣya
+vividhavicitrasaṃvaram aho pradarśayasva //</p>
+
+<lg>
+<l>païsaü samaü savvāāsu jou /</l>
+<l>bhakkhaü saala savvāāsu lou //</l>
+</lg>
+
+<p>athāntarīkṣe hūṃkāreṇa vajraṃ vicintya, tasyādhastād āḥkāreṇa padmam, tanmadhye praṇavāṅkitāni dravyāṇi, vajrapadmasamāyogād agnijvālanam, tena teṣāṃ tāpanam, pākād dravīkṛtya jñānasūryīkaraṇād dyotanam, tatkiraṇair daśadiksarvatathāgatānāṃ rūpadarśanam, tajjñānabījebhyas tair eva kiraṇair ākṛṣya jñānāmṛtaṃ teṣu saṃpātya samarasīkuryāt. evaṃ tāny amṛtīkṛtya tryakṣareṇādhiṣṭhāya hūṃkāreṇa jihvāyāṃ śubhravajram, hṛtsūrye ca maṇḍalam adhimucya, tair amṛtair ātmānaṃ maṇḍalaṃ ca saṃtarpayet.</p>
+
+<lg>
+<l>mātṛcakre pure ramye bhāvayed īdṛśaṃ prabhum /</l>
+<l>nistaraṅgasukhāvāptaṃ nistaraṅgasvarūpiṇam //</l>
+</lg>
+
+<note><hi rend="bold">BhrHe 172</hi></note>
+<p>iti maṇḍalarājāgrī nāma dvitīyaḥ samādhiḥ, sāṃbhogikaś ca kāyaḥ.</p>
+
+<p>tato gaurīṃ caurīṃ yāvan maṇḍalādhipatiṃ pratyekam anupūrvyā daśasu dikṣu nirantaraṃ saṃsphārya, sattvānām arthaṃ kṛtvā, teṣv eva saṃhṛtya, kṛtakṛtyaṃ maṇḍalaṃ maṇḍalādhipatiṃ ca niṣprapañcasukhasamarpitaṃ paśyet. tatra gaurī kāyasya bhūtapratyavekṣāyāṃ sattvān vyavasthāpayati, caurī cittasya, vettālī vācaḥ, ghasmarī jñānasya, pukkasī kāyasya samyagjñāne, śabarī cittasya, caṇḍālī vācaḥ, ḍombī jñānasya. maṇḍaleśvaras tu mahāvajradharapade sattvān avasthāpayati.</p>
+
+<p>tadanantaraṃ ṣaḍaṅgayogena samatāṃ bhāvayet.</p>
+
+<lg>
+<l>kṛṣṇaṃ raktaṃ tataḥ pītaṃ harin nīlaṃ sitaṃ kramāt /</l>
+<l>sahajānandamātraṃ ca dhyāyāc cakraṃ sanāyakam //</l>
+</lg>
+
+<p>iti karmarājāgrī nāma tṛtīyaḥ samādhiḥ, nairmāṇikaś (<hi rend="bold">BhrHe 173</hi>) ca kāyaḥ. bhāvanākhinno mantraṃ japet. samaṇḍalam ātmānaṃ devatārūpeṇāvirbhūtaṃ vicintya</p>
+
+<p>oṃ deva picuvajra hūṃ 3 phaṭ svāhā</p>
+
+<p>iti hṛtsūrye trayodaśa mantrākṣarāṇy ūrdhvaśiraskāni pradīpavaj jvalanti maṇḍalībhūtāni manasābhilikhya, tāny eva vācayan vajravācā krodhavācā vā japet. sarvamukhebhyaḥ sarvadevīmukhebhyaś ca mantram uccarantam adhimuñcet. iyataiva svadevatāyā aṣṭaguṇo jāpaḥ sarvadevīnāṃ ca mantrajāpaḥ kṛto bhavati.</p>
+
+<p>tataḥ praṇidhānaṃ kuryāt.</p>
+
+<lg>
+<l>sarvasvaṃ sarvabuddhānāṃ mahāvajrabhṛtaḥ padam /</l>
+<l>ebhir labheya kuśalair lambhayeyaṃ ca taj jagat //</l>
+</lg>
+
+<lg>
+<l>caryā saṃbodhaye yā ca saṃbuddhānāṃ ca yā punaḥ /</l>
+<l>varṇitā bodhivajreṇa sā caryāstu dvayī mama //</l>
+</lg>
+
+<p>tataḥ sanāyakaṃ maṇḍalaṃ pūrvavat saṃpūjya, svahṛnmantre devīr antarbhāvya, ādhāramaṇḍalam ativistīrṇam adhimucya, (<hi rend="bold">BhrHe 174</hi>) catvāri mahābhūtāni pukkasyādisvabhāvāni niścitya, hevajrāhaṃkareṇotthāya tathaiva viharet. madhyāhnapradoṣasandhyayor dhyānagṛhaṃ praviśya pūrvavad ādhāramaṇḍalaṃ tanmadhyāsane cātmānaṃ samāpannāṣṭānanahevajrarūpaṃ jhaṭiti dṛṣṭvā, hṛdbījaniścāritāś ca devīr yathāsthānaṃ niveśya, sarvamaṇḍalam ānandamayaṃ dhyātvā, pūjāstutyamṛtāsvādaṃ jāpādikaṃ ca kuryāt. nidrākāle ṣaḍaṅgayogaṃ sahajānandayogaṃ vābhimukhīkṛtya supyāt. caturdevīgītisaṃcoditaś ca nidrāta uttiṣṭhet. utthāya sarvaṃ pūrvavat kuryāt. evaṃ pratyahaṃ yāvat siddhinimittāni paśyati. tāni dṛṣṭvā yathātantram abhimatasiddher upāyam anutiṣṭhed iti.</p>
+
+<p>guruguṇadhanadhāmnaḥ sādhanaṃ herukasya
+bhramaharam abhidhāya spaṣṭam aṣṭānanasya /</p>
+
+<note><hi rend="bold">BhrHe 175</hi></note>
+<p>kuśalam idam avāptaṃ yan mayā janmabhājāṃ niravadhihitahetus tena vajrī jinaḥ syām //</p>
+
+  </body>
+</text>
+</TEI>

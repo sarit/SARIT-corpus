@@ -1,0 +1,879 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_bAdarAyaNa-brahmasUtra">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Brahmasūtra</title>
+	<author>Bādarāyaṇa</author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>members of the Sansknet Project</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>members of the Sansknet Project</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/vedanta/brahmsuu.htm">brahmsuu.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Badarayana: Brahmasutra
+<lb/>
+<lb/>Input by members of the Sansknet project
+<lb/>(www.sansknet.org)
+<lb/>
+<lb/>This GRETIL version has been converted from a custom Devanagari encoding.
+<lb/>Therefore, word boundaries are usually not marked by blanks.
+<lb/>
+<lb/>THE TEXT IS NOT PROOF-READ!
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl></bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Brahmasūtra = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Śāstra -- Philosophy -- Vedānta</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+
+<l>athāto brahmajijñāsā | BBs_1,1.1 |</l>
+<l>janmādyasya yataḥ | BBs_1,1.2 |</l>
+<l>śāstrayonitvāt | BBs_1,1.3 |</l>
+<l>tat tu samanvayāt | BBs_1,1.4 |</l>
+<l>īkṣater nāśabdam | BBs_1,1.5 |</l>
+<l>gauṇaś cen nātmaśabdāt | BBs_1,1.6 |</l>
+<l>tanniṣṭhasya mokṣopadeśāt | BBs_1,1.7 |</l>
+<l>heyatvāvacanāc ca | BBs_1,1.8 |</l>
+<l>pratijñāvirodhāt | BBs_1,1.9 |</l>
+<l>svāpyayāt | BBs_1,1.10 |</l>
+<l>gatisāmānyāt | BBs_1,1.11 |</l>
+<l>śrutatvāc ca | BBs_1,1.12 |</l>
+<l>ānandamayo 'bhyāsāt | BBs_1,1.13 |</l>
+<l>vikāraśabdān neti cen na prācuryāt | BBs_1,1.14 |</l>
+<l>taddhetuvyapadeśāc ca | BBs_1,1.15 |</l>
+<l>māntravarṇikameva ca gīyate | BBs_1,1.16 |</l>
+<l>netaro 'nupapatteḥ | BBs_1,1.17 |</l>
+<l>bhedavyapadeśāc ca | BBs_1,1.18 |</l>
+<l>kāmāc ca nānumānāpekṣā | BBs_1,1.19 |</l>
+<l>asminn asya ca tadyogaṃ śāsti | BBs_1,1.20 |</l>
+<l>antas taddharmopadeśāt | BBs_1,1.21 |</l>
+<l>bhedavyapadeśāc cānyaḥ | BBs_1,1.22 |</l>
+<l>ākāśas talliṅgāt | BBs_1,1.23 |</l>
+<l>ata eva prāṇaḥ | BBs_1,1.24 |</l>
+<l>jyotiś caraṇābhidhānāt | BBs_1,1.25 |</l>
+<l>chando 'bhidhānān neti cen na tathā ceto'rpaṇanigadāt tathā hi darśanam | BBs_1,1.26 |</l>
+<l>bhūtādipādavyapadeśopapatteś caivam | BBs_1,1.27 |</l>
+<l>upadeśabhedān neti cen nobhayasminn apy avirodhāt | BBs_1,1.28 |</l>
+<l>prāṇas tathānugamāt | BBs_1,1.29 |</l>
+<l>na vaktur ātmopadeśād iti ced adhyātmasaṃbandhabhūmā hy asmin | BBs_1,1.30 |</l>
+<l>śāstradṛṣṭyā tūpadeśo vāmadevavat | BBs_1,1.31 |</l>
+<l>jīvamukhyaprāṇaliṅgān neti cen nopāsātraividhyādāśritatvād iha tadyogāt | BBs_1,1.32 |</l>
+
+<l>sarvatra prasiddhopadeśāt | BBs_1,2.1 |</l>
+<l>vivakṣitaguṇopapatteś ca | BBs_1,2.2 |</l>
+<l>anupapattes tu na śārīraḥ | BBs_1,2.3 |</l>
+<l>karmakartṛvyapadeśāc ca | BBs_1,2.4 |</l>
+<l>śabdaviśeṣāt | BBs_1,2.5 |</l>
+<l>smṛteś ca | BBs_1,2.6 |</l>
+<l>arbhakaustvāt tadvyapadeśāc ca neti cen na nicāyyatvād evaṃ vyomavac ca | BBs_1,2.7 |</l>
+<l>saṃbhogaprāptir iti cen na vaiśeṣyāt | BBs_1,2.8 |</l>
+<l>attā carācaragrahaṇāt | BBs_1,2.9 |</l>
+<l>prakaraṇāc ca | BBs_1,2.10 |</l>
+<l>guhāṃ praviṣṭāv ātmānau hi taddarśanāt | BBs_1,2.11 |</l>
+<l>viśeṣaṇāc ca | BBs_1,2.12 |</l>
+<l>antara upapatteḥ | BBs_1,2.13 |</l>
+<l>sthānādivyapadeśāc ca | BBs_1,2.14 |</l>
+<l>sukhaviśiṣṭābhidhānād eva ca | BBs_1,2.15 |</l>
+<l>ata eva ca sa brahma | BBs_1,2.16 |</l>
+<l>śrutopaniṣatkagatyabhidhānāc ca | BBs_1,2.17 |</l>
+<l>anavasthiter asaṃbhavāc ca netaraḥ | BBs_1,2.18 |</l>
+<l>antaryāmyadhidaivādhilokādiṣu taddharmavyapadeśāt | BBs_1,2.19 |</l>
+<l>na ca smārtam ataddharmābhilāpāc chārīraś ca | BBs_1,2.20 |</l>
+<l>ubhaye 'pi hi bhedenainam adhīyate | BBs_1,2.21 |</l>
+<l>adṛśyatvādiguṇako dharmokteḥ | BBs_1,2.22 |</l>
+<l>viśeṣaṇabhedavyapadeśābhyāṃ ca netarau | BBs_1,2.23 |</l>
+<l>rūpopanyāsāc ca | BBs_1,2.24 |</l>
+<l>vaiśvānaraḥ sādhāraṇaśabdaviśeṣāt | BBs_1,2.25 |</l>
+<l>smaryamāṇam anumānaṃ syād iti | BBs_1,2.26 |</l>
+<l>śabdādibhyo 'ntaḥpratiṣṭhānāc ca neti cen na tathā dṛṣṭyupadeśād asambhavāt puruṣamapi cainam adhīyate | BBs_1,2.27 |</l>
+<l>ata eva na devatā bhūtaṃ ca | BBs_1,2.28 |</l>
+<l>sākṣād apy avirodhaṃ jaiminiḥ | BBs_1,2.29 |</l>
+<l>abhivyakter ity āśmarathyaḥ | BBs_1,2.30 |</l>
+<l>anusmṛter bādariḥ | BBs_1,2.31 |</l>
+<l>saṃpatter iti jaiminis tathā hi darśayati | BBs_1,2.32 |</l>
+<l>āmananti cainam asmin | BBs_1,2.33 |</l>
+
+<l>dyubhvādyāyatanaṃ svaśabdāt | BBs_1,3.1 |</l>
+<l>muktopasṛpyavyapadeśāc ca | BBs_1,3.2 |</l>
+<l>nānumānam atacchabdāt prāṇabhṛc ca | BBs_1,3.3 |</l>
+<l>bhedavyapadeśāt | BBs_1,3.4 |</l>
+<l>prakaraṇāt | BBs_1,3.5 |</l>
+<l>sthityadanābhyāṃ ca | BBs_1,3.6 |</l>
+<l>bhūmā saṃprasādād adhyupadeśāt | BBs_1,3.7 |</l>
+<l>dharmopapatteś ca | BBs_1,3.8 |</l>
+<l>akṣaram ambarāntadhṛteḥ | BBs_1,3.9 |</l>
+<l>sā ca praśāsanāt | BBs_1,3.10 |</l>
+<l>anyabhāvavyāvṛtteśca | BBs_1,3.11 |</l>
+<l>īkṣatikarmavyapadeśāt saḥ | BBs_1,3.12 |</l>
+<l>dahara uttarebhyaḥ | BBs_1,3.13 |</l>
+<l>gatiśabdābhyāṃ tathā hi dṛṣṭaṃ liṅgaṃ ca | BBs_1,3.14 |</l>
+<l>dhṛteś ca mahimno 'syāsminn upalabdheḥ | BBs_1,3.15 |</l>
+<l>prasiddheś ca | BBs_1,3.16 |</l>
+<l>itaraparāmarśāt sa iti cen nāsaṃbhavāt | BBs_1,3.17 |</l>
+<l>uttarāc ced āvirbhūtasvarūpas tu | BBs_1,3.18 |</l>
+<l>anyārthaś ca parāmarśaḥ | BBs_1,3.19 |</l>
+<l>alpaśruter iti cet tad uktam | BBs_1,3.20 |</l>
+<l>anukṛtes tasya ca | BBs_1,3.21 |</l>
+<l>api ca smaryate | BBs_1,3.22 |</l>
+<l>śabdād eva pramitaḥ | BBs_1,3.23 |</l>
+<l>hṛdyapekṣayā tu manuṣyādhikāratvāt | BBs_1,3.24 |</l>
+<l>tadupary api bādarāyaṇaḥ saṃbhavāt | BBs_1,3.25 |</l>
+<l>virodhaḥ karmaṇīti cen nānekapratipatter darśanāt | BBs_1,3.26 |</l>
+<l>śabda iti cen nātaḥ prabhavāt pratyakṣānumānābhyām | BBs_1,3.27 |</l>
+<l>ata eva ca nityatvam | BBs_1,3.28 |</l>
+<l>samānanāmarūpatvāccāvṛttāvapyavirodho darśanāt smṛteś ca | BBs_1,3.29 |</l>
+<l>madhvādiṣv asaṃbhavād anadhikāraṃ jaiminiḥ | BBs_1,3.30 |</l>
+<l>jyotiṣi bhāvāc ca | BBs_1,3.31 |</l>
+<l>bhāvaṃ tu bādarāyaṇo 'sti hi | BBs_1,3.32 |</l>
+<l>śugasya tadanādaraśravaṇāt tadādravaṇāt sūcyate hi | BBs_1,3.33 |</l>
+<l>kṣatriyatvagateś ca | BBs_1,3.34 |</l>
+<l>uttaratra caitrarathena liṅgāt | BBs_1,3.35 |</l>
+<l>saṃskāraparāmarśāt tadabhāvābhilāpāc ca | BBs_1,3.36 |</l>
+<l>tadabhāvanirdhāraṇe ca pravṛtteḥ | BBs_1,3.37 |</l>
+<l>śravaṇādhyayanārthapratiṣedhāt | BBs_1,3.38 |</l>
+<l>smṛteś ca | BBs_1,3.39 |</l>
+<l>kampanāt | BBs_1,3.40 |</l>
+<l>jyotir darśanāt | BBs_1,3.41 |</l>
+<l>ākāśo 'rthāntaratvādivyapadeśāt | BBs_1,3.42 |</l>
+<l>suṣuptyutkrāntyor bhedena | BBs_1,3.43 |</l>
+<l>patyādiśabdebhyaḥ | BBs_1,3.44 |</l>
+
+<l>ānumānikam apy ekeṣām iti cen na śarīra-rūpaka-vinyasta-gṛhīter darśayati ca | BBs_1,4.1 |</l>
+<l>sūkṣmaṃ tu tadarhatvāt | BBs_1,4.2 |</l>
+<l>tadadhīnatvād arthavat | BBs_1,4.3 |</l>
+<l>jñeyatvāvacanāc ca | BBs_1,4.4 |</l>
+<l>vadatīti cen na prājño hi prakaraṇāt | BBs_1,4.5 |</l>
+<l>trayāṇām eva caivam upanyāsaḥ praśnaś ca | BBs_1,4.6 |</l>
+<l>mahadvac ca | BBs_1,4.7 |</l>
+<l>camasavadaviśeṣāt | BBs_1,4.8 |</l>
+<l>jyotirupakramā tu tathā hy adhīyata eke | BBs_1,4.9 |</l>
+<l>kalpanopadeśāc ca madhvādivadavirodhaḥ | BBs_1,4.10 |</l>
+<l>na saṃkhyopasaṃgrahādapi jñānābhāvād atirekāc ca | BBs_1,4.11 |</l>
+<l>prāṇādayo vākyaśeṣāt | BBs_1,4.12 |</l>
+<l>jyotiṣaikeṣām asatyanne | BBs_1,4.13 |</l>
+<l>kāraṇatvena cākāśādiṣu yathāvyapadiṣṭokteḥ | BBs_1,4.14 |</l>
+<l>samākarṣāt | BBs_1,4.15 |</l>
+<l>jagadvācitvāt | BBs_1,4.16 |</l>
+<l>jīvamukhyaprāṇaliṅgān neti cet tadvyākhyātam | BBs_1,4.17 |</l>
+<l>anyārthaṃ tu jaiminiḥ praśnavyākhyānābhyām api caivam eke | BBs_1,4.18 |</l>
+<l>vākyānvayāt | BBs_1,4.19 |</l>
+<l>pratijñāsiddher liṅgam āśmarathyaḥ | BBs_1,4.20 |</l>
+<l>utkramiṣyata evaṃ bhāvād ity auḍulomiḥ | BBs_1,4.21 |</l>
+<l>avasthiter iti kāśakṛtsnaḥ | BBs_1,4.22 |</l>
+<l>prakṛtiś ca pratijñādṛṣṭāntānuparodhāt | BBs_1,4.23 |</l>
+<l>abhidhyopadeśāc ca | BBs_1,4.24 |</l>
+<l>sākṣāc cobhayāmnānāt | BBs_1,4.25 |</l>
+<l>ātmakṛteḥ | BBs_1,4.26 |</l>
+<l>pariṇāmāt | BBs_1,4.27 |</l>
+<l>yoniś ca hi gīyate | BBs_1,4.28 |</l>
+<l>etena sarve vyākhyātā vyākhyātāḥ | BBs_1,4.29 |</l>
+
+<l>smṛtyanavakāśadoṣaprasaṅga iti cen nānyasmṛtyanavakāśadoṣaprasaṅgāt | BBs_2,1.1 |</l>
+<l>itareṣāṃ cānupalabdheḥ | BBs_2,1.2 |</l>
+<l>etena yogaḥ pratyuktaḥ | BBs_2,1.3 |</l>
+<l>na vilakṣaṇatvād asya tathātvaṃ ca śabdāt | BBs_2,1.4 |</l>
+<l>abhimānivyapadeśas tu viśeṣānugatibhyām | BBs_2,1.5 |</l>
+<l>dṛśyate tu | BBs_2,1.6 |</l>
+<l>asad iti cen na pratiṣedhamātratvāt | BBs_2,1.7 |</l>
+<l>apītau tadvatprasaṅgād asamañjasam | BBs_2,1.8 |</l>
+<l>na tu dṛṣṭāntabhāvāt | BBs_2,1.9 |</l>
+<l>svapakṣadoṣāc ca | BBs_2,1.10 |</l>
+<l>tarkāpratiṣṭhānād api | BBs_2,1.11 |</l>
+<l>anyathānumeyam iti ced evam apy anirmokṣaprasaṅgaḥ | BBs_2,1.12 |</l>
+<l>etena śiṣṭāparigrahā api vyākhyātāḥ | BBs_2,1.13 |</l>
+<l>bhoktrāpatter avibhāgaś cet syāl lokavat | BBs_2,1.14 |</l>
+<l>tadananyatvam ārambhaṇaśabdādibhyaḥ | BBs_2,1.15 |</l>
+<l>bhāve copalabdheḥ | BBs_2,1.16 |</l>
+<l>satvāc cāparasya | BBs_2,1.17 |</l>
+<l>asadvyapadeśān neti cen na dharmāntareṇa vākyaśeṣādyukteḥ śabdāntarāc ca | BBs_2,1.18 |</l>
+<l>paṭavac ca | BBs_2,1.19 |</l>
+<l>yathā ca prāṇādiḥ | BBs_2,1.20 |</l>
+<l>itaravyapadeśād dhitākaraṇādidoṣaprasaktiḥ | BBs_2,1.21 |</l>
+<l>adhikaṃ tu bhedanirdeśāt | BBs_2,1.22 |</l>
+<l>aśmādivac ca tadanupapattiḥ | BBs_2,1.23 |</l>
+<l>upasaṃhāradarśanān neti cen na kṣīravad dhi | BBs_2,1.24 |</l>
+<l>devādivad api loke | BBs_2,1.25 |</l>
+<l>kṛtsnaprasaktir niravayavatvaśabdakopo vā | BBs_2,1.26 |</l>
+<l>śrutes tu śabdamūlatvāt | BBs_2,1.27 |</l>
+<l>ātmani caivaṃ vicitrāś ca hi | BBs_2,1.28 |</l>
+<l>svapakṣadoṣāc ca | BBs_2,1.29 |</l>
+<l>sarvopetā ca taddarśanāt | BBs_2,1.30 |</l>
+<l>vikaraṇatvān neti cet tad uktam | BBs_2,1.31 |</l>
+<l>na prayojanavattvāt | BBs_2,1.32 |</l>
+<l>lokavat tu līlākaivalyam | BBs_2,1.33 |</l>
+<l>vaiṣamyanairghṛṇye na sāpekṣatvāt tathā hi darśayati | BBs_2,1.34 |</l>
+<l>na karmāvibhāgād iti cen nānāditvād upapadyate cāpy upalabhyate ca | BBs_2,1.35 |</l>
+<l>sarvadharmopapatteś ca | BBs_2,1.36 |</l>
+
+<l>racanānupapatteś ca nānumānaṃ pravṛtteś ca | BBs_2,2.1 |</l>
+<l>payo 'mbuvac cet tatrāpi | BBs_2,2.2 |</l>
+<l>vyatirekānavasthiteś cānapekṣatvāt | BBs_2,2.3 |</l>
+<l>anyatrābhāvāc ca na tṛṇādivat | BBs_2,2.4 |</l>
+<l>puruṣāśmavad iti cet tathāpi | BBs_2,2.5 |</l>
+<l>aṅgitvānupapatteś ca | BBs_2,2.6 |</l>
+<l>anyathānumitau ca jñaśaktiviyogāt | BBs_2,2.7 |</l>
+<l>abhyupagame 'py arthābhāvāt | BBs_2,2.8 |</l>
+<l>vipratiṣedhāc cāsamañjasam | BBs_2,2.9 |</l>
+<l>mahaddīrghavad vā hrasvaparimaṇḍalābhyām | BBs_2,2.10 |</l>
+<l>ubhayathāpi na karmātastadabhāvaḥ | BBs_2,2.11 |</l>
+<l>samavāyābhyupagamāc ca sāmyād anavasthiteḥ | BBs_2,2.12 |</l>
+<l>nityam eva ca bhāvāt | BBs_2,2.13 |</l>
+<l>rūpādimattvāc ca viparyayo darśanāt | BBs_2,2.14 |</l>
+<l>ubhayathā ca doṣāt | BBs_2,2.15 |</l>
+<l>aparigrahāc cātyantam anapekṣā | BBs_2,2.16 |</l>
+<l>samudāya ubhayahetuke 'pi tadaprāptiḥ | BBs_2,2.17 |</l>
+<l>itaretarapratyayatvād upapannam iti cen na saṅghātabhāvānimittatvāt | BBs_2,2.18 |</l>
+<l>uttarotpāde ca pūrvanirodhāt | BBs_2,2.19 |</l>
+<l>asati pratijñoparodho yaugapadyamanyathā | BBs_2,2.20 |</l>
+<l>pratisaṃkhyāpratisaṃkhyānirodhāprāptir avicchedāt | BBs_2,2.21 |</l>
+<l>ubhayathā ca doṣāt | BBs_2,2.22 |</l>
+<l>ākāśe cāviśeṣāt | BBs_2,2.23 |</l>
+<l>anusmṛteś ca | BBs_2,2.24 |</l>
+<l>nāsato 'dṛṣṭatvāt | BBs_2,2.25 |</l>
+<l>udāsīnānām api caivaṃ siddhiḥ | BBs_2,2.26 |</l>
+<l>nābhāva upalabdheḥ | BBs_2,2.27 |</l>
+<l>vaidharmyāc ca na svapnādivat | BBs_2,2.28 |</l>
+<l>na bhāvo 'nupalabdheḥ | BBs_2,2.29 |</l>
+<l>sarvathānupapatteś ca | BBs_2,2.30 |</l>
+<l>naikasminn asambhavāt | BBs_2,2.31 |</l>
+<l>evaṃ cātmākārtsnyam | BBs_2,2.32 |</l>
+<l>na ca paryāyād apy avirodho vikārādibhyaḥ | BBs_2,2.33 |</l>
+<l>antyāvasthiteś cobhayanityatvād aviśeṣaḥ | BBs_2,2.34 |</l>
+<l>patyur asāmañjasyāt | BBs_2,2.35 |</l>
+<l>adhiṣṭhānānupapatteś ca | BBs_2,2.36 |</l>
+<l>karaṇavac cen na bhogādibhyaḥ | BBs_2,2.37 |</l>
+<l>antavattvam asarvajñatā vā | BBs_2,2.38 |</l>
+<l>utpattyasaṃbhavāt | BBs_2,2.39 |</l>
+<l>na ca kartuḥ karaṇam | BBs_2,2.40 |</l>
+<l>vijñānādibhāve vā tadapratiṣedhaḥ | BBs_2,2.41 |</l>
+<l>vipratiṣedhāc ca | BBs_2,2.42 |</l>
+
+<l>na viyadaśruteḥ | BBs_2,3.1 |</l>
+<l>asti tu | BBs_2,3.2 |</l>
+<l>gauṇyasaṃbhavāc chabdāc ca | BBs_2,3.3 |</l>
+<l>syāc caikasya brahmaśabdavat | BBs_2,3.4 |</l>
+<l>pratijñāhānir avyatirekāt | BBs_2,3.5 |</l>
+<l>śabdebhyaḥ | BBs_2,3.6 |</l>
+<l>yāvadvikāraṃ tu vibhāgo lokavat | BBs_2,3.7 |</l>
+<l>etena mātariśvā vyākhyātaḥ | BBs_2,3.8 |</l>
+<l>asaṃbhavas tu sato 'nupapatteḥ | BBs_2,3.9 |</l>
+<l>tejo 'tas tathā hy āha | BBs_2,3.10 |</l>
+<l>āpaḥ | BBs_2,3.11 |</l>
+<l>pṛthivī | BBs_2,3.12 |</l>
+<l>adhikārarūpaśabdāntarebhyaḥ | BBs_2,3.13 |</l>
+<l>tadabhidhyānād eva tu talliṅgāt saḥ | BBs_2,3.14 |</l>
+<l>viparyayeṇa tu kramo 'ta upapadyate ca | BBs_2,3.15 |</l>
+<l>antarā vijñānamanasī krameṇa talliṅgād iti cen nāviśeṣāt | BBs_2,3.16 |</l>
+<l>carācaravyapāśrayas tu syāt tadvyapadeśo bhāktas tadbhāvabhāvitvāt | BBs_2,3.17 |</l>
+<l>nātmā śruter nityatvāc ca tābhyaḥ | BBs_2,3.18 |</l>
+<l>jño 'ta eva | BBs_2,3.19 |</l>
+<l>utkrāntigatyāgatīnām | BBs_2,3.20 |</l>
+<l>svātmanā cottarayoḥ | BBs_2,3.21 |</l>
+<l>nāṇuratacchruter iti cen netarādhikārāt | BBs_2,3.22 |</l>
+<l>svaśabdonmānābhyāṃ ca | BBs_2,3.23 |</l>
+<l>avirodhaś candanavat | BBs_2,3.24 |</l>
+<l>avasthitivaiśeṣyād iti cen nābhyupagamād dhṛdi hi | BBs_2,3.25 |</l>
+<l>guṇādvā lokavat | BBs_2,3.26 |</l>
+<l>vyatireko gandhavat tathā hi darśayati | BBs_2,3.27 |</l>
+<l>pṛthagupadeśāt | BBs_2,3.28 |</l>
+<l>tadguṇasāratvāt tu tadvyapadeśaḥ prājñavat | BBs_2,3.29 |</l>
+<l>yāvadātmabhāvitvāc ca na doṣas taddarśanāt | BBs_2,3.30 |</l>
+<l>puṃstvādivat tv asya sato 'bhivyaktiyogāt | BBs_2,3.31 |</l>
+<l>nityopalabdhyanupalabdhiprasaṅgo 'nyataraniyamo vānyathā | BBs_2,3.32 |</l>
+<l>kartā śāstrārthavattvāt | BBs_2,3.33 |</l>
+<l>upādānād vihāropadeśāc ca | BBs_2,3.34 |</l>
+<l>vyapadeśāc ca kriyāyāṃ na cen nirdeśaviparyayaḥ | BBs_2,3.35 |</l>
+<l>upalabdhivadaniyamaḥ | BBs_2,3.36 |</l>
+<l>śaktiviparyayāt | BBs_2,3.37 |</l>
+<l>samādhyabhāvāc ca | BBs_2,3.38 |</l>
+<l>yathā ca takṣobhayathā | BBs_2,3.39 |</l>
+<l>parāt tu tacchruteḥ | BBs_2,3.40 |</l>
+<l>kṛtaprayatnāpekṣas tu vihitapratiṣiddhāvaiyarthyādibhyaḥ | BBs_2,3.41 |</l>
+<l>aṃśo nānāvyapadeśād anyathā cāpi dāśakitavāditvam adhīyata eke | BBs_2,3.42 |</l>
+<l>mantravarṇāt | BBs_2,3.43 |</l>
+<l>api smaryate | BBs_2,3.44 |</l>
+<l>prakāśādivat tu naivaṃ paraḥ | BBs_2,3.45 |</l>
+<l>smaranti ca | BBs_2,3.46 |</l>
+<l>anujñāparihārau dehasambandhāj jyotirādivat | BBs_2,3.47 |</l>
+<l>asantateś cāvyatikaraḥ | BBs_2,3.48 |</l>
+<l>ābhāsa eva ca | BBs_2,3.49 |</l>
+<l>adṛṣṭāniyamāt | BBs_2,3.50 |</l>
+<l>abhisandhyādiṣv api caivam | BBs_2,3.51 |</l>
+<l>pradeśabhedād iti cen nāntarbhāvāt | BBs_2,3.52 |</l>
+
+<l>tathā prāṇāḥ | BBs_2,4.1 |</l>
+<l>gauṇyasaṃbhavāt tatprāk śruteś ca | BBs_2,4.2 |</l>
+<l>tatpūrvakatvād vācaḥ | BBs_2,4.3 |</l>
+<l>sapta gater viśeṣitatvāc ca | BBs_2,4.4 |</l>
+<l>hastādayas tu sthite 'to naivam | BBs_2,4.5 |</l>
+<l>aṇavaś ca | BBs_2,4.6 |</l>
+<l>śreṣṭhaś ca | BBs_2,4.7 |</l>
+<l>na vāyukriye pṛthagupadeśāt | BBs_2,4.8 |</l>
+<l>cakṣurādivat tu tatsahaśiṣṭyādibhyaḥ | BBs_2,4.9 |</l>
+<l>akaraṇatvāc ca na doṣas tathā hi darśayati | BBs_2,4.10 |</l>
+<l>pañcavṛttir manovat vyapadiśyate | BBs_2,4.11 |</l>
+<l>aṇuś ca | BBs_2,4.12 |</l>
+<l>jyotir ādyadhiṣṭhānaṃ tu tadāmananātprāṇavatā śabdāt | BBs_2,4.13 |</l>
+<l>tasya ca nityatvāt | BBs_2,4.14 |</l>
+<l>ta indriyāṇi tadvyapadeśād anyatra śreṣṭhāt | BBs_2,4.15 |</l>
+<l>bhedaśruter vailakṣaṇyāc ca | BBs_2,4.16 |</l>
+<l>saṃjñāmūrtikḷptis tu trivṛtkurvata upadeśāt | BBs_2,4.17 |</l>
+<l>māṃsādi bhaumaṃ yathāśabdamitarayoś ca | BBs_2,4.18 |</l>
+<l>vaiśeṣyāt tu tadvādas tadvādaḥ | BBs_2,4.19 |</l>
+
+<l>tadantarapratipattau raṃhati saṃpariṣvaktaḥ praśnanirūpaṇābhyām | BBs_3,1.1 |</l>
+<l>tryātmakatvāt tu bhūyastvāt | BBs_3,1.2 |</l>
+<l>prāṇagateś ca | BBs_3,1.3 |</l>
+<l>agnyādiśruter iti cen na bhāktatvāt | BBs_3,1.4 |</l>
+<l>prathame 'śravaṇād iti cen na tā eva hy upapatteḥ | BBs_3,1.5 |</l>
+<l>aśrutatvād iti cen neṣṭādikāriṇāṃ pratīteḥ | BBs_3,1.6 |</l>
+<l>bhāktaṃ vānātmavittvāt tathā hi darśayati | BBs_3,1.7 |</l>
+<l>kṛtātyaye 'nuśayavān dṛṣṭasmṛtibhyāṃ yathetamanevaṃ ca | BBs_3,1.8 |</l>
+<l>caraṇād iti cen na tadupalakṣaṇārtheti kārṣṇājiniḥ | BBs_3,1.9 |</l>
+<l>ānarthakyam iti cen na tadapekṣatvāt | BBs_3,1.10 |</l>
+<l>sukṛtaduṣkṛte eveti tu bādariḥ | BBs_3,1.11 |</l>
+<l>aniṣṭādikāriṇām api ca śrutam | BBs_3,1.12 |</l>
+<l>saṃyamane tv anubhūyetareṣāmārohāv arohau tadgatidarśanāt | BBs_3,1.13 |</l>
+<l>smaranti ca | BBs_3,1.14 |</l>
+<l>api sapta | BBs_3,1.15 |</l>
+<l>tatrāpi tadvyāpārādavirodhaḥ | BBs_3,1.16 |</l>
+<l>vidyākarmaṇor iti tu prakṛtatvāt | BBs_3,1.17 |</l>
+<l>na tṛtīye tathopalabdheḥ | BBs_3,1.18 |</l>
+<l>smaryate 'pi ca loke | BBs_3,1.19 |</l>
+<l>darśanāc ca | BBs_3,1.20 |</l>
+<l>tṛtīyaśabdāvarodhaḥ saṃśokajasya | BBs_3,1.21 |</l>
+<l>tatsvābhāvyāpattirupapatteḥ | BBs_3,1.22 |</l>
+<l>nāticireṇa viśeṣāt | BBs_3,1.23 |</l>
+<l>anyādhiṣṭhite pūrvavadabhilāpāt | BBs_3,1.24 |</l>
+<l>aśuddham iti cen na śabdāt | BBs_3,1.25 |</l>
+<l>retaḥsigyogo 'tha | BBs_3,1.26 |</l>
+<l>yoneḥśarīram | BBs_3,1.27 |</l>
+
+<l>sandhye sṛṣṭirāha hi | BBs_3,2.1 |</l>
+<l>nirmātāraṃ caike putrādayaś ca | BBs_3,2.2 |</l>
+<l>māyāmātraṃ tu kārtsnyenānabhivyaktasvarūpatvāt | BBs_3,2.3 |</l>
+<l>parābhidhyānāt tu tirohitaṃ tato hyasya bandhaviparyayau | BBs_3,2.4 |</l>
+<l>dehayogādvā so 'pi | BBs_3,2.5 |</l>
+<l>sūcakaś ca hi śruterācakṣate ca tadvidaḥ | BBs_3,2.6 |</l>
+<l>tadabhāvo nāḍīṣu tacchruterātmani ca | BBs_3,2.7 |</l>
+<l>ataḥ prabodho 'smāt | BBs_3,2.8 |</l>
+<l>sa eva tu karmānusmṛtiśabdavidhibhyaḥ | BBs_3,2.9 |</l>
+<l>mugdher'dhasaṃpattiḥ pariśeṣāt | BBs_3,2.10 |</l>
+<l>na sthānato 'pi parasyobhayaliṅgaṃ sarvatra hi | BBs_3,2.11 |</l>
+<l>bhedād iti cen na pratyekamatadvacanāt | BBs_3,2.12 |</l>
+<l>api caivam eke | BBs_3,2.13 |</l>
+<l>arūpavadeva hi tatpradhānatvāt | BBs_3,2.14 |</l>
+<l>prakāśavaccāvaiyarthyāt | BBs_3,2.15 |</l>
+<l>āha ca tanmātram | BBs_3,2.16 |</l>
+<l>darśayati cātho api smaryate | BBs_3,2.17 |</l>
+<l>ata eva copamā sūryakādivat | BBs_3,2.18 |</l>
+<l>ambuvadagrahaṇāt tu na tathātvam | BBs_3,2.19 |</l>
+<l>vṛddhihrāsabhāktvamantarbhāvādubhayasāmañjasyādevaṃ darśanāc ca | BBs_3,2.20 |</l>
+<l>prakṛtaitāvattvaṃ hi pratiṣedhati tato bravīti ca bhūyaḥ | BBs_3,2.21 |</l>
+<l>tadavyaktamāha hi | BBs_3,2.22 |</l>
+<l>api saṃrādhane pratyakṣānumānābhyām | BBs_3,2.23 |</l>
+<l>prakāśādivaccāvaiśeṣyaṃ prakāśaś ca karmaṇyabhyāsāt | BBs_3,2.24 |</l>
+<l>ato 'nantena tathā hi liṅgam | BBs_3,2.25 |</l>
+<l>ubhayavyapadeśāttvahikuṇḍalavat | BBs_3,2.26 |</l>
+<l>prakāśāśrayavadvā tejastvāt | BBs_3,2.27 |</l>
+<l>pūrvavadvā | BBs_3,2.28 |</l>
+<l>pratiṣedhāc ca | BBs_3,2.29 |</l>
+<l>paramatassetūnmānasaṃbandhabhedavyapadeśebhyaḥ | BBs_3,2.30 |</l>
+<l>sāmānyāt tu | BBs_3,2.31 |</l>
+<l>buddhyarthaḥ pādavat | BBs_3,2.32 |</l>
+<l>sthānaviśeṣātprakāśādivat | BBs_3,2.33 |</l>
+<l>upapatteś ca | BBs_3,2.34 |</l>
+<l>tathānyapratiṣedhāt | BBs_3,2.35 |</l>
+<l>anena sarvagatatvamāyāmaśabdādibhyaḥ | BBs_3,2.36 |</l>
+<l>phalamata upapatteḥ | BBs_3,2.37 |</l>
+<l>śrutatvāc ca | BBs_3,2.38 |</l>
+<l>dharmaṃ jaiminirata eva | BBs_3,2.39 |</l>
+<l>pūrvaṃ tu bādarāyaṇo hetuvyapadeśāt | BBs_3,2.40 |</l>
+<l>sarvavedāntapratyayaṃ codanādyaviśeṣāt | BBs_3,3.1 |</l>
+<l>bhedān neti ced ekasyām api | BBs_3,3.2 |</l>
+<l>svādhyāyasya tathātve hi samācāre 'dhikārāc ca savavac ca tanniyamaḥ | BBs_3,3.3 |</l>
+<l>darśayati ca | BBs_3,3.4 |</l>
+<l>upasaṃhāror'thābhedādvidhiśeṣavatsamāne ca | BBs_3,3.5 |</l>
+<l>anyathātvaṃ śabdād iti cen nāviśeṣāt | BBs_3,3.6 |</l>
+<l>na vā prakaraṇabhedāt parovarīyastvādivat | BBs_3,3.7 |</l>
+<l>saṃjñātaś cet tad uktam asti tu tad api | BBs_3,3.8 |</l>
+<l>vyāpteś ca samañjasam | BBs_3,3.9 |</l>
+<l>sarvābhedādanyatreme | BBs_3,3.10 |</l>
+<l>ānandādayaḥ pradhānasya | BBs_3,3.11 |</l>
+<l>priyaśirastvādyaprāptirupacayāpacayau hi bhede | BBs_3,3.12 |</l>
+<l>itare tvarthasāmānyāt | BBs_3,3.13 |</l>
+<l>ādhyānāya prayojanābhāvāt | BBs_3,3.14 |</l>
+<l>ātmaśabdāc ca | BBs_3,3.15 |</l>
+<l>ātmagṛhītir itaravad uttarāt | BBs_3,3.16 |</l>
+<l>anvayād iti cet syād avadhāraṇāt | BBs_3,3.17 |</l>
+<l>kāryākhyānādapūrvam | BBs_3,3.18 |</l>
+<l>samāna evaṃ cābhedāt | BBs_3,3.19 |</l>
+<l>sambandhādevamanyatrāpi | BBs_3,3.20 |</l>
+<l>na vā viśeṣāt | BBs_3,3.21 |</l>
+<l>darśayati ca | BBs_3,3.22 |</l>
+<l>saṃbhṛtidyuvyāptyapi cātaḥ | BBs_3,3.23 |</l>
+<l>puruṣavidyāyāmapi cetareṣāmanāmnānāt | BBs_3,3.24 |</l>
+<l>vedhādyarthabhedāt | BBs_3,3.25 |</l>
+<l>hānau tūpāyanaśabdaśeṣatvāt kuśācchandasstutyupagānavattaduktam | BBs_3,3.26 |</l>
+<l>sāṃparāye tartavyābhāvāt tathā hy anye | BBs_3,3.27 |</l>
+<l>chandata ubhayāvirodhāt | BBs_3,3.28 |</l>
+<l>gater arthavattvam ubhayathānyathā hi virodhaḥ | BBs_3,3.29 |</l>
+<l>upapannas tallakṣaṇārthopalabdher lokavat | BBs_3,3.30 |</l>
+<l>yāvadadhikāram avasthitir ādhikārikāṇām | BBs_3,3.31 |</l>
+<l>aniyamassarveṣāmavirodhaśśabdānumānābhyām | BBs_3,3.32 |</l>
+<l>akṣaradhiyāṃ tvavarodhassāmānyatadbhāvābhyāmaupasadavattaduktam | BBs_3,3.33 |</l>
+<l>iyadāmananāt | BBs_3,3.34 |</l>
+<l>antarā bhūtagrāmavatsvātmano 'nyathā bhedānupapattir iti cen nopadeśavat | BBs_3,3.35 |</l>
+<l>vyatihāro viśiṃṣanti hītaravat | BBs_3,3.36 |</l>
+<l>saiva hi satyādayaḥ | BBs_3,3.37 |</l>
+<l>kāmādītaratra tatra cā'yatanādibhyaḥ | BBs_3,3.38 |</l>
+<l>ādarādalopaḥ | BBs_3,3.39 |</l>
+<l>upasthite 'tastadvacanāt | BBs_3,3.40 |</l>
+<l>tannirdhāraṇāniyamastaddṛṣṭeḥ pṛthagghyapratibandhaḥ phalam | BBs_3,3.41 |</l>
+<l>pradānavadeva taduktam | BBs_3,3.42 |</l>
+<l>liṅgabhūyastvāttaddhi balīyastadapi | BBs_3,3.43 |</l>
+<l>pūrvavikalpaḥ prakaraṇātsyāt kriyāmānasavat | BBs_3,3.44 |</l>
+<l>atideśāc ca | BBs_3,3.45 |</l>
+<l>vidyaiva tu nirdhāraṇāddarśanāc ca | BBs_3,3.46 |</l>
+<l>śrutyādibalīyastvāc ca na bādhaḥ | BBs_3,3.47 |</l>
+<l>anubandhādibhyaḥ prajñāntarapṛthaktvavaddṛṣṭaś ca taduktam | BBs_3,3.48 |</l>
+<l>na sāmānyādapyupalabdhermṛtyuvanna hi lokāpattiḥ | BBs_3,3.49 |</l>
+<l>pareṇa ca śabdasya tādvidhyaṃ bhūyastvāt tv anubandhaḥ | BBs_3,3.50 |</l>
+<l>eka ātmanaḥ śarīre bhāvāt | BBs_3,3.51 |</l>
+<l>vyatirekastadbhāvabhāvitvānna tūpalabdhivat | BBs_3,3.52 |</l>
+<l>aṅgāvabaddhāstu na śākhāsu hi prativedam | BBs_3,3.53 |</l>
+<l>mantrādivadvāvirodhaḥ | BBs_3,3.54 |</l>
+<l>bhūmnaḥ kratuvajjyāyasvaṃ tathā hi darśayati | BBs_3,3.55 |</l>
+<l>nānā śabdādibhedāt | BBs_3,3.56 |</l>
+<l>vikalpo 'viśiṣṭaphalatvāt | BBs_3,3.57 |</l>
+<l>kāmyāstu yathākāmaṃ samuccīyeranna vā pūrvahetvabhāvāt | BBs_3,3.58 |</l>
+<l>aṅgeṣu yathāśrayabhāvaḥ | BBs_3,3.59 |</l>
+<l>śiṣṭeś ca | BBs_3,3.60 |</l>
+<l>samāhārāt | BBs_3,3.61 |</l>
+<l>guṇasādhāraṇyaśruteś ca | BBs_3,3.62 |</l>
+<l>na vā tatsahabhāvāśruteḥ | BBs_3,3.63 |</l>
+<l>darśanāc ca | BBs_3,3.64 |</l>
+
+<l>puruṣārtho 'taḥ śabdād iti bādarāyaṇaḥ | BBs_3,4.1 |</l>
+<l>śeṣatvātpuruṣārthavādo yathānyeṣv iti jaiminiḥ | BBs_3,4.2 |</l>
+<l>ācāradarśanāt | BBs_3,4.3 |</l>
+<l>tacchruteḥ | BBs_3,4.4 |</l>
+<l>samanvārambhaṇāt | BBs_3,4.5 |</l>
+<l>tadvato vidhānāt | BBs_3,4.6 |</l>
+<l>niyamāt | BBs_3,4.7 |</l>
+<l>adhikopadeśāt tu bādarāyaṇasyaivaṃ taddarśanāt | BBs_3,4.8 |</l>
+<l>tulyaṃ tu darśanam | BBs_3,4.9 |</l>
+<l>asārvatrikī | BBs_3,4.10 |</l>
+<l>vibhāgaḥ śatavat | BBs_3,4.11 |</l>
+<l>adhyayanamātravataḥ | BBs_3,4.12 |</l>
+<l>nāviśeṣāt | BBs_3,4.13 |</l>
+<l>stutaye 'numatirvā | BBs_3,4.14 |</l>
+<l>kāmakāreṇa caike | BBs_3,4.15 |</l>
+<l>upamardaṃ ca | BBs_3,4.16 |</l>
+<l>ūrdhvaretassu ca śabde hi | BBs_3,4.17 |</l>
+<l>parāmarśaṃ jaiminiracodanāccāpavadati hi | BBs_3,4.18 |</l>
+<l>anuṣṭheyaṃ bādarāyaṇassāmyaśruteḥ | BBs_3,4.19 |</l>
+<l>vidhir vā dhāraṇavat | BBs_3,4.20 |</l>
+<l>stutimātram upādānād iti cen nāpūrvatvāt | BBs_3,4.21 |</l>
+<l>bhāvaśabdāc ca | BBs_3,4.22 |</l>
+<l>pāriplavārthā iti cen na viśeṣitatvāt | BBs_3,4.23 |</l>
+<l>tathā caikavākyopabandhāt | BBs_3,4.24 |</l>
+<l>ata eva cāgnīndhanādyanapekṣā | BBs_3,4.25 |</l>
+<l>sarvāpekṣā ca yajñādiśruter aśvavat | BBs_3,4.26 |</l>
+<l>śamadamādyupetas syāt tathāpi tu tadvidhes tadaṅgatayā teṣām apy avaśyānuṣṭheyatvāt | BBs_3,4.27 |</l>
+<l>sarvān nānumatiś ca prāṇātyaye taddarśanāt | BBs_3,4.28 |</l>
+<l>abādhāc ca | BBs_3,4.29 |</l>
+<l>api smaryate | BBs_3,4.30 |</l>
+<l>śabdaś cāto 'kāmakāre | BBs_3,4.31 |</l>
+<l>vihitatvāc cā'śramakarmāpi | BBs_3,4.32 |</l>
+<l>sahakāritvena ca | BBs_3,4.33 |</l>
+<l>sarvathāpi ta evobhayaliṅgāt | BBs_3,4.34 |</l>
+<l>anabhibhavaṃ ca darśayati | BBs_3,4.35 |</l>
+<l>antarā cāpi tu taddṛṣṭeḥ | BBs_3,4.36 |</l>
+<l>api smaryate | BBs_3,4.37 |</l>
+<l>viśeṣānugrahaś ca | BBs_3,4.38 |</l>
+<l>atas tv itarajjyāyo liṅgāc ca | BBs_3,4.39 |</l>
+<l>tadbhūtasya tu nātadbhāvo jaiminer api niyamāt tadrūpābhāvebhyaḥ | BBs_3,4.40 |</l>
+<l>na cādhikārikam api patanānumānāt tadayogāt | BBs_3,4.41 |</l>
+<l>upapūrvam apīty eke bhāvamaśanavat tad uktam | BBs_3,4.42 |</l>
+<l>bahis tūbhayathāpi smṛter ācārāc ca | BBs_3,4.43 |</l>
+<l>svāminaḥ phalaśruter ity ātreyaḥ | BBs_3,4.44 |</l>
+<l>ārtvijyam ity auḍulomiḥ tasmai hi parikrīyate | BBs_3,4.45 |</l>
+<l>sahakāryantaravidhiḥ pakṣeṇa tṛtīyaṃ tadvato vidhyādivat | BBs_3,4.46 |</l>
+<l>kṛtsnabhāvāt tu gṛhiṇopasaṃhāraḥ | BBs_3,4.47 |</l>
+<l>maunavad itareṣām apy upadeśāt | BBs_3,4.48 |</l>
+<l>anāviṣkurvann anvayāt | BBs_3,4.49 |</l>
+<l>aihikam aprastutapratibandhe taddarśanāt | BBs_3,4.50 |</l>
+<l>evaṃ muktiphalāniyamas tadavasthāvadhṛtes tadavasthāvadhṛteḥ | BBs_3,4.51 |</l>
+
+<l>āvṛttir asakṛdupadeśāt | BBs_4,1.1 |</l>
+<l>liṅgāc ca | BBs_4,1.2 |</l>
+<l>ātmeti tūpagacchanti grāhayanti ca | BBs_4,1.3 |</l>
+<l>na pratīke na hi saḥ | BBs_4,1.4 |</l>
+<l>brahmadṛṣṭir utkarṣāt | BBs_4,1.5 |</l>
+<l>ādityādimatayaś cāṅga upapatteḥ | BBs_4,1.6 |</l>
+<l>āsīnaḥ saṃbhavāt | BBs_4,1.7 |</l>
+<l>dhyānāc ca | BBs_4,1.8 |</l>
+<l>acalatvaṃ cāpekṣya | BBs_4,1.9 |</l>
+<l>smaranti ca | BBs_4,1.10 |</l>
+<l>yatraikāgratā tatrāviśeṣāt | BBs_4,1.11 |</l>
+<l>āprayāṇāt tatrāpi hi dṛṣṭam | BBs_4,1.12 |</l>
+<l>tadadhigama uttarapūrvāghayor aśleṣavināśau tadvyapadeśāt | BBs_4,1.13 |</l>
+<l>itarasyāpy evam asaṃśleṣaḥ pāte tu | BBs_4,1.14 |</l>
+<l>anārabdhakārye eva tu pūrve tadavadheḥ | BBs_4,1.15 |</l>
+<l>agnihotrādi tu tatkāryāyaiva taddarśanāt | BBs_4,1.16 |</l>
+<l>ato 'nyāpi hy ekeṣām ubhayoḥ | BBs_4,1.17 |</l>
+<l>yad eva vidyayeti hi | BBs_4,1.18 |</l>
+<l>bhogena tv itare kṣapayitvātha saṃpadyate | BBs_4,1.19 |</l>
+
+<l>vāṅmanasi darśanāc chabdāc ca | BBs_4,2.1 |</l>
+<l>ata eva sarvāṇyanu | BBs_4,2.2 |</l>
+<l>tanmanaḥ prāṇa uttarāt | BBs_4,2.3 |</l>
+<l>so 'dhyakṣe tadupagamādibhyaḥ | BBs_4,2.4 |</l>
+<l>bhūteṣu tacchruteḥ | BBs_4,2.5 |</l>
+<l>naikasmin darśayato hi | BBs_4,2.6 |</l>
+<l>samānā cāsṛtyupakramād amṛtatvaṃ cānupoṣya | BBs_4,2.7 |</l>
+<l>tadāpīteḥ saṃsāravyapadeśāt | BBs_4,2.8 |</l>
+<l>sūkṣmaṃ pramāṇataś ca tathopalabdheḥ | BBs_4,2.9 |</l>
+<l>nopamardenātaḥ | BBs_4,2.10 |</l>
+<l>asyaiva copapatter ūṣmā | BBs_4,2.11 |</l>
+<l>pratiṣedhād iti cen na śārīrāt spaṣṭo hyekeṣām | BBs_4,2.12 |</l>
+<l>smaryate ca | BBs_4,2.13 |</l>
+<l>tāni pare tathā hy āha | BBs_4,2.14 |</l>
+<l>avibhāgo vacanāt | BBs_4,2.15 |</l>
+<l>tadokograjvalanaṃ tatprakāśitadvāro vidyāsāmarthyāt taccheṣagatyanusmṛtiyogāc | BBs_4,2.16 |</l>
+<l>raśmyanusārī | BBs_4,2.17 |</l>
+<l>niśi neti cen na sambandhasya yāvaddehabhāvitvād darśayati ca | BBs_4,2.18 |</l>
+<l>ataś cāyane 'pi dakṣiṇe | BBs_4,2.19 |</l>
+<l>yoginaḥ prati smaryete smārte caite | BBs_4,2.20 |</l>
+
+<l>arcirādinā tatprathiteḥ | BBs_4,3.1 |</l>
+<l>vāyumabdādaviśeṣaviśeṣābhyām | BBs_4,3.2 |</l>
+<l>taṭito 'dhi varuṇaḥ saṃbandhāt | BBs_4,3.3 |</l>
+<l>ātivāhikās talliṅgāt | BBs_4,3.4 |</l>
+<l>vaidyutenaiva tatas tacchruteḥ | BBs_4,3.5 |</l>
+<l>kāryaṃ bādarirasya gatyupapatteḥ | BBs_4,3.6 |</l>
+<l>viśeṣitatvāc ca | BBs_4,3.7 |</l>
+<l>sāmīpyāt tu tadvyapadeśaḥ | BBs_4,3.8 |</l>
+<l>kāryātyaye tadadhyakṣeṇa sahātaḥ param abhidhānāt | BBs_4,3.9 |</l>
+<l>smṛteś ca | BBs_4,3.10 |</l>
+<l>paraṃ jaiminir mukhyatvāt | BBs_4,3.11 |</l>
+<l>darśanāc ca | BBs_4,3.12 |</l>
+<l>na ca kārye pratyabhisandhiḥ | BBs_4,3.13 |</l>
+<l>apratīkālambanān nayatīti bādarāyaṇa ubhayathā ca doṣāt tatkratuś ca | BBs_4,3.14 |</l>
+<l>viśeṣaṃ ca darśayati | BBs_4,3.15 |</l>
+
+<l>saṃpadyāvirbhāvaḥ svena śabdāt | BBs_4,4.1 |</l>
+<l>muktaḥ pratijñānāt | BBs_4,4.2 |</l>
+<l>ātmā prakaraṇāt | BBs_4,4.3 |</l>
+<l>avibhāgena dṛṣṭatvāt | BBs_4,4.4 |</l>
+<l>brāhmeṇa jaiminir upanyāsādibhyaḥ | BBs_4,4.5 |</l>
+<l>cititanmātreṇa tadātmakatvād ity auḍulomiḥ | BBs_4,4.6 |</l>
+<l>evam apy upanyāsāt pūrvabhāvād avirodhaṃ bādarāyaṇaḥ | BBs_4,4.7 |</l>
+<l>saṃkalpād eva tacchruteḥ | BBs_4,4.8 |</l>
+<l>ata eva cānanyādhipatiḥ | BBs_4,4.9 |</l>
+<l>abhāvaṃ bādarir āha hy evam | BBs_4,4.10 |</l>
+<l>bhāvaṃ jaiminir vikalpāmananāt | BBs_4,4.11 |</l>
+<l>dvādaśāhavad ubhayavidhaṃ bādarāyaṇo 'taḥ | BBs_4,4.12 |</l>
+<l>tanvabhāve sandhyavad upapatteḥ | BBs_4,4.13 |</l>
+<l>bhāve jāgradvat | BBs_4,4.14 |</l>
+<l>pradīpavadāveśas tathā hi darśayati | BBs_4,4.15 |</l>
+<l>svāpyayasaṃpatyor anyatarāpekṣam āviṣkṛtaṃ hi | BBs_4,4.16 |</l>
+<l>jagadvyāpāravarjaṃ prakaraṇād asaṃnihitatvāc ca | BBs_4,4.17 |</l>
+<l>pratyakṣopadeśād iti cen nādhikārikamaṇḍalasthokteḥ | BBs_4,4.18 |</l>
+<l>vikārāvarti ca tathā hi sthitim āha | BBs_4,4.19 |</l>
+<l>darśayataś caivaṃ pratyakṣānumāne | BBs_4,4.20 |</l>
+<l>bhogamātrasāmyaliṅgāc ca | BBs_4,4.21 |</l>
+<l>anāvṛttiḥ śabdād anāvṛttiḥ śabdāt | BBs_4,4.22 |</l>
+
+  </body>
+</text>
+</TEI>

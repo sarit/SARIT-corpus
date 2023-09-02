@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_jagannAtha-prANAbharaNa-comm">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Prāṇābharaṇa with autoentary</title>
+	<author>Jagannātha</author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>Dhaval Patel</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Dhaval Patel</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/5_poetry/2_kavya/jagpranu.htm">jagpranu.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Jagannatha: Pranabharana, with auto-commentary
+<lb/>Based on the ed. by Pdt. Durgaprasad and Kasinath Pandurang Parab,
+<lb/>Kavyamala [old, cumulative series], vol. 1, 1886 (3rd ed., 1929), pp. 79-90.
+<lb/>
+<lb/>Input by Dhaval Patel
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>Pdt. Durgaprasad and Kasinath Pandurang Parab, Kavyamala [old, cumulative series], vol. 1, 1886 (3rd ed., 1929), pp. 79-90.</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Prāṇābharaṇa+comm = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Poetry -- Kāvya</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+
+<p>paṇḍitarājaśrījagannāthaviracitaṃ prāṇābharaṇam /
+tatkṛtayaiva ṭippaṇyā sametam /</p>
+
+<lg>
+<l>  vidvāṃso vasudhātale paravacaḥślāghāsu vācaṃyamā bhūpālāḥ kamalāvilāsamadironmīlanmadāghūrṇitāḥ /</l>
+<l>  āsye ghāsyati kasya lāsyamadhunā dhanyasya kāmālasasvarvāmādharamādhurīmadharayanvācāṃ vilāso mama // JPran_1 //</l>
+</lg>
+
+<p>vidvāṃsa ityādi prāyadarśanābhiprāyametat /
+tena sahṛdayairna manāgapi vimanāyitavyam /
+<lg>
+<l>bhāvadhvaniścāyam /</l>
+<l>uttarārdhapratipādyārthālambanāyā etatpadyaprayogānubhāvāyāḥ kavigatacintāyāḥ prādhānyenābhivyakteḥ /</l>
+<l>anupāttobhayanimittako vyatirekaḥ sphuṭo 'laṃkāraḥ /</l>
+<l>kāmālasatvaṃ vāmāviśeṣamadharamādhurīprakarṣakam //</l>
+</lg></p>
+
+<lg>
+<l>  vidrāṇaiva guṇajñatā samudito bhūyānasūyābharaḥ kālo 'yaṃ kalirājagāma jagatīlāvaṇyakukṣiṃbhariḥ /</l>
+<l>  evaṃ bhāvanayā madīyakavite maunaṃ kimālambase jāgartu kṣitimaṇḍale ciramiha śrīkāmarūpeśvaraḥ // JPran_2 //</l>
+</lg>
+
+<p>kavigatarājaviṣayakaratibhāvadhvaniścāyam /
+<lg>
+<l>ita ūrdhvamayameva ā caramapadyamanuvartayiṣyate /</l>
+<l>asya cātra maunānubhāvito varṇanīyālambano nirvedo guṇa iti preyolaṃkārāspadam /</l>
+<l>atra cācetanāyāṃ kavitāyāṃ cetanatvādhyavasāyamūlāsaṃbandhe saṃbandhātmikātiśayoktirvivakṣitā /</l>
+<l>tena bhāvanāmaunanirvedānāṃ saṃbodhanasya ca nānupapattiḥ //</l>
+</lg></p>
+
+<lg>
+<l>  pārīndrāṇāṃ ghurīṇairavanitalaguhāgarbhataḥ saṃpatadbhiḥ svāpabhraṃśāparādhapracalitanayanaprāntamākarṇyamānaḥ /</l>
+<l>  tvatprasthānāntarudyatpralayajaladharadhvānadhikkāradhīro ghṛṣṭakṣīrodatīro jagati vijayate dundubhidvandvanādaḥ // JPran_3 //</l>
+</lg>
+
+<p>atra rājālambanasya tādṛśanādaśravaṇoddīpitasya nayanapracalanānubhāvitasya giriguhāgarbhotpatanābhivyaktenāmarṣeṇa saṃcāriṇā paripoṣitasya pārīndragatotsāhasya sthāyino rājaviṣayakaratibhāvāṅgatvādrasālaṃkāratvam /
+<lg>
+<l>yadāhuḥ -</l>
+<l>'pradhāne 'nyatra vākyārthe yatrāṅgaṃ tu rasādayaḥ /</l>
+<l>kāvye tasminnalaṃkāro rasādiriti me matiḥ'; //</l>
+</lg></p>
+
+<p>iti /
+tṛtīyacaturthacaraṇayostu sphuṭāveva vyatirekātiśayau /
+<lg>
+<l>ghṛṣṭāśabdena tādṛśanādo velācalapratibaddhatvādagre na gataḥ /</l>
+<l>anyathā lokālokācalamapi spṛśediti gamyate /</l>
+<l>eva mṛṣṭeti noktam /</l>
+<l>tathā sati śaithilyapratyayāpatteḥ //</l>
+</lg></p>
+
+<lg>
+<l>  kiṃ brūmastava vīratāṃ vayamamī yasmindharākhaṇḍala krīḍākuṇḍalitabhru śoṇanayanaṃ dormaṇḍalaṃ paśyati /</l>
+<l>  māṇikyāvalikāntidanturatarairbhūṣāsahasrotkarairvindhyāraṇyaguhāgṛhāvaniruhāstatkālamullāsitāḥ // JPran_4 //</l>
+</lg>
+
+<lg>
+<l>atra vindhyāraṇyagatānāṃ guhāgṛhāṇāmavaniruhāṃ ca vindhyagatānāṃ guhāgṛhāṇāmaraṇyagatānāmavaniruhāṇāṃ vā bhūṣaṇena kāryeṇāprastutena tvadarinārīṇāṃ svanagarāṇi parityajya niśi guhāgṛheṣu tarutaleṣu ca vinyasya sakalābharaṇāni kṛtaśayanānāṃ prātastvadāgamanasaṃbhrameṇa tatkarmakaṃ vismaraṇaṃ bhāravaśātparityāgo vā prastuto gamyata ityaprastutapraśaṃsā /</l>
+<l>kāryasya yathākathaṃcitprastutatve tu paryāyoktamalaṃkāraḥ //</l>
+</lg>
+
+<lg>
+<l>  māhātmyasya paro 'vadhirnijagṛhaṃ gambhīratāyāḥ pitā ratnānāmahameka eva bhuvane ko vāparo mādṛśaḥ /</l>
+<l>  ityevaṃ paricintya mā sma sahasā garvāndhakāraṃ gamo dugdhābdhe bhavatā samo vijayate śrīprāṇanārāyaṇaḥ // JPran_5 //</l>
+</lg>
+
+<lg>
+<l>atropamānasya guṇaviśeṣaprayuktasādṛśyābhāvanibandhanamutkarṣaṃ parihartuṃ varṇyamānasādṛśyātmakaḥ pratīpālaṃkārabhedaḥ /</l>
+<l>sa copamāviśeṣa ityeke /</l>
+<l>vicchittivailakṣaṇyādatirikta evetyapare //</l>
+</lg>
+
+<lg>
+<l>  tattvo janma sitāṃśuśekharatanujyotsnānimagnātmano dugdhāmbhonidhimugdhavīcivalayaiḥ sākaṃ parikrīḍanam /</l>
+<l>  saṃvāsaḥ suralokasindhupuline vādaḥ sudhāṃśoḥ karaiḥ kasmānnojjvalimānamañcatutamāṃ deva tvadīyaṃ yaśaḥ // JPran_6 //</l>
+</lg>
+
+<lg>
+<l>atra yaśasi dhavalatātiśayastaddharmisaṃbandhaprayuktatvena kathita iti samasya viṣayaḥ /</l>
+<l>aṃśukṛtaścandre tatkṛtaśca bhagavati bhagavatkṛtaśca rājanītyevamuttarottaramupacīyamāno rājagata utkarṣaḥ pratīyata iti sāraviṣayaḥ //</l>
+</lg>
+
+<lg>
+<l>  ābadhnāsyalakānnirasyasitamāṃ colaṃ rasākāṅkṣayā laṅkāyāvaśatāṃ tanoṣi kuruṣe jaṅghālalāṭakṣatam /</l>
+<l>  pratyaṅgaṃ parimardanirdayamaho cetaḥ samālambase vāmānāṃ viṣaye nṛpendra bhavataḥ prāgalbhyamadbhutam // JPran_7 //</l>
+</lg>
+
+<lg>
+<l>atra prakṛtidharmigatayoḥ prakṛtāprakṛtayoḥ prakṛtayoreva vā vṛttāntayoḥ śleṣaḥ /</l>
+<l>sa ca ṣaṭsu sthaleṣu śabdanānātvanibandhano dvayoścārthanānātvanibandhanaḥ /</l>
+<l>dvāvapyetau śabdālaṃkārāviti prāñcaḥ /</l>
+<l>ādyo jatukāṣṭhanyāyena śabdaśleṣaṇācchabdālaṃkāraḥ, dvitīyastvekavṛntagataphaladvayanyāyenārthaśleṣaṇādarthālaṃkāra iti navyāḥ //</l>
+</lg>
+
+<lg>
+<l>  deva tvāṃ paritaḥ stavantu kavayo lobhena kiṃ tāvatā stavyastvaṃ bhavitāsi yasya taruṇaścāpapratāpo 'niśam /</l>
+<l>  kroḍāntaḥ kurutetarāṃ vasumatīmāśāḥ samāliṅgati dyāṃ cumbatyamarāvatī ca sahasā gacchatyagamyāmapi // JPran_8 //</l>
+</lg>
+
+<lg>
+<l>atra pratāpagataḥ pṛthivyādisaṃbandho liṅgaviśeṣāvacchinnatattatsādhāraṇaviśeṣaṇābhivyaktakāmukavṛttāntābhinnatayā sthita iti samāsoktiḥ kāryarūpadharmaprayuktaśuddhasādhāraṇyena viśeṣaṇasāmyamālambya pravṛttā /</l>
+<l>sā ca nindotthāpakatvādadvyājastutau guṇaḥ //</l>
+</lg>
+
+<lg>
+<l>  lokānāṃ vipadaṃ dhunoṣi kuruṣe saṃpattimatyutkaṭāmityalpetarajalpitairjaḍadhiyāṃ bhūpāla mā gā madam /</l>
+<l>  yatkīrtistava vallabhā laghutarabrahmāṇḍabhāṇḍodare piṇḍīkṛtya mahonnatāmapi tanuṃ kaṣṭena hā vartate // JPran_9 //</l>
+</lg>
+
+<lg>
+<l>atrāpi prāgvat /</l>
+<l>paraṃ tvādhārādheyānyataravistṛtatvasiddhiphalakānyataranyūnatvakalpanātsādhikālaṃkāro 'pi tasyāṃ guṇaḥ //</l>
+</lg>
+
+<lg>
+<l>  kṣoṇīṃ śāsati mayyupadravalavaḥ kasyāpi na syāditi prauḍhaṃ vyāharato vacastava kathaṃ deva pratīmo vayam /</l>
+<l>  pratyakṣaṃ bhavato vipakṣanivahairdyāmutpatadbhiḥ krudhā yadyuṣmatkulakoṭimūlapuruṣo nirbhidyate bhāskaraḥ // JPran_10 //</l>
+</lg>
+
+<p>iha tvadhikasamāsoktibhyāmanāliṅgitaiva sā [vyājastutiḥ] //</p>
+
+<lg>
+<l>  āsvādena raso rasena kavitā kāvyena vaṇī tayā lokāntaḥkaraṇānurāgarasikaḥ sabhyaḥ sabhā cāmunā /</l>
+<l>  dāridryānaladahyamānajagatīpīyūṣadhārādhara kṣoṇīnātha tathā bhavāṃśca bhavatā bhūmaṇḍalaṃ bhāsate // JPran_11 //</l>
+</lg>
+
+<lg>
+<l>mālādīpakametaditi prāñcaḥ /</l>
+<l>dīpakasya sādṛśyamūlakatāniyamānna mālādīpakamapi tvekāvalībheda iti tu vayam //</l>
+</lg>
+
+<lg>
+<l>  amlāyanyadarātikairavakulānyamlāsiṣuḥ satvaraṃ dainyadhvāntakadambakāni parito neśustamāṃ tāmasāḥ /</l>
+<l>  sanmārgāḥ prasaranti sādhunalinānyullāsamātanvate tanmanye bhavataḥ pratāpatapano deva prabhātonmukhaḥ // JPran_12 //</l>
+</lg>
+
+<p>iha rūpakaniṣpāditaliṅgakamanumānaṃ nimittavirahādutprekṣāyā ayogādvācakamanumitiparam //</p>
+
+<lg>
+<l>  utkṣiptāḥ kabarībharaṃ vivalitāḥ pārśvadvayaṃ nyakkṛtāḥ pādāmbhojayugaṃ ruṣā parihṛtā dūreṇa celāñcalam /</l>
+<l>  gṛhṇanti tvarayā bhavatpratibhaṭakṣmāpālavāmabhruvāṃ yāntīnāṃ gahaneṣu kaṇṭakacitāḥ ke ke na bhūmīrūhāḥ // JPran_13 //</l>
+</lg>
+
+<p>atra kaṇṭakacitatvena kabarīgrahaṇādeḥ saṃkīrṇatvātkāryadharmāntarā saṃkīrṇaśuddhasādhāraṇyena viśeṣaṇasāmyamālambya pravṛttā samāsoktiḥ //</p>
+
+<lg>
+<l>  dṛṣṭiḥ saṃbhṛtamaṅgalā budhamayī deva tvadīyā sabhā kāvyasyāśrayabhūtamāsyamaruṇādhāro 'dharaḥ sundaraḥ /</l>
+<l>  krodhaste 'śanimūrudāradhiṣaṇa svāntaṃ tu somāspadaṃ rājannūnamanūnavikrama bhavānsarvagrahālambanam // JPran_14 //</l>
+</lg>
+
+<p>atrotprekṣyamānasarvagrahālambanatvasya samānādhikaraṇeṣu dharmeṣu tattadgrahāśritāṅgakatveṣu viśeṣaṇībhūtaistattadgrahaiḥ saha viṣayasya rājño kalyāṇāśrayatvādiṣu viśeṣaṇānāṃ kalyāṇādīnāṃ śleṣeṇābhedasaṃpādanadvārā tādṛśadharmasādhāraṇatāsaṃpattau tannimittakotprekṣāsiddhiḥ //</p>
+
+<lg>
+<l>  sṛṣṭiḥ sṛṣṭibhuvā purā kila paritrātuṃ jaganmaṇḍalaṃ tvaṃ caṇḍātapanirdayaṃ tapasi yajjvālājaṭālaiḥ karaiḥ /</l>
+<l>  saṃrambhāruṇalocano raṇabhuvi prasthātukāmo 'dhunā jānīmo bhavatā na hanta viditaḥ śrīkāmarūpeśvaraḥ // JPran_15 //</l>
+</lg>
+
+<p>atra rājavarṇanāṅgatvena raverbhayotpādane varṇyatvena prastute sākṣāttadananuguṇatvenāprastutena prasthānena sākṣāttadanuguṇaṃ ripukartṛkaṃ sūryamaṇḍalabhedanaṃ kāryaṃ gamyate //</p>
+
+<lg>
+<l>  āyātā kamalāsanasya bhavanāddraṣṭuṃ trilokītalaṃ gīrvāṇeṣu dināni kānicidaho nītvā punaḥ kautukāt /</l>
+<l>  bhrāntvā bhūvalaye mahākavikulopāsyā tavāsyāmbuje rājansaṃprati satyadhāmani girāṃ devī sukhaṃ vartate // JPran_16 //</l>
+</lg>
+
+<lg>
+<l>atraikasyādheyasyānekādhārasaṃbandhātparyāyaḥ /</l>
+<l>tatra prathamacaraṇagatamadhikaraṇamārthaviśleṣāvadhikapañcamyā viśleṣasyopaśleṣāpekṣatvenaupaśleṣikādhikaraṇasyākṣepagamyatvāt /</l>
+<l>satyadhāmanīti śleṣabhittikābhedādhyavasānena mukhasya satyalokatāsiddhau sukhavartanasiddhiḥ //</l>
+</lg>
+
+<lg>
+<l>  vidvaddainyatamastrimūrtirathavā vairīndravaṃśāṭavīdāvāgniḥ kimaho mahojjvalayaśaḥśītāṃśudugdhāmbudhiḥ /</l>
+<l>  kiṃ vānaṅgabhujaṃgadaṣṭavanitājīvāturevaṃ nṛṇāṃ keṣāmeṣa narādhipo na janayatyalpetarāḥ kalpanāḥ // JPran_17 //</l>
+</lg>
+
+<lg>
+<l>atra koṭīnāmāropāntaramūlakatvātparamparitasaṃśayaḥ sa cāhāryaḥ, mūlāropasya tathātvāt /</l>
+<l>kavāviva kavinibaddhapramātrantare 'pyāhāryabuddheravirodhāt //</l>
+</lg>
+
+<lg>
+<l>  nadanti madadantinaḥ parilasanti vājivrajāḥ paṭhanti birudāvalīmahitamandire bandinaḥ /</l>
+<l>  idaṃ tadavadhi prabho yadavadhi pravṛddhā na te yugāntadahanopamā nayanakoṇaśoṇadyutiḥ // JPran_18 //</l>
+</lg>
+
+<p>atra mukhyārthasya rājaviṣayāyāḥ kaviraterupakārakasya yadaiva tava kopodayastadaiva tava ripūṇāṃ saṃpado bhasmasādbhaviṣyantīti vastuna upakārikā nayanakoṇaśoṇadyuteryugāntadahanopamā //</p>
+
+<lg>
+<l>  mayi tvadupamāvidhau vasumatīśa vācaṃyame na varṇayati māmayaṃ kaviriti krudhaṃ mā kṛthāḥ /</l>
+<l>  carācaramidaṃ jagajjanayato vidhermānase padaṃ na vidadhetarāṃ tava samo dvitīyo naraḥ // JPran_19 //</l>
+</lg>
+
+<p>atra tvatsamo 'nyo nāstīti pratyayādupamānaluptopamā vyaṅgyeti prāñcaḥ /
+<lg>
+<l>sarvathaiva sāmyasyāpratiṣṭhānānneyamupamā /</l>
+<l>anyathā vyatirekasyāpi tattvāpatteḥ /</l>
+<l>'ḍhuṃḍhollanto marisasi kaṃṭakakaliāiṃ keaivaṇāiṃ /</l>
+<l>mālaikusumasaricchaṃ bhamara bhamaṃto ṇa pāvesi //</l>
+</lg></p>
+
+<lg>
+<l>'; ityatra tu na prāpsyasītyuktvā kvacittvadagocare sthale bhaviṣyatīti pratīteḥ sādṛśyapratiṣṭhānālluptopamāstu /</l>
+<l>tasmādasamālaṃkāra evāyamiti tu navyāḥ //</l>
+</lg>
+
+<lg>
+<l>  bhujabhramitapaṭṭiśoddalitadṛptadantāvalaṃ bhavantamarimaṇḍalakrathana paśyataḥ saṃgare /</l>
+<l>  karālakuliśāhatisphuṭavibhinnavindhyācalo na kasya hṛdayaṃ jhaṭityadhiruroha jambhāhitaḥ // JPran_20 //</l>
+</lg>
+
+<p>atra smaraṇālaṃkāraḥ paraṃtu lakṣyaḥ //</p>
+
+<lg>
+<l>  yamaḥ pratimahībhṛtāṃ hutavaho 'si tannīvṛtāṃ satāṃ khalu yudhiṣṭhiro dhanapatirdhanākāṅkṣiṇām /</l>
+<l>  gṛhaṃ śaraṇamicchatāṃ kuliśakoṭibhirnirmitaṃ tvameka iha bhūtale bahuvidho vidhātrā kṛtaḥ // JPran_21 //</l>
+</lg>
+
+<p>atra kavinā yamatvādinā rūpeṇa rājño rūpavataḥ karaṇādrūpakeṇa vipakṣabhūpālādīnāmetasminnāgate yamatvādinā bhrānterapi saṃbhavādbhrāntimatā tairevānekairgrahītṛbhiranekairdharmairullekhanādullekhaviśeṣeṇa ca saha saṃkīrṇo 'pi saṃbandhiṣaṣṭhyantabhedaprayuktavarṇyānekavidhatvaka ullekhaḥ //</p>
+
+<lg>
+<l>  dvinetra iva vāsavo mitakaro vivasvāniva dvitīya iva candramāḥ śritavapurmanobhūriva /</l>
+<l>  narākṛtirivāmbudhirgururiva kṣamāmāgato nuto nikhilabhūsurairjayati kāmarūpeśvaraḥ // JPran_22 //</l>
+</lg>
+
+<p>atra rājagatānāṃ dvinetratvādīnāṃ vāsavāditādātmyavirodhināṃ virodhanivartanāya viṣayiṣu vāsavādiṣvāropeṇa sādhāraṇīkaraṇāttannimittakotprekṣā /
+sā ceha mālārūpā /
+na cātropamā śakyarūpaṇā /
+<lg>
+<l>dvinetratvādyukterniṣprayojanakatvāpatteḥ /</l>
+<l>na copamāniṣpādakaṃ teṣāṃ sādhāraṇyaṃ tadabhāve 'pi paramaiśvaryādibhiḥ pratīyamānaistasyā niṣpatteḥ /</l>
+<l>asundaratvenopamāniṣpādakatayā kaveranabhipretatvācca /</l>
+<l>evaṃ dvitīyādīnāṃ candrādiṣvāropo 'pyupamāyāṃ satyāmanarthaka eva syāt //</l>
+</lg></p>
+
+<lg>
+<l>  dīnavrāte dayārdrā nikhilaripukule nirdayā kiṃ ca mṛdvī kāvyālāpeṣu tarkaprativacanavidhau karkaśatvaṃ dadhānā /</l>
+<l>  lubdhā dharmeṣvalubdhā vasuni paravipaddarśane kāṃdiśīkā rājannājanmaramya sphurati bahuvidhā tāvakī cittavṛttiḥ // JPran_23 //</l>
+</lg>
+
+<lg>
+<l>atra viṣayānekatvaprayuktacittavṛtteranekavidhatvamityullekhaḥ /</l>
+<l>tatra ca tadīyacittavṛttitvenaikatvādhyavasānaṃ tantram //</l>
+</lg>
+
+<lg>
+<l>  devāḥ ke pūrvadevāḥ samiti mama naraḥ santi ke vā purastādeva jalpanti tāvatpratibhaṭapṛtanāvartinaḥ kṣatravīrāḥ /</l>
+<l>  yāvannāyāti rājannayanaviṣayatāmantakatrāsimūrtermugdhāriprāṇadugdhāśanamasṛṇarucistvatkṛpāṇo bhujaṃgaḥ // JPran_24 //</l>
+</lg>
+
+<p>atra śuddhaparamparitarūpakam //</p>
+
+<lg>
+<l>  prācīsaṃdhyāsamudyanmahimadinamaṇermānamāṇikyakāntirjvālāmālā karālā kavalitajagataḥ krodhakālānalasya /</l>
+<l>  āśākāntāpadāmbhoruhatalavigalanmañjulākṣārasābhā sā bhāti kṣoṇiśobhākaraṇa tava dṛśoḥ saṃgare śoṇimaśrīḥ // JPran_25 //</l>
+</lg>
+
+<p>atrāpi tadeva paraṃtu mālātmakam //</p>
+
+<lg>
+<l>  tvāṃ sundarīnivahaniṣṭhuradhairyagarvanirvāsanaikarasikaṃ samare nirīkṣya /</l>
+<l>  kā vā ripukṣitibhṛtāṃ bata rājalakṣmīḥ svāmivratatvamapariskhalitaṃ babhāra // JPran_26 //</l>
+</lg>
+
+<lg>
+<l>atra śatrūṇāṃ rājyalakṣmīstvāṃ prāpteti vivakṣito 'rthaḥ pātivratyaskhalitarūpeṇābhihita iti paryāyoktam /</l>
+<l>tacca rājyalakṣmyā nāyikātvasiddhyarthaṃ samāsoktimapekṣata iti sā tatra guṇaḥ //</l>
+</lg>
+
+<lg>
+<l>  nāsatyayogo vacaneṣu kīrtau tathārjunaḥ karmaṇi cāpi dharmaḥ /</l>
+<l>  citte jagatprāṇabhavo yadāste vaśaṃvadāste kimu pānḍuputrāḥ // JPran_27 //</l>
+</lg>
+
+<p>atra pāṇḍuputreṣu viṣayeṣu rājavaśaṃvadatādātmyotprekṣāyāṃ rājāśritatvarūpo viṣayidharmaḥ śleṣeṇa viṣayāṇāṃ tadāśritānāṃ cāsatyābhāvaśuklagunapuṇyaparameśvarāṇāmabhedasaṃpādanadvārā viṣayasādhāraṇīkṛtaḥ //</p>
+
+<lg>
+<l>  manthācalabhramaṇaveghavaśaṃvadā ye dugdhāmbudherudapatannaṇavaḥ sudhāyāḥ /</l>
+<l>  tairekatāmupagatairvividhauṣadhībhirdhātā sasarja tava deva dayādṛgantān // JPran_28 //</l>
+</lg>
+
+<p>atra dṛganteṣu na kevalaṃ saṃjīvakatvādayo 'mṛtamātraguṇa eva kaverbubodhayiṣitā api tu nikhilajanavaśīkāratvādayo 'nye 'pīti sudhākaṇeṣvoṣadhīsaṃsargo 'tiśayārthamupāttaḥ //</p>
+
+<lg>
+<l>  keśairvadhūnāmatha sarvakoṣaiḥ prāṇaiśca sākaṃ pratibhūpatīnām /</l>
+<l>  tvayā raṇe niṣkaruṇena gāḍhaṃ cāpasya jīvā cakṛṣe javena // JPran_29 //</l>
+</lg>
+
+<p>atra cāpakarṣaṇakāryāṇānāṃ keśākarṣaṇādīnāṃ paurvāparyaviparyayātmanātiśayenānuprāṇitā sahoktiḥ //</p>
+
+<lg>
+<l>  mahendratulyaṃ kavayo bhavantaṃ vadantu kiṃ tāniha vārayāmaḥ /</l>
+<l>  bhavānsahasraiḥ samupāsyamānaḥ kathaṃ samānastridaśādhipena // JPran_30 //</l>
+</lg>
+
+<p>atra śleṣotthāpitatridaśatvasaṃkhyāmādāya vyatireka upāttobhayanimittakaḥ //</p>
+
+<lg>
+<l>  sa tu varṣatu vāri vāridastvamudārāśaya ratnavarṣaṇaḥ /</l>
+<l>  sa kuhūrajanīmalīmasastvamihāntarbahireva nirmalaḥ // JPran_31 //</l>
+</lg>
+
+<p>atrāpi sa eva paraṃ tu śleṣo 'trānutthāpako niṣidhyamānaṃ sāmyaṃ ca na śābdamiti viśeṣaḥ //</p>
+
+<lg>
+<l>  katipayairniraṇāyi janādhipastadaparairudaṭaṅki dhanādhipaḥ /</l>
+<l>  ajani kevalameṣa girāṃ patirbhuvi madekamate kamateśvaraḥ // JPran_32 //</l>
+</lg>
+
+<lg>
+<l>atra nāyaṃ rājā kiṃ tu girāṃ patirityākārāpahnutiḥ /</l>
+<l>tatra niṣedhabhāgaḥ paramatattvoktyā pūrvārdhena gamyate /</l>
+<l>āropāṃśastūttarārdhena //</l>
+</lg>
+
+<lg>
+<l>  makarapratimairmahābhaṭaiḥ kavibhī ratnanibhaiḥ samanvitaḥ /</l>
+<l>  kavitāmṛtakīrticandrayostvamihorvīramaṇāsi bhājanam // JPran_33 //</l>
+</lg>
+
+<lg>
+<l>atra rājño jaladhyupamāyāḥ śabdenābhidhāne 'pyaṅgopamābhirākṣepādekadeśavivartinyupamā tenottarārdha upamitasamāsa eva /</l>
+<l>viśeṣaṇasamāsavedyasya tādātmyasya prakṛte 'nupayogāt //</l>
+</lg>
+
+<lg>
+<l>  puraḥ purastādaribhūpatīnāṃ bhavanti bhūvallabha bhasmaśeṣāḥ /</l>
+<l>  anantaraṃ te bhrukuṭīviṭaṅkātpatanti roṣānalavisphuliṅgāḥ // JPran_34 //</l>
+</lg>
+
+<lg>
+<l>atra prayojakātiśayakṛtaḥ prayojyaśaighryātiśayo gamyaḥ /</l>
+<l>kāryakāraṇapaurvāparyaviparyayarūpā ceyamatiśayoktiḥ //</l>
+</lg>
+
+<lg>
+<l>  bhuvanatritaye 'pi mānavaiḥ paripūrṇe vibudhaiśca dānavaiḥ /</l>
+<l>  na bhaviṣyati nāsti nābhavannṛpa yaste bhajate tulāspadam // JPran_35 //</l>
+</lg>
+
+<lg>
+<l>atropamānaluptopameti prāñcaḥ /</l>
+<l>asamākhyamalaṃkārāntaramiti tu vayam //</l>
+</lg>
+
+<lg>
+<l>  pīyūṣayūṣakalpāmalpāmapi te giraṃ nipītavatām /</l>
+<l>  toṣāya kalpate no yoṣādharabimbamadhurimodrekaḥ // JPran_36 //</l>
+</lg>
+
+<lg>
+<l>atra saṃbandhe 'pyasaṃbandha ityatiśayoktibhedaḥ /</l>
+<l>upameyopamānaviśeṣaṇābhyāmalpatvodriktatvābhyāmalpayāpi saha bhūyānapi madhurimā sāmyaṃ kartuṃ yatrānīśastatra kiṃ vācyaṃ bhūyasyeti vailakṣaṇyātmā vyatirekaśca //</l>
+</lg>
+
+<lg>
+<l>  bhāsayati vyomasthā jagadakhilaṃ kumudinīrvikāsayati /</l>
+<l>  kīrtistava dharaṇigatā sagarasutāyāsamaphalatāṃ nayate // JPran_37 //</l>
+</lg>
+
+<p>atra vyajamānacandrikārūpakasaṃkīrṇa ullekhadhvaniḥ //</p>
+
+<lg>
+<l>  bhāgyena saha ripūṇāmuttiṣṭhasi viṣṭarātkṛdhāviṣṭaḥ /</l>
+<l>  sahasaiva patasi teṣu kṣitiśāsana mṛtyunā sākam // JPran_38 //</l>
+</lg>
+
+<lg>
+<l>'keśairvadhūnām'; ityatra karmaṇaḥ sahoktiḥ /</l>
+<l>iha tu karturiti viśeṣaḥ //</l>
+</lg>
+
+<lg>
+<l>  tvayi pākaśāsanasame śāsati sakalaṃ vasuṃdharāvalayam /</l>
+<l>  vipine vairivadhūnāṃ varṣanti vilocanāni ca dināni // JPran_39 //</l>
+</lg>
+
+<lg>
+<l>atra varṣavadācarantītyācārakvibantena śleṣācchleṣamūlikā tulyayogitā /</l>
+<l>ripukāminīvarṇanaviṣayatvenopamānopameyayordvayorapi prakṛtatvāt //</l>
+</lg>
+
+<lg>
+<l>  ahitāpakaraṇabheṣaja naranātha bhavānkarasthito yasya /</l>
+<l>  tasya kuto 'hibhayaṃ syādakhilāmapi medinīṃ carataḥ // JPran_40 //</l>
+</lg>
+
+<p>atra śleṣaniveditasya sarpabhayābhāvasyopapādakatayopāttasya rājani bheṣajatādātmyāropasyāpyupapādakatayā sthitaṃ rājasaṃbandhini dviṣadapakaraṇarūpe dharme śleṣaniveditasarpatāpakaraṇatādātmyamiti prathamacaraṇe śliṣṭaparamparitarūpakaṃ tṛtīye tu śleṣa eva /</p>
+
+<lg>
+<l>  kuvalayalakṣmīṃ harate tava kīrtistatra kiṃ citram /</l>
+<l>  yasmānnidānamasyā lokanamasyāṅghripaṅkajo hi bhavān // JPran_41 //</l>
+</lg>
+
+<lg>
+<l>atrotpādakasamānaguṇatvādutpādyasyotpādakasaṃsargānurūpaḥ samālaṃkāraviśeṣaḥ /</l>
+<l>śleṣaścāsminguṇaḥ //</l>
+</lg>
+
+<lg>
+<l>  dṛṣṭaḥ sadasi cedugrāścandracandanacandrikāḥ /</l>
+<l>  atha tvaṃ saṃgare saumyāḥ śeṣakālānalāsayaḥ // JPran_42 //</l>
+</lg>
+
+<lg>
+<l>atra dṛṣṭaḥ sadasīti vākye tvamityasyāpakarṣaṇāt, atha tvaṃ saṃgara ityatra ca tvamityasyānuvartanādvākyayoḥ padavinimayātmālaṃkāraḥ pūrvārdhe /</l>
+<l>uttarārdhe prakṛtānekadharmasaṃbandhāttulyayogitā /</l>
+<l>upameyasyotkṛṣṭaguṇatvasiddhaya upamānasya tadviruddhaguṇakalpanātmakenālaṃkārāntareṇa śabalitā //</l>
+</lg>
+
+<lg>
+<l>  apāre khalu saṃsāre vidhinaiko 'rjunaḥ kṛtaḥ /</l>
+<l>  kīrtyā nirmalayā bhūpa tvayā sarve 'rjunāḥ kṛtāḥ // JPran_43 //</l>
+</lg>
+
+<p>iha śleṣamūlo vyatirekaḥ //</p>
+
+<lg>
+<l>  dadhīcibalikarṇeṣu himahemācalābdhiṣu /</l>
+<l>  adātṛtvamadhairyaṃ ca dṛṣṭe bhavati bhāsate // JPran_44 //</l>
+</lg>
+
+<lg>
+<l>atrāpi saiva tathāvidhā /</l>
+<l>yathāsaṃkhyasaṃkarastu viśeṣaḥ //</l>
+</lg>
+
+<lg>
+<l>  śāsati tvayi he rājannakhaṇḍāvanimaṇḍalam /</l>
+<l>  na manāgapi niścinte maṇḍale śatrumittrayoḥ // JPran_45 //</l>
+</lg>
+
+<p>ihāpi tulyayogitā mittraśabdaśleṣotthāpitā vyājastutiśca //</p>
+
+<lg>
+<l>  bhānuragniryamo vāyaṃ baliḥ karṇo 'thavā śibiḥ /</l>
+<l>  pratyarthino 'rthinaścetthaṃ tvayi yānti vikalpanām // JPran_46 //</l>
+</lg>
+
+<p>iha tu saṃśaya ullekhāliṅgitaḥ //</p>
+
+<lg>
+<l>  kamalāvāsakāsāraḥ kṣamādhṛtiphaṇīśvaraḥ /</l>
+<l>  bhavānkuvalayasyendurānandayati mānavān // JPran_47 //</l>
+</lg>
+
+<p>iha śliṣṭaparamparitaṃ rūpakaṃ mālārūpam //</p>
+
+<lg>
+<l>  gagane candrikāyante himāyante himācale /</l>
+<l>  pṛthivyāṃ sāgarāyante bhūpāla tava kīrtayaḥ // JPran_48 //</l>
+</lg>
+
+<p>iha mālopamāliṅgita ullekhaḥ //</p>
+
+<lg>
+<l>  mṛgatāṃ harayanmadhye vṛkṣatāṃ ca paṭīrayan /</l>
+<l>  nakṣatratāṃ mahīpānāṃ tvamindavasi bhūpate // JPran_49 //</l>
+</lg>
+
+<lg>
+<l>iha śuddhaparamparitā mālārūpopamā /</l>
+<l>ācārakvibantācchatari rūpāṇi /</l>
+<l>tiṅi caikam [indavasi] //</l>
+</lg>
+
+<lg>
+<l>  madhye sudhāsamdurasya sitāmayagṛhodare /</l>
+<l>  pūrṇenduviṣṭare deva sthātuṃ yogyāstavoktayaḥ // JPran_50 //</l>
+</lg>
+
+<p>atra trayāṇāṃ sudhāsamudrādīnāṃ viśeṣaṇaviśeṣyabhāvena madhurimaṇi parāṃ kāṣṭhāmadhirūḍhe tvadīyoktipadasaṃbandho yukto na tu viśakalita ityatiśāyakāsadviśeṣaṇanibandhanaḥ prauḍhoktiḥ //</p>
+
+<lg>
+<l>  amṛtalaharīcandrajyotsnāramāvadanāmbujānyadharitavato nirmaryādaprasādamahāmbudheḥ /</l>
+<l>  ubhayavadayaṃ deva tvattaḥ kathaṃ paramolbaṇaḥ pralayadahanajvālājālākulo mahasāṃ gaṇaḥ // JPran_51 //</l>
+</lg>
+
+<lg>
+<l>atra kāraṇaguṇaviruddhasvaguṇasya kāryasyotpatterviṣamālaṃkāraḥ /</l>
+<l>amṛtalaharyādīnāṃ trayāṇāmadharīkaraṇātmanā vyatirekeṇa saṃjīvakatvaparamaśītalatvaviśuddhatvasaundaryāṇāmatiśayo gamyate /</l>
+<l>evameṣu padyeṣu saṃbhavanto 'pyanye 'laṃkārāḥ sphuṭatvānna vivecitāḥ /</l>
+<l>sahṛdayānāṃ prītyāvaśyakaṃ kiṃcidvyākhyātamanyattu tairevollāsanīyamityalaṃ pallavitena //</l>
+</lg>
+
+<lg>
+<l>  tailaṅgānvayamaṅgalālayamahālakṣmīdayālalitaḥ śrīmatperamabhaṭṭasūnuraniśaṃ vidvallalāṭaṃtapaḥ /</l>
+<l>  saṃtuṣṭaḥ kamatādhipasya kavitāmākarṇya tadvarṇanaṃ śrīmatpaṇḍitarājapaṇḍitajagannātho vyadhāsīdidam // JPran_52 //</l>
+</lg>
+
+<lg>
+<l>  dordaṇḍadvayakuṇḍalīkṛtalasatkodaṇḍācaṇḍāśugadhvastoddaṇḍavipakṣamaṇḍalamiha tvāṃ vīkṣya madhyeraṇam /</l>
+<l>  valgadgāṇḍivamuktakāṇḍavalayajvālāvalītāṇḍavabhraśyatkhāṇḍavaruṣṭapāṇḍavamaho ko na kṣitīśaḥ smaret // JPran_53 //</l>
+</lg>
+
+<lg>
+<l>atra smaraṇālaṃkāraḥ /</l>
+<l>bhāva iti tu na bhrāmitavyam /</l>
+<l>sādṛśyamūlakatvātanmūlakatvābhyāṃ bhāvatvālaṃkāratvayoriha vyavasthiteḥ śabdavedyatvācca //</l>
+</lg>
+
+<p>iti paṇḍitarājaśrījagannāthaviracitaṃ prāṇābharaṇaṃ tatkṛtayaiva ṭippaṇyā sametaṃ samāptam /</p>
+
+  </body>
+</text>
+</TEI>

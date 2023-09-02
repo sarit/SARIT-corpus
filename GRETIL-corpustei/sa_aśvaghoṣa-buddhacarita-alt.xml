@@ -1,0 +1,5512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_azvaghoSa-buddhacarita-alt">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Buddhacarita</title>
+	<author>Aśvaghoṣa</author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>members of the Digital Sanskrit Buddhist Canon Input Project</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>members of the Digital Sanskrit Buddhist Canon Input Project</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/5_poetry/2_kavya/asvbuc2u.htm">asvbuc2u.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Asvaghosa: Buddhacarita
+<lb/>
+<lb/>Based on the edition by E.H. Johnston: The Buddhacarita: Or, Acts of the Buddha, Part I.
+<lb/>Calcutta: Baptist Mission Press 1935 (Panjab University Oriental Publications, 31)
+<lb/>
+<lb/>Input by members of the Sanskrit Buddhist Input Project.
+<lb/>With kind permission of the Digital Sanskrit Buddhist Canon Project of Nagarjuna Institute, Nepal
+<lb/>and University of the West, Rosemead, California, USA (www.uwest.edu/sanskritcanon), Sastra section
+<lb/>
+<lb/>[GRETIL-Version: 2018-02-23]
+<lb/>
+<lb/>Revision:
+<lb/> 2018-02-23: Bc_5.77 sahāyaḥ changed to sahāyāḥ by Arlo Griffiths
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>E.H. Johnston: The Buddhacarita: Or, Acts of the Buddha, Part I. Calcutta: Baptist Mission Press 1935 (Panjab University Oriental Publications, 31)</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Buddhacarita-alt = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Poetry -- Kāvya</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+
+<p>Aśvaghoṣa: Buddhacarita</p>
+
+<p>CANTO 1</p>
+
+<lg>
+<l>aikṣvāka ikṣvākusamaprabhāvaḥśākyeṣvaśakyeṣu viśuddhavṛttaḥ /</l>
+<l>priyaḥ śaraccandra iva prajānāṃ śuddhodano nāma babhūva rājā // Bc_1.1 //</l>
+</lg>
+
+<lg>
+<l>tasyendrakalpasya babhūva patnī dīptyā narendrasya samaprabhāvā /</l>
+<l>padmeva lakṣmīḥ pṛthivīva dhīrā māyeti nāmnānupameva māyā // Bc_1.2 //</l>
+</lg>
+
+<lg>
+<l>sārdha tayāsau vijahāra rājā nācintayadvaiśravaṇasya lakṣmīm /</l>
+<l>tataśca vidheva samādhiyuktā garbha dadhe pāpavivarjitā sā // Bc_1.3 //</l>
+</lg>
+
+<lg>
+<l>prāggarbhadhānnānmanujendrapatnī sitaṃ dadarśa dviparājamekam /</l>
+<l>svapne viśantaṃ vapurātmanaḥ sā na tannimittaṃ samavāpa tāpam // Bc_1.4 //</l>
+</lg>
+
+<lg>
+<l>sā tasya devapratimasya devī garbheṇa vaṃśaśriyamudvahantī /</l>
+<l>śramaṃ na lebhe na śucaṃ na māyāṃ gantuṃ vanaṃ sā nibhṛtaṃ cakāṅkṣa // Bc_1.5 //</l>
+</lg>
+
+<lg>
+<l>sā lumbinī nāma vanāntabhūmiṃ citradrūmāṃ caitrarathābhirāmām /</l>
+<l>dhyānānukūlāṃ vijanāmiyeṣa tasyāṃ nivāsāya nṛpaṃ babhāṣe // Bc_1.6 //</l>
+</lg>
+
+<lg>
+<l>āryāśayāṃ tāṃ pravaṇāṃ ca dharme vijñāya kautūhalaharṣapūrṇaḥ /</l>
+<l>śivāt purād bhūmipatirjagāma tatprītaye nāpi vihārahetoḥ // Bc_1.7 //</l>
+</lg>
+
+<lg>
+<l>tasminvane śrīmati rājapatnī prasūtikālaṃ samavekṣamāṇā /</l>
+<l>śayyāṃ vitānopahitāṃ prapede nārīsahasrairabhinandyamānā // Bc_1.8 //</l>
+</lg>
+
+<lg>
+<l>tataḥ prasannaśca babhūva puṣyastasyāśca devyā vratasaṃskṛtāyāḥ /</l>
+<l>pārśvātsuto lokahitāya jajñe nirvedanaṃ caiva nirāmayaṃ ca // Bc_1.9 //</l>
+</lg>
+
+<lg>
+<l>ūroryathaurvasya pṛthośca hastānmāndhāturindrapratimasya mūrdhnaḥ /</l>
+<l>kakṣīvataścaiva bhujāṃsadeśāttathāvidhaṃ tasya babhūva janma // Bc_1.10 //</l>
+</lg>
+
+<lg>
+<l>krameṇa garbhādabhiniḥsṛtaḥ san babhau cyutaḥ khādiva yonyajātaḥ /</l>
+<l>kalpeṣvanekeṣu ca bhāvitātmā yaḥ saṃprajānansuṣuve na mūḍhaḥ // Bc_1.11 //</l>
+</lg>
+
+<lg>
+<l>dīptyā ca dhairyeṇa ca yo rarāja bālo ravibhūmimivāvatīrṇaḥ /</l>
+<l>tathātidīpto 'pi nirīkṣyamāṇo jahāra cakṣūṃṣi yathā śaśāṅkaḥ // Bc_1.12 //</l>
+</lg>
+
+<lg>
+<l>sa hi svagātraprabhayojjvalantyā dīpaprabhāṃ bhāskaravanmumoṣa /</l>
+<l>mahārhajāmbūnadacāruvarṇo vidyotayāmāsa diśaśca sarvāḥ // Bc_1.13 //</l>
+</lg>
+
+<lg>
+<l>anākulānyubjasamudgatāni niṣpeṣavadvyāyatavikramāṇi /</l>
+<l>tathaiva dhīrāṇi padāni sapta saptarṣitārāsadṛśo jagāma // Bc_1.14 //</l>
+</lg>
+
+<lg>
+<l>bodhāya jāto 'smi jagaddhitārthamantyā bhavotpattiriyaṃ mameti /</l>
+<l>caturdiśaṃ siṃhagatirvilokya vāṇī ca bhavyārthakarīmuvāca // Bc_1.15 //</l>
+</lg>
+
+<lg>
+<l>khātprasrūte candramarīciśubhre dve vāridhāre śiśiroṣṇavīrye /</l>
+<l>śarīrasaṃsparśasukhāntarāya nipetaturmūrdhani tasya saumye // Bc_1.16 //</l>
+</lg>
+
+<lg>
+<l>śrīmadvitāne kanakojjvalāṅge vaiḍūryapāde śayane śayānam /</l>
+<l>yadgauravātkāñcanapadmahastā yakṣādhipāḥ saṃparivārya tasthuḥ // Bc_1.17 //</l>
+</lg>
+
+<lg>
+<l>adṛśyabhāvāśca divaukasaḥ khe yasya prabhāvātpraṇataiḥ śīrobhiḥ /</l>
+<l>ādhārayan pāṇḍaramātapatraṃ bodhāya jepuḥ paramāśiṣaśca // Bc_1.18 //</l>
+</lg>
+
+<lg>
+<l>mahoragā dharmaviśeṣatarṣād buddheṣvatīteṣu kṛtādhikārāḥ /</l>
+<l>yamavyajan bhaktiviśiṣṭanetrā mandārapuṣpaiḥ samavākiraṃśca // Bc_1.19 //</l>
+</lg>
+
+<lg>
+<l>tathāgatotpādaguṇena tuṣṭāḥ śuddhādhivāsāśca viśuddhasattvāḥ /</l>
+<l>devā nanandurvigate 'pi rāge magnasya duḥkhe jagato hitāya // Bc_1.20 //</l>
+</lg>
+
+<lg>
+<l>yasya prasūtau girirājakīlā vātāhatā nauriva bhūścacāla /</l>
+<l>sacandanā cotpalapadmagarbhā papāta vṛṣṭirgaganādanabhrāt // Bc_1.21 //</l>
+</lg>
+
+<lg>
+<l>vātā vavuḥ sparśasukhā manojñā divyāni vāsāṃsyavapātayantaḥ /</l>
+<l>sūryaḥ sa evābhyadhikaṃ cakāśe jajvāla saumyārciranīrito 'gniḥ // Bc_1.22 //</l>
+</lg>
+
+<p>prāguttare cāvasathapradeśe kūpaḥ svayaṃ prādurabhūtsitāmbuḥ
+<l>antaḥpurāṇyāgatavismayāni yasmin kriyāstīrtha iva pracakruḥ // Bc_1.23 //</l></p>
+
+<lg>
+<l>dharmārthibhirbhūtagaṇaiśca divyaistaddarśanārtha vanamāpupūre /</l>
+<l>kautūhalenaiva ca pādapebhyaḥ puṣpāṇyakāle 'pyavapātayadbhiḥ // Bc_1.24 //</l>
+</lg>
+
+<lg>
+<l>bhūtairasaumyaiḥ parityaktahiṃsairnākāri pīḍā svagaṇe pare vā /</l>
+<l>loke hi sarvāśca vinā prayāsaṃ rujo narāṇāṃ śamayāṃbabhūvuḥ // Bc_1.25 //</l>
+</lg>
+
+<lg>
+<l>kalaṃ praṇeduḥ mṛgapakṣiṇaśca śāntāmbuvāhāḥ sarito babhūvuḥ /</l>
+<l>diśaḥ prasedurvimale nirabhre vihāyase dundubhayo nineduḥ // Bc_1.26 //</l>
+</lg>
+
+<lg>
+<l>lokasya mokṣāya gurau prasūte śamaṃ prapede jagadavyavastham /</l>
+<l>prāpyeva nāthaṃ khalu nītimantam eko na māro mudamāpa loke // Bc_1.27 //</l>
+</lg>
+
+<lg>
+<l>divyādbhutaṃ janma nirīkṣya tasya dhīro 'pi rājā bahukṣobhametaḥ /</l>
+<l>snehādasau bhītipramodajanye dve vāridhāre mumuce narendraḥ // Bc_1.28 //</l>
+</lg>
+
+<lg>
+<l>amānuṣī tasya niśamya śaktiṃ mātā prakṛtyā karuṇārdracittā /</l>
+<l>prītā ca bhītā ca babhūva devī śītoṣṇamiśreva jalasya dhārā // Bc_1.29 //</l>
+</lg>
+
+<lg>
+<l>nirīkṣamāṇā bhayahetumeva dhyātuṃ na śekuḥ vanitāḥ pravṛddhāḥ /</l>
+<l>pūtāśca tā maṅgalakarma cakruḥ śivaṃ yayācuḥ śiśave suraughān // Bc_1.30 //</l>
+</lg>
+
+<p>viprāśca khyātāḥ śrutaśīlavāgbhiḥ śrutvā nimittāni vicārya samyak /
+mukhaiḥ praphullaiścakitaiśca dīptaiḥ / bhītaprasannaṃ nṛpametya procuḥ // Bc_1.31 //</p>
+
+<p>śamepsavo ye bhuvi santi sattvāḥ / putraṃ vinecchanti guṇaṃ na kañcit /
+tvatputra eṣo 'sti kulapradīpaḥ / nṛtyotsavaṃ tvadya vidhehi rājan // Bc_1.32 //</p>
+
+<lg>
+<l>vihāya cintāṃ bhava śāntacitto modasva vaṃśastava vṛddhibhāgī /</l>
+<l>lokasya netā tava putrabhūtaḥ duḥkhārditānāṃ bhuvi eṣa trātā // Bc_1.33 //</l>
+</lg>
+
+<lg>
+<l>dīpaprabho 'yaṃ kanakojjvalāṅgaḥ sulakṣaṇairyaistu samanvito 'sti /</l>
+<l>nidhirguṇānāṃ samaye sa gatāṃ buddharṣibhāvaṃ paramāṃ śriyaṃ vā // Bc_1.34 //</l>
+</lg>
+
+<lg>
+<l>icchedasau vai pṛthivīśriyaṃ cet nyāyena jitvā pṛthivī samagrām /</l>
+<l>bhūpeṣu rājeta yathā prakāśaḥ graheṣu sarveṣu ravervibhāti // Bc_1.35 //</l>
+</lg>
+
+<p>mokṣāya cedvā vanameva gacchet / tattvena samyak sa vijitya sarvān /
+<l>matān pṛthivyāṃ bahumānametaḥ rājeta śaileṣu yathā sumeruḥ // Bc_1.36 //</l></p>
+
+<lg>
+<l>yathā hiraṇyaṃ śuci dhātumadhye merurgirīṇāṃ sarasāṃ samudraḥ /</l>
+<l>tārāsu candrastapatāṃ ca sūryaḥ putrastathā te dvipadeṣu varyaḥ // Bc_1.37 //</l>
+</lg>
+
+<lg>
+<l>tasyākṣiṇī nirnimiṣe viśāle snigdhe ca dīpte vimale tathaiva /</l>
+<l>niṣkampakṛṣṇāyataśuddhapakṣme draṣṭuṃ samarthe khalu sarvabhāvān // Bc_1.38 //</l>
+</lg>
+
+<lg>
+<l>kasmānnu hetoḥ kathitānbhavadbhiḥ varānguṇān dhārayate kumāraḥ /</l>
+<l>prāpurna pūrve munayo nṛpāśca rājñeti pṛṣṭā jagadus dvijāstam // Bc_1.39 //</l>
+</lg>
+
+<lg>
+<l>khyātāni karmāṇi yaśo matiśca pūrva na bhūtāni bhavanti paścāt /</l>
+<l>guṇā hi sarvāḥ prabhavanti hetoḥ nidarśanānyatra ca no nibodha // Bc_1.40 //</l>
+</lg>
+
+<lg>
+<l>yadrājaśāstraṃ bhṛguraṅgirā vā na cakraturvaśakarāvṛṣī tau /</l>
+<l>tayoḥ sutau saumya sasarjatustatkālena śukraśca bṛhaspatiśca // Bc_1.41 //</l>
+</lg>
+
+<lg>
+<l>sārasvataścāpi jagāda naṣṭaṃ vedaṃ punaryaṃ dadṛśurna pūrve /</l>
+<l>vyāsastathainaṃ bahudhā cakāra na yaṃ vasiṣṭhaḥ kṛtavānaśaktiḥ // Bc_1.42 //</l>
+</lg>
+
+<lg>
+<l>vālmīkirādau ca sasarja padyaṃ jagrantha yanna cyavano maharṣiḥ /</l>
+<l>cikitsitaṃ yacca cakāra nātriḥ paścāttadātreya ṛṣirjagāda // Bc_1.43 //</l>
+</lg>
+
+<lg>
+<l>yacca dvijatvaṃ kuśiko na lebhe tadgādhinaḥ sunūravāpa rājan /</l>
+<l>velāṃ samudre sagaraśca dadhre nekṣvākavo yāṃ prathamaṃ babandhuḥ // Bc_1.44 //</l>
+</lg>
+
+<lg>
+<l>ācāryakaṃ yogavidhau dvijānāmaprāptamanyairjanako jagāma /</l>
+<l>khyātāni karmāṇi ca yāni śaureḥ śūrādayasteṣvabalā babhūvuḥ // Bc_1.45 //</l>
+</lg>
+
+<lg>
+<l>tasmātpramāṇaṃ na vayo na vaṃśaḥ kaścitkvacicchraiṣṭhyamupaiti loke /</l>
+<l>rājñāmṛṣīṇāṃ ca hi tāni tāni kṛtāni putrairakṛtāni pūrvaiḥ // Bc_1.46 //</l>
+</lg>
+
+<lg>
+<l>evaṃ nṛpaḥ pratyayitairdvijaistairāśvāsitaścāpyabhinanditaśca /</l>
+<l>śaṅkāmaniṣṭāṃ vijahau manastaḥ praharṣamevādhikamāruroha // Bc_1.47 //</l>
+</lg>
+
+<lg>
+<l>prītaśca tebhyo dvijasattamebhyaḥ satkārapūrva pradadau dhanāni /</l>
+<l>bhūyādayaṃ bhūmipatiryathokto yāyājjarāmetya vanāni ceti // Bc_1.48 //</l>
+</lg>
+
+<lg>
+<l>atho nimittaiśca tapobalācca tajjanma janmāntakarasya buddhvā /</l>
+<l>śākyeśvarasyālayamājagāma saddharmatarṣādasito maharṣiḥ // Bc_1.49 //</l>
+</lg>
+
+<lg>
+<l>taṃ brahmavidbrahmavidaṃ jvalantaṃ brāhmyā śriyā caiva tapaḥśriyā ca /</l>
+<l>rājño gururgauravasatkriyābhyāṃ praveśāyāmāsa narendrasadma // Bc_1.50 //</l>
+</lg>
+
+<lg>
+<l>sa pārthivāntaḥpurasaṃnikarṣa kumārajanmāgataharṣavegaḥ /</l>
+<l>viveśa dhīro vanasaṃjñayeva tapaḥprakarṣācca jarāśrayācca // Bc_1.51 //</l>
+</lg>
+
+<lg>
+<l>tato nṛpastaṃ munimāsanasthaṃ pādyārdhyapūrvaṃ pratipūjya samyak /</l>
+<l>nimantrayāmāsa yathopacāraṃ purā vasiṣṭhaṃ sa ivāntidevaḥ // Bc_1.52 //</l>
+</lg>
+
+<p>dhanyo 'smyanugrāhyamidaṃ kulaṃ me / yanmāṃ didṛkṣurbhagavānupetaḥ /
+<l>ājñāpyatāṃ kiṃ karavāṇi saumya śiṣyo 'smi viśrambhitumarhasīti // Bc_1.53 //</l></p>
+
+<lg>
+<l>evaṃ nṛpeṇopanimantritaḥ sansarveṇa bhāvena muniryathāvat /</l>
+<l>sa vismayotphullaviśāladṛṣṭirgambhīradhīrāṇi vacāṃsyuvāca // Bc_1.54 //</l>
+</lg>
+
+<lg>
+<l>mahātmani tvayyupapannametatpriyātithau tyāgini dharmakāme /</l>
+<l>sattvānvayajñānavayo 'nurūpā snigdhā yadevaṃ mayi me matiḥ syāt // Bc_1.55 //</l>
+</lg>
+
+<p>etacca tadyena nṛparṣayaste / dharmeṇa sūkṣmeṇa dhanānyavāpya /
+<l>nityaṃ tyajanto vidhivadbabhūvustapobhirāḍhyā vibhavairdaridrāḥ // Bc_1.56 //</l></p>
+
+<lg>
+<l>prayojanaṃ yattu mamopayāne tanme śṛṇu prītimupehi ca tvam /</l>
+<l>divyā mayādityapathe śrutā vāgbodhāya jātastanayastaveti // Bc_1.57 //</l>
+</lg>
+
+<lg>
+<l>śrutvā vacastacca manaśca yuktvā jñātvā nimittaiśca tato 'smyupetaḥ /</l>
+<l>didṛkṣayā śākyakuladhvajasya śakradhvajasyeva samucchritasya // Bc_1.58 //</l>
+</lg>
+
+<lg>
+<l>ityetadevaṃ vacanaṃ niśamya praharṣasaṃbhrāntagatinarendraḥ /</l>
+<l>ādāya dhātryaṅkagataṃ kumāraṃ saṃdarśayāmāsa tapodhanāya // Bc_1.59 //</l>
+</lg>
+
+<lg>
+<l>cakrāṅkapādaṃ sa tato maharṣirjālāvanaddhāṅgulipāṇipādam /</l>
+<l>sorṇabhruvaṃ vāraṇavastikośaṃ savismayaṃ rājasutaṃ dadarśa // Bc_1.60 //</l>
+</lg>
+
+<lg>
+<l>dhātryaṅkasaṃviṣṭamavekṣya cainaṃ devyaṅkasaṃviṣṭamivāgnisūnum /</l>
+<l>babhūva pakṣmāntavicañcitāśrurniśvasya caiva tridivonmukho 'bhūt // Bc_1.61 //</l>
+</lg>
+
+<p>dṛṣṭvāsitaṃ tvaśrupariplutākṣaṃ / snehāttanūjasya nṛpaścakampe /
+<l>sagadgadaṃ bāṣpakaṣāyakaṇṭhaḥ papraccha sa prāñjalirānatāṅgaḥ // Bc_1.62 //</l></p>
+
+<lg>
+<l>alpāntaraṃ yasya vapuḥ surebhyo bavhadbhutaṃ yasya ca janma dīptam /</l>
+<l>yasyottamaṃ bhāvinamāttha cārtha taṃ prekṣya kasmāttava dhīra bāṣpaḥ // Bc_1.63 //</l>
+</lg>
+
+<lg>
+<l>api sthirāyurbhagavan kumāraḥ kaccinna śokāya mama prasūtaḥ /</l>
+<l>labdhaḥ kathaṃcitsalilāñjalirme na khalvimaṃ pātumupaiti kālaḥ // Bc_1.64 //</l>
+</lg>
+
+<lg>
+<l>apyakṣayaṃ me yaśaso nidhānaṃ kacciddhruvo me kulahastasāraḥ /</l>
+<l>api prayāsyāmi sukhaṃ paratra supto 'pi putre 'nimiṣaikacakṣuḥ // Bc_1.65 //</l>
+</lg>
+
+<lg>
+<l>kaccinna me jātamaphullameva kulapravālaṃ pariśoṣabhāgi /</l>
+<l>kṣipraṃ vibho brūhi na me 'sti śāntiḥ snehaṃ sute vetsi hi bāndhavānām // Bc_1.66 //</l>
+</lg>
+
+<lg>
+<l>ityāgatāvegamaniṣṭabuddhyā buddhvā narendraṃ sa munirbabhāṣe /</l>
+<l>mā bhūnmatiste nṛpa kācidanyā niḥsaṃśayaṃ tadyadavocamasmi // Bc_1.67 //</l>
+</lg>
+
+<lg>
+<l>nāsyānyathātvaṃ prati vikriyā me svāṃ vañcanāṃ tu prati viklavo 'smi /</l>
+<l>kālo hi me yātumayaṃ ca jāto jātikṣayasyāsulabhasya boddhā // Bc_1.68 //</l>
+</lg>
+
+<lg>
+<l>vihāya rājyaṃ viṣayeṣvanāsthastīvraiḥ prayatnairadhigamya tattvam /</l>
+<l>jagatyayaṃ mohatamo nihantuṃ jvaliṣyati jñānamayo hi sūryaḥ // Bc_1.69 //</l>
+</lg>
+
+<lg>
+<l>duḥkhārṇavādvyādhivikīrṇaphenājjarātaraṅgānmaraṇogravegāt /</l>
+<l>uttārayiṣyatyayamuhyamānamārta jagajjñānamahāplavena // Bc_1.70 //</l>
+</lg>
+
+<p>prajñāmbuvegāṃ sthiraśīlavaprāṃ samādhiśītāṃ vratacakravākām /
+asyottamāṃ dharmanadī pravṛtāṃ / tṛṣṇārditaḥ pāsyati jīvalokaḥ // Bc_1.71 //</p>
+
+<lg>
+<l>duḥkhārditebhyo viṣayāvṛtebhyaḥ saṃsārakāntārapathasthitebhyaḥ /</l>
+<l>ākhyāsyati hyeṣa vimokṣamārga mārgapranaṣṭebhya ivādhvagebhyaḥ // Bc_1.72 //</l>
+</lg>
+
+<lg>
+<l>vidahyamānāya janāya loke rāgāgnināyaṃ viṣayendhanena /</l>
+<l>pralhādamādhāsyati dharmavṛṣṭyā vṛṣṭyā mahāmegha ivātapānte // Bc_1.73 //</l>
+</lg>
+
+<lg>
+<l>tṛṣṇārgalaṃ mohatamaḥkapāṭaṃ dvāraṃ prajānāmapayānahetoḥ /</l>
+<l>vipāṭayiṣyatyayamuttamena saddharmatāḍena durāsadena // Bc_1.74 //</l>
+</lg>
+
+<lg>
+<l>svairmohapāśaiḥ pariveṣṭitasya duḥkhābhibhūtasya nirāśrayasya /</l>
+<l>lokasya saṃbudhya ca dharmarājaḥ kariṣyate bandhanamokṣameṣaḥ // Bc_1.75 //</l>
+</lg>
+
+<lg>
+<l>tanmā kṛthāḥ śokamimaṃ prati tvamasminsa śocyo 'sti manuṣyaloke /</l>
+<l>mohena vā kāmasukhairmadādvā yo naiṣṭhikaṃ śroṣyati nāsya dharmam // Bc_1.76 //</l>
+</lg>
+
+<lg>
+<l>bhraṣṭasya tasmācca guṇādato me dhyānāni labdhvāpyakṛtārthataiva /</l>
+<l>dharmasya tasyāśravaṇādahaṃ hi manye vipattiṃ tridive 'pi vāsam // Bc_1.77 //</l>
+</lg>
+
+<lg>
+<l>iti śrutārthaḥ sasuhṛtsadārastyaktvā viṣādaṃ mumude narendraḥ /</l>
+<l>evaṃvidho 'yaṃ tanayo mameti mene sa hi svāmapi sāravattām // Bc_1.78 //</l>
+</lg>
+
+<p>ārṣeṇa mārgeṇa tu yāsyatīti cintāvidheyaṃ hṛdayaṃ cakāra /
+na khalvasau na priyadharmapakṣaḥ / saṃtānanāśāttu bhayaṃ dadarśa // Bc_1.79 //</p>
+
+<lg>
+<l>atha munirasito nivedya tattvaṃ sutaniyataṃ sutaviklavāya rājñe /</l>
+<l>sabahumatumudīkṣyamāṇarūpaḥ pavanapathena yathāgataṃ jagāma // Bc_1.80 //</l>
+</lg>
+
+<lg>
+<l>kṛtamitiranujāsutaṃ ca dṛṣṭvā munivacanaśravaṇe ca tanmatau ca /</l>
+<l>bahuvidhamanukampayā sa sādhuḥ priyasutavadviniyojayāṃcakāra // Bc_1.81 //</l>
+</lg>
+
+<lg>
+<l>narapatirapi putrajanmatuṣṭo viṣayagatāni vimucya bandhanāni /</l>
+<l>kulasadṛśamacīrakaradyathāvatpriyatanayastanayasya jātakarma // Bc_1.82 //</l>
+</lg>
+
+<lg>
+<l>daśasu pariṇateṣvahaḥsu caiva prayatamanāḥ parayā mudā parītaḥ /</l>
+<l>akuruta japahomamaṅgalādyāḥ paramabhavāya sutasya devatejyāḥ // Bc_1.83 //</l>
+</lg>
+
+<lg>
+<l>api ca śatasahasrapūrṇasaṃkhyāḥ sthirabalavattanayāḥ sahemaśṛṅgīḥ /</l>
+<l>anupagatajarāḥ payasvinīrgāḥ svayamadadātsutavṛddhaye dvijebhyaḥ // Bc_1.84 //</l>
+</lg>
+
+<lg>
+<l>bahuvidhaviṣayāstato yatātmā svahṛdayatoṣakarīḥ kriyā vidhāya /</l>
+<l>guṇavati niyate śive muhūrte matimakaronmuditaḥ purapraveśe // Bc_1.85 //</l>
+</lg>
+
+<lg>
+<l>dviradaradamayīmatho mahārhā sitasitapuṣpabhṛtāṃ maṇipradīpām /</l>
+<l>abhajata śivikāṃ śivāya devī tanayavatī praṇipatya devatābhyaḥ // Bc_1.86 //</l>
+</lg>
+
+<lg>
+<l>puramatha purataḥ praveśya patnīṃ sthavirajanānugatāmapatyanāthām /</l>
+<l>nṛpatirapi jagāma paurasaṃghairdivamamarairmaghavānivārcyamānaḥ // Bc_1.87 //</l>
+</lg>
+
+<lg>
+<l>bhavanamatha vigāhya śākyarājo bhava iva ṣaṇmukhajanmanā pratītaḥ /</l>
+<l>idamidamiti harṣapūrṇavaktro bahuvidhapuṣṭiyaśaskaraṃ vyadhatta // Bc_1.88 //</l>
+</lg>
+
+<lg>
+<l>iti narapatiputrajanmavṛddhyā sajanapadaṃ kapilāvhayaṃ puraṃ tat /</l>
+<l>dhanadapuramivāpsaro 'vakīrṇa muditamabhūnnalakūbaraprasūtau // Bc_1.89 //</l>
+</lg>
+
+<l>iti buddhacarite mahākāvye bhagavatprasūtirnāma prathamaḥ sargaḥ // 1 //</l>
+
+<p>CANTO II</p>
+
+<lg>
+<l>ā janmano janmajarāntakasya tasyātmajasyātmajitaḥ sa rājā /</l>
+<l>ahanyahanyarthagajāśvamitrairvṛddhiṃ yayau sindhurivāmbuvegaiḥ // Bc_2.1 //</l>
+</lg>
+
+<lg>
+<l>dhanasya ratnasya ca tasya tasya kṛtākṛtasyaiva ca kāñcanasya /</l>
+<l>tadā hi naikānsa nidhīnavāpa manorathasyāpyatibhārabhūtān // Bc_2.2 //</l>
+</lg>
+
+<lg>
+<l>ye padmakalpairapi ca dvipendrairna maṇḍalaṃ śakyamihābhinetum /</l>
+<l>madotkaṭā haimavatā gajāste vināpi yatnādupatasthurenam // Bc_2.3 //</l>
+</lg>
+
+<lg>
+<l>nānāṅkacinhairnavahemabhāṇḍairvibhūṣitairlambasaṭaistathānyaiḥ /</l>
+<l>saṃcukṣubhe cāsya puraṃ turaṅgairbalena maitryā ca dhanena cāptaiḥ // Bc_2.4 //</l>
+</lg>
+
+<lg>
+<l>puṣṭāśca tuṣṭāśca tathāsya rājye sādhvyo 'rajaskā guṇavatpayaskāḥ /</l>
+<l>udagravatsaiḥ sahitā babhūvurbavhyo bahukṣīraduhaśca gāvaḥ // Bc_2.5 //</l>
+</lg>
+
+<lg>
+<l>madhyasthatāṃ tasya ripurjagāma madhyasthabhāvaḥ prayayau suhṛttvam /</l>
+<l>viśeṣato dārḍhyamiyāya mitraṃ dvāvasya pakṣāvaparastu nāsa // Bc_2.6 //</l>
+</lg>
+
+<lg>
+<l>tathāsya mandānilameghaśabdaḥ saudāminīkuṇḍalamaṇḍitābhraḥ /</l>
+<l>vināśmavarṣāśanipātadoṣaiḥ kāle ca deśe pravavarṣa devaḥ // Bc_2.7 //</l>
+</lg>
+
+<lg>
+<l>ruroha sasyaṃ phalavadyathartu tadākṛtenāpi kṛṣiśrameṇa /</l>
+<l>tā eva cāsyauṣadhayo rasena sāreṇa caivābhyadhikā babhūvuḥ // Bc_2.8 //</l>
+</lg>
+
+<lg>
+<l>śarīrasaṃdehakare 'pi kāle saṃgrāmasaṃmarda iva pravṛte /</l>
+<l>svasthāḥ sukhaṃ caiva nirāmayaṃ ca prajajñire kālavaśena nāryaḥ // Bc_2.9 //</l>
+</lg>
+
+<lg>
+<l>pṛthagvratibhyo vibhave 'pi garhye na prārthayanti sma narāḥ parebhyaḥ /</l>
+<l>abhyarthitaḥ sūkṣmadhano 'pi cāryastadā na kaścidvimukho babhūva // Bc_2.10 //</l>
+</lg>
+
+<lg>
+<l>nāgauravo bandhuṣu nāpyadātā naivāvrato nānṛtiko na hiṃsraḥ /</l>
+<l>āsīttadā kaścana tasya rājye rājño yayāteriva nāhuṣasya // Bc_2.11 //</l>
+</lg>
+
+<lg>
+<l>udyānadevāyatanāśramāṇāṃ kūpaprapāpuṣkariṇīvanānām /</l>
+<l>cakruḥ kriyāstatra ca dharmakāmāḥ pratyakṣataḥ svargīmavopalabhya // Bc_2.12 //</l>
+</lg>
+
+<lg>
+<l>muktaśca durbhikṣabhayāmayebhyo hṛṣṭo janaḥ svarga ivābhireme /</l>
+<l>patnīṃ patirvā mahiṣī patiṃ vā parasparaṃ na vyabhiceratuśca // Bc_2.13 //</l>
+</lg>
+
+<lg>
+<l>kaścitsiṣeve rataye na kāmaṃ kāmārthamarthaṃ na jugopa kaścit /</l>
+<l>kaściddhanārthaṃ na cacāra dharma dharmāya kaścinna cakāra hiṃsām // Bc_2.14 //</l>
+</lg>
+
+<lg>
+<l>steyādibhiścāpyaribhiśca naṣṭaṃ svasthaṃ svacakraṃ paracakramuktam /</l>
+<l>kṣemaṃ subhikṣaṃ ca babhūva tasya purānaraṇyasya yathaiva rāṣṭre // Bc_2.15 //</l>
+</lg>
+
+<lg>
+<l>tadā hi tajjanmani tasya rājño manorivādityasutasya rājye /</l>
+<l>cacāra harṣaḥ praṇanāśa pāpmā jajvāla dharmaḥ kaluṣaḥ śaśāma // Bc_2.16 //</l>
+</lg>
+
+<lg>
+<l>evaṃvidhā rājakulasya saṃpatsarvārthasiddhiśca yato babhūva /</l>
+<l>tato nṛpastasya sutasya nāma sarvārthasiddhi 'yamiti pracakre // Bc_2.17 //</l>
+</lg>
+
+<lg>
+<l>devī tu māyā vibudharṣikalpaṃ dṛṣṭvā viśālaṃ tanayaprabhāvam /</l>
+<l>jātaṃ praharṣa na śaśāka soḍhuṃ tato nivāsāya divaṃ jagāma // Bc_2.18 //</l>
+</lg>
+
+<lg>
+<l>tataḥ kumāraṃ suragarbhakalpaṃ snehena bhāvena ca nirviśeṣam /</l>
+<l>mātṛṣvasā mātṛsamaprabhāvā saṃvardhayāmātmajavadbabhūva // Bc_2.19 //</l>
+</lg>
+
+<lg>
+<l>tataḥ sa bālārka ivodayasthaḥ samīrito vanhirivānilena /</l>
+<l>krameṇa samyagvavṛdhe kumārastārādhipaḥ pakṣa ivātamaske // Bc_2.20 //</l>
+</lg>
+
+<lg>
+<l>tato mahārhāṇi ca candanāni ratnāvalīścauṣadhibhiḥ sagarbhāḥ /</l>
+<l>mṛgaprayuktān rathakāṃśca haimānācakrire 'smai suhṛdālayebhyaḥ // Bc_2.21 //</l>
+</lg>
+
+<lg>
+<l>vayo 'nurūpāṇi ca bhūṣaṇāni hiraṇmayān hastimṛgāśvakāṃśca /</l>
+<l>rathāṃśca goputrakasaṃprayuktān putrīśca cāmīkararūpyacitrāḥ // Bc_2.22 //</l>
+</lg>
+
+<lg>
+<l>evaṃ sa taistairviṣayopacārairvayo 'nurūpairupacaryamāṇaḥ /</l>
+<l>bālo 'pyabālapratimo babhūva dhṛtyā ca śaucena dhiyā śriyā ca // Bc_2.23 //</l>
+</lg>
+
+<lg>
+<l>vayaśca kaumāramatītya samyak saṃprāpya kāle pratipattikarma /</l>
+<l>alpairahobhirbahuvarṣagāmyā jagrāha vidyāḥ svakulānurūpāḥ // Bc_2.24 //</l>
+</lg>
+
+<lg>
+<l>naiḥśreyasaṃ tasya tu bhavyamarthaṃ śrutvā purastādasitānmaharṣeḥ /</l>
+<l>kāmeṣu saṅgaṃ janayāṃbabhūva vanāni yāyāditi śākyarājaḥ // Bc_2.25 //</l>
+</lg>
+
+<lg>
+<l>kulāttato 'smai sthiraśīlayuktātsādhvīṃ vapurhrīvinayopapannām /</l>
+<l>yaśodharāṃ nāma yaśoviśālāṃ vāmābhidhānāṃ śriyamājuhāva // Bc_2.26 //</l>
+</lg>
+
+<lg>
+<l>vidyotamāno vapuṣā pareṇa sanatkumārapratimaḥ kumāraḥ /</l>
+<l>sārdha tayā śākyanarendravadhvā śacyā sahasrākṣa ivābhireme // Bc_2.27 //</l>
+</lg>
+
+<lg>
+<l>kiṃcinmanaḥkṣobhakaraṃ pratīpaṃ kathaṃ na paśyediti so 'nucintya /</l>
+<l>vāsaṃ nṛpo vyādiśati sma tasmai harmyodareṣveva na bhūpracāram // Bc_2.28 //</l>
+</lg>
+
+<lg>
+<l>tataḥ śarattoyadapāṇḍareṣu bhūmau vimāneṣviva rañjiteṣu /</l>
+<l>harmyeṣu sarvartusukhāśrayeṣu strīṇāmudārairvijahāra tūryaiḥ // Bc_2.29 //</l>
+</lg>
+
+<lg>
+<l>kalairhi cāmīkarabaddhakakṣairnārīkarāgrābhihatairmṛdaṅgaiḥ /</l>
+<l>varāpsaronṛtyasamaiśca nṛtyaiḥ kailāsavattadbhavanaṃ rarāja // Bc_2.30 //</l>
+</lg>
+
+<lg>
+<l>vāgbhiḥ kalābhirlīlataiśca hāvairmadaiḥ sakhelairmadhuraiśca hāsaiḥ /</l>
+<l>taṃ tatra nāryo ramayāṃbabhūvurbhūvañcitairardhīnarīkṣitaiśca // Bc_2.31 //</l>
+</lg>
+
+<lg>
+<l>tataḥ sa kāmāśrayapaṇḍitābhiḥ strībhirgṛhīto ratikarkaśābhiḥ /</l>
+<l>vimānapṛṣṭhānna mahīṃ jagāma vimānapṛṣṭhādiva puṇyakarmā // Bc_2.32 //</l>
+</lg>
+
+<lg>
+<l>nṛpastu tasyaiva vivṛddhihetostadbhāvinārthena ca codyamānaḥ /</l>
+<l>śame 'bhireme virarāma pāpādbheje damaṃ saṃvibabhāja sādhūn // Bc_2.33 //</l>
+</lg>
+
+<lg>
+<l>nādhīravatkāmasukhe sasañje na saṃrarañje viṣamaṃ jananyām /</l>
+<l>dhṛtyendriyāśvāṃścapalānvijigye bandhūṃśca paurāṃśca guṇairjigāya // Bc_2.34 //</l>
+</lg>
+
+<lg>
+<l>nādhyaiṣṭa duḥkhāya parasya vidyāṃ jñānaṃ śivaṃ yattu tadadhyagīṣṭa /</l>
+<l>svābhyaḥ prajābhyo hi yathā tathaiva sarvaprajābhyaḥ śivamāśaśaṃse // Bc_2.35 //</l>
+</lg>
+
+<lg>
+<l>bhaṃ bhāsuraṃ cāṅgirasādhidevaṃ yathāvadānarca tadāyuṣe saḥ /</l>
+<l>juhāva havyānyakṛśe kṛśānau dadau dvijebhyaḥ kṛśanaṃ ca gāśca // Bc_2.36 //</l>
+</lg>
+
+<lg>
+<l>sasnau śarīraṃ pavituṃ manaśca tīrthāmbubhiścaiva guṇāmbubhiśca /</l>
+<l>vedopadiṣṭaṃ samamātmajaṃ ca somaṃ papau śāntisukhaṃ ca hārdam // Bc_2.37 //</l>
+</lg>
+
+<lg>
+<l>sāntvaṃ babhāṣe na ca nārthavadyajjajalpa tattvaṃ na ca vipriyaṃ yat /</l>
+<l>sāntvaṃ hyatattvaṃ paruṣaṃ ca tattvaṃ hriyāśakannātmana eva vaktum // Bc_2.38 //</l>
+</lg>
+
+<lg>
+<l>iṣṭeṣvaniṣṭeṣu ca kāryavatsu na rāgadoṣāśrayatāṃ prapede /</l>
+<l>śivaṃ siṣeve vyavahāraśuddhaṃ yajñaṃ hi mene na tathā yathā tat // Bc_2.39 //</l>
+</lg>
+
+<lg>
+<l>āśāvate cāhigatāya sadyo deyāmbubhistarṣamacecchidiṣṭa /</l>
+<l>yuddhādṛte vṛttaparaśvadhena dviḍdarpamudvṛttamabebhidiṣṭa // Bc_2.40 //</l>
+</lg>
+
+<lg>
+<l>ekaṃ vininye sa jugopa sapta saptaiva tatyāja rarakṣa pañca /</l>
+<l>prāpa trivarga bubudhe trivarga jajñe dvivarga prajahau dvivargam // Bc_2.41 //</l>
+</lg>
+
+<lg>
+<l>kṛtāgaso 'pi pratipādya vadhyānnājīghanannāpi ruṣā dadarśa /</l>
+<l>babandha sāntvena phalena caitāṃstyāgo 'pi teṣāṃ hyanayāya dṛṣṭaḥ // Bc_2.42 //</l>
+</lg>
+
+<lg>
+<l>ārṣāṇyacārītparamavratāni vairāṇyahāsīccirasaṃbhṛtāni /</l>
+<l>yaśāṃsi cāpadguṇagandhavanti rajāṃsyahārṣīnmalinīkarāṇi // Bc_2.43 //</l>
+</lg>
+
+<lg>
+<l>na cājihīrṣidvalimapravṛttaṃ na cācikīrṣitparavastvabhidhyām /</l>
+<l>na cāvivakṣīd dviṣatāmadharma na cāvivākṣīddhṛdayena manyum // Bc_2.44 //</l>
+</lg>
+
+<lg>
+<l>tasmiṃstathā bhūmipatau pravṛtte bhṛtyāśca paurāśca tathaiva ceruḥ /</l>
+<l>śamātmake cetasi viprasanne prayuktayogasya yathendriyāṇi // Bc_2.45 //</l>
+</lg>
+
+<lg>
+<l>kāle tataścārupayodharāyāṃ yaśodharāyāṃ svayaśodharāyām /</l>
+<l>śauddhodane rāhusapatnavaktro jajñe suto rāhula eva nāmnā // Bc_2.46 //</l>
+</lg>
+
+<lg>
+<l>atheṣṭaputraḥ paramapratītaḥ kulasya vṛddhiṃ prati bhūmipālaḥ /</l>
+<l>yathaiva putraprasave nananda tathaiva pautraprasave nananda // Bc_2.47 //</l>
+</lg>
+
+<lg>
+<l>putrasya me putragato mameva snehaḥ kathaṃ syāditi jātaharṣaḥ /</l>
+<l>kāle sa taṃ taṃ vidhimālalambe putrapriyaḥ svargamivārurukṣan // Bc_2.48 //</l>
+</lg>
+
+<lg>
+<l>sthitvā pathi prāthamakalpikānāṃ rājavarṣabhāṇāṃ yaśasānvitānām /</l>
+<l>śuklānyamuktvāpi tapāṃsyatapta yajñaiśca hiṃsārahitairayaṣṭa // Bc_2.49 //</l>
+</lg>
+
+<lg>
+<l>ajājvaliṣṭātha sa puṇyakarmā nṛpaśriyā caiva tapaḥśriyā ca /</l>
+<l>kulena vṛttena dhiyā ca dīptastejaḥ sahasrāṃśurivotsisṛkṣuḥ // Bc_2.50 //</l>
+</lg>
+
+<lg>
+<l>svāyaṃbhuvaṃ cārcikamarcayitvā jajāpa putrasthitaye sthitaśrīḥ /</l>
+<l>cakāra karmāṇi ca duṣkarāṇi prajāḥ sisṛkṣuḥ ka ivādikāle // Bc_2.51 //</l>
+</lg>
+
+<lg>
+<l>tatyāja śastraṃ vimamarśa śāstraṃ śamaṃ siṣeve niyamaṃ viṣehe /</l>
+<l>vaśīva kaṃcidviṣayaṃ na bheje piteva sarvānviṣayāndadarśa // Bc_2.52 //</l>
+</lg>
+
+<lg>
+<l>babhāra rājyaṃ sa hi putrahetoḥ putraṃ kulārthaṃ yaśase kulaṃ tu /</l>
+<l>svargāya śabdaṃ divamātmahetordharmārthamātmasthitimācakāṅkṣa // Bc_2.53 //</l>
+</lg>
+
+<lg>
+<l>evaṃ sa dharma vividhaṃ cakāra sidbhirnipātaṃ śrutitaśca siddham /</l>
+<l>dṛṣṭvā kathaṃ putramukhaṃ suto me vanaṃ na yāyāditi nāthamānaḥ // Bc_2.54 //</l>
+</lg>
+
+<lg>
+<l>rirakṣiṣantaḥ śriyamātmasaṃsthāṃ rakṣanti putrān bhuvi bhūmipālāḥ /</l>
+<l>putraṃ narendraḥ sa tu dharmakāmo rarakṣa dharmādviṣayeṣu muñcan // Bc_2.55 //</l>
+</lg>
+
+<lg>
+<l>vanamanupamasattvā bodhisattvāstu sarve viṣayasukharasajñā jagmurutpannaputrāḥ /</l>
+<l>ata upacitakarmā rūḍhamūle 'pi hetau sa ratimupasiṣeve bodhimāpanna yāvat // Bc_2.56 //</l>
+</lg>
+
+<l>iti buddhacarite mahākāvye antaḥpuravihāro nāma dvitīyaḥ sargaḥ // 2 //</l>
+
+<p>CANTO III</p>
+
+<lg>
+<l>tataḥ kadācinmṛduśādvalāni puṃskokilonnāditapādapāni /</l>
+<l>śuśrāva padmākaramaṇḍitāni gītairnibaddhāni sa kānanāni // Bc_3.1 //</l>
+</lg>
+
+<lg>
+<l>śrutvā tataḥ strījanavallabhānāṃ manojñabhāvaṃ purakānanānām /</l>
+<l>bahiḥprayāṇāya cakāra buddhimantargṛhe nāga ivāvarūddhaḥ // Bc_3.2 //</l>
+</lg>
+
+<lg>
+<l>tato nṛpastasya niśamya bhāvaṃ putrābhidhānasya manorathasya /</l>
+<l>snehasya lakṣmyā vayasaśca yogyāmājñāpayāmāsa vihārayātrām // Bc_3.3 //</l>
+</lg>
+
+<lg>
+<l>nivartayāmāsa ca rājamārge saṃpātamārtasya pṛthagjanasya /</l>
+<l>mā bhūtkumāraḥ sukumāracittaḥ saṃvignacetā iti manyamānaḥ // Bc_3.4 //</l>
+</lg>
+
+<lg>
+<l>pratyaṅgahīnānvikalendriyāṃśca jīrṇāturādīn kṛpaṇāṃśca dikṣu /</l>
+<l>tataḥ samutsārya pareṇa sāmnā śobhāṃ parāṃ rājapathasya cakuḥ // Bc_3.5 //</l>
+</lg>
+
+<lg>
+<l>tataḥ kṛte śrīmati rājamārge śrīmānvinītānucaraḥ kumāraḥ /</l>
+<l>prāsādapṛṣṭhādavatīrya kāle kṛtābhyanujño nṛpamabhyagacchat // Bc_3.6 //</l>
+</lg>
+
+<lg>
+<l>atho narendraḥ sutamāgatāśruḥ śirasyupāghrāya ciraṃ nirīkṣya /</l>
+<l>gaccheti cājñāpayati sma vācā snehānna cainaṃ manasā mumoca // Bc_3.7 //</l>
+</lg>
+
+<lg>
+<l>tataḥ sa jāmbūnadabhāṇḍabhṛdbhiryuktaṃ caturbhirnibhṛtaisturaṅgaiḥ /</l>
+<l>aklībavidvacchuciraśmidhāraṃ hiraṇmayaṃ syandanamāruroha // Bc_3.8 //</l>
+</lg>
+
+<lg>
+<l>tataḥ prakīrṇojjvalapuṣpajālaṃ viṣaktamālyaṃ pracalatpatākam /</l>
+<l>mārgaṃ prapede sadṛśānuyātraścandraḥ sanakṣatra ivāntarīkṣam // Bc_3.9 //</l>
+</lg>
+
+<lg>
+<l>kautūhalātsphītataraiśca netrairnīlotpalārdhairiva kīryamāṇam /</l>
+<l>śanaiḥ śanai rājapathaṃ jagāhe pauraiḥ samantādabhivīkṣyamāṇaḥ // Bc_3.10 //</l>
+</lg>
+
+<lg>
+<l>taṃ tuṣṭuvuḥ saumyaguṇena kecidvavandire dīptatayā tathānye /</l>
+<l>saumukhyatastu śriyamasya kecidvaipulyamāśaṃsiṣurāyuṣaśca // Bc_3.11 //</l>
+</lg>
+
+<lg>
+<l>niḥsṛtya kubjāśca mahākulebhyo vyūhāśca kairātakavāmanānām /</l>
+<l>nāryaḥ kṛśebhyaśca niveśanebhyo devānuyānadhvajavatpraṇemuḥ // Bc_3.12 //</l>
+</lg>
+
+<lg>
+<l>tataḥ kumāraḥ khalu gacchatīti śrutvā striyaḥ preṣyajanātpravṛttim /</l>
+<l>didṛkṣayā harmyatalāni jagmurjanena mānyena kṛtābhyanujñāḥ // Bc_3.13 //</l>
+</lg>
+
+<lg>
+<l>tāḥ srastakāñcīguṇavighnitāśca suptaprabuddhākulalocanāśca /</l>
+<l>vṛttāntavinyastavibhūṣaṇāśca kautūhalenānibhṛtāḥ parīyuḥ // Bc_3.14 //</l>
+</lg>
+
+<lg>
+<l>prāsādasopānatalapraṇādaiḥ kāñcīravairnūpuranisvanaiśca /</l>
+<l>vitrāsayantyo gṛhapakṣisaṅghānanyonyavegāṃśca samākṣipantyaḥ // Bc_3.15 //</l>
+</lg>
+
+<lg>
+<l>kāsāṃcidāsāṃ tu varāṅganānāṃ jātatvarāṇāmapi sotsukānām /</l>
+<l>gatiṃ gurutvājjagṛhurviśālāḥ śroṇīrathāḥ pīnapayodharāśca // Bc_3.16 //</l>
+</lg>
+
+<lg>
+<l>śīghraṃ samarthāpi tu gantumanyā gatiṃ nijagrāha yayau na tūrṇam /</l>
+<l>hriyāpragalbhā vinigūhamānā rahaḥprayuktāni vibhūṣaṇāni // Bc_3.17 //</l>
+</lg>
+
+<lg>
+<l>parasparotpīḍanapiṇḍitānāṃ saṃmardasaṃkṣobhikuṇḍalānām /</l>
+<l>tāsāṃ tadā sasvanabhūṣaṇānāṃ vātayaneṣvapraśamo babhūva // Bc_3.18 //</l>
+</lg>
+
+<lg>
+<l>vātāyanebhyastu viniḥsṛtāni parasparāyāsitakuṇḍalāni /</l>
+<l>strīṇāṃ virejurmukhapaṅkajāni saktāni harmyeṣviva paṅkajāni // Bc_3.19 //</l>
+</lg>
+
+<lg>
+<l>tato vimānairyuvatīkarālaiḥ kautūhalodghāṭitavātayānaiḥ /</l>
+<l>śrīmatsamantānnagaraṃ babhāse viyadvimānairiva sāpsarobhiḥ // Bc_3.20 //</l>
+</lg>
+
+<lg>
+<l>vātāyanānāmaviśālabhāvādanyonyagaṇḍārpitakuṇḍalānām /</l>
+<l>mukhāni rejuḥ pramodottamānāṃ baddhāḥ kalāpā iva paṅkajānām // Bc_3.21 //</l>
+</lg>
+
+<lg>
+<l>taṃ tāḥ kumāraṃ pathi vīkṣamāṇāḥ striyo babhurgāmiva gantukāmāḥ /</l>
+<l>ūrdhvonmukhāścainamudīkṣamāṇā narā babhurdyāmiva gantukāmāḥ // Bc_3.22 //</l>
+</lg>
+
+<lg>
+<l>dṛṣṭvā ca taṃ rājasutaṃ striyastā jājvalyamānaṃ vapuṣā śriyā ca /</l>
+<l>dhanyāsya bhāryeti śanairavocañśuddhairmanobhiḥ khalu nānyabhāvāt // Bc_3.23 //</l>
+</lg>
+
+<lg>
+<l>ayaṃ kila vyāyatapīnabāhū rūpeṇa sākṣādiva puṣpaketuḥ /</l>
+<l>tyaktvā śriyaṃ dharmamupaiṣyatīti tasmin hi tā gauravameva cakruḥ // Bc_3.24 //</l>
+</lg>
+
+<lg>
+<l>kīrṇa tathā rājapathaṃ kumāraḥ paurairvinītaiḥ śucidhīraveṣaiḥ /</l>
+<l>tatpūrvamālokya jaharṣa kiṃcinmene punarbhāvamivātmanaśca // Bc_3.25 //</l>
+</lg>
+
+<lg>
+<l>puraṃ tu tatsvargamiva prahṛṣṭaṃ śuddhādhivāsāḥ samavekṣya devāḥ /</l>
+<l>jīrṇaṃ naraṃ nirmamire prayātuṃ saṃcodanārthaṃ kṣitipātmajasya // Bc_3.26 //</l>
+</lg>
+
+<lg>
+<l>tataḥ kumāro jarayābhibhūtaṃ dṛṣṭvā narebhyaḥ pṛthagākṛtiṃ tam /</l>
+<l>uvāca saṃgrāhakamāgatāsthastatraiva niṣkampaniviṣṭadṛṣṭiḥ // Bc_3.27 //</l>
+</lg>
+
+<lg>
+<l>ka eṣa bhoḥ sūta naro 'bhyupetaḥ keśaiḥ sitairyaṣṭiviṣaktahaṣṭaḥ /</l>
+<l>bhrūsaṃvṛtākṣaḥ śithilānatāṅgaḥ kiṃ vikriyaiṣā prakṛtiryadṛcchā // Bc_3.28 //</l>
+</lg>
+
+<lg>
+<l>ityevamuktaḥ sa rathapraṇetā nivedayāmāsa nṛpātmajāya /</l>
+<l>saṃrakṣyamapyarthamadoṣadarśī taireva devaiḥ kṛtabuddhimohaḥ // Bc_3.29 //</l>
+</lg>
+
+<lg>
+<l>rūpasya hantrī vyasanaṃ balasya śokasya yonirnidhana ratīnām /</l>
+<l>nāśaḥ smṛtīnāṃ ripurindriyāṇāmeṣā jarā nāma yayaiṣa bhagnaḥ // Bc_3.30 //</l>
+</lg>
+
+<lg>
+<l>pītaṃ hyanenāpi payaḥ śiśutve kālena bhūyaḥ parisṛptamurvyām /</l>
+<l>krameṇa bhūtvā ca yuvā vapuṣmān krameṇa tenaiva jarāmupetaḥ // Bc_3.31 //</l>
+</lg>
+
+<lg>
+<l>ityevamukte calitaḥ sa kiṃcidrājātmajaḥ sūtamidaṃ babhāṣe /</l>
+<l>kimeṣa doṣo bhavitā mamāpītyasmai tataḥ sārathirabhyuvāca // Bc_3.32 //</l>
+</lg>
+
+<lg>
+<l>āyuṣmato 'pyeṣa vayaḥprakarṣo niḥsaṃśayaṃ kālavaśena bhāvī /</l>
+<l>evaṃ jarāṃ rūpavināśayitrīṃ jānāti caivecchati caiva lokaḥ // Bc_3.33 //</l>
+</lg>
+
+<lg>
+<l>tataḥ sa pūrvāśayaśuddhabuddhirvistīrṇakalpācitapuṇyakarmā /</l>
+<l>śrutvā jarāṃ savivije mahātmā mahāśanerghoṣamivāntike gauḥ // Bc_3.34 //</l>
+</lg>
+
+<lg>
+<l>niḥśvasya dīrghaṃ svaśiraḥ prakampya tasmiṃśca jīrṇe viniveśya cakṣuḥ /</l>
+<l>tāṃ caiva dṛṣṭvā janatāṃ saharṣāṃ vākyaṃ sa saṃvigna idaṃ jagāda // Bc_3.35 //</l>
+</lg>
+
+<lg>
+<l>evaṃ jarā hanti ca nirviśeṣaṃ smṛtiṃ ca rūpaṃ ca parākramaṃ ca /</l>
+<l>na caiva saṃvegamupaiti lokaḥ pratyakṣato 'pīdṛśamīkṣamāṇaḥ // Bc_3.36 //</l>
+</lg>
+
+<lg>
+<l>evaṃ gate sūta nivartayāśvān śīghraṃ gṛhāṇyeva bhavānprayātu /</l>
+<l>udyānabhūmau hi kuto ratirme jarābhaye cetasi vartamāne // Bc_3.37 //</l>
+</lg>
+
+<lg>
+<l>athājñayā bhartusutasya tasya nivartayāmāsa rathaṃ niyantā /</l>
+<l>tataḥ kumāro bhavanaṃ tadeva cintāvaśaḥ śūnyamiva prapede // Bc_3.38 //</l>
+</lg>
+
+<lg>
+<l>yadā tu tatraiva na śarma lebhe jarā jareti praparīkṣamāṇaḥ /</l>
+<l>tato narendrānumataḥ sa bhūyaḥ krameṇa tenaiva bahirjagāma // Bc_3.39 //</l>
+</lg>
+
+<lg>
+<l>athāparaṃ vyādhiparītadehaṃ ta eva devāḥ sasṛjurmanuṣyam /</l>
+<l>dṛṣṭvā ca taṃ sārathimābabhāṣe śauddhodanistadgatadṛṣṭireva // Bc_3.40 //</l>
+</lg>
+
+<lg>
+<l>sthūlodaraḥ śvāsacalaccharīraḥ srastāṃsabāhuḥ kṛśapāṇḍugātraḥ /</l>
+<l>ambeti vācaṃ karuṇaṃ bruvāṇaḥ paraṃ samāśritya naraḥ ka eṣaḥ // Bc_3.41 //</l>
+</lg>
+
+<lg>
+<l>tato 'bravītsārathirasya saumya dhātuprakopaprabhavaḥ pravṛddhaḥ /</l>
+<l>rogābhidhānaḥ sumahānanarthaḥ śakto 'pi yenaiṣa kṛto 'svatantraḥ // Bc_3.42 //</l>
+</lg>
+
+<lg>
+<l>ityūcivān rājasutaḥ sa bhūyastaṃ sānukampo naramīkṣamāṇaḥ /</l>
+<l>asyaiva jāto pṛthageṣa doṣaḥ sāmānyato rogabhayaṃ prajānām // Bc_3.43 //</l>
+</lg>
+
+<lg>
+<l>tato babhāṣe sa rathapraṇetā kumāra sādhāraṇa eṣa doṣaḥ /</l>
+<l>evaṃ hi rogaiḥ paripīḍyamāno rujāturo harṣamupaiti lokaḥ // Bc_3.44 //</l>
+</lg>
+
+<lg>
+<l>iti śrutārthaḥ sa viṣaṇṇacetāḥ prāvepatāmbūrmigataḥ śaśīva /</l>
+<l>idaṃ ca vākyaṃ karuṇāyamānaḥ provāca kiṃcinmṛdunā svareṇa // Bc_3.45 //</l>
+</lg>
+
+<lg>
+<l>idaṃ ca rogavyasanaṃ prajānāṃ paśyaṃśca viśrambhamupaiti lokaḥ /</l>
+<l>vistīrṇamajñānamaho narāṇāṃ hasanti ye rogabhayairamuktāḥ // Bc_3.46 //</l>
+</lg>
+
+<lg>
+<l>nivartyatāṃ sūta bahiḥprayāṇānnarendrasadmaiva rathaḥ prayātu /</l>
+<l>śrutvā ca me rogabhayaṃ ratibhyaḥ pratyāhataṃ saṃkucatīva cetaḥ // Bc_3.47 //</l>
+</lg>
+
+<lg>
+<l>tato nivṛttaḥ sa nivṛttaharṣaḥ pradhyānayuktaḥ praviveśa veśma /</l>
+<l>taṃ dvistathā prekṣya ca saṃnivṛttaṃ paryeṣaṇaṃ bhūmipatiścakāra // Bc_3.48 //</l>
+</lg>
+
+<lg>
+<l>śrutvā nimittaṃ tu nivartanasya saṃtyaktamātmānamanena mene /</l>
+<l>mārgasya śaucādhikṛtāya caiva cukrośa ruṣṭo 'pi ca nogradaṇḍaḥ // Bc_3.49 //</l>
+</lg>
+
+<lg>
+<l>bhūyaśca tasmai vidadhe sutāya viśeṣayuktaṃ viṣayapracāram /</l>
+<l>calendriyatvādapi nāma sakto nāsmānvijahyāditi nāthamānaḥ // Bc_3.50 //</l>
+</lg>
+
+<lg>
+<l>yadā ca śabdādibhirindriyārthairantaḥpure naiva suto 'sya reme /</l>
+<l>tato bahirvyādiśati sma yātrāṃ rasāntaraṃ syāditi manyamānaḥ // Bc_3.51 //</l>
+</lg>
+
+<lg>
+<l>snehācca bhāvaṃ tanayasya buddhvā sa rāgadoṣānavicintya kāṃścit /</l>
+<l>yogyāḥ samājñāpayati sma tatra kalāsvabhijñā iti vāramukhyāḥ // Bc_3.52 //</l>
+</lg>
+
+<lg>
+<l>tato viśeṣeṇa narendramārge svalaṃkṛte caiva parīkṣite ca /</l>
+<l>vyatyasya sūtaṃ ca rathaṃ ca rājā prasthāpayāmāsa bahiḥ kumāram // Bc_3.53 //</l>
+</lg>
+
+<lg>
+<l>tatastathā gacchati rājaputre taireva devairvihito gatāsuḥ /</l>
+<l>taṃ caiva mārge mṛtamuhyamānaṃ sūtaḥ kumāraśca dadarśa nānyaḥ // Bc_3.54 //</l>
+</lg>
+
+<lg>
+<l>athabravīdrājasutaḥ sa sūtaṃ naraiścaturbhihriyate ka eṣaḥ /</l>
+<l>dīnairmanuṣyairanugamyamāno yo bhūṣitaścāpyavarudyate ca // Bc_3.55 //</l>
+</lg>
+
+<lg>
+<l>tataḥ sa śuddhātmabhireva devaiḥ śuddhādhivāsairabhibhūtacetāḥ /</l>
+<l>avācyamapyathīmimaṃ niyantā pravyājahārārthavadīśvarāya // Bc_3.56 //</l>
+</lg>
+
+<lg>
+<l>buddhīndriyaprāṇaguṇairviyuktaḥ supto visaṃjñastṛṇakāṣṭhabhūtaḥ /</l>
+<l>saṃvardhya saṃrakṣya ca yatnavadbhiḥ priyapriyaistyajyata eṣa ko 'pi // Bc_3.57 //</l>
+</lg>
+
+<lg>
+<l>iti praṇetuḥ sa niśamya vākyaṃ saṃcukṣubhe kiṃciduvāca cainam /</l>
+<l>kiṃ kevalo 'syaiva janasya dharmaḥ sarvaprajānāmayamīdṛśo 'ntaḥ // Bc_3.58 //</l>
+</lg>
+
+<lg>
+<l>tataḥ praṇetā vadati sma tasmai sarvaprajānāmidamantakarma /</l>
+<l>hīnasya madhyasya mahātmano vā sarvasya loke niyato vināśaḥ // Bc_3.59 //</l>
+</lg>
+
+<lg>
+<l>tataḥ sa dhīro 'pi narendrasūnuḥ śrutvaiva mṛtyuṃ viṣasāda sadyaḥ /</l>
+<l>aṃsena saṃśliṣya ca kūbarāgraṃ provāca nihrādavatā svareṇa // Bc_3.60 //</l>
+</lg>
+
+<lg>
+<l>iyaṃ ca niṣṭhā niyatā prajānāṃ pramādyati tyaktabhayaśca lokaḥ /</l>
+<l>manāṃsi śaṅke kaṭhināni nṝṇāṃ svasthāstathā hyadhvani vartamānāḥ // Bc_3.61 //</l>
+</lg>
+
+<lg>
+<l>tasmādrathaḥ sūta nivartyatā no vihārabhūmerna hi deśakālaḥ /</l>
+<l>jānanvināśaṃ kathamartikāle sacetanaḥ syādiha hi pramattaḥ // Bc_3.62 //</l>
+</lg>
+
+<lg>
+<l>iti bruvāṇe 'pi narādhipātmaje nivartayāmāsa sa naiva taṃ ratham /</l>
+<l>viśeṣayuktaṃ tu narendraśāsanātsa padmaṣaṇḍaṃ vanameva niryayau // Bc_3.63 //</l>
+</lg>
+
+<lg>
+<l>tataḥ śivaṃ kusumitabālapādapaṃ paribhramatpramuditamattakokilam /</l>
+<l>vimānavatsa kamalacārudīrghikaṃ dadarśa tadvanamiva nandanaṃ vanam // Bc_3.64 //</l>
+</lg>
+
+<lg>
+<l>varāṅganāgaṇakalilaṃ nṛpātmajastato balādvanamatinīyate sma tat /</l>
+<l>varāpsarovṛtamalakādhipālayaṃ navavrato muniriva vighnakātaraḥ // Bc_3.65 //</l>
+</lg>
+
+<l>iti buddhacarite mahākāvye saṃvegotpattirnāma tṛtīyaḥ sargaḥ // 3 //</l>
+
+<p>CANTO IV</p>
+
+<lg>
+<l>tatastasmātpurodyānātkautūhalacalekṣaṇāḥ /</l>
+<l>pratyujjagmurnṛpasutaṃ prāptaṃ varamiva striyaḥ // Bc_4.1 //</l>
+</lg>
+
+<lg>
+<l>abhigamya ca tāstasmai vismayotphullalocanāḥ /</l>
+<l>cakrire samudācāraṃ padmakośanibhaiḥ karaiḥ // Bc_4.2 //</l>
+</lg>
+
+<lg>
+<l>tasthuśca parivāryainaṃ manmathākṣiptacetasaḥ /</l>
+<l>niścalaiḥ prītivikacaiḥ pibantya iva locanaiḥ // Bc_4.3 //</l>
+</lg>
+
+<lg>
+<l>taṃ hi tā menire nāryaḥ kāmo vigrahavāniti /</l>
+<l>śobhitaṃ lakṣaṇairdīptaiḥ sahajairbhūṣāṇairiva // Bc_4.4 //</l>
+</lg>
+
+<lg>
+<l>saumyatvāccaiva dhairyācca kāścidenaṃ prajajñire /</l>
+<l>avatīrṇo mahī sākṣād guḍhāṃśuścandramā iti // Bc_4.5 //</l>
+</lg>
+
+<lg>
+<l>tasya tā vapuṣākṣiptā nigṛhītaṃ jajṛmbhire /</l>
+<l>anyonyaṃ dṛṣṭibhirhatvā śanaiśca viniśaśvasuḥ // Bc_4.6 //</l>
+</lg>
+
+<lg>
+<l>evaṃ tā dṛṣṭimātreṇa nāryo dadṛśureva tam /</l>
+<l>na vyājahurna jahasuḥ prabhāveṇāsya yantritāḥ // Bc_4.7 //</l>
+</lg>
+
+<lg>
+<l>tāstathā nu nirārambhā dṛṣṭvā praṇayaviklavāḥ /</l>
+<l>purohitasuto dhīmānudāyī vākyamabravīt // Bc_4.8 //</l>
+</lg>
+
+<lg>
+<l>sarvāḥ sarvakalājñāḥ stha bhāvagrahaṇapaṇḍitāḥ /</l>
+<l>rupacāturyasaṃpannāḥ svaguṇairmukhyatāṃ gatāḥ // Bc_4.9 //</l>
+</lg>
+
+<lg>
+<l>śobhayeta guṇairebhirapi tānuttarān kurūn /</l>
+<l>kuberasyāpi cākrīḍaṃ prāgeva vasudhāmimām // Bc_4.10 //</l>
+</lg>
+
+<lg>
+<l>śaktāścaliyituṃ yūyaṃ vitarāgānuṣīnapi /</l>
+<l>apsarobhiśca kalitān grahītuṃ vibudhānapi // Bc_4.11 //</l>
+</lg>
+
+<lg>
+<l>bhāvajñānena hāvena rūpacāturyasaṃpadā /</l>
+<l>strīṇāmeva ca śaktāḥ stha saṃrāge kiṃ punarnṛṇām // Bc_4.12 //</l>
+</lg>
+
+<lg>
+<l>tāsāmevaṃvidhānāṃ vo viyuktānāṃ svagocare /</l>
+<l>iyamevaṃvidhā ceṣṭā na tuṣṭo 'smyārjavena vaḥ // Bc_4.13 //</l>
+</lg>
+
+<lg>
+<l>idaṃ navavadhūnāṃ vo hrīnīkuñcitacakṣuṣām /</l>
+<l>sadṛśaṃ ceṣṭitaṃ hi syādapi vā gopāyoṣitām // Bc_4.14 //</l>
+</lg>
+
+<lg>
+<l>yadapi syādayaṃ dhīraḥ śriprabhāvānmahāniti /</l>
+<l>strīṇāmapi mahatteja itaḥ kāryo 'tra niścayaḥ // Bc_4.15 //</l>
+</lg>
+
+<lg>
+<l>purā hi kāśisundaryā veśavadhvā mahānṛṣiḥ /</l>
+<l>tāḍito 'bhūtpadā vyāso durdharṣo devatairapi // Bc_4.16 //</l>
+</lg>
+
+<lg>
+<l>manthālagautamo bhikṣurjaṅghayā vāramukhyayā /</l>
+<l>piprīṣuśca tadarthārthaṃ vyasūnniraharatpurā // Bc_4.17 //</l>
+</lg>
+
+<lg>
+<l>gautamaṃ dīrghatapasaṃ maharṣi dīrghajīvinam /</l>
+<l>yoṣitsaṃtoṣayāmāsa varṇasthānāvarā satī // Bc_4.18 //</l>
+</lg>
+
+<lg>
+<l>ṛṣyaśṛṅgaṃ munisutaṃ tathaiva strīṣvapaṇḍitam /</l>
+<l>upāyairvividhaiḥ śāntā jagrāha ca jahāra ca // Bc_4.19 //</l>
+</lg>
+
+<lg>
+<l>viśvāmitro maharṣiśca vigāḍho 'pi mahattapaḥ /</l>
+<l>daśa varṣāṇyaharmene ghṛtācyāpsarasā hṛtaḥ // Bc_4.20 //</l>
+</lg>
+
+<lg>
+<l>evamādīnṛṣīstāṃstānanayanvikriyāṃ striyaḥ /</l>
+<l>lalitaṃ pūrvavayasaṃ kiṃ punarnṛpateḥ sutam // Bc_4.21 //</l>
+</lg>
+
+<lg>
+<l>tadevaṃ sati viśrabdhaṃ prayatadhvaṃ tathā yathā /</l>
+<l>iyaṃ nṛpasya vaṃśaśrīrito na syātparāṅmukhī // Bc_4.22 //</l>
+</lg>
+
+<lg>
+<l>yā hi kāścidyuvatayo haranti sadṛśaṃ janam /</l>
+<l>nikṛṣṭotkṛṣṭayorbhāvaṃ yā gṛhṇanti tu tāḥ striyaḥ // Bc_4.23 //</l>
+</lg>
+
+<lg>
+<l>ityudāyivacaḥ śrutvā tā viddhā iva yoṣitaḥ /</l>
+<l>samāruruhurātmānaṃ kumāragrahaṇaṃ prati // Bc_4.24 //</l>
+</lg>
+
+<lg>
+<l>tā bhrūmiḥ prekṣitairhāvairhasitailīḍitairgataiḥ /</l>
+<l>cakrurākṣepikāśceṣṭā bhītabhītā ivāṅganāḥ // Bc_4.25 //</l>
+</lg>
+
+<lg>
+<l>rājñastu viniyogena kumārasya ca mārdavāt /</l>
+<l>jahuḥ kṣipramaviśrambhaṃ madena madanena ca // Bc_4.26 //</l>
+</lg>
+
+<lg>
+<l>atha nārījanavṛtaḥ kumāro vyacaradvanam /</l>
+<l>vāsitāyūthasahitaḥ karīva himavadvanam // Bc_4.27 //</l>
+</lg>
+
+<lg>
+<l>sa tasmin kānane ramye jajvāla strīpuraḥsaraḥ /</l>
+<l>ākrīḍa iva vibhrāje vivasvānapsarovṛtaḥ // Bc_4.28 //</l>
+</lg>
+
+<lg>
+<l>madenāvarjitā nāma taṃ kāścittatra yiṣitaḥ /</l>
+<l>kaṭhinaiḥ paspṛśuḥ pīnaiḥ saṃhatairvalgubhiḥ stanaiḥ // Bc_4.29 //</l>
+</lg>
+
+<lg>
+<l>srastāṃsakomalālambamṛdubāhulatābalā /</l>
+<l>anṛtaṃ skhalitaṃ kācitkṛtvainaṃ sasvaje balāt // Bc_4.30 //</l>
+</lg>
+
+<lg>
+<l>kācittāmrādharoṣṭhena mukhenāsavagandhinā /</l>
+<l>viniśaśvāsa karṇe 'sya rahasyaṃ śrūyatāmiti // Bc_4.31 //</l>
+</lg>
+
+<lg>
+<l>kācidājñāpayantīva provācārdrānulepanā /</l>
+<l>iha bhaktiṃ kuruṣveti hastasaṃśleṣalipsayā // Bc_4.32 //</l>
+</lg>
+
+<lg>
+<l>muhurmuhurmadavyājasrastanīlāṃśukāparā /</l>
+<l>ālakṣyaraśanā reje sphuradvidyudiva kṣapā // Bc_4.33 //</l>
+</lg>
+
+<lg>
+<l>kāścitkanakakāñcībhirmukharābhiritastataḥ /</l>
+<l>babhramurdarśayantyo 'sya śroṇīstanvaṃśukāvṛtāḥ // Bc_4.34 //</l>
+</lg>
+
+<lg>
+<l>cūtaśākhāṃ kusumitāṃ pragṛhyānyā lalambire /</l>
+<l>suvarṇakalaśaprakhyāndarśayantyaḥ payodharān // Bc_4.35 //</l>
+</lg>
+
+<lg>
+<l>kācitpadmavanādetya sapadmā padmalocanā /</l>
+<l>padmavaktrasya pārśve 'sya padmaśrīriva tasthuṣī // Bc_4.36 //</l>
+</lg>
+
+<lg>
+<l>madhuraṃ gītamanvarthaṃ kācitsābhinayaṃ jagau /</l>
+<l>taṃ svasthaṃ codayantīva vañcito 'sītyavekṣitaiḥ // Bc_4.37 //</l>
+</lg>
+
+<lg>
+<l>śubhena vadanenānyā bhrūkārmukavikarṣiṇā /</l>
+<l>prāvṛtyānucakārāsya ceṣṭitaṃ dhīralīlayā // Bc_4.38 //</l>
+</lg>
+
+<lg>
+<l>pīnavalgustanī kāciddhāsāghūrṇitakuṇḍalā /</l>
+<l>uccairavajahāsainaṃ samāpnotu bhavāniti // Bc_4.39 //</l>
+</lg>
+
+<lg>
+<l>apayāntaṃ tathaivānyā babandhurmālyadāmabhiḥ /</l>
+<l>kāścitsākṣepamadhurairjagṛharvacanāṅkuśaiḥ // Bc_4.40 //</l>
+</lg>
+
+<lg>
+<l>pratiyogārthinī kācid gṛhītvā cūtavallarīm /</l>
+<l>idaṃ puṣpaṃ tu kasyeti papraccha madaviklavā // Bc_4.41 //</l>
+</lg>
+
+<lg>
+<l>kācitpuruṣavatkṛtvā gatiṃ saṃsthānameva ca /</l>
+<l>uvācainaṃ jitaḥ strībhīrjaya bho pṛthivīmimām // Bc_4.42 //</l>
+</lg>
+
+<lg>
+<l>atha lolekṣaṇā kācijjighrantī nīlamutpalam /</l>
+<l>kiṃcinmadakalairvākyai rnṛpātmajamabhāṣata // Bc_4.43 //</l>
+</lg>
+
+<lg>
+<l>paśya bhartīścitaṃ cūtaṃ kusumairmadhugandhibhiḥ /</l>
+<l>hemapañjararuddho vā kokilo yatra kūjati // Bc_4.44 //</l>
+</lg>
+
+<lg>
+<l>aśoko dṛśyatāmeṣa kāmiśokavivardhanaḥ /</l>
+<l>ruvanti bhramarā yatra dahyamānā ivāgninā // Bc_4.45 //</l>
+</lg>
+
+<lg>
+<l>cūtayaṣṭyā samāśliṣṭo dṛśyatāṃ tilakadrumaḥ /</l>
+<l>śuklavāsā iva naraḥ striyā pītāṅgarāgayā // Bc_4.46 //</l>
+</lg>
+
+<lg>
+<l>phullaṃ kurubakaṃ paśya nirbhuktālaktakaprabham /</l>
+<l>yo nakhaprabhayā strīṇāṃ nirbhīrtsata ivānataḥ // Bc_4.47 //</l>
+</lg>
+
+<lg>
+<l>bālāśokaśca nicito dṛśyatāmeṣa pallavaiḥ /</l>
+<l>yo 'smākaṃ hastaśobhābhirlajjamāna iva sthitaḥ // Bc_4.48 //</l>
+</lg>
+
+<lg>
+<l>dīrghikā prāvṛtāṃ paśya tīrajaiḥ sinduvārakaiḥ /</l>
+<l>pāṇḍurāṃśukasaṃvītāṃ śayānāṃ pramadāmiva // Bc_4.49 //</l>
+</lg>
+
+<lg>
+<l>dṛśyatāṃ strīṣu māhātmyaṃ cakravāko hyasau jale /</l>
+<l>pṛṣṭhataḥ preṣyavadbhāryāmanuvartyanugacchati // Bc_4.50 //</l>
+</lg>
+
+<lg>
+<l>mattasya parapuṣṭasya ruvataḥ śrūyatāṃ dhvaniḥ /</l>
+<l>aparaḥ kokilo 'nvakṣaṃ pratiśrutkeva kūjati // Bc_4.51 //</l>
+</lg>
+
+<lg>
+<l>api nāma vihaṅgānāṃ vasantenāhṛto madaḥ /</l>
+<l>na tu cintayato 'cintyaṃ janasya prājñamāninaḥ // Bc_4.52 //</l>
+</lg>
+
+<lg>
+<l>ityevaṃ tā yuvatayo manmathoddāmacetasaḥ /</l>
+<l>kumāraṃ vividhaistaistairupacakramire nayaiḥ // Bc_4.53 //</l>
+</lg>
+
+<lg>
+<l>evamākṣipyamāṇo 'pi satu dhairyāvṛtendriyaḥ /</l>
+<l>martavyamiti sodvego na jaharṣa na vivyathe // Bc_4.54 //</l>
+</lg>
+
+<lg>
+<l>tāsāṃ tattve 'navasthānaṃ dṛṣṭvā sa puruṣottamaḥ /</l>
+<l>samaṃ vignena dhīreṇa cintayāmāsa cetasā // Bc_4.55 //</l>
+</lg>
+
+<lg>
+<l>kiṃ tvimā nāvagacchanti capalaṃ yauvanaṃ striyaḥ /</l>
+<l>yato rūpeṇa saṃmattaṃ jarā yannāśayiṣyati // Bc_4.56 //</l>
+</lg>
+
+<lg>
+<l>nūnametā na paśyanti kasyacidrogasaṃplavam /</l>
+<l>tathā hṛṣṭā bhayaṃ tyaktvā jagati vyadhidharmiṇi // Bc_4.57 //</l>
+</lg>
+
+<lg>
+<l>anabhijñāśca suvyaktaṃ mṛtyoḥ sarvāpahāriṇaḥ /</l>
+<l>tataḥ svasthā nirudvignāḥ krīḍanti ca hasanti ca // Bc_4.58 //</l>
+</lg>
+
+<lg>
+<l>jarāṃ vyādhiṃ ca mṛtyuṃ ca ko hi jānansacetanaḥ /</l>
+<l>svasthastiṣṭhenniṣīdedvā śayedvā kiṃ punarhaset // Bc_4.59 //</l>
+</lg>
+
+<lg>
+<l>yastu dṛṣṭvā paraṃ jīrṇa vyādhitaṃ mṛtameva ca /</l>
+<l>svastho bhavati nodvigno yathācetāstathaiva saḥ // Bc_4.60 //</l>
+</lg>
+
+<lg>
+<l>viyujyamāne hi tarau puṣpairapi phalairapi /</l>
+<l>patati cchidyamāne vā taruranyo na śocate // Bc_4.61 //</l>
+</lg>
+
+<lg>
+<l>iti dhyānaparaṃ dṛṣṭvā viṣayebhyo gataspṛham /</l>
+<l>udāyī nītiśāstrajñastamuvāca suhṛttayā // Bc_4.62 //</l>
+</lg>
+
+<lg>
+<l>ahaṃ nṛpatinā dattaḥ sakhā tubhyaṃ kṣamaḥ kila /</l>
+<l>yāsmāttvayi vivakṣā me tayā praṇayavattayā // Bc_4.63 //</l>
+</lg>
+
+<lg>
+<l>ahitātpratiṣedhaśca hite cānupravartanam /</l>
+<l>vyasane cāparityāgastrividhaṃ mitralakṣaṇam // Bc_4.64 //</l>
+</lg>
+
+<lg>
+<l>so 'haṃ maitrīṃ pratijñāya puruṣārthātparāṅmukhaḥ /</l>
+<l>yadi tvā samupekṣeya na bhavenmitratā mayi // Bc_4.65 //</l>
+</lg>
+
+<lg>
+<l>tadbravīmi suhṛdbhūtvā taruṇasya vapuṣmataḥ /</l>
+<l>idaṃ na pratirūpaṃ te strīṣvadākṣiṇyamīdṛśam // Bc_4.66 //</l>
+</lg>
+
+<lg>
+<l>anṛtenāpi nārīṇāṃ yuktaṃ samanuvartanam /</l>
+<l>tadvrīḍāparihārārthamātmaratyarthameva ca // Bc_4.67 //</l>
+</lg>
+
+<lg>
+<l>saṃnatiścānuvṛttiśca strīṇāṃ hṛdayabandhanam /</l>
+<l>snehasya hi guṇā yonirmānakāmāśca yoṣitaḥ // Bc_4.68 //</l>
+</lg>
+
+<lg>
+<l>tadarhasi viśālākṣa hṛdaye 'pi parāṅmukhe /</l>
+<l>rūpasyāsyānurūpeṇa dākṣiṇyenānuvartitum // Bc_4.69 //</l>
+</lg>
+
+<lg>
+<l>dākṣiṇyamauṣadhaṃ strīṇāṃ dākṣiṇyaṃ bhūṣaṇaṃ param /</l>
+<l>dākṣiṇyarahitaṃ rūpaṃ niṣpuṣpamiva kānanam // Bc_4.70 //</l>
+</lg>
+
+<lg>
+<l>kiṃ vā dākṣiṇyamātreṇa bhāvenāstu parigrahaḥ /</l>
+<l>viṣayāndurlabhāṃllabdhvā na hyavajñātumarhasi // Bc_4.71 //</l>
+</lg>
+
+<lg>
+<l>kāmaṃ paramiti jñātvā devo 'pi hi puraṃdaraḥ /</l>
+<l>gautamasya muneḥ patnīmahalyāṃ cakame purā // Bc_4.72 //</l>
+</lg>
+
+<lg>
+<l>agastyaḥ prārthayāmāsa somabhāryā ca rohiṇīm /</l>
+<l>tasmāttatsadṛśī lebhe lopāmudrāmiti śrutiḥ // Bc_4.73 //</l>
+</lg>
+
+<lg>
+<l>utathyasya ca bhāryāyāṃ mamātāyaṃ mahātapaḥ /</l>
+<l>mārutyāṃ janayāmāsa bharadvājaṃ bṛhaspatiḥ // Bc_4.74 //</l>
+</lg>
+
+<lg>
+<l>bṛhaspatermahiṣyāṃ ca juvhatyāṃ juvhatāṃ varaḥ /</l>
+<l>budhaṃ vibudhakarmāṇaṃ janayāmāsa candramāḥ // Bc_4.75 //</l>
+</lg>
+
+<lg>
+<l>kālīṃ caiva purā kanyāṃ jalaprabhavasaṃbhavām /</l>
+<l>jagāma yamunātīre jātarāgaḥ parāśaraḥ // Bc_4.76 //</l>
+</lg>
+
+<lg>
+<l>mātaṅgayāmakṣamālāyāṃ garhitāyāṃ riraṃsayā /</l>
+<l>kapiñjalādaṃ tanayaṃ vasiṣṭho 'janayanmuniḥ // Bc_4.77 //</l>
+</lg>
+
+<lg>
+<l>yayātiścaiva rājarṣirvayasyapi vinirgate /</l>
+<l>viśvācyāpsarasā sārdhaṃ reme caitrarathe vane // Bc_4.78 //</l>
+</lg>
+
+<lg>
+<l>strīsaṃsarga vināśāntaṃ pāṇḍurjñātvāpi kauravaḥ /</l>
+<l>mādrīrūpaguṇākṣiptaḥ siṣeve kāmajaṃ sukham // Bc_4.79 //</l>
+</lg>
+
+<lg>
+<l>karālajanakaścaiva hṛtvā brāhmaṇakanyakām /</l>
+<l>avāpa bhraṃśamapyevaṃ na tu seje na manmatham // Bc_4.80 //</l>
+</lg>
+
+<lg>
+<l>evamādyā mahātmāno viṣayān garhitānapi /</l>
+<l>ratihetorbubhujire prāgeva guṇasaṃhitān // Bc_4.81 //</l>
+</lg>
+
+<lg>
+<l>tvaṃ punarnyāyataḥ prāptān balavān rūpavānyuvā /</l>
+<l>viṣayānavajānāsi yatra saktamidaṃ jagat // Bc_4.82 //</l>
+</lg>
+
+<lg>
+<l>iti śrutvā vacastasya ślakṣṇamāgamasaṃhitam /</l>
+<l>meghastanitanirghoṣaḥ kumāraḥ pratyabhāṣata // Bc_4.83 //</l>
+</lg>
+
+<lg>
+<l>upapannamidaṃ vākyaṃ sauhārdavyañjakaṃ tvayi /</l>
+<l>atra ca tvānuneṣyāmi yatra mā duṣṭhu manyase // Bc_4.84 //</l>
+</lg>
+
+<lg>
+<l>nāvajānāmi viṣayān jāne lokaṃ tadātmakam /</l>
+<l>anityaṃ tu jagamatvā nātra me ramate manaḥ // Bc_4.85 //</l>
+</lg>
+
+<lg>
+<l>jarā vyādhiśca mṛtyuśca yadi na syādidaṃ trayam /</l>
+<l>mamāpi hi manojñeṣu viṣayeṣu ratirbhavet // Bc_4.86 //</l>
+</lg>
+
+<lg>
+<l>nityaṃ yadapi hi strīṇāmetadeva vapurbhavet /</l>
+<l>doṣavatsvapi kāmeṣu kāmaṃ rajyeta me manaḥ // Bc_4.87 //</l>
+</lg>
+
+<lg>
+<l>yadā tu jarayāpītaṃ rūpamāsāṃ bhaviṣyati /</l>
+<l>ātmano 'pyanabhipretaṃ mohāttatra ratirbhavet // Bc_4.88 //</l>
+</lg>
+
+<lg>
+<l>mṛtyuvyādhijarādharmā mṛtyuvyādhijarātmabhiḥ /</l>
+<l>ramamāṇo hyasaṃvignaḥ samāno mṛgapakṣibhiḥ // Bc_4.89 //</l>
+</lg>
+
+<lg>
+<l>yadapyāttha mahātmānaste 'pi kāmātmakā iti /</l>
+<l>saṃvego 'traiva kartavyo yadā teṣāmapi kṣayaḥ // Bc_4.90 //</l>
+</lg>
+
+<lg>
+<l>māhātmyaṃ na ca tanmanye yatra sāmānyataḥ kṣayaḥ /</l>
+<l>viṣayeṣu prasaktirvā yuktirvā nātmavattayā // Bc_4.91 //</l>
+</lg>
+
+<lg>
+<l>yadapyātthānṛtenāpi strījane vartyatāmiti /</l>
+<l>anṛtaṃ nāvagacchāmi dākṣiṇyenāpi kiṃcana // Bc_4.92 //</l>
+</lg>
+
+<lg>
+<l>na cānuvartanaṃ tanme rucitaṃ yatra nārjavam /</l>
+<l>sarvabhāvena saṃparko yadi nāsti dhigastu tat // Bc_4.93 //</l>
+</lg>
+
+<lg>
+<l>adhṛteḥ śraddadhānasya saktasyādoṣadarśinaḥ /</l>
+<l>kiṃ hi vañcayitavyaṃ syājjātarāgasya cetasaḥ // Bc_4.94 //</l>
+</lg>
+
+<lg>
+<l>vañcayanti ca yadyevaṃ jātarāgāḥ parasparam /</l>
+<l>nanu naiva kṣamaṃ draṣṭuṃ narāḥ strīṇāṃ nṛṇāṃ striyaḥ // Bc_4.95 //</l>
+</lg>
+
+<lg>
+<l>tadevaṃ sati duḥkhārta jarāmaraṇabhāginam /</l>
+<l>na māṃ kāmeṣvanāryeṣu pratārayitumarhasi // Bc_4.96 //</l>
+</lg>
+
+<lg>
+<l>aho 'tidhīraṃ balavacca te manaścaleṣu kāmeṣu ca sāradarśinaḥ /</l>
+<l>bhaye 'titīvre viṣayeṣu sajjase nirīkṣamāṇo maraṇādhvani prajāḥ // Bc_4.97 //</l>
+</lg>
+
+<lg>
+<l>ahaṃ punarbhīruratīvaviklavo jarāvipadvyādhibhayaṃ vicintayan /</l>
+<l>labhe na śāntiṃ na dhṛtiṃ kuto ratiṃ niśāmayandīptamivāgninā jagat // Bc_4.98 //</l>
+</lg>
+
+<lg>
+<l>asaṃśayaṃ mṛtyuriti prajānato narasya rāgo hṛdi yasya jāyate /</l>
+<l>ayomayīṃ tasya paraimi cetanāṃ mahābhaye rajyati yo na roditi // Bc_4.99 //</l>
+</lg>
+
+<lg>
+<l>atho kumāraśca viniścayātmikāṃ cakāra kāmāśrayaghātinīṃ kathām /</l>
+<l>janasya cakṣurgamanīyamaṇḍalo mahīdharaṃ cāstamiyāya bhāskaraḥ // Bc_4.100 //</l>
+</lg>
+
+<lg>
+<l>tato vṛthādhāritabhūṣaṇasrajaḥ kalāguṇaiśca praṇayaiśca niṣphalaiḥ /</l>
+<l>sva eva bhāve vinigṛhya manmathaṃ puraṃ yayurbhagnamanorathāḥ striyaḥ // Bc_4.101 //</l>
+</lg>
+
+<lg>
+<l>tataḥ purodyānagatāṃ janaśriyaṃ nirīkṣya sāyaṃ pratisaṃhṛtāṃ punaḥ /</l>
+<l>anityatāṃ sarvagatāṃ vicintayanviveśa dhiṣṇayaṃ kṣitipālakātmajaḥ // Bc_4.102 //</l>
+</lg>
+
+<lg>
+<l>tataḥ śrutvā rājā viṣayavimukhaṃ tasya tu mano</l>
+<l>na śiśye tāṃ rātriṃ hṛdayagataśalyo gaja iva /</l>
+<l>atha śrānto mantre bahuvividhamārge sasacivo</l>
+<l>na so 'nyatkāmebhyo niyamanamapaśyatsutamateḥ // Bc_4.103 //</l>
+</lg>
+
+<l>iti buddhacarite mahākāvye strīvighātano nāma caturthaḥ sargaḥ // 4 //</l>
+
+<p>CANTO V</p>
+
+<lg>
+<l>sa tathā viṣayairvilobhyamānaḥ paramārhairapi śākyarājasūnuḥ /</l>
+<l>na jagāma dhṛtiṃ na śarma lebhe hṛdaye siṃha ivātidigdhaviddhaḥ // Bc_5.1 //</l>
+</lg>
+
+<lg>
+<l>atha mantisutaiḥ kṣamaiḥ kadācitsakhibhiścitrakathaiḥ kṛtānuyātraḥ /</l>
+<l>vanabhūmididṛkṣayā śamepsurnaradevānumato bahiḥ pratasthe // Bc_5.2 //</l>
+</lg>
+
+<lg>
+<l>navarukmakhalīnakiṅkiṇīkaṃ pracalaccāramaracāruhemabhāṇḍam /</l>
+<l>abhiruhya sa kanthakaṃ sadaśvaṃ prayayau ketumiva drumābjaketuḥ // Bc_5.3 //</l>
+</lg>
+
+<lg>
+<l>sa vikṛṣṭatarāṃ vanāntabhūmiṃ vanalobhācca yayau mahīguṇācca /</l>
+<l>salilormivikārasīramārgāṃ vasudhāṃ caiva dadarśa kṛṣyamāṇām // Bc_5.4 //</l>
+</lg>
+
+<lg>
+<l>halabhinnavikīrṇaśaṣpadarbhā hatasūkṣmakrimikīṭajantukīrṇām /</l>
+<l>samavekṣya rasāṃ tathāvidhāṃ tāṃ svajanasyeva vadhe bhṛśaṃ śuśoca // Bc_5.5 //</l>
+</lg>
+
+<lg>
+<l>kṛṣataḥ puruṣāṃśca vīkṣamāṇaḥ pavanārkāśurajovibhinnavarṇān /</l>
+<l>vahanaklamaviklavāṃśca dhuryān paramāryaḥ paramāṃ kṛpāṃ cakāra // Bc_5.6 //</l>
+</lg>
+
+<lg>
+<l>avatīrya tatasturaṅgapṛṣṭhācchanakairgā vyacaracchucā parītaḥ /</l>
+<l>jagato jananavyayaṃ vicinvan kṛpaṇaṃ khalvidamityuvāca cārtaḥ // Bc_5.7 //</l>
+</lg>
+
+<lg>
+<l>manasā ca viviktatāmabhīpsuḥ suhṛdastānanuyāyino nivārya /</l>
+<l>abhitaścalacāruparṇavatyā vijane mūlamupeyivān sa jambvāḥ // Bc_5.8 //</l>
+</lg>
+
+<lg>
+<l>niṣasāda sa yatra śaucavatyāṃ bhuvi vaidūryanikāśaśādvalāyām /</l>
+<l>jagataḥ prabhavavyayau vicinvanmanasaśca sthitimārgamālalambe // Bc_5.9 //</l>
+</lg>
+
+<lg>
+<l>samavāptamanaḥsthitiśca sadyo viṣayecchādibhirādhibhiśca muktaḥ /</l>
+<l>savitarkavicāramāpa śāntaṃ prathamaṃ dhyānamanāsravaprakāram // Bc_5.10 //</l>
+</lg>
+
+<lg>
+<l>adhigamya tato vivekajaṃ tu paramaprītisukhaṃ manaḥsamādhim /</l>
+<l>idameva tataḥ paraṃ pradadhyau manasā lokagatiṃ niśāmya samyak // Bc_5.11 //</l>
+</lg>
+
+<lg>
+<l>kṛpaṇaṃ bata yajjanaḥ svayaṃ sannavaśo vyādhijarāvināśadharmā /</l>
+<l>jarayārditamāturaṃ mṛtaṃ vā paramajño vijugupsate madāndhaḥ // Bc_5.12 //</l>
+</lg>
+
+<lg>
+<l>iha cedahamīdṛśaḥ svayaṃ sanvijugupseya paraṃ tathāsvabhāvam /</l>
+<l>na bhavetsadṛśaṃ hi tatkṣamaṃ vā paramaṃ dharmamimaṃ vijānato me // Bc_5.13 //</l>
+</lg>
+
+<lg>
+<l>iti tasya vipaśyato yathāvajjagato vyādhijarāvipattidoṣān /</l>
+<l>balayauvanajīvitapravṛtto vijagāmātmagato madaḥ kṣaṇena // Bc_5.14 //</l>
+</lg>
+
+<lg>
+<l>na jaharṣa na cāpi cānutepe vicikitsāṃ na yayau na tandrinidre /</l>
+<l>na ca kāmaguṇeṣu saṃrarañje na vididveṣa paraṃ na cāvamene // Bc_5.15 //</l>
+</lg>
+
+<lg>
+<l>iti buddhiriyaṃ ca nīrajaskā vavṛdhe tasya mahātmano viśuddhā /</l>
+<l>puruṣairaparairadṛśyamānaḥ puruṣaścopasasarpa bhikṣuveṣaḥ // Bc_5.16 //</l>
+</lg>
+
+<lg>
+<l>naradevasutastamabhyapṛcchadvada ko 'sīti śaśaṃsa so 'tha tasmai /</l>
+<l>narapuṃgava janmamṛtyubhītaḥ śramaṇaḥ pravrajito 'smi mokṣahetoḥ // Bc_5.17 //</l>
+</lg>
+
+<lg>
+<l>jagati kṣayadharmake mumukṣarmṛgaye 'haṃ śivamakṣayaṃ padaṃ tat /</l>
+<l>svajane 'nyajane ca tulyabuddhirviṣayebhyo vinivṛttarāgadoṣaḥ // Bc_5.18 //</l>
+</lg>
+
+<lg>
+<l>nivasan kvacideva vṛkṣamūle vijane vāyatane girau vane vā /</l>
+<l>vicarāmyaparigraho nirāśaḥ paramārthāya yathopapannabhaikṣaḥ // Bc_5.19 //</l>
+</lg>
+
+<lg>
+<l>iti paśyata eva rājasūnoridamuktvā sa nabhaḥ samutpapāta /</l>
+<l>sa hi tadvapuranyabuddhadarśī smṛtaye tasya sameyivāndivaukāḥ // Bc_5.20 //</l>
+</lg>
+
+<lg>
+<l>gaganaṃ khagavadgate ca tasminṛvaraḥ saṃjahṛṣe visismiye ca /</l>
+<l>upalabhya tataśca dharmasaṃjñāmabhiniryāṇavidhau matiṃ cakāra // Bc_5.21 //</l>
+</lg>
+
+<lg>
+<l>tata indrasamo jitendriyāśvaḥ pravivikṣuḥ puramaśvamāruroha /</l>
+<l>parivārajanaṃ tvavekṣamāṇastata evābhimataṃ vanaṃ na bheje // Bc_5.22 //</l>
+</lg>
+
+<lg>
+<l>sa jarāmaraṇakṣayaṃ cikīrṣurvanavāsāya matiṃ smṛtau nidhāya /</l>
+<l>praviveśa punaḥ puraṃ na kāmādvanabhūmeriva maṇḍalaṃ dvipendraḥ // Bc_5.23 //</l>
+</lg>
+
+<lg>
+<l>sukhitā bata nirvṛtā ca sā strī patirīdṛkṣa ihāyatākṣa yasyāḥ /</l>
+<l>iti taṃ samudīkṣya rājakanyā praviśantaṃ pathi sāñjalirjagāda // Bc_5.24 //</l>
+</lg>
+
+<lg>
+<l>atha ghoṣamimaṃ mahābhraghoṣaḥ pariśuśrāva śamaṃ paraṃ ca lebhe /</l>
+<l>śrutavānsa hi nirvṛteti śabdaṃ parinirvāṇavidhau matiṃ cakāra // Bc_5.25 //</l>
+</lg>
+
+<lg>
+<l>atha kāñcanaśailaśṛṅgavarṣmā gajamegharṣabhabāhunisvanākṣaḥ /</l>
+<l>kṣayamakṣayadharmajātarāgaḥ śaśisiṃhānanavikramaḥ prapede // Bc_5.26 //</l>
+</lg>
+
+<lg>
+<l>mṛgarājagatistato 'bhyagacchannṛpatiṃ mantrigaṇairupāsyamānam /</l>
+<l>samitau marutāmiva jvalantaṃ maghavantaṃ tridive sanatkumāraḥ // Bc_5.27 //</l>
+</lg>
+
+<lg>
+<l>praṇipatya ca sāñjalirbabhāṣe diśa mahyaṃ naradeva sādhvanujñām /</l>
+<l>parivivrajiṣāmi mokṣahetorniyato hyasya janasya viprayogaḥ // Bc_5.28 //</l>
+</lg>
+
+<lg>
+<l>iti tasya vaco niśamya rājā kariṇevābhihato drumaścacāla /</l>
+<l>kamalapratime 'ñjalau gṛhītvā vacanaṃ cedamuvāca bāṣpakaṇṭhaḥ // Bc_5.29 //</l>
+</lg>
+
+<lg>
+<l>pratisaṃhara tāt buddhimetāṃ na hi kālastava dharmasaṃśrayasya /</l>
+<l>vayasi prathame matau calāyāṃ bahudoṣāṃ hi vadanti dharmacaryām // Bc_5.30 //</l>
+</lg>
+
+<lg>
+<l>viṣayeṣu kutūhalendriyasya vratakhedeṣvasamarthīniścayasya /</l>
+<l>taruṇasya manaścalatyaraṇyādanabhijñaśca viśeṣato viveke // Bc_5.31 //</l>
+</lg>
+
+<lg>
+<l>mama tu priyadharma dharmakālastvayi lakṣmīmavasṛjya lakṣmabhūte /</l>
+<l>sthiravikrama vikrameṇa dharmastava hitvā tu guruṃ bhavedadharmaḥ // Bc_5.32 //</l>
+</lg>
+
+<lg>
+<l>tadimaṃ vyavasāyamutsṛja tvaṃ bhava tāvannirato gṛhasthadharme /</l>
+<l>puruṣasya vayaḥsukhāni bhuktvā ramaṇīyo hi tapovanapraveśaḥ // Bc_5.33 //</l>
+</lg>
+
+<lg>
+<l>iti vākyamidaṃ niśamya rājñaḥ kalaviṅkasvara uttaraṃ babhāṣe /</l>
+<l>yadi me pratibhūtaścaturṣu rājan bhavasi tvaṃ na tapovanaṃ śrayiṣye // Bc_5.34 //</l>
+</lg>
+
+<lg>
+<l>na bhavenmaraṇāya jīvitaṃ me viharetsvāsthyamidaṃ ca me na rogaḥ /</l>
+<l>na ca yauvanamākṣipejjarā me na ca saṃpattimimāṃ haredvipattiḥ // Bc_5.35 //</l>
+</lg>
+
+<lg>
+<l>iti durlabhamarthamūcivāṃsaṃ tanayaṃ vākyamuvāca śākyarājaḥ /</l>
+<l>tyaja buddhimimāmatipravṛttāmavahāsyo 'timanoratho 'kramaśca // Bc_5.36 //</l>
+</lg>
+
+<lg>
+<l>atha merugururguruṃ babhāṣe yadi nāsti krama eṣa nāsmi vāryaḥ /</l>
+<l>śaraṇājjvalanena dahyamānānna hi niścikramiṣuḥ kṣamaṃ grahītum // Bc_5.37 //</l>
+</lg>
+
+<lg>
+<l>jagataśca yadā dhruvo viyogo nanu dharmāya varaṃ svayaviyogaḥ /</l>
+<l>avaśaṃ nanu viprayojayenmāmakṛtasvārthamatṛptameva mṛtyuḥ // Bc_5.38 //</l>
+</lg>
+
+<lg>
+<l>iti bhūmipatirniśamya tasya vyavasāyaṃ tanayasya nirmumukṣoḥ /</l>
+<l>abhidhāya na yāsyatīti bhūyo vidadhe rakṣaṇamuttamāṃśca kāmān // Bc_5.39 //</l>
+</lg>
+
+<lg>
+<l>sacivaistu nidarśito yathāvad bahumānātpraṇayācca śāstrapūrvam /</l>
+<l>guruṇā ca nivārito 'śrupātaiḥ praviveśāvasathaṃ tataḥ sa śocan // Bc_5.40 //</l>
+</lg>
+
+<lg>
+<l>calakuṇḍalacumbitānanābhirghananiśvāsavikampitastanībhiḥ /</l>
+<l>vanitābhiradhīralocanābhimṛrgaśāvābhirivābhyudīkṣyamāṇaḥ // Bc_5.41 //</l>
+</lg>
+
+<lg>
+<l>sa hi kāñcanaparvatāvadāto hṛdayenmādakaro varāṅganānām /</l>
+<l>śravaṇāṅgavilocanātmabhāvānvacanasparśavapurguṇairjahāra // Bc_5.42 //</l>
+</lg>
+
+<lg>
+<l>vigate divase tato vimānaṃ vapuṣā sūrya iva pradīpyamānaḥ /</l>
+<l>timiraṃ vijighāṃsurātmabhāsā ravirudyanniva merumāruroha // Bc_5.43 //</l>
+</lg>
+
+<lg>
+<l>kanakojjvaladīptadīpavṛkṣaṃ varakālāgurudhūpapūrṇagarbham /</l>
+<l>adhiruhya sa vajrabhakticitraṃ pravaraṃ kāñcanamāsanaṃ siṣeve // Bc_5.44 //</l>
+</lg>
+
+<lg>
+<l>tata uttamamuttamāṅganāstaṃ niśi tūryairupatasthurindrakalpam /</l>
+<l>himavacchirasīva candragaure draviṇendrātmajamapsarogaṇaughāḥ // Bc_5.45 //</l>
+</lg>
+
+<lg>
+<l>paramairapi divyatūryakalpaiḥ sa tu tairnaiva ratiṃ yayau na harṣam /</l>
+<l>paramārthasukhāya tasya sādhorabhiniścikramiṣā yato na reme // Bc_5.46 //</l>
+</lg>
+
+<lg>
+<l>atha tatra suraistapovariṣṭhairakaniṣṭhairvyavasāyamasya buddhvā /</l>
+<l>yugapatpramadājanasya nidrā vihitāsīdvikṛtāśca gātraceṣṭāḥ // Bc_5.47 //</l>
+</lg>
+
+<lg>
+<l>abhavacchayitā hi tatra kācidviniveśya pracale kare kapolam /</l>
+<l>dayitāmapi rukmapattracitrāṃ kupitevāṅkagatāṃ vihāya vīṇām // Bc_5.48 //</l>
+</lg>
+
+<lg>
+<l>vibabhau karalagnaveṇuranyā stanavisrastasitāṃśukā śayānā /</l>
+<l>ṛjuṣaṭpadapaṅktijuṣṭapadmā jalaphenaprahasattaṭā nadīva // Bc_5.49 //</l>
+</lg>
+
+<lg>
+<l>navapuṣkaragarbhakomalābhyāṃ tapanīyojjvalasaṃgatāṅgadābhyām /</l>
+<l>svapiti sma tathāparā bhujābhyāṃ parirabhya priyavanmṛdaṅgameva // Bc_5.50 //</l>
+</lg>
+
+<lg>
+<l>navahāṭakabhūṣaṇāstathānyā vasanaṃ pītamanuttamaṃ vasānāḥ /</l>
+<l>avaśā ghananidrayā nipeturgajabhagnā iva karṇikāraśākhāḥ // Bc_5.51 //</l>
+</lg>
+
+<lg>
+<l>avalambya gavākṣapārśvamanyā śayitā cāpavibhugnagātrayaṣṭiḥ /</l>
+<l>virarāja vilambicāruhārā racitā toraṇāśālabhañjikeva // Bc_5.52 //</l>
+</lg>
+
+<lg>
+<l>maṇikuṇḍaladaṣṭapattralekhaṃ mukhapadmaṃ vinataṃ tathāparasyāḥ /</l>
+<l>śatapattramivārdhavakranāḍaṃ sthitakāraṇḍavaghaṭṭitaṃ cakāśe // Bc_5.53 //</l>
+</lg>
+
+<lg>
+<l>aparāḥ śayitā yathopaviṣṭāḥ stanabhārairavanamyamānagātrāḥ /</l>
+<l>upaguhya parasparaṃ virejurbhujapāśaistapanīyaparihāryaiḥ // Bc_5.54 //</l>
+</lg>
+
+<lg>
+<l>mahatī parivādinī ca kācidvanitāliṅgya sakhīmiva prasuptā /</l>
+<l>vijughūrṇa calatsuvarṇasūtrā vadanenākulakarṇikojjvalena // Bc_5.55 //</l>
+</lg>
+
+<lg>
+<l>paṇavaṃ yuvatirbhujāṃsadeśādavavisraṃsitacārūpāśamanyā /</l>
+<l>savilāsaratāntatāntamūrvorvivare kāntamivābhinīya śiśye // Bc_5.56 //</l>
+</lg>
+
+<lg>
+<l>aparā babhūvurnimīlitākṣyo vipulākṣyo 'pi śubhabhruvo 'pi satyaḥ /</l>
+<l>pratisaṃkucitāravindakośāḥ savitaryastamite yathā nalinyaḥ // Bc_5.57 //</l>
+</lg>
+
+<lg>
+<l>śithilākulamūrdhajā tathānyā jaghanasrastavibhūṣaṇāṃśukāntā /</l>
+<l>aśayiṣṭa vikīrṇakaṇṭhasūtrā gajabhagnā pratiyātanāṅganeva // Bc_5.58 //</l>
+</lg>
+
+<lg>
+<l>aparāstvavaśā hriyā viyuktā dhṛtimatyo 'pi vapurguṇairupetāḥ /</l>
+<l>viniśaśvasurulbaṇaṃ śayānā vikṛtāḥ kṣiptabhūjā jajṛmbhire ca // Bc_5.59 //</l>
+</lg>
+
+<lg>
+<l>vyapaviddhavibhūṣaṇasrajo 'nyā visṛtāgranthanavāsaso visaṃjñāḥ /</l>
+<l>animīlitaśuklaniścalākṣyo na virejuḥ śayitā gatāsukalpāḥ // Bc_5.60 //</l>
+</lg>
+
+<lg>
+<l>vivṛtāsyapuṭā vivṛddhagātrī prapatadvaktrajalā prakāśaguhyā /</l>
+<l>aparā madaghūrṇiteva śiśye na babhāse vikṛtaṃ vapuḥ pupoṣa // Bc_5.61 //</l>
+</lg>
+
+<lg>
+<l>iti sattvakulānvayānurūpaṃ vividhaṃ sa pramadājanaḥ śayānaḥ /</l>
+<l>sarasaḥ sadṛśaṃ babhāra rūpaṃ pavanāvarjitarugnapuṣkarasya // Bc_5.62 //</l>
+</lg>
+
+<lg>
+<l>samavekṣya tathā tathā śayānā vikṛtāstā yuvatīradhīraceṣṭāḥ /</l>
+<l>guṇavadvapuṣo 'pi valgubhāṣā nṛpasūnuḥ sa vigarhayāṃbabhūva // Bc_5.63 //</l>
+</lg>
+
+<lg>
+<l>aśucirvikṛtaśca jīvaloke vanitānāmayamīdṛśaḥ svabhāvaḥ /</l>
+<l>vasanābharaṇaistu vañcyamānaḥ puruṣaḥ strīviṣayeṣu rāgameti // Bc_5.64 //</l>
+</lg>
+
+<lg>
+<l>vimṛśedyadi yoṣitāṃ manuṣyaḥ prakṛtiṃ svapnavikāramīdṛśaṃ ca /</l>
+<l>dhruvamatra na vardhayetpramādaṃ guṇasaṃkalpahatastu rāgameti // Bc_5.65 //</l>
+</lg>
+
+<lg>
+<l>iti tasya tadantaraṃ viditvā niśi niścikramiṣā samudbabhūva /</l>
+<l>avagamya manastato 'sya devairbhavanadvāramapāvṛtaṃ babhūva // Bc_5.66 //</l>
+</lg>
+
+<lg>
+<l>atha so 'vatatāra harmyapṛṣṭhādyuvatīstāḥ śayitā vigarhamāṇaḥ /</l>
+<l>avatīrya tataśca nirviśaṅko gṛhakakṣyāṃ prathamāṃ vinirjagāma // Bc_5.67 //</l>
+</lg>
+
+<lg>
+<l>turagāvacaraṃ sa bodhayitvā javinaṃ chandakamitthamityuvāca /</l>
+<l>hayamānaya kanthakaṃ tvarāvānamṛtaṃ prāptumito 'dya me yiyāsā // Bc_5.68 //</l>
+</lg>
+
+<lg>
+<l>hṛdi yā mama tuṣṭiradya jātā vyavasāyaśca yathā matau niviṣṭaḥ /</l>
+<l>vijane 'pi ca nāthavānivāsmi dhruvamartho 'bhimukhaḥ sameta iṣṭaḥ // Bc_5.69 //</l>
+</lg>
+
+<lg>
+<l>hriyameva ca saṃnatiṃ ca hitvā śayitā matpramukhe yathā yuvatyaḥ /</l>
+<l>vivṛte ca yathā svayaṃ kapāṭe niyataṃ yātumato mamādya kālaḥ // Bc_5.70 //</l>
+</lg>
+
+<lg>
+<l>pratigṛhya tataḥ sa bharturājñāṃ viditārtho 'pi narendraśāsanasya /</l>
+<l>manasīva pareṇa codyamānasturagasyānayane matiṃ cakāra // Bc_5.71 //</l>
+</lg>
+
+<lg>
+<l>atha hemakhalīnapūrṇavaktraṃ laghuśayyāstaraṇopagūḍhapṛṣṭham /</l>
+<l>balasattvajavānvayopapannaṃ sa varāśvaṃ tamupānināya bhartre // Bc_5.72 //</l>
+</lg>
+
+<lg>
+<l>pratatrikapucchamūlapārṣṇi nibhṛtahṛsvatanūjapucchakarṇam /</l>
+<l>vinatonnatapṛṣṭhakukṣipārśva vipulaprothalalāṭakaṭyuraskam // Bc_5.73 //</l>
+</lg>
+
+<lg>
+<l>upaguhya sa taṃ viśālavakṣāḥ kamalābhena ca sāntvayan kareṇa /</l>
+<l>madhurākṣarayā girā śaśāsa dhvajinīmadhyamiva praveṣṭukāmaḥ // Bc_5.74 //</l>
+</lg>
+
+<lg>
+<l>bahuśaḥ kila śatravo nirastāḥ samare tvāmadhiruhya pārthivena /</l>
+<l>ahamapyamṛtaṃ padaṃ yathāvatturagaśreṣṭha labheya tatkuruṣva // Bc_5.75 //</l>
+</lg>
+
+<lg>
+<l>sulabhāḥ khalu saṃyuge sahāyā viṣayāvāptasukhe dhanārjane vā /</l>
+<l>puruṣasya tu durlabhāḥ sahāyāḥ patitasyāpadi dharmasaṃśraye vā // Bc_5.76 //</l>
+</lg>
+
+<lg>
+<l>iha caiva bhavanti ye sahāyāḥ kaluṣe karmaṇi dharmasaṃśraye vā /</l>
+<l>avagacchati me yathāntarātmā niyataṃ te 'pi janāstadaṃśabhājaḥ // Bc_5.77 //</l>
+</lg>
+
+<lg>
+<l>tadidaṃ parigamya dharmayuktaṃ mama niryāṇamito jagaddhitāya /</l>
+<l>turagottama vegavikramābhyāṃ prayatasvātmahite jagaddhite ca // Bc_5.78 //</l>
+</lg>
+
+<lg>
+<l>iti suhṛdamivānuśiṣya kṛtye turagavaraṃ nṛvaro vanaṃ yiyāsuḥ /</l>
+<l>sitamasitagatidyutirvapuṣmān raviriva śāradamabhramāruroha // Bc_5.79 //</l>
+</lg>
+
+<lg>
+<l>atha sa pariharanniśīthacaṇḍaṃ parijanabodhakaraṃ dhvanīṃ sadaśvaḥ /</l>
+<l>vigatahanuravaḥ praśāntaheṣaścakitavimuktapadakramo jagāma // Bc_5.80 //</l>
+</lg>
+
+<lg>
+<l>kanakavalayabhūṣitaprakoṣṭhaiḥ kamalanibhaiḥ kamalāniva pravidhya /</l>
+<l>avanatatanavastato 'sya yakṣāścakitagatairdīdhare khurān karāgraiḥ // Bc_5.81 //</l>
+</lg>
+
+<lg>
+<l>guruparighakapāṭasaṃvṛtā yā na sukhamapi dviradairapāvriyante /</l>
+<l>vrajati nṛpasute gatasvanāstāḥ svayamabhavanvivṛtāḥ puraḥ pratolyaḥ // Bc_5.82 //</l>
+</lg>
+
+<lg>
+<l>pitaramabhimukhaṃ sutaṃ ca bālaṃ janamanuraktamanuttamāṃ ca lakṣmīm /</l>
+<l>kṛtamatirapahāya nirvyapekṣaḥ pitṛnagarātsa tato vinirjagāma // Bc_5.83 //</l>
+</lg>
+
+<lg>
+<l>atha sa vimalapaṅkajāyatākṣaḥ puramavalokya nanāda siṃhanādam /</l>
+<l>jananamaraṇayoradṛṣṭapāro na puramahaṃ kapilāvhayaṃ praveṣṭā // Bc_5.84 //</l>
+</lg>
+
+<lg>
+<l>iti vacanamidaṃ niśamya tasya draviṇapateḥ pariṣadgaṇā nananduḥ /</l>
+<l>pramuditamanasaśca devasaṅghā vyavasitapāraṇamāśaśaṃsire 'smai // Bc_5.85 //</l>
+</lg>
+
+<lg>
+<l>hutavahavapuṣoḥ divaukaso 'nye vyavasitamasya suduṣkaraṃ viditvā /</l>
+<l>akṛṣata tuhine pathi prakāśaṃ ghanavivaraprasṛtā ivendupādāḥ // Bc_5.86 //</l>
+</lg>
+
+<lg>
+<l>harituragaturaṅgavatturaṅgaḥ sa tu vicaranmanasīva codyamānaḥ /</l>
+<l>aruṇaparuṣatāramantarikṣaṃ sa ca subahūni jagāma yojanāni // Bc_5.87 //</l>
+</lg>
+
+<l>iti buddhacarite mahākāvye 'bhiniṣkramaṇo nāma pañcamaḥ sargaḥ // 5 //</l>
+
+<p>CANTO VI</p>
+
+<lg>
+<l>tato muhūrtābhyudite jagaccakṣuṣi bhāskare /</l>
+<l>bhārgavasyāśramapadaṃ sa dadarśa nṛṇāṃ varaḥ // Bc_6.1 //</l>
+</lg>
+
+<lg>
+<l>suptaviśvastahariṇaṃ svasthasthitavihaṅgamam /</l>
+<l>viśrānta iva yaddṛṣṭvā kṛtārtha iva cābhavat // Bc_6.2 //</l>
+</lg>
+
+<lg>
+<l>sa vismayanivṛttyartha tapaḥpūjārthameva ca /</l>
+<l>svāṃ cānuvartitā rakṣannaśvapṛṣṭhādavatārat // Bc_6.3 //</l>
+</lg>
+
+<lg>
+<l>avatīrya ca pasparśa nistīrṇamiti vājinam /</l>
+<l>chandakaṃ cāvravītprītaḥ snāpayanniva cakṣuṣā // Bc_6.4 //</l>
+</lg>
+
+<lg>
+<l>imaṃ tārkṣyopamajavaṃ turaṅgamanugacchatā /</l>
+<l>darśitā saumya madbhaktirvikramaścāyamātmanaḥ // Bc_6.5 //</l>
+</lg>
+
+<lg>
+<l>sarvathāsmyanyakāryo 'pi gṛhīto bhavatā hṛdi /</l>
+<l>bhartusnehaśca yasyāyamīdṛśaḥ śaktireva ca // Bc_6.6 //</l>
+</lg>
+
+<lg>
+<l>asnigdho 'pi samartho 'sti niḥsāmarthyo 'pi bhaktimān /</l>
+<l>bhaktimāṃścaiva śaktaśca durlabhastvadvidho bhuvi // Bc_6.7 //</l>
+</lg>
+
+<lg>
+<l>tatprīto 'smi tavānena mahābhāgena karmaṇā /</l>
+<l>yasya te mayi bhāvo 'yaṃ phalebhyo 'pi parāṅmukhaḥ // Bc_6.8 //</l>
+</lg>
+
+<lg>
+<l>ko janasya phalasthasya na syādabhimukho janaḥ /</l>
+<l>janībhavati bhūyiṣṭhaṃ svajano 'pi viparyaye // Bc_6.9 //</l>
+</lg>
+
+<lg>
+<l>kulārtha dhāryate putraḥ poṣārtha sevyate pitā /</l>
+<l>āśayācchilaṣyati jagannāsti niṣkāraṇā svatā // Bc_6.10 //</l>
+</lg>
+
+<lg>
+<l>kimuktvā bahu saṃkṣepātkṛtaṃ me sumahatpriyam /</l>
+<l>nivartasvāśvamādāya saṃprāpto 'smīpsitaṃ padam // Bc_6.11 //</l>
+</lg>
+
+<lg>
+<l>ityuktvā sa mahābāhuranuśaṃsacikīrṣayā /</l>
+<l>bhūṣaṇānyavamucyāsmai saṃtaptamanase dadau // Bc_6.12 //</l>
+</lg>
+
+<lg>
+<l>mukuṭāddīpakarmāṇaṃ maṇīmādāya bhāsvaram /</l>
+<l>bruvanvākyamidaṃ tasthau sāṃditya iva mandaraḥ // Bc_6.13 //</l>
+</lg>
+
+<lg>
+<l>anena maṇinā chanda praṇamya bahuśo nṛpaḥ /</l>
+<l>vijñāpyo 'muktaviśrambhaṃ saṃtāpavinivṛttaye // Bc_6.14 //</l>
+</lg>
+
+<lg>
+<l>janmamaraṇanāśārtha praviṣṭo 'smi tapovanam /</l>
+<l>na khalu svargatarṣeṇa nāsnehena na manyunā // Bc_6.15 //</l>
+</lg>
+
+<lg>
+<l>tadevamabhiniṣkrāntaṃ na māṃ śocitumarhasi /</l>
+<l>bhūtvāpi hi ciraṃ śleṣaḥ kālena na bhaviṣyati // Bc_6.16 //</l>
+</lg>
+
+<lg>
+<l>dhruvo yasmācca viśleṣastasmānmokṣāya me matiḥ /</l>
+<l>viprayogaḥ kathaṃ na syād bhūyo 'pi svajanāditi // Bc_6.17 //</l>
+</lg>
+
+<lg>
+<l>śokatyāgāya niṣkrāntaṃ na māṃ śocitumarhasi /</l>
+<l>śokahetuṣu kāmeṣu saktāḥ śocyāstu rāgiṇaḥ // Bc_6.18 //</l>
+</lg>
+
+<lg>
+<l>ayaṃ ca kila pūrveṣāmasmākaṃ niścayaḥ sthiraḥ /</l>
+<l>iti dāyādyabhūtena na śocyo 'smi pathā vrajan // Bc_6.19 //</l>
+</lg>
+
+<lg>
+<l>bhavanti hyarthadāyādāḥ puruṣasya viparyaye /</l>
+<l>pṛthivyāṃ dharmadāyādāḥ durlabhāstu na santi vā // Bc_6.20 //</l>
+</lg>
+
+<lg>
+<l>yadapi syādasamaye yāto vanamasāviti /</l>
+<l>akālo nāsti dharmasya jīvite cañcale sati // Bc_6.21 //</l>
+</lg>
+
+<lg>
+<l>tasmādadyaiva me śreyaścetavyamiti niścayaḥ /</l>
+<l>jīvite ko hi viśrambho mṛtyau pratyarthini sthite // Bc_6.22 //</l>
+</lg>
+
+<lg>
+<l>evamādi tvayā saumya vijñāpyo vasudhādhipaḥ /</l>
+<l>prayatethāstathā caiva yathā māṃ na smaredāpi // Bc_6.23 //</l>
+</lg>
+
+<lg>
+<l>api nairguṇyamasmākaṃ vācyaṃ narapatau tvayā /</l>
+<l>nairguṇyāttyajyate snehaḥ snehatyāgānna śocyate // Bc_6.24 //</l>
+</lg>
+
+<lg>
+<l>iti vākyamidaṃ śrutvā chandaḥ saṃtāpaviklavaḥ /</l>
+<l>bāṣpagrathitayā vācā pratyuvāca kṛtāñjaliḥ // Bc_6.25 //</l>
+</lg>
+
+<lg>
+<l>anena ta va bhāvena bāndhavāyāsadāyinā /</l>
+<l>bhartaḥ sīdati me ceto nadīpaṅka iva dvipaḥ // Bc_6.26 //</l>
+</lg>
+
+<lg>
+<l>kasya notpādayedbāṣpaṃ niścayaste 'yamīdṛśaḥ /</l>
+<l>ayomaye 'pi hṛdaye kiṃ punaḥ snehaviklave // Bc_6.27 //</l>
+</lg>
+
+<lg>
+<l>vimānaśayanārhaṃ hi saukumāryamidaṃ kva ca /</l>
+<l>kharadarbhāṅkuravatī tapovanamahī kva ca // Bc_6.28 //</l>
+</lg>
+
+<lg>
+<l>śrutvā tu vyavasāyaṃ te yadaśvo 'yaṃ mayāhṛtaḥ /</l>
+<l>balātkāreṇa tannātha daivenaivāsmi kāritaḥ // Bc_6.29 //</l>
+</lg>
+
+<lg>
+<l>kathaṃ hyātmavaśo jānan vyavasāyamimaṃ tava /</l>
+<l>upānayeyaṃ turagaṃ śokaṃ kapilavāstunaḥ // Bc_6.30 //</l>
+</lg>
+
+<lg>
+<l>tannārhasi mahābāho vihātuṃ putralālasam /</l>
+<l>snigdhaṃ vṛddhaṃ ca rājānaṃ saddharmamiva nāstikaḥ // Bc_6.31 //</l>
+</lg>
+
+<lg>
+<l>saṃvardhanapariśrāntāṃ dvitīyāṃ tāṃ ca mātaram /</l>
+<l>devīṃ nārhasi vismartu kṛtaghna iva satkriyām // Bc_6.32 //</l>
+</lg>
+
+<lg>
+<l>bālaputrāṃ guṇavartī kulaślādhyāṃ pativratām /</l>
+<l>devīmarhasi na tyaktuṃ klībaḥ prāptāmiva śriyam // Bc_6.33 //</l>
+</lg>
+
+<lg>
+<l>putraṃ yāśodharaṃ ślādhyaṃ yaśodharmabhṛtāṃ varam /</l>
+<l>bālamarhasi na tyaktuṃ vyasanīvottamaṃ yaśaḥ // Bc_6.34 //</l>
+</lg>
+
+<lg>
+<l>atha bandhuṃ ca rājyaṃ ca tyaktumeva kṛtā matiḥ /</l>
+<l>māṃ nārhasi vibho tyaktuṃ tvatpādau hi gatirmama // Bc_6.35 //</l>
+</lg>
+
+<lg>
+<l>nāsmi yātuṃ puraṃ śakto dahyamānena cetasā /</l>
+<l>tvāmaraṇye parityajya sumantra iva rāghavam // Bc_6.36 //</l>
+</lg>
+
+<lg>
+<l>kiṃ hi vakṣyati māṃ rājā tvadṛte nagaraṃ gatam /</l>
+<l>vakṣyāmyucitadarśitvātkiṃ tavāntaḥpurāṇi vā // Bc_6.37 //</l>
+</lg>
+
+<lg>
+<l>yadapyātthāpi nairguṇyaṃ vācyaṃ narapatāviti /</l>
+<l>kiṃ tadvakṣyāmyabhūtaṃ te nirdoṣasya muneriva // Bc_6.38 //</l>
+</lg>
+
+<lg>
+<l>hṛdayena salajjena jivhayā sajjamānayā /</l>
+<l>ahaṃ yadapi vā brūyāṃ kastacchraddhātumarhati // Bc_6.39 //</l>
+</lg>
+
+<lg>
+<l>yo hi candramasastaikṣṇyaṃ kathayecchraddadhīta vā /</l>
+<l>sa doṣāṃstava doṣajña kathayecchraddadhīta vā // Bc_6.40 //</l>
+</lg>
+
+<lg>
+<l>sānukrośasya satataṃ nityaṃ karuṇavedinaḥ /</l>
+<l>snigdhatyāgo na sadṛśo nivartasva prasīda me // Bc_6.41 //</l>
+</lg>
+
+<lg>
+<l>iti śokābhibhūtasya śrutvā chandasya bhāṣitam /</l>
+<l>svasthaḥ paramayā dhṛtyā jagāda vadatāṃ varaḥ // Bc_6.42 //</l>
+</lg>
+
+<lg>
+<l>madviyogaṃ prati cchanda saṃtāpastyajyatāmayam /</l>
+<l>nānābhāvo hi niyataṃ pṛthagjātiṣu dehiṣu // Bc_6.43 //</l>
+</lg>
+
+<lg>
+<l>svajanaṃ yadyapi snehānna tyajeyamahaṃ svayam /</l>
+<l>mṛtyuranyonyamavaśānasmān saṃtyājayiṣyati // Bc_6.44 //</l>
+</lg>
+
+<lg>
+<l>mahatyā tṛṣṇayā duḥkhairgarbheṇāsmi yayā dhṛtaḥ /</l>
+<l>tasyā niṣphalayatnāyāḥ kvāhaṃ mātuḥ kva sā mama // Bc_6.45 //</l>
+</lg>
+
+<lg>
+<l>vāsavṛkṣe samāgamya vigacchanti yathāṇḍajāḥ /</l>
+<l>niyataṃ viprayogāntastathā bhūtasamāgamaḥ // Bc_6.46 //</l>
+</lg>
+
+<lg>
+<l>sametya ca yathā bhūyo vyapayānti balāhakāḥ /</l>
+<l>saṃyogo viprayogaśca tathā me prāṇināṃ mataḥ // Bc_6.47 //</l>
+</lg>
+
+<lg>
+<l>yasmādyāti ca loko 'yaṃ vipralabhya paraṃparam /</l>
+<l>mamattvaṃ na kṣamaṃ tasmātsvapnabhūte samāgame // Bc_6.48 //</l>
+</lg>
+
+<lg>
+<l>sahajena viyujyante parṇarāgeṇa pādapāḥ /</l>
+<l>anyenānyasya viśleṣaḥ kiṃ punarna bhaviṣyati // Bc_6.49 //</l>
+</lg>
+
+<lg>
+<l>tadevaṃ sati saṃtāpaṃ mā kārṣī saumya gamyatām /</l>
+<l>lambate yadi tu sneho gatvāpi punarāvraja // Bc_6.50 //</l>
+</lg>
+
+<lg>
+<l>brūyāścāsmatkṛtāpekṣaṃ janaṃ kapilavāstuni /</l>
+<l>tyajyatāṃ tagdataḥ snehaḥ śrūyatāṃ cāsya niścayaḥ // Bc_6.51 //</l>
+</lg>
+
+<lg>
+<l>kṣiprameṣyati vā kṛtvā janmamṛtyukṣayaṃ kila /</l>
+<l>akṛtārtho nirārambho nidhanaṃ yāsyatīti vā // Bc_6.52 //</l>
+</lg>
+
+<lg>
+<l>iti tasya vacaḥ śrutvā kanthakasturagottamaḥ /</l>
+<l>jivhayā lilihe pādau bāṣpamuṣṇaṃ mumoca ca // Bc_6.53 //</l>
+</lg>
+
+<lg>
+<l>jālinā svastikāṅkena cakramadhyena pāṇinā /</l>
+<l>āmamarśa kumārastaṃ babhāṣe ca vayasyavat // Bc_6.54 //</l>
+</lg>
+
+<lg>
+<l>muñca kanthaka mā bāṣpaṃ darśiteyaṃ sadaśvatā /</l>
+<l>mṛṣyatāṃ saphalaḥ śīghraṃ śramaste 'yaṃ bhaviṣyati // Bc_6.55 //</l>
+</lg>
+
+<p>maṇitsaruṃ chandakahastasaṃsthaṃ tataḥ sa dhīro niśitaṃ gṛhītvā
+<l>kośādasiṃ kañcanabhakticitraṃ bilādivaśīviṣamudbabarha // Bc_6.56 //</l></p>
+
+<lg>
+<l>niṣkāsya taṃ cotpalapattranīlaṃ ciccheda citraṃ mukuṭaṃ sakeśam /</l>
+<l>vikīryamāṇāṃśukamantarīkṣe cikṣepa cainaṃ sarasīva haṃsam // Bc_6.57 //</l>
+</lg>
+
+<lg>
+<l>pūjābhilāṣeṇa ca bāhumānyāddivaukasastaṃ jagṛhuḥ praviddham /</l>
+<l>yathāvadenaṃ divi devasaṅghā divyairviśeṣairmahayāṃ ca cakruḥ // Bc_6.58 //</l>
+</lg>
+
+<lg>
+<l>muktvā tvalaṃkārakalatravattāṃ śrīvipravāsaṃ śirasaśca kṛtvā /</l>
+<l>dṛṣṭvāṃśukaṃ kāñcanahaṃsacinhaṃ vanyaṃ sa dhīro 'bhicakāṅkṣa vāsaḥ // Bc_6.59 //</l>
+</lg>
+
+<lg>
+<l>tato mṛgavyādhanapurdivaukā bhāvaṃ viditvāsya viśuddhabhāvaḥ /</l>
+<l>kāṣāyavastro 'bhiyayau samīpaṃ taṃ śākyarājaprabhavo 'bhyuvāca // Bc_6.60 //</l>
+</lg>
+
+<lg>
+<l>śivaṃ ca kāṣāyamṛṣidhvajaste na yujyate hiṃsramidaṃ dhanuśca /</l>
+<l>tatsaumya yadyasti na saktiratra mahyaṃ prayacchedamidaṃ gṛhāṇa // Bc_6.61 //</l>
+</lg>
+
+<lg>
+<l>vyādho 'bravītkāmada kāmamārādanena viśvāsya mṛgāgnihanmi /</l>
+<l>arthastu śakropama yadyanena hanta pratīcchānaya śuklametat // Bc_6.62 //</l>
+</lg>
+
+<lg>
+<l>pareṇa harṣeṇa tataḥ sa vanyaṃ jagrāha vāso 'śukamutsasarja /</l>
+<l>vyādhastu divyaṃ vapureva bibhrattacchuklamādāya divaṃ jagāma // Bc_6.63 //</l>
+</lg>
+
+<lg>
+<l>tataḥ kumāraśca sa cāśvagopastasmiṃstathā yāti visismiyāte /</l>
+<l>āraṇyake vāsasi caiva bhūyastasminnakārṣṭā bahumānamāśu // Bc_6.64 //</l>
+</lg>
+
+<lg>
+<l>chandaṃ tataḥ sāśrumukhaṃ visṛjya kāṣāyasaṃbhṛddhṛtikīrtibhṛtsaḥ /</l>
+<l>yenāśramastena yayau mahātmā saṃdhyābhrasaṃvīta ivoḍurājaḥ // Bc_6.65 //</l>
+</lg>
+
+<lg>
+<l>tatastathā bhartari rājyaniḥspṛhe tapovanaṃ yāti vivarṇavāsasi /</l>
+<l>bhujau samutkṣipya tataḥ sa vājibhṛd bhṛśaṃ vicukrośa papāta ca kṣitau // Bc_6.66 //</l>
+</lg>
+
+<lg>
+<l>vilokya bhūyaśca ruroda sasvaraṃ hayaṃ bhujābhyāmupaguhya kanthakam /</l>
+<l>tato nirāśo vilapananmuhurmuhuryayau śarīreṇa puraṃ na cetasā // Bc_6.67 //</l>
+</lg>
+
+<lg>
+<l>kvacitpradadhyau vilalāpa ca kvacit kvacitpracaskhāla papāta ca kvacit /</l>
+<l>ato vrajan bhaktivaśena duḥkhitaścacāra bavhīravaśaḥ pathi kriyāḥ // Bc_6.68 //</l>
+</lg>
+
+<l>iti buddhacarite mahākāvye chandakanivartano nāma ṣaṣṭhaḥ sargaḥ // 6 //</l>
+
+<p>CANTO VII</p>
+
+<lg>
+<l>tato visṛjyāśrumukhaṃ rudantaṃ chandaṃ vanacchandatayā nirāsthaḥ /</l>
+<l>sarvārthasiddho vapuṣābhibhūya tamāśramaṃ siddha iva prapede // Bc_7.1 //</l>
+</lg>
+
+<lg>
+<l>sa rājasūnurmṛgarājagāmī mṛgājiraṃ tanmṛgavatpraviṣṭaḥ /</l>
+<l>lakṣmīviyukto 'pi śarīralakṣmyā cakṣūṃṣi sarvāśramiṇāṃ jahāra // Bc_7.2 //</l>
+</lg>
+
+<lg>
+<l>sthitā hi hastasthayugāstathaiva kautūhalāccakradharāḥ sadārāḥ /</l>
+<l>tamindrakalpaṃ dadṛśurna jagmurdhuryā ivārdhāvanataiḥ śirobhiḥ // Bc_7.3 //</l>
+</lg>
+
+<lg>
+<l>viprāśca gatvā bahiridhmahetoḥ prāptāḥ samitpuṣpavitrahastāḥ /</l>
+<l>tapaḥpradhānāḥ kṛtabuddhayo 'pi taṃ draṣṭumīyurna maṭhānabhīyuḥ // Bc_7.4 //</l>
+</lg>
+
+<lg>
+<l>hṛṣṭāśca kekā mumucurmayūrā dṛṣṭvāmbudaṃ nīlamivonnamantaḥ /</l>
+<l>śaṣpāṇi hitvābhimukhāśca tasthurmṛgāścalākṣā mṛgacāriṇaśca // Bc_7.5 //</l>
+</lg>
+
+<lg>
+<l>dṛṣṭvā tamikṣvākukulapradīpaṃ jvalantamudyantamivāṃśumantam /</l>
+<l>kṛte 'pi dohe janitapramodāḥ prasusruvurhomaduhaśca gāvaḥ // Bc_7.6 //</l>
+</lg>
+
+<lg>
+<l>kaścidvasūnāmayamaṣṭamaḥ syātsyādāviśvanoranyataraścyuto vā /</l>
+<l>ucceruruccairiti tatra vācastaddarśanādvismayajā munīnām // Bc_7.7 //</l>
+</lg>
+
+<lg>
+<l>lekharṣabhasyeva vapurdvitīyaṃ dhāmeva lokasya carācarasya /</l>
+<l>sa dyotayāmāsa vanaṃ hi kṛtsnaṃ yadṛcchayā sūrya ivāvatīrṇaḥ // Bc_7.8 //</l>
+</lg>
+
+<lg>
+<l>tataḥ sa tairāśramibhiryathāvadabhyarcitaścopanimantritaśca /</l>
+<l>pratyarcayāṃ dharmabhṛto babhūva svareṇa sāmbho 'mbudharopamena // Bc_7.9 //</l>
+</lg>
+
+<lg>
+<l>kīrṇaṃ tathā puṇyakṛtā janena svargābhikāmena vimokṣakāmaḥ /</l>
+<l>tamāśramaṃ so 'nucacāra dhirastapāṃsi citrāṇi nirīkṣamāṇaḥ // Bc_7.10 //</l>
+</lg>
+
+<lg>
+<l>tapovikārāṃśca nirīkṣya saumyastapovane tatra tapodhanānām /</l>
+<l>tapasvinaṃ kaṃcidanuvrajantaṃ tattvaṃ vijijñāsuridaṃ babhāṣe // Bc_7.11 //</l>
+</lg>
+
+<lg>
+<l>tatpūrvamadyāśramadarśanaṃ me yāsmādimaṃ dharmavidhiṃ na jāne /</l>
+<l>tasmādbhavānarhati bhāṣituṃ me yo niścayo yatprati vaḥ pravṛttaḥ // Bc_7.12 //</l>
+</lg>
+
+<lg>
+<l>tato dvijātiḥ sa tapovihāraḥ śākyarṣabhāyarṣabhavikramāya /</l>
+<l>krameṇa tasmai kathayāṃcakāra tapoviśeṣāṃstapasaḥ phalaṃ ca // Bc_7.13 //</l>
+</lg>
+
+<lg>
+<l>agrāmyamannaṃ salile prarūḍhaṃ parṇīna toyaṃ phalamūlameva /</l>
+<l>yathāgamaṃ vṛttiriyaṃ munīnāṃ bhinnāstu te te tapasāṃ vikalpāḥ // Bc_7.14 //</l>
+</lg>
+
+<lg>
+<l>uñchena jīvanti khagā ivānye tṛṇāni kecinmṛgavaccaranti /</l>
+<l>kecidbhujaṅgaiḥ saha vartayanti valmīkabhūtā vanamārutena // Bc_7.15 //</l>
+</lg>
+
+<lg>
+<l>āśmaprayatnārjitavṛttayo 'nye kecitsvadantāpahatānnabhakṣāḥ /</l>
+<l>kṛtvā parārtha śrapaṇaṃ tathānye kurvanti kāryaṃ yadi śeṣamasti // Bc_7.16 //</l>
+</lg>
+
+<lg>
+<l>kecijjalaklinnajaṭākalāpā dviḥ pāvakaṃ juvhati mantrapūrvam /</l>
+<l>mīnaiḥ samaṃ kecidapo vigāhya vasanti kūrmollikhitaiḥ śarīraiḥ // Bc_7.17 //</l>
+</lg>
+
+<lg>
+<l>evaṃvidhaiḥ kālacitaistapobhiḥ parairdivaṃ yāntyaparairnṛlokam /</l>
+<l>duḥkhena mārgeṇa sukhaṃ hyupaiti sukhaṃ hi dharmasya vadanti mūlam // Bc_7.18 //</l>
+</lg>
+
+<p>ityevamādi dvipadendravatsaḥ śrutvā vacastasya tapodhanasya /
+adṛṣṭatattvo 'pi na saṃtutoṣa / śanairidaṃ cātmagataṃ babhāṣe // Bc_7.19 //</p>
+
+<lg>
+<l>duḥkhātmakaṃ naikavidhaṃ tapaśca svargapradhānaṃ tapasaḥ phalaṃ ca /</l>
+<l>lokāśca sarve pariṇāmavantaḥ svalpe śramaḥ khalvayamāśramāṇām // Bc_7.20 //</l>
+</lg>
+
+<lg>
+<l>priyāṃśca bandhūnviṣayāṃśca hitvā ye svargahetorniyamaṃ caranti /</l>
+<l>te viprayuktāḥ khalu gantukāmā mahattaraṃ bandhanameva bhūyaḥ // Bc_7.21 //</l>
+</lg>
+
+<lg>
+<l>kāyaklamairyaśca tapo 'bhidhānaiḥ pravṛttimakāṅkṣati kāmahetoḥ /</l>
+<l>saṃsāradoṣānaparīkṣamāṇo duḥkhena so 'nvicchati duḥkhameva // Bc_7.22 //</l>
+</lg>
+
+<lg>
+<l>trāsaśca nityaṃ maraṇātprajānāṃ yatnena cecchanti punaḥprasūtim /</l>
+<l>satyāṃ pravṛttau niyataśca mṛtyustatraiva magnā yata eva bhītāḥ // Bc_7.23 //</l>
+</lg>
+
+<lg>
+<l>ihārthameke praviśanti khedaṃ svargārthamanye śramamāpnuvanti /</l>
+<l>sukhārthamāśākṛpaṇo 'kṛtārthaḥ patatyanarthe khalu jīvalokaḥ // Bc_7.24 //</l>
+</lg>
+
+<lg>
+<l>na khalvayaṃ garhita eva yatno yo hīnamṛtsṛjya viśeṣagāmi /</l>
+<l>prājñaiḥ samānena pariśrameṇa kāryaṃ tu tadyatra punarna kāryam // Bc_7.25 //</l>
+</lg>
+
+<lg>
+<l>śarīrapīḍā tu yadīha dharmaḥ sukhaṃ śarīrasya bhavatyadharmaḥ /</l>
+<l>dharmeṇa cāpnoti sukhaṃ paratra tasmādadharma phalatīha dharmaḥ // Bc_7.26 //</l>
+</lg>
+
+<lg>
+<l>yataḥ śarīraṃ manaso vaśena pravartate cāpi nivartate ca /</l>
+<l>yukto damaścetasa eva tasmāccittādṛte kāṣṭhasamaṃ śarīram // Bc_7.27 //</l>
+</lg>
+
+<lg>
+<l>āhāraśuddhyā yadi puṇyamiṣṭaṃ tasmānmṛgānāmapi puṇyamasti /</l>
+<l>ye cāpi bāhyāḥ puruṣāḥ phalebhyo bhāgyāparādhena parāṅmukhārthāḥ // Bc_7.28 //</l>
+</lg>
+
+<lg>
+<l>duḥkhe 'bhisaṃdhistvatha puṇyahetuḥ sukhe 'pi kāryo nanu so 'bhisaṃdhiḥ /</l>
+<l>atha pramāṇaṃ na sukhe 'bhisaṃdhirduḥkhe pramāṇaṃ nanu nābhisaṃdhiḥ // Bc_7.29 //</l>
+</lg>
+
+<lg>
+<l>tathaiva ye karmaviśuddhihetoḥ spṛśantyapastīrthamiti pravṛttāḥ /</l>
+<l>tatrāpi toṣo hṛdi kevalo 'yaṃ na pāvayiṣyanti hi pāpamāpaḥ // Bc_7.30 //</l>
+</lg>
+
+<lg>
+<l>spṛṣṭaṃ hi yadyadguṇavadbhirambhastattatpṛthivyāṃ yadi tīrthamiṣṭam /</l>
+<l>tasmādguṇāneva paraimi tīrthamāpastu niḥsaṃśayamāpa eva // Bc_7.31 //</l>
+</lg>
+
+<lg>
+<l>iti sma tattadbahuyuktiyuktaṃ jagāda cāstaṃ ca yayau vivasvān /</l>
+<l>tato havirdhūmavivarṇavṛkṣaṃ tapaḥpraśāntaṃ sa vanaṃ viveśa // Bc_7.32 //</l>
+</lg>
+
+<lg>
+<l>abhyuddhṛtaprajvalitāgnihotraṃ kṛtābhiṣekarṣijanāvakirṇam /</l>
+<l>jāpyasvanākūjitadevakoṣṭhaṃ dharmasya karmāntamiva pravṛttam // Bc_7.33 //</l>
+</lg>
+
+<lg>
+<l>kāścinniśāstatra niśākarābhaḥ parīkṣamāṇaśca tapāṃsyuvāsa /</l>
+<l>sarva parikṣepya tapaśca matvā tasmāttapaḥkṣetratalājjagāma // Bc_7.34 //</l>
+</lg>
+
+<lg>
+<l>anvavrajannāśramiṇastatastaṃ tadrūpamāhātmyagatairmanobhiḥ /</l>
+<l>deśādanāryairabhibhūyamānānmaharṣayo dharmamivāpayāntam // Bc_7.35 //</l>
+</lg>
+
+<lg>
+<l>tato jaṭāvalkalacīrakhelāṃstapodhanāṃścaiva sa tāndadarśa /</l>
+<l>tapāṃsi caiṣāmanurudhyamānastasthau śive śrīmati vṛkṣamūle // Bc_7.36 //</l>
+</lg>
+
+<lg>
+<l>athopasṛtyāśramavāsinastaṃ manuṣyavarya parivārya tasthuḥ /</l>
+<l>vṛddhaśca teṣāṃ bahumānapūrvaṃ kalena sāmnā giramityuvāca // Bc_7.37 //</l>
+</lg>
+
+<lg>
+<l>tvayyāgate pūrṇa ivāśramo 'bhūtsaṃpadyate śūnya eva prayāte /</l>
+<l>tasmādimaṃ nārhasi tāta hātuṃ jijīviṣordehamiveṣṭamāyuḥ // Bc_7.38 //</l>
+</lg>
+
+<lg>
+<l>brahmarṣirājarṣisurarṣijuṣṭaḥ puṇyaḥ samīpe himavān hi śailaḥ /</l>
+<l>tapāṃsi tānyeva tapodhanānāṃ yatsaṃnikarṣādbahulībhavanti // Bc_7.39 //</l>
+</lg>
+
+<p>tīrthāni puṇyāyānyabhitastathaiva sopānabhūtāni nabhastalasya
+<l>juṣṭāni dharmātmabhirātmavadbhirdevarṣibhiścaiva maharṣibhiśca // Bc_7.40 //</l></p>
+
+<lg>
+<l>itaśca bhūyaḥ kṣamamuttaraiva diksevituṃ dharmīvaśeṣahetoḥ /</l>
+<l>na tu kṣamaṃ dakṣiṇato budhena padaṃ bhavedekamapi prayātum // Bc_7.41 //</l>
+</lg>
+
+<lg>
+<l>tapovane 'sminnatha niṣkriyo vā saṃkīrṇadharmāpatito 'śucirvā /</l>
+<l>dṛṣṭastvayā yena na te vivatsā tadbrūhi yāvadrucito 'stu vāsaḥ // Bc_7.42 //</l>
+</lg>
+
+<lg>
+<l>ime hi vāñchanti tapaḥsahāyaṃ taponidhānapratīmaṃ bhavantam /</l>
+<l>vāsastvayā hīndrasamena sārdha bṛhaspaterabhyudayāvahaḥ syāt // Bc_7.43 //</l>
+</lg>
+
+<lg>
+<l>ityevamukte sa tapasvimadhye tapasvimukhyena manīṣimukhyaḥ /</l>
+<l>bhavapraṇāśāya kṛtapratijñaḥ svaṃ bhāvāmantargatamācacakṣe // Bc_7.44 //</l>
+</lg>
+
+<lg>
+<l>ṛjvātmanāṃ dharmabhṛtāṃ munīnāmiṣṭātithitvātsvajanopamānām /</l>
+<l>evaṃvidhairmā prati bhāvajātaiḥ prītiḥ parā me janitaśca mānaḥ // Bc_7.45 //</l>
+</lg>
+
+<lg>
+<l>snigdhābhirābhirhṛdayaṃgamābhiḥ samāsataḥ snāta ivāsmi vāgbhiḥ /</l>
+<l>ratiśca me dharmanavagrahasya vispanditā saṃprati bhūya eva // Bc_7.46 //</l>
+</lg>
+
+<lg>
+<l>evaṃ pravṛttān bhavataḥ śaraṇyānatīva saṃdarśitapakṣapātān /</l>
+<l>yāsyāmi hitveti mamāpi duḥkhaṃ yathaiva bandhūṃstyajatastathaiva // Bc_7.47 //</l>
+</lg>
+
+<lg>
+<l>svargāya yuṣmākamayaṃ tu dharmo mamābhilāṣastvapunarbhavāya /</l>
+<l>asminvane yena na me vivatsā bhinnaḥ pravṛttyā hi nivṛttidharmaḥ // Bc_7.48 //</l>
+</lg>
+
+<lg>
+<l>tannāratirme na parāpacāro vanādito yena parivrajāmi /</l>
+<l>dharme sthitāḥ pūrvayugānurūpe sarve bhavanto hi maharṣikalpāḥ // Bc_7.49 //</l>
+</lg>
+
+<lg>
+<l>tato vacaḥ sūnṛtamarthavacca suślakṣṇamojasvi ca garvita ca /</l>
+<l>śrutvā kumārasya tapasvinaste viśeṣayuktaṃ bahumānamīyuḥ // Bc_7.50 //</l>
+</lg>
+
+<lg>
+<l>kaściddvijastatra tu bhasmaśāyī prāṃśuḥ śikhī dāravacīravāsāḥ /</l>
+<l>āpiṅgalākṣastanudīrghaghoṇaḥ kuṇḍaikahasto giramityuvāca // Bc_7.51 //</l>
+</lg>
+
+<lg>
+<l>dhīmannudāraḥ khalu niścayaste yastvaṃ yuvā janmani dṛṣṭadoṣaḥ /</l>
+<l>svargāpavargau hi vicārya samyagyasyāpavarge matirasti so 'sti // Bc_7.52 //</l>
+</lg>
+
+<lg>
+<l>yajñaistapobhirniyamaiśca taistaiḥ svarga yiyāsanti hi rāgavantaḥ /</l>
+<l>rāgeṇa sārdha ripuṇeva yuddhvā mokṣaṃ parīpsanti tu sattvavantaḥ // Bc_7.53 //</l>
+</lg>
+
+<lg>
+<l>tadbuddhireṣā yadi niścitā te tūrṇaṃ bhavān gacchatu vindhyakoṣṭham /</l>
+<l>asau munistatra vasatyarāḍo yo naiṣṭhike śreyasi labdhacakṣuḥ // Bc_7.54 //</l>
+</lg>
+
+<lg>
+<l>tasmādbhavāñcchroṣyati tattvamārga satyāṃ rucau saṃpratipatsyate ca /</l>
+<l>yathā tu paśyāmi matistathaiṣā tasyāpi yāsyatyavadhūya buddhim // Bc_7.55 //</l>
+</lg>
+
+<p>spaṣṭoccaghoṇaṃ vipulāyatākṣaṃ / tāmrādharauṣṭhaṃ sitatīkṣaṇadaṃṣṭram /
+<l>idaṃ hi vaktuṃ tanuraktajivhaṃ jñeyārṇavaṃ pāsyati kṛtsnameva // Bc_7.56 //</l></p>
+
+<lg>
+<l>gambhīratā yā bhavatastvagādhā yā dīptatā yāni ca lakṣaṇāni /</l>
+<l>ācāryakaṃ prāpsyasi tatpṛthivyāṃ yannarṣibhiḥ pūrvayuge 'pyavāptam // Bc_7.57 //</l>
+</lg>
+
+<lg>
+<l>paramamiti tato nṛpātmajastamṛṣijanaṃ pratinandya niryayau /</l>
+<l>vidhivadanuvidhāya te 'pi taṃ praviviśurāśramiṇastapovanam // Bc_7.58 //</l>
+</lg>
+
+<l>iti buddhacarite mahākāvye tapovanapraveśo nāma saptamaḥ sargaḥ // 7 //</l>
+
+<p>CANTO VIII</p>
+
+<lg>
+<l>tatasturaṅgāvacaraḥ sa durmanāstathā vanaṃ bhartari nirmame gate /</l>
+<l>cakāra yatnaṃ pathi śokanigrahe tathāpi caivāśru na tasya cikṣiye // Bc_8.1 //</l>
+</lg>
+
+<lg>
+<l>yamekarātreṇa tu bharturājñayā jagāma mārga saha tena vājinā /</l>
+<l>iyāya bharturvirahaṃ vicintayaṃstameva panthānamahobhiraṣṭabhiḥ // Bc_8.2 //</l>
+</lg>
+
+<lg>
+<l>hayaśca saujā vicacāra kanthakastatāma bhāvena babhūva nirmadaḥ /</l>
+<l>alaṃkṛtaścāpi tathaiva bhūṣaṇairabhūdgataśrīriva tena varjitaḥ // Bc_8.3 //</l>
+</lg>
+
+<lg>
+<l>nivṛtya caivābhimukhastapovanaṃ bhṛśaṃ jiheṣe karuṇaṃ muhurmuhuḥ /</l>
+<l>kṣudhānvito 'pyadhvani śaṣpamambu vā yathā purā nābhinanda nādade // Bc_8.4 //</l>
+</lg>
+
+<lg>
+<l>tato vihīnaṃ kapilāvhayaṃ puraṃ mahātmanā tena jagaddhitātmanā /</l>
+<l>krameṇa tau śūnyamivopajagmaturdivākareṇeva vinākṛtaṃ nabhaḥ // Bc_8.5 //</l>
+</lg>
+
+<lg>
+<l>sapuṇḍarīkairapi śobhitaṃ jalairalaṃkṛtaṃ puṣpadharairnagairapi /</l>
+<l>tadeva tasyopavanaṃ vanopamaṃ gatapraharṣairna rarāja nāgaraiḥ // Bc_8.6 //</l>
+</lg>
+
+<lg>
+<l>tato bhramadbhirdiśi dīnamānasairanujjvalairbāṣpahatekṣaṇairnaraiḥ /</l>
+<l>nirvāyamāṇāviva tāvubhau puraṃ śanairapasnātamivābhijagmatuḥ // Bc_8.7 //</l>
+</lg>
+
+<lg>
+<l>niśāmya ca srastaśarīragāminau vināgatau śākyakularṣabheṇa tau /</l>
+<l>mumoca bāṣpaṃ pathi nāgaro janaḥ pura rathe dāśaratherivāgate // Bc_8.8 //</l>
+</lg>
+
+<lg>
+<l>atha bruvantaḥ samupetamanyavo janāḥ pathi cchandakamāgatāśravaḥ /</l>
+<l>kva rājaputraḥ purarāṣṭranandano hṛtastvayāsāviti pṛṣṭhato 'nvayuḥ // Bc_8.9 //</l>
+</lg>
+
+<lg>
+<l>tataḥ sa tān bhaktimato 'bravījjanānnarendraputraṃ na parityajāmyaham /</l>
+<l>rudannahaṃ tena tu nirjane vane gṛhasthaveśaśca visarjitāviti // Bc_8.10 //</l>
+</lg>
+
+<lg>
+<l>idaṃ vacastasya niśamya te janāḥ suduṣkaraṃ khalviti niścayaṃ yayuḥ /</l>
+<l>pataddhi jahruḥ salilaṃ na netrajaṃ mano nininduśca phalotthamātmanaḥ // Bc_8.11 //</l>
+</lg>
+
+<lg>
+<l>athocuradyaiva viśāma tadvanaṃ gataḥ sa yatra dviparājavikramaḥ /</l>
+<l>jijīviṣā nāsti hi tena no vinā yathendriyāṇāṃ vigame śarīriṇām // Bc_8.12 //</l>
+</lg>
+
+<lg>
+<l>idaṃ puraṃ tena vivarjitaṃ vanaṃ vanaṃ ca tattena samanvitaṃ puram /</l>
+<l>na śobhate tena hi no vinā puraṃ marutvatā vṛtravadhe yathā divam // Bc_8.13 //</l>
+</lg>
+
+<lg>
+<l>punaḥ kumāro vinivṛtta ityatho gavākṣamālāḥ pratipedire 'ṅganāḥ /</l>
+<l>viviktapṛṣṭhaṃ ca niśāmya vājinaṃ punargavākṣāṇi pidhāya cukruśuḥ // Bc_8.14 //</l>
+</lg>
+
+<lg>
+<l>praviṣṭadīkṣastu sutopalabdhaye vratena śokena ca khinnamānasaḥ /</l>
+<l>jajāpa devāyatane narādhipaścakāra tāstāśca yathāśayāḥ kriyāḥ // Bc_8.15 //</l>
+</lg>
+
+<lg>
+<l>tataḥ sa bāṣpapratipūrṇalocanasturaṅgamādāya turaṅgamānugaḥ /</l>
+<l>viveśa śokābhihato nṛpakṣayaṃ yudhāpinīte ripuṇeva bhartari // Bc_8.16 //</l>
+</lg>
+
+<lg>
+<l>vigāhamānaśca narendramandiraṃ vilokayannaśruvahena cakṣuṣā /</l>
+<l>svareṇa puṣṭena rurāva kanthako janāya duḥkhaṃ prativedayanniva // Bc_8.17 //</l>
+</lg>
+
+<lg>
+<l>tataḥ khagāśca kṣayamadhyagocarāḥ samīpabaddhāsturagāśca satkṛtāḥ /</l>
+<l>hayasya tasya pratisasvanuḥ svanaṃ narendrasūnorupayānaśaṅkinaḥ // Bc_8.18 //</l>
+</lg>
+
+<lg>
+<l>janāśca harṣatiśayena vañcitā janādhipāntaḥpurasaṃnikarṣagāḥ /</l>
+<l>yathā hayaḥ kanthaka eṣa heṣate dhruvaṃ kumāro viśatīti menire // Bc_8.19 //</l>
+</lg>
+
+<lg>
+<l>atipraharṣādatha śokamūrchitāḥ kumārasaṃdarśanalolalocanāḥ /</l>
+<l>gṛhādviniścakramurāśayā striyaḥ śaratpayodādiva vidyutaścalāḥ // Bc_8.20 //</l>
+</lg>
+
+<lg>
+<l>vilambakeśyo malināṃśukāmbarā nirañjanairbāṣpahatekṣaṇairmukhaiḥ /</l>
+<l>striyo na rejurmṛjayā vinākṛtā divīva tārā rajanīkṣayāruṇāḥ // Bc_8.21 //</l>
+</lg>
+
+<lg>
+<l>araktatāmraiścaraṇairanūpurairakuṇḍalairārjavakandharairmukhaiḥ /</l>
+<l>svabhāvapīnairjaghanairamekhalairahārayoktrairmuṣitairiva stanaiḥ // Bc_8.22 //</l>
+</lg>
+
+<lg>
+<l>nirīkṣya tā bāṣpaparītalocanā nirāśrayaṃ chandakamaśvameva ca /</l>
+<l>viṣaṇṇavaktrā rurudurvarāṅganā vanāntare gāva ivarṣabhojjhitāḥ // Bc_8.23 //</l>
+</lg>
+
+<lg>
+<l>tataḥ sabāṣpā mahīṣī mahīpateḥ pranaṣṭavatsā mahiṣīva vatsalā /</l>
+<l>pragṛhya bāhū nipapāta gautamī vilolaparṇā kadalīva kāñcanī // Bc_8.24 //</l>
+</lg>
+
+<lg>
+<l>hatatviṣo 'nyāḥ śithilāṃsabāhavaḥ striyo viṣādena vicetanā iva /</l>
+<l>na cukruśurnāśru jahurna śaśvasurna celurāsurlikhitā iva sthitāḥ // Bc_8.25 //</l>
+</lg>
+
+<lg>
+<l>adhīramanyāḥ patiśokamūrcchitā vilocanaprasravaṇairmukhaiḥ striyaḥ /</l>
+<l>siṣiñcire proṣitacandanān stanāndharādharaḥ prasravaṇairivopalān // Bc_8.26 //</l>
+</lg>
+
+<lg>
+<l>mukhaiśca tāsāṃ nāyanāmbutāḍitaiṃ rarāja tadrājaniveśanaṃ tadā /</l>
+<l>navāmbukāle 'mbudavṛṣṭitāḍitaiḥ sravajjalaistāmarasairyathā saraḥ // Bc_8.27 //</l>
+</lg>
+
+<lg>
+<l>suvṛttapiṇāḍagulibhirnirantarairabhūṣaṇairgūḍhasirairvarāṅganāḥ /</l>
+<l>urāṃsi jaghnuḥ kamalopamaiḥ karaiḥ svapallavairvātacalā latā iva // Bc_8.28 //</l>
+</lg>
+
+<lg>
+<l>karaprahārapracalaiśca tā babhustathāpi nāryaḥ sahitonnataiḥ stanaiḥ /</l>
+<l>vanānilāghūrṇitapadmakampitai rathāṅganāmnāṃ mithunairivāpagāḥ // Bc_8.29 //</l>
+</lg>
+
+<lg>
+<l>yathā ca vakṣāṃsi karairapīḍayaṃstathaiva vakṣobhirapīḍayan karān /</l>
+<l>akārayaṃstatra parasparaṃ vyathāḥ karāgravakṣāṃsyabalā dayālasāḥ // Bc_8.30 //</l>
+</lg>
+
+<lg>
+<l>tatastu roṣapraviraktalocanā viṣādasaṃbandhikaṣāyagadgadam /</l>
+<l>uvāca niśvāsacalatpayodharā vigāḍhaśokāśrudharā yaśodharā // Bc_8.31 //</l>
+</lg>
+
+<lg>
+<l>niśi prasuptāmavaśāṃ vihāya māṃ gataḥ kva sa chandaka manmanorathaḥ /</l>
+<l>upāgate ca tvayi kanthake ca me samaṃ gateṣu triṣu kampate manaḥ // Bc_8.32 //</l>
+</lg>
+
+<lg>
+<l>anāryamasnigdhamamitrakarma me nṛśaṃsa kṛtvā kimihādya rodiṣi /</l>
+<l>niyaccha bāṣpaṃ bhava tuṣṭamānaso na saṃvadatyaśru ca tacca karma te // Bc_8.33 //</l>
+</lg>
+
+<lg>
+<l>priyeṇa vaśyena hitena sādhunā tvayā sahāyena yathārthakāriṇā /</l>
+<l>gato 'ryaputro hyapunarnivṛttaye ramasva diṣṭyā saphalaḥ śramastava // Bc_8.34 //</l>
+</lg>
+
+<lg>
+<l>varaṃ manuṣyasya vicakṣaṇo ripurna mitramaprājñamayogapeśalam /</l>
+<l>suhṛdbruveṇa hyavipaścitā tvayā kṛtaḥ kulasyāsya mahānupaplavaḥ // Bc_8.35 //</l>
+</lg>
+
+<lg>
+<l>imā hi śocyā vyavamuktabhūṣaṇāḥ prasaktabāṣpāvilaraktalocanāḥ /</l>
+<l>sthite 'pi patyau himavanmahīsame pranaṣṭaśobhā vidhavā iva striyaḥ // Bc_8.36 //</l>
+</lg>
+
+<lg>
+<l>imāśca vikṣiptaviṭaṅkabāhavaḥ prasaktapārāvatadīrghanisvanāḥ /</l>
+<l>vinākṛtāstena sahāvarodhanairbhṛśaṃ rudantīva vimānapaṅktayaḥ // Bc_8.37 //</l>
+</lg>
+
+<lg>
+<l>anarthakāmo 'sya janasya sarvathā turaṅgamo 'pi dhruvameṣa kanthakaḥ /</l>
+<l>jahāra sarvasvamitastathā hi me jane prasupte niśi ratnacauravat // Bc_8.38 //</l>
+</lg>
+
+<lg>
+<l>yadā samarthaḥ khalu soḍhumāgatāniṣuprahārānapi kiṃ punaḥ kaśāḥ /</l>
+<l>gataḥ kaśāpātabhayātkathaṃ nvayaṃ śriyaṃ gṛhītvā hṛdayaṃ ca me samam // Bc_8.39 //</l>
+</lg>
+
+<lg>
+<l>anāryakarmā bhṛśamadya heṣate narendradhiṣṇyaṃ pratipūrayanniva /</l>
+<l>yadā tu nirvāhayati sma me priyaṃ tadā hi mūkasturagādhamo 'bhavat // Bc_8.40 //</l>
+</lg>
+
+<lg>
+<l>yadi hyaheṣiṣyata bodhayan janaṃ khuraiḥ kṣitau vāpyakariṣyata dhvanim /</l>
+<l>hanusvanaṃ vājanayiṣyaduttamaṃ na cābhaviṣyanmama duḥkhamīdṛśam // Bc_8.41 //</l>
+</lg>
+
+<lg>
+<l>itīha devyāḥ paridevitāśrayaṃ niśamya bāṣpagrathitākṣaraṃ vacaḥ /</l>
+<l>adhomukhaḥ sāśrukalaḥ kṛtāñjaliḥ śanairidaṃ chandaka uttaraṃ jagau // Bc_8.42 //</l>
+</lg>
+
+<lg>
+<l>vigarhituṃ nārhasi devi kanthakaṃ na cāpi roṣaṃ mayi kartumarhasi /</l>
+<l>anāgasau svaḥ samavehi sarvaśo gato nṛdevaḥ sa hi devi devavat // Bc_8.43 //</l>
+</lg>
+
+<lg>
+<l>ahaṃ hi jānannapi rājaśāsanaṃ balātkṛtaḥ kairapi daivatairiva /</l>
+<l>upānayaṃ tūrṇamimaṃ turaṅgamaṃ tathānvagacchaṃ vigataśramo 'dhvani // Bc_8.44 //</l>
+</lg>
+
+<lg>
+<l>vrajannayaṃ vajivaro 'pi nāspṛśanmahī khurāgrairvidhṛtairivāntarā /</l>
+<l>tathaiva daivādiva saṃyatānano hanusvanaṃ nākṛta nāpyaheṣata // Bc_8.45 //</l>
+</lg>
+
+<lg>
+<l>yato bahirgacchati pārthivātmaje tadābhavaddvāramapāvṛtaṃ svayam /</l>
+<l>tamaśca naiśaṃ raviṇeva pāṭitaṃ tapo 'pi daivo vidhireṣa gṛhyatām // Bc_8.46 //</l>
+</lg>
+
+<lg>
+<l>yadapramatto 'pi narendraśāsanād gṛhe pure civa sahasraśo janaḥ /</l>
+<l>tadā sa nābudhyata nidrayā hṛtastato 'pi daivo vidhireṣa gṛhyatām // Bc_8.47 //</l>
+</lg>
+
+<lg>
+<l>yataśca vāso vanavāsasaṃmataṃ nisṛṣṭamasmai samaye divaukasā /</l>
+<l>divi praviddhaṃ mukuṭaṃ ca taddhṛtaṃ tato 'pi daivo vidhireṣa gṛhyatām // Bc_8.48 //</l>
+</lg>
+
+<lg>
+<l>tadevamāvāṃ naradevi doṣato na tatprayātaṃ prati gantumarhasi /</l>
+<l>na kāmakāro mama nāsya vājinaḥ kṛtānuyātraḥ sa hi daivatairgataḥ // Bc_8.49 //</l>
+</lg>
+
+<lg>
+<l>iti prayāṇaṃ bahudevamadbhūtaṃ niśamya tāstasya mahātmanaḥ striyaḥ /</l>
+<l>pranaṣṭaśokā iva vismayaṃ yayurmanojvaraṃ pravrajanāttu lebhire // Bc_8.50 //</l>
+</lg>
+
+<lg>
+<l>viṣādapāriplavalocanā tataḥ pranaṣṭapotā kurarīva duḥkhitā /</l>
+<l>vihāya dhairya virurāva gautamī tatāma caivāśrumukhī jagāda ca // Bc_8.51 //</l>
+</lg>
+
+<lg>
+<l>mahormimanto mṛdavo 'sitāḥ śubhāḥ pṛthakpṛthaṅmūlaruhāḥ samudgatāḥ /</l>
+<l>praveritāste bhuvi tasya murdhajā narendramaulīpariveṣṭanakṣamāḥ // Bc_8.52 //</l>
+</lg>
+
+<lg>
+<l>pralambabāhurmṛgarājavikramo maharṣabhākṣaḥ kanakojjvaladyutiḥ /</l>
+<l>viśālavakṣā ghanadundubhisvanastathāvidho 'pyāśramavāsamarhati // Bc_8.53 //</l>
+</lg>
+
+<lg>
+<l>abhāginī nūnamiyaṃ vasuṃdharā tamāryakarmāṇamanuttamaṃ patim /</l>
+<l>gatastato 'sau guṇavān hi tādṛśo nṛpaḥ prajābhāgyaguṇaiḥ prasūyate // Bc_8.54 //</l>
+</lg>
+
+<lg>
+<l>sujātajālāvatatāṅgulī mṛdū nigūḍhagulphau bisapuṣpakomalau /</l>
+<l>vanāntabhūmiṃ kaṭhināṃ kathaṃ nu tau sacakramadhyau caraṇau gamiṣyataḥ // Bc_8.55 //</l>
+</lg>
+
+<lg>
+<l>vimānapṛṣṭhe śayanāsanocitaṃ mahārhavastrāgurucandanārcitam /</l>
+<l>kathaṃ nu śītoṣṇajalāgameṣu taccharīramojasvi vane bhaviṣyati // Bc_8.56 //</l>
+</lg>
+
+<lg>
+<l>kulena sattvena balena varcasā śrutena lakṣmyā vayasā ca garvitaḥ /</l>
+<l>pradātumevābhyucito na yācituṃ kathaṃ sa bhikṣāṃ parataścariṣyati // Bc_8.57 //</l>
+</lg>
+
+<lg>
+<l>śucau śayitvā śayane hiraṇmaye prabodhyamāno niśi tūryanisvanaiḥ /</l>
+<l>kathaṃ bata svapsyati so 'dya me vratī paṭaikadeśāntarite mahītale // Bc_8.58 //</l>
+</lg>
+
+<lg>
+<l>imaṃ pralāpaṃ karuṇaṃ niśamya tā bhujaiḥ pariṣvajya parasparaṃ striyaḥ /</l>
+<l>vilocanebhyaḥ salilāni tatyajurmadhūni puṣpebhya iveritā latāḥ // Bc_8.59 //</l>
+</lg>
+
+<lg>
+<l>tato dharāyāmapatadyaśodharā vicakravākeva rathāṅgasāvhayā /</l>
+<l>śanaiśca tattadvilalāpa viklavā muhurmuhurgadgadaruddhayā girā // Bc_8.60 //</l>
+</lg>
+
+<lg>
+<l>sa māmanāthāṃ sahadharmacāriṇīmapāsya dharma yadi kartumicchati /</l>
+<l>kuto 'sya dharmaḥ sahadharmacāriṇī vinā tapo yaḥ paribhoktumicchati // Bc_8.61 //</l>
+</lg>
+
+<lg>
+<l>śṛṇoti nūnaṃ sa na pūrvapārthivānmahāsudarśaprabhṛtīn pitāmahān /</l>
+<l>vanāni patnīsahitānupeyuṣastathā hi dharma madṛte cikīrṣīte // Bc_8.62 //</l>
+</lg>
+
+<lg>
+<l>makheṣu vā vedavidhānasaṃskṛtau na daṃpatī paśyati dīkṣitābubhau /</l>
+<l>samaṃ bubhukṣū parato 'pi tatphalaṃ tato 'sya jāto mayi dharmamatsaraḥ // Bc_8.63 //</l>
+</lg>
+
+<lg>
+<l>dhruvaṃ sa jānanmama dharmavallabho manaḥ priyerṣyākalahaṃ muhurmithaḥ /</l>
+<l>sukhaṃ vibhīrmāmapahāya roṣaṇāṃ mahendraloke 'psaraso jighṛkṣati // Bc_8.64 //</l>
+</lg>
+
+<lg>
+<l>iyaṃ tu cintā mama kīdṛśaṃ nu tā vapurguṇaṃ bibhrati tatra yoṣitaḥ /</l>
+<l>vane yadartha sa tapāṃsi tapyate śriyaṃ ca hitvā mama bhaktimeva ca // Bc_8.65 //</l>
+</lg>
+
+<lg>
+<l>na khalviyaṃ svargasukhāya me spṛhā na tajjanasyātmavato 'pi durlabham /</l>
+<l>sa tu priyo māmiha vā paratra vā kathaṃ na jahyāditi me manorathaḥ // Bc_8.66 //</l>
+</lg>
+
+<lg>
+<l>abhāginī yadyahamāyatekṣaṇaṃ śucismitaṃ bharturudīkṣituṃ mukham /</l>
+<l>na mandabhāgyo 'rhati rāhulo 'pyayaṃ kadācidaṅke parivartituṃ pituḥ // Bc_8.67 //</l>
+</lg>
+
+<lg>
+<l>aho nṛśaṃsaṃ sukumāravarcasaḥ sudāruṇaṃ tasya manasvino manaḥ /</l>
+<l>kalapralāpaṃ dviṣato 'pi harṣaṇaṃ śiśuṃ sutaṃ yastyajatīdṛśaṃ bata // Bc_8.68 //</l>
+</lg>
+
+<lg>
+<l>mamāpi kāmaṃ hṛdayaṃ sudāruṇaṃ śilāmayaṃ vāpyayaso 'pi vā kṛtam /</l>
+<l>anāthavacchrīrahite sukhocite vanaṃ gate bhartari yanna dīryate // Bc_8.69 //</l>
+</lg>
+
+<lg>
+<l>itīha devī patiśokamūrchitā ruroda dadhyau vilalāpa cāsakṛt /</l>
+<l>svabhāvadhīrāpi hi sā satī śucā dhṛtiṃ na sasmāra cakāra no hriyam // Bc_8.70 //</l>
+</lg>
+
+<lg>
+<l>tatastathā śokavilāpaviklavāṃ yaśodharāṃ prekṣya vasuṃdharāgatām /</l>
+<l>mahāravindairiva vṛṣṭitāḍitairmukhaiḥ sabāṣpairvanitā vicukruśuḥ // Bc_8.71 //</l>
+</lg>
+
+<lg>
+<l>samāptajāpyaḥ kṛtahomamaṅgalo nṛpastu devāyatanādviniryayau /</l>
+<l>janasya tejārtaraveṇa cāhataścacāla vajradhvanineva vāraṇaḥ // Bc_8.72 //</l>
+</lg>
+
+<lg>
+<l>niśāmya ca cchandakakanthakāvubhau sutasya saṃśrutya ca niścayaṃ sthiram /</l>
+<l>papāta śokābhihato mahīpatiḥ śacīpatervṛtta ivotsave dhvajaḥ // Bc_8.73 //</l>
+</lg>
+
+<lg>
+<l>tato muhūrta sutaśokamohito janena tulyābhijanena dhāritaḥ /</l>
+<l>nirīkṣya dṛṣṭyā jalapūrṇayā hayaṃ mahītalastho vilalāpa pārthivaḥ // Bc_8.74 //</l>
+</lg>
+
+<lg>
+<l>bahūni kṛtvā samare priyāṇi me mahattvayā kanthaka vipriyaṃ kṛtam /</l>
+<l>guṇapriyo yena vane sa me priyaḥ priyo 'pi sannapriyavatpraveritaḥ // Bc_8.75 //</l>
+</lg>
+
+<lg>
+<l>tadadya māṃ vā naya tatra yatra sa vraja drutaṃ vā punarenamānaya /</l>
+<l>ṛte hi tasmānmama nāsti jīvitaṃ vigāḍharogasya sadauṣadhādiva // Bc_8.76 //</l>
+</lg>
+
+<lg>
+<l>suvarṇaniṣṭhīvini mṛtyunā hṛte suduṣkaraṃ yanna mamāra saṃjayaḥ /</l>
+<l>ahaṃ punardharmaratau sute gate mumukṣurātmānamanātmavāniva // Bc_8.77 //</l>
+</lg>
+
+<lg>
+<l>vibhordaśakṣatrakṛtaḥ prajāpateḥ parāparajñasya vivasvadātmanaḥ /</l>
+<l>priyeṇa putreṇa satā vinākṛtaṃ kathaṃ na muhyeddhi mano manorapi // Bc_8.78 //</l>
+</lg>
+
+<lg>
+<l>ajasya rājñastanayāya dhīmate narādhipāyendrasakhāya me spṛhā /</l>
+<l>gate vanaṃ yastanaye divaṃ gato na moghabāṣpaḥ kṛpaṇaṃ jijīva ha // Bc_8.79 //</l>
+</lg>
+
+<lg>
+<l>pracakṣva me bhadra tadāśramājiraṃ hṛtastvayā yatra sa me jalāñjaliḥ /</l>
+<l>ime parīpsanti hi taṃ pipāsavo mamāsavaḥ pretagatiṃ yiyāsavaḥ // Bc_8.80 //</l>
+</lg>
+
+<lg>
+<l>iti tanayaviyogajātaduḥkha kṣitisadṛśaṃ sahajaṃ vihāya dhairyam /</l>
+<l>daśaratha iva rāmaśokavaśyo bahu vilalāpa nṛpo visaṃjñakalpaḥ // Bc_8.81 //</l>
+</lg>
+
+<lg>
+<l>śrutavinayaguṇānvitastatastaṃ matisacivaḥ pravayā purohitaśca /</l>
+<l>samadhṛtamidamūcaturyathāvanna ca pariptamukhau na cāpyaśokau // Bc_8.82 //</l>
+</lg>
+
+<lg>
+<l>tyaja naravara śokamehi dhairya kudhṛtirivārhasi dhīra nāśru moktum /</l>
+<l>srajamiva mṛditāmapāsya lakṣmīṃ bhuvi bahavo hi nṛpā vanānyabhīyuḥ // Bc_8.83 //</l>
+</lg>
+
+<lg>
+<l>api ca niyata eṣa tasya bhāvaḥ smara vacanaṃ tadṛṣeḥ purāsitasya /</l>
+<l>na hi sa divi na cakravartirājye kṣaṇamapi vāsayituṃ sukhena śakyaḥ // Bc_8.84 //</l>
+</lg>
+
+<lg>
+<l>yadi tu nṛvara kārya eva yatnastvaritamudāhara yāvadatra yāvaḥ /</l>
+<l>bahuvidhimiha yuddhamastu tāvattava tanayasya vidheśca tasya tasya // Bc_8.85 //</l>
+</lg>
+
+<lg>
+<l>narapatiratha tau śaśāsa tasmād drutamita eva yuvāmabhiprayātam /</l>
+<l>na hi mama hṛdayaṃ prayāti śāntiṃ vanaśakuneriva putralālasasya // Bc_8.86 //</l>
+</lg>
+
+<lg>
+<l>paramamiti narendraśāsanāttau yayaturamātyapurohitau vanaṃ tat /</l>
+<l>kṛtamiti savadhūjanaḥ sadāro nṛpatirapi pracakāra śeṣakāryam // Bc_8.87 //</l>
+</lg>
+
+<l>iti buddhacarite mahākāvye 'ntaḥpuravilāpo nāmāṣṭamaḥ sargaḥ // 8 //</l>
+
+<p>CANTO IX</p>
+
+<lg>
+<l>tatastadā mantripurohitau tau bāṣpapratodābhihatau nṛpeṇa /</l>
+<l>viddhau sadaśvāviva sarvayatnātsauhārdaśīghraṃ yayaturvanaṃ tat // Bc_9.1 //</l>
+</lg>
+
+<lg>
+<l>tamāśramaṃ jātapariśramau tāvupetya kāle sadṛśānuyātrau /</l>
+<l>rājarddhimutsṛjya vinītaceṣṭāvupeyaturbhārgavadhiṣṇyameva // Bc_9.2 //</l>
+</lg>
+
+<lg>
+<l>tau nyāyatastaṃ pratipūjya vipraṃ tenārcitau tāvapi cānurūpam /</l>
+<l>kṛtāsanau bhārgavamāsanasthaṃ chittvā kathāmūcaturātmakṛtyam // Bc_9.3 //</l>
+</lg>
+
+<lg>
+<l>śuddhaujasaḥ śuddhaviśālakīrterikṣvākuvaṃśaprabhavasya rājñaḥ /</l>
+<l>imaṃ janaṃ vettu bhavānadhītaṃ śrutagrahe mantraparigrahe ca // Bc_9.4 //</l>
+</lg>
+
+<lg>
+<l>tasyendrakalpasya jayantakalpaḥ putro jarāmṛtyubhayaṃ titīrṣuḥ /</l>
+<l>ihābhyutepaḥ kila tasya hetorāvāmupetau bhagavānavaitu // Bc_9.5 //</l>
+</lg>
+
+<lg>
+<l>tau so 'bravīdasti sa dīrghabāhuḥ prāptaḥ kumāro na tu nāvabuddhaḥ /</l>
+<l>dharmo 'yamāvartaka ityavetya yātastvarāḍābhimukho mumukṣuḥ // Bc_9.6 //</l>
+</lg>
+
+<lg>
+<l>tasmāttatastāvupalabhya tattvaṃ taṃ vipramāmantrya tadaiva sadyaḥ /</l>
+<l>khinnāvakhinnāviva rājabhaktyā prasasratustena yataḥ sa yātaḥ // Bc_9.7 //</l>
+</lg>
+
+<lg>
+<l>yāntau tatastau mṛjayā vihīnamapaśyatāṃ taṃ vapuṣojjvalantam /</l>
+<l>upopaviṣṭaṃ pathi vṛkṣamūle sūrya ghanābhogamiva praviṣṭam // Bc_9.8 //</l>
+</lg>
+
+<lg>
+<l>yānaṃ vihāyopayayau tatastaṃ purohito mantradhareṇa sārdham /</l>
+<l>yathā vanasthaṃ sahavāmadevo rāmaṃ didṛkṣurmunirāvairvaśeyaḥ // Bc_9.9 //</l>
+</lg>
+
+<lg>
+<l>tāvarcayāmāsaturarhatastaṃ divīva śukrāṅgirasau mahendram /</l>
+<l>pratyarcayāmāsa sa cārhatastau divīva śukrāṅgirasau mahendraḥ // Bc_9.10 //</l>
+</lg>
+
+<lg>
+<l>kṛtābhyanujñāvabhitastatastau niṣedatuḥ śākyakuladhvajasya /</l>
+<l>virejatustasya ca saṃnikarṣe punarvasū yogagatāvivendoḥ // Bc_9.11 //</l>
+</lg>
+
+<lg>
+<l>taṃ vṛkṣamūlasthamabhijvalantaṃ purohito rājasutaṃ babhāṣe /</l>
+<l>yathopaviṣṭaṃ divi pārijāte bṛhaspatiḥ śakrasutaṃ jayantam // Bc_9.12 //</l>
+</lg>
+
+<lg>
+<l>tvacchokaśalye hṛdayāvagāḍhe mohaṃ gato bhūmitale muhūrtam /</l>
+<l>kumāra rājā nayanāmbuvarṣo yattvāmavocattadidaṃ nibodha // Bc_9.13 //</l>
+</lg>
+
+<lg>
+<l>jānāmi dharma prati niścayaṃ te paraimi te bhāvinametamartham /</l>
+<l>ahaṃ tvakāle vanasaṃśrayātte śokāgnināgnipratimena dahye // Bc_9.14 //</l>
+</lg>
+
+<lg>
+<l>tadehi dharmapriya matpriyārtha dharmārthameva tyaja buddhimetām /</l>
+<l>ayaṃ hi mā śokarayaḥ pravṛddhau nadīrayaḥ kūlamivābhihanti // Bc_9.15 //</l>
+</lg>
+
+<lg>
+<l>meghāmbukakṣādriṣu yā hi vṛttiḥ samīraṇārkāgnimahāśanīnām /</l>
+<l>tāṃ vṛttimasmāsu karoti śoko vikarṣaṇocchoṣaṇadāhabhedaiḥ // Bc_9.16 //</l>
+</lg>
+
+<lg>
+<l>tadbhuṅkṣva tāvadvasudhādhipatyaṃ kāle vanaṃ yāsyāsi śāstradṛṣṭe /</l>
+<l>aniṣṭabandhau kuru mayyapekṣāṃ sarveṣu bhūteṣu dayā hi dharmaḥ // Bc_9.17 //</l>
+</lg>
+
+<lg>
+<l>na caiṣa dharmo vana eva siddhaḥ pure 'pi siddhirniyatā yatīnām /</l>
+<l>buddhiśca yatnaśca nimittamatra vana ca liṅgaṃ ca hi bhīrucinham // Bc_9.18 //</l>
+</lg>
+
+<lg>
+<l>maulīdharairasaviṣaktahāraiḥ keyūraviṣṭabdhabhujairnarendraiḥ /</l>
+<l>lakṣbhyaṅkamadhye parivartamānaiḥ prāpto gṛhasthairapi mokṣadharmaḥ // Bc_9.19 //</l>
+</lg>
+
+<lg>
+<l>dhruvānujau yau balivajrabāhū vaibhrājamāṣāḍhamathāntidevam /</l>
+<l>videharājaṃ janakaṃ tathaiva śālvadrumaṃ senajitaśca rājñaḥ // Bc_9.20 //</l>
+</lg>
+
+<lg>
+<l>etān gṛhasthānnṛpatīnavehi naiḥśreyase dharmavidhau vinītān /</l>
+<l>ubhe 'pi tasmādyugapadbhajasva cittādhipatyaṃ ca nṛpaśriyaṃ ca // Bc_9.21 //</l>
+</lg>
+
+<lg>
+<l>icchāmi hi tvāmupaguhya gāḍhaṃ kṛtābhiṣekaṃ salilārdrameva /</l>
+<l>dhṛtātapattraṃ samudīkṣamāṇastenaiva harṣeṇa vanaṃ praveṣṭum // Bc_9.22 //</l>
+</lg>
+
+<lg>
+<l>ityabravīdbhūmipatirbhavantaṃ vākyena bāṣpagrathitākṣareṇa /</l>
+<l>śrutvā bhavānarhati tatpriyārtha snehena tasnehamanuprayātum // Bc_9.23 //</l>
+</lg>
+
+<lg>
+<l>śokāmbhasi tvatprabhave hyagādhe duḥkhārṇave majjati śākyarājaḥ /</l>
+<l>tasmāttamuttāraya nāthahīnaṃ nirāśrayaṃ magnamivārṇave nauḥ // Bc_9.24 //</l>
+</lg>
+
+<lg>
+<l>bhīṣmeṇa gaṅgodarasaṃbhavena rāmeṇa rāmeṇa ca bhārgaveṇa /</l>
+<l>śrutvā kṛtaṃ karma pituḥ priyārtha pitustvamaopyarhasi kartumiṣṭam // Bc_9.25 //</l>
+</lg>
+
+<lg>
+<l>saṃvardhayitrī samavehi devīmagastyajuṣṭāṃ diśamaprayātām /</l>
+<l>pranaṣṭavatsāmiva vatsalāṃ gāmajasramārtā karuṇaṃ rudantīm // Bc_9.26 //</l>
+</lg>
+
+<lg>
+<l>haṃsena haṃsīmiva viprayuktāṃ tyaktāṃ gajeneva vane kareṇum /</l>
+<l>artā sanāthāmapi nāthahīnāṃ trātuṃ vadhūmarhasi darśanena // Bc_9.27 //</l>
+</lg>
+
+<lg>
+<l>ekaṃ sutaṃ bālamanarhaduḥkhaṃ saṃtāpamantargatamudvahantam /</l>
+<l>taṃ rāhulaṃ mokṣaya bandhuśokādrāhūpasargādeva pūrṇacandram // Bc_9.28 //</l>
+</lg>
+
+<p>śokāgninā tvadvirahendhanena / niḥsvāsadhūmena tamaḥśikhena /
+<l>tvaddarśanāmbvicchati dahyamānamantaḥpuraṃ caiva puraṃ ca kṛtsnam // Bc_9.29 //</l></p>
+
+<lg>
+<l>sa bodhisattvaḥ paripūrṇasattvaḥ śrutvā vacastasya purohitasya /</l>
+<l>dhyātvā muhūrtaṃ guṇavadguṇajñaḥ pratyuttaraṃ praśritamityuvāca // Bc_9.30 //</l>
+</lg>
+
+<lg>
+<l>avaimi bhāvaṃ tanaye pitṝṇāṃ viśeṣato yo mayi bhūmipasya /</l>
+<l>jānannapi vyādhijarāvipadbhyo bhītastvagatyā svajanaṃ tyajāmi // Bc_9.31 //</l>
+</lg>
+
+<lg>
+<l>draṣṭuṃ priyaṃ kaḥ svajanaṃ hi necchennānte yadi syātpriyaviprayogaḥ /</l>
+<l>yadā tu bhūtvāpi ciraṃ viyogastato guruaṃ snindhamapi tyajāmi // Bc_9.32 //</l>
+</lg>
+
+<lg>
+<l>maddhetukaṃ yattu narādhipasya śokaṃ bhavānāha na tatpriyaṃ me /</l>
+<l>yatsvapnabhūteṣu samāgameṣu saṃtapyate bhāvini viprayoge // Bc_9.33 //</l>
+</lg>
+
+<lg>
+<l>evaṃ ca te niścayametu buddhirdṛṣṭvā vicitraṃ jagataḥ pracāram /</l>
+<l>saṃtāpaheturna suto na bandhurajñānanaimittika eṣa tāpaḥ // Bc_9.34 //</l>
+</lg>
+
+<lg>
+<l>yathādhvagānamiha saṃgatānāṃ kāle viyogo niyataḥ prajānām /</l>
+<l>prājño janaḥ ko tu bhajeta śokaṃ bandhupratijñātajanairvihīnaḥ // Bc_9.35 //</l>
+</lg>
+
+<lg>
+<l>ihaiti hitvā svajanaṃ paratra pralabhya cehāpi punaḥ prayāti /</l>
+<l>gatvāpi tatrāpyaparatra gacchatyevaṃ jane tyāgini ko 'nurodhaḥ // Bc_9.36 //</l>
+</lg>
+
+<lg>
+<l>yadā ca garbhātprabhṛti pravṛttaḥ sarvāsvavasthāsu vadhāya mṛtyuḥ /</l>
+<l>kasmādakāle vanasaṃśrayaṃ me putrapriyastatrabhavānavocat // Bc_9.37 //</l>
+</lg>
+
+<lg>
+<l>bhavatyakālo viṣayābhipattau kālastathaivārthavidhau pradiṣṭaḥ /</l>
+<l>kālo jagatkarṣati sarvakālānnirvāhake śreyasi nāsti kālaḥ // Bc_9.38 //</l>
+</lg>
+
+<lg>
+<l>rājyaṃ mumukṣurmayi yacca rājā tadapyudāraṃ sadṛśaṃ pituśca /</l>
+<l>pratigrahītuṃ mama na kṣamaṃ tu lobhādapathyānnamivāturasya // Bc_9.39 //</l>
+</lg>
+
+<lg>
+<l>kathaṃ nu mohāyatanaṃ nṛpatvaṃ kṣamaṃ prapattuṃ viduṣā nareṇa /</l>
+<l>sodvegatā yatra madaḥ śramaśca parāpacāreṇa ca dharmapīḍā // Bc_9.40 //</l>
+</lg>
+
+<lg>
+<l>jāmbūnadaṃ harmyamiva pradīptaṃ viṣeṇa saṃyuktamivottamānnam /</l>
+<l>grāhākulaṃ cāmbviva sāravindaṃ rājyaṃ hi ramyaṃ vyasanāśrayaṃ ca // Bc_9.41 //</l>
+</lg>
+
+<lg>
+<l>itthaṃ ca rājyaṃ na sukhaṃ na dharmaḥ pūrve yathā jātaghṛṇā narendrāḥ /</l>
+<l>vayaḥprakarṣe 'parihāryaduḥkhe rājyāni muktvā vanameva jagmuḥ // Bc_9.42 //</l>
+</lg>
+
+<lg>
+<l>varaṃ hi bhuktāni tṛṇānyaraṇye toṣaṃ paraṃ ratnamivopagṛhya /</l>
+<l>sahoṣitaṃ śrīsulabhairna caiva doṣairadṛśyairiva kṛṣṇasarpaiḥ // Bc_9.43 //</l>
+</lg>
+
+<lg>
+<l>ślādhyaṃ hi rājyāni vihāya rājñāṃ dharmābhilāṣeṇa vanaṃ praveṣṭum /</l>
+<l>bhagnapratijñasya na tūpapannaṃ vanaṃ parityajya gṛhaṃ praveṣṭum // Bc_9.44 //</l>
+</lg>
+
+<lg>
+<l>jātaḥ kule ko hi naraḥ sasattvo dharmābhilāṣeṇa vanaṃ praviṣṭaḥ /</l>
+<l>kāṣāyamutsṛjya vimuktalajjaḥ puraṃdarasyāpi puraṃ śrayeta // Bc_9.45 //</l>
+</lg>
+
+<lg>
+<l>lobhāddhi mohādathavā bhayena yo vāntamannaṃ punarādadīta /</l>
+<l>lobhātsa mohādathavā bhayena saṃtyajya kāmān punarādadīta // Bc_9.46 //</l>
+</lg>
+
+<lg>
+<l>yaśca pradīptāccharaṇātkathaṃcinniṣkramya bhūyaḥ praviśettadeva /</l>
+<l>gārhasthyamutsṛjya sa dṛṣṭadoṣo mohena bhūyo 'bhilaṣedgrahītum // Bc_9.47 //</l>
+</lg>
+
+<lg>
+<l>yā ca śrutirmokṣamavāptavanto nṛpā gṛhasthā iti naitadasti /</l>
+<l>śamapradhānaḥ kva ca mokṣadharmo daṇḍapradhānaḥ kva ca rājadharmaḥ // Bc_9.48 //</l>
+</lg>
+
+<lg>
+<l>śame ratiścecchithilaṃ ca rājyaṃ rājye matiścecchamaviplavaśca /</l>
+<l>śamaśca taikṣṇyaṃ ca hi nopapannaṃ śītoṣṇayoraikyamivodakāgnyoḥ // Bc_9.49 //</l>
+</lg>
+
+<lg>
+<l>tanniścayādvā vasudhādhipāste rājyāni muktvā śamamāptavantaḥ /</l>
+<l>rājyāṅgitā vā nibhṛtendriyatvādanaiṣṭhike mokṣakṛtābhimānāḥ // Bc_9.50 //</l>
+</lg>
+
+<lg>
+<l>teṣāṃ ca rājye 'stu śamo yathāvatprāpto vanaṃ nāhamaniścayena /</l>
+<l>chittvā hi pāśaṃ gṛhabandhusaṃjñaṃ muktaḥ punarna pravivikṣurasmi // Bc_9.51 //</l>
+</lg>
+
+<lg>
+<l>ityātmavijñānaguṇānurūpaṃ muktaspṛhaṃ hetumadūrjitaṃ ca /</l>
+<l>śrutvā narendrātmajamuktavantaṃ pratyuttaraṃ mantradharo 'pyuvāca // Bc_9.52 //</l>
+</lg>
+
+<lg>
+<l>yo niścayo dharmavidhau tavāyaṃ nāyaṃ na yukto na tu kālayuktaḥ /</l>
+<l>śokāya dattvā pitaraṃ vayaḥsthaṃ syāddharmakāmasya hi te na dharmaḥ // Bc_9.53 //</l>
+</lg>
+
+<lg>
+<l>nūnaṃ ca buddhistava nātisūkṣmā dharmārthakāmeṣvavicakṣaṇā vā /</l>
+<l>hetoradṛṣṭasya phalasya yastvaṃ pratyakṣamartha paribhūya yāsi // Bc_9.54 //</l>
+</lg>
+
+<lg>
+<l>punarbhavo 'stīti ca kecidāhurnāstīti kecinniyatapratijñāḥ /</l>
+<l>evaṃ yadā saṃśayito 'yamarthastasmātkṣamaṃ bhoktumupasthitā śrīḥ // Bc_9.55 //</l>
+</lg>
+
+<lg>
+<l>bhūyaḥ pravṛttiryadi kācidasti raṃsyāmahe tatra yathopapattau /</l>
+<l>atha pravṛttiḥ parato na kācitsiddhau 'prayatnājjagato 'sya mokṣaḥ // Bc_9.56 //</l>
+</lg>
+
+<lg>
+<l>astīti kecitparalokamāhurmokṣasya yogaṃ na tu varṇayanti /</l>
+<l>agneryathā hyauṣṇyamapāṃ dravatvaṃ tadvatpravṛttau prakṛtiṃ vadanti // Bc_9.57 //</l>
+</lg>
+
+<lg>
+<l>kecitsvabhāvāditi varṇayanti śubhāśubhaṃ caiva bhavābhavau ca /</l>
+<l>svābhāvikaṃ sarvamidaṃ ca yasmādato 'pi mogho bhavati prayatnaḥ // Bc_9.58 //</l>
+</lg>
+
+<lg>
+<l>yadindriyāṇāṃ niyataḥ pracāraḥ priyāpriyatvaṃ viṣayeṣu caiva /</l>
+<l>saṃyujyate yajjarayārtibhiśca kastatra yatno nanu sa svabhāvaḥ // Bc_9.59 //</l>
+</lg>
+
+<lg>
+<l>adbhirhutāśaḥ śamamabhyupaiti tejāṃsi cāpo gamayanti śoṣam /</l>
+<l>bhinnāni bhūtāni śarīrasaṃsthānyaikyaṃ ca gatvā jagadudvahanti // Bc_9.60 //</l>
+</lg>
+
+<lg>
+<l>yatpāṇipādodarapṛṣṭhamūrdhnā nirvartate garbhagatasya bhāvaḥ /</l>
+<l>yadātmanastasya ca tena yogaḥ svābhāvikaṃ tatkathayanti tajjñāḥ // Bc_9.61 //</l>
+</lg>
+
+<lg>
+<l>kaḥ kaṇṭakasya prakaroti taikṣṇyaṃ vicitrabhāvaṃ mṛgapakṣiṇāṃ vā /</l>
+<l>svabhāvataḥ sarvamidaṃ pravṛttaṃ na kāmakāro 'sti kutaḥ prayatnaḥ // Bc_9.62 //</l>
+</lg>
+
+<lg>
+<l>sarga vadantīśvaratastathānye tatra paryatne puruṣasya ko 'rthaḥ /</l>
+<l>ya eva heturjagataḥ pravṛttau heturnivṛttau niyataḥ sa eva // Bc_9.63 //</l>
+</lg>
+
+<lg>
+<l>kecidvadantyātmanimittameva prādurbhavaṃ caiva bhavakṣayaṃ ca /</l>
+<l>prādurbhavaṃ tu pravadantyayatnādyatnena mokṣādhigamaṃ bruvanti // Bc_9.64 //</l>
+</lg>
+
+<lg>
+<l>naraḥ pitṛṇāmanṛṇaḥ prajābhirvedaiṛṣīṇāṃ kratubhiḥ surāṇām /</l>
+<l>utpadyate sārdhamṛṇaistribhistairyasyāsti mokṣaḥ kila tasya mokṣaḥ // Bc_9.65 //</l>
+</lg>
+
+<lg>
+<l>ityevametena vidhikrameṇa mokṣaṃ sayatnasya vadanti tajjñāḥ /</l>
+<l>prayatnavanto 'pi hi vikrameṇa mumukṣavaḥ khedamavāpnuvanti // Bc_9.66 //</l>
+</lg>
+
+<lg>
+<l>tatsaumya mokṣe yadi bhaktirasti nyāyena sevasva vidhiṃ yathoktam /</l>
+<l>evaṃ bhaviṣyatyupapattirasya saṃtāpanāśaśca narādhipasya // Bc_9.67 //</l>
+</lg>
+
+<lg>
+<l>yā ca pravṛttā tava doṣabuddhistapovanebhyo bhavanaṃ praveṣṭum /</l>
+<l>tatrāpi cintā tava tāta mā bhūta pūrve 'pi jagmuḥ svagṛhānvanebhyaḥ // Bc_9.68 //</l>
+</lg>
+
+<lg>
+<l>tapovanastho 'pi vṛtaḥ prajābhirjagāma rājā puramambarīṣaḥ /</l>
+<l>tathā mahīṃ viprakṛtāmanāryaistapovanādetya rarakṣa rāmaḥ // Bc_9.69 //</l>
+</lg>
+
+<lg>
+<l>tathaiva śālvādhipatirdrumākhyo vanātsasūranurnagaraṃ viveśa /</l>
+<l>brahmārṣibhūtaśca munervasiṣṭhāddadhre śriyaṃ sāṃkṛtirantidevaḥ // Bc_9.70 //</l>
+</lg>
+
+<lg>
+<l>evaṃvidhā dharmayaśaḥpradīptā vanāni hitvā bhavanānyatīyuḥ /</l>
+<l>tasmānna doṣo 'sti gṛhaṃ prayātuṃ tapovanāddharmanimittameva // Bc_9.71 //</l>
+</lg>
+
+<lg>
+<l>tato vacastasya niśamya mantriṇaḥ priyaṃ hitaṃ caiva nṛpasya cakṣuṣaḥ /</l>
+<l>anūnamavyastamasaktamadrutaṃ dhṛtau sthito rājasuto 'bravīdvacaḥ // Bc_9.72 //</l>
+</lg>
+
+<lg>
+<l>ihāsti nāstīti ya eṣa saṃśayaḥ parasya vākyairna mamātra niścayaḥ /</l>
+<l>avetya tattvaṃ tapasā śamena ca svayaṃ grahīṣyāmi yadatra niścitam // Bc_9.73 //</l>
+</lg>
+
+<lg>
+<l>na me kṣamaṃ saṃśayajaṃ hi darśanaṃ grahītumavyaktaparasparāhatam /</l>
+<l>budhaḥ parapratyayato hi ko vrajejjano 'ndhakāre 'ndha ivāndhadeśikaḥ // Bc_9.74 //</l>
+</lg>
+
+<lg>
+<l>adṛṣṭatattvasya sato 'pi kiṃ tu me śubhāśubhe saṃśayitu śubhe matiḥ /</l>
+<l>vṛthāpi khedo hi varaṃ śubhātmanaḥ sukhaṃ na tattve 'pi vigarhitātmanaḥ // Bc_9.75 //</l>
+</lg>
+
+<lg>
+<l>imaṃ tu dṛṣṭvāgamamavyavasthitaṃ yaduktamāpttaistadavehi sādhviti /</l>
+<l>prahīṇadoṣatvamavehi cāptatāṃ prahīṇadoṣo hyanṛtaṃ na vakṣyati // Bc_9.76 //</l>
+</lg>
+
+<lg>
+<l>gṛhapraveśaṃ prati yacca me bhavānuvāca rāmaprabhṛtīnnidarśanam /</l>
+<l>na te pramāṇaṃ na hi dharmaniścayaiṣvalaṃ pramāṇāya parikṣatavratāḥ // Bc_9.77 //</l>
+</lg>
+
+<lg>
+<l>tadevamapyeva ravirmahī patedapi sthiratvaṃ himavān giristyajet /</l>
+<l>adṛṣṭatattvo viṣayonmukhendriyaḥ śrayeya na tveva gṛhān pṛthagjanaḥ // Bc_9.78 //</l>
+</lg>
+
+<lg>
+<l>ahaṃ viśeyaṃ jvalitaṃ hutāśanaṃ na cākṛtārthaḥ praviśeyamālayam /</l>
+<l>iti pratijñāṃ sa cakāra garvito yatheṣṭamutthāya ca nirmamo yayau // Bc_9.79 //</l>
+</lg>
+
+<lg>
+<l>tataḥ sabāṣpau sacivadvijābubhau niśamya tasya sthirameva niścayam /</l>
+<l>viṣaṇṇavaktrāvanugamya duḥkhitau śanairagatyā purameva jagmatuḥ // Bc_9.80 //</l>
+</lg>
+
+<lg>
+<l>tatsnehādatha nṛpateśca bhaktitastau sāpekṣaṃ pratiyayatuśca tasthatuśca /</l>
+<l>durdharṣa ravimiva dīptamātmabhāsā taṃ draṣṭuṃ na hi pathi śekaturna moktum // Bc_9.81 //</l>
+</lg>
+
+<lg>
+<l>tau jñātuṃ paramagatergatiṃ tu tasya pracchannāṃścarapuruṣāñchucīnvidhāya /</l>
+<l>rājānaṃ priyasutalālasaṃ nu gatvā drakṣyāvaḥ kathamiti jagmatuḥ kathaṃcitu // Bc_9.82 //</l>
+</lg>
+
+<l>iti buddhacarite mahākāvye kumārānveṣaṇoṃ nāma navamaḥ sargaḥ // 9 //</l>
+
+<p>CANTO X</p>
+
+<lg>
+<l>sa rājavatsaḥ pṛthupīnavakṣāstau havyamantrādhikṛtau vihāya /</l>
+<l>uttīrya gaṅgāṃ pracalattaraṅgāṃ śrīmadgṛhaṃ rājagṛhaṃ jagāma // Bc_10.1 //</l>
+</lg>
+
+<lg>
+<l>śailaiḥ suguptaṃ ca vibhūṣitaṃ ca dhṛtaṃ ca pūtaṃ ca śivaistapodaiḥ /</l>
+<l>pañcācalāṅkaṃ nagaraṃ prapede śāntaḥ svayaṃbhūriva nākapṛṣṭham // Bc_10.2 //</l>
+</lg>
+
+<lg>
+<l>gāmbhīryamojaśca niśāmya tasya vapuśca dīptaṃ puruṣānatītya /</l>
+<l>visismiye tatra janastadānīṃ sthāṇūvratasyeva vṛṣādhvajāsya // Bc_10.3 //</l>
+</lg>
+
+<lg>
+<l>taṃ prekṣya yo 'nyena yayau sa tasthau yastatra tasthau pathi so 'nvagacchat /</l>
+<l>drutaṃ yayau yaḥ sa jagāma dhīraṃ yaḥ kaścidāste sma sa cotpapāta // Bc_10.4 //</l>
+</lg>
+
+<lg>
+<l>kaścittamānarca janaḥ karābhyāṃ satkṛtya kaścicchirasā vavande /</l>
+<l>snigdhena kaścidvacasābhyanandanainaṃ jagāmāpratipūjya kaścit // Bc_10.5 //</l>
+</lg>
+
+<lg>
+<l>taṃ jihriyuḥ prekṣya vicitraveṣāḥ prakīrṇavācaḥ pathi maunamīyuḥ /</l>
+<l>dharmasya sākṣādiva saṃnikarṣe na kaścidanyāyamatirbabhūva // Bc_10.6 //</l>
+</lg>
+
+<lg>
+<l>anyakriyāṇāmapi rājamārge strīṇāṃ nṛṇāṃ vā bahumānapūrvam /</l>
+<l>taṃ devakalpaṃ naradevasūnuṃ nirīkṣamāṇā na tatarpa dṛṣṭiḥ // Bc_10.7 //</l>
+</lg>
+
+<lg>
+<l>bhruvau lalāṭaṃ mukhamīkṣaṇe vā vapuḥ karau vā caraṇau gatiṃ vā /</l>
+<l>yadeva yastasya dadarśa tatra tadeva tasyātha babandha cakṣuḥ // Bc_10.8 //</l>
+</lg>
+
+<lg>
+<l>dṛṣṭvā ca sorṇabhruvamāyatākṣaṃ jvalaccharīraṃ śubhajālahastam /</l>
+<l>ta bhikṣuveṣaṃ kṣitipālanārha saṃcukṣubhe rājagṛhasya lakṣmīḥ // Bc_10.9 //</l>
+</lg>
+
+<lg>
+<l>śreṇyo 'tha bhartā magadhājirasya bāhyādvimānādvipulaṃ janaugham /</l>
+<l>dadarśa papraccha ca tasya hetuṃ tatastamasmai puruṣaḥ śaśaṃsa // Bc_10.10 //</l>
+</lg>
+
+<lg>
+<l>jñānaṃ paraṃ vā pṛthivīśriyaṃ vā viprairya ukto 'dhigamiṣyatīti /</l>
+<l>sa eṣa śākyādhipatestanūjo nirīkṣyate pravrajito janena // Bc_10.11 //</l>
+</lg>
+
+<lg>
+<l>tataḥ śrutārtho manasāgatāstho rājā babhāṣe puruṣaṃ tameva /</l>
+<l>vijñāyatāṃ kva pratigacchatīti tathetyathainaṃ puruṣo 'nvagacchat // Bc_10.12 //</l>
+</lg>
+
+<lg>
+<l>alolacakṣuryugamātradarśī nivṛttavāgyantritamandagāmī /</l>
+<l>cacāra bhikṣāṃ sa tu bhikṣuvaryo nidhāya gātrāṇi calaṃ ca cetaḥ // Bc_10.13 //</l>
+</lg>
+
+<lg>
+<l>ādāya bhaikṣaṃ ca yathopapannaṃ yayau gireḥ prasravaṇaṃ viviktam /</l>
+<l>nyāyena tatrābhyavahṛtya cainanmahīdharaṃ pāṇḍavamāruroha // Bc_10.14 //</l>
+</lg>
+
+<lg>
+<l>tasminnavau lodhravanopagūḍhe mayūranādapratipurṇakuñje /</l>
+<l>kāṣāyavāsāḥ sa babhau nṛsūryo yathodayasyopari bālasūryaḥ // Bc_10.15 //</l>
+</lg>
+
+<lg>
+<l>tatrainamālokya sa rājabhṛtyaḥ śreṇyāya rājñe kathayāṃcakāra /</l>
+<l>saṃśrutya rājā sa ca bāhumānyāttatra pratasthe nibhṛtānuyātraḥ // Bc_10.16 //</l>
+</lg>
+
+<lg>
+<l>sa pāṇḍavaṃ pāṇḍavatulyavīryaḥ śailottamaṃ śailasamānavarṣmā /</l>
+<l>maulīdharaḥ siṃhagatirnṛsiṃhaścalatsaṭaḥ siṃha ivāruroha // Bc_10.17 //</l>
+</lg>
+
+<lg>
+<l>tataḥ sma tasyopari śṛṅgabhūtaṃ śāntendriyaṃ paśyati bodhisattvam /</l>
+<l>paryaṅkamāsthāya virocamānaṃ śaśāṅkamudyantamivābhrakuñjāt // Bc_10.18 //</l>
+</lg>
+
+<lg>
+<l>taṃ rupalakṣmyā ca śamena caiva dharmasya nirmāṇamivopaviṣṭam /</l>
+<l>savismayaḥ praśrayavānnarendraḥ svayaṃbhūvaṃ śakra ivopatasthe // Bc_10.19 //</l>
+</lg>
+
+<lg>
+<l>taṃ nyāyato nyāyavidāṃ variṣṭhaṃ sametya papraccha ca dhātusāmyam /</l>
+<l>sa cāpyavocatsadṛśena sāmnā nṛpaṃ manaḥsvāsthyamanāmayaṃ ca // Bc_10.20 //</l>
+</lg>
+
+<lg>
+<l>tataḥ śucau vāraṇakarṇanīle śilātale saṃniṣasāda rājā /</l>
+<l>upopaviśyānumataśca tasya bhāvaṃ vijijñāsuridaṃ babhāṣe // Bc_10.21 //</l>
+</lg>
+
+<lg>
+<l>prītiḥ parā me bhavataḥ kulena kramāgatā caiva parīkṣitā ca /</l>
+<l>jātā vivakṣā svavayo yato me tasmādidaṃ snehavaco nibodha // Bc_10.22 //</l>
+</lg>
+
+<lg>
+<l>ādityapūrva vipulaṃ kulaṃ te navaṃ vayo dīptamidaṃ vapuśca /</l>
+<l>kasmādiyaṃ te matirakrameṇa bhaikṣāka evābhiratā na rājye // Bc_10.23 //</l>
+</lg>
+
+<lg>
+<l>gātraṃ hi te lohitacandanārhaṃ kāṣāyasaṃśleṣamanarhametat /</l>
+<l>hastaḥ prajāpālanayogya eṣa bhoktuṃ na cārhaḥ paradattamannam // Bc_10.24 //</l>
+</lg>
+
+<lg>
+<l>tatsaumya rājyaṃ yadi paitṛkaṃ tvaṃ snehātpiturnecchasi vikrameṇa /</l>
+<l>na ca kramaṃ marṣayituṃ matiste bhuṅkṣvārdhamasmādviṣayasya śīghram // Bc_10.25 //</l>
+</lg>
+
+<lg>
+<l>evaṃ hi na syātsvajanāvamardaḥ kālakrameṇāpi śamaśrayā śrīḥ /</l>
+<l>tasmātkuruṣva praṇayaṃ mayi tvaṃ sadbhiḥ sahīyā hi satāṃ samṛddhiḥ // Bc_10.26 //</l>
+</lg>
+
+<lg>
+<l>atha tvidānī kulagarvitatvādasmāsu viśrambhaguṇo na te 'sti /</l>
+<l>vyūḍhānyanīkāni vigāhya bāṇairmayā sahāyena parān jigīṣa // Bc_10.27 //</l>
+</lg>
+
+<lg>
+<l>tadbuddhimatrānyatarāṃ vṛṇīṣva dharmārthakāmānvidhivadbhajasva /</l>
+<l>vyatyasya rāgādiha hi trivarga pretyeha ca bhraṃśamavāpnuvanti // Bc_10.28 //</l>
+</lg>
+
+<lg>
+<l>yo hyarthadharmau paripīḍya kāmaḥ syāddharmakāmau paribhūya cārthaḥ /</l>
+<l>kāmārthayoścoparameṇa dharmastyājyaḥ sa kṛtsno yadi kāṅkṣito 'rthaḥ // Bc_10.29 //</l>
+</lg>
+
+<lg>
+<l>tasmāttrivargasya niṣevaṇena tvaṃ rūpametatsaphalaṃ kuruṣva /</l>
+<l>dharmārthakāmādhigamaṃ hyanūnaṃ nṛṇāmanūnaṃ puruṣārthamāhuḥ // Bc_10.30 //</l>
+</lg>
+
+<lg>
+<l>tanniṣphalau nārhasi kartumetau pīnau bhujau cāpavikarṣaṇārhau /</l>
+<l>māndhātṛvajjetumimau hi yogyau lokānapi trīniha kiṃ punargām // Bc_10.31 //</l>
+</lg>
+
+<lg>
+<l>snehena khalvetadahaṃ bravīmi naiśvaryarāgeṇa na vismayena /</l>
+<l>imaṃ hi dṛṣṭvā tava bhikṣuveṣaṃ jātānukampo 'smyapi cāgatāśruḥ // Bc_10.32 //</l>
+</lg>
+
+<lg>
+<l>yāvatsvavaṃśapratirūpa rūpaṃ na te jarābhyetyabhibhūya bhūyaḥ /</l>
+<l>tadbhuṅkṣva bhikṣāśramakāma kāmān kāle 'si kartā priyadharma dharmam // Bc_10.33 //</l>
+</lg>
+
+<lg>
+<l>śaknoti jīrṇaḥ khalu dharmamāptuṃ kāmopabhogeṣvagatirjarāyāḥ /</l>
+<l>ataśca yūnaḥ kathayanti kāmānmadhyasya vittaṃ sthavirasya dharmam // Bc_10.34 //</l>
+</lg>
+
+<lg>
+<l>dharmasya cārthasya ca jīvaloke pratyarthibhutāni hi yauvanāni /</l>
+<l>saṃrakṣyamāṇānyapi durgrahāṇi kāmā yatastena pathā haranti // Bc_10.35 //</l>
+</lg>
+
+<lg>
+<l>vayāṃsi jīrṇāni vimarśavanti dhīrāṇyavasthānaparāyaṇāni /</l>
+<l>alpena yatnena śamātmakāni bhavantyagatyaiva ca lajjayā ca // Bc_10.36 //</l>
+</lg>
+
+<lg>
+<l>ataśca lolaṃ viṣayapradhānaṃ pramattamakṣāntamadīrghadarśi /</l>
+<l>bahucchalaṃ yauvanamabhyatītya nistīrya kāntāramivāśvasanti // Bc_10.37 //</l>
+</lg>
+
+<lg>
+<l>tasmādadhīraṃ capalapramādi navaṃ vayastāvadidaṃ vyapaitu /</l>
+<l>kāmasya pūrva hi vayaḥ śaravyaṃ na śakyate rakṣitumindriyebhyaḥ // Bc_10.38 //</l>
+</lg>
+
+<lg>
+<l>atho cikīrṣā tava dharma eva yajasva yajñaṃ kuladharma eṣaḥ /</l>
+<l>yajñairadhiṣṭhāya hi nāgapṛṣṭhaṃ yayau marutvānapi nākapṛṣṭham // Bc_10.39 //</l>
+</lg>
+
+<lg>
+<l>suvarṇakeyūravidaṣṭabāhavo maṇipradīpojjvalacitramaulayaḥ /</l>
+<l>nṛparṣayastāṃ hi gatiṃ gatā makhaiḥ śrameṇa yāmeva maharṣayo yayuḥ // Bc_10.40 //</l>
+</lg>
+
+<lg>
+<l>ityevaṃ magadhapatirvaco babhāṣe yaḥ samyagvalābhidiva bruvan babhāse /</l>
+<l>tacchrutvā na sa vicacāla rājasūnuḥ kailāso giririva naikacitrasānuḥ // Bc_10.41 //</l>
+</lg>
+
+<l>iti buddhacarite mahākāvye 'śvaghoṣakṛte śreṇyābhigamano nāma daśamaḥ sargaḥ // 10 //</l>
+
+<p>CANTO XI</p>
+
+<lg>
+<l>athaivamukto magadhādhipena suhṛnmukhena pratikūlamartham /</l>
+<l>svastho 'vikāraḥ kulaśaucaśuddhaḥ śauddhodanirvākyamidaṃ jagāda // Bc_11.1 //</l>
+</lg>
+
+<lg>
+<l>nāścaryametadbhavato vidhānaṃ jātasya haryaṅkakule viśāle /</l>
+<l>yanmitrapakṣe tava mitrakāma syādvṛttireṣā pariśuddhavṛtteḥ // Bc_11.2 //</l>
+</lg>
+
+<lg>
+<l>asatsu maitrī svakulānuvṛttā na tiṣṭhati śrīriva viklaveṣu /</l>
+<l>pūrvaiḥ kṛtāṃ prītiparaṃparābhistāmeva santastu vivardhayanti // Bc_11.3 //</l>
+</lg>
+
+<lg>
+<l>ye cārthakṛccheṣu bhavanti loke samānakāryāḥ suhṛdāṃ manuṣyāḥ /</l>
+<l>mitrāṇiḥ tānīti paraimi buddhyā svasthasya vṛddhiṣviha ko hi na syāt // Bc_11.4 //</l>
+</lg>
+
+<lg>
+<l>evaṃ ca ye dravyamavāpya loke mitreṣu dharme ca niyojayanti /</l>
+<l>avāptasārāṇi dhanāni teṣāṃ bhraṣṭāni nānte janayanti tāpam // Bc_11.5 //</l>
+</lg>
+
+<lg>
+<l>suhṛttayā cāryatayā ca rājan khalveṣa yo māṃ prati niścayaste /</l>
+<l>atrānuneṣyāmi suhṛttayaiva brūyāmahaṃ nottaramanyadatra // Bc_11.6 //</l>
+</lg>
+
+<lg>
+<l>ahaṃ jarāmṛtyubhayaṃ viditvā mumukṣayā dharmamimaṃ prapannaḥ /</l>
+<l>bandhūn priyānaśrumukhānvihāya prāgeva kāmānuśubhasya hetūn // Bc_11.7 //</l>
+</lg>
+
+<lg>
+<l>nāśīviṣebhyo hi tathā bibhemi naivāśanibhyo gaganāccyutebhyaḥ /</l>
+<l>na pāvakebhyo 'nilasaṃhitebhyo yathā bhayaṃ me viṣayebhya eva // Bc_11.8 //</l>
+</lg>
+
+<lg>
+<l>kāmā hyanityāḥ kuśalārthacaurā riktāśca māyāsadṛśāśca loke /</l>
+<l>āśāsyamānā api mohayanti cittaṃ nṛṇāṃ kiṃ punarātmasaṃsthāḥ // Bc_11.9 //</l>
+</lg>
+
+<lg>
+<l>kāmābhibhūtā hi na yānti śarma tripiṣṭape kiṃ bata martyaloke /</l>
+<l>kāmaiḥ satṛṣṇasya hi nāsti tṛptiryathendhanairvātasakhasya vanheḥ // Bc_11.10 //</l>
+</lg>
+
+<lg>
+<l>jagatyanartho na samo 'sti kāmairmohācca teṣveva janaḥ prasaktaḥ /</l>
+<l>tattvaṃ viditvaivamanarthabhīruḥ prājñaḥ svayaṃ ko 'bhilaṣedanartham // Bc_11.11 //</l>
+</lg>
+
+<lg>
+<l>samudravaktrāmapi gāmavāpya pāraṃ jigīṣanti mahārṇavasya /</l>
+<l>lokasya kāmairna vitṛptirasti patidbhirambhobhirivārṇavasya // Bc_11.12 //</l>
+</lg>
+
+<lg>
+<l>devena vṛṣṭe 'pi hiraṇyavarṣe dvīpānsamagrāṃścaturo 'pi jitvā /</l>
+<l>śakrasya cārdhāsanamapyavāpya māndhāturāsīdviṣayeṣvatṛptiḥ // Bc_11.13 //</l>
+</lg>
+
+<lg>
+<l>bhuktvāpi rājyaṃ divi devatānāṃ śatakratau vṛtrabhayātpranaṣṭe /</l>
+<l>darpānmaharṣīnapi vāhayitvā kāmeṣvatṛpto nahuṣaḥ papāta // Bc_11.14 //</l>
+</lg>
+
+<lg>
+<l>aiḍaśca rājā tridivaṃ vigāhya nītvāpi devī vaśamurvaśī tām /</l>
+<l>lobhādṛṣibhyaḥ kanakaṃ jihīrṣurjagāma nāśaṃ viṣayeṣvatṛptaḥ // Bc_11.15 //</l>
+</lg>
+
+<lg>
+<l>balermahendraṃ nahuṣaṃ mahendrādindraṃ punarye nahuṣādupeyuḥ /</l>
+<l>svarge kṣitau vā viṣayeṣu teṣu ko viśvasedbhāgyakulākuleṣu // Bc_11.16 //</l>
+</lg>
+
+<lg>
+<l>cīrāmbarā mūlaphalāmbubhakṣā jaṭā vahanto 'pi bhujaṅgadīrghāḥ /</l>
+<l>yairnānyakāryā munayo 'pi bhagnāḥ kaḥ kāmasaṃjñānmṛgayeta śatrūn // Bc_11.17 //</l>
+</lg>
+
+<lg>
+<l>ugrāyudhaścogradhṛtāyudho 'pi yeṣāṃ kṛte mṛtyumavāpa bhīṣmāt /</l>
+<l>cintāpi teṣāmaśivā vadhāya sadvṛttināṃ kiṃ punaravratānām // Bc_11.18 //</l>
+</lg>
+
+<lg>
+<l>āsvādamalpaṃ viṣayeṣu matvā saṃyojanotkarṣamatṛptimeva /</l>
+<l>sadbhyaśca garhā niyataṃ ca pāpaṃ kaḥ kāmasaṃjñaṃ viṣamādadīta // Bc_11.19 //</l>
+</lg>
+
+<lg>
+<l>kṛṣyādibhiḥ karmabhirarditānāṃ kāmātmakānāṃ ca niśamya duḥkham /</l>
+<l>svāsthyaṃ ca kāmeṣvakutūhalānāṃ kāmānvihātuṃ kṣamamātmavadbhiḥ // Bc_11.20 //</l>
+</lg>
+
+<lg>
+<l>jñeyā vipatkāmini kāmasaṃpatsiddheṣu kāmeṣu madaṃ hyupaiti /</l>
+<l>madādakārya kurute na kārya yena kṣato durgatimabhyupaiti // Bc_11.21 //</l>
+</lg>
+
+<lg>
+<l>yatnena labdhvāḥ parirakṣitāśca ye vipralabhya pratiyānti bhūyaḥ /</l>
+<l>teṣvātmavānyācitakopameṣu kāmeṣu vidvāniha ko rameta // Bc_11.22 //</l>
+</lg>
+
+<lg>
+<l>anviṣya cādāya ca jātatarṣā yānatyajantaḥ pariyānti duḥkham /</l>
+<l>loke tṛṇolkāsadṛśeṣu teṣu kāmeṣu kasyātmavato ratiḥ syāt // Bc_11.23 //</l>
+</lg>
+
+<lg>
+<l>anātmavanto hṛdi yairvidaṣṭā vināśamarchanti na yānti śarma /</l>
+<l>kuddhograsarpapratimeṣu teṣu kāmeṣu kasyātmavato ratiḥ syāt // Bc_11.24 //</l>
+</lg>
+
+<lg>
+<l>asthi kṣudhārtā iva sārameyā bhuktvāpi yānnaiva bhavanti tṛptāḥ /</l>
+<l>jīrṇasthikaṅkālasameṣu teṣu kāmeṣu kasyātmavato ratiḥ syāt // Bc_11.25 //</l>
+</lg>
+
+<lg>
+<l>ye rājacaurodakapāvakebhyaḥ sādhāraṇatvājjanayanti duḥkham /</l>
+<l>teṣu praviddhāmiṣasanibheṣu kāmeṣu kasyātmavato ratiḥ syāt // Bc_11.26 //</l>
+</lg>
+
+<lg>
+<l>yatra sthitānāmabhito vipattiḥ śatroḥ sakāśādapi bāndhavebhyaḥ /</l>
+<l>hiṃsreṣu teṣvāyatanopameṣu kāmeṣu kasyātmavato ratiḥ syāt // Bc_11.27 //</l>
+</lg>
+
+<lg>
+<l>girau vane cāpsu ca sāgare ca yān bhraṃśamarchanti vilaṅghamānāḥ /</l>
+<l>teṣu drumaprāgraphalopameṣu kāmeṣu kasyātmavato ratiḥ syāt // Bc_11.28 //</l>
+</lg>
+
+<lg>
+<l>tīvraiḥ prayatnairvividhairavāptāḥ kṣaṇena ye nāśamiha prayānti /</l>
+<l>svapnopabhogapratimeṣu teṣu kāmeṣu kasyātmavato ratiḥ syāt // Bc_11.29 //</l>
+</lg>
+
+<lg>
+<l>yānarjayitvāpi na yānti śarma vivardhayitvā paripālayitvā /</l>
+<l>aṅgārakarṣūpratimeṣu teṣu kāmeṣu kasyātmavato ratiḥ syāt // Bc_11.30 //</l>
+</lg>
+
+<lg>
+<l>vināśamīyuḥ kuravo yadartha vṛṣṇyandhakā mekhaladaṇḍakāśca /</l>
+<l>sūnāsikāṣṭhapratimeṣu teṣu kāmeṣu kasyātmavato ratiḥ syāt // Bc_11.31 //</l>
+</lg>
+
+<lg>
+<l>sundopasundāvasurau yadarthamanyonyavairaprasṛtau vinaṣṭau /</l>
+<l>sauhārdīvaśleṣakareṣu teṣu kāmeṣu kasyātmavato ratiḥ syāt // Bc_11.32 //</l>
+</lg>
+
+<p>yeṣāṃ kṛte vāriṇi pāvake ca / kravyātsu cātmānamihotsṛjanti /
+<l>sapatnabhūteṣvaśiveṣu teṣu kāmeṣu kasyātmavato ratiḥ syāt // Bc_11.33 //</l></p>
+
+<lg>
+<l>kāmārthamajñaḥ kṛpaṇaṃ karoti prāpnoti duḥkhaṃ vadhabandhanādi /</l>
+<l>kāmārthamāśākṛpaṇastapasvī mṛtyuṃ śramaṃ cārchati jīvalokaḥ // Bc_11.34 //</l>
+</lg>
+
+<lg>
+<l>gītairhiyante hi mṛgā vadhāya rūpārthamagnau śalabhāḥ patanti /</l>
+<l>matsyo giratyāyasamāmiṣārthī tasmādanartha viṣayāḥ phalanti // Bc_11.35 //</l>
+</lg>
+
+<p>kāmāstu bhogā iti yanmatiḥ syādbhogā na kecitparigaṇyamānāḥ
+<l>vastrādayo dravyaguṇā hi loke duḥkhapratīkāra iti pradhāryāḥ // Bc_11.36 //</l></p>
+
+<lg>
+<l>iṣṭaṃ hi tarṣapraśamāya toyaṃ kṣunnāśahetoraśanaṃ tathaiva /</l>
+<l>vātātapāmbvāvaraṇāya veśma kaupīnaśītāvaraṇāya vāsaḥ // Bc_11.37 //</l>
+</lg>
+
+<lg>
+<l>nidrāvighātāya tathaiva śayyā yānaṃ tathādhvaśramanāśanāya /</l>
+<l>tathāsanaṃ sthānavinodanāya snānaṃ mṛjarogyabalāśrayāya // Bc_11.38 //</l>
+</lg>
+
+<lg>
+<l>duḥkhapratīkāranimittabhūtāstasmātprajānāṃ viṣayā na bhogāḥ /</l>
+<l>aśnāmi bhogāniti ko 'bhyupeyātprājñaḥ pratīkāravidhau pravṛttaḥ // Bc_11.39 //</l>
+</lg>
+
+<lg>
+<l>yaḥ pittadāhena vidahyamānaḥ śītakriyāṃ bhoga iti vyavasyet /</l>
+<l>duḥkhapratīkāravidhau pravṛttaḥ kāmeṣu kuryātsa hi bhogasaṃjñām // Bc_11.40 //</l>
+</lg>
+
+<lg>
+<l>kāmeṣvanaikāntikatā ca yasmādato 'pi me teṣu na bhogasaṃjñā /</l>
+<l>ya eva bhāvā hi sukhaṃ diśanti ta eva duḥkhaṃ punarāvahanti // Bc_11.41 //</l>
+</lg>
+
+<lg>
+<l>gurūṇi vāsāṃsyagurūṇi caiva sukhāya śīte hyusukhāya dharme /</l>
+<l>candrāṃśavaścandanameva coṣṇe sukhāya duḥkhāya bhavanti śīte // Bc_11.42 //</l>
+</lg>
+
+<lg>
+<l>dvandvāni sarvasya yataḥ prasaktānyalābhalābhaprabhṛtīni loke /</l>
+<l>ato 'pi naikāntasukho 'sti kaścinnaikāntaduḥkha puruṣaḥ pṛthivyām // Bc_11.43 //</l>
+</lg>
+
+<lg>
+<l>dṛṣṭvā vimiśrāṃ sukhaduḥkhatāṃ me rājyaṃ ca dāsyaṃ ca mataṃ samānam /</l>
+<l>nityaṃ hasatyeva hi naiva rājā na cāpi saṃtapyata eva dāsaḥ // Bc_11.44 //</l>
+</lg>
+
+<lg>
+<l>ājñā nṛpatve 'bhyadhiketi yatsyānmahānti duḥkhānyata eva rājñaḥ /</l>
+<l>āsaṅgakāṣṭhapratimo hi rājā lokasya hetoḥ parikhedameti // Bc_11.45 //</l>
+</lg>
+
+<lg>
+<l>rājye nṛpastyāgini bavhamitre viśvāsamāgacchati cedvipannaḥ /</l>
+<l>athāpi viśrambhamupaiti neha kiṃ nāma saukhyaṃ cakitasya rājñaḥ // Bc_11.46 //</l>
+</lg>
+
+<lg>
+<l>yadā ca jitvāpi mahīṃ samagrāṃ vāsāya dṛṣṭaṃ puramekameva /</l>
+<l>tatrāpi caikaṃ bhavanaṃ niṣevyaṃ śramaḥ parārthe nanu rājabhāvaḥ // Bc_11.47 //</l>
+</lg>
+
+<lg>
+<l>rājño 'pi vāsoyugamekameva kṣutsaṃnirodhāya tathānnamātrā /</l>
+<l>śayyā tathaikāsanamekameva śeṣā viśeṣā nṛpatermadāya // Bc_11.48 //</l>
+</lg>
+
+<lg>
+<l>tuṣṭyarthametacca phalaṃ yadīṣṭamṛte 'pi rājyānmama tuṣṭirasti /</l>
+<l>tuṣṭau ca satyāṃ puruṣasya loke sarve viśeṣā nanu nirviśeṣāḥ // Bc_11.49 //</l>
+</lg>
+
+<lg>
+<l>tannāsmi kāmān prati saṃpratāryaḥ kṣemaṃ śivaṃ mārgamanuprapannaḥ /</l>
+<l>smṛtvā suhṛttvaṃ tu punaḥ punarmā brūhi pratijñāṃ khalu pālayeti // Bc_11.50 //</l>
+</lg>
+
+<lg>
+<l>na hyasmyamarṣeṇa vanaṃ praviṣṭo na śatrubāṇairavadhūtamauliḥ /</l>
+<l>kṛtaspṛho nāpi phalādhikebhyo gṛhṇāmi naitadvacanaṃ yataste // Bc_11.51 //</l>
+</lg>
+
+<lg>
+<l>yo dandaśūkaṃ kupitaṃ bhujaṅgaṃ muktvā vyavasyeddhi punargrahītum /</l>
+<l>dāhātmikāṃ vā jvalitāṃ tṛṇolkāṃ saṃtyajya kāmānsa punarbhajeta // Bc_11.52 //</l>
+</lg>
+
+<lg>
+<l>andhāya yaśca spṛhayedanandho baddhāya mukto vidhanāya cāḍhyaḥ /</l>
+<l>unmattacittāya ca kalyacittaḥ spṛhāṃ sa kuryādviṣayātmakāya // Bc_11.53 //</l>
+</lg>
+
+<lg>
+<l>bhaikṣopabhogīti ca nānukampyaḥ kṛtī jarāmṛtyubhayaṃ titīrṣuḥ /</l>
+<l>ihottamaṃ śāntisukhaṃ ca yasya paratra duḥkhāni ca saṃvṛtāni // Bc_11.54 //</l>
+</lg>
+
+<lg>
+<l>lakṣmyāṃ mahatyāmapi vartamānastṛṣṇābhibhūtastvanukampitavyaḥ /</l>
+<l>prāpnoti yaḥ śāntisukhaṃ na ceha paratra duḥkhai pratigṛhyate ca // Bc_11.55 //</l>
+</lg>
+
+<lg>
+<l>evaṃ tu vaktuṃ bhavato 'nurūpaṃ sattvasya vṛttasya kulasya caiva /</l>
+<l>mamāpi voḍhuṃ sadṛśaṃ pratijñāṃ sattvasya vṛttasya kulasya caiva // Bc_11.56 //</l>
+</lg>
+
+<lg>
+<l>ahaṃ hi saṃsāraśareṇa viddho viniḥsṛtaḥ śāntimavāptukāmaḥ /</l>
+<l>neccheyamāptuṃ tridive 'pi rājyaṃ nirāmayaṃ kiṃ bata mānuṣeṣu // Bc_11.57 //</l>
+</lg>
+
+<lg>
+<l>trivargasevāṃ nṛpa yattu kṛtsnataḥ paro manuṣyārtha iti tvamāttha mām /</l>
+<l>anartha ityeva mamātra darśanaṃ kṣayī trivargo hi na cāpi tarpakaḥ // Bc_11.58 //</l>
+</lg>
+
+<lg>
+<l>pade tu yasminna jarā na bhīrna rūṅ na janma naivoparamo na cādhayaḥ /</l>
+<l>tameva manye puruṣārthamuttamaṃ na vidyate yatra punaḥ punaḥ kriyā // Bc_11.59 //</l>
+</lg>
+
+<lg>
+<l>yadapyavoca paripālyatāṃ jarā nava vayo gacchati vikriyāmiti /</l>
+<l>aniścayo 'ya capalaṃ hi dṛśyate jarāpyadhīrā dhṛtimacca yauvanam // Bc_11.60 //</l>
+</lg>
+
+<lg>
+<l>svakarmadakṣaśca yadāntako jagad vayasu sarveṣvavaśa vikarṣati /</l>
+<l>vināśakāle kathamavyavasthite jarā pratīkṣyā viduṣā śamepsunā // Bc_11.61 //</l>
+</lg>
+
+<lg>
+<l>jarāyudho vyādhivikīrṇasāyako yadāntako vyādha ivāśivaḥ sthitaḥ /</l>
+<l>prajāmṛgān bhāgyavanāśritāṃstudan vayaḥprakarṣa prati ko manorathaḥ // Bc_11.62 //</l>
+</lg>
+
+<lg>
+<l>ato yuvā vā sthaviro 'thavā śiśustathā tvarāvāniha kartumarhati /</l>
+<l>yathā bhaveddharmavataḥ kṛtātmanaḥ pravṛttiriṣṭā vinivṛttireva vā // Bc_11.63 //</l>
+</lg>
+
+<lg>
+<l>yadāttha cāpīṣṭaphalāṃ kulocitāṃ kuruṣva dharmāya makhakriyāmiti /</l>
+<l>namo makhebhyo na hi kāmaye sukhaṃ parasya duḥkhakriyayā yadiṣyate // Bc_11.64 //</l>
+</lg>
+
+<lg>
+<l>paraṃ hi hantuṃ vivaśaṃ phalepsayā na yuktarūpa karuṇātmanaḥ sataḥ /</l>
+<l>kratoḥ phalaṃ yadyapi śāśvataṃ bhavettathāpi kṛttvā kimu yatkṣayātmakam // Bc_11.65 //</l>
+</lg>
+
+<lg>
+<l>bhavecca dharmo yadi nāparo vidhirvratena śīlena manaḥśamena vā /</l>
+<l>tathāpi naivārhati sevituṃ kratuṃ viśasya yasmin paramucyate phalam // Bc_11.66 //</l>
+</lg>
+
+<lg>
+<l>ihāpi tāvatpuruṣasya tiṣṭhataḥ pravartate yatparahiṃsayā sukham /</l>
+<l>tadapyaniṣṭaṃ saghṛṇasya dhīmato bhavāntare kiṃ bata yanna dṛśyate // Bc_11.67 //</l>
+</lg>
+
+<lg>
+<l>na ca pratāryo 'smi phalapravṛttaye bhaveṣu rājan ramate na me manaḥ /</l>
+<l>latā ivāmbhodharavṛṣṭitāḍitāḥ pravṛttayaḥ sarvagatā hi cañcalāḥ // Bc_11.68 //</l>
+</lg>
+
+<lg>
+<l>ihāgataścahamito didṛkṣayā munerarāḍasya vimokṣavādinaḥ /</l>
+<l>prayāmi cādyaiva nṛpāstu te śivaṃ vacaḥ kṣamethā mama tattvaniṣṭhuram // Bc_11.69 //</l>
+</lg>
+
+<lg>
+<l>avendravaddivyava śaśvadarkavad guṇairava śreya ihāva gāmava /</l>
+<l>avāyurāryairava satsutānava śriyaśca rājannava dharmamātmanaḥ // Bc_11.70 //</l>
+</lg>
+
+<lg>
+<l>himāriketūdbhavasaṃbhavāntare yathā dvijo yāti vimokṣayaṃstanum /</l>
+<l>himāriśatrukṣayaśatrughātane tathāntare yāhi vimokṣayanmanaḥ // Bc_11.71 //</l>
+</lg>
+
+<lg>
+<l>nṛpo 'bravītsāñjalirāgataspṛho yatheṣṭamāpnotu bhavānavighnataḥ /</l>
+<l>avāpya kāle kṛtakṛtyatāmimāṃ mamāpi kāryo bhavatā tvanugrahaḥ // Bc_11.72 //</l>
+</lg>
+
+<lg>
+<l>sthiraṃ pratijñāya tatheti pārthive tataḥ sa vaiśvaṃtaramāśramaṃ yayau /</l>
+<l>parivrajantaṃ tamudīkṣya vismito nṛpo 'pi vavrāja puri girivrajam // Bc_11.73 //</l>
+</lg>
+
+<l>iti buddhacarite mahākāvye kāmavigarhaṇo nāmaikādaśa sargaḥ // 11 //</l>
+
+<p>CANTO XII</p>
+
+<lg>
+<l>tataḥ śamavihārasya munerikṣvākucandramāḥ /</l>
+<l>arāḍasyāśramaṃ bheje vapuṣā pūrayanniva // Bc_12.1 //</l>
+</lg>
+
+<lg>
+<l>sa kālāmasagotreṇa tenālokyaiva dūrataḥ /</l>
+<l>uccaiḥ svāgatamityuktaḥ samīpamupajagmivān // Bc_12.2 //</l>
+</lg>
+
+<lg>
+<l>tāvubhau nyāyataḥ pṛṣṭvā dhātusāmyaṃ parasparam /</l>
+<l>dāravyormedhyayorvṛṣyoḥ śucau deśe niṣedatuḥ // Bc_12.3 //</l>
+</lg>
+
+<lg>
+<l>tamāsīnaṃ nṛpasutaṃ so 'bravīnmunisattamaḥ /</l>
+<l>bahumānaviśālābhyāṃ darśanābhyāṃ pibanniva // Bc_12.4 //</l>
+</lg>
+
+<lg>
+<l>viditaṃ me yathā saumya niṣkrānto bhavanādasi /</l>
+<l>chittvā snehamayaṃ pāśaṃ pāśaṃ dṛpta iva dvipaḥ // Bc_12.5 //</l>
+</lg>
+
+<lg>
+<l>sarvathā dhṛtimaccaiva prājñaṃ caiva manastava /</l>
+<l>yastvaṃ prāptaḥ śriyaṃ tyaktvā latāṃ viṣaphalāmiva // Bc_12.6 //</l>
+</lg>
+
+<lg>
+<l>nāścarya jīrṇavayaso yajjagmuḥ pārthivā vanam /</l>
+<l>apatyebhyaḥ śriyaṃ dattvā bhuktocchiṣṭāmiva srajam // Bc_12.7 //</l>
+</lg>
+
+<lg>
+<l>idaṃ me matamāścaryaṃ nave vayasi yadbhavān /</l>
+<l>abhuktvaiva śriyaṃ prāptaḥ sthito viṣayagocare // Bc_12.8 //</l>
+</lg>
+
+<lg>
+<l>tadvijñātumimaṃ dharma paramaṃ bhājanaṃ bhavān /</l>
+<l>jñānaplamavadhiṣṭhāya śīghraṃ duḥkhārṇavaṃ tara // Bc_12.9 //</l>
+</lg>
+
+<lg>
+<l>śiṣye yadyapi vijñāte śāstraṃ kālena varṇyate /</l>
+<l>gāmbhīryādvyavasāyācca na parīkṣyo bhavānmama // Bc_12.10 //</l>
+</lg>
+
+<lg>
+<l>iti vākyamarāḍasya vijñāya sa nararṣabhaḥ /</l>
+<l>babhūva paramaprītaḥ provācottarameva ca // Bc_12.11 //</l>
+</lg>
+
+<lg>
+<l>viraktasyāpi yadidaṃ saumukhyaṃ bhavataḥ param /</l>
+<l>akṛtārtho 'pyanenāsmi kṛtārtha iva saṃprati // Bc_12.12 //</l>
+</lg>
+
+<lg>
+<l>didṛkṣuriva hi jyotiryiyāsuriva daiśikam /</l>
+<l>tvaddarśanamahaṃ manye titīrṣuriva ca plavam // Bc_12.13 //</l>
+</lg>
+
+<lg>
+<l>tasmādarhasi tadvaktuṃ vaktavyaṃ yadi manyase /</l>
+<l>jarāmaraṇarogebhyo yathāyaṃ parimucyate // Bc_12.14 //</l>
+</lg>
+
+<lg>
+<l>ityarāḍaḥ kumārasya māhātmyādeva coditaḥ /</l>
+<l>saṃkṣiptaṃ kathayāṃcakre svasya śāstrasya niścayam // Bc_12.15 //</l>
+</lg>
+
+<lg>
+<l>śrūyatāmayamasmākaṃ siddhāntaḥ śṛṇvatāṃ vara /</l>
+<l>yathā bhavati saṃsāro yathā caiva nivartate // Bc_12.16 //</l>
+</lg>
+
+<lg>
+<l>prakṛtiśca vikāraśca janma mṛtyurjareva ca /</l>
+<l>tattāvatsattvamituktaṃ sthirasattva parehi tat // Bc_12.17 //</l>
+</lg>
+
+<lg>
+<l>tatra tu prakṛtiṃ nāma viddhiṃ prakṛtikovida /</l>
+<l>pañca bhūtānyahaṃkāraṃ buddhimavyaktameva ca // Bc_12.18 //</l>
+</lg>
+
+<lg>
+<l>vikāra iti budhyasva viṣayānindriyāṇi ca /</l>
+<l>pāṇipādaṃ ca vādaṃ ca pāyūpasthaṃ tathā manaḥ // Bc_12.19 //</l>
+</lg>
+
+<lg>
+<l>asya kṣetrasya vijñānātkṣetrajña iti saṃjñi ca /</l>
+<l>kṣetrajña iti cātmānaṃ kathayantyātmacintakāḥ // Bc_12.20 //</l>
+</lg>
+
+<lg>
+<l>saśiṣyaḥ kapilaśceha pratibuddha iti smṛtiḥ /</l>
+<l>saputro 'pratibuddhastu prajāpatirihocyate // Bc_12.21 //</l>
+</lg>
+
+<lg>
+<l>jāyate jīryate caiva bādhyate mriyate ca yat /</l>
+<l>tadvyaktamiti vijñeyamavyaktaṃ tu viparyayāt // Bc_12.22 //</l>
+</lg>
+
+<lg>
+<l>ajñānaṃ karma tṛṣṇā ca jñeyāḥ saṃsārahetavaḥ /</l>
+<l>sthito 'smiṃstritaye jantustatsattvaṃ nātivartate // Bc_12.23 //</l>
+</lg>
+
+<lg>
+<l>vipratyayādahaṃkārātsaṃdehādabhisaṃplavāt /</l>
+<l>aviśeṣānupāyābhyāṃ saṅgādabhyavapātataḥ // Bc_12.24 //</l>
+</lg>
+
+<lg>
+<l>tatra vipratyayo nāma viparītaṃ pravartate /</l>
+<l>anyathā kurute kāryaṃ mantavyaṃ manyate 'nyathā // Bc_12.25 //</l>
+</lg>
+
+<lg>
+<l>bravīmyahamahaṃ vedmi gacchāmyahamahaṃ sthitaḥ /</l>
+<l>itīhaivamahaṃkārastvanahaṃkāra vartate // Bc_12.26 //</l>
+</lg>
+
+<lg>
+<l>yastu bhāvānasaṃdigdhānekībhāvena paśyati /</l>
+<l>mṛtpiṇḍavadasaṃdeha saṃdehaḥ sa ihocyate // Bc_12.27 //</l>
+</lg>
+
+<lg>
+<l>ya evāhaṃ sa evedaṃ mano buddhiśca karma ca /</l>
+<l>yaścaivaiṣa gaṇaḥ so 'hamiti yaḥ so 'bhisaṃplavaḥ // Bc_12.28 //</l>
+</lg>
+
+<lg>
+<l>aviśeṣaṃ viśeṣajña pratibuddhāprabuddhayoḥ /</l>
+<l>prakṛtīnāṃ ca yo veda so 'viśeṣa iti smṛtaḥ // Bc_12.29 //</l>
+</lg>
+
+<lg>
+<l>namaskāravaṣaṭkārau prokṣaṇābhyukṣaṇādayaḥ /</l>
+<l>anupāya iti prājñairupāyajña praveditaḥ // Bc_12.30 //</l>
+</lg>
+
+<lg>
+<l>sajjate yena durmedhā manovāgbuddhikarmabhiḥ /</l>
+<l>viṣayeṣvanabhiṣvaṅga so 'bhiṣvaṅga iti smṛtaḥ // Bc_12.31 //</l>
+</lg>
+
+<lg>
+<l>mamedamahamasyeti yadduḥkhamabhimanyate /</l>
+<l>vijñeyo 'bhyavapātaḥ sa saṃsāre yena pātyate // Bc_12.32 //</l>
+</lg>
+
+<lg>
+<l>ityavidyāṃ hi vidvānsa pañcaparvā samīhate /</l>
+<l>tamo mohaṃ mahāmohaṃ tāmisradvayameva ca // Bc_12.33 //</l>
+</lg>
+
+<lg>
+<l>tatrālasyaṃ tamo viddhi mohaṃ mṛtyuṃ ca janma ca /</l>
+<l>mahāmohastvasaṃmoha kāma ityeva gamyatām // Bc_12.34 //</l>
+</lg>
+
+<lg>
+<l>yasmādatra ca bhūtāni pramuhyanti mahāntyapi /</l>
+<l>tasmādeṣa mahābāho mahāmoha iti smṛtaḥ // Bc_12.35 //</l>
+</lg>
+
+<lg>
+<l>tāmisramiti cākrodha krodhamevādhikurvate /</l>
+<l>viṣādaṃ cāndhatāmisramaviṣāda pracakṣate // Bc_12.36 //</l>
+</lg>
+
+<lg>
+<l>anayāvidyayā bālaḥ saṃyuktaḥ pañcaparvayā /</l>
+<l>saṃsāre duḥkhabhūyiṣṭhe janmasvabhiniṣicyate // Bc_12.37 //</l>
+</lg>
+
+<lg>
+<l>draṣṭā śrotā ca mantā ca kāryakaraṇameva ca /</l>
+<l>ahamityevamāgamya saṃsāre parivartate // Bc_12.38 //</l>
+</lg>
+
+<lg>
+<l>ihaibhirhetubhirdhīman janmastrotaḥ pravartate /</l>
+<l>hetvabhāvātphalābhāva iti vijñātumarhasi // Bc_12.39 //</l>
+</lg>
+
+<lg>
+<l>tatra samyaṅmatirvidyānmokṣakāma catuṣṭayam /</l>
+<l>pratibuddhāprabuddhau ca vyaktamavyaktameva ca // Bc_12.40 //</l>
+</lg>
+
+<lg>
+<l>yathāvadetadvijñāya kṣetrajño hi catuṣṭayam /</l>
+<l>ājavaṃjavatāṃ hitvā prāpnoti padamakṣaram // Bc_12.41 //</l>
+</lg>
+
+<lg>
+<l>ityartha brāhmaṇā loke paramabrahmavādinaḥ /</l>
+<l>brahmacarya carantīha brāhmaṇānvāsayanti ca // Bc_12.42 //</l>
+</lg>
+
+<lg>
+<l>iti vākyamidaṃ śrutvā munestasya nṛpātmajaḥ /</l>
+<l>abhyupāyaṃ ca papraccha padameva ca naiṣṭhikam // Bc_12.43 //</l>
+</lg>
+
+<lg>
+<l>brahmacaryamidaṃ caryaṃ yathā yāvacca yatra ca /</l>
+<l>dharmasyāsya ca paryantaṃ bhavānvyākhyātumarhati // Bc_12.44 //</l>
+</lg>
+
+<lg>
+<l>ityarāḍo yathāśāstraṃ vispaṣṭārtha samāsataḥ /</l>
+<l>tamevānyena kalpena dharmamasmai vyabhāṣata // Bc_12.45 //</l>
+</lg>
+
+<lg>
+<l>ayamādau gṛhānmuktvā bhaikṣākaṃ liṅgamāśritaḥ /</l>
+<l>samudācāravistīrṇa śīlamādāya vartate // Bc_12.46 //</l>
+</lg>
+
+<lg>
+<l>saṃtoṣaṃ paramāsthāya yena tena yatastataḥ /</l>
+<l>viviktaṃ sevate vāsaṃ nirdvandvaḥ śāstravitkṛtī // Bc_12.47 //</l>
+</lg>
+
+<lg>
+<l>tato rāgādbhayaṃ dṛṣṭvā vairāgyācca paraṃ śivam /</l>
+<l>nigṛhṇannindriyagrāmaṃ yatate manasaḥ śame // Bc_12.48 //</l>
+</lg>
+
+<lg>
+<l>atho viviktaṃ kāmebhyo vyāpādādibhya eva ca /</l>
+<l>vivekajamavāpnoti pūrvadhyānaṃ vitarkavat // Bc_12.49 //</l>
+</lg>
+
+<lg>
+<l>tacca dhyānasukhaṃ prāpya tattadeva vitarkayān /</l>
+<l>apūrvasukhalābhena hriyate bāliśo janaḥ // Bc_12.50 //</l>
+</lg>
+
+<lg>
+<l>śamenaivaṃvidhenāyaṃ kāmadveṣavigarhiṇā /</l>
+<l>brahmalokamavāpnoti paritoṣeṇa vañcitaḥ // Bc_12.51 //</l>
+</lg>
+
+<lg>
+<l>jñātvā vidvānvitarkāstu manaḥsaṃkṣobhakārakān /</l>
+<l>tadviyuktamavāpnoti dhyānaṃ prītisukhānvitam // Bc_12.52 //</l>
+</lg>
+
+<lg>
+<l>hriyamāṇastayā prītyā yo viśeṣaṃ na paśyati /</l>
+<l>sthānaṃ bhāsvaramāpnoti deveṣvābhāsvareṣu saḥ // Bc_12.53 //</l>
+</lg>
+
+<lg>
+<l>yastu prītisukhāttasmādvivecayati mānasam /</l>
+<l>tṛtīyaṃ labhate dhyānaṃ sukhaṃ prītivivarjitam // Bc_12.54 //</l>
+</lg>
+
+<lg>
+<l>yastu tasminsukhe magno na viśeṣāya yatnavān /</l>
+<l>śubhakṛtsnaiḥ sa sāmānyaṃ sukhaṃ prāpnoti daivataiḥ // Bc_12.55 //</l>
+</lg>
+
+<p>tādṛśaṃ sukhāmāsādya yo na rajyatyupekṣakaḥ
+<l>caturtha dhyānamāpnoti sukhaduḥkhavivarjitam // Bc_12.56 //</l></p>
+
+<lg>
+<l>tatra kecidvyavasyanti mokṣa ityabhimāninaḥ /</l>
+<l>sukhaduḥkhaparityāgādavyāpārācca cetasaḥ // Bc_12.57 //</l>
+</lg>
+
+<lg>
+<l>asya dhyānasya tu phalaṃ samaṃ devairbṛhatphalaiḥ /</l>
+<l>kathayanti bṛhatkālaṃ bṛhatprajñāparīkṣakāḥ // Bc_12.58 //</l>
+</lg>
+
+<lg>
+<l>samādhervyutthitastasmād dṛṣtvā doṣāṃścharīriṇām /</l>
+<l>jñānamārohati prājñaḥ śarīravinivṛttaye // Bc_12.59 //</l>
+</lg>
+
+<lg>
+<l>tatastaddhyānamutsṛjya viśeṣe kṛtaniścayaḥ /</l>
+<l>kāmebhya iva sa prājño rūpādapi virajyate // Bc_12.60 //</l>
+</lg>
+
+<lg>
+<l>śarīre khāni yānyasmintānyādau parikalpayan /</l>
+<l>ghaneṣvapi tato dravyeṣvākāśamadhimucyate // Bc_12.61 //</l>
+</lg>
+
+<lg>
+<l>ākāśagatamātmānaṃ saṃkṣipya tvaparo budhaḥ /</l>
+<l>tadevānantataḥ paśyanviśeṣamadhigacchati // Bc_12.62 //</l>
+</lg>
+
+<lg>
+<l>adhyātmakuśalastvanyo nivartyātmānamātmanā /</l>
+<l>kiṃcinnāstīti saṃpaśyannākiṃcanya iti smṛtaḥ // Bc_12.63 //</l>
+</lg>
+
+<lg>
+<l>tato muñjādiṣīkeva śakuniḥ pañjarādiva /</l>
+<l>kṣetrajño niḥsṛto dehānmukta ityabhidhīyate // Bc_12.64 //</l>
+</lg>
+
+<lg>
+<l>etattatparamaṃ brahma nirliṅga dhruvamakṣaram /</l>
+<l>yanmokṣa iti tattvajñāḥ kathayanti manīṣiṇaḥ // Bc_12.65 //</l>
+</lg>
+
+<lg>
+<l>ityupāyaṃśca mokṣaśca mayā saṃdarśitastava /</l>
+<l>yadi jñātaṃ yadi ruciryathāvatpratipadyatām // Bc_12.66 //</l>
+</lg>
+
+<lg>
+<l>jaigīṣavyo 'tha janako vṛddhaścaiva parāśaraḥ /</l>
+<l>imaṃ panthānamāsādya muktā hyanye ca mokṣiṇaḥ // Bc_12.67 //</l>
+</lg>
+
+<lg>
+<l>iti tasya sa tadvākyaṃ gṛhītvā tu vicārya ca /</l>
+<l>pūrvahetubalaprāptaḥ pratyuttaramuvāca ha // Bc_12.68 //</l>
+</lg>
+
+<lg>
+<l>śrutaṃ jñānamidaṃ sūkṣmaṃ parataḥ parataḥ śivam /</l>
+<l>kṣetrajñasyāparityāgādavaimyetadanaiṣṭhikam // Bc_12.69 //</l>
+</lg>
+
+<lg>
+<l>vikāraprakṛtibhyo hi kṣetrajñaṃ muktamapyaham /</l>
+<l>manye prasavadharmāṇaṃ bījadharmāṇameva ca // Bc_12.70 //</l>
+</lg>
+
+<lg>
+<l>viśuddho yadyapi hyātmā nirmukta iti kalpyate /</l>
+<l>bhūyaḥ pratyayasadbhāvādamuktaḥ sa bhaviṣyati // Bc_12.71 //</l>
+</lg>
+
+<lg>
+<l>ṛtubhūmyambuvirahādyathā bījaṃ na rohati /</l>
+<l>rohati pratyayaistaistaistadvatso 'pi mato mama // Bc_12.72 //</l>
+</lg>
+
+<lg>
+<l>yatkarmājñānatṛṣṇānāṃ tyāgānmokṣaśca kalpyate /</l>
+<l>atyantastatparityāgaḥ satyātmani na vidyate // Bc_12.73 //</l>
+</lg>
+
+<lg>
+<l>hitvā hitvā trayamidaṃ viśeṣastūpalabhyate /</l>
+<l>ātmanastu sthitiryatra tatra sūkṣmamidaṃ trayam // Bc_12.74 //</l>
+</lg>
+
+<lg>
+<l>sūkṣmatvāccaiva doṣāṇāmavyāpārācca cetasaḥ /</l>
+<l>dīrghatvādāyuṣaścaiva mokṣastu parikalpyate // Bc_12.75 //</l>
+</lg>
+
+<lg>
+<l>ahaṃkāraparityāgo yaścaiṣa parikalpyate /</l>
+<l>satyātmani parityāgo nāhaṃkārasya vidyate // Bc_12.76 //</l>
+</lg>
+
+<lg>
+<l>saṃkhyādibhiramuktaśca nirguṇo na bhavatyayam /</l>
+<l>tasmādasati nairguṇye nāsya mokṣo 'bhidhīyate // Bc_12.77 //</l>
+</lg>
+
+<lg>
+<l>guṇino hi guṇānāṃ ca vyatireko na vidyate /</l>
+<l>rūpoṣṇābhyāṃ virahito na hyagnirupalabhyate // Bc_12.78 //</l>
+</lg>
+
+<lg>
+<l>prāgdehānna bhaveddehī prāgguṇebhyastathā guṇī /</l>
+<l>tasmādādau vimuktaḥ san śarīrī badhyate punaḥ // Bc_12.79 //</l>
+</lg>
+
+<lg>
+<l>kṣetrajño viśarīraśca jño vā syādajña eva vā /</l>
+<l>yadi jño jñeyamasyāsti jñeye sati na mucyate // Bc_12.80 //</l>
+</lg>
+
+<lg>
+<l>athājña iti siddho vaḥ kalpitena kimātmanā /</l>
+<l>vināpi hyātmanājñānaṃ prasiddhaṃ kāṣṭhakuḍyavat // Bc_12.81 //</l>
+</lg>
+
+<lg>
+<l>parataḥ paratastyāgo yasmāttu guṇavān smṛtaḥ /</l>
+<l>tasmātsarvaparityāgānmanye kṛtsnāṃ kṛtārthatām // Bc_12.82 //</l>
+</lg>
+
+<lg>
+<l>iti dharmamarāḍasya viditvā na tutoṣa saḥ /</l>
+<l>akṛtsnamiti vijñāya tataḥ pratijagāma ha // Bc_12.83 //</l>
+</lg>
+
+<lg>
+<l>viśeṣamatha śuśrūṣurudrakasyāśramaṃ yayau /</l>
+<l>ātmagrāhācca tasyāpi jagṛhe na sa darśanam // Bc_12.84 //</l>
+</lg>
+
+<lg>
+<l>saṃjñāsaṃjñitvayordoṣaṃ jñātvā hi munirudrakaḥ /</l>
+<l>ākiṃcanyātparaṃ lebhe'saṃjñāsaṃjñātmikāṃ gatim // Bc_12.85 //</l>
+</lg>
+
+<lg>
+<l>yasmāccālambane sūkṣme saṃjñāsaṃjñe tataḥ param /</l>
+<l>nāsaṃjñī naiva saṃjñīti tasmāttatragataspṛhaḥ // Bc_12.86 //</l>
+</lg>
+
+<lg>
+<l>yataśca buddhistatraiva sthitānyatrāpracāriṇī /</l>
+<l>sūkṣmāpaṭvī tatastatra nāsaṃjñitvaṃ na saṃjñitā // Bc_12.87 //</l>
+</lg>
+
+<lg>
+<l>yasmācca tadapi prāpya punarāvartate jagat /</l>
+<l>bodhisattvaḥ paraṃ prepsustasmādudrakamatyajat // Bc_12.88 //</l>
+</lg>
+
+<lg>
+<l>tato hitvāśramaṃ tasya śreyo 'rthī kṛtaniścayaḥ /</l>
+<l>bheje gayasya rājarṣernagarīsaṃjñamāśramam // Bc_12.89 //</l>
+</lg>
+
+<lg>
+<l>atha nairañjanātīre śucau śuciparākramaḥ /</l>
+<l>cakāra vāsamekāntavihārābhiratirmuniḥ // Bc_12.90 //</l>
+</lg>
+
+<lg>
+<l>āgatān tatra tatpūrvapañcendriyavaśoddhatān /</l>
+<l>tapaḥpravṛttān vratino bhikṣūn pañca niraikṣata // Bc_12.91 //</l>
+</lg>
+
+<lg>
+<l>te copatastthurdṛṣṭvātra bhikṣavastaṃ mumukṣavaḥ /</l>
+<l>puṇyārjitadhanārogyamindriyārthā iveśvaram // Bc_12.92 //</l>
+</lg>
+
+<lg>
+<l>saṃpūjyamānastaiḥ pravhairvinayādanuvartibhiḥ /</l>
+<l>tadvaśasthāyibhiḥ śiṣyairlolairmana ivendriyaiḥ // Bc_12.93 //</l>
+</lg>
+
+<lg>
+<l>mṛtyujanmāntakaraṇe syādupāyo 'yamityatha /</l>
+<l>duṣkarāṇi samārebhe tapāṃsyanaśanena saḥ // Bc_12.94 //</l>
+</lg>
+
+<lg>
+<l>upavāsavidhīnnaikān kurvannaradurācarān /</l>
+<l>varṣāṇi ṣaṭ śamaprepsurakarotkārśyamātmanaḥ // Bc_12.95 //</l>
+</lg>
+
+<lg>
+<l>annakāleṣu caikaikaiḥ sa kolatilataṇḍulaiḥ /</l>
+<l>apārapārasaṃsārapāraṃ prepsurapārayat // Bc_12.96 //</l>
+</lg>
+
+<lg>
+<l>dehādapacayastena tapasā tasya yaḥ kṛtaḥ /</l>
+<l>sa evopacayo bhūyastejasāsya kṛto 'bhavat // Bc_12.97 //</l>
+</lg>
+
+<lg>
+<l>kṛśo 'pyakṛśakīrtiśrīrlhādaṃ cakre 'nyacakṣuṣām /</l>
+<l>kumudānāmiva śaracchuklapakṣādicandramāḥ // Bc_12.98 //</l>
+</lg>
+
+<lg>
+<l>tvagasthiśeṣo niḥśeṣairmedaḥpiśitaśoṇitaiḥ /</l>
+<l>kṣīṇo 'pyakṣīṇagāmbhīryaḥ samudra iva sa vyabhāt // Bc_12.99 //</l>
+</lg>
+
+<lg>
+<l>atha kaṣṭatapaḥspaṣṭavyarthakliṣṭatanurmuniḥ /</l>
+<l>bhavabhīrurimāṃ cakre buddhiṃ buddhatvakāṅkṣayā // Bc_12.100 //</l>
+</lg>
+
+<lg>
+<l>nāyaṃ dharmo virāgāya na bodhāya na muktaye /</l>
+<l>jambumūle mayā prāpto yastadā sa vidhirdhruvaḥ // Bc_12.101 //</l>
+</lg>
+
+<lg>
+<l>na cāsau durbalenāptuṃ śakyamityāgatādaraḥ /</l>
+<l>śarīrabalavṛddhyarthamidaṃ bhūyo 'nvacintayat // Bc_12.102 //</l>
+</lg>
+
+<lg>
+<l>kṣutpipāsāśramaklāntaḥ śramādasvasthamānasaḥ /</l>
+<l>prāpnuyānmanasāvāpyaṃ phalaṃ kathamanirvṛtaḥ // Bc_12.103 //</l>
+</lg>
+
+<lg>
+<l>nirvṛtiḥ prāpyate samyak satatendriyatarpaṇāt /</l>
+<l>saṃtarpitendriyatayā manaḥsvāsthyamavāpyate // Bc_12.104 //</l>
+</lg>
+
+<lg>
+<l>svasthaprasannamanasaḥ samādhirupapadyate /</l>
+<l>samādhiyuktacittasya dhyānayogaḥ pravartate // Bc_12.105 //</l>
+</lg>
+
+<lg>
+<l>dhyānapravartanāddharmāḥ prāpyante yairavāpyate /</l>
+<l>durlabhaṃ śāntamajaraṃ paraṃ tadamṛtaṃ padam // Bc_12.106 //</l>
+</lg>
+
+<lg>
+<l>tasmādāhāramūlo 'yamupāya itiniścayaḥ /</l>
+<l>āhārakaraṇe dhīraḥ kṛtvāmitamatirmatim // Bc_12.107 //</l>
+</lg>
+
+<lg>
+<l>snāto nairañjanātīrāduttatāra śanaiḥ kṛśaḥ /</l>
+<l>bhaktyāvanataśākhāgrairdattahastastaṭadrumaiḥ // Bc_12.108 //</l>
+</lg>
+
+<lg>
+<l>atha gopādhipasutā daivatairabhicoditā /</l>
+<l>udbhutahṛdayānandā tatra nandabalāgamat // Bc_12.109 //</l>
+</lg>
+
+<lg>
+<l>sitaśaṅkhojjvalabhujā nīlakambalavāsinī /</l>
+<l>saphenamālānīlāmburyamuneva saridvarā // Bc_12.110 //</l>
+</lg>
+
+<lg>
+<l>sā śraddhāvardhitaprītirvikasallocanotpalā /</l>
+<l>śirasā praṇipatyainaṃ grāhayāmāsa pāyasam // Bc_12.111 //</l>
+</lg>
+
+<lg>
+<l>kṛtvā tadupabhogena prāptajanmaphalāṃ sa tām /</l>
+<l>bodhiprāptau samartho 'bhūtsaṃtarpitaṣaḍindriyaḥ // Bc_12.112 //</l>
+</lg>
+
+<lg>
+<l>paryāptāpyānamūrtiśca sārdha svayaśasā muniḥ /</l>
+<l>kāntidhairye babhāraikaḥ śaśāṅkārṇavayordvayoḥ // Bc_12.113 //</l>
+</lg>
+
+<lg>
+<l>āvṛtta iti vijñāya taṃ jahuḥ pañca bhikṣavaḥ /</l>
+<l>manīṣiṇamivātmānaṃ nirmuktaṃ pañca dhātavaḥ // Bc_12.114 //</l>
+</lg>
+
+<lg>
+<l>vyavasāyadvitīyo 'tha śādvalāstīrṇabhūtalam /</l>
+<l>so 'śvatthamūlaṃ prayayau bodhāya kṛtaniścayaḥ // Bc_12.115 //</l>
+</lg>
+
+<lg>
+<l>tatastadānīṃ gajarājavikramaḥ padasvanenānupamena bodhitaḥ /</l>
+<l>mahāmunerāgatabodhiniścayo jagāda kālo bhujagottamaḥ stutim // Bc_12.116 //</l>
+</lg>
+
+<lg>
+<l>yathā mune tvaccaraṇāvapīḍitā muhurmuhurniṣṭanatīva medinī /</l>
+<l>yathā ca te rājati sūryavatprabhā dhrūvaṃ tvamiṣṭaṃ phalamadya bhokṣyase // Bc_12.117 //</l>
+</lg>
+
+<lg>
+<l>yathā bhramantyo divi cāṣapaṅktayaḥ pradakṣiṇaṃ tvāṃ kamalākṣa kurvate /</l>
+<l>yathā ca saumyā divi vānti vāyavastvamadya buddho niyataṃ bhaviṣyasi // Bc_12.118 //</l>
+</lg>
+
+<lg>
+<l>tato bhujaṅgapravareṇa saṃstutastṛṇānyupādāya śucīni lāvakāt /</l>
+<l>kṛtapratijño niṣasāda bodhaye mahātarormūlamupāśritaḥ śuceḥ // Bc_12.119 //</l>
+</lg>
+
+<lg>
+<l>tataḥ sa paryaṅkamakampyamuttamaṃ babandha suptoragabhogapiṇḍitam /</l>
+<l>bhinadmi tāvadbhuvi naitadāsanaṃ na yāmi yāvatkutakṛtyatāmiti // Bc_12.120 //</l>
+</lg>
+
+<lg>
+<l>tato yayurmadamatulāṃ divaukaso vavāśire na mṛgagaṇā na pakṣiṇaḥ /</l>
+<l>na sasvanurvanataravo 'nilāhatāḥ kṛtāsane bhagavati niścitātmani // Bc_12.121 //</l>
+</lg>
+
+<l>iti buddhacarite mahākāvye 'rāḍadarśano nāma dvādaśaḥ sargaḥ // 12 //</l>
+
+<p>CANTO XIII</p>
+
+<lg>
+<l>tasminvimokṣāya kṛtapratijñe rājarṣivaṃśaprabhave maharṣau /</l>
+<l>tatropaviṣṭe prajaharṣa lokastatrāsa saddharmaripustu māraḥ // Bc_13.1 //</l>
+</lg>
+
+<lg>
+<l>yaṃ kāmadevaṃ pravadanti loke citrāyudhaṃ puṣpaśaraṃ tathaiva /</l>
+<l>kāmapracārādhipatiṃ tameva mokṣadviṣaṃ māramudāharanti // Bc_13.2 //</l>
+</lg>
+
+<lg>
+<l>tasyātmajā vibhramaharṣadarpāstisro 'ratiprītitṛṣaśca kanyāḥ /</l>
+<l>papracchurenaṃ manaso vikāraṃ sa tāṃśca tāścaiva vaco 'bhyuvāca // Bc_13.3 //</l>
+</lg>
+
+<lg>
+<l>asau munirniścayavarma bibhratsattvāyudhaṃ buddhiśaraṃ vikṛṣya /</l>
+<l>jigīṣurāste viṣayānmadīyāntasmādayaṃ me manaso viṣādaḥ // Bc_13.4 //</l>
+</lg>
+
+<lg>
+<l>yadi hyasau māmabhibhūya yāti lokāya cākhyātyapavargamārgam /</l>
+<l>śūnyastato 'yaṃ viṣayo mamādya vṛttāccyutasyeva videhabhartuḥ // Bc_13.5 //</l>
+</lg>
+
+<lg>
+<l>tadyāvadevaiṣa na labdhacakṣurmadrocare tiṣṭhati yāvadeva /</l>
+<l>yāsyāmi tāvadvratamasya bhettuṃ setuṃ nadīvega ivātivṛddhaḥ // Bc_13.6 //</l>
+</lg>
+
+<lg>
+<l>tato dhanuḥ puṣpamayaṃ gṛhītvā śarān jaganmohakarāṃśca pañca /</l>
+<l>so 'śvatthamūlaṃ sasuto 'bhyagacchadasvāsthyakārī manasaḥ prajānām // Bc_13.7 //</l>
+</lg>
+
+<lg>
+<l>atha praśāntaṃ munimāsanasthaṃ pāraṃ titīrṣu bhavasāgarasya /</l>
+<l>viṣajya savyaṃ karamāyudhāgre krīḍan śareṇedamuvāca māraḥ // Bc_13.8 //</l>
+</lg>
+
+<lg>
+<l>uttiṣṭha bhoḥ kṣatriya mṛtyubhīta cara svadharma tyaja mokṣadharmam /</l>
+<l>bāṇaiśca yajñaiśca vinīya lokaṃ lokātpadaṃ prāpnuhi vāsavasya // Bc_13.9 //</l>
+</lg>
+
+<lg>
+<l>panthā hi niryātumayaṃ yaśasyo yo vāhitaḥ pūrvatamairnarendraiḥ /</l>
+<l>jātasya rājarṣikule viśāle bhaikṣākamaślādhyamidaṃ prapattum // Bc_13.10 //</l>
+</lg>
+
+<lg>
+<l>athādya nottiṣṭhasi niścitātman bhava sthiro mā vimucaḥ pratijñām /</l>
+<l>mayodyato hyeṣa śaraḥ sa eṃva yaḥ śūrpake mīnaripau vimuktaḥ // Bc_13.11 //</l>
+</lg>
+
+<lg>
+<l>spṛṣṭaḥ sa cānena kathaṃcidaiḍaḥ somasya naptāpyabhavadvicittaḥ /</l>
+<l>sa cābhavacchantanurasvatantraḥ kṣīṇe yuge kiṃ bata durbalo 'nyaḥ // Bc_13.12 //</l>
+</lg>
+
+<lg>
+<l>tatkṣipramuttiṣṭha labhasva saṃjñāṃ bāṇo hyayaṃ tiṣṭhati lelihānaḥ /</l>
+<l>priyāvidheyeṣu ratipriyeṣu yaṃ cakravākeṣviva notsṛjāmi // Bc_13.13 //</l>
+</lg>
+
+<lg>
+<l>ityevamukto 'pi yadā nirāstho naivāsanaṃ śākyamunirbibheda /</l>
+<l>śaraṃ tato 'smai visasarja māraḥ kanyāśca kṛtvā purataḥ sutāṃśca // Bc_13.14 //</l>
+</lg>
+
+<lg>
+<l>tasmiṃstu bāṇe 'pi sa vipramukte cakāra nāsthāṃ na dhṛteścacāla /</l>
+<l>dṛṣṭvā tathainaṃ viṣasāda māraścintāparītaśca śanairjagāda // Bc_13.15 //</l>
+</lg>
+
+<lg>
+<l>śailendraputrīṃ prati yena viddho devo 'pi śambhuścalito babhūva /</l>
+<l>na cintayatyeṣa tameva bāṇaṃ kiṃ syādacitto na śaraḥ sa eṣaḥ // Bc_13.16 //</l>
+</lg>
+
+<lg>
+<l>tasmādayaṃ nārhati puṣpabāṇaṃ na harṣaṇaṃ nāpi raterniyogam /</l>
+<l>arhatyayaṃ bhūtagaṇairasaumyaiḥ saṃtrāsanātarjanatāḍanāni // Bc_13.17 //</l>
+</lg>
+
+<lg>
+<l>sasmāra māraśca tataḥ svasainyaṃ vighnaṃ śame śākyamuneścikīrṣan /</l>
+<l>nanāśrayāścānucarāḥ parīyuḥ śaladrumaprāsagadāsihastāḥ // Bc_13.18 //</l>
+</lg>
+
+<lg>
+<l>varāhamīnāśvakharoṣṭravaktrā vyāghrarkṣasiṃhadviradānanāśca /</l>
+<l>ekekṣaṇā naikamukhāstriśīrṣā lambodarāścaiva pṛṣodarāśca // Bc_13.19 //</l>
+</lg>
+
+<lg>
+<l>ajānusakthā ghaṭajānavaśca daṃṣṭrāyudhāścaiva nakhāyudhāśca /</l>
+<l>karaṅkavaktrā bahumūrtayaśca bhagnārdhavaktrāśca mahāmukhāśca // Bc_13.20 //</l>
+</lg>
+
+<lg>
+<l>bhasmāruṇā lohitabinducitrāḥ khaṭvāṅgahastā haridhūmrakeśāḥ /</l>
+<l>lambasrajo vāraṇalambakarṇāścarmāmbarāścaiva nirambarāśca // Bc_13.21 //</l>
+</lg>
+
+<lg>
+<l>śvetārdhavaktrā haritārdhakāyāstāmrāśca dhrūmrā harayo 'sitāśca /</l>
+<l>vyālottarāsaṅgabhujāstathaiva praghuṣṭāghaṇṭākulamekhalāśca // Bc_13.22 //</l>
+</lg>
+
+<lg>
+<l>tālapramāṇāśca gṛhītaśūlā daṃṣṭrākarālāśca śiśupramāṇāḥ /</l>
+<l>urabhravaktrāśca vihaṃgamākṣā mārjāravaktrāśca manuṣyakāyāḥ // Bc_13.23 //</l>
+</lg>
+
+<lg>
+<l>prakīrṇakeśāḥ śikhino 'rdhamuṇḍā raktāmbarā vyākulaveṣṭanāśca /</l>
+<l>prahṛṣṭavaktrā bhṛkuṭīmukhāśca tejoharāścaiva manoharāśca // Bc_13.24 //</l>
+</lg>
+
+<lg>
+<l>kecidvrajanto bhṛśamāvavalguranyo 'nyamāpupluvire tathānye /</l>
+<l>cikrīḍurākāśagatāśca kecitkecicca cerustarumastakeṣu // Bc_13.25 //</l>
+</lg>
+
+<lg>
+<l>nanarta kaścidbhramayaṃstriśūlaṃ kaścidvipuṣphūrja gadāṃ vikarṣan /</l>
+<l>harṣeṇa kaścidvṛṣavannanarda kaścicatprajajvāla tanūnaruhebhyaḥ // Bc_13.26 //</l>
+</lg>
+
+<lg>
+<l>evaṃvidhā bhūtagaṇāḥ samantāttadbodhimūlaṃ parivārya tasthuḥ /</l>
+<l>jighṛkṣavaścaiva jighāṃsavaśca bharturniyogaṃ paripālayantaḥ // Bc_13.27 //</l>
+</lg>
+
+<lg>
+<l>taṃ prekṣya mārasya ca pūrvarātre śākyarṣabhasyaiva ca yuddhakālam /</l>
+<l>na dyauścakāśe pṛthivī cakampe prajajvaluścaiva diśaḥ saśabdāḥ // Bc_13.28 //</l>
+</lg>
+
+<lg>
+<l>viṣvagvavau vāyurudīrṇavegastārā na rejurna babhau śaśāṅkaḥ /</l>
+<l>tamaśca bhūyo vitatāna rātriḥ sarve ca saṃcukṣubhire samudrāḥ // Bc_13.29 //</l>
+</lg>
+
+<lg>
+<l>mahībhṛto dharmaparāśca nāgā mahāmunervighnamamṛṣyamāṇāḥ /</l>
+<l>māraṃ prati krodhavivṛttanetrā niḥśaśvasuścaiva jajṛmbhire ca // Bc_13.30 //</l>
+</lg>
+
+<lg>
+<l>śuddhādhivāsā vibudharṣayastu saddharmasiddhyarthamabhipravṛttāḥ /</l>
+<l>māre 'nukampāṃ manasā pracakrurvirāgabhāvāttu na roṣamīyuḥ // Bc_13.31 //</l>
+</lg>
+
+<lg>
+<l>tadbodhimūlaṃ samavekṣya kīrṇa hiṃsātmanā mārabalena tena /</l>
+<l>dharmātmabhirlokavimokṣakāmairbabhūva hāhākṛtamantarīkṣe // Bc_13.32 //</l>
+</lg>
+
+<lg>
+<l>upaplavaṃ dharmavidhestu tasya dṛṣṭvā sthitaṃ mārabalaṃ maharṣiḥ /</l>
+<l>na cukṣubhe nāpi yayau vikāraṃ madhye gavāṃ siṃha ivopaviṣṭaḥ // Bc_13.33 //</l>
+</lg>
+
+<lg>
+<l>mārastato bhūtacamūmudīrṇāmājñāpayāmāsa bhayāya tasya /</l>
+<l>svaiḥ svaiḥ prabhāvairatha sāsya senā taddhairyabhedāya matiṃ cakāra // Bc_13.34 //</l>
+</lg>
+
+<lg>
+<l>keciccalannaikavilambijivhāstīkṣṇāgradaṃṣṭrā harimaṇḍalākṣāḥ /</l>
+<l>vidāritāsyāḥ sthiraśaṅkukarṇāḥ saṃtrāsayantaḥ kila nāma tasthuḥ // Bc_13.35 //</l>
+</lg>
+
+<lg>
+<l>tebhyaḥ sthitebhyaḥ sa tathāvidhebhyaḥ rūpeṇa bhāvena ca dāruṇebhyaḥ /</l>
+<l>na vivyathe nodvivije maharṣiḥ krīḍatsubālebhya ivoddhatebhyaḥ // Bc_13.36 //</l>
+</lg>
+
+<lg>
+<l>kaścittato roṣavivṛttadṛṣṭistasmai gadāmudyamayāṃcakāra /</l>
+<l>tastambha bāhuḥ sagadastato 'sya puraṃdarasyeva pura savajraḥ // Bc_13.37 //</l>
+</lg>
+
+<lg>
+<l>kecitsamudyamya śilāstarūṃśca viṣehire naiva munau vimoktum /</l>
+<l>petuḥ savṛkṣāḥ saśilāstathaiva vajrāvabhagnā iva vindhyapādāḥ // Bc_13.38 //</l>
+</lg>
+
+<lg>
+<l>kaiścitsamutpatya nabho vimuktāḥ śilāśca vṛkṣāśca paraśvadhāśca /</l>
+<l>tasthurnabhayasyeva na cāvapetuḥ saṃdhyābhrapādā iva naikavarṇāḥ // Bc_13.39 //</l>
+</lg>
+
+<lg>
+<l>cikṣepa tasyopari dīptamanyaḥ kaḍaṅgaraṃ parvataśṛṅgamātram /</l>
+<l>yanmuktapātraṃ gaganasthameva tasyānubhāvācchatadhā paphāla // Bc_13.40 //</l>
+</lg>
+
+<lg>
+<l>kaścijjvalannarka ivoditaḥ khādaṅgāravarṣa mahadutsasarja /</l>
+<l>cūrṇāni cāmīkarakandarāṇāṃ kalpātyaye meruriva pradīptaḥ // Bc_13.41 //</l>
+</lg>
+
+<lg>
+<l>tadbodhimūle pravikīryamāṇamaṅgāravarṣa tu savisphuliṅgam /</l>
+<l>maitrīvihārādṛṣisattamasya babhūva raktotpalapattravarṣaḥ // Bc_13.42 //</l>
+</lg>
+
+<lg>
+<l>śarīracittavyasanātapaistairevaṃvidhaistaiśca nipātyamānaiḥ /</l>
+<l>naivāsanācchākyamuniścacāla svaniścayaṃ bandhumivopaguhya // Bc_13.43 //</l>
+</lg>
+
+<lg>
+<l>athāpare nirjigilurmukhebhyaḥ sarpānvijīrṇebhya iva drumebhyaḥ /</l>
+<l>te mantrabaddhā iva tatsamīpe na śaśvasurnotsasṛpurna celuḥ // Bc_13.44 //</l>
+</lg>
+
+<lg>
+<l>bhūtvāpare vāridharā bṛhantaḥ savidyutaḥ sāśanicaṇḍaghoṣāḥ /</l>
+<l>tasmindrume tatyajuraśmavarṣaṃ tatpuṣpavarṣaṃ ruciraṃ babhūva // Bc_13.45 //</l>
+</lg>
+
+<lg>
+<l>cāpe 'tha bāṇo nihito 'pareṇa jajvāla tatraiva na niṣpapāta /</l>
+<l>anīśvarasyātmani dhūyamāno durmarṣaṇasyeva narasya manyuḥ // Bc_13.46 //</l>
+</lg>
+
+<lg>
+<l>pañceṣavo 'nyena tu vipramuktāstasthurnabhasyeva munau na petuḥ /</l>
+<l>saṃsārabhīrorviṣayapravṛttau pañcendriyāṇīva parikṣakasya // Bc_13.47 //</l>
+</lg>
+
+<lg>
+<l>jighāsayānyaḥ prasasāra ruṣṭo gadāṃ gṛhītvābhimukho maharṣeḥ /</l>
+<l>so 'prāptakāmo vivaśaḥ papāta doṣeṣvivānarthakareṣu lokaḥ // Bc_13.48 //</l>
+</lg>
+
+<lg>
+<l>strī meghakālī tu kapālahastā kartu maharṣeḥ kila cittamoham /</l>
+<l>babhrāma tatrāniyataṃ na tasthau calātmano buddhirivāgameṣu // Bc_13.49 //</l>
+</lg>
+
+<lg>
+<l>kaścitpradīptaṃ praṇidhāya cakṣurnetrāgnināśīviṣavaddidhakṣuḥ /</l>
+<l>tatraiva nāsīnamṛṣiṃ dadarśa kāmātmakaḥ śreya ivopadiṣṭam // Bc_13.50 //</l>
+</lg>
+
+<lg>
+<l>gurvī śilāmudyamayaṃstathānyaḥ śaśrāma moghaṃ vihataprayatnaḥ /</l>
+<l>niḥśreyasaṃ jñānasamādhigamyaṃ kāyaklamairdharmamivāptukāmaḥ // Bc_13.51 //</l>
+</lg>
+
+<lg>
+<l>tarakṣusiṃhākṛtayastathānye praṇeduruccairmahataḥ praṇādān /</l>
+<l>sattvāni yaiḥ saṃcukucuḥ samantādvajrāhatā dyauḥ phalatīti mattvā // Bc_13.52 //</l>
+</lg>
+
+<lg>
+<l>mṛgā gajāścārtaravān sṛjanto vidudruvuścaiva nililyire ca /</l>
+<l>rātrau ca tasyāmahanīva digbhyaḥ khagā ruvantaḥ paripeturārtāḥ // Bc_13.53 //</l>
+</lg>
+
+<lg>
+<l>teṣāṃ praṇādaistu tathāvidhaistai sarveṣu bhūteṣvapi kampiteṣu /</l>
+<l>munirna tatrāsa na saṃcukoca ravairgarutmāniva vāyasānām // Bc_13.54 //</l>
+</lg>
+
+<lg>
+<l>bhayāvahebhyaḥ pariṣadgaṇebhyo yathā yathā naiva munirbibhāya /</l>
+<l>tathā tathā dharmabhṛtāṃ sapatnaḥ śokācca roṣācca sasāda māraḥ // Bc_13.55 //</l>
+</lg>
+
+<lg>
+<l>bhūtaṃ tataḥ kiṃciddṛśyarūpaṃ viśiṣṭabhūtaṃ gaganasthameva /</l>
+<l>dṛṣṭavarṣaye dugdhamavairaruṣṭaṃ māraṃ babhāṣe mahatā svareṇa // Bc_13.56 //</l>
+</lg>
+
+<lg>
+<l>moghaṃ śramaṃ nārhasi māra kartuṃ hiṃsrātmatāmutsṛja gaccha śarma /</l>
+<l>naiṣa tvayā kampayituṃ hi śakyo mahāgirirmerurivānilena // Bc_13.57 //</l>
+</lg>
+
+<lg>
+<l>apyuṣṇabhāvaṃ jvalanaḥ prajahyādāpo dravatvaṃ prathivī sthiratvam /</l>
+<l>anekakalpācitapuṇyakarmā na tveva jahyādvyavasāyameṣaḥ // Bc_13.58 //</l>
+</lg>
+
+<lg>
+<l>yo niścayo hyasya parākramaśca tejaśca yadyā ca dayā prajāsu /</l>
+<l>aprāpya notthāsyati tattvameṣa tamāṃsyahatveva sahasraraśmiḥ // Bc_13.59 //</l>
+</lg>
+
+<lg>
+<l>kāṣṭhaṃ hi mathnan labhate hutāśaṃ bhūmiṃ khananvindati cāpi toyam /</l>
+<l>nirbandhinaḥ kiṃcana nāstyasādhyaṃ nyāyena yuktaṃ ca kṛtaṃ ca sarvam // Bc_13.60 //</l>
+</lg>
+
+<lg>
+<l>tallokamārta karuṇāyamāno rogeṣu rāgādiṣu vartamānam /</l>
+<l>mahābhiṣaṅga nārhati vighnameṣa jñānauṣadhārtha parikhidyamānaḥ // Bc_13.61 //</l>
+</lg>
+
+<lg>
+<l>hṛte ca loke bahubhiḥ kumārgaiḥ sanmārgamanvicchati yaḥ śrameṇa /</l>
+<l>sa daiśikaḥ kṣobhayituṃ na yuktaṃ sudeśikaḥ sārtha iva pranaṣṭe // Bc_13.62 //</l>
+</lg>
+
+<lg>
+<l>sattveṣu naṣṭeṣu mahāndhakāre jñānapradīpaḥ kriyamāṇa eṣaḥ /</l>
+<l>āryasya nirvāpayituṃ na sādhu prajvālyamānastamasīva dīpaḥ // Bc_13.63 //</l>
+</lg>
+
+<lg>
+<l>dṛṣṭvā ca saṃsāramaye mahaughe magnaṃ jagatpāramavindamānam /</l>
+<l>yaścedamuttārayituṃ pravṛttaḥ kaścintayettasya tu pāpamāryaḥ // Bc_13.64 //</l>
+</lg>
+
+<lg>
+<l>kṣamāśipho dhairyavigāḍhamūlaścāritrapuṣpaḥ smṛtibuddhiśākhaḥ /</l>
+<l>jñānadrumo dharmaphalapradātā notpāṭanaṃ hyarhati vardhamānaḥ // Bc_13.65 //</l>
+</lg>
+
+<lg>
+<l>baddhāṃ dṛḍhaiścetasi mohapāśairyasya prajāṃ mokṣayituṃ manīṣā /</l>
+<l>tasmin jighāṃsā tava nopapannā śrānte jagadbandhanamokṣahetoḥ // Bc_13.66 //</l>
+</lg>
+
+<lg>
+<l>bodhāya karmāṇi hi yānyanena kṛtāni teṣāṃ niyato 'dya kālaḥ /</l>
+<l>sthāne tathāsminnupaviṣṭa eṣa yathaiva pūrve munayastathaiva // Bc_13.67 //</l>
+</lg>
+
+<lg>
+<l>eṣā hi nābhirvasudhātalasya kṛtsnena yuktā parameṇa dhāmnā /</l>
+<l>bhūmerato 'nyo 'sti hi na pradeśo vegaṃ samādherviṣaheta yo 'sya // Bc_13.68 //</l>
+</lg>
+
+<lg>
+<l>tanmā kṛthā śokamupehi śāntiṃ mā bhūnmahimnā tava māra mānaḥ /</l>
+<l>viśrambhituṃ na kṣamamadhuvā śrīścale pade vismayamabhyupaiṣi // Bc_13.69 //</l>
+</lg>
+
+<lg>
+<l>tataḥ sa saṃśrutya ca tasya tadvaco mahāmuneḥ prekṣya ca niṣprakampatām /</l>
+<l>jagāma māro vimano hatodyamaḥ śarairjagaccetasi yairvihanyate // Bc_13.70 //</l>
+</lg>
+
+<lg>
+<l>gatapraharṣā viphalīkṛtaśramā praviddhapāṣāṇakaḍaṅgaradrumā /</l>
+<l>diśaḥ pradudrāva tato 'sya sā camūrhatāśrayeva dviṣatā dviṣaccamūḥ // Bc_13.71 //</l>
+</lg>
+
+<lg>
+<l>dravati saparipakṣe nirjitai puṣpaketau jayatijitamaske nīrajaske maharṣau /</l>
+<l>yuvatiriva sahāsā dyauścakāśe sacandrā surabhi ca jalagarbha puṣpavarṣa papāta // Bc_13.72 //</l>
+</lg>
+
+<l>iti buddhacarite mahākāvye 'śvaghoṣakṛte māravijayo nāma trayodaśaḥ sargaḥ // 13 //</l>
+
+<p>CANTO XIV</p>
+
+<lg>
+<l>tato mārabalaṃ jitvā dhairyeṇa ca śamena ca /</l>
+<l>paramārtha vijijñāsuḥ sa dadhyau dhyānakovidaḥ // Bc_14.1 //</l>
+</lg>
+
+<lg>
+<l>sarveṣu dhyānavidhiṣu prāpya caiśvaryamuttamam /</l>
+<l>sasmāra prathame yāme pūrvajanmaparaṃparām // Bc_14.2 //</l>
+</lg>
+
+<lg>
+<l>amutrāhamayaṃ nāma cyutastasmādihāgataḥ /</l>
+<l>uiti janmasahastrāṇi sasmārānubhavanniva // Bc_14.3 //</l>
+</lg>
+
+<lg>
+<l>smṛtvā janma ca mṛtyuṃ ca tāsu tāsūpapattiṣu /</l>
+<l>tataḥ sattveṣu kāruṃṇyaṃ cakāra karuṇātmakaḥ // Bc_14.4 //</l>
+</lg>
+
+<lg>
+<l>kṛtveha svajanotsarga punaranyatra ca kriyāḥ /</l>
+<l>atrāṇaḥ khalu loko 'yaṃ paribhramati cakravat // Bc_14.5 //</l>
+</lg>
+
+<lg>
+<l>ityevaṃ smaratastasya babhūva niyatātmanaḥ /</l>
+<l>kadalīgarbhaniḥsāraḥ saṃsāra iti niścayaḥ // Bc_14.6 //</l>
+</lg>
+
+<lg>
+<l>dvitīye tvāgate yāme so 'dvitīyaparākramaḥ /</l>
+<l>divyaṃ lebhe paraṃ cakṣuḥ sarvacakṣuṣmatāṃ varaḥ // Bc_14.7 //</l>
+</lg>
+
+<lg>
+<l>tatastena sa divyena pariśuddhena cakṣuṣā /</l>
+<l>dadarśa nikhilaṃ lokamādarśa iva nirmale // Bc_14.8 //</l>
+</lg>
+
+<lg>
+<l>sattvānāṃ paśyatastasya nikṛṣṭotkṛṣṭakarmaṇām /</l>
+<l>pracyutiṃ copapattiṃ ca vavṛdhe karuṇātmatā // Bc_14.9 //</l>
+</lg>
+
+<lg>
+<l>ime duṣkṛtakarmāṇaḥ prāṇino yāni durgatim /</l>
+<l>ime 'nye śubhakarmāṇaḥ pratiṣṭhante tripiṣṭape // Bc_14.10 //</l>
+</lg>
+
+<lg>
+<l>upapannāḥ pratibhaye narake bhṛśadāruṇe /</l>
+<l>amī duḥkhairbahuvidhaiḥ pīḍyante kṛpaṇaṃ bata // Bc_14.11 //</l>
+</lg>
+
+<lg>
+<l>pāyyante kvathitaṃ kecidagnivarṇamayorasam /</l>
+<l>āropyante ruvānto 'nye niṣṭaptastambhamāyasam // Bc_14.12 //</l>
+</lg>
+
+<lg>
+<l>pacyante piṣṭavatkecidayaskumbhīṣvavāṅmukhāḥ /</l>
+<l>dahyante karuṇaṃ keciddīpteṣvaṅgārarāśiṣu // Bc_14.13 //</l>
+</lg>
+
+<lg>
+<l>kecittīkṣṇairayodaṃṣṭrairbhakṣyante dāruṇaiḥ śvabhiḥ /</l>
+<l>keciddhṛṣṭairayastuṇḍairvāyasairāyasairiva // Bc_14.14 //</l>
+</lg>
+
+<lg>
+<l>keciddāhapariśrāntāḥ śītacchāyābhikāṅikṣaṇaḥ /</l>
+<l>asipattravanaṃ nīlaṃ baddhā iva viśantyamī // Bc_14.15 //</l>
+</lg>
+
+<lg>
+<l>pāṭyante dāruvatkecitkuṭhārairbaddhabāhavaḥ /</l>
+<l>duḥkhe 'pi na vipacyante karmabhirdhāritāsavaḥ // Bc_14.16 //</l>
+</lg>
+
+<lg>
+<l>sukhaṃ syāditi yatkarma kṛtaṃ duḥkhanivṛttaye /</l>
+<l>phalaṃ tasyedamavaśairduḥkhamevopabhujyate // Bc_14.17 //</l>
+</lg>
+
+<lg>
+<l>sukhārthamaśubhaṃ kṛtvā ya ete bhṛśaduḥkhitāḥ /</l>
+<l>āsvādaḥ sa kimeteṣāṃ karoti sukhamaṇvapi // Bc_14.18 //</l>
+</lg>
+
+<lg>
+<l>hasadbhiryatkṛtaṃ karma kaluṣaṃ kaluṣātmabhiḥ /</l>
+<l>etatpariṇate kāle krośadbhiranubhūyate // Bc_14.19 //</l>
+</lg>
+
+<lg>
+<l>yadyevaṃ pāpakarmāṇaḥ paśyeyuḥ karmaṇāṃ phalam /</l>
+<l>vameyuruṣṇaṃ rudhiraṃ marmasvabhihatā iva // Bc_14.20 //</l>
+</lg>
+
+<lg>
+<l>ime 'nye karmabhiścitraiścittavispandasaṃbhavaiḥ /</l>
+<l>tiryagyonau vicitrāyāḥmupapannāstapasvinaḥ // Bc_14.21 //</l>
+</lg>
+
+<lg>
+<l>māṃsatvagbāladantārtha vairādapi madādapi /</l>
+<l>hanyante kṛpaṇaṃ yatra bandhūnāṃ paśyatāmapi // Bc_14.22 //</l>
+</lg>
+
+<lg>
+<l>aśaknuvanto 'pyavaśāḥ kṣuttarṣaśramapīḍitāḥ /</l>
+<l>go 'śvabhūtāśca vāhyante pratodakṣatamūrtayaḥ // Bc_14.23 //</l>
+</lg>
+
+<lg>
+<l>vāhyante gajabhūtāśca valīyāṃso 'pi durbalaiḥ /</l>
+<l>aṅkaśakliṣṭamūrdhānastāḍitāḥ pādapāṣṇibhiḥ // Bc_14.24 //</l>
+</lg>
+
+<lg>
+<l>satsvapyanyeṣu duḥkheṣu duḥkhaṃ yatra viśeṣataḥ /</l>
+<l>parasparavirodhācca parādhīnatayaiva ca // Bc_14.25 //</l>
+</lg>
+
+<lg>
+<l>khasthāḥ khasthairhi bādhyante jalasthā jalacāribhiḥ /</l>
+<l>sthalasthāḥ sthalasaṃsthaiśca prāpya caivetaretaraiḥ // Bc_14.26 //</l>
+</lg>
+
+<lg>
+<l>upapannāstathā ceme mātsaryākrāntacetasaḥ /</l>
+<l>pitṛloke nirāloke kṛpaṇaṃ bhuñjate phalam // Bc_14.27 //</l>
+</lg>
+
+<lg>
+<l>sūcīchidropamamukhāḥ parvatopamakukṣayaḥ /</l>
+<l>kṣuttarṣajanitairduḥkhai pīḍyante duḥkhabhāginaḥ // Bc_14.28 //</l>
+</lg>
+
+<lg>
+<l>āśayā samatikrāntā dhāryamāṇāḥ svakarmabhiḥ /</l>
+<l>labhante na hyamī bhoktuṃ praviddhānyaśucīnyapi // Bc_14.29 //</l>
+</lg>
+
+<lg>
+<l>puruṣo yadi jānīta mātsaryasyedṛśaṃ phalam /</l>
+<l>sarvathā śibivaddadyāccharīrāvayavānapi // Bc_14.30 //</l>
+</lg>
+
+<lg>
+<l>ime 'nye narakaprakhye garbhasaṃjñe 'śucihrade /</l>
+<l>upapannā manuṣyeṣu duḥkhamarchanti jantavaḥ // Bc_14.31 //</l>
+</lg>
+
+  </body>
+</text>
+</TEI>

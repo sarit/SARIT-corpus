@@ -1,0 +1,1708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_utpaladeva-zivastotrAvali">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Śivastotrāvali</title>
+	<author>Utpaladeva</author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>Somadeva Vasudeva</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Somadeva Vasudeva</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/saiva/utsivsau.htm">utsivsau.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Utpaladeva:
+<lb/>Sivastotravali
+<lb/>based on the edition by Constantina R. Bailly
+<lb/>(repr. Delhi 1990, Garib Dass Oriental Series, 109)
+<lb/>
+<lb/>Input by S.D. Vasudeva in 199?, never proof-read.
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>Constantina R. Bailly (repr. Delhi 1990, Garib Dass Oriental Series, 109)</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Śivastotrāvali = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Religious Literature -- Śaiva</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+
+<p>bhaktivilāsākhyaṃ prathamaṃ stotram</p>
+
+<p>oṃ</p>
+
+<p>na dhyāyato na japataḥ syād yasyāvidhipūrvakam &amp;
+<l>evam eva śivabhāsas taṃ numo bhaktiśālinam // UtSst_1.1 //</l></p>
+
+<p>ātmā mama bhavadbhaktisudhāpānayuvāpi san &amp;
+<l>lokayātrārajorāgāt palitair iva dhūsaraḥ // UtSst_1.2 //</l></p>
+
+<p>labdhatatsaṃpadāṃ bhaktimatāṃ tvatpuravāsinām &amp;
+<l>saṃcāro lokamārge 'pi syāt tayaiva vijṛmbhayā // UtSst_1.3 //</l></p>
+
+<p>sākṣādbhavanmaye nātha sarvasmin bhuvanāntare &amp;
+<l>kiṃ na bhaktimatāṃ kṣetram mantraḥ kvaiṣām na siddhyati // UtSst_1.4 //</l></p>
+
+<p>jayanti bhaktipīyūṣarasāsavavaronmadāḥ &amp;
+<l>advitīyā api sadā tvaddvitīyā api prabho // UtSst_1.5 //</l></p>
+
+<p>anantānandasindhos te nātha tattvaṃ vidanti te &amp;
+<l>tādṛśa eva ye sāndrabhaktyānandarasāplutāḥ // UtSst_1.6 //</l></p>
+
+<p>tvam evātmeśa sarvasya sarvaś cātmani rāgavān &amp;
+<l>iti svabhāvasiddhāṃs tvadbhaktiṃ jānañ jayej janaḥ // UtSst_1.7 //</l></p>
+
+<p>nātha vedyakṣaye kena na dṛśyo 'syekakaḥ sthitaḥ &amp;
+<l>vedyavedakasaṃkṣobhe 'py asi bhaktaiḥ sudarśanaḥ // UtSst_1.8 //</l></p>
+
+<p>anantānandasarasī devī priyatamā yathā &amp;
+<l>aviyuktāsti te tadvad ekā tvadbhaktir astu me // UtSst_1.9 //</l></p>
+
+<p>sarva eva bhavallābhahetur bhaktimatāṃ vibho &amp;
+<l>saṃvinmārgo 'yam āhlādaduḥkhamohais tridhā sthitaḥ // UtSst_1.10 //</l></p>
+
+<p>bhavadbhaktyamṛtāsvādād bodhasya syāt parāpi yā &amp;
+<l>daśā sā māṃ prati svāmin nāsavasyeva śuktatā // UtSst_1.11 //</l></p>
+
+<p>bhavadbhaktimahāvidyā yeṣām abhyāsam āgatā &amp;
+<l>vidyāvidyobhayasyāpi tā ete tattvavedinaḥ // UtSst_1.12 //</l></p>
+
+<p>āmulād vāglatā seyaṃ kramavisphāraśālinī &amp;
+<l>tvadbhaktisudhayā siktā tadrasāḍhyaphalāstu me // UtSst_1.13 //</l></p>
+
+<p>śivo bhūtvā yajeteti bhakto bhūtveti kathyate &amp;
+<l>tvam eva hi vapuḥ sāraṃ bhaktair advayaśodhitam // UtSst_1.14 //</l></p>
+
+<p>bhaktānāṃ bhavadadvaitasiddhyai kā nopapattayaḥ &amp;
+<l>tadasiddhyai nikṛṣṭānāṃ kāni nāvaraṇāni vā // UtSst_1.15 //</l></p>
+
+<p>kadācit kvāpi labhyo 'si yogenetīśa vañcanā &amp;
+<l>anyathā sarvakakṣyāsu bhāsi bhaktimatāṃ katham // UtSst_1.16 //</l></p>
+
+<p>pratyāhārādyasaṃspṛṣṭo viśeṣo 'sti mahānayam &amp;
+<l>yogibhyo bhaktibhājām yad vyutthāne 'pi samāhitāḥ // UtSst_1.17 //</l></p>
+
+<p>na yogo na tapo nārcākramaḥ ko 'pi pranīyate &amp;
+<l>amāye śivamārge 'smin bhaktir ekā praśasyate // UtSst_1.18 //</l></p>
+
+<p>sarvato vilasadbhaktitejodhvastāvṛter mama &amp;
+<l>pratyakṣasarvabhāvasya cintānām api naśyatu // UtSst_1.19 //</l></p>
+
+<p>śiva ity ekaśabdasya jihvāgre tiṣṭhataḥ sadā &amp;
+<l>samastaviṣayāsvādo bhakteṣv evāsti ko 'py aho // UtSst_1.20 //</l></p>
+
+<p>śāntakallolaśītācchasvādubhaktisudhāmbudhau &amp;
+<l>alaukikarasāsvāde susthaiḥ ko 'nāma gaṇyate // UtSst_1.21 //</l></p>
+
+<p>sādṛśaiḥ kiṃ na carvyeta bhavadbhaktimahauṣadhiḥ &amp;
+<l>tādṛśī bhagavan yasyā mokṣākhyo 'nantaro rasaḥ // UtSst_1.22 //</l></p>
+
+<p>tā eva paramarthyante sampadaḥ sadbhir īśa yāḥ &amp;
+<l>tvad bhaktirasasambhogavisrambhaparipoṣikāḥ // UtSst_1.23 //</l></p>
+
+<p>bhavadbhaktisudhāsāras taiḥ kim apy upalakṣitaḥ &amp;
+<l>ye na rāgādi paṅke 'smiṃḷ lipyante patitā api // UtSst_1.24 //</l></p>
+
+<p>aṇimādiṣu mokṣānteṣv aṅgeṣv eva phalābhidhā &amp;
+<l>bhavadbhakter vipakvāyā latāyā iva keṣu cit // UtSst_1.25 //</l></p>
+
+<p>citraṃ nisargato nātha duḥkhabījam idaṃ manaḥ &amp;
+<l>tvadbhaktirasasaṃsiktam niḥśreyasamahāphalam // UtSst_1.26 //</l></p>
+
+<p>sarvātmaparibhāvanākhyaṃ dvitīyaṃ stotram</p>
+
+<p>agnīṣomaravibrahmaviṣṇusthāvarajaṅgama &amp;
+<l>svarūpa bahurūpāya namaḥ saṃvinmayāya te // UtSst_2.1 //</l></p>
+
+<p>viśvendhanamahākṣārānulepaśucivarcase &amp;
+<l>mahānalāya bhavate viśvaikahaviṣe namaḥ // UtSst_2.2 //</l></p>
+
+<p>paramāmṛtasāndrāya śītalāya śivāgnaye &amp;
+<l>kasmai cid viśvasaṃploṣaviṣamāya namo 'stu te // UtSst_2.3 //</l></p>
+
+<p>mahādevāya rudrāya śaṅkarāya śivāya te &amp;
+<l>maheśvarāyāpi namaḥ kasmai cin mantramūrtaye // UtSst_2.4 //</l></p>
+
+<p>namo nikṛttaniḥśoṣatrailokyavigaladvasā- &amp;
+<l>vasekaviṣamāyāpi maṅgalāya śivāgnaye // UtSst_2.5 //</l></p>
+
+<p>samastalakṣanāyoga eva yasyopalakṣaṇam &amp;
+<l>tasmai namo 'stu devāya kasmai cid api śambhave // UtSst_2.6 //</l></p>
+
+<p>vedāgamaviruddhāya vedāgamavidhāyine &amp;
+<l>vedāgamasatattvāya guhyāya svāmine namaḥ // UtSst_2.7 //</l></p>
+
+<p>saṃsāraikanimittāya saṃsāraikavirodhine &amp;
+<l>namaḥ samsārarūpāya niḥsaṃsārāya śambhave // UtSst_2.8 //</l></p>
+
+<p>mūlāya madhyāyāgrāya mūlamadhyāgramūrtaye &amp;
+<l>kṣīnāgramadhyamūlāya namaḥ pūrṇāya śambhave // UtSst_2.9 //</l></p>
+
+<p>namaḥ sukṛtasaṃbharavipākaḥ sakṛd apy asau &amp;
+<l>yasya nāmagrahas tasmai durlabhāya śivāya te // UtSst_2.10 //</l></p>
+
+<p>namaścarācarākāraparetanicayaiḥ sadā &amp;
+<l>krīḍate tubhyam ekasmai cinmayāya kapāline // UtSst_2.11 //</l></p>
+
+<p>māyāvine viśuddhāya guhyāya prakaṭātmane &amp;
+<l>sūkṣmāya viśvarūpāya namaś citrāya śambhave // UtSst_2.12 //</l></p>
+
+<p>brahmendraviṣṇunirvyūḍhajagatsaṃhārakelaye &amp;
+<l>āścaryakaraṇīyāya namas te sarvaśaktaye // UtSst_2.13 //</l></p>
+
+<p>taṭeṣv eva paribhrāntaiḥ labdhās tās tā vibhūtayaḥ &amp;
+<l>yasya tasmai namas tubhyam agādhaharasindhave // UtSst_2.14 //</l></p>
+
+<p>māyāmayajagatsāndrapaṅkamadhyādhivāsine &amp;
+<l>alepāya namaḥ śambhuśatapatrāya śobhine // UtSst_2.15 //</l></p>
+
+<p>maṅgalāya pavitrāya nidhaye bhūṣaṇātmane &amp;
+<l>priyāya paramārthāya sarvotkṛṣṭāya te namaḥ // UtSst_2.16 //</l></p>
+
+<p>namaḥ satatabaddhāya nityanirmuktibhāgine &amp;
+<l>bandhamokṣavihīnāya kasmai ci d api śambhave // UtSst_2.17 //</l></p>
+
+<p>upahāsaikasāre 'sminn etāvati jagattraye &amp;
+<l>tubhyam evādvitīyāya namo nityasukhāsine // UtSst_2.18 //</l></p>
+
+<p>dakṣiṇācārasārāya vāmācārābhilāṣiṇe &amp;
+<l>sarvācārāya śarvāya nirācārāya te namaḥ // UtSst_2.19 //</l></p>
+
+<p>yathā tathāpi yaḥ pūjyo yatra tatrāpi yo 'rcitaḥ &amp;
+<l>yo 'pi vā so 'pi vā yo 'sau devas tasmai namo 'stu te // UtSst_2.20 //</l></p>
+
+<p>mumukṣujanasevyāya sarvasantāpahāriṇe &amp;
+<l>namo vitatalāvaṇyavarāya varadāya te // UtSst_2.21 //</l></p>
+
+<p>sadā nirantarānandarasanirbharitākhila- &amp;
+<l>trilokāya namas tubhyaṃ svāmine nityaparvaṇe // UtSst_2.22 //</l></p>
+
+<p>sukhapradhānasaṃvedyasambhogair bhajate ca yat &amp;
+<l>tvām eva tasmai ghorāya śaktivṛndāya te namaḥ // UtSst_2.23 //</l></p>
+
+<p>munīnām apy avijñeyaṃ bhaktisambandhaceṣṭitāḥ &amp;
+<l>āliṅganty api yaṃ tasmai kasmai cid bhavate namaḥ // UtSst_2.24 //</l></p>
+
+<p>paramāmṛtakośāya paramāmṛtarāśaye &amp;
+<l>sarvapāramyapāramyaprāpyāya bhavate namaḥ // UtSst_2.25 //</l></p>
+
+<p>mahāmantramayaṃ naumi rūpaṃ te svacchaśītalam &amp;
+<l>apūrvamodasubhagaṃ parāmṛtarasolvaṇam // UtSst_2.26 //</l></p>
+
+<p>svātantryāmṛtapūrṇatvad aikyakhyātimahāpaṭe &amp;
+<l>citraṃ nāsty eva yatreśa tan naumi tava śāsanam // UtSst_2.27 //</l></p>
+
+<p>sarvāśaṅkāsaniṃ sarvālakṣmīkālānalaṃ tathā &amp;
+<l>sarvāmaṅgalyakalpāntaṃ mārgaṃ māheśvaraṃ numaḥ // UtSst_2.28 //</l></p>
+
+<p>jaya deva namo namo 'stu te sakalaṃ viśvam idaṃ tavāśritam &amp;
+<l>jagatāṃ parameśvaro bhavān paramekaḥ śaraṇāgato 'smi te // UtSst_2.29 //</l></p>
+
+<p>praṇayaprasādākhyaṃ tṛtīyaṃ stotram</p>
+
+<p>sadasattvena bhāvānāṃ yuktā yā dvitayī gatiḥ &amp;
+<l>tām ullaṅghya tṛtīyasmai namaś citrāya śambhave // UtSst_3.1 //</l></p>
+
+<p>āsurarṣijanād asminn asvatantre jagattraye &amp;
+<l>svatantrās te svatantrasya ye tavaivānujīvinaḥ // UtSst_3.2 //</l></p>
+
+<p>aśeṣaviśvakhacitabhavadvapur anusmṛtiḥ &amp;
+<l>yeṣām bhavarujām ekaṃ bheṣajaṃ te sukhāsinaḥ // UtSst_3.3 //</l></p>
+
+<p>sitātapatraṃ yasyenduḥ svaprabhāparipūritaḥ &amp;
+<l>cāmaraṃ svardhunīsrotaḥ sa ekaḥ parameśvaraḥ // UtSst_3.4 //</l></p>
+
+<p>prakāśāṃ śītalām ekāṃ śuddhāṃ śaśikalām iva &amp;
+<l>dṛśaṃ vitara me nātha kām apy amṛtavāhinīm // UtSst_3.5 //</l></p>
+
+<p>tvaccidānandajaladheś cyutāḥ saṃvittivipruṣaḥ &amp;
+<l>imāḥ kathaṃ me bhagavan nāmṛtāsvādasundarāḥ // UtSst_3.6 //</l></p>
+
+<p>tvayi rāgarase nātha na magnaṃ hṛdayaṃ prabho &amp;
+<l>yeṣām ahṛdayā eva te 'vajñaspadam īdṛśāḥ // UtSst_3.7 //</l></p>
+
+<p>prabhuṇā bhavatā yasya jātaṃ hṛdayamelanam &amp;
+<l>prābhavīṇāṃ vibhūtīnāṃ paramekaḥ sa bhājanam // UtSst_3.8 //</l></p>
+
+<p>harṣāṇām atha śokānāṃ sarveṣāṃ plāvakaḥ samam &amp;
+<l>bhavaddhyānāmṛtāpūro nimnāṇimnabhuvām iva // UtSst_3.9 //</l></p>
+
+<p>keva na syād dṛśā teṣāṃ sukhasambhāranirbharā &amp;
+<l>yeṣām ātmādhikeneśa na kvāpi virahas tvayā // UtSst_3.10 //</l></p>
+
+<p>garjāmi bata nṛtyāmi pūrṇā mama manorathāḥ &amp;
+<l>svāmī mamaiṣa ghaṭito yat tvam atyantarocanaḥ // UtSst_3.11 //</l></p>
+
+<p>nānyad vedyaṃ kriyā yatra nānyo yogo vidā ca yat &amp;
+<l>jñānaṃ syāt kiṃ tu viśvaikapūrṇā cittvaṃ vijṛmbhate // UtSst_3.12 //</l></p>
+
+<p>durjayānām anantānām duḥkhānāṃ sahasaiva te &amp;
+<l>hastāt palāyitā yeṣāṃ vāci śaśvacchivadhvaniḥ // UtSst_3.13 //</l></p>
+
+<p>uttamaḥ puruṣo 'nyo 'sti yuṣmaccheṣaviśeṣitaḥ &amp;
+<l>tvaṃ mahāpuruṣas tv eko niḥśeṣapuruṣāśrayaḥ // UtSst_3.14 //</l></p>
+
+<p>jayanti te jagadvandyā dāsās te jagatāṃ vibho &amp;
+<l>saṃsārārṇava evaiṣa yeṣāṃ krīḍāmahāsaraḥ // UtSst_3.15 //</l></p>
+
+<p>āsatāṃ tāvad anyāni dainyānīha bhavajjuṣām &amp;
+<l>tvam eva prakaṭībhūyā ity anenaiva lajjyate // UtSst_3.16 //</l></p>
+
+<p>matparaṃ nāsti tatrāpi jāpako 'smi tadaikyataḥ &amp;
+<l>tattvena japa ity akṣamālayā diśasi kvacit // UtSst_3.17 //</l></p>
+
+<p>sato 'vaśyaṃ paramasat sac ca tasmāt paraṃ prabho &amp;
+<l>tvaṃ cāsataḥ sataś cānyas tenāsi sadasanmayaḥ // UtSst_3.18 //</l></p>
+
+<p>sahasrasūryakiraṇādhikaśuddhaprakāśavān &amp;
+<l>api tvaṃ sarvabhuvanavyāpako 'pi na dṛśyase // UtSst_3.19 //</l></p>
+
+<p>jaḍe jagati cidrūpaḥ kila vedye 'pi vedakaḥ &amp;
+<l>vibhur mite ca yenāsi tena sarvottamo bhavān // UtSst_3.20 //</l></p>
+
+<p>alam ākranditair anyair iyad eva puraḥ prabhoḥ &amp;
+<l>tīvraṃ viraumi yan nātha muhyāmy evaṃ vidann api // UtSst_3.21 //</l></p>
+
+<p>surasodbalākhyāṃ caturthaṃ stotram</p>
+
+<p>capalam asi yad api mānasa tatrāpi ślāghyase yato bhajase &amp;
+<l>śaraṇānām api śaraṇaṃ tribhuvanagurum ambikākāntam // UtSst_4.1 //</l></p>
+
+<p>ullaṅghya vividhadaivatasopānakramam upeya śivacaraṇān &amp;
+<l>āśrityāpy adharatarāṃ bhūmiṃ nādyāpi citram ujjhāmi // UtSst_4.2 //</l></p>
+
+<p>prakaṭaya nijam adhvānaṃ sthagayatarām akhilalokacaritāni &amp;
+<l>yāvad bhavāmi bhagavaṃs tava sapadi sadodito dāsaḥ // UtSst_4.3 //</l></p>
+
+<p>śiva śiva śambho śaṅkara śaraṇāgatavatsalāśu kuru karuṇām &amp;
+<l>tava caraṇakamalayugalasmaraṇaparasya hi sampado 'dūre // UtSst_4.4 //</l></p>
+
+<p>tāvakāṅghrikamalāsanalīnā ye yathāruci jagad racayanti &amp;
+<l>te viriñcim adhikāramalenāliptam asvavaśam īśa hasanti // UtSst_4.5 //</l></p>
+
+<p>tvatprakāśavapuṣo na vibhinnaṃ kiṃ cana prabhavati pratibhātum &amp;
+<l>tat sadaiva bhagavan parilabdho 'sīśvara prakṛtito 'pi vidūraḥ // UtSst_4.6 //</l></p>
+
+<p>pādapaṅkajarasaṃ tava ke cid bhedaparyuṣitavṛttim upetāḥ &amp;
+<l>ke canāpi rasayanti tu sadhyo bhātam akṣatavapur dvayaśūnyam // UtSst_4.7 //</l></p>
+
+<p>nātha vidyud iva bhāti vibhāte yā kadā cana mamāmṛtadigdhā &amp;
+<l>sā yadi sthirataraiva bhavet tat pūjito 'si vidhivat kim utānyat // UtSst_4.8 //</l></p>
+
+<p>sarvam asyaparam asti na kiṃ cid vastv avastu yadi veti mahatyā &amp;
+<l>prajñāya vyavasito 'tra yathaiva tvaṃ tathaiva bhava suprakaṭo me // UtSst_4.9 //</l></p>
+
+<p>svecchayaiva bhagavan nijamārge kāritaḥ padam ahaṃ prabhunaiva &amp;
+<l>tat kathaṃ janavad eva carāmi tvatpadocitam avaimi na kiṃ cit // UtSst_4.10 //</l></p>
+
+<p>ko 'pi deva hṛdi teṣu tāvako jṛmbhate subhagabhāva uttamaḥ &amp;
+<l>tvatkathāmbudaninādacātakā yena te 'pi subhagīkṛtāś ciram // UtSst_4.11 //</l></p>
+
+<p>tvajjuṣāṃ tvayi kayāpi līlayā rāga eṣa paripoṣam āgataḥ &amp;
+<l>yad viyogabhuvi saṅkathā tathā saṃsmṛtiḥ phalati saṃgamotsavam // UtSst_4.12 //</l></p>
+
+<p>yo vicitrarasasekavardhitaḥ śaṅkareti śataśo 'py udīritaḥ &amp;
+<l>śabda āviśati tiryagāśayeṣv apy ayaṃ navanavaprayojanaḥ // UtSst_4.13 //</l></p>
+
+<p>te jayanti mukhamaṇḍale bhraman asti yeṣu niyataṃ śivadhvaniḥ &amp;
+<l>yaḥ śāśīva prasṛto 'mṛtāśayāt svādu saṃsravati cāmṛtaṃ param // UtSst_4.14 //</l></p>
+
+<p>parisamāptam ivogram idaṃ jagad vigalito 'viralo manaso malaḥ &amp;
+<l>tad api nāsti bhavatpurārgalakavāṭavighaṭṭanam aṇva pi // UtSst_4.15 //</l></p>
+
+<p>satataphullabhavanmukhapaṅkajodaravilokanalālasacetasaḥ &amp;
+<l>kim api tat kuru nātha manāg iva sphurasi yena mamābhimukhasthitiḥ // UtSst_4.16 //</l></p>
+
+<p>tvadavibhedamater aparaṃ nu kiṃ sukham ihāsti vibhūtir athāparā &amp;
+<l>tad iha tāvakadāsajanasya kiṃ kupatham eti manaḥ parihṛtya tām // UtSst_4.17 //</l></p>
+
+<p>kṣaṇam apīha na tāvakadāsatāṃ prati bhaveyam ahaṃ kila bhājanam &amp;
+<l>bhavadabhedarasāsavam ādarād avirataṃ rasayeyam ahaṃ na cet // UtSst_4.18 //</l></p>
+
+<p>na kila paśyati satyam ayaṃ janas tava vapur dvayadṛṣṭimalīmasaḥ &amp;
+<l>tad api sarvavidāśritavatsalaḥ kim idam āraṭitaṃ na śṛṇoṣi me // UtSst_4.19 //</l></p>
+
+<p>smarasi nātha kadācid apīhitaṃ viṣayasaukhyam athāpi mayārthitam &amp;
+<l>satatam eva bhavadvapurīkṣaṇāmṛtamabhīṣṭamalaṃ mama dehi tat // UtSst_4.20 //</l></p>
+
+<p>kila yadaiva śivādhvani tāvake kṛtapado 'smi maheśa tavecchayā &amp;
+<l>śubhaśatānyuditāni tadaiva me kim aparaṃ mṛgaye bhavataḥ prabho // UtSst_4.21 //</l></p>
+
+<p>yatra so 'stam ayam eti vivasvāṃś candramaḥ prabhṛtibhiḥ saha sarvaiḥ &amp;
+<l>kāpi sā vijayate śivarātriḥ svaprabhāprasarabhāsvararūpā // UtSst_4.22 //</l></p>
+
+<p>apy upārjitam ahaṃ triṣu lokeṣv adhipatyam amareśvara manye &amp;
+<l>nīrasaṃ tad akhilaṃ bhavadaṅghrisparśanāmṛtarasena vihīnam // UtSst_4.23 //</l></p>
+
+<p>bata nātha dṛḍho 'yam ātmabandho bhavadakhyātimayas tvayaiva kḷptaḥ &amp;
+<l>yad ayaṃ prathamānam eva me tvām avadhīrya ślathate na leśato 'pi // UtSst_4.24 //</l></p>
+
+<p>mahatām amareśa pūjyamāno 'py aniśaṃ tiṣṭhasi pūjakaikarūpaḥ &amp;
+<l>bahirantarapīha dṛśyamānaḥ sphurasi draṣṭṛśarīra eva śaśvat // UtSst_4.25 //</l></p>
+
+<p>svabalanideśanākhyaṃ pañcamaṃ stotram</p>
+
+<p>tvatpādapadmasamparkamātrasambhogasaṅginam &amp;
+<l>galepādikayā nātha māṃ svaveśma praveśaya // UtSst_5.1 //</l></p>
+
+<p>bhavatpādāmbujarajorājirañjitamūrdhajaḥ &amp;
+<l>apārarabhasārabdhanartanaḥ syām ahaṃ kadā // UtSst_5.2 //</l></p>
+
+<p>tvad ekanātho bhagavann iyad evārthaye sadā &amp;
+<l>tvadantarvasatir mūko bhaveyaṃ mānyathā budhaḥ // UtSst_5.3 //</l></p>
+
+<p>aho sudhānidhe svāminn aho mṛṣṭa trilocana &amp;
+<l>aho svādo virūpakṣety eva nṛtyeyam āraṭan // UtSst_5.4 //</l></p>
+
+<p>tvatpādapadmasaṃsparśaparimīlitalocanaḥ &amp;
+<l>vijṛmbheyabhavadbhaktimadirāmadaghūrṇitaḥ // UtSst_5.5 //</l></p>
+
+<p>cittabhūbhṛd bhuvi vibho vaseyaṃ kvāpi yatra sā &amp;
+<l>nirantaratvatpralāpamayī vṛttir mahārasā // UtSst_5.6 //</l></p>
+
+<p>yatra devīsametas tvam āsaudhādā ca gopurāt &amp;
+<l>bahurūpaḥ sthitas tasmin vāstavyaḥ syām ahaṃ pure // UtSst_5.7 //</l></p>
+
+<p>samullasantu bhagavan bhavadbhānumarīcayaḥ &amp;
+<l>vikasatveṣa yāvan me hṛtpadmaḥ pūjanāya te // UtSst_5.8 //</l></p>
+
+<p>prasīda bhagavan yena tvatpade patitaṃ sadā &amp;
+<l>mano me tattadāsvādya kṣīved iva galed iva // UtSst_5.9 //</l></p>
+
+<p>praharṣād vātha śokād vā yadi kuṅyād dhaṭād api &amp;
+<l>bāhyād athāntarād bhāvāt prakaṭībhava me prabho // UtSst_5.10 //</l></p>
+
+<p>bahir apy antar api tat syandamānaṃ sadāstu me &amp;
+<l>bhavatpādāmbujasparśāmṛtam atyantaśītalam // UtSst_5.11 //</l></p>
+
+<p>tvatpādasaṃsparśasudhāsaraso 'ntarnimajjanam &amp;
+<l>ko 'py eṣa sarvasambhogalaṅghī bhogo 'stu me sadā // UtSst_5.12 //</l></p>
+
+<p>niveditam upādatsva rāgādi bhagavan mayā &amp;
+<l>ādāya cāmṛtīkṛtya bhuṅkṣva bhaktajanaiḥ samam // UtSst_5.13 //</l></p>
+
+<p>aśeṣabhuvanāhāranityatṛptaḥ sukhāsanam &amp;
+<l>svāmin gṛhāṇa dāseṣu prasādālokanakṣaṇam // UtSst_5.14 //</l></p>
+
+<p>antarbhakticamatkāracarvaṇāmīlitekṣaṇaḥ &amp;
+<l>namo mahyaṃ śivāyeti pūjayam syāṃ tṛṇāny api // UtSst_5.15 //</l></p>
+
+<p>api labdhabhavadbhāvaḥ svātmollāsamayaṃ jagat &amp;
+<l>paśyan bhaktirasābhogair bhaveyam aviyojitaḥ // UtSst_5.16 //</l></p>
+
+<p>ākāmkṣaṇīyam aparaṃ yena nātha na vidyate &amp;
+<l>tava tenādvitīyasya yuktaṃ yat paripūrṇatā // UtSst_5.17 //</l></p>
+
+<p>hasyate nṛtyate yatra rāgadveṣādi bhujyate &amp;
+<l>pīyate bhaktipīyūṣarasas tat prāpnuyāṃ padam // UtSst_5.18 //</l></p>
+
+<p>tat tad apūrvāmodatvaccintākusumavāsanā dṛḍhatām &amp;
+<l>etu mama manasi yāvann aśyatu durvāsanāgandhaḥ // UtSst_5.19 //</l></p>
+
+<p>kva nu rāgādiṣu rāgaḥ kva ca haracaraṇāmbujeṣu rāgitvam &amp;
+<l>itthaṃ virodharasikaṃ bodhaya hitam amara me hṛdayam // UtSst_5.20 //</l></p>
+
+<p>vicaran yogadaśāsv api viṣayavyāvṛttivartamāno 'pi &amp;
+<l>tvaccintāmadirāmadataralīkṛtahṛdaya eva syām // UtSst_5.21 //</l></p>
+
+<p>vāci manomatiṣu tathā śarīraceṣṭāsu karaṇaracitāsu &amp;
+<l>sarvatra sarvadā me puraḥsaro bhavatu bhaktirasaḥ // UtSst_5.22 //</l></p>
+
+<p>śivaśivaśiveti nāmani tava niravadhi nātha japyamāne 'smin &amp;
+<l>āsvādayan bhaveyaṃ kam api mahārasam apunaruktam // UtSst_5.23 //</l></p>
+
+<p>sphuradanantacidātmakaviṣṭape parinipītasamastajaḍādhvani &amp;
+<l>agaṇitāparacinmayagaṇḍike pravicareyam ahaṃ bhavato 'rcitā // UtSst_5.24 //</l></p>
+
+<p>svavapuṣi sphuṭabhāsini śāśvate sthitikṛte na kim apy upayujyate &amp;
+<l>iti matiḥ sudṛḍhā bhavatāt paraṃ mama bhavaccaraṇābjarajaḥ śuceḥ // UtSst_5.25 //</l></p>
+
+<p>kim api nātha kadācana cetasi sphurati tad bhavadaṃghritalaspṛśām &amp;
+<l>galati yatra samastamidaṃ sudhāsarasi viśvam idaṃ diśa me sadā // UtSst_5.26 //</l></p>
+
+<p>adhvavisphuraṇākhyaṃ sastham stotram</p>
+
+<p>kṣaṇamātram apīśāna viyuktasya tvayā mama &amp;
+<l>nibiḍaṃ tapyamānasya sadā bhūyā dṛśaḥ padam // UtSst_6.1 //</l></p>
+
+<p>viyogasāre saṃsāre priyeṇa prabhuṇā tvayā &amp;
+<l>aviyuktaḥ sadaiva syāṃ jagatāpi viyojitaḥ // UtSst_6.2 //</l></p>
+
+<p>kāyavāṅmanasair yatra yāmi sarvaṃ tvam eva tat &amp;
+<l>ity eṣa paramārtho 'pi paripūrṇo 'stu me sadā // UtSst_6.3 //</l></p>
+
+<p>nirvikalpo mahānandapūrṇo yadvad bhavāṃs tathā &amp;
+<l>bhavatstutikarī bhūyād anurūpaiva vāṅ mama // UtSst_6.4 //</l></p>
+
+<p>bhavadāveśataḥ paśyan bhāvaṃ bhāvaṃ bhavanmayam &amp;
+<l>vicareyaṃ nirākāṅkṣaḥ praharṣaparipūritaḥ // UtSst_6.5 //</l></p>
+
+<p>bhagavanbhavataḥ pūrṇam paśyeyam akhilaṃ jagat &amp;
+<l>tāvataivāsmi santuṣṭas tato na parikhidyase // UtSst_6.6 //</l></p>
+
+<p>vilīyamānās tvayy eva vyomni meghalavā iva &amp;
+<l>bhāvā vibhāntu me śaśvat kramanairmalyagāminaḥ // UtSst_6.7 //</l></p>
+
+<p>svaprabhāprasaradhvastāparyantadhvāntasantatiḥ &amp;
+<l>santataṃ bhātu me ko 'pi bhavamadhyād bhavanmaṇiḥ // UtSst_6.8 //</l></p>
+
+<p>kāṃ bhūmikāṃ nādhiśeṣe kiṃ tat syād yan na te vapuḥ &amp;
+<l>śrāntas tenāprayāsena sarvatas tvām avāpnuyām // UtSst_6.9 //</l></p>
+
+<p>bhavadaṅgapariṣvaṅgasambhogaḥ svecchayaiva me &amp;
+<l>ghaṭatām iyati prāpte kiṃ nātha na jitaṃ mayā // UtSst_6.10 //</l></p>
+
+<p>prakaṭībhava nānyābhiḥ prārthanābhiḥ kadarthanāḥ &amp;
+<l>kurmas te nātha tāmyantas tvām eva mṛgayāmahe // UtSst_6.11 //</l></p>
+
+<p>vidhuravijayanāmadheyaṃ saptamaṃ stotram</p>
+
+<p>tvayy ānandasarasvati samarasatām etya nātha mama cetaḥ &amp;
+<l>pariharatu sakṛd iyantaṃ bhedādhīnaṃ mahānartham // UtSst_7.1 //</l></p>
+
+<p>etan mama na tv idam iti rāgadveṣādinigaḍadṛḍhamūle &amp;
+<l>nātha bhavanmayataikyapratyayaparaśuḥ patatvantaḥ // UtSst_7.2 //</l></p>
+
+<p>galatu vikalpakalaṅkāvalī samullasatu hṛdi nirargalatā &amp;
+<l>bhagavann ānandarasaplutāstu me cinmayī mūrtiḥ // UtSst_7.3 //</l></p>
+
+<p>rāgādimayabhavāṇḍakaluṭhitaṃ tvadbhaktibhāvanāmbikā tais taiḥ &amp;
+<l>āpyāyayatu rasair māṃ pravṛddhapakṣo yathā bhavāmi khagaḥ // UtSst_7.4 //</l></p>
+
+<p>tvaccaraṇabhāvanāmṛtarasasārāsvādanaipuṇaṃ labhatām &amp;
+<l>cittam idaṃ niḥśeṣitaviṣayaviṣāsaṅgavāsanāvadhi me // UtSst_7.5 //</l></p>
+
+<p>tvadbhaktitapanadīdhitisaṃsparśavaśān mamaiṣa dūrataram &amp;
+<l>cetomaṇir vimūñcaturāgādikataptavahnikaṇān // UtSst_7.6 //</l></p>
+
+<p>tasmin pade bhavantaṃ satatam upaślokayeyam atyuccaiḥ &amp;
+<l>hariharyaśvaviriñcā api yatra bahiḥ pratīkṣante // UtSst_7.7 //</l></p>
+
+<p>bhaktimadajanitavibhramavaśena paśyeyam avikalaṃ karaṇaiḥ &amp;
+<l>śivamayam akhilaṃ lokaṃ kriyāś ca pūjāmayī sakalāḥ // UtSst_7.8 //</l></p>
+
+<p>māmakamanogṛhītatvadbhaktikulāṅganāṇimādisutān &amp;
+<l>sūtvā subaddhamūlā mameti buddhiṃ dṛḍhīkurutām // UtSst_7.9 //</l></p>
+
+<p>alaukikodbalanākhyam aṣṭamaṃ stotram</p>
+
+<p>yaḥ prasādalava īśvarasthito yā ca bhaktir iva mām upeyuṣī &amp;
+<l>tau parasparasamanvitau kadā tādṛśe vapuṣi rūḍhim eṣyataḥ // UtSst_8.1 //</l></p>
+
+<p>tvatprabhutvaparicarvaṇajanmā ko 'py udetu paritoṣaraso 'ntaḥ &amp;
+<l>sarvakālam iha me param astu jñānayogamahimādi vidūre // UtSst_8.2 //</l></p>
+
+<p>lokavadbhavatu me viṣayeṣu sphīta eva bhagavanparitarṣaḥ &amp;
+<l>kevalaṃ tava śarīratayaitān+ lokayeyam aham astavikalpaḥ // UtSst_8.3 //</l></p>
+
+<p>dehabhūmiṣu tathā manasi tvaṃ prāṇavartmani ca bhedam upete &amp;
+<l>saṃvidaḥ pathiṣu teṣu ca tena svātmanā mama bhava sphuṭarūpaḥ // UtSst_8.4 //</l></p>
+
+<p>nijanijeṣu padeṣu patantv imāḥ karaṇavṛttaya ullasitā mama &amp;
+<l>kṣaṇamapīśa manāg api maiva bhūt tvadavibhedarasakṣatisāhasam // UtSst_8.5 //</l></p>
+
+<p>laghumasṛṇasitācchaśītalaṃ bhavadāveśavaśena bhāvayan &amp;
+<l>vapur akhilapadārthapaddhater vyavahārān ativartayeya tān // UtSst_8.6 //</l></p>
+
+<p>vikasatu svavapur bhavadātmakaṃ samupayāntu jaganti mamāṅgatām &amp;
+<l>vrajatu sarvam idaṃ dvayavalgitaṃ smṛtipathopagame 'py anupākhyatām // UtSst_8.7 //</l></p>
+
+<p>samudiyād api tādṛśatāvakānana viloka parāmṛtasamplavaḥ &amp;
+<l>mama ghaṭeta yathā bhavadadvayāprathanaghoradarīparipūraṇam // UtSst_8.8 //</l></p>
+
+<p>api kadācana tāvakasaṅgamāmṛtakaṇācchuraṇena tanīyasā &amp;
+<l>sakalalokasukheṣu parāṅmukho na bhavitāsmy ubhayacyuta eva kim // UtSst_8.9 //</l></p>
+
+<p>satatam eva bhavaccaraṇāmbujākaracarasya hi haṃsavarasya me &amp;
+<l>upari mūlatalād api cāntarād upanamatv aja bhaktimṛṇālikā // UtSst_8.10 //</l></p>
+
+<p>upayāntu vibho samastavastūny api cintāviṣayaṃ dṛśaḥ padaṃ ca &amp;
+<l>mama darśanacintanaprakāśāmṛtasārāṇi paraṃ parisphurantu // UtSst_8.11 //</l></p>
+
+<p>parameśvara teṣu teṣu kṛcchreṣv api nāmopanamatsv ahaṃ bhaveyam &amp;
+<l>na paraṃ gatabhīs tvadaṅgasaṅgādupajātādhikasammado 'pi yāvat // UtSst_8.12 //</l></p>
+
+<p>bhavadātmani viśvam umbhitaṃ yad bhavataivāpi bahiḥ prakāśyate tat &amp;
+<l>iti yad dṛḍhaniścayopajuṣṭaṃ tad idāniṃ sphuṭam eva bhāsatām // UtSst_8.13 //</l></p>
+
+<p>svātantryavijayākhyaṃ navamaṃ stotram</p>
+
+<p>kadā navarasārdrārdrasambhogāsvādanotsukam &amp;
+<l>pravarteta vihāyānyan mama tvatsparśane manaḥ // UtSst_9.1 //</l></p>
+
+<p>tvadekaraktas tvatpādapūjāmātramahādhanaḥ &amp;
+<l>kadā sākṣātkariṣyāmi bhavantam ayam utsukaḥ // UtSst_9.2 //</l></p>
+
+<p>gāḍhānurāgavaśato nirapekṣībhūtamānaso 'smi kadā &amp;
+<l>paṭapaṭiti vighaṭitākhilamahārgalas tvām upaiṣyāmi // UtSst_9.3 //</l></p>
+
+<p>svasaṃvitsārahṛdayādhiṣṭhānāḥ sarvadevatāḥ &amp;
+<l>kadā nātha vaśīkuryāṃ bhavadbhaktiprabhāvataḥ // UtSst_9.4 //</l></p>
+
+<p>kadā me syād vibho bhūri bhaktyānandarasotsavaḥ &amp;
+<l>yadālokasukhānandī pṛthaṅ nāmāpi lapsyate // UtSst_9.5 //</l></p>
+
+<p>īśvaram abhayam udāraṃ pūrṇam akāraṇam apahnutātmānaṃ &amp;
+<l>sahasābhijñāya kadā svāmijanaṃ lajjayiṣyāmi // UtSst_9.6 //</l></p>
+
+<p>kadā kām api tāṃ nātha tava vallabhatām iyām &amp;
+<l>yayā māṃ prati na kvāpi yuktaṃ te syāt palāyitum // UtSst_9.7 //</l></p>
+
+<p>tattvato 'śeṣajantūnāṃ bhavatpūjāmayātmanām &amp;
+<l>dṛṣṭyānumoditarasāplāvitaḥ syāṃ kadā vibho // UtSst_9.8 //</l></p>
+
+<p>jñānasya paramā bhūmir yogasya paramā daśā &amp;
+<l>tvadbhaktir yā vibho karhi pūrṇa me syāt tadarthitā // UtSst_9.9 //</l></p>
+
+<p>sahasaivasādya kadā gāḍham avaṣṭabhya harṣavivaśo 'ham &amp;
+<l>tvaccaraṇavaranidhānaṃ sarvasya prakaṭayiṣyāmi // UtSst_9.10 //</l></p>
+
+<p>paritaḥ prasaracchuddhatvadālokamayaḥ kadā &amp;
+<l>syāṃ yatheśa na kiñcin me māyācchāyābilaṃ bhavet // UtSst_9.11 //</l></p>
+
+<p>ātmasātkṛtaniḥśeṣamaṇḍalo nirvyapekṣakaḥ &amp;
+<l>kadā bhaveyaṃ bhagavaṃs tvadbhaktagaṇanāyakaḥ // UtSst_9.12 //</l></p>
+
+<p>nātha lokābhimānānām apūrvaṃ tvaṃ nibandhanam &amp;
+<l>mahābhimānaḥ karhi syāṃ tvadbhaktirasapūritaḥ // UtSst_9.13 //</l></p>
+
+<p>aśeṣaviṣayāśūnyaśrīsamāśleṣasusthitaḥ &amp;
+<l>śayīyam iva śītāṅghrikuśeśayayuge kadā // UtSst_9.14 //</l></p>
+
+<p>bhaktyāsavasamṛddhāyās tvatpūjābhogasampadaḥ &amp;
+<l>kadā pāraṃ gamiṣyāmi bhaviṣyāmi kadā kṛtī // UtSst_9.15 //</l></p>
+
+<p>ānandabāṣpapūraskhalitaparibhrāntagadgadākrandaḥ &amp;
+<l>hāsollāsitavadanas tvatsparśarasaṃ kadāpsyāmi // UtSst_9.16 //</l></p>
+
+<p>paśujanasamānavṛttām avadhūya daśām imāṃ kadā śambho &amp;
+<l>āsvādayeya tāvakabhaktocitam ātmano rūpam // UtSst_9.17 //</l></p>
+
+<p>labdhāṇimādisiddhir vigalitasakalopatāpasantrāsaḥ &amp;
+<l>tvadbhaktirasāyanapānakriḍhāniṣṭaḥ kadāsīya // UtSst_9.18 //</l></p>
+
+<p>nātha kadā sa tathāvidha ākrando me samuccared vāci &amp;
+<l>yat samanantaram eva sphurati puras tāvakī mūrtiḥ // UtSst_9.19 //</l></p>
+
+<p>gāḍhagāḍhabhavadaṅghrisarojāliṅganavyasanatatparacetāḥ &amp;
+<l>vastv avastv idam ayatnata eva tvāṃ kadā samavalokayitāsmi // UtSst_9.20 //</l></p>
+
+<p>avicchedabhaṅgākhyaṃ daśamaṃ stotram</p>
+
+<p>na soḍhavyam avaśyam te jagadekaprabhor idam &amp;
+<l>māheśvarāś ca lokānām itareṣāṃ samāś ca yat // UtSst_10.1 //</l></p>
+
+<p>ye sadaivānurāgeṇa bhavatpādānugāminaḥ &amp;
+<l>yatra tatra gatā bhogāṃs te kāṃś cid upabhuñjate // UtSst_10.2 //</l></p>
+
+<p>bhartā kālāntako yatra bhavāṃs tatra kuto rujaḥ &amp;
+<l>tatra cetarabhogāśā kā lakṣmīr yatra tāvakī // UtSst_10.3 //</l></p>
+
+<p>kṣanamātrasukhenāpi vibhur yenāsi labhyase &amp;
+<l>tadaiva sarvaḥ kālo 'sya tvadānandena pūryate // UtSst_10.4 //</l></p>
+
+<p>ānandarasabindus te candramā galito bhuvi &amp;
+<l>sūryas tathā te prasṛtaḥ saṃhārī tejasaḥ kaṇaḥ // UtSst_10.5 //</l></p>
+
+<p>baliṃ yāmas tṛtīyāya netrāyāsmai tava prabho &amp;
+<l>alaukikasya kasyāpi māhātmyasyaikalakṣmaṇe // UtSst_10.6 //</l></p>
+
+<p>tenaiva dṛṣṭo 'si bhavaddarśanādyo 'tihṛṣyati &amp;
+<l>kathañcid yasya vā harṣaḥ ko 'pi tena tvam īkṣitaḥ // UtSst_10.7 //</l></p>
+
+<p>yeṣām prasanno 'si vibho yair labdhaṃ hṛdayaṃ tava &amp;
+<l>ākṛṣya tvatpurāttais tu bāhyam ābhyantarīkṛtam // UtSst_10.8 //</l></p>
+
+<p>tvad ṛte nikhilaṃ viśvaṃ samadṛgyātam īkṣyatām &amp;
+<l>īśvaraḥ punar etasya tvam eko viṣamekṣaṇaḥ // UtSst_10.9 //</l></p>
+
+<p>āstāṃ bhavatprabhāveṇa vinā sattaiva nāsti yat &amp;
+<l>tvaddūṣaṇakathā yeṣām tvad ṛte nopapadyate // UtSst_10.10 //</l></p>
+
+<p>bāhyāntarāntarāyālīkevale cetasi sthitiḥ &amp;
+<l>tvayi cet syān mama vibho kim anyad upayujyate // UtSst_10.11 //</l></p>
+
+<p>anye bhramanti bhagavann ātmany evātiduḥsthitāḥ &amp;
+<l>anye bhramanti bhagavann ātmany evātisusthitāḥ // UtSst_10.12 //</l></p>
+
+<p>apītvāpi bhavadbhaktisudhām anavalokya ca &amp;
+<l>tvām īśa tvatsamācāramātrāt siddhyanti jantavaḥ // UtSst_10.13 //</l></p>
+
+<p>bhṛtyā vayaṃ tava vibho tena trijagatāṃ yathā &amp;
+<l>bibharṣy ātmānam evaṃ te bharttavyā vayam apy alam // UtSst_10.14 //</l></p>
+
+<p>parānandāmṛtamaye dṛṣṭo 'pi jagadātmani &amp;
+<l>tvayi sparśarase 'tyantatarasutkaṇṭhito(?) 'smi te // UtSst_10.15 //</l></p>
+
+<p>deva duḥkhāny aśeṣāṇi yāni saṃsāriṇām api &amp;
+<l>ghṛtyākhyabhavadīyātmayutāny āyānti sahyatām // UtSst_10.16 //</l></p>
+
+<p>sarvajñe sarvaśaktau ca tvayy eva sati cinmaye &amp;
+<l>sarvathāpy asato nātha yuktāsya jagataḥ prathā // UtSst_10.17 //</l></p>
+
+<p>tvatprāṇitāḥ sphurantīme guṇā loṣṭopamā api &amp;
+<l>nṛtyanti pavanoddhūtāḥ kārpāsāḥ picavo yathā // UtSst_10.18 //</l></p>
+
+<p>yadi nātha guṇeṣv ātmābhimāno na bhavet tataḥ &amp;
+<l>kena hīyeta jagatas tvadekātmatayā prathā // UtSst_10.19 //</l></p>
+
+<p>vandyās te 'pi mahīyāṃsaḥ pralayopagatā api &amp;
+<l>tvatkopapāvakasparśapūtā ye parameśvara // UtSst_10.20 //</l></p>
+
+<p>mahāprakāśavapuṣi vispaṣṭe bhavati sthite &amp;
+<l>sarvato 'pīśa tat kasmāt tamasi prasarāmy aham // UtSst_10.21 //</l></p>
+
+<p>avibhāgo bhavān eva svarūpam amṛtaṃ mama &amp;
+<l>tathāpi martyadharmāṇām aham evaikam āspadam // UtSst_10.22 //</l></p>
+
+<p>maheśvareti yasyāsti nāmakaṃ vāgvibhūṣaṇam &amp;
+<l>praṇāmāṅkaś ca śirasi sa evaikaḥ prabhāvitaḥ // UtSst_10.23 //</l></p>
+
+<p>sadasac ca bhavān eva yena tenāprayāsataḥ &amp;
+<l>svarasenaiva bhagavaṃs tathā siddhiḥ kathaṃ na me // UtSst_10.24 //</l></p>
+
+<p>śivadāsaḥ śivaikātmā kiṃ yan nāsādayet sukham &amp;
+<l>tarpyo 'smi devamukhyānām api yenāmṛtāsavaiḥ // UtSst_10.25 //</l></p>
+
+<p>hṛnnābhyor antarālasthaḥ prāṇināṃ pittavigrahaḥ &amp;
+<l>grasase tvaṃ mahāvahniḥ sarvaṃ sthāvarajaṅgamam // UtSst_10.26 //</l></p>
+
+<p>autsukyaviśvasitanāmaikādaśaṃ stotram</p>
+
+<p>jagad idam athavā suhṛdo bandhujano vā na bhavati mama kim api &amp;
+<l>tvaṃ punar etat sarvaṃ yadā tadā ko 'paro me 'stu // UtSst_11.1 //</l></p>
+
+<p>svāmin maheśvaras tvaṃ sākṣāt sarvaṃ jagat tvam eveti &amp;
+<l>vastv eva siddhim etv iti yācñā tatrāpi yācñaiva // UtSst_11.2 //</l></p>
+
+<p>tribhuvanādhipatitvam apīha yat tṛṇam iva pratibhāti bhavajjuṣaḥ &amp;
+<l>kim iva tasya phalaṃ śubhakarmaṇo bhavati nātha bhavatsmaraṇād ṛte // UtSst_11.3 //</l></p>
+
+<p>yena naiva bhavato 'sti vibhinnaṃ kiñcanāpi jagatāṃ prabhavaś ca &amp;
+<l>tvadvijṛmbhitam ato 'dbhutakarmasv apy udeti na tava stutibandhaḥ // UtSst_11.4 //</l></p>
+
+<p>tvanmayo 'smi bhavadarcananiṣṭhaḥ sarvadāham iti cāpy avirāmam &amp;
+<l>bhāvayann api vibho svarasena svapnago 'pi na tathā kim iva syām // UtSst_11.5 //</l></p>
+
+<p>ye manāg api bhavaccaraṇābjodbhūtasaurabhalavena vimṛṣṭaḥ &amp;
+<l>teṣu visram iva bhavati samastaṃ bhogajātam amarair api mṛgyam // UtSst_11.6 //</l></p>
+
+<p>hṛdi te na tu vidyate 'nyad anyad vacane karmaṇi cānyad eva śaṃbho &amp;
+<l>paramārthasato 'py anugraho vā yadi vā nigraha eka eva kāryaḥ // UtSst_11.7 //</l></p>
+
+<p>mūḍho 'smi duḥkhakalito 'smi jarādidoṣabhīto 'smi śaktirahito 'smi tavāśrito 'smi &amp;
+<l>śambho tathā kalaya śīghram upaimi yena sarvottamāṃ dhuram apojjhitaduḥkhamārgaḥ // UtSst_11.8 //</l></p>
+
+<p>tvatkarṇadeśama dhiśayya mahārghabhāvam ākranditāni mama tucchatarāṇi yānti &amp;
+<l>vaṃśāntarālapatitāni jalaikadeśakhaṇḍāni mauktikamaṇitvam ivodvahanti // UtSst_11.9 //</l></p>
+
+<p>kim iva ca labhyate bata na tair api nātha janaiḥ kṣaṇam api kaitavād api ca ye tava nāmni ratāḥ &amp;
+<l>śiśiramayūkhaśekhara tathā kuru yena mama kṣatamaraṇo 'ṇimādikam upaimi yathā vibhavam // UtSst_11.10 //</l></p>
+
+<p>śambho śarva śaśaṅkaśekhara śiva tryakṣākṣamālādhara śrīmann ugrakapālalāñchana lasadbhīmatriśūlāyudha &amp;
+<l>kāruṇyāmbunidhe trilokaracanāśīlograśaktyātmaka śrīkaṇṭhāśu vināśayāśubhabharān ādhat svasiddhiṃ parām // UtSst_11.11 //</l></p>
+
+<p>tat kiṃ nātha bhaven na yatra bhagavān nirmātṛtām aśnute bhāvaḥ syāt kim u tasya cetanavato nāśāsti yaṃ śaṅkaraḥ &amp;
+<l>itthaṃ te parameśvarākṣatamahāśakteḥ sadā saṃśritaḥ saṃsāre 'tra nirantarādhividhuraḥ kliśyāmy ahaṃ kevalam // UtSst_11.12 //</l></p>
+
+<p>yady apy atra varapradoddhatatamāḥ pīḍājarāmṛtyava ete vā kṣaṇam āsatāṃ bahumataḥ śabdādir evāsthiraḥ &amp;
+<l>tatrāpi spṛhayāmi santatasukhākāṅkṣī ciraṃ sthāsnave bhogāsvādayutatvadaṅghrikamaladhyānāgrya jīvātave // UtSst_11.13 //</l></p>
+
+<p>he nātha praṇatārtināśanapaṭo śreyonidhe dhūrjaṭe duḥkhaikāyatanasya janmamaraṇatrastasya me sāmpratam &amp;
+<l>tac ceṣṭasva yathā manojñaviṣayāsvādapradā uttamā jīvann eva samaśnuve 'ham acalāḥ siddhīs tvadarcāparaḥ // UtSst_11.14 //</l></p>
+
+<p>namo mohamahādhvāntadhvaṃsanānanyakarmaṇe &amp;
+<l>sarvaprakāśātiśayaprakāśāyendulakṣmaṇe // UtSst_11.15 //</l></p>
+
+<p>rahasyanirdeśanāma dvādaśaṃ stotram</p>
+
+<p>sahakāri na kiñcid iṣyate bhavato na pratibandhakaṃ dṛṣi &amp;
+<l>bhavataiva hi sarvam āplutaṃ katham adyāpi tathāpi nekṣase // UtSst_12.1 //</l></p>
+
+<p>api bhāvagaṇād apīndriyapracayād apy avabodhamadhyataḥ &amp;
+<l>prabhavantam api svataḥ sadā paripaśyeyam apoḍhaviśvakam // UtSst_12.2 //</l></p>
+
+<p>kathaṃ te jāyeran katham api ca te darśanapathaṃ vrajeyuḥ kenāpi prakṛtimahatāṅkena khacitaḥ &amp;
+<l>tathotthāyotthāya sthalajalatṛṇāder akhilataḥ padārthadyānsṛṣṭisravadamṛtapūrair(?) vikirasi // UtSst_12.3 //</l></p>
+
+<p>sākṣatkṛta bhavadrūpaprasṛtāmṛtatarpitāḥ &amp;
+<l>unmūlitatṛṣo mattā vicaranti yathāruci // UtSst_12.4 //</l></p>
+
+<p>na tadā na sadā na caikadety api sā yatra na kāladhīr bhavet &amp;
+<l>tad idaṃ bhavadīyadarśanaṃ na ca nityaṃ na ca kathyate 'nyathā // UtSst_12.5 //</l></p>
+
+<p>tvadvilokanasamutkacetaso yogasiddhir iyatī sadāstu me &amp;
+<l>yad viśeyam abhisandhimātratas tvatsudhāsadanam arcanāya te // UtSst_12.6 //</l></p>
+
+<p>nirvikalpabhavadīyadarśanapraptiphullamanasāṃ mahātmanām &amp;
+<l>ullasanti vimalāni helayā ceṣṭitāni ca vacāṃsi ca sphuṭam // UtSst_12.7 //</l></p>
+
+<p>bhavanbhavadīyapādayor nivasann antara eva nirbhayaḥ &amp;
+<l>bhavabhūmiṣu tāsu tāsv ahaṃ prabhum arceyam anargalakriyaḥ // UtSst_12.8 //</l></p>
+
+<p>bhavadaṅghrisaroruhodare parilīno galitaparaiṣaṇaḥ &amp;
+<l>atimātramadhūpayogataḥ paritṛpto vicareyam icchayā // UtSst_12.9 //</l></p>
+
+<p>yasya dambhād iva bhavatpūjāsaṅkalpa utthitaḥ &amp;
+<l>tasyāpy avaśyam uditaṃ sannidhānaṃ tavocitam // UtSst_12.10 //</l></p>
+
+<p>bhagavann itarān apekṣiṇā nitarām ekarasena cetasā &amp;
+<l>sulabhaṃ sakalopaśāyinaṃ prabhum ātṛpti pibeyam asmi kim // UtSst_12.11 //</l></p>
+
+<p>tvayā nirākṛtam sarvaṃ heyam etat tad eva tu &amp;
+<l>tvanmayaṃ samupādeyam ity ayaṃ sārasaṃgrahaḥ // UtSst_12.12 //</l></p>
+
+<p>bhavato 'ntaracāri bhāvajātaṃ prabhuvanmukhyatayaiva pūjitaṃ tat &amp;
+<l>bhavato bahir apy abhāvamātrā katham īśān bhavet samarcyate vā // UtSst_12.13 //</l></p>
+
+<p>niḥśabdaṃ nirvikalpaṃ ca nirvyākṣepam athānisam &amp;
+<l>kṣobhe 'py adhyakṣamī kṣeyaṃ tryakṣa tvām eva sarvataḥ // UtSst_12.14 //</l></p>
+
+<p>prakaṭaya nijadhāma deva yasmiṃs tvam asi sadā parameśvarīsametaḥ &amp;
+<l>prabhucaraṇarajaḥsamānakakṣyāḥ kim aviśvāsapadaṃ bhānti bhṛtyāḥ // UtSst_12.15 //</l></p>
+
+<p>darśanapatham upayāto 'py apasarasi kuto mameśa bhṛtyasya &amp;
+<l>kṣaṇamātrakam iha na bhavasi kasya na jantor dṛśor viṣayaḥ // UtSst_12.16 //</l></p>
+
+<p>aikyasaṃvidamṛtācchadhārayā santataprasṛtayā kadā vibho &amp;
+<l>plāvanāt paramabhedamānayaṃs tvāṃ nijaṃ ca vapur āpnuyāṃ mudam // UtSst_12.17 //</l></p>
+
+<p>aham ity amuto 'varuddhalokād bhavadīyāt pratipattisārato me &amp;
+<l>aṇumātrakam eva viśvaniṣṭhaṃ ghaṭatāṃ yena bhaveyam arcitā te // UtSst_12.18 //</l></p>
+
+<p>aparimitarūpam ahaṃ taṃ taṃ bhāvaṃ pratikṣaṇaṃ paśyan &amp;
+<l>tvām eva viśvarūpaṃ nijanāthaṃ sādhu paśyeyam // UtSst_12.19 //</l></p>
+
+<p>bhavadaṅgagataṃ tam eva kasmān na manaḥ paryaṭatīṣṭam artham artham &amp;
+<l>prakṛtikṣatir asti no tathāsya mama cecchā paripūryate paraiva // UtSst_12.20 //</l></p>
+
+<p>śataśaḥ kila te tavānubhāvād bhagavan ke 'py amunaiva cakṣuṣā ye &amp;
+<l>api hālikaceṣṭayā carantaḥ paripaśyanti bhavadvapuḥ sadāgre // UtSst_12.21 //</l></p>
+
+<p>na sā matir udeti yā na bhavati tvadicchāmayī sadā śubham athetarad bhagavataivam ācaryate &amp;
+<l>ato 'smi bhavadātmako bhuvi yathā tathā sañcaran sthi to 'niśam abādhitatvadamalaṅghripūjotsavaḥ // UtSst_12.22 //</l></p>
+
+<p>bhavadīyagabhīrabhāṣiteṣu pratibhā samyag udetu me puro 'taḥ &amp;
+<l>tadanuṣṭhitaśaktir apy atas tadbhavadarcāvyasanaṃ ca nirvirāmam // UtSst_12.23 //</l></p>
+
+<p>vyavahārapade 'pi sarvadā pratibhātv arthakalāpa eṣa mām &amp;
+<l>bhavato 'vayavo yathā na tu svata evādaraṇīyatāṃ gataḥ // UtSst_12.24 //</l></p>
+
+<p>manasi svarasena yatra tatra pracaraty apy aham asya gocareṣu &amp;
+<l>prasṛto 'py avilola eva yuṣmatparicaryācaturaḥ sadā bhaveyam // UtSst_12.25 //</l></p>
+
+<p>bhagavan bhavadicchayaiva dāsas tava jāto 'smi parasya nātra śaktiḥ &amp;
+<l>katham eṣa tathāpi vaktrabimbaṃ tava paśyāmi na jātu citram etat // UtSst_12.26 //</l></p>
+
+<p>samutsukās tvāṃ prati ye bhavantaṃ pratyartharūpād avalokayanti &amp;
+<l>teṣām aho kiṃ tadupasthitaṃ syāt kiṃ sādhanaṃ vā phalitaṃ bhavet tat // UtSst_12.27 //</l></p>
+
+<p>bhāvā bhāvatayā santu bhavadbhāvena me bhava &amp;
+<l>tathā na kiñcid apy astu na kiñcid bhavato 'nyathā // UtSst_12.28 //</l></p>
+
+<p>yan na kiñcid api tanna kiñcid apy astu kiñcid api kiñcid eva me &amp;
+<l>sarvathā bhavatu tāvatā bhavān sarvato bhavati labdhapūjitaḥ // UtSst_12.29 //</l></p>
+
+<p>saṃgrahastotranāma trayodaśaṃ stotram</p>
+
+<p>saṃgrahena sukhaduḥkhalakṣaṇaṃ māṃ prati sthitam idaṃ śṛṇu prabho &amp;
+<l>saukhyam eṣa bhavatā samāgamaḥ svāminā viraha eva duḥkhitā // UtSst_13.1 //</l></p>
+
+<p>antar apy atitarām aṇīyasī yā tvadaprathanakālikāsti me &amp;
+<l>tām apīśa parimṛjya sarvataḥ svaṃ svarūpam amalaṃ prakāśaya // UtSst_13.2 //</l></p>
+
+<p>tāvake vapuṣi viśvanirbhare citsudhārasamaye niratyaye &amp;
+<l>tiṣṭhataḥ satatam arcataḥ prabhuṃ jīvitaṃ mṛtam athānyad astu me // UtSst_13.3 //</l></p>
+
+<p>īśvaro 'ham aham eva rūpavān paṇḍito 'smi subhago 'smi ko 'paraḥ &amp;
+<l>matsamo 'sti jagatīti śobhate mānitā tvadanurāgiṇaḥ param // UtSst_13.4 //</l></p>
+
+<p>devadeva bhavadadvayāmṛtākhyātisaṃharaṇalabdhajanmanā &amp;
+<l>tad yathāsthitapadārthasaṃvidā māṃ kuruṣva caraṇārcanocitam // UtSst_13.5 //</l></p>
+
+<p>dhyāyate tad anu dṛśyate tataḥ spṛśyate ca parameśvaraḥ svayam &amp;
+<l>yatra pūjanamahotsavaḥ sa me sarvadāstu bhavato 'nubhāvataḥ // UtSst_13.6 //</l></p>
+
+<p>yady athāsthitapadārthadarśanaṃ yuṣmadarcanamahotsavaś ca yaḥ &amp;
+<l>yugmam etad itaretarāśrayaṃ bhaktiśāliṣu sadā vijṛmbhate // UtSst_13.7 //</l></p>
+
+<p>tattadindriyamukhena santataṃ yuṣmadarcanarasāyanāsavam &amp;
+<l>sarvabhāvacaṣakeṣu pūriteṣv āpibann api bhaveyam unmadaḥ // UtSst_13.8 //</l></p>
+
+<p>anyavedyam aṇumātram asti na svaprakāśam akhilaṃ vijṛmbhate &amp;
+<l>yatra nātha bhavataḥ pure sthitaṃ tatra me kuru sadā tavārcituḥ // UtSst_13.9 //</l></p>
+
+<p>dāsadhāmni viniyojito 'py ahaṃ svecchayaiva parameśvara tvayā &amp;
+<l>darśanena na kim asmi pātritaḥ pādasaṃvahanakarmaṇāpi vā // UtSst_13.10 //</l></p>
+
+<p>śaktipātasamaye vicāraṇaṃ prāptam īśa na karoṣi karhicit &amp;
+<l>adya māṃ prati kim āgataṃ yataḥ svaprakāśanavidhau vilambase // UtSst_13.11 //</l></p>
+
+<p>tatra tatra viṣaye bahirvibhāty antare ca parameśvarīyutam &amp;
+<l>tvāṃ jagattritayanirbharaṃ sadā lokayeya nijapāṇipūjitam // UtSst_13.12 //</l></p>
+
+<p>svāmisaudham abhisandhimātrato nirvibandham adhiruhya sarvadā &amp;
+<l>syāṃ prasāda paramāmṛtāsavāpānakeliparilabdhanirvṛtiḥ // UtSst_13.13 //</l></p>
+
+<p>yatsamastasubhagārthavastuṣu sparśamātravidhinā camatkṛtim &amp;
+<l>tāṃ samarpayati tena te vapuḥ pūjayanty acalabhaktiśālinaḥ // UtSst_13.14 //</l></p>
+
+<p>sphārayasy akhilam ātmanā sphuran viśvam āmṛśasi rūpam āmṛśan &amp;
+<l>yat svayaṃ nijarasena ghurṇase tat samullasati bhāvamaṇḍalam // UtSst_13.15 //</l></p>
+
+<p>yo 'vikalpam idam arthamaṇḍalaṃ paśyatīśa nikhilaṃ bhavadvapuḥ &amp;
+<l>svātmapakṣaparipūrite jagaty asya nityasukhinaḥ kuto bhayam // UtSst_13.16 //</l></p>
+
+<p>kaṇṭhakoṇaviniviṣṭam īśa te kālakūṭam api me mahāmṛtam &amp;
+<l>apy upāttam amṛtaṃ bhavadvapur bhedavṛtti yadi rocate na me // UtSst_13.17 //</l></p>
+
+<p>tvatpralāpamayaraktagītikāni tya yuktavadanopaśobhitaḥ &amp;
+<l>syām athāpi bhavadarcanakriyāpreyasīparigatāśayaḥ sadā // UtSst_13.18 //</l></p>
+
+<p>īhitaṃ na bata pārameśvaraṃ śakyate gaṇayituṃ tathā ca me &amp;
+<l>dattam apy amṛtanirbharaṃ vapuḥ svaṃ na pātum anumanyate tathā // UtSst_13.19 //</l></p>
+
+<p>tvām agādham avikalpam advayaṃ svaṃ svarūpam akhilārthaghasmaram &amp;
+<l>āviśann aham umeśa sarvadā pūjayeyam abhisaṃstuvīya ca // UtSst_13.20 //</l></p>
+
+<p>jayastotranāma caturdaśaṃ stotram</p>
+
+<p>jayalakṣmīnidhānasya nijasya svāminaḥ puraḥ &amp;
+<l>jayodghoṣaṇapīyūṣarasam āsvādaye kṣaṇam // UtSst_14.1 //</l></p>
+
+<p>jayaikarudraikaśiva mahādeva maheśvara &amp;
+<l>pārvatīpraṇayiñ śarva sarvagīrvāṇapūrvaja // UtSst_14.2 //</l></p>
+
+<p>jaya trailokyanāthaikalāñchanālikalocana &amp;
+<l>jaya pītartalokārtikālakūṭāṅkakandhara // UtSst_14.3 //</l></p>
+
+<p>jaya mūrtatriśaktyātmiśataśūlollasatkara &amp;
+<l>jayecchāmātrasiddārthapūjārhacaraṇāmbuja // UtSst_14.4 //</l></p>
+
+<p>jaya śobhaśatasyandilokottaravapurdhara &amp;
+<l>jayaikajaṭikākṣīṇagaṅgākṛtyāttabhasmaka // UtSst_14.5 //</l></p>
+
+<p>jaya kṣīrodaparyastajyotsnācchāyānulepana &amp;
+<l>jayeśvarāṅgasaṅgottharatnakāntāhimaṇḍana // UtSst_14.6 //</l></p>
+
+<p>jayākṣayaikaśītāṃśukalāsadṛśasaṃśraya &amp;
+<l>jaya gaṅgāsadārbdhaviśvaiśvaryābhiṣecana // UtSst_14.7 //</l></p>
+
+<p>jayādharāṅgasaṃsparśapāvanīkṛtagokula &amp;
+<l>jaya bhaktimadābaddhagoṣṭhīniyatasannidhe // UtSst_14.8 //</l></p>
+
+<p>jaya svecchātapodeśavipralambhitabāliśa &amp;
+<l>jaya gaurīpariṣvaṅgayogyasaubhāgyabhājana // UtSst_14.9 //</l></p>
+
+<p>jaya bhaktirasārdrārdrabhāvopāyanalampaṭa &amp;
+<l>jaya bhaktimadoddāmabhaktavāṅnṛttatoṣita // UtSst_14.10 //</l></p>
+
+<p>jaya brahmādideveśaprabhāvaprabhavavyaya &amp;
+<l>jayalokeśvaraśreṇiśirovidhṛtaśāsana // UtSst_14.11 //</l></p>
+
+<p>jayasarvajagannyastasvamudrāvyaktavaibhava &amp;
+<l>jayātmadānaparyantaviśveśvaramaheśvara // UtSst_14.12 //</l></p>
+
+<p>jaya trailokyasargecchāvasarāsaddvitīyaka &amp;
+<l>jayaiśvaryabharodvāhadevīmātrasahāyaka // UtSst_14.13 //</l></p>
+
+<p>jayākramasamākrāntasamastabhuvanatraya &amp;
+<l>jayāvigītam ābālagīyamāneśvaradhvane // UtSst_14.14 //</l></p>
+
+<p>jayānukampādiguṇānapekṣasahajonnate &amp;
+<l>jaya bhīṣmamahāmṛtyughaṭanāpūrvabhairava // UtSst_14.15 //</l></p>
+
+<p>jaya viśvakṣayoccaṇḍakriyāniṣparipanthika &amp;
+<l>jaya śreyaḥśataguṇānuganāmānukīrtana // UtSst_14.16 //</l></p>
+
+<p>jaya helāvitīrnaitadamṛtākarasāgara &amp;
+<l>jaya viśvakṣayakṣepikṣaṇakopāśuśukṣaṇe // UtSst_14.17 //</l></p>
+
+<p>jaya mohāndhakārāndhajīvalokaikadīpaka &amp;
+<l>jaya prasuptajagatījāgarūkādhipūruṣa // UtSst_14.18 //</l></p>
+
+<p>jaya dehādrikuñjāntarnikūjañjīvajīvaka &amp;
+<l>jaya sanmānasavyomavilāsivarasārasa // UtSst_14.19 //</l></p>
+
+<p>jaya jāmbūnadodagradhātūdbhavagirīśvara &amp;
+<l>jaya pāpiṣu nindolkāpātanotpātacandramaḥ // UtSst_14.20 //</l></p>
+
+<p>jaya kaṣṭatapaḥkliṣṭamunidevadurāsada &amp;
+<l>jaya sarvadaśārūḍhabhaktimallokalokita // UtSst_14.21 //</l></p>
+
+<p>jaya svasampatprasarapatrīkṛtanijāśrita &amp;
+<l>jaya prapannajanatālālanaikaprayojana // UtSst_14.22 //</l></p>
+
+<p>jaya sargasthitidhvaṃsakāraṇaikāvadānaka &amp;
+<l>jaya bhaktimadālolalīlotpalamagotsava // UtSst_14.23 //</l></p>
+
+<p>jaya jayabhājana jaya jitajanmajarāmaraṇa jaya jagajjyeṣṭha &amp;
+<l>jaya jaya jaya jaya jaya jaya jaya jaya jaya jaya jaya jaya jaya tryakṣa // UtSst_14.24 //</l></p>
+
+<p>bhaktistotranāma pañcadaśaṃ</p>
+
+<p>trimalakṣālino granthāḥ santi tatpāragāstathā &amp;
+<l>yoginaḥ paṇḍitāḥ svasthās tvadbhaktā eva tattvataḥ // UtSst_15.1 //</l></p>
+
+<p>māyīyakālaniyatirāgādyāhāratarpitāḥ &amp;
+<l>caranti sukhino nātha bhaktimanto jagattaṭe // UtSst_15.2 //</l></p>
+
+<p>rudanto vā hasanto vā tvām uccaiḥ pralapanty amī &amp;
+<l>bhaktāḥ stutipadoccāropacārāḥ pṛthag eva te // UtSst_15.3 //</l></p>
+
+<p>na virakto na cāpīśo mokṣākāṅkṣī tvadarcakaḥ &amp;
+<l>bhaveyam api tūdriktabhaktyāsavarasonmadaḥ // UtSst_15.4 //</l></p>
+
+<p>bāhyaṃ hṛdaya evāntar abhihṛtyaiva yo 'rcati &amp;
+<l>tvām īśa bhaktipīyūṣarasapūrair namāmi tam // UtSst_15.5 //</l></p>
+
+<p>dharmādharmātmanor antaḥ kriyayor jñānayos tathā &amp;
+<l>sukhaduḥkhātmanor bhaktāḥ kim apy āsvādayanty aho // UtSst_15.6 //</l></p>
+
+<p>carācarapitaḥ svāmin apy andhā api kuṣṭhinaḥ &amp;
+<l>śobhante param uddāmabhavadbhaktivibhūṣaṇāḥ // UtSst_15.7 //</l></p>
+
+<p>śiloñchapicchakaśipuvicchāyāṅgā api prabho &amp;
+<l>bhavadbhaktimahoṣmaṇo rājarājam apīśate // UtSst_15.8 //</l></p>
+
+<p>sudhārdrāyāṃ bhavadbhaktau luṭhatāpy ārurukṣuṇā &amp;
+<l>cetasaiva vibho 'rcanti kecit tvām abhitaḥ sthitāḥ // UtSst_15.9 //</l></p>
+
+<p>rakṣaṇīyaṃ vardhanīyaṃ bahumānyam idaṃ prabho &amp;
+<l>saṃsāradurgatiharaṃ bhavadbhaktimahādhanam // UtSst_15.10 //</l></p>
+
+<p>nātha te bhaktajanatā yady api tvayi rāgiṇī &amp;
+<l>tathāpīrṣyāṃ vihāyāsyās tuṣṭāstu svāminī sadā // UtSst_15.11 //</l></p>
+
+<p>bhavadbhāvaḥ puro bhāvī prāpte tvadbhaktisambhave &amp;
+<l>labdhe dugdhamahākumbhe hatā dadhani gṛdhnutā // UtSst_15.12 //</l></p>
+
+<p>kim iyaṃ na siddhir atulā kiṃ vā mukhyaṃ na saukhyam āsravati &amp;
+<l>bhaktir upacīyamānā yeyaṃ śambhoḥ sadātanī bhavati // UtSst_15.13 //</l></p>
+
+<p>manasi maline madīyemagnā tvadbhaktimaṇilatā kaṣṭam &amp;
+<l>na nijān api tanute tānapauruṣeyān svasampadullāsān // UtSst_15.14 //</l></p>
+
+<p>bhaktir bhagavati bhavati trilokanāthe nanūttamā siddhiḥ &amp;
+<l>kiṃ tv aṇimādikavirahāt saiva na pūrṇeti cintā me // UtSst_15.15 //</l></p>
+
+<p>bāhyato 'ntar api cotkaṭonmiṣattryambakastavakasaurabhāḥ śubhāḥ &amp;
+<l>vāsayanty api viruddhavāsanān yogino nikaṭavāsino 'khilān // UtSst_15.16 //</l></p>
+
+<p>jyotir asti kathayāpi na kiṃ cid viśvam apy atisuṣuptam aśeṣam &amp;
+<l>yatra nātha śivarātripade 'smin nityam arcayati bhaktajanas tvām // UtSst_15.17 //</l></p>
+
+<p>sattvaṃ satyaguṇe śive bhagavati sphārībhavatv arcane cūḍāyāṃ vilasantu śaṅkarapadaprodyadrajaḥsaṅcayāḥ &amp;
+<l>rāgādismṛtivāsanām api samucchettuṃ tamo jṛmbhatāṃ śambho me bhavatāt tvadātmavilaye traiguṇyavargo 'thavā // UtSst_15.18 //</l></p>
+
+<p>saṃsārādhvā sudūraḥ kharataravividhavyādhidagdhāṅgayaṣṭiḥ bhogā naivopabhuktā yad api sukham abhūj jātu nanno cirāya &amp;
+<l>itthaṃ vyartho 'smi jātaḥ śaśidharacaraṇākrāntikāntottamāṅgas tvadbhaktaś ceti tan me kuru sapadi mahāsampado dīrghadīrghāḥ // UtSst_15.19 //</l></p>
+
+<p>pāśānudbhedanāma ṣoḍaśaṃ stotram</p>
+
+<p>na kiñcid eva lokānāṃ bhavadāvaraṇaṃ prati \var{yat kiṃ cid eva bhūtānāṃ\em \cit \Naresvaraparīksā} &amp;
+<l>na kiñcid eva bhaktānāṃ bhavadāvaraṇaṃ prati // UtSst_16.1 //</l></p>
+
+<p>apy upāyakramaprāpyaḥ saṅkulo 'pi viśeṣaṇaiḥ &amp;
+<l>bhaktibhājāṃ bhavān ātmā sakṛc chuddho 'vabhāsate // UtSst_16.2 //</l></p>
+
+<p>jayanto 'pi hasanty ete jitā api hasanti ca &amp;
+<l>bhavadbhaktisudhāpānamattāḥ ke 'py eva ye prabho // UtSst_16.3 //</l></p>
+
+<p>śuṣkakaṃ maiva siddheya maiva mucyeya vāpi tu &amp;
+<l>svādiṣṭhaparakāṣṭāptatvadbhaktirasanirbharaḥ // UtSst_16.4 //</l></p>
+
+<p>yathaivajñātapūrvo 'yaṃ bhavadbhaktiraso mama &amp;
+<l>ghaṭitas tadvad īśāna sa eva paripuṣyatu // UtSst_16.5 //</l></p>
+
+<p>satyena bhagavan nānyaḥ prārthanāprasaro 'sti me &amp;
+<l>kevalaṃ sa tathā ko 'pi bhaktyāveśo 'stu me sadā // UtSst_16.6 //</l></p>
+
+<p>bhaktikṣīvo 'pi kupyeyaṃ bhavāyānuśayīya ca &amp;
+<l>tathā haseyaṃ udyāṃ ca raṭeyaṃ ca śivety alam // UtSst_16.7 //</l></p>
+
+<p>viṣamastho 'pi svastho 'pi rudann api hasann api &amp;
+<l>gambhīro 'pi vicitto 'pi bhaveyaṃ bhaktitaḥ prabho // UtSst_16.8 //</l></p>
+
+<p>bhaktānāṃ nāsti saṃvedyaṃ tvadantar yadi vā bahiḥ &amp;
+<l>ciddharmā yatra na bhavān nirvikalpaḥ sthitaḥ svayam // UtSst_16.9 //</l></p>
+
+<p>bhaktā nindānukare 'pi tavāmṛtakaṇair iva &amp;
+<l>hṛṣyanty evāntarāviddhās tīkṣṇaromāñcasūcibhiḥ // UtSst_16.10 //</l></p>
+
+<p>duḥkhāpi vedanā bhaktimatāṃ bhogāya kalpate &amp;
+<l>yeṣāṃ sudhārdrā sarvaiva saṃvit tvaccandrikāmayī // UtSst_16.11 //</l></p>
+
+<p>yatra tatroparuddhānāṃ bhaktānāṃ bahirantare &amp;
+<l>nirvyājaṃ tvadvapuḥsparśarasāsvādasukhaṃ samam // UtSst_16.12 //</l></p>
+
+<p>taveśa bhakter arcāyāṃ dainyāṃśaṃ dvayasaṃśrayam &amp;
+<l>vilupyāsvādayanty eke vapur acchaṃ sudhāmayam // UtSst_16.13 //</l></p>
+
+<p>bhrāntās tīrthadṛśo bhinnā bhrānter eva hi bhinnatā &amp;
+<l>niṣpratidvandvi vastv ekaṃ bhaktānāṃ tvaṃ tu rājase // UtSst_16.14 //</l></p>
+
+<p>mānāvamānarāgādiniṣpākavimalaṃ manaḥ &amp;
+<l>yasyāsau bhaktimāṃl lokatulyaśīlaḥ kathaṃ bhavet // UtSst_16.15 //</l></p>
+
+<p>rāgadveṣandhakāro 'pi yeṣāṃ bhaktitviṣā jitaḥ &amp;
+<l>teṣāṃ mahīyasām agre katame jñānaśālinaḥ // UtSst_16.16 //</l></p>
+
+<p>yasya bhaktisudhāsnānapānādividhisādhanam &amp;
+<l>tasya prārabdhamadhyāntadaśāsūccaiḥ sukhāsikā // UtSst_16.17 //</l></p>
+
+<p>kīrtyaś cintāpadaṃ mṛgyaḥ pūjyo yena tvam eva tat &amp;
+<l>bhavadbhaktimatāṃ ślāghyā lokayātrā bhavanmayī // UtSst_16.18 //</l></p>
+
+<p>muktisaṃjñā vipakvāyā bhakter eva tvayi prabho &amp;
+<l>tasyām ādyadaśārūḍhā muktakalpā vayaṃ tataḥ // UtSst_16.19 //</l></p>
+
+<p>duḥkhāgamo 'pi bhūyān me tvadbhaktibharitātmanaḥ &amp;
+<l>tvatparācī vibho mā bhūd api saukhyaparamparā // UtSst_16.20 //</l></p>
+
+<p>tvaṃ bhaktyā prīyase bhaktiḥ prīte tvayi ca nātha yat &amp;
+<l>tadanyonyāśrayaṃ yuktaṃ yathā vettha tvam eva tat // UtSst_16.21 //</l></p>
+
+<p>sākāro vā nirākaro vāntar vā bahir eva vā &amp;
+<l>bhaktimattātmanāṃ nātha sarvathāsi sudhāmayaḥ // UtSst_16.22 //</l></p>
+
+<p>asminn eva jagaty antar bhavadbhaktimataḥ prati &amp;
+<l>harṣaprakāśanaphalam anyad eva jagatsthitam // UtSst_16.23 //</l></p>
+
+<p>guhye bhaktiḥ pare bhaktir bhaktir viśvamaheśvare &amp;
+<l>tvayi śambhau śive deva bhaktir nāma kim apy aho // UtSst_16.24 //</l></p>
+
+<p>bhaktir bhaktiḥ pare bhaktir bhaktir nāma samutkaṭā &amp;
+<l>tāraṃ viraumi yat tīvrā bhaktir me 'stu paraṃ tvayi // UtSst_16.25 //</l></p>
+
+<p>yato 'smi sarvaśobhānāṃ prasavāvanir īśa tat &amp;
+<l>tvayi lagnam anarghaṃ syād ratnam vā yadi vā tṛṇam // UtSst_16.26 //</l></p>
+
+<p>āvedakād ā ca vedyād yeṣāṃ saṃvedanādhvani &amp;
+<l>bhavatā na viyogo 'sti te jayanti bhavajjuṣaḥ // UtSst_16.27 //</l></p>
+
+<p>saṃsārasadaso bāhye kaiś cittvaṃ parirabhyase &amp;
+<l>svāmin parais tu tatraiva tāmyadbhis tyaktayantraṇaiḥ // UtSst_16.28 //</l></p>
+
+<p>pānāśanaprasādhanasambhuktasamastaviśvayā śivayā &amp;
+<l>pralayotsavasarabhasayā dṛḍham upagūḍhaṃ śivaṃ vande // UtSst_16.29 //</l></p>
+
+<p>parameśvaratā jayaty apūrvā tava viśveśa yadīśitavyaśūnyā &amp;
+<l>aparāpi tathaiva te yayedaṃ jagad ābhāti yathā tathā na bhāti // UtSst_16.30 //</l></p>
+
+<p>divyakrīḍābahumānanāma saptadasaṃ stotram</p>
+
+<p>aho ko 'pi jayaty eṣa svāduḥ pūjāmahotsavaḥ &amp;
+<l>yato 'mṛtarasāsvādam aśrūṇy api dadaty alam // UtSst_17.1 //</l></p>
+
+<p>vyāpārāḥ siddhidāḥ sarve ye tvatpūjāpuraḥsarāḥ &amp;
+<l>bhaktānāṃ tvanmayāḥ sarve svayaṃ siddhaya eva te // UtSst_17.2 //</l></p>
+
+<p>sarvadā sarvabhāveṣu yugapat sarvarūpiṇam &amp;
+<l>tvām arcayanty aviśrantaṃ ye mamaite 'dhidevatāḥ // UtSst_17.3 //</l></p>
+
+<p>dhyānāyasatiraskārasiddhas tvatsparśanotsavaḥ &amp;
+<l>pūjāvidhir iti khyāto bhaktānāṃ sa sadās tu me // UtSst_17.4 //</l></p>
+
+<p>bhaktānāṃ samatāsāraviṣuvatsamayaḥ sadā &amp;
+<l>tvadbhāvarasapīyūṣarasennaiṣāṃ sadārcanam // UtSst_17.5 //</l></p>
+
+<p>yasyānārambhaparyantau na ca kālakramaḥ prabho &amp;
+<l>pūjātmāsau kriyā tasyāḥ kartāras tvajjuṣaḥ param // UtSst_17.6 //</l></p>
+
+<p>brahmādīnām apīśāste te ca saubhāgyabhāginaḥ &amp;
+<l>yeṣāṃ svapne 'pi mohe 'pi sthitas tvatpūjanotsavaḥ // UtSst_17.7 //</l></p>
+
+<p>japatāṃ juhvatāṃ snātāṃ dhyāyatāṃ na ca kevalam &amp;
+<l>bhaktānāṃ bhavadabhyarcāmaho yāvad yadā tadā // UtSst_17.8 //</l></p>
+
+<p>bhavatpūjāsudhāsvādasambhogasukhinaḥ sadā &amp;
+<l>indrādīnām atha brahmamukhyānām asti kaḥ samaḥ // UtSst_17.9 //</l></p>
+
+<p>jagatkṣobhaikajanake bhavatpūjāmahotsave &amp;
+<l>yatprāpyaṃ prāpyate kiṃcid bhaktā eva vidanti tat // UtSst_17.10 //</l></p>
+
+<p>tvaddhāmni cinmaye sthitvā ṣaṭtriṃśattattvakarmabhiḥ &amp;
+<l>kāyavākcittaceṣṭādyair arcaye tvāṃ sadā vibho // UtSst_17.11 //</l></p>
+
+<p>bhavatpūjāmayāsaṅgasambhogasukhino mama &amp;
+<l>prayātu kālaḥ sakalo 'py ananto 'pīyadarthaye // UtSst_17.12 //</l></p>
+
+<p>bhavatpūjāmṛtarasābhogalampaṭata vibho &amp;
+<l>vivardhatām anudinaṃ sadā ca phalatāṃ mama // UtSst_17.13 //</l></p>
+
+<p>jagadvilayasañjātasudhaikarasanirbhare &amp;
+<l>tvadabdhau tvāṃ mahātmānam arcannāsīya sarvadā // UtSst_17.14 //</l></p>
+
+<p>aśeṣavāsanāgranthivicchedasaralaṃ sadā &amp;
+<l>mano nivedyate bhaktaiḥ svādu pūjāvidhau tava // UtSst_17.15 //</l></p>
+
+<p>adhiṣṭhāyaiva viṣayānimāḥ karaṇavṛttayaḥ &amp;
+<l>bhaktānāṃ preṣayanti svatpūjārtham amṛtāsavam // UtSst_17.16 //</l></p>
+
+<p>bhaktānāṃ bhaktisaṃvegamahoṣmavivaśātmanām &amp;
+<l>ko 'nyo nirvāṇahetuḥ syāt tvatpūjāmṛtamajjanāt // UtSst_17.17 //</l></p>
+
+<p>satataṃ tvatpadābhyarcāsudhāpānamahotsavaḥ &amp;
+<l>tvatprasādaikasamprāptihetur me nātha kalpatām // UtSst_17.18 //</l></p>
+
+<p>anubhūyāsamīśāna pratikarma kṣaṇāt kṣaṇam &amp;
+<l>bhavatpūjāmṛtāpānamadāsvādamahāmudam // UtSst_17.19 //</l></p>
+
+<p>dṛṣṭartha eva bhaktānāṃ bhavatpūjāmahodyamaḥ &amp;
+<l>tadaiva yad asambhāvyaṃ sukham āsvādayanti te // UtSst_17.20 //</l></p>
+
+<p>yāvan na labdhas tvatpūjāsudhāsvādamahotsavaḥ &amp;
+<l>tāvan nāsvādito manye lavo 'pi sukhasampadaḥ // UtSst_17.21 //</l></p>
+
+<p>bhaktānāṃ viṣayanveṣābhāsāyāsād vinaiva sā &amp;
+<l>ayatnasiddhaṃ tvaddhāmasthitiḥ pūjāsu jāyate // UtSst_17.22 //</l></p>
+
+<p>na prāpyam asti bhaktanāṃ nāpy eṣām asti durlabham &amp;
+<l>kevalaṃ vicaranty ete bhavatpūjāmadonmadāḥ // UtSst_17.23 //</l></p>
+
+<p>aho bhaktibharodāracetasāṃ varada tvayi &amp;
+<l>slāghyaḥ pūjāvidhiḥ ko 'pi yo na yācñākalaṃkitaḥ // UtSst_17.24 //</l></p>
+
+<p>kā na śobhā na ko hlādaḥ kā samṛddhir na vāparā &amp;
+<l>ko vā na mokṣaḥ ko 'py eṣa mahādevo yad arcyate // UtSst_17.25 //</l></p>
+
+<p>antarullasadacchācchabhaktipīyūṣapoṣitam &amp;
+<l>bhavatpūjopayogāya śarīram idam astu me // UtSst_17.26 //</l></p>
+
+<p>tvatpādapūjāsambhogaparatantraḥ sadā vibho &amp;
+<l>bhūyāsaṃ jagatām īśa ekaḥ svacchandaceṣṭitaḥ // UtSst_17.27 //</l></p>
+
+<p>tvaddhyānadarśanasparśatṛṣi keṣām api prabho &amp;
+<l>jāyate śītalasvādu bhavatpūjāmahāsaraḥ // UtSst_17.28 //</l></p>
+
+<p>yathā tvam eva jagataḥ pūjāsambhogabhājanam &amp;
+<l>tatheśa bhaktimān eva pūjāsambhogabhājanam // UtSst_17.29 //</l></p>
+
+<p>ko 'py asau jayati svāmin bhavatpūjāmahotsavaḥ &amp;
+<l>ṣaṭtriṃśato 'pi tattvānāṃ kṣobho yatrollasaty alam // UtSst_17.30 //</l></p>
+
+<p>namas tebhyo vibho yeṣāṃ bhaktipīyūṣavāriṇā &amp;
+<l>pūjyāny eva bhavanti tvatpūjopakaraṇāny api // UtSst_17.31 //</l></p>
+
+<p>pūjārambhe vibho dhyātvā mantrādheyāṃ tvadātmatām &amp;
+<l>svātmany eva pare bhaktā mānti harṣeṇa na kvacit // UtSst_17.32 //</l></p>
+
+<p>rājyalābhādivotphullaiḥ kaiś cit pūjāmahotsave &amp;
+<l>sudhāsavena sakalā jagatī saṃvibhajyate // UtSst_17.33 //</l></p>
+
+<p>pūjāmṛtāpānamayo yeṣāṃ bhogaḥ pratikṣaṇam &amp;
+<l>kiṃ devā uta muktās te kiṃ vā ke 'py eva te janāḥ // UtSst_17.34 //</l></p>
+
+<p>pūjopakaraṇībhūtaviśvaveśena gauravam &amp;
+<l>aho kim api bhaktānāṃ kim apy eva ca lāghavam // UtSst_17.35 //</l></p>
+
+<p>pūjāmayākṣavikṣepakṣobhādevāmṛtodgamaḥ &amp;
+<l>bhaktānāṃ kṣīrajaladhikṣobhād iva divaukasām // UtSst_17.36 //</l></p>
+
+<p>pūjāṃ ke cana manyante dhenuṃ kāmadughām iva &amp;
+<l>sudhādhārādhikarasāṃ dhayanty antarmukhāḥ pare // UtSst_17.37 //</l></p>
+
+<p>bhaktānām akṣavikṣepo 'py eṣa saṃsārasaṃmataḥ &amp;
+<l>upanīya kim apy antaḥ puṣṇāty arcāmahotsavam // UtSst_17.38 //</l></p>
+
+<p>bhaktikṣobhavaśād īśa svātmabhūte 'rcanaṃ tvayi &amp;
+<l>citraṃ dainyāya no yāvad dīnatāyāḥ paraṃ phalam // UtSst_17.39 //</l></p>
+
+<p>upacārapadaṃ pūjā keṣāṃ cit tvatpadāptaye &amp;
+<l>bhaktānāṃ bhavadaikātmyanirvṛttiprasaras tu saḥ // UtSst_17.40 //</l></p>
+
+<p>apy asambaddharūpārcābhaktyunmādanirargalaiḥ &amp;
+<l>vitanyamānā labhate pratiṣṭhāṃ tvayi kām api // UtSst_17.41 //</l></p>
+
+<p>svādubhaktirasāsvādastabdhībhūtamanaś cyutām &amp;
+<l>śambho tvam eva lalitaḥ pūjānāṃ kila bhājanam // UtSst_17.42 //</l></p>
+
+<p>paripūrṇāni śuddhāni bhaktimanti sthirāṇi ca &amp;
+<l>bhavatpūjāvidhau nātha sādhanāni bhavantu me // UtSst_17.43 //</l></p>
+
+<p>aśeṣapūjāsatkośe tvatpūjākarmaṇi prabho &amp;
+<l>aho karaṇavṛndasya kāpi lakṣmīr vijṛmbhate // UtSst_17.44 //</l></p>
+
+<p>eṣā peśalimā nātha tavaiva kila dṛśyate &amp;
+<l>viśveśvaro 'pi bhṛtyair yad arcyase yaś ca labhyase // UtSst_17.45 //</l></p>
+
+<p>sadāmurttād amūrttādvā bhāvād yad vāpy abhāvataḥ &amp;
+<l>uttheyān me praśastasya bhavatpūjāmahotsavaḥ // UtSst_17.46 //</l></p>
+
+<p>kāmakrodhābhimānais tvām upaharīkṛtaiḥ sadā &amp;
+<l>ye 'rcayanti namas tebhyas teṣāṃ tuṣṭo 'smi tattvataḥ // UtSst_17.47 //</l></p>
+
+<p>jayaty eṣa bhavadbhaktibhājāṃ pūjāvidhiḥ paraḥ &amp;
+<l>yas tṛṇaiḥ kriyamāno 'pi ratnair evopakalpate // UtSst_17.48 //</l></p>
+
+<p>āviṣkāranāma aṣṭādaśaṃ stotram</p>
+
+<p>jagato 'ntarato bhavantam āptvā punar etad bhavato 'ntarāl labhante &amp;
+<l>jagadīśa tavaiva bhaktibhājo na hi teṣām iha dūrato 'sti kiñcit // UtSst_18.1 //</l></p>
+
+<p>kvacid eva bhavān kvacid bhavānī sakalārthakramagarbhiṇī pradhānā &amp;
+<l>paramārthapade tu naiva devyā bhavato nāpi jatattrayasya bhedaḥ // UtSst_18.2 //</l></p>
+
+<p>no jānate subhagam apy avalepavanto lokāḥ prayatnasubhagā nikhila hi bhāvāḥ &amp;
+<l>cetaḥ punar yad idam udyatam apy avaiti naivātmarūpam iha hā tad aho hato 'smi // UtSst_18.3 //</l></p>
+
+<p>bhavanmayasvātmanivāsalabdhasampadbharābhyarcitayuṣmadaṅghriḥ &amp;
+<l>na bhojanācchādanam apy ajasram apekṣate yas tam ahaṃ nato 'smi // UtSst_18.4 //</l></p>
+
+<p>sadā bhavaddehanivāsasvastho 'py antaḥ paraṃ dahyata eṣa lokaḥ &amp;
+<l>tavecchayā tat kuru me yathātra tvadarcanānandamayo bhaveyam // UtSst_18.5 //</l></p>
+
+<p>svarasoditayuṣmadaṅghripadmadvayapūjāmṛtapānasaktacittaḥ &amp;
+<l>sakārthacayeṣv ahaṃ bhaveyam sukhasaṃsparśanamātralokayātraḥ // UtSst_18.6 //</l></p>
+
+<p>sakalavyavahāragocare sphuṭam antaḥ spurati tvayi prabho &amp;
+<l>upayānty apayānti cāniśam mama vastūni vibhāntu sarvadā // UtSst_18.7 //</l></p>
+
+<p>satatam eva tavaiva pure 'thavāpy arahito vicareyam ahaṃ tvayā &amp;
+<l>kṣaṇalavo 'py atha mā sma bhavet sa me na vijaye nanu yatra bhavanmayaḥ // UtSst_18.8 //</l></p>
+
+<p>bhavadaṅgaparisravatsuśītāmṛtapūrair bharite samantato 'pi &amp;
+<l>bhavadarcanasampadeha bhaktās tava saṃsārasaro 'ntare caranti // UtSst_18.9 //</l></p>
+
+<p>mahāmantratarucchāyāśītale tvanmahāvane &amp;
+<l>nijātmani sadā nātha vaseyaṃ tava pūjakaḥ // UtSst_18.10 //</l></p>
+
+<p>prativastu samastajīvataḥ pratibhāsi pratibhāmayo yathā &amp;
+<l>mama nātha tathā puraḥ prathāṃ vraja netratrayaśūlaśobhitaḥ // UtSst_18.11 //</l></p>
+
+<p>abhimānacarūpahārato mamatābhaktibhareṇa kalpitāt &amp;
+<l>paritoṣagataḥ kadā bhavān mama sarvatra bhaved dṛśaḥ padam // UtSst_18.12 //</l></p>
+
+<p>nivasanparamāmṛtābdhimadhye bhavadarcāvidhimātramagnacittaḥ &amp;
+<l>sakalaṃ janavṛttam ācareyaṃ rasayan sarvata eva kiñcanāpi // UtSst_18.13 //</l></p>
+
+<p>bhavadīyam ihāstu vastu tattvaṃ vivarītuṃ ka ivātra pātram arthe &amp;
+<l>idam eva hi nāmarūpaceṣṭādyasamaṃ te harate haro 'si yasmāt // UtSst_18.14 //</l></p>
+
+<p>śāntaye na sukhalipsutā manāg bhaktisambhṛtamadeṣu taiḥ prabhoḥ &amp;
+<l>mokṣamārgaṇaphalāpi nārthanā smaryate hṛdayahāriṇaḥ puraḥ // UtSst_18.15 //</l></p>
+
+<p>jāgaretaradaśāthavā parā yāpi kācana manāg avasthiteḥ &amp;
+<l>bhaktibhājanajanasya sākhilā tvatsanāthamanaso mahotsavaḥ // UtSst_18.16 //</l></p>
+
+<p>āmano 'kṣavalayasya vṛttayaḥ sarvataḥ śithilavṛttayo 'pi tāḥ &amp;
+<l>tvām avāpya dṛḍhadīrghasaṃvido nātha bhaktidhanasoṣmaṇāṃ katham // UtSst_18.17 //</l></p>
+
+<p>na ca vibhinnam asṛjyata kiñcid asty atha sukhetarad atra na nirmitam &amp;
+<l>atha ca duḥkhi ca bhedi ca sarvathāpy asamavismayadhāma namo 'stu te // UtSst_18.18 //</l></p>
+
+<p>kharaniṣedhakhadāmṛtapūraṇocchalitadhautavikalpamalasya me &amp;
+<l>dalitadurjayasaṃśayavairiṇas tvadavalokanam astu nirantaram // UtSst_18.19 //</l></p>
+
+<p>sphuṭam aviśa mām athāviśeyaṃ satataṃ nātha bhavantamasmi yasmāt &amp;
+<l>rabhasena vapus tavaiva sākṣāt paramāsattigataḥ samarcayeyam // UtSst_18.20 //</l></p>
+
+<p>tvayi na stutiśaktir asti kasyāpy athavāsty eva yato 'tisundaro 'si &amp;
+<l>satataṃ punar arthitaṃ mamaitad yad aviśrānti vilokayeyam īśam // UtSst_18.21 //</l></p>
+
+<p>udyotanābhidhānam ekonaviṃśaṃ stotram</p>
+
+<p>prārthanābhūmikātītavicitraphaladāyakaḥ &amp;
+<l>jayaty apūrvavṛttāntaḥ śivaḥ satkalpapādapaḥ // UtSst_19.1 //</l></p>
+
+<p>sarvavastuni ca yaikanidhānāt svātmanas tvad akhilaṃ kila labhyam &amp;
+<l>asya me punar asau nijā ātmā na tvam eva ghaṭase paramās tām // UtSst_19.2 //</l></p>
+
+<p>jñānakarmamayacidvapur ātmā sarvathaiṣa parameśvara eva &amp;
+<l>syād vapus tu nikhileṣu padārtheṣv eṣu nāma na bhavet kim utānyat // UtSst_19.3 //</l></p>
+
+<p>viṣamārtimuṣānena phalena tvaddṛgātmanā &amp;
+<l>abhilīya pathā nātha mamāstu tvanmayī gatiḥ // UtSst_19.4 //</l></p>
+
+<p>bhavadamalacaraṇacintāratnalatālaṅkṛtā kadā siddhiḥ &amp;
+<l>siddhajanamānasānāṃ vismayajananī ghaṭeta mama bhavataḥ // UtSst_19.5 //</l></p>
+
+<p>karhi nātha vimalaṃ mukhabimbaṃ tāvakaṃ samavalokayitāsmi &amp;
+<l>yatsravaty amṛtapūram apūrvaṃ yo nimajjayati viśvam aśeṣam // UtSst_19.6 //</l></p>
+
+<p>dhyātamātramuditaṃ tava rūpaṃ karhi nātha paramāmṛtapūraiḥ &amp;
+<l>pūrayet tvadavibhedavimokṣākhyātidūravivarāṇi sadā me // UtSst_19.7 //</l></p>
+
+<p>tvadīyānuttararasāsaṅgasaṃtyaktacāpalam &amp;
+<l>nādyāpi me mano nātha karhi syād astu śīghrataḥ // UtSst_19.8 //</l></p>
+
+<p>mā śuṣkakaṭukāny eva paraṃ sarvāṇi sarvadā &amp;
+<l>tavopahṛtya labdhāni dvandvāny apy āpatantu me // UtSst_19.9 //</l></p>
+
+<p>nātha sāṃmukhyam āyāntu viśuddhās tava raśmayaḥ &amp;
+<l>yāvat kāyamanastāpatamobhiḥ parilupyatām // UtSst_19.10 //</l></p>
+
+<p>deva prasīda yāvan me tvanmārgaparipanthikāḥ &amp;
+<l>paramārthamuṣo vaśyā bhūyāsur guṇataskarāḥ // UtSst_19.11 //</l></p>
+
+<p>tvad bhaktisudhāsārair mānasam āpūryatāṃ mamāśu vibho &amp;
+<l>yāvad imā uhyantāṃ niḥśeṣāsāravāsanāḥ plutvā // UtSst_19.12 //</l></p>
+
+<p>mokṣadaśāyāṃ bhaktis tvayi kuta iva martyadharmiṇo 'pi na sā &amp;
+<l>rājati tato 'nurūpām āropaya siddhibhūmikām aja mām // UtSst_19.13 //</l></p>
+
+<p>siddhilavalābhalubdhaṃ mām avalepena mā vibho saṃsthāḥ &amp;
+<l>kṣāmas tvadbhaktimukhe prollasadaṇimādipakṣato mokṣaḥ // UtSst_19.14 //</l></p>
+
+<p>dāsasya me prasīdatu bhagavān etāvad eva nanu yāce &amp;
+<l>dātā tribhuvananātho yasya na tanmādṛśāṃ dṛśo viṣayaḥ // UtSst_19.15 //</l></p>
+
+<p>tvadvapuḥsmṛtisudhārasapūrṇe mānase tava padāmbujayugmam &amp;
+<l>māmake vikasad astu sadaiva prasravanmadhu kim apy atilokam // UtSst_19.16 //</l></p>
+
+<p>asti me prabhur asau janako 'tha tryambako 'tha jananī ca bhavānī &amp;
+<l>na dvitīya iha ko 'pi mamāstīty eva nirvṛtatamo vicareyam // UtSst_19.17 //</l></p>
+
+<p>carvanābhidhānam vimśam stotram</p>
+
+<p>nathaṃ tribhuvananāthaṃ bhūtisitaṃ trinayanaṃ triśūladharam &amp;
+<l>upavītīkṛtabhoginam indukalāśekharaṃ vande // UtSst_20.1 //</l></p>
+
+<p>naumi nijatanuvinismaradaṃśukapariveṣadhavalaparidhānam &amp;
+<l>vilasatkapālamālākalpitanṛttotsavākalpam // UtSst_20.2 //</l></p>
+
+<p>vande tān daivataṃ yeṣāṃ haraś ceṣṭā harocitāḥ &amp;
+<l>haraikapravaṇāḥ prāṇāḥ sadā saubhāgyasadmanām // UtSst_20.3 //</l></p>
+
+<p>krīḍitaṃ tava maheśvaratāyāḥ pṛṣṭhato 'nyad idam eva yathaitat &amp;
+<l>iṣṭamātraghaṭiteṣv avadāneṣv ātmanā param upāyam upaimi // UtSst_20.4 //</l></p>
+
+<p>tvaddhāmni viśvavandye 'sminn iyati krīḍane sati &amp;
+<l>tava nātha kiyān bhūyānn ānandarasasambhavaḥ // UtSst_20.5 //</l></p>
+
+<p>kathaṃ sa subhago mā bhūdyo gauryā vallabho haraḥ &amp;
+<l>haro 'pi mā bhūd atha kiṃ gauryāḥ paramavallabhaḥ // UtSst_20.6 //</l></p>
+
+<p>dhyānāmṛtamayaṃ yasya svātmamūlam anaśvaram &amp;
+<l>saṃvillatās tathārūpās tasya kasyāpi sattaroḥ // UtSst_20.7 //</l></p>
+
+<p>bhaktikaṇḍūsam ullāsāvasare parameśvara &amp;
+<l>mahānikaṣapāṣāṇasthūṇā pūjaiva jāyate // UtSst_20.8 //</l></p>
+
+<p>sadā srṣṭivinodāya sadā sthitisukhāsine &amp;
+<l>sadā tribhuvanāhāratṛptāya svāmine namaḥ // UtSst_20.9 //</l></p>
+
+<p>na kvāpi gatvā hitvāpi na kiṃcid idam eva ye &amp;
+<l>bhavyaṃ tvaddhāma paśyanti bhavyās tebhyo namo namaḥ // UtSst_20.10 //</l></p>
+
+<p>bhaktilakṣmīsamṛddhānāṃ kim anyad upayācitam &amp;
+<l>etayā vā daridraṇāṃ kim anyad upayācitam // UtSst_20.11 //</l></p>
+
+<p>duḥkhāny api sukhāyante viṣam apy amṛtāyate &amp;
+<l>mokṣāyate ca saṃsāro yatra mārgaḥ sa śaṅkaraḥ // UtSst_20.12 //</l></p>
+
+<p>mūle madhye 'vasāne ca nāsti duḥkhaṃ bhavajjuṣāṃ &amp;
+<l>tathāpi vayam īśāna sīdāmaḥ katham ucyatām // UtSst_20.13 //</l></p>
+
+<p>jñānayogādinānyeṣām apy apekṣitum arhati &amp;
+<l>prakāśaḥ svairiṇām iva bhavān bhaktimatāṃ prabho // UtSst_20.14 //</l></p>
+
+<p>bhaktānāṃ nārtayo nāpy asty ādhyānaṃ svātmanas tava &amp;
+<l>tathāpy asti śivety etat kim apy eṣāṃ bahirmukhe // UtSst_20.15 //</l></p>
+
+<p>sarvābhāsāvabhāso yo vimarśavalito 'khilam &amp;
+<l>aham etad iti staumi tāṃ kriyāśaktim īśa te // UtSst_20.16 //</l></p>
+
+<p>vartante jantavo 'śeṣā api brahmendraviṣṇavaḥ &amp;
+<l>grasamānās tato vande deva viśvaṃ bhavanmayam // UtSst_20.17 //</l></p>
+
+<p>sato vināśasambandhān matparaṃ nikhilaṃ mṛṣā &amp;
+<l>evamevodyate nātha tvayā saṃhāralīlayā // UtSst_20.18 //</l></p>
+
+<p>dhyātam ātmupatiṣṭhata eva tvadvapur varada bhaktidhanānām &amp;
+<l>apy acintyam akhilādbhutacintākartṛtāṃ prati ca te vijayante // UtSst_20.19 //</l></p>
+
+<p>tāvakabhaktirasāsavasekād iva sukhitamarmamaṇḍalasphuritaiḥ &amp;
+<l>nṛtyati vīrajano niśi vetālakulaiḥ kṛtotsāhaḥ // UtSst_20.20 //</l></p>
+
+<p>ārabdhā bhavadabhinutir amunā yenāṅgakena mama śambho &amp;
+<l>tenāparyantam imaṃ kālaṃ dṛḍham akhilam eva bhaviṣīṣṭa // UtSst_20.21 //</l></p>
+
+  </body>
+</text>
+</TEI>

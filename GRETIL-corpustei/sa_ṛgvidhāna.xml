@@ -1,0 +1,4045 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_RgvidhAna">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Ṛgvidhāna</title>
+	<author></author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>Muneo Tokunaga</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Muneo Tokunaga</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/1_veda/5_vedang/3_pratis/rgvidh_u.htm">rgvidh_u.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Rgvidhana
+<lb/>Based on the edition by M.S. Bhat
+<lb/>Input by Muneo Tokunaga
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>M.S. Bhat</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Ṛgvidhāna = RgV,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Veda -- Vedāṅga -- Prātiśākhya</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn" xml:id="RgV">
+  <body>
+<head>atha.ṛgvidhānam</head>
+
+<lg xml:id="RgV_1.1.1">
+<l xml:id="RgV_1.1.1a">svayambhuve.brahmaṇe.viśvagoptre.namaskṛtvā.mantradṛgbhyas.tathaiva./</l>
+<l xml:id="RgV_1.1.1b">vivakṣur.asmy.ṛgvidhānam.purāṇam.purādṛṣṭam.ṛṣibhir.mantra.dṛgbhiḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.1.2">
+<l xml:id="RgV_1.1.2a">mantrebhyo.mantra.dṛgbhyaś.ca.samāmnāyānupūrvaśaḥ./</l>
+<l xml:id="RgV_1.1.2b">karmaṇām.ṛṣi.dṛṣṭānām.vidhim.provāca.śaunakaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.1.3">
+<l xml:id="RgV_1.1.3a">ṛṣibhir.vividhā.mantrā.dṛṣṭā.dṛṣṭa.prayojanāḥ./</l>
+<l xml:id="RgV_1.1.3b">prayojanāya.coddiṣṭās.tasmiṃs.tasmin.pradarśitāḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.1.4">
+<l xml:id="RgV_1.1.4a">nānārthāni.ca.karmāṇi.śānti.puṣṭy.āśrayāṇi.ca./</l>
+<l xml:id="RgV_1.1.4b">siddhayaś.ca.tapo.mūlāḥ.śraddadhānasya.kurvataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.1.5">
+<l xml:id="RgV_1.1.5a">stuty.ādayo.ye.vikārāḥ.pradiṣṭās.tathā.arthavādā.rkṣu.sūkteṣu.caiva./</l>
+<l xml:id="RgV_1.1.5b">yair..yaiḥ.kāmair.ṛṣir.devatāś.ca.tuṣṭūṣyante..tān..śṛṇuṣva.ucyamānān.//</l>
+</lg>
+
+<lg xml:id="RgV_1.1.6">
+<l xml:id="RgV_1.1.6a">āyuḥ.svargo.draviṇam.sūnavaś.ca.caturvidham.proktam.āśāsyam.agre./</l>
+<l xml:id="RgV_1.1.6b">anye.kāmāḥ.śataśaḥ.sampradiṣṭāḥ.saṃstuvadbhir.ṛṣibhir.devatāś.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_1.2.7">
+<l xml:id="RgV_1.2.7a">siddhā.mantrā.vidhinā.brāhmaṇasya.phalam.yacchanti.vidhivat.prayuktāḥ./</l>
+<l xml:id="RgV_1.2.7b">satyam.teṣām.sādhanam.samyamaś.ca.śamas.titikṣā.anasūyā.damaś.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_1.2.8">
+<l xml:id="RgV_1.2.8a">tasmād.dvijaḥ.praśānta.ātmā.japa.homa.parāyaṇaḥ./</l>
+<l xml:id="RgV_1.2.8b">tapasy.adhyayane.yukto.bhaved.bhūta.anukampakaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.2.9">
+<l xml:id="RgV_1.2.9a">kṣatriyo.bāhu.vīryeṇa.tared.āpadam.ātmanaḥ./</l>
+<l xml:id="RgV_1.2.9b">dhanena.vaiśya.śūdrau.tu.japa.homair.dvija.uttamaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.2.10">
+<l xml:id="RgV_1.2.10a">tapasā.svargam.āpnoti.tapasā.vindate.mahat./</l>
+<l xml:id="RgV_1.2.10b">tapo.yuktasya.sidhyanti.karmāṇi.niyata.ātmanaḥ./</l>
+</lg>
+<lg xml:id="RgV_1.2.11">
+<l xml:id="RgV_1.2.11a">vidveṣaṇam.saṃvananam.viṣaghnam.roga.nāśanam./</l>
+<l xml:id="RgV_1.2.11b">yena.yena.artham.ṛṣiṇā.yad.artham.devatāḥ.stutāḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.3.12">
+<l xml:id="RgV_1.3.12a">sa.sa.kāmaḥ.samṛddhaś.ca.teṣām.teṣām.tathā.tathā./</l>
+<l xml:id="RgV_1.3.12b">tāni.karmāṇi.vakṣyāmi.vividhāni.ca.karmaṇām.//</l>
+</lg>
+
+<lg xml:id="RgV_1.3.13">
+<l xml:id="RgV_1.3.13a">puraścaraṇam.ādau.tu.karmaṇām.siddhi.kārakam./</l>
+<l xml:id="RgV_1.3.13b">svādhyāya.abhyasanasya.ādau.prājāpatyam.cared.dvijaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.3.14">
+<l xml:id="RgV_1.3.14a">keśa.śmaśru.loma.nakhān.vāpayitvā.āplutaḥ.śuciḥ./</l>
+<l xml:id="RgV_1.3.14b">tiṣṭhed.ahani.rātrau.tu.śucir.āsīta.vāg.yataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.3.15">
+<l xml:id="RgV_1.3.15a">satya.vādī.pavitrāṇi.japed.vyāhṛtayas.tathā./</l>
+<l xml:id="RgV_1.3.15b">om.kāra.ādyās.tu.tā.japtvā.sāvitrīm.ca.tad.ity.ṛcam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.3.16">
+<l xml:id="RgV_1.3.16a">āpo.hi.ṣṭha.iti.sūktam.tu.śuddhavatyo.aghamarṣaṇam./</l>
+<l xml:id="RgV_1.3.16b">śaṃvatyaḥ.svastimatyaś.ca.pāvamānyas.tathaiva.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_1.4.17">
+<l xml:id="RgV_1.4.17a">sarvatra.etat.prayoktavyam.ādāv.ante.ca.karmaṇām./</l>
+<l xml:id="RgV_1.4.17b">āsahasrād.āśatād.vā.daśa.antam.athavā.japet.//</l>
+</lg>
+
+<lg xml:id="RgV_1.4.18">
+<l xml:id="RgV_1.4.18a">om.kāram.vyāhṛtīs.tisraḥ.sāvitrīm.athavā.ayutam./</l>
+<l xml:id="RgV_1.4.18b">tarpayitvā.adbhir.ācāryān.ṛṣīṃś.chandāṃsi.devatāḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.4.19">
+<l xml:id="RgV_1.4.19a">prapadyeta.virūka.akṣam.raudram.mantra.gaṇam.japan./</l>
+<l xml:id="RgV_1.4.19b">anāryair.na.ca.bhāṣeta.na.śūdrair.na.api.garhitai.ḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.4.20">
+<l xml:id="RgV_1.4.20a">na.rajasvalayā.nāryā.patitair.na.antyajair.nṛbhi.ḥ./</l>
+<l xml:id="RgV_1.4.20b">na.deva.brāhmaṇa.dviṣṭair.na.ācārya.guru.nindakaiḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.4.21">
+<l xml:id="RgV_1.4.21a">na.mātṛ.pitṛ.vidviṣṭair.na.avamanyeta.kaṃcana./</l>
+<l xml:id="RgV_1.4.21b">maṅgala.ācāra.yukta.ḥ.syāt.trir.ahno.abhyupayan.apaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.5.22">
+<l xml:id="RgV_1.5.22a">ante.dvādaśa.rātrasya.sthālī.pākam.prakalpayet./</l>
+<l xml:id="RgV_1.5.22b">agnaye.ca.atha.somāya.tṛtīyām.ca.tayoḥ.saha.//</l>
+</lg>
+
+<lg xml:id="RgV_1.5.23">
+<l xml:id="RgV_1.5.23a">vaiśvadevīm.ca.raudrīm.ca.juhuyād.uttare.tataḥ./</l>
+<l xml:id="RgV_1.5.23b">avasānasya.pataye.tathā.anumataye.api.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_1.5.24">
+<l xml:id="RgV_1.5.24a">dhanvantaraya.ity.anyā.gandharva.apsarasām.api./</l>
+<l xml:id="RgV_1.5.24b">daśamī.brāhmaṇaspatyā.parā.tu.brahmaṇe.smṛtā.//</l>
+</lg>
+
+<lg xml:id="RgV_1.5.25">
+<l xml:id="RgV_1.5.25a">sarasvatyai.tathā.viṣṇor.antyā.sauviṣṭakṛty.api./</l>
+<l xml:id="RgV_1.5.25b">ājya.āhutaya.eva.ādau.sthālī.pāke.hute.punaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.5.26">
+<l xml:id="RgV_1.5.26a">hutvā.agnim.tarpayed.viprān.śucir.bhuñjīta.vāg.yataḥ./</l>
+<l xml:id="RgV_1.5.26b">tataḥ.śeṣam.vidhānena.śucir.bhuñjīta.vāg.yataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.6.27">
+<l xml:id="RgV_1.6.27a">kṛcchrāṇām.eṣa.sarveṣām.vidhir.ukto.anupūrvaśaḥ./</l>
+<l xml:id="RgV_1.6.27b">prājāpatya.atikṛcchrasya.tathā.sāṃtapanasya.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_1.6.28">
+<l xml:id="RgV_1.6.28a">parākasya.ca.kṛcchrasya.vidhiś.cāndrāyaṇasya.ca./</l>
+<l xml:id="RgV_1.6.28b">ekena.śuddhim.āpnoti.dvābhyām.pāpaiḥ.pramucyate.//</l>
+</lg>
+
+<lg xml:id="RgV_1.6.29">
+<l xml:id="RgV_1.6.29a">tribhir.sidhyanti.mantrāś.ca.mucyate.ca.upapātakai.h/(?)</l>
+<l xml:id="RgV_1.6.29b">caturbhir.bhrūṇahatyāyās.tathaiva.ayājya.yājanāt.//</l>
+</lg>
+
+<lg xml:id="RgV_1.6.30">
+<l xml:id="RgV_1.6.30a">pañcabhiḥ.pātakaiḥ.sarvair.duṣkṛtaiś.ca.pramucyate./</l>
+<l xml:id="RgV_1.6.30b">tapta.kṛcchreṇa.sarvāṇi.pāpāni.pratibādhate.//</l>
+</lg>
+
+<lg xml:id="RgV_1.6.31">
+<l xml:id="RgV_1.6.31a">cāndrāyaṇam.saha.ādy.antam.ebhi.ḥ.kṛcchraiḥ.samam.smṛtam./</l>
+<l xml:id="RgV_1.6.31b">tribhiś.cāndrāyaṇaiḥ.pūto.brahma.lokam.samaśnute.//</l>
+</lg>
+
+<lg xml:id="RgV_1.7.32">
+<l xml:id="RgV_1.7.32a">aṣṭābhir.devatāḥ.sākṣāt.paśyeta.varadās.tathā./</l>
+<l xml:id="RgV_1.7.32b">chandāṃsi.daśabhir.jñātvā.sarvān.kāmānt.samaśnute.//</l>
+</lg>
+
+<lg xml:id="RgV_1.7.33">
+<l xml:id="RgV_1.7.33a">tryaham.prātas.tryaham.sāyam.tryaham.adyād.ayācitam./</l>
+<l xml:id="RgV_1.7.33b">tryaham.param.ca.na.aśnīyāt.prājāpatyam.caran.dvijaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.7.34">
+<l xml:id="RgV_1.7.34a">eka.ekam.grāsam.aśnīyāt.tryahāṇi.trīṇi.pūrvavat./</l>
+<l xml:id="RgV_1.7.34b">tryaham.ca.upavased.antyam.atikṛcchram.caran.dvijaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.7.35">
+<l xml:id="RgV_1.7.35a">go.mūtram.gomayam.kṣīram.dadhi.sarpiḥ.kuśa.udakam./</l>
+<l xml:id="RgV_1.7.35b">eka.rātra.upavāsaś.ca.kṛcchraḥ.sāṃtapanaḥ.smṛtaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.7.36">
+<l xml:id="RgV_1.7.36a">etam.eva.tryahair.yuktam.mahā.sāṃtapanam.viduḥ./</l>
+<l xml:id="RgV_1.7.36b">upavāsas.tu.sata.aham.śiśu.sāṃtapanam.smṛtam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.8.37">
+<l xml:id="RgV_1.8.37a">tapta.kṛcchram.caran.vipro.jala.kṣīra.ghṛta.anilān./</l>
+<l xml:id="RgV_1.8.37b">pratitryaham.pibed.uṣṇānt.sakṛtsnāyī.saṃhāhitaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.8.38">
+<l xml:id="RgV_1.8.38a">niyatas.tu.pibed.apaḥ.prājāpatya.vidhiḥ.smṛtaḥ./</l>
+<l xml:id="RgV_1.8.38b">yati.kṛcchram.vadanty.etad.rapasām.apanodanam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.8.39">
+<l xml:id="RgV_1.8.39a">yata.ātmano.apramattasya.dvādaśa.aham.abhojanam./</l>
+<l xml:id="RgV_1.8.39b">parāko.nāma.kṛcchro.ayam.sarva.pāpa.apanodanaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.8.40">
+<l xml:id="RgV_1.8.40a">eka.ekam.hrāsayet.piṇḍam.kṛṣṇe.śukle.ca.vardhayet./</l>
+<l xml:id="RgV_1.8.40b">upaspṛśaṃs.triṣavaṇam.etac.cāndrāyaṇam.vratam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.8.41">
+<l xml:id="RgV_1.8.41a">etam.eva.vidhim.kṛtsnam.ācared.yava.madhyame./</l>
+<l xml:id="RgV_1.8.41b">śukla.pakṣa.ādi.niyataḥ.caraṃś.cāndrāyaṇa.vratam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.9.42">
+<l xml:id="RgV_1.9.42a">caturaḥ.prātar.aśnīyād.vipraḥ.piṇḍān.kṛta.āhnikaḥ./</l>
+<l xml:id="RgV_1.9.42b">caturo.astamite.sūrye.śiśu.cāndrayaṇam.smṛtam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.9.43">
+<l xml:id="RgV_1.9.43a">aṣṭāv.aṣṭau.samaśnīyāt.piṇḍān.madhyaṃdine.sthite./</l>
+<l xml:id="RgV_1.9.43b">niyata.ātmā.haviṣyasya.yati.cāndrāyaṇa.vratam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.9.44">
+<l xml:id="RgV_1.9.44a">yathā.kathaṃcit.piṇḍānām.tisro.aśītīḥ.samāhitaḥ./</l>
+<l xml:id="RgV_1.9.44b">māsena.aśnan.haviṣyasya.candrasya.eti.salokatām.//</l>
+</lg>
+
+<lg xml:id="RgV_1.9.45">
+<l xml:id="RgV_1.9.45a">etad.rudrās.tathā.ādityā.vasavaś.ca.ācaran.vratam./</l>
+<l xml:id="RgV_1.9.45b">sarva.akuśala.mokṣāya.marutaś.ca.ṛbhubhiḥ.saha.//</l>
+</lg>
+
+<lg xml:id="RgV_1.9.46">
+<l xml:id="RgV_1.9.46a">yāvakaḥ.sapta.rātram.tu.pātavyo.niyata.ātmanā./(?)</l>
+<l xml:id="RgV_1.9.46b">sthāna.āsana.triṣavaṇair.japatā.pāvanāni.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_1.10.47">
+<l xml:id="RgV_1.10.47a">eka.ekam.sapta.rātreṇa.punāti.vidhivat.kṛtaḥ./</l>
+<l xml:id="RgV_1.10.47b">tvag.asṛk.piśita.asthīni.medo.majjānam.eva.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_1.10.48">
+<l xml:id="RgV_1.10.48a">eka.ekam.sapta.rātram.tu.tvag.ādīnām.viśodhanam./</l>
+<l xml:id="RgV_1.10.48b">ebhir.vratair.vipūta.ātmā.kuryāt.karmāṇy.atandritaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.10.49">
+<l xml:id="RgV_1.10.49a">iṣṭān.kāmān.tataḥ.sarvān.avāpnoti.na.saṃśayaḥ./</l>
+<l xml:id="RgV_1.10.49b">kaṇa.piṇyāka.takrāṇām.eka.ekam.śodhanam.bhavet.//</l>
+</lg>
+
+<lg xml:id="RgV_1.10.50">
+<l xml:id="RgV_1.10.50a">śuddha.ātmā.karma.kurvīta.satya.vādī.jita.indriyaḥ./</l>
+<l xml:id="RgV_1.10.50b">evam.śuddhasya.karmāṇi.mantrair.vakṣyāmi.tadyathā.//</l>
+</lg>
+
+<lg xml:id="RgV_1.10.51">
+<l xml:id="RgV_1.10.51a">trirātram.eva.upavased.āditaḥ.sarva.karmaṇām./</l>
+<l xml:id="RgV_1.10.51b">trīṇi.naktāni.vā.kuryāt.tataḥ.karma.samārabhet.//</l>
+</lg>
+
+<lg xml:id="RgV_1.11.52">
+<l xml:id="RgV_1.11.52a">nitya.prayogiṇām.caiva.prayoga.ādau.vratam.tryaham./</l>
+<l xml:id="RgV_1.11.52b">upariṣṭād.upavaset.kṛtvā.vā.sāmnipātikam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.11.53">
+<l xml:id="RgV_1.11.53a">āyuṣyāṇy.eva.karmāṇi.matra.yuktaḥ.samārabhet./</l>
+<l xml:id="RgV_1.11.53b">śaṃvatyaḥ.svastimatyaś.ca.japeta.trivṛtā.ṛcaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.11.54">
+<l xml:id="RgV_1.11.54a">araṇye.ca.udite.sūrye.diśam.prāpya.aparājitām./</l>
+<l xml:id="RgV_1.11.54b">prācīm.atha.uttarām.vā.api.śucau.deśe.samāhitaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.11.55">
+<l xml:id="RgV_1.11.55a">savāsāḥ.saśirasko.apsu.snātvā.abhyukṣya.japed.dvijaḥ./</l>
+<l xml:id="RgV_1.11.55b">śuddhavatyas.tathā.abvatyaḥ.pāvamānyo.aghamarṣaṇam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.11.56">
+<l xml:id="RgV_1.11.56a">evam.trir.āplutya.śuciḥ.prāṇa.āyāmānt.samācaret./</l>
+<l xml:id="RgV_1.11.56b">trīn.ṣaḍ.aṣṭau.dvādaśa.vā.ṣoḍaśa.aṣṭādaśa.api.vā.//</l>
+</lg>
+
+<lg xml:id="RgV_1.12.57">
+<l xml:id="RgV_1.12.57a">āśatād.vāyamet.prāṇān.japan.brahma.aghamarṣaṇam./(?)</l>
+<l xml:id="RgV_1.12.57b">yāvad.vā.manasas.tuṣṭis.tāvat.prāṇānt.samāyamet.//</l>
+</lg>
+
+<lg xml:id="RgV_1.12.58">
+<l xml:id="RgV_1.12.58a">yathā.yathā.manas.tasya.duṣkṛtam.karma.garhati./</l>
+<l xml:id="RgV_1.12.58b">tathā.tathā.śarīram.tat.tena.adharmeṇa.mucyate.//</l>
+</lg>
+
+<lg xml:id="RgV_1.12.59">
+<l xml:id="RgV_1.12.59a">prāṇa.āyāmair.dagdha.doṣaḥ.śukla.ambara.dharaḥ.śuciḥ./</l>
+<l xml:id="RgV_1.12.59b">yathā.vidhy.apa.ācamya.ārohed.dharma.prastaram.//</l>
+</lg>
+
+<lg xml:id="RgV_1.12.60">
+<l xml:id="RgV_1.12.60a">pavitra.pāṇiḥ.kṛtvā.tu.upastham.dakṣiṇa.uttaram./</l>
+<l xml:id="RgV_1.12.60b">diśor.eva.antaram.prekṣya.animiṣam.chādya.cakṣuṣī.//</l>
+</lg>
+
+<lg xml:id="RgV_1.12.61">
+<l xml:id="RgV_1.12.61a">om.kārma.vyāhṛtīs.tisraḥ.sāvitrīm.ca.tad.ity.ṛcam./</l>
+<l xml:id="RgV_1.12.61b">manasā.etā.anudrutya.veda.ādim.samupakamet.//</l>
+</lg>
+
+<lg xml:id="RgV_1.13.62">
+<l xml:id="RgV_1.13.62a">mandram.eva.paṭhet.prātar.uccair.madhyaṃdine.paṭhet./</l>
+<l xml:id="RgV_1.13.62b">uccair.eva.apara.ahne.tu.saṃdhyā.kāla.upāramet.//</l>
+</lg>
+
+<lg xml:id="RgV_1.13.63">
+<l xml:id="RgV_1.13.63a">brāhme.muhūrte.ca.utthāya.trir.āplutya.paṭhed.dvijaḥ./</l>
+<l xml:id="RgV_1.13.63b">madhyamām.vṛttim.āsthāya.na.drutām.na.vilambitām.//</l>
+</lg>
+
+<lg xml:id="RgV_1.13.64">
+<l xml:id="RgV_1.13.64a">pūrvām.saṃdhyām.japais.tiṣṭhed.upāsīta.ca.paścimām./</l>
+<l xml:id="RgV_1.13.64b">na.ca.antarā.vyāhareta.viramed.vā.kathaṃcana.//</l>
+</lg>
+
+<lg xml:id="RgV_1.13.65">
+<l xml:id="RgV_1.13.65a">viramed.brāhmaṇe.prāpte.kāmam.tena.tu.saṃvadet./</l>
+<l xml:id="RgV_1.13.65b">śūdram.dṛṣṭvā.eva.samprāptam.na.adhīyīta.kathaṃcana.//</l>
+</lg>
+
+<lg xml:id="RgV_1.13.66">
+<l xml:id="RgV_1.13.66a">āgneyam.sūktam.ādyam.tu.mukhyam.brahma.ṛṣi.sammatam./</l>
+<l xml:id="RgV_1.13.66b">rāyas.poṣa.karam.dhanyam.japan.vipro.artham.āpnuyāt.//</l>
+</lg>
+
+<lg xml:id="RgV_1.14.67">
+<l xml:id="RgV_1.14.67a">ṛṣim.sarvam.idam.japtvā.saputam.niyata.ḥ.śuciḥ./(?)</l>
+<l xml:id="RgV_1.14.67b">saṃhitā.phalam.āpnoti.ṛgvedasya.na.saṃśayaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.14.68">
+<l xml:id="RgV_1.14.68a">ekādaśa.guṇam.hy.etaj.japan.brahma.sanātanam./</l>
+<l xml:id="RgV_1.14.68b">sarvān.kāmān.avāpnoti.pāpaiś.ca.parimucyate.//</l>
+</lg>
+
+<lg xml:id="RgV_1.14.69">
+<l xml:id="RgV_1.14.69a">anaśnan.saṃhitām.etām.prātaḥ.prātar.dine.dine./</l>
+<l xml:id="RgV_1.14.69b">āyur.vidhyām.dhanam.putrān.gṛhāṃś.ca.āpnoty.anāmayān.//</l>
+</lg>
+
+<lg xml:id="RgV_1.14.70">
+<l xml:id="RgV_1.14.70a">etad.brahma.japan.śūdrān.na.īkṣeta.anyāṃś.ca.tadvidhān./</l>
+<l xml:id="RgV_1.14.70b">prekṣya.ācamya.udakam.pūtaḥ.paśyed.gām.agni.bhāskarau.//</l>
+</lg>
+
+<lg xml:id="RgV_1.14.71">
+<l xml:id="RgV_1.14.71a">mandram.japo.daśa.guṇa.upāṃśu.syāt.śata.anvitaḥ./</l>
+<l xml:id="RgV_1.14.71b">sahasram.mānasam.vidyād.eṣa.japya.vidhiḥ.smṛtaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.15.72">
+<l xml:id="RgV_1.15.72a">ādāv.eva.tu.sāvitryā.karma.kurvīta.śāntaye./</l>
+<l xml:id="RgV_1.15.72b">puṣṭaye.dhana.lābhāya.paśu.lābhāya.bhūtaye.//</l>
+</lg>
+
+<lg xml:id="RgV_1.15.73">
+<l xml:id="RgV_1.15.73a">eṣā.hi.sammitā.vedaiḥ.sarva.brahmamaī.nicṛt./</l>
+<l xml:id="RgV_1.15.73b">ugreṇa.tapasā.dṛṣṭā.viśvāmitreṇa.dhīmatā.//</l>
+</lg>
+
+<lg xml:id="RgV_1.15.74">
+<l xml:id="RgV_1.15.74a">homāṃś.ca.japa.yajñāṃś.ca.nityam.kurvīta.ca.etayā./</l>
+<l xml:id="RgV_1.15.74b">sarva.kāma.samṛddhy.artham.param.braham.idam.ucyate.//</l>
+</lg>
+
+<lg xml:id="RgV_1.15.75">
+<l xml:id="RgV_1.15.75a">eṣā.eva.pratiloma.uktā.pacchaḥ.śatru.vināśinī./(?)</l>
+<l xml:id="RgV_1.15.75b">akṣara.pratilomā.iyam.abhicāreṣu.śasyate.//</l>
+</lg>
+
+<lg xml:id="RgV_1.15.76">
+<l xml:id="RgV_1.15.76a">akṣara.pratikomā.iyam.yasmin.yujyeta.karmaṇi./</l>
+<l xml:id="RgV_1.15.76b">tad.amogham.vijānīyād.etad.vai.brahmaṇo.balam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.15.77">
+<l xml:id="RgV_1.15.77a">vyāghātaka.idhma.samidho.akṣara.pratilomayā./(?)</l>
+<l xml:id="RgV_1.15.77b">juhuyāt.sārṣapam.tailam.vaibhītaka.kṛta.srucā.//</l>
+</lg>
+
+<lg xml:id="RgV_1.15.78">
+<l xml:id="RgV_1.15.78a">ya.icchet.pīḍanam.śatror.api.vā.uccāṭanam.punaḥ./</l>
+<l xml:id="RgV_1.15.78b">pacchaḥ.sampīḍayet.śatrūn.varṇaśaś.ca.pramāpayet.//</l>
+</lg>
+
+<lg xml:id="RgV_1.16.79">
+<l xml:id="RgV_1.16.79a">ṛgveda.ādya.sūktasya.vidhim.vakṣyāmy.ataḥ.param./</l>
+<l xml:id="RgV_1.16.79b">yathā.ṛṣir.madhucchandāḥ.karma.etena.akarot.purā.//</l>
+</lg>
+
+<lg xml:id="RgV_1.16.80">
+<l xml:id="RgV_1.16.80a">śirasā.dhārayed.agnim.niyataḥ.parivatsaram./</l>
+<l xml:id="RgV_1.16.80b">caturtha.prāṇa.kālīyo.huta.śiṣṭam.adan.haviḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.16.81">
+<l xml:id="RgV_1.16.81a">juhvat.trir.upatiṣṭheta.satya.vādī.dine.dine./</l>
+<l xml:id="RgV_1.16.81b">vrata.kāle.tu.samprāpta.āgneyam.nirvapec.carutm.//</l>
+</lg>
+
+<lg xml:id="RgV_1.16.82">
+<l xml:id="RgV_1.16.82a">anagnau.dhyāta.mātro.agnir.vrata.ante.asya.upatiṣṭhati./</l>
+<l xml:id="RgV_1.16.82b">daheyam.iti.yam.cecchettam.dahaty.eva.pāvakaḥ.//(?)</l>
+</lg>
+<lg xml:id="RgV_1.16.83">
+<l xml:id="RgV_1.16.83a">apsv.apy.agnir.jvalaty.eva.tad.vratasya.mahātmanaḥ./</l>
+<l xml:id="RgV_1.16.83b">samardhayati.tam.ca.iṣṭaiḥ.kāmair.vahniḥ.prayatnataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.17.84">
+<l xml:id="RgV_1.17.84a">ataḥ.param.tṛcāḥ.sapta.vāyv.ādyā.ye.prakīrtitāḥ./</l>
+<l xml:id="RgV_1.17.84b">tān.japan.prayato.nityam.iṣṭān.kāmānt.samaśnute.//</l>
+</lg>
+
+<lg xml:id="RgV_1.17.85">
+<l xml:id="RgV_1.17.85a">medhātithāv.ṛṣau.punaḥ.sadasas.patim.ity.ṛcam./</l>
+<l xml:id="RgV_1.17.85b">medhā.kāmo.japen.nityam.juhuyāt.ca.ājyam.etayā.//</l>
+</lg>
+
+<lg xml:id="RgV_1.17.86">
+<l xml:id="RgV_1.17.86a">syonā.iti.pṛthivīm.nityam.snātvā.vipraḥ.śucir.japet./</l>
+<l xml:id="RgV_1.17.86b">vindate.mahatīm.bhūmim.asapatnām.akaṇṭakām.//</l>
+</lg>
+
+<lg xml:id="RgV_1.17.87">
+<l xml:id="RgV_1.17.87a">idam.viṣṇur.iti.imābhiḥ.pañcabhiḥ.śrāddha.karmaṇi./</l>
+<l xml:id="RgV_1.17.87b">aṅguṣṭham.anne.avagāhya.tena.rakṣāṃsi.bādhate.//</l>
+</lg>
+
+<lg xml:id="RgV_1.17.88">
+<l xml:id="RgV_1.17.88a">sapta.janma.kṛtam.pāpam.kṛtvā.ca.abhakṣya.bhakṣaṇam./</l>
+<l xml:id="RgV_1.17.88b">tad.viṣṇor.ity.apām.madhye.sakṛj.japtvā.viśudhyati.//</l>
+</lg>
+
+<lg xml:id="RgV_1.17.89">
+<l xml:id="RgV_1.17.89a">ambayo.yanti.yā.proktā.navarcas.tv.abhiṣecanīḥ./</l>
+<l xml:id="RgV_1.17.89b">āyuṣyās.tāḥ.pariproktā.bhaiṣajyāḥ.pāpa.mocanīḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.17.90">
+<l xml:id="RgV_1.17.90a">śunahśepam.ṛṣim.baddhaḥ.samniruddho.athavā.japet./</l>
+<l xml:id="RgV_1.17.90b">mucyate.sarva.pāśebhyo.gadī.ca.apy.agadī.bhavet.//</l>
+</lg>
+
+<lg xml:id="RgV_1.17.91">
+<l xml:id="RgV_1.17.91a">ya.icchet.śāśvatān.kāmān.indrāt.prāptum.puraṃdarāt./</l>
+<l xml:id="RgV_1.17.91b">sa.ṣoḍaśabhir.eva.ṛgbhir.indram.stūyād.dine.dine.//</l>
+</lg>
+
+<lg xml:id="RgV_1.18.92">
+<l xml:id="RgV_1.18.92a">hairaṇyastūpam.indrasya.sūktam.karma.abhisaṃstavam./</l>
+<l xml:id="RgV_1.18.92b">taj.japan.prayataḥ.śatrūn.ayatnāt.pratibādhate.//</l>
+</lg>
+
+<lg xml:id="RgV_1.18.93">
+<l xml:id="RgV_1.18.93a">ākṛṣṇena.ity.ṛcā.tv.eva.yo.nityam.sūryam.arcati./</l>
+<l xml:id="RgV_1.18.93b">prātar.madhye.astagam.vā.api.sa.jīved.agadaḥ.sukhī.//</l>
+</lg>
+
+<lg xml:id="RgV_1.18.94">
+<l xml:id="RgV_1.18.94a">ākṛṣṇena.ity.ṛcam.tv.ekām.dhyāyan.niśi.diva.okasaḥ./</l>
+<l xml:id="RgV_1.18.94b">agnau.hutvā.etayā.ca.ājyam.dīrgham.āyur.avāpnuyāt.//</l>
+</lg>
+
+<lg xml:id="RgV_1.18.95">
+<l xml:id="RgV_1.18.95a">ye.te.panthā.iti.imām.tu.sāvitrīm.adhvago.abhyaset./</l>
+<l xml:id="RgV_1.18.95b">svastimān.vrajate.adhvānam.gṛhāṃś.ca.āpnoty.anāmayān.//</l>
+</lg>
+
+<lg xml:id="RgV_1.18.96">
+<l xml:id="RgV_1.18.96a">sam.pūṣann.iti.yat.sūktam.ghauraiḥ.kaṇvo.jagāv.ṛṣiḥ./</l>
+<l xml:id="RgV_1.18.96b">adhvany.etad.vijñeyam.paripanthy.apasedhanam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.18.97">
+<l xml:id="RgV_1.18.97a">raudrībhiḥ.ṣaḍbhir.īśānam.tuṣṭūyād.yo.dine.dine./</l>
+<l xml:id="RgV_1.18.97b">sa.nārī.nara.go.śāntim.śaṅkarāt.prāpnuyāt.sadā.//</l>
+</lg>
+
+<lg xml:id="RgV_1.18.98">
+<l xml:id="RgV_1.18.98a">etena.eva.ṣaḍarcena.juhuyād.ājyam.anvaham./</l>
+<l xml:id="RgV_1.18.98b">carum.vā.kalpayed.raudram.bhūti.kāmo.atha.parvasu.//</l>
+</lg>
+
+<lg xml:id="RgV_1.19.99">
+<l xml:id="RgV_1.19.99a">ud.ity.udyantam.ādityam.upatiṣṭhed.dine.dine./</l>
+<l xml:id="RgV_1.19.99b">hṛd.roga.nāśanam.hy.etat.parama.ārogya.vardhanam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.19.100">
+<l xml:id="RgV_1.19.100a">dviṣantam.ity.atha.ardharcam.yam.dviṣyāt.tam.japant.smaret./</l>
+<l xml:id="RgV_1.19.100b">āgas.kṛt.sapta.rātreṇa.vidveṣam.adhigacchati.//</l>
+</lg>
+
+<lg xml:id="RgV_1.19.101">
+<l xml:id="RgV_1.19.101a">rogair.gṛhīto.arogī.ca.praskaṇvasya.utttamam.tṛcam./</l>
+<l xml:id="RgV_1.19.101b">ārogyam.etat.prayato.japen.nityam.anekaśaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.19.102">
+<l xml:id="RgV_1.19.102a">uttamas.tasya.ca.ardharco.dviṣad.dveṣa.iti.smṛtaḥ./</l>
+<l xml:id="RgV_1.19.102b">yam.dviṣyāt.tam.abhidhyāyed.dṛṣṭvā.ca.enam.japed.idam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.19.103">
+<l xml:id="RgV_1.19.103a">āgas.kṛc.cet.tri.rātreṇa.vidveṣam.samniyacchati./</l>
+<l xml:id="RgV_1.19.103b">udayaty.āyur.akṣayyam.tejo.madhyaṃdine.japan.//</l>
+</lg>
+
+<lg xml:id="RgV_1.20.104">
+<l xml:id="RgV_1.20.104a">astam.vrajati.sūrye.tu.dviṣantam.pratibādhate./</l>
+<l xml:id="RgV_1.20.104b">ojas.tejas.tathā.ārogyam.dviṣad.dveṣam.prakīrtitam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.20.105">
+<l xml:id="RgV_1.20.105a">nava.paśvā.iti.sūktāni.yāni.garbhe.parāśaraḥ./</l>
+<l xml:id="RgV_1.20.105b">arātīnām.haret.prāṇān.chatraṃś.caiva.niyacchati.//</l>
+</lg>
+
+<lg xml:id="RgV_1.20.106">
+<l xml:id="RgV_1.20.106a">sauparṇāni.pavitrāṇi.sūktāny.ekādaśa.abhyaset./</l>
+<l xml:id="RgV_1.20.106b">vāñchan.putrān.paśūn.vittam.svargam.āyur.anandhatām.//</l>
+</lg>
+
+<lg xml:id="RgV_1.20.107">
+<l xml:id="RgV_1.20.107a">ādhyātmikīḥ.ka.ity.etā.japais.tu.susamāhitaḥ./</l>
+<l xml:id="RgV_1.20.107b">prāpnuyāt.sa.param.dhāma.viśvam.jyotiḥ.sanātanam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.20.108">
+<l xml:id="RgV_1.20.108a">ānohadrīyam.āyuṣyam.vaiśvadevam.japan.muniḥ./</l>
+<l xml:id="RgV_1.20.108b">mumūrṣur.api.japtvā.etat.sarvam.āyur.avāpnuyāt.//</l>
+</lg>
+
+<lg xml:id="RgV_1.21.109">
+<l xml:id="RgV_1.21.109a">pitṝṇām.śrāddha.kāle.tu.madhv.ity.etat.tṛcam.japet./</l>
+<l xml:id="RgV_1.21.109b">aghorāḥ.pitaras.tasya.viśanti.jyotir.uttamam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.21.110">
+<l xml:id="RgV_1.21.110a">tvam.soma.iti.tu.sūktena.paśyec.candram.upoditam./</l>
+<l xml:id="RgV_1.21.110b">upatiṣṭhet.samit.pāṇir.māsi.māsi.navam.navam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.21.111">
+<l xml:id="RgV_1.21.111a">tam.māsam.tasya.duhkham.hi.na.jātu.trividham.bhavet./</l>
+<l xml:id="RgV_1.21.111b">gotamena.purā.dṛṣṭam.mṛtyor.nāśanam.ātmanaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.21.112">
+<l xml:id="RgV_1.21.112a">udyantam.upatiṣṭheta.pūrṇe.ca.etat.samāhitaḥ./</l>
+<l xml:id="RgV_1.21.112b">vāsāṃsy.api.sa.vindeta.candrasya.eti.salokatām.//</l>
+</lg>
+
+<lg xml:id="RgV_1.21.113">
+<l xml:id="RgV_1.21.113a">dhana.kāmo.japen.nityam.etā.iti.tu.nityaśaḥ./</l>
+</lg>
+<lg xml:id="RgV_1.22.113">
+<l xml:id="RgV_1.22.113b">snātvā.śucis.tu.niyata.iṣṭam.dhanam.avāpnuyāt.//</l>
+</lg>
+
+<lg xml:id="RgV_1.22.114">
+<l xml:id="RgV_1.22.114a">āyur.īpsann.imam.iti.kautsam.sūktam.sadā.abhyaset./</l>
+<l xml:id="RgV_1.22.114b">ājya.āhutiś.ca.juhuyāt.pratyṛcam.vāg.yataḥ.śuciḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.22.115">
+<l xml:id="RgV_1.22.115a">japed.āplutya.niyataḥ.sa.sākṣād.āpadam.taret./</l>
+<l xml:id="RgV_1.22.115b">apa.naḥ.śośucad.iti.snātvā.madhyaṃdine.ravau.//</l>
+</lg>
+
+<lg xml:id="RgV_1.22.116">
+<l xml:id="RgV_1.22.116a">śuddhi.kāmo.yata.āhāraḥ.pratyṛcam.juhuyād.ghṛtam./</l>
+<l xml:id="RgV_1.22.116b">samidho.anvaham.aṣṭau.vā.sūktam.etad.agha.apaham.//</l>
+</lg>
+
+<lg xml:id="RgV_1.22.117">
+<l xml:id="RgV_1.22.117a">yathā.muñja.ādi.veṣīkā.tathā.pāpāt.pramucyate./</l>
+<l xml:id="RgV_1.22.117b">jātavedasa.ity.ādi.sadā.svastyayane.japet.//</l>
+</lg>
+
+<lg xml:id="RgV_1.22.118">
+<l xml:id="RgV_1.22.118a">durge.pathi.prayātasya.na.asya.aribhyo.bhayam.bhavet./</l>
+<l xml:id="RgV_1.22.118b">rāja.kārye.aśva.yūthe.vā.abhiśasto.apy.anekadhā.//</l>
+</lg>
+
+<lg xml:id="RgV_1.22.119">
+<l xml:id="RgV_1.22.119a">aśakye.pratibhā.kārye.bhaye.prāṇa.antike.api.vā./(?)</l>
+<l xml:id="RgV_1.22.119b">jātavedasa.ity.etām.japaṃs.tebhyaḥ.pramucyate.//</l>
+</lg>
+
+<lg xml:id="RgV_1.22.120">
+<l xml:id="RgV_1.22.120a">siṣādhayiṣur.artham.ca.prasthito.manasā.japet./</l>
+<l xml:id="RgV_1.22.120b">siddha.arthaḥ.svastimān.eti.pramīyeta.na.ca.adhvani.//</l>
+</lg>
+
+<lg xml:id="RgV_1.23.121">
+<l xml:id="RgV_1.23.121a">kṛta.arthaḥ.sva.gṛhān.gacchann.etām.eva.sadā.abhyaset./</l>
+<l xml:id="RgV_1.23.121b">udite.savitary.etām.japed.astam.gate.tathā.//</l>
+</lg>
+
+<lg xml:id="RgV_1.23.122">
+<l xml:id="RgV_1.23.122a">ahaḥ.svastyayanam.prātā.rātri.svastyayanam.niśi./</l>
+<l xml:id="RgV_1.23.122b">vyuṣṭāyām.ca.japen.nityam.etām.duhsvapna.nāśinīm.//</l>
+</lg>
+
+<lg xml:id="RgV_1.23.123">
+<l xml:id="RgV_1.23.123a">pramandina.iti.sūyantyām.japed.garbha.pramocinīm./</l>
+<l xml:id="RgV_1.23.123b">indram.ca.manasā.dhyāyen.nārī.garbham.pramuñcati.//</l>
+</lg>
+
+<lg xml:id="RgV_1.23.124">
+<l xml:id="RgV_1.23.124a">āpatsu.sarva.kāmo.vā.tritam.nityam.japed.ṛṣim./</l>
+<l xml:id="RgV_1.23.124b">japann.indrma.iti.snāto.vaiśvadevam.tu.saptakam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.23.125">
+<l xml:id="RgV_1.23.125a">mucyate.juhvad.ājyam.tu.viśvasmād.eva.so.aṃhasaḥ./</l>
+<l xml:id="RgV_1.23.125b">śantātīyam.param.sūktam.pañca.viṃśakam.uttamam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.23.126">
+<l xml:id="RgV_1.23.126a">nāsatyau.tu.namas.kṛtvā.parā.m.ṛddhim.avāpnuyāt./</l>
+<l xml:id="RgV_1.23.126b">dharma.saṃstavam.sūktam.rapasaś.ca.pramocanam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.23.127">
+<l xml:id="RgV_1.23.127a">imā.iti.japet.śaśvad.raudram.sūktam.dvijaḥ.śuciḥ./</l>
+<l xml:id="RgV_1.23.127b">āyur.vidyām.dhanam.putrān.gṛhāṃś.ca.āpnoty.anāmayān.//</l>
+</lg>
+
+<lg xml:id="RgV_1.24.128">
+<l xml:id="RgV_1.24.128a">vīreṣv.apatya.goṣṭheṣu.duhsvapne.ripram.ātmanaḥ./</l>
+<l xml:id="RgV_1.24.128b">mā.no.mahāntam.ity.ābhyām.tri.rātra.upoṣitaḥ.śuciḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.24.129">
+<l xml:id="RgV_1.24.129a">audumbarīs.tu.juhuyād.dadhi.madhv.ājya.saṃskṛtāḥ./</l>
+<l xml:id="RgV_1.24.129b">sūktena.juhuyād.ājyam.ādāv.ante.ca.karmaṇām.//</l>
+</lg>
+
+<lg xml:id="RgV_1.24.130">
+<l xml:id="RgV_1.24.130a">ūrdhva.bāhus.tu.sūktena.tuṣṭvā.ca.śataśo.bhavam./</l>
+<l xml:id="RgV_1.24.130b">chittvā.sarvān.mṛtyu.pāśān.jīved.rogair.vivarjitaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.24.131">
+<l xml:id="RgV_1.24.131a">tiṣṭhann.udyantam.ādityam.samit.pāṇiḥ.śuciḥ.sadā./</l>
+<l xml:id="RgV_1.24.131b">citram.ity.upatiṣṭheta.sūktena.anena.bhāskaram.//</l>
+</lg>
+
+<lg xml:id="RgV_1.24.132">
+<l xml:id="RgV_1.24.132a">atistavena.ca.etena.nityam.madhyaṃdine.ravim./</l>
+<l xml:id="RgV_1.24.132b">gṛṇann.apohate.ripram.prāpnoti.ca.dhana.āyuṣī.//</l>
+</lg>
+
+<lg xml:id="RgV_1.25.133">
+<l xml:id="RgV_1.25.133a">adhaḥ.svapnasya.iti.japet.prātaḥ.prātar.dine.dine./</l>
+<l xml:id="RgV_1.25.133b">duḥ.svapnam.nudate.kṣipram.na.ca.asya.abhojanād.bhayam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.25.134">
+<l xml:id="RgV_1.25.134a">ubhe.punāmi.iti.parā.ripughnyas.tu.prakīrtitāḥ./</l>
+<l xml:id="RgV_1.25.134b">tā.japan.hanti.rakṣāṃsi.sapatnāṃś.ca.niyacchati.//</l>
+</lg>
+
+<lg xml:id="RgV_1.25.135">
+<l xml:id="RgV_1.25.135a">nirvartya.pañca.yajñāṃś.ca.hutvā.ca.agnim.kṛta.āhnikaḥ./</l>
+<l xml:id="RgV_1.25.135b">ye.devāso.divya.nayā.japan.kāmān.avāpnuyāt.//</l>
+</lg>
+
+<lg xml:id="RgV_1.25.136">
+<l xml:id="RgV_1.25.136a">indrā.viṣṇū.namas.kṛtya.viṣṇor.nu.kam.iti.tribhiḥ./</l>
+<l xml:id="RgV_1.25.136b">samit.pāṇiḥ.śucir.bhūtvā.upatiṣṭhed.dine.dine.//</l>
+</lg>
+
+<lg xml:id="RgV_1.25.137">
+<l xml:id="RgV_1.25.137a">dharmam.buddhim.dhanam.putrān.ārogyam.brahma.vardhanam./</l>
+<l xml:id="RgV_1.25.137b">prāpnoti.ca.param.sthānam.jyotī.rūpam.sanātanam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.25.138">
+<l xml:id="RgV_1.25.138a">ātatāyinam.āyāntam.dṛṣṭvā.vyāghram.atho.vṛkam./</l>
+<l xml:id="RgV_1.25.138b">na.mā.garann.iti.japaṃs.tebhya.eva.pramucyate.//</l>
+</lg>
+
+<lg xml:id="RgV_1.25.139">
+<l xml:id="RgV_1.25.139a">tri.rātra.upoṣito.rātrau.japed.āsūrya.darśanāt./</l>
+<l xml:id="RgV_1.25.139b">āplutya.prayataḥ.saurīr.upatiṣṭhed.divākaram.//</l>
+</lg>
+
+<lg xml:id="RgV_1.26.140">
+<l xml:id="RgV_1.26.140a">na.enam.paśyanti.vai.caurās.tathā.anye.pāpa.vṛttayaḥ./</l>
+<l xml:id="RgV_1.26.140b">ekaḥ.śatāni.trāyeta.taskarebhyaś.caran.pathi.//</l>
+</lg>
+
+<lg xml:id="RgV_1.26.141">
+<l xml:id="RgV_1.26.141a">steyam.kṛtvā.dvijo.mohāt.tri.rātra.upoṣitaḥ.śuciḥ./</l>
+<l xml:id="RgV_1.26.141b">sūktam.japtvā.asya.vāmīyam.kṣipram.mucyeta.kilbiṣāt.//</l>
+</lg>
+
+<lg xml:id="RgV_1.26.142">
+<l xml:id="RgV_1.26.142a">jñāti.putra.suhṛn.mitrair.yaś.ca.rājyam.cikīrṣati./</l>
+<l xml:id="RgV_1.26.142b">nityam.sa.niyato.bhūtvā.sūktam.tu.manasā.japet.//</l>
+</lg>
+
+<lg xml:id="RgV_1.26.143">
+<l xml:id="RgV_1.26.143a">kayā.śubhā.iti.paiśunyam.kṛtvā.ācārya.nṛpa.dvijaiḥ./</l>
+<l xml:id="RgV_1.26.143b">śrutvā.para.rahasyam.tu.guror.apy.āha.śaunakaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.26.144">
+<l xml:id="RgV_1.26.144a">imam.nu.somam.ity.ete.dve.ṛcau.prayato.japet./</l>
+<l xml:id="RgV_1.26.144b">sarvān.kāmān.avāpnoti.na.kiṃcit.pātakam.bhavet.//</l>
+</lg>
+
+<lg xml:id="RgV_1.26.145">
+<l xml:id="RgV_1.26.145a">pitum.nv.ity.upatiṣṭheta.nityam.annam.upasthitam./</l>
+<l xml:id="RgV_1.26.145b">pūjayed.aśanam.nityam.bhuñjīyād.avikutsitam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.27.146">
+<l xml:id="RgV_1.27.146a">na.asya.syād.annajo.vyādhir.viṣam.apy.annatām.iyāt./</l>
+<l xml:id="RgV_1.27.146b">viṣam.ca.pītvā.etat.sūktam.japeta.viṣa.nāśanam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.27.147">
+<l xml:id="RgV_1.27.147a">na.avāg.yatas.tu.bhuñjīta.na.aśucir.na.jugupsitam./</l>
+<l xml:id="RgV_1.27.147b">dadyāc.ca.pūjayec.caiva.juhuyāc.ca.śuciḥ.sadā.//</l>
+</lg>
+
+<lg xml:id="RgV_1.27.148">
+<l xml:id="RgV_1.27.148a">kṣud.bhayam.na.asya.kiṃcit.syān.na.annajam.vyādhim.āpnuyāt./</l>
+<l xml:id="RgV_1.27.148b">utpatha.pratipanno.yo.bhraṣṭo.vā.api.pathaḥ.kvacit.//</l>
+</lg>
+
+<lg xml:id="RgV_1.27.149">
+<l xml:id="RgV_1.27.149a">panthānam.pratipadyeta.kṛtvā.vā.karma.garhitam./</l>
+<l xml:id="RgV_1.27.149b">agne.naya.iti.sūktena.pratyṛcam.juhuyād.ghṛtam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.27.150">
+<l xml:id="RgV_1.27.150a">japaṃś.ca.prayato.nityam.upatiṣṭheta.ca.analam./</l>
+<l xml:id="RgV_1.27.150b">snātvā.japed.anarvāṇam.namas.kṛtya.bṛhaspatim.//</l>
+</lg>
+
+<lg xml:id="RgV_1.28.151">
+<l xml:id="RgV_1.28.151a">vīrān.dhanam.ca.prāpnoti.suślokyam.ca.niyacchati./</l>
+<l xml:id="RgV_1.28.151b">kaṅkato.na.iti.sūktam.tu.viṣa.ārtaḥ.prayato.japet.//</l>
+</lg>
+
+<lg xml:id="RgV_1.28.152">
+<l xml:id="RgV_1.28.152a">viṣam.na.kramate.ca.asya.sarpād.dṛṣṭi.viṣād.api./</l>
+<l xml:id="RgV_1.28.152b">yat.kīṭalūṭāsu.viṣam.daṃṣṭri.vṛścikajam.ca.yat.//</l>
+</lg>
+
+<lg xml:id="RgV_1.28.153">
+<l xml:id="RgV_1.28.153a">maulam.ca.kṛtrimam.caiva.japant.sarvam.vyapohati./</l>
+<l xml:id="RgV_1.28.153b">dharmam.buddhim.dhanam.putrān.saubhāgyam.brahma.varcasam.//</l>
+</lg>
+<lg xml:id="RgV_1.28.154">
+<l xml:id="RgV_1.28.154a">ārogyam.puṣṭim.āyuṣyam.paśūn.vidyām.mahad.yaśaḥ./</l>
+<l xml:id="RgV_1.28.154b">tri.rātra.upoṣitaḥ.snātaḥ.prayataḥ.carita.vrataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.28.155">
+<l xml:id="RgV_1.28.155a">prāṇa.āyāma.śatam.kṛtvā.upatiṣṭhet.śata.kratum./</l>
+<l xml:id="RgV_1.28.155b">eka.aham.kṣura.samyuktaḥ.pādau.saṃdhāya.vāg.yataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.29.156">
+<l xml:id="RgV_1.29.156a">yo.jāta.iti.sūktena.ṛṣim.gṛtsamadam.smaran./</l>
+<l xml:id="RgV_1.29.156b">śata.kṛtvo.japed.etad.indra.śreṣṭha.iti.ca.antataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.29.157">
+<l xml:id="RgV_1.29.157a">eka.ahāl.labhate.vittam.dvy.ahāt.siddhim.anuttamām./</l>
+<l xml:id="RgV_1.29.157b">ahobhir.tribhir.ārogyam.caturbhir.aśanam.bahu.//</l>
+</lg>
+
+<lg xml:id="RgV_1.29.158">
+<l xml:id="RgV_1.29.158a">pañcabhir.brahmavarcasyam.ṣaḍbhir.āyuḥ.sukha.āvaham./</l>
+<l xml:id="RgV_1.29.158b">saptabhis.tanayān.puṣṭim.aṣṭahiḥ.prāpnuyād.yaśaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.29.159">
+<l xml:id="RgV_1.29.159a">priyo.bhavati.ca.indrasya.priyam.dhāma.sa.gacchati./</l>
+<l xml:id="RgV_1.29.159b">ripughnam.dasyu.śamanam.rāyas.pṣa.karam.param.//</l>
+</lg>
+
+<lg xml:id="RgV_1.29.160">
+<l xml:id="RgV_1.29.160a">gaṇānām.iti.yat.sūktam.taj.japet.sukha.vardhanam./</l>
+<l xml:id="RgV_1.29.160b">saṃdhyayoḥ.prayatas.tv.etaj.japen.nityam.bṛhaspatim.//</l>
+</lg>
+
+<lg xml:id="RgV_1.30.161">
+<l xml:id="RgV_1.30.161a">upatiṣṭheta.sūktena.sarva.kāma.samṛddhaye./</l>
+<l xml:id="RgV_1.30.161b">yo.me.rājann.iti.imām.tu.duhsvapna.śamanīm.ṛcam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.30.162">
+<l xml:id="RgV_1.30.162a">japtvā.nāśayati.kṣipram.duhsvapnam.brāhmaṇaḥ.śuciḥ./</l>
+<l xml:id="RgV_1.30.162b">aho.rātram.upoṣya.ekam.niyato.brahmavittamaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.30.163">
+<l xml:id="RgV_1.30.163a">prajā.artham.juhuyād.ājyam.carum.vā.payasi.śritam./</l>
+<l xml:id="RgV_1.30.163b">rākā.maham.iti.imābhiḥ.ṣaṣṭhyām.śuklasya.pañcabhiḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.30.164">
+<l xml:id="RgV_1.30.164a">haviḥ.śeṣam.svayam.prāśya.vindate.mahatīm.prajām./</l>
+<l xml:id="RgV_1.30.164b">vyādhinā.yo.abhibhūtaḥ.syād.ghoreṇa.prāṇa.hāriṇā.//</l>
+</lg>
+
+<lg xml:id="RgV_1.30.165">
+<l xml:id="RgV_1.30.165a">caturdaśīm.upoṣya.ekām.kṛṣṇasya.juhuyāc.carum./</l>
+<l xml:id="RgV_1.30.165b">ā.te.sūktena.raudreṇa.pratyṛcam.vāg.yataḥ.śuciḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.31.166">
+<l xml:id="RgV_1.31.166a">pūrvam.ājya.āhutīr.hutvā.atha.upasthāya.śaṃkaram./</l>
+<l xml:id="RgV_1.31.166b">haviḥ.śeṣeṇa.varteta.ekāntaram.atandritaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_1.31.167">
+<l xml:id="RgV_1.31.167a">pūrṇe.māsi.japen.mṛtyum.rogebhyaś.ca.pramucyate./</l>
+<l xml:id="RgV_1.31.167b">abhiśasyeta.yo.mohāt.kuryād.vā.karma.garhitam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.31.168">
+<l xml:id="RgV_1.31.168a">snātvā.bhuñjan.japed.apsu.ambī.ity.ṛcam.atandritaḥ./</l>
+<l xml:id="RgV_1.31.168b">adhvani.prasthito.yas.tu.paśyet.śakunim.utthitam.//</l>
+</lg>
+
+<lg xml:id="RgV_1.31.169">
+<l xml:id="RgV_1.31.169a">apraśastam.praśastam.vā.sthitvā.aikṣya.prayato.japet./</l>
+<l xml:id="RgV_1.31.169b">kanikradad.iti.sūktābhyām.upatiṣṭhet.kṛta.svaram.//</l>
+</lg>
+
+<lg xml:id="RgV_1.31.170">
+<l xml:id="RgV_1.31.170a">śakunim.vāyasam.vā.api.mṛgam.daṃṣṭriṇam.eva.ca./</l>
+<l xml:id="RgV_1.31.170b">apy.adṛṣṭvā.eva.japtavyam.etat.taskara.mohanam./E</l>
+</lg>
+
+<lg xml:id="RgV_2.1.1">
+<l xml:id="RgV_2.1.1a">kalyāṇa.vādī.vā.anyo.vā.na.vā.rauti.na.dṛśyate/</l>
+<l xml:id="RgV_2.1.1b">japed.eva.namas.kṛtya.siddha.arthaḥ.san.nivartate.//</l>
+</lg>
+
+<lg xml:id="RgV_2.1.2">
+<l xml:id="RgV_2.1.2a">na.tasya.asti.bhayam.kiṃcid.dasyubhyo.adhvani.vā.kvacit./</l>
+<l xml:id="RgV_2.1.2b">taraty.api.ca.durgāṇi.svastimāṃś.ca.sukhī.bhavet.//</l>
+</lg>
+
+<lg xml:id="RgV_2.1.3">
+<l xml:id="RgV_2.1.3a">yasya.bhuktam.na.jīryeta.na.tiṣṭhed.vā.kathaṃcana./</l>
+<l xml:id="RgV_2.1.3b">dhyātvā.so.attāram.annasya.agnir.asmi.ity.rcam.japet.//</l>
+</lg>
+
+<lg xml:id="RgV_2.1.4">
+<l xml:id="RgV_2.1.4a">viśvāmitrasya.saṃvādam.nady.atikramaṇe.japet./</l>
+<l xml:id="RgV_2.1.4b">āplutasya.ācamya.vidhivad.udakasya.añjalim.kṣipet.//</l>
+</lg>
+
+<lg xml:id="RgV_2.1.5">
+<l xml:id="RgV_2.1.5a">namaḥ.sravadbhya.ity.etad.yo.nityam.hi.samācaret./</l>
+<l xml:id="RgV_2.1.5b">tam.nadyaḥ.srotasaḥ.pānti.svam.putram.iva.mātaraḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.2.6">
+<l xml:id="RgV_2.2.6a">bhayam.ca.asya.na.vidyate.nadī.tīra.careṣv.api./</l>
+<l xml:id="RgV_2.2.6b">jala.carebhyo.bhūtebhyaḥ.śīta.uṣṇair.na.ca.bādhyate.//</l>
+</lg>
+
+<lg xml:id="RgV_2.2.7">
+<l xml:id="RgV_2.2.7a">pūrṇām.titīrṣuḥ.saritam.ramadhvam.iti.saṃsmaret./</l>
+<l xml:id="RgV_2.2.7b">o.sv.ity.ṛcam.apām.madhye.japed.yo.vai.nadīm.taran.//</l>
+</lg>
+
+<lg xml:id="RgV_2.2.8">
+<l xml:id="RgV_2.2.8a">sa.śīghram.tīram.āpnoti.gādham.vā.vindate.dvijaḥ./</l>
+<l xml:id="RgV_2.2.8b">yuktena.eva.rathena.āśu.yo.apām.pāram.titīrṣati.//</l>
+</lg>
+
+<lg xml:id="RgV_2.2.9">
+<l xml:id="RgV_2.2.9a">ud.va.ūrmir.iti.imām.tu.japeta.niyataḥ.svayam./</l>
+<l xml:id="RgV_2.2.9b">adhvānam.prasthitaś.caivam.āmandrair.iti.saṃsmaret.//</l>
+</lg>
+
+<lg xml:id="RgV_2.2.10">
+<l xml:id="RgV_2.2.10a">kāryāṇy.aśeṣataḥ.kṛtvā.punar.āyāti.vai.gṛham./</l>
+<l xml:id="RgV_2.2.10b">adātāram.supuṣṭa.artham.sarvadā.āviṣṭa.cetanam.//</l>
+</lg>
+
+<lg xml:id="RgV_2.2.11">
+<l xml:id="RgV_2.2.11a">hatvā.tad.dhanam.anvicchet.kim.te.kṛṇvanti.iti.smaran./</l>
+<l xml:id="RgV_2.2.11b">indrā.parvata.iti.sūktam.āyuṣyam.drāviṇam.smṛtam.//</l>
+</lg>
+
+<lg xml:id="RgV_2.3.12">
+<l xml:id="RgV_2.3.12a">vāg.indriya.pramūḍho.yo.na.vidyām.pratipadyate./</l>
+<l xml:id="RgV_2.3.12b">indriya.arthāny.atha.arthān.vā.yo.na.vetti.kathaṃcana.//</l>
+</lg>
+
+<lg xml:id="RgV_2.3.13">
+<l xml:id="RgV_2.3.13a">vidyā.vā.adhigatā.yasya.praṇaśyeta.punaḥ.punaḥ./</l>
+<l xml:id="RgV_2.3.13b">sasarparīr.ṛcau.japan.dvau.māsau.pratipadyate.//</l>
+</lg>
+
+<lg xml:id="RgV_2.3.14">
+<l xml:id="RgV_2.3.14a">anasā.samprayātas.tu.sthirau.gāvāv.iti.smaret./</l>
+<l xml:id="RgV_2.3.14b">catasraḥ.kuśalena.eti.siddha.arthaḥ.sthirayā.anugaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.3.15">
+<l xml:id="RgV_2.3.15a">yāna.akṣam.apabhagna.antam.dṛṣṭvā.durge.adhvani.dvijaḥ./</l>
+<l xml:id="RgV_2.3.15b">abhi.vyayasva.iti.japed.dvṛcam.akṣa.balam.dadhat.//</l>
+</lg>
+
+<lg xml:id="RgV_2.3.16">
+<l xml:id="RgV_2.3.16a">kṛṣṇa.pakṣe.caturdaśyām.tri.rātra.upoṣitaḥ.śuciḥ./</l>
+<l xml:id="RgV_2.3.16b">dakṣiṇa.pravaṇe.deśe.śmaśānasthaḥ.samāhitaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.4.17">
+<l xml:id="RgV_2.4.17a">rakta.uṣṇīṣy.asi.pāṇiś.ca.bailvaka.idhmo.nila.aśanaḥ./(?)</l>
+<l xml:id="RgV_2.4.17b">sapta.aham.juhuyāt.tailam.sārṣapam.lavaṇa.anvitam.//</l>
+</lg>
+
+<lg xml:id="RgV_2.4.18">
+<l xml:id="RgV_2.4.18a">samidho.rāja.vṛkṣasya.vasiṣṭha.dveṣiṇīḥ.paṭhan./</l>
+<l xml:id="RgV_2.4.18b">yam.dviṣyāt.tasya.kṛtvā.tu.śamyākena.ākṛtim.niśi.//</l>
+</lg>
+
+<lg xml:id="RgV_2.4.19">
+<l xml:id="RgV_2.4.19a">adhiṣṭhāya.ca.tām.kuryād.ṛgbhiś.catasṛbhir.dvijaḥ./</l>
+<l xml:id="RgV_2.4.19b">uddiśya.nāma.homo.ayam.sapta.rātram.na.jīvati.//</l>
+</lg>
+
+<lg xml:id="RgV_2.4.20">
+<l xml:id="RgV_2.4.20a">vasiṣṭhān.antato.hanti.brahma.etat.kuśika.uditam./</l>
+<l xml:id="RgV_2.4.20b">na.asya.kaścid.avadhyo.asti.japato.juhvato.api.vā.//</l>
+</lg>
+
+<lg xml:id="RgV_2.4.21">
+<l xml:id="RgV_2.4.21a">dvāviṃśakam.japet.sūktam.ādhyātmikam.anuttamam./</l>
+<l xml:id="RgV_2.4.21b">parvasu.prayato.nityam.iṣṭān.kāmānt.samaśnute.//</l>
+</lg>
+
+<lg xml:id="RgV_2.5.22">
+<l xml:id="RgV_2.5.22a">bṛhaspatim.aja.aśvam.ca.savitāram.babhrum.eva.ca./</l>
+<l xml:id="RgV_2.5.22b">ṛtāvṛdhau.dine.dine.tṛcaiḥ.pañcabhir.anvaham.//</l>
+</lg>
+
+<lg xml:id="RgV_2.5.23">
+<l xml:id="RgV_2.5.23a">bṛhaspata.iti.pañca.aham.pratyṛcam.juhuyād.ghṛtam./</l>
+<l xml:id="RgV_2.5.23b">hutvā.agnim.arcayitvā.tu.gandha.mālyaiḥ.sadhūpakaiḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.5.24">
+<l xml:id="RgV_2.5.24a">tā.eva.devatāḥ.pañca.kāmair.arcanti.pañcabhiḥ./</l>
+<l xml:id="RgV_2.5.24b">ratnair.apatyaiḥ.paśubhir.makhair.dīrgheṇa.ca.āyuṣā.//</l>
+</lg>
+
+<lg xml:id="RgV_2.6.25">
+<l xml:id="RgV_2.6.25a">atha.veda.ādi.gītāyāḥ.prasāda.jananam.vidhim./</l>
+<l xml:id="RgV_2.6.25b">gāyatryāḥ.sampravakṣyāmi.dharma.kāma.artha.mokṣadam.//</l>
+</lg>
+
+<lg xml:id="RgV_2.6.26">
+<l xml:id="RgV_2.6.26a">nitye.naimittike.kāmye.tritaye.tu.parāyaṇam./</l>
+<l xml:id="RgV_2.6.26b">gāyatryās.tu.param.na.asti.iha.loke.paratra.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_2.6.27">
+<l xml:id="RgV_2.6.27a">medhya.anna.mita.bhug.maunī.triḥ.snāna.arcana.tatparaḥ./</l>
+<l xml:id="RgV_2.6.27b">japel.lakṣa.trayam.dhīmān.ananya.mānasa.kriyaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.6.28">
+<l xml:id="RgV_2.6.28a">karmabhir.yojayet.paścāt.kramaśaḥ.sva.icchayā.api.vā./</l>
+<l xml:id="RgV_2.6.28b">yāvat.kāryam.sa.kurvīta.na.lopet.tāvat.tad.vratam.//</l>
+</lg>
+
+<lg xml:id="RgV_2.6.29">
+<l xml:id="RgV_2.6.29a">ādityasya.udaye.snātvā.sahasram.pratyaham.japet./</l>
+<l xml:id="RgV_2.6.29b">āyur.ārogyam.aiśvaryam.dhanam.ca.labhate.dhruvam.//</l>
+</lg>
+
+<lg xml:id="RgV_2.7.30">
+<l xml:id="RgV_2.7.30a">tri.rātra.upoṣitaḥ.samyag.ghṛtam.hutvā.sahasraśaḥ./</l>
+<l xml:id="RgV_2.7.30b">sahasra.lābham.āpnoti.huta.aśe.khādira.indhane.//</l>
+</lg>
+
+<lg xml:id="RgV_2.7.31">
+<l xml:id="RgV_2.7.31a">pālāśa.samidhām.caiva.ghṛta.aktānām.huta.aśane./</l>
+<l xml:id="RgV_2.7.31b">sahasra.lābham.āpnoti.rāhu.sūrya.samāgame.//</l>
+</lg>
+
+<lg xml:id="RgV_2.7.32">
+<l xml:id="RgV_2.7.32a">hutvā.tu.khādire.vahnau.saghṛtam.rakta.candanam./</l>
+<l xml:id="RgV_2.7.32b">sahasram.homam.āpnoti.rāhu.sūrya.samāgamet.//</l>
+</lg>
+
+<lg xml:id="RgV_2.7.33">
+<l xml:id="RgV_2.7.33a">rakta.candana.miśram.tu.saghṛtam.havya.vāhane./</l>
+<l xml:id="RgV_2.7.33b">hutvā.gomayam.āpnoti.sahasram.go.dhanam.dvijaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.7.34">
+<l xml:id="RgV_2.7.34a">yasyās.tu.gor.gomayena.guṭikānām.sahasraśaḥ./</l>
+<l xml:id="RgV_2.7.34b">hutvā.tām.gām.avāpnoti.ghṛta.aktānām.huta.aśane.//</l>
+</lg>
+
+<lg xml:id="RgV_2.8.35">
+<l xml:id="RgV_2.8.35a">yavair.aśvāṃs.tilair.hastīn.mahiṣyo.yāvakais.tathā./</l>
+<l xml:id="RgV_2.8.35b">śālī.tāṇḍula.homena.kanyā.lābham.avāpnuyāt.//</l>
+</lg>
+
+<lg xml:id="RgV_2.8.36">
+<l xml:id="RgV_2.8.36a">jātī.campaka.rāja.arka.kusumānām.sahasraśaḥ./</l>
+<l xml:id="RgV_2.8.36b">hutvā.vastrāṇy.avāpnoti.ghṛta.aktānām.huta.aśane.//</l>
+</lg>
+
+<lg xml:id="RgV_2.8.37">
+<l xml:id="RgV_2.8.37a">sūrya.bimbe.jala.madhye.toyam.hutvā.sahasraśaḥ./</l>
+<l xml:id="RgV_2.8.37b">sahasram.prāpnuyādd.haimam.raupyam.indumaye.hute.//</l>
+</lg>
+
+<lg xml:id="RgV_2.8.38">
+<l xml:id="RgV_2.8.38a">alakṣmī.pāpa.samyukto.mala.vyādhi.vināyakaiḥ./</l>
+<l xml:id="RgV_2.8.38b">mucyet.sahasra.japtena.snāyād.yas.tu.jalena.vai.//</l>
+</lg>
+
+<lg xml:id="RgV_2.8.39">
+<l xml:id="RgV_2.8.39a">yām.diśam.sapta.japtena.loṣṭena.sampracāṭayet./</l>
+<l xml:id="RgV_2.8.39b">caura.agni.māruta.utthāni.bhayāni.na.bhavanti.vai.//</l>
+</lg>
+
+<lg xml:id="RgV_2.9.40">
+<l xml:id="RgV_2.9.40a">kṣīra.āhāro.japel.lakṣam.apamṛtyum.vyapohati./</l>
+</lg>
+<lg xml:id="RgV_2.10.40">
+<l xml:id="RgV_2.10.40b">ghṛta.āśī.prāpnuyān.medhyām.bahu.vijñāna.saṃcayam.//</l>
+</lg>
+
+<lg xml:id="RgV_2.10.41">
+<l xml:id="RgV_2.10.41a">hutvā.vetasa.patrāṇi.ghṛta.aktāni.huta.aśane./</l>
+<l xml:id="RgV_2.10.41b">lakṣād.varṣāpayed.devam.sārvabhaumam.na.saṃśayaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.10.42">
+<l xml:id="RgV_2.10.42a">lakṣeṇa.bhasma.homasya.kṛtyā.hy.uttiṣṭhate.jalāt./</l>
+<l xml:id="RgV_2.10.42b">āditya.abhimukhaḥ.sthitvā.na.abhimātre.jale.śuciḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.10.43">
+<l xml:id="RgV_2.10.43a">tilānām.lakṣa.homena.ghṛta.aktānām.huta.aśane./</l>
+<l xml:id="RgV_2.10.43b">sarva.kāma.samṛddha.ātmā.parām.siddhim.avāpnuyāt.//</l>
+</lg>
+
+<lg xml:id="RgV_2.10.44">
+<l xml:id="RgV_2.10.44a">yavānām.lakṣa.homena.ghṛta.aktānām.huta.aśane./</l>
+<l xml:id="RgV_2.10.44b">sarva.kāma.samṛddha.ātmā.param.sthānam.avāpnuyāt.//</l>
+</lg>
+
+<lg xml:id="RgV_2.10.45">
+<l xml:id="RgV_2.10.45a">ghṛtasya.āhuti.lakṣeṇa.sarvān.kāmān.avāpnuyāt./</l>
+<l xml:id="RgV_2.10.45b">pañca.gavya.aśano.lakṣam.japej.jāti.smaro.bhavet.//</l>
+</lg>
+
+<lg xml:id="RgV_2.10.46">
+<l xml:id="RgV_2.10.46a">tad.eva.hy.anale.hutvā.prāpnoti.bahuśo.dhanam./</l>
+<l xml:id="RgV_2.10.46b">anna.adya.havanān.nityam.anna.adyam.ca.bhavet.sadā.//</l>
+</lg>
+
+<lg xml:id="RgV_2.10.47">
+<l xml:id="RgV_2.10.47a">juhuyāt.sarva.sādhyānām.āhuty.ayuta.saṃkhyayā./</l>
+<l xml:id="RgV_2.10.47b">rakta.siddha.arthakān.hutvā.sarvānt.sādhayate.ripūn.//</l>
+</lg>
+
+<lg xml:id="RgV_2.10.48">
+<l xml:id="RgV_2.10.48a">lavaṇam.madhu.samyuktam.hutvā.sarvam.vaśo.bhavet./</l>
+<l xml:id="RgV_2.10.48b">hutvā.hu.kara.vīrāṇi.raktāni.janayej.jvaram.//</l>
+</lg>
+
+<lg xml:id="RgV_2.10.49">
+<l xml:id="RgV_2.10.49a">hutvā.vaibhītakam.tailam.deśād.eva.pracāṭayet./</l>
+<l xml:id="RgV_2.10.49b">hutvā.tu.nimba.patrāṇi.vidveṣam.janayen.nṛṇām.//</l>
+</lg>
+
+<lg xml:id="RgV_2.10.50">
+<l xml:id="RgV_2.10.50a">raktānām.taṇḍulānām.tu.ghṛta.aktānām.huta.aśane./</l>
+<l xml:id="RgV_2.10.50b">hutvā.balam.avāpnoti.śatrubhir.na.jīyate.//</l>
+</lg>
+
+<lg xml:id="RgV_2.11.51">
+<l xml:id="RgV_2.11.51a">pratyānayana.siddhy.artham.madhu.sarpiḥ.samanvitam./</l>
+<l xml:id="RgV_2.11.51b">gavyam.kṣīram.pradīpte.gnau.juhvatas.tat.praśāmyati.//</l>
+</lg>
+
+<lg xml:id="RgV_2.11.52">
+<l xml:id="RgV_2.11.52a">brahma.cārī.mita.āhāro.yaḥ.sahasra.trayam.japet./</l>
+<l xml:id="RgV_2.11.52b">saṃvatsareṇa.labhate.dhana.aiśvaryam.na.saṃśayaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.11.53">
+<l xml:id="RgV_2.11.53a">śamī.bilva.palāśānām.arkasya.tu.viśeṣataḥ./</l>
+<l xml:id="RgV_2.11.53b">puṣpāṇām.samidhām.caiva.hutvā.haimam.avāpnuyāt.//</l>
+</lg>
+
+<lg xml:id="RgV_2.11.54">
+<l xml:id="RgV_2.11.54a">abrahma.tryambaka.ādīnām.yasya.āyatanam.āśritaḥ./</l>
+<l xml:id="RgV_2.11.54b">japel.lakṣam.nirāhāraḥ.sa.tasya.varado.bhavet.//</l>
+</lg>
+
+<lg xml:id="RgV_2.11.55">
+<l xml:id="RgV_2.11.55a">bilvānām.lakṣa.homena.ghṛta.aktānām.huta.aśane./</l>
+<l xml:id="RgV_2.11.55b">parām.śriyam.avāpnoti.yadi.na.bhrūṇahā.bhavet.//</l>
+</lg>
+
+<lg xml:id="RgV_2.12.56">
+<l xml:id="RgV_2.12.56a">padmānām.lakṣa.homena.ghṛta.aktānām.huta.aśane./</l>
+<l xml:id="RgV_2.12.56b">prāpnoti.rājyam.nikhilam.asapatnam.akaṇṭakam.//</l>
+</lg>
+
+<lg xml:id="RgV_2.12.57">
+<l xml:id="RgV_2.12.57a">pañca.viṃśati.lakṣeṇa.dadhi.kṣīra.ghṛta.aśanaḥ./</l>
+<l xml:id="RgV_2.12.57b">sva.dehe.sidhyate.jantuḥ.kauśikasya.matam.yathā.//</l>
+</lg>
+
+<lg xml:id="RgV_2.12.58">
+<l xml:id="RgV_2.12.58a">eka.aham.pañca.gavya.āśī.eka.aham.māruta.aśanaḥ./</l>
+<l xml:id="RgV_2.12.58b">eka.aham.brāhmaṇa.anna.āśī.gāyatrī.japa.ucyate.//</l>
+</lg>
+
+<lg xml:id="RgV_2.12.59">
+<l xml:id="RgV_2.12.59a">śatena.gāyatryā.snātvā.śatam.antar.jale.japet./</l>
+<l xml:id="RgV_2.12.59b">śatena.apas.tataḥ.pītvā.sarva.pāpaiḥ.pramucyate.//</l>
+</lg>
+
+<lg xml:id="RgV_2.12.60">
+<l xml:id="RgV_2.12.60a">godhnaḥ.pitṛghno.mātṛghno.brahmahā.guru.talpaṇaḥ./</l>
+<l xml:id="RgV_2.12.60b">suvarṇa.ratna.hārī.ca.yaś.ca.vipraḥ.surām.pibet.//</l>
+</lg>
+<lg xml:id="RgV_2.12.61">
+<l xml:id="RgV_2.12.61a">ayājya.yājanam.kṛtvā.kṛtvā.vā.karma.garhitam./</l>
+<l xml:id="RgV_2.12.61b">na.sīdet.pratigṛhṇāno.mahīm.api.sasāgarām.//</l>
+</lg>
+
+<lg xml:id="RgV_2.12.62">
+<l xml:id="RgV_2.12.62a">ye.ca.asya.duhsthitā.loke.grahāḥ.sūrya.ādayo.bhuvi./</l>
+<l xml:id="RgV_2.12.62b">te.yānti.saumyatām.sarve.śivā.iti.na.saṃśayaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.13.63">
+<l xml:id="RgV_2.13.63a">kṛṇuṣva.iti.japant.sūktam.rakṣoghnam.dasyubhir.vṛtaḥ./</l>
+<l xml:id="RgV_2.13.63b">arātīnām.haret.prāṇān.rakṣāṃsy.api.na.nāśayet.//</l>
+</lg>
+
+<lg xml:id="RgV_2.13.64">
+<l xml:id="RgV_2.13.64a">upatiṣṭheta.yo.vahnim.pari.ity.ṛcā.dine.dine./</l>
+<l xml:id="RgV_2.13.64b">tam.rakṣati.svayam.vahnir.viśvato.viśvato.mukhaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.13.65">
+<l xml:id="RgV_2.13.65a">ko.adya.iti.tu.sūktena.yo.nityam.śakram.arcati./</l>
+<l xml:id="RgV_2.13.65b">japed.vā.atha.namas.kāraiḥ.śakrato.labhate.varān.//</l>
+</lg>
+
+<lg xml:id="RgV_2.13.66">
+<l xml:id="RgV_2.13.66a">kayā.iti.vāmadevyena.kuryāt.svastyayanam.niśi./</l>
+<l xml:id="RgV_2.13.66b">japed.vā.saṃdhi.velāsu.brahma.etat.kuśika.uditam.//</l>
+</lg>
+
+<lg xml:id="RgV_2.13.67">
+<l xml:id="RgV_2.13.67a">haṃsaḥ.śuciṣad.ity.ṛcā.śucir.īkṣed.divākaram./</l>
+<l xml:id="RgV_2.13.67b">anta.kāle.japann.eti.brahmaṇaḥ.sadma.śāśvatam.//</l>
+</lg>
+
+<lg xml:id="RgV_2.13.68">
+<l xml:id="RgV_2.13.68a">kṛṣim.prapadyamānas.tu.sthālī.pākam.yathā.vidhi./</l>
+<l xml:id="RgV_2.13.68b">juhuyāt.kṣetra.madhye.tu.śunam.vāhās.tu.pañcabhiḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.13.69">
+<l xml:id="RgV_2.13.69a">yathā.liṅgam.tu.viharel.lāṅgalam.kṛṣīvalaḥ./</l>
+<l xml:id="RgV_2.13.69b">indrāya.ca.marudbhyaś.ca.parjanyāya.bhagāya.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_2.14.70">
+<l xml:id="RgV_2.14.70a">pūṣṇe.dhānyāya.sītāyai.śunā.sīram.atha.uttaram./</l>
+<l xml:id="RgV_2.14.70b">hutvā.tu.pṛthag.etāsām.yajed.etāś.ca.devatāḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.14.71">
+<l xml:id="RgV_2.14.71a">gandha.mālya.upahāraiś.ca.phala.lājā.surā.āsavaiḥ./</l>
+<l xml:id="RgV_2.14.71b">pravapaṇe.pralavane.khala.sīta.upahārayoḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.14.72">
+<l xml:id="RgV_2.14.72a">etā.eva.yajen.nityam.devatā.vidhinā.śuciḥ./</l>
+<l xml:id="RgV_2.14.72b">amogham.karma.bhavati.kṛṣir.vardhati.sarvadā.//</l>
+</lg>
+
+<lg xml:id="RgV_2.14.73">
+<l xml:id="RgV_2.14.73a">kṣetrasya.patinā.ity.etat.kṣaitrapatyam.tṛcam.japet./</l>
+<l xml:id="RgV_2.14.73b">īkṣet.sūryam.dvijo.nityam.vindate.kṣetram.uttamam.//</l>
+</lg>
+
+<lg xml:id="RgV_2.14.74">
+<l xml:id="RgV_2.14.74a">ākhu.utkareṣu.caruṇā.yajed.etena.mūṣikān./</l>
+<l xml:id="RgV_2.14.74b">citra.id.rāja.ity.anayā.stutvā.ca.ākhu.patim.sadā.//</l>
+</lg>
+
+<lg xml:id="RgV_2.15.75">
+<l xml:id="RgV_2.15.75a">brāhmaṇān.bhojayed.atra.kīnāśāṃś.caiva.bhojayet./</l>
+<l xml:id="RgV_2.15.75b">apramattaḥ.śānti.paraḥ.svayam.eva.kṛṣim.vrajet.//</l>
+</lg>
+
+<lg xml:id="RgV_2.15.76">
+<l xml:id="RgV_2.15.76a">bhūmi.bhaṅgo.gavām.hiṃsā.tṛṇa.kīṭa.ādi.nāśanam./</l>
+<l xml:id="RgV_2.15.76b">eteṣu.yat.kṛtam.pāpam.khala.dānena.śudhyati.//</l>
+</lg>
+
+<lg xml:id="RgV_2.15.77">
+<l xml:id="RgV_2.15.77a">dhānyānām.viṃśakam.bhāgam.śrotriyebhyo.nivedayet./</l>
+<l xml:id="RgV_2.15.77b">viṃśakasya.hi.dānena.kṛṣi.doṣāt.pramucyate.//</l>
+</lg>
+
+<lg xml:id="RgV_2.15.78">
+<l xml:id="RgV_2.15.78a">samudrād.iti.sūktena.yaḥ.sadā.juhuyād.ghṛtam./</l>
+<l xml:id="RgV_2.15.78b">pūrva.uktena.eva.kalpena.samyata.ātmā.jita.indriyaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.15.79">
+<l xml:id="RgV_2.15.79a">vi.jyotiṣā.iti.jvalayed.yatra.icchej.jātavedasi./</l>
+<l xml:id="RgV_2.15.79b">tam.agniḥ.sarvataḥ.pāti.bhadreṇa.draviṇena.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_2.15.80">
+<l xml:id="RgV_2.15.80a">viśvāni.na.iti.dvābhyām.ṛgbhyām.yo.vahnim.arcati./</l>
+<l xml:id="RgV_2.15.80b">sa.taraty.āpadaḥ.sarvā.yaśaḥ.prāpnoti.ca.akṣayam.//</l>
+</lg>
+
+<lg xml:id="RgV_2.15.81">
+<l xml:id="RgV_2.15.81a">hutvā.vahni.rūpa.stheyaḥ.prāṇa.artham.havya.vāhanaḥ./</l>
+<l xml:id="RgV_2.15.81b">agne.tvam.iti.sūktena.dhanam.āyuś.ca.vāñchatā.//</l>
+</lg>
+
+<lg xml:id="RgV_2.16.82">
+<l xml:id="RgV_2.16.82a">ya.ic.ched.vividham.vittam.sattvam.ca.anupamam.mahat./</l>
+<l xml:id="RgV_2.16.82b">uro.ṣṭa.iti.sūktena.upatiṣṭhet.śatakratum.//</l>
+</lg>
+
+<lg xml:id="RgV_2.16.83">
+<l xml:id="RgV_2.16.83a">prajā.kāmo.yajej.nityam.caruṇā.deva.patnayaḥ./</l>
+<l xml:id="RgV_2.16.83b">upahṛtya.upahāram.ca.śeṣam.bhuñjīta.vāg.yataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.16.84">
+<l xml:id="RgV_2.16.84a">ucchiṣṭam.ca.pradātavyam.bhāryāyai.putram.icchatā./</l>
+<l xml:id="RgV_2.16.84b">dhenvāḥ.sarūpa.vatsāyāḥ.payasā.sādhayec.carum.//</l>
+</lg>
+
+<lg xml:id="RgV_2.16.85">
+<l xml:id="RgV_2.16.85a">anurūpām.prajām.āśu.labhate.na.atra.saṃśayaḥ./</l>
+<l xml:id="RgV_2.16.85b">svastyātreyam.japen.nityam.prātaḥ.prātar.dvijaḥ.śuciḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.16.86">
+<l xml:id="RgV_2.16.86a">etat.svastyayanam.puṇyam.sarva.kalmaṣa.nāśanam./</l>
+<l xml:id="RgV_2.16.86b">suhṛdam.jñātinam.caiva.gacchantam.anumantrayet.//</l>
+</lg>
+
+<lg xml:id="RgV_2.17.87">
+<l xml:id="RgV_2.17.87a">svasti.panthām.iti.procya.svastimān.vrajate.adhvani./</l>
+<l xml:id="RgV_2.17.87b">vijihīṣva.vanaspate.tad.idam.cyāvanam.smṛtam.//</l>
+</lg>
+
+<lg xml:id="RgV_2.17.88">
+<l xml:id="RgV_2.17.88a">yam.cyāvayitu.kāmaḥ.syāc.cyāvayet.tam.idam.japan./</l>
+<l xml:id="RgV_2.17.88b">dviṣantam.vā.padā.ākramya.bhūmau.pāṃsumayīm.kṛtim.//</l>
+</lg>
+
+<lg xml:id="RgV_2.17.89">
+<l xml:id="RgV_2.17.89a">niṣpekṣyann.iva.saṃgrāmāc.cyavate.na.atra.saṃśayaḥ./</l>
+<l xml:id="RgV_2.17.89b">striyam.garbha.pramūḍhām.vā.pāyayed.anumantritam.//</l>
+</lg>
+
+<lg xml:id="RgV_2.17.90">
+<l xml:id="RgV_2.17.90a">udakam.cyāvanena.eva.garbho.adhaḥ.cyavate.sukham./</l>
+<l xml:id="RgV_2.17.90b">acchā.vada.iti.sūktam.tu.vṛṣṭi.kāmaḥ.prayojayet.//</l>
+</lg>
+
+<lg xml:id="RgV_2.17.91">
+<l xml:id="RgV_2.17.91a">nirāhāraḥ.khinna.vāsā.acireṇa.pravarṣati./</l>
+<l xml:id="RgV_2.17.91b">hutvā.ayutam.vaitasīnām.kṣīra.aktānām.huta.aśane.//</l>
+</lg>
+
+<lg xml:id="RgV_2.17.92">
+<l xml:id="RgV_2.17.92a">mahad.varṣam.avāpnoti.sūktena.ācchā.vadena.hi./</l>
+<l xml:id="RgV_2.17.92b">ya.icched.varadām.devīm.śriyam.nityam.kule.sthitām.//</l>
+</lg>
+
+<lg xml:id="RgV_2.18.93">
+<l xml:id="RgV_2.18.93a">sa.śuciḥ.prayato.bhūtvā.juhuyād.ājyam.anvaham./</l>
+<l xml:id="RgV_2.18.93b">śriyaḥ.pañca.daśa.ṛcam.ca.śrī.kāmaḥ.satatam.japet.//</l>
+</lg>
+
+<lg xml:id="RgV_2.18.94">
+<l xml:id="RgV_2.18.94a">āvāhayet.śriyam.padme.pañcabhiḥ.kanako.api.vā./</l>
+<l xml:id="RgV_2.18.94b">upahārān.upaharet.śuklān.bhakṣān.payo.dadhi.//</l>
+</lg>
+
+<lg xml:id="RgV_2.18.95">
+<l xml:id="RgV_2.18.95a">sthālī.pākam.ca.śālīnām.payasā.samprakalpayet./</l>
+<l xml:id="RgV_2.18.95b">cāndrāyaṇa.kṛta.ātmā.tu.prapadyet.prayataḥ.śriyai.//</l>
+</lg>
+
+<lg xml:id="RgV_2.18.96">
+<l xml:id="RgV_2.18.96a">sarva.auṣadhībhiḥ.phāṇṭābhiḥ.snātvā.adbhiḥ.pāvanair.api./</l>
+<l xml:id="RgV_2.18.96b">upaitu.mām.deva.sakha.iti.rājño.abhiṣecanī.//</l>
+</lg>
+
+<lg xml:id="RgV_2.18.97">
+<l xml:id="RgV_2.18.97a">manasaḥ.kāmam.ity.eṣā.paśu.kāma.abhiṣecanī./</l>
+<l xml:id="RgV_2.18.97b">kadarmena.iti.yaḥ.snāyāt.prajā.kāmaḥ.śuci.vrataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.19.98">
+<l xml:id="RgV_2.19.98a">aśva.pūrṇām.iti.snāyād.rājya.kāmaḥ.śuci.vrataḥ./</l>
+<l xml:id="RgV_2.19.98b">rohite.carmaṇi.snāyād.brāhmaṇas.tu.yathā.vidhi.//</l>
+</lg>
+
+<lg xml:id="RgV_2.19.99">
+<l xml:id="RgV_2.19.99a">rājā.carmaṇi.vaiyāghre.kṣatriyas.tv.atha.raurave./</l>
+<l xml:id="RgV_2.19.99b">basta.carmaṇi.vaiśyas.tu.homaḥ.kāryas.tv.anantaram.//</l>
+</lg>
+
+<lg xml:id="RgV_2.19.100">
+<l xml:id="RgV_2.19.100a">candrām.iti.tu.padmāni.juhuyāt.sarpiṣā.dvijaḥ./</l>
+<l xml:id="RgV_2.19.100b">āditya.varṇa.ity.anayā.bilva.homo.vidhīyate.//</l>
+</lg>
+
+<lg xml:id="RgV_2.19.101">
+<l xml:id="RgV_2.19.101a">bilva.idhma.eva.vā.agniḥ.syāt.sthālīś.ca.juhuyād.dvijaḥ./</l>
+<l xml:id="RgV_2.19.101b">daśa.sāhasriko.homaḥ.śrī.kāmaḥ.prathamo.vidhiḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.19.102">
+<l xml:id="RgV_2.19.102a">hutvā.tu.prayutam.samyag.anantām.vindate.śriyam./</l>
+<l xml:id="RgV_2.19.102b">ayutam.śatakṛtvas.tu.hutvā.śuklāni.sarpiṣā.//</l>
+</lg>
+
+<lg xml:id="RgV_2.20.103">
+<l xml:id="RgV_2.20.103a">anantām.avyavacchinām.śāśvatīm.vindate.śriyam./</l>
+<l xml:id="RgV_2.20.103b">aśaktau.japa.eva.ukto.daśa.sāhasriko.varaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.20.104">
+<l xml:id="RgV_2.20.104a">aptvā.nu.prayutam.samyag.anantām.vindate.śriyam./</l>
+<l xml:id="RgV_2.20.104b">ayutam.śatakṛtvas.tu.japtvā.śriyam.upāśnute.//</l>
+</lg>
+
+<lg xml:id="RgV_2.20.105">
+<l xml:id="RgV_2.20.105a">apsv.eva.juhuyān.nityam.padmāny.ayutaśo.niśi./</l>
+<l xml:id="RgV_2.20.105b">dṛṣṭvā.śriyam.tu.uparamet.kilāsatvād.bibheta.vai.//</l>
+</lg>
+
+<lg xml:id="RgV_2.20.106">
+<l xml:id="RgV_2.20.106a">bilva.āśī.bilva.nilayo.juhuyād.bilvāni.sarpiṣā./</l>
+<l xml:id="RgV_2.20.106b">eka.viṃśati.rātreṇa.parām.siddhim.niyacchati.//</l>
+</lg>
+
+<lg xml:id="RgV_2.20.107">
+<l xml:id="RgV_2.20.107a">yena.yena.ca.kāmena.juhoti.prayataḥ.śriyai./</l>
+<l xml:id="RgV_2.20.107b">padmāny.atha.api.bilvāni.sa.sa.kāmaḥ.samṛdhyati.//</l>
+</lg>
+
+<lg xml:id="RgV_2.21.108">
+<l xml:id="RgV_2.21.108a">na.jātu.kṛpaṇa.arthāya.śriyam.āvāhayet.kvacit./</l>
+<l xml:id="RgV_2.21.108b">na.yat.kiṃcana.kāmena.homaḥ.kāryaḥ.kathaṃcana.//</l>
+</lg>
+
+<lg xml:id="RgV_2.21.109">
+<l xml:id="RgV_2.21.109a">mahad.vā.prārthyamānena.rājya.kāmena.vā.punaḥ./</l>
+<l xml:id="RgV_2.21.109b">vācaḥ.param.prārthayitā.yatnād.yuktaḥ.śriyam.yajet.//</l>
+</lg>
+
+<lg xml:id="RgV_2.21.110">
+<l xml:id="RgV_2.21.110a">agnir.etv.iti.sūktena.juhuyād.ājyam.anvaham./</l>
+<l xml:id="RgV_2.21.110b">ojasvinīm.avāpnoti.prajām.dharmavatīm.śubhām.//</l>
+</lg>
+
+<lg xml:id="RgV_2.21.111">
+<l xml:id="RgV_2.21.111a">acchā.na.ity.ṛcā.dīptam.upatiṣṭhed.vibhāvasum./</l>
+<l xml:id="RgV_2.21.111b">prajām.prāpya.jayet.śatrūṃs.tarate.duritāni.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_2.21.112">
+<l xml:id="RgV_2.21.112a">ā.gāva.iti.sūktena.goṣṭhagā.loka.mātaraḥ./</l>
+<l xml:id="RgV_2.21.112b">upatiṣṭhed.vrajantīś.ca.ya.icchet.tāḥ.sadā.akṣayāḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.21.113">
+<l xml:id="RgV_2.21.113a">tvām.iddhi.iti.pragāthena.upatiṣṭhet.śatakratum./</l>
+<l xml:id="RgV_2.21.113b">madhya.ahne.saṃdhyayoś.caiva.japan.dhanam.avāpnuyāt.//</l>
+</lg>
+
+<lg xml:id="RgV_2.22.114">
+<l xml:id="RgV_2.22.114a">upa.iti.tisṛbhī.rājño.dundubhīn.saṃspṛśed.raṇe./</l>
+<l xml:id="RgV_2.22.114b">ojo.balam.avāpnoti.śatrūṃś.caiva.niyacchati.//</l>
+</lg>
+
+<lg xml:id="RgV_2.22.115">
+<l xml:id="RgV_2.22.115a">pāṇinā.tṛṇam.ādāya.yajña.ayajña.iti.yo.abhyaset./</l>
+<l xml:id="RgV_2.22.115b">so.adhītasya.asya.sūktasya.phalam.prāpnoti.na.atṛṇaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.22.116">
+<l xml:id="RgV_2.22.116a">sūkta.ante.ca.tṛṇam.tv.agnāv.iriṇe.vā.udake.api.vā./</l>
+<l xml:id="RgV_2.22.116b">nikṣipet.tat.prayatnena.tyaktvā.anyatra.bhaya.āvaham.//</l>
+</lg>
+
+<lg xml:id="RgV_2.22.117">
+<l xml:id="RgV_2.22.117a">tṛṇa.pāṇir.japan.sūktam.rakṣoghnam.dasyubhir.vṛtaḥ./</l>
+<l xml:id="RgV_2.22.117b">na.bhayam.vindate.kiṃcid.rakṣobhyo.aribhya.eva.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_2.22.118">
+<l xml:id="RgV_2.22.118a">gṛhāt.prapadyamānas.tu.panthānam.dhana.kāmyayā./</l>
+<l xml:id="RgV_2.22.118b">japet.so.adhvani.yatnena.api.panthām.iti.vrajan.//</l>
+</lg>
+
+<lg xml:id="RgV_2.22.119">
+<l xml:id="RgV_2.22.119a">ye.ke.ca.jmā.ity.ṛcam.tv.etām.dhyāyan.niśi.diva.okasaḥ./</l>
+<l xml:id="RgV_2.22.119b">agnau.hutvā.etayā.ca.ājyam.dīrgham.āyur.avāpnuyāt.//</l>
+</lg>
+
+<lg xml:id="RgV_2.23.120">
+<l xml:id="RgV_2.23.120a">vayam.u.tvā.iti.sūktam.tu.pauṣṇam.draviṇa.vardhanam./</l>
+<l xml:id="RgV_2.23.120b">nityam.japet.śucir.bhūtvā.dhanam.vindaty.abhīpsitam.//</l>
+</lg>
+
+<lg xml:id="RgV_2.23.121">
+<l xml:id="RgV_2.23.121a">yasya.naṣṭam.bhavet.kiṃcid.dravyam.gaur.dvipadam.dhanam./</l>
+<l xml:id="RgV_2.23.121b">naśyed.vā.adhvani.yo.mohāt.sampūṣan.sa.japen.niśi.//</l>
+</lg>
+
+<lg xml:id="RgV_2.23.122">
+<l xml:id="RgV_2.23.122a">iyam.ity.etad.ādy.antam.sūktam.sārasvatam.dvijaḥ./</l>
+<l xml:id="RgV_2.23.122b">nityam.japet.śucir.bhūtvā.vāgmī.bhavati.buddhimān.//</l>
+</lg>
+
+<lg xml:id="RgV_2.23.123">
+<l xml:id="RgV_2.23.123a">sam.vām.iti.tu.yat.sūktam.aṣṭa.ṛcam.traiṣṭubham.smṛtam./</l>
+<l xml:id="RgV_2.23.123b">taj.japan.prayato.nityam.iṣṭān.kāmānt.samaśnute.//</l>
+</lg>
+
+<lg xml:id="RgV_2.23.124">
+<l xml:id="RgV_2.23.124a">yo.adri.bhit.tu.yat.sūktam.tat.sapatna.nibarhaṇam./</l>
+<l xml:id="RgV_2.23.124b">bṛhaspatim.namas.kṛtvā.sapatnānt.stṛṇute.bahūn.//</l>
+</lg>
+
+<lg xml:id="RgV_2.24.125">
+<l xml:id="RgV_2.24.125a">enasvī.vā.abhiśasto.vā.kṛtvā.vā.karma.garhitam./</l>
+<l xml:id="RgV_2.24.125b">somā.raudram.japet.sūktam.kṛtsnam.eno.vyapohati.//</l>
+</lg>
+
+<lg xml:id="RgV_2.24.126">
+<l xml:id="RgV_2.24.126a">juhuyād.vā.ya.etābhir.ṛgbhir.nityam.ghṛta.vrataḥ./</l>
+<l xml:id="RgV_2.24.126b">vāruṇebhyo.sa.pāśebhyo.mucyate.śam.tathā.āpnuyāt.//</l>
+</lg>
+
+<lg xml:id="RgV_2.24.127">
+<l xml:id="RgV_2.24.127a">jīmūta.sūktasya.vidhim.yathā.liṅgam.avekṣya.vai./</l>
+<l xml:id="RgV_2.24.127b">ṛgbhiḥ.karmāṇi.kurvīta.ratha.aṅgānām.yathā.vidhi.//</l>
+</lg>
+
+<lg xml:id="RgV_2.24.128">
+<l xml:id="RgV_2.24.128a">saṃgrāmam.tu.prayātasya.rājñaś.ca.etat.prayojayet./</l>
+<l xml:id="RgV_2.24.128b">sarvāṇy.aṅgāni.rathyāṃś.ca.sadaśvāṃś.ca.anumantrayet.//</l>
+</lg>
+
+<lg xml:id="RgV_2.24.129">
+<l xml:id="RgV_2.24.129a">yam.eva.deśam.gaccheta.śatrum.vā.apy.anumantritaḥ./</l>
+<l xml:id="RgV_2.24.129b">na.ajitvā.vinivarteta.param.hi.brahmaṇo.balam.//</l>
+</lg>
+
+<lg xml:id="RgV_2.25.130">
+<l xml:id="RgV_2.25.130a">putrān.āyur.atha.ārogyam.ya.icched.avyayam.sukham./</l>
+<l xml:id="RgV_2.25.130b">so.agnim.nara.iti.sūktena.juhuyād.ājyam.anvaham.//</l>
+</lg>
+
+<lg xml:id="RgV_2.25.131">
+<l xml:id="RgV_2.25.131a">pra.agnaye.atha.tribhiḥ.sūktaiḥ.saṃdhyayor.japam.ārabhet./</l>
+<l xml:id="RgV_2.25.131b">na.rakṣobhyo.bhayam.vetti.dhanam.prāpnoti.ca.akṣayam.//</l>
+</lg>
+
+<lg xml:id="RgV_2.25.132">
+<l xml:id="RgV_2.25.132a">abhi.tvā.yaḥ.pragāthena.nityam.arcati.vrajiṇam./</l>
+<l xml:id="RgV_2.25.132b">sa.śriyam.vipulām.bhuṅkte.prāpnoti.ca.dhana.āyuṣī.//</l>
+</lg>
+
+<lg xml:id="RgV_2.25.133">
+<l xml:id="RgV_2.25.133a">śaṃvatīḥ.śam.na.indra.agnī.ity.ete.satatam.japet./</l>
+<l xml:id="RgV_2.25.133b">na.rakṣobhyo.na.bhūtebhyo.vyādhibhyo.vā.bhayam.bhavet.//</l>
+</lg>
+
+<lg xml:id="RgV_2.25.134">
+<l xml:id="RgV_2.25.134a">niveṣṭu.kāmo.roga.ārto.bhaga.sūktam.sadā.abhyaset./</l>
+<l xml:id="RgV_2.25.134b">niveśam.vindate.kṣipram.rogebhyaś.ca.pramucyate.//</l>
+</lg>
+
+<lg xml:id="RgV_2.26.135">
+<l xml:id="RgV_2.26.135a">imā.iti.japen.nityam.raudram.sūktam.dvijaḥ.śuciḥ./</l>
+<l xml:id="RgV_2.26.135b">taj.japan.prajayā.vittaiḥ.svayam.caiva.na.riṣyati.//</l>
+</lg>
+
+<lg xml:id="RgV_2.26.136">
+<l xml:id="RgV_2.26.136a">uttitīrṣur.apo.yas.tu.śaṅket.srotyā.samāgame./(?)</l>
+<l xml:id="RgV_2.26.136b">samudra.jyeṣṭhā.iti.japet.sūktam.etad.bhaya.apaham.//</l>
+</lg>
+
+<lg xml:id="RgV_2.26.137">
+<l xml:id="RgV_2.26.137a">āditya.daivate.sūkte.ripughne.roga.nāśane./</l>
+<l xml:id="RgV_2.26.137b">japet.prātaḥ.śucir.bhūtvā.ripu.rogaiḥ.pramucyate.//</l>
+</lg>
+
+<lg xml:id="RgV_2.26.138">
+<l xml:id="RgV_2.26.138a">vāstoṣpate.prati.ity.etat.sūktam.vāstoṣpatam.japet./</l>
+<l xml:id="RgV_2.26.138b">snātaḥ.kṛtvā.vaiśvadevam.param.brahma.idam.ucyate.//</l>
+</lg>
+<lg xml:id="RgV_2.26.139">
+<l xml:id="RgV_2.26.139a">amīvahā.iti.sūktena.bhūtāni.svāpayen.niśi./</l>
+<l xml:id="RgV_2.26.139b">na.hi.prasvāpanam.kiṃcid.īdṛśam.vidyate.kvacit.//</l>
+</lg>
+
+<lg xml:id="RgV_2.27.140">
+<l xml:id="RgV_2.27.140a">sambādhe.viṣame.durge.baddho.vā.nirgataḥ.kvacit./</l>
+<l xml:id="RgV_2.27.140b">palāyan.vā.gṛhīto.vā.taskaraiḥ.sa.japed.idam.//</l>
+</lg>
+
+<lg xml:id="RgV_2.27.141">
+<l xml:id="RgV_2.27.141a">amīvahā.viśvavatīm.uddhṛtya.anyāḥ.prayojayet./</l>
+<l xml:id="RgV_2.27.141b">sūktam.etaj.japet.sarvam.iti.manyeta.śaunakaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.27.142">
+<l xml:id="RgV_2.27.142a">tri.rātrim.niyato.anaśnan.śrapayet.pāyasam.carum./</l>
+<l xml:id="RgV_2.27.142b">tena.āhuti.śatam.pūrṇam.juhuyāt.sarpiṣā.dvijaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.27.143">
+<l xml:id="RgV_2.27.143a">samuddiśya.mahā.devam.tryambakam.tryambaka.ity.ṛcā./</l>
+<l xml:id="RgV_2.27.143b">etat.parva.śatam.kṛtvā.jīved.abda.śatam.sukhī.//</l>
+</lg>
+
+<lg xml:id="RgV_2.27.144">
+<l xml:id="RgV_2.27.144a">tat.cakśur.ity.ṛcā.snāta.upatiṣṭhed.divākaram./</l>
+<l xml:id="RgV_2.27.144b">udyantam.madhyagam.caiva.dīrgham.āyur.jijīviṣuḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.27.145">
+<l xml:id="RgV_2.27.145a">rātryā.apara.kāle.ya.utthāya.prayataḥ.śuciḥ./</l>
+</lg>
+<lg xml:id="RgV_2.28.145">
+<l xml:id="RgV_2.28.145b">vyuṣā.ity.upatiṣṭheta.ṣaḍbhiḥ.sūktaiḥ.kṛta.añjaliḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.28.146">
+<l xml:id="RgV_2.28.146a">prāpnuyāt.sa.hiraṇya.ādi.nānā.rūpam.dhanam.bahu./</l>
+<l xml:id="RgV_2.28.146b">gā.aśvān.puruṣān.dhānyam.striyo.vāsāṃsy.aja.avikam.//</l>
+</lg>
+
+<lg xml:id="RgV_2.28.147">
+<l xml:id="RgV_2.28.147a">dhruvāsu.tv.āsu.kṣitiṣu.japan.baddhaḥ.pramucyate./</l>
+<l xml:id="RgV_2.28.147b">tiṣṭhan.rātrau.japed.enām.vipāśaḥ.samprapadyate.//</l>
+</lg>
+
+<lg xml:id="RgV_2.28.148">
+<l xml:id="RgV_2.28.148a">aho.rātram.sthitaś.caivam.anaśnant.syād.viceṣṭitaḥ./</l>
+<l xml:id="RgV_2.28.148b">ayaḥ.pāśaḥ.sphuṭanty.asya.dāru.pāśās.tathaiva.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_2.28.149">
+<l xml:id="RgV_2.28.149a">syonā.iti.pṛthivīm.devīm.prapadyen.niyataḥ.sadā./</l>
+<l xml:id="RgV_2.28.149b">japed.enām.ca.tatra.api.bhūmi.pāśāt.pramucyate.//</l>
+</lg>
+
+<lg xml:id="RgV_2.29.150">
+<l xml:id="RgV_2.29.150a">yat.kiṃcit.pātakam.kuryāt.karmaṇā.manasā.girā./</l>
+<l xml:id="RgV_2.29.150b">yat.kiṃca.idam.varuṇa.iti.ṛcam.japtvā.pramucyate.//</l>
+</lg>
+
+<lg xml:id="RgV_2.29.151">
+<l xml:id="RgV_2.29.151a">agamyā.gamane.ca.etat.prāyaścittam.vidhīyate./</l>
+<l xml:id="RgV_2.29.151b">anyatra.guru.talpāc.ca.tasmāt.pāpāt.pramucyate.//</l>
+</lg>
+
+<lg xml:id="RgV_2.29.152">
+<l xml:id="RgV_2.29.152a">dvādaśa.aham.abhuñjānaḥ.sva.gotra.āgamane.japet./</l>
+<l xml:id="RgV_2.29.152b">ardha.māsam.abhuñjānaḥ.sakhi.dāreṣu.saṃvasan.//</l>
+</lg>
+
+<lg xml:id="RgV_2.29.153">
+<l xml:id="RgV_2.29.153a">idam.āpaḥ.pravahata.yat.kim.ca.idam.ṛcam.punaḥ./</l>
+<l xml:id="RgV_2.29.153b">iti.ca.etā.japed.apaḥ.praviśya.eteṣu.karmasu.//</l>
+</lg>
+
+<lg xml:id="RgV_2.29.154">
+<l xml:id="RgV_2.29.154a">indrā.viṣṇū.namas.kṛtya.juhuyād.ājyam.anvaham./</l>
+<l xml:id="RgV_2.29.154b">sūktābhyām.para.etābhyām.ya.icched.bhūtim.ātmanaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.30.155">
+<l xml:id="RgV_2.30.155a">āsya.daghnam.vigāhya.ambhaḥ.prān.mukhaḥ.prayataḥ.śuciḥ./</l>
+<l xml:id="RgV_2.30.155b">sūktābhyām.tisra.etābhyām.upatiṣṭhed.divākaram.//</l>
+</lg>
+
+<lg xml:id="RgV_2.30.156">
+<l xml:id="RgV_2.30.156a">anaśnatā.tu.japtavyam.vṛṣṭi.kāmena.yatnataḥ./</l>
+<l xml:id="RgV_2.30.156b">pañca.rātre.vyatīte.tu.mahad.varṣam.avāpnuyāt.//</l>
+</lg>
+
+<lg xml:id="RgV_2.30.157">
+<l xml:id="RgV_2.30.157a">yo.aribhiḥ.pratipadyeta.abhiśasyeta.vā.mṛṣā./</l>
+<l xml:id="RgV_2.30.157b">upoṣya.ekam.tri.rātram.sa.juhuyād.ājyam.anvaham.//</l>
+</lg>
+
+<lg xml:id="RgV_2.30.158">
+<l xml:id="RgV_2.30.158a">indrā.soma.iti.sūktam.tu.japec.ca.etat.śata.avaram./</l>
+<l xml:id="RgV_2.30.158b">kiṃcid.dadyād.dvijebhyo.ante.stṛṇute.sarva.śātravān.//</l>
+</lg>
+
+<lg xml:id="RgV_2.30.159">
+<l xml:id="RgV_2.30.159a">yasya.lupyed.vratam.mohād.vrātyair.vā.saṃspṛśed.dvijaḥ./</l>
+<l xml:id="RgV_2.30.159b">upoṣya.ājyam.ca.juhuyāt.tvam.agne.vratapā.iti.//</l>
+</lg>
+
+<lg xml:id="RgV_2.31.160">
+<l xml:id="RgV_2.31.160a">pra.saṃrājam.iti.tv.etaj.japann.īkṣed.divākaram./</l>
+<l xml:id="RgV_2.31.160b">udyantam.upatiṣṭheta.snātvā.snātvā.dine.dine.//</l>
+</lg>
+
+<lg xml:id="RgV_2.31.161">
+<l xml:id="RgV_2.31.161a">abhiyukto.bhaved.yas.tu.vivaded.vā.api.kenacit./</l>
+<l xml:id="RgV_2.31.161b">nirjitya.sagaṇān.śatrūn.kṣipram.vādam.parājayet.//</l>
+</lg>
+
+<lg xml:id="RgV_2.31.162">
+<l xml:id="RgV_2.31.162a">śam.agir.agnibhiś.ca.iti.prapadyed.vāyu.bhāskarau./</l>
+<l xml:id="RgV_2.31.162b">agnim.prathamataḥ.stutvā.mahat.kṛcchrāt.pramucyate.//</l>
+</lg>
+
+<lg xml:id="RgV_2.31.163">
+<l xml:id="RgV_2.31.163a">na.hi.iti.yaś.catuṣkeṇa.snātvā.vai.prātar.utthitaḥ./</l>
+<l xml:id="RgV_2.31.163b">dvau.māsāv.upatiṣṭheta.sa.trāyati.bhayāt.svayam.//</l>
+</lg>
+
+<lg xml:id="RgV_2.31.164">
+<l xml:id="RgV_2.31.164a">tṛcam.japtvā.āyad.ity.etat.snātvā.abhyarcya.puraṃdaram./</l>
+<l xml:id="RgV_2.31.164b">prāpnuyān.mānasān.kāmān.sampūjya.vasu.rociṣaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.31.165">
+<l xml:id="RgV_2.31.165a">ādyāni.trīṇi.sūktāni.pañca.ca.agre.bṛhann.iti./</l>
+<l xml:id="RgV_2.31.165b">ṣaṭ.tathā.antyāni.sūktāni.agnim.nara.ito.iti.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_2.31.166">
+<l xml:id="RgV_2.31.166a">prakṛtāni.iti.ca.adhyāyam.bhojanāt.prāk.paṭhed.idam./</l>
+<l xml:id="RgV_2.31.166b">sarvān.kāmān.avāpnoti.mucyeta.sarva.kilbiṣaiḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.32.167">
+<l xml:id="RgV_2.32.167a">prāg.bhojanam.idam.brahma.mānavānām.maharṣiṇām./</l>
+<l xml:id="RgV_2.32.167b">pūrva.ahṇe.japato.nityam.artha.siddhiḥ.parā.bhavet.//</l>
+</lg>
+
+<lg xml:id="RgV_2.32.168">
+<l xml:id="RgV_2.32.168a">agninā.ity.āśvinam.sūktam.catur.viṃśakam.anvaham./</l>
+<l xml:id="RgV_2.32.168b">japet.prātaḥ.śucir.bhūtvā.nāsatyāv.arcya.suvrataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.32.169">
+<l xml:id="RgV_2.32.169a">sa.prāpnuyāt.parām.ṛddhim.draviṇam.ca.ūrjam.eva.ca./</l>
+<l xml:id="RgV_2.32.169b">samidhā.iti.juhoty.agnau.sūktena.pratyṛcam.ghṛtam.//</l>
+</lg>
+
+<lg xml:id="RgV_2.32.170">
+<l xml:id="RgV_2.32.170a">sa.siddhim.atulām.prāpya.samānām.jīvate.śatam./</l>
+<l xml:id="RgV_2.32.170b">dvi.catvāriṃśakena.iha.sūktena.agha.iti.vajriṇam.//</l>
+</lg>
+
+<lg xml:id="RgV_2.32.171">
+<l xml:id="RgV_2.32.171a">sakhyam.labdhvā.mahā.indreṇa.sapatnānt.stṛṇute.bahūn./</l>
+<l xml:id="RgV_2.32.171b">prāśnīyāj.japato.atra.asti.praśnam.kṛtvā.pramāṇataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.33.172">
+<l xml:id="RgV_2.33.172a">tasmāt.pūrva.āhṇiko.adhyāyaḥ.smṛto.ayam.ripu.nāśanaḥ./</l>
+<l xml:id="RgV_2.33.172b">vāśam.mahī.iti.ca.japtvā.prāpnoty.ārogyam.eva.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_2.33.173">
+<l xml:id="RgV_2.33.173a">duhsvapnaghnīḥ.parā.japtvā.prātaḥ.pāpaiḥ.pramucyate./</l>
+<l xml:id="RgV_2.33.173b">śam.no.bhava.iti.dvābhyām.tu.bhuktvā.annam.prayataḥ.śuciḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.33.174">
+<l xml:id="RgV_2.33.174a">hṛdayam.pāṇinā.spṛṣṭvā.jyog.jīved.agadaḥ.sukhī./</l>
+<l xml:id="RgV_2.33.174b">yato.bhayam.vijānīyāt.tasyām.diśi.yata.vrataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.33.175">
+<l xml:id="RgV_2.33.175a">śucau.deśe.agnim.ādhāya.juhuyād.indram.arcya.ca./</l>
+<l xml:id="RgV_2.33.175b">yata.ity.ājyam.utpūtam.ṣaḍbhir.gandhān.nivedya.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_2.33.176">
+<l xml:id="RgV_2.33.176a">pāyasam.dadhi.mantham.vā.apūpān.vā.apy.upahārayet./</l>
+<l xml:id="RgV_2.33.176b">aho.rātram.upoṣya.ekam.tilān.vā.ghṛtam.eva.vā.//</l>
+</lg>
+
+<lg xml:id="RgV_2.34.177">
+<l xml:id="RgV_2.34.177a">ut.tvā.mandantv.iti.snāto.hutvā.śatrūn.pramāpayet./</l>
+<l xml:id="RgV_2.34.177b">baddho.vā.apy.abaddho.vā.vāg.yataḥ.prayato.japet.//</l>
+</lg>
+
+<lg xml:id="RgV_2.34.178">
+<l xml:id="RgV_2.34.178a">tyā.nv.ity.āditya.daivatyam.sadyo.mucyeta.bandhanāt./</l>
+<l xml:id="RgV_2.34.178b">yad.dyāvā.iti.japen.nityam.pragātham.niyataḥ.śuciḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.34.179">
+<l xml:id="RgV_2.34.179a">sa.kīrtim.atulām.prāpya.sarvān.kāmānt.samaśnute./</l>
+<l xml:id="RgV_2.34.179b">tvam.no.agna.iti.sūktena.hutvā.arcya.agnim.ghṛtena.tu.//</l>
+</lg>
+
+<lg xml:id="RgV_2.34.180">
+<l xml:id="RgV_2.34.180a">pālito.viśvato.dīptyā.prāpnuyād.vahninā.rayim./</l>
+<l xml:id="RgV_2.34.180b">ā.tu.sūktena.satatam.dhanam.yāvat.puraṃdaram.//</l>
+</lg>
+
+<lg xml:id="RgV_2.34.181">
+<l xml:id="RgV_2.34.181a">prasamit.pāṇaye.tasmai.dhanam.yacchati.vṛtrahā./</l>
+</lg>
+<lg xml:id="RgV_2.35.181">
+<l xml:id="RgV_2.35.181b">kanyā.vār.iti.sūktam.tu.satatam.niyato.japet.//</l>
+</lg>
+
+<lg xml:id="RgV_2.35.182">
+<l xml:id="RgV_2.35.182a">tvag.doṣiṇīm.tathā.alomnīm.kṣipram.tasmāt.pramocayet./</l>
+<l xml:id="RgV_2.35.182b">yad.adya.kac.ca.ity.udite.ravau.stutvā.puraṃdaram.//</l>
+</lg>
+
+<lg xml:id="RgV_2.35.183">
+<l xml:id="RgV_2.35.183a">gṛṇann.apohate.ripram.vaśyam.vā.kurute.jagat./</l>
+<l xml:id="RgV_2.35.183b">yad.vāg.iti.dvṛcena.etya.gaurīm.yo.arcati.suvrataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_2.35.184">
+<l xml:id="RgV_2.35.184a">tasya.na.asaṃskṛtā.vāṇī.mukhād.uccarate.kvacit./</l>
+<l xml:id="RgV_2.35.184b">baṇ.mahām.iti.dṛṣṭvā.arkam.upatiṣṭhed.dvṛcam.paṭhan.//(vaṇ.mahām)</l>
+</lg>
+<lg xml:id="RgV_2.35.185">
+<l xml:id="RgV_2.35.185a">bruvann.apy.anṛtām.vāṇīm.lipyate.na.anṛtena.saḥ./</l>
+<l xml:id="RgV_2.35.185b">pūrṇe.candramasi.jyotsnām.iyam.yā.ity.anusevayet.//</l>
+</lg>
+
+<lg xml:id="RgV_2.35.186">
+<l xml:id="RgV_2.35.186a">candra.dṛṣṭis.tv.animiṣo.varcasvī.dṛṣṭimān.bhavet./</l>
+<l xml:id="RgV_2.35.186b">prajā.ha.iti.japant.snātvā.na.yonim.pratijāyate.//</l>
+</lg>
+
+<lg xml:id="RgV_2.35.187">
+<l xml:id="RgV_2.35.187a">mātā.iti.gām.upaspṛśya.japan.gās.tu.samaśnute./</l>
+<l xml:id="RgV_2.35.187b">vacovidam.iti.tv.etām.japan.vācam.samaśnute.//</l>
+</lg>
+
+<lg xml:id="RgV_2.35.188">
+<l xml:id="RgV_2.35.188a">pāvamānam.param.hy.etan.navamam.maṇḍalam.japet./</l>
+<l xml:id="RgV_2.35.188b">snātvā.śuciḥ.śucau.deśe.sapavitraḥ.sakāñcanaḥ.//E</l>
+</lg>
+
+<lg xml:id="RgV_3.1.1">
+<l xml:id="RgV_3.1.1a">svādiṣṭhayā.iti.gāyatrīḥ.pāvamānīr.japed.dvijaḥ./</l>
+<l xml:id="RgV_3.1.1b">pavitrāṇām.pavitram.tu.pāvamānīr.ṛco.japet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.1.2">
+<l xml:id="RgV_3.1.2a">prayato.apsu.nimajya.āśu.sarva.pāpaiḥ.pramucyate./</l>
+<l xml:id="RgV_3.1.2b">etāsām.kīrtanam.puṇyam.smaraṇam.dhāraṇam.tathā.//</l>
+</lg>
+
+<lg xml:id="RgV_3.1.3">
+<l xml:id="RgV_3.1.3a">yāthāyathyena.ca.jñātvā.brahma.lokam.samaśnute./</l>
+<l xml:id="RgV_3.1.3b">eteṣām.tu.yathā.uktānām.guṇavad.yad.yad.uttaram.//</l>
+</lg>
+
+<lg xml:id="RgV_3.1.4">
+<l xml:id="RgV_3.1.4a">kīrtanāt.tu.bhavet.pūtaḥ.smaraṇāt.smarate.param./</l>
+<l xml:id="RgV_3.1.4b">dhāraṇād.brahmatām.eti.pūta.ātmā.vijita.indriyaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.1.5">
+<l xml:id="RgV_3.1.5a">yāthātathyena.ca.jñātvā.brahmaṇo.vindate.padam./</l>
+<l xml:id="RgV_3.1.5b">śrāvayed.devatā.kṛtye.brāhmaṇān.bhuñjato.agrataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.2.6">
+<l xml:id="RgV_3.2.6a">prīṇāti.devatām.tac.ca.samardhayati.karma.ca./</l>
+<l xml:id="RgV_3.2.6b">pitrye.pitrīn.prīṇayanti.śrāvitāḥ.prayata.ātmanā.//</l>
+</lg>
+
+<lg xml:id="RgV_3.2.7">
+<l xml:id="RgV_3.2.7a">kṛtvā.doṣānt.sumahato.apy.apeya.ādīn.prapīya.ca./</l>
+<l xml:id="RgV_3.2.7b">japtvā.tarat.samandīyam.praviśya.apaḥ.tryahāt.śuciḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.2.8">
+<l xml:id="RgV_3.2.8a">akṣayyam.ca.bhaved.dattam.pitṛbhyaḥ.paramam.madhu./</l>
+<l xml:id="RgV_3.2.8b">yaḥ.pāvamānīr.adhyeti.pūta.ātmā.vijita.indriyaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.2.9">
+<l xml:id="RgV_3.2.9a">tasya.kāma.dughā.bhūtvā.upatiṣṭhanti.dhenavaḥ./</l>
+<l xml:id="RgV_3.2.9b">āyur.balam.yaśo.vittam.prajām.kīrtim.anāmayam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.2.10">
+<l xml:id="RgV_3.2.10a">svādhyāya.puṇyam.atulam.pūtaḥ.prāpnoti.ca.akṣayam./</l>
+<l xml:id="RgV_3.2.10b">aśaktas.tu.japed.yuktāḥ.pavitrasya.ca.yāḥ.parāḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.2.11">
+<l xml:id="RgV_3.2.11a">sapta.ṛṣibhiś.ca.yāḥ.proktāḥ.pavitrasya.ca.yāḥ.parāḥ./</l>
+<l xml:id="RgV_3.2.11b">ṛcām.dviṣaṣṭiḥ.proktā.iyam.pavasva.ity.ṛṣi.sattamaiḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.3.12">
+<l xml:id="RgV_3.3.12a">sarva.kalmaṣa.nāśāya.pāvanāya.śivāya.ca./</l>
+<l xml:id="RgV_3.3.12b">svādiṣṭhayā.iti.sūktānām.sapta.ṣaṣṭir.iha.uditā.//</l>
+</lg>
+
+<lg xml:id="RgV_3.3.13">
+<l xml:id="RgV_3.3.13a">daśa.uttarāṇy.ṛcām.caiva.pāvamānīḥ.śatāni.ṣa]./</l>
+<l xml:id="RgV_3.3.13b">etaj.juhvan.japaṃś.caiva.ghoram.mṛtyu.bhayam.jayet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.3.14">
+<l xml:id="RgV_3.3.14a">vyādhibhyaḥ.parimokṣam.ca.labhate.na.atra.saṃśayaḥ./</l>
+<l xml:id="RgV_3.3.14b">pratigṛhya.apratigrāhyam.bhuktvā.ca.annam.vigarhitam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.3.15">
+<l xml:id="RgV_3.3.15a">japaṃs.taratsamandīyam.praviśya.apaḥ.tryahāt.śuciḥ./</l>
+<l xml:id="RgV_3.3.15b">pāvamānam.param.hy.etad.rapasām.apanodanam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.3.16">
+<l xml:id="RgV_3.3.16a">prāṇān.āyamya.ca.dhyāyed.ante.devān.pitṝn.ṛṣīn./</l>
+<l xml:id="RgV_3.3.16b">upoṣya.ājyam.ca.juhuyād.agnim.somam.ca.pūjayet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.3.17">
+<l xml:id="RgV_3.3.17a">sarasvatīm.ca.arcayeta.payo.ambu.madhu.sarpiṣā./</l>
+<l xml:id="RgV_3.3.17b">ādhyātmikam.pavitram.te.sūktam.japtvā.āplutaḥ.śuciḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.4.18">
+<l xml:id="RgV_3.4.18a">gatim.iṣṭām.avāpnoti.vindate.ca.iha.vṛddayaḥ./</l>
+<l xml:id="RgV_3.4.add18-1">[.maṇḍalam.pāvamānam.tu.japel.lakṣam.upoṣitaḥ./</l>
+<l xml:id="RgV_3.4.add18-2">nāśayed.brahmahatyām.vai.vasiṣṭha.vacanam.yathā./](not in Bhat)</l>
+<l xml:id="RgV_3.4.18b">nānānam.iti.sūktāni.anta.kāle.japet.sakṛt.//</l>
+</lg>
+
+<lg xml:id="RgV_3.4.19">
+<l xml:id="RgV_3.4.19a">japtvā.caiva.param.sthānam.amṛtatvam.ca.gacchati./</l>
+<l xml:id="RgV_3.4.19b">āpo.hi.ṣṭha.iti.niyataḥ.prayuñjīta.sadā.dvijaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.4.20">
+<l xml:id="RgV_3.4.20a">snāna.artham.śuddhi.kāmas.tu.japeta.triḥ.samāhitaḥ./</l>
+<l xml:id="RgV_3.4.20b">apsu.caiva.nimajjitvā.triḥ.paṭhet.susamāhitaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.4.21">
+<l xml:id="RgV_3.4.21a">brahmahā.tu.kapālena.khaṭva.aṅgī.cīra.saṃvṛtaḥ./</l>
+<l xml:id="RgV_3.4.21b">cared.dvādaśa.varṣāṇi.sva.karma.parikīrtayan.//</l>
+</lg>
+
+<lg xml:id="RgV_3.4.22">
+<l xml:id="RgV_3.4.22a">ajapan.manasā.eva.etad.āpo.hi.ṣṭha.iti.saṃsmaret./</l>
+<l xml:id="RgV_3.4.22b">ūrdhvam.tu.pañcamād.varṣāj.japed.eva.sahasraśaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.4.23">
+<l xml:id="RgV_3.4.23a">aparas.tu.tri.sāhasro.japaḥ.syāt.pratyaham.sadā./</l>
+<l xml:id="RgV_3.4.23b">pūrṇe.tu.dvādaśe.varṣe.brahmahā.vipramucyate.//</l>
+</lg>
+
+<lg xml:id="RgV_3.4.24">
+<l xml:id="RgV_3.4.24a">sametya.brāhmaṇā.brūyur.atha.tam.carita.vratam./</l>
+</lg>
+<lg xml:id="RgV_3.5.24">
+<l xml:id="RgV_3.5.24b">acaritam.bhavet.kiṃcid.mithyā.vādī.pateḥ.punaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.5.25">
+<l xml:id="RgV_3.5.25a">daśa.avarān.daśa.parān.hanyās.tvam.anṛtam.vadan./</l>
+<l xml:id="RgV_3.5.25b">om.bho.iti.vaded.viprair.anujñātaḥ.śucir.japet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.5.26">
+<l xml:id="RgV_3.5.26a">sthālī.pākam.ca.kurvīta.so.agnaya.vrata.cāriṇe./</l>
+<l xml:id="RgV_3.5.26b">evam.sa.mucyate.pāpāt.sāvitrīm.pratipadya.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_3.6.27">
+<l xml:id="RgV_3.6.27a">brahmahā.sa.purā.śakras.tvāṣṭram.hatvā.tv.ṛṣim.prabham./</l>
+<l xml:id="RgV_3.6.27b">sindhu.dvīpas.tam.etābhir.abhiṣicya.vyamocayat.//</l>
+</lg>
+<lg xml:id="RgV_3.6.28">
+<l xml:id="RgV_3.6.28a">brahmasvam.ca.guror.dravyam.steyam.kṛtvā.japann.imāḥ./</l>
+<l xml:id="RgV_3.6.28b">anena.eva.vidhānena.ṣaḍbhir.varṣaiḥ.pramucyate.//</l>
+</lg>
+
+<lg xml:id="RgV_3.6.29">
+<l xml:id="RgV_3.6.29a">brahmahā.ca.surāpaś.ca.niyamena.japann.imāḥ./</l>
+<l xml:id="RgV_3.6.29b">anena.eva.upacāreṇa.brahmaghna.iva.mucyate.//</l>
+</lg>
+
+<lg xml:id="RgV_3.6.30">
+<l xml:id="RgV_3.6.30a">brāhmaṇasya.ruṣā.udyamya.japed.etā.nipātya.ca./</l>
+<l xml:id="RgV_3.6.30b">tryaham.nipātya.upavased.eka.aham.avagūrya.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_3.6.31">
+<l xml:id="RgV_3.6.31a">śoṇitam.tu.prahāreṇa.utpādya.sa.kathaṃcana./</l>
+<l xml:id="RgV_3.6.31b">tri.rātram.eva.upavasej.japed.etāḥ.prasādya.tam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.6.32">
+<l xml:id="RgV_3.6.32a">prātar.utthāya.satatam.kuryād.mārjanam.ātmanaḥ./</l>
+<l xml:id="RgV_3.6.32b">rātrau.kṛtasya.pāpasya.avijñātasya.niṣkṛtiḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.6.33">
+<l xml:id="RgV_3.6.33a">sāyam.ca.nityam.etābhiḥ.kuryād.mārjanam.ātmanaḥ./</l>
+<l xml:id="RgV_3.6.33b">divā.kṛtasya.pāpasya.avijñātasya.niṣkṛtiḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.7.34">
+<l xml:id="RgV_3.7.34a">upatiṣṭheta.rājānam.yamam.sūktena.vai.dvijaḥ./</l>
+<l xml:id="RgV_3.7.34b">sthālī.pākam.ca.kurvīta.pakṣayor.yama.daivatam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.7.35">
+<l xml:id="RgV_3.7.35a">aṣṭamyām.ca.caturdaśyām.yajeta.haviṣā.yamam./</l>
+<l xml:id="RgV_3.7.35b">pareyivāṃsam.ity.etat.sūktam.atra.prayojayet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.7.36">
+<l xml:id="RgV_3.7.36a">purā.āyuṣaḥ.pramīyeta.na.jātu.sa.kathaṃcana./</l>
+<l xml:id="RgV_3.7.36b">prīyate.asya.yamo.rājā.smṛtim.ca.ante.prayacchati.//</l>
+</lg>
+
+<lg xml:id="RgV_3.7.37">
+<l xml:id="RgV_3.7.37a">dharma.rājāya.svāhā.iti.mantra.ante.juhuyādd.haviḥ./</l>
+<l xml:id="RgV_3.7.37b">vaiśākhyām.paurṇamāsyām.tu.karma.nityam.prayojayet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.7.38">
+<l xml:id="RgV_3.7.38a">anaye.parvasu.snātvā.yaḥ.pradadyāt.tila.udakam./</l>
+<l xml:id="RgV_3.7.38b">yamāya.sagaṇāya.eva.tad.bhayam.na.sa.vindati.//</l>
+</lg>
+
+<lg xml:id="RgV_3.7.39">
+<l xml:id="RgV_3.7.39a">mṛtyum.eva.prapadyeta.param.mṛtyo.japan.dvijaḥ./</l>
+<l xml:id="RgV_3.7.39b">nakta.bhojī.mita.āhāraḥ.parisaṃvatsaram.sadā.//</l>
+</lg>
+
+<lg xml:id="RgV_3.8.40">
+<l xml:id="RgV_3.8.40a">na.enam.purā.āyuṣo.mṛtyur.nayate.sasuta.prajam./</l>
+<l xml:id="RgV_3.8.40b">phala.āhāro.jayen.mṛtyum.tribhir.varṣair.mita.aśanaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.8.41">
+<l xml:id="RgV_3.8.41a">ṣaṣṭhe.kāle.tu.bhuñjīta.phalam.mūlam.atha.api.vā./</l>
+<l xml:id="RgV_3.8.41b">sthāna.āsanābhyām.vihared.udake.śiśire.vaset.//</l>
+</lg>
+
+<lg xml:id="RgV_3.8.42">
+<l xml:id="RgV_3.8.42a">grīṣme.pañca.tapās.tu.syād.varṣāsv.abhra.avakāśakaḥ./</l>
+<l xml:id="RgV_3.8.42b">evam.yukto.jayen.mṛtyum.rogebhyaś.ca.pramucyate.//</l>
+</lg>
+
+<lg xml:id="RgV_3.8.43">
+<l xml:id="RgV_3.8.43a">bhrātur.bhāryām.aputrasya.santāna.artham.mṛte.patau./</l>
+<l xml:id="RgV_3.8.43b">devaro.anvārurukṣantīm.udīrṣva.iti.nivartayet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.8.44">
+<l xml:id="RgV_3.8.44a">ṛtu.kāle.tu.samprāpte.ghṛta.abhyakto.atha.vāg.yataḥ./</l>
+<l xml:id="RgV_3.8.44b">ekam.utpādayet.putram.na.dvitīyam.kathaṃcana.//</l>
+</lg>
+
+<lg xml:id="RgV_3.8.45">
+<l xml:id="RgV_3.8.45a">daśa.akṣaram.tu.śānty.artham.bhadram.na.iti.saṃsmaret./</l>
+<l xml:id="RgV_3.8.45b">nityam.japet.śucir.bhūtvā.mānasam.vindate.sukham.//</l>
+</lg>
+
+<lg xml:id="RgV_3.9.46">
+<l xml:id="RgV_3.9.46a">phala.āhāro.bhaven.māsam.māsam.ca.apaḥ.pibet.tataḥ./</l>
+<l xml:id="RgV_3.9.46b">vāyu.bhakṣo.bhaven.māsam.japann.etat.sahasraśaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.9.47">
+<l xml:id="RgV_3.9.47a">manasā.eva.asya.sidhyanti.sarve.kāmāḥ.samīhitāḥ./</l>
+<l xml:id="RgV_3.9.47b">divyān.paśyati.gandharvānt.siddhān.paśyati.cāraṇān.//</l>
+</lg>
+
+<lg xml:id="RgV_3.9.48">
+<l xml:id="RgV_3.9.48a">antardhānam.vrajaty.asmāl.lokād.ākāśago.bhavet./</l>
+<l xml:id="RgV_3.9.48b">dūrāt.paśyati.dūrāc.ca.śṛṇoti.parameṣṭhivat.//</l>
+</lg>
+
+<lg xml:id="RgV_3.9.49">
+<l xml:id="RgV_3.9.49a">pra.devatra.iti.niyato.japeta.maru.dhanvasu./</l>
+<l xml:id="RgV_3.9.49b">prāṇa.antike.bhaye.prāpte.kṣipram.ambhaḥ.sa.vindati.//</l>
+</lg>
+
+<lg xml:id="RgV_3.9.50">
+<l xml:id="RgV_3.9.50a">vaibhītakāṃs.tu.trīn.akṣān.gandhaiḥ.samabhivāsayet./</l>
+<l xml:id="RgV_3.9.50b">puṣpair.avakirec.ca.enānt.sthāpayitvā.vihāyasi.//</l>
+</lg>
+
+<lg xml:id="RgV_3.10.51">
+<l xml:id="RgV_3.10.51a">saṃhatya.pādau.tām.rātrīm.tiṣṭhann.akṣa.stutim.japet./</l>
+<l xml:id="RgV_3.10.51b">prā.vepā.mā.ṛcam.tv.etām.manasā.eva.japen.niśi.//</l>
+</lg>
+
+<lg xml:id="RgV_3.10.52">
+<l xml:id="RgV_3.10.52a">vyuṣṭāyām.udite.sūrye.japann.ādevanam.vrajet./</l>
+<l xml:id="RgV_3.10.52b">etām.eva.japen.nityam.jayaty.anyair.na.jīyate.//</l>
+</lg>
+
+<lg xml:id="RgV_3.10.53">
+<l xml:id="RgV_3.10.53a">yam.eva.jetum.iccheta.spṛṣṭvā.mūrdhani.tam.japet./</l>
+<l xml:id="RgV_3.10.53b">sūkta.śeṣam.jayaty.anyān.jīyate.na.sa.kenacit.//</l>
+</lg>
+
+<lg xml:id="RgV_3.10.54">
+<l xml:id="RgV_3.10.54a">abudhram.uṣāsā.naktā.ity.ete.svastyayane.japet./</l>
+<l xml:id="RgV_3.10.54b">namo.mitrasya.varuṇasya.cakṣasa.iti.nityaśaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.10.55">
+<l xml:id="RgV_3.10.55a">asya.eva.ca.uttama.ṛg.ekā.yayā.enobhyaḥ.pramucyate./</l>
+<l xml:id="RgV_3.10.55b">tayā.ājyam.juhuyān.nityam.enobhyo.vipramucyate.//</l>
+</lg>
+
+<lg xml:id="RgV_3.11.56">
+<l xml:id="RgV_3.11.56a">divas.pari.iti.sūktam.tu.japen.śraddhā.samanvitaḥ./</l>
+<l xml:id="RgV_3.11.56b">sarvatra.labhate.śraddhām.śraddhā.kāmaḥ.samāhitaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.11.57">
+<l xml:id="RgV_3.11.57a">mā.pra.gāma.iti.ca.japet.sa.mūḍho.gahane.pathi./</l>
+<l xml:id="RgV_3.11.57b">svastimān.eti.panthānam.vindate.ca.param.sukham.//</l>
+</lg>
+
+<lg xml:id="RgV_3.11.58">
+<l xml:id="RgV_3.11.58a">kṣīṇa.āyur.iti.manyeta.yam.kaṃcit.suhṛdam.priyam./</l>
+<l xml:id="RgV_3.11.58b">yat.te.yamam.iti.snātas.tasya.mūrdhānam.ālabhet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.11.59">
+<l xml:id="RgV_3.11.59a">sahasrakṛtvaḥ.pañca.aham.japed.āyur.labheta.saḥ./</l>
+<l xml:id="RgV_3.11.59b">ghṛtena.sindhu.dvīpasya.sūktena.enam.pralepayet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.11.60">
+<l xml:id="RgV_3.11.60a">saṃviśan.śayane.nityam.etam.mantram.japeta.vai./</l>
+<l xml:id="RgV_3.11.60b">putrān.bhāryām.priyam.ca.anyam.ātmānam.saṃspṛśet.tataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.12.61">
+<l xml:id="RgV_3.12.61a">jīva.āvṛttim.prayuñjīta.nityam.etām.ghṛtena.tu./</l>
+<l xml:id="RgV_3.12.61b">śrotāṃsy.abhyajya.sarvāṇi.sukhī.bhavati.vijvaraḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.12.62">
+<l xml:id="RgV_3.12.62a">idam.itthā.iti.mantro.ayam.sahasra.sanir.ucyate./</l>
+<l xml:id="RgV_3.12.62b">ardha.māsam.haviṣya.annam.ardha.māsam.payaḥ.pibet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.12.63">
+<l xml:id="RgV_3.12.63a">upoṣya.ca.aparam.pakṣam.araṇye.sthaṇḍile.śucau./</l>
+<l xml:id="RgV_3.12.63b">audumbara.idhmam.prajvālya.juhuyāt.pāvake.ghṛtam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.12.64">
+<l xml:id="RgV_3.12.64a">sruk.sruvau.camasaś.caiva.sarvam.audumbaram.bhavet./</l>
+<l xml:id="RgV_3.12.64b">hutvā.āhuti.sahasram.tu.tena.kāmena.yujyate.//</l>
+</lg>
+
+<lg xml:id="RgV_3.12.65">
+<l xml:id="RgV_3.12.65a">amogham.eva.karma.etaj.jānīyāt.siddhim.eva.tu./</l>
+<l xml:id="RgV_3.12.65b">vyartham.apy.ardham.eva.etat.phalasya.asya.prayacchati.//</l>
+</lg>
+
+<lg xml:id="RgV_3.13.66">
+<l xml:id="RgV_3.13.66a">catuṣ.pathe.ca.anna.kāma.āditya.abhimukho.ghṛtam./</l>
+<l xml:id="RgV_3.13.66b">juhuyād.dhana.kāmas.tu.sahasram.bhojayed.dvijān.//</l>
+</lg>
+
+<lg xml:id="RgV_3.13.67">
+<l xml:id="RgV_3.13.67a">paśu.kāmo.japed.goṣṭhe.juhuyād.vā.apy.upoṣitaḥ./</l>
+<l xml:id="RgV_3.13.67b">vidhinā.anena.niyataḥ.sahasram.vindate.paśūn.//</l>
+</lg>
+
+<lg xml:id="RgV_3.13.68">
+<l xml:id="RgV_3.13.68a">loha.lohita.hemānām.kārayet.trivṛtam.maṇim./</l>
+<l xml:id="RgV_3.13.68b">sahasram.samidhām.caiva.sampāta.abhihut.tu.bhavet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.13.69">
+<l xml:id="RgV_3.13.69a">kṛtvā.sahasra.sampātam.śirasā.dhārayet.tu.tam./</l>
+<l xml:id="RgV_3.13.69b">pāṇinā.vā.śucir.bhūtvā.sahasra.anucaro.bhavet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.13.70">
+<l xml:id="RgV_3.13.70a">parāvataḥ.svastyayanam.snātakasya.vidhīyate./</l>
+<l xml:id="RgV_3.13.70b">svarga.kāmaś.ca.tam.nityam.japeta.niyata.vrataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.14.71">
+<l xml:id="RgV_3.14.71a">bṛhaspate.prathamam.iti.nityam.jñāna.stutim.japet./</l>
+<l xml:id="RgV_3.14.71b">jñānavān.bhavati.śrīmān.anantām.vindate.śriyam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.14.72">
+<l xml:id="RgV_3.14.72a">alakṣmī.nāśana.artham.tu.payo.bhakṣo.bhaved.dvijaḥ./</l>
+<l xml:id="RgV_3.14.72b">vayaḥ.suparṇā.ity.etām.japan.vai.vindate.śriyam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.14.73">
+<l xml:id="RgV_3.14.73a">tamasā.prāvṛto.yas.tu.manyeta.ātmānam.ātmani./</l>
+<l xml:id="RgV_3.14.73b">aśriyā.vā.apy.atha.āviṣṭo.japann.etām.pramucyate.//</l>
+</lg>
+
+<lg xml:id="RgV_3.14.74">
+<l xml:id="RgV_3.14.74a">akṣiṇī.prātar.utthāya.vimṛjīta.etayā.sadā./</l>
+<l xml:id="RgV_3.14.74b">cakṣuṣmān.bhavati.śrīmān.alakṣmīm.ca.prabādhate.//</l>
+</lg>
+
+<lg xml:id="RgV_3.14.75">
+<l xml:id="RgV_3.14.75a">na.tam.vidātha.ity.etām.tu.japan.vipraḥ.samāhitaḥ./</l>
+<l xml:id="RgV_3.14.75b">vihāya.kalmaṣam.sarvam.brahma.abhyeti.sanātanam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.14.76">
+<l xml:id="RgV_3.14.76a">anayā.parvasu.snātvā.yaḥ.pradadyāt.tila.udakam./</l>
+<l xml:id="RgV_3.14.76b">yamāya.sagaṇāya.eva.tad.bhayam.na.sa.vindati.//</l>
+</lg>
+
+<lg xml:id="RgV_3.14.77">
+<l xml:id="RgV_3.14.77a">yas.te.manyo.iti.sadā.sapatnaghne.tv.ime.japet./</l>
+<l xml:id="RgV_3.14.77b">ghṛtena.abhihutam.dvābhyām.dhārayed.āyasam.maṇim.//</l>
+</lg>
+
+<lg xml:id="RgV_3.15.78">
+<l xml:id="RgV_3.15.78a">juhuyād.āyasam.śaṅkum.ābhyām.eva.caturdaśīm./</l>
+<l xml:id="RgV_3.15.78b">khādira.idhma.samiddhe.agnau.sapatnān.pratibādhate.//</l>
+</lg>
+
+<lg xml:id="RgV_3.15.79">
+<l xml:id="RgV_3.15.79a">yathā.hi.paramam.brahma.guhyam.pāvanam.adbhutam./</l>
+<l xml:id="RgV_3.15.79b">tathā.saṃvananam.hṛdyam.na.hy.asmād.vidyate.param.//</l>
+</lg>
+
+<lg xml:id="RgV_3.15.80">
+<l xml:id="RgV_3.15.80a">upoṣya.dvādaśa.ahāni.japann.etam.ṛṣim.sadā./</l>
+<l xml:id="RgV_3.15.80b">tan.manāḥ.prayataḥ.sa.syāt.trir.ahno.abhyupayann.apaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.15.81">
+<l xml:id="RgV_3.15.81a">ante.tu.dvādaśa.ahasya.śucau.deśe.samāhitaḥ./</l>
+<l xml:id="RgV_3.15.81b">puṃsaḥ.pratikṛtim.kuryād.bhūmau.pāṃsumayīm.tathā.//</l>
+</lg>
+
+<lg xml:id="RgV_3.15.82">
+<l xml:id="RgV_3.15.82a">tasyā.hṛdaya.deśam.tu.samākramya.japed.ṛṣim./</l>
+<l xml:id="RgV_3.15.82b">amogham.karma.jānīyād.aho.rātre.gate.sati.//</l>
+</lg>
+
+<lg xml:id="RgV_3.16.83">
+<l xml:id="RgV_3.16.83a">tryaheṇa.dhaninām.vaiśyam.catū.rātreṇa.kṣatriyam./</l>
+<l xml:id="RgV_3.16.83b">rājānam.pañca.rātreṇa.ṣaḍ.rātreṇa.dvija.uttamam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.16.84">
+<l xml:id="RgV_3.16.84a">tapasvinam.sapta.rātrāj.jayed.bhuñjīta.ca.eva.tam./</l>
+<l xml:id="RgV_3.16.84b">api.vā.upoṣitaḥ.snāto.japed.etat.sadā.sthitaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.16.85">
+<l xml:id="RgV_3.16.85a">ya.icched.ātmanaḥ.kartum.hīnam.tu.parivarjayet./</l>
+<l xml:id="RgV_3.16.85b">sahasra.sampāta.hutam.bilvānām.cūrṇam.āvayet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.16.86">
+<l xml:id="RgV_3.16.86a">uda.pāne.vaśam.netum.tam.janam.kṣipram.ānayet./</l>
+<l xml:id="RgV_3.16.86b">mātary.ātmani.putreṣu.pitṛ.bhrātṛ.suhṛtsu.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_3.17.87">
+<l xml:id="RgV_3.17.87a">hṛdyam.etat.prayujñīta.śirasā.dhārayed.gurum./</l>
+<l xml:id="RgV_3.17.87b">sumitram.tu.pariṣvajya.mūrdhany.āghrāya.ca.ātmajam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.17.88">
+<l xml:id="RgV_3.17.88a">hṛdyam.etat.prayuñjīta.śānty.arthāya.sukhāya.ca./</l>
+<l xml:id="RgV_3.17.88b">asaṃsiddhe.saṃvanane.pāṃsu.pratikṛtim.pathi.//</l>
+</lg>
+
+<lg xml:id="RgV_3.17.89">
+<l xml:id="RgV_3.17.89a">prajvālya.juhuyād.agnim.ghṛtena.brāhmaṇo.yadi./</l>
+<l xml:id="RgV_3.17.89b">kṣatriyasya.tu.tailena.sārṣapeṇa.viśām.api.//</l>
+</lg>
+
+<lg xml:id="RgV_3.17.90">
+<l xml:id="RgV_3.17.90a">āyasīm.vā.pratikṛtim.agni.madhye.nidhāpayet./</l>
+<l xml:id="RgV_3.17.90b">tām.ca.prajvalitām.matvā.juhuyāt.tanmanāḥ.śuciḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.17.91">
+<l xml:id="RgV_3.17.91a">ugreṇa.manasā.hanyāt.kruddhaś.ca.juhuyād.ghṛtam./</l>
+<l xml:id="RgV_3.17.91b">yathā.yathā.prajvalite.hūyate.jāta.vedasi.//</l>
+</lg>
+
+<lg xml:id="RgV_3.17.92">
+<l xml:id="RgV_3.17.92a">dīptā.pratikṛti.vipras.tathā.sa.vaśam.eṣyati./</l>
+<l xml:id="RgV_3.17.92b">śmaśāna.dagdha.pāṃsūnām.kuryād.vedim.vilakṣaṇām.//</l>
+</lg>
+
+<lg xml:id="RgV_3.18.93">
+<l xml:id="RgV_3.18.93a">vaibhītaka.idhme.jvalite.loha.pratikṛtim.nyaset./</l>
+<l xml:id="RgV_3.18.93b">ardha.rātre.sthite.taile.sārṣapam.lavaṇa.anvitam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.18.94">
+<l xml:id="RgV_3.18.94a">tatra.śaramayam.kuryāt.prastaram.pratilomataḥ./</l>
+<l xml:id="RgV_3.18.94b">triṣu.śaṅkuṣu.ca.āsīno.juhuyād.ugra.darśanaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.18.95">
+<l xml:id="RgV_3.18.95a">mukta.keśo.vadham.prepsur.acireṇa.prasādhayet./</l>
+<l xml:id="RgV_3.18.95b">athavā.abhicared.evam.juhuyād.ātma.śoṇitam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.18.96">
+<l xml:id="RgV_3.18.96a">vaśam.nayati.rājānam.kṣipram.jana.padam.puram./</l>
+<l xml:id="RgV_3.18.96b">puṣṭi.karma.api.kartavyam.hṛdyena.uktam.yata.ātmanā.//</l>
+</lg>
+
+<lg xml:id="RgV_3.18.97">
+<l xml:id="RgV_3.18.97a">anāgasi.na.kurvīta.brāhmaṇo.vadha.samyutam./</l>
+<l xml:id="RgV_3.18.97b">sarūpa.vatsāyāś.ca.goḥ.payasā.sādhayet.carum.//</l>
+</lg>
+
+<lg xml:id="RgV_3.19.98">
+<l xml:id="RgV_3.19.98a">sahasra.sampāta.hutam.pāyayed.vatsam.agrajam./</l>
+<l xml:id="RgV_3.19.98b">sahasra.anucaro.vatsaḥ.sa.syād.rāgair.vivarjitaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.19.99">
+<l xml:id="RgV_3.19.99a">gāś.caiva.pāyayet.tāś.ca.bhavanti.vigata.jvarāḥ./</l>
+<l xml:id="RgV_3.19.99b">putrāṃś.ca.prāśayen.nityam.priyān.anyāṃś.ca.sajjanān.//</l>
+</lg>
+
+<lg xml:id="RgV_3.19.100">
+<l xml:id="RgV_3.19.100a">nirāmayāś.ca.snigdhāś.ca.bhavanti.vigata.jvarāḥ./</l>
+<l xml:id="RgV_3.19.100b">striyam.ced.abhimanyeta.tasyāḥ.saṃvananam.mahat.//</l>
+</lg>
+
+<lg xml:id="RgV_3.19.101">
+<l xml:id="RgV_3.19.101a">vrīhīṇām.nakha.bhinnānām.taṇḍulānt.sūkṣma.cūrṇitān./</l>
+<l xml:id="RgV_3.19.101b">sahasra.sampāta.hutānt.svedayet.kuśalo.agninā.//</l>
+</lg>
+
+<lg xml:id="RgV_3.19.102">
+<l xml:id="RgV_3.19.102a">tena.pratikṛtim.kuryāt.tām.dhyātvā.manasā.striyam./</l>
+<l xml:id="RgV_3.19.102b">aktām.sarṣapa.tailena.juhuyād.aṅgaśaś.ca.tām.//</l>
+</lg>
+
+<lg xml:id="RgV_3.20.103">
+<l xml:id="RgV_3.20.103a">pādau.prathamataś.chindyāt.phaḍ.ity.agnau.nidhāpayet./</l>
+<l xml:id="RgV_3.20.103b">atha.jaṅghe.jānuni.ca.ūrū.bāhū.tataḥ.śiraḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.20.104">
+<l xml:id="RgV_3.20.104a">chittvā.hṛdaya.deśam.tu.hṛdaye.sve.niveśayet./</l>
+<l xml:id="RgV_3.20.104b">japann.etam.ṛṣim.vipraḥ.strī.vaśam.sā.adhigacchati.//</l>
+</lg>
+
+<lg xml:id="RgV_3.20.105">
+<l xml:id="RgV_3.20.105a">na.etat.parigṛhītāsu.na.sādhvīṣu.kathaṃcana./</l>
+<l xml:id="RgV_3.20.105b">na.dharma.vrata.śīlāsu.kurvīta.dvija.sattamaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.20.106">
+<l xml:id="RgV_3.20.106a">kāmam.parigṛhītāsu.hīna.varṇāsu.yaś.caret./</l>
+<l xml:id="RgV_3.20.106b">patim.asyā.guṇī.kuryāt.pūrvam.paścāt.tu.tām.striyam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.20.107">
+<l xml:id="RgV_3.20.107a">bhuktvā.vā.pāyasam.sadyaḥ.chardayitvā.nidhāpayet./</l>
+<l xml:id="RgV_3.20.107b">tat.cūrṇam.kṛṣṇa.jāyāyai.deyam.saṃvananam.smṛtam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.21.108">
+<l xml:id="RgV_3.21.108a">mahā.vṛkṣa.phalāny.evam.ayugmāny.abhimantrayet./</l>
+<l xml:id="RgV_3.21.108b">teṣām.yugmāni.bhuñjīta.svayam.ardhāni.śeṣayet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.21.109">
+<l xml:id="RgV_3.21.109a">tāni.dadyād.yam.icchet.tu.vaśī.kartum.japann.ṛṣim./</l>
+<l xml:id="RgV_3.21.109b">suhṛd.bhūtvā.asuhṛd.yasya.deyam.saṃvananam.smṛtam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.21.110">
+<l xml:id="RgV_3.21.110a">eka.ekam.abhirūpam.tu.hṛdya.sūkta.ādy.ataḥ.punaḥ./</l>
+<l xml:id="RgV_3.21.110b">karmāṇi.tv.abhirūpāṇi.kuryād.yas.tu.yathā.icchati.//</l>
+</lg>
+
+<lg xml:id="RgV_3.21.111">
+<l xml:id="RgV_3.21.111a">parāka.dāsasya.vidhim.hṛdyena.uktam.vidur.budhāḥ./</l>
+<l xml:id="RgV_3.21.111b">strīṇām.saṃvananam.ca.etat.puṃsām.api.vidhīyate.//</l>
+</lg>
+
+<lg xml:id="RgV_3.21.112">
+<l xml:id="RgV_3.21.112a">dveṣyam.tu.jñātinām.eva.japec.caiva.sadā.yudhi./</l>
+<l xml:id="RgV_3.21.112b">khādiram.kārayet.śaṅkum.hṛdi.tam.samniveśayet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.22.113">
+<l xml:id="RgV_3.22.113a">kṛtvā.pratikṛtim.pūrvam.pāṃsubhir.vā.athavā.tuṣaiḥ./</l>
+<l xml:id="RgV_3.22.113b">iṣum.apy.anumantrya.eva.saṃgrāmam.samprakalpayet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.22.114">
+<l xml:id="RgV_3.22.114a">ripughnam.etaj.jānīyāt.prayuktam.aparājitam./</l>
+<l xml:id="RgV_3.22.114b">parāka.dāsa.dveṣya.artham.hṛdyam.saṃvananam.smṛtam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.22.115">
+<l xml:id="RgV_3.22.115a">cintayann.manasā.apy.ete.sūkte.siddhim.niyacchati./</l>
+<l xml:id="RgV_3.22.115b">sūryāyai.bhāva.vṛttam.tu.śrāvayet.kanyakām.pitā.//</l>
+</lg>
+
+<lg xml:id="RgV_3.22.116">
+<l xml:id="RgV_3.22.116a">anurūpam.susadṛśam.bhartāram.tena.vindati./</l>
+<l xml:id="RgV_3.22.116b">imām.iti.japet.kanyā.nābhim.ālabhya.nityaśaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.22.117">
+<l xml:id="RgV_3.22.117a">evam.eva.japed.bhartā.tato.dīrgha.āyuṣau.tu.tau./</l>
+<l xml:id="RgV_3.22.117b">snāpayed.abhirūpaiś.ca.bhrātā.kanyām.pitā.api.vā.//</l>
+</lg>
+
+<lg xml:id="RgV_3.23.118">
+<l xml:id="RgV_3.23.118a">daśa.putravatī.bhaven.na.ca.bhartrā.viyujyate./</l>
+<l xml:id="RgV_3.23.118b">saṃrājñī.iti.japen.mūrdhni.kanyām.ālabhya.nityaśaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.23.119">
+<l xml:id="RgV_3.23.119a">śvaśrū.śvaśura.devarair.nanāndrā.ca.api.pūjyate./(?)</l>
+<l xml:id="RgV_3.23.119b">indrāṇyā.kṛta.saṃvādam.snāne.sūktam.prayojayet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.23.120">
+<l xml:id="RgV_3.23.120a">nava.varga.uttama.yutam.pati.saubhāgya.putradam./</l>
+<l xml:id="RgV_3.23.120b">jala.puṣpa.utkara.yute.citra.kumbha.samāvṛte.//</l>
+</lg>
+
+<lg xml:id="RgV_3.23.121">
+<l xml:id="RgV_3.23.121a">kartavyo.atra.tathā.yāgaḥ.soma.gandharva.vahninām./</l>
+<l xml:id="RgV_3.23.121b">bhagāya.apsarasām.caiva.yakṣa.adhipataye.api.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_3.23.122">
+<l xml:id="RgV_3.23.122a">indrāṇyai.deva.patnīnām.rati.pradyumnayos.tathā./</l>
+<l xml:id="RgV_3.23.122b">nadī.salika.sampūrṇaiḥ.pañca.gavya.samāvṛtaiḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.24.123">
+<l xml:id="RgV_3.24.123a">hutvā.agnim.snāpayet.kanyām.sthitām.deśe.tu.dakṣiṇe./</l>
+<l xml:id="RgV_3.24.123b">priyaṅgu.vaṭa.nāgānām.kaṣāya.udghṛṣṭa.kesaram.//</l>
+</lg>
+
+<lg xml:id="RgV_3.24.124">
+<l xml:id="RgV_3.24.124a">sampāta.abhihutam.kṛtvā.sarva.oṣadhi.samanvitam./</l>
+<l xml:id="RgV_3.24.124b">abhimantrya.hi.sūkta.ante.navabhis.tu.vi.hi.iti.vai.//</l>
+</lg>
+
+<lg xml:id="RgV_3.24.125">
+<l xml:id="RgV_3.24.125a">stheyābhir.adbhiḥ.pūrṇena.abhiṣiñced.upoṣitām./</l>
+<l xml:id="RgV_3.24.125b">yaḥ.patighnyaḥ.striyas.tanvaḥ.śāmyante.tās.tv.anena.vai.//</l>
+</lg>
+
+<lg xml:id="RgV_3.24.126">
+<l xml:id="RgV_3.24.126a">snāpayed.āhanasyābhir.vidyād.yām.vipravrājinīm./</l>
+<l xml:id="RgV_3.24.126b">sūktād.upoddhared.enam.na.seśa.iti.tu.dvṛcam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.24.127">
+<l xml:id="RgV_3.24.127a">upadiṣṭo.ayam.ekeṣām.puṃsaḥ.karmaṇi.pauruṣe./</l>
+<l xml:id="RgV_3.24.127b">rakṣohaṇam.vājinam.ity.etad.rakṣohaṇam.japet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.25.128">
+<l xml:id="RgV_3.25.128a">agnim.prajvālya.ca.etena.upatiṣṭheta.nityaśaḥ./</l>
+<l xml:id="RgV_3.25.128b">ājya.āhutīś.ca.juhuyāt.tena.rakṣāṃsi.bādhate.//</l>
+</lg>
+
+<lg xml:id="RgV_3.25.129">
+<l xml:id="RgV_3.25.129a">etad.rakṣohaṇam.śāntiḥ.paramā.eṣā.prakīrtitā./</l>
+<l xml:id="RgV_3.25.129b">haviṣpāntīyam.ity.etat.sūktam.atra.prayojayet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.25.130">
+<l xml:id="RgV_3.25.130a">garhita.anna.agha.yoge.ca.haviṣpāntīyam.abhyaset./</l>
+<l xml:id="RgV_3.25.130b">pavitram.paramam.hy.etad.dhyātavyam.ca.abhīkṣṇaśaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.25.131">
+<l xml:id="RgV_3.25.131a">āditye.dṛṣṭim.āsthāya.ṣaṇ.māsān.niyato.abhyaset./</l>
+<l xml:id="RgV_3.25.131b">deva.yānam.sa.panthānam.paśyaty.āditya.maṇḍale.//</l>
+</lg>
+
+<lg xml:id="RgV_3.25.132">
+<l xml:id="RgV_3.25.132a">vidyā.vaiśvānarī.ca.asya.sva.kāyasthā.prakāśate./</l>
+<l xml:id="RgV_3.25.132b">haviṣpāntīyam.abhyasya.sarva.pāpaiḥ.pramucyate.//</l>
+</lg>
+
+<lg xml:id="RgV_3.25.133">
+<l xml:id="RgV_3.25.133a">indram.stava.iti.sūktam.tu.japet.śatru.nibarhaṇam./</l>
+<l xml:id="RgV_3.25.133b">pavitrāṇām.pavitram.tu.guhyam.pāvanam.adbhutam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.26.134">
+<l xml:id="RgV_3.26.134a">śukla.pakṣe.śubhe.vāre.sunakṣatre.sugocare./</l>
+<l xml:id="RgV_3.26.134b">dvādaśyām.putra.kāmāya.carum.kurvīta.vaiṣṇavam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.26.135">
+<l xml:id="RgV_3.26.135a">dampatyor.upavāsaḥ.syād.ekādaśyām.sula.ālaye./</l>
+<l xml:id="RgV_3.26.135b">ṛgbhiḥ.ṣoḍaśabhiḥ.samyag.arcayitvā.janārdanam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.26.136">
+<l xml:id="RgV_3.26.136a">carum.puruṣa.sūktena.śrapayet.putra.kāmyayā./</l>
+<l xml:id="RgV_3.26.136b">prāpnuyād.vaiṣṇavam.putram.acirāt.santati.kṣamam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.26.137">
+<l xml:id="RgV_3.26.137a">dvādaśa.dvādaśīḥ.samyak.payasā.nirvapet.carum./</l>
+<l xml:id="RgV_3.26.137b">yaḥ.karoti.sahasram.syād.yāti.viṣṇoḥ.param.padam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.26.138">
+<l xml:id="RgV_3.26.138a">hutvā.agnim.vidhivat.samyag.ṛgbhiḥ.ṣoḍaśabhir.budhaḥ./</l>
+<l xml:id="RgV_3.26.138b">kṛta.añjalipuṭo.bhūtvā.stavam.tābhiḥ.prayojayet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.27.139">
+<l xml:id="RgV_3.27.139a">keśavam.mārgaśīrṣe.tu.pauṣe.nārāyaṇam.smṛtam./</l>
+<l xml:id="RgV_3.27.139b">mādhavam.māghamāse.tu.govindam.phālgune.tathā.//</l>
+</lg>
+
+<lg xml:id="RgV_3.27.140">
+<l xml:id="RgV_3.27.140a">caitre.caiva.tathā.viṣṇum.vaiśākhe.madhu.sūdanam./</l>
+<l xml:id="RgV_3.27.140b">jyeṣṭhe.trivikramam.vidyād.āṣāḍhe.vāmanam.viduḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.27.141">
+<l xml:id="RgV_3.27.141a">śrāvaṇe.śrīdharam.vidyādd.hṛṣīkeśam.tataḥ.pare./</l>
+<l xml:id="RgV_3.27.141b">āśvine.padmanābham.tu.dāmodaram.ca.kārttike.//</l>
+</lg>
+
+<lg xml:id="RgV_3.27.142">
+<l xml:id="RgV_3.27.142a">dvādaśa.etāni.nāmāni.ṛṣyaśṛṅgo.abravīn.muniḥ./</l>
+<l xml:id="RgV_3.27.142b">pūjayen.māsa.nāmabhiḥ.sarvān.kāmānt.samaśnute.//</l>
+</lg>
+
+<lg xml:id="RgV_3.27.143">
+<l xml:id="RgV_3.27.143a">āyuṣmantam.sutam.sūte.yaśo.medhā.samanvitam./</l>
+<l xml:id="RgV_3.27.143b">dhanavantam.prajāvantam.dhārmikam.sāttvikam.tathā.//</l>
+</lg>
+
+<lg xml:id="RgV_3.28.144">
+<l xml:id="RgV_3.28.144a">samidho.aśvattha.vṛkṣasya.hutvā.agnim.juhuyāt.punaḥ./</l>
+<l xml:id="RgV_3.28.144b">upasthānam.hutāśasya.dhyātvā.arcya.madhu.sūdanam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.28.145">
+<l xml:id="RgV_3.28.145a">havir.hoam.tataḥ.kuryāt.pratyṛcam.vāg.yataḥ.śuciḥ./</l>
+<l xml:id="RgV_3.28.145b">sūktena.juhuyād.ājyam.ādāv.ante.ca.pūrvavat.//</l>
+</lg>
+
+<lg xml:id="RgV_3.28.146">
+<l xml:id="RgV_3.28.146a">haviḥ.śeṣam.namas.kṛtvā.nārī.nārāyaṇam.patim./</l>
+<l xml:id="RgV_3.28.146b">bhakṣayitvā.haviḥ.śeṣam.labdha.āśīḥ.saṃviśet.kṣapām.//</l>
+</lg>
+
+<lg xml:id="RgV_3.28.147">
+<l xml:id="RgV_3.28.147a">tatas.tu.karma.kṛtvā.idam.kartavyam.dvija.tarpaṇam./</l>
+<l xml:id="RgV_3.28.147b">dvitīyām.striyām.nivarteta.yāvad.garbham.na.vindati.//</l>
+</lg>
+
+<lg xml:id="RgV_3.28.148">
+<l xml:id="RgV_3.28.148a">aputrā.mṛta.putrā.vā.yā.ca.kanyām.prasūyate./</l>
+</lg>
+<lg xml:id="RgV_3.29.148">
+<l xml:id="RgV_3.29.148b">kṣipram.sā.janayet.putram.ṛṣyaśṛṅgo.yathā.abravīt.//</l>
+</lg>
+
+<lg xml:id="RgV_3.29.149">
+<l xml:id="RgV_3.29.149a">arcām.sampravakṣyāmi.viṣṇor.amita.tejasaḥ./</l>
+<l xml:id="RgV_3.29.149b">yat.kṛtvā.munayaḥ.sarve.brahma.nirvāṇam.āpnuyuḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.29.150">
+<l xml:id="RgV_3.29.150a">apsv.agnau.hṛdaye.sūrye.sthaṇḍile.pratimāsu.ca./</l>
+<l xml:id="RgV_3.29.150b">ṣaṭsv.eteṣu.hareḥ.samyag.arcanam.munibhiḥ.smṛtam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.29.151">
+<l xml:id="RgV_3.29.151a">agnau.kriyāvatām.devo.divi.devo.manīṣiṇām./</l>
+<l xml:id="RgV_3.29.151b">pratimāsv.alpa.buddhīnām.yoginām.hṛdaye.hariḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.29.152">
+<l xml:id="RgV_3.29.152a">āpo.hy.āyatanam.tasya.tasmāt.tāsu.sadā.hariḥ./</l>
+<l xml:id="RgV_3.29.152b">tasya.sarva.gatatvāc.ca.sthaṇḍile.bhāvita.ātmanām.//</l>
+</lg>
+
+<lg xml:id="RgV_3.29.153">
+<l xml:id="RgV_3.29.153a">dadyāt.puruṣa.sūktena.yaḥ.puṣpāṇy.apa.eva.vā./</l>
+<l xml:id="RgV_3.29.153b">arcitam.syāt.jagad.idam.tena.sarvam.cara.acaram.//</l>
+</lg>
+
+<lg xml:id="RgV_3.29.154">
+<l xml:id="RgV_3.29.154a">ānuṣṭubhasya.sūktasya.triṣṭub.antasya.devatā./</l>
+<l xml:id="RgV_3.29.154b">puruṣo.yo.jagad.bījam.ṛṣir.nārāyaṇaḥ.smṛtaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.30.155">
+<l xml:id="RgV_3.30.155a">nārāyaṇa.mahā.bāho.śṛṇuṣva.eka.manāḥ.prabho./</l>
+<l xml:id="RgV_3.30.155b">vakṣye.puruṣa.sūktasya.vidhānam.tv.arcanam.prati.//</l>
+</lg>
+
+<lg xml:id="RgV_3.30.156">
+<l xml:id="RgV_3.30.156a">agni.kāryam.japa.vidhim.stotram.caiva.sadātmakam./</l>
+<l xml:id="RgV_3.30.156b">snātvā.yathā.ukta.vidhinā.prān.mukhaḥ.śuddha.mānasaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.30.157">
+<l xml:id="RgV_3.30.157a">prathamām.vinyased.vāme.dvitīyām.dakṣiṇe.kare./</l>
+<l xml:id="RgV_3.30.157b">tṛtīyām.vāma.pāde.tu.caturthīm.dakṣiṇe.nyaset.//</l>
+</lg>
+
+<lg xml:id="RgV_3.30.158">
+<l xml:id="RgV_3.30.158a">pañcamī.vāma.jānuni.ṣaṣṭhim.vai.dakṣiṇe.nyaset./</l>
+<l xml:id="RgV_3.30.158b">saptamīm.vāma.kaṭyām.tu.aṣṭamīm.dakṣiṇe.kaṭau.//</l>
+</lg>
+
+<lg xml:id="RgV_3.30.159">
+<l xml:id="RgV_3.30.159a">navamīm.nābhi.madhye.tu.daśamīm.hṛdaye.nyaset./</l>
+<l xml:id="RgV_3.30.159b">ekādaśīm.kaṇṭha.deśe.dvādaśīm.vāma.bāhuke.//</l>
+</lg>
+
+<lg xml:id="RgV_3.30.160">
+<l xml:id="RgV_3.30.160a">trayodaśīm.dakṣiṇe.ca.āsye.caiva.caturdaśīm./</l>
+<l xml:id="RgV_3.30.160b">akṣṇoḥ.pañcadaśīm.caiva.ṣoḍaśīm.mūrdhni.vinyaset.//</l>
+</lg>
+
+<lg xml:id="RgV_3.31.161">
+<l xml:id="RgV_3.31.161a">evam.nyāsa.vidhim.kṛtvā.paścāt.pūjām.samārabhet./</l>
+<l xml:id="RgV_3.31.161b">yathā.dehe.tathā.deve.nyāsam.kṛtvā.vidhānataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.31.162">
+<l xml:id="RgV_3.31.162a">ādyayā.āvāhayed.devam.ṛcā.tu.puruṣa.uttamam./</l>
+<l xml:id="RgV_3.31.162b">dvitīyayā.āsanam.dadyāt.pādyam.caiva.tṛtīyayā.//</l>
+</lg>
+
+<lg xml:id="RgV_3.31.163">
+<l xml:id="RgV_3.31.163a">arghyam.caturthyā.dātavyam.pañcamyā.ācamanīyakam./</l>
+<l xml:id="RgV_3.31.163b">ṣaṣṭhyā.snānam.prakurvīta.saptamyā.vastram.eva.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_3.31.164">
+<l xml:id="RgV_3.31.164a">yajña.upavītam.aṣṭamyā.navamyā.ca.anulepanam./</l>
+<l xml:id="RgV_3.31.164b">puṣpam.daśamyā.dātavyam.ekādaśyā.tu.dhūpakam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.31.165">
+<l xml:id="RgV_3.31.165a">dvādaśyā.dīpakam.dadyāt.trayodaśyā.nivedanam./</l>
+<l xml:id="RgV_3.31.165b">caturdaśyā.namaskāram.pañcadaśyā.pradakṣiṇam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.31.166">
+<l xml:id="RgV_3.31.166a">snāne.vastre.ca.naivedye.dadyād.ācamanīyakam./</l>
+<l xml:id="RgV_3.31.166b">dakṣiṇām.tu.yathā.śaktyā.ṣoḍaśyā.tu.pradāpayet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.32.167">
+<l xml:id="RgV_3.32.167a">tataḥ.pradakṣiṇām.kṛtvā.japam.kuryāt.samāhitaḥ./</l>
+<l xml:id="RgV_3.32.167b">yathā.śakti.japitvā.tu.sūktam.tasya.nivedayet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.32.168">
+<l xml:id="RgV_3.32.168a">devasya.dakṣiṇe.pārśve.kuṇḍam.sthaṇḍilam.eva.vā./</l>
+<l xml:id="RgV_3.32.168b">kārayet.prathamena.eva.dvitīyena.tu.prokṣaṇam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.32.169">
+<l xml:id="RgV_3.32.169a">tṛtīyena.agnim.ādadhyāc.caturthena.samindhanam./</l>
+<l xml:id="RgV_3.32.169b">pañcamena.ājya.śrapaṇam.caroś.ca.śrapaṇam.tathā.//</l>
+</lg>
+
+<lg xml:id="RgV_3.32.170">
+<l xml:id="RgV_3.32.170a">ṣaṣṭhena.eva.agni.madhye.tu.kalpayet.padmam.āsanam./</l>
+<l xml:id="RgV_3.32.170b">cintayed.deva.deva.īśam.kāla.anala.sama.prabham.//</l>
+</lg>
+
+<lg xml:id="RgV_3.32.171">
+<l xml:id="RgV_3.32.171a">tato.gandham.ca.puṣpam.ca.dhūpa.dīpa.nivedanam./</l>
+<l xml:id="RgV_3.32.171b">anujñāpya.tataḥ.kuryāt.saptamy.ādi.yathā.kramam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.32.172">
+<l xml:id="RgV_3.32.172a">samidhas.tāvatīḥ.pūrvam.juhuyād.abhidhāritāḥ./(?)</l>
+<l xml:id="RgV_3.32.172b">tato.ghṛtena.juhuyāc.caruṇā.ca.tataḥ.punaḥ./</l>
+</lg>
+<lg xml:id="RgV_3.32.173">
+<l xml:id="RgV_3.32.173a">evam.hutvā.tataś.caiva.anujñāpya.yathā.kramam.//</l>
+
+<l xml:id="RgV_3.32.173b">agner.bhagavatas.tasya.samīpe.stotram.uccaret./</l>
+</lg>
+<lg xml:id="RgV_3.33.174">
+<l xml:id="RgV_3.33.174a">jitam.te.puṇḍarīka.akṣa.namas.te.viśva.bhāvana./</l>
+<l xml:id="RgV_3.33.174b">namas.te.astu.hṛṣīkeśa.mahā.puruṣa.pūrvaja.//</l>
+</lg>
+
+<lg xml:id="RgV_3.33.175">
+<l xml:id="RgV_3.33.175a">devānām.dānavānām.ca.sāmānyam.adhidaivatam./</l>
+<l xml:id="RgV_3.33.175b">sarvadā.caraṇa.dvandvam.vrajāmi.śaraṇam.tava.//</l>
+</lg>
+
+<lg xml:id="RgV_3.33.176">
+<l xml:id="RgV_3.33.176a">ekas.tvam.asi.lokasya.sraṣṭā.saṃhārakas.tathā./</l>
+<l xml:id="RgV_3.33.176b">avyaktaś.ca.anumantā.ca.guṇa.māyā.samāvṛtaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.33.177">
+<l xml:id="RgV_3.33.177a">saṃsāra.sāgaram.ghoram.anantam.kleśa.bhājanam./</l>
+<l xml:id="RgV_3.33.177b">tvām.eva.śaraṇam.prāpya.nistaranti.manīṣiṇaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.33.178">
+<l xml:id="RgV_3.33.178a">na.te.rūpam.na.ca.ākāro.na.āyudhāni.na.ca.āspadam./</l>
+<l xml:id="RgV_3.33.178b">tathā.api.puruṣa.ākāro.bhaktānām.tvam.prakāśase.//</l>
+</lg>
+
+<lg xml:id="RgV_3.33.179">
+<l xml:id="RgV_3.33.179a">na.eva.kiṃcit.parokṣam.te.pratyakṣo.asi.na.kasyacit./</l>
+<l xml:id="RgV_3.33.179b">na.eva.kiṃcid.asādhyam.te.na.ca.sādhyo.asi.kasyacit.//</l>
+</lg>
+
+<lg xml:id="RgV_3.34.180">
+<l xml:id="RgV_3.34.180a">kāryāṇām.kāraṇam.pūrvam.vacasām.vāyam.uttamam./</l>
+<l xml:id="RgV_3.34.180b">yoginām.parama.aiddhiḥ.paramam.te.padam.viduḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.34.181">
+<l xml:id="RgV_3.34.181a">aham.bhīto.asmi.deva.īśa.saṃsāre.asmin.mahā.bhaye./</l>
+<l xml:id="RgV_3.34.181b">trāhi.mām.puṇḍarīka.akṣa.na.jāne.paramam.padam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.34.182">
+<l xml:id="RgV_3.34.182a">kāleṣv.api.ca.sarveṣu.diṣku.sarvāṣu.ca.acyuta./</l>
+<l xml:id="RgV_3.34.182b">śarīre.ca.gataś.ca.asi.vartate.me.mahad.bhayam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.34.183">
+<l xml:id="RgV_3.34.183a">tvat.pāda.kamalād.anyan.na.me.janma.antareṣv.api./</l>
+<l xml:id="RgV_3.34.183b">vijñānam.yad.idam.prāpya.yad.idam.sthānam.arjitam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.34.184">
+<l xml:id="RgV_3.34.184a">janma.antare.api.me.deva.mā.bhūd.asya.parikṣayaḥ./</l>
+<l xml:id="RgV_3.34.184b">durgatāv.api.jātavya.tvad.gato.me.mano.rathaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.34.185">
+<l xml:id="RgV_3.34.185a">yadi.nāśam.na.vindeta.tāvatā.asmi.kṛtī.sadā./</l>
+<l xml:id="RgV_3.34.185b">kāmaye.viṣṇu.pādau.tu.sarva.janmasu.kevalam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.35.186">
+<l xml:id="RgV_3.35.186a">puruṣasya.hareḥ.sūktam.svargyam.dhanyam.yaśaskaram./</l>
+<l xml:id="RgV_3.35.186b">ātma.jñānam.idam.puṇyam.yoga.jñānam.idam.param.//</l>
+</lg>
+
+<lg xml:id="RgV_3.35.187">
+<l xml:id="RgV_3.35.187a">phala.āhāro.bhaven.māsam.paśyaty.ātmānam.ātmani./</l>
+<l xml:id="RgV_3.35.187b">phalāni.bhuktvā.upavasen.māsam.adbhiś.ca.vartayet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.35.188">
+<l xml:id="RgV_3.35.188a">araṇye.nivasen.nityam.japann.etam.ṛṣim.sadā./</l>
+<l xml:id="RgV_3.35.188b">tris.triṣavaṇa.kāleṣu.snāyād.apsu.samāhitaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.35.189">
+<l xml:id="RgV_3.35.189a">ādityam.upatiṣṭheta.sūktena.anena.nityaśaḥ./</l>
+<l xml:id="RgV_3.35.189b">ājya.āhutor.anena.eva.hutvā.etam.cintayed.ṛṣim.//</l>
+</lg>
+
+<lg xml:id="RgV_3.35.190">
+<l xml:id="RgV_3.35.190a">ūrdhvam.māsāt.phala.āhāras.tribhir.varṣair.jayed.divam./</l>
+<l xml:id="RgV_3.35.190b">tadbhaktas.tanmanā.yukto.daśa.varṣāṇy.ananya.bhāk.//</l>
+</lg>
+
+<lg xml:id="RgV_3.35.191">
+<l xml:id="RgV_3.35.191a">sākṣāt.paśyati.tam.devam.nārāyaṇam.anāmayam./</l>
+<l xml:id="RgV_3.35.191b">grāhyam.atyanta.yatnena.sraṣṭāram.jagato.avyayam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.36.192">
+<l xml:id="RgV_3.36.192a">gṛhastha.dharme.varteta.nyāya.klṛptaḥ.śuci.vrataḥ./</l>
+<l xml:id="RgV_3.36.192b">etam.devam.cintayeta.nārāyaṇam.anāmayam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.36.193">
+<l xml:id="RgV_3.36.193a">ardha.rātre.tyakta.nidra.utthāya.śuci.vāg.yataḥ./</l>
+<l xml:id="RgV_3.36.193b">samprasupteṣu.bhūteṣu.yogam.yuñjīta.yogavit.//</l>
+</lg>
+
+<lg xml:id="RgV_3.36.194">
+<l xml:id="RgV_3.36.194a">ṛjv.āsīnaḥ.same.deśe.nivāte.śabda.varjite./</l>
+<l xml:id="RgV_3.36.194b">savyam.pādam.dakṣiṇasya.jānuni.śleṣayet.tataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.36.195">
+<l xml:id="RgV_3.36.195a">saṃhṛtya.dakṣiṇam.pādam.savye.jānuni.yacchati./</l>
+<l xml:id="RgV_3.36.195b">brahma.añjali.kṛtaḥ.svastho.yoga.sammīlita.īkṣaṇaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.36.196">
+<l xml:id="RgV_3.36.196a">om.ity.uktvā.svam.hṛdayam.cintayed.aviśaṅkitaḥ./</l>
+<l xml:id="RgV_3.36.196b">tatra.ātmānam.samādadhyād.indriyāṇi.manas.tathā.//</l>
+</lg>
+
+<lg xml:id="RgV_3.37.197">
+<l xml:id="RgV_3.37.197a">na.ced.budhyeta.kiṃca.anyan.na.paśyec.śṛṇuyān.na.ca./</l>
+<l xml:id="RgV_3.37.197b">na.manasyed.yadā.yogam.tadā.prāptaḥ.sa.ucyate.//</l>
+</lg>
+
+<lg xml:id="RgV_3.37.198">
+<l xml:id="RgV_3.37.198a">hṛdyam.etam.ṛṣim.abhyasyet.paśyann.iva.yathā.śruti./</l>
+<l xml:id="RgV_3.37.198b">prāṇān.āyamya.ca.āsīno.yāvat.tam.cintayed.ṛṣim.//</l>
+</lg>
+
+<lg xml:id="RgV_3.37.199">
+<l xml:id="RgV_3.37.199a">ucchvasiṣyann.adho.nābhi.gamayitvā.manas.tathā./</l>
+<l xml:id="RgV_3.37.199b">ucchvased.evam.asakṛt.tanmanā.yogam.unnayet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.37.200">
+<l xml:id="RgV_3.37.200a">evam.hi.yuñjant.sāmānyam.na.paśyet.śṛṇuyān.na.ca./</l>
+<l xml:id="RgV_3.37.200b">tadā.śanair.nayec.ceto.hṛdayād.ūrdhvam.eva.tu.//</l>
+</lg>
+
+<lg xml:id="RgV_3.37.201">
+<l xml:id="RgV_3.37.201a">samau.tu.jatrū.ca.āsyam.ca.nāsikā.nayane.bhruvau./</l>
+<l xml:id="RgV_3.37.201b">bhruvor.madhye.param.sthānam.tatra.etad.dhārayet.sthiram.//</l>
+</lg>
+
+<lg xml:id="RgV_3.38.202">
+<l xml:id="RgV_3.38.202a">lalāṭa.deśe.dhārya.atha.mūrdhānam.gamayet.tataḥ./</l>
+<l xml:id="RgV_3.38.202b">ucchvasaṃś.ca.yathā.kālam.nābhim.gatvā.ucchvaset.punaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.38.203">
+<l xml:id="RgV_3.38.203a">etat.param.sthānam.uktam.brahmaṇaḥ.paramātmanaḥ./</l>
+<l xml:id="RgV_3.38.203b">evam.yukto.mahātmānam.ātmānam.pratipadyate.//</l>
+</lg>
+
+<lg xml:id="RgV_3.38.204">
+<l xml:id="RgV_3.38.204a">yadi.syāt.sukṛtī.śuddho.yadi.vā.pāpakṛttamaḥ./</l>
+<l xml:id="RgV_3.38.204b">upalabhya.param.brahma.gatim.jñātvā.bhavet.śuciḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.38.205">
+<l xml:id="RgV_3.38.205a">sarva.pāpa.anubaddhaś.ced.buddhvā.etat.prayato.japet./</l>
+<l xml:id="RgV_3.38.205b">api.jijñāsanād.eva.gaccheta.paramām.gatim.//</l>
+</lg>
+
+<lg xml:id="RgV_3.38.206">
+<l xml:id="RgV_3.38.206a">dhāraṇā.tu.pṛthak.kāryā.dharmeṇa.anena.nityaśaḥ./</l>
+<l xml:id="RgV_3.38.206b">āditye.agnau.candramasi.vṛkṣa.agreṣu.ca.dhārayet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.39.207">
+<l xml:id="RgV_3.39.207a">parvata.agre.samudre.vā.yatra.vā.api.mano.rame./</l>
+<l xml:id="RgV_3.39.207b">na.tv.eva.viṣayān.prāpya.dhārayīta.kathaṃcana.//</l>
+</lg>
+
+<lg xml:id="RgV_3.39.208">
+<l xml:id="RgV_3.39.208a">bahv.atra.duhkham.jānīyāt.pradhvaṃse.dhāraṇā.kṛte./</l>
+<l xml:id="RgV_3.39.208b">dhārmikāṇām.kule.śuddhe.yoga.bhraṣṭo.abhijāyate.//</l>
+</lg>
+
+<lg xml:id="RgV_3.39.209">
+<l xml:id="RgV_3.39.209a">mūrdhni.brahma.yadā.vindet.tam.eva.ṛṣi.sattamam./</l>
+<l xml:id="RgV_3.39.209b">tadā.mūrdhnaḥ.param.jyotir.nakṣatra.patham.unnayet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.39.210">
+<l xml:id="RgV_3.39.210a">yogī.yoga.īśvaram.prāpya.nirdvandvaḥ.parama.ātmavit./</l>
+<l xml:id="RgV_3.39.210b">sarvatra.eva.ātmanā.ātmānam.paśyed.ṛṣi.parāyaṇaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.39.211">
+<l xml:id="RgV_3.39.211a">japec.caiva.sadā.snātaḥ.pavitram.idam.uttamam./</l>
+<l xml:id="RgV_3.39.211b">api.pātaka.samyuktaḥ.kālena.sukṛtī.bhavet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.40.212">
+<l xml:id="RgV_3.40.212a">tapaḥ.parāyaṇo.nityam.satya.vāg.anasūyakaḥ./</l>
+<l xml:id="RgV_3.40.212b">japann.etam.ṛṣim.vipraḥ.kālena.sa.vanī.bhavet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.40.213">
+<l xml:id="RgV_3.40.213a">yena.yena.ca.kāmena.japed.imam.ṛṣim.sadā./</l>
+<l xml:id="RgV_3.40.213b">sa.sa.kāmaḥ.samṛddhaḥ.syāt.śraddadhānasya.kurvataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.40.214">
+<l xml:id="RgV_3.40.214a">homam.vā.apy.athavā.jāpyam.upahāram.atho.carum./</l>
+<l xml:id="RgV_3.40.214b">kurvīta.yena.kāmena.tat.siddhim.avadhārayet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.40.215">
+<l xml:id="RgV_3.40.215a">jñāti.śraiṣṭhyam.mahad.vittam.yaśo.loke.parām.gatim./</l>
+<l xml:id="RgV_3.40.215b">pāpena.vipramokṣas.tu.tat.siddhim.avadhārayet.//</l>
+</lg>
+
+<lg xml:id="RgV_3.40.216">
+<l xml:id="RgV_3.40.216a">jñāna.gamyam.param.sūkṣmam.vyāpya.sarvam.avasthitam./</l>
+<l xml:id="RgV_3.40.216b">grāhyam.atyanta.yatnena.brahma.abhyety.sanātanam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.40.217">
+<l xml:id="RgV_3.40.217a">sahasra.śīrṣā.iti.sūktam.sarva.kāma.phala.pradam./</l>
+<l xml:id="RgV_3.40.217b">veda.garbha.śarīreṇa.sa.vai.nārāyaṇaḥ.smṛtaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.40.218">
+<l xml:id="RgV_3.40.218a">brahma.indu.rudra.parjanyā.atra.sūkte.vyavasthitāḥ./</l>
+<l xml:id="RgV_3.40.218b">atrastham.etad.draṣṭavyam.jagat.sthāvara.jaṅgamam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.41.219">
+<l xml:id="RgV_3.41.219a">anāsādayāmo.api.bhaktim.na.parihāpayet./</l>
+<l xml:id="RgV_3.41.219b">bhakta.anukampī.bhagavān.śrūyate.puruṣa.uttamaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.41.220">
+<l xml:id="RgV_3.41.220a">pūjā.artham.tasya.devasya.vanyānt.svayam.upārjitān./</l>
+<l xml:id="RgV_3.41.220b">āraṇyaka.vidhānena.nirvapet.pratyaham.carum./</l>
+</lg>
+<lg xml:id="RgV_3.41.221">
+<l xml:id="RgV_3.41.221a">nārāyaṇāya.svāhā.iti.mantra.ante.juhuyādd.haviḥ.//</l>
+
+<l xml:id="RgV_3.41.221b">āsahasrāt.tataś.cakṣur.divyam.hotur.dadāti.saḥ./</l>
+</lg>
+<lg xml:id="RgV_3.41.222">
+<l xml:id="RgV_3.41.222a">api.vā.caru.sahasram.tantreṇa.ekena.nirvapet.//</l>
+
+<l xml:id="RgV_3.41.222b">yāvanto.vā.api.śakyante.ahnā.sarvānt.samāpayet./</l>
+</lg>
+<lg xml:id="RgV_3.41.223">
+<l xml:id="RgV_3.41.223a">sahasrasya.īpsitānām.ca.kāmānām.labhate.phalam.//</l>
+
+<l xml:id="RgV_3.41.223b">puruṣa.āyuḥ.samāyuktaḥ.siddho.vā.api.caren.mahīm./</l>
+</lg>
+<lg xml:id="RgV_3.42.224">
+<l xml:id="RgV_3.42.224a">dhyeyaḥ.sadā.savitṛ.maṇḍala.madhya.vartī.nārāyaṇaḥ.sarasija.āsana.samniviṣṭaḥ./</l>
+<l xml:id="RgV_3.42.224b">keyūravān.makara.kuṇḍalavān.kirīṭī.hārī.hiraṇmaya.vapur.dhṛta.śaṅkha.cakraḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.42.225">
+<l xml:id="RgV_3.42.225a">etat.tu.yaḥ.paṭhati.kevalam.eva.sūktam.nārāyaṇasya.caraṇāv.abhivandya.vandyau./</l>
+<l xml:id="RgV_3.42.225b">pāṭhena.tena.paramena.sanātanasya.sthānam.jarā.maraṇa.varjitam.eti.viṣṇoḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.42.226">
+<l xml:id="RgV_3.42.226a">haviṣā.agnau.jale.puṣpair.dhyānena.hṛday.harim./</l>
+<l xml:id="RgV_3.42.226b">yajanti.sūrayo.nityam.japena.ravi.maṇḍale.//</l>
+</lg>
+
+<lg xml:id="RgV_3.43.227">
+<l xml:id="RgV_3.43.227a">bilva.patram.śamī.patram.patram.bhṛṅgārakasya.ca./</l>
+<l xml:id="RgV_3.43.227b">mālatī.kuśa.padmam.ca.sadyas.tuṣṭi.karam.hareḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.43.228">
+<l xml:id="RgV_3.43.228a">yan.na.upapadyate.kiṃcit.tam.dhyāyen.manasā.eva.tu./</l>
+<l xml:id="RgV_3.43.228b">sampadyate.prasādāt.tu.deva.devasya.cakriṇaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.43.229">
+<l xml:id="RgV_3.43.229a">patraiś.ca.puṣpaiś.ca.toyair.akrīta.labdhairś.ca.sadā.eva.satsu./</l>
+<l xml:id="RgV_3.43.229b">bhaktyā.eka.labhye.puruṣe.purāṇe.muktyai.kim.artham.kriyate.na.yatnaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_3.43.230">
+<l xml:id="RgV_3.43.230a">ity.evam.uktaḥ.puruṣasya.viṣṇor.arcā.vidhir.viṣṇu.kumāra.nāmnā./</l>
+<l xml:id="RgV_3.43.230b">muktyā.eka.mārga.pratibodhanāya.dṛṣṭvā.vidhānam.tv.iha.nārada.uktam.//</l>
+</lg>
+
+<lg xml:id="RgV_3.43.231">
+<l xml:id="RgV_3.43.231a">yā.oṣadhīḥ.svastyayanam.japeta.nitya.vrataḥ./</l>
+<l xml:id="RgV_3.43.231b">oṣadhīś.ca.jayen.nityam.ṣaṇ.māsān.eva.nityaśaḥ.//E</l>
+</lg>
+
+<lg xml:id="RgV_4.1.1">
+<l xml:id="RgV_4.1.1a">iṣṭvā.śaradi.vai.rudram.oṣadhīś.ca.yajet.tathā./</l>
+<l xml:id="RgV_4.1.1b">tasya.āmayā.na.bhavanti.tathā.jīrṇāni.yāni.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_4.1.2">
+<l xml:id="RgV_4.1.2a">kriyām.tu.sapta.rātreṇa.saptakṛtvo.abhyaset.tataḥ./</l>
+<l xml:id="RgV_4.1.2b">prapadyeta.oṣadhīm.vipraḥ.sūktam.etaj.japant.sadā.//</l>
+</lg>
+
+<lg xml:id="RgV_4.1.3">
+<l xml:id="RgV_4.1.3a">dviṣat.kṣetrād.iha.āyadhvam.iti.vijñāpayeta.ca./</l>
+<l xml:id="RgV_4.1.3b">sva.kṣetre.varuṇam.iṣṭvā.vindate.dviṣad.oṣadhīḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.1.4">
+<l xml:id="RgV_4.1.4a">vṛṣṭi.kāmo.yata.āhāraḥ.prapadyeta.bṛhaspatim./</l>
+<l xml:id="RgV_4.1.4b">pāyasena.upahāreṇa.homena.ca.samanvitaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.1.5">
+<l xml:id="RgV_4.1.5a">bṛhaspate.pati.ity.etad.vṛṣṭi.kāmaḥ.prayojayet./</l>
+<l xml:id="RgV_4.1.5b">parjanyam.ca.namas.kṛtvā.vṛṣṭim.vindati.śobhanām.//</l>
+</lg>
+
+<lg xml:id="RgV_4.2.6">
+<l xml:id="RgV_4.2.6a">sarvatra.tu.parā.śāntir.jñeyo.apratirathas.tv.ṛṣiḥ./</l>
+<l xml:id="RgV_4.2.6b">yam.eva.deśam.gaccheta.śatrum.vā.apy.anumantritaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.2.7">
+<l xml:id="RgV_4.2.7a">na.ajitvā.vinivarteta.param.hi.brahmaṇo.balam./</l>
+<l xml:id="RgV_4.2.7b">sarva.kāmair.japed.etat.sarva.kāma.samṛddhaye.//</l>
+</lg>
+
+<lg xml:id="RgV_4.2.8">
+<l xml:id="RgV_4.2.8a">saṃgrāmam.abhyudyatāya.rājñe.ca.etat.prayojayet./</l>
+<l xml:id="RgV_4.2.8b">sarvān.vijayate.śatrūn.na.parājīyate.paraiḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.2.9">
+<l xml:id="RgV_4.2.9a">pathi.svastyayanam.ca.etat.taskarebhyaś.caran.pathi./</l>
+<l xml:id="RgV_4.2.9b">bhūta.uraga.piśācebhyaḥ.sarvebhyaḥ.parirakṣati.//</l>
+</lg>
+
+<lg xml:id="RgV_4.2.10">
+<l xml:id="RgV_4.2.10a">bhūtāṃśam.kāśyapam.sūktam.prajā.kāmaḥ.śucir.japan./</l>
+<l xml:id="RgV_4.2.10b">anurūpām.prajām.āśu.labhate.na.atra.saṃśayaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.3.11">
+<l xml:id="RgV_4.3.11a">sthālī.pākena.nāsatyāv.aśvinau.tu.jayed.dvijaḥ./</l>
+<l xml:id="RgV_4.3.11b">anena.eva.tu.sūktena.hutvā.aśvān.anumantrayet.//</l>
+</lg>
+
+<lg xml:id="RgV_4.3.12">
+<l xml:id="RgV_4.3.12a">pāyasam.kṛsaram.māṃsam.odanam.dadhi.saktukān./</l>
+<l xml:id="RgV_4.3.12b">kulmāṣāṃś.ca.karambhāṃś.ca.phalāni.vividhāni.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_4.3.13">
+<l xml:id="RgV_4.3.13a">citram.mātryam.śubhān.gandhān.anna.pānāni.yāni.ca./</l>
+<l xml:id="RgV_4.3.13b">bhakṣyam.bhojyam.ca.peyam.ca.samāhṛtya.udite.ravau.//</l>
+</lg>
+
+<lg xml:id="RgV_4.3.14">
+<l xml:id="RgV_4.3.14a">bhūtāṃśam.abhyaset.tāvad.yāvad.astamito.raviḥ./</l>
+<l xml:id="RgV_4.3.14b">ardha.rātre.tv.atikrānte.tato.aśvibhyām.nivedayet.//</l>
+</lg>
+
+<lg xml:id="RgV_4.3.15">
+<l xml:id="RgV_4.3.15a">dīrgha.āyuṣam.surūpam.ca.labhet.putram.suvarcasam./</l>
+<l xml:id="RgV_4.3.15b">rūpavāṃś.ca.bhaven.nityam.bhūtāṃśam.yo.abhyaset.sadā.//</l>
+</lg>
+
+<lg xml:id="RgV_4.4.16">
+<l xml:id="RgV_4.4.16a">sārvakāmim.ity.etam.ṛṣim.vidyād.vicakṣaṇaḥ./</l>
+<l xml:id="RgV_4.4.16b">na.vā.u.devā.ity.etaj.japeta.niyata.vrataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.4.17">
+<l xml:id="RgV_4.4.17a">annam.vindati.sarvatra.yatra.yatra.upatiṣ]hati./</l>
+<l xml:id="RgV_4.4.17b">pāpmā.upahatam.ātmānam.yo.manyeta.vicakṣaṇaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.4.18">
+<l xml:id="RgV_4.4.18a">sa.japen.niyato.bhūtvā.laghu.manyeta.pāpmanā./</l>
+<l xml:id="RgV_4.4.18b">vācam.prapadyed.vāk.kāmo.juhvad.āśu.japann.imāḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.4.19">
+<l xml:id="RgV_4.4.19a">aham.rudrebhir.ity.etad.vāgmī.bhavati.pūjitaḥ./</l>
+<l xml:id="RgV_4.4.19b">natam.ity.aṣṭakam.sūktam.vaiśvadevam.japan.muniḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.4.20">
+<l xml:id="RgV_4.4.20a">kṛtsnam.tu.kalmaṣam.hatvā.viśvair.devaiḥ.saha.āsate./</l>
+<l xml:id="RgV_4.4.20b">rātrīm.prapadyeta.sadā.śuciś.cīrṇa.vrato.niśi.//</l>
+</lg>
+
+<lg xml:id="RgV_4.4.21">
+<l xml:id="RgV_4.4.21a">yaḥ.kāmayeta.na.punar.jāyeyam.iti.yoniṣu./</l>
+<l xml:id="RgV_4.4.21b">sahasrakṛtvo.manasā.japed.rātrī.iti.rātri.su.//</l>
+</lg>
+
+<lg xml:id="RgV_4.4.22">
+<l xml:id="RgV_4.4.22a">sthālī.pākena.rātrīm.ca.yajeta.ahar.ahar.niśi./</l>
+<l xml:id="RgV_4.4.22b">tanmanā.niśi.ca.āsīnas.tiṣṭhed.ahani.dhārmikaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.5.23">
+<l xml:id="RgV_4.5.23a">ūrdhvam.saṃvatsarāc.caiva.carum.payasi.saṃskṛtam./</l>
+<l xml:id="RgV_4.5.23b">sahasrakṛtvas.tv.etena.divā.homo.vidhīyate.//</l>
+</lg>
+
+<lg xml:id="RgV_4.5.24">
+<l xml:id="RgV_4.5.24a">juhuyān.niśi.pūrvasmin.bhāge.rātri.samāhitaḥ./</l>
+<l xml:id="RgV_4.5.24b">divā.ca.āvaśyakam.kāryam.chāyāyām.aṃśu.tejasā.//</l>
+</lg>
+
+<lg xml:id="RgV_4.5.25">
+<l xml:id="RgV_4.5.25a">iti.prayata.ātmavānt.sūktam.tu.manasā.japet./</l>
+<l xml:id="RgV_4.5.25b">saṃvatsare.tṛtīye.tu.sarpiṣā.sādhayet.carum.//</l>
+</lg>
+
+<lg xml:id="RgV_4.5.26">
+<l xml:id="RgV_4.5.26a">atha.asya.varadā.devī.rātrir.bhavati.śarvarī./</l>
+<l xml:id="RgV_4.5.26b">vijñāpayati.tām.devīm.varadām.svayam.āgatām.//</l>
+</lg>
+
+<lg xml:id="RgV_4.5.27">
+<l xml:id="RgV_4.5.27a">saṃvatsara.ṛtau.māsi.divase.asmin.kṣaṇe.api.vā./</l>
+<l xml:id="RgV_4.5.27b">prayāṇa.kālo.bhavitā.tava.vatsa.iti.vatsalā.//</l>
+</lg>
+
+<lg xml:id="RgV_4.6.28">
+<l xml:id="RgV_4.6.28a">rātrī.sūktam.japann.eva.tam.kālam.pratipadyate./</l>
+<l xml:id="RgV_4.6.28b">na.yonim.punar.āyāti.sarva.pāpaiḥ.pramucyate.//</l>
+</lg>
+
+<lg xml:id="RgV_4.6.29">
+<l xml:id="RgV_4.6.29a">mama.agne.varca.ity.etat.sarva.kāmair.japed.dvijaḥ./</l>
+<l xml:id="RgV_4.6.29b">juhvad.ājyam.anena.eva.sarvān.kāmān.avāpnuyāt.//</l>
+</lg>
+<lg xml:id="RgV_4.6.30">
+<l xml:id="RgV_4.6.30a">yām.kalpayanti.iti.sadā.japeta.niyata.vrataḥ./</l>
+<l xml:id="RgV_4.6.30b">na.enam.kṛtyā.nihiṃsanti.kruddha.abhicaritāni.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_4.6.31">
+<l xml:id="RgV_4.6.31a">yamm.aṅgirasa.kalpais.tu.tadvido.abhicaranti.saḥ./</l>
+<l xml:id="RgV_4.6.31b">pratyaṅgirasa.kalpena.sarvāṃs.tān.pratibādhate.//</l>
+</lg>
+
+<lg xml:id="RgV_4.6.32">
+<l xml:id="RgV_4.6.32a">pratyaṅgirasa.vidvāṃs.tu.na.riṣyeta.kadācana./</l>
+<l xml:id="RgV_4.6.32b">na.enam.kṛtyā.nihiṃsanti.jñāta.ajñātāni.vā.kvacit.//</l>
+</lg>
+
+<lg xml:id="RgV_4.7.33">
+<l xml:id="RgV_4.7.33a">ajānatā.jānatā.vā.kruddhena.amarṣitena.vā./</l>
+<l xml:id="RgV_4.7.33b">ākruṣṭam.vā.duruktam.vā.na.eno.liṇpati.tadvidam.//</l>
+</lg>
+
+<lg xml:id="RgV_4.7.34">
+<l xml:id="RgV_4.7.34a">evam.eva.japen.nityam.ṛṣim.svastyayanāya.vai./</l>
+<l xml:id="RgV_4.7.34b">sarva.prāyaścittam.etad.abhāṣata.ṛṣiḥ.svayam.//</l>
+</lg>
+
+<lg xml:id="RgV_4.7.35">
+<l xml:id="RgV_4.7.35a">sthāvarāṇām.niveśe.tu.nagarāṇām.tathaiva.ca./</l>
+<l xml:id="RgV_4.7.35b">grāmāṇām.ca.gṛhāṇām.ca.japed.imam.ṛṣim.sadā.//</l>
+</lg>
+
+<lg xml:id="RgV_4.7.36">
+<l xml:id="RgV_4.7.36a">jāta.rūpamayam.vidvān.kārayet.trivṛtam.maṇim./</l>
+<l xml:id="RgV_4.7.36b">sahasra.sampāta.hutam.ṛṣiṇā.tena.tam.tataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.7.37">
+<l xml:id="RgV_4.7.37a">pratimuñceta.śirasi.grīvāyām.athavā.urasi./</l>
+<l xml:id="RgV_4.7.37b">na.enam.kṛtyā.nihiṃsanti.jñāta.ajñātāni.yāni.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_4.8.38">
+<l xml:id="RgV_4.8.38a">anena.eva.tu.sūktena.rājñām.ca.samalohitam./</l>
+<l xml:id="RgV_4.8.38b">kārayeta.maṇim.vidvāṃs.tāvad.eva.anumantraṇam.//</l>
+</lg>
+
+<lg xml:id="RgV_4.8.39">
+<l xml:id="RgV_4.8.39a">saṃgrāmeṣu.dhvaja.agrāṇi.vāditrāṇy.anumantrayet./</l>
+<l xml:id="RgV_4.8.39b">āsanāni.ca.śayyāś.ca.yānāni.vividhāni.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_4.8.40">
+<l xml:id="RgV_4.8.40a">tasya.abhicarataḥ.sākṣād.āṅgirasa.ṛṣeḥ.svayam./</l>
+<l xml:id="RgV_4.8.40b">pratyaṅgirasa.kalpena.sarvam.tat.pratibādhate.//</l>
+</lg>
+
+<lg xml:id="RgV_4.8.41">
+<l xml:id="RgV_4.8.41a">amānuṣīr.abhicaret.kṛtyā.sūktam.japann.idam./</l>
+<l xml:id="RgV_4.8.41b">mucyate.sarvato.aniṣṭāt.kim.punar.mānuṣād.bhayam.//</l>
+</lg>
+
+<lg xml:id="RgV_4.8.42">
+<l xml:id="RgV_4.8.42a">tapasvī.niyato.dāntaḥ.prayoktā.ced.bhaved.ṛṣiḥ./</l>
+<l xml:id="RgV_4.8.42b">sarvam.tarati.śānta.ātmā.tapo.hi.sumahad.balam.//</l>
+</lg>
+
+<lg xml:id="RgV_4.9.43">
+<l xml:id="RgV_4.9.43a">āyuṣyam.āyur.varcasyam.sūktam.dākṣāyaṇam.mahat./</l>
+<l xml:id="RgV_4.9.43b">alaṃkāram.hiraṇyam.vā.prāpya.dākṣāyaṇam.japet.//</l>
+</lg>
+
+<lg xml:id="RgV_4.9.44">
+<l xml:id="RgV_4.9.44a">prāptam.ca.śriyam.ādatte.bahu.ca.annam.samaśnute./</l>
+<l xml:id="RgV_4.9.44b">na.asad.āsīd.iti.japej.juhuyād.yoga.tatparaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.9.45">
+<l xml:id="RgV_4.9.45a">prajāpates.tu.sāyojyam.dvādaśa.abdaiḥ.samaśnute./</l>
+<l xml:id="RgV_4.9.45b">uta.devā.iti.japed.āmayāvī.yata.vrataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.9.46">
+<l xml:id="RgV_4.9.46a">ghṛta.kumbham.nidhāya.atha.juhuyāj.jāta.vedasi./</l>
+<l xml:id="RgV_4.9.46b">kumbhāt.sampātam.anyasmin.kāṃsya.pātre.nidhāpayet.//</l>
+</lg>
+
+<lg xml:id="RgV_4.9.47">
+<l xml:id="RgV_4.9.47a">yo.annāya.alam.na.ca.annam.syāt.sa.idam.samprakalpayet./</l>
+<l xml:id="RgV_4.9.47b">tena.ājyena.aṅgam.abhyajya.śanakair.anna.bhāg.bhavet.//</l>
+</lg>
+
+<lg xml:id="RgV_4.9.48">
+<l xml:id="RgV_4.9.48a">roga.ārtasya.apy.anena.eva.gātram.aṅktvā.japed.idam./</l>
+<l xml:id="RgV_4.9.48b">ajīrṇān.no.apy.añjayīta.sukham.bhavati.tena.ha.//</l>
+</lg>
+
+<lg xml:id="RgV_4.10.49">
+<l xml:id="RgV_4.10.49a">agne.acchā.vada.ity.etad.dhana.kāmaḥ.prayojayet./</l>
+<l xml:id="RgV_4.10.49b">niyataḥ.sarpiṣā.hutvā.japed.ayutaśaḥ.punaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.10.50">
+<l xml:id="RgV_4.10.50a">khādirīṇām.hi.samidhām.juhuyād.daśatīr.daśa./</l>
+<l xml:id="RgV_4.10.50b">daśakṛtvaḥ.sadāreṇa.rāyas.poṣeṇa.puṣyati.//</l>
+</lg>
+
+<lg xml:id="RgV_4.10.51">
+<l xml:id="RgV_4.10.51a">bilva.udumbara.pālāśīs.tathā.rauhītakīś.ca.yāḥ./</l>
+<l xml:id="RgV_4.10.51b">juhuyād.dhana.kāmas.tu.rāyas.poṣeṇa.puṣyati.//</l>
+</lg>
+
+<lg xml:id="RgV_4.10.52">
+<l xml:id="RgV_4.10.52a">vaibhītaka.idhmo.bailvakīr.juhuyād.ardha.māsabhuk./</l>
+<l xml:id="RgV_4.10.52b">dviṣad.dveṣeṇa.tasya.ante.sūktam.etat.prayojayet.//</l>
+</lg>
+
+<lg xml:id="RgV_4.10.53">
+<l xml:id="RgV_4.10.53a">dviṣantam.dhaninam.hatvā.dviṣato.vindate.dhanam./</l>
+<l xml:id="RgV_4.10.53b">athavā.japyam.eva.syād.rāyas.poṣa.dhana.arthinā.//</l>
+</lg>
+
+<lg xml:id="RgV_4.11.54">
+<l xml:id="RgV_4.11.54a">ayam.agne.jaritā.iti.japed.agni.bhaye.sati./</l>
+<l xml:id="RgV_4.11.54b">vidhinā.tarpayitvā.agnim.payo.dadhi.ghṛta.ādibhiḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.11.55">
+<l xml:id="RgV_4.11.55a">svayam.pātum.yāvad.icchet.tāvad.gatvā.catur.diśam./</l>
+<l xml:id="RgV_4.11.55b">apām.idam.pariṇayet.saṃtata.udaka.dhārayā.//</l>
+</lg>
+
+<lg xml:id="RgV_4.11.56">
+<l xml:id="RgV_4.11.56a">uda.hrada.iva.bhūtvā.agner.bheṣajam.antikāt./</l>
+<l xml:id="RgV_4.11.56b">araṇyam.etya.pāṭhām.tu.krīṇīyād.yava.muṣṭinā.//</l>
+</lg>
+
+<lg xml:id="RgV_4.11.57">
+<l xml:id="RgV_4.11.57a">yadi.saumy.asi.somāya.tvā.parikrīṇāmy.oṣadhim./</l>
+<l xml:id="RgV_4.11.57b">yadi.vāruṇy.asy.varuṇāya.tvā.parikrīṇāmy.aham.tataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.11.58">
+<l xml:id="RgV_4.11.58a">vasubhyo.athavā.rudrebhya.ādityebhyo.athavā.punaḥ./</l>
+<l xml:id="RgV_4.11.58b">vaiśvadevy.asi.viśvebhyaḥ.parikrīṇāmy.aham.tataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.11.59">
+<l xml:id="RgV_4.11.59a">kṣiptvā.sumanasaḥ.pūrvam.oṣadhyā.saha.vīrudhi./</l>
+<l xml:id="RgV_4.11.59b">tasyā.vīryam.samādatte.karma.yatra.kariṣyati.//</l>
+</lg>
+
+<lg xml:id="RgV_4.11.60">
+<l xml:id="RgV_4.11.60a">tām.tu.madhye.nidadhīta.oṣadhīnām.vihāyasi./</l>
+<l xml:id="RgV_4.11.60b">grahaṇe.tv.oṣadhīnām.tu.sarvatra.eṣa.vidhir.bhavet.//</l>
+</lg>
+
+<lg xml:id="RgV_4.12.61">
+<l xml:id="RgV_4.12.61a">utkhāpayīta.tām.pāṭhām.imām.iti.japann.iha./</l>
+<l xml:id="RgV_4.12.61b">prātaś.ca.peṣayed.enām.saṃsadi.brahma.cāriṇā.//</l>
+</lg>
+
+<lg xml:id="RgV_4.12.62">
+<l xml:id="RgV_4.12.62a">tad.alābhe.vratavatā.kanyayā.brāhmaṇena.vā./</l>
+<l xml:id="RgV_4.12.62b">prātaḥ.śucis.tām.ghṛtena.triḥ.pibed.anumantritām.//</l>
+</lg>
+
+<lg xml:id="RgV_4.12.63">
+<l xml:id="RgV_4.12.63a">imām.iti.tu.sūktena.śatakṛtvo.daśa.avaram./</l>
+<l xml:id="RgV_4.12.63b">sapatnīm.bādhate.tena.patiś.ca.atīva.manyate.//</l>
+</lg>
+
+<lg xml:id="RgV_4.12.64">
+<l xml:id="RgV_4.12.64a">patis.tu.parijapya.enām.pāṭhām.etena.vai.pibet./</l>
+<l xml:id="RgV_4.12.64b">payasā.sapta.rātram.tu.sapatnān.pratibādhate.//</l>
+</lg>
+
+<lg xml:id="RgV_4.12.65">
+<l xml:id="RgV_4.12.65a">mūla.mantra.japair.anyair.yā.patim.jetum.icchati./</l>
+<l xml:id="RgV_4.12.65b">alokā.yama.lokasthā.majjate.narake.hi.sā.//</l>
+</lg>
+
+<lg xml:id="RgV_4.13.66">
+<l xml:id="RgV_4.13.66a">anyathā.ca.upanītāni.cūrṇa.mūla.auṣadhāny.api./</l>
+<l xml:id="RgV_4.13.66b">vināśayeyuḥ.puruṣam.tasmān.na.anyat.samācaret.//</l>
+</lg>
+
+<lg xml:id="RgV_4.13.67">
+<l xml:id="RgV_4.13.67a">priyam.vadā.bhartari.yā.bhartā.yasyāḥ.parāyaṇam./</l>
+<l xml:id="RgV_4.13.67b">vāk.caiva.madhurā.yasyāḥ.patyuḥ.saṃvananam.mahat.//</l>
+</lg>
+
+<lg xml:id="RgV_4.13.68">
+<l xml:id="RgV_4.13.68a">priyam.bhartāram.āsādya.pibed.eva.oṣadhīm.imām./</l>
+<l xml:id="RgV_4.13.68b">priyaṃvadām.dharma.parām.dharma.patnīm.aninditām.//</l>
+</lg>
+
+<lg xml:id="RgV_4.13.69">
+<l xml:id="RgV_4.13.69a">avamanyeta.yo.mohāt.tam.āhuḥ.puruṣa.adhamam./</l>
+<l xml:id="RgV_4.13.69b">araṇyānī.ity.araṇyeṣu.japet.sūktam.anekaśaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.13.70">
+<l xml:id="RgV_4.13.70a">araṇyānīm.namas.kṛtvā.so.araṇyāt.pramucyate./</l>
+<l xml:id="RgV_4.13.70b">śraddhā.sūktam.japen.nityam.śraddhā.kāmaḥ.samāhitaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.14.71">
+<l xml:id="RgV_4.14.71a">sarvatra.labhate.śraddhām.medhā.sūktam.tathaiva.ca./</l>
+<l xml:id="RgV_4.14.71b">brāhmīm.āsādya.sūkte.dve.japeta.niyata.vrataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.14.72">
+<l xml:id="RgV_4.14.72a">tām.pibet.tu.yathā.śaktyā.tryahāt.siddhim.niyacchati./</l>
+<l xml:id="RgV_4.14.72b">śaṅkha.puṣpīm.tu.payasā.brāhmī.puṣpāṇi.sarpiṣā.//</l>
+</lg>
+
+<lg xml:id="RgV_4.14.73">
+<l xml:id="RgV_4.14.73a">śata.avarīm.tu.payasā.varcām.adbhir.ghṛtena.vā./(?)</l>
+<l xml:id="RgV_4.14.73b">sūktābhyām.anumantrya.ābhyām.eka.ekām.tryaham.pibet.//</l>
+</lg>
+
+<lg xml:id="RgV_4.14.74">
+<l xml:id="RgV_4.14.74a">śraddhām.medhām.smṛtim.puṣṭim.balam.lakṣmīm.ca.vindati./</l>
+<l xml:id="RgV_4.14.74b">siddhim.prāpnoti.ca.parām.dīrgham.ca.āyuḥ.samaśnute.//</l>
+</lg>
+
+<lg xml:id="RgV_4.14.75">
+<l xml:id="RgV_4.14.75a">athavā.manasā.dhyāyet.sūkte.siddhim.niyacchati./</l>
+<l xml:id="RgV_4.14.75b">śāma.itthā.sapatnaghnam.saṃgrāmam.vijigīṣataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.15.76">
+<l xml:id="RgV_4.15.76a">prayoktavyam.tu.śucinā.juhuyāt.tatra.siddhaye./</l>
+<l xml:id="RgV_4.15.76b">athavā.japyam.eva.syāt.saṃgrāmam.abhigacchataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.15.77">
+<l xml:id="RgV_4.15.77a">śāma.itthā.iti.yo.hantum.śatrūnt.sarvān.nivārayet./</l>
+<l xml:id="RgV_4.15.77b">alakṣmī.nāśana.artham.tu.japen.nityam.śirimbiṭam.//</l>
+</lg>
+
+<lg xml:id="RgV_4.15.78">
+<l xml:id="RgV_4.15.78a">apāmārgamayīm.śākhām.sadarbhām.saha.vīrudhām./</l>
+<l xml:id="RgV_4.15.78b">gṛhītvā.ātmānam.pāvayed.adhaś.ca.ūrdhvam.ca.nityaśaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.15.79">
+<l xml:id="RgV_4.15.79a">ājyam.ca.anena.juhuyāt.sahasram.daśatīr.daśa./</l>
+<l xml:id="RgV_4.15.79b">tryaheṇa.nudate.dehād.alakṣmīm.śatavārṣikīm.//</l>
+</lg>
+
+<lg xml:id="RgV_4.15.80">
+<l xml:id="RgV_4.15.80a">cāndrāyaṇam.carann.etat.sūktam.siddhikaram.japet./</l>
+<l xml:id="RgV_4.15.80b">alakṣmīm.nudate.dehād.api.varṣa.sahasrakīm.//</l>
+</lg>
+
+<lg xml:id="RgV_4.16.81">
+<l xml:id="RgV_4.16.81a">gṛhītam.yakṣmaṇā.darbhān.gṛhītvā.saṃspṛśan.japet./</l>
+<l xml:id="RgV_4.16.81b">muñcāmi.tvā.haviṣā.iti.yakṣmāṇam.apakarṣati.//</l>
+</lg>
+
+<lg xml:id="RgV_4.16.82">
+<l xml:id="RgV_4.16.82a">samiddham.agim.juhuyād.ājyena.eva.yathā.vidhi./</l>
+<l xml:id="RgV_4.16.82b">sampātam.ājye.ninayet.sampātaiś.ca.payaḥ.pibet.//</l>
+</lg>
+
+<lg xml:id="RgV_4.16.83">
+<l xml:id="RgV_4.16.83a">sampāta.bhājane.sarpiś.cūrṇam.tatra.nidhāpayet./</l>
+<l xml:id="RgV_4.16.83b">tatra.asya.bhojanīyam.syāt.pānīyam.ca.anumantritam.//</l>
+</lg>
+
+<lg xml:id="RgV_4.16.84">
+<l xml:id="RgV_4.16.84a">khādirāṇi.ca.kāṣṭhāni.cūrṇam.kṛtvā.saha.ambubhiḥ./</l>
+<l xml:id="RgV_4.16.84b">śodhayīta.rasam.ca.iṣām.madhv.ājyābhyām.pibet.saha.//</l>
+</lg>
+
+<lg xml:id="RgV_4.16.85">
+<l xml:id="RgV_4.16.85a">muñcāmi.tvā.haviṣā.iti.tatra.tatra.prayojayet./</l>
+<l xml:id="RgV_4.16.85b">yakṣmāṇam.apakarṣanti.śarīrāt.tena.karmaṇā.//</l>
+</lg>
+
+<lg xml:id="RgV_4.17.86">
+<l xml:id="RgV_4.17.86a">yasyāḥ.garbhaḥ.pramīyeta.tatra.agnau.juhuyādd.haviḥ./</l>
+<l xml:id="RgV_4.17.86b">brahmaṇā.agniḥ.saṃvidāna.ity.ājyena.yathā.vidhi.//</l>
+</lg>
+
+<lg xml:id="RgV_4.17.87">
+<l xml:id="RgV_4.17.87a">ājya.śeṣeṇa.ca.abhyajya.garbhiṇī.prasavet.tataḥ./</l>
+<l xml:id="RgV_4.17.87b">pibed.eva.ājya.śeṣam.tu.jīvaṃs.tasyāḥ.prajāyate.//</l>
+</lg>
+
+<lg xml:id="RgV_4.17.88">
+<l xml:id="RgV_4.17.88a">jātāni.cet.pramīyerann.ājyam.kṛtvā.anumantritam./</l>
+<l xml:id="RgV_4.17.88b">juhuyād.brahmaṇā.agnir.iti.sampātān.ninayen.maṇau.//</l>
+</lg>
+
+<lg xml:id="RgV_4.17.89">
+<l xml:id="RgV_4.17.89a">maṇim.tu.trivṛti.sūtre.vāsayed.vāsasā.saha./</l>
+<l xml:id="RgV_4.17.89b">nyagrodha.śuṅgayā.tatra.śukla.lohita.veṣṭitam.//</l>
+</lg>
+
+<lg xml:id="RgV_4.17.90">
+<l xml:id="RgV_4.17.90a">tam.sāvitry.ayutena.eva.anumantrya.yathā.vidhi./</l>
+<l xml:id="RgV_4.17.90b">sampātair.ayutena.eva.brahmaṇā.iti.ca.saṃstutam.//</l>
+</lg>
+
+<lg xml:id="RgV_4.18.91">
+<l xml:id="RgV_4.18.91a">upariṣṭāc.ca.sāvitryā.tāvad.eva.anumantraṇam./</l>
+<l xml:id="RgV_4.18.91b">sarvaiḥ.svastyayanaiś.ca.etaj.japed.abhihutam.maṇim.//</l>
+</lg>
+
+<lg xml:id="RgV_4.18.92">
+<l xml:id="RgV_4.18.92a">śirasā.dhārayen.nārī.prayatā.garbhiṇī.satī./</l>
+<l xml:id="RgV_4.18.92b">tṛtīye.garbha.māse.tu.maṇim.etam.samāsajet.//</l>
+</lg>
+
+<lg xml:id="RgV_4.18.93">
+<l xml:id="RgV_4.18.93a">puṣpavatī.śaradam.nārī.gauḥ.savatsā.vased.yathā./</l>
+<l xml:id="RgV_4.18.93b">bahu.pānīya.yavasā.vatsena.pibatā.saha.//</l>
+</lg>
+
+<lg xml:id="RgV_4.18.94">
+<l xml:id="RgV_4.18.94a">jātasya.tu.kumārasya.kaṇṭhe.tam.maṇim.āsajet./</l>
+<l xml:id="RgV_4.18.94b">ājya.śeṣam.puraskṛtya.tam.abhyajya.kumārakam.//</l>
+</lg>
+
+<lg xml:id="RgV_4.18.95">
+<l xml:id="RgV_4.18.95a">hutvā.svastyayanair.eva.strī.pumāṃsam.prasūyate./</l>
+<l xml:id="RgV_4.18.95b">ūrdhvam.varṣāt.svastyayanam.punar.eva.vidhīyate.//</l>
+</lg>
+
+<lg xml:id="RgV_4.19.96">
+<l xml:id="RgV_4.19.96a">puraḥ.stana.pradānāt.tam.śraddhā.sūktena.pāyayet./</l>
+<l xml:id="RgV_4.19.96b">medhā.sūktena.caiva.enam.piṣṭam.vrīhimayam.carum.//</l>
+</lg>
+
+<lg xml:id="RgV_4.19.97">
+<l xml:id="RgV_4.19.97a">madhu.miśram.jāta.rūpam.medhāvī.tena.jāyate./</l>
+<l xml:id="RgV_4.19.97b">śatam.varṣāṇi.jīvet.ṃriyate.na.purā.āyuṣaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.19.98">
+<l xml:id="RgV_4.19.98a">smṛtam.eva.tasya.syāt.ṣaṇ.māsāc.ca.tataḥ.param./</l>
+<l xml:id="RgV_4.19.98b">ājyam.saṃskṛtya.juhuyād.akṣibhyām.ta.iti.dvijaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.19.99">
+<l xml:id="RgV_4.19.99a">pāṇinā.tu.ghṛta.aktena.mūrdhānam.saṃspṛśet.tataḥ./</l>
+<l xml:id="RgV_4.19.99b">karṇau.netre.ca.chubukam.nāsike.caiva.saṃspṛśet.//</l>
+</lg>
+
+<lg xml:id="RgV_4.19.100">
+<l xml:id="RgV_4.19.100a">evam.eva.japen.nityam.yakṣmaṇo.vipramucyate./</l>
+<l xml:id="RgV_4.19.100b">pūrva.uktena.eva.kalpena.yakṣma.nāśanam.ācaret.//</l>
+</lg>
+
+<lg xml:id="RgV_4.20.101">
+<l xml:id="RgV_4.20.101a">homena.ca.japaiś.caiva.yakṣam.nāśanam.ācaret./</l>
+<l xml:id="RgV_4.20.101b">apehi.iti.ca.japet.sūktam.śucir.duhsvapna.nāśanam.//</l>
+</lg>
+
+<lg xml:id="RgV_4.20.102">
+<l xml:id="RgV_4.20.102a">devāḥ.kapota.iti.tu.kapotasya.upaveśane./</l>
+<l xml:id="RgV_4.20.102b">sūktena.juhuyād.ājyam.yama.dūtam.hi.tam.viduḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.20.103">
+<l xml:id="RgV_4.20.103a">sapatnaghnam.prayuñjīta.ṛṣabham.japa.homayoḥ./</l>
+<l xml:id="RgV_4.20.103b">yena.idam.iti.vai.nityam.japeta.niyata.vrataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.20.104">
+<l xml:id="RgV_4.20.104a">samādhim.manasas.tena.vindate.na.eva.muhyati./</l>
+<l xml:id="RgV_4.20.104b">mayo.bhūr.vāta.iti.tu.gavām.svastyayane.japet.//</l>
+</lg>
+
+<lg xml:id="RgV_4.20.105">
+<l xml:id="RgV_4.20.105a">yavānām.tu.ghṛta.aktānām.kārīṣe.agnau.samāhitaḥ./</l>
+<l xml:id="RgV_4.20.105b">juhuyād.goṣṭha.madhye.tu.dadhi.madhv.ājya.saṃskṛtān.//</l>
+</lg>
+
+<lg xml:id="RgV_4.21.106">
+<l xml:id="RgV_4.21.106a">rājānam.abhiṣiñceta.tiṣyeṇa.śravaṇena.vā./</l>
+<l xml:id="RgV_4.21.106b">pauṣṇa.sāvitra.saumya.aśvi.rohiṇīṣu.uttarāsu.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_4.21.107">
+<l xml:id="RgV_4.21.107a">hutvā.agnim.rāja.liṅgābhiḥ.sāvitryā.prayataḥ.śuciḥ./</l>
+<l xml:id="RgV_4.21.107b">mahā.vyāhṛtibhiś.caiva.sampāta.abhihuto.bhavet.//</l>
+</lg>
+
+<lg xml:id="RgV_4.21.108">
+<l xml:id="RgV_4.21.108a">sarva.oṣadhi.rasaiḥ.ślakṣṇair.nadīnām.salilena.ca./</l>
+<l xml:id="RgV_4.21.108b">vyāghra.carmaṇy.atha.āsīnam.āsandyām.abhiṣicya.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_4.21.109">
+<l xml:id="RgV_4.21.109a">tiṣṭhan.pratyan.mukho.brūyāj.jaya.tvam.pṛthivīm.imām./</l>
+<l xml:id="RgV_4.21.109b">dharmas.te.nikhilo.rājan.vardhatām.pālayan.prajāḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.21.110">
+<l xml:id="RgV_4.21.110a">vardhasva.tvam.śriyai.puṣṭyai.jayāya.abhyudayāya.ca./</l>
+<l xml:id="RgV_4.21.110b">rājānaḥ.santu.te.gotre.tato.apratiratham.japet.//</l>
+</lg>
+
+<lg xml:id="RgV_4.22.111">
+<l xml:id="RgV_4.22.111a">vaiyāghram.tu.bhavet.carma.samid.audumbarī.bhavet./</l>
+<l xml:id="RgV_4.22.111b">tir.enam.abhiṣicya.evam.dundubhīn.abhimantrayet.//</l>
+</lg>
+
+<lg xml:id="RgV_4.22.112">
+<l xml:id="RgV_4.22.112a">prācyām.tvā.diśi.vasavo.abhiṣiñcantu.tejase./</l>
+<l xml:id="RgV_4.22.112b">dakṣiṇasyām.tvā.diśi.rudrā.abhiṣiñcantu.vṛddhaye.//</l>
+</lg>
+
+<lg xml:id="RgV_4.22.113">
+<l xml:id="RgV_4.22.113a">pratīcyām.tvā.diśy.ādityā.abhiṣiñcantu.puṣṭaye./</l>
+<l xml:id="RgV_4.22.113b">viśvedevā.udīcyām.tu.abhiṣiñcantu.śreyase.//</l>
+</lg>
+
+<lg xml:id="RgV_4.22.114">
+<l xml:id="RgV_4.22.114a">abhiṣicya.ca.rājānam.āśīrbhir.abhinandya.ca./</l>
+<l xml:id="RgV_4.22.114b">ā.tvā.ahārṣam.antaredhī.ity.atha.enam.abhimantrayet.//</l>
+</lg>
+
+<lg xml:id="RgV_4.22.115">
+<l xml:id="RgV_4.22.115a">pataṅgam.iti.nityam.tu.japed.ajñāna.bhedanam./</l>
+<l xml:id="RgV_4.22.115b">māyā.bhedanam.etadd.hi.sarva.māyāḥ.prabādhate.//</l>
+</lg>
+
+<lg xml:id="RgV_4.23.116">
+<l xml:id="RgV_4.23.116a">śāmbarīm.indra.jālām.vā.māyām.etena.vārayet./</l>
+<l xml:id="RgV_4.23.116b">adṛṣṭānām.ca.sattvānām.māyām.etena.bādhate.//</l>
+</lg>
+
+<lg xml:id="RgV_4.23.117">
+<l xml:id="RgV_4.23.117a">tyamūṣv.iti.svastyayanam.japeta.niyata.vrataḥ./</l>
+<l xml:id="RgV_4.23.117b">puṣpam.dṛṣṭvā.tu.yā.garbham.na.gṛhṇīyād.vayo.anvitā.//</l>
+</lg>
+
+<lg xml:id="RgV_4.23.118">
+<l xml:id="RgV_4.23.118a">viṣṇur.yonim.nejameṣa.yonim.spṛṣṭvā.tato.japet./</l>
+<l xml:id="RgV_4.23.118b">mahi.trīṇām.avo.astv.iti.pathi.svastyayane.japet.//</l>
+</lg>
+
+<lg xml:id="RgV_4.23.119">
+<l xml:id="RgV_4.23.119a">pra.agnaye.atha.dviṣad.dveṣyam.japed.dveṣasya.niṣkṛtim./</l>
+<l xml:id="RgV_4.23.119b">āyam.gauḥ.sārparājñīs.tu.sarvān.etena.bādhate.//</l>
+</lg>
+
+<lg xml:id="RgV_4.23.120">
+<l xml:id="RgV_4.23.120a">pavitrāṇām.pavitram.tu.japed.eva.aghamarṣaṇam./</l>
+<l xml:id="RgV_4.23.120b">apaḥ.praviśya.yaś.ca.etat.triḥ.paṭhet.susamāhitaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.24.121">
+<l xml:id="RgV_4.24.121a">yathā.aśva.medha.avabhṛthas.tādṛśam.manur.abravīt./</l>
+<l xml:id="RgV_4.24.121b">yathā.aśva.medhaḥ.kratu.rāṭ.sarva.pāpa.praṇodanaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.24.122">
+<l xml:id="RgV_4.24.122a">tathā.aghamarṣaṇam.sūktam.sarva.pāpa.praṇodanam./</l>
+<l xml:id="RgV_4.24.122b">senā.dāraṇam.etat.syān.nairhastyam.iti.śaunakaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.24.123">
+<l xml:id="RgV_4.24.123a">manasādhyeyam.etat.tu.manyate.śaunakas.tv.ṛṣiḥ./</l>
+<l xml:id="RgV_4.24.123b">sam.samid.yuvase.vṛṣan.saubhrātṛ.karaṇam.mahat.//</l>
+</lg>
+
+<lg xml:id="RgV_4.24.124">
+<l xml:id="RgV_4.24.124a">jñāti.bhede.prayuñjīta.na.bhidyante.kadācana./</l>
+<l xml:id="RgV_4.24.124b">kṛte.bhede.tu.saṃjñānam.etat.saṃdhi.karam.japet.//</l>
+</lg>
+
+<lg xml:id="RgV_4.24.125">
+<l xml:id="RgV_4.24.125a">na.tatra.bhedo.bhūyaḥ.syād.yatra.etat.satatam.japet./</l>
+<l xml:id="RgV_4.24.125b">tac.śamyor.ā.vṛṇīmaha.iti.svastyayane.japet.//</l>
+</lg>
+
+<lg xml:id="RgV_4.25.126">
+<l xml:id="RgV_4.25.126a">mahānāmnyaḥ.param.brahma.śukram.jyotiḥ.sanātanam./</l>
+<l xml:id="RgV_4.25.126b">sapatnaghnyaś.ca.puṇyāś.ca.pāvamānyaḥ.parāḥ.smṛtāḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.25.127">
+<l xml:id="RgV_4.25.127a">vṛṣṭi.kāmo.japec.ca.etā.āpo.hi.ṣṭhāḥ.sanātanāḥ./</l>
+<l xml:id="RgV_4.25.127b">om.kāra.pūrvā.vyāhṛtayo.madhucchandasa.āditaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.25.128">
+<l xml:id="RgV_4.25.128a">sūktāny.ante.mahānāmnyaḥ.saṃhitā.sā.amṛtā.smṛtā./</l>
+<l xml:id="RgV_4.25.128b">amṛtatvam.yayur.devāḥ.pūrvam.sahitayā.anayā.//</l>
+</lg>
+
+<lg xml:id="RgV_4.25.129">
+<l xml:id="RgV_4.25.129a">japed.etām.śucir.nityam.amṛtatvam.sa.gacchati./</l>
+<l xml:id="RgV_4.25.129b">atra.eva.tv.āvapen.madhye.pitṛ.sūktāny.anekaśaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.25.130">
+<l xml:id="RgV_4.25.130a">pitryām.tām.saṃhitām.vidyāt.pitṝn.prīṇāti.ca.etayā./</l>
+<l xml:id="RgV_4.25.130b">evam.eva.samāhṛtya.vāsavī.saṃhitā.bhavet.//</l>
+</lg>
+
+<lg xml:id="RgV_4.25.131">
+<l xml:id="RgV_4.25.131a">raudra.ādityā.vaiśvadevī.yad.devatyām.ca.kāmayet./</l>
+<l xml:id="RgV_4.25.131b">kurvīta.vāstu.śamanam.madhye.goṣṭhasya.dharmavit.//</l>
+</lg>
+
+<lg xml:id="RgV_4.26.132">
+<l xml:id="RgV_4.26.132a">puṣpair.gandhairś.ca.mālyaiś.ca.vānaspatyais.tathā.auṣadhaiḥ./</l>
+<l xml:id="RgV_4.26.132b">vāstu.sarvam.pratikiret.sapta.dhānyais.tathaiva.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_4.26.133">
+<l xml:id="RgV_4.26.133a">vāstoṣpatim.yajec.ca.atra.pāyasena.bṛhaspatim./</l>
+<l xml:id="RgV_4.26.133b">audumbara.palāśaiś.ca.balim.pratidiśam.haret.//</l>
+</lg>
+
+<lg xml:id="RgV_4.26.134">
+<l xml:id="RgV_4.26.134a">sūryo.vāyur.yamaḥ.pitaro.varuṇo.nirṛtis.tathā./</l>
+<l xml:id="RgV_4.26.134b">somo.mahā.indra.ity.etā.dikṣu.vai.devatāḥ.smṛtāḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.26.135">
+<l xml:id="RgV_4.26.135a">dadyād.dānam.brāhmaṇebhyaḥ.śivam.bhavati.vāstuni./</l>
+<l xml:id="RgV_4.26.135b">pratisaṃvatsaram.kāryam.gṛhe.vai.gṛhamedhinā.//</l>
+</lg>
+
+<lg xml:id="RgV_4.26.136">
+<l xml:id="RgV_4.26.136a">yady.evam.savidham.ca.anyad.anuktam.api.kiṃcana./</l>
+<l xml:id="RgV_4.26.136b">agnim.indram.atho.vāyum.sūryam.anyāś.ca.devatāḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_4.27.137">
+<l xml:id="RgV_4.27.137a">ārirādhāyaṣur.yām.yām.abhidhāveta.devatām./</l>
+<l xml:id="RgV_4.27.137b">abhirūpeṇa.sūktena.yathā.ādiṣṭam.prayojanam.//</l>
+</lg>
+
+<lg xml:id="RgV_4.27.138">
+<l xml:id="RgV_4.27.138a">ṛṣīṇām.mantra.dṛṣṭena.pratyakṣā.siddhir.iṣyate./</l>
+<l xml:id="RgV_4.27.138b">sarvatra.dakṣiṇām.dadyād.dhanam.vā.karma.siddhaye.//</l>
+</lg>
+
+<lg xml:id="RgV_4.27.139">
+<l xml:id="RgV_4.27.139a">na.tv.eva.adakṣiṇam.karma.kiṃcid.asti.iti.śaunakaḥ./</l>
+<l xml:id="RgV_4.27.139b">śaktyā.hi.pūrṇa.pātreṇa.sammitā.apy.antato.bhavet.//</l>
+</lg>
+
+<lg xml:id="RgV_4.27.140">
+<l xml:id="RgV_4.27.140a">tasmāt.svalpā.api.dātavyā.dakṣiṇā.karma.siddhaye./</l>
+<l xml:id="RgV_4.27.140b">ṛṣabha.ekādaśā.dadyād.yena.vā.tuṣyate.guruḥ./</l>
+</lg>
+<lg xml:id="RgV_4.27.141">
+<l xml:id="RgV_4.27.141a">dharmajñe.satya.vādini.brahma.dānam.ca.dīyate.//</l>
+
+<l xml:id="RgV_4.27.141b">tad.idam.param.brahma.guhyam.pāvanam.adbhutam./</l>
+</lg>
+<lg xml:id="RgV_4.27.142">
+<l xml:id="RgV_4.27.142a">na.apraśāntāya.dātavyam.na.aputrāya.atapasvine./</l>
+<l xml:id="RgV_4.27.142b">na.asaṃvatsara.uṣitāya.na.aśiṣyāya.ahitāya.ca.//</l>
+</lg>
+
+<lg xml:id="RgV_5.1.1">
+<l xml:id="RgV_5.1.1a">narāṇām.bhāgya.hīnānām.ṛgvidhānam.ajānatām./</l>
+<l xml:id="RgV_5.1.1b">ṛgvedaḥ.kalpa.vṛkṣo.ayam.phalam.naiva.prayacchati.//</l>
+</lg>
+
+<lg xml:id="RgV_5.1.2">
+<l xml:id="RgV_5.1.2a">ratna.garbha;iva.āvāsa;ṛgvedaḥ.pratibhāti.me./</l>
+<l xml:id="RgV_5.1.2b">ṛgvidhāna.pardīpena.vinā.naiva.prakāśate.//</l>
+</lg>
+
+<lg xml:id="RgV_5.1.3">
+<l xml:id="RgV_5.1.3a">ratnākara;iva.udāra;ṛgvedo.atyanta.duṣṭaraḥ./</l>
+<l xml:id="RgV_5.1.3b">ṛgvidhāna.mahā.potam.vinā.naiva.phala.pradaḥ.//</l>
+</lg>
+
+<l xml:id="RgV_5.1.4">nidhānam.sarva.ratnānām.ṛgvedo..brahma.mandiram./</l>
+
+<lg xml:id="RgV_5.1.5">
+<l xml:id="RgV_5.1.5a">ṛgvedaḥ.pathito.hy.eṣa.nṛṇām.bhavati.nihphalaḥ./</l>
+<l xml:id="RgV_5.1.5b">ṛgvidhānam.vinā.tasmād.adhyeyam.tat.prayatnataḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_5.2.1">
+<l xml:id="RgV_5.2.1a">sūkta.tattva.artha.kathanam.ṛgvidhānam.avaiti.yaḥ./</l>
+<l xml:id="RgV_5.2.1b">ṛgvedo.jāyate.tasya.prasādāt.phulla.mānasaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_5.2.2">
+<l xml:id="RgV_5.2.2a">āyuṣyam.sampado.mūlam.sarva.kalmaṣa.nāśanam./</l>
+<l xml:id="RgV_5.2.2b">ṛgvidhāna.abhyanuṣṭhānam.śubhra.kīrti.karam.param.//</l>
+</lg>
+
+<lg xml:id="RgV_5.2.3">
+<l xml:id="RgV_5.2.3a">ṛgvidhānena.samyuktam.ṛgvedam.vetti.yo.dvijaḥ./</l>
+<l xml:id="RgV_5.2.3b">dharma.artha.kāma.mokṣāṇām.āśrayaḥ.sa.bhaved.dhruvam.//</l>
+</lg>
+
+<lg xml:id="RgV_5.2.4">
+<l xml:id="RgV_5.2.4a">vedeṣu.prathamo.veda;āyurveda.nidhiḥ.prabhuḥ./</l>
+<l xml:id="RgV_5.2.4b">ṛgvidhāna.sadābhyāsād atīva.paritu;syati.//</l>
+</lg>
+
+<lg xml:id="RgV_5.2.5">
+<l xml:id="RgV_5.2.5a">śatru.nāśam.manas.tuṣṭim.suhṛj.jana.samāgamān./</l>
+<l xml:id="RgV_5.2.5b">ṛgvedaḥ.prayantā.nityam.ṛgvidhānena.toṣitaḥ.//</l>
+</lg>
+
+<lg xml:id="RgV_5.3.1">
+<l xml:id="RgV_5.3.1a">ṛgvedam.vetti.yaḥ.sāṅgam.ṛgvidhāna.rataḥ.sadā./</l>
+<l xml:id="RgV_5.3.1b">mano.rathād.apy.adhikam.bhavet.tasya.samīhitam.//</l>
+</lg>
+
+<lg xml:id="RgV_5.3.2">
+<l xml:id="RgV_5.3.2a">kule.janmani.śīle.vā.prajñāyām.udyame.api.ca./</l>
+<l xml:id="RgV_5.3.2b">ṛgvidhāna.parijñānād.uśanti.carita.arthatām.//</l>
+</lg>
+
+<lg xml:id="RgV_5.3.3">
+<l xml:id="RgV_5.3.3a">tuṣyanti.devatāḥ.sarvāḥ.sampadyante.vibhūtayaḥ./</l>
+<l xml:id="RgV_5.3.3b">durādhayaḥ.praṇaśyanti.nityam.ṛg.vidhi.pāṭhinām.//</l>
+</lg>
+
+<lg>
+<l>yādṛśam.pustakam.dṛṣṭvā.tādṛśam.likhitam.mayā./</l>
+<l>yadi.śuddham.aśuddham.vā.mama.doṣo.na.dīyate./</l>
+<l>ārṣam.yo.vilikhitvā.tu.brāhmaṇebhyaḥ.prayacchati./</l>
+<l>pitaras.tasya.vaikuṇṭhe.vasanty.akṣara.saṃkhyayā./</l>
+<l>bhagna.pṛṣṭi.kaṭi.grīvā.baddha.muṣṭir.adho.mukham./</l>
+<l>kaṣṭena.likhitam.cedam.yatnena.paripālayet./</l>
+<l>tailād.rakṣej.jalād.rakṣed.rakṣet.śithila.bandhanāt./</l>
+<l>para.haste.gatām.rakṣed.evam.vadati.pustikā./</l>
+</lg>
+
+  </body>
+</text>
+</TEI>

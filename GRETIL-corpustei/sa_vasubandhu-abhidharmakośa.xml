@@ -1,0 +1,3380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_vasubandhu-abhidharmakoza">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Abhidharmakośa</title>
+	<author>Vasubandhu</author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>members of the Digital Sanskrit Buddhist Canon Input Project</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>members of the Digital Sanskrit Buddhist Canon Input Project</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/vakobhku.htm">vakobhku.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Vasubandhu: Abhidharmakosa, Karikas only
+<lb/>Source unknown; cf. the edition by P. Pradhan. Vasubandhu, Abhidharmakośabhāṣya, rev. 2nd ed. with introduction and indices by A. Haldar, Patna 1975 (Tibetan Sanskrit Works Series, 8),
+<lb/>and G.V. Gokhale, The Text of the Abhidharmakośakārikā of Vasubandhu, Journal of the Bombay Branch of the Royal Asiatic Society, New Series, vol. 22 (1946), pp. 73-102.
+<lb/>
+<lb/>(For Karikas with Bhasya see separate GRETIL file.)
+<lb/>
+<lb/>Input by members of the Sanskrit Buddhist Input Project.
+<lb/>With kind permission of the Digital Sanskrit Buddhist Canon Project
+<lb/>of Nagarjuna Institute, Nepal
+<lb/>and University of the West, Rosemead, California, USA
+<lb/>(www.uwest.edu/sanskritcanon)
+<lb/>Sastra section
+<lb/>
+<lb/>The transliteration emulates the conventions of Nagari script.
+<lb/>Therefore, many word boundaries are not marked by blanks.
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>unknown source; cf. the edition by P. Pradhan. Vasubandhu, Abhidharmakośabhāṣya, rev. 2nd ed. with introduction and indices by A. Haldar, Patna 1975 (Tibetan Sanskrit Works Series, 8), and G.V. Gokhale, The Text of the Abhidharmakośakārikā of Vasubandhu, Journal of the Bombay Branch of the Royal Asiatic Society, New Series, vol. 22 (1946), pp. 73-102.</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Abhidharmakośa = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Śāstra -- Philosophy -- Buddhist</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+
+<p>Abhidharmakośabhāṣyam</p>
+
+<p>prathamaṃ kośasthānam</p>
+
+<p>om namo buddhāya</p>
+
+<lg>
+<l>yaḥ sarvathāsarvahatāndhakāraḥ saṃsārapaṅkājjagadujjahāra /</l>
+<l>tasmai namaskṛtya yathārthaśāstre śāstraṃ pravakṣyāmyabhidharmakośam // VAkK_1.1 //</l>
+</lg>
+
+<lg>
+<l>prajñāmalā sānucarābhidharmaḥ tatprāptaye yāpi ca yacca śāstram /</l>
+<l>tasyārthato 'smin samanupraveśāt sa cā śrayo 'syetyabhidharmakośam // VAkK_1.2 //</l>
+</lg>
+
+<lg>
+<l>dharmāṇāṃ pravicayamantareṇa nāsti kleśānāṃ yata upaśāntaye 'bhyupāyaḥ /</l>
+<l>kleśaiśca bhramati bhavārṇave 'tra lokastaddhetorata uditaḥ kilaiṣa śāstrā // VAkK_1.3 //</l>
+</lg>
+
+<lg>
+<l>sāsravānāsravā dharmāḥ saṃskṛtā mārgavarjitāḥ /</l>
+<l>sāsravāḥ āsravāsteṣu yasmātsamanuśerate // VAkK_1.4 //</l>
+</lg>
+
+<lg>
+<l>anāsravā mārgasatyaṃ trividhaṃ cāpyasaṃskṛtam /</l>
+<l>ākāśaṃ dvau nirodhau ca tatrākāśamanāvṛtiḥ // VAkK_1.5 //</l>
+</lg>
+
+<lg>
+<l>pratisaṃkhyānirodho yo visaṃyogaḥ pṛthak pṛthak /</l>
+<l>utpādātyantavighno 'nyo nirodho 'pratisaṃkhyayā // VAkK_1.6 //</l>
+</lg>
+
+<lg>
+<l>te punaḥ saṃskṛtā dharmā rūpādiskandhapañcakam /</l>
+<l>sa evādhvā kathāvastu saniḥsārāḥ savastukāḥ // VAkK_1.7 //</l>
+</lg>
+
+<lg>
+<l>ye sāsravā upādānaskandhāste saraṇā api /</l>
+<l>duḥkhaṃ samudayo loko dṛṣṭisthānaṃ bhavaśca te // VAkK_1.8 //</l>
+</lg>
+
+<lg>
+<l>rūpaṃ pañcendriyāṇyarthāḥ pañcāvijñaptireva ca /</l>
+<l>tadvijñānāśrayā rūpaprasādāścakṣurādayaḥ // VAkK_1.9 //</l>
+</lg>
+
+<lg>
+<l>rūpaṃ dvidhā viṃśatidhā śabdastvaṣṭavidhaḥ rasaḥ /</l>
+<l>ṣoḍhā caturvidho gandhaḥ spṛśyamekādaśātmakam // VAkK_1.10 //</l>
+</lg>
+
+<lg>
+<l>vikṣiptācittakasyāpi yo 'nubandhaḥ śubhāśubhaḥ /</l>
+<l>mahābhūtānyupādāya sa hyavijñaptirucyate // VAkK_1.11 //</l>
+</lg>
+
+<lg>
+<l>bhūtāni pṛthividhāturaptejovāyudhātavaḥ /</l>
+<l>dhṛtyādikarmasaṃsiddhā kharasnehoṣṇateraṇāḥ // VAkK_1.12 //</l>
+</lg>
+
+<lg>
+<l>pṛthivī varṇasaṃsthānamucyate lokasaṃjñayā /</l>
+<l>āpastejaśca vāyustu dhātureva tathāpi ca // VAkK_1.13 //</l>
+</lg>
+
+<lg>
+<l>indriyārthāsta eveṣṭā daśāyatanadhātavaḥ /</l>
+<l>vedanānubhavaḥ saṃjñā nimittodgrahaṇātmikā // VAkK_1.14 //</l>
+</lg>
+
+<lg>
+<l>caturbhyo 'nye tu saṃskāraskandhaḥ ete punastrayaḥ /</l>
+<l>dharmāyatanadhātvākhyāḥ sahāvijñaptyasaṃskṛtai // VAkK_1.15 //</l>
+</lg>
+
+<lg>
+<l>vijñānaṃ prativijñaptiḥ mana āyatanaṃ ca tat /</l>
+<l>dhātavaḥ sapta ca matāḥ ṣaḍ vijñānānyatho mahaḥ // VAkK_1.16 //</l>
+</lg>
+
+<lg>
+<l>ṣaṇṇāmanantarātītaṃ vijñānaṃ yaddhi tanmanaḥ /</l>
+<l>ṣaṣṭhāśrayaprasiddhayarthaṃ dhatavo 'ṣṭādaśa smṛtāḥ // VAkK_1.17 //</l>
+</lg>
+
+<lg>
+<l>sarvasaṃgraha ekena skandhenāyatanena ca /</l>
+<l>dhātunā ca svabhāvena parabhāvaviyogataḥ // VAkK_1.18 //</l>
+</lg>
+
+<lg>
+<l>jātigocaravijñānasāmānyādekadhātutā /</l>
+<l>dvitve 'pi cakṣurādīnāṃ śobhārtha tu dvayodbhavaḥ // VAkK_1.19 //</l>
+</lg>
+
+<lg>
+<l>rāśyāyadvāragotrārthāḥ skandhāyatanadhātavaḥ /</l>
+<l>mohendriyarūcitraidhāttistraḥ skandhādideśanāḥ // VAkK_1.20 //</l>
+</lg>
+
+<lg>
+<l>vivādamūlasaṃsārahetutvāt kramakāraṇāt /</l>
+<l>caittebhyo vedanāsaṃjñe pṛthakskandhau niveśitau // VAkK_1.21 //</l>
+</lg>
+
+<lg>
+<l>skandheṣva saṃskṛtaṃ noktamarthāyogāt kramaḥ punaḥ /</l>
+<l>yathaudārikasaṃklesabhājanādyarthadhātutaḥ // VAkK_1.22 //</l>
+</lg>
+
+<lg>
+<l>prāk pañca vārttamānārthyāt bhautikārthyāccatuṣṭayam /</l>
+<l>dūrāśutaravṛttyānyat yathāsthānaṃ kramo 'thavā // VAkK_1.23 //</l>
+</lg>
+
+<lg>
+<l>viśeṣaṇārthaṃ prādhānyabdahudharmāgrasaṃgrahāt /</l>
+<l>ekamāyatanaṃ rūpamekaṃ dharmākhyamucyate // VAkK_1.24 //</l>
+</lg>
+
+<lg>
+<l>dharmaskandhasahasrāṇi yānyaśītiṃ jagau muniḥ /</l>
+<l>tāni vāṅnāma vetyeṣāṃ rūpasaṃskārasaṃgrahaḥ // VAkK_1.25 //</l>
+</lg>
+
+<lg>
+<l>śāstrapramāṇā ityeke skandhādīnāṃ kathaikaśaḥ /</l>
+<l>caritapratipakṣastu dharmaskandho 'nuvarṇitaḥ // VAkK_1.26 //</l>
+</lg>
+
+<lg>
+<l>tathānye 'pi yathāyogaṃ skandhāyatanadhātavaḥ /</l>
+<l>pratipādyā yathokteṣu saṃpradhārya svalakṣaṇam // VAkK_1.27 //</l>
+</lg>
+
+<lg>
+<l>chidramākāśadhātvākhyam ālokatamasī kila /</l>
+<l>vijñānadhāturvijñānaṃ sāsravaṃ janmaniśrayāḥ // VAkK_1.28 //</l>
+</lg>
+
+<lg>
+<l>sanidarśana eko 'tra rūpaṃ sapratighā daśa /</l>
+<l>rūpiṇaḥ avyākṛtā aṣṭau ta evārūpaśabdakāḥ // VAkK_1.29 //</l>
+</lg>
+
+<lg>
+<l>tridhānye kāmadhātvāptāḥ sarve rūpe caturdaśa /</l>
+<l>vinā gandharasaghrāṇajivhāvijñānadhātubhiḥ // VAkK_1.30 //</l>
+</lg>
+
+<lg>
+<l>ārūpyāptā manodharmamanovijñānadhātavaḥ /</l>
+<l>sāsravānāsravā ete trayaḥ śeṣāstu sāsravāḥ // VAkK_1.31 //</l>
+</lg>
+
+<lg>
+<l>savitarkavicārā hi pañca vijñānadhātavaḥ /</l>
+<l>antyāstrayastriprakārāḥ śeṣā ubhayavarjitāḥ // VAkK_1.32 //</l>
+</lg>
+
+<lg>
+<l>nirūpaṇānusmaraṇavikalpenāvikalpakāḥ /</l>
+<l>tau prajñāmānasī vyagrā smṛtiḥ sarvaiva mānasī // VAkK_1.33 //</l>
+</lg>
+
+<lg>
+<l>sapta sālambanāścittadhātavaḥ ardhaṃ ca dharmataḥ /</l>
+<l>navānupāttā te cāṣṭau śabdaśca anye nava dvidhā // VAkK_1.34 //</l>
+</lg>
+
+<lg>
+<l>spraṣṭavyaṃ dvividhaṃ śeṣā rūpiṇo nava bhautikāḥ /</l>
+<l>dharmadhātvekadeśaśca saṃcitā daśa rūpiṇaḥ // VAkK_1.35 //</l>
+</lg>
+
+<lg>
+<l>chinatti chidyate caiva bāhyaṃ dhātu catuṣṭayam /</l>
+<l>dahyate tulayatyevaṃ vivādo dagdhṛtulyayoḥ // VAkK_1.36 //</l>
+</lg>
+
+<lg>
+<l>vipākajaupacayikāḥ pañcādhyātmaṃ vipākajaḥ /</l>
+<l>na śabdaḥ apratighā aṣṭau naiḥṣyandika vipākajāḥ // VAkK_1.37 //</l>
+</lg>
+
+<lg>
+<l>tridhānye dravyavānekaḥ kṣaṇikāḥ paścimāstrayaḥ /</l>
+<l>cakṣurvijñānadhātvoḥ syāt pṛthak lābhaḥ sahāpi ca // VAkK_1.38 //</l>
+</lg>
+
+<lg>
+<l>dvādaśādhyātmikāḥ hitvā rūpādīn dharmasaṃjñakaḥ /</l>
+<l>sabhāgaḥ tatsabhāgāśca śeṣāḥ yo na svakarmakṛt // VAkK_1.39 //</l>
+</lg>
+
+<lg>
+<l>daśa bhāvanayā heyāḥ pañca ca antyāstrayastridhā /</l>
+<l>na dṛṣṭiheyamakliṣṭaṃ na rūpaṃ nāpyaṣaṣṭhajam // VAkK_1.40 //</l>
+</lg>
+
+<lg>
+<l>cakṣuśca dharmadhātośca pradeśau dṛṣṭiḥ aṣṭadhā /</l>
+<l>pañcavijñānasahajā dhīrna dṛṣṭiratīraṇāt // VAkK_1.41 //</l>
+</lg>
+
+<lg>
+<l>cakṣuḥ paśyati rūpāṇi sabhāgaṃ na tadāśritam /</l>
+<l>vijñānaṃ dṛśyate rūpaṃ na kilāntaritaṃ yataḥ // VAkK_1.42 //</l>
+</lg>
+
+<lg>
+<l>ubhābhyāmapi cakṣurbhyāṃ paśyati vyaktadarśanāt /</l>
+<l>cakṣuḥśrotramano 'prāptaviṣayaṃ trayamanyathā // VAkK_1.43 //</l>
+</lg>
+
+<lg>
+<l>tribhirghrāṇādibhistulyaviṣayagrahaṇaṃ matam /</l>
+<l>caramasyāśrayo 'tītaḥ pañcānāṃ sahajaśca taiḥ // VAkK_1.44 //</l>
+</lg>
+
+<lg>
+<l>tadvikāravikāritvādāśrayāścakṣurādayaḥ /</l>
+<l>ato 'sādhāraṇatvāddhi vijñānaṃ tairnirucyate // VAkK_1.45 //</l>
+</lg>
+
+<lg>
+<l>na kāyasyādharaṃ cakṣuḥ ūrdhvaṃ rūpaṃ na cakṣuṣaḥ /</l>
+<l>vijñānaṃ ca asya rūpaṃ tu kāyasyobhe ca sarvataḥ // VAkK_1.46 //</l>
+</lg>
+
+<lg>
+<l>tathā śrotraṃ trayāṇāṃ tu sarvameva svabhūmikam /</l>
+<l>kāyavijñānamadharasvabhūmi aniyataṃ manaḥ // VAkK_1.47 //</l>
+</lg>
+
+<lg>
+<l>pañca bāhyā divijñeyāḥ nityā dharmā asaṃskṛtāḥ /</l>
+<l>dharmārdhamindriyaṃ ye ca dvādaśādhyātmikāḥ smṛtāḥ // VAkK_1.48 //</l>
+</lg>
+
+<p>abhidharmakośabhāṣye dhātunirdeśo nāma prathamaṃ kośasthānaṃ samāptamiti /</p>
+
+<lg>
+<l>ye dharmā hetuprabhavā hetusteṣāṃ tathāgato hyavadat /</l>
+<l>teṣāṃ ca yo nirodha evaṃvādī mahāśramaṇaḥ //</l>
+</lg>
+
+<p>likhāpitamidaṃ śrīlāmāvākeneti /</p>
+
+<p>dvitīyaṃ kośasthānam</p>
+
+<lg>
+<l>caturṣvartheṣu pañcānāmādhipatyaṃ dvayoḥ kila /</l>
+<l>caturṇṇāṃ pañcakāṣṭānāṃ saṃkleśavyavadānayoḥ // VAkK_2.1 //</l>
+</lg>
+
+<lg>
+<l>svārthopalabdhyādhipatyāt sarvasya ca ṣaḍindriyam /</l>
+<l>strītvapuṃstvādhipatyāttu kāyāt strīpuruṣendriye // VAkK_2.2 //</l>
+</lg>
+
+<lg>
+<l>nikāyasthitisaṃkleśavyavadānādhipatyataḥ /</l>
+<l>jīvitaṃ vedanāḥ pañca śraddhādyāścendriyaṃ matāḥ // VAkK_2.3 //</l>
+</lg>
+
+<lg>
+<l>ājñāsyāmyākhyamājñākhyamājñātāvīndriyaṃ tathā /</l>
+<l>uttarottarasaṃprāptinirvāṇādyādhipatyataḥ // VAkK_2.4 //</l>
+</lg>
+
+<lg>
+<l>cittāśrayastadvikalpaḥ sthitiḥ saṃkleśa eva ca /</l>
+<l>saṃbhāro vyavadānaṃ ca yāvatā tāvadindriyam // VAkK_2.5 //</l>
+</lg>
+
+<lg>
+<l>pravṛtterāśrayotpattisthitipratyupabhogataḥ /</l>
+<l>caturdaśa tathānyāni nivṛtterindriyāṇi vā // VAkK_2.6 //</l>
+</lg>
+
+<lg>
+<l>duḥkhendriyamaśātā yā kāyikī vedanā sukham /</l>
+<l>śātā dhyāne tṛtīye tu caitasī sā sukhendriyam // VAkK_2.7 //</l>
+</lg>
+
+<lg>
+<l>anyatra sā saumanasyaṃ aśātā caitasī punaḥ /</l>
+<l>daurmanasyamupekṣā tu madhyā ubhayī avikalpanāt // VAkK_2.8 //</l>
+</lg>
+
+<lg>
+<l>dṛgbhāvanāśaikṣapathe nava trīṇi amalaṃ trayam /</l>
+<l>rūpīṇi jīvitaṃ duḥkhe sāsravāṇi dvidhā nava // VAkK_2.9 //</l>
+</lg>
+
+<lg>
+<l>vipāko jīvitaṃ dvedhā dvādaśa antyāṣṭakādṛte /</l>
+<l>daurmanasyācca tattvekaṃ savipākaṃ daśa dvidhā // VAkK_2.10 //</l>
+</lg>
+
+<lg>
+<l>mano 'nyavittiśraddhādīni aṣṭakaṃ kuśalaṃ dvidhā /</l>
+<l>daurmanasyaṃ mano 'nyā ca vittistredhā anyadekadhā // VAkK_2.11 //</l>
+</lg>
+
+<lg>
+<l>kāmāptamamalaṃ hitvā rūpāptaṃ strīpumindriye /</l>
+<l>duḥkhe ca hitvā ārūpyāptaṃ sukhe cāpohya rūpi ca // VAkK_2.12 //</l>
+</lg>
+
+<lg>
+<l>manovittitrayaṃ tredhā dviheyā durmanaskatā /</l>
+<l>nava bhavanayā pañca tvaheyānyapi na trayam // VAkK_2.13 //</l>
+</lg>
+
+<lg>
+<l>kāmeṣvādau vipāko dve labhyate nopapādukaiḥ /</l>
+<l>teḥ ṣaḍ vā sapta vā aṣṭau vā ṣaḍ rūpeṣu ekamuttare // VAkK_2.14 //</l>
+</lg>
+
+<lg>
+<l>nirodhayatyuparamānnārūpye jīvitaṃ manaḥ /</l>
+<l>upekṣāṃ caiva rūpe 'ṣṭau kāme daśa navāṣṭau vā // VAkK_2.15 //</l>
+</lg>
+
+<lg>
+<l>kramamṛtyau tu catvāri śubhe sarvatra pañca ca /</l>
+<l>navāptirantyaphalayoḥ saptāṣṭanavabhirdvayoḥ // VAkK_2.16 //</l>
+</lg>
+
+<lg>
+<l>ekādaśabhirarhattvamuktaṃ tvekasya saṃbhavāt /</l>
+<l>upekṣajīvitamanoyukto 'vaśyaṃ trayānvitaḥ // VAkK_2.17 //</l>
+</lg>
+
+<lg>
+<l>caturbhiḥ sukhakāyābhyāṃ pañcabhiścakṣurādimān /</l>
+<l>saumanasyī ca duḥkhī tu saptabhiḥ strīndriyādimān // VAkK_2.18 //</l>
+</lg>
+
+<lg>
+<l>aṣṭābhiḥ ekādaśabhistvājñājñāte ndriyānvitaḥ /</l>
+<l>ājñāsyāmīndriyopetastrayodaśabhiranvitaḥ // VAkK_2.19 //</l>
+</lg>
+
+<lg>
+<l>sarvālpairniḥśubho 'ṣṭābhirvinmanaḥkāyajīvitaiḥ /</l>
+<l>yuktaḥ bālastathārūpye upekṣāyurmanaḥśubhaiḥ // VAkK_2.20 //</l>
+</lg>
+
+<lg>
+<l>bahubhiryukta ekānnaviṃśatyāmalavarjitaiḥ /</l>
+<l>dviliṅgaḥ āryo rāgī ekaliṅgadvayamalavarjitaiḥ // VAkK_2.21 //</l>
+</lg>
+
+<lg>
+<l>kāme 'ṣṭadravyako 'śabdaḥ paramāṇuranindriyaḥ /</l>
+<l>kāyendriyī navadravyaḥ daśadravyo 'parendriyaḥ // VAkK_2.22 //</l>
+</lg>
+
+<lg>
+<l>cittaṃ caittāḥ sahāvaśyaṃ sarva saṃskṛtalakṣaṇaiḥ /</l>
+<l>prāptyā vā pañcadhā caittā mahābhūmyādibhedataḥ // VAkK_2.23 //</l>
+</lg>
+
+<lg>
+<l>vedanā cetanā saṃjñā cchandaḥ sparśo matiḥ smṛtiḥ /</l>
+<l>manaskāro 'dhimokṣaśca samādhiḥ sarvacetasi // VAkK_2.24 //</l>
+</lg>
+
+<lg>
+<l>śraddhāpramādaḥ praśrabdhirupekṣā hrīrapatrapā /</l>
+<l>mūladvayamahiṃsā ca vīryaṃ ca kuśale sadā // VAkK_2.25 //</l>
+</lg>
+
+<lg>
+<l>mohaḥ pramādaḥ kauśīdyamāśraddhayaṃ styānamuddhavaḥ /</l>
+<l>kliṣṭe sadaiva akuśale tvāhrīkyamanapatrapā // VAkK_2.26 //</l>
+</lg>
+
+<lg>
+<l>krodhopanāhaśāṭhyerṣyāpradāsamrakṣamatsarāḥ /</l>
+<l>māyāmadavihiṃsāśca parīttakleśabhūmikāḥ // VAkK_2.27 //</l>
+</lg>
+
+<lg>
+<l>savitarkavicāratvāt kuśale kāmacetasi /</l>
+<l>dvāṃviṃśatiścaitasikāḥ kaukṛtyamadhikaṃ kvacit // VAkK_2.28 //</l>
+</lg>
+
+<lg>
+<l>āveṇike tvakuśale dṛṣṭiyukte ca viṃśatiḥ /</l>
+<l>kleśaiścaturbhiḥ krodhādyaiḥ kaukṛtyenaikaviṃśatiḥ // VAkK_2.29 //</l>
+</lg>
+
+<lg>
+<l>nivṛte 'ṣṭādaśa anyatra dvādaśāvyākṛte matāḥ /</l>
+<l>middhaṃ sarvāvirodhitvādyatra syādadhikaṃ hi tat // VAkK_2.30 //</l>
+</lg>
+
+<lg>
+<l>kaukṛtyamiddhākuśalānyādye dhyāne na santyataḥ /</l>
+<l>dhyānāntare vitarkaśca vicāraścāpyataḥ param // VAkK_2.31 //</l>
+</lg>
+
+<lg>
+<l>ahrīragurutā avadye bhayādarśitva matrapā /</l>
+<l>prema śraddhā gurutvaṃ hrīḥ te punaḥ kāmarūpayoḥ // VAkK_2.33 //</l>
+</lg>
+
+<lg>
+<l>vitarkacārā vaudāryasūkṣmate māna unnatiḥ /</l>
+<l>madaḥ svadharme raktasya paryādānaṃ tu cetasaḥ // VAkK_2.33 //</l>
+</lg>
+
+<lg>
+<l>cittaṃ mano 'tha vijñānamekārthaṃ cittacaitasāḥ /</l>
+<l>sāśrayā lambanākārāḥ saṃprayuktāśca pañcadhā // VAkK_2.34 //</l>
+</lg>
+
+<lg>
+<l>viprayuktāstu saṃskārāḥ prāptyaprāptī sabhāgatā /</l>
+<l>āsaṃjñikaṃ samāpattī jīvitaṃ lakṣaṇāni ca // VAkK_2.35 //</l>
+</lg>
+
+<lg>
+<l>nāmakāyādayaśceti prāptirlābhaḥ samanvayaḥ /</l>
+<l>prāptyaprāptī svasaṃtāna patitānāṃ nirodhayoḥ // VAkK_2.36 //</l>
+</lg>
+
+<lg>
+<l>traiyadhvikānāṃ trividhā śubhādīnāṃ śubhādikā /</l>
+<l>svadhātukā tadāptānāṃ anāptānāṃ caturvidhā // VAkK_2.37 //</l>
+</lg>
+
+<lg>
+<l>tridhā naśaikṣāśaikṣāṇāṃ aheyānāṃ dvidhā matā /</l>
+<l>avyākṛtāptiḥ sahajā abhijñānairmāṇikādṛte // VAkK_2.38 //</l>
+</lg>
+
+<lg>
+<l>nivṛtasya ca rūpasya kāme rūpasya nāgrajā /</l>
+<l>akliṣṭāvyākṛtāprāptiḥ sātītājātayostridhā // VAkK_2.39 //</l>
+</lg>
+
+<lg>
+<l>kāmādyāptāmalānāṃ ca mārgasyāprāptiriṣyate /</l>
+<l>pṛthagjanatvam tatprāptibhūsaṃcārād vihīyate // VAkK_2.40 //</l>
+</lg>
+
+<lg>
+<l>sabhāgatā sattvasāmyaṃ āsaṃjñikamasaṃjñiṣu /</l>
+<l>nirodhaścittacaittānāṃ vipākaḥ te bṛhatphalāḥ // VAkK_2.41 //</l>
+</lg>
+
+<lg>
+<l>tathāsaṃjñisamāpattiḥ dhyāne 'ntye niḥsṛtīcchayā /</l>
+<l>śubhā upapadyavedyaiva nāryasya ekādhvikāpyate // VAkK_2.42 //</l>
+</lg>
+
+<lg>
+<l>nirodhākhyā tathaiveyaṃ vihārārthaṃ bhavāgrajā /</l>
+<l>śubhā dvivedyāniyatā ca āryasya āpyā prayogataḥ // VAkK_2.43 //</l>
+</lg>
+
+<lg>
+<l>bodhilabhyā muneḥ na prāk catustriṃśatkṣaṇāptitaḥ /</l>
+<l>kāmarūpāśraye bhūte nirodhākhyādito nṛṣu // VAkK_2.44 //</l>
+</lg>
+
+<lg>
+<l>āyurjīvitam ādhāra ūṣmavijñāyorhi yaḥ /</l>
+<l>lakṣaṇāni punarjātirjarā sthitiranityatā // VAkK_2.45 //</l>
+</lg>
+
+<lg>
+<l>jātijātyādayasteṣāṃ te 'ṣṭadharmaikavṛttayaḥ /</l>
+<l>janyasya janikā jātirna hetupratyayairvinā // VAkK_2.46 //</l>
+</lg>
+
+<lg>
+<l>nāmakāyādayaḥ saṃjñāvākyākṣarasamuktayaḥ /</l>
+<l>kāmarūpāptasattvākhyā niḥṣyandāvyākṛtāḥ tathā // VAkK_2.47 //</l>
+</lg>
+
+<lg>
+<l>sabhāgatā sā tu punarvipāko 'pi āptayo dvidhā /</l>
+<l>lakṣaṇāni ca niḥṣyandāḥ samāpattya samanvayāḥ // VAkK_2.48 //</l>
+</lg>
+
+<lg>
+<l>kāraṇaṃ sahabhūścaiva sabhāgaḥ saṃprayuktakaḥ /</l>
+<l>sarvatrago vipākākhyaḥ ṣaḍvidho heturiṣyate // VAkK_2.49 //</l>
+</lg>
+
+<lg>
+<l>svato 'nye kāraṇaṃ hetuḥ sahabhūrye mithaḥphalāḥ /</l>
+<l>bhūtavaccittacittānuvartilakṣaṇalakṣyavat // VAkK_2.50 //</l>
+</lg>
+
+<lg>
+<l>caittā dvau saṃvarau teṣāṃ cetaso lakṣaṇāni ca /</l>
+<l>cittānuvarttinaḥ kālaphalādiśubhatādibhiḥ // VAkK_2.51 //</l>
+</lg>
+
+<lg>
+<l>sabhāgahetuḥ sadṛśāḥ svanikāyabhuvaḥ agrajāḥ /</l>
+<l>anyo 'nyaṃ navabhūmistu mārgaḥ samaviśiṣṭayoḥ // VAkK_2.52 //</l>
+</lg>
+
+<lg>
+<l>prayogajāstayoreva śrutacintāmayādikāḥ /</l>
+<l>saṃprayuktakahetustu cittacaittāḥ samāśrayāḥ // VAkK_2.53 //</l>
+</lg>
+
+<lg>
+<l>sarvatragākhyaḥ kliṣṭānāṃ svabhūmau pūrvasarvagāḥ /</l>
+<l>vipākaheturaśubhāḥ kuśalāścaiva sāsravāḥ // VAkK_2.54 //</l>
+</lg>
+
+<lg>
+<l>sarvatragaḥ sabhāgaśca dvayadhvagau tryadhvagāstrayaḥ /</l>
+<l>saṃskṛtaṃ savisaṃyoga phalaṃ nāsaṃskṛtasya te // VAkK_2.55 //</l>
+</lg>
+
+<lg>
+<l>vipākaphalamantyasya pūrvasyādhipataṃ phalam /</l>
+<l>sabhāga sarvatragayorniṣyandaḥ pauruṣaṃ dvayoḥ // VAkK_2.56 //</l>
+</lg>
+
+<lg>
+<l>vipāko 'vyākṛto dharmaḥ sattvākhyaḥ vyākṛtodbhavaḥ /</l>
+<l>niḥṣyando hetusadṛśaḥ visaṃyogaḥ kṣayo dhiyā // VAkK_2.57 //</l>
+</lg>
+
+<lg>
+<l>yadvalājjāyate yattatphalaṃ puruṣakārajam /</l>
+<l>apūrvaḥ saṃskṛtasyaiva saṃskṛto 'dhipateḥ phalam // VAkK_2.58 //</l>
+</lg>
+
+<lg>
+<l>varttamānāḥ phalaṃ pañca gṛṇhanti dvau prayacchataḥ /</l>
+<l>varttamānābhyatītau dvau eko 'tītaḥ prayacchati // VAkK_2.59 //</l>
+</lg>
+
+<lg>
+<l>kliṣṭā vipākajāḥ śeṣāḥ prathamāryā yathākramam /</l>
+<l>vipākaṃ sarvagaṃ hitvā tau sabhāgaṃ ca śeṣajāḥ // VAkK_2.60 //</l>
+</lg>
+
+<lg>
+<l>cittacaitāḥ tathānye 'pi saṃprayuktakavarjitāḥ /</l>
+<l>catvāraḥ pratyayā uktāḥ hetvākhyaḥ pañca hetavaḥ // VAkK_2.61 //</l>
+</lg>
+
+<lg>
+<l>cittacaittā acaramā utpannāḥ samanantaraḥ /</l>
+<l>ālambanaṃ sarvadharmāḥ kāraṇākhyo 'dhipaḥ smṛtaḥ // VAkK_2.62 //</l>
+</lg>
+
+<lg>
+<l>nirudhyamāne kāritraṃ dvau hetū kurutaḥ trayaḥ /</l>
+<l>jāyamāne tato 'nyau tu pratyayau tadviparyayāt // VAkK_2.63 //</l>
+</lg>
+
+<lg>
+<l>caturbhiścattacaittā hi samāpattidvayaṃ tribhiḥ /</l>
+<l>dvābhyāmanye tu jāyante neśvarādeḥ kramādibhiḥ // VAkK_2.64 //</l>
+</lg>
+
+<lg>
+<l>dvidhā bhūtāni taddhetuḥ bhautikasya tu pañcadhā /</l>
+<l>tridhā bhautikamanyonyaṃ bhūtānāmekadhaiva tat // VAkK_2.65 //</l>
+</lg>
+
+<lg>
+<l>kuśalākuśalaṃ kāme nivṛtānivṛtaṃ manaḥ /</l>
+<l>rūpārūpyeṣvakuśalādanyatra anāsravaṃ dvidhā // VAkK_2.66 //</l>
+</lg>
+
+<lg>
+<l>kāme nava śubhāccittāccittāni aṣṭābhya eva tat /</l>
+<l>daśabhyo 'kuśalaṃ tasmāccatvāri nivṛtaṃ tathā // VAkK_2.67 //</l>
+</lg>
+
+<lg>
+<l>pañcabhyo 'nivṛtaṃ tasmātsapta cittānyanantaram /</l>
+<l>rūpe daśaikaṃ ca śubhāt navabhyastadanantaram // VAkK_2.68 //</l>
+</lg>
+
+<lg>
+<l>aṣṭābhyo nivṛtaṃ tasmāt ṣaṭ tribhyo 'nivṛtaṃ punaḥ /</l>
+<l>tasmāt ṣaṭ evāmārūpye tasya nītiḥ śubhātpunaḥ // VAkK_2.69 //</l>
+</lg>
+
+<lg>
+<l>nava cittāni tat ṣaṇṇāṃ nivṛtātsapta tattathā /</l>
+<l>caturbhyaḥ śaikṣam asmāttu pañca aśaikṣaṃ tu pañcakāt // VAkK_2.70 //</l>
+</lg>
+
+<lg>
+<l>tasmāccatvāri cittāni dvādaśaitāni viṃśatiḥ /</l>
+<l>prāyogikopapattyāptaṃ śubhaṃ bhittvā triṣu dvidhā // VAkK_2.71 //</l>
+</lg>
+
+<lg>
+<l>vipākajairyāpathikaśailpasthānikanairmitam /</l>
+<l>caturdhāvyākṛtaṃ kāme rūpe śilpavivarjitam // VAkK_2.72 //</l>
+</lg>
+
+<lg>
+<l>kliṣṭe traidhātuke lābhaḥ ṣaṇṇāṃ ṣaṇṇāṃ dvayoḥ śubhe /</l>
+<l>trayāṇāṃ rūpaje śaikṣe caturṇāṃ tasya śeṣite // VAkK_2.73 //</l>
+</lg>
+
+<p>abhidharmakośe indriyanirddeśo nāma dvitīyaṃ kośasthānaṃ samāptamiti /
+śrīlāmāvākasya</p>
+
+<p>tṛtīyaṃ kośasthānam</p>
+
+<p>oṃ namo buddhāya /</p>
+
+<lg>
+<l>narakapretatiryañco manuṣyāḥ ṣaḍ divaukasaḥ /</l>
+<l>kāmadhātuḥ sa narakadvīpabhedena viṃśatiḥ // VAkK_3.1 //</l>
+</lg>
+
+<lg>
+<l>ūrdhvaṃ saptadaśasthāno rūpadhātuḥ pṛthak pṛthak /</l>
+<l>dhyānaṃ tribhūmikaṃ tatra caturthaṃ tvaṣṭabhūmikam // VAkK_3.2 //</l>
+</lg>
+
+<lg>
+<l>ārūpyadhāturasthānaḥ upapattyā caturvidhaḥ /</l>
+<l>nikāyaṃ jīvitaṃ cātra niśritā cittasantatiḥ // VAkK_3.3 //</l>
+</lg>
+
+<lg>
+<l>narakādisvanāmoktā gatayaḥ pañca teṣu tāḥ /</l>
+<l>akliṣṭāvyākṛtā eva sattvākhyā nāntarābhavaḥ // VAkK_3.4 //</l>
+</lg>
+
+<lg>
+<l>nānātvakāyasaṃjñāśca nānākāyaikasaṃjñinaḥ /</l>
+<l>viparyayāccaikakāyasaṃjñāścārūpiṇasrayaḥ // VAkK_3.5 //</l>
+</lg>
+
+<lg>
+<l>vijñānasthitayaḥ sapta śeṣaṃ tatparibhedavat /</l>
+<l>bhavāgrāsaṃjñisattvāśca sattvāvāsā nava smṛtāḥ // VAkK_3.6 //</l>
+</lg>
+
+<lg>
+<l>anicchāvasanānnānye catasraḥ sthitayaḥ punaḥ /</l>
+<l>catvāraḥ sāsravāḥ skandhāḥ svabhūmāveva kevalam // VAkK_3.7 //</l>
+</lg>
+
+<lg>
+<l>vijñānaṃ na sthitiḥ proktaṃ catuṣkoṭi tu saṃgrahe /</l>
+<l>catasro yonayastatra sattvānāmaṇḍajādayaḥ // VAkK_3.8 //</l>
+</lg>
+
+<lg>
+<l>caturdhā nara tiryañcaḥ nārakā upapādukāḥ /</l>
+<l>antarābhavadevāśca pretā api jarāyujāḥ // VAkK_3.9 //</l>
+</lg>
+
+<lg>
+<l>mṛtyupapattibhavayorantarā bhavatīha yaḥ /</l>
+<l>gamyadeśānupetatvānnopapanno 'ntarābhavaḥ // VAkK_3.10 //</l>
+</lg>
+
+<lg>
+<l>vrīhisantānasādharmyādavicchinnabhavodbhavaḥ /</l>
+<l>pratibimbamasiddhatvādasāmyāccānidarśanam // VAkK_3.11 //</l>
+</lg>
+
+<lg>
+<l>sahaikatra dvayābhāvāt asantānād dvayodayāt /</l>
+<l>kaṇṭhokteścāsti gandharvāt pañcokteḥ gatisūtrataḥ // VAkK_3.12 //</l>
+</lg>
+
+<lg>
+<l>ekākṣepādasāvaiṣyatpūrvakālabhavākṛtiḥ /</l>
+<l>sa punarmaraṇātpūrva upapattikṣaṇātparaḥ // VAkK_3.13 //</l>
+</lg>
+
+<lg>
+<l>sajātiśuddhadivyākṣidṛśyaḥ karmarddhivegavān /</l>
+<l>sakalākṣaḥ apratighavān anivartyaḥ sa gandhabhuk // VAkK_3.14 //</l>
+</lg>
+
+<lg>
+<l>viparyastamatiryāti gatideśaṃ riraṃsayā /</l>
+<l>gandhasthānābhikāmo 'nyaḥ ūrdhvapādastu nārakaḥ // VAkK_3.15 //</l>
+</lg>
+
+<lg>
+<l>saṃprajānan viśatyekaḥ tiṣṭhatyapyaparaḥ aparaḥ /</l>
+<l>niṣkrāmatyapi sarvāṇi mūḍho 'nyaḥ nityamaṇḍajaḥ // VAkK_3.16 //</l>
+</lg>
+
+<lg>
+<l>garbhāvakrāntayastisraścakravarttisvayaṃbhuvām /</l>
+<l>karmajñānobhayeṣāṃ vā viśadatvād yathākramam // VAkK_3.17 //</l>
+</lg>
+
+<lg>
+<l>nātmāsti skandhamātraṃ tu kleśakarmābhisaṃskṛtam /</l>
+<l>antarābhavasaṃtatyā kukṣimeti pradīpavat // VAkK_3.18 //</l>
+</lg>
+
+<lg>
+<l>yathākṣepaṃ kramādvṛddhaḥ santānaḥ kleśakarmabhiḥ /</l>
+<l>paralokaṃ punaryāti ityanādibhavacakrakam // VAkK_3.19 //</l>
+</lg>
+
+<lg>
+<l>sa pratītyasamutpādo dvādaśāṅgastrikāṇḍakaḥ /</l>
+<l>pūrvāparāntayordve dve madhye 'ṣṭau paripūriṇaḥ // VAkK_3.20 //</l>
+</lg>
+
+<lg>
+<l>pūrvakleśā daśāvidyā saṃskārāḥ pūrvakarmaṇaḥ /</l>
+<l>saṃdhiskandhāstu vijñānaṃ nāmarūpamataḥ param // VAkK_3.21 //</l>
+</lg>
+
+<lg>
+<l>prāk ṣaḍāyatanotpādāt tatpūrvaṃ trikasaṃgamāt /</l>
+<l>sparśaḥ prāksukhaduḥkhādikāraṇajñānaśaktitaḥ // VAkK_3.22 //</l>
+</lg>
+
+<lg>
+<l>vittiḥ prāk maithunāt tṛṣṇā bhogamaithunarāgiṇaḥ /</l>
+<l>upādānaṃ tu bhogānāṃ prāptaye paridhāvataḥ // VAkK_3.23 //</l>
+</lg>
+
+<lg>
+<l>sa bhaviṣyat bhavaphalaṃ kurute karma tat bhavaḥ /</l>
+<l>pratisaṃdhiḥ punarjātiḥ jarāmaraṇamā vidaḥ // VAkK_3.24 //</l>
+</lg>
+
+<lg>
+<l>āvasthikaḥ kileṣṭo 'yaṃ prādhānyā ttvaṅgakīrtanam /</l>
+<l>pūrvāparāntamadhyeṣu saṃmohavinivṛttaye // VAkK_3.25 //</l>
+</lg>
+
+<lg>
+<l>kleśāstrīṇi dvayaṃ karma sapta vastu phalaṃ tathā /</l>
+<l>phalahetvabhisaṃkṣepo dvayormadhyānumānataḥ // VAkK_3.26 //</l>
+</lg>
+
+<lg>
+<l>kleśāt kleśaḥ kriyā caiva tato vastu tataḥ punaḥ /</l>
+<l>vastu kleśāśca jāyante bhavāṅgānāmayaṃ nayaḥ // VAkK_3.27 //</l>
+</lg>
+
+<lg>
+<l>heturatra samutpādaḥ samutpannaḥ phalaṃ matam /</l>
+<l>vidyāvipakṣo dharmo 'nyo 'vidyāmitrānṛtādivat // VAkK_3.28 //</l>
+</lg>
+
+<lg>
+<l>saṃyojanādivacanāt kuprajñā cenna darśanāt /</l>
+<l>dṛṣṭestatsaṃprayuktatvāt prajñopakleśadeśanāt // VAkK_3.29 //</l>
+</lg>
+
+<lg>
+<l>nāma tvarūpiṇaḥ skandhāḥ sparśāḥ ṣaṭ saṃnipātajāḥ /</l>
+<l>pañcapratighasaṃsparśaḥ ṣaṣṭho 'dhivacanāvhaya // VAkK_3.30 //</l>
+</lg>
+
+<lg>
+<l>vidyāvidyetarasparśāḥ amalakliṣṭaśeṣitāḥ /</l>
+<l>vyāpādānunayasparśau sukhavedyādayastrayaḥ // VAkK_3.31 //</l>
+</lg>
+
+<lg>
+<l>tajjāḥ ṣaḍvedanāḥ pañca kāyikī caitasī parā /</l>
+<l>punaścāṣṭādaśavidhā sā manopavicārataḥ // VAkK_3.32 //</l>
+</lg>
+
+<lg>
+<l>kāme svālambanāḥ sarve rūpī dvādaśagocaraḥ /</l>
+<l>trayāṇāmuttaraḥ dhyānadvaye dvādaśa kāmagāḥ // VAkK_3.33 //</l>
+</lg>
+
+<lg>
+<l>svo 'ṣṭālambanam ārūpyo dvayoḥ dhyānadvaye tu ṣaṭ /</l>
+<l>kāmāḥ ṣaṇṇāṃ caturṇā svaḥ ekasyālambanaṃ paraḥ // VAkK_3.34 //</l>
+</lg>
+
+<lg>
+<l>catvāro 'rūpisāmante rūpagāḥ eka ūrdhvagaḥ /</l>
+<l>eko maule svaviṣayaḥ sarve 'ṣṭādaśa sāsravāḥ // VAkK_3.35 //</l>
+</lg>
+
+<lg>
+<l>uktaṃ ca vakṣyate cānyat atra tu kleśā iṣyate /</l>
+<l>bījavannāgavanmūlavṛkṣavattuṣavattathā // VAkK_3.36 //</l>
+</lg>
+
+<lg>
+<l>tuṣitaṇḍulavat karma tathaivauṣadhi puṣpavat /</l>
+<l>siddhānnapānavadvastu tasmin bhavacatuṣṭaye // VAkK_3.37 //</l>
+</lg>
+
+<lg>
+<l>upapattibhavaḥ kliṣṭaḥ sarvakleśaiḥ svabhūmikaiḥ /</l>
+<l>tridhānye traya ārūpye āhārasthitikaṃ jagat // VAkK_3.38 //</l>
+</lg>
+
+<lg>
+<l>kavaḍīkāra āhāraḥ kāme tryāyatanātmakaḥ /</l>
+<l>na rūpāyatanaṃ tena svākṣamuktānanugrahāt // VAkK_3.39 //</l>
+</lg>
+
+<lg>
+<l>sparśaṃcetanāvijñā āhārāḥ sāsravāstriṣu /</l>
+<l>manomayaḥ saṃbhavaiṣī gandharvaścāntarābhavaḥ // VAkK_3.40 //</l>
+</lg>
+
+<lg>
+<l>nirvṛttiśca iha puṣṭyarthamāśrayāśritayordvayam /</l>
+<l>dvayamanyabhavākṣepanivṛttyartha yathākramam // VAkK_3.41 //</l>
+</lg>
+
+<lg>
+<l>chedasaṃdhāna vairāgyahānicyutyupapattayaḥ /</l>
+<l>manovijñāna eveṣṭāḥ upekṣāyāṃ cyutodbhavau // VAkK_3.42 //</l>
+</lg>
+
+<lg>
+<l>naikāgrācittayoretau nirvātyavyākṛtadvaye /</l>
+<l>kramacyutau pādanābhihṛdayeṣu manaścyutiḥ // VAkK_3.43 //</l>
+</lg>
+
+<lg>
+<l>adhonṛsuragājānāṃ marmacchedastvabādibhiḥ /</l>
+<l>samyaṅ mithyātvaniyatā āryānantaryakāriṇaḥ // VAkK_3.44 //</l>
+</lg>
+
+<lg>
+<l>tatra bhājanalokasya saṃniveśamuśantyadhaḥ /</l>
+<l>lakṣaṣoḍaśakodvedhamasaṃkhyaṃ vāyumaṇḍalam // VAkK_3.45 //</l>
+</lg>
+
+<lg>
+<l>apāmekādaśodvedhaṃ sahasrāṇi ca viṃśatiḥ /</l>
+<l>aṣṭalakṣaucchrayaṃ paścāccheṣaṃ bhavati kāñcanam // VAkK_3.46 //</l>
+</lg>
+
+<lg>
+<l>tiryak trīṇi sahasrāṇi sārdhaṃ śatacatuṣṭayam /</l>
+<l>lakṣadvādaśakaṃ caiva jalakāñcanamaṇḍalam // VAkK_3.47 //</l>
+</lg>
+
+<lg>
+<l>samantatastu triguṇaṃ tatra merūryugandharaḥ /</l>
+<l>īśādhāraḥ khadirakaḥ sudarśanagiristathā // VAkK_3.48 //</l>
+</lg>
+
+<lg>
+<l>aśvakarṇo vinitako nimindharagiriḥ tataḥ /</l>
+<l>dvīpāḥ bahiścakravāḍaḥ sapta haimāḥ sa āyasaḥ // VAkK_3.49 //</l>
+</lg>
+
+<lg>
+<l>catūratnamayo meruḥ jale 'śītisahasrake /</l>
+<l>magnāḥ ūrdhva jalāt merurbhūyo 'śītisahasrakaḥ // VAkK_3.50 //</l>
+</lg>
+
+<lg>
+<l>ardhārdhahāniraṣṭāsu samocchrāyaghanāśca te /</l>
+<l>śītāḥ saptāntarāṇyeṣāṃ ādyāśītisahasrikā // VAkK_3.51 //</l>
+</lg>
+
+<lg>
+<l>ābhyantaraḥ samudro 'sau triguṇaḥ sa tu pārśvataḥ /</l>
+<l>ardhārdhenāparāḥ śītāḥ śeṣaṃ bāhyo mahodadheḥ // VAkK_3.52 //</l>
+</lg>
+
+<lg>
+<l>lakṣatrayaṃ sahasrāṇi viṃśatirdve ca tatra tu /</l>
+<l>jambūdvīpo dvisāhasrastripārśvaḥ śakaṭākṛtiḥ // VAkK_3.53 //</l>
+</lg>
+
+<lg>
+<l>sārdhatriyojanaṃ tvekaṃ prāgvideho 'rdhacandravat /</l>
+<l>pārśvatrayaṃ tathāsya ekaṃ sārdhaṃ triśatayojanam // VAkK_3.54 //</l>
+</lg>
+
+<lg>
+<l>godānīyaḥ sahasrāṇi sapta sārdhāni maṇḍalaḥ /</l>
+<l>sārdhe dve madhyamasya aṣṭau caturasraḥ kuruḥ samaḥ // VAkK_3.55 //</l>
+</lg>
+
+<lg>
+<l>dehā videhāḥ kuravaḥ kauravāścāmarāvarāḥ /</l>
+<l>aṣṭau tadantaradvīpā gāṭhā uttaramantriṇaḥ // VAkK_3.56 //</l>
+</lg>
+
+<lg>
+<l>ihottareṇa kīṭādri navakāddhimavān tataḥ /</l>
+<l>pañcāśadvistṛtāyāmaṃ saro 'rvāggandhamādanāt // VAkK_3.57 //</l>
+</lg>
+
+<lg>
+<l>adhaḥ sahasrairviśatyā tanmātro 'vīcirasya hi /</l>
+<l>tadūrdhvaṃ sapta narakāḥ sarve 'ṣṭau ṣoḍaśotsadāḥ // VAkK_3.58 //</l>
+</lg>
+
+<lg>
+<l>kukūlaṃ kuṇapaṃ cātha kṣuramārgādikaṃ nadī /</l>
+<l>teṣāṃ caturdiśaṃ śītā anye 'ṣṭāvarvudādayaḥ // VAkK_3.59 //</l>
+</lg>
+
+<lg>
+<l>ardhena meroścandrārkau pañcāśatsaikayojanau /</l>
+<l>ardharātro 'staṃgamanaṃ madhyānha udayaḥ sakṛta // VAkK_3.60 //</l>
+</lg>
+
+<lg>
+<l>prāvṛṇmāse dvitīye 'ntyanavamyāṃ vardhate niśā /</l>
+<l>hemantānāṃ caturthe tu hīyate aharviparyayāt // VAkK_3.61 //</l>
+</lg>
+
+<lg>
+<l>lavaśo rātryaharvṛddhī dakṣiṇottarage ravau /</l>
+<l>svacchāyayārkasāmīpyādvikalendusamīkṣaṇam // VAkK_3.62 //</l>
+</lg>
+
+<lg>
+<l>pariṣaṇḍāścatasro 'sya daśasāhasrikāntarāḥ /</l>
+<l>ṣoḍaśāṣṭau sahasrāṇi catvāri dve ca nirgatāḥ // VAkK_3.63 //</l>
+</lg>
+
+<lg>
+<l>karoṭapāṇayastāsu mālādhārāssadāmadāḥ /</l>
+<l>mahārājikadevāśca parvateṣvapi saptasu // VAkK_3.64 //</l>
+</lg>
+
+<lg>
+<l>merumūrdhni trayastriṃśāḥ sa cāśītisahasradik /</l>
+<l>vidikṣu kūṭāścatvāra uṣitā vajrapāṇibhiḥ // VAkK_3.65 //</l>
+</lg>
+
+<lg>
+<l>madhye sārdhadvisāhasrapārśvamadhyardhayojanam /</l>
+<l>puraṃ sudarśanaṃ nāma haimaṃ citratalaṃ mṛdu // VAkK_3.66 //</l>
+</lg>
+
+<lg>
+<l>sārdhadviśatapārśvo 'tra vaijayantaḥ bahiḥ punaḥ /</l>
+<l>taccaitrarathapāruṣyamiśranandanabhūṣitam // VAkK_3.67 //</l>
+</lg>
+
+<lg>
+<l>viṃśatyantaritānyeṣāṃ subhūmīni caturdiśam /</l>
+<l>pūrvottare pārijātaḥ sudharmā dakṣiṇāvare // VAkK_3.68 //</l>
+</lg>
+
+<lg>
+<l>tata ūrdhva vimāneṣu devāḥ kāmabhujastu ṣaṭ /</l>
+<l>dvaṃdvāliṃṅganapāṇyāptivasitekṣitamaithunāḥ // VAkK_3.69 //</l>
+</lg>
+
+<lg>
+<l>pañcavarṣopamo yāvat daśavarṣopamaḥ śiśuḥ /</l>
+<l>saṃbhavatyeṣu saṃpūrṇāḥ savastrāścaiva rūpiṇaḥ // VAkK_3.70 //</l>
+</lg>
+
+<lg>
+<l>kāmopapattayastistraḥ kāmadevāḥ samānuṣāḥ /</l>
+<l>sukhopapattayastistro navatridhyānabhūmayaḥ // VAkK_3.71 //</l>
+</lg>
+
+<lg>
+<l>sthānāt sthānadadho yāvattāvadūrdhvaṃ tatastataḥ /</l>
+<l>nordhva darśanamastyeṣāmanyatrarddhiparāśrayāt // VAkK_3.72 //</l>
+</lg>
+
+<lg>
+<l>caturdvīpakacandrārkamerukāmadivaukasām /</l>
+<l>brahmalokasahasraṃ ca sāhasraścūḍiko mataḥ // VAkK_3.73 //</l>
+</lg>
+
+<lg>
+<l>tatsahasraṃ dvisāhasro lokadhātustu madhyamaḥ /</l>
+<l>tatsahasraṃ trisāhasraḥ samasaṃvartasaṃbhavaḥ // VAkK_3.74 //</l>
+</lg>
+
+<lg>
+<l>jāmbūdvīpāḥ pramāṇena catuḥsārdhatrihastakāḥ /</l>
+<l>dviguṇottaravṛddhayā tu purvagodottarāvhayāḥ // VAkK_3.75 //</l>
+</lg>
+
+<lg>
+<l>pādabṛddhayā tanuryāva tsārdhakrośo divaukasām /</l>
+<l>kāmināṃ rūpiṇāṃ tvādau yojanārdhaṃ tataḥ param // VAkK_3.76 //</l>
+</lg>
+
+<lg>
+<l>ardhārdhavṛddhi ūrdhva tu parīttābhebhya āśrayaḥ /</l>
+<l>dviguṇadviguṇā hitvānabhrakebhya striyojanam // VAkK_3.77 //</l>
+</lg>
+
+<lg>
+<l>sahasrāmāyuḥ kuruṣu dvayorardhārdhavarjitam /</l>
+<l>ihāniyatam ante tu daśābdāḥ ādito 'mitam // VAkK_3.78 //</l>
+</lg>
+
+<lg>
+<l>nṛṇāṃ varṣāṇi pañcāśadahorātro divaukasām /</l>
+<l>kāme 'dharāṇāṃ tenāyuḥ pañcavarṣaśatāni tu // VAkK_3.79 //</l>
+</lg>
+
+<lg>
+<l>dviguṇottaramurdhvānāmubhayaṃ rūpiṇāṃ punaḥ /</l>
+<l>nāstyahorātramāyustu kalpaiḥ svāśrayasaṃmitaiḥ // VAkK_3.80 //</l>
+</lg>
+
+<lg>
+<l>ārūpye viṃśatiḥ kalpasahasrāṇya dhikādhikam /</l>
+<l>mahākalpaḥ parīttābhāt prabhṛtyadharmadhastataḥ // VAkK_3.81 //</l>
+</lg>
+
+<lg>
+<l>kāmedevāyuṣā tulyā ahorātrā yathākramam /</l>
+<l>saṃjīvādiṣu ṣaṭsu āyustaisteṣāṃ kāmadevavat // VAkK_3.82 //</l>
+</lg>
+
+<lg>
+<l>ardhaṃ pratāpane avīcāvantaḥkalpaṃ paraṃ punaḥ /</l>
+<l>kalpaṃ tiraścāṃ pretānāṃ māsānhā śatapañcakam // VAkK_3.83 //</l>
+</lg>
+
+<lg>
+<l>vāhādvarṣaśatenaikatiloddhārakṣayāyuṣaḥ /</l>
+<l>arvudā dviṃśatiguṇaprativṛddhayāyuṣaḥ pare // VAkK_3.84 //</l>
+</lg>
+
+<lg>
+<l>kurubāhyo 'ntarāmṛtyuḥ paramāṇvakṣarakṣaṇāḥ /</l>
+<l>rūpanāmādhvaparyantāḥ paramāṇuraṇustathā // VAkK_3.85 //</l>
+</lg>
+
+<lg>
+<l>lohāpśaśā vigocchidrarajolikṣāstadudbhavāḥ /</l>
+<l>yavastathāṅgulīparva jñeyaṃ saptaguṇottaram // VAkK_3.86 //</l>
+</lg>
+
+<lg>
+<l>caturviśatiraṅgulyo hasto hastacatuṣṭayam /</l>
+<l>dhanuḥ pañcaśatānyeṣāṃ krośo raṇyaṃ ca tanmatam // VAkK_3.87 //</l>
+</lg>
+
+<lg>
+<l>te 'ṣṭau yojanamityāhuḥ viṃśaṃ kṣaṇaśataṃ punaḥ /</l>
+<l>tatkṣaṇaḥ te punaḥ ṣaṣṭirlavaḥ triṃśad guṇottarāḥ // VAkK_3.88 //</l>
+</lg>
+
+<lg>
+<l>trayo muhūrttāhorātramāsāḥ dvādaśamāsakaḥ /</l>
+<l>saṃvatsaraḥ sonarātraḥ kalpo bahuvidhaḥ smṛtaḥ // VAkK_3.89 //</l>
+</lg>
+
+<lg>
+<l>saṃvarttakalpo narakasaṃbhavāt bhājanakṣayaḥ /</l>
+<l>vivartakalpaḥ prāgvāyoryāvannaraka saṃbhavaḥ // VAkK_3.90 //</l>
+</lg>
+
+<lg>
+<l>antaḥ kalpo 'mitāt yavaddaśavarṣāyuṣaḥ tataḥ /</l>
+<l>utkarṣā apakarṣāśca kalpā aṣṭā daśāpare // VAkK_3.91 //</l>
+</lg>
+
+<lg>
+<l>utkarṣa ekaḥ te 'śītisahasrādyāvadāyuṣaḥ /</l>
+<l>iti loko vivṛtto 'yaṃ kalpāṃstiṣṭhati viṃśatim // VAkK_3.92 //</l>
+</lg>
+
+<lg>
+<l>vivartate 'tha saṃvṛtta āste saṃvartate samam /</l>
+<l>te hyaśītirmahākalpaḥ tadasaṃkhyatrayodbhavam // VAkK_3.93 //</l>
+</lg>
+
+<lg>
+<l>buddhatvam apakarṣe hi śatādyāvattadudbhavaḥ /</l>
+<l>dvayoḥ pratyekabuddhānāṃ khaḍgaḥ kalpaśatānvayaḥ // VAkK_3.94 //</l>
+</lg>
+
+<lg>
+<l>cakravartisamutpattirnādho 'śītisahasrakāt /</l>
+<l>suvarṇarūpyatāmrāyaścakriṇaḥ te 'dharakramāt // VAkK_3.95 //</l>
+</lg>
+
+<lg>
+<l>ekadvitricaturdvīpāḥ na ca dvau saha buddhavat /</l>
+<l>pratyudyānasvayaṃyāna kalahāstrajitaḥ avadhāḥ // VAkK_3.96 //</l>
+</lg>
+
+<lg>
+<l>deśasthottaptapūrṇatvairlakṣaṇātiśayo muneḥ /</l>
+<l>prāgāsan rūpivat sattvāḥ rasarāgāttataḥ śanaiḥ // VAkK_3.97 //</l>
+</lg>
+
+<lg>
+<l>ālasyātsaṃnidhiṃ kṛtvā sāgrahaiḥ kṣetrapo bhṛtaḥ /</l>
+<l>tataḥ karmapathādhikyādapahrāse daśāyuṣaḥ // VAkK_3.98 //</l>
+</lg>
+
+<lg>
+<l>kalpasya śastrarogābhyāṃ durbhikṣeṇa ca nirgamaḥ /</l>
+<l>divasān sapta māsāṃśca varṣāṇi ca yathākramam // VAkK_3.99 //</l>
+</lg>
+
+<lg>
+<l>saṃvartanyaḥ punastistro bhavantyagnyambuvāyubhiḥ /</l>
+<l>dhyānatrayaṃ dvitīyādi śīrṣa tāsāṃ yathākramam // VAkK_3.100 //</l>
+</lg>
+
+<lg>
+<l>tadapakṣālasādharmyāt na caturthe 'styaniñjanāt /</l>
+<l>na nityaṃ saha sattvena tadvimānodayavyayāt // VAkK_3.101 //</l>
+</lg>
+
+<lg>
+<l>saptāgninā adbhirekā evaṃ gate 'dbhiḥ saptake punaḥ /</l>
+<l>tejasā saptakaḥ paścādvāyusaṃvartanī tataḥ // VAkK_3.102 //</l>
+</lg>
+
+<p>abhidharmakośabhāṣye lokanirdeśo nāma tṛtīyaṃ kośasthānam samāptamiti /</p>
+
+<p>śrīlāmāvākasya yadatra puṇyam /</p>
+
+<p>caturthaṃ kośasthānam</p>
+
+<p>oṃ namo buddhāya /</p>
+
+<lg>
+<l>karmajaṃ lokavaicitryaṃ cetanā tatkṛtaṃ ca tat /</l>
+<l>cetanā mānasaṃ karma tajjaṃ vākkāyakarmaṇī // VAkK_4.1 //</l>
+</lg>
+
+<lg>
+<l>te tu vijñaptyavijñaptī kāyavijñaptiriṣyate /</l>
+<l>saṃsthānaṃ na gatiryasmātsaṃskṛtaṃ kṣaṇikaṃ vyayāt // VAkK_4.2 //</l>
+</lg>
+
+<lg>
+<l>na kasyacidahetoḥ syāt hetuḥ syācca vināśakaḥ /</l>
+<l>dvigrāhyaṃ syāt na cāṇau tat vāgvijñaptistu vāgdhvaniḥ // VAkK_4.3 //</l>
+</lg>
+
+<lg>
+<l>trividhāmalarūpoktivṛddhayakurvatpathādibhiḥ /</l>
+<l>kṣaṇādūrdhvamavijñaptiḥ kāmāptātītabhūtajā // VAkK_4.4 //</l>
+</lg>
+
+<lg>
+<l>svāni bhūtānyupādāya kāyavākkarma sāsravam /</l>
+<l>anāsravaṃ yatra jātaḥ avijñaptiranupāttikā // VAkK_4.5 //</l>
+</lg>
+
+<lg>
+<l>naiḥṣyandikī ca sattvākhyā niṣyandopāttabhūtajā /</l>
+<l>samādhijau pacayikānupāttābhinnabhūtajā // VAkK_4.6 //</l>
+</lg>
+
+<lg>
+<l>nāvyākṛtāstyavijñaptiḥ tridhānvyat aśubhaṃ punaḥ /</l>
+<l>kāme rūpe 'pyavijñaptiḥ vijñaptiḥ savicārayoḥ // VAkK_4.7 //</l>
+</lg>
+
+<lg>
+<l>kāme 'pi nivṛtā nāsti samutthānamasadyataḥ /</l>
+<l>paramārthaśubho mokṣaḥ svato mūlahyrapatrapāḥ // VAkK_4.8 //</l>
+</lg>
+
+<lg>
+<l>saṃprayogeṇa tadyuktāḥ samutthā nāt kriyādayaḥ /</l>
+<l>viparyayeṇākuśalaṃ paramāvyākṛte dhruve // VAkK_4.9 //</l>
+</lg>
+
+<lg>
+<l>samutthānaṃ dvidhā hetutatkṣaṇotthānasaṃjñitam /</l>
+<l>pravartakaṃ tayorādyaṃ dvitīyamanuvartakam // VAkK_4.10 //</l>
+</lg>
+
+<lg>
+<l>pravartakaṃ dṛṣṭiheyaṃ vijñānam ubhayaṃ punaḥ /</l>
+<l>mānasaṃ bhāvanāheyaṃ pañcakaṃ tvanuvartakam // VAkK_4.11 //</l>
+</lg>
+
+<lg>
+<l>pravartake śubhādau hi syāttridhāpyanuvartakam /</l>
+<l>tulyaṃ muneḥ śubhaṃ yāvat nobhayaṃ tu vipākajam // VAkK_4.12 //</l>
+</lg>
+
+<lg>
+<l>avijñaptistridhā jñeyā saṃvarāsaṃvaretarā /</l>
+<l>saṃvaraḥ prātimokṣākhyo dhyānajo 'nāsravastathā // VAkK_4.13 //</l>
+</lg>
+
+<lg>
+<l>aṣṭadhā prātimokṣākhyaḥ dravyatastu caturvidhaḥ /</l>
+<l>liṅgato nāmasaṃcārāt pṛthak te cāvirodhinaḥ // VAkK_4.14 //</l>
+</lg>
+
+<lg>
+<l>pañcāṣṭadaśasarvebhyo varjyebhyo viratigrahāt /</l>
+<l>upāsakopavāsasthaśramaṇoddeśabhikṣutā // VAkK_4.15 //</l>
+</lg>
+
+<lg>
+<l>śīlaṃ sucaritaṃ karma saṃvaraścocyate punaḥ /</l>
+<l>ādye vijñaptyavijñapto prātimokṣakriyāpathaḥ // VAkK_4.16 //</l>
+</lg>
+
+<lg>
+<l>prātimokṣānvitā aṣṭau dhyānajena tadanvitaḥ /</l>
+<l>anāsraveṇāryasattvāḥ antyau cittānuvartinau // VAkK_4.17 //</l>
+</lg>
+
+<lg>
+<l>anāgamye prahāṇākhyau tāvānantaryamārgajau /</l>
+<l>saṃprajñānasmṛtī dve tu manaindriyasaṃvarau // VAkK_4.18 //</l>
+</lg>
+
+<lg>
+<l>prātimokṣasthito nityamatyāgā dvartamānayā /</l>
+<l>avijñaptyānvitaḥ pūrvāt kṣaṇādūrdhvamatītayā // VAkK_4.19 //</l>
+</lg>
+
+<lg>
+<l>tathaivāsaṃvarastho 'pi dhyānasaṃvaravān sadā /</l>
+<l>atītājātayā āryastu prathame nābhyatītayā // VAkK_4.20 //</l>
+</lg>
+
+<lg>
+<l>samāhītāryamārgasthau tau yuktau vartamānayā /</l>
+<l>madhyasthasyāsti cedādau madhyayā ūrdhvaṃ dvikālayā // VAkK_4.21 //</l>
+</lg>
+
+<lg>
+<l>asaṃvarasthaḥ śubhayāśubhayā saṃvare sthitaḥ /</l>
+<l>avijñaptyānvito yāvat prasādakleśavegavān // VAkK_4.22 //</l>
+</lg>
+
+<lg>
+<l>vijñaptyā tu punaḥ sarve kurvanto madhyayānvitāḥ /</l>
+<l>atītayā kṣaṇādūrdhvamātyāgāt nāstyajātayā // VAkK_4.23 //</l>
+</lg>
+
+<lg>
+<l>nivṛtānivṛtābhyāṃ ca nātītābhyāṃ samanvitaḥ /</l>
+<l>asaṃvaro duścaritaṃ dauḥśīlyaṃ karma tatpathaḥ // VAkK_4.24 //</l>
+</lg>
+
+<lg>
+<l>vijñaptyaivānvitaḥ kurvanmadhyastho mṛducetanaḥ /</l>
+<l>tyaktānutpannavijñaptiravijñaptyāryapudgalaḥ // VAkK_4.25 //</l>
+</lg>
+
+<lg>
+<l>dhyānajo dhyānabhūmyaiva labhyate anāsravastayā /</l>
+<l>āryayā prātimokṣākhyaḥ paravijñapanādibhiḥ // VAkK_4.26 //</l>
+</lg>
+
+<lg>
+<l>yāvajjīvaṃ samādānamahorātraṃ ca saṃvṛteḥ /</l>
+<l>nāsaṃvaro 'styahorātraṃ na kilaivaṃ pragṛhyate // VAkK_4.27 //</l>
+</lg>
+
+<lg>
+<l>kālyaṃ grāhyo 'nyato nīcaiḥ sthitenoktānuvāditā /</l>
+<l>upavāsaḥ samagrāṅgo nirbhūṣeṇāniśākṣayāt // VAkK_4.28 //</l>
+</lg>
+
+<lg>
+<l>śīlāṅgānyapramādāṅgaṃ vratāṅgāni yathākramam /</l>
+<l>catvāryekaṃ tathā trīṇi smṛtināśo madaśca taiḥ // VAkK_4.29 //</l>
+</lg>
+
+<lg>
+<l>anyasyāpyupavāso 'sti śaraṇaṃ tvagatasya na /</l>
+<l>upāsakatvopagamātsaṃvṛt uktistu bhikṣuvat // VAkK_4.30 //</l>
+</lg>
+
+<lg>
+<l>sarve cet saṃvṛtā ekadeśakāryādayaḥ katham /</l>
+<l>tatpalanāt kila proktāḥ mṛdvāditvaṃ yathā manaḥ // VAkK_4.31 //</l>
+</lg>
+
+<lg>
+<l>buddhasaṃghakarāndharmānaśaikṣānubhayāṃśca saḥ /</l>
+<l>nirvāṇaṃ ceti śaraṇaṃ yo yāti śaraṇatrayam // VAkK_4.32 //</l>
+</lg>
+
+<lg>
+<l>mithyācārātigarhyatvātsaukaryādākriyāptitaḥ /</l>
+<l>yathābhyupagamaṃ lābhaḥ saṃvarasya na saṃtate // VAkK_4.33 //</l>
+</lg>
+
+<lg>
+<l>mṛṣāvādaprasaṅgācca sarvaśikṣāvyatikrame /</l>
+<l>pratikṣepaṇasāvadyānmadyādeva anyuguptaye // VAkK_4.34 //</l>
+</lg>
+
+<lg>
+<l>sarvobhayebhyaḥ kāmāpto vartamānebhya āpyate /</l>
+<l>maulebhyaḥ sarvakālebhyo dhyānānāsrava saṃvarau // VAkK_4.35 //</l>
+</lg>
+
+<lg>
+<l>saṃvaraḥ sarvasattvebhyo vibhāṣā tvaṅgakāraṇaiḥ /</l>
+<l>asaṃvarastu sarvebhyaḥ sarvāṅgebhyo na kāraṇaiḥ // VAkK_4.36 //</l>
+</lg>
+
+<lg>
+<l>asaṃvarasya kriyayā lābho 'bhyupagamena vā /</l>
+<l>śeṣāvijñaptilābhastu kṣetrādānādarehanāt // VAkK_4.37 //</l>
+</lg>
+
+<lg>
+<l>prātimokṣadamatyāgaḥ śikṣānikṣepaṇāccyuteḥ /</l>
+<l>ubhayavyañjanotpattermūlacchedānniśātyayāt // VAkK_4.38 //</l>
+</lg>
+
+<lg>
+<l>patanīyena cetyeke saddharmāntadhito 'pare /</l>
+<l>dhanarṇavattu kāśmīrairāpannasyeṣyate dvayam // VAkK_4.39 //</l>
+</lg>
+
+<lg>
+<l>bhūmisaṃcārahānibhyāṃ dhyānāptaṃ tyajyate śubham /</l>
+<l>tathārūpyāptamāryaṃ tu phalāptyuttaptihānibhiḥ // VAkK_4.40 //</l>
+</lg>
+
+<lg>
+<l>asaṃvaraḥ saṃvarāptimṛtyudvivyañjanodayaiḥ /</l>
+<l>vegādānakriyārthāyurmūlacchedaistu madhyamā // VAkK_4.41 //</l>
+</lg>
+
+<lg>
+<l>kāmāptaṃ kuśalārūpaṃ mūlacchedordhvajanmataḥ /</l>
+<l>pratipakṣodayāt kliṣṭamarūpaṃ tu vihīyate // VAkK_4.42 //</l>
+</lg>
+
+<lg>
+<l>nṛṇāmasaṃvaro hitvā śaṇḍha paṇḍadvidhākṛtīn /</l>
+<l>kurūṃśca saṃvaro 'pyevaṃ devānāṃ ca nṛṇāṃ trayaḥ // VAkK_4.43 //</l>
+</lg>
+
+<lg>
+<l>kāmarūpajadevānāṃ dhyānajaḥ anāsravaḥ punaḥ /</l>
+<l>dhyānāntarāsaṃjñisattvavarjyānāmapyarūpiṇām // VAkK_4.44 //</l>
+</lg>
+
+<lg>
+<l>kṣemākṣemetaratkarma kuśalākuśaletarat /</l>
+<l>puṇyāpuṇyamaniñjaṃ ca sukhevedyādi ca trayam // VAkK_4.45 //</l>
+</lg>
+
+<lg>
+<l>kāmadhātau śubhaṃ karma puṇyamāneñjamūrdhvajam /</l>
+<l>tadbhūmiṣu yataḥ karmavipākaṃ prati neñjati // VAkK_4.46 //</l>
+</lg>
+
+<lg>
+<l>sukhavedyaṃ śubhaṃ dhyānādātṛtīyāt ataḥ param /</l>
+<l>aduḥkhāsukhavedyaṃ tu duḥkhavedyamihāśubham // VAkK_4.47 //</l>
+</lg>
+
+<lg>
+<l>adho 'pi madhyamastyeke dhyānāntaravipākataḥ /</l>
+<l>apūrvācaramaḥ pākastrayāṇāṃ ceṣyate yataḥ // VAkK_4.48 //</l>
+</lg>
+
+<lg>
+<l>svabhāvasaṃprayogābhyāmālambanavipākataḥ /</l>
+<l>saṃmukhībhāvataśceti pañcadhā vedanīyatā // VAkK_4.49 //</l>
+</lg>
+
+<lg>
+<l>niyatāniyataṃ tacca niyataṃ trividhaṃ punaḥ /</l>
+<l>dṛṣṭadharmādivedyatvāt pañcadhā karma kecana // VAkK_4.50 //</l>
+</lg>
+
+<lg>
+<l>catuṣkoṭikamityanye nikāyākṣepaṇaṃ tribhiḥ /</l>
+<l>sarvatra caturākṣepaḥ śubhasya narake tridhā // VAkK_4.51 //</l>
+</lg>
+
+<lg>
+<l>yadviraktaḥ sthiro bālastatra notpadyavedyakṛt /</l>
+<l>nānyavedyakṛdapyāryaḥ kāme 'gre vāsthiro 'pi na // VAkK_4.52 //</l>
+</lg>
+
+<lg>
+<l>dvāviṃśatividhaṃ kāmeṣvākṣipatyantarābhavaḥ /</l>
+<l>dṛṣṭadharmaphalaṃ tacca nikāyo hyeka eva saḥ // VAkK_4.53 //</l>
+</lg>
+
+<lg>
+<l>tīvrakleśaprasādena sātatyena ca yatkṛtam /</l>
+<l>guṇakṣetre ca niyataṃ tatpitrorghātakaṃ ca yat // VAkK_4.54 //</l>
+</lg>
+
+<lg>
+<l>dṛṣṭadharmaphalaṃ karma kṣetrāśayaviśeṣataḥ /</l>
+<l>tadbhūmyatyantavairāgyāt vipāke niyataṃ hi yat // VAkK_4.55 //</l>
+</lg>
+
+<lg>
+<l>ye nirodhāraṇāmaitrīdarśanārhatphalotthitāḥ /</l>
+<l>teṣu kārāpakārāsya phalaṃ sadyo 'nubhūyate // VAkK_4.56 //</l>
+</lg>
+
+<lg>
+<l>kuśalasyāvitarkasya karmaṇo vedanā matā /</l>
+<l>vipākaścaitasikyeva kāyikyevāśubhasya tu // VAkK_4.57 //</l>
+</lg>
+
+<lg>
+<l>cittakṣepo manaścitte sa ca karmavipākajaḥ /</l>
+<l>bhayopaghātavaiṣamyaśokaiśca akurukāminām // VAkK_4.58 //</l>
+</lg>
+
+<lg>
+<l>vaṅkadoṣakaṣāyoktiḥ śāṭhyadveṣajarāgaje /</l>
+<l>kṛṣṇaśuklādibhedena punaḥ karma caturvidham // VAkK_4.59 //</l>
+</lg>
+
+<lg>
+<l>aśubhaṃ rūpakāmāptaṃ śubhaṃ caiva yathākramam /</l>
+<l>kṛṣṇaśuklobhayaṃ karma tatkṣayāya nirāsravam // VAkK_4.60 //</l>
+</lg>
+
+<lg>
+<l>dharmakṣāntiṣu vairāgye cānantaryapathāṣṭake /</l>
+<l>yā cetanā dvādaśadhā karma kṛṣṇakṣayāya tat // VAkK_4.61 //</l>
+</lg>
+
+<lg>
+<l>navame cetanā yā sā kṛṣṇaśuklakṣayāya ca /</l>
+<l>śuklasya dhyānavairāgyeṣvantyānantaryamārgajā // VAkK_4.62 //</l>
+</lg>
+
+<lg>
+<l>anye narakavedyānyakāmavedyaṃ dvayaṃ viduḥ /</l>
+<l>dṛgdheyaṃ kṛṣṇamanye anyatkṛṣṇaśuklaṃ tu kāmajam // VAkK_4.63 //</l>
+</lg>
+
+<lg>
+<l>aśaikṣaṃ kāyavākkarma manaścaiva yathākramam /</l>
+<l>maunatrayam tridhā śaucaṃ sarva sucaritatrayam // VAkK_4.64 //</l>
+</lg>
+
+<lg>
+<l>aśubhaṃ kāyakarmādi mataṃ duścarita trayam /</l>
+<l>akarmāpi tvabhidhyādimanoduścaritaṃ tridhā // VAkK_4.65 //</l>
+</lg>
+
+<lg>
+<l>viparyayātsucaritam tadaudārikasaṃgrahāt /</l>
+<l>daśa karmapathā uktā yathāyogaṃ śubhāśubhāḥ // VAkK_4.66 //</l>
+</lg>
+
+<lg>
+<l>aśubhāḥ ṣaḍavijñaptiḥ dvidhaikaḥ te 'pi kurvataḥ /</l>
+<l>dvividhāḥ sapta kuśalāḥ avijñaptiḥ samādhijāḥ // VAkK_4.67 //</l>
+</lg>
+
+<lg>
+<l>sāmantakāstu vijñaptiḥ avijñaptirbhavenna vā /</l>
+<l>viparyayeṇa pṛṣṭhāni prayogastu trimūlajaḥ // VAkK_4.68 //</l>
+</lg>
+
+<lg>
+<l>tadanantarasaṃbhūterabhidhyādyāstrimūlajāḥ /</l>
+<l>kuśalāḥ saprayogāntā alobhadveṣamohajāḥ // VAkK_4.69 //</l>
+</lg>
+
+<lg>
+<l>vadhavyāpādapāruṣyaniṣṭhā dveṣeṇa lobhataḥ /</l>
+<l>parastrīgamanābhidhyādattādānasamāpanam // VAkK_4.70 //</l>
+</lg>
+
+<lg>
+<l>mithyādṛṣṭestu mohena śeṣāṇāṃ tribhiriṣyate /</l>
+<l>sattvabhogāvadhiṣṭhānaṃ nāmarūpaṃ ca nāma ca // VAkK_4.71 //</l>
+</lg>
+
+<lg>
+<l>samaṃ prāk ca mṛtasyāsti na maulaḥ anyāśrayodayāt /</l>
+<l>senādiṣvekakāryatvāt sarve karttṛvadanvitāḥ // VAkK_4.72 //</l>
+</lg>
+
+<lg>
+<l>prāṇātipātaḥ saṃcintya parasyābhrāntimāraṇam /</l>
+<l>adattādānamanyasvasvīkriyā balacauryataḥ // VAkK_4.73 //</l>
+</lg>
+
+<lg>
+<l>agamyagamanaṃ kāmamithyācāraścaturvidhaḥ /</l>
+<l>anyathāsaṃjñino vākyamarthābhijñe mṛṣāvacaḥ // VAkK_4.74 //</l>
+</lg>
+
+<lg>
+<l>cakṣuḥ śrotamanaścittairanubhūtaṃ tribhiśca yat /</l>
+<l>taddaṣṭaśrutavijñātaṃ mataṃ coktaṃ yathākramam // VAkK_4.75 //</l>
+</lg>
+
+<lg>
+<l>paiśunyaṃ kliṣṭacittasya vacanaṃ parabhedane /</l>
+<l>pārūṣyamapriyaṃ sarva kliṣṭaṃ bhinna pralāpitā // VAkK_4.76 //</l>
+</lg>
+
+<lg>
+<l>ato 'nyat kliṣṭamityanye lapanāgītanāṭyavat /</l>
+<l>kuśāstavacca abhidhyā tu parasvaviṣamaspṛhā // VAkK_4.77 //</l>
+</lg>
+
+<lg>
+<l>vyāpādaḥ sattvavidveṣaḥ nāstidṛṣṭiḥ śubhāśubhe /</l>
+<l>mithyādṛṣṭiḥ trayo hyatra panthānaḥ sapta karma ca // VAkK_4.78 //</l>
+</lg>
+
+<lg>
+<l>mūlacchedastvasaddṛṣṭayā kāmāptotpattilābhinām /</l>
+<l>phalahetvapavādinyā sarvathā kramaśaḥ nṛṣu // VAkK_4.79 //</l>
+</lg>
+
+<lg>
+<l>chinatti strī pumān dṛṣṭicaritaḥ so 'samanvayaḥ /</l>
+<l>saṃdhiḥ kāṅkṣāstidṛṣṭibhyāṃ nehānantaryakāriṇaḥ // VAkK_4.80 //</l>
+</lg>
+
+<lg>
+<l>yugapadyāvadaṣṭābhiraśubhaiḥ saha vartate /</l>
+<l>cetanā daśabhiryāvacchubhaiḥ naikāṣṭapañcabhiḥ // VAkK_4.81 //</l>
+</lg>
+
+<lg>
+<l>bhinnapralāpapārūṣyavyāpādā narake dvidhā /</l>
+<l>samanvāgamato 'bhidhyāmithyādṛṣṭī kurau trayaḥ // VAkK_4.82 //</l>
+</lg>
+
+<lg>
+<l>saptamaḥ svayamapyatra kāme 'nyatra daśāśubhāḥ /</l>
+<l>śubhāstrayastu sarvatra saṃmukhībhāvalābhataḥ // VAkK_4.83 //</l>
+</lg>
+
+<lg>
+<l>ārūpyāsaṃjñisattveṣu lābhataḥ sapta śeṣite /</l>
+<l>saṃmukhībhāvataścāpi hitvā sanarakān kurūn // VAkK_4.84 //</l>
+</lg>
+
+<lg>
+<l>sarve 'dhipatiniṣyandavipākaphaladā matāḥ /</l>
+<l>duḥkhanānmāraṇādojonāśanāttrividhaṃ phalam // VAkK_4.85 //</l>
+</lg>
+
+<lg>
+<l>lobhajaṃ kāyavākkarma mithyājīvaḥ pṛthak kṛtaḥ /</l>
+<l>duḥśodhatvāt pariṣkāralobhotthaṃ cet na sūtrataḥ // VAkK_4.86 //</l>
+</lg>
+
+<lg>
+<l>prahāṇamārge samale saphalaṃ karma pañcabhiḥ /</l>
+<l>caturbhiramale anyacca sāsravaṃ yacchubhāśubham // VAkK_4.87 //</l>
+</lg>
+
+<lg>
+<l>anāsravaṃ punaḥ śeṣaṃ tribhiravyākṛtaṃ ca yat /</l>
+<l>catvāri dve tathā trīṇi kuśalasya śubhādayaḥ // VAkK_4.88 //</l>
+</lg>
+
+<lg>
+<l>aśubhasya śubhādyā dve trīṇi catvāryanukramam /</l>
+<l>avyākṛtasya dve trīṇi trīṇī caite śubhādayaḥ // VAkK_4.89 //</l>
+</lg>
+
+<lg>
+<l>sarve 'tītasya catvāri madhyamasyāpyanāgatāḥ /</l>
+<l>madhyamā dve ajātasya phalāni trīṇyanāgatāḥ // VAkK_4.90 //</l>
+</lg>
+
+<lg>
+<l>svabhūmidharmāścatvāri trīṇi dve vānyabhūmikāḥ /</l>
+<l>śaikṣasya trīṇi śaikṣādyāḥ aśaikṣasya tu karmaṇaḥ // VAkK_4.91 //</l>
+</lg>
+
+<lg>
+<l>dharmāḥ śaikṣādikā ekaṃ phalaṃ trīṇyapi ca dvayam /</l>
+<l>tābhyāmanyasya śaikṣādyā dve dve pañca phalāni ca // VAkK_4.92 //</l>
+</lg>
+
+<lg>
+<l>trīṇi catvāri caikaṃ ca dṛggheyasya tadādayaḥ /</l>
+<l>te dve catvāryatha trīṇi bhāvanāheyakarmaṇaḥ // VAkK_4.93 //</l>
+</lg>
+
+<lg>
+<l>apraheyasya te tvekaṃ dve catvāri yathākramam /</l>
+<l>ayogavihitaṃ kliṣṭaṃ vidhibhraṣṭaṃ ca kecana // VAkK_4.94 //</l>
+</lg>
+
+<lg>
+<l>ekaṃ janmākṣipatyekam anekaṃ paripūrakam /</l>
+<l>nākṣepike samāpattī acitte prāptayo na ca // VAkK_4.95 //</l>
+</lg>
+
+<lg>
+<l>ānantaryāṇi karmāṇi tīvrakleśo 'tha durgatiḥ /</l>
+<l>kauravāsaṃjñittvāśca matamāvaraṇatrayam // VAkK_4.96 //</l>
+</lg>
+
+<lg>
+<l>triṣu dvipeṣvānantarya śaṇḍhā dīnāṃ tu neṣyate /</l>
+<l>alpopakārālajjitvāt śeṣe gatiṣu pañcasu // VAkK_4.97 //</l>
+</lg>
+
+<lg>
+<l>saṃghabhedastvasāmagrīsvabhāvo viprayuktakaḥ /</l>
+<l>akliṣṭāvyākṛto dharmaḥ saṃghastena samanvitaḥ // VAkK_4.98 //</l>
+</lg>
+
+<lg>
+<l>tadavadya mṛṣāvādastena bhettā samanvitaḥ /</l>
+<l>avīcau pacyate kalpam adhikairadhikā rujaḥ // VAkK_4.99 //</l>
+</lg>
+
+<lg>
+<l>bhikṣurdṛk carito vṛttī bhinatti anyatra bāliśān /</l>
+<l>śāstṛmārgāntarakṣāntau bhinnaḥ na vivasatyasau // VAkK_4.100 //</l>
+</lg>
+
+<lg>
+<l>cakrabhedaḥ sa ca mataḥ jambūdvīpe navādibhiḥ /</l>
+<l>karmabhedastriṣu dvipeṣu aṣṭabhiradhikaiśca saḥ // VAkK_4.101 //</l>
+</lg>
+
+<lg>
+<l>ādāvante 'rbudāt pūrvaṃ yugāccoparate munau /</l>
+<l>sīmāyāṃ cāpyabaddhāyāṃ cakrabhedo na jāyate // VAkK_4.102 //</l>
+</lg>
+
+<lg>
+<l>upakāriguṇakṣetranirākṛtivipādanāt /</l>
+<l>vyañjanāntarito 'pi syāt mātā yacchoṇitodbhavaḥ // VAkK_4.103 //</l>
+</lg>
+
+<lg>
+<l>buddhe na tāḍanecchasya prahārānnordhvamarhati /</l>
+<l>nānantaryaprayuktasya vairāgyaphalasaṃbhavaḥ // VAkK_4.104 //</l>
+</lg>
+
+<lg>
+<l>saṃghabhede mṛṣāvādo mahāvadyatamo mataḥ /</l>
+<l>bhavāgracetanā loke mahāphalatamā śubhe // VAkK_4.105 //</l>
+</lg>
+
+<lg>
+<l>dūṣaṇaṃ māturarhantyā niyatisthasya māraṇam /</l>
+<l>bodhisattvasya śaikṣasya saṃghāyadvārahārikā // VAkK_4.106 //</l>
+</lg>
+
+<lg>
+<l>ānantaryasabhāgāni pañcamaṃ stūpabhedanam /</l>
+<l>kṣāntyanāgāmitārhattvaprāptau karmātivighnakṛt // VAkK_4.107 //</l>
+</lg>
+
+<lg>
+<l>bodhisattvaḥ kuto yāvat yato lakṣaṇa karmakṛt /</l>
+<l>sugatiḥ kulajo 'vyakṣaḥ pumān jātismaro 'nivṛt // VAkK_4.108 //</l>
+</lg>
+
+<lg>
+<l>jambūdvīpe pumāneva saṃmukhaṃ buddhacetanaḥ /</l>
+<l>cintāmayaṃ kalpaśate śeṣa ākṣipate hi tat // VAkK_4.109 //</l>
+</lg>
+
+<lg>
+<l>ekaikaṃ puṇyaśatajam asaṃkhyeyatrayāntyajāḥ /</l>
+<l>vipaśyī dīpakṛdatnaśikhī śākyamuniḥ purā // VAkK_4.110 //</l>
+</lg>
+
+<lg>
+<l>sarvatra sarva dadataḥ kārūṇyāddānapūraṇam /</l>
+<l>aṅgacchede 'pyakopāttu rāgiṇaḥ kṣāntiśīlayoḥ // VAkK_4.111 //</l>
+</lg>
+
+<lg>
+<l>tiṣyastotreṇa vīryasya dhīsamādhyoranantaram /</l>
+<l>puṇyaṃ kriyātha tadvastu trayaṃ karmapathā yathā // VAkK_4.112 //</l>
+</lg>
+
+<lg>
+<l>dīyate yena taddānaṃ pūjānugrahakāmyayā /</l>
+<l>kāyavākkarma sotthānaṃ mahābhogyaphalaṃ ca tat // VAkK_4.113 //</l>
+</lg>
+
+<lg>
+<l>svaparārthobhayārthāya nobhayārthāya dīyate /</l>
+<l>tadviśeṣaḥ punardātṛvastukṣetraviśeṣataḥ // VAkK_4.114 //</l>
+</lg>
+
+<lg>
+<l>dātā viśiṣṭaḥ śraddhādyaiḥ satkṛtyādi dadāti ataḥ /</l>
+<l>satkārodārarucitā kālānācchedyalābhitā // VAkK_4.115 //</l>
+</lg>
+
+<lg>
+<l>varṇādisampadā vastu surūpatvaṃ yaśasvi vā /</l>
+<l>priyatā sukumārartusukhasparśāṅgatā tataḥ // VAkK_4.116 //</l>
+</lg>
+
+<lg>
+<l>gatiduḥkhopakāritvaguṇaiḥ kṣetraṃ viśiṣyate /</l>
+<l>agraṃ muktasya muktāya bodhisattvasya ca aṣṭamam // VAkK_4.117 //</l>
+</lg>
+
+<lg>
+<l>mātṛpitṛglānadhārmakathikebhyo 'ntyajanmane /</l>
+<l>bodhisattvāya cāmeyā anāryebhyo 'pi dakṣiṇā // VAkK_4.118 //</l>
+</lg>
+
+<lg>
+<l>pṛṣṭhaṃ kṣetramadhiṣṭhānaṃ prayogaścetanāśayaḥ /</l>
+<l>eṣāṃ mṛdvadhimātratvāt karmamṛdvadhimātratā // VAkK_4.119 //</l>
+</lg>
+
+<lg>
+<l>saṃcetanasamāptibhyāṃ niṣkraukṛtya vipakṣataḥ /</l>
+<l>parivārādvipākācca karmopacittamucyate // VAkK_4.120 //</l>
+</lg>
+
+<lg>
+<l>caitye tyāgānvayaṃ puṇyaṃ maitryādivadagṛṇhati /</l>
+<l>kukṣetre 'pīṣṭaphalatā phalabījāviparyayāt // VAkK_4.121 //</l>
+</lg>
+
+<lg>
+<l>dauḥśīlyamaśubhaṃ rūpaṃ śīlaṃ tadviratiḥ dvidhā /</l>
+<l>pratikṣiptācca buddhena viśuddhaṃ tu caturguṇam // VAkK_4.122 //</l>
+</lg>
+
+<lg>
+<l>dauḥśīlyataddhetvahataṃ tadvipakṣaśamāśritam /</l>
+<l>samāhitaṃ tu kuśalaṃ bhāvanā cittavāsanāt // VAkK_4.123 //</l>
+</lg>
+
+<lg>
+<l>svargāya śīlaṃ prādhānyāt visaṃyogāya bhāvanā /</l>
+<l>caturṇāṃ brāhmapuṇyatvaṃ kalpaṃ svargeṣu modanāt // VAkK_4.124 //</l>
+</lg>
+
+<lg>
+<l>dharmadānaṃ yathābhūta sūtrādyakliṣṭadeśanā /</l>
+<l>puṇyanirvāṇanirvedhabhāgīyaṃ kuśalaṃ tridhā // VAkK_4.125 //</l>
+</lg>
+
+<lg>
+<l>yogapravartitaṃ karma sasamutthāpakaṃ tridhā /</l>
+<l>lipimudre sagaṇanaṃ kāvyaṃ saṃkhyā yathākramam // VAkK_4.126 //</l>
+</lg>
+
+<lg>
+<l>sāvadyā nivṛtā hīnāḥ kliṣṭāḥ dharmāḥ śubhāmalāḥ /</l>
+<l>praṇītāḥ saṃskṛtaśubhā sevyāḥ mokṣastvanuttaraḥ // VAkK_4.127 //</l>
+</lg>
+
+<p>abhidharmakośe karmanirddeśo nāma caturtha kośasthānamiti //</p>
+
+<p>pañcamaṃ kośasthānam</p>
+
+<p>om namo buddhāya</p>
+
+<lg>
+<l>mūlaṃ bhavasyānuśayāḥ ṣaḍrāgaḥ pratighastathā /</l>
+<l>māno 'vidyā ca dṛṣṭiśca vicikitsā ca te punaḥ // VAkK_5.1 //</l>
+</lg>
+
+<lg>
+<l>ṣaḍrāgabhedātsaptoktāḥ bhavarāgo dvidhātujaḥ /</l>
+<l>antarmukhatvāttanmokṣasaṃjñāvyāvṛttaye kṛtaḥ // VAkK_5.2 //</l>
+</lg>
+
+<lg>
+<l>dṛṣṭayaḥ pañca satkāyamithyāntagrahadṛṣṭayaḥ /</l>
+<l>dṛṣṭiśīlavrataparāmarśāviti punardaśaḥ // VAkK_5.3 //</l>
+</lg>
+
+<lg>
+<l>daśaite saptāsaptāṣṭau tridvidṛṣṭivivarjitāḥ /</l>
+<l>yathākramaṃ prahīyante kāme duḥkhādidarśanaiḥ // VAkK_5.4 //</l>
+</lg>
+
+<lg>
+<l>catvāro bhāvanāheyāḥ ta evāpratighāḥ punaḥ /</l>
+<l>rūpadhātau tathārūpye ityaṣṭānavatirmatāḥ // VAkK_5.5 //</l>
+</lg>
+
+<lg>
+<l>bhavāgrajāḥ kṣāntivadhya dṛggheyā eva śeṣajāḥ /</l>
+<l>dṛgbhāvanābhyām akṣāntivadhyā bhāvanayaiva tu // VAkK_5.6 //</l>
+</lg>
+
+<lg>
+<l>ātmātmīyadhruvocchedanāstihīnā gradṝṣṭayaḥ /</l>
+<l>ahetvamārge taddṛṣṭiretāstāḥ pañca dṛṣṭayaḥ // VAkK_5.7 //</l>
+</lg>
+
+<lg>
+<l>īśvarādiṣu nityātmaviparyāsāt pravartate /</l>
+<l>kāraṇābhiniveśo 'to dūḥkhadṛggheya eva saḥ // VAkK_5.8 //</l>
+</lg>
+
+<lg>
+<l>dṛṣṭitrayādviparyāsacatuṣkaṃ viparītataḥ /</l>
+<l>nitīraṇāt samāropāt saṃjñācitte tu tadvaśāt // VAkK_5.9 //</l>
+</lg>
+
+<lg>
+<l>sapta mānāḥ navavidhāstribhyaḥ dṛgbhāvanākṣayāḥ /</l>
+<l>vadhādiparyavasthānaṃ heyaṃ bhāvanayā tathā // VAkK_5.10 //</l>
+</lg>
+
+<lg>
+<l>vibhavecchā na cāryasya saṃbhavanti vidhādayaḥ /</l>
+<l>nāsmitā dṛṣṭipuṣṭatvāt kaukṛtyaṃ nāpi cāśubham // VAkK_5.11 //</l>
+</lg>
+
+<lg>
+<l>sarvatragā duḥkhahetudṛggheyā dṛṣṭayastathā /</l>
+<l>vimatiḥ saha tābhiśca yāvidyāveṇikī ca yā // VAkK_5.12 //</l>
+</lg>
+
+<lg>
+<l>navordhvālambanā eṣāṃ dṛṣṭidvayavivarjitāḥ /</l>
+<l>prāptivarjyāḥ sahabhuvo ye 'pyebhiste 'pi sarvagāḥ // VAkK_5.13 //</l>
+</lg>
+
+<lg>
+<l>mithyādṛgvimatī tābhyāṃ yuktāvidyātha kevalā /</l>
+<l>nirodhamārgadṛggheyāḥ ṣaḍanāsravagocarāḥ // VAkK_5.14 //</l>
+</lg>
+
+<lg>
+<l>svabhūmyuparamo mārgaḥ ṣaḍbhūminavabhūmikaḥ /</l>
+<l>tadgocarāṇāṃ viṣayo mārgo hyanyo 'nyahetukaḥ // VAkK_5.15 //</l>
+</lg>
+
+<lg>
+<l>na rāgastasya varjyatvāt na dveṣo 'napakārataḥ /</l>
+<l>na māno na parāmarśau śāntaśuddhyagrabhāvataḥ // VAkK_5.16 //</l>
+</lg>
+
+<lg>
+<l>sarvatragā anuśayāḥ sakalāmanuśerate /</l>
+<l>svabhūmimālambanataḥ svanikāyamasarvagāḥ // VAkK_5.17 //</l>
+</lg>
+
+<lg>
+<l>nānāsravordhvaviṣayāḥ asvīkārādvipakṣataḥ /</l>
+<l>yena yaḥ saṃprayuktastu sa tasmin saṃprayogataḥ // VAkK_5.18 //</l>
+</lg>
+
+<lg>
+<l>ūrdhvamavyākṛtāḥ sarve kāme satkāyadarśanam /</l>
+<l>antagrāhaḥ sahābhyāṃ ca mohaḥ śeṣāstvihāśubhāḥ // VAkK_5.19 //</l>
+</lg>
+
+<lg>
+<l>kāme 'kuśalamūlāni rāgapratighamūḍhayaḥ /</l>
+<l>trīṇyakuśalamūlāni tṛṣṇāvidyā matiśca sā // VAkK_5.20 //</l>
+</lg>
+
+<lg>
+<l>dvidhordhvavṛtternāto 'nyau catvāryeveti bāhyakāḥ /</l>
+<l>tṛṣṇādṛṅmānamohāste dhyāyitritvādavidyayā // VAkK_5.21 //</l>
+</lg>
+
+<lg>
+<l>ekāṃśato vyākaraṇaṃ vibhajya paripṛcchya ca /</l>
+<l>sthāpyaṃ ca maraṇotpatti viśiṣṭātmānyatādivat // VAkK_5.22 //</l>
+</lg>
+
+<lg>
+<l>rāgapratighamānaiḥ syadatītapratyupasthitaiḥ /</l>
+<l>yatrotpannāprahīṇāste tasmin vastuni saṃyutaḥ // VAkK_5.23 //</l>
+</lg>
+
+<lg>
+<l>sarvatrānāgatairebhirmānasaiḥ svādhvike paraiḥ /</l>
+<l>ajaiḥ sarvatra śeṣaistu sarvaiḥ sarvatra saṃyutaḥ // VAkK_5.24 //</l>
+</lg>
+
+<lg>
+<l>sarvakālāstitā uktatvāt dvayāt sadviṣayāt phalāt /</l>
+<l>tadastivādāt sarvāstivādā iṣṭāḥ caturvidhāḥ // VAkK_5.25 //</l>
+</lg>
+
+<lg>
+<l>te bhāvalakṣaṇāvasthānyathānyathikasaṃjñitāḥ /</l>
+<l>tṛtīyaḥ śobhanaḥ adhvānaḥ kāritreṇa vyavasthitāḥ // VAkK_5.26 //</l>
+</lg>
+
+<lg>
+<l>kiṃ vighnaṃ tatkathaṃ nānyat adhvāyogaḥ tathā sataḥ /</l>
+<l>ajātanaṣṭatā kena gambhīrā khalu dharmatā // VAkK_5.27 //</l>
+</lg>
+
+<lg>
+<l>prahīṇe duḥkhadṛggheye saṃyuktaḥ śeṣasarvagaiḥ /</l>
+<l>prāk prahīṇe prakare ca śeṣaistadviṣayairmalaiḥ // VAkK_5.28 //</l>
+</lg>
+
+<lg>
+<l>duḥkhahetudṛgabhyāsapraheyāḥ kāmadhātujāḥ /</l>
+<l>svakatrayaikarūpāptāmalavijñānagocarāḥ // VAkK_5.29 //</l>
+</lg>
+
+<lg>
+<l>svakādharatrayordhvaikāmalānāṃ rūpadhātujāḥ /</l>
+<l>ārūpyajāstridhātvātpatrayānāsravagocarāḥ // VAkK_5.30 //</l>
+</lg>
+
+<lg>
+<l>nirodhamārgadṛggheyāḥ sarve svādhikagocarāḥ /</l>
+<l>anāsravāstridhātvantyatrayānāsravagocarāḥ // VAkK_5.31 //</l>
+</lg>
+
+<lg>
+<l>dvidhā sānuśayaṃ kliṣṭamakliṣṭamanuśāyakaiḥ /</l>
+<l>mohākāṅkṣā tato mithyādṛṣṭiḥ satkāyadṛktataḥ // VAkK_5.32 //</l>
+</lg>
+
+<lg>
+<l>tato 'ntagrahaṇaṃ tasmācchīlāmarśaḥ tato dṛśaḥ /</l>
+<l>rāgaḥ svadṛṣṭau mānaśca dveṣo 'nyatra ityanukramaḥ // VAkK_5.33 //</l>
+</lg>
+
+<lg>
+<l>aprahīṇādanuśayādviṣayāt pratyupasthitāt /</l>
+<l>ayoniśo manaskārāt kleśaḥ saṃpūrṇakāraṇaḥ // VAkK_5.34 //</l>
+</lg>
+
+<lg>
+<l>kāme saparyavasthānāḥ kleśāḥ kāmasravo vinā /</l>
+<l>mohena anuśayā eva rūpārūpye bhavāsravaḥ // VAkK_5.35 //</l>
+</lg>
+
+<lg>
+<l>avyākṛtāntarmukhā hi te samāhitabhūmikāḥ /</l>
+<l>ata ekīkṛtāḥ mūlamavidyetyāsravaḥ pṛthak // VAkK_5.36 //</l>
+</lg>
+
+<lg>
+<l>tathaughayogā dṛṣṭīnāṃ pṛthagbhāvastu pāṭavāt /</l>
+<l>nāsraveṣvasahāyānāṃ na kilāsyānukūlatā // VAkK_5.37 //</l>
+</lg>
+
+<lg>
+<l>yathoktā eva sāvidyā dvidhā dṛṣṭivivecanāt /</l>
+<l>upādānāni avidyā tu grāhikā ne ti miśritā // VAkK_5.38 //</l>
+</lg>
+
+<lg>
+<l>aṇavo 'nugatāścaite dvidhā cāpyanuśerate /</l>
+<l>anubadhnanti yasmācca tasmādanuśayāḥ smṛtāḥ // VAkK_5.39 //</l>
+</lg>
+
+<lg>
+<l>āsayantyāsravantyete haranti śleṣayantyatha /</l>
+<l>upagṛhṇanti cetyeṣāmāsravādiniruktayaḥ // VAkK_5.40 //</l>
+</lg>
+
+<lg>
+<l>saṃyojanādibhedena punaste pañcadhoditāḥ /</l>
+<l>dravyāmarśana sāmānyaddṛṣṭī saṃyojanāntaram // VAkK_5.41 //</l>
+</lg>
+
+<lg>
+<l>ekāntākuśalaṃ yasmāt svatantraṃ cobhayaṃ yataḥ /</l>
+<l>īrṣyāmātsaryameṣūktaṃ pṛthak saṃyojanadvayam // VAkK_5.42 //</l>
+</lg>
+
+<lg>
+<l>pañcadhāvarabhāgīyaṃ dvābhyāṃ kāmānatikramaḥ /</l>
+<l>tribhistu punarāvṛttiḥ mukhamūlagrahāttrayam // VAkK_5.43 //</l>
+</lg>
+
+<lg>
+<l>agantukāmatāmārgavibhramo mārgasaṃśayaḥ /</l>
+<l>ityantarāyā mokṣasya gamane 'tastrideśanā // VAkK_5.44 //</l>
+</lg>
+
+<lg>
+<l>pañcadhaivordhvabhāgīyaṃ dvau rāgau rūpyarūpijau /</l>
+<l>auddhatyamānamohāśca vidvaśād bandhanatrayam // VAkK_5.45 //</l>
+</lg>
+
+<lg>
+<l>ye 'pyanye caitasāḥ kliṣṭāḥ saṃskāraskandhasaṃjñitāḥ /</l>
+<l>kleśebhyaste 'pyupakleśāste tu na kleśasaṃjñitāḥ // VAkK_5.46 //</l>
+</lg>
+
+<lg>
+<l>āhrīkyamanapatrapyamīrṣyāmātsaryamuddhavaḥ /</l>
+<l>kaukṛtyaṃ styānamiddhaṃ ca paryavasthānamaṣṭadhā // VAkK_5.47 //</l>
+</lg>
+
+<lg>
+<l>krodhamrakṣau ca rāgotthā āhrīkyauddhatyamatsarāḥ /</l>
+<l>mrakṣe vivādaḥ avidyātaḥ styānamiddhānapatrapāḥ // VAkK_5.48 //</l>
+</lg>
+
+<lg>
+<l>kaukṛtyaṃ vicikitsātaḥ kodherṣye pratighānvaye /</l>
+<l>anye ca ṣaṭkleśamalāḥ māyā śāṭhyaṃ madastathā // VAkK_5.49 //</l>
+</lg>
+
+<lg>
+<l>pradāśa upanāhaśca vihiṃsā ceti rāgajau /</l>
+<l>māyāmadau pratighaje upanāhavihiṃsane // VAkK_5.50 //</l>
+</lg>
+
+<lg>
+<l>dṛṣṭyāmarśāt pradāśastu śāṭhyaṃ dṛṣṭisamutthitam /</l>
+<l>tatrāhrīkyānapatrāpyastyānāmiddhoddhavā dvidhā // VAkK_5.51 //</l>
+</lg>
+
+<lg>
+<l>tadanye bhāvanāheyāḥ svatantrāśca tathā malāḥ /</l>
+<l>kāme 'śubhāḥ trayo dvidhā pareṇāvyākṛtāstataḥ // VAkK_5.52 //</l>
+</lg>
+
+<lg>
+<l>māyā śāṭhyaṃ ca kāmādyadhyānayoḥ brahmavañcanāt /</l>
+<l>styānauddhatyamadā dhātutraye anye kāmadhātujāḥ // VAkK_5.53 //</l>
+</lg>
+
+<lg>
+<l>samānasiddhā dṛggheyā manovijñānabhūmikāḥ /</l>
+<l>upakleśāḥ svatantrāśca ṣaḍ vijñānāśrayāḥ pare // VAkK_5.54 //</l>
+</lg>
+
+<lg>
+<l>sukhābhyāṃ saṃprayukto hi rāgaḥ dveṣo viparyayāt /</l>
+<l>mohaḥ sarvaiḥ asaddṛṣṭirmanoduḥkhasukhena tu // VAkK_5.55 //</l>
+</lg>
+
+<lg>
+<l>daurmanasyena kāṅkṣā anye saumanasyena kāmajāḥ /</l>
+<l>sarve 'pyupekṣayā svaiḥ svairyathābhūmyūrdhvabhūmikāḥ // VAkK_5.56 //</l>
+</lg>
+
+<lg>
+<l>daurmanasyena kaukṛtyamīrṣyā krodho vihiṃsanam /</l>
+<l>upanāhaḥ pradāśaśca mātsaryaṃ tu viparyayāt // VAkK_5.57 //</l>
+</lg>
+
+<lg>
+<l>māyā śāṭhyamatho mrakṣo middhaṃ cobhayathā madaḥ /</l>
+<l>sukhābhyām sarvagopekṣā catvāryanyāni pañcabhiḥ // VAkK_5.58 //</l>
+</lg>
+
+<lg>
+<l>kāme nivaraṇāni ekavipakṣāhārakṛtyataḥ /</l>
+<l>dvayaketā pañcatā skandhavighātavicikitsanāt // VAkK_5.59 //</l>
+</lg>
+
+<lg>
+<l>ālambanaparijñānāttadālambanasaṃkṣayāt /</l>
+<l>ālambanaprahāṇācca pratipakṣodayāt kṣayaḥ // VAkK_5.60 //</l>
+</lg>
+
+<lg>
+<l>prahāṇādhārabhūtattva dūṣaṇākhyaścaturvidhaḥ /</l>
+<l>pratipakṣaḥ prahātavyaḥ kleśa ālambanāt mataḥ // VAkK_5.61 //</l>
+</lg>
+
+<lg>
+<l>vailakṣaṇyādvipakṣatvāddeśavicchedakālataḥ /</l>
+<l>bhūtaśīlapradeśādhvadvayānāmiva dūratā // VAkK_5.62 //</l>
+</lg>
+
+<lg>
+<l>sakṛt kṣayaḥ visaṃyogalābhasteṣāṃ punaḥ pūnaḥ /</l>
+<l>pratipakṣodayaphalaprāptīndriyavivṛddhiṣu // VAkK_5.63 //</l>
+</lg>
+
+<lg>
+<l>parijñā nava kāmādyaprakāradvayasaṃkṣayaḥ /</l>
+<l>ekā dvayoḥ kṣaye dve te tathordhvaṃ tisra eva tāḥ // VAkK_5.64 //</l>
+</lg>
+
+<lg>
+<l>anyā avarabhāgīyarūpasarvāsravakṣayāḥ /</l>
+<l>tisraḥ parijñāḥ ṣaṭ kṣāntiphalaṃ jñānasya śeṣitāḥ // VAkK_5.65 //</l>
+</lg>
+
+<lg>
+<l>anāgamyaphalaṃ sarvā dhyānānāṃ pañca vāthavā /</l>
+<l>aṣṭau sāmantakasyaikā maulārūpyatrayasya ca // VAkK_5.66 //</l>
+</lg>
+
+<lg>
+<l>āryamārgasya sarvāḥ dve laukikasya anvayasya ca /</l>
+<l>dharmajñānasya tisrastu ṣaṭ tatpakṣasya pañca ca // VAkK_5.67 //</l>
+</lg>
+
+<lg>
+<l>anāsravaviyogāpterbhavāgravikalīkṛteḥ /</l>
+<l>hetudvayasamudghātāt parijñā dhātvatikramāt // VAkK_5.68 //</l>
+</lg>
+
+<lg>
+<l>naikayā pañcabhiryāvaddarśanasthaḥ samanvitaḥ /</l>
+<l>bhāvanāsthaḥ punaḥ ṣaḍibharekayā vā dvayena vā // VAkK_5.69 //</l>
+</lg>
+
+<lg>
+<l>tāsāṃ saṃkalanaṃ dhātuvairāgyaphalalābhataḥ /</l>
+<l>ekāṃ dve pañca ṣaṭ kaścijjahātyāpnoti pañca na // VAkK_5.70 //</l>
+</lg>
+
+<p>samāptaḥ parijñāprasaṅgaḥ //</p>
+
+<p>abhidharmakośe 'nuśayanirddeśo nāma pañcamaṃ kośasthānaṃ samāptamiti //</p>
+
+<p>śrīlāmāvākasya yadatra puṇyam /</p>
+
+<p>ṣaṣṭhaṃ kośasthānam</p>
+
+<p>om namo buddhāya //</p>
+
+<lg>
+<l>kleśaprahāṇāmākhyātaṃ satyadarśanabhāvanāt /</l>
+<l>dvividho bhāvanāmārgo darśanākhyastvanāsravaḥ // VAkK_6.1 //</l>
+</lg>
+
+<lg>
+<l>satyānyuktāni catvāri duḥkhaṃ samudayastathā /</l>
+<l>nirodhamārga iti eṣāṃ yathābhisamayaṃ kramaḥ // VAkK_6.2 //</l>
+</lg>
+
+<lg>
+<l>duḥkhā stridūḥkhatāyogādyathāyogamaśeṣataḥ /</l>
+<l>manāpā amanāpāśca tadanye caiva sāsravāḥ // VAkK_6.3 //</l>
+</lg>
+
+<lg>
+<l>yatra bhinnena tadbuddhiranyāpohe dhiyā ca tat /</l>
+<l>ghaṭārthavatsaṃvṛtisat paramārthasadanyathā // VAkK_6.4 //</l>
+</lg>
+
+<lg>
+<l>vṛttasthaḥ śrutacintāvānbhāvanāyāṃ prayujyate /</l>
+<l>nāmobhayārthaviṣayā śrutamayyādikā dhiyaḥ // VAkK_6.5 //</l>
+</lg>
+
+<lg>
+<l>vyapakarṣadvayavataḥ nāsaṃtuṣṭamahecchayoḥ /</l>
+<l>labdhe bhūyaḥspṛhātuṣṭiralabdhecchā mahecchatā // VAkK_6.6 //</l>
+</lg>
+
+<lg>
+<l>viparyāsāttadvipakṣau tridhātvāptāmalau ca tau /</l>
+<l>alobhaḥ āryavaṃśāśca teṣāṃ tuṣṭayātmakāstrayaḥ // VAkK_6.7 //</l>
+</lg>
+
+<lg>
+<l>karmāntena tribhirvṛttiḥ tṛṣṇotpādavipakṣataḥ /</l>
+<l>mamāha kāravastvicchātatkālātyantaśāntaye // VAkK_6.8 //</l>
+</lg>
+
+<lg>
+<l>tatrāvatāro 'śubhayā cānāpānasmṛtena ca /</l>
+<l>adhirāgavitarkāṇām śaṃkalā sarvārāgiṇām // VAkK_6.9 //</l>
+</lg>
+
+<lg>
+<l>āsamudrāsthivistārasaṃkṣepādādikarmikaḥ /</l>
+<l>pādāsthna ākapālārdhatyāgāt kṛtajayaḥ smṛtaḥ // VAkK_6.10 //</l>
+</lg>
+
+<lg>
+<l>atikrāntamanaskāro bhrūmadhye cittadhāraṇāt /</l>
+<l>alobho daśabhūḥ kāmadṛśyālambā nṛjāśubhā // VAkK_6.11 //</l>
+</lg>
+
+<lg>
+<l>ānāpānasmṛtiḥ prajñā pañcabhūrvāyurgīcarā /</l>
+<l>kāmāśrayā na bāhyānām ṣaḍ vidhā gaṇanādibhiḥ // VAkK_6.12 //</l>
+</lg>
+
+<lg>
+<l>ānāpānau yataḥ kāyaḥ sattvākhyau anupāttakau /</l>
+<l>naiḥṣyandikau nādhareṇa lakṣyete manasā ca tau // VAkK_6.13 //</l>
+</lg>
+
+<lg>
+<l>niṣprannaśamathaḥ kuryāt smṛtyupasthānabhāvanām /</l>
+<l>kāyaviccittadharmāṇāṃ dvilakṣaṇaparīkṣaṇāt // VAkK_6.14 //</l>
+</lg>
+
+<lg>
+<l>prajñā śrutādimayī anye saṃsargālambanāḥ kramaḥ /</l>
+<l>yathotpatti catuṣkaṃ tu viparyāsavipakṣataḥ // VAkK_6.15 //</l>
+</lg>
+
+<lg>
+<l>sa dharmasmṛtyupasthāne samastālambane sthitaḥ /</l>
+<l>ānityaduḥkhataḥ śūnyānātmatastānvipaśyati // VAkK_6.16 //</l>
+</lg>
+
+<lg>
+<l>tata ūṣmagatotpattiḥ taccatuḥsatyagocaram /</l>
+<l>ṣoḍaśākāram ūṣmabhyo mūrdhānaḥ te 'pi tādṛśāḥ // VAkK_6.17 //</l>
+</lg>
+
+<lg>
+<l>ubhayākaraṇaṃ dharmeṇa anyairapi tu vardhanam /</l>
+<l>tebhyaḥ kṣāntiḥ dvidhā tadvat kṣāntyā dharmeṇa vardhanam // VAkK_6.18 //</l>
+</lg>
+
+<lg>
+<l>kāmāptaduḥkhaviṣayā tvadhimātrā kṣaṇaṃ ca sā /</l>
+<l>tathāgradharmāḥ sarve tu pañcaskandhāḥ vināptibhiḥ // VAkK_6.19 //</l>
+</lg>
+
+<lg>
+<l>iti nirvedhabhāgīyaṃ caturdhā bhāvanāmayam /</l>
+<l>anāgamyā ntaradhyānabhūmikam dve tvadho 'pi vā // VAkK_6.20 //</l>
+</lg>
+
+<lg>
+<l>kāmāśrayāṇi agradharmān dvayāśrayān labhate 'ṅganā /</l>
+<l>bhūmityāgāttyajatyāryastāni anāryastu mṛtyunā // VAkK_6.21 //</l>
+</lg>
+
+<lg>
+<l>ādye dve parihāṇyā ca maulestatraiva satyadṛk /</l>
+<l>apūrvāptirvihīneṣu hānī dve asamanvitiḥ // VAkK_6.22 //</l>
+</lg>
+
+<lg>
+<l>mūrdhalābhī na mūlacchit kṣāntilābhyanapāyagaḥ /</l>
+<l>śiṣyagotrā nnivartya dve buddhaḥ syāt trīṇyapītaraḥ // VAkK_6.23 //</l>
+</lg>
+
+<lg>
+<l>ābodheḥ sarvamekatra dhyānāntye śāstṛkhaḍgayoḥ /</l>
+<l>prāktebhyo mokṣabhāgīyaṃ kṣipraṃ mokṣastribhirbhavaiḥ // VAkK_6.24 //</l>
+</lg>
+
+<lg>
+<l>śrutacintāmayaṃ trīṇi karmāṇi ākṣipyate nṛṣu /</l>
+<l>laukikebhyo 'gradharmebhyo dharmakṣāntiranāsravā // VAkK_6.25 //</l>
+</lg>
+
+<lg>
+<l>kāmaduḥkhe tato 'traiva dharmajñānaṃ tathā punaḥ /</l>
+<l>śeṣe duḥkhe 'nvayakṣāntijñāne satyatraye tathā // VAkK_6.26 //</l>
+</lg>
+
+<lg>
+<l>iti ṣoḍaśacitto 'yaṃ satyābhisamayaḥ tridhā /</l>
+<l>darśanālambakāryākhyaḥ so 'gradharmaikabhūmikaḥ // VAkK_6.27 //</l>
+</lg>
+
+<lg>
+<l>kṣāntijñānānyanantarya muktimārgā yathākramam /</l>
+<l>adṛṣṭadṛṣṭerdṛṅgmārgastatra pañcadaśa kṣaṇāḥ // VAkK_6.28 //</l>
+</lg>
+
+<lg>
+<l>mṛdutīkṣṇendriyau teṣu śraddhādharmānusāriṇau /</l>
+<l>ahīnabhāvanāheyau phalādyuapratipannakau // VAkK_6.29 //</l>
+</lg>
+
+<lg>
+<l>yāvat pañcaprakāraghnau dvītīye 'rvāṅnavakṣayāt /</l>
+<l>kāmādviraktāvūrdhvaṃ vā tṛtīyapratipannakau // VAkK_6.30 //</l>
+</lg>
+
+<lg>
+<l>ṣoḍaśe tu phalasthau tau yatra yaḥ pratipannakaḥ /</l>
+<l>śraddhādhimuktadṛṣṭyāptau mṛdutīkṣṇendriyau tadā // VAkK_6.31 //</l>
+</lg>
+
+<lg>
+<l>phale phalaviśiṣṭasya lābho mārgasya nāstyataḥ /</l>
+<l>nāprayukto viśeṣāya phalasthaḥ pratipannakaḥ // VAkK_6.32 //</l>
+</lg>
+
+<lg>
+<l>navaprakārā doṣā hi bhūmau bhūmau tathā guṇāḥ /</l>
+<l>mṛdumadhyādhimātrāṇāṃ punarmṛdvādibhedataḥ // VAkK_6.33 //</l>
+</lg>
+
+<lg>
+<l>akṣīṇabhāvanāheyaḥ phalasthaḥ saptakṛtparaḥ /</l>
+<l>tricaturvidhamuktastu dvitrijanmā kulaṃkulaḥ // VAkK_6.34 //</l>
+</lg>
+
+<lg>
+<l>āpañcamaprakāraghno dvitīyapratipannakaḥ /</l>
+<l>kṣīṇaṣaṣṭhaprakārastu sakṛdāgāmyasau punaḥ // VAkK_6.35 //</l>
+</lg>
+
+<lg>
+<l>kṣīṇasaptāṣṭadoṣāṃśa ekajanmaikavīcikaḥ /</l>
+<l>tṛtīyapratipannaśca so 'nāgāmi navakṣayāt // VAkK_6.36 //</l>
+</lg>
+
+<lg>
+<l>so 'ntarotpannasaṃskārāsaṃskāraparinirvṛtiḥ /</l>
+<l>ūrdhvastrotāśca sa dhyāne vyavakīrṇo 'kaniṣṭhagaḥ // VAkK_6.37 //</l>
+</lg>
+
+<lg>
+<l>sa pluto 'rdhaplutaḥ sarvacyutaśca anyo bhavāgragaḥ /</l>
+<l>ārūpyagaścaturdhānyaḥ iha nirvāpako 'paraḥ // VAkK_6.38 //</l>
+</lg>
+
+<lg>
+<l>punastrīṃstrividhān kṛtvā nava rūpopagāḥ smṛtāḥ /</l>
+<l>tadviśeṣaḥ punaḥ karmakleśendriyaviśeṣataḥ // VAkK_6.39 //</l>
+</lg>
+
+<lg>
+<l>ūrdhvastroturabhedena sapta sadgatayo matāḥ /</l>
+<l>sadasadvṛttyavṛttibhyāṃ gatāpratyāgateśca tāḥ // VAkK_6.40 //</l>
+</lg>
+
+<lg>
+<l>na parāvṛttajanmāryaḥ kāme dhātvantaropagaḥ /</l>
+<l>sa cordhvajaśca naivākṣasaṃcāraparihāṇibhāk // VAkK_6.41 //</l>
+</lg>
+
+<lg>
+<l>ākīryate caturtha prāk niṣpatti kṣaṇamiśraṇāt /</l>
+<l>upapattivihārārtha kleśabhīrutayāpi ca // VAkK_6.42 //</l>
+</lg>
+
+<lg>
+<l>tatpāñcavidhyātpañcaiva śuddhāvāsopapattayaḥ /</l>
+<l>nirodhalābhyanāgāmī kāyasākṣī punarmataḥ // VAkK_6.43 //</l>
+</lg>
+
+<lg>
+<l>ābhavāgrāṣṭabhāgakṣidarhattve pratipannakaḥ /</l>
+<l>navamasyāpyānantaryapathe vajropamaśca saḥ // VAkK_6.44 //</l>
+</lg>
+
+<lg>
+<l>tatkṣayāptyā kṣayajñānaṃ āśaikṣo 'rhannasau tadā /</l>
+<l>lokottareṇa vairāgyaṃ bhavāgrāt anyato dvidhā // VAkK_6.45 //</l>
+</lg>
+
+<lg>
+<l>laukikenāryavairāgye visaṃyogāptayo dvidhā /</l>
+<l>lokottareṇa cetyeke tyakte kleśāsamanvayāt // VAkK_6.46 //</l>
+</lg>
+
+<lg>
+<l>bhavāgrādhavimuktordhvajātavattvasamanvayaḥ /</l>
+<l>anāsraveṇa vairāgyamanāgāmyena sarvataḥ // VAkK_6.47 //</l>
+</lg>
+
+<lg>
+<l>dhyānātsāmantakādvāntyo mukti mārgastribhūjaye /</l>
+<l>nordhvaṃ sāmantakāt āryairaṣṭābhiḥ svordhvabhūjayaḥ // VAkK_6.48 //</l>
+</lg>
+
+<lg>
+<l>vimuktyānantaryapathā laukikāstu yathākramam /</l>
+<l>śāntādyudārādyākārāḥ uttarādharagocarāḥ // VAkK_6.49 //</l>
+</lg>
+
+<lg>
+<l>yadyakopyaḥ kṣayajñānādanutpādamatiḥ na cet /</l>
+<l>kṣayajñānamaśaikṣo vā dṛṣṭiḥ sarvasya sārhataḥ // VAkK_6.50 //</l>
+</lg>
+
+<lg>
+<l>śrāmaṇyamamalo mārgaḥ saṃskṛtāsaṃskṛtaṃ phalam /</l>
+<l>ekānnavatistāni muktimārgāḥ saha kṣayaiḥ // VAkK_6.51 //</l>
+</lg>
+
+<lg>
+<l>catuṣphalavyavasthā tu pañcakāraṇasaṃbhavāt /</l>
+<l>pūrvatyāgo 'nyamārgāptiḥ kṣayasaṃkalanaṃ phale // VAkK_6.52 //</l>
+</lg>
+
+<lg>
+<l>jñānāṣṭakasya lābho 'tha ṣoḍaśākārabhāvanā /</l>
+<l>laukikāptaṃ tu miśratvānāsravāptiḥ dhṛteḥ phalam // VAkK_6.53 //</l>
+</lg>
+
+<lg>
+<l>brāhmaṇyaṃ brahmacakraṃ ca tadeva brahmavartanāt /</l>
+<l>dharmacakraṃ tu dṛṅmārgaḥ āśugatvādyarādibhiḥ // VAkK_6.54 //</l>
+</lg>
+
+<lg>
+<l>kāme trayāptiḥ antyasya triṣu nordhva hi dṛkpathaḥ /</l>
+<l>asaṃvegādiha vidhā tatra niṣṭheti cāgamāt // VAkK_6.55 //</l>
+</lg>
+
+<lg>
+<l>ṣaḍarhanto matāḥ teṣāṃ pañca śraddhādhimuktijāḥ /</l>
+<l>vimuktiḥ sāmayikyeṣām akopyākopyadharmaṇaḥ // VAkK_6.56 //</l>
+</lg>
+
+<lg>
+<l>ato 'samayamukto 'sau dṛṣṭiprāptānvayaśca saḥ /</l>
+<l>tadgotrā āditaḥ kecitkeciduttāpanāgatāḥ // VAkK_6.57 //</l>
+</lg>
+
+<lg>
+<l>gotrāccaturṇāṃ pañcānāṃ phalāddhāniḥ na pūrvakāt /</l>
+<l>śaikṣānāryāśca ṣaḍgotrāḥ saṃcāro nāsti darśane // VAkK_6.58 //</l>
+</lg>
+
+<lg>
+<l>parihāṇistridhā jñeyā prāptāprāptopabhogataḥ /</l>
+<l>antyā śāsturakopyasya madhyā cānyasya tu tridhā // VAkK_6.59 //</l>
+</lg>
+
+<lg>
+<l>mriyate na phalabhraṣṭaḥ tadakārya karoti na /</l>
+<l>vimuktyānantaryapathā navākopye atisevanāt // VAkK_6.60 //</l>
+</lg>
+
+<lg>
+<l>dṛṣṭayāptatāyāmekaikaḥ anāsravāḥ nṛṣu vardhanam /</l>
+<l>aśaikṣo nava niśritya bhūmīḥ śaikṣastu ṣaṭ yataḥ // VAkK_6.61 //</l>
+</lg>
+
+<lg>
+<l>saviśeṣaṃ phalaṃ tyaktvā phalamāpnoti vardhayan /</l>
+<l>dvau buddhau śrāvakāḥ sapta navaite navadhendriyāḥ // VAkK_6.62 //</l>
+</lg>
+
+<lg>
+<l>prayogākṣasamāpattivimuktyubhayataḥ kṛtāḥ /</l>
+<l>pudgalāḥ sapta ṣaṭ tvete dvau dvau mārgatraye yataḥ // VAkK_6.63 //</l>
+</lg>
+
+<lg>
+<l>nirodhalābhyubhayatovimuktaḥ prajñayetaraḥ /</l>
+<l>samāpattīndriyaphalaiḥ pūrṇaḥ śaikṣo 'bhidhīyate // VAkK_6.64 //</l>
+</lg>
+
+<lg>
+<l>aśaikṣaparipūrṇatvaṃ dvābhyām mārgaḥ samāsataḥ /</l>
+<l>viśeṣamuktyānantaryaprayogākhya ścaturvidhaḥ // VAkK_6.65 //</l>
+</lg>
+
+<lg>
+<l>dhyāneṣu mārgaḥ pratipatsukhā duḥkhānyabhūmiṣu /</l>
+<l>dhanyābhijñā mṛdumateḥ kṣiprābhijñetarasya tu // VAkK_6.66 //</l>
+</lg>
+
+<lg>
+<l>anutpādakṣayajñāne bodhiḥ tādanulomyataḥ /</l>
+<l>saptatriṃśattu tatpakṣyāḥ nāmato dravyato daśa // VAkK_6.67 //</l>
+</lg>
+
+<lg>
+<l>śraddhā vīryaṃ smṛtiḥ prajñā samādhiḥ prītyupekṣaṇe /</l>
+<l>praśrabdhiśīlasaṃkalpāḥ prajñā hi smṛtyupasthitiḥ // VAkK_6.68 //</l>
+</lg>
+
+<lg>
+<l>vīryaṃ samyakprahāṇākhyamṛddhipādāḥ samādhayaḥ /</l>
+<l>pradhānagrahaṇaṃ sarve guṇāḥ prāyogikāstu te // VAkK_6.69 //</l>
+</lg>
+
+<lg>
+<l>ādikarmikanirvedhabhāgīyeṣu prabhāvitāḥ /</l>
+<l>bhāvane darśane caiva sapta vargā yathākramam // VAkK_6.70 //</l>
+</lg>
+
+<lg>
+<l>anāsravāṇi bodhyaṅgamārgāṅgāni dvidhetare /</l>
+<l>sakalāḥ prathame dhyāne anāgamye prītivarjitāḥ // VAkK_6.71 //</l>
+</lg>
+
+<lg>
+<l>dvitīye 'nyatra saṃkalpāt dvayostaddvayavarjitāḥ /</l>
+<l>dhyānāntare ca śīlāṅgaistābhyāṃ ca triṣvarūpiṣu // VAkK_6.72 //</l>
+</lg>
+
+<lg>
+<l>kāmadhātau bhavāgre ca bodhimārgāṅgavarjitāḥ /</l>
+<l>trisatyadarśane śīladharmāvetyaprasādayoḥ // VAkK_6.73 //</l>
+</lg>
+
+<lg>
+<l>lābho mārgābhisamaye buddhatatsaṃghayorapi /</l>
+<l>dharmaḥ satyatrayaṃ bodhisattvapratyekabuddhayoḥ // VAkK_6.74 //</l>
+</lg>
+
+<lg>
+<l>mārgaśca dravyatastu dve śraddhā śīlaṃ ca nirmalāḥ /</l>
+<l>noktā vimuktiḥ śaikṣāṅgaṃ baddhatvāt sā punardvidhā // VAkK_6.75 //</l>
+</lg>
+
+<lg>
+<l>asaṃskṛtā kleśahānamadhimuktastu saṃskṛtā /</l>
+<l>sāṅgaḥ saiva vimuktī dve jñānaṃ bodhiryathoditā // VAkK_6.76 //</l>
+</lg>
+
+<lg>
+<l>vimucyate jāyamānasaśaikṣaṃ cittamāvṛteḥ /</l>
+<l>nirudhyamāno mārgastu prajahāti tadāvṛtim // VAkK_6.77 //</l>
+</lg>
+
+<lg>
+<l>asaṃskṛtaiva dhātvākhyā virāgo rāgasaṃkṣayaḥ /</l>
+<l>prahāṇadhāturanyeṣāṃ nirodhākhyastu vastunaḥ // VAkK_6.78 //</l>
+</lg>
+
+<lg>
+<l>nirvidyate duḥkhahetukṣāntijñānaiḥ virajyate /</l>
+<l>sarvairjahāti yaiḥ evaṃ catuṣkoṭikasaṃbhavaḥ // VAkK_6.79 //</l>
+</lg>
+
+<p>abhidharmakośe mārgapudgalanirdeśo nāma ṣaṣṭhaṃ kośasthānaṃ samāptamiti //</p>
+
+<p>saptamaṃ kośasthānam</p>
+
+<p>namo buddhāya //</p>
+
+<lg>
+<l>nāmalā kṣāntayo jñānaṃ kṣayānutpādadhīrna dak /</l>
+<l>tadanyobhayathāryā dhīḥ anyā jñānaṃ dṛśaśca ṣaṭ // VAkK_7.1 //</l>
+</lg>
+
+<lg>
+<l>sāsravānāsravaṃ jñānaṃ ādyaṃ saṃvṛtijñāpakam /</l>
+<l>anāsravaṃ dvidhā dharmajñānamanvayameva ca // VAkK_7.2 //</l>
+</lg>
+
+<lg>
+<l>sāṃvṛtaṃ sarvaviṣayaṃ kāmaduḥkhādigocaram /</l>
+<l>dharmākhyam anvayajñānaṃ tūrdhvaduḥkhādigocaram // VAkK_7.3 //</l>
+</lg>
+
+<lg>
+<l>te eva satyabhedena catvāri ete caturvidhe /</l>
+<l>anutpādakṣayajñāne te punaḥ prathamodite // VAkK_7.4 //</l>
+</lg>
+
+<lg>
+<l>duḥkhahetvanvayajñāne caturbhyaḥ paracittavit /</l>
+<l>bhūmyakṣapudgalotkrāntaṃ naṣṭājātaṃ na vetti tat // VAkK_7.5 //</l>
+</lg>
+
+<lg>
+<l>ta dharmānvayadhīpakṣyamanyo 'nyaṃ darśanakṣaṇau /</l>
+<l>śrāvako vetti khaṅgastrīn sarvānbuddho 'prayogataḥ // VAkK_7.6 //</l>
+</lg>
+
+<lg>
+<l>kṣayajñānaṃ hi satyeṣu parijñātādiniścayaḥ /</l>
+<l>na parijñeyamityādiranutpādamatirmatā // VAkK_7.7 //</l>
+</lg>
+
+<lg>
+<l>svabhāvapratipakṣābhyāmākārākāragocarāt /</l>
+<l>prayogakṛtakṛtyatvahetūpacayato daśa // VAkK_7.8 //</l>
+</lg>
+
+<lg>
+<l>dharmajñānanirodhe yanmārge vā bhāvanāpathe /</l>
+<l>tridhātupratipakṣastat kāmadhāto 'stu nānvayam // VAkK_7.9 //</l>
+</lg>
+
+<lg>
+<l>dharmajñānānvayajñānaṃ ṣoḍaśākāram anyathā /</l>
+<l>tathā ca sāṃvṛtaṃ svaiḥ svaiḥ satyākāraiścatuṣṭayam // VAkK_7.10 //</l>
+</lg>
+
+<lg>
+<l>tathā paramanojñānaṃ nirmalaṃ samalaṃ punaḥ /</l>
+<l>jñeyasvalakṣaṇākāraṃ ekaikadravyagocaram // VAkK_7.11 //</l>
+</lg>
+
+<lg>
+<l>śeṣe caturdaśākāre śūnyānātmavivarjite /</l>
+<l>nāmalaḥ ṣoḍaśabhyo 'nya ākāraḥ anye 'sti śāstrataḥ // VAkK_7.12 //</l>
+</lg>
+
+<lg>
+<l>dravyataḥ ṣoḍaśākārāḥ prajñākāraḥ tayā saha /</l>
+<l>ākārayanti sālambāḥ sarvamākāryate tu sat // VAkK_7.13 //</l>
+</lg>
+
+<lg>
+<l>tridhādyaṃ kuśalānyanyāni ādyaṃ sarvāsu bhūmiṣu /</l>
+<l>dharmākhyaṃ ṣaṭsu navasu tvanvayākhyaṃ tathaiva ṣaṭ // VAkK_7.14 //</l>
+</lg>
+
+<lg>
+<l>dhyāneṣvanyamanojñānaṃ kāmarūpāśrayaṃ ca tat /</l>
+<l>kāmāśrayaṃ tu dharmākhyam anyattraidhātukāśrayam // VAkK_7.15 //</l>
+</lg>
+
+<lg>
+<l>smṛtyupasthānamekaṃ dhīrnirodhe paracittadhīḥ /</l>
+<l>trīṇi catvāri śeṣāṇi dharmadhīgocaro nava // VAkK_7.16 //</l>
+</lg>
+
+<lg>
+<l>nava mārgānvayadhiyoḥ duḥkhahetudhiyordvayam /</l>
+<l>caturṇāṃ daśa naikasya yojyā dharmāḥ punardaśa // VAkK_7.17 //</l>
+</lg>
+
+<lg>
+<l>traidhātukāmalā dharmā akṛtāśca dvidhā dvidhā /</l>
+<l>sāṃvṛtaṃ svakalāpānyadekaṃ vidyādanātmataḥ // VAkK_7.18 //</l>
+</lg>
+
+<lg>
+<l>ekajñānānvito rāgī prathame 'nāsravakṣaṇe /</l>
+<l>dvitīye tribhiḥ ūrdhvastu caturṣvekaikavṛddhimān // VAkK_7.19 //</l>
+</lg>
+
+<lg>
+<l>yathotpannāni bhāvyante kṣāntijñānāni darśane /</l>
+<l>anāgatāni tatraiva sāṃvṛtaṃ cānvayatraye // VAkK_7.20 //</l>
+</lg>
+
+<lg>
+<l>ato 'bhisamayāntyākhyaṃ tadānutpattidharmakam /</l>
+<l>svādhobhūmi nirodhe 'ntyaṃ svasatyākāraṃ yātnikam // VAkK_7.21 //</l>
+</lg>
+
+<lg>
+<l>ṣoḍaśe ṣaṭ sarāgasya vītarāgasya sapta tu /</l>
+<l>sarāgabhāvanā mārge tadūrdhvaṃ saptabhāvanā // VAkK_7.22 //</l>
+</lg>
+
+<p>saptabhūmijayābhijñākopyāptyākīrṇabhāvite
+<l>ānantaryapatheṣūrdhvaṃ muktimārgāṣṭake 'pi ca // VAkK_7.23 //</l></p>
+
+<lg>
+<l>śaikṣottāpanamuktau vā ṣaṭ saptajñānabhāvanā /</l>
+<l>ānantaryapathe ṣaṇṇāṃ bhavāgravijaye tathā // VAkK_7.24 //</l>
+</lg>
+
+<lg>
+<l>navānāṃ tu kṣayajñāne akopyasya daśa bhāvanā /</l>
+<l>tatsaṃcare 'ntyamuktau ca proktaśeṣe 'ṣṭabhāvanā // VAkK_7.25 //</l>
+</lg>
+
+<lg>
+<l>yadvairāgyāya yallābhastatra cādhaśca bhāvyate /</l>
+<l>sāsravāśca kṣayajñāne labdhapūrvaṃ na bhāvyate // VAkK_7.26 //</l>
+</lg>
+
+<lg>
+<l>pratilambhaniṣevākhye śubhasaṃskṛtabhāvane /</l>
+<l>pratipakṣavinirdhāvabhāvane sāsravasya tu // VAkK_7.27 //</l>
+</lg>
+
+<lg>
+<l>aṣṭādaśāveṇikāstu buddhadharmā balādayaḥ /</l>
+<l>sthānāsthāne daśa jñānāni aṣṭau karmaphale nava // VAkK_7.28 //</l>
+</lg>
+
+<lg>
+<l>dhyānādyakṣādhimokṣeṣu dhātau ca pratipatsu tu /</l>
+<l>daśa vā saṃvṛtijñānaṃ dvayoḥ ṣaṭ daśa vā kṣaye // VAkK_7.29 //</l>
+</lg>
+
+<lg>
+<l>prāṅinavisacyutotpādabaladhyāneṣu śeṣitam /</l>
+<l>sarvabhūmiṣu kenāsya balamavyāhataṃ yataḥ // VAkK_7.30 //</l>
+</lg>
+
+<lg>
+<l>nārāyaṇabalaṃ kāye saṃdhiṣvanye daśādhikam /</l>
+<l>hastyādisaptakabalam spraṣṭavyāyatanaṃ ca tat // VAkK_7.31 //</l>
+</lg>
+
+<lg>
+<l>vaiśāradyaṃ caturdhā tu yathādyadaśame bale /</l>
+<l>dvitīyasaptame caiva smṛtiprajñātmakaṃ trayam // VAkK_7.32 //</l>
+</lg>
+
+<lg>
+<l>mahākṛpā saṃvṛtidhīḥ saṃbhārākāragocaraiḥ /</l>
+<l>samatvādādhimātryācca nānākaraṇamaṣṭadhā // VAkK_7.33 //</l>
+</lg>
+
+<lg>
+<l>saṃbhāradharmakāyābhyāṃ jagataścārthacaryayā /</l>
+<l>samatā sarvabuddhānāṃ nāyurjātipramāṇataḥ // VAkK_7.34 //</l>
+</lg>
+
+<lg>
+<l>śiṣyasādhāraṇā anye dharmāḥ kecit pṛthagjanaiḥ /</l>
+<l>araṇāpraṇidhijñānapratisaṃvidguṇādayaḥ // VAkK_7.35 //</l>
+</lg>
+
+<lg>
+<l>saṃvṛtijñānamaraṇā dhyāne 'ntye akopyadharmaṇaḥ /</l>
+<l>nṛjā anutpannakāmāptasavastukleśagocarāḥ // VAkK_7.36 //</l>
+</lg>
+
+<lg>
+<l>tathaiva praṇidhijñānaṃ sarvālambaṃ tu tat tathā /</l>
+<l>dharmārthayorniruktau ca pratibhāne ca saṃvidaḥ // VAkK_7.37 //</l>
+</lg>
+
+<lg>
+<l>tisro nāmāthavāgjñānamavivartyaṃ yathākramam /</l>
+<l>caturthīyuktamuktābhilāpamārgavaśitvayoḥ // VAkK_7.38 //</l>
+</lg>
+
+<lg>
+<l>vāṅmārgālambanā cāsau nava jñānāni sarvabhūḥ /</l>
+<l>daśa ṣaḍvārthasaṃvit sā sarvatra anye tu sāṃvṛtam // VAkK_7.39 //</l>
+</lg>
+
+<lg>
+<l>kāmadhyāneṣu dharme vit vāci prathamakāmayoḥ /</l>
+<l>vikalābhirna tallābhī ṣaḍete prāntakoṭikāḥ // VAkK_7.40 //</l>
+</lg>
+
+<lg>
+<l>tatṣaḍ vidhaṃ sarvabhūmyanulomitam /</l>
+<l>vṛddhikāṣṭhāgataṃ tacca buddhānyasya prayogajāḥ // VAkK_7.41 //</l>
+</lg>
+
+<lg>
+<l>ṛddhiśrotramanaḥpūrvajanmacyutyudayakṣaye /</l>
+<l>jñāta sākṣīkriyābhijñā ṣaḍ vidhā muktimārgadhīḥ // VAkK_7.42 //</l>
+</lg>
+
+<lg>
+<l>catasraḥ saṃvṛtijñānaṃ cetasi jñānapañcakam /</l>
+<l>kṣayābhijñā balaṃ yadvat pañca dhyānacatuṣṭaye // VAkK_7.43 //</l>
+</lg>
+
+<lg>
+<l>svādhobhūviṣayāḥ labhyā ucitāstu virāgataḥ /</l>
+<l>tṛtīyā trīpyupasthānāni ādyaṃ śrotraddhircakṣuṣi // VAkK_7.44 //</l>
+</lg>
+
+<lg>
+<l>avyākṛte śrotracakṣurabhijñe itarāḥ śubhāḥ /</l>
+<l>tisro vidyāḥ avidyāyāḥ pūrvāntādau nivarttanāt // VAkK_7.45 //</l>
+</lg>
+
+<lg>
+<l>aśaikṣyantyā tadākhye dve tatsaṃtānamudbhavāt /</l>
+<l>iṣṭe śaikṣasya nokte tu vidye sāvidyasaṃtateḥ // VAkK_7.46 //</l>
+</lg>
+
+<lg>
+<l>ādyā tṛtīyā ṣaṣṭhī ca prātihāryāṇi śāsanam /</l>
+<l>agyram avyabhicāritvāddhiteṣṭaphalayojanāt // VAkK_7.47 //</l>
+</lg>
+
+<lg>
+<l>ṛddhiḥ samādhiḥ gamanaṃ nirmāṇaṃ ca gatistridhā /</l>
+<l>śāsturmanojavā anyeṣāṃ vāhinyapyādhimokṣikī // VAkK_7.48 //</l>
+</lg>
+
+<lg>
+<l>kāmāptaṃ nirmitaṃ bāhyaṃ caturāyatanaṃ dvidhā /</l>
+<l>rūpāptaṃ dve tu nirmāṇacittaistāni caturdaśa // VAkK_7.49 //</l>
+</lg>
+
+<lg>
+<l>yathākramaṃ dhyānaphalaṃ dve yāvat pañca nordhvajam /</l>
+<l>tallābho dhyānavat śuddhāttatsvataśca tato 'pi te // VAkK_7.50 //</l>
+</lg>
+
+<lg>
+<l>svabhūmikena nirmāṇaṃ bhāṣaṇaṃ tvadhareṇa ca /</l>
+<l>nirmātraiva sahāśāstuḥ adhiṣṭhāyānyavarttanāt // VAkK_7.51 //</l>
+</lg>
+
+<lg>
+<l>mṛtasyāpyastyadhiṣṭhānaṃ nāsthirasya apare tu na /</l>
+<l>ādāvekamanekena jitāyāṃ tu viparyayāt // VAkK_7.52 //</l>
+</lg>
+
+<lg>
+<l>avyākṛtaṃ bhāvanājaṃ trividhaṃ tūpapattijam /</l>
+<l>ṛddhirmantrauṣadhābhyāṃ ca karmajā ceti pañcadhā // VAkK_7.53 //</l>
+</lg>
+
+<lg>
+<l>divyaśrotrākṣiṇī rūpaprasādau dhyānabhūmikau /</l>
+<l>sabhāgāvikale nityaṃ dūrasūkṣmādigocare // VAkK_7.54 //</l>
+</lg>
+
+<lg>
+<l>durasthamāvṛtaṃ sūkṣmaṃ sarvataśca na paśyati /</l>
+<l>māṃsacakṣuryato rūpamato divyaṃ dṛgiṣyate //</l>
+</lg>
+
+<lg>
+<l>dvitrisāhasrakāsaṃkhyadṛśo 'rhatkhaḍgadaiśikāḥ /</l>
+<l>anyadapyupapattyāptaṃ taddṛśyo nāntarībhavaḥ // VAkK_7.55 //</l>
+</lg>
+
+<lg>
+<l>cetojñānaṃ tu tattredhā tarkavidyākṛtaṃ ca yat /</l>
+<l>jānate nārakā ādau nṛṇāṃ notpattilabhikam // VAkK_7.56 //</l>
+</lg>
+
+<p>abhidharmakośe jñānanirdeśo nāma saptamaṃ kośasthānam //</p>
+
+<p>aṣṭamaṃ kośasthānam</p>
+
+<p>oṃ namo buddhāya //</p>
+
+<lg>
+<l>dvidhā dhyānāni catvāri proktāstadupapattayaḥ /</l>
+<l>samāpattiḥ śubhaikāgyraṃ pañcaskandhāstu sānugam // VAkK_8.1 //</l>
+</lg>
+
+<lg>
+<l>vicāraprītisukhavat pūrvapūrvāṅgavarjitam /</l>
+<l>tathārūpyāḥ catuskandhāḥ adhobhūmivivekajāḥ // VAkK_8.2 //</l>
+</lg>
+
+<lg>
+<l>vibhūtarūpasaṃjñākhyāḥ saha sāmantakaistribhiḥ /</l>
+<l>nārūpye rūpasadbhāvaḥ rūpotpattistu cittataḥ // VAkK_8.3 //</l>
+</lg>
+
+<lg>
+<l>ākāśānantyavijñānanatyākiṃcanyasaṃjñakāḥ /</l>
+<l>tathāprayogāt māndyāttu nasaṃjñānāpyasaṃjñakaḥ // VAkK_8.4 //</l>
+</lg>
+
+<lg>
+<l>iti maulaṃ samāpattidravyamaṣṭavidhaṃ tridhā /</l>
+<l>sapta āsvādanavacchuddhānāsravāṇi aṣṭamaṃ dvidhā // VAkK_8.5 //</l>
+</lg>
+
+<lg>
+<l>āsvādanāsaṃprayuktaṃ satṛṣṇaṃ laukikaṃ śubham /</l>
+<l>śuddhakaṃ tattadāsvādyaṃ lokattaramanāsravam // VAkK_8.6 //</l>
+</lg>
+
+<lg>
+<l>pañcādye tarkacārau ca prītisaukhyasamādhayaḥ /</l>
+<l>prītyādayaḥ prasādaśca dvitīye 'ṅgacatuṣṭayam // VAkK_8.7 //</l>
+</lg>
+
+<lg>
+<l>tṛtīye pañca tūpekṣā smṛtiḥ prajñā sukhaṃ sthitiḥ /</l>
+<l>catvāryante 'sukhāduḥkhopekṣāsmṛtisamādhayaḥ // VAkK_8.8 //</l>
+</lg>
+
+<lg>
+<l>dravyato daśa caikaṃ ca prasrabdhi sukhamādyayoḥ /</l>
+<l>śraddhā prasādaḥ prītistu saumanasyaṃ dvidhāgamāt // VAkK_8.9 //</l>
+</lg>
+
+<lg>
+<l>kliṣṭeṣva satprītisukhaṃ prasādaḥ saṃpradhīḥ smṛtiḥ /</l>
+<l>upekṣāsmṛtiśuddhiśca kecit prasrabdhyupekṣaṇe // VAkK_8.10 //</l>
+</lg>
+
+<lg>
+<l>aṣṭāpakṣālamuktatvādāniñjaṃ tu caturthakam /</l>
+<l>vitarkacārau śvāsau ca sukhādi ca catuṣṭayam // VAkK_8.11 //</l>
+</lg>
+
+<lg>
+<l>saumanasyasukhopekṣā upekṣāsumanaskate /</l>
+<l>sukhopekṣe upekṣā pravido dhyānopapattiṣu // VAkK_8.12 //</l>
+</lg>
+
+<lg>
+<l>kāyākṣiśrotravijñānaṃ vijñaptyutthāpakaṃ ca yat /</l>
+<l>dvitīyādau tadādyāptaṃ akliṣṭāvyākṛtaṃ ca tat // VAkK_8.13 //</l>
+</lg>
+
+<lg>
+<l>atadvān labhate śuddhaṃ vairāgyeṇopapattitaḥ /</l>
+<l>anāsravaṃ tu vairāgyāt kliṣṭaṃ hānyupapattitaḥ // VAkK_8.14 //</l>
+</lg>
+
+<lg>
+<l>tṛtīyādyāvadūrdhvādho 'nāsravānantaraṃ śubham /</l>
+<l>utpadyate tathā śuddhāt kliṭaṃ cāpi svabhūmikam // VAkK_8.15 //</l>
+</lg>
+
+<lg>
+<l>kliṣṭāt svaṃ śuddakaṃ kliṣṭaṃ evaṃ cādharaśuddhakam /</l>
+<l>cyutau tu śuddhakāt kliṣṭaṃ sarvaṃ kliṣṭāttu nottaram // VAkK_8.16 //</l>
+</lg>
+
+<lg>
+<l>caturdhā śuddhakaṃ hānabhāgīyādi yathākramam /</l>
+<l>kleśotpattisvabhūmyūrdhvānāsravānuguṇaṃ hi tat // VAkK_8.17 //</l>
+</lg>
+
+<lg>
+<l>dve trīṇi trīṇi caikaṃ ca hāna bhāgādyanantaram /</l>
+<l>gatvāgamya dvidhā bhūmīraṣṭau śliṣṭai kalaṅghitāḥ // VAkK_8.18 //</l>
+</lg>
+
+<lg>
+<l>vyutkrāntakasamāpattirvisabhāgatṛtīyagā /</l>
+<l>svādhobhūmyāśrayā eva dhyānārūpyāḥ vṛthādharam // VAkK_8.19 //</l>
+</lg>
+
+<lg>
+<l>āryākiṃcanyasāṃmukhyāt bhavāgre tvāsravakṣayaḥ /</l>
+<l>satṛṣṇāḥ svabhavālambāḥ dhyānaṃ sadviṣayaṃ śubham // VAkK_8.20 //</l>
+</lg>
+
+<lg>
+<l>na maulāḥ kuśalārūpyāḥ sāsravādharagocarāḥ /</l>
+<l>anāsraveṇa hīyante kleśāḥ sāmantakena ca // VAkK_8.21 //</l>
+</lg>
+
+<lg>
+<l>aṣṭau sāmantakānyeṣāṃ śuddhāduḥkhāsukhāni hi /</l>
+<l>ārya cādyaṃ tridhā kecit atarka dhyānamantaram // VAkK_8.22 //</l>
+</lg>
+
+<lg>
+<l>tridhā aduḥkhāsukhaṃtacca mahābrahmaphalaṃ ca tat /</l>
+<l>savitarkavicāro 'dhaḥsamādhiḥ parato 'dvayaḥ // VAkK_8.23 //</l>
+</lg>
+
+<lg>
+<l>ānimittaḥ samākāraiḥ śūnyatānātmaśūnyataḥ /</l>
+<l>pravartate apraṇihitaḥ satyākārairataḥ paraiḥ // VAkK_8.24 //</l>
+</lg>
+
+<lg>
+<l>śuddhāmalāḥ nirmalāstu te vimokṣamukhatrayam /</l>
+<l>śūnyatāśunyatādyākhyāstrayo 'parasamādhayaḥ // VAkK_8.25 //</l>
+</lg>
+
+<lg>
+<l>ālambete aśaikṣaṃ dvau śūnyataścāpyanityataḥ /</l>
+<l>ānimittānimittastu śāntato 'saṃkhyayā kṣayam // VAkK_8.26 //</l>
+</lg>
+
+<lg>
+<l>sāsravāḥ nṛṣu akopyasya saptasāmantavarjitāḥ /</l>
+<l>samādhibhāvanā dhyānaṃ subhamādyaṃ sukhāya hi // VAkK_8.27 //</l>
+</lg>
+
+<lg>
+<l>darśanāyākṣyabhijñeṣṭā dhībhedāya prayogajāḥ /</l>
+<l>vajropamo 'ntye yo dhyāne sāsravakṣayabhāvanā // VAkK_8.28 //</l>
+</lg>
+
+<lg>
+<l>apramāṇāni catvāri vyāpādādivipakṣataḥ /</l>
+<l>maitryadveṣaḥ api karuṇā muditā sumanaskatā // VAkK_8.29 //</l>
+</lg>
+
+<lg>
+<l>upekṣālobhaḥ ākāraḥ sukhitā duḥkhitā vata /</l>
+<l>modantāmiti sattvācca kāmasattvāstu gocaraḥ // VAkK_8.30 //</l>
+</lg>
+
+<lg>
+<l>dhyānayormuditā anyāni ṣaṭ su kecittu pañcasu /</l>
+<l>na taiḥ prahāṇaṃ nṛṣveva janyante tryanvito dhruvam // VAkK_8.31 //</l>
+</lg>
+
+<lg>
+<l>aṣṭau vimokṣāḥ prathamāvaśubhā dhyānayordvayoḥ /</l>
+<l>tṛtīyo 'ntye sa cālobhaḥ śubhārūpyāḥ samāhitāḥ // VAkK_8.32 //</l>
+</lg>
+
+<lg>
+<l>nirodhastu samāpattiḥ sūkṣmasūkṣmādanantaram /</l>
+<l>svaśuddhakādharāryeṇa vyutthānaṃ cetasā tataḥ // VAkK_8.33 //</l>
+</lg>
+
+<lg>
+<l>kāmāptadṛśyaviṣayāḥ prathamāḥ ye tvarūpiṇaḥ /</l>
+<l>te 'nvayajñānapakṣordhvasvabhūduḥkhādigocarāḥ // VAkK_8.34 //</l>
+</lg>
+
+<lg>
+<l>abhibhvāyatanānyaṣṭau dvayamādyavimokṣavat /</l>
+<l>dve dvitīyavat anyāni punaḥ śubhavimokṣavat // VAkK_8.35 //</l>
+</lg>
+
+<lg>
+<l>daśa kṛtsnāni alobhāṣṭau dhyāne 'ntye gocaraḥ punaḥ /</l>
+<l>kāmāḥ dve śuddhākārūpye svacatuḥskandhagocare // VAkK_8.36 //</l>
+</lg>
+
+<lg>
+<l>nirodha uktaḥ vairāgyaprayogāptaṃ tu śeṣitam /</l>
+<l>tridhātvāśrayamārūpyasaṃjñaṃ śeṣaṃ manuṣyajam // VAkK_8.37 //</l>
+</lg>
+
+<lg>
+<l>hetukarmabālāddhātvorārupyotpādanaṃ dvayoḥ /</l>
+<l>dhyānānāṃ rūpadhātau tu tābhyāṃ dharmatayāpi ca // VAkK_8.38 //</l>
+</lg>
+
+<lg>
+<l>saddharmo dvividhaḥ śāsturāgamādhigamātmakaḥ /</l>
+<l>dhātārastasya vaktāraḥ pratipattāra eva ca // VAkK_8.39 //</l>
+</lg>
+
+<lg>
+<l>kāśmīravaibhāṣikanītisiddhaḥ prāyo mayāyaṃ kathito 'bhidharmaḥ /</l>
+<l>yaddurguhītaṃ tadihāsmadāgaḥ saddharmanītau munayaḥ pramāṇam // VAkK_8.40 //</l>
+</lg>
+
+<lg>
+<l>nimīlite śāstari lokacakṣuṣi kṣayaṃ gate sākṣijane ca bhūyasā /</l>
+<l>adṛṣṭatattvairniravagrahaiḥ kṛtaṃ kutārkikaiḥ śāsanametadākulam // VAkK_8.41 //</l>
+</lg>
+
+<lg>
+<l>gate 'tha śāntiṃ paramāṃ svayaṃbhuvi svayaṃbhuvaḥ śāsanadhūrdhareṣu ca /</l>
+<l>jagatyanāthe gaṇaghātibhirmataiḥ niraṅkuśaiḥ svairamihādya caryate // VAkK_8.42 //</l>
+</lg>
+
+<lg>
+<l>iti kaṇṭhagataprāṇaṃ viditvā śāsanaṃ muneḥ /</l>
+<l>balakālaṃ malānāṃ ca na pramādyaṃ mumukṣubhiḥ // VAkK_8.43 //</l>
+</lg>
+
+<p>abhidharmakośe samāpattinirdeśo nāmāṣṭamakośasthānamiti //</p>
+
+  </body>
+</text>
+</TEI>

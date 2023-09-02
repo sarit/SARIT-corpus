@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_pataJjali-yogasUtra">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Yogasūtra</title>
+	<author>Patañjali</author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>Philipp A. Maas</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Philipp A. Maas</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/yoga/patyog_u.htm">patyog_u.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Patanjali: Yogasutra
+<lb/>Based on the edition by Kāśinātha Śāstrī Āgāśe: Vācaspatimiśraviracitaṭīkāsaṃvalitavyāsabhāṣyasametāni Pātañjalayogasūtrāṇi, tathā bhojadevaviracitarājamārtaṇḍābhidhavṛttisametāni pātañjalayogasūtrāṇi. sūtrapāṭhasūtravarṇānukramasūcībhyāṃ ca sanāthīkṛtāni ...
+<lb/>Pune : Ānandāśramamudraṇālaya 1904 (Ānandāśrama Sanskrit Series, 47).
+<lb/>
+<lb/>Input and proof reading by Philipp A. Maas
+<lb/>
+<lb/>Sutras extracted from the commented version (see separate file)
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>Kāśinātha Śāstrī Āgāśe: Vācaspatimiśraviracitaṭīkāsaṃvalitavyāsabhāṣyasametāni Pātañjalayogasūtrāṇi, tathā bhojadevaviracitarājamārtaṇḍābhidhavṛttisametāni pātañjalayogasūtrāṇi. sūtrapāṭhasūtravarṇānukramasūcībhyāṃ ca sanāthīkṛtāni ...</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Yogasūtra = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Śāstra -- Philosophy -- Yoga</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+
+<l>atha yogānuśāsanam || YS_1.1 ||</l>
+
+<l>yogaś cittavṛttinirodhaḥ || YS_1.2 ||</l>
+
+<l>tadā draṣṭuḥ svarūpe 'vasthānam || YS_1.3 ||</l>
+
+<l>vṛttisārūpyam itaratra || YS_1.4 ||</l>
+
+<l>vṛttayaḥ pañcatayyaḥ kliṣṭākliṣṭāḥ || YS_1.5 ||</l>
+
+<l>pramāṇaviparyayavikalpanidrāsmṛtayaḥ || YS_1.6 ||</l>
+
+<l>pratyakṣānumānāgamāḥ pramāṇāni || YS_1.7 ||</l>
+
+<l>viparyayo mithyājñānam atadrūpapratiṣṭham || YS_1.8 ||</l>
+
+<l>śabdajñānānupātī vastuśūnyo vikalpaḥ || YS_1.9 ||</l>
+
+<l>abhāvapratyayālambanā vṛttir nidrā || YS_1.10 ||</l>
+
+<l>anubhūtaviṣayāsaṃpramoṣaḥ smṛtiḥ || YS_1.11 ||</l>
+
+<l>abhyāsavairāgyābhyāṃ tannirodhaḥ || YS_1.12 ||</l>
+
+<l>tatra sthitau yatno 'bhyāsaḥ || YS_1.13 ||</l>
+
+<l>sa tu dīrghakālanairantaryasatkārāsevito dṛḍhabhūmiḥ || YS_1.14 ||</l>
+
+<l>dṛṣṭānuśravikaviṣayavitṛṣṇasya vaśīkārasaṃjñā vairāgyam || YS_1.15 ||</l>
+
+<l>tat paraṃ puruṣakhyāter guṇavaitṛṣṇyam || YS_1.16 ||</l>
+
+<l>vitarkavicārānandāsmitārūpānugamāt saṃprajñātaḥ || YS_1.17 ||</l>
+
+<l>virāmapratyayābhyāsapūrvaḥ saṃskāraśeṣo 'nyaḥ || YS_1.18 ||</l>
+
+<l>bhavapratyayo videhaprakṛtilayānām || YS_1.19 ||</l>
+
+<l>śraddhāvīryasmṛtisamādhiprajñāpūrvaka itareṣām || YS_1.20 ||</l>
+
+<l>tīvrasaṃvegānām āsannaḥ || YS_1.21 ||</l>
+
+<l>mṛdumadhyādhimātratvāt tato 'pi viśeṣaḥ || YS_1.22 ||</l>
+
+<l>īśvarapraṇidhānād vā || YS_1.23 ||</l>
+
+<l>kleśakarmavipākāśayair aparāmṛṣṭaḥ puruṣaviśeṣa īśvaraḥ || YS_1.24 ||</l>
+
+<l>tatra niratiśayaṃ sarvajñabījam || YS_1.25 ||</l>
+
+<l>pūrveṣām api guruḥ kālenānavacchedāt || YS_1.26 ||</l>
+
+<l>tasya vācakaḥ praṇavaḥ || YS_1.27 ||</l>
+
+<l>tajjapas tadarthabhāvanam || YS_1.28 ||</l>
+
+<l>tataḥ pratyakcetanādhigamo 'py antarāyābhāvaś ca || YS_1.29 ||</l>
+
+<l>vyādhistyānasaṃśayapramādālasyāviratibhrāntidarśanālabdhabhūmikatvānavasthitatvāni cittavikṣepās te 'ntarāyāḥ || YS_1.30 ||</l>
+
+<l>duḥkhadaurmanasyāṅgamejayatvaśvāsapraśvāsā vikṣepasahabhuvaḥ || YS_1.31 ||</l>
+
+<l>tatpratiṣedhārtham ekatattvābhyāsaḥ || YS_1.32 ||</l>
+
+<l>maitrīkaruṇāmuditopekṣāṇāṃ sukhaduḥkhapuṇyāpuṇyaviṣayāṇāṃ bhāvanātaś cittaprasādanam || YS_1.33 ||</l>
+
+<l>pracchardanavidhāraṇābhyāṃ vā prāṇasya || YS_1.34 ||</l>
+
+<l>viṣayavatī vā pravṛttir utpannā manasaḥ sthitinibandhanī || YS_1.35 ||</l>
+
+<l>viśokā vā jyotiṣmatī || YS_1.36 ||</l>
+
+<l>vītarāgaviṣayaṃ vā cittam || YS_1.37 ||</l>
+
+<l>svapnanidrājñānālambanaṃ vā || YS_1.38 ||</l>
+
+<l>yathābhimatadhyānād vā || YS_1.39 ||</l>
+
+<l>paramāṇuparamamahattvānto 'sya vaśīkāraḥ || YS_1.40 ||</l>
+
+<l>kṣīṇavṛtter abhijātasyeva maṇer grahītṛgrahaṇagrāhyeṣu tatsthatadañjanatā samāpattiḥ || YS_1.41 ||</l>
+
+<l>tatra śabdārthajñānavikalpaiḥ saṃkīrṇā savitarkā samāpattiḥ || YS_1.42 ||</l>
+
+<l>smṛtipariśuddhau svarūpaśūnyevārthamātranirbhāsā nirvitarkā || YS_1.43 ||</l>
+
+<l>etayaiva savicārā nirvicārā ca sūkṣmaviṣayā vyākhyātā || YS_1.44 ||</l>
+
+<l>sūkṣmaviṣayatvaṃ cāliṅgaparyavasānam || YS_1.45 ||</l>
+
+<l>tā eva sabījaḥ samādhiḥ || YS_1.46 ||</l>
+
+<l>nirvicāravaiśāradye 'dhyātmaprasādaḥ || YS_1.47 ||</l>
+
+<l>ṛtaṃbharā tatra prajñā || YS_1.48 ||</l>
+
+<l>śrutānumānaprajñābhyām anyaviṣayā viśeṣārthatvāt || YS_1.49 ||</l>
+
+<l>tajjaḥ saṃskāro 'nyasaṃskārapratibandhī || YS_1.50 ||</l>
+
+<l>tasyāpi nirodhe sarvanirodhān nirbījaḥ samādhiḥ || YS_1.51 ||</l>
+
+<l>tapaḥsvādhyāyeśvarapraṇidhānāni kriyāyogaḥ || YS_2.1 ||</l>
+
+<l>samādhibhāvanārthaḥ kleśatanūkaraṇārthaś ca || YS_2.2 ||</l>
+
+<l>avidyāsmitārāgadveṣābhiniveśāḥ kleśāḥ || YS_2.3 ||</l>
+
+<l>avidyā kṣetram uttareṣāṃ prasuptatanuvicchinnodārāṇām || YS_2.4 ||</l>
+
+<l>anityāśuciduḥkhānātmasu nityaśucisukhātmakhyātir avidyā || YS_2.5 ||</l>
+
+<l>dṛgdarśanaśaktyor ekātmatevāsmitā || YS_2.6 ||</l>
+
+<l>sukhānuśayī rāgaḥ || YS_2.7 ||</l>
+
+<l>duḥkhānuśayī dveṣaḥ || YS_2.8 ||</l>
+
+<l>svarasavāhī viduṣo 'pi tathā rūḍho 'bhiniveśaḥ || YS_2.9 ||</l>
+
+<l>te pratiprasavaheyāḥ sūkṣmāḥ || YS_2.10 ||</l>
+
+<l>dhyānaheyās tadvṛttayaḥ || YS_2.11 ||</l>
+
+<l>kleśamūlaḥ karmāśayo dṛṣṭādṛṣṭajanmavedanīyaḥ || YS_2.12 ||</l>
+
+<l>sati mūle tadvipāko jātyāyurbhogāḥ || YS_2.13 ||</l>
+
+<l>te hlādaparitāpaphalāḥ puṇyāpuṇyahetutvāt || YS_2.14 ||</l>
+
+<l>pariṇāmatāpasaṃskāraduḥkhair guṇavṛttivirodhāc ca duḥkham eva sarvaṃ vivekinaḥ || YS_2.15 ||</l>
+
+<l>heyaṃ duḥkham anāgatam || YS_2.16 ||</l>
+
+<l>draṣṭṛdṛśyayoḥ saṃyogo heyahetuḥ || YS_2.17 ||</l>
+
+<l>prakāśakriyāsthitiśīlaṃ bhūtendriyātmakaṃ bhogāpavargārthaṃ dṛśyam || YS_2.18 ||</l>
+
+<l>viśeṣāviśeṣaliṅgamātrāliṅgāni guṇaparvāṇi || YS_2.19 ||</l>
+
+<l>draṣṭā dṛśimātraḥ śuddho 'pi pratyayānupaśyaḥ || YS_2.20 ||</l>
+
+<l>tadartha eva dṛśyasyātmā || YS_2.21 ||</l>
+
+<l>kṛtārthaṃ prati naṣṭam apy anaṣṭaṃ tadanyasādhāraṇatvāt || YS_2.22 ||</l>
+
+<l>svasvāmiśaktyoḥ svarūpopalabdhihetuḥ saṃyogaḥ || YS_2.23 ||</l>
+
+<l>tasya hetur avidyā || YS_2.24 ||</l>
+
+<l>tadabhāvāt saṃyogābhāvo hānaṃ taddṛśeḥ kaivalyam || YS_2.25 ||</l>
+
+<l>vivekakhyātir aviplavā hānopāyaḥ || YS_2.26 ||</l>
+
+<l>tasya saptadhā prāntabhūmiḥ prajñā || YS_2.27 ||</l>
+
+<l>yogāṅgānuṣṭhānād aśuddhikṣaye jñānadīptir ā vivekakhyāteḥ || YS_2.28 ||</l>
+
+<l>yamaniyamāsanaprāṇāyāmapratyāhāradhāraṇādhyānasamādhayo 'ṣṭāv aṅgāni || YS_2.29 ||</l>
+
+<l>ahiṃsāsatyāsteyabrahmacaryāparigrahā yamāḥ || YS_2.30 ||</l>
+
+<l>jātideśakālasamayānavacchinnāḥ sārvabhaumā mahāvratam || YS_2.31 ||</l>
+
+<l>śaucasaṃtoṣatapaḥsvādhyāyeśvarapraṇidhānāni niyamāḥ || YS_2.32 ||</l>
+
+<l>vitarkabādhane pratipakṣabhāvanam || YS_2.33 ||</l>
+
+<l>vitarkā hiṃsādayaḥ kṛtakāritānumoditā lobhakrodhamohapūrvakā mṛdumadhyādhimātrā duḥkhājñānānantaphalā iti pratipakṣabhāvanam || YS_2.34 ||</l>
+
+<l>ahiṃsāpratiṣṭhāyāṃ tatsaṃnidhau vairatyāgaḥ || YS_2.35 ||</l>
+
+<l>satyapratiṣṭhāyāṃ kriyāphalāśrayatvam || YS_2.36 ||</l>
+
+<l>asteyapratiṣṭhāyāṃ sarvaratnopasthānam || YS_2.37 ||</l>
+
+<l>brahmacaryapratiṣṭhāyāṃ vīryalābhaḥ || YS_2.38 ||</l>
+
+<l>aparigrahasthairye janmakathaṃtāsaṃbodhaḥ || YS_2.39 ||</l>
+
+<l>śaucāt svāṅgajugupsā parair asaṃsargaḥ || YS_2.40 ||</l>
+
+<l>sattvaśuddhisaumanasyaikāgryendriyajayātmadarśanayogyatvāni ca || YS_2.41 ||</l>
+
+<l>saṃtoṣād anuttamaḥ sukhalābhaḥ || YS_2.42 ||</l>
+
+<l>kāyendriyasiddhir aśuddhikṣayāt tapasaḥ || YS_2.43 ||</l>
+
+<l>svādhyāyād iṣṭadevatāsaṃprayogaḥ || YS_2.44 ||</l>
+
+<l>samādhisiddhir īśvarapraṇidhānāt || YS_2.45 ||</l>
+
+<l>sthirasukham āsanam || YS_2.46 ||</l>
+
+<l>prayatnaśaithilyānantasamāpattibhyām || YS_2.47 ||</l>
+
+<l>tato dvandvānabhighātaḥ || YS_2.48 ||</l>
+
+<l>tasmin sati śvāsapraśvāsayor gativicchedaḥ prāṇāyāmaḥ || YS_2.49 ||</l>
+
+<l>bāhyābhyantarastambhavṛttir deśakālasaṃkhyābhiḥ paridṛṣṭo dīrghasūkṣmaḥ || YS_2.50 ||</l>
+
+<l>bāhyābhyantaraviṣayākṣepī caturthaḥ || YS_2.51 ||</l>
+
+<l>tataḥ kṣīyate prakāśāvaraṇam || YS_2.52 ||</l>
+
+<l>dhāraṇāsu ca yogyatā manasaḥ || YS_2.53 ||</l>
+
+<l>svaviṣayāsaṃprayoge cittasvarūpānukāra ivendriyāṇāṃ pratyāhāraḥ || YS_2.54 ||</l>
+
+<l>tataḥ paramā vaśyatendriyāṇām || YS_2.55 ||</l>
+
+<l>deśabandhaś cittasya dhāraṇā || YS_3.1 ||</l>
+
+<l>tatra pratyayaikatānatā dhyānam || YS_3.2 ||</l>
+
+<l>tad evārthamātranirbhāsaṃ svarūpaśūnyam iva samādhiḥ || YS_3.3 ||</l>
+
+<l>trayam ekatra saṃyamaḥ || YS_3.4 ||</l>
+
+<l>tajjayāt prajñālokaḥ || YS_3.5 ||</l>
+
+<l>tasya bhūmiṣu viniyogaḥ || YS_3.6 ||</l>
+
+<l>trayam antaraṅgaṃ pūrvebhyaḥ || YS_3.7 ||</l>
+
+<l>tad api bahiraṅgaṃ nirbījasya || YS_3.8 ||</l>
+
+<l>vyutthānanirodhasaṃskārayor abhibhavaprādurbhāvau nirodhakṣaṇacittānvayo nirodhapariṇāmaḥ || YS_3.9 ||</l>
+
+<l>tasya praśāntavāhitā saṃskārāt || YS_3.10 ||</l>
+
+<l>sarvārthataikāgratayoḥ kṣayodayau cittasya samādhipariṇāmaḥ || YS_3.11 ||</l>
+
+<l>tataḥ punaḥ śāntoditau tulyapratyayau cittasyaikāgratāpariṇāmaḥ || YS_3.12 ||</l>
+
+<l>etena bhūtendriyeṣu dharmalakṣaṇāvasthāpariṇāmā vyākhyātāḥ || YS_3.13 ||</l>
+
+<l>śāntoditāvyapadeśyadharmānupātī dharmī || YS_3.14 ||</l>
+
+<l>kramānyatvaṃ pariṇāmānyatve hetuḥ || YS_3.15 ||</l>
+
+<l>pariṇāmatrayasaṃyamād atītānāgatajñānam || YS_3.16 ||</l>
+
+<l>śabdārthapratyayānām itaretarādhyāsāt saṃkaras tatpravibhāgasaṃyamāt sarvabhūtarutajñānam || YS_3.17 ||</l>
+
+<l>saṃskārasākṣātkaraṇāt pūrvajātijñānam || YS_3.18 ||</l>
+
+<l>pratyayasya paracittajñānam || YS_3.19 ||</l>
+
+<l>na ca tat sālambanaṃ tasyāviṣayībhūtatvāt || YS_3.20 ||</l>
+
+<l>kāyarūpasaṃyamāt tadgrāhyaśaktistambhe cakṣuḥprakāśāsaṃprayoge 'ntardhānam || YS_3.21 ||</l>
+
+<l>sopakramaṃ nirupakramaṃ ca karma tatsaṃyamād aparāntajñānam ariṣṭebhyo vā || YS_3.22 ||</l>
+
+<l>maitryādiṣu balāni || YS_3.23 ||</l>
+
+<l>baleṣu hastibalādīni || YS_3.24 ||</l>
+
+<l>pravṛttyālokanyāsāt sūkṣmavyavahitaviprakṛṣṭajñānam || YS_3.25 ||</l>
+
+<l>bhuvanajñānaṃ sūrye saṃyamāt || YS_3.26 ||</l>
+
+<l>candre tārāvyūhajñānam || YS_3.27 ||</l>
+
+<l>dhruve tadgatijñānam || YS_3.28 ||</l>
+
+<l>nābhicakre kāyavyūhajñānam || YS_3.29 ||</l>
+
+<l>kaṇṭhakūpe kṣutpipāsānivṛttiḥ || YS_3.30 ||</l>
+
+<l>kūrmanāḍyāṃ sthairyam || YS_3.31 ||</l>
+
+<l>mūrdhajyotiṣi siddhadarśanam || YS_3.32 ||</l>
+
+<l>prātibhād vā sarvam || YS_3.33 ||</l>
+
+<l>hṛdaye cittasaṃvit || YS_3.34 ||</l>
+
+<l>sattvapuruṣayor atyantāsaṃkīrṇayoḥ pratyayāviśeṣo bhogaḥ parārthāt svārthasaṃyamāt puruṣajñānam || YS_3.35 ||</l>
+
+<l>tataḥ prātibhaśrāvaṇavedanādarśāsvādavārtā jāyante || YS_3.36 ||</l>
+
+<l>te samādhāv upasargā vyutthāne siddhayaḥ || YS_3.37 ||</l>
+
+<l>bandhakāraṇaśaithilyāt pracārasaṃvedanāc ca cittasya paraśarīrāveśaḥ || YS_3.38 ||</l>
+
+<l>udānajayāj jalapaṅkakaṇṭakādiṣv asaṅga utkrāntiś ca || YS_3.39 ||</l>
+
+<l>samānajayāj jvalanam || YS_3.40 ||</l>
+
+<l>śrotrākāśayoḥ saṃbandhasaṃyamād divyaṃ śrotram || YS_3.41 ||</l>
+
+<l>kāyākāśayoḥ saṃbandhasaṃyamāl laghutūlasamāpatteś cākāśagamanam || YS_3.42 ||</l>
+
+<l>bahir akalpitā vṛttir mahāvidehā tataḥ prakāśāvaraṇakṣayaḥ || YS_3.43 ||</l>
+
+<l>sthūlasvarūpasūkṣmānvayārthavattvasaṃyamād bhūtajayaḥ || YS_3.44 ||</l>
+
+<l>tato 'ṇimādiprādurbhāvaḥ kāyasaṃpat taddharmānabhighātaś ca || YS_3.45 ||</l>
+
+<l>rūpalāvaṇyabalavajrasaṃhananatvāni kāyasaṃpat || YS_3.46 ||</l>
+
+<l>grahaṇasvarūpāsmitānvayārthavattvasaṃyamād indriyajayaḥ || YS_3.47 ||</l>
+
+<l>tato manojavitvaṃ vikaraṇabhāvaḥ pradhānajayaś ca || YS_3.48 ||</l>
+
+<l>sattvapuruṣānyatākhyātimātrasya sarvabhāvādhiṣṭhātṛtvaṃ sarvajñātṛtvaṃ ca || YS_3.49 ||</l>
+
+<l>tadvairāgyād api doṣabījakṣaye kaivalyam || YS_3.50 ||</l>
+
+<l>sthānyupanimantraṇe saṅgasmayākaraṇaṃ punar aniṣṭaprasaṅgāt || YS_3.51 ||</l>
+
+<l>kṣaṇatatkramayoḥ saṃyamād vivekajaṃ jñānam || YS_3.52 ||</l>
+
+<l>jātilakṣaṇadeśair anyatānavacchedāt tulyayos tataḥ pratipattiḥ || YS_3.53 ||</l>
+
+<l>tārakaṃ sarvaviṣayaṃ sarvathāviṣayam akramaṃ ceti vivekajaṃ jñānam || YS_3.54 ||</l>
+
+<l>sattvapuruṣayoḥ śuddhisāmye kaivalyam iti || YS_3.55 ||</l>
+
+<l>janmauṣadhimantratapaḥsamādhijāḥ siddhayaḥ || YS_4.1 ||</l>
+
+<l>jātyantarapariṇāmaḥ prakṛtyāpūrāt || YS_4.2 ||</l>
+
+<l>nimittam aprayojakaṃ prakṛtīnāṃ varaṇabhedas tu tataḥ kṣetrikavat || YS_4.3 ||</l>
+
+<l>nirmāṇacittāny asmitāmātrāt || YS_4.4 ||</l>
+
+<l>pravṛttibhede prayojakaṃ cittam ekam anekeṣām || YS_4.5 ||</l>
+
+<l>tatra dhyānajam anāśayam || YS_4.6 ||</l>
+
+<l>karmāśuklākṛṣṇaṃ yoginas trividham itareṣām || YS_4.7 ||</l>
+
+<l>tatas tadvipākānuguṇānām evābhivyaktir vāsanānām || YS_4.8 ||</l>
+
+<l>jātideśakālavyavahitānām apy ānantaryaṃ smṛtisaṃskārayor ekarūpatvāt || YS_4.9 ||</l>
+
+<l>tāsām anāditvaṃ cāśiṣo nityatvāt || YS_4.10 ||</l>
+
+<l>hetuphalāśrayālambanaiḥ saṃgṛhītatvād eṣām abhāve tadabhāvaḥ || YS_4.11 ||</l>
+
+<l>atītānāgataṃ svarūpato 'sty adhvabhedād dharmāṇām || YS_4.12 ||</l>
+
+<l>te vyaktasūkṣmā guṇātmānaḥ || YS_4.13 ||</l>
+
+<l>pariṇāmaikatvād vastutattvam || YS_4.14 ||</l>
+
+<l>vastusāmye cittabhedāt tayor vibhaktaḥ panthāḥ || YS_4.15 ||</l>
+
+<l>na caikacittatantraṃ vastu tadapramāṇakaṃ tadā kiṃ syāt || YS_4.16 ||</l>
+
+<l>taduparāgāpekṣitvāc cittasya vastu jñātājñātam || YS_4.17 ||</l>
+
+<l>sadā jñātāś cittavṛttayas tatprabhoḥ puruṣasyāpariṇāmitvāt || YS_4.18 ||</l>
+
+<l>na tat svābhāsaṃ dṛśyatvāt || YS_4.19 ||</l>
+
+<l>ekasamaye cobhayānavadhāraṇam || YS_4.20 ||</l>
+
+<l>cittāntaradṛśye buddhibuddher atiprasaṅgaḥ smṛtisaṃkaraś ca || YS_4.21 ||</l>
+
+<l>citer apratisaṃkramāyās tadākārāpattau svabuddhisaṃvedanam || YS_4.22 ||</l>
+
+<l>draṣṭṛdṛśyoparaktaṃ cittaṃ sarvārtham || YS_4.23 ||</l>
+
+<l>tad asaṃkhyeyavāsanābhiś citram api parārthaṃ saṃhatyakāritvāt || YS_4.24 ||</l>
+
+<l>viśeṣadarśina ātmabhāvabhāvanānivṛttiḥ || YS_4.25 ||</l>
+
+<l>tadā vivekanimnaṃ kaivalyaprāgbhāraṃ cittam || YS_4.26 ||</l>
+
+<l>tacchidreṣu pratyayāntarāṇi saṃskārebhyaḥ || YS_4.27 ||</l>
+
+<l>hānam eṣāṃ kleśavad uktam || YS_4.28 ||</l>
+
+<l>prasaṃkhyāne 'py akusīdasya sarvathā vivekakhyāter dharmameghaḥ samādhiḥ || YS_4.29 ||</l>
+
+<l>tataḥ kleśakarmanivṛttiḥ || YS_4.30 ||</l>
+
+<l>tadā sarvāvaraṇamalāpetasya jñānasyānantyāj jñeyam alpam || YS_4.31 ||</l>
+
+<l>tataḥ kṛtārthānāṃ pariṇāmakramasamāptir guṇānām || YS_4.32 ||</l>
+
+<l>kṣaṇapratiyogī pariṇāmāparāntanirgrāhyaḥ kramaḥ || YS_4.33 ||</l>
+
+<l>puruṣārthaśūnyānāṃ guṇānāṃ pratiprasavaḥ kaivalyaṃ svarūpapratiṣṭhā vā citiśaktir iti || YS_4.34 ||</l>
+
+  </body>
+</text>
+</TEI>
