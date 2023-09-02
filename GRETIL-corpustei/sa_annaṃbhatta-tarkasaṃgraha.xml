@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_annaMbhatta-tarkasaMgraha">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Tarkasaṃgraha</title>
+	<author>Annaṃbhatta</author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>Takuya Ono</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Takuya Ono</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/nyaya/antarkau.htm">antarkau.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Annambhatta: Tarkasamgraha
+<lb/>
+<lb/>Input by Takuya Ono
+<lb/>
+<lb/>ANALYTIC TEXT (BHELA conventions)
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl></bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Tarkasaṃgraha = AnTs,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Śāstra -- Philosophy -- Nyāya</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn" xml:id="AnTs">
+  <body>
+    
+<lg xml:id="AnTs_1">
+<l xml:id="AnTs_1ab">nidhāya hṛdi viśveśaṃ vidhāya guruvandanam /</l>
+<l xml:id="AnTs_1cd">bālānāṃ sukhabodhāya kriyate tarkasaṃgrahaḥ //</l>
+</lg>
+<note type="analysis" corresp="#AnTs_1">
+<lg>
+<l xml:id="AnTs_1ab">nidhāya hṛdi viśveśaṃ vidhāya guru-vandanam /</l>
+<l xml:id="AnTs_1cd">bālānāṃ sukha-bodhāya kriyate tarka-saṃgrahaḥ //</l>
+</lg>
+</note>
+
+<p xml:id="AnTs_2">dravyaguṇakarmasāmānyaviśeṣasamavāyābhāvāḥ sapta padārthāḥ //</p>
+<note type="analysis" corresp="#AnTs_2">
+<p>dravya-guṇa-karma-sāmānya-viśeṣa-samavāya-abhāvāḥ sapta pada-arthāḥ //</p>
+</note>
+
+<p xml:id="AnTs_3">tatra dravyāṇi pṛthivyaptejovāyvākāśakāladigātmamanāṃsi navaiva //</p>
+<note type="analysis" corresp="#AnTs_3">
+<p>tatra dravyāṇi pṛthivy-ap-tejo-vāyv-ākāśa-kāla-dig-ātma-manāṃsi nava-eva //</p>
+</note>
+
+<p xml:id="AnTs_4">rūparasagandhasparśasaṃkhyāparimāṇapṛthaktvasaṃyogavibhāgaparatvāparatvagurutvadravatvasnehaśabdabuddhisukhaduḥkhecchādveṣaprayatnadharmādharmasaṃskārāś caturviṃśati guṇāḥ //</p>
+<note type="analysis" corresp="#AnTs_4">
+<p>rūpa-rasa-gandha-sparśa-saṃkhyā-parimāṇa-pṛthaktva-saṃyoga-vibhāga-paratva-aparatva-gurutva-dravatva-sneha-śabda-buddhi-sukha-duḥkha-icchā-dveṣa-prayatna-dharma-adharma-saṃskārāś caturviṃśati guṇāḥ //</p>
+</note>
+
+<p xml:id="AnTs_5">utkṣepaṇāvakṣepaṇākuñcanaprasāraṇagamanāni pañca karmāṇi //</p>
+<note type="analysis" corresp="#AnTs_5">
+<p>utkṣepaṇa-avakṣepaṇa-ākuñcana-prasāraṇa-gamanāni pañca karmāṇi //</p>
+</note>
+
+<p xml:id="AnTs_6">param aparaṃ ceti dvividhaṃ sāmānyam //</p>
+<note type="analysis" corresp="#AnTs_6">
+<p>param aparaṃ ca iti dvividhaṃ sāmānyam //</p>
+</note>
+
+<p xml:id="AnTs_7">nityadravyavṛttayo viśeṣās tv anantā eva //</p>
+<note type="analysis" corresp="#AnTs_7">
+<p>nitya-dravya-vṛttayo viśeṣās tv an-antā eva //</p>
+</note>
+
+<p xml:id="AnTs_8">samavāyas tv eka eva //</p>
+<note type="analysis" corresp="#AnTs_8">
+<p>samavāyas tv eka eva //</p>
+</note>
+
+<p xml:id="AnTs_9">abhāvaś caturvidhaḥ / prāgabhāvaḥ pradhvaṃsābhāvo 'tyantābhāvo 'nyonyābhāvaś ceti //</p>
+<note type="analysis" corresp="#AnTs_9">
+<p>abhāvaś caturvidhaḥ / prāg-abhāvaḥ pradhvaṃsa-abhāvo 'tyanta-abhāvo 'nyonya-abhāvaś ca iti //</p>
+</note>
+
+<p xml:id="AnTs_10">gandhavatī pṛthivī / sā dvividhā nityānityā ca / nityā paramāṇurūpā / anityā kāryarūpā / punas trividhā śarīrendriyaviṣayabhedāt / śarīram asmadādīnām / indriyaṃ gandhagrāhakaṃ ghrāṇaṃ nāsāgravarti / viṣayo mṛtpāṣāṇādiḥ //</p>
+<note type="analysis" corresp="#AnTs_10">
+<p>gandhavatī pṛthivī / sā dvividhā nitya-anityā ca / nityā paramāṇu-rūpā / anityā kārya-rūpā / punas trividhā śarīra-indriya-viṣaya-bhedāt / śarīram asmad-ādīnām / indriyaṃ gandha-grāhakaṃ ghrāṇaṃ nāsa-agravarti / viṣayo mṛt-pāṣāṇa-ādiḥ //</p>
+</note>
+
+<p xml:id="AnTs_11">śitasparśavatya āpaḥ / tā dvividhāḥ nityā anityāś ca / ntyāḥ paramāṇurūpāḥ / anityāḥ kāryarūpāḥ. / punas trividhāḥ. śarīrendriyaviṣayabhedāt / śarīraṃ varuṇaloke / indriyaṃ rasagrāhakaṃ rasanaṃ jihvāgravarti / viṣayaḥ saritsamudrādiḥ //</p>
+<note type="analysis" corresp="#AnTs_11">
+<p>śita-sparśavatya āpaḥ / tā dvividhāḥ nityā anityāś ca / ntyāḥ paramāṇu-rūpāḥ / anityāḥ kārya-rūpāḥ. / punas trividhāḥ. śarīra-indriya-viṣaya-bhedāt / śarīraṃ varuṇa-loke / indriyaṃ rasa-grāhakaṃ rasanaṃ jihva-agravarti / viṣayaḥ sarit-samudra-ādiḥ //</p>
+</note>
+
+<p xml:id="AnTs_12">uṣṇasparśavat tejaḥ / tad dvividhaṃ nityam anityaṃ ca / niyyaṃ paramāṇurūpam / anityaṃ kāryarūpam / punas trividhaṃ śarīrendriyaviṣayabhedāt / śarīram ādityaloke / indriyaṃ rūpagrāhakaṃ cakṣuḥ kṛṣṇatārāgravarti / viṣayaś caturvidhaḥ / bhaumadivyaudaryākarajabhedāt / bhaumaṃ vahnyādikam / abindhanaṃ divyaṃ vidyudādi / bhuktasya pariṇāmahetur audaryam. ākarajaṃ suvarṇādi //</p>
+<note type="analysis" corresp="#AnTs_12">
+<p>uṣṇa-sparśavat tejaḥ / tad dvividhaṃ nityam anityaṃ ca / niyyaṃ paramāṇu-rūpam / anityaṃ kārya-rūpam / punas trividhaṃ śarīra-indriya-viṣaya-bhedāt / śarīram ādityaloke / indriyaṃ rūpa-grāhakaṃ cakṣuḥ kṛṣṇatāra-agravarti / viṣayaś caturvidhaḥ / bhauma-divya-audarya-ākaraja-bhedāt / bhaumaṃ vahny-ādikam / abindhanaṃ divyaṃ vidyud-ādi / bhuktasya pariṇāma-hetur audaryam. ākarajaṃ suvarṇa-ādi //</p>
+</note>
+
+<p xml:id="AnTs_13">rūparahitasparśavān vāyuḥ / sa dvividho nityo 'nityaś ca / nityaḥ paramāṇurūpaḥ / anityaḥ kāryarūpaḥ / punas trividhaḥ śarīrendriyaviṣayabhedāt / śarīraṃ vāyuloke / indriyaṃ sparśagrāhakaṃ tvaksarvaśarīravarti / viṣayo vṛkṣādikampanahetuḥ // śarīrāntaḥsaṃcārī vāyuḥ prāṇaḥ / sa caiko 'py upādhibhedāt prāṇāpānādisaṃjñā labhate //</p>
+<note type="analysis" corresp="#AnTs_13">
+<p>rūpa-rahita-sparśavān vāyuḥ / sa dvividho nityo 'nityaś ca / nityaḥ paramāṇu-rūpaḥ / anityaḥ kārya-rūpaḥ / punas trividhaḥ śarīra-indriya-viṣaya-bhedāt / śarīraṃ vāyu-loke / indriyaṃ sparśa-grāhakaṃ tvak-sarva-śarīravarti / viṣayo vṛkṣa-ādi-kampana-hetuḥ // śarīra-antaḥsaṃcārī vāyuḥ prāṇaḥ / sa ca eko 'py upādhi-bhedāt prāṇa-apāna-ādi-saṃjñā labhate //</p>
+</note>
+
+<p xml:id="AnTs_14">śabdaguṇam ākāśam / tac caikaṃ vibhu nityaṃ ca //</p>
+<note type="analysis" corresp="#AnTs_14">
+<p>śabda-guṇam ākāśam / tac ca ekaṃ vibhu nityaṃ ca //</p>
+</note>
+
+<p xml:id="AnTs_15">atītādivyavahārahetuḥ kālaḥ / sa caiko vibhur nityaś ca //</p>
+<note type="analysis" corresp="#AnTs_15">
+<p>atīta-ādi-vyavahāra-hetuḥ kālaḥ / sa ca eko vibhur nityaś ca //</p>
+</note>
+
+<p xml:id="AnTs_16">prācyādivyavahārahetur dik / sā caikā vibhvī nityā ca //</p>
+<note type="analysis" corresp="#AnTs_16">
+<p>prācya-ādi-vyavahāra-hetur dik / sā ca ekā vibhvī nityā ca //</p>
+</note>
+
+<p xml:id="AnTs_17">jñānādhikaraṇam ātmā / sa dvividhaḥ paramātmā jīvātmā ca / tatreśvaraḥ sarvajñaḥ paramātmaika eva / jīvātmā pratiśarīraṃ bhinno vibhur nityaś ca //</p>
+<note type="analysis" corresp="#AnTs_17">
+<p>jñāna-adhikaraṇam ātmā / sa dvividhaḥ param-ātmā jīva-ātmā ca / tatrā iśvaraḥ sarvajñaḥ param-ātmā-eka eva / jīva-ātmā pratiśarīraṃ bhinno vibhur nityaś ca //</p>
+</note>
+
+<p xml:id="AnTs_18">sukhādyupalabdhisādhanam indriyaṃ manaḥ / tac ca pratyātmaniyatatvād anantaṃ paramāṇurūpaṃ nityaṃ ca //</p>
+<note type="analysis" corresp="#AnTs_18">
+<p>sukha-ādy-upalabdhi-sādhanam indriyaṃ manaḥ / tac ca pratyātma-niyatatvād anantaṃ paramāṇu-rūpaṃ nityaṃ ca //</p>
+</note>
+
+<p xml:id="AnTs_19">cakṣurmātragrāhyo guṇo rūpam / tac ca śuklanīlapītaraktaharitakapiśacitrabhedāt saptavidhaṃ pṛthivījalatejovṛtti / tatra pṛthivyāṃ saptavidham / abhāsvaraśuklaṃ jale / bhāsvaraśuklaṃ tejasi //</p>
+<note type="analysis" corresp="#AnTs_19">
+<p>cakṣur-mātra-grāhyo guṇo rūpam / tac ca śukla-nīla-pīta-rakta-harita-kapiśa-citra-bhedāt saptavidhaṃ pṛthivī-jala-tejo-vṛtti / tatra pṛthivyāṃ saptavidham / abhāsvara-śuklaṃ jale / bhāsvara-śuklaṃ tejasi //</p>
+</note>
+
+<p xml:id="AnTs_20">rasanagrāhyo guṇo rasaḥ / sa ca madhurāmlalavaṇakaṭukaṣāyatiktabhedāt ṣaḍvidhaḥ / pṛthivyāṃ ṣaḍvidhaḥ / jale madhura eva //</p>
+<note type="analysis" corresp="#AnTs_20">
+<p>rasana-grāhyo guṇo rasaḥ / sa ca madhu-rāmla-lavaṇa-kaṭu-kaṣāya-tikta-bhedāt ṣaḍvidhaḥ / pṛthivyāṃ ṣaḍvidhaḥ / jale madhura eva //</p>
+</note>
+
+<p xml:id="AnTs_21">ghrāṇagrāhyo guṇo gandhaḥ / sa ca dvividhaḥ surabhirasurabhiś ca / pṛthivīmātravṛttiḥ /</p>
+<note type="analysis" corresp="#AnTs_21">
+<p>ghrāṇa-grāhyo guṇo gandhaḥ / sa ca dvividhaḥ surabhir-asurabhiś ca / pṛthivī-mātra-vṛttiḥ /</p>
+</note>
+<p xml:id="AnTs_22">tvagindriyamātragrāhyo guṇo saparśaḥ / sa ca trividhaḥ śitoṣṇānuṣṇāśītabhedāt / pṛthivyaptejovāyuvṛttiḥ / tatra śīto jale / uṣṇas tejasi / anuṣṇāśītaḥ pṛthivīvāyvoḥ //</p>
+<note type="analysis" corresp="#AnTs_22">
+<p>tvag-indriya-mātra-grāhyo guṇo saparśaḥ / sa ca trividhaḥ śita-uṣṇa-anuṣṇa-aśīta-bhedāt / pṛthivy-ap-tejo-vāyu-vṛttiḥ / tatra śīto jale / uṣṇas tejasi / anuṣṇa-aśītaḥ pṛthivī-vāyvoḥ //</p>
+</note>
+
+<p xml:id="AnTs_23">rūpādicatuṣṭayaṃ pṛthivyāṃ pākajam anityaṃ ca / anyatrāpākajaṃ nityam antyaṃ ca / nityagataṃ nityam / anityagatam anityam //</p>
+<note type="analysis" corresp="#AnTs_23">
+<p>rūpa-ādi-catuṣṭayaṃ pṛthivyāṃ pākajam anityaṃ ca / anyatra apākajaṃ nityam antyaṃ ca / nityagataṃ nityam / anityagatam anityam //</p>
+</note>
+
+<p xml:id="AnTs_24">ekatvādivyavahārahetuḥ saṃkhyā / navadravyavṛttir ekatvādiparārdhaparyantā / ekatvaṃ nityam anityaṃ ca / nityagataṃ nityam anityagatam anityam / dvitvādikaṃ tu sarvatrānityam eva //</p>
+<note type="analysis" corresp="#AnTs_24">
+<p>ekatva-ādi-vyavahāra-hetuḥ saṃkhyā / nava-dravya-vṛttir ekatva-ādi-parārdha-paryantā / ekatvaṃ nityam anityaṃ ca / nityagataṃ nityam anityagatam anityam / dvitva-ādikaṃ tu sarvatra a-nityam eva //</p>
+</note>
+
+<p xml:id="AnTs_25">mānavyavahārakāraṇaṃ parimāṇaṃ / navadravyavṛtti / tac caturvidham / aṇu mahad dīrghaṃ hrasvaṃ ceti //</p>
+<note type="analysis" corresp="#AnTs_25">
+<p>māna-vyavahāra-kāraṇaṃ parimāṇaṃ / nava-dravya-vṛtti / tac caturvidham / aṇu mahad dīrghaṃ hrasvaṃ ca iti //</p>
+</note>
+
+<p xml:id="AnTs_26">pṛthagvyavahārakāraṇaṃ pṛthagtvaṃ / sarvadravyavṛtti //</p>
+<note type="analysis" corresp="#AnTs_26">
+<p>pṛthag-vyavahāra-kāraṇaṃ pṛthagtvaṃ / sarvadravyavṛtti //</p>
+</note>
+
+<p xml:id="AnTs_27">saṃyuktavyavahārahetuḥ saṃyogaḥ / sarvadravyavṛttiḥ //</p>
+<note type="analysis" corresp="#AnTs_27">
+<p>saṃyukta-vyavahāra-hetuḥ saṃyogaḥ / sarvadravyavṛttiḥ //</p>
+</note>
+
+<p xml:id="AnTs_28">saṃyoganāśako guṇo vibhāgaḥ / sarvadravyavṛttiḥ //</p>
+<note type="analysis" corresp="#AnTs_28">
+<p>saṃyoga-nāśako guṇo vibhāgaḥ / sarvadravyavṛttiḥ //</p>
+</note>
+
+<p xml:id="AnTs_29">parāparavyavahārāsādhāraṇakāraṇe paratvāparatve / pṛthivyādicatuṣṭayamanovṛttīti / te dvividhe dikkṛte kālakṛte ca / dūrasthe dikkṛtaṃ paratvam / samīpasthe dikkṛtam aparatvam / jyeṣṭhe kālakṛthaṃ paratvam / kaniṣṭhe kālakṛtam aparatvam //</p>
+<note type="analysis" corresp="#AnTs_29">
+<p>para-apara-vyavahāra-asādhāraṇa-kāraṇe paratva-aparatve / pṛthivy-ādi-catuṣṭaya-mano-vṛtti iti / te dvividhe dik-kṛte kāla-kṛte ca / dūra-sthe dik-kṛtaṃ paratvam / samīpasthe dik-kṛtam aparatvam / jyeṣṭhe kāla-kṛthaṃ paratvam / kaniṣṭhe kāla-kṛtam aparatvam //</p>
+</note>
+
+<p xml:id="AnTs_30">ādyapatanāsamavāyikāraṇaṃ gurutvaṃ / pṛthivījalavṛtti //</p>
+<note type="analysis" corresp="#AnTs_30">
+<p>ādya-patana-asamavāyi-kāraṇaṃ gurutvaṃ / pṛthivī-jala-vṛtti //</p>
+</note>
+
+<p xml:id="AnTs_31">ādyasyandanāsamavāyikāraṇaṃ dravatvaṃ pṛthivyaptejovṛtti / tad dvividhaṃ sāṃsiddhikaṃ naimittikaṃ ca / sāṃsiddhikaṃ jale naimittikaṃ pṛthivītejasoḥ / pṛthivyāṃ ghṛtādāvagnisaṃyogajanyaṃ daravatvam / tejasi suvarṇādau //</p>
+<note type="analysis" corresp="#AnTs_31">
+<p>ādya-syandana-asamavāyi-kāraṇaṃ dravatvaṃ pṛthivy-ap-tejo-vṛtti / tad dvividhaṃ sāṃsiddhikaṃ naimittikaṃ ca / sāṃsiddhikaṃ jale naimittikaṃ pṛthivī-tejasoḥ / pṛthivyāṃ ghṛta-ādāv-agni-saṃyogajanyaṃ daravatvam / tejasi suvarṇādau //</p>
+</note>
+
+<p xml:id="AnTs_32">cūrṇādipiṇḍībhāvahetur guṇaḥ snehaḥ / jalamātravṛttiḥ //</p>
+<note type="analysis" corresp="#AnTs_32">
+<p>cūrṇa-ādi-piṇḍī-bhāva-hetur guṇaḥ snehaḥ / jala-mātra-vṛttiḥ //</p>
+</note>
+
+<p xml:id="AnTs_33">śrotragrāhyo guṇaḥ śabdaḥ / ākāśamātravṛttiḥ / sa dvividho dvanyātmako varṇātmakaś ceti / dvanyātmako bheryādau / varṇātmakaḥ saṃskṛtabhāṣādirūpaḥ //</p>
+<note type="analysis" corresp="#AnTs_33">
+<p>śrotra-grāhyo guṇaḥ śabdaḥ / ākāśa-mātra-vṛttiḥ / sa dvividho dvany-ātmako varṇa-ātmakaś ca iti / dvany-ātmako bhery-ādau / varṇa-ātmakaḥ saṃskṛta-bhāṣā-ādi-rūpaḥ //</p>
+</note>
+
+<p xml:id="AnTs_34">sarvavyavahārahetur buddhir jñānam / sā dvividhā smṛtiranubhavaś ca / saṃskāramātrajanyaṃ jñānaṃ smṛtiḥ / tadbhinnaṃ jñānam anubhavaḥ //</p>
+<note type="analysis" corresp="#AnTs_34">
+<p>sarva-vyavahāra-hetur buddhir jñānam / sā dvividhā smṛtir-anubhavaś ca / saṃskāra-mātra-janyaṃ jñānaṃ smṛtiḥ / tad-bhinnaṃ jñānam anubhavaḥ //</p>
+</note>
+
+<p xml:id="AnTs_35">sa dvividho yathārtho 'yathārthaś ca / tadvati tatprakārako 'nubhavo yathārthaḥ / yathā rajata idaṃ rajatam iti jñānam / sa eva pramety ucyate / tadabhāvavati tatprakārako 'nubhavo 'yathārthaḥ / yathā śuktāv idaṃ rajatam iti jñānam //</p>
+<note type="analysis" corresp="#AnTs_35">
+<p>sa dvividho yathārtho 'yathārthaś ca / tad-vati tat-prakārako 'nubhavo yathārthaḥ / yathā rajata idaṃ rajatam iti jñānam / sa eva prama īty ucyate / tad-abhāva-vati tat-prakārako 'nubhavo 'yathārthaḥ / yathā śuktāv idaṃ rajatam iti jñānam //</p>
+</note>
+
+<p xml:id="AnTs_36">yathārthānubhavaś caturvidhaḥ pratyakṣānumityupamitiśabdabhedāt / tatkaraṇam api caturvidhaṃ pratyakṣānumānopamānaśabdabhedāt //</p>
+<note type="analysis" corresp="#AnTs_36">
+<p>yathārtha-anubhavaś caturvidhaḥ pratyakṣa-anumity-upamiti-śabda-bhedāt / tat-karaṇam api caturvidhaṃ pratyakṣa-anumāna-upamāna-śabda-bhedāt //</p>
+</note>
+
+<p xml:id="AnTs_37">asādhāraṇam kāraṇaṃ karaṇam /</p>
+<note type="analysis" corresp="#AnTs_37">
+<p>asādhāraṇam kāraṇaṃ karaṇam /</p>
+</note>
+<p xml:id="AnTs_38">kāryaniyatapūrvavṛtti kāraṇam /</p>
+<note type="analysis" corresp="#AnTs_38">
+<p>kārya-niyata-pūrva-vṛtti kāraṇam /</p>
+</note>
+<p xml:id="AnTs_39">kāryaṃ prāgabhāvapratiyogi /</p>
+<note type="analysis" corresp="#AnTs_39">
+<p>kāryaṃ prāg-abhāva-pratiyogi /</p>
+</note>
+<p xml:id="AnTs_40">kāraṇaṃ trividhaṃ samavāyyasamavāyinimittabhedāt / yat samavetaṃ kāryam utpadyate tat samavāyikāraṇam / yathā tantavaḥ paṭasya paṭaś ca khagatarūpādeḥ / kāryeṇa kāraṇena vā sahaikasminn arthe samavetatve sati yat kāraṇaṃ tad asamavāyikāraṇam / yathā tantusaṃyogaḥ paṭasya tanturūpaṃ paṭarūpasya / tadubhayabhinnaṃ kāraṇaṃ nimittakāraṇam / yathā turīvemādikaṃ paṭasya /</p>
+<note type="analysis" corresp="#AnTs_40">
+<p>kāraṇaṃ trividhaṃ samavāyy-asamavāyi-nimitta-bhedāt / yat samavetaṃ kāryam utpadyate tat samavāyikāraṇam / yathā tantavaḥ paṭasya paṭaś ca khagata-rūpādeḥ / kāryeṇa kāraṇena vā saha ekasminn arthe samavetatve sati yat kāraṇaṃ tad asamavāyikāraṇam / yathā tantusaṃyogaḥ paṭasya tanturūpaṃ paṭarūpasya / tad-ubhaya-bhinnaṃ kāraṇaṃ nimittakāraṇam / yathā turī-vema-ādikaṃ paṭasya /</p>
+</note>
+<p xml:id="AnTs_41">tad etattrividhakāraṇamadhye yad asādhāraṇaṃ kāraṇaṃ tad eva karaṇam //</p>
+<note type="analysis" corresp="#AnTs_41">
+<p>tad etat-trividha-kāraṇa-madhye yad asādhāraṇaṃ kāraṇaṃ tad eva karaṇam //</p>
+</note>
+
+<p xml:id="AnTs_42">tatra pratyakṣajñānakaraṇaṃ pratyakṣam / indriyārthasannikarṣajanyaṃ jñānaṃ pratyakṣam /tad dvividhaṃ nirvikalpakaṃ savikalpakaṃ ceti / tatra nirvikalpakaṃ jñānaṃ nirvikalpakaṃ yathedaṃ kiṃcit / saparakārakaṃ jñānaṃ savikalpakaṃ yathā ḍittho'yam brahmaṇo'yaṃ śyāmo'yam iti //</p>
+<note type="analysis" corresp="#AnTs_42">
+<p>tatra pratyakṣa-jñāna-karaṇaṃ pratyakṣam / indriya-artha-sannikarṣa-janyaṃ jñānaṃ pratyakṣam /tad dvividhaṃ nirvikalpakaṃ savikalpakaṃ ca iti / tatra nirvikalpakaṃ jñānaṃ nirvikalpakaṃ yatha īdaṃ kiṃcit / saparakārakaṃ jñānaṃ savikalpakaṃ yathā ḍittho'yam brahmaṇo'yaṃ śyāmo'yam iti //</p>
+</note>
+
+<p xml:id="AnTs_43">pratyakṣajñānahetur indriyārthasannikarṣaḥ ṣaḍvidhaḥ / saṃyogaḥ saṃyuktasamavāyaḥ saṃyuktasamavetasamavāyaḥ samavāyaḥ samavetasamavāyo viśeṣaṇaviśeṣyabhāvaś ceti / cakṣuṣā ghaṭapratyakṣajanane saṃyogaḥ sannikarṣaḥ / ghaṭarūpapratyakṣajanane saṃyuktasamavāyaḥ sannikarṣaḥ cakṣuḥsaṃyukte ghaṭe rūpasya samavāyāt / rūpatvasāmānyapratyakṣe saṃyuktasamavetasamavāyaḥ sannikarṣaḥ cakṣuḥsaṃyukte ghaṭe rūpaṃ samavetaṃ tatra rūpatvasya samavāyāt / śrotreṇa śabdasyākāśaguṇatvāt guṇaguṇinoś ca samavāyāt / śabdatvasākṣātkāre samavetasamavāyaḥ sannikarṣaḥ śrotrasamavete śabde śabdatvasya samavāyāt / abhāvaparatyakṣe viśeṣaṇaviśeṣyabhāvaḥ sannikarṣo ghaṭābhāvavad bhṛtalam ity atra cakṣuḥsaṃyukte bhūtale ghaṭābhāvasya viśeṣaṇatvāt / evaṃ snnikarṣaṣaṭkajanyaṃ jñānaṃ pratyakṣam / tatkaraṇam indriyam / tasmād indriyaṃ pratyakṣapramāṇam iti siddham //</p>
+<note type="analysis" corresp="#AnTs_43">
+<p>pratyakṣa-jñāna-hetur indriya-artha-sannikarṣaḥ ṣaḍvidhaḥ / saṃyogaḥ saṃyukta-samavāyaḥ saṃyukta-samaveta-samavāyaḥ samavāyaḥ samaveta-samavāyo viśeṣaṇa-viśeṣya-bhāvaś ca iti / cakṣuṣā ghaṭa-pratyakṣa-janane saṃyogaḥ sannikarṣaḥ / ghaṭa-rūpa-pratyakṣa-janane saṃyukta-samavāyaḥ sannikarṣaḥ cakṣuḥsaṃyukte ghaṭe rūpasya samavāyāt / rūpatva-sāmānyapratyakṣe saṃyukta-samaveta-samavāyaḥ sannikarṣaḥ cakṣuḥ-saṃyukte ghaṭe rūpaṃ samavetaṃ tatra rūpatvasya samavāyāt / śrotreṇa śabdasyā akāśa-guṇatvāt guṇa-guṇinoś ca samavāyāt / śabdatva-sākṣātkāre samaveta-samavāyaḥ sannikarṣaḥ śrotra-samavete śabde śabdatvasya samavāyāt / abhāvaparatyakṣe viśeṣaṇa-viśeṣya-bhāvaḥ sannikarṣo ghaṭa-abhāvavad bhṛtalam ity atra cakṣuḥ-saṃyukte bhūtale ghaṭa-abhāvasya viśeṣaṇatvāt / evaṃ snnikarṣa-ṣaṭka-janyaṃ jñānaṃ pratyakṣam / tatkaraṇam indriyam / tasmād indriyaṃ pratyakṣa-pramāṇam iti siddham //</p>
+</note>
+
+<p xml:id="AnTs_44">anumitikaraṇam anumānam / parāmarśajanyaṃ jñānam anumitiḥ / vyāptiviśiṣṭapakṣadharmatājñānaṃ parāmarśaḥ / yathā vahnivyāpyadhūmavān ayaṃ parvata iti jñānaṃ parāmarśaḥ / taj janyaṃ parvato vahnimān iti jñānam anumitiḥ / yatra yatra dhūmas tatrāgnir iti sāhacaryaniyamo vyāptiḥ / vyāpyasya parvatādivṛttitvaṃ pakṣadharmatā //</p>
+<note type="analysis" corresp="#AnTs_44">
+<p>anumiti-karaṇam anumānam / parāmarśajanyaṃ jñānam anumitiḥ / vyāpti-viśiṣṭa-pakṣa-dharmatā-jñānaṃ parāmarśaḥ / yathā vahni-vyāpya-dhūmavān ayaṃ parvata iti jñānaṃ parāmarśaḥ / taj janyaṃ parvato vahnimān iti jñānam anumitiḥ / yatra yatra dhūmas tatra agnir iti sāhacarya-niyamo vyāptiḥ / vyāpyasya parvata-ādi-vṛttitvaṃ pakṣadharmatā //</p>
+</note>
+
+<p xml:id="AnTs_45">anumānaṃ dvividhaṃ svārthaṃ parārthaṃ ca / tatra svārthaṃ svānumitihetuḥ / tathā hi svayam eva bhūyo darśanena yatra dhūmas tatra agnir iti mahānasādau vyāptiṃ gṛhītvā parvatasamīpaṃ gatas tadgate cāgnau sandihānaḥ parvate dhūmaṃ paśyan vyāptiṃ smarati yatra dhūmas tatrāgnir iti / tadantaraṃ vahnivyāpyadhūmavān ayaṃ parvata iti jñānam utpadyate / ayam eva liṅgaparāmarṣaṃ ity ucyate / tasmāt parvato vahnimān iti jñānam anumitir utpadyate / tad etat svārthānumānam / yat tu svayaṃ dhūmād agnim anumāya parapratipattyarthaṃ pañcāvayavavākyaṃ prayukte tat parārthānumānam / yathā parvato vahnimān dhūmavattvāt / yo yo dhūmavān sa vahnimān yathā mahānasaḥ / tathā cāyam / tasmāt tatheti / anena pratipāditāl lingāt paro'py agniṃ pratipadyate //</p>
+<note type="analysis" corresp="#AnTs_45">
+<p>anumānaṃ dvividhaṃ sva-arthaṃ para-arthaṃ ca / tatra sva-arthaṃ sva-anumiti-hetuḥ / tathā hi svayam eva bhūyo darśanena yatra dhūmas tatra agnir iti mahānasādau vyāptiṃ gṛhītvā parvatasamīpaṃ gatas tad-gate ca agnau sandihānaḥ parvate dhūmaṃ paśyan vyāptiṃ smarati yatra dhūmas tatra agnir iti / tad-antaraṃ vahni-vyāpya-dhūmavān ayaṃ parvata iti jñānam utpadyate / ayam eva liṅgaparāmarṣaṃ ity ucyate / tasmāt parvato vahnimān iti jñānam anumitir utpadyate / tad etat sva-artha-anumānam / yat tu svayaṃ dhūmād agnim anumāya para-pratipatty-arthaṃ pañca-avayava-vākyaṃ prayukte tat para-artha-anumānam / yathā parvato vahnimān dhūmavattvāt / yo yo dhūmavān sa vahnimān yathā mahānasaḥ / tathā ca-ayam / tasmāt tatha īti / anena pratipāditāl lingāt paro'py agniṃ pratipadyate //</p>
+</note>
+
+<p xml:id="AnTs_46">pratijñāhetūdāharaṇopanayanigamāni pañcāvayavaḥ / parvato vahnimān iti pratijñā / dhūmavattvād iti hetuḥ / yo yo dhūmavān sa so'gnimān yathā mahānasa ity udāharaṇam / tathā cāyam iti upanayaḥ / tasmāt tatheti nigamanam //</p>
+<note type="analysis" corresp="#AnTs_46">
+<p>pratijñā-hetu-udāharaṇa-upanaya-nigamāni pañca-avayavaḥ / parvato vahnimān iti pratijñā / dhūmavattvād iti hetuḥ / yo yo dhūmavān sa so'gnimān yathā mahānasa ity udāharaṇam / tathā ca ayam iti upanayaḥ / tasmāt tatha īti nigamanam //</p>
+</note>
+
+<p xml:id="AnTs_47">svārthānumitiparārthānumityor liṅgaparāmarśa eva karaṇam / tasmāl liṅgaparāmarśā'numānam //</p>
+<note type="analysis" corresp="#AnTs_47">
+<p>sva-artha-anumiti-para-artha-anumityor liṅga-parāmarśa eva karaṇam / tasmāl liṅga-parāmarśā'numānam //</p>
+</note>
+
+<p xml:id="AnTs_48">liṅgaṃ trividham / anvayavyatireki kevalānvayi kevalavyatireki ceti / anvayena vyatirekeṇa ca vyāptimad anvayavyatireki / yathā vahnau sādhye dhūmavattvam / yatra dhūmas tatrāgnir yathā mahānasa ity anvayavyāptiḥ / yatra vahnir nāsti tatra dhūmo'pi nāsti yathā mahāhrada iti vyatirekavyāptiḥ / anvayamātravyāptikaṃ kevalānvayi yathā ghaṭo'bhidheyaḥ prameyatvāt paṭavat / atra prameyatvābhidhyatvayor vyatirekavyāptir nāsti sarvasyāpi prameyatvād abhidheyatvāc ca / vyatirekamātravyāptikaṃ kevalavyatireki yathā pṛthivī tarebhyo bhidyate gandhavattvāt / yad itarebhyo na bhidyate na tad gandhavat / yathā jalam / na ceyaṃ tathā / tasmān na tatheti atra yad gandhavat tad itarabhinnam ity anvayadṛṣṭanto nāsti pṛthivīmātrasya pakṣatvāt //</p>
+<note type="analysis" corresp="#AnTs_48">
+<p>liṅgaṃ trividham / anvaya-vyatireki kevala-anvayi kevala-vyatireki ca iti / anvayena vyatirekeṇa ca vyāptimad anvaya-vyatireki / yathā vahnau sādhye dhūmavattvam / yatra dhūmas tatra agnir yathā mahānasa ity anvaya-vyāptiḥ / yatra vahnir na asti tatra dhūmo'pi na asti yathā mahāhrada iti vyatireka-vyāptiḥ / anvaya-mātra-vyāptikaṃ kevala-anvayi yathā ghaṭo'bhidheyaḥ prameyatvāt paṭavat / atra prameyatva-abhidhyatvayor vyatirekavyāptir na asti sarvasya api prameyatvād abhidheyatvāc ca / vyatirekamātravyāptikaṃ kevala-vyatireki yathā pṛthivī tarebhyo bhidyate gandhavattvāt / yad itarebhyo na bhidyate na tad gandhavat / yathā jalam / na ca iyaṃ tathā / tasmān na tatha īti atra yad gandhavat tad itara-bhinnam ity anvayadṛṣṭanto na asti pṛthivī-mātrasya pakṣatvāt //</p>
+</note>
+
+<p xml:id="AnTs_49">saṃdigdhasādhyavān pakṣaḥ / yathā dhūmavattve hetau parvataḥ //</p>
+<note type="analysis" corresp="#AnTs_49">
+<p>saṃdigdha-sādhyavān pakṣaḥ / yathā dhūmavattve hetau parvataḥ //</p>
+</note>
+
+<p xml:id="AnTs_50">niścitasādhyavān sapakṣaḥ / yathā tatraiva mahānasaḥ //</p>
+<note type="analysis" corresp="#AnTs_50">
+<p>niścita-sādhyavān sapakṣaḥ / yathā tatra eva mahānasaḥ //</p>
+</note>
+
+<p xml:id="AnTs_51">niścitasādhyābhāvavān vipakṣaḥ / yathā tatraiva mahāhradaḥ //</p>
+<note type="analysis" corresp="#AnTs_51">
+<p>niścita-sādhya-abhāvavān vipakṣaḥ / yathā tatra eva mahāhradaḥ //</p>
+</note>
+
+<p xml:id="AnTs_52">savyabhicāraviruddhasatpakṣāsiddhabādhitāḥ pañca hetvābhāsāḥ //</p>
+<note type="analysis" corresp="#AnTs_52">
+<p>savyabhicāra-viruddha-satpakṣa-asiddha-bādhitāḥ pañca hetvābhāsāḥ //</p>
+</note>
+
+<p xml:id="AnTs_53">savyabhicāro'naikāntikaḥ / sa trividhaḥ / sādhāraṇāsādhāraṇānupasaṃhāribhedāt / tatra sādhyābhāvavadvṛttiḥ sādhāraṇo anaikāntikaḥ / yathā parvato vahnimān prameyatvād iti prameyatvasya vahnyabhāvavati hrade vidyamānatvāt / sarvasapakṣavipakṣavyāvṛtto'sādhāraṇaḥ / yathā śabdo nityaḥ śabdatvād iti / śabdatvaṃ sarvebhyo nityebhyo'ntyebhyaś ca vyāvṛttaṃ śabdamātravṛtti / anvayavyatirekadṛṣṭāntarahito'nupasaṃhārī / yathā sarvam anityaṃ prameyatvād iti / atra sarvasyāpi pakṣatvād dṛṣṭānto nāsti //</p>
+<note type="analysis" corresp="#AnTs_53">
+<p>savyabhicāro'naikāntikaḥ / sa trividhaḥ / sādhāraṇa-asādhāraṇa-anupasaṃhāri-bhedāt / tatra sādhya-abhāvavad-vṛttiḥ sādhāraṇo anaikāntikaḥ / yathā parvato vahnimān prameyatvād iti prameyatvasya vahny-abhāvavati hrade vidyamānatvāt / sarva-sapakṣa-vipakṣa-vyāvṛtto'sādhāraṇaḥ / yathā śabdo nityaḥ śabdatvād iti / śabdatvaṃ sarvebhyo nityebhyo'ntyebhyaś ca vyāvṛttaṃ śabda-mātra-vṛtti / anvaya-vyatireka-dṛṣṭānta-rahito'nupasaṃhārī / yathā sarvam anityaṃ prameyatvād iti / atra sarvasya api pakṣatvād dṛṣṭānto na asti //</p>
+</note>
+
+<p xml:id="AnTs_54">sādhyābhāvavyāpto hetur viruddhaḥ / yatra śabdo nityaḥ kṛtakatvād iti / kṛtakatvaṃ hi nityatvābhāvenānityatvena vyāptam //</p>
+<note type="analysis" corresp="#AnTs_54">
+<p>sādhya-abhāva-vyāpto hetur viruddhaḥ / yatra śabdo nityaḥ kṛtakatvād iti / kṛtakatvaṃ hi nityatva-abhāvena a-nityatvena vyāptam //</p>
+</note>
+
+<p xml:id="AnTs_55">yasya sādhyabhāvasādhakaṃ hetvantaraṃ vidyate sa satpratipakṣaḥ / yathā śabdo nityaḥ śrāvaṇatvāc chabdatvavad iti / śabdo'nityaḥ kāryatvād ghaṭavad iti //</p>
+<note type="analysis" corresp="#AnTs_55">
+<p>yasya sādhya-bhāva-sādhakaṃ hetv-antaraṃ vidyate sa satpratipakṣaḥ / yathā śabdo nityaḥ śrāvaṇatvāc chabdatvavad iti / śabdo'nityaḥ kāryatvād ghaṭavad iti //</p>
+</note>
+
+<p xml:id="AnTs_56">asiddhas trividhaḥ / āśrayāsiddhaḥ svarūpāsiddho vyāpyatvāsiddhaś ceti / āśrayāsiddho yathā gaganāravindaṃ surabhy aravindatvāt sarojāravindavat / atra gaganāravindam āśrayaḥ / sa ca nāsty eva / svarūpāsiddho yathā śabdo guṇaś cākṣuṣatvāt / atra cākṣuṣatvaṃ śabde nāsti śabdasya śrāvaṇatvāt / sopādhiko vyāpyatvāsiddhaḥ / sādhyavyāpakatve sati sādhanāvyāpaka upādhiḥ / sādhyasamānādhikaraṇātyantābhāvāpratiyogitvaṃ sādhyavyāpakatvam / sādhanavann iṣṭātyantābhāvapratiyogitvaṃ sādhāraṇāvyapakatvam / parvato dhūmavān vahnimattvād ity atrārdrendhasaṃyoga upādhiḥ / tathā hi / yatra dhūmas tatrārdrendhnasaṃyoga iti sādhyavyāpakatā / yatra vahnis tatrārdrendhanasaṃyogābhāvād iti sādhanāvyāpakatā / evaṃ sādhyavyāpakatve sati sādhanāvyāpakatvād ardrendhanasaṃyoga upādhiḥ / sopādhikatvād vahnimattvaṃ vyāpyatvāsiddham //</p>
+<note type="analysis" corresp="#AnTs_56">
+<p>asiddhas trividhaḥ / āśraya-asiddhaḥ svarūpa-asiddho vyāpyatva-asiddhaś ca iti / āśraya-asiddho yathā gagana-aravindaṃ surabhy aravindatvāt saro-ja-aravindavat / atra gagana-aravindam āśrayaḥ / sa ca na asty eva / svarūpa-asiddho yathā śabdo guṇaś cākṣuṣatvāt / atra cākṣuṣatvaṃ śabde na asti śabdasya śrāvaṇatvāt / sa-upādhiko vyāpyatva-asiddhaḥ / sādhya-vyāpakatve sati sādhana-avyāpaka upādhiḥ / sādhya-samāna-adhikaraṇa-atyanta-abhāva-apratiyogitvaṃ sādhya-vyāpakatvam / sādhanavann iṣṭa-atyanta-abhāva-pratiyogitvaṃ sādhāraṇa-avyapakatvam / parvato dhūmavān vahnimattvād ity atrā ardra-indhasaṃyoga upādhiḥ / tathā hi / yatra dhūmas tatrā ardra-indhna-saṃyoga iti sādhya-vyāpakatā / yatra vahnis tatrā ardra-indhana-saṃyoga-abhāvād iti sādhana-avyāpakatā / evaṃ sādhya-vyāpakatve sati sādhana-avyāpakatvād ardra-indhana-saṃyoga upādhiḥ / sa-upādhikatvād vahnimattvaṃ vyāpyatva-asiddham //</p>
+</note>
+
+<p xml:id="AnTs_57">yasya sādhyābhāvaḥ pramāṇāntareṇa niścitaḥ sa bādhitaḥ / yathā vahnir anuṣṇo dravyatvād iti / atrānuṣṇatvaṃ sādhyaṃ tadabhāva uṣṇatvaṃ spārśanapratyakṣeṇa gṛhyata iti bādhitatvam //</p>
+<note type="analysis" corresp="#AnTs_57">
+<p>yasya sādhya-abhāvaḥ pramāṇa-antareṇa niścitaḥ sa bādhitaḥ / yathā vahnir anuṣṇo dravyatvād iti / atra anuṣṇatvaṃ sādhyaṃ tad-abhāva uṣṇatvaṃ spārśana-pratyakṣeṇa gṛhyata iti bādhitatvam //</p>
+</note>
+
+<p xml:id="AnTs_58">upamitikaraṇam upamānam / saṃjñāsaṃjñisaṃbandhajñānam upamitiḥ / tatkaraṇaṃ sādṛśyajñānam / atideśavākyārthasmaraṇam avāntaravyāpāraḥ / tathā hi kaś cid gavayaśabdārtham ajānan kutaś cid āraṇyakapuruṣād gosadṛśo gavaya iti śrutvā vanaṃ gato vākyārthaṃ smaran gosadṛṣaṃ piṇḍaṃ paśyati / tadanantaram asau gavayaśabdavācya ity upamitir utpadyte //</p>
+<note type="analysis" corresp="#AnTs_58">
+<p>upamiti-karaṇam upamānam / saṃjñā-saṃjñi-saṃbandha-jñānam upamitiḥ / tat-karaṇaṃ sādṛśya-jñānam / atideśa-vākya-artha-smaraṇam avāntara-vyāpāraḥ / tathā hi kaś cid gavaya-śabda-artham ajānan kutaś cid āraṇyaka-puruṣād go-sadṛśo gavaya iti śrutvā vanaṃ gato vākya-arthaṃ smaran go-sadṛṣaṃ piṇḍaṃ paśyati / tad-anantaram asau gavaya-śabda-vācya ity upamitir utpadyte //</p>
+</note>
+
+<p xml:id="AnTs_59">āptavākyaṃ śabdaḥ / āptas tu yathārthavaktā / vākyaṃ padasamūhaḥ / yathā gām ānayeti / śaktaṃ padam / asmāt padād ayam artho boddhavya itīśvarasaṃketaḥ śaktiḥ //</p>
+<note type="analysis" corresp="#AnTs_59">
+<p>āpta-vākyaṃ śabdaḥ / āptas tu yatha ārtha-vaktā / vākyaṃ pada-samūhaḥ / yathā gām ānaya iti / śaktaṃ padam / asmāt padād ayam artho boddhavya itī iśvara-saṃketaḥ śaktiḥ //</p>
+</note>
+
+<p xml:id="AnTs_60">ākāṅkṣā yogyatā saṃnidhiś ca vākyārthajñānahetuḥ / padasya padāntaravyatirekaprayuktānvayānanubhāvakatvam ākāṅkṣā / arthābādho yogyatā / padānāmavilambenoccāraṇaṃ saṃnidhiḥ //</p>
+<note type="analysis" corresp="#AnTs_60">
+<p>ākāṅkṣā yogyatā saṃnidhiś ca vākya-artha-jñāna-hetuḥ / padasya pada-antara-vyatireka-prayukta-anvaya-ananubhāvakatvam ākāṅkṣā / artha-abādho yogyatā / padānām-avilambena uccāraṇaṃ saṃnidhiḥ //</p>
+</note>
+
+<p xml:id="AnTs_61">ākāṅkṣādirahitaṃ vākyam apramāṇam / yathā gaur aśvaḥ puruṣo hastīti na pramāṇam ākāṅkṣāvirahāt / agninā siñced iti na pramāṇaṃ yogyatāvirahāt / prahare prehare'sahoccāritāni gām ānayetyādipadāni na pramāṇaṃ saṃnidhyabhāvāt //</p>
+<note type="analysis" corresp="#AnTs_61">
+<p>ākāṅkṣā-ādi-rahitaṃ vākyam apramāṇam / yathā gaur aśvaḥ puruṣo hasti īti na pramāṇam ākāṅkṣā-virahāt / agninā siñced iti na pramāṇaṃ yogyatā-virahāt / prahare prehare-'saha uccāritāni gām ānaya ity-ādi-padāni na pramāṇaṃ saṃnidhy-abhāvāt //</p>
+</note>
+
+<p xml:id="AnTs_62">vākyaṃ dvividham / vaidikaṃ laukikaṃ ca / vaidikam īśvaroktatvāt sarvam eva pramāṇam / laukikaṃ tv āptoktaṃ pramāṇam / anyad apramāṇam //</p>
+<note type="analysis" corresp="#AnTs_62">
+<p>vākyaṃ dvividham / vaidikaṃ laukikaṃ ca / vaidikam īśvara-uktatvāt sarvam eva pramāṇam / laukikaṃ tv āpta-uktaṃ pramāṇam / anyad apramāṇam //</p>
+</note>
+
+<p xml:id="AnTs_63">vākyārthajñānaṃ śabdajñānam / tatkaraṇaṃ śabdaḥ //</p>
+<note type="analysis" corresp="#AnTs_63">
+<p>vākya-artha-jñānaṃ śabda-jñānam / tat-karaṇaṃ śabdaḥ //</p>
+</note>
+
+<p xml:id="AnTs_64">ayathārthānubhavas trividhaḥ saṃśayaviparyayatarkabhedāt / ekasmin dharmini viruddhanānādharmavaiśiṣṭyāvagāhi jñānaṃ saṃśayaḥ / yathā sthāṇur vā purṣo veti / mithyājñānaṃ viparyayaḥ / yathā śuktāv idaṃ rajatam iti / vyāpyāropeṇa vyāpakāropas tarkaḥ yathā yadi vahnir na syāt tarhi dhūmo'pi na syād iti //</p>
+<note type="analysis" corresp="#AnTs_64">
+<p>ayathā-artha-anubhavas trividhaḥ saṃśaya-viparyaya-tarka-bhedāt / ekasmin dharmini viruddha-nānā-dharma-vaiśiṣṭya-avagāhi jñānaṃ saṃśayaḥ / yathā sthāṇur vā purṣo va īti / mithyā-jñānaṃ viparyayaḥ / yathā śuktāv idaṃ rajatam iti / vyāpyā aropeṇa vyāpaka-āropas tarkaḥ yathā yadi vahnir na syāt tarhi dhūmo'pi na syād iti //</p>
+</note>
+
+<p xml:id="AnTs_65">smṛtir api dvividhā / yathārthāyathārthā ca pramājanyā yathārthā / apramājanyāyathārthā //</p>
+<note type="analysis" corresp="#AnTs_65">
+<p>smṛtir api dvividhā / yathā-artha-ayathā-arthā ca pramā-janyā yathā-arthā / apramā-janya ā-yathā-arthā //</p>
+</note>
+
+<p xml:id="AnTs_66">sarveśām anukūlatayā vedanīyaṃ sukham //</p>
+<note type="analysis" corresp="#AnTs_66">
+<p>sarveśām anukūlatayā vedanīyaṃ sukham //</p>
+</note>
+
+<p xml:id="AnTs_67">sarveśāṃ pratikūlatayā vedanīyaṃ duḥkham //</p>
+<note type="analysis" corresp="#AnTs_67">
+<p>sarveśāṃ pratikūlatayā vedanīyaṃ duḥkham //</p>
+</note>
+
+<p xml:id="AnTs_68">icchā kāmaḥ //</p>
+<note type="analysis" corresp="#AnTs_68">
+<p>icchā kāmaḥ //</p>
+</note>
+
+<p xml:id="AnTs_69">krodho dveṣaḥ //</p>
+<note type="analysis" corresp="#AnTs_69">
+<p>krodho dveṣaḥ //</p>
+</note>
+
+<p xml:id="AnTs_70">kṛtiḥ prayatnaḥ //</p>
+<note type="analysis" corresp="#AnTs_70">
+<p>kṛtiḥ prayatnaḥ //</p>
+</note>
+
+<p xml:id="AnTs_71">vihitakarmajanyo dharmaḥ //</p>
+<note type="analysis" corresp="#AnTs_71">
+<p>vihita-karma-janyo dharmaḥ //</p>
+</note>
+
+<p xml:id="AnTs_72">niṣiddhakarmajanyas tv adharmaḥ //</p>
+<note type="analysis" corresp="#AnTs_72">
+<p>niṣiddha-karma-janyas tv adharmaḥ //</p>
+</note>
+
+<p xml:id="AnTs_73">buddhyādayo'ṣṭāv ātmamātraviśeṣaguṇāḥ //</p>
+<note type="analysis" corresp="#AnTs_73">
+<p>buddhy-ādayo'ṣṭāv ātma-mātraviśeṣa-guṇāḥ //</p>
+</note>
+
+<p xml:id="AnTs_74">buddhīcchāprayatnā dvividhāḥ / nityā anityāś ca / nityā īśvarasya / anityā jīvasya //</p>
+<note type="analysis" corresp="#AnTs_74">
+<p>buddhi-icchā-prayatnā dvividhāḥ / nityā anityāś ca / nityā īśvarasya / anityā jīvasya //</p>
+</note>
+
+<p xml:id="AnTs_75">saṃskāras trividhaḥ / vego bhāvanā sthitisthāpakaś ceti / vegaḥ pṛthivyādicatuṣṭayamanovṛttiḥ / anubhavajanyā smṛtihetur bhāvanātmamātravṛttiḥ / anyathā kṛtasya punas tadavasthāpādakaḥ sthitisthāpakaḥ kaṭādipṛthivīvṛttiḥ //</p>
+<note type="analysis" corresp="#AnTs_75">
+<p>saṃskāras trividhaḥ / vego bhāvanā sthiti-sthāpakaś ca iti / vegaḥ pṛthivy-ādi-catuṣṭaya-mano-vṛttiḥ / anubhava-janyā smṛti-hetur bhāvanā ātma-mātra-vṛttiḥ / anyathā kṛtasya punas tad-avasthā-pādakaḥ sthiti-sthāpakaḥ kaṭa-ādi-pṛthivī-vṛttiḥ //</p>
+</note>
+
+<p xml:id="AnTs_76">calanātmakaṃ karma / ūrdhvadeśasaṃyogahetur utkṣepaṇam / adhodeśasaṃyogahetur apakṣepaṇam / śarīrasaṃnikṛṣṭasaṃyogahetur ākuñcanam / viprakṛṣṭasaṃyogahetuḥ prasāraṇam / anyat sarvaṃ gamanam / pṛthivyādicatuṣṭayamanomātravṛtti //</p>
+<note type="analysis" corresp="#AnTs_76">
+<p>calana-ātmakaṃ karma / ūrdhva-deśa-saṃyoga-hetur utkṣepaṇam / adho-deśa-saṃyoga-hetur apakṣepaṇam / śarīra-saṃnikṛṣṭa-saṃyoga-hetur ākuñcanam / viprakṛṣṭa-saṃyoga-hetuḥ prasāraṇam / anyat sarvaṃ gamanam / pṛthivy-ādi-catuṣṭaya-mano-mātra-vṛtti //</p>
+</note>
+
+<p xml:id="AnTs_77">nityam ekam anekānugataṃ sāmānyam / dravyaguṇakarmavṛtti / tad dvividhaṃ parāparabhedāt / paraṃ sattā / aparaṃ dravyatvādiḥ //</p>
+<note type="analysis" corresp="#AnTs_77">
+<p>nityam ekam aneka-anugataṃ sāmānyam / dravya-guṇa-karma-vṛtti / tad dvividhaṃ para-apara-bhedāt / paraṃ sattā / aparaṃ dravyatva-ādiḥ //</p>
+</note>
+
+<p xml:id="AnTs_78">nityadravyavṛttayo vyāvartakā viśeṣāḥ //</p>
+<note type="analysis" corresp="#AnTs_78">
+<p>nitya-dravya-vṛttayo vyāvartakā viśeṣāḥ //</p>
+</note>
+
+<p xml:id="AnTs_79">nityasaṃbandhaḥ samavāyaḥ / ayutasiddhavṛttiḥ / yayor dvayor madhya ekam avinaśyadaparāśritam evāvatiṣṭate tāv ayutasiddau / yathāvayavāvayavinau guṇaguṇinau kriyākriyāvantau jātivyaktī viśeṣanityadravye ceti //</p>
+<note type="analysis" corresp="#AnTs_79">
+<p>nitya-saṃbandhaḥ samavāyaḥ / ayuta-siddha-vṛttiḥ / yayor dvayor madhya ekam avinaśyad-apara-āśritam eva avatiṣṭate tāv ayutasiddau / yatha āvayava-avayavinau guṇa-guṇinau kriyā-kriyāvantau jāti-vyaktī viśeṣa-nitya-dravye ca iti //</p>
+</note>
+
+<p xml:id="AnTs_80">anādiḥ sāntaḥ prāgabhāvaḥ / utpatteḥ pūrvaṃ kāryasya / sādir anantaḥ pradhvaṃsaḥ / utpattyanantaraṃ kāryasya / traikālikasaṃsargāvacchinnapratiyogitāko'tyantābhāvaḥ / yathā bhūtale ghaṭo nāstīti / tādātmyasaṃbandhāvacchinnapratiyogitāko'nyonyābhāvaḥ yathā ghaṭaḥ paṭo na bhavatīti //</p>
+<note type="analysis" corresp="#AnTs_80">
+<p>an-ādiḥ sa-antaḥ prāg-abhāvaḥ / utpatteḥ pūrvaṃ kāryasya / sa-ādir an-antaḥ pradhvaṃsaḥ / utpatty-an-antaraṃ kāryasya / traikālika-saṃsarga-avacchinna-pratiyogitāko'tyanta-abhāvaḥ / yathā bhūtale ghaṭo na asti iti / tādātmya-saṃbandha-avacchinna-pratiyogitāko'nyonya-abhāvaḥ yathā ghaṭaḥ paṭo na bhavati iti //</p>
+</note>
+
+<p xml:id="AnTs_81">sarveṣāṃ padārthānāṃ yathāyatham ukteṣv antarbhāvāt saptaiva padārthā iti siddham //</p>
+<note type="analysis" corresp="#AnTs_81">
+<p>sarveṣāṃ pada-arthānāṃ yathā-yatham ukteṣv antarbhāvāt sapta eva pada-arthā iti siddham //</p>
+</note>
+
+<lg xml:id="AnTs_p25365">
+<l>kāṇādanyāyamatayor bālāvyutpattisiddhaye /</l>
+<l>annaṃbhaṭṭena viduṣā racitas tarkasaṃgrahaḥ //</l>
+</lg>
+<note type="analysis" corresp="#AnTs_p25365">
+<lg>
+<l>kāṇāda-nyāya-matayor bālā-vyutpatti-siddhaye /</l>
+<l>annaṃbhaṭṭena viduṣā racitas tarkasaṃgrahaḥ //</l>
+</lg>
+</note>
+
+  </body>
+</text>
+</TEI>

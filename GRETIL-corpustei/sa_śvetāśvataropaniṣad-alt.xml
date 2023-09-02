@@ -1,0 +1,980 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_zvetAzvataropaniSad-alt">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Śvetāśvataropaniṣad</title>
+	<author></author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>Jan Brzezinski</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Jan Brzezinski</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/1_veda/4_upa/svetugau.htm">svetugau.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Svetasvatara-Upanisad (Svetasvataropanisad)
+<lb/>Based on two editions:
+<lb/>1. Isadi nau upanisad. Ed. by Harikrsnadas Goendaka. (Gorakhpur : Gita Press, 2038 samvat)
+<lb/>2. Sri Sri Sruti-ratna-mala. Ed. by Bhakti Sudhakar. (Dhaka : 'Manjusa Printing Works) n.d
+<lb/>
+<lb/>Input by Jan Brzezinski
+<lb/>
+<lb/>TEXT WITH PADA MARKERS
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>two editions: 1. Isadi nau upanisad. Ed. by Harikrsnadas Goendaka. (Gorakhpur : Gita Press, 2038 samvat), 2. Sri Sri Sruti-ratna-mala. Ed. by Bhakti Sudhakar. (Dhaka : 'Manjusa Printing Works) n.d.</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Śvetāśvataropaniṣad-alt = SvetUp,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Veda -- Upaniṣad</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn" xml:id="SvetUp">
+  <body>
+<p>auṃ / saha nāv avatu / saha nau bhunaktu / saha vīryaṃ karavāvahai / tejasvi nāv adhītam astu / mā vidviṣāvahai /</p>
+
+<p>auṃ śāntiḥ śāntiḥ śāntiḥ</p>
+
+<div type="adhyāya" n="1">
+
+<head>prathamo 'dhyāyaḥ</head>
+
+<p>hariḥ oṃ brahma-vādino vadanti</p>
+
+<lg xml:id="SvetUp_1.1">
+<l><seg type="pāda" n="a">kiṃ kāraṇaṃ brahma kutaḥ sma jātā</seg> <seg type="pāda" n="b">jīvāma kena kva ca saṃpratiṣṭhāḥ</seg> </l>
+<l><seg type="pāda" n="c">adhiṣṭhitāḥ kena sukhetareṣu</seg> <seg type="pāda" n="d">vartāmahe brahma-vido vyavasthām</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_1.2">
+<l><seg type="pāda" n="a">kālaḥ svabhāvo niyatir yadṛcchā</seg> <seg type="pāda" n="b">bhūtāni yoniḥ puruṣa iti cintyā</seg> </l>
+<l><seg type="pāda" n="c">saṃyoga eṣāṃ na tv ātma-bhāvād</seg> <seg type="pāda" n="d">ātmāpy anīśaḥ sukha-duḥkha-hetoḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_1.3">
+<l><seg type="pāda" n="a">te dhyāna-yogānugatā apaśyan</seg> <seg type="pāda" n="b">devātma-śaktiṃ sva-guṇair nigūḍhām</seg> </l>
+<l><seg type="pāda" n="c">yaḥ kāraṇāni nikhilāni tāni</seg> <seg type="pāda" n="d">kālātma-yuktāny adhitiṣṭhaty ekaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_1.4">
+<l><seg type="pāda" n="a">tam eka-nemiṃ tri-vṛtaṃ ṣoḍaśāntaṃ</seg> <seg type="pāda" n="b">śatārdhāraṃ viṃśati-pratyarābhiḥ</seg> </l>
+<l><seg type="pāda" n="c">aṣṭakaiḥ ṣaḍbhir viśva-rūpaika-pāśaṃ</seg> <seg type="pāda" n="d">tri-mārga-bhedaṃ dvi-nimittaika-moham</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_1.5">
+<l><seg type="pāda" n="a">pañca-sroto 'mbuṃ pañca-yony-ugra-vakrāṃ</seg> <seg type="pāda" n="b">pañca-prāṇormiṃ pañca-buddhy-ādi-mūlām</seg> </l>
+<l><seg type="pāda" n="c">pañcāvartāṃ pañca-duḥkhaugha-vegāṃ</seg> <seg type="pāda" n="d">pañcāśad-bhedāṃ pañca-parvām adhīmaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_1.6">
+<l><seg type="pāda" n="a">sarvājīve sarva-saṃsthe bṛhante</seg> <seg type="pāda" n="b">asmin haṃso bhrāmyate brahma-cakre</seg> </l>
+<l><seg type="pāda" n="c">pṛthag ātmānaṃ preritāraṃ ca matvā</seg> <seg type="pāda" n="d">juṣṭas tatas tenāmṛtatvam eti</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_1.7">
+<l><seg type="pāda" n="a">udgītam etat paramaṃ tu brahma</seg> <seg type="pāda" n="b">tasmiṃs trayaṃ supratiṣṭhākṣaraṃ ca</seg> </l>
+<l><seg type="pāda" n="c">atrāntaraṃ brahma-vido viditvā</seg> <seg type="pāda" n="d">līnā brahmaṇi tat-parā yoni-muktāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_1.8">
+<l><seg type="pāda" n="a">saṃyuktam etat kṣaram akṣaraṃ ca</seg> <seg type="pāda" n="b">vyaktāvyaktaṃ bharate viśvam īśaḥ</seg> </l>
+<l><seg type="pāda" n="c">anīśaś cātmā badhyate bhoktṛ-bhāvāj</seg> <seg type="pāda" n="d">jñātvā devaṃ mucyate sarva-pāśaiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_1.9">
+<l><seg type="pāda" n="a">jñājñau dvāv ajāv īśanīśāv</seg> <seg type="pāda" n="b">ajā hy ekā bhoktṛ-bhogyārtha-yuktā</seg> </l>
+<l><seg type="pāda" n="c">anantaś cātmā viśva-rūpo hy akartā</seg> <seg type="pāda" n="d">trayaṃ yadā vindate brahmam etat</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_1.10">
+<l><seg type="pāda" n="a">kṣaraṃ pradhānam amṛtākṣaraṃ haraḥ</seg> <seg type="pāda" n="b">kṣarātmānāv īśate deva ekaḥ</seg> </l>
+<l><seg type="pāda" n="c">tasyābhidhyānād yojanāt tattva-bhāvād</seg> <seg type="pāda" n="d">bhūyaś cānte viśva-māyā-nivṛttiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_1.11">
+<l><seg type="pāda" n="a">jñātvā devaṃ sarva-pāśāpahāniḥ</seg> <seg type="pāda" n="b">kṣīṇaiḥ kleśair janma-mṛtyu-prahāṇiḥ</seg> </l>
+<l><seg type="pāda" n="c">tasyābhidhyānāt tṛtīyaṃ deha-bhede</seg> <seg type="pāda" n="d">viśvaiśvaryaṃ kevala āpta-kāmaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_1.12">
+<l><seg type="pāda" n="a">etaj jñeyaṃ nityam evātma-saṃsthaṃ</seg> <seg type="pāda" n="b">nātaḥ paraṃ veditavyaṃ hi kiñcit</seg> </l>
+<l><seg type="pāda" n="c">bhoktā bhogyaṃ preritāraṃ ca matvā</seg> <seg type="pāda" n="d">sarvaṃ proktaṃ trividhaṃ brahmam etat</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_1.13">
+<l><seg type="pāda" n="a">vahner yathā yoni-gatasya mūrtir</seg> <seg type="pāda" n="b">na dṛśyate naiva ca liṅga-nāśaḥ</seg> </l>
+<l><seg type="pāda" n="c">sa bhūya evendhana-yoni-gṛhyas</seg> <seg type="pāda" n="d">tad vobhayaṃ vai praṇavena dehe</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_1.14">
+<l><seg type="pāda" n="a">sva-deham araṇiṃ kṛtvā</seg> <seg type="pāda" n="b">praṇavaṃ cottarāraṇim</seg> </l>
+<l><seg type="pāda" n="c">dhyāna-nirmathanābhyāsād</seg> <seg type="pāda" n="d">devaṃ paśyan nigūḍhavat</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_1.15">
+<l><seg type="pāda" n="a">tileṣu tailaṃ dadhanīva sarpir</seg> <seg type="pāda" n="b">āpaḥ srotaḥsv araṇīṣu cāgniḥ</seg> </l>
+<l><seg type="pāda" n="c">evam ātmātmani gṛhyate 'sau</seg> <seg type="pāda" n="d">satyenainaṃ tapasā yo 'nupaśyati</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_1.16">
+<l><seg type="pāda" n="a">sarva-vyāpinam ātmānaṃ</seg> <seg type="pāda" n="b">kṣīre sarpir ivārpitam</seg> </l>
+<l><seg type="pāda" n="c">ātma-vidyā-tapo-mūlaṃ</seg> <seg type="pāda" n="d">tad brahmopaniṣat param</seg> //</l>
+</lg>
+
+<p>tad brahmopaniṣat param</p>
+
+<trailer>iti prathamo 'dhyāyaḥ</trailer>
+
+</div>
+<div type="adhyāya" n="2">
+
+<head>dvitīyo 'dhyāyaḥ</head>
+
+
+<lg xml:id="SvetUp_2.1">
+<l><seg type="pāda" n="a">yuñjānaḥ prathamaṃ manas</seg><seg type="pāda" n="b">tattvāya savitā dhiyaḥ</seg> </l>
+<l><seg type="pāda" n="c">agner jyotir nicāyya</seg> <seg type="pāda" n="d">pṛthivyā adhyābharat [*1]</seg> //</l>
+</lg>
+
+<note>[*1] This mantra is also found in Yajurveda 11.1.</note>
+
+<lg xml:id="SvetUp_2.2">
+<l><seg type="pāda" n="a">yuktena manasā vayaṃ</seg> <seg type="pāda" n="b">devasya savituḥ save</seg> </l>
+<l><seg type="pāda" n="c">suvargeyāya śaktyā [*2]</seg> <seg type="pāda" n="d">...</seg> //</l>
+</lg>
+
+<note>[*2] This mantra is also found in Yajurveda 11.2.</note>
+
+<lg xml:id="SvetUp_2.3">
+<l><seg type="pāda" n="a">yuktvāya manasā devān</seg> <seg type="pāda" n="b">suvaryato dhiyā divam</seg> </l>
+<l><seg type="pāda" n="c">bṛhaj jyotiḥ kariṣyataḥ</seg> <seg type="pāda" n="d">savitā prasuvāti tān [*3]</seg> //</l>
+</lg>
+
+<note>[*3] This mantra is also found in Yajurveda 11.3</note>
+
+<lg xml:id="SvetUp_2.4">
+<l><seg type="pāda" n="a">yuñjate mana uta yuñjate dhiyo</seg> <seg type="pāda" n="b">viprā viprasya bṛhato vipaścitaḥ</seg> </l>
+<l><seg type="pāda" n="c">vi hotrā dadhe vayunāvid eka</seg> <seg type="pāda" n="d">inmahī devasya savituḥ pariṣṭutiḥ [*4]</seg> //</l>
+</lg>
+
+<note>[*4] This mantra is also found in Yajurveda 11.4, 5.14, and Rigveda 5.81.1.</note>
+
+<lg xml:id="SvetUp_2.5">
+<l><seg type="pāda" n="a">yuje vāṃ brahma pūrvyaṃ namobhir</seg> <seg type="pāda" n="b">viśloka etu pathy eva sūreḥ</seg> </l>
+<l><seg type="pāda" n="c">śṛṇvantu viśve amṛtasya putrā</seg> <seg type="pāda" n="d">ā ye dhāmāni divyāni tasthuḥ [*5]</seg> //</l>
+</lg>
+
+<note>[*5] This mantra is also found in Yajurveda 11.5 and Rigveda 10.13.1.</note>
+
+<lg xml:id="SvetUp_2.6">
+<l><seg type="pāda" n="a">agnir yatrābhimathyate</seg> <seg type="pāda" n="b">vāyur yatrādhirudhyate</seg> </l>
+<l><seg type="pāda" n="c">somo yatrātiricyate</seg> <seg type="pāda" n="d">tatra sañjāyate manaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_2.7">
+<l><seg type="pāda" n="a">savitrā prasavena</seg> <seg type="pāda" n="b">juṣeta brahma pūrvyam</seg> </l>
+<l><seg type="pāda" n="c">yatra yoniṃ kṛṇavase</seg> <seg type="pāda" n="d">na hi te pūrvam akṣipat</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_2.8">
+<l><seg type="pāda" n="a">trir unnataṃ sthāpya samaṃ śarīraṃ</seg> <seg type="pāda" n="b">hṛdīndriyāṇi manasā sanniveśya</seg> </l>
+<l><seg type="pāda" n="c">brahmoḍupena pratareta vidvān</seg> <seg type="pāda" n="d">srotāṃsi sarvāṇi bhayāvahāni</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_2.9">
+<l><seg type="pāda" n="a">prāṇān prapīḍyeha saṃyukta-ceṣṭaḥ</seg> <seg type="pāda" n="b">kṣīṇe prāṇe nāsikayocchvasīta</seg> </l>
+<l><seg type="pāda" n="c">duṣṭāśva-yuktam iva vāham enaṃ</seg> <seg type="pāda" n="d">vidvān mano dhārayetāpramattaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_2.10">
+<l><seg type="pāda" n="a">same śucau śarkarā-vahni-bālukā</seg><seg type="pāda" n="b">vivarjite śabda-jalāśrayādibhiḥ</seg> </l>
+<l><seg type="pāda" n="c">mano 'nukūle na tu cakṣu-pīḍane</seg> <seg type="pāda" n="d">guhā-nivātāśrayaṇe prayojayet</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_2.11">
+<l><seg type="pāda" n="a">nīhāra-dhūmārkānilānalānāṃ</seg> <seg type="pāda" n="b">khadyota-vidyut-sphaṭika-śaśīnām</seg> </l>
+<l><seg type="pāda" n="c">etāni rūpāṇi puraḥ-sarāṇi</seg> <seg type="pāda" n="d">brahmaṇy abhivyakti-karāṇi yoge</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_2.12">
+<l><seg type="pāda" n="a">pṛthivy-ap-tejo 'nila-khe samutthite</seg> <seg type="pāda" n="b">pañcātmake yoga-guṇe pravṛtte</seg> </l>
+<l><seg type="pāda" n="c">na tasya rogo na jarā na mṛtyuḥ</seg> <seg type="pāda" n="d">prāptasya yogāgni-mayaṃ śarīram</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_2.13">
+<l><seg type="pāda" n="a">laghutvam ārogyam alolupatvaṃ</seg> <seg type="pāda" n="b">varṇa-prasādaṃ svara-sauṣṭhavaṃ ca</seg> </l>
+<l><seg type="pāda" n="c">gandhaḥ śubho mūtra-purīṣam alpaṃ</seg> <seg type="pāda" n="d">yoga-pravṛttiṃ prathamāṃ vadanti</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_2.14">
+<l><seg type="pāda" n="a">yathaiva bimbaṃ mṛdayopaliptaṃ</seg> <seg type="pāda" n="b">tejo-mayaṃ bhrājate tat sudhāntam</seg> </l>
+<l><seg type="pāda" n="c">tad vātma-tattvaṃ prasamīkṣya dehī</seg> <seg type="pāda" n="d">ekaḥ kṛtārtho bhavate vīta-śokaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_2.15">
+<l><seg type="pāda" n="a">yad ātma-tattvena tu brahma-tattvaṃ</seg> <seg type="pāda" n="b">dīpopameneha yuktaḥ prapaśyet</seg> </l>
+<l><seg type="pāda" n="c">ajaṃ dhruvaṃ sarva-tattvair viśuddhaṃ</seg> <seg type="pāda" n="d">jñātvā devaṃ mucyate sarva-pāśaiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_2.16">
+<l><seg type="pāda" n="a">eṣa ha devaḥ pradiśo 'nu sarvāḥ</seg> <seg type="pāda" n="b">pūrvo ha jātaḥ sa u garbhe antaḥ</seg> </l>
+<l><seg type="pāda" n="c">sa eva jātaḥ sa janiṣyamāṇaḥ</seg> <seg type="pāda" n="d">pratyaṅ janāṃs tiṣṭhati sarvato-mukhaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_2.17">
+<l><seg type="pāda" n="a">yo devo agnau yo 'psu</seg> <seg type="pāda" n="b">yo viśvaṃ bhuvanam āviveśa</seg> </l>
+<l><seg type="pāda" n="c">ya oṣadhīṣu yo vanaspatiṣu</seg> <seg type="pāda" n="d">tasmai devāya namo namaḥ</seg> //</l>
+</lg>
+
+<trailer>iti dvitīyo 'dhyāyaḥ</trailer>
+
+</div>
+<div type="adhyāya" n="3">
+
+  <head>tṛtīyo 'dhyāyaḥ</head>
+  
+<lg xml:id="SvetUp_3.1">
+<l><seg type="pāda" n="a">ya eko jālavān īśata īśanībhiḥ</seg> <seg type="pāda" n="b">sarvāṃl lokān īśata īśanībhiḥ</seg> </l>
+<l><seg type="pāda" n="c">ya evaika udbhave sambhave ca</seg> <seg type="pāda" n="d">ya etad vidur amṛtās te bhavanti</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_3.2">
+<l><seg type="pāda" n="a">eko hi rudro na dvitīyāya tasthur</seg> <seg type="pāda" n="b">ya imāṃl lokān īśata īśanībhiḥ</seg> </l>
+<l><seg type="pāda" n="c">pratyaṅ janāṃs tiṣṭhati sañcukocānta-kāle</seg> <seg type="pāda" n="d">saṃsṛjya viśvā bhuvanāni gopāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_3.3">
+<l><seg type="pāda" n="a">viśvataś cakṣur uta viśvato-mukho</seg> <seg type="pāda" n="b">viśvato-bāhur uta viśvatas-pāt</seg> </l>
+<l><seg type="pāda" n="c">saṃ[*6] bāhubhyāṃ dhamati sampatatrair</seg> <seg type="pāda" n="d">dyāv-ābhūmī janayan deva ekaḥ [*7]</seg> //</l>
+</lg>
+
+<note>[*6] taṃ</note>
+
+<note>[*7] This mantra is also found in Yajurveda 17.19 and Rigveda 10.82.3.</note>
+
+<lg xml:id="SvetUp_3.4">
+<l><seg type="pāda" n="a">yo devānāṃ prabhavaś codbhavaś ca</seg> <seg type="pāda" n="b">viśvādhipo rudro maharṣiḥ</seg> </l>
+<l><seg type="pāda" n="c">hiraṇyagarbhaṃ janayāmāsa pūrvaṃ</seg> <seg type="pāda" n="d">sa no buddhyā śubhayā saṃyunaktu</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_3.5">
+<l><seg type="pāda" n="a">yā te rudra śivā tanūr</seg> <seg type="pāda" n="b">aghorāpāpa-kāśinī</seg> </l>
+<l><seg type="pāda" n="c">tayā nas tanuvā śantamayā</seg> <seg type="pāda" n="d">giriśantābhicākaśīhi [*8]</seg> //</l>
+</lg>
+
+<note>[*8] Yajurveda 16.2.</note>
+
+<lg xml:id="SvetUp_3.6">
+<l><seg type="pāda" n="a">yābhiṣuṃ giriśanta</seg> <seg type="pāda" n="b">haste bibharṣy astave</seg> </l>
+<l><seg type="pāda" n="c">śivāṃ giritra tāṃ kuru</seg> <seg type="pāda" n="d">mā hiṃsīḥ puruṣaṃ jagat [*9]</seg> //</l>
+</lg>
+
+<note>[*9] Yajurveda 16.3.</note>
+
+<lg xml:id="SvetUp_3.7">
+<l><seg type="pāda" n="a">tataḥ paraṃ brahma paraṃ bṛhantaṃ</seg> <seg type="pāda" n="b">yathānikāyaṃ sarva-bhūteṣu gūḍham</seg> </l>
+<l><seg type="pāda" n="c">viśvasyaikaṃ pariveṣṭitāram</seg> <seg type="pāda" n="d">īśaṃ taṃ jñātvāmṛtā bhavanti</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_3.8">
+<l><seg type="pāda" n="a">vedāham etaṃ puruṣaṃ mahāntam</seg> <seg type="pāda" n="b">āditya-varṇaṃ tamasaḥ parastāt</seg> </l>
+<l><seg type="pāda" n="c">tam eva viditvātimṛtyum eti</seg> <seg type="pāda" n="d">nānyaḥ panthā vidyate 'yanāya [*10]</seg> //</l>
+</lg>
+
+<note>[*10] Yajurveda 31.8.</note>
+
+<lg xml:id="SvetUp_3.9">
+<l><seg type="pāda" n="a">yasmāt paraṃ nāparam asti kiṃcid</seg> <seg type="pāda" n="b">yasmān nāṇīyo na jyāyo 'sti kaścit</seg> </l>
+<l><seg type="pāda" n="c">vṛkṣa iva stabdho divi tiṣṭhaty ekas</seg> <seg type="pāda" n="d">tenedaṃ pūrṇaṃ puruṣeṇa sarvam</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_3.10">
+<l><seg type="pāda" n="a">tato yad uttarataraṃ</seg> <seg type="pāda" n="b">tad arūpam anāmayam</seg> </l>
+<l><seg type="pāda" n="c">ya etad vidur amṛtāste bhavanti</seg> <seg type="pāda" n="d">athetare duḥkham evāpi yanti</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_3.11">
+<l><seg type="pāda" n="a">sarvānana-śiro-grīvaḥ</seg> <seg type="pāda" n="b">sarva-bhūta-guhāśayaḥ</seg> </l>
+<l><seg type="pāda" n="c">sarva-vyāpī sa bhagavāṃs</seg> <seg type="pāda" n="d">tasmāt sarva-gataḥ śivaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_3.12">
+<l><seg type="pāda" n="a">mahān prabhur vai puruṣaḥ</seg> <seg type="pāda" n="b">sattvasyaiṣa pravartakaḥ</seg> </l>
+<l><seg type="pāda" n="c">sunirmalām imāṃ prāptim</seg> <seg type="pāda" n="d">īśāno jyotir avyayaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_3.13">
+<l><seg type="pāda" n="a">aṅguṣṭha-mātraḥ puruṣo 'ntarātmā</seg> <seg type="pāda" n="b">sadā janānāṃ hṛdaye sanniviṣṭaḥ</seg> </l>
+<l><seg type="pāda" n="c">hṛdā manīṣo[*11] manasābhikḷpto</seg> <seg type="pāda" n="d">ya etad vidur amṛtās te bhavanti</seg> //</l>
+</lg>
+
+<note>[*11] manvīśo</note>
+
+<lg xml:id="SvetUp_3.14">
+<l><seg type="pāda" n="a">sahasra-śīrṣā puruṣaḥ</seg> <seg type="pāda" n="b">sahasrākṣaḥ sahasra-pāt</seg> </l>
+<l><seg type="pāda" n="c">sa bhūmiṃ viśvato vṛtvā</seg><seg type="pāda" n="d">[a]tyatiṣṭhad daśāṅgulam</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_3.15">
+<l><seg type="pāda" n="a">puruṣa evedaṃ sarvaṃ</seg> <seg type="pāda" n="b">yad bhūtaṃ yac ca bhavyam</seg> </l>
+<l><seg type="pāda" n="c">utāmṛtatvasyeśāno</seg> <seg type="pāda" n="d">yad annenātirohati [*12]</seg> //</l>
+</lg>
+
+<note>[*12] Yajurveda 31.1-2, Rigveda 10.90.1-2. Atharva-veda 19.6.1,4.</note>
+
+<lg xml:id="SvetUp_3.16">
+<l><seg type="pāda" n="a">sarvataḥ pāṇi-pādaṃ tat</seg> <seg type="pāda" n="b">sarvato 'kṣi-śiro-mukham</seg> </l>
+<l><seg type="pāda" n="c">sarvataḥ śrutimal loke</seg> <seg type="pāda" n="d">sarvam āvṛtya tiṣṭhati</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_3.17">
+<l><seg type="pāda" n="a">sarvendriya-guṇābhāsaṃ</seg> <seg type="pāda" n="b">sarvendriya-vivarjitam</seg> </l>
+<l><seg type="pāda" n="c">sarvasya prabhum īśānaṃ</seg> <seg type="pāda" n="d">sarvasya śaraṇaṃ bṛhat[*13]</seg> //</l>
+</lg>
+
+<note>[*13] suhṛt</note>
+
+<lg xml:id="SvetUp_3.18">
+<l><seg type="pāda" n="a">nava-dvāre pure dehī</seg> <seg type="pāda" n="b">haṃso lelāyate bahiḥ</seg> </l>
+<l><seg type="pāda" n="c">vaśī sarvasya lokasya</seg> <seg type="pāda" n="d">sthāvarasya carasya ca</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_3.19">
+<l><seg type="pāda" n="a">apāṇi-pādo javano grahītā</seg> <seg type="pāda" n="b">paśyaty acakṣuḥ sa śṛṇoty akarṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">sa vetti vedyaṃ na ca tasyāsti vettā</seg> <seg type="pāda" n="d">tam āhur agryaṃ puruṣaṃ mahāntam</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_3.20">
+<l><seg type="pāda" n="a">aṇor aṇīyān mahato mahīyān</seg> <seg type="pāda" n="b">ātmā guhāyāṃ nihito 'sya jantoḥ</seg> </l>
+<l><seg type="pāda" n="c">tam akratuḥ paśyati vīta-śoko</seg> <seg type="pāda" n="d">dhātuḥ prasādān mahimānam īśam [*14]</seg> //</l>
+</lg>
+
+<note>[*14] See KaṭhaU 1.2.20.</note>
+
+<lg xml:id="SvetUp_3.21">
+<l><seg type="pāda" n="a">vedāham etam ajaraṃ purāṇaṃ</seg> <seg type="pāda" n="b">sarvātmānaṃ sarva-gataṃ vibhutvāt</seg> </l>
+<l><seg type="pāda" n="c">janma-nirodhaṃ pravadanti yasya</seg> <seg type="pāda" n="d">brahma-vādino hi pravadanti nityam</seg> //</l>
+</lg>
+
+<trailer>iti tṛtīyo 'dhyāyaḥ</trailer>
+
+</div>
+<div type="adhyāya" n="4">
+
+<head>caturtho 'dhyāyaḥ</head>
+  
+<lg xml:id="SvetUp_4.1">
+<l><seg type="pāda" n="a">ya eko 'varṇo bahudhā śakti-yogād</seg> <seg type="pāda" n="b">varaṇān anekān nihitārtho dadhāti</seg> </l>
+<l><seg type="pāda" n="c">vi caiti cānte viśvam ādau sa devaḥ</seg> <seg type="pāda" n="d">sa no buddhyā śubhayā saṃyunaktu</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_4.2">
+<l><seg type="pāda" n="a">tad evāgnis tad ādityas</seg> <seg type="pāda" n="b">tad vāyus tad u candramāḥ</seg> </l>
+<l><seg type="pāda" n="c">tad eva śukraṃ tad brahma</seg> <seg type="pāda" n="d">tad āpas tat prajāpatiḥ [*15]</seg> //</l>
+</lg>
+
+<note>[*15] Yajurveda 32.1.</note>
+
+<lg xml:id="SvetUp_4.3">
+<l><seg type="pāda" n="a">tvaṃ strī pumān asi</seg> <seg type="pāda" n="b">tvaṃ kumāra uta vā kumārī</seg> </l>
+<l><seg type="pāda" n="c">tvaṃ jīrṇo daṇḍena vañcasi</seg> <seg type="pāda" n="d">tvaṃ jāto bhavasi viśvato-mukhaḥ [*16]</seg> //</l>
+</lg>
+
+<note>[*16] Atharva-veda 10.8.27.</note>
+
+<lg xml:id="SvetUp_4.4">
+<l><seg type="pāda" n="a">nīlaḥ pataṅgo harito lohitākṣas</seg> <seg type="pāda" n="b">taḍid-garbha ṛtavaḥ samudrāḥ</seg> </l>
+<l><seg type="pāda" n="c">anādimat tvaṃ vibhutvena vartase</seg> <seg type="pāda" n="d">yato jātāni bhuvanāni viśvā</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_4.5">
+<l><seg type="pāda" n="a">ajām ekāṃ lohita-śukla-kṛṣṇāṃ</seg> <seg type="pāda" n="b">bahvīḥ prajāḥ sṛjamānāṃ sa-rūpāḥ</seg> </l>
+<l><seg type="pāda" n="c">ajo hy eko juṣamāṇo 'nuśete</seg> <seg type="pāda" n="d">jahāty enāṃ bhukta-bhogām ajo 'nyaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_4.6">
+<l><seg type="pāda" n="a">dvā suparṇā sayujā sakhāyā</seg> <seg type="pāda" n="b">samānaṃ vṛkṣaṃ pariṣasvajāte</seg> </l>
+<l><seg type="pāda" n="c">tayor anyaḥ pippalaṃ svādv atty</seg> <seg type="pāda" n="d">anaśnann anyo abhicākaśīti [*17]</seg> //</l>
+</lg>
+
+<note>[*17] Atharva-veda 9.14.20, Rigveda 1.164.20.</note>
+
+<lg xml:id="SvetUp_4.7">
+<l><seg type="pāda" n="a">samāne vṛkṣe puruṣo nimagno</seg> <seg type="pāda" n="b">'nīśayā śocati muhyamānaḥ</seg> </l>
+<l><seg type="pāda" n="c">juṣṭaṃ yadā paśyaty anyam īśam</seg> <seg type="pāda" n="d">asya mahimānam iti vīta-śokaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_4.8">
+<l><seg type="pāda" n="a">ṛco akṣare parame vyoman</seg> <seg type="pāda" n="b">yasmin devā adhi viśve niṣeduḥ</seg> </l>
+<l><seg type="pāda" n="c">yas taṃ na veda kim ṛcā kariṣyati</seg> <seg type="pāda" n="d">ya it tad vidus ta ime samāsate [*18]</seg> //</l>
+</lg>
+
+<note>[*18] Atharva-veda 9.15.18, Rigveda 1.164.39.</note>
+
+<lg xml:id="SvetUp_4.9">
+<l><seg type="pāda" n="a">chandāṃsi yajñāḥ kratavo vratāni</seg> <seg type="pāda" n="b">bhūtaṃ bhavyaṃ yac ca vedā vadanti</seg> </l>
+<l><seg type="pāda" n="c">asmān māyī sṛjate viśvam etat</seg> <seg type="pāda" n="d">tasmiṃś cānyo māyayā sanniruddhaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_4.10">
+<l><seg type="pāda" n="a">māyāṃ tu prakṛtiṃ vidyān</seg> <seg type="pāda" n="b">māyinaṃ ca maheśvaram</seg> </l>
+<l><seg type="pāda" n="c">tasyāvayava-bhūtais tu</seg> <seg type="pāda" n="d">vyāptaṃ sarvam idaṃ jagat</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_4.11">
+<l><seg type="pāda" n="a">yo yoniṃ yonim adhitiṣṭhaty eko</seg> <seg type="pāda" n="b">yasminn idam saṃ ca vicaiti sarvam</seg> </l>
+<l><seg type="pāda" n="c">tam īśānaṃ varadaṃ devam īḍyaṃ</seg> <seg type="pāda" n="d">nicāyyemāṃ śāntim atyantam eti</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_4.12">
+<l><seg type="pāda" n="a">yo devānāṃ prabhavaś codbhavaś ca</seg> <seg type="pāda" n="b">viśvādhipo rudro maharṣiḥ</seg> </l>
+<l><seg type="pāda" n="c">hiraṇyagarbhaṃ paśyata jāyamānaṃ</seg> <seg type="pāda" n="d">sa no buddhyā śubhayā saṃyunaktu</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_4.13">
+<l><seg type="pāda" n="a">yo devānām adhipo</seg> <seg type="pāda" n="b">yasmin lokā adhiśritāḥ</seg> </l>
+<l><seg type="pāda" n="c">ya īśe asya dvipadaś catuṣpadaḥ</seg> <seg type="pāda" n="d">kasmai devāya haviṣā vidhema</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_4.14">
+<l><seg type="pāda" n="a">sūkṣmātisūkṣmaṃ kalilasya madhye</seg> <seg type="pāda" n="b">viśvasya sraṣṭāram aneka-rūpam</seg> </l>
+<l><seg type="pāda" n="c">viśvasyaikaṃ pariveṣṭitāraṃ</seg> <seg type="pāda" n="d">jñātvā śivaṃ śāntim atyantam eti [*19]</seg> //</l>
+</lg>
+
+<note>[*19] See below 5.13.</note>
+
+<lg xml:id="SvetUp_4.15">
+<l><seg type="pāda" n="a">sa eva kāle bhuvanasya goptā</seg> <seg type="pāda" n="b">viśvādhipaḥ sarva-bhūteṣu gūḍhaḥ</seg> </l>
+<l><seg type="pāda" n="c">yasmin yuktā brahmarṣayo devatāś ca</seg> <seg type="pāda" n="d">tam evaṃ jñātvā mṛtyu-pāśāṃś chinatti</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_4.16">
+<l><seg type="pāda" n="a">ghṛtāt paraṃ maṇḍam ivātisūkṣmaṃ</seg> <seg type="pāda" n="b">jñātvā śivaṃ sarva-bhūteṣu gūḍham</seg> </l>
+<l><seg type="pāda" n="c">viśvasyaikaṃ pariveṣṭitāraṃ</seg> <seg type="pāda" n="d">jñātvā devaṃ mucyate sarva-pāśaiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_4.17">
+<l><seg type="pāda" n="a">eṣa devo viśva-karmā mahātmā</seg> <seg type="pāda" n="b">sadā janānāṃ hṛdaye saṃniviṣṭaḥ</seg> </l>
+<l><seg type="pāda" n="c">hṛdā manīṣā manasābhikḷpto</seg> <seg type="pāda" n="d">ya etad vidur amṛtās te bhavanti</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_4.18">
+<l><seg type="pāda" n="a">yadātamas tan na divā na rātrir</seg> <seg type="pāda" n="b">na san na cāsac chiva eva kevalaḥ</seg> </l>
+<l><seg type="pāda" n="c">tad akṣaraṃ tat savitur vareṇyaṃ</seg> <seg type="pāda" n="d">prajñā ca tasmāt prasṛtā purāṇī</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_4.19">
+<l><seg type="pāda" n="a">nainam ūrdhvaṃ na tiryañcaṃ</seg> <seg type="pāda" n="b">na madhye na parijagrabhat</seg> </l>
+<l><seg type="pāda" n="c">na tasya pratimā asti</seg> <seg type="pāda" n="d">yasya nāma mahad yaśaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_4.20">
+<l><seg type="pāda" n="a">na saṃdṛśe tiṣṭhati rūpam asya</seg> <seg type="pāda" n="b">na cakṣuṣā paśyati kaścanainam</seg> </l>
+<l><seg type="pāda" n="c">hṛdā hṛdi-sthaṃ manasā ya enam</seg> <seg type="pāda" n="d">evaṃ vidur amṛtāste bhavanti</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_4.21">
+<l><seg type="pāda" n="a">ajāta ity evaṃ kaścid</seg> <seg type="pāda" n="b">bhīruḥ prapadyate</seg> </l>
+<l><seg type="pāda" n="c">rudra yat te dakṣiṇaṃ mukhaṃ</seg> <seg type="pāda" n="d">tena māṃ pāhi nityam</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_4.22">
+<l><seg type="pāda" n="a">mā nas toke tanaye mā na āyuṣi</seg> <seg type="pāda" n="b">mā no goṣu mā na aśveṣu rīriṣaḥ</seg> </l>
+<l><seg type="pāda" n="c">vīrān mā no rudra bhāmito</seg> <seg type="pāda" n="d">vadhīr haviṣmantaḥ sadāmit tvā havāmahe [*20]</seg> //</l>
+</lg>
+
+<note>[*20] Yajurveda 16.16, Rigveda 10.114.8.</note>
+
+<trailer>iti caturtho 'dhyāyaḥ</trailer>
+
+</div>
+<div type="adhyāya" n="5">
+
+<head>pañcamo 'dhyāyaḥ</head>
+  
+<lg xml:id="SvetUp_5.1">
+<l><seg type="pāda" n="a">dve akṣare brahma-pare tv anante</seg> <seg type="pāda" n="b">vidyāvidye nihite yatra gūḍhe</seg> </l>
+<l><seg type="pāda" n="c">kṣaraṃ tv avidyā hy amṛtaṃ tu vidyā</seg> <seg type="pāda" n="d">vidyāvidye īśate yas tu so 'nyaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_5.2">
+<l><seg type="pāda" n="a">yo yoniṃ yonim adhitiṣṭhaty eko</seg> <seg type="pāda" n="b">viśvāni rūpāṇi yonīś ca sarvāḥ</seg> </l>
+<l><seg type="pāda" n="c">ṛṣiṃ prasūtaṃ kapilaṃ yas tam agre</seg> <seg type="pāda" n="d">jñānair bibharti jāyamānaṃ ca paśyet</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_5.3">
+<l><seg type="pāda" n="a">ekaika-jālaṃ bahudhā vikurvann</seg> <seg type="pāda" n="b">asmin kṣetre saṃharaty eṣa devaḥ</seg> </l>
+<l><seg type="pāda" n="c">bhūyaḥ sṛṣṭvā patayas tatheśaḥ</seg> <seg type="pāda" n="d">sarvādhipatyaṃ kurute mahātmā</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_5.4">
+<l><seg type="pāda" n="a">sarvā diśa ūrdhvam adhaś ca tiryak</seg> <seg type="pāda" n="b">prakāśayan bhrājate yad v anaḍvān</seg> </l>
+<l><seg type="pāda" n="c">evaṃ sa devo bhagavān vareṇyo</seg> <seg type="pāda" n="d">yoni-svabhāvān adhitiṣṭhaty ekaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_5.5">
+<l><seg type="pāda" n="a">yac ca svabhāvaṃ pacati viśva-yoniḥ</seg> <seg type="pāda" n="b">pācyāṃś ca sarvān pariṇāmayed yaḥ</seg> </l>
+<l><seg type="pāda" n="c">sarvam etad viśvam adhitiṣṭhaty eko</seg> <seg type="pāda" n="d">guṇāṃś ca sarvān viniyojayed yaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_5.6">
+<l><seg type="pāda" n="a">tad veda-guhyopaniṣatsu gūḍhaṃ</seg> <seg type="pāda" n="b">tad brahmā vedate brahma-yonim</seg> </l>
+<l><seg type="pāda" n="c">ye pūrvaṃ devā ṛṣayaś ca tad vidus</seg> <seg type="pāda" n="d">te tan-mayā amṛtā vai babhūvuḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_5.7">
+<l><seg type="pāda" n="a">guṇānvayo yaḥ phala-karma-kartā</seg> <seg type="pāda" n="b">kṛtasya tasyaiva sa copabhoktā</seg> </l>
+<l><seg type="pāda" n="c">sa viśva-rūpas triguṇas trivartmā</seg> <seg type="pāda" n="d">prāṇādhipaḥ sañcarati sva-karmabhiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_5.8">
+<l><seg type="pāda" n="a">aṅguṣṭha-mātro ravi-tulya-rūpaḥ</seg> <seg type="pāda" n="b">saṅkalpāhaṅkāra-samanvito yaḥ</seg> </l>
+<l><seg type="pāda" n="c">buddher guṇenātma-guṇena caiva</seg> <seg type="pāda" n="d">ārāgra-mātro 'py aparo 'pi dṛṣṭaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_5.9">
+<l><seg type="pāda" n="a">bālāgra-śata-bhāgasya</seg> <seg type="pāda" n="b">śatadhā kalpitasya ca</seg> </l>
+<l><seg type="pāda" n="c">bhāgo jīvaḥ sa vijñeyaḥ</seg> <seg type="pāda" n="d">sa cānantyāya kalpate</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_5.10">
+<l><seg type="pāda" n="a">naiva strī na pumān eṣa</seg> <seg type="pāda" n="b">na caivāyaṃ napuṃsakaḥ</seg> </l>
+<l><seg type="pāda" n="c">yad yac charīram ādatte</seg> <seg type="pāda" n="d">tena tena sa yujyate</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_5.11">
+<l><seg type="pāda" n="a">saṅkalpana-sparśana-dṛṣṭi-mohair</seg> <seg type="pāda" n="b">grāsāmbu-vṛṣṭyātma-vivṛddhi-janma</seg> </l>
+<l><seg type="pāda" n="c">karmānugāny anukrameṇa dehī</seg> <seg type="pāda" n="d">sthāneṣu rūpāṇy abhisamprapadyate</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_5.12">
+<l><seg type="pāda" n="a">sthūlāni sūkṣmāṇi bahūni caiva</seg> <seg type="pāda" n="b">rūpāṇi dehī sva-guṇair vṛṇoti</seg> </l>
+<l><seg type="pāda" n="c">kriyā-guṇair ātma-guṇaiś ca teṣāṃ</seg> <seg type="pāda" n="d">saṃyoga-hetur aparo 'pi dṛṣṭaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_5.13">
+<l><seg type="pāda" n="a">anādy-anantaṃ kalilasya madhye</seg> <seg type="pāda" n="b">viśvasya sraṣṭāram aneka-rūpam</seg> </l>
+<l><seg type="pāda" n="c">viśvasyaikaṃ pariveṣṭitāraṃ</seg> <seg type="pāda" n="d">jñātvā devaṃ mucyate sarva-pāśaiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_5.14">
+<l><seg type="pāda" n="a">bhāva-grāhyam anīḍākhyaṃ</seg> <seg type="pāda" n="b">bhāvābhāva-karaṃ śivam</seg> </l>
+<l><seg type="pāda" n="c">kalā-sarga-karaṃ devaṃ</seg> <seg type="pāda" n="d">ye vidus te jahus tanum</seg> //</l>
+</lg>
+
+<trailer>iti pañcamo 'dhyāyaḥ</trailer>
+
+</div>
+<div type="adhyāya" n="6">
+
+  <head>ṣaṣṭho 'dhyāyaḥ</head>
+  
+<lg xml:id="SvetUp_6.1">
+<l><seg type="pāda" n="a">svabhāvam eke kavayo vadanti</seg> <seg type="pāda" n="b">kālaṃ tathānye parimuhyamānāḥ</seg> </l>
+<l><seg type="pāda" n="c">devasyaiṣa mahimā tu loke</seg> <seg type="pāda" n="d">yenedaṃ bhrāmyate brahma-cakram</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_6.2">
+<l><seg type="pāda" n="a">yenāvṛtaṃ nityam idaṃ hi sarvaṃ</seg> <seg type="pāda" n="b">jñaḥ kāla-kālo guṇī sarva-vid yaḥ</seg> </l>
+<l><seg type="pāda" n="c">teneśitaṃ karma vivartate ha</seg> <seg type="pāda" n="d">pṛthivy-ap-tejo 'nila-khāni cintyam</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_6.3">
+<l><seg type="pāda" n="a">tat karma kṛtvā vinivartya bhūyas</seg> <seg type="pāda" n="b">tattvasya tattvena sametya yogam</seg> </l>
+<l><seg type="pāda" n="c">ekena dvābhyāṃ tribhir aṣṭabhir vā</seg> <seg type="pāda" n="d">kālena caivātma-guṇaiś ca sūkṣmaiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_6.4">
+<l><seg type="pāda" n="a">ārabhya karmāṇi guṇānvitāni</seg> <seg type="pāda" n="b">bhāvāṃś ca sarvān viniyojayed yaḥ</seg> </l>
+<l><seg type="pāda" n="c">teṣām abhāve kṛta-karma-nāśaḥ</seg> <seg type="pāda" n="d">karma-kṣaye yāti sa tattvato 'nyaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_6.5">
+<l><seg type="pāda" n="a">ādiḥ sa saṃyoga-nimitta-hetuḥ</seg> <seg type="pāda" n="b">paras trikālād akalo 'pi dṛṣṭaḥ</seg> </l>
+<l><seg type="pāda" n="c">taṃ viśva-rūpaṃ bhava-bhūtam īḍyaṃ</seg> <seg type="pāda" n="d">devaṃ sva-citta-stham upāsya pūrvam</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_6.6">
+<l><seg type="pāda" n="a">sa vṛkṣa-kālākṛtibhiḥ paro 'nyo</seg> <seg type="pāda" n="b">yasmāt prapañcaḥ parivartate 'yam</seg> </l>
+<l><seg type="pāda" n="c">dharmāvahaṃ pāpa-nudaṃ bhageśaṃ</seg> <seg type="pāda" n="d">jñātvātma-stham amṛtaṃ viśva-dhāma</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_6.7">
+<l><seg type="pāda" n="a">tam īśvarāṇāṃ paramaṃ maheśvaraṃ</seg> <seg type="pāda" n="b">taṃ devatānāṃ paramaṃ ca daivatam</seg> </l>
+<l><seg type="pāda" n="c">patiṃ patīnāṃ paramaṃ parastād</seg> <seg type="pāda" n="d">vidāma devaṃ bhuvaneśam īḍyam</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_6.8">
+<l><seg type="pāda" n="a">na tasya kāryaṃ karaṇaṃ ca vidyate</seg> <seg type="pāda" n="b">na tat-samaś cābhyadhikaś ca dṛśyate</seg> </l>
+<l><seg type="pāda" n="c">parāsya śaktir vividhaiva śrūyate</seg> <seg type="pāda" n="d">svābhāvikī jñāna-bala-kriyā ca</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_6.9">
+<l><seg type="pāda" n="a">na tasya kaścit patir asti loke</seg> <seg type="pāda" n="b">na ceśitā naiva ca tasya liṅgam</seg> </l>
+<l><seg type="pāda" n="c">sa kāraṇaṃ karaṇādhipādhipo</seg> <seg type="pāda" n="d">na cāsya kaścij janitā na cādhipaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_6.10">
+<l><seg type="pāda" n="a">yas tantu-nābha iva tantubhiḥ</seg> <seg type="pāda" n="b">pradhānajaiḥ svabhāvataḥ</seg> </l>
+<l><seg type="pāda" n="c">deva ekaḥ svam āvṛṇoti</seg> <seg type="pāda" n="d">sa no dadhātu brahmāpyayam</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_6.11">
+<l><seg type="pāda" n="a">eko devaḥ sarva-bhūteṣu gūḍhaḥ</seg> <seg type="pāda" n="b">sarva-vyāpī sarva-bhūtāntarātmā</seg> </l>
+<l><seg type="pāda" n="c">karmādhyakṣaḥ sarva-bhūtādhivāsaḥ</seg> <seg type="pāda" n="d">sākṣī cetā kevalo nirguṇaś ca</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_6.12">
+<l><seg type="pāda" n="a">eko vaśī niṣkriyāṇāṃ bahūnām</seg> <seg type="pāda" n="b">ekaṃ bījaṃ bahudhā yaḥ karoti</seg> </l>
+<l><seg type="pāda" n="c">tam ātma-sthaṃ ye 'nupaśyanti dhīrās</seg> <seg type="pāda" n="d">teṣāṃ sukhaṃ śāśvataṃ netareṣām</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_6.13">
+<l><seg type="pāda" n="a">nityo nityānāṃ cetanaś cetanānām</seg> <seg type="pāda" n="b">eko bahūnāṃ yo vidadhāti kāmān</seg> </l>
+<l><seg type="pāda" n="c">tat kāraṇaṃ sāṅkhya-yogādhigamyaṃ</seg> <seg type="pāda" n="d">jñātvā devaṃ mucyate sarva-pāśaiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_6.14">
+<l><seg type="pāda" n="a">na tatra sūryo bhāti na candra-tārakaṃ</seg> <seg type="pāda" n="b">nemā vidyuto bhānti kuto 'yam agniḥ</seg> </l>
+<l><seg type="pāda" n="c">tam eva bhāntam anubhāti sarvaṃ</seg> <seg type="pāda" n="d">tasya bhāsā sarvam idaṃ vibhāti</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_6.15">
+<l><seg type="pāda" n="a">eko haṃso bhuvanasyāsya madhye</seg> <seg type="pāda" n="b">sa evāgniḥ salile saṃniviṣṭaḥ</seg> </l>
+<l><seg type="pāda" n="c">tam eva viditvātimṛtyum eti</seg> <seg type="pāda" n="d">nānyaḥ panthā vidyate 'yanāya</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_6.16">
+<l><seg type="pāda" n="a">sa viśva-kṛd viśva-vid ātma-yonir</seg> <seg type="pāda" n="b">jñaḥ kāla-kālo guṇī sarva-vid yaḥ</seg> </l>
+<l><seg type="pāda" n="c">pradhāna-kṣetra-jña-patir guṇeśaḥ</seg> <seg type="pāda" n="d">saṃsāra-mokṣa-sthiti-bandha-hetuḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_6.17">
+<l><seg type="pāda" n="a">sa tan-mayo hy amṛta īśa-saṃstho</seg> <seg type="pāda" n="b">jñaḥ sarvago bhuvanasyāsya goptā</seg> </l>
+<l><seg type="pāda" n="c">ya īśe 'sya jagato nityam eva</seg> <seg type="pāda" n="d">nānyo hetur vidyata īśanāya</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_6.18">
+<l><seg type="pāda" n="a">yo brahmāṇaṃ vidadhāti pūrvaṃ</seg> <seg type="pāda" n="b">yo vai vedāṃś ca prahiṇoti tasmai</seg> </l>
+<l><seg type="pāda" n="c">taṃ ha devaṃ ātma-buddhi-prakāśaṃ</seg> <seg type="pāda" n="d">mumukṣur vai śaraṇam ahaṃ prapadye</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_6.19">
+<l><seg type="pāda" n="a">niṣkalaṃ niṣkriyaṃ śāntaṃ</seg> <seg type="pāda" n="b">niravadyaṃ nirañjanam</seg> </l>
+<l><seg type="pāda" n="c">amṛtasya paraṃ setuṃ</seg> <seg type="pāda" n="d">dagdhendanam ivānalam</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_6.20">
+<l><seg type="pāda" n="a">yadā carmavad ākāśaṃ</seg> <seg type="pāda" n="b">veṣṭayiṣyanti mānavāḥ</seg> </l>
+<l><seg type="pāda" n="c">tadā devam avijñāya</seg> <seg type="pāda" n="d">duḥkhasyānto bhaviṣyati</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_6.21">
+<l><seg type="pāda" n="a">tapaḥ-prabhāvād deva-prasādāc ca</seg> <seg type="pāda" n="b">brahma ha śvetāśvataro 'tha vidvān</seg> </l>
+<l><seg type="pāda" n="c">atyāśramibhyaḥ paramaṃ pavitraṃ</seg> <seg type="pāda" n="d">provāca samyag-ṛṣi-saṅgha-juṣṭam</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_6.22">
+<l><seg type="pāda" n="a">vedānte paramaṃ guhyaṃ</seg> <seg type="pāda" n="b">purā-kalpe pracoditam</seg> </l>
+<l><seg type="pāda" n="c">nāpraśāntāya dātavyaṃ</seg> <seg type="pāda" n="d">nāputrāyāśiṣyāya vā punaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="SvetUp_6.23">
+<l><seg type="pāda" n="a">yasya deve parā bhaktiḥ</seg> <seg type="pāda" n="b">yathā deve tathā gurau</seg> </l>
+<l><seg type="pāda" n="c">tasyaite kathitā hy arthāḥ</seg> <seg type="pāda" n="d">prakāśante mahātmanaḥ</seg> //</l>
+</lg>
+
+<p>oṃ saha nāv avatu saha nau bhunaktu saha vīryaṃ karavāvahai
+tejasvi nāvadhītam astu mā vidviṣāvahai</p>
+
+<p>oṃ śāntiḥ śāntiḥ śāntiḥ</p>
+
+<trailer>iti ṣaṣṭho 'dhyāyaḥ</trailer>
+</div>
+<trailer>|| iti śvetāśvataropaniṣat sampūrṇā ||</trailer>
+
+
+</body>
+</text>
+</TEI>

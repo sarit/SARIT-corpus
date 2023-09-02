@@ -1,0 +1,1734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_gautama-nyAyasUtra">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Nyāyasūtra</title>
+	<author>Gautama</author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>members of the Sansknet Project</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>members of the Sansknet Project</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/nyaya/gaunys_u.htm">gaunys_u.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Gautama: Nyayasutra
+<lb/>
+<lb/>Input by members of the SANSKNET-project
+<lb/>(www.sansknet.org)
+<lb/>
+<lb/>This GRETIL version has been converted from a custom Devanagari encoding.
+<lb/>Consequently, word boundaries may not always be marked by spaces.
+<lb/>The text is not proof-read.
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl></bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Nyāyasūtra = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Śāstra -- Philosophy -- Nyāya</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+
+<p>(atha prathamaḥ adhyāyaḥ)
+[anubandhacatuṣṭayaprakaraṇam]</p>
+
+<p>1.1.1: pramāṇa-prameya-saṃśaya-prayojana-dṛṣṭānta-siddhāntāvayava-tarka-nirṇaya-vāda-jalpa-vitaṇḍāhetvābhāsa-cchala-jāti-nigrahasthānānāmtattvajñānāt niḥśreyasādhigamaḥ</p>
+
+<p>{padārthoddeśasūtram}</p>
+
+<p>1.1.2: duḥkhajanmapravṛttidoṣamithyājñānānām uttarottarāpāye tadanantarā pāyāt apavargaḥ</p>
+
+<p>{padārthoddeśasūtram}</p>
+
+<p>[pramāṇaprakaraṇam]</p>
+
+<p>1.1.3: pratyakṣānumānopamānaśabdāḥ pramāṇāni</p>
+
+<p>{pramāṇa-uddeśa-sūtram}</p>
+
+<p>1.1.4: indriyārthasannikarṣotpannam jñānam avyapadeśyam avyabhicāri vyavasāyātmakam pratyakṣam</p>
+
+<p>{pratyakṣalakṣaṇam}</p>
+
+<p>1.1.5: atha tatpūrvakaṃ trividham anumānaṃ pūrvavat śeṣavat sāmānyatodṛṣṭaṃ ca</p>
+
+<p>{anumānalakṣaṇam}</p>
+
+<p>1.1.6: prasiddhasādharmyāt sādhyasādhanam upamānam</p>
+
+<p>{upamānalakṣaṇam}</p>
+
+<p>1.1.7: āptopadeśaḥ śabdaḥ</p>
+
+<p>{śabdalakṣaṇam}</p>
+
+<p>1.1.8: saḥ dvividhaḥ dṛṣṭādṛṣṭārthatvāt</p>
+
+<p>{śabdabhedaḥ}</p>
+
+<p>[prameyaprakaraṇam]</p>
+
+<p>1.1.9: ātmaśarīrendriyārthabuddhimanaḥpravṛttidoṣapretyabhāvaphaladuḥkhāpavargāḥ tu prameyam</p>
+
+<p>{prameya-uddeśa-sūtram}</p>
+
+<p>1.1.10: icchādveṣaprayatnasukhaduḥkhajñānāni ātmanaḥ liṅgam iti</p>
+
+<p>{ātmalakṣaṇam}</p>
+
+<p>1.1.11: ceṣṭendriyārthāśrayaḥ śarīram</p>
+
+<p>{śarīralakṣaṇam}</p>
+
+<p>1.1.12: ghrāṇarasanacakṣustvakśrotrāṇi indriyāṇi bhūtebhyaḥ</p>
+
+<p>{indriyalakṣaṇam}</p>
+
+<p>1.1.13: pṛthivī āpaḥ tejaḥ vāyuḥ ākāśam iti bhūtāni</p>
+
+<p>{bhūtalakṣaṇam}</p>
+
+<p>1.1.14: gandharasarūpasparśaśabdāḥ pṛthivyādiguṇāḥ tadarthāḥ</p>
+
+<p>{artha(viṣaya)lakṣaṇam}</p>
+
+<p>1.1.15: buddhiḥ upalabdhiḥ jñānam iti anarthāntaram</p>
+
+<p>{buddhilakṣaṇam}</p>
+
+<p>1.1.16: yugapat jñānānutpattiḥ manasaḥ liṅgam</p>
+
+<p>{manolakṣaṇam}</p>
+
+<p>1.1.17: pravṛttiḥ vāgbuddhiśarīrārambhaḥ</p>
+
+<p>{pravṛttilakṣaṇam}</p>
+
+<p>1.1.18: pravarttanālakṣaṇāḥ doṣāḥ</p>
+
+<p>{doṣalakṣaṇam}</p>
+
+<p>1.1.19: punarutpattiḥ pretyabhāvaḥ</p>
+
+<p>{pretyabhāvalakṣaṇam}</p>
+
+<p>1.1.20: pravṛttidoṣajanitaḥ arthaḥ phalam</p>
+
+<p>{phalalakṣaṇam}</p>
+
+<p>1.1.21: bādhanālakṣaṇam duḥkham</p>
+
+<p>{duḥkhalakṣaṇam}</p>
+
+<p>1.1.22: tadatyantavimokṣaḥ apavargaḥ</p>
+
+<p>{apavargalakṣaṇam}</p>
+
+<p>[nyāyapūrvāṅgalakṣaṇaprakaraṇam]</p>
+
+<p>1.1.23: samānānekadharmopapatteḥ vipratipatteḥ upalabdhyanupalabdhyavyavasthātaḥ ca viśeṣāpekṣaḥ vimarśaḥ saṃśayaḥ</p>
+
+<p>{saṃśayalakṣaṇam}</p>
+
+<p>1.1.24: yam artham adhikṛtya pravartate tat prayojanam</p>
+
+<p>{prayojanalakṣaṇam}</p>
+
+<p>1.1.25: laukikaparīkṣakāṇāṃ yasmin arthe buddhisāmyam saḥ dṛṣṭāntaḥ</p>
+
+<p>{dṛṣṭāntalakṣaṇam}</p>
+
+<p>[nyāyāśrayasiddhāntalakṣaṇaprakaraṇam]</p>
+
+<p>1.1.26: tantrādhikaraṇābhyupagamasaṃsthitiḥ siddhāntaḥ</p>
+
+<p>{abhyupagamasiddhāntalakṣaṇam}</p>
+
+<p>1.1.27: saḥ caturvidhaḥ sarvatantrapratitantrādhikaraṇābhyupagamasaṃsthityarthāntarabhāvāt</p>
+
+<p>{tantrabheda-uddeśasūtram}</p>
+
+<p>1.1.28: sarvatantrāviruddhaḥ tantre adhikṛtaḥ arthaḥ sarvatantrasiddhāntaḥ</p>
+
+<p>{sarvatantrasiddhānta-lakṣaṇam}</p>
+
+<p>1.1.29: samānatantrasiddhaḥ paratantrāsiddhaḥ pratitantrasiddhāntaḥ</p>
+
+<p>{pratitantrasiddhānta-lakṣaṇam}</p>
+
+<p>1.1.30: yatsiddhau anyaprakaraṇasiddhiḥ saḥ adhikaraṇasiddhāntaḥ</p>
+
+<p>{adhikaraṇasiddhānta-lakṣaṇam}</p>
+
+<p>1.1.31: aparīkṣitābhyupagamāt tadviśeṣaparīkṣaṇam abhyupagamasiddhāntaḥ</p>
+
+<p>{abhyupagamasiddhānta-lakṣaṇam}</p>
+
+<p>[nyāyaprakaraṇam]</p>
+
+<p>1.1.32: pratijñāhetūdāharaṇopanayanigamanāni avayavāḥ</p>
+
+<p>{avayava-uddeśasūtram}</p>
+
+<p>1.1.33: sādhyanirdeśaḥ pratijñā</p>
+
+<p>{pratijñā-lakṣaṇam}</p>
+
+<p>1.1.34: udāharaṇasādharmyāt sādhyasādhanaṃ hetuḥ</p>
+
+<p>{hetu-lakṣaṇam}</p>
+
+<p>1.1.35: tathā vaidharmyāt</p>
+
+<p>{hetu-lakṣaṇam}</p>
+
+<p>1.1.36: sādhyasādharmyāt taddharmabhāvī dṛṣṭāntaḥ udāharaṇam</p>
+
+<p>{udāharaṇa-lakṣaṇam}</p>
+
+<p>1.1.37: tadviparyayāt vā viparītam</p>
+
+<p>{udāharaṇa-lakṣaṇam}</p>
+
+<p>1.1.38: udāharaṇāpekṣaḥ tathā iti upasaṃhāraḥ na tathā iti vā sādhyasya upanayaḥ</p>
+
+<p>{upanaya-lakṣaṇam}</p>
+
+<p>1.1.39: hetvapadeśāt pratijñāyāḥ punarvacanam nigamanam</p>
+
+<p>{nigamana-lakṣaṇam}</p>
+
+<p>[nyāyottarāṅgaprakaraṇam]</p>
+
+<p>1.1.40: avijñātatatve arthe kāraṇopapattitaḥ tattvajñānārtham uhaḥ tarkaḥ</p>
+
+<p>{tarka-lakṣaṇam}</p>
+
+<p>1.1.41: vimṛśya pakṣapratipakṣābhyām arthāvadhāraṇam nirṇayaḥ</p>
+
+<p>{nirṇaya-lakṣaṇam}</p>
+
+<p>(iti nyāyasūtre prathamādhyāyasya prathamam āhnikam)</p>
+
+<p>(atha dvitīyam āhnikam)</p>
+
+<p>[kathālakṣaṇaprakaraṇam]</p>
+
+<p>1.2.1: pramāṇatarkasādhanopālambhaḥ siddhāntāviruddhaḥ pañcāvayavopapannaḥ pakṣapratipakṣaparigrahaḥ vādaḥ</p>
+
+<p>{vāda-lakṣaṇam}</p>
+
+<p>1.2.2: yathoktopapannaḥ chalajātinigrahasthānasādhanopālambhaḥ jalpaḥ</p>
+
+<p>{jalpa-lakṣaṇam}</p>
+
+<p>1.2.3: saḥ pratipakṣasthāpanāhīnaḥ vitaṇḍā</p>
+
+<p>{vitaṇḍā-lakṣaṇam}</p>
+
+<p>[hetvābhāsaprakaraṇam]</p>
+
+<p>1.2.4: savyabhicāra-viruddha-prakaraṇasama-sādhyasama-kālātītāḥ hetvābhāsāḥ</p>
+
+<p>{hetvābhāsa-uddeśa-sūtram}</p>
+
+<p>1.2.5: anaikāntikaḥ savyabhicāraḥ</p>
+
+<p>{savyabhicāra-lakṣaṇam}</p>
+
+<p>1.2.6: siddhāntam abhyupetya tadvirodhī viruddhaḥ</p>
+
+<p>{viruddha-lakṣaṇam}</p>
+
+<p>1.2.7: yasmāt prakaraṇacintā saḥ nirṇayārthamapadiṣṭaḥ prakaraṇasamaḥ</p>
+
+<p>{prakaraṇasama-lakṣaṇam}</p>
+
+<p>1.2.8: sādhyāviśiṣṭaḥ sādhyatvāt sādhyasamaḥ</p>
+
+<p>{sādhyasama-lakṣaṇam}</p>
+
+<p>1.2.9: kālātyayāpadiṣṭaḥ kālātītaḥ</p>
+
+<p>{kālātīta-lakṣaṇam}</p>
+
+<p>[chalaprakaraṇam]</p>
+
+<p>1.2.10: vacanavighātaḥ arthavikalpopapattyā chalam</p>
+
+<p>{chala-lakṣaṇam}</p>
+
+<p>1.2.11: tat trividham - vākchalam sāmānyacchalam upacāracchalam ca iti</p>
+
+<p>{chala-bheda-uddeśa-sūtram}</p>
+
+<p>1.2.12: aviśeṣābhihite arthe vaktuḥ abhiprāyāt arthāntarakalpanā vākchalam</p>
+
+<p>{vākchala-lakṣaṇam}</p>
+
+<p>1.2.13: sambhavataḥ arthasya atisāmānyayogāt asambhūtārthakalpanā sāmānyacchalam</p>
+
+<p>{sāmānyacchala-lakṣaṇam}</p>
+
+<p>1.2.14: dharmavikalpanirdeśe arthasadbhāvapratiṣedhaḥ upacāracchalam</p>
+
+<p>{upacāracchala-lakṣaṇam}</p>
+
+<p>1.2.15: vākchalam eva upacāracchalam tat aviśeṣāt</p>
+
+<p>{upacāracchala-pūrvapakṣa-lakṣaṇam}</p>
+
+<p>1.2.16: na tat arthāntarabhāvāt</p>
+
+<p>{upacāracchala-lakṣaṇam}</p>
+
+<p>1.2.17: aviśeṣe vā kiñcitsādharmyāt ekacchalaprasaṅgaḥ</p>
+
+<p>{upacāracchala-lakṣaṇam}</p>
+
+<p>[liṅgadoṣasāmānyaprakaraṇam]</p>
+
+<p>1.2.18: sādharmyavaidharmyābhyām pratyavasthānaṃ jātiḥ</p>
+
+<p>{jāti-lakṣaṇam}</p>
+
+<p>1.2.19: vipratipattiḥ apratipattiḥ ca nigrahasthānam</p>
+
+<p>{nigrahasthāna-lakṣaṇam}</p>
+
+<p>1.2.20: tadvikalpāt jātinigrahasthānabahutvam</p>
+
+<p>{nigrahasthānabahutva-sūtram}</p>
+
+<p>(iti nyāyasūtre prathamādhyāyasya dvitīyam āhnikam)</p>
+
+<p>(samāptaḥ ca ayam prathamaḥ adhyāyaḥ)</p>
+
+<p>(atha dvitīyaḥ adhyāyaḥ)</p>
+
+<p>(prathamam āhnikam)
+[saṃśayaparīkṣāprakaraṇam]
+2.1.1: samānānekadharmādhyavasāyāt anyataradharmādhyavasāyāt vā na saṃśayaḥ
+{saṃśaya-}
+2.1.2: viprattipattyavyavasthādhyavasāyāt ca
+{saṃśaya-}
+2.1.3: viprattipattau ca saṃprattipatteḥ
+{saṃśaya-}
+2.1.4: avyavasthā ātmani vyavasthitatvāt ca avyavasthāyāḥ
+{saṃśaya-}
+2.1.5: tathā atyantasaṃśayaḥ taddharmasātatyopapatteḥ
+{saṃśaya-}
+2.1.6: yathoktādhyavasāyāt eva tadviśeṣāpekṣāt saṃśaye na asaṃśayaḥ na atyantasaṃśayaḥ vā
+{saṃśaya-}
+2.1.7: yatra saṃśayaḥ tatra evam uttarottaraprasaṅgaḥ
+{saṃśaya-}
+[pramāṇasāmānyaparīkṣāprakaraṇam]
+2.1.8: pratyakṣādīnām aprāmāṇyaṃ traikālyāsiddheḥ
+{pūrvapakṣasūtram}
+2.1.9: pūrvaṃ hi pramāṇasiddhau na indriyārthasannikarṣāt pratyakṣotpattiḥ
+{pūrvapakṣasūtram}
+2.1.10: paścātsiddhau na pramāṇebhyaḥ prameyasiddhiḥ
+{pūrvapakṣasūtram}
+2.1.11: yugapatsiddhau pratyarthaniyatatvāt kramavṛttitvābhāvaḥ buddhīnām
+{pūrvapakṣasūtram}
+2.1.12: traikālyāsiddheḥ pratiṣedhānupapattiḥ
+{pūrvapakṣasūtram}
+2.1.13: sarvapramāṇapratiṣedhāt ca pratiṣedhānupapattiḥ
+{pūrvapakṣasūtram}
+2.1.14: tatprāmāṇye vā na sarvapramāṇavipratiṣedhaḥ
+{pūrvapakṣasūtram}
+2.1.15: traikālyāpratiṣedhaḥ ca śabdāt ātodyasiddhivat tatsiddheḥ
+{pūrvapakṣasūtram}
+2.1.16: prameyā ca tulāprāmāṇyavat
+{pūrvapakṣasūtram}
+2.1.17: pramāṇataḥ siddheḥ pramāṇānām pramāṇāntarasiddhiprasaṅgaḥ
+{pūrvapakṣasūtram}
+2.1.18: tadvinivṛtteḥ vā pramāṇasiddhivat prameyasiddhiḥ
+{pūrvapakṣasūtram}
+2.1.19: na, pradīpaprakāśasiddhivat tatsiddheḥ
+{siddhāntalakṣaṇam}
+2.1.20: kvacit nivṛttidarśanāt anivṛttidarśanāt ca kvacit anekāntaḥ
+{siddhāntalakṣaṇam}
+[pratyakṣaparīkṣāprakaraṇām]
+2.1.21: pratyakṣalakṣaṇānupapattiḥ asamagravacanāt
+{pratyakṣalakṣaṇa-}
+{pratyakṣalakṣaṇaparīkṣā}
+2.1.22: na ātmamanasoḥ sannikarṣābhāve pratyakṣotpattiḥ
+(do)
+2.1.23: digdeśakālākāśeṣu api evaṃ prasaṅgaḥ
+(do)
+2.1.24: jñānaliṅgatvāt ātmanaḥ na anavarodhaḥ
+{pratyakṣalakṣaṇa-siddhānta-sūtram}
+2.1.25: tadayaugapadyaliṅgatvāt ca na manasaḥ
+{pratyakṣalakṣaṇa-siddhānta-sūtra}
+2.1.26: pratyakṣanimittatvāt ca indriyārthayoḥ sannikarṣasya svaśabdena vacanam
+{pratyakṣalakṣaṇa-siddhānta-sūtra}
+2.1.27: suptavyāsaktamanasāṃ ca indriyārthayoḥ sannikarṣanimittatvāt
+{pratyakṣalakṣaṇa-siddhānta-sūtra}
+2.1.28: taiḥ ca apadeśaḥ jñānaviśeṣāṇām
+{pratyakṣalakṣaṇa-siddhānta-sūtra}
+2.1.29: vyāhatatvāt ahetuḥ
+{pratyakṣalakṣaṇa-siddhānta-sūtra}
+2.1.30: na arthaviśeṣaprābalyāt
+{pratyakṣalakṣaṇa-siddhānta-sūtra}</p>
+
+<p>[viṣayaparīkṣā-prakaraṇām]
+2.1.31: pratyakṣam anumānam ekadeśagrahaṇāt upalabdheḥ
+{pūrvapakṣa-sūtra}
+2.1.32: na, pratyakṣeṇa yāvat tāvat api upalambhāt
+{siddhānta-sūtra}
+2.1.33: na caikadeśopalabdhiravayavisadbhāvāt
+{siddhānta-sūtra}
+[prasaṅgopāttā avayaviparīkṣā]
+2.1.34: sādhyatvāt avayavini sandehaḥ
+{pūrvapakṣa-sūtra}
+2.1.35: sarvāgrahaṇam avayavyasiddheḥ
+{siddhānta-sūtra}
+2.1.36: dhāraṇākarṣaṇopapatteḥ ca
+{siddhānta-sūtra}
+2.1.37: senāvanavat grahaṇam iti cet na atīndriyatvāt aṇūnām
+{siddhānta-sūtra}</p>
+
+<p>[anumānaparīkṣāprakaraṇam]</p>
+
+<p>2.1.38: rodhopaghātasādṛśyebhyaḥ vyabhicārāt anumānam apramāṇam
+{pūrvapakṣa-sūtra}
+2.1.39: na, ekadeśatrāsasādṛśyebhyaḥ arthāntarabhāvāt
+{siddhānta-sūtra}
+{vartamānakālaparīkṣā}
+2.1.40: vartamānābhāvaḥ, patataḥ patitapatitavyakālopapatteḥ
+{pūrvapakṣa-sūtra}
+2.1.41: tayoḥ api abhāvaḥ vartamānābhāve, tadapekṣatvāt
+{siddhānta-sūtra}
+2.1.42: na atītānāgatayoḥ itaretarāpekṣā siddhiḥ
+{siddhānta-sūtra}
+2.1.43: vartamānābhāve sarvāgrahaṇaṃ pratyakṣānupapatteḥ
+{siddhānta-sūtra}
+2.1.44: kṛtatākarttavyatopapatteḥ tu ubhayathā grahaṇam
+{siddhānta-sūtra}</p>
+
+<p>[upamānaparīkṣāprakaraṇam]
+2.1.45: atyantaprāyaikadeśasādharmyāt upamānāsiddhiḥ
+{siddhānta-sūtra}
+2.1.46: prasiddhasādharmyāt upamānasiddheḥ yathoktadoṣānupapattiḥ
+{pūrvapakṣa-sūtra}
+2.1.47: pratyakṣeṇa apratyakṣasiddheḥ
+{siddhānta-sūtra}
+2.1.48: na apratyakṣe gavaye pramāṇārtham upamānasya paśyāmaḥ
+{siddhānta-sūtra}
+2.1.49: tathā iti upasaṃhārāt upamānasiddheḥ na aviśeṣaḥ
+{siddhānta-sūtra}
+[śabdasāmānyaparīkṣāprakaraṇam]
+2.1.50: śabdaḥ anumānam arthasya anupalabdheḥ anumeyatvāt
+{pūrvapakṣa-sūtra}
+2.1.51: upalabdheḥ advipravṛttitvāt
+{pūrvapakṣa-sūtra}
+2.1.52: sambandhāt ca
+{pūrvapakṣa-sūtra}
+2.1.53: āptopadeśasāmarthyāt śabdāt arthasampratyayaḥ
+{siddhānta-sūtra}
+2.1.54: pūraṇapradāhapāṭanānupalabdheḥ ca sambandhābhāvaḥ
+{siddhānta-sūtra}
+2.1.55: śabdārthavyavasthānāt apratiṣedhaḥ
+{siddhānta-sūtra}
+2.1.56: na, sāmayikatvāt śabdārthasampratyayasya
+{siddhānta-sūtra}
+2.1.57: jātiviśeṣe ca aniyamāt
+{siddhānta-sūtra}
+[śabdaviśeṣaparīkṣāprakaraṇam]
+2.1.58: tadaprāmāṇyam anṛtavyāghātapunaruktadoṣebhyaḥ
+{siddhānta-sūtra}
+2.1.59: na, karmakartṛsādhanavaiguṇyāt
+{siddhānta-sūtra}
+2.1.60: abhyupetya kālabhede doṣavacanāt
+{siddhānta-sūtra}
+2.1.61: anuvādopapatteḥ ca
+{siddhānta-sūtra}
+2.1.62: vākyavibhāgasya ca arthagrahaṇāt
+{siddhānta-sūtra}
+2.1.63: vidhyarthavādānuvādavacanaviniyogāt
+{siddhānta-sūtra}
+2.1.64: vidhiḥ vidhāyakaḥ
+{siddhānta-sūtra}
+2.1.65: stutiḥ nindā parakṛtiḥ purākalpaḥ iti arthavādaḥ
+{siddhānta-sūtra}
+{arthavāda-bhedaḥ}
+2.1.66: vidhivihitasya anuvacanam anuvādaḥ
+{arthavāda-}
+2.1.67: na anuvādapunaruktayoḥ viśeṣaḥ, śabdābhyāsopapatteḥ
+{siddhānta-sūtra}
+2.1.68: śīghrataragamanopadeśavat abhyāsāt na aviśeṣaḥ
+{siddhānta-sūtra}
+2.1.69: mantrāyurvedaprāmāṇyavat ca tatprāmāṇyam, āptaprāmāṇyāt
+{siddhānta-sūtra}</p>
+
+<p>(iti nyāyasūtre dvitīyādhyāyasya prathamam āhnikam)</p>
+
+<p>(dvitīyam āhnikam)
+[pramāṇacatuṣṭvaparīkṣāprakaraṇam]</p>
+
+<p>2.2.1: na catuṣṭvam, aitihyārthāpattisambhavābhāvaprāmāṇyāt
+{pūrvapakṣa-sūtra}
+2.2.2: śabde aitihyānarthāntarabhāvāt anumāne arthāpattisambhavābhāvānarthāntara bhāvāt ca apratiṣedhaḥ
+{siddhānta-sūtra}
+2.2.3: arthāpattiḥ apramāṇam anaikāntikatvāt
+{arthāpattiprāmāṇyaparīkṣā}
+2.2.4: anarthāpattau arthāpattyabhimānāt
+{nānaikāntikatvamarthāpatteḥ}
+2.2.5: pratiṣedhāprāmāṇyaṃ ca anaikāntikatvāt
+(-)
+2.2.6: tatprāmāṇye vā na arthāpattyaprāmāṇyam
+{siddhānta-sūtra}
+[abhāvaprāmāṇyasiddhiḥ - avāntaraprakaraṇam]
+2.2.7: na abhāvaprāmāṇyaṃ prameyāsiddheḥ
+{pūrvapakṣa-sūtra}
+2.2.8: lakṣiteṣvalakṣaṇalakṣitatvāt alakṣitānāṃ tatprameyasiddheḥ
+{udāharaṇa sūtra}
+2.2.9: asati arthe na abhāvaḥ iti cet na, anyalakṣaṇopapatteḥ
+{siddhānta-sūtra}
+2.2.10: tatsiddheḥ alakṣiteṣu ahetuḥ
+{pūrvapakṣa-sūtra}
+2.2.11: na, lakṣaṇāvasthitāpekṣasiddheḥ
+{siddhānta-sūtra}
+2.2.12: prāk utpatteḥ abhāvopapatteḥ ca
+{siddhānta-sūtra}</p>
+
+<p>[śabdānityatvaparīkṣāprakaraṇam(13-39)]
+2.2.13: ādimatvāt aindriyakatvāt kṛtakavat upacārāt ca
+{śabdānityatva-pratipādana-sūtra}
+2.2.14: na, ghaṭābhāvasāmānyanityatvāt nityeṣu api anityavat upacārāt ca
+{siddhānta-sūtra}
+2.2.15: tattvabhāktayoḥ nānātvavibhāgāt avyabhicāraḥ
+{śabdānityatva-pratipādana-sūtra}
+{siddhānta-sūtra}
+2.2.16: santānānumānaviśeṣaṇāt
+{śabdānityatva-pratipādana-sūtra}
+{siddhānta-sūtra}
+2.2.17: kāraṇadravyasya pradeśaśabdenābhidhānāt
+{śabdānityatva-pratipādana-sūtra}
+{siddhānta-sūtra}
+2.2.18: prāk uccāraṇāt anupalabdheḥ āvaraṇādyanupalabdheḥ ca
+{śabdānityatva-pratipādana-sūtra}
+2.2.19: tadanupalabdheḥ anupalambhāt āvaraṇopapattiḥ
+{śabdānityatva-pratipādana-sūtra}
+2.2.20: anupalambhāt anupalabdhisadbhāvāt na āvaraṇānupapattiḥ anupalambhāt
+{siddhānta-sūtra}
+2.2.21: anupalambhātmakatvāt anupalabdheḥ ahetuḥ
+{siddhānta-sūtra}
+2.2.22: asparśatvāt
+{siddhānta-sūtra}
+2.2.23: na, karmānityatvāt
+{siddhānta-sūtra}
+2.2.24: na, aṇunityatvāt
+{siddhānta-sūtra}
+2.2.25: sampradānāt
+{siddhānta-sūtra}
+2.2.26: tadantarālānupalabdheḥ ahetuḥ
+{siddhānta-sūtra}
+2.2.27: adhyāpanāt apratiṣedhaḥ
+{siddhānta-sūtra}
+2.2.28: ubhayoḥ pakṣayoḥ anyatarasya adhyāpanāt apratiṣedhaḥ
+{siddhānta-sūtra}
+2.2.29: abhyāsāt
+{siddhānta-sūtra}
+2.2.30: na anyatve api abhyāsasya upacārāt
+{siddhānta-sūtra}
+2.2.31: anyat anyasmāt ananyatvāt ananyat iti anyatābhāvaḥ
+{siddhānta-sūtra}
+2.2.32: tadabhāve na asti ananyatā, tayoḥ itaretarāpekṣasiddheḥ
+{siddhānta-sūtra}
+2.2.33: vināśakāraṇānupalabdheḥ
+{siddhānta-sūtra}
+2.2.34: aśravaṇakāraṇānupalabdheḥ satataśravaṇaprasaṅgaḥ
+{siddhānta-sūtra}
+2.2.35: upalabhyamāne ca anupalabdheḥ asattvāt anapadeśaḥ
+{siddhānta-sūtra}
+2.2.36: pāṇinimittapraśleṣāt śabdābhāve na anupalabdhiḥ
+{siddhānta-sūtra}
+2.2.37: vināśakāraṇānupalabdheḥ ca avasthāne tannityatvaprasaṅgaḥ
+{siddhānta-sūtra}
+2.2.38: asparśatvāt apratiṣedhaḥ
+{siddhānta-sūtra}
+2.2.39: vibhaktyantaropapatteḥ ca samāse
+{siddhānta-sūtra}</p>
+
+<p>[śabdapariṇāmaparīkṣāprakaraṇam(40-56)]
+2.2.40: vikārādeśopadeśāt saṃśayaḥ
+{pūrvapakṣa-sūtra}
+2.2.41: prakṛtivivṛddhau vikāravivṛddheḥ
+{siddhānta-sūtra}
+2.2.42: nyūnasamādhikopalabdheḥ vikārāṇām ahetuḥ
+{siddhānta-sūtra}
+2.2.43: dvividhasya api hetoḥ abhāvāt asādhanaṃ dṛṣṭāntaḥ
+{udāharaṇasūtra}
+2.2.44: na, atulyaprakṛtīnām vikāravikalpāt
+{siddhānta-sūtra}
+2.2.45: dravyavikāravaiṣamyavat varṇavikāravikalaḥ
+{pūrvapakṣa-sūtra}
+2.2.46: na, vikāradharmānupapatteḥ
+{siddhānta-sūtra}
+2.2.47: vikāraprāptānām apunarāpatteḥ
+{siddhānta-sūtra}
+2.2.48: suvarṇādīnāṃ punarāpatteḥ ahetuḥ
+{pūrvapakṣa-sūtra}
+2.2.49: na, tadvikārāṇāṃ suvarṇabhāvāvyatirekāt
+{siddhānta-sūtra}
+2.2.50: varṇatvāvyatirekāt varṇavikārāṇām apratiṣedhaḥ
+{siddhānta-sūtra}
+2.2.51: sāmānyavato dharmayogo na sāmānyasya
+{siddhānta-sūtra}
+2.2.52: nityatve avikārāt anityatve ca anavasthānāt
+{siddhānta-sūtra}
+2.2.53: nityānām atīndriyatvāt taddharmavikalpāt ca varṇavikārāṇām apratiṣedhaḥ
+{pūrvapakṣa-sūtra}
+2.2.54: anavasthāyitve ca varṇopalabdhivat tadvikāropapattiḥ
+{pūrvapakṣa-sūtra}
+2.2.55: vikāradharmitve nityatvābhāvāt kālāntare vikāropapatteḥ ca apratiṣedhaḥ
+{siddhānta-sūtra}
+2.2.56: prakṛtyaniyamāt
+{siddhānta-sūtra}
+2.2.57: aniyame niyamāt na aniyamaḥ
+{pūrvapakṣa-sūtra}
+2.2.58: niyamāniyamavirodhāt aniyame niyamāt ca apratiṣedhaḥ
+{siddhānta-sūtra}
+2.2.59: guṇāntarāpattyupamarda-hrāsa-vṛddhi-śleṣebhyaḥ tu vikāropapatteḥ varṇavikārāḥ
+{siddhānta-sūtra}</p>
+
+<p>[śabdaśaktiparīkṣāprakaraṇam]
+2.2.60: te vibhaktyantāḥ padam
+{pada-lakṣaṇa-sūtram}
+2.2.61: vyaktyākṛtijātisannidhau upacārāt saṃśayaḥ
+{pūrvapakṣa-sūtra}</p>
+
+<p>[vyaktivāda-avāntaraprakaraṇam]
+2.2.62: yāśabda-samūha-tyāga-parigraha-saṅkhyā-vṛddhyapacaya-varṇa-samāsānubandhānām vyaktau upacārāt vyaktiḥ
+{pūrvapakṣa-sūtra}
+2.2.63: na, tat anavasthānāt
+{siddhānta-sūtra}
+2.2.64: sahacaraṇa-sthāna-tādarthya-vṛtta-māna-dhāraṇa-sāmīpya-yoga-sādhanādhipatyebhyaḥ brāhmaṇa-mañca-kaṭa-rāja-saktu-candana-gaṅgā-śāṭakānna-puruṣeṣvatadbhāve api tadupacāraḥ
+{siddhānta-sūtra}</p>
+
+<p>[ākṛtivāda-avāntaraprakaraṇam]
+2.2.65: ākṛtiḥ, tadapekṣatvāt sattvavyavasthānasiddheḥ
+{pūrvapakṣa-sūtra}</p>
+
+<p>[jātivāda-avāntaraprakaraṇam]
+2.2.66: vyaktyākṛtiyukte api aprasaṅgāt prokṣaṇādināṃ mṛdgavake jātiḥ
+{pūrvapakṣa-sūtra}
+2.2.67: na, ākṛtivyaktyapekṣatvāt jātyabhivyakteḥ
+{siddhānta-sūtra}</p>
+
+<p>[siddhāntavāda-avāntaraprakaraṇam]
+2.2.68: vyaktyākṛtijātayaḥ tu padārthaḥ
+{siddhānta-sūtra}
+2.2.69: vyaktiḥ guṇaviśeṣāśrayaḥ mūrtiḥ
+{siddhānta-sūtra}
+2.2.70: ākṛtiḥ jātiliṅgākhyā
+{siddhānta-sūtra}
+2.2.71: samānaprasavātmikā jātiḥ
+{siddhānta-sūtra}</p>
+
+<p>(iti nyāyasūtre dvitīyādhyāyasya dvitīyam āhnikam)</p>
+
+<p>samāptaḥ ca ayam dvitīyādhyāyaḥ</p>
+
+<p>(atha tṛtīyaḥ adhyāyaḥ)
+(prathamam āhnikam)
+[indriyavyatiriktātmaparīkṣāprakaraṇaṃ(1-3)]
+3.1.1: darśanasparśanābhyām ekārthagrahaṇāt
+{pūrvapakṣa-sūtra}
+3.1.2: na, viṣayavyavasthānāt
+{pūrvapakṣa-sūtra}
+3.1.3: tadvyavasthānāt eva ātmasadbhāvāt apratiṣedhaḥ
+{siddhānta-sūtra}
+[śarīravyatiriktātmaparīkṣāprakaraṇam]
+3.1.4: śarīradāhe pātakābhāvāt
+{siddhānta-sūtra}
+3.1.5: tadabhāvaḥ sātmakapradāhe api, tannityatvāt
+{pūrvapakṣa-sūtra}
+3.1.6: na, kāryāśrayakartṛvadhāt
+{siddhānta-sūtra}</p>
+
+<p>[prāsaṅgikaṃ cakṣuradvaitaparīkṣāprakaraṇam(7-14)]
+3.1.7: savyadṛṣṭasya itareṇa pratyabhijñānāt
+{siddhānta-sūtra}
+3.1.8: na ekasmin nāsāsthivyavahite dvitvābhimānāt
+{pūrvapakṣa-sūtra}
+3.1.9: ekavināśe dvitīyāvināśāt na ekatvam
+{siddhānta-sūtra}
+3.1.10: avayavanāśe api avayavyupalabdheḥ ahetuḥ
+{pūrvapakṣa-sūtra}
+3.1.11: dṛṣṭāntavirodhāt apratiṣedhaḥ
+{siddhānta-sūtra}
+3.1.12: indriyāntaravikārāt
+{siddhānta-sūtra}
+3.1.13: na, smṛteḥ smarttavyaviṣayatvāt
+{pūrvapakṣa-sūtra}
+3.1.14: tadātmaguṇasadbhāvāt apratiṣedhaḥ
+{siddhānta-sūtra}</p>
+
+<p>[ātmamanobhedaparīkṣāprakaraṇam(15-17)]
+3.1.15: na, ātmapratipattihetūnāṃ manasi sambhavāt
+{pūrvapakṣa-sūtra}
+3.1.16: jñātuḥ jñānasādhanopapatteḥ saṃjñābhedamātram
+{siddhānta-sūtra}
+3.1.17: niyamaḥ ca niranumānaḥ
+{siddhānta-sūtra}
+[ātmanityatvaparīkṣāprakaraṇam(18-26)]
+3.1.18: pūrvābhyastasmṛtyanubandhāt jātasya harṣabhayaśokasampratipatteḥ
+{siddhānta-sūtra}
+3.1.19: padmādiṣu prabodhasammīlanavikāravat tadvikāraḥ
+{pūrvapakṣa-sūtra}
+3.1.20: na, uṣṇaśītavarṣākālanimittatvāt pañcātmakavikārāṇām
+{siddhānta-sūtra}
+3.1.21: pretyāhārābhyāsakṛtāt stanyābhilāṣāt
+{siddhānta-sūtra}
+3.1.22: ayasaḥ ayaskāntābhigamanavat tadupasarpaṇam
+{pūrvapakṣa-sūtra}
+3.1.23: na, anyatra pravṛttyabhāvāt
+{siddhānta-sūtra}
+3.1.24: vītarāgajanmādarśanāt
+{siddhānta-sūtra}
+3.1.25: saguṇadravyotpattivat tadutpattiḥ
+{pūrvapakṣa-sūtra}
+3.1.26: na, saṅkalpanimittatvāt rāgādīnām
+{siddhānta-sūtra}</p>
+
+<p>[śarīraparīkṣāprakaraṇam(27-31)]
+3.1.27: pārthivaṃ guṇāntaropalabdheḥ
+{siddhānta-sūtra}
+3.1.28: pārthivāpyataijasaṃ tadguṇopalabdheḥ
+{siddhānta-sūtra}
+3.1.29: niḥśvāsocchvāsopalabdheḥ cāturbhauntikam
+{pūrvapakṣa-sūtra}
+3.1.30: gandhakledapākavyūhāvakāśadānebhyaḥ pāñcabhautikam
+{pūrvapakṣa-sūtra}
+3.1.31: śrutiprāmāṇyāt ca
+{siddhānta-sūtra}</p>
+
+<p>[indriyaparīkṣāprakaraṇam(32-51)]
+3.1.32: kṛṣṇasāre sati upalambhāt vyatiricya ca upalambhāt saṃśayaḥ
+{siddhānta-sūtra}
+3.1.33: mahadaṇugrahaṇāt
+{sāṅkhyamatakhaṇḍanam}
+3.1.34: raśmyarthasannikarṣaviśeṣāt tadgrahaṇam
+{siddhānta-sūtra}
+3.1.35: tadanupalabdheḥ ahetuḥ
+{siddhānta-sūtra}
+3.1.36: na anumīyamānasya pratyakṣataḥ anupalabdhiḥ abhāvahetuḥ
+{siddhānta-sūtra}
+3.1.37: dravyaguṇadharmabhedāt ca upalabdhiniyamaḥ
+{siddhānta-sūtra}
+3.1.38: anekadravyasamavāyāt rūpaviśeṣāt ca rūpopalabdhiḥ
+{siddhānta-sūtra}
+3.1.39: karmakāritaḥ ca indriyāṇāṃ vyūhaḥ puruṣārthatantraḥ
+{siddhānta-sūtra}
+3.1.40: madhyandinolkāprakāśānupalabdhivat tadanupalabdhiḥ
+{siddhānta-sūtra}
+3.1.41: na, rātrau api anupalabdheḥ
+{siddhānta-sūtra}
+3.1.42: bāhyaprakāśānugrahāt viṣayopalabdheḥ anabhivyaktitaḥ anupalabdhiḥ
+{siddhānta-sūtra}
+3.1.43: abhivyaktau ca abhibhavāt
+{siddhānta-sūtra}
+3.1.44: naktañcaranayanaraśmidarśanāt ca
+{siddhānta-sūtra}
+3.1.45: aprāpyagrahaṇaṃ kācābhrapaṭalasphaṭikāntaritopalabdheḥ
+{pūrvapakṣa-sūtra}
+3.1.46: kuḍyāntaritānupalabdheḥ apratiṣedhaḥ
+{siddhānta-sūtra}
+3.1.47: apratīghātāt sannikarṣopapattiḥ
+{siddhānta-sūtra}
+3.1.48: ādityaraśmeḥ sphaṭikāntarite api dāhye avighātāt
+{siddhānta-sūtra}
+3.1.49: na itaretaradharmaprasaṅgāt
+{pūrvapakṣa-sūtra}
+3.1.50: ādarśodakayoḥ prasādasvābhāvyāt rūpopalabdhiḥ
+{siddhānta-sūtra}
+3.1.51: dṛṣṭānumitānāṃ hi niyogapratiṣedhānupapattiḥ
+{siddhānta-sūtra}</p>
+
+<p>[indriyanānātvaparīkṣāprakaraṇam(52-62)]
+3.1.52: sthānānyatve nānātvāt avayavinānāsthānatvāt ca saṃśayaḥ
+{siddhānta-sūtra}
+3.1.53: tvak avyatirekāt
+{pūrvapakṣa-sūtra}
+3.1.54: na yugapat arthānupalabdheḥ
+{siddhānta-sūtra}
+3.1.55: vipratiṣedhāt ca na tvak ekā
+{siddhānta-sūtra}
+3.1.56: indriyārthapañcatvāt
+{siddhānta-sūtra}
+3.1.57: na, tadarthabahutvāt
+{pūrvapakṣa-sūtra}
+3.1.58: gandhatvādyavyatirekāt gandhādīnāmapratiṣedhaḥ
+{siddhānta-sūtra}
+3.1.59: viṣayatvāvyatirekāt ekatvam
+{siddhānta-sūtra}
+3.1.60: na, buddhilakṣaṇādhiṣṭhāna-gatyākṛti-jātipañcatvebhyaḥ
+{siddhānta-sūtra}
+3.1.61: bhūtaguṇaviśeṣopalabdheḥ tādātmyam
+{siddhānta-sūtra}</p>
+
+<p>[arthaparīkṣāprakaraṇam(62-74)]
+3.1.62: gandha-rasa-rūpa-sparśa-śabdānāṃ sparśaparyantāḥ pṛthivyāḥ
+{siddhānta-sūtra}
+3.1.63: ap-tejo-vāyūnāṃ pūrvaṃ pūrvam apohya ākāśasya uttaraḥ
+{pūrvapakṣa-sūtra}
+3.1.64: na, sarvaguṇānupalabdheḥ
+{siddhānta-sūtra}
+3.1.65: ekaikaśyena uttaraguṇāsadbhāvāt uttarottarāṇāṃ tadanupalabdhiḥ
+{pūrvapakṣa-sūtra}
+3.1.66: viṣṭaṃ hi aparaṃ pareṇa
+{pūrvapakṣa-sūtra}
+3.1.67: na, pārthivāpyayoḥ pratyakṣatvāt
+{siddhānta-sūtra}
+3.1.68: pūrvapūrvaguṇotkarṣāt tattat pradhānam
+{siddhānta-sūtra}
+3.1.69: taddhyavasthānaṃ tu bhūyastvāt
+{siddhānta-sūtra}
+3.1.70: saguṇānām indriyabhāvāt
+{siddhānta-sūtra}
+3.1.71: tena eva tasya agrahaṇāt ca
+{siddhānta-sūtra}
+3.1.72: na, śabdaguṇopalabdheḥ
+{pūrvapakṣa-sūtra}
+3.1.73: tadupalabdhiḥ itaretaradravyaguṇavaidharmyāt
+{siddhānta-sūtra}</p>
+
+<p>(iti nyāyasūtre tṛtīyādhyāyasya prathamam āhnikam)</p>
+
+<p>(dvitīyam āhnikam)</p>
+
+<p>[buddheranityatvaparīkṣāprakaraṇam(1-9)]
+3.2.1: karmākāśasādharmyāt saṃśayaḥ
+{siddhānta-sūtra}
+3.2.2: viṣayapratyabhijñānāt
+{siddhānta-sūtra}
+3.2.3: sādhyasamatvāt ahetuḥ
+{siddhānta-sūtra}
+3.2.4: na, yugapat agrahaṇāt
+{siddhānta-sūtra}
+3.2.5: apratyabhijñāne ca vināśaprasaṅgaḥ
+{siddhānta-sūtra}
+3.2.6: kramavṛttitvāt ayugapat grahaṇam
+{siddhānta-sūtra}
+3.2.7: apratyabhijñānaṃ ca viṣayāntaravyāsaṅgāt
+{siddhānta-sūtra}
+3.2.8: na, gatyabhāvāt
+{siddhānta-sūtra}
+3.2.9: sphaṭikānyatvābhimānavat tadanyatvābhimānaḥ
+{siddhānta-sūtra}</p>
+
+<p>[kṣaṇabhaṅgaparīkṣāprakaraṇam(10-17)]
+3.2.10: sphaṭike api aparāparotpatteḥ kṣaṇikatvāt vyaktīnām ahetuḥ
+{siddhānta-sūtra}
+3.2.11: niyamahetvabhāvāt yathādarśanam abhyanujñā
+{siddhānta-sūtra}
+3.2.12: na, utpattivināśakāraṇopalabdheḥ
+{siddhānta-sūtra}
+3.2.13: kṣīravināśe kāraṇānupalabdhivat dadhyutpattivat ca tadutpattiḥ
+{pūrvapakṣa-sūtra}
+3.2.14: liṅgataḥ grahaṇāt na anupalabdhiḥ
+{siddhānta-sūtra}
+3.2.15: na payasaḥ pariṇāma-guṇāntaraprādurbhāvāt
+{siddhānta-sūtra}
+3.2.16: vyūhāntarāt dravyāntarotpattidarśanaṃ pūrvadravyanivṛtteḥ anumānam
+{siddhānta-sūtra}
+3.2.17: kvacit vināśakāraṇānupalabdheḥ kvacit ca upalabdheḥ anekāntaḥ
+{siddhānta-sūtra}</p>
+
+<p>[buddherātmaguṇatvaparīkṣāprakaraṇām(18-41)]
+3.2.18: na indriyārthayoḥ, tadvināśe api jñānāvasthānāt
+{siddhānta-sūtra}
+3.2.19: yugapat jñānānupalabdheḥ ca na manasaḥ
+{siddhānta-sūtra}
+3.2.20: tat ātmaguṇatve api tulyam
+{pūrvapakṣa-sūtra}
+3.2.21: indriyaiḥ manasaḥ sannikarṣābhāvāt tadanutpattiḥ
+{pūrvapakṣa-sūtra}
+3.2.22: na, utpattikāraṇānapadeśāt
+{siddhānta-sūtra}
+3.2.23: vināśakāraṇānupalabdheḥ ca avasthāne tannityatvaprasaṅgaḥ
+{pūrvapakṣa-sūtra}
+3.2.24: anityatvagrahāt buddheḥ buddhyantarāt vināśaḥ śabdavat
+{siddhānta-sūtra}
+3.2.25: jñānasamavetātmapradeśasannikarṣāt manasaḥ smṛtyutpatteḥ na yugapat utpattiḥ
+{pūrvapakṣa-sūtra}
+3.2.26: na, antaḥ-śarīravṛttitvāt manasaḥ
+{siddhānta-sūtra}
+3.2.27: sādhyatvāt ahetuḥ
+{pūrvapakṣa-sūtra}
+3.2.28: smarataḥ śarīradhāraṇopapatteḥ apratiṣedhaḥ
+{siddhānta-sūtra}
+3.2.29: na, tadāśugatitvānmanasaḥ
+{pūrvapakṣa-sūtra}
+3.2.30: na, smaraṇakālāniyamāt
+{siddhānta-sūtra}
+3.2.31: ātmapreraṇa-yadṛcchā-jñatābhiḥ ca na saṃyogaviśeṣaḥ
+{pūrvapakṣa-sūtra}
+3.2.32: vyāsaktamanasaḥ pādavyathanena saṃyogaviśeṣeṇa samānam
+{siddhānta-sūtra}
+3.2.33: praṇidhānaliṅgādijñānānām ayugapadbhāvāt ayugapatsmaraṇam
+{siddhānta-sūtra}
+3.2.34: jñasya icchādveṣanimittatvāt ārambhanivṛttyoḥ
+{siddhānta-sūtra}
+3.2.35: talliṅgatvāt icchādveṣayoḥ pārthivādyeṣu apratiṣedhaḥ
+{pūrvapakṣa-sūtra}
+3.2.36: paraśvādiṣu ārambhanivṛttidarśanāt
+{siddhānta-sūtra}
+3.2.37: niyamāniyamau tu tadviśeṣakau
+{siddhānta-sūtra}
+3.2.38: yathoktahetutvāt pāratantryāt akṛtābhyāgamāt ca na manasaḥ
+{siddhānta-sūtra}
+3.2.39: pariśeṣāt yathoktahetūpapatteḥ ca
+{siddhānta-sūtra}
+3.2.40: smaraṇaṃ tu ātmanaḥ jñasvābhāvyāt
+{siddhānta-sūtra}
+3.2.41: praṇidhāna-nibandhābhyāsa-liṅga-lakṣaṇa-sādṛśya-parigrahāśrayāśrita sambandhānantarya-viyogaikakārya-virodhātiśaya-prāpti-vyavadhāna-sukha-duḥkhecchā dveṣa-bhayārthitva-kriyārāga-dharmādharmanimittebhyaḥ
+{siddhānta-sūtra}</p>
+
+<p>[buddherutpannāpavargitvaparīkṣāprakaraṇam(42-45)]
+3.2.42: karmānavasthāyigrahaṇāt
+{siddhānta-sūtra}
+3.2.43: avyaktagrahaṇam anavasthāyitvāt vidyutsampāte rūpāvyaktagrahaṇavat
+{siddhānta-sūtra}
+3.2.44: hetūpādānāt pratiṣeddhavyābhyanujñā
+{siddhānta-sūtra}
+3.2.45: na pradīpārciḥsantatyabhivyaktagrahaṇavat tadgrahaṇam
+{siddhānta-sūtra}</p>
+
+<p>[buddheḥ śarīraguṇavyatirekaparīkṣāprakaraṇam(46-55)]
+3.2.46: dravye svaguṇaparaguṇopalabdheḥ saṃśayaḥ
+{siddhānta-sūtra}
+3.2.47: yāvaccharīrabhāvitvāt rūpādīnām
+{siddhānta-sūtra}
+3.2.48: na, pākajaguṇāntarotpatteḥ
+{siddhānta-sūtra}
+3.2.49: pratidvandvisiddheḥ pākajānām apratiṣedhaḥ
+{siddhānta-sūtra}
+3.2.50: śarīravyāpitvāt
+{siddhānta-sūtra}
+3.2.51: na, keśanakhādiṣu anupalabdheḥ
+{pūrvapakṣa-sūtra}
+3.2.52: tvakparyantatvāt śarīrasya keśanakhādiṣu aprasaṅgaḥ
+{siddhānta-sūtra}
+3.2.53: śarīraguṇavaidharmyāt
+{siddhānta-sūtra}
+3.2.54: na, rūpādīnām itaretaravaidharmyāt
+{pūrvapakṣa-sūtra}
+3.2.55: aindriyakatvāt rūpādīnām apratiṣedhaḥ
+{siddhānta-sūtra}</p>
+
+<p>[manaḥparīkṣāprakaraṇam(56-59)]
+3.2.56: jñānāyaugapadyāt ekam manaḥ
+{siddhānta-sūtra}
+3.2.57: na, yugapat anekakriyopalabdheḥ
+{pūrvapakṣa-sūtra}
+3.2.58: alātacakradarśanavat tadupalabdhiḥ āśusañcārāt
+{siddhānta-sūtra}
+3.2.59: yathoktahetutvāt ca aṇu
+{siddhānta-sūtra}</p>
+
+<p>[adṛṣṭaniṣpādyatvaparīkṣāprakaraṇam(60-72)]
+3.2.60: pūrvakṛtaphalānubandhāt tadutpattiḥ
+{siddhānta-sūtra}
+3.2.61: bhūtebhyaḥ mūrtyupādānavat tadupādānam
+{pūrvapakṣa-sūtra}
+3.2.62: na, sādhyasamatvāt
+{siddhānta-sūtra}
+3.2.63: na, utpattinimittatvāt mātāpitroḥ
+{siddhānta-sūtra}
+3.2.64: tathā āhārasya
+{siddhānta-sūtra}
+3.2.65: prāptau ca aniyamāt
+{siddhānta-sūtra}
+3.2.66: śarīrotpattinimittavat saṃyogotpattinimittaṃ karma
+{siddhānta-sūtra}
+3.2.67: etena aniyamaḥ pratyuktaḥ
+{siddhānta-sūtra}
+3.2.68: tat adṛṣṭakāritam iti cet punaḥ tatprasaṅgaḥ apavarge
+{siddhānta-sūtra}
+3.2.69: manaḥkarmanimittatvāt ca saṃyogāvyucchedaḥ
+{siddhānta-sūtra}
+3.2.70: nityatvaprasaṅgaḥ ca prāyaṇānupapatteḥ
+{siddhānta-sūtra}
+3.2.71: aṇuśyāmatānityatvavat etat syāt
+{pūrvapakṣa-sūtra}
+3.2.72: na, akṛtābhyāgamaprasaṅgāt
+{siddhānta-sūtra}</p>
+
+<p>(iti nyāyasūtre tṛtīyādhyāyasya dvitīyam āhnikam)</p>
+
+<p>(samāptaḥ ca ayam tṛtīyaḥ adhyāyaḥ)</p>
+
+<p>(atha caturthaḥ adhyāyaḥ)
+(prathamam āhnikam)
+[pravṛttidoṣasāmānyaparīkṣāprakaraṇam(1-2)]</p>
+
+<p>4.1.1: pravṛttiryathoktā
+{siddhānta-sūtra}
+4.1.2: tathā doṣāḥ
+{siddhānta-sūtra}</p>
+
+<p>[doṣatrairāśyaparīkṣāprakaraṇam(3-8)]
+4.1.3: trairāśyaṃ rāgadveṣamohārthāntarbhāvāt
+{siddhānta-sūtra}
+4.1.4: na, ekapratyanīkabhāvāt
+{pūrvapakṣa-sūtra}
+4.1.5: vyabhicārādahetuḥ
+{siddhānta-sūtra}
+4.1.6: teṣāṃ mohaḥ pāpīyān, nāmūḍhasyetarotpatteḥ
+{siddhānta-sūtra}
+4.1.7: nimittanaimittikabhāvādarthāntarabhāvo doṣebhyaḥ
+{pūrvapakṣa-sūtra}
+4.1.8: na doṣalakṣaṇāvarodhānmohasya
+{siddhānta-sūtra}
+4.1.9: nimittanaimittikopapatteśca tulyajātīyānāmapratiṣedhaḥ
+{siddhānta-sūtra}</p>
+
+<p>[pretyabhāvaparīkṣāprakaraṇam(10-13)]
+4.1.10: ātmanityatve pretyabhāvasiddhiḥ
+{siddhānta-sūtra}
+4.1.11: vyaktād vyaktānām, pratyakṣaprāmāṇyāt
+{siddhānta-sūtra}
+4.1.12: na, ghaṭād ghaṭaniṣpatteḥ
+{pūrvapakṣa-sūtra}
+4.1.13: vyaktād ghaṭaniṣpatterapratiṣedhaḥ
+{siddhānta-sūtra}</p>
+
+<p>[śūnyatopādānanirākaraṇaprakaraṇam(14-18)]
+4.1.14: abhāvād bhāvotpattiḥ, nānupamṛdya prādurbhāvāt
+{pūrvapakṣa-sūtra}
+4.1.15: vyāghātādaprayogaḥ
+{siddhānta-sūtra}
+4.1.16: na, atītānāgatayoḥ kārakaśabdaprayogāt
+{pūrvapakṣa-sūtra}
+4.1.17: na, vinaṣṭebhyo 'niṣpatteḥ
+{siddhānta-sūtra}
+4.1.18: kramanirdeśādapratiṣedhaḥ
+{siddhānta-sūtra}</p>
+
+<p>[īśvaropādānātāprakaraṇam(19-21)]
+4.1.19: īśvaraḥ kāraṇam, puruṣakarmāphalyadarśanāt
+{siddhānta-sūtra}
+4.1.20: na, puruṣakarmābhāve phlāniṣpatteḥ
+{pūrvapakṣa-sūtra}
+4.1.21: tatkāritatvād ahetuḥ
+{siddhānta-sūtra}</p>
+
+<p>[ākasmikatvanirākaraṇaprakaraṇam(22-24)]
+4.1.22: animittato bhāvotpattiḥ, kaṇṭakataikṣṇyādidarśanāt
+{pūrvapakṣa-sūtra}
+4.1.23: animittanimittatvānnanimittataḥ
+{siddhānta-sūtra}
+4.1.24: nimittanimittayorarthāntarabhāvādapratiṣedhaḥ
+{siddhānta-sūtra}</p>
+
+<p>[sarvānityatvanirākaraṇaprakaraṇam(25-28)]
+4.1.25: sarvam anityam, utpattivināśadharmakatvāt
+{pūrvapakṣa-sūtra}
+4.1.26: na, anityatānityatvāt
+{siddhānta-sūtra}
+4.1.27: tadanityatvamagnerdāhyaṃ vināśyānuvināśavat
+{siddhānta-sūtra}
+4.1.28: nityasyāpratyākhyānam, yathopalabdhi vyavasthānāt
+{siddhānta-sūtra}</p>
+
+<p>[sarvanityatvanirākaraṇam(29-33)]
+4.1.29: sarvaṃ nityam, pañcabhūtanityatvāt
+{pūrvapakṣa-sūtra}
+4.1.30: na, utpattivināśakāraṇopalabdheḥ
+{siddhānta-sūtra}
+4.1.31: tallakṣaṇāvarodhādapratiṣedhaḥ
+{pūrvapakṣa-sūtra}
+4.1.32: na, utpattitatkāraṇopalabdheḥ
+{siddhānta-sūtra}
+4.1.33: na, vyavasthānupapatteḥ
+{siddhānta-sūtra}</p>
+
+<p>[sarvapṛthaktvanirākaraṇaprakaraṇam(34-36)]
+4.1.34: sarvaṃ pṛthag, bhāvalakṣaṇapṛthaktvāt
+{pūrvapakṣa-sūtra}
+4.1.35: na, anekalakṣaṇairekabhāvaniṣpatteḥ
+{siddhānta-sūtra}
+4.1.36: lakṣaṇavyavasthānādevāpratiṣedhaḥ
+{siddhānta-sūtra}</p>
+
+<p>[sarvaśūnyatānirākaraṇaprakaraṇam(37-40)]
+4.1.37: sarvam abhāvo bhāveṣvitaretarābhāvasiddheḥ
+{pūrvapakṣa-sūtra}
+4.1.38: na, svabhāvasiddherbhāvānām
+{siddhānta-sūtra}
+4.1.39: na svabhāvasiddhiḥ, āpekṣikatvāt
+{pūrvapakṣa-sūtra}
+4.1.40: vyāhatatvādayuktam
+{siddhānta-sūtra}</p>
+
+<p>[saṃkhyaikāntavādaprakaraṇam(41-43)]
+4.1.41: saṃkhyaikāntāsiddhiḥ, kāraṇānupapattyupapattibhyām
+{siddhānta-sūtra}
+4.1.42: na, kāraṇavayavābhāvāt
+{pūrvapakṣa-sūtra}
+4.1.43: niravayavatvādahetuḥ
+{siddhānta-sūtra}</p>
+
+<p>[phalaparīkṣāprakaraṇam(44-54)]
+4.1.44: sadyaḥ kālāntare ca phalaniṣpatteḥ saṃśayaḥ
+{siddhānta-sūtra}
+4.1.45: na sadyaḥ, kālāntaropabhogyatvāt
+{siddhānta-sūtra}
+4.1.46: kālāntareṇāniṣpattiheturvināśāt
+{pūrvapakṣa-sūtra}
+4.1.47: prāṅniṣpattervṛkṣaphalavat tatsyāt
+{siddhānta-sūtra}
+4.1.48: nāsanna sanna sadasat, sadasatorvaidharmayāt
+{pūrvapakṣa-sūtra}
+4.1.49: utpādavyayadarśanāt
+{siddhānta-sūtra}
+4.1.50: buddhisiddhaṃ tu tadasat
+{siddhānta-sūtra}
+4.1.51: āśrayavyatirekād vṛkṣaphalotpattivad ityahetuḥ
+{pūrvapakṣa-sūtra}
+4.1.52: prīterātmāśrayatvādapratiṣedhaḥ
+{siddhānta-sūtra}
+4.1.53: na putrapaśustrīparicchedahiraṇyānnādiphalanirddeśāt
+{pūrvapakṣa-sūtra}
+4.1.54: tatsambandhāt phalaniṣpattesteṣu phalavadupacāraḥ
+{siddhānta-sūtra}</p>
+
+<p>[duḥkhaparīkṣāprakaraṇam(55-58)]
+4.1.55: vividhavādhanāyogād duḥkhameva janmotpattiḥ
+{siddhānta-sūtra}
+4.1.56: na, sukhasyāpyantarālaniṣpatteḥ
+{siddhānta-sūtra}
+4.1.57: bhādhanānivṛttervedayataḥ pryeṣaṇadoṣādapratiṣedhaḥ
+{siddhānta-sūtra}
+4.1.58: duḥkhavikalpe sukhābhimānācca
+{siddhānta-sūtra}</p>
+
+<p>[apavargaparīkṣāprakaraṇam(59-68)]
+4.1.59: ṛṇakleśapravṛttyanubndhādapavargābhāvaḥ
+{pūrvapakṣa-sūtra}
+4.1.60: pradhānaśabdānupapatterguṇaśabdenānuvādo nindāpraśaṃsopapatteḥ
+{siddhānta-sūtra}
+4.1.61: samāropaṇādātmanyapratiṣedhaḥ
+{siddhānta-sūtra}
+4.1.62: pātracayāntānupapatteśca phalābhāvaḥ
+{siddhānta-sūtra}
+4.1.63: suṣuptasya svapnādarśane kleśābhāvādapavargaḥ
+{siddhānta-sūtra}
+4.1.64: na pravṛttiḥ pratisandhānāya hīnakleśasya
+{siddhānta-sūtra}
+4.1.65: na, kleśasantateḥ svābhāvikatvāt
+{pūrvapakṣa-sūtra}
+4.1.66: prāgutpatterabhāvānityatvavat svābhāvike 'pyanityatvam
+{siddhānta-sūtra}
+4.1.67: aṇuśyāmatānityatvavad vā
+{siddhānta-sūtra}
+4.1.68: na, saṅkalpanimittatvācca rāgādīnām
+{siddhānta-sūtra}</p>
+
+<p>(iti nyāyasūtre caturthādhyāyasya prathamam āhnikam)</p>
+
+<p>(dvitīyam āhnikam)
+[tattvajñānotpattiprakaraṇam(1-3)]
+4.2.1: doṣanimittānāṃ tattvajñānādahaṅkāranivṛttiḥ
+{siddhānta-sūtra}
+4.2.2: doṣanimittaṃ rūpādayo viṣayaḥ saṅkalpakṛtāḥ
+{siddhānta-sūtra}
+4.2.3: tannimittaṃ tvavayavyabhimānaḥ
+{siddhānta-sūtra}</p>
+
+<p>[prāsaṅgikam avayaviprakaraṇam(4-17)]
+4.2.4: vidyāvidyādvaividhyāt saṃśayaḥ
+{pūrvapakṣa-sūtra}
+4.2.5: tadasaṃśayaḥ, pūrvahetuprasiddhatvāt
+{siddhānta-sūtra}
+4.2.6: vṛttyanupapatterapi tarhi na saṃśayaḥ
+{pūrvapakṣa-sūtra}
+4.2.7: kṛtsnaikadeśāvṛttitvādavayavānāmavayavyabhāvaḥ
+{pūrvapakṣa-sūtra}
+4.2.8: teṣu cāvṛtteravayavyabhāvaḥ
+{pūrvapakṣa-sūtra}
+4.2.9: pṛthak cāvayavebhyo 'vṛtteḥ
+{siddhānta-sūtra}
+4.2.10: na cāvayavyavayavāḥ
+{pūrvapakṣa-sūtra}
+4.2.11: ekasmin bhedābhāvād bhedaśabdaprayogānupapatterapraśnaḥ
+{siddhānta-sūtra}
+4.2.12: avayavāntarabhāve 'pyavṛtterahetuḥ
+{siddhānta-sūtra}
+4.2.13: keśasamūhe taimirikopalabdhivat tadupalabdhiḥ
+{pūrvapakṣa-sūtra}
+4.2.14: svaviṣayānatikrameṇendriyasya paṭumandabhāvādviṣayagrahaṇasya tathābhābo nāviṣaye pravṛttiḥ
+{siddhānta-sūtra}
+4.2.15: avayavāvayaviprasaṅgaścaivamāpralayāt
+{siddhānta-sūtra}
+4.2.16: na pralayo 'ṇusadbhāvāt
+{siddhānta-sūtra}
+4.2.17: paraṃ vā truṭeḥ
+{siddhānta-sūtra}</p>
+
+<p>[aupodghātikaṃ niravayavaprakaraṇam(18-25)]
+4.2.18: ākāśavyatibhedāt tadanupapattiḥ
+{siddhānta-sūtra}
+4.2.19: ākāśāsarvagatatvaṃ vā
+{pūrvapakṣa-sūtra}
+4.2.20: antarbahiśca kāryadravyasya kāraṇāntaravacanādakārye tadabhāvaḥ
+{siddhānta-sūtra}
+4.2.21: śabdasaṃyogavibhāvācca sarvagatam
+{siddhānta-sūtra}
+4.2.22: avyūhāviṣṭambhavibhutvāni cākāśadharmāḥ
+{siddhānta-sūtra}
+4.2.23: mūrtimatāṃ ca saṃsthānopapatteravayavasadbhāvaḥ
+{pūrvapakṣa-sūtra}
+4.2.24: saṃyogopapatteśca
+{pūrvapakṣa-sūtra}
+4.2.25: anavasthākāritvādanavasthānupapatteścāpratiṣedhaḥ
+{siddhānta-sūtra}</p>
+
+<p>[bāhyārthabhaṅganirākaraṇaprakaraṇam(26-37)]
+4.2.26: buddhyā vivecanāttu bhāvānāṃ yāthātmyānupalabdhistantvapakarṣaṇe paṭasadbhāvānupalabdhivat tadanupalabdhiḥ
+{pūrvapakṣa-sūtra}
+4.2.27: vyāhatatvādahetuḥ
+{siddhānta-sūtra}
+4.2.28: tadāśrayatvādapṛthaggrahaṇam
+{siddhānta-sūtra}
+4.2.29: pramāṇataścārthapratipatteḥ
+{siddhānta-sūtra}
+4.2.30: pramāṇānupapattyupapattibhyām
+{siddhānta-sūtra}
+4.2.31: svapnaviṣayābhimānavadayaṃ pramāṇaprameyābhimānaḥ
+{pūrvapakṣa-sūtra}
+4.2.32: māyāgandharvanagaramṛgatṛṣṇikāvadvā
+{pūrvapakṣa-sūtra}
+4.2.33: hetvabhāvādasiddhiḥ
+{siddhānta-sūtra}
+4.2.34: smṛtisaṃkalpavacca svapnaviṣayābhimānaḥ
+{siddhānta-sūtra}
+4.2.35: mithyopalabdhervināśastattvajñānātsvapnaviṣayābhimānapraṇāśavat pratibodhe
+{siddhānta-sūtra}
+4.2.36: buddheścaivaṃ nimittasadbhāvopalambhāt
+{siddhānta-sūtra}
+4.2.37: tattvapradhānabhedācca mithyābuddherdvaividhyopapattiḥ
+{siddhānta-sūtra}</p>
+
+<p>[tattvajñānavivṛddhiprakaraṇam(38-49)]
+4.2.38: samādhiviśeṣābhyāsāt
+{siddhānta-sūtra}
+4.2.39: na, arthaviśeṣaprāvalyāt
+{pūrvapakṣa-sūtra}
+4.2.40: kṣudādibhiḥ pravartanācca
+{pūrvapakṣa-sūtra}
+4.2.41: pūrvakṛtaphalānubandhāt tadutpattiḥ
+{siddhānta-sūtra}
+4.2.42: araṇyaguhāpulinādiṣu yogābhyāsopadeśaḥ
+{siddhānta-sūtra}
+4.2.43: apavarge 'pyevaṃ prasaṅgaḥ
+{pūrvapakṣa-sūtra}
+4.2.44: na, niṣpannāvaśyambhāvitvāt
+{siddhānta-sūtra}
+4.2.45: tadabhāvaścāpavarge
+{siddhānta-sūtra}
+4.2.46: tadarthaṃ yamaniyamābhyāsātmasaṃskāro yogāccādhyātmavidhyupāyaiḥ
+{siddhānta-sūtra}
+4.2.47: jñānagrahaṇābhyāsastadvidyaiśca saha saṃvādaḥ
+{siddhānta-sūtra}
+4.2.48: taṃ śiṣyagurusabrahmacāriviśiṣṭaśreyo 'rthibhiranasūyibhirabhyupeyāt
+{siddhānta-sūtra}
+4.2.49: pratipakṣahīnam api vā prayojanārthamarthitve</p>
+
+<p>[tattvajñānaparipālanaprakaraṇam(50-51)]
+4.2.50: tattvādhyavasāyasaṃrakṣaṇārthaṃ jalpavitaṇḍe, bījaprarohasaṃrakṣṇārthaṃ kaṇṭakaśākhāvaraṇavat
+{siddhānta-sūtra}
+4.2.51: tābhyāṃ vigṛhyakathanam
+{siddhānta-sūtra}</p>
+
+<p>(iti nyāyasūtre caturthādhyāyasya dvitīyam āhnikam)</p>
+
+<p>(samāptaśca caturthaḥ adhyāyaḥ)</p>
+
+<p>(atha pañcamaḥ adhyāyaḥ)
+(prathamam āhnikam)
+[satpratipakṣadeśanābhāsaprakarṇam(1-3)]
+5.1.1: sādharmyavaidharmyotkarṣāpakarṣavarṇyāvarṇyavikalpasādhyaprāpty aprāptipraṣaṅgapratidṛṛṣṭāntānutpattisaṃśayaprakaraṇahetvarthā pattyaviśeṣopapattyupalabdhyanupalabdhinityānityakaāryasamāḥ
+{siddhānta-sūtra}
+5.1.2: sādharmyavaidharmyābhyāmupasaṃhāre taddharmaviparyayopapatteḥ sādharmyavaidharmyasamau
+{siddhānta-sūtra}
+5.1.3: gotvād gosiddhivat tatsiddhiḥ
+{siddhānta-sūtra}</p>
+
+<p>utkarṣasamādijātiṣaṭkaprakaraṇam(4-6)ṭa
+5.1.4: sādhyadṛṣṭāntayordharmavikalpādubhayasādhyatvāccotkarṣāpakarṣa varṇyavikalpasādhyasamāḥ
+{siddhānta-sūtra}
+5.1.5: kiñcitsādharmyādupasaṃhārasiddhervaidharmyādapratiṣedhaḥ
+{siddhānta-sūtra}
+5.1.6: sādhyātideśācca dṛṣṭāntopaptteḥ
+{siddhānta-sūtra}</p>
+
+<p>[prāptyaprāptisamajātidvayaprakaraṇam(7-8)]
+5.1.7: prāpya sādhyamaprāpya vā hetoḥ prāptyāviśiṣṭatvādaprāptyāsādhāka tvācca prāptyaprāptisamau
+{siddhānta-sūtra}
+5.1.8: ghaṭādiniṣpattidarśanāt pīḍane cābhicārādapratiṣedhaḥ
+{siddhānta-sūtra}</p>
+
+<p>[prasaṅgapratidṛṣṭāntasamaprakaraṇam(9-11)]
+5.1.9: dṛṣṭāntasya kāraṇānapadeśāt pratyavasthānācca pratidṛṣṭāntena prasaṅgapratidṛṣṭāntasamau
+{siddhānta-sūtra}
+5.1.10: pradīpopādānaprasaṅganivṛttivat tadvinivṛttiḥ
+{siddhānta-sūtra}
+5.1.11: pratidṛṣṭāntahetutve ca nāheturdṛṣṭāntaḥ
+{siddhānta-sūtra}</p>
+
+<p>[anutpattisamaprakaraṇam(12-13)]
+5.1.12: prāgutpatteḥ kāraṇābhāvādanutpattisamaḥ
+{siddhānta-sūtra}
+5.1.13: tathābhāvādutpannasya kāraṇopapatterna kāraṇapratiṣedhaḥ
+{siddhānta-sūtra}</p>
+
+<p>[saṃśayasamaprakaraṇam(14-15)]
+5.1.14: sāmānyadṛṣṭāntayoraindriyakatve samāne nityānityasādharmyāt saṃśayasamaḥ
+{siddhānta-sūtra}
+5.1.15: sādharmyātsaṃśaye na saṃśayo vaidharmyādubhayathā vā saṃśaye 'tyanta saṃśayaprasaṅgo nityatvānabhyūpagamācca sāmānyasyāpratiṣedhaḥ
+{siddhānta-sūtra}</p>
+
+<p>[prakaraṇasamaprakaraṇam(16-17)]
+5.1.16: ubhayasādharmyāt prakriyāsiddheḥ prakaraṇasamaḥ
+{siddhānta-sūtra}
+5.1.17: pratipakṣāt prakaraṇasiddheḥ pratiṣedhānupapattiḥ pratipakṣopapatteḥ
+{siddhānta-sūtra}</p>
+
+<p>[ahetusamaprakaraṇam(18-20)]
+5.1.18: traikālyāsiddherhetorahetusamaḥ
+{siddhānta-sūtra}
+5.1.19: na hetutaḥ sādhyasiddhestraikālyāssiddhiḥ
+{siddhānta-sūtra}
+5.1.20: pratiṣedhānupapatteśca pratiṣeddhavyāpratiṣedhaḥ
+{siddhānta-sūtra}</p>
+
+<p>[arthāpattisamaprakaraṇam(21-22)]
+5.1.21: arthāpattitaḥ pratipakṣasiddherarthāpattisamaḥ
+{siddhānta-sūtra}
+5.1.22: anuktasyārthāpatteḥ pakṣahānerupapattiranuktatvādanaikāntikatvāc cārthāpatteḥ
+{siddhānta-sūtra}</p>
+
+<p>[aviśeṣasamaprakaraṇam(23-24)]
+5.1.23: ekadharmopapatteraviśeṣe sarvāviśeṣaprasaṅgātsadbhābopapatter-
+aviśeṣasamaḥ
+{siddhānta-sūtra}
+5.1.24: kvaciddharmānupapatteḥ kvaciccopapatteḥ pratiṣedhābhāvaḥ
+{siddhānta-sūtra}</p>
+
+<p>[uapapattisamaprakaraṇam(25-26)]
+5.1.25: ubhayokāraṇopapatterupapattisamaḥ
+{siddhānta-sūtra}
+5.1.26: uapapattikāraṇābhyaniñjānādapratiṣedhaḥ
+{siddhānta-sūtra}</p>
+
+<p>[upalabdhisamaprakaraṇam(27-28)]
+5.1.27: nirdiṣṭakāraṇābhāve 'pyupalambhādupalabdhisamaḥ
+{siddhānta-sūtra}
+5.1.28: kāraṇāntarādapi taddharmopapatterapratiṣedhaḥ
+{siddhānta-sūtra}</p>
+
+<p>[anupalabdhisamaprakaraṇam(29-31)]
+5.1.29: tadanupalabdheranupalambhādabhāvasiddhau tadviparītopapatter anupalabdhisamaḥ
+{siddhānta-sūtra}
+5.1.30: anupalambhātmakatvādanupalabdherahetuḥ
+{siddhānta-sūtra}
+5.1.31: jñānavikalpānāṃ ca bhāvābhāvasaṃvedanādadhyātmam
+{siddhānta-sūtra}</p>
+
+<p>[anityasamaprakaraṇam(32-34)
+5.1.32: sādharmyāttulyadharmopapatteḥ sarvānityatvaprasaṅgādanityasamaḥ
+{siddhānta-sūtra}
+5.1.33: sādharmyādasiddheḥ pratiṣedhāsiddhiḥ pratiṣedhyasādharmyācca
+{siddhānta-sūtra}
+5.1.34: dṛṣṭānte ca sādhyasādhanabhāvena prajñātasya dharmasya tasysa cobhayathā bhāvānnāviśeṣaḥ
+{siddhānta-sūtra}</p>
+
+<p>[anityasamaprakaraṇam(35-36)]
+5.1.35: nityamanityabhāvādanitye nityatvopapatternityasamaḥ
+{siddhānta-sūtra}
+5.1.36: pratiṣedhye nityamanityabhāvādanitye 'nityatvopapatteḥ pratiṣedhābhāvaḥ
+{siddhānta-sūtra}</p>
+
+<p>[kāryasamaprakaraṇam(37-38)]
+5.1.37: prayatnakāryānekatvāt kāryasamaḥ
+{siddhānta-sūtra}
+5.1.38: kāryānyatve prayatnāhetutvamanupalabdhikāraṇopapatteḥ
+{siddhānta-sūtra}</p>
+
+<p>[ṣaṭpakṣīprakaraṇam(39-40)]
+5.1.39: pratiṣedhe 'pi samānadoṣaḥ
+{siddhānta-sūtra}
+5.1.40: sarvatraivam
+{siddhānta-sūtra}
+5.1.41: pratiṣedhavipratiṣedhe pratiṣedhadoṣavad doṣaḥ
+{siddhānta-sūtra}
+5.1.42: pratiṣedhaṃ sadoṣamabhyupetya pratiṣedhavipratiṣedhe samāno doṣaprasaṅgo matānujñā
+{siddhānta-sūtra}
+5.1.43: svapakṣalakṣanāpekṣopapattyupasaṃhāre hetunirdeśe parapakṣadoṣā bhyupagamāt samāno doṣa iti
+{siddhānta-sūtra}</p>
+
+<p>(iti nyāyasūtre pañcamādhyāyasya prathamam āhnikam)</p>
+
+<p>(dvitīyam āhnikam)</p>
+
+<p>5.2.1: pratijñāhāniḥ pratijñāntaraṃ pratijñāvirodhaḥ pratijñāsannyāso hetvantaram arthāntaraṃ nirarthakam avijñātārtham apārthakam aprāpta kālaṃ nyūnam adhikaṃ punaruktam ananubhāṣaṇam ajñānam apratibhā vikṣepo matānujñā paryanuyojyopekṣaṇaṃ niranuyojyānuyogo 'pasiddhānto hetvā bhāsāśca nigrahasthānāni
+{nigrahasthāna-uddeśa-sūtram}</p>
+
+<p>[nigrahasthānapañcakaprakaraṇam(2-6)]
+5.2.2: pratidṛṣṭāntadharmābhyanujñā svadṛṣṭānte pratijñāhāniḥ
+{pratijñāhāniḥ lakṣaṇa-sūtram}
+5.2.3: pratijñātārthapratiṣedhadharmavikalpāt tadarthanirdeśaḥ pratijñāntara.
+{pratijñāntara-lakṣaṇa-sūtram}
+5.2.4: pratijñāhetvorvirodhaḥ pratijñāvirodhaḥ
+{pratijñāvirodhaḥ lakṣaṇa-sūtram}
+5.2.5: pakṣapratiṣedhe pratijñātārthāpanayanaṃ pratijñāsannyāsaḥ
+{pratijñāsannyāsaḥ lakṣaṇa-sūtram}
+5.2.6: aviśeṣokte hetau pratiṣiddhe viśeṣamicchato hetvantaram
+{hetvantaram lakṣaṇa-sūtram}</p>
+
+<p>[nigrahasthānacatuṣkaprakaraṇam(7-10)]
+5.2.7: prakṛtādarthādapratisambddhārthamarthāntaram
+{arthāntaram lakṣaṇa-sūtram}
+5.2.8: varṇakramanirdeśavannirarthakam
+{nirarthakam lakṣaṇa-sūtram}
+5.2.9: pariṣatprativādibhyāṃ trirabhihitamapyavijñātamavijñātārtham
+{avijñātārtham lakṣaṇa-sūtram}
+5.2.10: paurvāparyāyogādapratisambaddhārthamapārthakam
+{apārthakam lakṣaṇa-sūtram}</p>
+
+<p>[nigrahasthānatrikaprakaraṇam(11-13)]
+5.2.11: avayavaviparyāsavacanamaprāptakālam
+{aprāptakālam lakṣaṇa-sūtram}
+5.2.12: hīnamanyatamenāpyavayavena nyūnam
+{nyūnam lakṣaṇa-sūtram}
+5.2.13: hetūdāharaṇādhikam adhikam
+{adhikam lakṣaṇa-sūtram}</p>
+
+<p>[punaruktinigrahasthānaprakaraṇam(14-16)]
+5.2.14: śabdārthayoḥ punarvacanaṃ punaruktam anyatra anuvādāt
+{punaruktam lakṣaṇa-sūtram}
+5.2.15: anuvāde tu apunaruktaṃ śabdābhyāsāt arthaviśeṣopapatteḥ
+{punaruktam lakṣaṇāpavādasūtram}
+5.2.16: arthāt āpannasya svaśabdena punarvacanam
+{punaruktam lakṣaṇāpavādasūtram}</p>
+
+<p>[uttaravirodhinigrahasthānacatuṣkaprakaraṇam(17-20)]
+5.2.17: vijñātasya pariṣadā triḥ abhihitasya api apratyuccāraṇam ananubhāṣaṇam
+{ananubhāṣaṇam lakṣaṇa-sūtram}
+5.2.18: avijñātam ca ajñānam
+{ajñānam lakṣaṇa-sūtram}
+5.2.19: uttarasya apratipattiḥ apratibhā
+{apratibhā lakṣaṇa-sūtram}
+5.2.20: kāryavyāsaṅgāt kathāvicchedaḥ vikṣepaḥ
+{vikṣepaḥ lakṣaṇa-sūtram}</p>
+
+<p>[matānujñādinigrahasthānatrikaprakaraṇam(21-23)]
+5.2.21: svapakṣe doṣābhyupagamāt parapakṣe doṣaprasaṅgaḥ matānujñā
+{matānujñā lakṣaṇa-sūtram}
+5.2.22: nigrahasthānaprāptasya anigrahaḥ paryanuyojyopekṣaṇam
+{paryanuyojyopekṣaṇam lakṣaṇa-sūtram}
+5.2.23: anigrahasthāne nigrahasthānābhiyogaḥ niranuyojyānuyogaḥ
+{niranuyojyānuyoga lakṣaṇa-sūtram}</p>
+
+<p>[kathakānyoktinirūpyanigrahasthānadvayaprakaraṇam(24-25)]
+5.2.24: siddhāntam abhyupetya aniyamāt kathāprasaṅgaḥ apasiddhāntaḥ
+{apasiddhānta lakṣaṇa-sūtram}
+5.2.25: hetvābhāsāḥ ca yathoktāḥ
+{hetvābhāsa nirūpaṇam}</p>
+
+<p>(iti nyāyasūtre pañcamādhyāyasya dvitīyam āhnikam)
+(samāptaścāyam pañcamādhyāyaḥ)
+nyāyadarśanaṃ samāptam</p>
+
+  </body>
+</text>
+</TEI>

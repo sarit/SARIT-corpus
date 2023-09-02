@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_vaikhAnasadharmasUtra">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Vaikhānasadharmasūtra</title>
+	<author></author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>Hiromichi Hikita</name>
+<name>Yuuko Matsuda</name>
+<name>Yasuke Ikari</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Hiromichi Hikita</name>
+<name>Yuuko Matsuda</name>
+<name>Yasuke Ikari</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/4_dharma/sutra/vaikhd_u.htm">vaikhd_u.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Vaikhaanasa Dharmasuutra \VKHDHS)1-3 = Vaikhanasa Smartasutra 8-10
+<lb/>
+<lb/>Text: edited by W.Caland, Vaikhanasasmartasutram, the domestic rules of
+<lb/>the Vaikhanasa school
+<lb/>belonging to the Black Yajurveda, Calcutta 1927
+<lb/>
+<lb/>Computerized by Hiromichi Hikita, and collated by Yuuko Matsuda and Yasuke
+<lb/>Ikari, March 1992,
+<lb/>May 1996.
+<lb/>
+<lb/>INPUT FORMAT
+<lb/>
+<lb/>(1) Members of a compound are separated by periods.
+<lb/>(2) External sandhi is decomposed with `-' \hyphen).
+<lb/>(3) Verbs are marked by `\'.
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>W. Caland, Vaikhanasasmartasutram, the domestic rules of the Vaikhanasa school belonging to the Black Yajurveda, Calcutta 1927</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Vaikhānasadharmasūtra = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Śāstra -- Dharmaśāstra -- Sūtra</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+
+<p>Vaikh 01.01.(112.1)/ atha varṇa.āśrama.dharmaṃ
+Vaikh 01.01.(112.1-2)/ brāhmaṇa.kṣatriya.vaiśya.śūdrāmukha.bāhu.ūru.pādeṣu jātāś catvāro varṇā.
+Vaikh 01.01.(112.2-3)/ yasmād brāhmaṇo asya mukham \āsīd iti śrutiḥ.
+Vaikh 01.01.(112.3-4)/ pūrveṣāṃ trayāṇāṃ niṣeka.ādyāḥ saṃskārā\vidhīyante.
+Vaikh 01.01.(112.4)/ teṣāṃ dvijanmanāṃ veda.adhikāras.
+Vaikh 01.01.(112.4-5)/ tasmād brāhmaṇasya-adhyayana.adhyāpana.yajana.yājana.dāna.pratigrahāṇi ṣaṭ karmāṇi \bhavanti.
+Vaikh 01.01.(112.6)/ kṣattriya.vaiśyayor yajana.adhyayana.dānāni.
+Vaikh 01.01.(112.6-7)/ kṣatriyasya prajā.pālaya.duṣṭa.nigraha.yuddhāḥ.
+Vaikh 01.01.(112.7)/ vaiśyasya pāśupālya.kusīda.vāṇijyāni.
+Vaikh 01.01.(112.8)/ śūdrasya dvijamanāṃ śuśrūṣā kṛṣiś ca-eva.
+Vaikh 01.01.(112.8-9)/ brāhmaṇasya-āśramāś catvāraḥ kṣatriyasya-ādyās trayo vaiśyasya dvāv eva.
+Vaikh 01.01.(112.9-10)/ tad.āśramiṇaś catvāro brahmacārī gṛhasthovānaprastho bhikṣur iti.
+Vaikh 01.02.(112.11-13)/ upanīto brahmacārīmekhalā.upavīta.ajina.daṇḍa.dhārī snātvā tarpaṇaṃ brahmayajñaṃ sāyaṃ.prātaḥ sandhyā.upāsana.samidd.homau cakurvan guroḥ pādāv upasaṃgṛhya nitya.abhivandī vratena-adhyayanaṃ \karoti.
+Vaikh 01.02.(112.13-15) sthite gurau stheyād utthite pūrvam utthāyavrajantam \anugacched. āsīne śayāne ca niyukto nīcair anvāsana.śayane \kuryād.
+Vaikh 01.02.(112.15-16)anukto yat kiñcit karma na-\ācarati.
+Vaikh 01.02.(112.16)/ anukto-api svādhyāya.nityakarmāṇy \ācared.
+Vaikh 01.02.(112.16-113.3) uṣṇāmbusnāna.dantadhāvana.añjana.anulepana.gandha.puṣpa.upānaṭ.chatra.divāsvāpa.retaḥskanda.strīdarśana.sparśana.maithunānikāma.krodha.lobha.moha.mada.mātsarya.hiṃsādīni varjayitvā sadāśuśrūṣur guroḥ priya.hita.karmāṇi \kurvīta.
+Vaikh 01.02.(113.3)/ adveṣī vāk.citta.anukūlaḥ priyaṃ satyaṃ \vadaty.
+Vaikh 01.02.(113.3-4)/ ārto-apy asatya.apriyaṃ nindaṃ na-\ācakṣīta.
+Vaikh 01.02.(113.4-5) madhu.māṃsa.matsya.rasa.śuktādy.abhojyabhojana.varjī bhaikṣa.ācaraṇaṃ \kṛtvā guruṇā-anujñāto bhaikṣa.annam \aśnīyād.
+Vaikh 01.02.(113.5-6)/ guru.vṛddha.dīkṣitānām ākhyāṃ na \brūyād.
+Vaikh 01.02.(113.6-7) guru.abhāve tat.putre ca guruvat karma-\ācarati.
+Vaikh 01.03.(113.8-9) brahmacāriṇaś caturvidhā gāyatro brāhmaḥprājāpatyo naiṣṭhika-iti.
+Vaikh 01.03.(113.9-10)/ gāyatra.upanayanād ūrdhvaṃ tri.rātramakṣāra.lavaṇa.aśī gāyatrīm \adhītya-ā sāvitra.vrata.samāpter atra vratacārī.
+Vaikh 01.03.(113.10-14) brāhmaḥ sāvitra.vratād ūrdhvamanabhiśasta.apatitānāṃ gṛhasthānāṃ gṛheṣu bhaikṣa.ācaraṇaṃ veda.vratacaraṇaṃ ca \kṛtvādvādaśa samā viṃśati samā vā guru.kule \sthitvā vedān vedau vedaṃ vā sūtra.sahitamadhyayanaṃ \kṛtvā gārhasthya.anusaraṇaṃ \kuryāt.
+Vaikh 01.03.(113.14-15)/ prājāpatyaḥ \snātvā nityakarma.brahmacarya.śīlo nārāyaṇa.parāyaṇo veda.vedāṅga.arthān \vicārya dāra.saṃgrahaṇaṃ \karoti.
+Vaikh 01.03.(113.15-16)/ prājāpatye trisaṃvatsarād ūrdhvaṃ na \tiṣṭhedity ṛṣayo \vadanti.
+Vaikh 01.03.(113.16-114.3)/ naiṣṭhikaḥ kāṣāyaṃ dhātu.vastram ajinaṃvalkalaṃ vā paridhāya jaṭī śikhī vā mekhalī daṇḍī sūtra.ajina.dhārībrahmacārī śucir a.kṣāra.lavaṇa.āśī yāvad ātmano viprayogas tāvad guru.kule \sthitvānivedita.bhaikṣa.bhojī \bhavati.
+Vaikh 01.04.(114.4-7)/ dārān saṃgṛhya gṛhastho-apisnānādi.niyama.ācāro nityam aupāsanaṃ \kṛtvā pākayajña.yājī vaiśvadeva.homānte gṛha.āgataṃ guruṃsnātakaṃ ca \pratyutthāya-\abhivandya-āsana.pādya.ācamanāni pradāyaghṛta.dadhi.kṣīra.miśraṃ madhuparkaṃ ca dattvā-annādyair yathāśakti \bhojayati.
+Vaikh 01.04.(114.7-10)/ bhikṣūn brahmacāriṇo-atithīn vedavidaḥ śrotriyān pitṛvya.ācārya.ṛtvij.mātula.śvaśura.ādīn abhyāgatān bāla.vṛddhān anātha.ārta.adhvaśrāntāṃś ca yathārthaṃ \pūjayaty.
+Vaikh 01.04.(114.10)/ aśakto-apy-agraṃ bhikṣāṃ vā sa.udakaṃ dattvāśeṣaṃ \bhuñjīta).
+Vaikh 01.04.(114.11-13) dayā.satya.śauca.ācāra.yutaḥsvādhyāya.tarpaṇābhyām ṛṣīn yajñna.bali.homa.jala.puṣpa.ādyair devān śrāddhaiḥ putraiś ca pitṛṛnbalinā bhūtān annādyair manuṣyāṃś ca nityam \arcayed.
+Vaikh 01.04.(114.13)/ ṛṇa.trayeṇa mukto-anṛṇo \bhavati).VKḥṅṣ.08.05.(114.14)/ gṛhasthāś caturvidhā vārtā.vṛttiḥ śālīna.vṛttiryāyāvaro ghora.ācārikaś ca-iti.VKḥṅṣ.08.05.(114.14)/ vārtā.vṛttiḥ kṛṣi.gorakṣya.vāṇijya.upajīvī.VKḥṅṣ.08.05.(114.14-15) śālīna.vṛttir niyamair yutaḥ pākayajñair\ṣṭvā-agnīn \adhāya pakṣe pakṣe darśapūrṇamāsa.yājī caturṣu caturṣu māseṣu
+cāturmāsya.yājīṣaṭsu ṣaṭsu māseṣu paśubandha.yājī prati.saṃvatsaraṃ soma.yājī ca.VKḥḍṣ.01.05.(115.1-3)/ yāyāvaro haviryajñaiḥ somayajñaiś ca \yajate\yājayaty adhīte-\adhyāpayati dadāti \pratigṛhṇāti ṣaṭ.karma.nirato nityamagni.paricaraṇam atithibhyo-abhyāgatebhyo-annādyaṃ ca \kurute).VKḥḍṣ.01.05.(115.3-7)/ ghora.ācāriko niyamair yukto \yajate) na\yājayaty)
+adhīte na-\adhyāpayati dadāti) na \pratigṛhṇāty) uñccha.vṛttim \upajīvati)nārāyaṇa.parāyaṇaḥ sāyaṃ.prātar agnihotraṃ \hutvā mārgaśīrṣa.jyeṣṭha.māsayor asidhārā.vrataṃvana.oṣadhibhir agni.paricaraṇaṃ \karoti).
+Vaikh 01.06.(115.8-11)/ gṛhasthaḥ sa.patnīkaḥ pañcāgnibhis tretāgnibhirvā gṛhād vana.āśramaṃ \yāsyann āhita.agnir anāhita.agniś ca-aupāsanam araṇyām\āropya gṛhe \mathitvā śrāmaṇakīya.vidhānena-\ādhāya-āghāraṃ \hutvāśrāmaṇaka.agnim \ādāya tṛtīyam āśramaṃ \gacchet).
+Vaikh 01.06.(115.11-12)/ pūrvavad agni.ālaya.prokṣaṇa.ullekhana.ādikarma \kuryāt).
+Vaikh 01.06.(115.12-14) tṛtīyām api vediṃ \parimṛjya ṣaḍ.aṅgula.agnerdarbhair grathite-adhas tridhā.kṛtaṃ rajjuvat- mūle baddhaṃ ṣaṭtriṃśad aṅgula.pramāṇaṃparistaraṇa.kūrcaṃ kṛtvā madhyavedyāṃ \paristṛṇāti) śrāmaṇakaṃ.
+Vaikh 01.06.(115.15-17)/ śrāmaṇaka.yajñaṃ yajñadaivaviśvān devānity-antam \āvāhya-ājyaṃ nirūpya śrāmanakāya svāhā śrāmaṇaka.yajñāya svāhāyajñadaivataviśvebhyo devebhyaḥ svāhā-ity antaṃ \hutvā caruṃ \juhuyād) ity ādhāra.viśeṣaḥ.
+Vaikh 01.06.(115.18-116.1) śrāmaṇaka.agneś ca-ūrdhva.vedirdvātriṃśad.aṅguli.āyatā catur.aṅguli.vistāra-unnatā.
+Vaikh 01.06.(116.1-2)/ madhyamā tat.parigatā pañca.aṅguli.vistārācatur.aṅgula.utsedhā.
+Vaikh 01.06.(116.2)/ adhastād ūrdhva.vedi.vistāra.unnatā tṛtīyā vedir.
+Vaikh 01.06.(116.2-5)/ dvādaśa.aṅgulaṃ madhye nimnaṃ tri.vedi.sahitaṃkuṇḍaṃ kṛtvā-\ādhāya vanastho nityam aupāsanavat sāyaṃ.prātar.āhutīr \hutvā mahāvyāhṛtibhiḥ śrāmaṇaka.agniṃ \juhuyād).
+Vaikh 01.06.(116.5)/ patnīko dārair agnibhir vinā vanaṃ \gacchet).
+Vaikh 01.07.(116.6)/ vānaprasthāḥ sa.patnīkā-a.patnīkāś ca-iti.
+Vaikh 01.07.(116.6-7)/ sa.patnīkāś caturvidhā.
+Vaikh 01.07.(116.7)/ audumbaro vairiñco vālakhilyaḥ phenapaś ca-iti.
+Vaikh 01.07.(116.7-11) audumbaro-akṛṣṭa.phala.avāpya.oṣadhi.bhojī mūla.phala.āśī vāaṇa.hiṅgu.laśuna.madhu.matsya.māṃsa.pūtyanna.dhānya.amla.parasparśana.parapāka.varjī deva.ṛṣi.pitṛ.manuṣya.pūjī vana.caro grāma.bahiṣkṛtaḥsāyaṃ.prātar.agnihotraṃ \hutvā śrāmaṇaka.agni.homaṃ vaiśvadeva.homaṃ \kurvaṃs tapaḥ \samācarati).
+Vaikh 01.07.(116.12)/ śrāmaṇaka.agnim ekam eva-ādhāya \juhoti)-ity eke.
+Vaikh 01.07.(116.12-15)/ vairiñcaḥ prātryāṃ diśaṃ \prekṣate tāṃ diśaṃ\gatvā tatra priyaṅgu.yava.śyāmāka.nīvāra.ādibhir labdhaiḥ svakīyān atithīṃś capoṣayitvā-agnihotra.śrāmaṇaka.vaiśvadeva.homī nārāyaṇa.parāyaṇas tapaḥ.śīlo\bhavati).
+Vaikh 01.07.(116.15-17) vālakhilyo jaṭā.dharaścīra.valkala.vasano-arka.agniḥ kārttikyāṃ paurṇamāsyāṃ puṣkalaṃ bhuktam \utsṛjya-anyathā śeṣān māsān upajīvyatapaḥ \kuryāt).
+Vaikh 01.07.(116.18)/ asya sūrya-eva-agnir \bhavati)-ity \āmananti).
+Vaikh 01.07.(116.18-117.2)/ phenapa ud.daṇḍaka unmattako nirodhakaḥ śīrṇa.patita.pattra.āhārī cāndrāyaṇa.vrataṃ caran pṛthivī.śāyīnārāyaṇaṃ \dhyāyan mokṣam eva \prārthayate).
+Vaikh 01.08.(117.3)/ a.patnīkā bahuvidhāḥ.
+Vaikh 01.08.(117.3-11)) kāla.aśikā uddaṇḍa.saṃvṛttā aśma.kuṭṭā udagra.phalino danta.ulūkhalikā uñcha.vṛttikāḥ saṃdarśana.vṛttikāḥ kapota.vṛttikāmṛga.cārikā hasta.ādāyinaḥ śaila.phalaka.ādino-arka.dagdha.aśino bailva.aśinaḥkusuma.aśinaḥ pāṇḍu.pattra.aśinaḥ kāla.antara.bhojina eka.kālikāś catuṣ.kālikāḥkaṇṭaka.śāyino vīrāsana.śāyinaḥ pañcāgni.madhya.śāyino
+dhūma.aśinaḥpāṣāṇa.śāyino-abhyavagāhina udakumbha.vāsino mauninaś ca-avāk.śirasaḥ sūrya.pratimukhā ūrdhva.bāhukā eka.pāda.sthitāś ca-iti vividha.ācārā \bhavanti)-iti \vijñāyate).
+Vaikh 01.09.(117.12-13)/ atha bhikṣukā mokṣa.arthinaḥ kuṭīcakābahu.udakā haṃsāḥ paramahaṃsāś ca-iti caturvidhā \bhavanti).
+Vaikh 01.09.(117.13-15)tatra kuṭīcakā gautama.bhāradvāja.yājñavalkya.hārīta.prabhṛtīnām āśrameṣv aṣṭau grāsāṃṣ caranto yogamārga.tattvajñā mokṣam eva\prārthayante).
+Vaikh 01.09.(117.15-118.1) bahu.udakās tridaṇḍa.kamaṇḍalu.kāṣāya.dhātu.vastra.grahaṇa.veṣa.dhāriṇo brahmarṣi.gṛheṣu ca-anyeṣu sādhu.vṛtteṣu māṃsa.lavaṇa.paryuṣita.annaṃ varjayantaḥ sapta.agāreṣubhaikṣaṃ \kṛtvā mokṣam eva \prārthayante).
+Vaikh 01.09.(118.1-4)/ haṃsā nāma grāme ca-ekarātraṃ nagarepañcarātraṃ vasantas tad.upari na vasanto gomūtra.gomaya.āhāriṇo vā māsa.upvāsino vānitya.cāndrāyaṇa.vratino nityam utthānam eva \prārthayante).
+Vaikh 01.09.(118.4-5) paramahaṃsā nāma vṛkṣa.ekamūle śūnya.agāreśmaśāne ā vāsinaḥ sa.ambarā dig.ambarā vā.
+Vaikh 01.09.(118.5-6)/ na teṣāṃ dharma.adharmau satya.anṛteśuddhi.aśuddhi.ādi dvaitaṃ.
+Vaikh 01.09.(118.6-7)/ sarva.samāḥ sarva.ātmanaḥ sama.loṣṭa.kāñcanāḥsarva.varṇeṣu bhaikṣa.ācaraṇaṃ \kurvanti).
+Vaikh 01.09.(118.7-8)/ brāhmaṇānāṃ cāturāśramyaṃ kṣatriyāṇāṃtraya.āśramyaṃ vaiśyānāṃ dvi.āśramyaṃ vihitaṃ.
+Vaikh 01.09.(118.8-9)/ tat.phalaṃ hi sa.kāmaṃ niṣ.kāmaṃ ca-iti dvividhaṃ\bhavati).
+Vaikh 01.09.(118.9-11) sa.kāmaṃ nāma-iha saṃsāre-abhivṛddhiṃ \jñātvā putra.lābha.ādi.abhikāṅkṣaṇam anyat svarga.ādi.phala.kāṅkṣaṇaṃ vā.
+Vaikh 01.09.(118.11-12)/ niṣ.kāmaṃ nāma kiñcid \an.abhikāṅkṣya yathāvihita.anuṣṭhānam iti.
+Vaikh 01.09.(118.12-13)/ tatra niṣ.kāmam dvividhaṃ bhavati pravṛttirnivṛttiś ca-iti.
+Vaikh 01.09.(118.13-15)/ pravṛttir nāma saṃsāram \an.ādṛtyasaṅkhya.jñānaṃ \samāśritya prāṇāyāma.āsana.pratyāhāra.dhāraṇā.yukto vāyu.jayaṃ \kṛtvā-aṇima.ādy.aiśvarya.prāpaṇaṃ.
+Vaikh 01.09.(118.15-119.1) tat punar api tapaḥ.kṣayāj janma.prāpakatvādvyādhi.bāhulyāc ca na-\ādriyante) paramarṣayo.
+Vaikh 01.09.(119.1-6)/ nivṛttir nāma lokānām anityatvaṃ \jñātvā paramātmano-anyan na kiñcid asti-iti saṃsāram \anādṛtya \cchitvā bhāryā.mayaṃ pāśaṃjita.indriyo \bhūtvā śarīraṃ \vihāya kṣetrajña.paramātmanor yogaṃ \kṛtvā-atīndriyaṃsarvajagad.bījam aśeṣa.viśeṣaṃ nitya.ānandam amṛta.rasa.pānavat sarvadā tṛpt.karaṃ paraṃ jyotiḥpraveśakam iti \vijñāyate).
+Vaikh 01.10.(119.7-8) nivṛtti.ācāra.bhedādd-hi yoginas trividhā\bhavanti) sāraṅgā eka.arthyā visaragāś ca-iti.
+Vaikh 01.10.(119.8-9)/ a.nirodhakā nirodhakā mārga.gā vimārga.gāśca-iti caturvidhā sāraṅgā.
+Vaikh 01.10.(119.9-10)/ dūra.gā adūra.gā bhrūmadhya.gā a.saṃbhaktāḥsaṃbhaktāś ca-ity eka.arthyāḥ pañcadhā \bhavanti).
+Vaikh 01.10.(119.10-11)/ na saṅkhyāvanto visaragās.
+Vaikh 01.10.(119.11-13)/ tatra sāraṅgāḥ sāraṃ kṣetrajñas taṃ\gacchanti)-iti sāraṅgās teṣv a.nirodhakā ahaṃ viṣṇur iti \dhyātvā ye \caranti) teṣāṃprāṇāyāma.ādayo na \santi).
+Vaikh 01.10.(119.13-14)/ ye tu nirodhakās teṣāṃ prāṇāyāma.pratyāhāra.dhāraṇā.ādayaḥ ṣoḍaśa kalāḥ \santi).
+Vaikh 01.10.(119.14-15)/ ye mārga.gās teṣāṃ ṣaḍ eva prāṇāyāma.ādayo.
+Vaikh 01.10.(119.15-17) ye vimārgās teṣāṃ yama.niyama.āsana.prāṇāyāma.pratyāhāra.dhāraṇā.dhyāna.samādhayaśca-ity aṣṭa.aṅgān \kalpayanto dhyeyam apy anyathā \kurvanti).
+Vaikh 01.11.(120.1)/ atha-ekārṣyā.
+Vaikh 01.11.(120.1)/ eka eva-ṛṣir yeṣāṃ te ekārṣyās.
+Vaikh 01.11.(120.1-2)/ teṣu ye dūra.gās teṣām ayaṃ mārgaḥ.
+Vaikh 01.11.(120.2-5)/ piṅgalayā nāḍikayā-āditya.maṇḍalam \anupraviśyatatra.sthena puruṣeṇa \saṃyujya tataś candra.maṇḍalaṃ tatra.sthena puruṣeṇa tatovidyutaṃ tatra.sthena puruṣeṇa punaḥ krameṇa vaikuṇṭha.sāyujyaṃ \yanti).
+Vaikh 01.11.(120.5)/ ye-adūra.gās teṣām ayaṃ dharmaḥ.
+Vaikh 01.11.(120.5-7) kṣetrajña.paramātmanor yogaṃ kṣetrajña.dvāreṇa\kārayitvā tatra-eva samasta.vināśaṃ dhyātvā-ākāśavat sattā.mātro-aham iti \dhyāyanti).
+Vaikh 01.11.(120.7-10)/ bhrūmadhya.gāḥ kṣetrajña.paramātmanor yoge sattva.rūpa.agni.dvāreṇa bhrūmadhyaṃ nītvā pañcabhyo-aṅgṣṭa.ādibhyaḥsthānebhya-ākarṣaṇaṃ punaḥ piṅgalā.dvāreṇa niṣkramaṇaṃ pralaya.antaṃkṣetrajña.yogāntaṃ vā \kurvanti).
+Vaikh 01.11.(120.10-11)/ a.saṃbhaktā nāma manasā dhyānaṃ \kurvanti).
+Vaikh 01.11.(120.11)/ tat.pratipādana.āgamaṃ śrotreṇa \śṛṇvanti).
+Vaikh 01.11.(120.11-12)/ cakṣuṣā devatā.akāraṃ \paśyanti).
+Vaikh 01.11.(120.12)/ ghrāṇena gandham \anubhavanti).
+Vaikh 01.11.(120.12-13)/ pāṇinā devatāṃ \namaskurvanti).
+Vaikh 01.11.(120.13-14)/ saṃbhaktā nāma brāhmaṇaḥ sarva.vyāpakatvādyuktam ayuktaṃ yo-asau paramātmā tat sa vyāpya-ākāśavat \tiṣṭhati).
+Vaikh 01.11.(120.15) tasmād brahmaṇo-anyan na kutracid ātmānaṃ\pratipadyate)-asau.
+Vaikh 01.11.(120.16)/ bhrūmadhya.gatasya-api saṃśayān niṣpramāṇameva-ity uktaṃ.
+Vaikh 01.11.(120.16-121.1)/ tasmād brahma.vyatiriktam anyan na-\upapadyate).
+Vaikh 01.11.(121.1-2)/ vividha.saraṇād vividha.darśanātkupatha.gāmitvād visara.gāḥ.
+Vaikh 01.11.(121.2-3)/ purā prajāpatir upadeśa.gūhana.arthaṃvisaraga.pakṣaṃ dṛṣṭavān.
+Vaikh 01.11.(121.3)/ taṃ dṛṣṭvā munayo-api mohaṃ \jagmuḥ) kiṃ punar manuṣyāḥ.
+Vaikh 01.11.(121.4) visaraga.paśūnām ahaṃkāra.yuktānāṃ janma.antareṣumuktir na-asmiñ janmani.
+Vaikh 01.11.(121.5)/ tasmād visaraga.pakṣo na-anuṣṭheyo.
+Vaikh 01.11.(121.5-8)/ kecid visargāḥ kāya.kleśāt kecin mantra.japātkecid yena kenacid dhyānena kecid yena kenacid akṣareṇa kecid vāyu.jayād anye paramātmanākṣetrajaṃ saṃyojya \dhyāyanty) ete paramātma.saṃyogam eva na-\icchanti).
+Vaikh 01.11.(121.8-9)/ hṛdi.stha-eva puruṣa-iti \vadanti).
+Vaikh 01.11.(121.9-10)/ kecin na kiñcid dhyānam itiyathā.ukta.anuṣṭhānaṃ yogam iti jñātvā muktim \icchanti).
+Vaikh 01.11.(121.10-11)/ teṣāṃ visaraga.paśūnāṃantareṣu muktir na-asmiñ janmani.
+Vaikh 01.11.(121.11-12)/ tasminn eva janmani mokṣa.kāṅkṣiṇāvisaraga.pakṣo na-anuṣṭheyaḥ.
+Vaikh 01.11.(121.12-15)/ sa.guṇe brahmaṇi buddhiṃ niveśyapaścāt-nir.guṇaṃ brahma-āśritya yatnaṃ kuryād iti \vijñāyate).</p>
+
+<p>Vaikh 02.01.(122.1)/ atha vanasthasya śrāmaṇaka.vidhānaṃ.
+Vaikh 02.01.(122.1-3)/ gṛhasthaḥ somayājī putraṃ pautraṃ ca dṛṣṭvātat.putra.ādīn gṛhe saṃsthāpya mauṇḍyaṃ kṛtvā prājāpatyaṃ kṛcchraṃ \caret).
+Vaikh 02.01.(122.3-4) vasante śukla.pakṣe puṇya.kṣetre patnyā sārdhaṃvana.āśramaṃ \yāti).
+Vaikh 02.01.(122.4-5)/ pūrvasmin divase kṛta.snānaḥ saṃkalpyakuśa.udakaṃ pītvā-upavāsaṃ \kuryād).
+Vaikh 02.01.(122.5-6) aupāsana.homaṃ hutvā-agni.mayaṃ te yonir ityaraṇyām \āropayed).
+Vaikh 02.01.(122.6-8)/ darśapūrṇamāsa.vidhānena darbha.ādīn saṃgṛhyapūrvavat paristaraṇa.kūrcān paridhīn samidhoveṇu.daṇḍa.upavīta.kamaṇḍalu.valkala.ādīn \saṃbharati).
+Vaikh 02.01.(122.8)/ pūrva.ukta.vidhinā-agni.kuṇḍaṃ \kuryād).
+Vaikh 02.01.(122.8-10) aparasmin divase vaiśvānara.sūktena-agniṃmathitvā prajvālya-agna-\āyāhy)/ upāvaroha-ity agniṃ nidhāya pūrvavat- śrāmaṇaka.agni.āghāraṃ \juhoti).
+Vaikh 02.01.(122.10-13)/ praṇamya-agniṃ pariṣicya-agne prāyaścitte tvam iti pañca.prāyaścittaṃ hutvā-apo.hiraṇya.avamānair ātmānaṃ prokṣyabrahma.daivatyaṃ vaiṣṇavaṃ pañca.vāruṇaṃ ca pradhānān vyāhṛti.antaṃ \yajet).
+Vaikh 02.02(122.14-17)/ agneḥ pratīcyāṃ dvau kuśau pūrva.agraunyasya-ūrdhve-aśmānaṃ nidhāya tat savitur vareṇyam iti dakṣiṇapāda.aṅguṣṭhāgreṇa-aśmānam\adhitiṣṭhet) tejo.vatsava iti\on the reading of the mantra, cf. Cal p.122n.4) valkalam ajinaṃ cīraṃvā paridhāya pūrvavan mekhalā.ādīṃs trīṇy upavītāny uttarīyaṃ kṛṣṇājinaṃ ca-\ādadāty).
+Vaikh 02.02(122.17-123.1) ācamya svasti deva-iti- agniṃ pradakṣiṇaṃpraṇāmaṃ ca kṛtvā-\āsīta).
+Vaikh 02.02(123.1-3)/ śaṃ no vedīr iti sva.mūrdhni prokṣya jayānabhyātānān rāṣṭrabhṛto vyāhṛtīś ca hutvā-ājya.śeṣaṃ prāṇāyāmena \prāśnīyād) .
+Vaikh 02.02(123.3-5)/ yoge yoga iti dvir ācamya śatam in nu śarada-itipraṇāmam āgantrā samagan mahi-iti pradakṣiṇaṃ ca-ādityasya \kurvīta).
+Vaikh 02.02(123.5-6)/ rāṣṭrabhṛd-asi-iti- ūrdhva-agraṃ kūrcaṃ \gṛhṇīyāt).
+Vaikh 02.02(123.6-10)/ oṃ bhūs tat savitur oṃ bhuvo bhargo devasyoṃsuvardhiyo yo na iti paccho vyastām oṃ bhūr bhuvas tat savitur oṃ suvardhiyo yo na ity ardharcām oṃ bhūr bhuvaḥ suvas tat savitur iti samastāṃ casāvitrīṃ japtvā vanāśramaṃ praviśya brahmacarya.vrataṃ \saṃkalpayet).
+Vaikh 02.03(123-11)/ tat.patnī ca tathā brahmacāriṇī \syāt).
+Vaikh 02.03(123.11-14) svayam eva-agniṃ pradakṣiṇīkṛtya-ājyena prājāpatyaṃ dhātā.ādīn minda.āhutī vicchinnam aindraṃ vaiśvadevaṃ vaiśṇavaṃ bāhyaṃ viṣṇornuka.ādīn prājāpatya.sūktaṃ tad.vrata.bandhaṃ ca punaḥ pradhānān hutvāprājāpatya.vrataṃ \badhnāti).
+Vaikh 02.03(123.14-16)/ sthitvā devasya tvā yo me daṇḍa iti dvābhyāṃ pañca.sapta.nava.anyatamaiḥ parvabhir yuktaṃ keśānta.āyataṃvā-apy-avakraṃ vaiṣṇavaṃ dvi.daṇḍam \ādadāti).
+Vaikh 02.03(123.16-17)/ yena devā iti kamaṇḍalu.mṛd.grahiṇyau pūrvavadupānaṭ.chatre ca \gṛhṇāty).
+Vaikh 02.03(123.17-20)/ agnīn gārhapatya.ādīn-ca-ujjvālya-agnihotraṃhutvā-āhavanīye prājāpatyaṃ viṣṇu.sūktaṃ ca sarvatra-agnaye svāhā somāya viṣṇavesvāhā-iti hutvā-agnīn araṇyām \āropayati).
+Vaikh 02.03(123.20-124.1) vane-adrau vivikte nadī.tīre vanāśramaṃpraklpya yathā.uktam agnikuṇḍāni \kuryāt).
+Vaikh 02.03(124.1-2)/ patnyā saha-agnīn ādāyapātrādi.saṃbhāra.yukto vanāśramaṃ \samāśrayati).aVKḥḍḥṣ 02.04(124.3-4)/ agnyāyatane prokṣya khanitvā lekhāḥ ṣaḍ ullikhyasuvarṇa.śakalaṃ vrīhīṃś ca nidhāya śrāmaṇaka.agniṃ \nidadhyāt).
+Vaikh 02.04(124.4-7) vanyān eva pārthivān vānaspatyānkulīra.udghāta.añchaṇān purāṇān kuśa.darbhān ūrṇā.stukāṃ plakṣa.agraṃ sugandhi.tejanaṃ gugguluṃ hiraṇya.śakalān sūrya.kāntaṃ ca \saṃbharati).
+Vaikh 02.04(124.7-9)/ vānaprasthān ṛtvijo vṛtvā-agniṃ mathitvāgārhapatya.ādīṃs tretā.agnīn pañca.agnīn vā-agnyādheya.krameṇa-ādhāya-āhutī dve dvehutvā nityaṃ dvi.kālaṃ vanyair eva \juhoti).
+Vaikh 02.04(124.9-12)/ vanāśramī muniḥ snāna.śauca.svādhyāya.tapo.dāna.ijyā.upavāsa.upasthanigraha.vrata.maunāni-iti niyamān daśa-etānsatya.ānṛśaṃsya.ārjava.kṣamā.dama.prīti.prasāda.mārdava.ahiṃsā.mādhuryāṇi-iti yama.andaśāmūṃś ca \samācarati).
+Vaikh 02.04(124.12-15)/ bhaktyā viṣṇuṃdhyāyann-agnihotra.śrāmaṇaka.agnihomau dvi.kālaṃ na-utsṛjan grāmya.aśanaṃ tyaktvā vanya.oṣadhīḥ phalaṃ mūlaṃśākaṃ vā nitya.aśanaṃ saṃkalpya tirodhā bhūr ity-āhṛtya- aparāhṇe svayaṃ patnīvā haviṣyam āsrāvitaṃ \pacati).
+Vaikh 02.04(124.16)/ vaiśvadeva.ante-athitīn abhyāgatān prāśayitvāmitaṃ \prāśnāti).
+Vaikh 02.05.(125.1)/ rātrau na-\aśnīyād).
+Vaikh 02.05.(125.1-2)/ adhastād darbhāṃs tṛṇāni parṇāni vā-āstīryasu.vrataḥ su.vratāṃ patnīṃ vinā-ekaḥ \śayīta).
+Vaikh 02.05.(125.2-3)/ sā-asya śuśrūṣāṃ \karoty). enāṃ na-\upagacchet).
+Vaikh 02.05.(125.3)/ mātṛvan niṣ.kāmaḥ prekṣeta-ūrdhva.retā jita.indriyo.
+Vaikh 02.05.(125.4-5)/ darśapūrṇamāsau cāturmāsyaṃ nakṣatra.iṣṭimāgrayaṇa.iṣṭiṃ ca vanya.oṣadhībhiḥ pūrvavad \yajed) anukramān.
+Vaikh 02.05.(125.5-7)/ mūlaiḥ phalaiḥ pattraiḥ puṣpair vātat.tat.kālena pakvaiḥ svayam eva saṃśīrṇaiḥ prāṇaṃ pravartayann uttara.uttare-apy adhikaṃ tapaḥ.saṃyogaṃphalādi.viśiṣtam \ācared).
+Vaikh 02.05.(125.7-10)/ atha vā-āhitāgniḥ sarvān agnīn araṇyāmāropya sarvaiḥ saṃvāpa.mantraiḥ pārthivān vānaspatyāṃś ca sarvān samūhyanirmanthya-etena vidhinā-agnim agnyādheya.vidhānena ca mantraiḥ sarvaiḥ sabhyāgny.āyataneśrāmaṇaka.agnim ādhāya-\āharet).
+Vaikh 02.05.(125.10)/ sabhyasya bhedaḥ śrāmaṇaka.agnir ity \āhuḥ).
+Vaikh 02.05.(125.10-13)/ a.patnīkaś ca bhikṣuvad agnau homaṃhutvā-araṇyādi.pātrāṇi ca prakṣipya putre bhāryāṃ nidhāya tathā-agnīn ātmany āropyavalkala.upavīta.ādīn bhikṣā.pātraṃ ca saṃgṛhya- an.agnir a.dāro gatvā vane \nivaset).
+Vaikh 02.05.(125.13-15)/ tapasāṃ śramaṇam etan mūlaṃ tasmād etadvidhānam enam agniṃ ca śrāmaṇakam ity \āha) vikhanāḥ.
+Vaikh 02.06.(125.16-17)/ saṃnyāsa.kramaṃ. saptaty.ūrdhvaṃvṛddho-an.apatyo vidhuro vā janma.mṛtyu.jarā.ādīn vicintya yoga.arthī yadā \syāt) tad.
+Vaikh 02.06.(125.17-18)/ atha vā putre bhāryāṃ nikṣipya paramātmanibuddhiṃ niveśya vanāt saṃnyāsaṃ \kuryāt).
+Vaikh 02.06.(125.19-126.4)/ muṇḍito vidhinā snātvā grāmād bāhyeprājāpatyaṃ caritvā pūrvāhṇe tri.daṇḍaṃ śikyaṃ kāṣāyaṃ kamaṇḍalum ap.pavitraṃ mṛd.grahaṇīṃ bhikṣā.pātraṃ ca saṃbhṛtya trivṛtaṃ prāśya- upavāsaṃkṛtvā dine-apare prātaḥ snātvā-agnihotraṃ vaiśvadevaṃ ca hutvā vaiśvānaraṃ dvādaśa.kapālaṃ \nirvapet).
+Vaikh 02.06.(126.4-6)/ gārhapatya.agnāv ājyaṃ saṃskṛtya-āhavanīyepūrṇa.āhutī puruṣasūktaṃ ca hutvā-agnaye somāya dhruvāya dhruva.karaṇāya paramātmane nārāyaṇāya svāhā-iti \juhoti).
+Vaikh 02.07.(126.7-8)/ sruci sruveṇa catur gṛhītaṃ gṛhītvā sarva.agniṣvoṃ svāhā-iti \juhuyād).
+Vaikh 02.07.(126.8-9)/ agnihotrahavaṇīm āhavanīye mṛt.śilāmayebhyo-anyāni pātrāṇI gārhapatye \prakṣipati).
+Vaikh 02.07.(126.9-10)/ gṛhastho-anāhitāgnir aupāsane vanasthaś caśrāmaṇaka.agnau homaṃ hutvā pātrāṇi \prakṣipet).
+Vaikh 02.07.(126.10-12)/ paccho-ardharcaśo vyastāṃ samastāṃ casāvitrīṃ japtvā bhikṣāśramaṃ praviśāmi-iti taṃ \praviśati).
+Vaikh 02.07.(126.12-14) antar vedyāṃ sthitvā gārhapatya.ādīn yā teagne yajñiya-iti pratyekaṃ trir āghrāya bhavataṃ naḥ sa.manasāv ity ātmany \āropayet).
+Vaikh 02.07.(126.14-16)/ bhūr bhuvaḥ suvaḥ saṃnyastaṃ mayā-iti trirupāṃśu-uccaiś ca praiṣam uktvā dakṣiṇa.hastena sakṛt-jalaṃ pītvā-ācamya tathā-eva-uktvā trir jala.añjaliṃ \visṛjen).
+Vaikh 02.07.(16-17)/ mekhalāṃ catvāry upavītāny ekaṃ vā-upavītaṃkṛṣṇājinam uttarīyaṃ ca pūrvavad \dadāti).
+Vaikh 02.08.(126.18-20)/ devasya tvā yo me daṇḍaḥ sakhā me gopāya-ititribhis tri.daṇḍaṃ yad asya pāre rajasa iti śikyaṃ yena devāḥ pavitreṇa- ity appavitraṃ yenadevā jyotiṣa-iti kamaṇḍalu.mṛd.grahaṇyāv \ādadīta).
+Vaikh 02.08.(127.1)/ snātvā-aghamarṣaṇa.sūktena-aghamarṣaṇaṃ kuryāt
+Vaikh 02.08.(127.1-3)/ ācamya ṣoḍaca prāṇāyāmān kṛtvā sahasraṃ śataṃ vā sāvitrīṃ japtvā tathā bhikṣā.pātram alābu dāravaṃ mṛn.mayaṃ vā\gṛhṇāti).
+Vaikh 02.08.(127.3-5) praṇava.ādy.ādibhiḥ\cf.Cal p.127n.2) pṛthak pṛthak sapta.vyāhṛtibhis tarpayāmi- iti devebhyo jale-adbhis tarpayitvā-ādyābhiś catasṛbhiḥsvadhā-iti pitṛbhyas tarpayet
+Vaikh 02.08.(127.5-6)/ ud vayaṃ tamasa ity ādityam \upatiṣṭheta).
+Vaikh 02.08.(127.6-7)/ jala.añjaliṃ visṛjya-abhayaṃ sarvabhūtebhyo \dadyād).
+Vaikh 02.08.(127.7-8)/ adhyātma.rato yatir bhikṣā.aśī niyama.yamāṃś casamācaran saṃyata.indriyo dhyāna.yogena paramātmānam \īkṣate).
+Vaikh 02.09.(127.9)/ dharmyaṃ sad.ācāraṃ.
+Vaikh 02.09.(127.9-11) nivītī dakṣiṇe karṇe yajña.upavītaṃkṛtvā-utkaṭikam āsīno- ahany udaṅ.mukho rātrau dakṣiṇā.mukhas tṛṇair antarite mūtra.purīṣe \visṛjen)-.
+Vaikh 02.09.(127.11-12)/ nadyāṃ goṣṭhe pathi chāyāyāṃ bhasmany apsukuśe darbhe vā na- \ācaret).
+Vaikh 02.09.(127.12-13) go.vipra.udaka.agni.vāyu.arka.tārā.indūn napaśyan \kuryāt).
+Vaikh 02.09.(127.13-16) vāma.hastena liṅgaṃ saṃgṛhya-utthāya-udakasyapārśve tathā- āsīno brahmacārī gṛhastho-api śiśne dvir hastayoś ca dvir.dvir gudeṣaṭkṛtvas- mṛdaṃ dattvā-uddhṛtair eva jalaiḥ śaucaṃ \kuryāt).
+Vaikh 02.09.(127.16-17)/ karaṃ vāmaṃ daśa kṛtvaḥ karāv ubhau ca tathāmṛdā-adbhiḥ \prakṣālayet).
+Vaikh 02.09.(127.17)/ vanasthasya bhikṣoś ca-etad dvi.guṇaṃ \bhavati).
+Vaikh 02.09.(127.17-18)/ rātrau yathā.ukta.ardhaṃ vā.
+Vaikh 02.09.(127.18-128.1)/ reto.visarge mūtravat-śaucaṃ kartavyaṃ.retasas trir ity eke.
+Vaikh 02.09.(128.1-3)/ sa.upavītī prāṅ.mukha udaṅ.mukhovā-anyatra-āsitvā mṛdā-ambunā pūrvavat pādau pāṇī ca prakṣālya-ācamya mantreṇa- \ācamati).
+Vaikh 02.10.(128.4-5) brāhmaṇo hṛdgābhiḥ kṣatriyaḥ kaṇṭhagābhir vaiśyastālugābhir adbhir ācāmeta.
+Vaikh 02.10.(128.5-6)/ ātmānaṃ prokṣya praty.arkam apo visṛjya-arkaṃ paryety.
+Vaikh 02.10.(128.6-8)/ udakasya-agner vāma.pārśvaṃ prāṇān āyamyapratyekam oṃ.kārādi.sapta.vyāhṛti.pūrvāṃ gāyatrīm ante sa.śiraskāṃ trir\japet). sa prāṇāyāmas. trīn ekaṃ vā prāṇāyāmaṃ kṛtvā pūtaḥ.
+Vaikh 02.10.(128.8-10) śataṃ daśa aṣṭau vā sāvitrīṃa sāyaṃ.prātaḥ sandhyām upāsya naiśikam āhnikaṃ ca-eno-\apamṛjyate).
+Vaikh 02.10.(128.10)/ dvijātiḥ sandhyā.upāsana.hīnaḥ śūdra.samo \bhavati).
+Vaikh 02.10.(128.11)/ brahmacārī sva.nāma saṃkīrtya-abhivādayed ahaṃbho iti.
+Vaikh 02.10.(128.11-13)/ śrotre ca saṃspṛśya guroḥ pādaṃ dakṣiṇaṃdakṣiṇena pāṇinā vāmaṃ vāmena vyatyasyar āpādamgṛhṇann ānata.śīrṣo-\abhivādayaty).
+Vaikh 02.10.(128.14)/ āyuṣmān bhava saumya-ity enaṃ \śaṃsed).
+Vaikh 02.10.(128.14)/ an.āśīr vādī na-abhivandyo.
+Vaikh 02.10.(128.14-15)/ mātā pitā gurur vidvāṃsaś ca pratyahamabhivādanīyāḥ.
+Vaikh 02.11.(128.16)/ anye bāndhavā viproṣya pratyāgatya-abhivandyāḥ
+Vaikh 02.11.(128.16-18)/ jyeṣṭho bhrātā pitṛvyo mātulaḥ śvaśuraś ca pitṛvat pitṛ.ṣvasā mātṛ.ṣvasā jyeṣṭha.bhharyā bhaginī jyeṣṭhā ca mātṛvatpūjitavyāḥ.
+Vaikh 02.11.(128.18-19)/ sarveṣāṃ mātā śreyasī guruś ca śreyān.
+Vaikh 02.11.(128.19-129.1)/ paras triyaṃ yuvatim aspṛśan bhūmāv\abhivādayed).
+Vaikh 02.11.(129.1)/ vandyānāṃ vandanādāyur.jñāna.bala.ārogya.śubhāni \bhavanti).
+Vaikh 02.11.(129.2)/ yajña.upavīta.mekhalā.ajina.daṇḍān pareṇa dhṛtānna \dhārayet).
+Vaikh 02.11.(129.2-4)upākṛtya-an.ālasyaḥ śuciḥ praṇava.ādyaṃ vedamadhīyāno-amāvāsyāyāṃ paurṇamāsyāṃ caturdaśyoḥ pratipador aṣṭamyoś ca na-adhīyīta.
+Vaikh 02.11.(129.4-5)/ nitya.jape home ca-an.adhyāyo na-asti.
+Vaikh 02.11.(129.5-8)/mārjāra.nakula.maṇḍūka.śva.sarpa.gardabha.varāha.paśu.ādiṣv antarāgateṣv ahorātraṃ sūtaka.pretakayor āśauce tāvat kālaṃ tisro-aṣṭakāsu gurau prete ca trirātram an.adhyāyaḥ \syāt).
+Vaikh 02.12.(129.9-10)/ tad.bhāryā.putrayoḥ sva.śiṣyasya ca-uparamemanuṣya.yajñe śrāddha.bhojane ca-ekāham an.adhyāyaḥ syāt āpad.ārtyor aprāyatye.
+Vaikh 02.12.(129.10-14)/ vṛkṣa.nau.yāna.śayaneṣv ārūḍhaḥ prasārita.pādo mūtra.purīṣa.reto.visarge grāme-antaḥśave satya.bhakṣyānna.bhojane chardane śmaṣāna.deśe sandhyā.stanite bhū.kampe dig.dāhe-aśani.ulkā.nipāte rudhira.upala.pāṃsu.varṣe sūrya.indu.rāhu.grahaṇe ca tat tat kāle na-\adhīyīta).
+Vaikh 02.12.(129.14-15)/ paratra-iha śreyas.karo vedas. tad adhyetavyo.
+Vaikh 02.12.(129.15)/ ante visṛjya praṇavaṃ \bravīti).
+Vaikh 02.12.(129.15-16) laukika.agnau samidhau hutvā bhikṣā.annaṃmedhā.pradaṃ śuddhaṃ maunī \bhuñjīta).
+Vaikh 02.12.(129.16-130.3)/ pauṣe māghe vā msāse grāmād bahirjala.ante pūrvavad vratavisarga.homaṃ hutvā svādhyāyam utsṛjya pakṣe śukle vedaṃ kṛṣṇeveda.aṅgaṃ ca yāvad antaṃ samadhītya guror dakṣiṇāṃ dattvā samāvartī\syāt).
+Vaikh 02.13.(130.4-5)/ madhyāhne śuddhe jale mṛd.adbhiḥ pādau hastau cadhāvayitvā-ācamya-aṅgāni saṃśodhya-apaḥ \punantv) iti jale \nimajjed).
+Vaikh 02.13.(130.5-7)/ ācānto vaiṣṇavair mantrair viṣṇuṃ hiraṇya.śṛṅgamiti varuṇaṃ ca praṇamya-agha.maṛṣaṇa.sūktena-agha.maṛṣaṇaṃ kṛtvā-idam āpaḥ śivāiti\snāyād). VKḥḍḥṣ 02.13.(130.7-9) āśramiṇaś catvāraḥ snānaṃ nityam evaṃpūrva.uktena vidhinā kāmyaṃ naimittikaṃ ca \kurvanti).
+Vaikh 02.13.(130.9-10)/ dhauta.vastreṇa-āchādya pūrvavad ācamyaprokṣya-āsīnas tiṣṭhan vā kṛta.prāṇāyāmaḥ sāvitrīṃ japtvā-ādityam \upatiṣṭheta).
+Vaikh 02.13.(130.10-14)/ dakṣiṇa.pāṇinā tīrthena brāhmeṇabhūpati.ādīn daivena nārāyaṇa.adīn kūpya.adīṃś ca-ārṣeṇa viśvāmitra.ādīn paitṛkeṇapitṛ.ādīn adbhis tarpayitvā brahmayajñaṃ kariṣyann ity amiṣe tvā-ūrje tvā-iti yathā.kāmaṃyajuḥ.saṃhitām ādyāṃ strīn anuvākān svādhyāyaṃ \kurvīta).
+Vaikh 02.13.(130.14-15)/ naimittikam ṛtaṃ ca satyaṃ ca-ity ādi.sūktānicatur vedādi.mantrān vā-apy \adhīyīta).
+Vaikh 02.13.(130.15-16)/ sarvayajñānām ādir brahmayajñaḥ.
+Vaikh 02.13.(130.16)/ tasmād upanayana.prabhṛty-eva dvijaiḥ kartavyo.
+Vaikh 02.13.(130.17-18)/ nadyāṃ tīrthe deva.khāte sarasi taṭāke vāsāmānye snānaṃ \kuryāt).
+Vaikh 02.14.(131.1)/ parasya-udake mṛt.piṇḍān pañca-uddhṛtya \snāyāt).
+Vaikh 02.14.(131.1-2)/ kūpe tat.tīre triḥ kumbhena-\abhiṣiñced).
+Vaikh 02.14.(131.2)/ ucchiṣṭo nagno vā na \snāyāt). tathā na \śayīta).
+Vaikh 02.14.(131.3)/ āturo-apsu na-\avagāheta).
+Vaikh 02.14.(131.3-5)/ āturasya snāne naimittike daśa kṛtvo dvādaśakṛtvo vā tam an.āturo jale -avagāhya-ācamya \spṛśet). tataḥ sa pūto \bhavati).
+Vaikh 02.14.(131.5-7)/ dvi.kālaṃ homa.ante pādauprakṣālya-ācamya-āsane prāṅ.mukhaḥ pratyaṅ.mukhaḥ vā sthitvā caturaśra.upalipte maṇḍale śuddhaṃ pātraṃ \nyaset).
+Vaikh 02.14.(131.7)/ tatra-annaṃ prakṣipya tat \pūjayati).
+Vaikh 02.14.(131.7-9)/ dvau pādāv ekaṃ vā bhūmau nidhāya prasannaṛtaṃ tvā satyena \pariṣiñcāmi)-iti sāyaṃ \pariṣiñcati). satyaṃ tv artena\pariṣiñcāmi)-iti prātar.
+Vaikh 02.14.(131.9-11)/ amṛta.upastaraṇam asi-ity ādhāvaṃ pītvāvidhinā prāṇa.āhutīr hutvā-annam anindann \aśnāti).
+Vaikh 02.14.(131.11) bhuktvā-amṛta.apidhānam asi-ity apaḥpītvā-ācamya-\ācāmed).
+Vaikh 02.14.(131.11-12)/ eka.vāsāḥ śayānas tiṣṭhann a.snāna.japa.homīśuṣka.pāda udaṅ.mukho vā na-\aśnāti).
+Vaikh 02.14..(131.13)/ bhinna.pātre-annaṃ paryuṣitaṃśayana.āsana.utsaṅga.sthaṃ vā na \bhuñjīta).
+Vaikh 02.14.(131.13-14)/ añjalinā-apo na \pibed).
+Vaikh 02.14.(131.14-15)/ ucchiṣṭa.aśucy.āśauci.patitataiḥ spṛṣṭhaṃsūtaka.pretake ca-annaṃ na-\aśnīyāt).
+Vaikh 02.15.(132.1)/ tila.saktu.dadhi.lājaṃ ca rātrāv abhakṣyam.
+Vaikh 02.15.(131.1-2)/ annaṃ paryuṣitam ājyena dadhnā vā yuktaṃ bhojyaṃ.
+Vaikh 02.15.(131.2-3)/ krimi.keśa.kīṭa.yutaṃ gavā.ghrātaṃ pakṣi.jagdhaṃ ca bhasma.adbhiḥ prokṣitaṃ śuddhaṃ.
+Vaikh 02.15.(131.3-5) śva.kākādy.upahate bahvanne tasmin puruṣa.āśamana.mātraṃ tatra-eva-uddhṛtya vyapohya pavamānaḥ suvarjana iti bhasma.jalaiḥ prokṣya darbha.ulkayā sparśayitvā \gṛhṇīyāt).
+Vaikh 02.15.(132.6-7)/ prasūte-antar.daśāhe go.kṣīraṃsadā-ekaśapha.uṣṭra.strīṇāṃ payaś ca pala.aṇḍuka.vakala.śuna.gṛñcana.viḍjam anuktaṃ\reading uncertain Cal p.132n.1)/ matsya.māṃsaṃ ca varjanīyaṃ.
+Vaikh 02.15.(132.8)/ yajña.śiṣṭaṃ māṃsaṃ bhakṣaṇīyam.
+Vaikh 02.15.(132.8-9)/ udakyā.spṛṣṭaṃ śūdra.anulomaiḥ spṛṣṭaṃ teṣāmannaṃ ca \varjayet).
+Vaikh 02.15.(132.9-10)/ svadharma.anuvartināṃ śūdra.anulomānām āmaṃkṣudhitasya saṃgrāhyaṃ.
+Vaikh 02.15.(132.10-11)/ sarveṣāṃ pratiloma.antarāla.vrātyānām āmaṃpakvaṃ ca kṣudhito-api yatnān na \gṛhṇīyāt).
+Vaikh 02.15.(132.11-12)/ taiḥ spṛṣṭi.saṃmiśraṃ para.pakvaṃ ca \saṃtyajati).
+Vaikh 02.15.(132.12-13) nityaṃ śruti.smṛti.uditaṃ karma kurvanmano.vāk.kāya.karmabhiḥ śanair dharmaṃ \samācarati).
+Vaikh 03.01.(133.1-2)/ gṛhastha.āśramī dve yajña.upavīte vaiṇavaṃdaṇḍaṃ kamaṇḍaluṃ ca \dhārayet).
+Vaikh 03.01.(132.2-3)/ snātvā sa.bhāryo gṛhya.agnau gārhyāṇi karmāṇiśrauta.agniṣu śrautāni \kuryāt).
+Vaikh 03.01.(133.3-4)/ sāyaṃ ca homa.ante-atithīn abhyāgatānprāśayitvā mitaṃ prāśya patnyā \śayīta).
+Vaikh 03.01.(133.4-5)/ ārdra.pādaḥ pratyaguttara.śirāś na \svapity)-.
+Vaikh 03.01.(133.5)/ ṛtu.rātriṣu svabhāryām \upagacched).
+Vaikh 03.01.(133.5-6) ādau tri.rātramṛtumatī.gamana.sahāsana.śayanāni \varjayet).
+Vaikh 03.01.(133.6-7)/ paradārān na \saṃgacchet).
+Vaikh 03.01.(133.7)/ paradāra.gamanād āyuḥ śrīr brahma.varcasaṃ\vinaśyati).
+Vaikh 03.01.(133.7-8)/ bhāryayā saha na-\aśnāty).
+Vaikh 03.01.(133.8)/ aśnantīṃ tāṃ jṛmbhamāṇāṃ nagnāṃ ca na-\avalokayet).
+Vaikh 03.01.(133.9)/ asatyavādaṃ \varjayaty).
+Vaikh 03.01.(133.9)/ asatyāt paraṃ pāpaṃ satyāt paro dharmaś ca na-\asti).
+Vaikh 03.01.(133.10-11) sarvaprāṇi.hito-adroheṇa-eva\jīvec)-śuddha.arthavān kusūla.dhānyaḥ kumbhī.dhānyo-a.śvastaniko vā \syāt).
+Vaikh 03.01.(133.11-12)/ dvijātiḥ patita.antyajātān na \spṛśed).
+Vaikh 03.01.(133.12)/ udaye-astamaye ca sūryaṃ na-\īkṣeta).
+Vaikh 03.01.(133.12-13 deva.guru.vipra.ghṛta.kṣīra.dadhi.mṛt.toya.samid.darbha.agni.vanaspatīnpradakṣiṇaṃ \gacchet).
+Vaikh 03.02.(133.14)/snātaka.rāja.guru.śreṣṭha.rogi.bhārabhṛd.antarvatnīnāṃ deyo.\Cal reads jyeṣṭha inst. of śreṣṭha, ṭr.p.214n.1)
+Vaikh 03.02.(133.15)/ vāta.arka.raśmibhiḥ panthānaḥ \śudhyanti).
+Vaikh 03.02.(133.15-16)/ parasya-āsana.śayanāny adattāni na-\upayuñjīta).
+Vaikh 03.02.(133.16)/ adatteṣu-upayukteṣu svapuṇya.caturthāṃśo \jahāti).
+Vaikh 03.02.(133.17)anya.upayuktāni vastra.mālya.upānaṭ.chattrāṇina-eva \dhārayed).
+Vaikh 03.02.(133.17-19)/ agnau pādaṃ na \tāpayen)/ na-enaṃ mukhena\dhamen) napādena \spṛśed)/ adhaḥ pādato na \kuryād).
+Vaikh 03.02.(133.19-134.1)/ agnāv agniṃ vā deva.ālaye-agnau jale ca mūtra.purīṣa.pūya.śoṇita.retaḥ.śleṣma.ucchiṣṭa.aṅganiṣpeṣān na \prakṣipet).
+Vaikh 03.02.(134.1-2)/ nagnāṃ paras triyaṃ viṇ.mūtre ca na \paśyed).
+Vaikh 03.02.(134.2-3)/ ucchiṣṭo deva.arka.candra.graha.ṛkṣa.tārā na\-īkṣeta).
+Vaikh 03.02.(134.3-4)/ deva.guru.snātaka.dīkṣita.rāja.go.śreṣṭhānāṃchāyāṃ na- \ākramati).
+Vaikh 03.02.(134.4)/ indradhanuḥ parasmai na \darśayen) na \vadet).
+Vaikh 03.02.(134.4-5)/ svapantaṃ na-\avabodhayed).
+Vaikh 03.02.(134.5)/ eko-adhvānaṃ na \gacchet).
+Vaikh 03.02.(134.5-6)/ parakṣetre carantīṃ gāṃ dhayantaṃ vatsaṃ ca na\vārayen)/ na- eva-\ācakṣīta).
+Vaikh 03.02.(134.6)/ jīrṇa.mala.vāsā na \syāt).
+Vaikh 03.03.(134.7)/ akṣaiḥ krīḍāṃ preta.dhūmaṃ bāla.ātāpaṃ ca\varjayet).
+Vaikh 03.03.(134.7-9)/ keśa.roma.tuṣa.aṅgāra.kapāla.asthi.viṇ.mūtra.pūya.śoṇita.retaḥ.śleṣma.ucchiṣṭān na-\adhitiṣṭhet).
+Vaikh 03.03.(134.9-10) amedhya.lipte-aṅge yāvattat.lepa.gandha.manaḥśaṅkā na \syāt)/ tāvan mṛt.toyaiḥ \śodhayet).
+Vaikh 03.03.(134.10-11) patita.antyaja.mūrkhā.dhārmika.vairibhiḥsārdhaṃ na \vased).
+Vaikh 03.03.(134.11)/ ucchiṣṭo-aśucir vā deva.go.vipra.agnīn na \spṛśet).
+Vaikh 03.03.(134.11-12)/ devān vedān rāja.guru.mātā.pitṛṛnvidvad.brāhmaṇān na- \avamanyeta)/ na \ninded).
+Vaikh 03.03.(134.12-13)/ avamantā nindakaś ca \vinaśyati).
+Vaikh 03.03.(134.13-14)/ sarvabhūta.kutsāṃ tāḍanaṃ ca na \kurvīta).
+Vaikh 03.03.(134.14-15) guruṇā mātā.pitṛbhyāṃ tat.pitṛ.ādyair bhrātṛ.pitṛ.bhrātṛ.mātula.ācārya.ṛtvij.ādyair vivādaṃ na-\ācaret).
+Vaikh 03.03.(134.15-16)/ sarva.śuddhiṣu puruṣasya-artha.śuddhiḥstrī.śuddhir anna.śuddhiś ca śreṣṭhatamā \syāt).
+Vaikh 03.03.(134.16-135.1) dravyeṣu ratna.sauvarṇa.rajata.mayāny adbhiḥ\śodhayaty)/ agnau vā \sparśayati).
+Vaikh 03.03.(135.1-3)/ tāmra.trapu.sīsa.āyasa.ādyāny amla.vāribhirdāru.danta.jātāni takṣaṇād dhāvanād vā yajña.pātrāṇi dakṣiṇa.pāṇinā mārjanātkṣālanād vā saṃśodhyāni.
+Vaikh 03.04.(135.4-5) carmamaya.saṃhatāni vastrāṇi śāka.mūla.phalānica \prokṣayed)/ alpāni \kṣālayet).
+Vaikh 03.04.(135.5-6)/ ghṛta.ādīni dravyāṇy utpūya-ulkayā \darśayet).
+Vaikh 03.04.(135.6-9)/ kauśeya.āvikāny ūṣair aṃśutaṭṭāni\Cal readsaṃśupaṭṭa- in his tr. p.216)/ śrīphalaiḥ śaṅkha.śukti.gośṛṅgāṇi sarṣapaiḥ sa.vāribhirmṛtmayāni punar dāhena gṛhaṃ mārjana.upalepana.apsekair bhūmiṃ khananādanyamṛt.pūraṇa.govāsaka.ādyair mārjana.ādyaiś ca \śodhayed).
+Vaikh 03.04.(135.9)/ gotṛpti.karaṃ bhū.gataṃ toyaṃ doṣa.vihīnaṃ su.pūtaṃ.
+Vaikh 03.04.(135.9-10)/ vāk.śastaṃ vāri.nirṇiktam adṛṣṭaṃ.
+Vaikh 03.04.(135.10-11) yoṣid.āsyaṃ kāru.hastaḥ prasārita.paṇyaṃ casarvadā śuddhaṃ.
+Vaikh 03.04.(135.11)/ śakuni.ucchiṣṭaṃ phalam anindyaṃ.
+Vaikh 03.04.(135.11-12)/ maśaka.makṣikā.nilīnaṃ tad.vipruṣaś ca na dūṣyāṇi.
+Vaikh 03.04.(135.12-13)/ vāyu.agni.sūryaraśmibhiḥ spṛṣṭaṃ ca medhyam.
+Vaikh 03.04.(135.13-14)/ āture bāle pacana.ālaye ca śaucaṃ navicāraṇīyaṃ yathā.śakti \syād).
+Vaikh 03.04.(135.14)/ viṇ.mūtrābhyāṃ bahu.āpo na dūṣyāḥ.
+Vaikh 03.04.(135.14-15) parasya-ācāmatas toya.bindubhir bhūmaunipatya-udgataiḥ pāda.spṛṣtair ācāmayan na-aśuciḥ syāt.
+Vaikh 03.05.(136.1-2)/ vānaprastho nitya.svādhyāyī kuśa.idhma.ādīnagni.arthaṃ śāka.mūla.phalāny aśana.arthaṃ ca śucau jātāny \āhared).
+Vaikh 03.05.(136.2-3)/ anya.adhīnam anya.utsṛṣṭam aśucau jātaṃ gorasaṃca \varjayet).
+Vaikh 03.05.(136.3)/ dhānya.dhana.saṃcayaṃ na \kurvīta).
+Vaikh 03.05.(136.4)/ vastraṃ na-\āchādayet).
+Vaikh 03.05.(136.4)/ madhu.ukte toyaṃ māṃsa.ukte paiṣṭikaṃ \gṛhṇāti).
+Vaikh 03.05.(136.5-9)/ sarvabhūteṣu dayāluḥ samaḥ kṣāntaḥ śucirnir.asūyakaḥ sukhe niḥ.spṛho maṅgalya.vāṇi.īrṣyā.kārpaṇya.varjī matsya.ādīn daṃśakānsīra.kṛṣṭa.jātāni kanda.mūla.phala.śāka.ādīni ca tyajan-jaṭā.śmaśru.roma.nakhāni dhārayaṃs trikāla.snāyī dharā. āśayo vanyair eva caru.puroḍaśān \nirvapet).
+Vaikh 03.05.(136.9-11)/ palāṇḍu.ādīn niryāsaṃ śvetavṛntākaṃ suniṣaṇṇakaṃ śleṣmātakaṃ vrajakaliṃ citrakaṃ śigruṃ bhūs tṛṇaṃ kovidāraṃ mūlakaṃ ca\varjayati).
+Vaikh 03.05.(136.11-12)/ muneḥ sarvaṃ māṃsaṃ gomāṃsa.tulyaṃ dhānya.āmlaṃ surā.samaṃ \bhavati).
+Vaikh 03.05.(136.12)/ pūrvasaṃcita.āśanaṃ pūrvāṇi vasanāny āśvayujemāsi \tyajati).
+Vaikh 03.05.(136.13)/ veda.vedāntena dhyāna.yogī tapaḥ \samācarati).
+Vaikh 03.05.(136.13-137.2)/ a.patnīko-an.agnir a.dāro-a.niketanovṛkṣamūle vasan vanastha.āśrameṣu gṛhasthānāṃ gṛheṣu vā bhikṣāṃbhikṣitvā-ambu.pārśve śuddhe parṇe prāṇayātrā.mātram annaṃ bhikṣuvad \aśnāti).
+Vaikh 03.05.(137.2)/ śarīraṃ śoṣayann uttaram uttaraṃ tīvraṃ tapaḥ \kuryāt).
+Vaikh 03.06.(137.4)/ bhikṣuḥ snātvā nityaṃ praṇavena-ātmānaṃ \tarpayet).
+Vaikh 03.06.(137.4-5)/ tena-eva \namaskuryāt).
+Vaikh 03.06.(137.5-6)/ ṣaḍ avarān prāṇāyāmān kṛtvā śata.avarāṃsāvitrīṃ japtvā sandhyām \upāsīta).
+Vaikh 03.06.(137.6)/ ap.pavitreṇa-utpūtābhir adbhir \ācāmet).
+Vaikh 03.06.(137.6-7)/ kāṣāya.dhāraṇaṃ sarva.tyāgaṃ maithuna.varjanamastainya.ādīn apy-\ācaret).
+Vaikh 03.06.(137.7-10)/ a.sahāyo-an.agnir a.niketano niḥ.saṃśayīsaṃmāna.avamāna.samo vivāda.krodha.lobha.moha.anṛta.varjī grāmād bahir vivikte maṭhedeva.ālaye vṛkṣamūle vā \nivaset).
+Vaikh 03.06.(137.10)/ cāturmāsād anyatra-ekāhād ūrdhvam ekasmin deśe na \vased).
+Vaikh 03.06.(137.10-11)/ varṣāḥ śarac cāturmāsyam ekatra-eva \vaset).
+Vaikh 03.06.(137.11-13)/ tridaṇḍe kāṣāya.ap.pavitra.ādīn yojayitvā kaṇṭhe vāma.hastena dhārayan dakṣiṇena bhikṣā.pātraṃ gṛhītvā-ekakāle viprāṇāṃśuddhānāṃ gṛheṣu vaiśvadeva.ante bhikṣāṃ \caret).
+Vaikh 03.06.(137.14)/ bhūmau vīkṣya jantūn pariharan pādaṃ \nyased).
+Vaikh 03.06.(137.14-15)/ adho.mukhas tiṣṭhan bhikṣām \ālipsate).
+Vaikh 03.07.(137.16)/ godohana.kāla.mātraṃ tad.ardhaṃ vā sthitvā \vrajed).
+Vaikh 03.07.(137.16-17)/ alābhe-apy-avamāne-apy-aviṣādī labdhesaṃmāne-apy a.saṃtoṣī \syāt).
+Vaikh 03.07.(137.17-18)/ drutaṃ vilambitaṃ vā na \gacchet).
+Vaikh 03.07.(137.18)/ bhikṣā.kālād anyatra para.veśma na gantavyaṃ.
+Vaikh 03.07.(137.19)/ bhikṣituṃ krośād ūrdhvaṃ na \gacchet).
+Vaikh 03.07.(137.19-138.3))/ bhikṣāṃ caritvā toya.pārśveprakṣālita.pāṇi.pāda- ācamya-ud u tyam ity-ādityāya-ato devā iti viṣṇave brahma jajñām iti brahmaṇe ca bhikṣā.agraṃ dattvā sarvabhūtebhya-iti baliṃ \prakṣipet).
+Vaikh 03.07.(138.3-4)/ pāṇinā-agnihotra.vidhānena-ātmayajñaṃ saṃkalpya prāṇayātrā.mātram aṣṭau grāsān vā-\aśnīyāt). kāmaṃ na-\aśnāti).
+Vaikh 03.07.(138.5)/ vastra.pūtaṃ jalaṃ pītvā-ācamya-\ācāmati).
+Vaikh 03.07.(138.5)/ nindā.krośau na \kurvīta).
+Vaikh 03.07.(138.6)/ bandhūñ jñātīṃs \tyajed).
+Vaikh 03.07.(138.6)/ vaṃśa.cāritraṃ tapaḥ śrutaṃ na \vadet).
+Vaikh 03.07.(138.6-8) saṅgaṃ tyaktvā niyama.yamī priyaṃ satyaṃ vadansarvabhūtasya-avirodhī samaḥ sadā-adhyātma.rato dhyāna.yogī nārāyaṇaṃ paraṃ brahmapaśyan dhāraṇāṃ \dhārayed).
+Vaikh 03.07.(138.8-9)/ akṣaraṃ brahma-\āpnoti).
+Vaikh 03.07.(138.9)/ nārāyaṇaḥ paraṃ brahma-iti śrutiḥ.
+Vaikh 03.08.(138.10-13)/ saṃnyāsino-an.āhitāgner dehaṃ mṛtaṃ putro-anyovā tṛṇair antarīkṛtya śuddhair brāhmaṇair yantreṇa vā saṃnidhāya samudra.gāmyāṃnadyāṃ tīre vā saikate deśe sṛgāla.ādibhir aspṛśyaṃ yathā tathā-avaṭaṃ \khanati).
+Vaikh 03.08.(138.13-139.1)/ gāyatryā snāpayitvā tathātatra-āsayitvā śāyayitvā vā dakṣiṇe haste vaiṣṇavair mantrais tri.daṇḍaṃ saṃnyasya savye yad asya pārerajasa iti śikyam ap.pavitram udare sāvitryā bhikṣā.pātraṃ guhyapradeśe bhūmir bhūmimiti kāṣāyaṃ mṛd.grahaṇīṃ kamaṇḍaluṃ ca saṃnyasya \pidadhyāt.
+Vaikh 03.08.(139.1-2) tasmin sṛgāla.ādibhiḥ spṛṣṭe tat.kartā pāpīyān\bhavati).
+Vaikh 03.08.(139.2-6)/ āhitāgner agnīn ātmany āropya saṃnyasino mṛtaṃdehaṃ gāyatryā snāpayitvā pūrvavad vāhayitvā śuddhe deśe nidhāya laukika.agnau tadagnim \upāvaroha)-ity avaropya pavitraṃ ta-iti ghṛta.kṣīram āsye prakṣipya pūrvavattri.daṇḍa.ādīn vinyasya brahmamedhena pitṛmedhena vā-āhitāgni.mantrais tad.agnibhir dahanam\ācarati).
+Vaikh 03.08.(139.7) tayor āśauca.udaka.bali.piṇḍa.dāna.ekoddiṣṭa.ādīnna-eva \kuryāt).
+Vaikh 03.08.(139.8)/ nārāyaṇa.baliṃ \karoti).
+Vaikh 03.08.(139.8-9)/ tad.vahanaṃ khanitvā pidhānaṃ dahanaṃnārāyaṇa.baliṃ vā yaḥ \kuryāt)/ so-aśvamedha.phalaṃ \samāpnuyāt).
+Vaikh 03.09.(139.10-14) nārāyaṇa.baliṃ nārāyaṇād evasarvārtha.siddhir iti brahmaṇa.ādyair narair hatasya-ātma.ghātinorajju.śastra.udaka.aśani.daṃṣṭri.paśu.sarpa.ādibhiḥ sarvapāpa.mṛtasya-adāhyānām anyeṣāṃ bhikṣoś ca-ekādaśa.dinād ūrdhvaṃ mahāpātakināṃ pañcānāṃ dvādaśa.saṃvatsarād ūrdhvaṃsapiṇḍīkaraṇa.sthāne mṛtaka.artham aparapakṣe dvādaśyāṃ śravaṇe vā
+\karoti).
+Vaikh 03.09.(139.14-15)/ pūrve-ahani dvādaśa brāhmaṇān \nimantrayed).
+Vaikh 03.09.(139.15-16)/ apare-ahani viṣṇor ālaya.pārśve nadī.tīregṛhe vā-agni.āyatanaṃ kṛtvā-āghāraṃ \juhuyād).
+Vaikh 03.09.(139.16-150.2)/ agniṃ paristīrya-agner vāyavyāṃ viṣṭaredarbheṣu tad.rūpaṃ suvarṇaṃ vā saṃsthāpya puruṣaṃ dhyāyann oṃ bhūḥ puruṣam ity -ādyaiḥprāṅ.mukhaṃ devaṃ nārāyaṇam āvāhya-āsana.pādya.ācamanāni \dadyāt).
+Vaikh 03.09.(140.2-4)/ puruṣasūktena \snāpayitvā) nārāyaṇāya\vidmaha)-ity aṣṭākṣara.mantreṇa vā vastra.uttarīya.ābharaṇa.pādya.ācamana.puṣpa.gandha.dhūpa.dīpa.akṣata.ācamanair \arcayati).
+Vaikh 03.10.(140.5)/ keśava.ādyair dvādaśa.nāmabhir adbhis \tarpayet).
+Vaikh 03.10.(140.5-6)/ pariṣicya sahasraśīrṣa.ādyair viṣṇor nuka.ādyairdvādaśa.nāmabhiś ca-ājyaṃ caruṃ \juhuyāt).
+Vaikh 03.10.(140.7-8)/ guḍa.ājya.phala.yuktaṃ pāyasaṃ havirviṣṇu.gāyatryā deva.īśāya nivedya pādya.ācamana.mukha.vāsaṃ \dadyāt).
+Vaikh 03.10.(140.8-13) agner dakṣiṇe darbheṣu-ūtara.agreṣu dakṣiṇādy\arcayitvā)/ nārāyaṇāya sahasraśīrṣāya sahasrākṣāya sahasrapādāyaparamapuruṣāya paramātmane paraṃjyotiṣe parabrahmaṇe- avyaktāya sarvakāraṇāya yajña.īśvarāyayajñātmane viśvebhyo devebhyaḥ sarvābhyo devatābhyaḥ sādhyebhya-ity antaiḥ pāyasaṃ baliṃ\dattvā)- ājyam ebhir\juhoti).
+Vaikh 03.10.(140.13-16) brāhmaṇān pādau prakṣālya navānivastra.uttarīya.ābharaṇāni dattvā puṣpa.ādyaiḥ pūjayitvā dvādaśa.mūrtiṃ dhyāyann upadaṃśa.ghṛta.guḍa.dadhi.phala.yuktaṃ śvetam annaṃ bhojayitvāyathā.śakti suvarṇaṃ dakṣiṇāṃ \dadāti).
+Vaikh 03.10.(140.16-141.1)/ sahasraśīrṣa.ādyaiḥ stutvādvādaśa.nāmabhiḥ \praṇamed). anta.homaṃ \juhoty).
+Vaikh 03.10.(141.1-2)/ abhīṣṭāṃ parāṃ gatiṃ sa gatvā viṣṇor loke\mahīyate).
+Vaikh 03.11.(141.3-4)/ cāturvarṇya.saṃkareṇa-utpannānām anuloma.pratiloma.antarāla.vrātyānām utpattiṃ nāma vṛttiṃ ca.-
+Vaikh 03.11.(141.4-5)/ ūrdhvajātād adhojātāyāṃ jāto-anulomo.-
+Vaikh 03.11.(141.5)/ adhara.utpannād ūrdhvajātāyāṃ jātaḥ pratilomas.
+Vaikh 03.11.(141.5-6)/ tato-anulomād anulomyāṃ jāto-antarālaḥ.
+Vaikh 03.11.(141.6-7)/ pratilomāt pratilomyāṃ jāto vrātyo \bhavati).
+Vaikh 03.11.(141.7-8)/ brahmaṇo mukhād udbhūtā brāhmaṇā brāhmaṇyaś ca brahma.ṛṣayaḥ patnyo \babhūvus).
+Vaikh 03.11.(141.8-9)/ teṣāṃ gātra.utpannād brāhmaṇyāṃ a.sagotrāyāṃvidhinā sa.mantrakaṃ gṛhītāyāṃ jāto brāhmaṇaḥ śuddho \bhavet).
+Vaikh 03.11.(141.10-11) vidhi.hīnam anya.pūrvāyāṃ golakohartṛkāyāṃ kuṇḍaś ca viprau dvau ninditau \syātāṃ ).
+Vaikh 03.11.(141.11-12)/ tasmād adho bāhubhyāmāt kṣatriyāt kṣatriyāyāṃ vidhivat-jātaḥ kṣatriyaḥ śuddhas.
+Vaikh 03.11.(141.12-14)/ tayor a.vidhikaṃ gūḍha.utpanno-aśuddhobhoja.ākhyo na-eva-\abhiṣecyaḥ). paṭṭa.bandho rājñaḥ saināpatyaṃ \karoti).
+Vaikh 03.11.(141.14-15)/ śuddha.abhāve-a.paṭṭa.bandho nṛṛn \pāyāt.
+Vaikh 03.11.(141.15)/ tad.vṛttaṃ rājavat \syāt).
+Vaikh 03.11.(141.15-142.1)/ adhastād ūrubhyāmād vaiśyād vaiśyāyāṃ tathā vaiśyaḥ śuddho.
+Vaikh 03.11.(142.1-2)/ vidhi.varjaṃ maṇikāro-aśuddho maṇi.muktādi.vedhaḥ śaṅkha.valaya.kārī \syāt).
+Vaikh 03.12.(142.3)/ atha padbhyām utpannāt-śūdrāt-śudrāyāṃ nyāyenaśūdraḥ śuddhaḥ.
+Vaikh 03.12.(142.4-5)/ jārān mālavako ninditaḥśūdro-aśvapālo-aśva.tṛṇa.hārī ca.-
+Vaikh 03.12.(142.5)/ ity ete cāturvarṇikās.
+Vaikh 03.12.(142.5-6)/ teṣām eva saṃskareṇa-utpannāḥ sarve-anuloma.ādyāḥ.
+Vaikh 03.12.(142.6-7)/ brāhmaṇāt kṣatriya.kanyāyāṃ jātaḥ savarṇo-anulomeṣu mukhyo.
+Vaikh 03.12.(142.7-8) asya vṛttir ātharvaṇaṃkarma.aśva.hasti.ratha.saṃvāhanam ārohaṇaṃ rajñaḥ saināpatyaṃ ca-āyurveda.kṛtyaṃ.
+Vaikh 03.12.(142.8)/ gūḍha.utpanno-abhiniṣakta.ākhyo-.
+Vaikh 03.12.(142.9)/ abhiṣiktaś cet-nṛpo bhūyād aṣṭāṅgam āyurvedaṃbhūta.tantraṃ vā \saṃpaṭet).
+Vaikh 03.12.(142.9-11) tad.ukta.ācāro dayā.yuktaḥ satya.vādītad.vidhānena sarvaprāṇi.hitaṃ \kuryāt).
+Vaikh 03.12.(142.11)/ jyotir gaṇana.ādika.adhika.vṛttir vā.
+Vaikh 03.12.(142.11-12)/ viprād vaiśyāyām ambaṣṭhaḥkakṣyājīvya.āgneyanartako dhvajaviśrāvī śalya.cikitsī.
+Vaikh 03.12.(142.13)/ jarāt kumbhakāraḥ kulāla.vṛttir na-āpito nābherūrdhva.vaptā ca.
+Vaikh 03.12.(142.14-15)/ kṣatriyād vaiśyāyāṃ madguḥ śreṣṭhitvaṃ prāpto mahānarma.ākhyaś ca vaiśya.vṛttiḥ kṣātram karma na-\ācarati).
+Vaikh 03.12.(142.15)/ gūḍhād āśviko-aśva.kraya.vikrayī \syāt).
+Vaikh 03.13.(143.1-2)/ viprāt-śūdrāyāṃ pāraśavo bhadrakālī.pūjana.citrakarma.aṅgavidyā.tūryaghoṣaṇa.mardana.vṛttir.
+Vaikh 03.13.(143.2-3)/ jāra.utpanno niṣādo vyāḍādi.mṛgahiṃsā.kārī.
+Vaikh 03.13.(143.3)/ rājanyataḥ śūdrāyām ugraḥ sudaṇḍya.daṇḍana.kṛtyo.
+Vaikh 03.13.(143.3-4)/ jārāt-śūlikaḥ śūlārohaṇādi.yātanā.kṛtyo.
+Vaikh 03.13.(143.4-5)/ vaiśyataḥ śūdrāyāṃ cūcukaḥ kramukata.ambūla.śarkarādi.kraya.vikrayī.
+Vaikh 03.13.(143.5-6)/ gūḍhāt kaṭakāraḥ kaṭakārī ca-iti.
+Vaikh 03.13.(143.6-7)/ tato-anulomād anulomāyāṃ jātaś ca-anulomaḥpitur mātur vā jātaṃ vṛttiṃ \bhajeta).
+Vaikh 03.13.(143.7-9)/ kṣatriyād viprakanyāyāṃ mantravat- jātaḥ sūtaḥpratilomeṣu mukhyo-ayaṃ mantrahīna.upanīto dvijadharma.hīno.
+Vaikh 03.13.(143.9)/ asya vṛttir dharma.anubodhanaṃ rājño-anna.saṃskāraś ca.
+Vaikh 03.13.(143.10-11)/ jāreṇa mantrahīna.jo rathakārodvijatva.vihīnaḥ śūdra.kṛtyo- aśvānāṃ poṣaṇa.damanādi.paricaryā.jīvī.
+Vaikh 03.13.(143.11-13)/ vaiśyād brāhmaṇyāṃ māgadhaḥ. śūdrair apyabhojyān no- aspṛśyaḥ sarvavandī praśaṃsā.kīrtana.gāna.preṣaṇa.vṛttir.
+Vaikh 03.13.(143.13)/ gūḍhāc cakrī lavaṇa.taila.vikretā \syāt).
+Vaikh 03.14.(143.14-15)/ vaiśyān nṛpāyām āyogavas tantu.vāyaḥ paṭa.kartā vastra.kāṃsya.uapjīvī.
+Vaikh 03.14.(143.15)/ gūḍha.ācārāt pulindo-araṇya.vṛttirduṣṭamṛga.sattva.ghātī.
+Vaikh 03.14.(143.16-17)/ śūdrāt kṣatriyāyāṃ pulkasaḥ kṛtakāṃ vāārkṣāṃ vā surāṃ \hutvā) pācako \vikrīnīta).
+Vaikh 03.14.(143.17)/ cora.vṛttād velavo janbhana.nartana.gāna.kṛtyaḥ.
+Vaikh 03.14.(144.1-2)/ śūdrād vaiśyāyāṃ vaidehakaḥ śūdra.aspṛśyastair apy abhojya.anno vanya.vṛttir aja.mahiṣa.gopālas tad.rasān vikrayī.
+Vaikh 03.14.(144.2-3)/ cauryāc cakriko lavaṇa.taila.piṇyāka.jīvī.
+Vaikh 03.14.(144.3-6)/ śūdrād brāhmaṇyāṃ caṇḍālaḥsīsaka.ālāyasa.ābharaṇo vardhrā.bandha.kaṇṭhaḥ kakṣerī.yukto yatas tataś caran sarvakarma.bahiṣkṛtaḥ pūrvāhṇe grāma.ādau vīthyām anyatra-api malāny apakṛṣya bahir \apohayati).</p>
+
+<p>Vaikh 03.14.(144.6)/ grāmād bahir dūre svajātīyair \nivaset).
+Vaikh 03.14.(144.6-7)/ madhyāhnāt paraṃ grāme na \viśaty)/ ayaṃ.
+Vaikh 03.14.(144.7)/ \viśec) ced rājñā vadhyo.
+Vaikh 03.14.(144.7-8)/ anyathā bhrūṇahatyām \avāpnoty).
+Vaikh 03.14.(144.8)/ antarāl.vratyāś ca.
+Vaikh 03.14.(144.8-10)/ cūcukād viprāyāṃ takṣako-aspṛśyojhallarī.hasto dārukāraḥ suvarṇakāro-ayaskāraḥ kāṃsyakāro vā.
+Vaikh 03.14.(144.10)/ kṣatriyāyāṃ matsya.bandhur matsyabandhī.
+Vaikh 03.14.(144.10-11)vaiśyāyāṃ sāmudraḥ samudrapaṇya.jīvīmatsya.ghātī ca \syāt).
+Vaikh 03.15.(144.12-13)/ ambaṣṭhād viprāyāṃ nāvikaḥsamudrapaṇya.matsya.jīvī samudra.laṅghanāṃ nāvaṃ \plāvayati).
+Vaikh 03.15.(144.13-14)/ kṣatriyāyām adhonāpito nābher adho roma.vaptā.
+Vaikh 03.15.(144.14)/ madgor viprāyāṃ veṇuko veṇu.vīṇā.vādī.
+Vaikh 03.15.(144.14-15)/ kṣatriyāyāṃ karmakaraḥ karmakārī.
+Vaikh 03.15.(144.15)/ vaidehakād viprāyāṃ carmakāraś carma.jīvī.
+Vaikh 03.15.(144.16)/ nṛpāyāṃ sūcikaḥ sūcī.vedhana.kṛtyavān.
+Vaikh 03.15.(144.16-17)/ āyogavād viprāyāṃ tāmras tāmra.jīvī.
+Vaikh 03.15.(144.17)/ nṛpāyāṃ khanakaḥ khanana.jīvī.
+Vaikh 03.15.(144.17-18) khananān nṛpāyām udbandhakaḥ śūdra.aspṛśyo vastra.nirṇejakaḥ.
+Vaikh 03.15.(144.18-19)/ pulkasād viprāyāṃ rajako vastrāṇāṃrajo.nirṇejakaś .
+Vaikh 03.15.(144.19-145.2)/ caṇḍālād viprāyāṃ śvapacaḥ caṇḍālavaccihna.yukto nitya.nindyaḥ sarvakarma.bahiṣkāryo nagaryādau mala.apohakaḥ śmaśāne \vasan) heyapātra.grāhī pretam abandhukaṃ \visṛjeta).
+Vaikh 03.15.(145.3-4)/ vadhyān hatvā tad.vastrādi.grāhīparādhīna.āhāro bhinnapātra.bhojī śvamāṃsa.bhakṣī carma.vāra.vāṇa.vāṇijya.kārī \syāt).
+Vaikh 03.15.(145.4-5)/ tasmān nikṛṣṭe sute samutpanne patito naṣṭoghorān narakān \vrajati).
+Vaikh 03.15.(145.5-6)/ sat.putro narakebhyas trāyakaḥ pitṛṛn\pāvayitvā)/ śubhāṃl lokān \nayati).
+Vaikh 03.15.(145.6-8)/ tasmād brāhmaṇādyāḥ savarṇāyāṃ vidhivat putram \utpādayeyur)-iti vikhanāḥ. End of the text.</p>
+
+  </body>
+</text>
+</TEI>

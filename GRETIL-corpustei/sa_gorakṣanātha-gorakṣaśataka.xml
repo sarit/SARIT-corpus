@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_gorakSanAtha-gorakSazataka">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Gorakṣaśataka</title>
+	<author>Gorakṣanātha (= Gorakhnāth)</author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>n.n.</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>n.n.</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/saiva/gorst1au.htm">gorst1au.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Goraksanatha (=Gorakhnath): Goraksasataka
+<lb/>Based on the ed. by Swami Kuvalayananda
+<lb/>and S. A. Shukla's critical edition (Lonavla: Kaivalya Dham, n.d.).
+<lb/>Another edition of this text was published by George Weston Briggs
+<lb/>in his Gorakhnath and the Kanphata Yogis (1939).
+<lb/>Since this text contains significant differences, it is given
+<lb/>separately as Gorakṣa-śatakam 2.
+<lb/>
+<lb/>Input by ... (?)
+<lb/>
+<lb/>TEXT WITH PADA MARKERS
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>Swami Kuvalayananda and S. A. Shukla's critical edition (Lonavla: Kaivalya Dham, n.d.).</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Gorakṣaśataka = GorS,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Religious Literature -- Śaiva</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn" xml:id="GorS">
+  <body>
+<head>Gorakṣa-śatakam</head>
+
+<p>oṃ parama-gurave gorakṣanāthāya namaḥ</p>
+
+<lg xml:id="GorS_1">
+<l><seg type="pāda" n="a">oṃ gorakṣa-śatakaṃ vakṣye</seg> <seg type="pāda" n="b">bhava-pāśa-vimuktaye</seg> </l>
+<l><seg type="pāda" n="c">ātma-bodha-karaṃ puṃsāṃ</seg> <seg type="pāda" n="d">viveka-dvāra-kuñcikām</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_2">
+<l><seg type="pāda" n="a">etad vimukti-sopānam</seg> <seg type="pāda" n="b">etat kālasya vañcanam</seg> </l>
+<l><seg type="pāda" n="c">yad vyāvṛttaṃ mano mohād</seg> <seg type="pāda" n="d">āsaktaṃ paramātmani</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_3">
+<l><seg type="pāda" n="a">dvija-sevita-śākhasya</seg> <seg type="pāda" n="b">śruti-kalpa-taroḥ phalam</seg> </l>
+<l><seg type="pāda" n="c">śamanaṃ bhava-tāpasya</seg> <seg type="pāda" n="d">yogaṃ bhajati sajjanaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_4">
+<l><seg type="pāda" n="a">āsanaṃ prāṇa-saṃyāmaḥ</seg> <seg type="pāda" n="b">pratyāhāro'tha dhāraṇā</seg> </l>
+<l><seg type="pāda" n="c">dhyānaṃ samādhir etāni</seg> <seg type="pāda" n="d">yogāṅgāni bhavanti ṣaṭ</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_5">
+<l><seg type="pāda" n="a">āsanāni tu tāvanti</seg> <seg type="pāda" n="b">yāvatyo jīva-jātayaḥ</seg> </l>
+<l><seg type="pāda" n="c">eteṣām akhilān bhedān</seg> <seg type="pāda" n="d">vijānāti maheśvaraḥ</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_6">
+<l><seg type="pāda" n="a">caturāśīti-lakṣāṇāṃ</seg> <seg type="pāda" n="b">ekam ekam udāhṛtam</seg> </l>
+<l><seg type="pāda" n="c">tataḥ śivena pīṭhānāṃ</seg> <seg type="pāda" n="d">ṣoḍeśānaṃ śataṃ kṛtam</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_7">
+<l><seg type="pāda" n="a">āsanebhyaḥ samastebhyo</seg> <seg type="pāda" n="b">dvayam eva viśiṣyate</seg> </l>
+<l><seg type="pāda" n="c">ekaṃ siddhāsanaṃ proktaṃ</seg> <seg type="pāda" n="d">dvitīyaṃ kamalāsanam</seg> //</l>
+</lg>
+
+
+<lg xml:id="GorS_8">
+<l><seg type="pāda" n="a">yoni-sthānakam aṅghri-mūla-ghaṭitaṃ kṛtvā dṛḍhaṃ vinyasen</seg> <seg type="pāda" n="b">meḍhre pādam athaikam eva niyataṃ kṛtvā samaṃ vigraham</seg> </l>
+<l><seg type="pāda" n="c">sthāṇuḥ saṃyamitendriyo'cala-dṛśā paśyan bhruvor antaram</seg> <seg type="pāda" n="d">etan mokṣa-kavāṭa-bheda-janakaṃ siddhāsanaṃ procyate</seg> //</l>
+</lg>
+
+
+<lg xml:id="GorS_9">
+<l><seg type="pāda" n="a">vāmorūpari dakṣiṇaṃ hi caraṇaṃ saṃsthāpya vāmaṃ tathā</seg> <seg type="pāda" n="b">dakṣorūpari paścimena vidhinā dhṛtvā karābhyāṃ dṛḍham</seg> </l>
+<l><seg type="pāda" n="c">aṅguṣṭhau hṛdaye nidhāya cibukaṃ nāsāgram ālokayed</seg> <seg type="pāda" n="d">etad-vyādhi-vikāra-hāri yamināṃ padmāsanaṃ procyate</seg> //</l>
+</lg>
+
+
+<lg xml:id="GorS_10">
+<l><seg type="pāda" n="a">ādhāraḥ prathamaṃ cakraṃ</seg> <seg type="pāda" n="b">svādhiṣṭhānaṃ dvitīyakam</seg> </l>
+<l><seg type="pāda" n="c">yoni-sthānaṃ dvayor madhye</seg> <seg type="pāda" n="d">kāma-rūpaṃ nigadyate</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_11">
+<l><seg type="pāda" n="a">ādhārākhye guda-sthāne</seg> <seg type="pāda" n="b">paṅkajaṃ yac caturdalam</seg> </l>
+<l><seg type="pāda" n="c">tan-madhye procyate yoniḥ</seg> <seg type="pāda" n="d">kāmākhyā siddha-vanditā</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_12">
+<l><seg type="pāda" n="a">yoni-madhye mahāliṅgaṃ</seg> <seg type="pāda" n="b">paścimābhimukhaṃ sthitam</seg> </l>
+<l><seg type="pāda" n="c">mastake maṇivad bhinnaṃ</seg> <seg type="pāda" n="d">yo jānāti sa yogavit</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_13">
+<l><seg type="pāda" n="a">tapta-cāmīkarābhāsaṃ</seg> <seg type="pāda" n="b">taḍil-lekheva visphurat</seg> </l>
+<l><seg type="pāda" n="c">caturasraṃ puraṃ vahner</seg> <seg type="pāda" n="d">adho-meḍhram evābhidhīyate</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_14">
+<l><seg type="pāda" n="a">sva-śabdena bhavet prāṇaḥ</seg> <seg type="pāda" n="b">svādhiṣṭhānaṃ tad-āśrayaḥ</seg> </l>
+<l><seg type="pāda" n="c">svādhiṣṭhānākhyayā tasmān</seg> <seg type="pāda" n="d">meḍhram evābhidhīyate</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_15">
+<l><seg type="pāda" n="a">tantunā maṇivat proto</seg> <seg type="pāda" n="b">yatra kandaḥ suṣumṇayā</seg> </l>
+<l><seg type="pāda" n="c">tan-nābhi-maṇḍalaṃ cakraṃ</seg> <seg type="pāda" n="d">procyate maṇi-pūrakam</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_16">
+<l><seg type="pāda" n="a">ūrdhvaṃ meḍhrād adho nābheḥ</seg> <seg type="pāda" n="b">kanda-yoniḥ sva-gāṇḍavat</seg> </l>
+<l><seg type="pāda" n="c">tatra nāḍyaḥ samutpannāḥ</seg> <seg type="pāda" n="d">sahasrāṇi dvisaptatiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_17">
+<l><seg type="pāda" n="a">teṣu nāḍi-sahasreṣu</seg> <seg type="pāda" n="b">dvisaptatir udāhṛtāḥ</seg> </l>
+<l><seg type="pāda" n="c">prādhānyāt prāṇa-vāhinyo</seg> <seg type="pāda" n="d">bhūyas tatra daśa smṛtāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_18">
+<l><seg type="pāda" n="a">iḍā ca piṅgalā caiva</seg> <seg type="pāda" n="b">suṣumṇā ca tṛtīyakā</seg> </l>
+<l><seg type="pāda" n="c">gāndhārī hasti-jihvā ca</seg> <seg type="pāda" n="d">pūṣā caiva yaśasvinī</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_19">
+<l><seg type="pāda" n="a">alambuṣā kuhūś caiva</seg> <seg type="pāda" n="b">śaṅkhinī daśamī smṛtā</seg> </l>
+<l><seg type="pāda" n="c">etan nāḍi-mayaṃ cakraṃ</seg> <seg type="pāda" n="d">jñātavyaṃ yogibhiḥ sadā</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_20">
+<l><seg type="pāda" n="a">iḍā vāme sthitā bhāge</seg> <seg type="pāda" n="b">piṅgalā dakṣiṇe tathā</seg> </l>
+<l><seg type="pāda" n="c">suṣumṇā madhya-deśe tu</seg> <seg type="pāda" n="d">gāndhārī vāma-cakṣuṣi</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_21">
+<l><seg type="pāda" n="a">dakṣiṇe hasti-jihvā ca</seg> <seg type="pāda" n="b">pūṣā karṇe ca dakṣiṇe</seg> </l>
+<l><seg type="pāda" n="c">yaśasvinī vāma-karṇe</seg> <seg type="pāda" n="d">cāsane vāpy alambuṣā</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_22">
+<l><seg type="pāda" n="a">kūhuś ca liṅga-deśe tu</seg> <seg type="pāda" n="b">mūla-sthāne ca śaṅkhinī</seg> </l>
+<l><seg type="pāda" n="c">evaṃ dvāram upāśritya</seg> <seg type="pāda" n="d">tiṣṭhanti daśa nāḍikāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_23">
+<l><seg type="pāda" n="a">satataṃ prāṇa-vāhinyaḥ</seg> <seg type="pāda" n="b">soma-sūryāgni-devatāḥ</seg> </l>
+<l><seg type="pāda" n="c">iḍā-piṅgalā-suṣumṇā ca</seg> <seg type="pāda" n="d">tisro nāḍya udāhṛtāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_24">
+<l><seg type="pāda" n="a">prāṇāpānau samānaś ca hy</seg> <seg type="pāda" n="b">udāno vyāna eva ca</seg> </l>
+<l><seg type="pāda" n="c">nāgaḥ kūrmaś ca kṛkaro</seg> <seg type="pāda" n="d">devadatto dhanañjayaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_25">
+<l><seg type="pāda" n="a">nāgādyāḥ pañca vikhyātāḥ</seg> <seg type="pāda" n="b">prāṇādyāḥ pañca vāyavaḥ</seg> </l>
+<l><seg type="pāda" n="c">ete nāḍi-sahasreṣu</seg> <seg type="pāda" n="d">vartante jīva-rūpiṇaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_26">
+<l><seg type="pāda" n="a">prāṇāpāna-vaśo jīvo hy</seg> <seg type="pāda" n="b">adhaś cordhvaṃ ca dhāvati</seg> </l>
+<l><seg type="pāda" n="c">vāma-dakṣiṇa-mārgeṇa</seg> <seg type="pāda" n="d">cañcalatvān na dṛśyate</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_27">
+<l><seg type="pāda" n="a">ākṣipto bhuvi daṇḍena</seg> <seg type="pāda" n="b">yathoccalati kandukaḥ</seg> </l>
+<l><seg type="pāda" n="c">prāṇāpāna-samākṣiptas</seg> <seg type="pāda" n="d">tathā jīvo'nukṛṣyate</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_28">
+<l><seg type="pāda" n="a">rajju-baddho yathā śyeno</seg> <seg type="pāda" n="b">gato'py ākṛṣyate(?)</seg> </l>
+<l><seg type="pāda" n="c">guṇa-baddhas tathā jīvaḥ</seg> <seg type="pāda" n="d">prāṇāpānena kṛṣyate</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_29">
+<l><seg type="pāda" n="a">apānaḥ karṣati prāṇaḥ</seg> <seg type="pāda" n="b">prāṇo'pānaṃ ca karṣati</seg> </l>
+<l><seg type="pāda" n="c">ūrdhvādhaḥ saṃsthitāv etau</seg> <seg type="pāda" n="d">yo jānāti sa yogavit</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_30">
+<l><seg type="pāda" n="a">kandordhve kuṇḍalī-śaktir</seg> <seg type="pāda" n="b">aṣṭadhā kuṇḍalī-kṛtā</seg> </l>
+<l><seg type="pāda" n="c">brahma-dvāra-mukhaṃ nityaṃ</seg> <seg type="pāda" n="d">mukhenāvṛtya tiṣṭhati</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_31">
+<l><seg type="pāda" n="a">prabuddhā vahni-yogena</seg> <seg type="pāda" n="b">manasā mārutā hatā</seg> </l>
+<l><seg type="pāda" n="c">prajīva-guṇam ādāya</seg> <seg type="pāda" n="d">vrajaty ūrdhvaṃ suṣumṇayā</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_32">
+<l><seg type="pāda" n="a">mahāmudrāṃ namo-mudrām</seg> <seg type="pāda" n="b">uḍḍiyānaṃ jalandharam</seg> </l>
+<l><seg type="pāda" n="c">mūla-bandhaṃ ca yo vetti</seg> <seg type="pāda" n="d">sa yogī siddhi-bhājanam</seg> //</l>
+</lg>
+
+
+<lg xml:id="GorS_33">
+<l><seg type="pāda" n="a">vakṣo-nyasta-hanur nipīḍya suciraṃ yoniṃ ca vāmāṅghriṇā</seg> <seg type="pāda" n="b">hastābhyām avadhāritaṃ prasaritaṃ pādaṃ tathā dakṣiṇam</seg> </l>
+<l><seg type="pāda" n="c">āpūrya śvasanena kukṣi-yugalaṃ baddhvā śanai recayed</seg> <seg type="pāda" n="d">eṣā pātaka-nāśinī sumahatī mudrā nṝṇāṃ procyate</seg> //</l>
+</lg>
+
+
+<lg xml:id="GorS_34">
+<l><seg type="pāda" n="a">kapāla-kuhare jihvā</seg> <seg type="pāda" n="b">praviṣṭā viparītagā</seg> </l>
+<l><seg type="pāda" n="c">bhruvor antargatā dṛṣṭir</seg> <seg type="pāda" n="d">mudrā bhavati khecarī</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_35">
+<l><seg type="pāda" n="a">ūrdhvaṃ meḍhrād adho nābher</seg> <seg type="pāda" n="b">uḍḍiyānaṃ pracakṣate</seg> </l>
+<l><seg type="pāda" n="c">uḍḍiyāna-jayo bandho</seg> <seg type="pāda" n="d">mṛtyu-mātaṅga-kesarī</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_36">
+<l><seg type="pāda" n="a">jālandhare kṛte bandhe</seg> <seg type="pāda" n="b">kaṇṭha-saṅkoca-lakṣaṇe</seg> </l>
+<l><seg type="pāda" n="c">na pīyūṣaṃ pataty agnau</seg> <seg type="pāda" n="d">na ca vāyuḥ prakupyati</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_37">
+<l><seg type="pāda" n="a">pārṣṇi-bhāgena sampīḍya</seg> <seg type="pāda" n="b">yonim ākuñcayed gudam</seg> </l>
+<l><seg type="pāda" n="c">apānam ūrdhvam ākṛṣya</seg> <seg type="pāda" n="d">mūla-bandho nigadyate</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_38">
+<l><seg type="pāda" n="a">yataḥ kāla-bhayāt brahmā</seg> <seg type="pāda" n="b">prāṇāyāma-parāyaṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">yogino munayaś caiva</seg> <seg type="pāda" n="d">tataḥ prāṇaṃ nibandhayet</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_39">
+<l><seg type="pāda" n="a">cale vāte calaṃ sarvaṃ</seg> <seg type="pāda" n="b">niścale niścalaṃ bhavet</seg> </l>
+<l><seg type="pāda" n="c">yogī sthāṇutvam āpnoti</seg> <seg type="pāda" n="d">tato vāyuṃ nibandhayet</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_40">
+<l><seg type="pāda" n="a">ṣaṭ-triṃśad-aṅgulaṃ haṃsaḥ</seg> <seg type="pāda" n="b">prayāṇaṃ kurute bahiḥ</seg> </l>
+<l><seg type="pāda" n="c">vāma-dakṣiṇa-mārgeṇa</seg> <seg type="pāda" n="d">tataḥ prāṇo'bhidhīyate</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_41">
+<l><seg type="pāda" n="a">baddha-padmāsano yogī</seg> <seg type="pāda" n="b">namaskṛtya guruṃ śivam</seg> </l>
+<l><seg type="pāda" n="c">nāsāgra-dṛṣṭir ekākī</seg> <seg type="pāda" n="d">prāṇāyāmaṃ samabhyaset</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_42">
+<l><seg type="pāda" n="a">prāṇo deha-sthito vāyur</seg> <seg type="pāda" n="b">āyāmas tan-nibandhanam</seg> </l>
+<l><seg type="pāda" n="c">eka-śvāsa-mayī mātrā</seg> <seg type="pāda" n="d">tad yogī gaganāyate</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_43">
+<l><seg type="pāda" n="a">baddha-padmāsano yogī</seg> <seg type="pāda" n="b">prāṇaṃ candreṇa pūrayet</seg> </l>
+<l><seg type="pāda" n="c">dhārayitvā yathā-śakti</seg> <seg type="pāda" n="d">bhūyaḥ sūryeṇa recayet</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_44">
+<l><seg type="pāda" n="a">amṛtodadhi-saṅkāśaṃ</seg> <seg type="pāda" n="b">kṣīroda-dhavala-prabham</seg> </l>
+<l><seg type="pāda" n="c">dhyātvā candramayaṃ bimbaṃ</seg> <seg type="pāda" n="d">prāṇāyāme sukhī bhavet</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_45">
+<l><seg type="pāda" n="a">prāṇaṃ sūryeṇa cākṛṣya</seg> <seg type="pāda" n="b">pūrayed udaraṃ śanaiḥ</seg> </l>
+<l><seg type="pāda" n="c">kumbhayitvā vidhānena</seg> <seg type="pāda" n="d">bhūyaś candreṇa recayet</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_46">
+<l><seg type="pāda" n="a">prajvalaj-jvalana-jvālā</seg><seg type="pāda" n="b">puñjam āditya-maṇḍalam</seg> </l>
+<l><seg type="pāda" n="c">dhyātvā nābhi-sthitaṃ yogī</seg> <seg type="pāda" n="d">prāṇāyāme sukhī bhavet</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_47">
+<l><seg type="pāda" n="a">recakaḥ pūrakaś caiva</seg> <seg type="pāda" n="b">kumbhakaḥ praṇavātmakaḥ</seg> </l>
+<l><seg type="pāda" n="c">prāṇāyāmo bhavet tredhā</seg> <seg type="pāda" n="d">mātrā dvādaśa-saṃyutaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_48">
+<l><seg type="pāda" n="a">dvādaśādhamake mātrā</seg> <seg type="pāda" n="b">madhyame dviguṇās tataḥ</seg> </l>
+<l><seg type="pāda" n="c">uttame triguṇā mātrāḥ</seg> <seg type="pāda" n="d">prāṇāyāmasya nirṇayaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_49">
+<l><seg type="pāda" n="a">adhame ca ghano gharmaḥ</seg> <seg type="pāda" n="b">kampo bhavati madhyame</seg> </l>
+<l><seg type="pāda" n="c">uttiṣṭhaty uttame yogī</seg> <seg type="pāda" n="d">baddha-padmāsano muhuḥ</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_50">
+<l><seg type="pāda" n="a">aṅgānāṃ mardanaṃ śastaṃ</seg> <seg type="pāda" n="b">śrama-saṃjāta-vāriṇā</seg> </l>
+<l><seg type="pāda" n="c">kaṭv-amla-lavaṇa-tyāgī</seg> <seg type="pāda" n="d">kṣīra-bhojanam ācaret</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_51">
+<l><seg type="pāda" n="a">mandaṃ mandaṃ pibed vāyuṃ</seg> <seg type="pāda" n="b">mandaṃ mandaṃ viyojayet</seg> </l>
+<l><seg type="pāda" n="c">nādhikaṃ stambhayed vāyuṃ</seg> <seg type="pāda" n="d">na ca śīghraṃ vimocayet</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_52">
+<l><seg type="pāda" n="a">ūrdhvam ākṛṣya cāpānaṃ</seg> <seg type="pāda" n="b">vātaṃ prāṇe niyojayet</seg> </l>
+<l><seg type="pāda" n="c">mūrdhānaṃ nīyate śaktyā</seg> <seg type="pāda" n="d">sarva-pāpaiḥ pramucyate</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_53">
+<l><seg type="pāda" n="a">prāṇāyāmo bhavaty evaṃ</seg> <seg type="pāda" n="b">pātakendhana-pātakaḥ</seg> </l>
+<l><seg type="pāda" n="c">enombudhi-mahā-setuḥ</seg> <seg type="pāda" n="d">procyate yogibhiḥ sadā</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_54">
+<l><seg type="pāda" n="a">āsanena rujo hanti</seg> <seg type="pāda" n="b">prāṇāyāmena pātakam</seg> </l>
+<l><seg type="pāda" n="c">vikāraṃ mānasaṃ yogī</seg> <seg type="pāda" n="d">pratyāhāreṇa sarvadā</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_55">
+<l><seg type="pāda" n="a">candrāmṛta-mayīṃ dhārāṃ</seg> <seg type="pāda" n="b">pratyāhārati bhāskaraḥ</seg> </l>
+<l><seg type="pāda" n="c">tat-pratyāharaṇaṃ tasya</seg> <seg type="pāda" n="d">pratyāhāraḥ sa ucyate</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_56">
+<l><seg type="pāda" n="a">ekā strī bhujyate dvābhyām</seg> <seg type="pāda" n="b">āgatā soma-maṇḍalāt</seg> </l>
+<l><seg type="pāda" n="c">tṛtīyo yo bhavet tābhyāṃ</seg> <seg type="pāda" n="d">sa bhavaty ajarāmaraḥ</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_57">
+<l><seg type="pāda" n="a">nābhideśe bhavaty eko</seg> <seg type="pāda" n="b">bhāskaro dahanātmakaḥ</seg> </l>
+<l><seg type="pāda" n="c">amṛtātmā sthito nityaṃ</seg> <seg type="pāda" n="d">tālumūle ca candramāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_58">
+<l><seg type="pāda" n="a">varṣaty adhomukhaś candro</seg> <seg type="pāda" n="b">grasaty ūrdhva-mukho raviḥ</seg> </l>
+<l><seg type="pāda" n="c">jñātavyaṃ karaṇaṃ tatra</seg> <seg type="pāda" n="d">yena pīyūṣam āpyate</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_59">
+<l><seg type="pāda" n="a">ūrdhva-nābhir adhas tālu</seg> <seg type="pāda" n="b">ūrdhva-bhānur adhaḥ śaśī</seg> </l>
+<l><seg type="pāda" n="c">karaṇaṃ viparītākhyaṃ</seg> <seg type="pāda" n="d">guru-vaktreṇa labhyate</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_60">
+<l><seg type="pāda" n="a">tridhā baddho vṛṣo yatra</seg> <seg type="pāda" n="b">rauravīti mahāsvanam</seg> </l>
+<l><seg type="pāda" n="c">anāhataṃ ca tac cakraṃ</seg> <seg type="pāda" n="d">hṛdaye yogino viduḥ</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_61">
+<l><seg type="pāda" n="a">anāhatam atikramya</seg> <seg type="pāda" n="b">cākramya maṇipūrakam</seg> </l>
+<l><seg type="pāda" n="c">prāpte prāṇaṃ mahāpadmaṃ</seg> <seg type="pāda" n="d">yogitvam amṛtāyate</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_62">
+<l><seg type="pāda" n="a">viśabdaḥ saṃsmṛto haṃso</seg> <seg type="pāda" n="b">nirmalaḥ śuddha ucyate</seg> </l>
+<l><seg type="pāda" n="c">ataḥ kaṇṭhe viśuddhākhye</seg> <seg type="pāda" n="d">cakraṃ cakra-vido viduḥ</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_63">
+<l><seg type="pāda" n="a">viśuddhe parame cakre</seg> <seg type="pāda" n="b">dhṛtvā soma-kalā-jalam</seg> </l>
+<l><seg type="pāda" n="c">māsena na kṣayaṃ yāti</seg> <seg type="pāda" n="d">vañcayitvā mukhaṃ raveḥ</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_64">
+<l><seg type="pāda" n="a">sampīḍya rasanāgreṇa</seg> <seg type="pāda" n="b">rāja-danta-bilaṃ mahat</seg> </l>
+<l><seg type="pāda" n="c">dhyātvāmṛtamayīṃ devīṃ</seg> <seg type="pāda" n="d">ṣaṇ-māsena kavir bhavet</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_65">
+<l><seg type="pāda" n="a">amṛtāpūrṇa-dehasya</seg> <seg type="pāda" n="b">yogino dvi-tri-vatsarāt</seg> </l>
+<l><seg type="pāda" n="c">ūrdhvaṃ pravartate reto'py</seg> <seg type="pāda" n="d">aṇimādi-guṇodayaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_66">
+<l><seg type="pāda" n="a">indhanāni yathā vahnis</seg> <seg type="pāda" n="b">taila-varti ca dīpakaḥ</seg> </l>
+<l><seg type="pāda" n="c">tathā somakalā-pūrṇaṃ</seg> <seg type="pāda" n="d">dehī dehaṃ na muñcati</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_67">
+<l><seg type="pāda" n="a">āsanena samāyuktaḥ</seg> <seg type="pāda" n="b">prāṇāyāmena saṃyutaḥ</seg> </l>
+<l><seg type="pāda" n="c">pratyāhāreṇa saṃyukto</seg> <seg type="pāda" n="d">dhāraṇāṃ ca samabhyaset</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_68">
+<l><seg type="pāda" n="a">hṛdaye pañca-bhūtānāṃ</seg> <seg type="pāda" n="b">dhāraṇāṃ ca pṛthak pṛthak</seg> </l>
+<l><seg type="pāda" n="c">manaso niścalatvena</seg> <seg type="pāda" n="d">dhāraṇā ca vidhīyate</seg> //</l>
+</lg>
+
+
+<lg xml:id="GorS_69">
+<l><seg type="pāda" n="a">yā pṛthvī hari-tāla-deśa-rucirā pītā lakārānvitā</seg> <seg type="pāda" n="b">saṃyuktā kamalāsanena hi catuṣkoṇā hṛdi sthāyinī</seg> </l>
+<l><seg type="pāda" n="c">prāṇaṃ tatra vinīya pañca-ghaṭikāś cittānvitaṃ dhārayed</seg> <seg type="pāda" n="d">eṣā stambhakarī sadā kṣitijayaṃ kuryād bhuvo dhāraṇā</seg> //</l>
+</lg>
+
+
+<lg xml:id="GorS_70">
+<l><seg type="pāda" n="a">ardhendu-pratimaṃ ca kunda-dhavalaṃ kaṇṭhe'mbu-tattavṃ sthitaṃ</seg> <seg type="pāda" n="b">yat pīyūṣa-va-kāra-bīja-sahitaṃ yuktaṃ sadā viṣṇunā</seg> </l>
+<l><seg type="pāda" n="c">prāṇaṃ tatra vinīya pañca-ghaṭikāś cittānvitaṃ dhārayed</seg> <seg type="pāda" n="d">eṣā durvaha-kāla-kūṭa-jaraṇā syād vāriṇī dhāraṇā</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_71">
+<l><seg type="pāda" n="a">yat tāla-sthitam indra-gopa-sadṛśaṃ tattvaṃ trikoṇojjvalaṃ</seg> <seg type="pāda" n="b">tejo-repha-mayaṃ pravāla-ruciraṃ rudreṇa yat saṅgatam</seg> </l>
+<l><seg type="pāda" n="c">prāṇaṃ tatra vinīya pañca-ghaṭikāś cittānvitaṃ dhārayed</seg> <seg type="pāda" n="d">eṣā vahni-jayaṃ sadā vidadhate vaiśvānarī dhāraṇā</seg> //</l>
+</lg>
+
+
+<lg xml:id="GorS_72">
+<l><seg type="pāda" n="a">yad bhinnāñjana-puñja-sānnibham idaṃ tattvaṃ bhruvor antare</seg> <seg type="pāda" n="b">vṛttaṃ vāyumayaṃ ya-kāra-sahitaṃ yatreśvaro devatā</seg> </l>
+<l><seg type="pāda" n="c">prāṇaṃ tatra vinīya pañca-ghaṭikāś cittānvitaṃ dhārayed</seg> <seg type="pāda" n="d">eṣā khe gamanaṃ karoti yamināṃ syād vāyavī dhāraṇā</seg> //</l>
+</lg>
+
+
+<lg xml:id="GorS_73">
+<l><seg type="pāda" n="a">ākāśaṃ suviśuddha-vāri-sadṛśaṃ yad brahma-randhre sthitaṃ</seg> <seg type="pāda" n="b">tatrādyena sadā-śivena sahitaṃ śāntaṃ ha-kārākṣaram</seg> </l>
+<l><seg type="pāda" n="c">prāṇaṃ tatra vinīya pañca-ghaṭikāś cittānvitaṃ dhārayed</seg> <seg type="pāda" n="d">eṣā mokṣa-kavāṭa-pāṭana-paṭuḥ proktā nabho-dhāraṇā</seg> //</l>
+</lg>
+
+
+<lg xml:id="GorS_74">
+<l><seg type="pāda" n="a">stambhanī drāvaṇī caiva</seg> <seg type="pāda" n="b">dahanī bhrāmaṇī tathā</seg> </l>
+<l><seg type="pāda" n="c">śoṣaṇī ca bhavanty evaṃ</seg> <seg type="pāda" n="d">bhūtānāṃ pañca dhāraṇāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_75">
+<l><seg type="pāda" n="a">karmaṇā manasā vācā</seg> <seg type="pāda" n="b">dhāraṇāḥ pañca durlabhāḥ</seg> </l>
+<l><seg type="pāda" n="c">vidhāya satataṃ yogī</seg> <seg type="pāda" n="d">sarva-pāpaiḥ pramucyate</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_76">
+<l><seg type="pāda" n="a">sarvaṃ cintā-samāvarti</seg> <seg type="pāda" n="b">yogino hṛdi vartate</seg> </l>
+<l><seg type="pāda" n="c">yat tattve niścitaṃ cetas</seg> <seg type="pāda" n="d">tat tu dhyānaṃ pracakṣate</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_77">
+<l><seg type="pāda" n="a">dvidhā bhavati tad dhyānaṃ</seg> <seg type="pāda" n="b">sa-guṇaṃ nirguṇaṃ tathā</seg> </l>
+<l><seg type="pāda" n="c">saguṇaṃ varṇa-bhedena</seg> <seg type="pāda" n="d">nirguṇaṃ kevalaṃ viduḥ</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_78">
+<l><seg type="pāda" n="a">ādhāraṃ prathamaṃ cakraṃ</seg> <seg type="pāda" n="b">tapta-kāñcana-sannibham</seg> </l>
+<l><seg type="pāda" n="c">nāsāgre dṛṣṭim ādāya</seg> <seg type="pāda" n="d">dhyātvā muñcati kilbiṣam</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_79">
+<l><seg type="pāda" n="a">svādhiṣṭhānaṃ dvitīyaṃ tu</seg> <seg type="pāda" n="b">san-māṇikya-suśobhanam</seg> </l>
+<l><seg type="pāda" n="c">nāsāgre dṛṣṭim ādāya</seg> <seg type="pāda" n="d">dhyātvā muñcati pātakam</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_80">
+<l><seg type="pāda" n="a">taruṇāditya-saṃkāśaṃ</seg> <seg type="pāda" n="b">cakraṃ ca maṇipūrakam</seg> </l>
+<l><seg type="pāda" n="c">nāsāgre dṛṣṭim ādāya</seg> <seg type="pāda" n="d">dhyātvā saṃkṣobhayej jagat</seg> //</l>
+</lg>
+
+<note>verse missing</note>
+<lg xml:id="GorS_82">
+<l><seg type="pāda" n="a">vidyut-prabhāvaṃ hṛt-padme</seg> <seg type="pāda" n="b">prāṇāyāma-vibhedanaiḥ</seg> </l>
+<l><seg type="pāda" n="c">nāsāgre dṛṣṭim ādāya</seg> <seg type="pāda" n="d">dhyātvā brahma-mayo bhavet</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_83">
+<l><seg type="pāda" n="a">santataṃ ghaṇṭikā-madhye</seg> <seg type="pāda" n="b">viśuddhaṃ cāmṛtodbhavam</seg> </l>
+<l><seg type="pāda" n="c">nāsāgre dṛṣṭim ādāya</seg> <seg type="pāda" n="d">dhyātvā brahma-mayo bhavet</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_84">
+<l><seg type="pāda" n="a">bhruvor madhye sthitaṃ devaṃ</seg> <seg type="pāda" n="b">snigdha-mauktika-sannibham</seg> </l>
+<l><seg type="pāda" n="c">nāsāgre dṛṣṭim ādāya</seg> <seg type="pāda" n="d">dhyātvā'nandamayo bhavet</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_85">
+<l><seg type="pāda" n="a">nirguṇaṃ ca śivaṃ śāntaṃ</seg> <seg type="pāda" n="b">gagane viśvatomukham</seg> </l>
+<l><seg type="pāda" n="c">nāsāgre dṛṣṭim ādāya</seg> <seg type="pāda" n="d">dhyātvā duḥkhād vimucyate</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_86">
+<l><seg type="pāda" n="a">gudaṃ meḍhraṃ ca nābhiṃ ca</seg> <seg type="pāda" n="b">hṛt-padme ca tad-ūrdhvataḥ</seg> </l>
+<l><seg type="pāda" n="c">ghaṇṭikāṃ lampikā-sthānaṃ</seg> <seg type="pāda" n="d">bhrū-madhye parameśvaram</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_87">
+<l><seg type="pāda" n="a">nirmalaṃ gaganākāraṃ</seg> <seg type="pāda" n="b">marīci-jala-sannibham</seg> </l>
+<l><seg type="pāda" n="c">ātmānaṃ sarvagaṃ dhyātvā</seg> <seg type="pāda" n="d">yogī yogam avāpnuyāt</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_88">
+<l><seg type="pāda" n="a">kathitāni yathaitāni</seg> <seg type="pāda" n="b">dhyāna-sthānāni yoginām</seg> </l>
+<l><seg type="pāda" n="c">upādhi-tattva-yuktāni</seg> <seg type="pāda" n="d">kurvanty aṣṭa-guṇodayam</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_89">
+<l><seg type="pāda" n="a">upādhiś ca tathā tattvaṃ</seg> <seg type="pāda" n="b">dvayam evam udāhṛtam</seg> </l>
+<l><seg type="pāda" n="c">upādhiḥ procyate varṇas</seg> <seg type="pāda" n="d">tattvam ātmābhidhīyate</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_90">
+<l><seg type="pāda" n="a">upādhir anyathā-jñānaṃ</seg> <seg type="pāda" n="b">tattvaṃ saṃsthitam anyathā</seg> </l>
+<l><seg type="pāda" n="c">samastopādhi-vidhvaṃsi</seg> <seg type="pāda" n="d">sadābhyāsena yoginām</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_91">
+<l><seg type="pāda" n="a">ātma-varṇena bhedena</seg> <seg type="pāda" n="b">dṛśyate sphāṭiko maṇiḥ</seg> </l>
+<l><seg type="pāda" n="c">mukto yaḥ śakti-bhedena</seg> <seg type="pāda" n="d">so'yam ātmā praśasyate</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_92">
+<l><seg type="pāda" n="a">nirātaṅkaṃ nirālambaṃ</seg> <seg type="pāda" n="b">niṣprapañcaṃ nirāśrayam</seg> </l>
+<l><seg type="pāda" n="c">nirāmayaṃ nirākāraṃ</seg> <seg type="pāda" n="d">tattvaṃ tattvavido viduḥ</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_93">
+<l><seg type="pāda" n="a">śabdādyāḥ pañca yā mātrā</seg> <seg type="pāda" n="b">yāvat karṇādiṣu smṛtāḥ</seg> </l>
+<l><seg type="pāda" n="c">tāvad eva smṛtaṃ dhyānaṃ</seg> <seg type="pāda" n="d">tat-samādhir ataḥ param</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_94">
+<l><seg type="pāda" n="a">yadā saṃkṣīyate prāṇo</seg> <seg type="pāda" n="b">mānasaṃ ca vilīyate</seg> </l>
+<l><seg type="pāda" n="c">tadā sama-rasaikatvaṃ</seg> <seg type="pāda" n="d">samādhir abhidhīyate</seg> //</l>
+</lg>
+
+<note>verse missing</note>
+<lg xml:id="GorS_96">
+<l><seg type="pāda" n="a">dhāraṇāḥ pañca-nāḍyas tu</seg> <seg type="pāda" n="b">dhyānaṃ ca ṣaṣṭhi-nāḍikāḥ</seg> </l>
+<l><seg type="pāda" n="c">dina-dvādaśakenaiva</seg> <seg type="pāda" n="d">samādhiḥ prāṇa-saṃyamaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_97">
+<l><seg type="pāda" n="a">na gandhaṃ na rasaṃ rūpaṃ</seg> <seg type="pāda" n="b">na sparśaṃ na ca niḥsvanam</seg> </l>
+<l><seg type="pāda" n="c">ātmānaṃ na paraṃ vetti</seg> <seg type="pāda" n="d">yogī yuktaḥ samādhinā</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_98">
+<l><seg type="pāda" n="a">khādyate na ca kālena</seg> <seg type="pāda" n="b">bādhyate na ca karmaṇā</seg> </l>
+<l><seg type="pāda" n="c">sādhyate na ca kenāpi</seg> <seg type="pāda" n="d">yogī yuktaḥ samādhinā</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_99">
+<l><seg type="pāda" n="a">nirmalaṃ niścalaṃ nityaṃ</seg> <seg type="pāda" n="b">niṣkriyaṃ nirguṇaṃ mahat</seg> </l>
+<l><seg type="pāda" n="c">vyoma-vijñānam ānandaṃ</seg> <seg type="pāda" n="d">brahma brahma-vido viduḥ</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_100">
+<l><seg type="pāda" n="a">dugdhe kṣīraṃ dhṛte sarpir</seg> <seg type="pāda" n="b">agnau vahnir ivārpitaḥ</seg> </l>
+<l><seg type="pāda" n="c">advayatvaṃ vrajen nityaṃ</seg> <seg type="pāda" n="d">yogavit parame pade</seg> //</l>
+</lg>
+
+<lg xml:id="GorS_101">
+<l><seg type="pāda" n="a">bhava-bhaya-vane vahnir</seg> <seg type="pāda" n="b">mukti-sopāna-mārgataḥ</seg> </l>
+<l><seg type="pāda" n="c">advayatvaṃ vrajen nityaṃ</seg> <seg type="pāda" n="d">yogavit parame pade</seg> //</l>
+</lg>
+
+<trailer>gorakṣa-śatakaṃ samāptam</trailer>
+  </body>
+</text>
+</TEI>

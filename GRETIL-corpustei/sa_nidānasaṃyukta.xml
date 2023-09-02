@@ -1,0 +1,1397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_nidAnasaMyukta">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Nidānasaṃyukta</title>
+	<author></author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>Seishi Karashima</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Seishi Karashima</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/nidansyu.htm">nidansyu.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Nidanasamyukta (= NidSa)
+<lb/>Based on the edition by C. Tripāṭhī: Fünfundzwanzig Sūtras des Nidānasaṃyukta. Berlin 1962 (Sanskrittexte aus den Turfanfunden, VIII).
+<lb/>
+<lb/>Input by Seishi Karashima (Tokyo, Japan)
+<lb/>
+<lb/>ITALICS for supplemented text
+<lb/>{...} = comments
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>C. Tripāṭhī: Fünfundzwanzig Sūtras des Nidānasaṃyukta. Berlin 1962 (Sanskrittexte aus den Turfanfunden, VIII). </bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Nidānasaṃyukta = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Religious Literature -- Buddhist</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+
+<p>Sūtra 1: vṛkṣa I (Baum)</p>
+
+<p>NidSa 1.1 <hi rend="it">śrāvastyāṃ</hi> nidā<hi rend="it">nam /</hi></p>
+
+<p>NidSa 1.2 <hi rend="it">tatra bhagavān bhikṣūn āmantrayati /</hi></p>
+
+<p>NidSa 1.3 <hi rend="it">upādānīyeṣu dharmeṣv āsvādānudarśino viharatas tṛṣṇā pravardhate / tṛṣṇāpratyayam upādānam | upādānapratyayo bhavaḥ | bha</hi>vapratya<hi rend="it">yā</hi> j<hi rend="it">ātiḥ | jātipratyayaṃ jarāmaraṇaṃ śokaparidevaduḥkhadaurmanasyopāyāsāḥ saṃbhavanti | evam asya kevalasya mahato duḥkhaskandhasya samudayo samudayo bhava</hi>ti |</p>
+
+<p>NidSa 1.4 tadyathā vṛkṣasya navasya dah<hi rend="it">arasya puruṣa utpadyeta arthakāmo hitakāmo yogakṣemakāmo yas taṃ vṛkṣaṃ</hi> + + + + + + + + + + + + + + + + + + + + k<hi rend="it">ā</hi>lena kālam utkīlayet k<hi rend="it">ā</hi>lena kālaṃ ś<hi rend="it">ītoṣṇa</hi> + + + + + + + + + + <hi rend="it">kālena kālam udakaṃ dadyāt | sa vṛkṣas tannidānaṃ vṛddhiṃ virūḍhim vipulatām āpadyeta |</hi></p>
+
+<p>NidSa 1.5 <hi rend="it">evam eva upā</hi>dānīyeṣu dharmeṣv āsvādānudarśino vih<hi rend="it">aratas tṛṣṇā pravardhate pūrvavad yāvat samudayo bhavati |</hi></p>
+
+<p>NidSa 1.6 <hi rend="it">upādānīyeṣu dharmeṣv anityānudarśino vibhavānudarśino virāgānudarśi</hi>no nirodhānudarśinaḥ pratiniḥsargānu<hi rend="it">darśinas tṛṣṇā nirudhyate | tṛṣṇāni</hi>rodhād upādānani<hi rend="it">rodhaḥ| upādānanirodhād bhavanirodhāh | bhavanirodhāj jātinirodhaḥ | jātinirodhāj jarāmaraṇanirodhaḥ | śokaparidevaduḥkhadaurmanas</hi>yopāyāsā nirudhyan<hi rend="it">te | evam asya kevalasya mahato duḥkhaskandha</hi>sya nirodho bhavati /</p>
+
+<p>NidSa 1.7 tadyathā tasyaiva vṛkṣasy<hi rend="it">a navasya daharasya</hi> .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. <hi rend="it">puruṣa utpadyeta anarthakāmo 'hitakāmo 'yo</hi>gakṣemakāmo yas taṃ vṛkṣaṃ mūlāc chitvā agra .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. <hi rend="it">vātātapābhyāṃ pariśo</hi>ṣayet | vātātapābhyāṃ pariśoṣayitvā agninā dahet | a<hi rend="it">gninā dagdhvā</hi> .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ḥ /</p>
+
+<p>NidSa 1.8 kiṃ manyadhve bhikṣa<hi rend="it">vo</hi> nanu sa vṛkṣas t<hi rend="it">an</hi> nidānam <hi rend="it">u</hi>cchinnamū<hi rend="it">las tālamastakavad anābhavagatika āyatyām anutpādadha</hi>rmā /</p>
+
+<p>NidSa 1.9 evaṃ bhad<hi rend="it">anta /</hi></p>
+
+<p>NidSa 1.10 <hi rend="it">evam eva upādānīyeṣu dharme</hi>ṣv anityānudarśino vi<hi rend="it">bhavānudarśino virāgānudarśino</hi> nirodhānudar<hi rend="it">śinaḥ pratiniḥsargānudarśi</hi>nas tṛṣṇā niru<hi rend="it">dhyate | tṛṣṇānirodhād upādānanirodhaḥ | upādānanirodhād bhavanirodhaḥ | bhavanirodhāj jātinirodhaḥ | jātinirodhāj jarāmaraṇanirodhaḥ | śokapari</hi>devaduḥkhaurma<hi rend="it">nasyopāyāsā nirudhyante | evam asya kevalasya mahato duḥkhaskandhasya niodho bhavati |</hi></p>
+
+<p>NidSa 1.11<hi rend="it"> atha te bhikṣavo bhagavato</hi> bhāṣitam abhyanandan <hi rend="it">| abhinandyānumodya bhagavato 'ntikāt prakrāntāḥ ||</hi></p>
+
+<p>Sūtra 2: vṛkṣa II (Baum)</p>
+
+<p>NidSa 2.1 <hi rend="it">śrāvastyāṃ nidānam |</hi></p>
+
+<p>NidSa 2.2 <hi rend="it">tatra bhagavān bhikṣūn āmantrayati /</hi></p>
+
+<p>NidSa 2.3 <hi rend="it">upādā</hi>nīyeṣu bhikṣavo dha<hi rend="it">rmeṣv āsvānudarṣino viha</hi>rat<hi rend="it">o</hi> hārakaṃ vijñānaṃ bhavat<hi rend="it">i nāmarūpe</hi> / nāma rūpapratyayaṃ <hi rend="it">ṣaḍāyatam / ṣaḍāyatanapratyayaḥ sparśaḥ / sparśapratyayā vedanā / ve</hi>danāpratyayātṛṣṇā / tṛ<hi rend="it">ṣṇāpratyayam upā</hi>dānam / upā<hi rend="it">dānapratyayo bhavaḥ / bhavapratyayā jātiḥ / jātipratyayaṃ jarāmaraṇaṃ śokaparidevaduḥkhadau</hi>rmanasyopāyāsāḥ saṃbhavanti / evam asy<hi rend="it">a kevalasya mahato duḥkhaskandhasya samudayo bhavati /</hi></p>
+
+<p>NidSa 2.4 <hi rend="it">tadyathā mahāvṛkṣasya mulāvataḥ skandhavataḥ sāravata</hi>ḥ śākhāpattraphalopetasya yāni cādhogatā<hi rend="it">ni mūlāni tāny tāny ūrdhvam ojam abhiharanti / evaṃ hi sa mahāvṛkṣas tadāhāras tadupādāno dīrgha</hi>m adh<hi rend="it">v</hi>ānaṃ tiṣṭhati /</p>
+
+<p>NidSa 2.5 evam eva upādā<hi rend="it">n</hi>īy<hi rend="it">e</hi>ṣu dharmeṣv āsvādānudarśino viharato <hi rend="it">hārakaṃ vijñānaṃ bhavati nāmarūpe / pūrvavad yāyad evam a</hi>sy<hi rend="it">a</hi> k<hi rend="it">e</hi>v<hi rend="it">alasya mahato duḥkhaskandhasya samudayo bhavati /</hi></p>
+
+<p>NidSa 2.6 <hi rend="it">upā</hi>dānīyeṣu <hi rend="it">dharmeṣv anityānudarśino vibhavānudarśino virāgānudarśino ni</hi>rodhānudarśinaḥ pratiniḥsargarśin<hi rend="it">o na</hi> hārakaṃ vijñānaṃ bhavati n<hi rend="it">āmarupe / tasya nirodhāt ṣaḍāyatananirodhaḥ / ṣaḍā</hi>yatananirodhāt <hi rend="it">sparśanirodaḥ / sparśanirodhād vedanānirodhaḥ / ve</hi>dan<hi rend="it">ānir</hi>odhāt tṛṣṇānirodhaḥ / tṛṣṇāni<hi rend="it">rodhād upādānanirodhaḥ / upādāna</hi>nirodhād bhavani<hi rend="it">rodhaḥ / bhavanirodhāj jātinirodhaḥ / jātinirodhāj jarāmaraṇanirodhaḥ / śokapari</hi>dev<hi rend="it">aduḥkha</hi>daurmanasyopāyāsā niru<hi rend="it">dhyante / evam asya kevalasya mahato duḥkhaskandhasya nirodho bhavati /</hi></p>
+
+<p>NidSa 2.7 <hi rend="it">tadyathā tasyaiva mahāvṛ</hi>kṣasya mūlavataḥ skandhavataḥ sāravataḥ śākhāp<hi rend="it">attraphalopetasya puruṣa utpadyeta</hi> .............</p>
+
+<p>NidSa 2.8 <hi rend="it">kiṃ manyadhve bhikṣavo nanu sa mahāvṛkṣas tannidānam ucchinnamūlas tālamastakavad anābhavagatika āyatyām a</hi>nutpādadharmā /</p>
+
+<p>NidSa 2.9 evaṃ bh<hi rend="it">adanta /</hi></p>
+
+<p>NidSa 2.10 <hi rend="it">evaṃ eva u</hi>pādānīyeṣu dharmeṣv anityānudarśin<hi rend="it">o</hi> vi<hi rend="it">bhavānudarśino virāgānudarśino nirodhānudarśinaḥ pratiniḥsargānu</hi>darśino <hi rend="it">na</hi> hārakaṃ vijñānaṃ bhavati nāmarūpe / tasya <hi rend="it">nirodhāt ṣaḍāyatananirodhāḥ / pūrvavad yāvan nirodho bhavati /</hi></p>
+
+<p>NidSa 2.11 <hi rend="it">atha te bhikṣavo bhagavato bhāṣitam abhyanandan / abhinandyānumodya bhagavato 'ntikāt prakrāntāḥ ||</hi></p>
+
+<p>Sūtra 3 und 4: dīpa I und II (Lampe)</p>
+
+<p>NidSa 3.1 <hi rend="it">pūrvaṃ me bhikṣavo 'nuttarāṃ samyaksaṃbodhim anabhisaṃbuddhasyaikā</hi>kino rahasigatasyaivaṃ cetasi cetaḥpa<hi rend="it">r</hi>ivi<hi rend="it">tarka udapādi /</hi></p>
+
+<p>NidSa 3.2 <hi rend="it">kṛcchraṃ batāyaṃ loka āpanno yad uta jāyate 'pi jīryate 'pi mriyate 'pi cyavate 'py upapadyate 'pi / atha</hi> ca pun<hi rend="it">ar ime sa</hi>t<hi rend="it">v</hi>ā jarāmaraṇasyottare niḥsaraṇaṃ ya<hi rend="it">thābhūtaṃ na prajānanti /</hi></p>
+
+<p>NidSa 3.3 <hi rend="it">tasya mamaitad abhavat / kasmin nu sati jarāmaraṇaṃ bhavati / kiṃpratyayañ ca punar jarāmaraṇam / tasya mama yo</hi>niśo <hi rend="it">ma</hi>nasi kurvata e<hi rend="it">va</hi>ṃ ya<hi rend="it">thābhūtasyābhisamaya udapādi / jātyāṃ satyāṃ jarāmaraṇaṃ bhavati / jātipratyayañ ca punar jarāmaraṇam /</hi></p>
+
+<p>NidSa 3.4 <hi rend="it">tasya mamaitad abhavat / kasmin nu sati jā</hi>tir bh<hi rend="it">avati / kiṃpratyayā ca punar jātiḥ /</hi> <hi rend="it">tasya mama yoniśo manasi kurvata evaṃ yathābhūtasyābhisamaya udapādi / bhave sati jātir bhavati / bhavapratyayā ca punar jātiḥ /</hi></p>
+
+<p>NidSa 3.5 <hi rend="it">tasya mamaitad abhavat / kasmin nu sati bhavo bhavati / kiṃpratyayaś ca punar bhavaḥ / tasya mama yoniśo manasi kurvata evaṃ yathābhūtasyābhisamaya udapādi / upādāne sati bhavo bhavati / upādānapratyayaś ca punar bhavaḥ /</hi></p>
+
+<p>NidSa 3.6 <hi rend="it">tasya mamaitad abhavat | kasmin nu saty upādānaṃ bhavati | kiṃpratyayañ ca punar upādānam | tasya mama yoniśo manasi kurvata evaṃ yathābhūtasyābhisamaya udapādi | upādānīyeṣu dharmeṣv āsvādānudarśino viharatas tṛṣṇā pravardhate | tṛsṇāpratyayam upādānam | upādānapratyayo bhavaḥ | bhavapratyayā jātiḥ | jātipratyayaṃ jarāmaraṇaṃ śokaparidevaduḥkhadaurmanasyopāyāsāḥ saṃbhavanti | evam asya kevalasya mahato duḥkhaskandhasya samudayo bhavati |</hi></p>
+
+<p>NidSa 3.7 <hi rend="it">kiṃ manyadhve bhikṣavaḥ |</hi> ....</p>
+
+<p>NidSa 3.8 <hi rend="it">evaṃ bhadanta |</hi></p>
+
+<p>NidSa 3.9 <hi rend="it">evam eva upādānīyeṣu dharmeṣv āsvādānudarśino viharatas tṛṣā pravardhate tṛṣṇāpratyayam upādānam | upādānapratyayo bhavaḥ | bhavapratyayā jātiḥ | jātipratyayaṃ jarāmaraṇaṃ śokaparidevaduḥkhadaurmanasyopāyāsāḥ saṃbhavanti | evam asya kevalasya mahato duḥkhaskandhasya samudayo bhavati |</hi></p>
+
+<p>NidSa 3.10 <hi rend="it">tasya mamaitad abhavat / kasmin nv asati jarāmaraṇaṃ na bhavati / kasya nirodhāj jarāmaraṇanirodhaḥ / tasya mama yoniśo manasi kurvata evaṃ yathābhūtasyābhisamaya udapādi / jātyām asatyāṃ jarāmaraṇaṃ na bhavati / jātinirodhāj jarāmaraṇanirodha /</hi></p>
+
+<p>NidSa 3.11 <hi rend="it">tasya mamaitad abhavat / kasmin nv asati jātir na bhavati / kasya nirodhāj jātinirodhaḥ / tasya mama yoniśo manasi kurvata evaṃ yathābhūtasyābhisamaya udpādi bhave 'sati jātir na bhavati / bhavanirodhāj jātinirodhaḥ /</hi></p>
+
+<p>NidSa 3.12 <hi rend="it">tasya mamaitad abhavat / kasmin nv asati bhavo na bhavati / kasya nirodhād bhavanirodhaḥ / tasya mama yoniśo manasi kurvata evaṃ yathābhūtasyābhisamaya udapādi / upādāne 'sati bhavo na bhavati / upādānanirodhād bhavanirodhaḥ /</hi></p>
+
+<p>NidSa 3.13 <hi rend="it">tasya mamaitad abhavat / kasmin nv asaty upādānaṃ na bhavati / kasya nirodhād upādānanirodhaḥ / tasya mama yoniśo manasi kurvata evaṃ yathābhūtasyābhisamaya udapādi / upādānīyeṣu dharmeṣv anityānudarśino vibhavānudarśino virāgānudarśino nirodhānudarśinaḥ pratiniḥsargānudarśinas tṛṣṇā nirudhyate | tṛṣṇānirodhād upādānanirodhaḥ | upādānanirodhād bhavanirodhaḥ | bhavanirodhāj jātinirodhaḥ | jātinirodhāj jarāmaraṇanirodhaḥ | śokaparidevaduḥkhadaurmanasyopāyāsā nirudhyante / evam asya kevalasya mahato duḥkhaskandhasya nirodho bhavati |</hi></p>
+
+<p>NidSa 3.14 <hi rend="it">kiṃ manyadhve bhikṣavaḥ |</hi> ...</p>
+
+<p>NidSa 3.15 <hi rend="it">evaṃ bhadanata |</hi></p>
+
+<p>NidSa 3.16 <hi rend="it">evam eva upādānīyeṣu dharmeṣv anityānudarśino vibhavānudarśino virāgānudarśino nirodhānudarśinaḥ pratiniḥsargānudarśinas tṛṣṇā nirudhyate | tṛṣṇānirodhād upādānanirodhaḥ | pūrvavad yāvan nirodho bhavati |</hi></p>
+
+<p>NidSa 3.17 <hi rend="it">atha te bhikṣavo bhagavato bhāṣitam abhyanandan | abhinandyānumodya bhagavato 'ntikāt prakrāntāḥ ||</hi></p>
+
+<p>Sūtra 4</p>
+
+<p>NidSa 4.1 <hi rend="it">pūrvaṃ me bhikṣavo 'nuttarāṃ samyaksaṃbodhim anabhisaṃbuddhasyaikākino rahasigatasyaivaṃ cetasi cetaḥparivitarka udapādi /</hi></p>
+
+<p>NidSa 4.2 <hi rend="it">kṛcchraṃ batāyaṃ loka āpanno yad uta jāyate 'pi jīryate 'pi mriyate 'pi cyavate 'py upapadyate 'pi / atha ca punar ime satvā jarāmaraṇasyottare niḥsaraṇaṃ yathābhūtaṃ na prajānanti /</hi></p>
+
+<p>NidSa 4.3 <hi rend="it">tasya mamaitad abhavat / kasmin nu sati jarāmaraṇaṃ bhavati / kiṃpratyayañ ca punar jarāmaraṇam / tasya mama yoniśo manasi kurvata evaṃ yathābhūtasyābhisamaya udapādi / jātyāṃ satyāṃ jarāmaraṇaṃ bhavati / jātipratyayañ ca punar jarāmaraṇam /</hi></p>
+
+<p>NidSa 4.4 <hi rend="it">tasya mamaitad abhavat / kasmin nu sati jātir bhavati / kiṃpratyayā ca punar jātiḥ /</hi> <hi rend="it">tasya mama yoniśo manasi kurvata evaṃ yathābhūtasyābhisamaya udapādi / bhave sati jātir bhavati / bhavapratyayā ca punar jātiḥ /</hi></p>
+
+<p>NidSa 4.5 <hi rend="it">tasya mamaitad abhavat / kasmin nu sati bhavo bhavati / kiṃpratyayaś ca punar bhavaḥ / tasya mama yoniśo manasi kurvata evaṃ yathābhūtasyābhisamaya udapādi / upādāne sati bhavo bhavati / upādānapratyayaś ca punar bhavaḥ /</hi></p>
+
+<p>NidSa 4.6 <hi rend="it">tasya mamaitad abhavat | kasmin nu saty upādānaṃ bhavati | kiṃpratyayañ ca punar upādānam | tasya mama yoniśo manasi kurvata evaṃ yathābhūtasyābhisamaya udapādi | upādānīyeṣu dharmeṣv āsvādānudarśino viharatas tṛṣṇā pravardhate | tṛsṇāpratyayam upādānam | upādānapratyayo bhavaḥ | bhavapratyayā jātiḥ | jātipratyayaṃ jarāmaraṇaṃ śokaparidevaduḥkhadaurmanasyopāyāsāḥ saṃbhavanti | evam asya kevalasya mahato duḥkhaskandhasya samudayo bhavati |</hi></p>
+
+<p>NidSa 4.7 <hi rend="it">kiṃ manyadhve bhikṣavaḥ |</hi> ....</p>
+
+<p>NidSa 4.8 <hi rend="it">evaṃ bhadanta |</hi></p>
+
+<p>NidSa 4.9 <hi rend="it">evam eva upādānīyeṣu dharmeṣv āsvādānudarśino viharatas tṛṣā pravardhate tṛṣṇāpratyayam upādānam | upādānapratyayo bhavaḥ | bhavapratyayā jātiḥ | jātipratyayaṃ jarāmaraṇaṃ śokaparidevaduḥkhadaurmanasyopāyāsāḥ saṃbhavanti | evam asya kevalasya mahato duḥkhaskandhasya samudayo bhavati |</hi></p>
+
+<p>NidSa 4.10 <hi rend="it">tasya mamaitad abhavat / kasmin nv asati jarāmaraṇaṃ na bhavati / kasya nirodhāj jarāmaraṇanirodhaḥ / tasya mama yoniśo manasi kurvata evaṃ yathābhūtasyābhisamaya udapādi / jātyām asatyāṃ jarāmaraṇaṃ na bhavati / jātinirodhāj jarāmaraṇanirodha /</hi></p>
+
+<p>NidSa 4.11 <hi rend="it">tasya mamaitad abhavat / kasmin nv asati jātir na bhavati / kasya nirodhāj jātinirodhaḥ / tasya mama yoniśo manasi kurvata evaṃ yathābhūtasyābhisamaya udpādi bhave 'sati jātir na bhavati / bhavanirodhāj jātinirodhaḥ /</hi></p>
+
+<p>NidSa 4.12 <hi rend="it">tasya mamaitad abhavat / kasmin nv asati bhavo na bhavati / kasya nirodhād bhavanirodhaḥ / tasya mama yoniśo manasi kurvata evaṃ yathābhūtasyābhisamaya udapādi / upādāne 'sati bhavo na bhavati / upādānanirodhād bhavanirodhaḥ /</hi></p>
+
+<p>NidSa 4.13 <hi rend="it">tasya mamaitad abhavat / kasmin nv asaty upādānaṃ na bhavati / kasya nirodhād upādānanirodhaḥ / tasya mama yoniśo manasi kurvata evaṃ yathābhūtasyābhisamaya udapādi / upādānīyeṣu dharmeṣv anityānudarśino vibhavānudarśino virāgānudarśino nirodhānudarśinaḥ pratiniḥsargānudarśinas tṛṣṇā nirudhyate | tṛṣṇānirodhād upādānanirodhaḥ | upādānanirodhād bhavanirodhaḥ | bhavanirodhāj jātinirodhaḥ | jātinirodhāj jarāmaraṇanirodhaḥ | śokaparidevaduḥkhadaurmanasyopāyāsā nirudhyante / evam asya kevalasya mahato duḥkhaskandhasya nirodho bhavati |</hi></p>
+
+<p>NidSa 4.14 <hi rend="it">kiṃ manyadhve bhikṣavaḥ |</hi> ...</p>
+
+<p>NidSa 4.15 <hi rend="it">evaṃ bhadanata |</hi></p>
+
+<p>NidSa 4.16 <hi rend="it">evam eva upādānīyeṣu dharmeṣv anityānudarśino vibhavānudarśino virāgānudarśino nirodhānudarśinaḥ pratiniḥsargānudarśinas tṛṣṇā nirudhyate | tṛṣṇānirodhād upādānanirodhaḥ | pūrvavad yāvan nirodho bhavati |</hi></p>
+
+<p><hi rend="it">NidSa </hi>4.17 <hi rend="it">atha te bhikṣavo bhagavato bhāṣitam abhyanandan | abhinandyānumodya bhagavato 'ntikāt prakrāntāḥ ||</hi></p>
+
+<p>Sūtra 5: nagarasūtra</p>
+
+<p>NidSa 5.1 siddham /
+evaṃ mayā śrutam eka<hi rend="it">smin samaye bhagavāñ śrā</hi>vastyāṃ viharati sma jet<hi rend="it">avane 'nāthapiṇḍadasyārāme / tatra bhagavān bhikṣūn āmantrayati |</hi></p>
+
+<p>NidSa 5.2 pūrvaṃ me bhikṣavo 'nuttarāṃ samyaksaṃbodhim anabhisaṃbuddhasyaikākino rahasigatasya pratisaṃl<hi rend="it">ī</hi>nasyaivaṃ cetasi cetaḥparivitarka udapādi |</p>
+
+<p>NidSa 5.3 kṛcchraṃ batāyaṃ loka āpanno yaduta jāyate'pi <hi rend="it">jīrya</hi>te 'pi mriyate 'pi <hi rend="it">cya</hi>vate 'py <hi rend="it">u</hi>papadyat<hi rend="it">e</hi> 'pi | atha ca punar ime sattvā jarāmaraṇasyo<hi rend="it">ttare</hi> niḥsaraṇaṃ yathābhūtaṃ na prajānan<hi rend="it">ti |</hi></p>
+
+<p>NidSa 5.4 <hi rend="it">ta</hi>sya mamai<hi rend="it">tad abha</hi>vat | ka<hi rend="it">smin nu</hi> sati jarāmara<hi rend="it">ṇaṃ bha</hi>vati | kiṃpratyayañ ca punar jarāmaraṇam |
+tasya mama yoniśo ma<hi rend="it">nas</hi>ik<hi rend="it">u</hi>rva<hi rend="it">ta</hi> evaṃ yathābhūtasyābhisamaya u<hi rend="it">dapādi | jātyāṃ</hi> satyāṃ jarāmaraṇaṃ bhavati | jātipratyaya<hi rend="it">ñ ca punar jārama</hi>raṇam /</p>
+
+<p>NidSa 5.5 tasya mamaita<hi rend="it">d a</hi>bha<hi rend="it">vat | kasmin</hi> nu sati jātir bha<hi rend="it">vati | kiṃpratyayā ca punar jātiḥ | tasya ma</hi>ma yoniśo <hi rend="it">manasi kurvata evaṃ yathābhūtasyābhisa</hi>maya <hi rend="it">udapādi | bhave sati jātir bhavati | bhavapratyayā ca punar jātiḥ |</hi></p>
+
+<p>NidSa 5.6 <hi rend="it">tasya mamaitad abhavat | kasmin nu sati bhavo bhavati | kiṃpratyayaś ca punar bhavaḥ | tasya mama yoniśo manasi kurvata evaṃ yathābhūtasyābhisamaya udapādi | upādāne sati bhavo bhavati | upādānapratyayaś ca punar bhavaḥ |</hi></p>
+
+<p>NidSa 5.7 <hi rend="it">tasya mamaitad abhavat | kasmin nu saty upādānaṃ bhavati | kiṃprat</hi>yayañ ca <hi rend="it">punar upādānam | tasya mama yoniśo mana</hi>si kurvata e<hi rend="it">vaṃ yathābhūtasyābhisamaya udapādi |</hi> t<hi rend="it">ṛ</hi>ṣṇāyāṃ sat<hi rend="it">yā</hi>m <hi rend="it">upādānaṃ bhavati | tṛṣṇāpratyayañ ca punar upādānam |</hi></p>
+
+<p>NidSa 5.8 <hi rend="it">tasya mamaitad abhavat | kasmin nu sati tṛṣṇā bhavati | kiṃpratyayā ca punas tṛṣṇā | tasya mama yoniśo manasi kurvata evaṃ yathābhūtasyābhi</hi>samaya udapādi | vedanāyāṃ satyāṃ tṛṣṇā bhavati | vedanāpratyayā ca punas tṛṣṇā |</p>
+
+<p>NidSa 5.9 ta<hi rend="it">sya</hi> mam<hi rend="it">ai</hi>tad abhavat | kasmin nu sati vedanā bhavati | kiṃpratyayā ca punar vedanā | tasya mama yo<hi rend="it">niśo ma</hi>nasi kurvata evaṃ yathābhūtasyābhisamaya udapādi | sparśe sati veda<hi rend="it">nā bha</hi>vati | sparśapratyayā ca punar vedanā |</p>
+
+<p>NidSa 5.10 <hi rend="it">tasya mamaitad a</hi>bhavat | kasmin nu sati sparśo bhavati | <hi rend="it">kiṃpratyaya</hi>ś <hi rend="it">ca</hi> punaḥ sparśaḥ | tasya mama yoniśo <hi rend="it">ma</hi>nasi kurvata evaṃ yathābhūta<hi rend="it">sy</hi>ā<hi rend="it">bh</hi>i<hi rend="it">samaya udapādi |</hi> ṣaḍāyatane sati sparśo bhavati | ṣaḍāyatanapratyayaś ca pu<hi rend="it">naḥ sparśaḥ |</hi></p>
+
+<p>NidSa 5.11 <hi rend="it">tasya mamaitad a</hi>bhavat | kasmin nu sati ṣaḍāya<hi rend="it">tanaṃ</hi> bhavati | kiṃpratyayañ ca <hi rend="it">p</hi>u<hi rend="it">naḥ ṣaḍāyatanam | ta</hi>sya mama yoniśo manasi kurvata evaṃ yath<hi rend="it">ā</hi>bhūtasyābhisamaya udapādi | nāmarūpe sati ṣaḍāyatanaṃ bhavati | nāmarūpapratyayañ ca punaḥ ṣaḍāyatanam |</p>
+
+<p>NidSa 5.12. tasya mamaitad abhavat | kasmin nu sat<hi rend="it">i nāma</hi>rūpaṃ bhavati | kiṃpratyañ ca punar nāmarūpam | tasya mama yoniśo manasi <hi rend="it">kurva</hi>ta evaṃ yathābhūtasyābhisamaya uda<hi rend="it">pādi | vijñāne sati nā</hi>marūpaṃ bhavati | vijñānapra<hi rend="it">tyayañ ca punar nāmarūpam |</hi></p>
+
+<p>NidSa 5.13 tasya mamaitad abhavat | kasmin <hi rend="it">nu sati vijñānaṃ bhava</hi>t<hi rend="it">i</hi> | kiṃpratyayañ ca punar vijñ<hi rend="it">ānam | tasya mama yoniśo mana</hi>si kurvata evaṃ yathā<hi rend="it">bhūtasyābhisamaya udapādi | saṃskāreṣu satsu vijñānaṃ bhavati | saṃskārapratyayañ ca punar vijñānam |</hi></p>
+
+<p>NidSa 5.14 <hi rend="it">tasya mamaitad abhavat | kasmin nu sati saṃskārā bhavanti | kiṃpratyayāś ca punaḥ saṃskārāḥ | tasya mama yoniśo manasi kurvata evaṃ yathābhūtasyābhisamaya udapādi | avidyāyāṃ satyāṃ saṃskārā bhavanti | avidyāpratyayāś ca punaḥ saṃskārāḥ |</hi></p>
+
+<p>NidSa 5.15 <hi rend="it">ity avidyāpratyayāḥ saṃskārāḥ | saṃskārapratyayaṃ vijñānam | vijñānapratyayaṃ nāmarūpam | nāmarūpapratyayaṃ ṣaḍāyatanam | ṣaḍāyatanapratyayaḥ sparśaḥ | sparśapratyayā vedanā | vedanāpratyayā tṛṣṇā | tṛṣṇāpratyayam upādānam | upādānapratyayo bhavaḥ | bhavapratyayā jatiḥ | jātipratyayaṃ jarāmaraṇaṃ śokaparidevaduḥkhadaurmanasyopāyāsāḥ saṃbhavanti |</hi>
+  <hi rend="it">eva</hi>m as<hi rend="it">ya kevalasya maha</hi>to duḥ<hi rend="it">khaskandhasya samudayo bha</hi>vati |</p>
+
+<p>NidSa 5.16 tasya mamaita<hi rend="it">d abhava</hi>t | kasmin <hi rend="it">nv asati jarāma</hi>raṇaṃ <hi rend="it">na bhavati | kasya nirodhāj ja</hi>rāma<hi rend="it">raṇanirodhaḥ | tasya</hi> ma<hi rend="it">ma yoniśo manasi kurvata e</hi>vaṃ ya<hi rend="it">thā</hi>bhūtasyābhi<hi rend="it">sana</hi>ya <hi rend="it">udapādi | jātyām asatyāṃ jar</hi>āma<hi rend="it">raṇaṃ na bhavati | jā</hi>t<hi rend="it">i</hi>ni<hi rend="it">rodhāj jarāmaraṇanirodhaḥ |</hi></p>
+
+<p>NidSa 5.17 <hi rend="it">ta</hi>sya <hi rend="it">mamaitad abha</hi>vat | kasmin nv asat<hi rend="it">i jātir na bhavati | kasya</hi> niro<hi rend="it">dhāj jātinirodhaḥ | tas</hi>ya mama <hi rend="it">yoniśo manasi kurvata evaṃ yathābhūtasyābhisa</hi>maya udapādi / bhave 'sati <hi rend="it">jāti</hi>r na bhavati | bhavanirodhāj jātinirodhaḥ |</p>
+
+<p>NidSa 5.18 tasya mamaitad ahavat | kasmin nv asati bhavo na bhavati | kasya nirodhād bhavanirodhaḥ | tasya mama yoniśo manasi kurvta evaṃ yathābhūtasyābhisamaya udapādi | upādāne 'sati bhavo na bhavati | upādānanirodhād bhavanirodhaḥ |</p>
+
+<p>NidSa 5.19 tasya mamaitad abhavat | kasmin nv asaty upādānaṃ na bhavati | kasya nirodhād upādānanirodhaḥ | tasya mama yoniśo manasi kurvata evaṃ yathābhūtasyābhisamava udapādi | tṛṣṇāyām asatyām upādānaṃ na bhavati | tṛṣṇānirodhād upādānanirodhaḥ |</p>
+
+<p>NidSa 5.20 tasya mamaitad abhavat | kasmin nv asati tṛṣṇā na bhavati | kasya nirodhāt tṛṣṇānirodhaḥ | tasya mama yoniśo manasi kurvata evaṃ yathābhūtasyābhisamaya udapādi | vedanāyām asatyāṃ tṛṣṇā na bhavati | vedanānirodhāt ṭṣṇānirodhaḥ |</p>
+
+<p>NidSa 5.21 tasya mamaitad abhavat | kasmin nv asati vedanā na bhavati | kasya nirodhād vedanānirodhaḥ | tasya mama yoniśo manasi kurvata evaṃ yathābhūtasyābhisamaya udapādi | sparśe 'sati vedanā na bhavati | sparśanirodhād vedanānirodhaḥ |</p>
+
+<p>NidSa 5.22 tasya mamaitad abhavat | kasmin nv asati sparśo na bhavati | kasya nirodhāt sparśanirodhaḥ | tasya mama yoniśo manasi kurvata evaṃ yathābhūtasyābhisamaya udapādi | ṣaḍāyatane 'sati sparśo na bhavati | ṣaḍāyatananirodhāt sparśanirodhaḥ |</p>
+
+<p>NidSa 5.23 tasya mamaitad abhavat | kasmin nv asati ṣaḍāyatanaṃ na bhavati / kasya nirodhāt ṣaḍāyatananirodhaḥ | tasya mama yoniśo manasi kurvata evaṃ yathābhūtasyābhisamaya udapādi | nāmarūpe 'sati ṣaḍāyatanaṃ na bhavati | nāmarūpanirodhāt ṣaḍāyatananirodhaḥ |</p>
+
+<p>NidSa 5.24 tasya mamaitad abhavat | kasmin nv asati nāmarūpaṃ na bhavati | kasya nirodhān nāmārūpanirodhaḥ | tasya mama yoniśo manasi kurvata evaṃ yathābhūtasyābhisamaya udapādi | vijñāne 'sati nāmarūpaṃ na bhavati | vijñānanirodhān nāmarūpanirodhaḥ |</p>
+
+<p>NidSa 5.25 tasya mamaitad abhavat | kasmin nv asati vijñānaṃ na bhavati | kasya nirodhād vijñānanirodhaḥ | tasya mama yoniśo manasi kurvata evaṃ yathābhūtasyābhisamaya udapādi | saṃskāreṣv asatsu vijñānaṃ na bhavati / saṃskāranirodhād vijñānanirodhaḥ |</p>
+
+<p>NidSa 5.26 tasya mamaitad abhavat | kasmin nv asati saṃskārā na bhavanti | kasya nirodhāt saṃskāranirodhaḥ | tasya mama yoniśo manasi kurvata evaṃ yathābhūtasyābhisamaya udapādi | avidyāyām asatyāṃ saṃskārā na bhavanti | avidyānirodhāt saṃskāranirodhaḥ |</p>
+
+<p>NidSa 5.27 ity avidyānirodhāt saṃskāranirodhaḥ | saṃskāranirodhād vijñānanirodhaḥ | vijñānanirodhān nāmarūpanirodhaḥ | nāmarūpanirodhāt ṣaḍāyatananirodhaḥ | ṣaḍāyatananirodhāt sparśanirodhaḥ | sparśanirodhād vedanānirodhaḥ | vedanānirodhāt tṛṣṇānirodhaḥ | tṛṣṇānirodhād upādānanirodhaḥ / upādānanirodhād bhavanirodhaḥ | bhavanirodhāj jātinirodhaḥ | jātinirodhāj jarāmaraṇanirodhaḥ | śokaparidevaduḥkhadaurmanasopāyāsā nirudhyante | evam asya kevalasya mahato duḥkhaskandhasya nirodho bhavati |</p>
+
+<p>NidSa 5.28 tasya mamaitad abhavat | adhigato me paurāṇo mārgaḥ paurāṇaṃ vartma paurāṇī puṭā pūrvakair ṛṣibhir yātānuyātā |</p>
+
+<p>NidSa 5.29 tadyathā puruṣo 'raṇye pravaṇe 'nvāhiṇḍann adhigacchet paurāṇaṃ mārgaṃ paurāṇaṃ vartma paurāṇīṃ pūṭāṃ pūrvakair manuṣyair yātānuyātām | sa tam anugacchet | sa tam anugacchan sa tatra paśyet paurāṇaṃ nagaraṃ paurāṇīṃ rājadhānī<hi rend="it">m</hi> ārāmasaṃ<hi rend="it">pannāṃ</hi> vanasaṃpannāṃ puṣkariṇīsaṃpannāṃ śubhāṃ dāpavatī<hi rend="it">ṃ</hi> ramaṇīyā<hi rend="it">m</hi> |</p>
+
+<p>NidSa 5.30 tasyaivaṃ syāt | yanv ahaṃ gatvā rājña ārocayeyam / a<hi rend="it">tha sa puruṣo rājña evam</hi> ārocayet | yat khalu deva jānīyāḥ | ihāham adrākṣam araṇye pravaṇe 'nvāhiṇḍan paurāṇaṃ mārgaṃ <hi rend="it">paurāṇaṃ vartma paurāṇīṃ puṭāṃ p</hi>ūrvakair manuṣyair yātānuyātām | so 'haṃ tam anugatavān | so 'haṃ tam anugacchann adrākṣaṃ paurāṇaṃ nagaraṃ paurā<hi rend="it">ṇīṃ rājadhānīṃ vanasaṃ</hi>pannāṃ puṣkariṇīsaṃpannāṃ śubhāṃ dāpavatīṃ ramaṇīyām | tāṃ devo nagarīṃ māpayatu |</p>
+
+<p>NidSa 5.31 atha sa rājā <hi rend="it">tāṃ nagarīṃ māpayet | sā syād a</hi>pareṇa samayena rājadhānī ṛddhā ca sphītā ca kṣemā ca subhikṣā cākīrṇabahujanamanuṣyā ca |</p>
+
+<p>NidSa 5.32 eva<hi rend="it">m eva adhigato me paurāṇo mārgaḥ paurāṇaṃ vartma paurāṇī puṭā</hi> pūrvakair ṛṣibhir yātānuyātā |</p>
+
+<p>NidSa 5.33 ka<hi rend="it">tamaś ca sa paurāṇo mārgaḥ paurāṇaṃ vartma paurāṇī puṭā pūrvakair ṛṣibhir yātānuyā</hi>tā |</p>
+
+<p>NidSa 5.34 yad utāryāṣṭā<hi rend="it">ṅgo mārgas ta</hi>dyathā samyagdṛṣṭiḥ samyaksaṃkaIpaḥ sa<hi rend="it">m</hi>ya<hi rend="it">gvā</hi>k samyakkarmāntaḥ samyagājīvaḥ samyagvyāyāmaḥ <hi rend="it">sa</hi>myaksmṛtiḥ samya<hi rend="it">ksamādhiḥ |</hi></p>
+
+<p>NidSa 5.35 <hi rend="it">a</hi>sau bhiksavaḥ paurāṇo mārgaḥ paurāṇaṃ vartma paurāṇī puṭā pūrvakair ṛṣibhir yātānuyā<hi rend="it">tā</hi> |</p>
+
+<p>NidSa 5.36 <hi rend="it">tam aham a</hi>nuga<hi rend="it">tavān | tam anugacchañ jarāma</hi>raṇaṃ <hi rend="it">a</hi>drākṣam | jarāmaraṇasamudayaṃ <hi rend="it">jarāmara</hi>ṇanirodhaṃ jarāmaraṇanirodhagāminīṃ pratipadam adrākṣam |</p>
+
+<p>NidSa 5.37 e<hi rend="it">vaṃ jātibhavopādā</hi>natṛṣṇāvedanāsparśaṣaḍāyatananāmarūpavijñānaṃ saṃskārān adrākṣam | saṃsk<hi rend="it">ā</hi>rasamudayaṃ saṃskāranirodhaṃ saṃskāranirodhagāminīṃ pratipadam adrākṣam |</p>
+
+<p>NidSa 5.38 so 'ham imān dharmān svayam abhijñ<hi rend="it">āya sākṣīkṛtvā</hi> bhikṣūṇām ārocayāmi | bhikṣūṇīnām upāsakānām upāsikānāṃ nānātīrthyaśramaṇa<hi rend="it">brāhma</hi>ṇacarakaparivrājakānām ārocayāmi |</p>
+
+<p>NidSa 5.39 tatra bhikṣur api samyakpratipadyamāna ārādhiko bhavati / ārādhayati nyāyaṃ dharmaṃ kuśalam |
+  bhikṣūṇy apy upāsako 'py upāsikāpi samyakpratipadya<hi rend="it">mā</hi>nā ārādhikā bhavati | ārādhayati nyāyaṃ dharmaṃ kuśalam |</p>
+
+<p>NidSa 5.40 evam idaṃ brahmacaryaṃ vaistārikaṃ bhavati bahujanyaṃ pṛthubhūtaṃ yāvad devamanuṣyebhyaḥ samyaksuprakāśitam ||</p>
+
+<p>Sūtra 6: naḍakalāpika (Rohrbundel)</p>
+
+<p>NidSa 6.1 <hi rend="it">bhagavān rā</hi>jagṛhe viha<hi rend="it">rati veṇuvane kalandakanivāpe |</hi></p>
+
+<p>NidSa 6.2 <hi rend="it">tena khalu samayenāyuṣmāñ chāriputra āyuṣmāṃś ca mahākoṣṭhilo rājagṛhe viharato gṛdhrakūṭe parvate |</hi></p>
+
+<p>NidSa 6.3. <hi rend="it">athāyuṣmāñ chāriputraḥ sāyāhne pratisaṃ</hi>layanād vyu<hi rend="it">tth</hi>āya <hi rend="it">ye</hi>nāyu<hi rend="it">ṣ</hi>m<hi rend="it">ān</hi> mahā<hi rend="it">k</hi>o<hi rend="it">ṣṭhilas tenopa</hi>jagāma | <hi rend="it">upet</hi>y<hi rend="it">āyu</hi>ṣma<hi rend="it">tā mahākoṣṭhilena sārdhaṃ saṃmukhaṃ sammodanīṃ saṃrañjanīṃ kathāṃ vividhām upasaṃhṛtyaikānte nyaṣīdat | ekāntaniṣaṇṇa āyuṣmāñ chāriputra āyuṣmantaṃ mahākoṣṭhilam idam avocat /</hi></p>
+
+<p>NidSa 6.4 <hi rend="it">pṛcchāma āyuṣman mahākoṣṭhila kañcid eva pradeśam | saced avakāśaṃ kuryāḥ praśnasya vyākaraṇ</hi>āya |</p>
+
+<p>NidSa 6.5 pṛcchāy<hi rend="it">u</hi>ṣmañ chāriputra | śrutvā te vedayi<hi rend="it">ṣ</hi>y<hi rend="it">āmi</hi> |</p>
+
+<p>NidSa 6.6a ki<hi rend="it">n</hi> nv āyuṣman mahāko<hi rend="it">ṣṭhila asti jarā | asty evāyuṣmañ chāriputra jarā |</hi></p>
+
+<p>NidSa 6.6b <hi rend="it">kin nv āyuṣman mahākoṣthila asti maraṇam | asty evāyuṣmañ chāriputra maraṇam |</hi></p>
+
+<p>NidSa 6.7 <hi rend="it">kin nv āyuṣmān mahāko</hi>ṣṭhila svayaṃkṛtaṃ jarāmaraṇam | aho svit parakṛtam | aho svit svayaṃkṛtañ ca parakṛ<hi rend="it">tañ ca | aho svid asvayaṃkāraparakārahetusamutpannaṃ jarāmaraṇam |</hi></p>
+
+<l><hi rend="it">na hy evāyuṣmañ</hi> chāriputra svayaṃkṛtaṃ ja<hi rend="it">r</hi>ā<hi rend="it">ma</hi>raṇam | na parakṛtaṃ | na svayaṃkṛtañ ca parakṛtañ ca | nāpy asvayaṃkārapa<hi rend="it">rakārahetusamutpannaṃ jarāmaraṇam | api tu jātipratyayaṃ jarāmaraṇam |</hi></l>
+
+<p>NidSa 6.8 <hi rend="it">evaṃ jātir bhava upādā</hi>na<hi rend="it">ṃ</hi> tṛṣṇā vedanā spa<hi rend="it">r</hi>śaḥ <hi rend="it">ṣa</hi>ḍāyatanaṃ nāmarūpaṃ vācyam |</p>
+
+<p>NidSa 6.9 kin nv āyuṣm<hi rend="it">an ma</hi>hākoṣṭhila s<hi rend="it">vayaṃkṛtaṃ nāmarūpam | aho svit parakṛtaṃ | aho svit svayaṃkṛtañ ca parakṛtañ ca | aho svid asvayaṃkāra</hi>parakārahetusam<hi rend="it">u</hi>tpannaṃ nāmarūpam |</p>
+
+<p>na hy evāyuṣmañ chāripurta s<hi rend="it">vaya</hi>ṃ<hi rend="it">kṛtaṃ nāmarūpam | na parakṛtaṃ | na svayaṃkṛtañ ca parakṛtañ ca | nāpy asvayaṃkāraparakārahetusamutpannaṃ</hi> nāmarūpam | api tu vijñānapratyaya<hi rend="it">ṃ</hi> nāmarūpam |</p>
+
+<p>NidSa 6.10 kin nv āyuṣman ma<hi rend="it">hākoṣṭhila svayaṃkṛtaṃ vijñānam | aho svit parakṛtam | aho svit svayaṃkṛtañ ca parakṛtañ ca / aho svid asvayaṃkāraparakā</hi>rah<hi rend="it">e</hi>tusamutpannaṃ vijñānam |
+na hy evāyuṣmañ chāriputra svayaṃkṛta<hi rend="it">ṃ vijñānam | na parakṛtaṃ / na svayaṃkṛtañ ca parakṛtañ ca | nāpy asvayaṃkāraparakārahetusamutpannaṃ vijñāna</hi>m / api tu nāmarūpapratyayaṃ vijñānam |</p>
+
+<p>NidSa 6.11 idānīm evaṃ vayam āyuṣmato ma<hi rend="it">hākoṣthilasya bhāṣitasyārtham ājānīmaḥ</hi> |</p>
+
+<l><hi rend="it">na svayaṃkṛtaṃ nāmarūpaṃ | na parakṛtaṃ | na svayaṃkṛ</hi>ta<hi rend="it">ñ</hi> ca parak<hi rend="it">ṛ</hi>tañ ca / nāpy asvayaṃkāraparakārahetusamutpannaṃ nāma<hi rend="it">rūpam | api tu vijñānapratyayaṃ nāmarūpam |</hi></l>
+<p><hi rend="it">idānīṃ ca punar nāmarūpapratyayaṃ vijñānam ity ājānīmaḥ |</hi> ko nv āyuṣman mahākoṣṭhila <hi rend="it">a</hi>sya bhāṣitasyārtho draṣṭavyaḥ |</p>
+
+<p>NidSa 6.12 tenāsyāy<hi rend="it">uṣma</hi>ñ <hi rend="it">chāriputra upamāṃ te kariṣyāmi | upamayā hy atraikatyā vjñapuruṣā bhāṣitasyārtham ājānanti |</hi></p>
+
+<p>NidSa 6.13 <hi rend="it">tadya</hi>thā dvau naḍakalāpāv ākā<hi rend="it">ś</hi>e ucchṛtau syātām anyonyaṃ niśṛtau | a ...... <hi rend="it">e</hi>tāv anyonyaṃ niśṛtya tiṣṭhataḥ | yaduta vijñānapratyayaṃ nāmarūpam | n<hi rend="it">āmarūpapratyayaṃ vijñānam |</hi></p>
+
+<p>NidSa 6.14 <hi rend="it">sādhu sādhv āyuṣman mahākoṣṭhila yathā śrutavatāryaśrāvakeṇa samyag eva śāstuḥ śāsanam ājānatā su</hi>vinītena viśāradenāmṛtadṛśā amṛtaṃ dhātuṃ kāyena sākṣīkṛtvo<hi rend="it">pasaṃpadya viharatāyuṣmatā mahākoṣṭhilena imā evaṃrūpā gaṃbhīrā gaṃbhīrā praśnā vimṛśya v</hi>imṛśya samyakprajñayā pṛṣṭena vyākṛtāḥ |</p>
+
+<p>NidSa 6.15 cailoṇḍukam ivāyuṣmantaṃ m<hi rend="it">ahākoṣṭhilaṃ ye sabrahmacāriṇo mūrdhnā pariharanta āyuṣmato mahākoṣṭhilasya labherañ ca darśanaṃ labherañ ca paryupāsanaṃ te</hi>ṣā<hi rend="it">ṃ</hi> syur lābhāḥ sulab<hi rend="it">dhāḥ</hi> |
+asmākam api lābhāḥ sulabdhā ye vayam ā<hi rend="it">yuṣmato mahākoṣṭhilasya labhāmahe ca darśanaṃ labhāmahe ca paryupāsanam |</hi></p>
+
+<p>NidSa 6.16 <hi rend="it">sādhv a</hi>t<hi rend="it">rā</hi>yuṣmatā mahākoṣṭhilena dharmaparyāyo deśitaḥ | imam aha<hi rend="it">m u</hi>tsahāmi triṃś<hi rend="it">at</hi> ........</p>
+
+<p>NidSa 6.17 <hi rend="it">jarāmaraṇasya āyuṣman mahākoṣṭhi</hi>la bhikṣur nirvi<hi rend="it">d</hi>e <hi rend="it">v</hi>i<hi rend="it">rāg</hi>āya nirodhāya dharma<hi rend="it">ṃ</hi> deśayati dharmakathiko bhikṣur a<hi rend="it">lam asya vacanāya |</hi></p>
+
+<l><hi rend="it">jātibhavopādānatṛṣṇāvedanāsparśaṣaḍāyatananāmarūpavijñā</hi>nasya bh<hi rend="it">ikṣur</hi> nirvide v<hi rend="it">i</hi>rāgāya nirodhāya dharmaṃ deśayati <hi rend="it">dharma</hi>kathiko bhikṣur alam a<hi rend="it">sya vacanāya |</hi></l>
+
+<p>NidSa 6.18 <hi rend="it">jarāmaraṇasya bhikṣur nirvide virāgāya nirodhāya pratipanno bhavati dharmakathiko</hi> bhikṣ<hi rend="it">ur ala</hi>m asya vacanāya |
+yāvad vijñānasya bhikṣu<hi rend="it">r</hi> nirvi<hi rend="it">de</hi> virāgāya n<hi rend="it">iro</hi>dhāya <hi rend="it">pratipanno bhavati dharmakathiko bhikṣur alam asya vacanāya |</hi></p>
+
+<p>NidSa 6.19 <hi rend="it">jarāmaraṇasya bhikṣur nirvide virāgāya nirodhā</hi>yānupādāyāsravebhyaḥ samyaks<hi rend="it">u</hi>vimuk<hi rend="it">ta</hi>citto <hi rend="it">bhava</hi>ti <hi rend="it">dhar</hi>ma<hi rend="it">ka</hi>thi<hi rend="it">ko bhi</hi>kṣur <hi rend="it">alam asya vacanāya |</hi>
+<hi rend="it">yāvad vijñānasya bikṣur nirvide virāgāya nirodhāyānupādāyāsravebyaḥ samyaksu</hi>vimuktacitto bha<hi rend="it">vati</hi> dharmakathi<hi rend="it">ko</hi> bhikṣur alam asya <hi rend="it">vacan</hi>āya |</p>
+
+<p>NidSa 6.20 <hi rend="it">s</hi>ā<hi rend="it">dhu sādhv ā</hi>y<hi rend="it">u</hi>ṣma<hi rend="it">ñ</hi> ch<hi rend="it">āriput</hi>r<hi rend="it">a yathā śrutavatāryaśrāvakeṇa samyag eva śāstuḥ śāsanam ājānatā suvinī</hi>tena viśāra<hi rend="it">denāmṛtadṛśā</hi></p>
+
+<p>NidSa 6.21 <hi rend="it">pūrvavad yāvat paryu</hi>pā<hi rend="it">sanam |</hi></p>
+
+<p>NidSa 6.22 <hi rend="it">atha kin nv asyottare karaṇīyam iti tau satpuruṣāv anyonyabhāṣitam a</hi>bhina<hi rend="it">ndyānum</hi>odya utthāyāsānā<hi rend="it">t</hi> prakrāntau ||</p>
+
+<p>Sūtra 7: markata (Affe)</p>
+
+<p>NidSa 7.1 bā<hi rend="it">lo bhikṣavo '</hi>śrutavān pṛthagjanaś catu<hi rend="it">rma</hi>hābhautikāt kāyā<hi rend="it">n n</hi>i<hi rend="it">rvid</hi>y<hi rend="it">e</hi>ta vi<hi rend="it">raj</hi>y<hi rend="it">eta</hi> vimu<hi rend="it">cye</hi>ta |</p>
+
+<p>NidSa 7.2 ta<hi rend="it">t kasmād dhetoḥ | dṛśyate bhikṣavo 'sya caturma</hi>hā<hi rend="it">bhauti</hi>kasya kāyasya ā<hi rend="it">ca</hi>yo 'py apaca<hi rend="it">yo 'p</hi>y <hi rend="it">ādānam a</hi>pi nikṣepaṇam api |</p>
+
+<p>NidSa 7.3 yat punar idam ucyate <hi rend="it">citta</hi>m i<hi rend="it">ti vā</hi> mama iti <hi rend="it">v</hi>ā vij<hi rend="it">ñānam i</hi>t<hi rend="it">i</hi> vā tat<hi rend="it">o</hi> nā<hi rend="it">laṃ</hi> bālenā<hi rend="it">śrutavatā pṛthagjane</hi>na ni<hi rend="it">rvett</hi>u<hi rend="it">ṃ</hi> vā <hi rend="it">v</hi>iraktuṃ vā vimoktuṃ vā |</p>
+
+<p>NidSa 7.4 <hi rend="it">ta</hi>t kasmād dhetoḥ | dīrgha<hi rend="it">rāt</hi>r<hi rend="it">a</hi>m eta<hi rend="it">d</hi> bālenāśrutavatā pṛthagja<hi rend="it">ne</hi>na kelāyitaṃ go<hi rend="it">p</hi>āyitaṃ mamāyitam upagatam upādattam etan <hi rend="it">ma</hi>ma | e<hi rend="it">ṣ</hi>o <hi rend="it">'ham asmi | eṣa me ātmeti |</hi></p>
+
+<p><hi rend="it">ta</hi>smāt tato nālaṃ bā<hi rend="it">len</hi>āśrutavatā pṛthagja<hi rend="it">n</hi>e<hi rend="it">na</hi> nirvettuṃ vā viraktuṃ vā vimoktuṃ vā |</p>
+
+<p>NidSa 7.5 varaṃ <hi rend="it">bhikṣavo</hi> bālenāśru<hi rend="it">ta</hi>vatā pṛthagjanenāyam eva caturmahābhau<hi rend="it">t</hi>i<hi rend="it">kaḥ kā</hi>yaḥ ātmata u<hi rend="it">paga</hi>to na tv eva vijñānam |</p>
+
+<p>NidSa 7.6 tat kasmā<hi rend="it">d</hi> dh<hi rend="it">et</hi>oḥ | dṛśyate cat<hi rend="it">urma</hi>h<hi rend="it">ā</hi>bhautikaḥ kāyo daśāpi varṣāṇi tiṣṭha<hi rend="it">māno viṃśa</hi>ti tri<hi rend="it">ṃ</hi>śac catvāriṃśat pañcāśad varṣaśatam kiñcid vā bhū<hi rend="it">yo 'pi tiṣṭhamā</hi>naḥ parihriyamāṇaḥ |</p>
+
+<p>NidSa 7.7 yat pun<hi rend="it">ar</hi> idam ucya<hi rend="it">te</hi> c<hi rend="it">ittam</hi> i<hi rend="it">ti</hi> vā <hi rend="it">mama</hi> iti vā vijñānam iti vā tat teṣāṃ <hi rend="it">teṣāṃ</hi> rātridivasānām atyayā<hi rend="it">t</hi> kṣaṇalavamuhūrtānā<hi rend="it">m a</hi>tyayāt <hi rend="it">pravartate</hi> bahunānāprakāram |</p>
+
+<p>anyad evotpadyamā<hi rend="it">na</hi>m u<hi rend="it">tpa</hi>dy<hi rend="it">ate</hi> a<hi rend="it">nyad</hi> e<hi rend="it">va nirudhyamānaṃ ni</hi>rudhyate |</p>
+
+<p>NidSa 7.8 tadyathā markaṭo vṛkṣasya śākhām ālaṃbeta | <hi rend="it">t</hi>ām utsṛjyānyām ālaṃbeta | evam eva yat punar idam ucyate cittam i<hi rend="it">ti v</hi>ā <hi rend="it">mana iti vā vijñānam iti vā</hi> tat teṣāṃ teṣāṃ rātridivasānām atyayā<hi rend="it">t</hi> pūrvavad yāva<hi rend="it">n</hi> nirudhyamā<hi rend="it">na</hi>ṃ nirudhyate |</p>
+
+<p>NidSa 7.9 tatra śrutavān āryāś<hi rend="it">rāvakaḥ pratī</hi>tyasamu<hi rend="it">tp</hi>ādam eva sādhu ca <hi rend="it">su</hi>ṣṭhu ca yo<hi rend="it">niśa</hi>ḥ praty<hi rend="it">avekṣate |</hi></p>
+
+<p>NidSa 7.10 <hi rend="it">yad uta sukhavedanīyaṃ</hi> sparśaṃ pratītyotpadyate sukhā vedanā | sa sukhaṃ vedayāna<hi rend="it">ḥ</hi> sukhā<hi rend="it">ṃ</hi> vedanā<hi rend="it">ṃ</hi> vedayāmīti ya<hi rend="it">thābhūtaṃ prajā</hi>nāt<hi rend="it">i |</hi>
+a<hi rend="it">syaiva su</hi>khaveda<hi rend="it">nīyasya sparśasya nir</hi>o<hi rend="it">dhād yā tajjā sukhavedanīyaṃ spa</hi>rśaṃ pratītyotpannā <hi rend="it">sukh</hi>ā <hi rend="it">v</hi>e<hi rend="it">da</hi>nā sā niruddhā sā vyupaśā<hi rend="it">nt</hi>ā sā śītībhūt<hi rend="it">ā sā</hi> astaṃ<hi rend="it">gatā |</hi></p>
+
+<p>NidSa 7.11 <hi rend="it">evam eva duḥkhavedanīyaṃ saumanasyavedanīyaṃ daurmanasyaveda</hi>nīyam |</p>
+
+<p>NidSa 7.12 upek<hi rend="it">ṣ</hi>ā<hi rend="it">vedanīyaṃ s</hi>pa<hi rend="it">rśaṃ</hi> pratītyotpadyate up<hi rend="it">ek</hi>ṣā | sa upekṣakaḥ <hi rend="it">sa</hi>māno u<hi rend="it">pekṣāṃ vedayā</hi>m<hi rend="it">ī</hi>ti yathābhūtaṃ <hi rend="it">p</hi>r<hi rend="it">ajānā</hi>ti |
+a<hi rend="it">syaiva upekṣāvedanīyasya sparśasya nirodhād yā tajjā u</hi>pekṣā<hi rend="it">veda</hi>nīyaṃ sparśa<hi rend="it">ṃ</hi> pratītyotpannā upekṣā sā niruddhā sā vyupaśāntā sā śītībhūtā sā <hi rend="it">a</hi>staṃgatā |</p>
+
+<p>NidSa 7.13 tasyaivaṃ bhava<hi rend="it">ti | i</hi>tīmā veda<hi rend="it">nāḥ</hi> spa<hi rend="it">r</hi>śa<hi rend="it">jāḥ</hi> spar<hi rend="it">śasamudayāḥ sparśajātīyāḥ spa</hi>rśaprabhavāḥ | tasya tasya sparśasya samudayāt tās tā vedanāḥ samudayanti |
+tasya tasya spa<hi rend="it">rśasya</hi> nirodhāt tās tā vedanā nirudhyante vyupaśamant<hi rend="it">i</hi> śītībh<hi rend="it">avanty astaṃgacchanti |</hi></p>
+
+<p>NidSa 7.14. <hi rend="it">evaṃ paśyan śru</hi>tavān āryaśrāvako rūpād api nirvidyate vedanāyāḥ saṃjñāyāḥ saṃskārebhyo vijñanād a<hi rend="it">pi nirvi</hi>dyate | nirviṇṇo virajyate | virakto vimucyate | vimuktasya v<hi rend="it">i</hi>mu<hi rend="it">k</hi>t<hi rend="it">o 'smīti jñānadarśa</hi>naṃ bhavati | kṣīṇā me jātir uṣitaṃ brahma<hi rend="it">ca</hi>ryaṃ kṛtaṃ karaṇīyaṃ nāparam asmād bhavaṃ praj<hi rend="it">ā</hi>n<hi rend="it">ā</hi>mi ||</p>
+
+<p>Sūtra 8: dvayaṃ kāṣṭhe (Zwei Hölzer)</p>
+
+<p>NidSa 8.1 etad eva sūtraṃ tāvad vaktavyaṃ yāvan niru<hi rend="it">dh</hi>yante vyupaśaman<hi rend="it">ti śī</hi>tībhavan<hi rend="it">ty a</hi>staṃgacchanti |</p>
+
+<p>NidSa 8.2 tadyathā dvayoḥ kāṣṭhayoḥ saṃ<hi rend="it">ghaṭanā</hi>t sannipātāt samavāyād agni<hi rend="it">r</hi> jāyate teja<hi rend="it">ḥ</hi> prādurbha<hi rend="it">va</hi>ti |
+atha tayor eva dvayoḥ kāṣṭhayoḥ nānābhāvād vinābhāvād ya uṣmā so 'n<hi rend="it">ta</hi>rhīy<hi rend="it">eta</hi> śītībhavetāṃ kāṣṭhe |</p>
+
+<p>NidSa 8.3 evam eva tasyaivaṃ bhavati | itīme vedanāḥ sparśajāḥ sparśasamudayāḥ sparśajātīyāḥ sparśaprabhavāḥ |
+tasya tasya sparśasya sam<hi rend="it">u</hi>dayāt tā<hi rend="it">s tā</hi> veda<hi rend="it">nāḥ</hi> samudayanti |
+ta<hi rend="it">sya ta</hi>sya sparśasya nirodhāt tās tā vedanā nirudhyante vyupaśamanti śītībhavanty astaṃgacchanti |</p>
+
+<p>NidSa 8.4 evaṃ paśyan śrutavān āryaśrāvakaḥ sparśād api parimuc<hi rend="it">ya</hi>t<hi rend="it">e |</hi> vedanāyāḥ saṃjñā<hi rend="it">yāḥ saṃsk</hi>ārebhyo vijñānād a<hi rend="it">pi</hi> parimucyate | parimucyate jātijarāvyādhimaraṇaśo<hi rend="it">ka</hi>parideva<hi rend="it">du</hi>ḥkhadaurmanas<hi rend="it">y</hi>opā<hi rend="it">y</hi>ā<hi rend="it">sebhyaḥ</hi> | pa<hi rend="it">r</hi>imucyate duḥkhād iti vadāmi ||</p>
+
+<p>Sūtra 9: kāṃsī (Messingschale)</p>
+
+<p>NidSa 9.1 tatra bhagavān bhikṣūn ā<hi rend="it">mantraya</hi>ti sma |</p>
+
+<p>NidSa 9.2 saṃmṛśatha <hi rend="it">yū</hi>yaṃ mayā deśitam antaḥsaṃmarśam |</p>
+
+<p>NidSa 9.3 athānyataro bhikṣ<hi rend="it">ur</hi> u<hi rend="it">tthā</hi>yāsa<hi rend="it">nā</hi>d e<hi rend="it">kāmsam utta</hi>rā<hi rend="it">saṃgaṃ kṛtvā yena bhagavāṃ</hi>s <hi rend="it">t</hi>enāñjali<hi rend="it">ṃ</hi> praṇamya bhagavantam idam avocat |</p>
+
+<p>NidSa 9.4 ahaṃ tv evaṃ saṃmṛś<hi rend="it">āmi</hi> bhaga<hi rend="it">vatā deśitam antaḥsaṃmarśam |</hi></p>
+
+<p>NidSa 9.5 .................... i va ............................................ <hi rend="it">nā</hi>rādhayati tena praśnavyākaraṇena|</p>
+
+<p>NidSa 9.6 tena khalu <hi rend="it">sama</hi>ye<hi rend="it">na</hi> ......</p>
+
+<p>NidSa 9.W <hi rend="it">atīte 'py adhvani ye kecic chramaṇā v</hi>ā b<hi rend="it">rāhmaṇā vā yal loke priyarūpaṃ sā</hi>tarūpa<hi rend="it">ṃ</hi> ta<hi rend="it">n</hi> nityataḥ <hi rend="it">sa</hi>ma<hi rend="it">nvadrākṣuḥ | dhruvataḥ kṣemata ārogyata ātmata ātmīyataḥ samanvadrākṣus te tṛṣṇāṃ prāvardhayiṣuḥ | ye tṛṣṇāṃ prāvardhayi</hi>ṣus te <hi rend="it">upadhiṃ prāvardhayiṣuḥ | ye upadhiṃ p</hi>rāvardhayiṣus te duḥkhā<hi rend="it">ṃ p</hi>r<hi rend="it">āvardha</hi>yiṣu<hi rend="it">ḥ | ye duḥkhaṃ prāvardhayiṣus te</hi>na <hi rend="it">pari</hi>mucya<hi rend="it">nte sma</hi> j<hi rend="it">ā</hi>t<hi rend="it">ijarāv</hi>y<hi rend="it">ādhimara</hi>ṇa<hi rend="it">śokaparidevaduḥ</hi>kha<hi rend="it">daurma</hi>nasyopāyā<hi rend="it">sebhyaḥ | na parimucyante</hi> sma duḥkhād iti vadāmi |</p>
+
+<p>NidSa 9.X ye <hi rend="it">tu</hi> kecic chra<hi rend="it">maṇā vā brāhmaṇā vā ya</hi>l loke pri<hi rend="it">yar</hi>ū<hi rend="it">paṃ</hi> sā<hi rend="it">ta</hi>rū<hi rend="it">paṃ</hi> ta<hi rend="it">d rogataḥ samanvad</hi>r<hi rend="it">ā</hi>kṣuḥ | gaṇḍa<hi rend="it">taḥ</hi> śalyato 'ghato 'ni<hi rend="it">tyato duḥkhataḥ śūnyato</hi> 'nātmataḥ sam<hi rend="it">anvadrā</hi>kṣus te tṛ<hi rend="it">ṣṇāṃ prajahuḥ | ye tṛṣṇāṃ praja</hi>hus te u<hi rend="it">padh</hi>i<hi rend="it">ṃ</hi> prajahuḥ | ye upadhiṃ prajahu<hi rend="it">s te</hi> duḥkhaṃ prajahu<hi rend="it">s t</hi>e parimu<hi rend="it">cyan</hi>te <hi rend="it">sma</hi> jā<hi rend="it">ti</hi>jarāvyādhi<hi rend="it">maraṇaśoka</hi>pari<hi rend="it">d</hi>evaduḥkha<hi rend="it">daurmanasyo</hi>pāyā<hi rend="it">sebhyaḥ | parimucyante sma duḥkhād i</hi>ti <hi rend="it">va</hi>dāmi |{Hs.: gaṇḍa<hi rend="it">taḥ</hi> śalyato 'gato 'ni<hi rend="it">tyato</hi>}</p>
+
+<p>NidSa 9.Y anāgate'; py adhvani ye k<hi rend="it">e</hi>cic chramaṇā vā brahmaṇā vā yal loke <hi rend="it">pr</hi>iyarūpa<hi rend="it">ṃ sātarū</hi>pa<hi rend="it">ṃ</hi> tan nityataḥ sa<hi rend="it">manudrakṣyanti |</hi> dhruvataḥ <hi rend="it">kṣemata ārogyata ātmata</hi> ātmīyataḥ samanudrak<hi rend="it">ṣ</hi>yanti te tṛṣṇ<hi rend="it">āṃ pra</hi>vardhayiṣyanti | ye tṛṣṇā<hi rend="it">ṃ</hi> pravardhayiṣyanti te upadhiṃ pravardhayiṣyan<hi rend="it">ti</hi> | y<hi rend="it">e</hi> upadhiṃ pravardhayiṣyant<hi rend="it">i</hi> te duḥkha<hi rend="it">ṃ</hi> pravardhayi<hi rend="it">ṣyanti | ye duḥkhaṃ pravardhayi</hi>ṣya<hi rend="it">n</hi>ti te na parimokṣyante jātijarā<hi rend="it">vyādhi</hi>maraṇaśokaparidevaduḥkhadaurmana<hi rend="it">s</hi>y<hi rend="it">o</hi>pāyā<hi rend="it">s</hi>ebhyaḥ | <hi rend="it">na parimok</hi>ṣya<hi rend="it">nt</hi>e duḥkhād iti vadāmi |</p>
+
+<p>NidSa 9.Z ye tu keci<hi rend="it">c chra</hi>maṇ<hi rend="it">ā vā brāhmaṇā vā yal loke priya</hi>rūpaṃ sātarūpaṃ tad rogataḥ sama<hi rend="it">nudra</hi>kṣyanti | gaṇ<hi rend="it">ḍa</hi>ta<hi rend="it">ḥ</hi> śalya<hi rend="it">to</hi> 'ghato 'n<hi rend="it">i</hi>tyato du<hi rend="it">ḥkhataḥ</hi> śūnyato 'nā<hi rend="it">tma</hi>taḥ samanu<hi rend="it">d</hi>rakṣyanti te t<hi rend="it">ṛ</hi>ṣṇā<hi rend="it">ṃ</hi> prahāsyanti | ye <hi rend="it">tṛṣṇāṃ prahāsyanti te upadhiṃ</hi> prahāsyanti | ye upadhi<hi rend="it">ṃ</hi> prahās<hi rend="it">ya</hi>n<hi rend="it">ti te</hi> duḥkhaṃ prahā<hi rend="it">sya</hi>n<hi rend="it">ti | ye duḥkhaṃ prahāsya</hi>nti te <hi rend="it">parimokṣyante</hi> jātija<hi rend="it">rā</hi>vy<hi rend="it">ā</hi>dhimaraṇaśoka<hi rend="it">pari</hi>deva<hi rend="it">duḥ</hi>kha<hi rend="it">daurmanasyopāyāsebhyaḥ | parimokṣyante</hi> duḥkhād iti vadāmi || {Hs.: gaṇ<hi rend="it">ḍa</hi>ta<hi rend="it">ḥ</hi> śalya<hi rend="it">to</hi> 'gato 'n<hi rend="it">i</hi>tyato}</p>
+
+<p>Sūtra 10: kumbha (Topf)</p>
+
+<p>NidSa 10.1 kiy<hi rend="it">atā bhikṣavo bhikṣuḥ pa</hi>rim<hi rend="it">īmā</hi>ṃ<hi rend="it">sa</hi>mā<hi rend="it">naḥ parimīmāṃseta samyagduḥkhakṣayāya duḥkhasy</hi>ā<hi rend="it">nta</hi>k<hi rend="it">r</hi>iyāyai |</p>
+
+<p>NidSa 10.2 bha<hi rend="it">ga</hi>va<hi rend="it">nmūlakā bhadanta dharmāḥ pūrvavad yāvad bhāṣiṣye |</hi></p>
+
+<p>NidSa 10.3a bhikṣu<hi rend="it">ḥ</hi> parimīmāṃsamā<hi rend="it">naḥ parimī</hi>mā<hi rend="it">ṃ</hi>sa<hi rend="it">te sa</hi>myagdu<hi rend="it">ḥkhakṣayāya duḥkhasyāntakriyāyai |</hi></p>
+
+<l><hi rend="it">atra</hi> c<hi rend="it">e</hi>t satv<hi rend="it">ānāṃ</hi> duḥkhaṃ utpadyamānam utpady<hi rend="it">eta bahu</hi>nā<hi rend="it">nāprakāram |</hi></l>
+<l><hi rend="it">ida</hi>ṃ duḥkhaṃ kinnidānaṃ kiṃsamudaya<hi rend="it">ṃ</hi> k<hi rend="it">iṃ</hi>jātīya<hi rend="it">ṃ</hi> kiṃpra<hi rend="it">bhavam |</hi></l>
+
+<p>NidSa 10.3b <hi rend="it">sa evaṃ parimī</hi>m<hi rend="it">āṃsamāno jān</hi>āti | <hi rend="it">i</hi>daṃ duḥkham upadhinidānam upadhisam<hi rend="it">u</hi>dayam upa<hi rend="it">dhijātīyam upadhiprabhava</hi>m | upadhiś cet sarveṇa sarvaṃ sarvathā <hi rend="it">sarva</hi>m apariśeṣaṃ nirudhye<hi rend="it">tā</hi>pari<hi rend="it">śe</hi>ṣa<hi rend="it">m adh</hi>yastaṃ pa<hi rend="it">rikṣa</hi>yaṃ paryādāna<hi rend="it">ṃ</hi> ga<hi rend="it">cched</hi> duḥkham apy asya nirudhyeta |</p>
+
+<p>NidSa 10.3c sa yā ca duḥkha<hi rend="it">nirodhagāminī pratipat tāṃ ya</hi>thābhūtaṃ prajānāti | tathā prati<hi rend="it">pannaś ca</hi> bhavaty anudharmacārī | ayam ucyate bhikṣu<hi rend="it">ḥ sam</hi>yagdu<hi rend="it">ḥkhakṣayā</hi>ya duḥkhasyāntakriyāyai pratipanno yad utopa<hi rend="it">dhinirodhāya |</hi></p>
+
+<p>NidSa 10.4a <hi rend="it">punar aparaṃ bhikṣuḥ</hi> parimīmā<hi rend="it">ṃ</hi>samānaḥ par<hi rend="it">i</hi>mīmāṃsa<hi rend="it">te</hi> samyagduḥkhakṣayāya duḥkhasyāntakri<hi rend="it">yā</hi>yai | upadhiḥ punaḥ kinnidāna<hi rend="it">ḥ</hi> kiṃsamudayaḥ kiṃ<hi rend="it">jāt</hi>īyaḥ ki<hi rend="it">ṃ</hi>prabhava<hi rend="it">ḥ |</hi></p>
+
+<p>NidSa 10.4b sa evaṃ pa<hi rend="it">rimīmāṃsamāno jānāti |</hi> <hi rend="it">upadhis</hi> tṛ<hi rend="it">ṣṇā</hi>nidānas tṛṣṇāsamudayas tṛṣṇājā<hi rend="it">tī</hi>yas tṛṣṇāprabhavaḥ | tṛṣṇā cet sa<hi rend="it">r</hi>veṇa <hi rend="it">sarvaṃ</hi> sarvathā sarvam apariśeṣaṃ nirudhyetāpar<hi rend="it">iśeṣam adhyastaṃ pa</hi>rikṣayaṃ <hi rend="it">paryādānaṃ gacche</hi>d upadhir apy asya nirudhyeta |</p>
+
+<p>NidSa 10.4c sa yā copadhinirodhagāminī <hi rend="it">prati</hi>pat tāṃ yathābhūtaṃ p<hi rend="it">ra</hi>jānāti | <hi rend="it">tathā</hi> pratipannaś ca <hi rend="it">bhavaty anudha</hi>rmacārī | ayam u<hi rend="it">cyate bhikṣuḥ</hi> samyagduḥkha<hi rend="it">kṣayāya duḥkhasyāntakriyā</hi>yai pratipanno ya<hi rend="it">d uta tṛṣṇān</hi>i<hi rend="it">rodh</hi>āya |</p>
+
+<p>NidSa 10.5a <hi rend="it">punar aparaṃ</hi> bhikṣuḥ parimīmāṃsamā<hi rend="it">naḥ</hi> parimīmāṃsa<hi rend="it">te samyagduḥkhakṣayāya duḥ</hi>khasyāntakriyā<hi rend="it">yai |</hi> tṛṣṇā punaḥ kinnidānā kiṃ<hi rend="it">samudayā kiṃ</hi>jātīyā <hi rend="it">kiṃprabhavā |</hi></p>
+
+<p>NidSa 10.5b sa evaṃ parimīmāṃsamāno jānāti | tṛṣṇā <hi rend="it">vedanā</hi>ni<hi rend="it">dā</hi>nā <hi rend="it">vedanāsamudayā vedanājātī</hi>yā vedanāprabha<hi rend="it">vā | vedanā cet sarveṇa sarvaṃ sarvathā sarvam apariśeṣaṃ nirudhyetāpariśeṣam adhyastaṃ parikṣayaṃ paryādānaṃ gacchet tṛṣṇāp</hi>y asya <hi rend="it">n</hi>i<hi rend="it">rudhyeta |</hi></p>
+
+<p>NidSa 10.5c <hi rend="it">sa yā ca tṛṣṇānirodhagāminī</hi> pratipat tāṃ ya<hi rend="it">thābhūtaṃ prajānāti | tathā pratipannaś ca bhavaty anudharmacārī | ayam ucyate bhikṣuḥ samyagduḥkhakṣayāya duḥkhasyāntakriyāyai pratipanno yad uta vedanānirodhāya |</hi></p>
+
+<p>NidSa 10.6a <hi rend="it">punar aparaṃ bhikṣuḥ pari</hi>mīm<hi rend="it">āṃ</hi>sa<hi rend="it">mānaḥ parimīmāṃsate samyagduḥkhakṣayāya duḥkhasyāntakriyāyai | vedanā punaḥ kinnidānā kiṃsamudayā kiṃjā</hi>tīyā k<hi rend="it">iṃpra</hi>bhavā |</p>
+
+<p>NidSa 10.6b <hi rend="it">sa evaṃ</hi> pari<hi rend="it">mīmāṃsamāno jānāti | veda</hi>nā sparśa<hi rend="it">nidānā sparśasamudayā sparśajātīyā sparśaprabhavā | sparśaś cet sarveṇa sarvaṃ sarvathā sarvam apariśeṣaṃ nirudhye</hi>tāpariśeṣam <hi rend="it">adhyastaṃ parikṣa</hi>yaṃ pa<hi rend="it">ryādānaṃ gacched ve</hi>da<hi rend="it">nā</hi>py asya nirudhy<hi rend="it">e</hi>ta |</p>
+
+<p>NidSa 10.6c sa yā <hi rend="it">ca vedanānirodhagāminī pratipat tāṃ yathābhūtaṃ prajānāti | tathā pratipannaś ca bhavaty anu</hi>dharmacārī | <hi rend="it">ayam ucyate bhikṣuḥ</hi> sam<hi rend="it">yagduḥkhakṣayā</hi>ya duḥkhasyāntakriyāyai pra<hi rend="it">ti</hi>panno yad uta s<hi rend="it">parśanirodhāya |</hi></p>
+
+<p>NidSa 10.7a <hi rend="it">punar a</hi>paraṃ bhikṣuḥ <hi rend="it">parimīmāṃsamānaḥ</hi> pa<hi rend="it">rimīmāṃsate sa</hi>myagdu<hi rend="it">ḥkhakṣayāya duḥkhasyāntakriyāyai | spa</hi>rśa<hi rend="it">ḥ kinni</hi>dānaḥ kiṃsamudayaḥ kiṃjātīyaḥ kiṃprabha<hi rend="it">vaḥ |</hi></p>
+
+<p>NidSa 10.7b <hi rend="it">sa e</hi>vaṃ parim<hi rend="it">ī</hi>māṃsamāno jānāti | spa<hi rend="it">r</hi>śaḥ ṣaḍāya<hi rend="it">tananidānaḥ</hi> ṣaḍāyata<hi rend="it">nasamudayaḥ</hi> ṣaḍāya<hi rend="it">ta</hi>na<hi rend="it">jātīyaḥ</hi> ṣaḍāyatanaprabhava<hi rend="it">ḥ</hi> | ṣaḍāyatanaṃ <hi rend="it">cet sa</hi>rveṇa sarvaṃ sarvathā sa<hi rend="it">rvam a</hi>pariśeṣaṃ nirudhyetā<hi rend="it">pariśeṣam a</hi>dhyastaṃ parikṣaya<hi rend="it">ṃ paryā</hi>dānaṃ ga<hi rend="it">c</hi>ch<hi rend="it">et s</hi>pa<hi rend="it">rśo</hi> 'py asya n<hi rend="it">i</hi>rudhyeta |</p>
+
+<p>NidSa 10.7c sa yā ca sparśanirodhagāminī pratipat tāṃ yathābhūtaṃ praj<hi rend="it">ānā</hi>ti | tathā pratipannaś ca <hi rend="it">bhava</hi>ty a<hi rend="it">nudhar</hi>macārī | ayam ucya<hi rend="it">te</hi> bhi<hi rend="it">kṣuḥ sa</hi>myagduḥkhakṣayāya du<hi rend="it">ḥ</hi>khasyāntakriyāyai pratipanno <hi rend="it">yad uta ṣaḍā</hi>yatananirodhāya |</p>
+
+<p>NidSa 10.8a <hi rend="it">punar a</hi>paraṃ bhikṣuḥ parimī<hi rend="it">māṃsamā</hi>n<hi rend="it">aḥ</hi> parimīmāṃsate samyagduḥkhakṣayāya duḥkhasyāntakriyāyai | ṣaḍ<hi rend="it">ā</hi>yatana<hi rend="it">ṃ punaḥ kinnidānaṃ</hi> kiṃsamudayaṃ <hi rend="it">kiṃjātīyaṃ</hi> kiṃprabhavam |</p>
+
+<p>NidSa 10.8b sa evaṃ <hi rend="it">parimī</hi>mā<hi rend="it">ṃ</hi>samāno jānāti | ṣaḍāyatana<hi rend="it">ṃ</hi> nāmarūpanidānaṃ nāmarūpa<hi rend="it">sa</hi>mudayaṃ nāmarūpajātīya<hi rend="it">ṃ n</hi>ām<hi rend="it">arūpa</hi>prabhavam | nāmarūpaṃ ce<hi rend="it">t sarveṇa sarvaṃ sarva</hi>thā sa<hi rend="it">r</hi>va<hi rend="it">m apariśe</hi>ṣa<hi rend="it">ṃ</hi> nirudhyetāpariśeṣam adhyastaṃ parikṣayaṃ <hi rend="it">pa</hi>ryādānaṃ gacchet ṣaḍāyatana<hi rend="it">m apy asya nirudhyeta |</hi></p>
+
+<p>NidSa 10.8c sa <hi rend="it">yā ca ṣaḍāyatana</hi>niro<hi rend="it">dhagāminī pratipat tāṃ yathābhūtaṃ prajān</hi>āti | tathā pratipannaś ca bhavaty anudharmacārī | ayam <hi rend="it">u</hi>cyate bhikṣuḥ samyagduḥkhak<hi rend="it">ṣayāya duḥkhasyāntakriyāyai pratipanno yad uta nāmarūpanirodhāya |</hi></p>
+
+<p>NidSa 10.9a <hi rend="it">punar a</hi>para<hi rend="it">ṃ</hi> bhikṣuḥ parimīmāṃsamānaḥ parimīmāṃ<hi rend="it">sate</hi> samyagduḥkhakṣay<hi rend="it">ā</hi>ya duḥkhasyānta<hi rend="it">kriyā</hi>y<hi rend="it">ai</hi> | <hi rend="it">nāmarūpaṃ punaḥ kinnidānaṃ kiṃsamudayaṃ kiṃjātīyaṃ kiṃprabhavam |</hi></p>
+
+<p>NidSa 10.9b <hi rend="it">sa evaṃ parimīmāṃsamāno jānāti | nāmarūpaṃ vijñānanidānaṃ vijñānasamudayaṃ vijñānajā</hi>tīya<hi rend="it">ṃ</hi> vijñānaprabhavam | vijñānaṃ cet sarveṇa sarvaṃ sarvathā sarva<hi rend="it">m apariśeṣaṃ nirudhyetāpariśeṣam adhyastaṃ parikṣayaṃ paryādā</hi>naṃ gacchen nāmarūpam apy asya nirudhyeta |</p>
+
+<p>NidSa 10.9c sa yā ca nāmarūpa<hi rend="it">nirodhagāminī pratipat tāṃ yathābhūtaṃ prajānāti | tathā prati</hi>pannaś ca bhavaty anudharmacārī | ayam ucyate bhikṣuḥ samyagdu<hi rend="it">ḥkhakṣayāya duḥkhasyāntakriyāyai pratipanno yad uta</hi> vijñānanirodhāya |</p>
+
+<p>NidSa 10.10a punar aparaṃ bhikṣuḥ parimīmāṃsamāna<hi rend="it">ḥ parimīmāṃsate samyagduḥkhakṣayāya duḥkhasyānta</hi>k<hi rend="it">ri</hi>yāyai | vijñānaṃ punaḥ kinnidānaṃ kiṃ<hi rend="it">jātīyaṃ kiṃ</hi>prabhava<hi rend="it">ṃ</hi> kiṃsamudayam</p>
+
+<p>NidSa 10.10b <hi rend="it">sa evaṃ</hi> parimīmāṃsamāno jānāti | vijñānaṃ saṃskārasamudayaṃ saṃskārajātīyaṃ saṃ<hi rend="it">skāra</hi>prabhavam |
+sa puṇyān abhisaṃ<hi rend="it">skārān abhi</hi>saṃskar<hi rend="it">oti</hi> | puṇyopagam apy asya bhavati vijñānam | apuṇyān abhisa<hi rend="it">ṃ</hi>skārān abhisaṃ<hi rend="it">ska</hi>roti | <hi rend="it">apuṇyopagam apy asya bhavati vijñānam | ānijyān abhisaṃskārān abhisaṃskaroti |</hi> ānijyopagam apy a<hi rend="it">sya</hi> bhavati vijñānam |
+tad ane<hi rend="it">naiva paryā</hi>y<hi rend="it">e</hi>ṇa veditavyaṃ yad vijñānam a<hi rend="it">p</hi>i <hi rend="it">sa</hi>ṃskāranidānaṃ saṃskā<hi rend="it">rasamu</hi>dayaṃ saṃskārajātīyaṃ saṃ<hi rend="it">skāra</hi>prabhavam | saṃskārāś ce<hi rend="it">t sarv</hi>eṇa sarvaṃ sarvathā sarvam apariśeṣaṃ ni<hi rend="it">rudhye</hi>tāpariśeṣa<hi rend="it">m adhyastaṃ parikṣa</hi>yaṃ paryādānaṃ <hi rend="it">gacched vijñā</hi>nam apy asya nirudhyeta |</p>
+
+<p>NidSa 10.10c <hi rend="it">sa</hi> yā ca vijñānanirodhag<hi rend="it">āmi</hi>nī pratipat tāṃ <hi rend="it">ya</hi>thā<hi rend="it">bhūta</hi>ṃ prajānā<hi rend="it">ti | tathā pra</hi>tipa<hi rend="it">nnaś</hi> ca bhavaty anudharmacārī | ayam ucyate bhikṣuḥ sa<hi rend="it">myagduḥkha</hi>kṣayāya duḥkhasyāntakriyāyai pra<hi rend="it">t</hi>ipanno yad uta saṃskāra<hi rend="it">nirodhāya |</hi></p>
+
+<p>NidSa 10.11a <hi rend="it">punar aparaṃ bhikṣuḥ</hi> parimīmāṃsamānaḥ parimīmāṃsate samyagduḥkhakṣayāya duḥkha<hi rend="it">syāntakriyā</hi>yai | saṃskā<hi rend="it">rāḥ</hi> pu<hi rend="it">naḥ kinni</hi>dānāḥ kiṃsamudayāḥ kiṃjātīyāḥ kiṃprabhavāḥ |</p>
+
+<p>NidSa 10.11b sa evaṃ parimīmāṃsamāno jānāti | saṃskā<hi rend="it">rā avidyā</hi>nidānā a<hi rend="it">vidyāsamuda</hi>yā avi<hi rend="it">dyājātiyā a</hi>vidyāprabhavāḥ | sa puṇyān abhisaṃskārān abhisaṃskaroty avidyā<hi rend="it">pratyayān | apuṇyān apy ānijyān apy abhisaṃskārān abhisaṃska</hi>roty avidyāpratyayān |
+tad anenaiva paryāye<hi rend="it">ṇa ve</hi>ditavyaṃ yat saṃskā<hi rend="it">rā apy</hi> avidyā<hi rend="it">nidānā avidyāsamudayā avidyājātīyā avidyā</hi>prabhavāḥ | avidyā cet sarveṇa sarvaṃ sarvathā sarvam apari<hi rend="it">śeṣaṃ nirudhyetāpāriśeṣam adhyastaṃ parikṣayaṃ paryādānaṃ</hi> gacche<hi rend="it">t saṃskārā apy asya nirudhyeran |</hi></p>
+
+<p>NidSa 10.11c <hi rend="it">sa yā ca saṃskāranirodhagāminī pratipat tāṃ yathā</hi>bhū<hi rend="it">taṃ prajā</hi>nāti | <hi rend="it">tathā pratipannaś ca</hi> bhavaty anudharmacārī | ayam ucyate <hi rend="it">bhikṣuḥ</hi> samyagduḥkhakṣayāya duḥkhasyāntakriyāyai pratipanno <hi rend="it">yad uta</hi> a<hi rend="it">v</hi>idyānirodhāya |</p>
+
+<p>NidSa 10.12 kiṃ ma<hi rend="it">n</hi>y<hi rend="it">adh</hi>ve bhikṣa<hi rend="it">vo</hi> ya<hi rend="it">sya bhi</hi>kṣor avidyā viraktā bhavati vidyotpannā
+api tu sa punar api puṇyān abhisaṃskā<hi rend="it">r</hi>ān abh<hi rend="it">i</hi>saṃskuryād avidyāpra<hi rend="it">tya</hi>yā<hi rend="it">n | a</hi>puṇyān apy ānijyān abhisa<hi rend="it">ṃskā</hi>rān abhi<hi rend="it">saṃ</hi>sku<hi rend="it">ryād av</hi>i<hi rend="it">dyā</hi>pratyayān |</p>
+
+<p>NidSa 10.13 no bhadanta | tat kasmād dhetoḥ | <hi rend="it">yataś ca</hi> śrutavata āryaśrāvakasyāvidyā v<hi rend="it">i</hi>raktā vidyotpannā tasyāvidy<hi rend="it">āniro</hi>dhāt saṃskāranirodhaḥ | saṃs<hi rend="it">k</hi>āran<hi rend="it">ir</hi>odhā<hi rend="it">d vi</hi>j<hi rend="it">ñ</hi>ā<hi rend="it">na</hi>ni<hi rend="it">r</hi>o<hi rend="it">dhaḥ pūrvava</hi>d yāva<hi rend="it">n</hi> nirodho bhavatīti |</p>
+
+<p>NidSa 10.14 sādhu sādhu bhikṣavaḥ | ahaṃ caivaṃ vadāmi yūyaṃ caivaṃ prajānīdhvam | yathā teṣāṃ teṣāṃ <hi rend="it">dha</hi>rmāṇām utpādā<hi rend="it">t</hi> te te dharmā utpadyant<hi rend="it">e | te</hi>ṣāṃ teṣāṃ <hi rend="it">dharmā</hi>ṇāṃ nirodhā<hi rend="it">t</hi> te te dharmā nirudhyante vyupaśamanti śītībhavanty astaṃgacchanti |</p>
+
+<p>NidSa 10.15 yataś ca śrutavata ārya<hi rend="it">śr</hi>āvakasyāvidyā vira<hi rend="it">kt</hi>ā bhavati vidyotpannā | sa kāyapa<hi rend="it">ryantikāṃ ve</hi>danā<hi rend="it">ṃ</hi> vedayānaḥ kāyaparyantikāṃ vedanā<hi rend="it">ṃ</hi> vedayāmīti yathābhūtaṃ prajānā<hi rend="it">ti</hi> | jī<hi rend="it">vita</hi>paryantikāṃ <hi rend="it">ve</hi>danā<hi rend="it">ṃ</hi> vedayāno <hi rend="it">j</hi>īvitaparyantikā<hi rend="it">ṃ</hi> v<hi rend="it">eda</hi>nāṃ <hi rend="it">ve</hi>dayāmīti yathābhūtaṃ prajānāti | bhedāc ca kāyasyordhvaṃ jīvitaparyādānād ihaivāsya sarvāṇi vedayitavyāny apariśeṣaṃ nirudhyante | apariśeṣam adhyastaṃ parikṣayaṃ paryādānaṃ gacchanti |</p>
+
+<p>NidSa 10.16 tad yathā balavān puruṣaḥ soṣmāt kumbhakārapākāt soṣmaṃ kumbhaṃ gṛhītvā same pṛthi<hi rend="it">vī</hi>pradeśe upanikṣipeta tasya ya uṣmā so 'ntarhīyeta śītībhavey<hi rend="it">u</hi>ḥ <hi rend="it">ka</hi>pālāni |
+evam eva yataś ca bhikṣor a<hi rend="it">v</hi>idyā viraktā bhavati vidyotpannā sa kāyaparyantikā<hi rend="it">ṃ</hi> vedanā<hi rend="it">ṃ</hi> vedayānaḥ kāyaparyantikāṃ vedan<hi rend="it">ā</hi>ṃ vedayāmīti yath<hi rend="it">ābhūtaṃ</hi> prajānāti pūrvavad yāvat parikṣayaṃ paryādānaṃ gacchanti //</p>
+
+<p>Sūtra 11: yo vadet (Wenn einer sagt)</p>
+
+<p>NidSa 11.1 vadeta bhi<hi rend="it">k</hi>ṣus tīrṇā m<hi rend="it">e</hi> kāṃkṣā vigatā me kathaṃka<hi rend="it">thā |</hi> atrocchi<hi rend="it">nno</hi> me dṛṣṭiśalyaḥ | {so Ed.: namety utāvartate; cf. SWTF s.v. pratyudāvṛt} na me pratyudāvartate mānasaṃ paritasyam upādāya | katha<hi rend="it">ṃ</hi> syād dhi me ātmā |</p>
+
+<p>NidSa 11.2 tasya bhikṣor dhārmyā<hi rend="it">ṃ</hi> kath<hi rend="it">āyāṃ</hi> ka<hi rend="it">th</hi>yamānāyām āryā<hi rend="it">yāṃ</hi> lok<hi rend="it">o</hi>ttarāyāṃ</p>
+
+<p>yad utāsm<hi rend="it">i</hi>n satīdaṃ bha<hi rend="it">va</hi>ty asyotpādād idam utpadyate |</p>
+
+<p>yad utāvidyāpratyayāḥ saṃskārāḥ pūrvavad yāvat sam<hi rend="it">uda</hi>yo nirodhaś ca bhavati |</p>
+
+<p>NidSa 11.3 ity evaṃrūpāyāṃ kathāyāṃ kathyamānāyāṃ bhavati kāṃkṣā bhavati vic<hi rend="it">i</hi>kitsā aprapte prāptasaṃjñy anadhigate 'dhigatasaṃjñy asākṣākṛte sākṣākṛtasaṃjñī duḥkhī durmanā vipratisārī vihanyate vigatam āpadyate |</p>
+
+<p>NidSa 11.4 tat kasmād dhetoḥ | gaṃbhīram idaṃ sth<hi rend="it">ā</hi>na<hi rend="it">ṃ</hi> yad uta idaṃpratyayatā pratītyasamutpā<hi rend="it">daḥ</hi> | idam api sudurdarśataraṃ padaṃ yad uta sarvopadhipratiniḥsargas tṛṣṇākṣayo virāgo nirodho nirvāṇam |</p>
+
+<p>NidSa 11.5 dvayam idaṃ saṃskṛtañ cāsaṃskṛtañ ca | <hi rend="it">tat</hi>r<hi rend="it">a</hi> saṃskṛtasyotpādo 'pi prajñāyate vyayo 'pi sthityanyathātvam api | asaṃskṛtasya naivotpādaḥ prajñāyate na vyayo na sthityanyathātvam |</p>
+
+<p>NidSa 11.6 iti hi bhikṣavo duḥkhāḥ saṃskārāḥ | <hi rend="it">śā</hi>nta<hi rend="it">ṃ</hi> nirvāṇam | h<hi rend="it">e</hi>tusamudayād duḥkhasamudayaḥ | hetunirodhā<hi rend="it">d</hi> duḥkhanirodhaḥ | chinnaṃ vartma na pravartate | apratisandhi nirudhyate | eṣa evānto duḥkhasya |</p>
+
+<p>NidSa 11.7 tatra bhikṣavaḥ kaḥ parini<hi rend="it">r</hi>vṛtaḥ anyatra yad duḥkhaṃ tan niruddhaṃ tad vyupaśāntaṃ tac chītībhūtaṃ tad astaṃgatam | śāntam idaṃ padaṃ yad uta sarvopadhiprati<hi rend="it">niḥ</hi>sargas tṛṣṇākṣayo virāgo nirodho nirvāṇam //</p>
+
+<p>Sūtra 12: nivṛta (Gehemmt)</p>
+
+<p>NidSa 12.1 avidyayā nivṛtasya bālasya tṛṣṇayā saṃyuktasyaivam ayam bāl<hi rend="it">a</hi>syā<hi rend="it">śrutava</hi>taḥ pṛthagjanasya savijñānakaḥ kāya<hi rend="it">ḥ</hi> samudāgataḥ | ity ayañ cāsya savijñānakaḥ kāyo bahirdhā ca nāmarūpam | evaṃ dvayam |</p>
+
+<p>NidSa 12.2 dvayaṃ khalu pratītya spa<hi rend="it">r</hi>śaḥ | ṣaḍ imā<hi rend="it">ni sparśāyatan</hi>āni yaiḥ spṛṣṭaḥ spṛṣṭo bālo 'śrutavān <hi rend="it">pṛ</hi>thagjanaḥ sukhaduḥkhaṃ pratisaṃvedayati | ato vā punar upādāyaiteṣāṃ vānyatamena |</p>
+
+<p>NidSa 12.3 katamāni <hi rend="it">ṣaṭ |</hi> ca<hi rend="it">kṣuḥ sparśāyata</hi>na<hi rend="it">m</hi> | śro<hi rend="it">traṃ ghrā</hi>ṇaṃ jihvā kāyo manaḥ sparśāyatanam |</p>
+
+<p>NidSa 12.4 avidyayā nivṛtasya paṇḍitasya tṛṣṇayā saṃyuktasyaivam ayam <hi rend="it">paṇḍ</hi>itasya savijñānakaḥ <hi rend="it">kāyaḥ</hi> samudāgataḥ | ity ayañ cāsya savijñānakaḥ kāyo <hi rend="it">ba</hi>hirdhā ca nāmarūpam | evaṃ dvayam |</p>
+
+<p>NidSa 12.5 dvayaṃ khalu pratītya sparśaḥ | ṣaḍ imāni spa<hi rend="it">rśāyata</hi>nāni yai<hi rend="it">ḥ</hi> spṛṣṭaḥ spṛṣṭaḥ <hi rend="it">paṇḍi</hi>taḥ sukhaduḥkhaṃ pratisaṃ<hi rend="it">v</hi>eda<hi rend="it">ya</hi>ti | ato vā punar upā<hi rend="it">dāyai</hi>teṣāṃ vānyatamena |</p>
+
+<p>NidSa 12.6 katamāni ṣaṭ | cakṣuḥ sparśāyatanaṃ śrotraṃ ghrāṇaṃ jihvā kāyo manaḥ |</p>
+
+<p>NidSa 12.7 i<hi rend="it">ti</hi> bhikṣavo ko viśesaḥ ko 'bhiprāyaḥ k<hi rend="it">in</hi> n<hi rend="it">ānā</hi>karaṇaṃ bālapaṇḍitayor mamāntike brahmacaryavāsāya |</p>
+
+<p>NidSa 12.8 bhagavanmūlakā bhadanta dharmāḥ pūrvavad yāvad bhāṣiṣye |</p>
+
+<p>NidSa 12.9 yayāvidyayā nivṛtasya bālasyāśrutavataḥ pṛthagjanasya yayā ca tṛṣṇayā saṃyuktasyāyaṃ savijñānakaḥ kāyaḥ samudāgatas tasya sā ca avidyā aprahīṇā sā ca tṛṣṇā aparikṣīṇā |
+sa tasyā avidyāyā aprahāṇāt tasyāś ca tṛṣṇāyā aparikṣayāt kāyasya bhedāt paraṃmaraṇāt kāyopago bhavati |
+sa kāyopagaḥ san na parimucyate jātijarāvyādhimaraṇaśokaparidevaduḥkhadaurmanasyopāyāsebhyaḥ | na parimucyate duḥkhād iti vadāmi |</p>
+
+<p>NidSa 12.10 tat kasmād dhetoḥ | nācārṣīd bālaḥ pūrve brahmacaryeṣaṇāṃ samyagduḥkhakṣayāya duḥkhasyāntakriyāyai |
+tasmāt sa kāyasya bhedāt paraṃmaraṇāt kāyopago bhavati |
+sa kāyopagaḥ san na parimucyate pūrvavad yāvad duḥkhād iti vadāmi |</p>
+
+<p>NidSa 12.11 yayā nv avidyayā nivṛtasya paṇḍitasya yayā ca tṛṣṇayā samyuktasya savijñānakaḥ kāyaḥ samudāgatas tasya sā ca avidyā prahīṇā sā ca tṛṣṇā parikṣīṇā |
+sa tasyā avidyāyāḥ prahāṇāt tasyāś ca tṛṣṇāyāḥ parikṣayāt kāyasya bhedāt paraṃmaraṇān na kāyopago bhavati |
+sa na kāyopagaḥ san parimucyate jātijarāvyādhimaraṇaśokaparidevaduḥkhadaurmanasyopāyāsebhyaḥ | parimucyate duḥkhād iti vadāmi |</p>
+
+<p>NidSa 12.12 tat kasmād dhetoḥ | acārṣīt paṇḍitaḥ pūrve brahmacaryeṣaṇāṃ samyagduḥkhakṣayāya duḥkhasyāntakriyāyai |
+tasmāt sa kāyasya bhedāt paraṃmaraṇān na kāyopago bhavati |
+sa na kāyopagaḥ san parimucyate pūrvavad yāvad duḥkhād iti vadāmi |</p>
+
+<p>NidSa 12.13 ayaṃ bhikṣavo viśeṣo 'yam abhiprāya idan nānākaraṇaṃ bālapaṇḍita<hi rend="it">yo</hi>r mamāntike brahmacaryavāsāya //</p>
+
+<p>Sūtra 13: na yuṣmākam (Nicht euch)</p>
+
+<p>NidSa 13.1 nāyaṃ bhikṣavaḥ kāyo yuṣmākaṃ nāpy anyeṣām | ṣaḍ imāni sparśāyatanāni pūrvam abhisaṃskṛtāny abhisañcetitāni | paurāṇaṃ karma veditavyam iti vadāmi |</p>
+
+<p>NidSa 13.2 katamāni ṣaṭ | cakṣuḥ sparśāyatanam | śrotraṃ ghrāṇaṃ ji<hi rend="it">h</hi>v<hi rend="it">ā</hi> kāyo manaḥ sparśāyatanam |</p>
+
+<p>NidSa 13.3 tatra śrutavān āryaśrāvakaḥ pratītyasamutpādam eva sādhu ca suṣṭhu ca yoniśaḥ pratyavekṣate |</p>
+
+<p>NidSa 13.4 yadutāsmin sati ṣaḍ vijñānakāyā bhavanti | ṣaṭ sparśakāyāḥ ṣaḍ vedanākāyāḥ ṣaṭ saṃjñākāyāḥ ṣaṭ cetanākāyā bhavanti | yadutāsmin saty evam āyatyāṃ jātijarāvyādhimaraṇaśokaparidevaduḥkhadaurmanasyopāyāsāḥ saṃbhavanti | evam asya kevalasya mahato duḥkhaskandhasya samudayo bhavati |</p>
+
+<p>NidSa 13.5 evaṃ hi sahetuḥ sapratyayo lokaḥ samudeti | evaṃ hi sahetoḥ sapratyayasya lokasya samudayo bhavati |</p>
+
+<p>NidSa 13.6 yadutāsminn asati ṣaḍ vijñānakāyā na bhavanti | ṣaṭ sparśakāyāḥ ṣaḍ vedanākāyāḥ ṣaṭ saṃjñākāyāḥ ṣaṭ cetanākāyā na bhavanti | yadutāsminn asaty evam āyatyām jātijarāvyādhimaraṇaśokaparidevaduḥkhadaurmanasyopāyāsā nirudhyante | evam asya kevalasya mahato duḥkhaskandhasya nirodho bhavati |</p>
+
+<p>NidSa 13.7 yataś ca śrutavatāryaśrāvakeṇa lokasamudayaś ca lokanirodhaś ca yathābhūtaṃ samyakprajñayā sudṛṣṭo bhavati suviditaḥ sujuṣṭaḥ supratividdhaḥ | ayam ucyate āryāśrāvakaḥ | āgata imaṃ saddharmam upagata imaṃ saddharmam avaiti saddharmam ity ucyate 'vagāḍhaprāptaḥ paryavagāḍhaprāptaḥ śaikṣeṇa jñānena śaikṣeṇa darśanena lokasyodayāstaṃgāminyā prajñayā samanvāgata āryayā nairyāṇikayā nairvedhikayā niryāti tatkaraḥ samyagduḥkhakṣayāya duḥkhasyāntakriyāyai |</p>
+
+<p>NidSa 13.8 tat kasmād dhetoḥ | tathā hi śrutavatāryaśrāvakeṇa lokasamudayaś ca lokanirodhaś ca yathābhūtaṃ samyakprajñayā sudṛṣṭaḥ suviditaḥ supratividdhaḥ //</p>
+
+<p>Sūtra 14: (pratītya)</p>
+
+<p>NidSa 14.1 pratītyasamutpādaṃ vo bhikṣavo deśayiṣye pratītyasamutpannāṃś ca dharmān | tāñ chṛṇuta sādhu ca suṣṭhu ca manasi kuruta bhāṣiṣye |</p>
+
+<p>NidSa 14.2 pratītyasamutpādaḥ katamaḥ | yadutāsmin satīdaṃ bhavaty asyotpādād idam utpadyate | yadutāvidyāpratyayāḥ saṃskārā yāvat samudayo bhavati |</p>
+
+<p>NidSa 14.3 avidyāpratyayāḥ saṃskārā ity utpādād vā tathāgatānām anutpādād <hi rend="it">v</hi>ā <hi rend="it">sth</hi>itā eveyaṃ dharmatā dharmasthitaye dhātuḥ |
+taṃ tathāgataḥ svayam abhijñāyābhisaṃbuddhyākhyāti prajñapayati prasthāpayati vibhajat<hi rend="it">i</hi> vivaraty uttānīkaroti deśay<hi rend="it">ati</hi> sa<hi rend="it">ṃ</hi>prakāśayati yadutāvidyāpratyayāḥ saṃskārāḥ |
+NidSa 14.4 yāvaj</p>
+
+<p>NidSa 14.5 jātipratyayaṃ jarāmaraṇam ity utpādād vā tathāgatānām anutpādād vā sthitā eveyaṃ dharmatā dharmasthitaye dhātuḥ |
+taṃ tathāgataḥ svayam abhijñāyābhisaṃbuddhyākhyāti prajñapayati prasthāpayati vibhajati vivaraty uttānīkaroti deśayati saṃprakāśayati yaduta jātipratyayaṃ jarāmaraṇam |</p>
+
+<p>NidSa 14.6 <hi rend="it">i</hi>t<hi rend="it">i</hi> yātra dharmatā dharmasthititā dharmaniyāmatā dharmayathātathā avitathatā ananyathā bhūtaṃ satyatā tattvatā yāthātathā aviparītatā aviparyastatā idaṃpratyayatā pratītyasamutpādānulomatā
+ayam ucyate pratītyasamutpādaḥ |</p>
+
+<p>NidSa 14.7 pratītyasamutpannā dharmāḥ katame | avidyā saṃskārā vijñānaṃ nāmarūpaṃ ṣaḍāyatanaṃ sparśo vedanā tṛṣṇā upādānaṃ bhavo jātir jarāmaraṇaṃ | ima ucyante pratītyasamutpannā dharmāḥ |</p>
+
+<p>NidSa 14.8 yataś ca śrutavatāryaśrāvakeṇa pratītyasamutpādaś ca pratītyasamutpannāś ca dharmā yathābhūtaṃ samyakprajñayā sudṛṣṭā bhavanti |</p>
+
+<p>NidSa 14.9 sa na pūrvāntaṃ pratisarati | kin nv aham abhūvam atīte 'dhvani | aho svin nāham atīte 'dhvani | ko nv aham abhūvam atīte 'dhvani | kathaṃ nv aham abhūvam atīte 'dhvani |</p>
+
+<p>NidSa 14.10 aparāntaṃ vā na pratisarati | kin nu bhaviṣyāmy anāgate 'dhvani | aho svin na bhaviṣyāmy anāgate 'dhvani | ko nu bhaviṣyāmy anāgate 'dhvani | kathaṃ nu bhaviṣyāmy anāgate 'dhvani |</p>
+
+<p>NidSa 14.11 adhyātmaṃ vākathaṃkathībhavati | kiṃ svid idam | kathaṃ svid idam | ke santaḥ ke bhaviṣyāmaḥ | ayaṃ satvaḥ kuta āgataḥ | sa itaś cyutaḥ kutragāmī bhaviṣyati |</p>
+
+<p>NidSa 14.12 yāni tāny ekatyānāṃ śramaṇabrāhmaṇānāṃ pṛthalloke dṛṣṭigatāni tadyathā ātmavādapratisaṃyuktāni satvavādapratisaṃyuktāni jīvavādapratisaṃyuktāni ko<hi rend="it">tū</hi>halamaṅgalavādapratisaṃyuktani tāny asya tasmin samaye prahīṇāni bhavanti parijñātāny ucchinnamūlāni tālamastakavad anābhavagatikāny āyatyām anutpādadharmāṇi |</p>
+
+<p>NidSa 14.13 tat kasmād dhetoḥ | tathā hi śrutavatāryaśrāvakeṇa prat<hi rend="it">ī</hi>tyasamutpādaś ca pratītyasamutpannāś ca dharmā yathābhūtaṃ samyakprajñayā sudṛṣṭāḥ sujuṣṭāḥ suviditāḥ supratividdhāḥ //</p>
+
+<p>Sūtra 15: śūnyatā (die Leere)</p>
+
+<p>NidSa 15.1 kuruṣu nidānam |</p>
+
+<p>NidSa 15.2 tatra bhagavān bhikṣūn āmantrayati |</p>
+
+<p>NidSa 15.3 dharmaṃ vo deśayiṣye ādau kalyāṇaṃ madhye kalyāṇaṃ paryavasāne kalyāṇaṃ yāvat prakāśayiṣye | yad uta mahāśūnyatānāma dharmaparyāyas tac chṛṇuta sādhu ca suṣṭhu ca manasi kuruta bhāṣiṣye |</p>
+
+<p>NidSa 15.4 mahāśūnyatādharmaparyāyāḥ katamāḥ | yad utāsmin satīdaṃ bhavaty asyotpādād idam utpadyate | yad utāvidyāpratyayāḥ saṃskārā yāvat samudayo bhavati |</p>
+
+<p>NidSa 15.5a jātipratyayaṃ jarāmaraṇam iti | tatra ko jarāmaraṇaṃ kasya vā jarāmaraṇam iti hi syuḥ praṣṭāra
+iti ya evaṃ vaded ayaṃ jarāmaraṇam asya vā jarāmaraṇam | yaś caivaṃ vadet taj jīvaṃ tac charīram anyaj jīvam anyac charīram | ubhayam etad ekam | vyañjanam atra nānā |</p>
+
+<p>NidSa 15.5b taj jīvaṃ tac charīram iti dṛṣṭau satyāṃ brahmacaryavāso na bhavati | anyaj jīvam anyac charīram iti bhikṣavo dṛṣṭau satyāṃ brahmacaryavāso na bhavati |
+ity etāv ubhāv antāv anupagamyāsti madhyamā pratipad āryā lokottarā yathābhūtā aviparītā samyagdṛṣṭiḥ | yad uta jātipratyayaṃ jarāmaraṇam |</p>
+
+<p>NidSa 15.6 evaṃ jātir bhava upādānaṃ tṛṣṇā vedanā sparśaḥ ṣaḍāyatanaṃ nāmarūpaṃ vijñānam |</p>
+
+<p>NidSa 15.7a avidyāpratyayāḥ saṃskārā iti | tatra kaḥ saṃskārāḥ kasya vā saṃskārā iti hi syuḥ praṣṭāra
+iti ya evaṃ vaded ayaṃ saṃskārā asya vā saṃskārāḥ | yaś caivaṃ vadet taj jīvaṃ tac charīram anyaj jīvam anyac charīram |
+ubhayam etad ekam | vyañjanam atra nānā |</p>
+
+<p>NidSa 15.7b taj jīvaṃ tac charīram iti bhikṣa<hi rend="it">vo dṛ</hi>ṣṭau <hi rend="it">sa</hi>tyāṃ brahmacaryavā<hi rend="it">so na</hi> bhavati |
+anyaj jīvam anyac charīram iti dṛṣṭau satyāṃ brahmacaryavāso na bhavati |
+ity etāv ubhāv antāv anupagamyāsti madhyamā pratipad āryā <hi rend="it">lokottarā</hi> yathābhūtā aviparītā samyagdṛṣṭiḥ | yad utāvidyāpratyayāḥ saṃskārāḥ |</p>
+
+<p>NidSa 15.8a yataś ca bhikṣor avidyā viraktā bhavati vidyotpannā</p>
+
+<p>NidSa 15.8b tasya ko jarāmaraṇaṃ kasya <hi rend="it">vā jar</hi>āmaraṇam |</p>
+
+<p>NidSa 15.8c avidyāvirāgād vidyotpādād evam asya taj jarāmaraṇaṃ prahīṇaṃ bhavati parijñātam ucchinnamūlaṃ tālamastakavad anābhavagatikam āyatyām anutpāda<hi rend="it">dharma |</hi></p>
+
+<p>NidSa 15.9a yataś ca bhikṣor avidyā viraktā bhavati vidyotpannā</p>
+
+<p>NidSa 15.9b tasya ko jātir bhava upādānaṃ tṛṣṇā vedanā sparśaḥ ṣaḍāyatanaṃ nāmarūpaṃ vijñānam |</p>
+
+<p>NidSa 15.10b tasya kaḥ saṃskārāḥ kasya vā <hi rend="it">saṃ</hi>skārāḥ |</p>
+
+<p>NidSa 15.10c avidyāvirāgād vidyotpādād evam asya te saṃskārāḥ prahiṇā bhavanti parijñātā ucchinnamūlās tālamastakavad anābhava<hi rend="it">ga</hi>tikam āyatyām anutpādadharmāṇaḥ |</p>
+
+<p>NidSa 15.11a <hi rend="it">ya</hi>taś ca bhikṣor avidyā viraktā bhavati vidyotpannā</p>
+
+<p>NidSa 15.11b tasyāvidyānirodhā<hi rend="it">t</hi> saṃskāranirodho yāvan mahato duḥkhaskandhasya nirodho bhavati |</p>
+
+<p>NidSa 15.12 ayam ucyate mahāśūnyatānāma dharmaparyāyaḥ |</p>
+
+<p>NidSa 15.13 dharmaṃ vo deśayiṣye ādau kalyāṇaṃ madhye pūrvavad iti me yad uktam idaṃ tat pratyuktam //</p>
+
+<p>Sūtra 16: ādisūtra</p>
+
+<p>NidSa 16.1 pratītyasamutpādasya vo bhikṣava ādiñ ca deśayiṣye vibhaṅgañ ca | tac chṛṇuta sādhu ca suṣṭhu ca manasi kuruta bhāṣiṣye |</p>
+
+<p>NidSa 16.2 pratītyasamutpādasyādiḥ katamaḥ | yad utāsmin satīdaṃ bhavaty asyotpādād idam utpadyate |
+yad utāvidyāpratyayāḥ saṃskārāḥ pūrvavad yāvat samudayo bhavati | ayam ucyate pratītyasamutpādasyādiḥ |</p>
+
+<p>NidSa 16.3 vibhaṅgaḥ katamaḥ |</p>
+
+<p>NidSa 16.4 avidyāpratyayāḥ saṃskārā ity avidyā katamā |
+yat tat pūrvānte ajñānam aparānte ajñānaṃ pūrvāntāparānte ajñānam adhyātme ajñānaṃ bahirdhā ajñānam adhyātmabahirdhā ajñānaṃ karmaṇy ajñānaṃ vipāke ajñānaṃ buddhe ajñānaṃ dharme ajñānaṃ saṃghe ajñānaṃ duḥkhe ajñānaṃ samudaye nirodhe mārge ajñānaṃ hetāv ajñānaṃ hetusamutpanneṣu dharmeṣv ajñānaṃ kuśalākuśaleṣu sāvadyānavadyeṣu sevitavyāse<hi rend="it">vi</hi>tavyeṣu hīnapraṇīteṣu kṛṣṇaśukleṣu pratibhāgapratītyasamutpanneṣu dharmeṣv ajñānam |
+ṣaṭsu vā punaḥ sparśāyataneṣu yathābhūtam asaṃprativedha iti |
+yatra tatrājñānam adarśanam anabhi<hi rend="it">sa</hi>mayas tamaḥ saṃmoho avidyānu<hi rend="it">śayaḥ |</hi> ayam ucyate avidyā |</p>
+
+<p>NidSa 16.5 avidyāpratyayāḥ saṃskārā iti saṃskārāḥ katame |
+trayaḥ saṃskārāḥ | kāyasaṃskāro vāksaṃskāro manaḥsaṃskāraḥ |</p>
+
+<p>NidSa 16.6 saṃskārapratya<hi rend="it">yaṃ</hi> vijñānam <hi rend="it">iti vi</hi>jñ<hi rend="it">ā</hi>na<hi rend="it">ṃ</hi> katarat |
+ṣaḍ vijñānakāyāḥ | cakṣur vijñānaṃ śrotraghrāṇajihvākāyamano vijñānam |</p>
+
+<p>NidSa 16.7 vijñānapratyayaṃ nāmarūpam <hi rend="it">iti</hi> nāmarūpaṃ katarat |
+catvāro 'rūpiṇaḥ skandhāḥ / vedanāskandhaḥ saṃjñāskandhaḥ saṃskāraskandho vijñānaskandhaḥ |
+rūpaskandhaḥ katarat | yat kiñcid rūpaṃ sarvaṃ tac catvāri mahābhūtāni | catvāri ca mahābhūtāny upādāya itīdaṃ ca rūpaṃ | pūrvakaṃ ca nāma | tad ubhayaṃ nāmarūpam | ity ucyate nāmarūpam |</p>
+
+<p>NidSa 16.8 nāmarūpapratyayaṃ ṣaḍāyatanam iti ṣaḍāyatanaṃ katarat |
+ṣaḍ ādhyātmikāny āyatanāni | cakṣur ādhyātmikam āyatanaṃ śrotraghrāṇajihvākāyamana ādhyātmikam āyatanam |</p>
+
+<p>NidSa 16.9 ṣaḍāyatanapratyayaḥ sparśa iti sparśaḥ katamaḥ |
+ṣaṭ sparśakāyāḥ | cakṣuḥ saṃsparśaḥ | śrotraghrāṇajihvākāyamanaḥ<hi rend="it">saṃ</hi>sparśaḥ |</p>
+
+<p>NidSa 16.10 sparśapratyayā vedaneti vedanā katamā |
+tisro vedanāḥ | sukhā vedanā duḥkhā aduḥkhāsukhā ca |</p>
+
+<p>NidSa 16.11 vedanāpratyayā tṛṣṇeti tṛṣṇā katamā |
+tisras tṛṣṇāḥ | kāmatṛṣṇā rūpatṛṣṇā ārūpyatṛṣṇā |</p>
+
+<p>NidSa 16.12 tṛṣṇāpratyayam upādānam iti upādānaṃ katarat |
+catvāry upādānāni | kāmopādānaṃ dṛṣṭyupādānaṃ śīlavratopādānam ātmopādānaṃ ca |</p>
+
+<p>NidSa 16.13 upādānapratyayo bhava iti bhavaḥ katamaḥ |
+trayo bhavāḥ | kāmabhavo rūpabhava ārūpyabhavaḥ |</p>
+
+<p>NidSa 16.14 bhavapratyayā jātir iti jātiḥ katamā |
+yā teṣāṃ teṣāṃ satvānāṃ tasmin tasmin satvanikāye jātiḥ sañjātir avakrāntir abhinirvṛttiḥ prādurbhāvaḥ skandhapratilābho dhātupratilābha āyatanapratilābho jīvitendriyasya prādurbhāvaḥ | iyam ucyate jātiḥ |</p>
+
+<p>NidSa 16.15 jātipratyayaṃ jarāmaraṇam iti jarā katamā |
+yat tat khālityaṃ pālityaṃ valipracuratā jīrṇatā bhagnatā kubjagopānasīvaṅkatā khurukhurupraśvāsakāyatā purataḥ prāgbhārakāyatā daṇḍaviṣṭaṃbhanatā tilakāḍaracitagātratā dhandhatvaṃ hāniḥ parihāṇir indriyāṇāṃ paripākaḥ paribhedaḥ saṃskārāṇāṃ purāṇībhāvo jarjarībhāvaḥ | iyam ucyate jarā |</p>
+
+<p>NidSa 16.16 maraṇaṃ katarat | yat teṣāṃ teṣāṃ satvānāṃ tasmāt tasmāt satvanikāyāc cyutiś cyavanaṃ bhedo 'ntarhāṇir āyuṣo hānir uṣmaṇo hānir jīvitasya nirodhaḥ skandhānāṃ nikṣepaṇaṃ maraṇaṃ kālakriyā | idam ucyate maraṇam |
+itīdañ ca maraṇam | pūrvikā ca jarā | tad ubhayaṃ jarāmaraṇam ity ucyate |</p>
+
+<p>NidSa 16.17 ayam ucyate pratītyasamutpādavibhaṅgaḥ |</p>
+
+<p>NidSa 16.18 pratītyasamutpādasya vo ādiñ ca deśayiṣye vibhaṅgañ ca iti me yad uktam idaṃ tat pratyuktam //</p>
+
+<p>Sūtra 17: bhikṣu (Mönch)</p>
+
+<p>NidSa 17.1 anyataro bhikṣur yena bhagavāṃs tenopaja<hi rend="it">gāma |</hi> up<hi rend="it">e</hi>tya bhagavatpādau śirasā vanditvaikānte 'sthāt | ekāntasthitaḥ sa bhikṣur bhagavantam idam avocat |</p>
+
+<p>NidSa 17.2 kin nu bhagavatā pratītyasamutpādaḥ kṛta aho svid anyaiḥ |</p>
+
+<p>NidSa 17.3 na bh<hi rend="it">i</hi>kṣ<hi rend="it">o</hi> mayā pratītyasamutpādaḥ kṛto nāpy anyaiḥ |</p>
+
+<p>NidSa 17.4 api tūtpādād vā tathāgatānām anutpādād vā sthitā eveyaṃ dharmatā dharmasthitaye dhātuḥ |
+taṃ tathāgataḥ svayam abhijñāyābhisaṃbuddhyākhyāti prajñapayati prasthāpayati vibhajati vivaraty uttānīkaroti deśayati saṃprakāśayati |</p>
+
+<lg>
+<l>NidSa 17.5 yadutāsmin satīdaṃ bhavaty asyotpādād idam utpadyate |</l>
+<l>yadutāvidyāpratyayāḥ saṃskārā yāvat samudayo nirodhaś ca bhavati //</l>
+</lg>
+
+<p>Sūtra 18: brāhmaṇa</p>
+
+<p>NidSa 18.1 anyataro brāhmaṇo yena bhagavāṃs tenopajagāma | upetya bhagavatā sārdhaṃ sammodanīṃ saṃrañjanī<hi rend="it">ṃ</hi> kathā<hi rend="it">ṃ</hi> vividhāṃ upasaṃhṛtyaikānte nyaṣīdat | ekāntaniṣaṇṇaḥ sa brāhmaṇo bhagavantam idam avocat |</p>
+
+<p>NidSa 18.2 kin nu bho gautama sa karoti sa pratisaṃvedayati |
+avyākṛtam idaṃ brāhmaṇa mayā sa karoti sa pratisaṃvedayati |</p>
+
+<p>NidSa 18.3 kin nu bho gautama anyaḥ karoty anyaḥ pratisaṃvedayati |
+etad api brāhmaṇa avyākṛtaṃ mayā anyaḥ karoty anyaḥ pratisaṃvedayati |</p>
+
+<p>NidSa 18.4 kin nu bho gautama sa karoti sa <hi rend="it">pra</hi>tisaṃvedayatīti pṛṣṭo avyākṛtam iti vadasi | anyaḥ karoty anyaḥ pratisaṃvedayatīti pṛṣṭo avyākṛtam iti vadasi |
+ko nu bho gautama asya bhāṣitasyārtho draṣṭavyaḥ |</p>
+
+<p>NidSa 18.5 sa karoti sa pratisaṃvedayatīti brāhmaṇa śāśvatatve paraiti |
+anyaḥ karoty anyaḥ pratisaṃvedayatīty ucchede paraiti |</p>
+
+<p>NidSa 18.6 ity etāv ubhāv antāv an<hi rend="it">u</hi>pagamya madhyamayā prati<hi rend="it">pa</hi>dā tathāgat<hi rend="it">o</hi> dharmaṃ deśayati |</p>
+
+<p>NidSa 18.7 yadutāsmin satīdaṃ bhavaty asyotpādād idam utpadyate |
+yadutāvidyāpratyayāḥ saṃskārā iti yāvat samudayo ni<hi rend="it">ro</hi>dhaś ca bhavati |</p>
+
+<p>Sūtra 19: Kātyāyanaḥ</p>
+
+<p>NidSa 19.1 bhagavān nādikāyāṃ viharati guñjakāvasathe |</p>
+
+<p>NidSa 19.2 athāyuṣmān sandhākātyāyano yena bhagavāṃs tenopajagāma | upetya bhagavatpādau śirasā vanditvaikānte 'sthāt |
+ekāntasthita āyuṣmān sandhākātyāyano bhagavantam idam avocat |</p>
+
+<p>NidSa 19.3 samyagdṛṣṭiḥ samyagdṛṣṭir iti bhadanta ucyate | kiyatā samyagdṛṣṭir bhavati | kiyatā tathāgataḥ samyagdṛṣtiṃ prajñapayamānaḥ prajñapayati |</p>
+
+<p>NidSa 19.4 evam ukto bhagavān āyuṣmantaṃ sandhākātyāyanam idam avocat |</p>
+
+<p>NidSa 19.5a dvayaṃ niśrito 'yaṃ kātyāyana loko yad bhūyasāstitāñ ca niśrito nāstitāñ ca |
+upadhyupādānavinibaddho 'yaṃ kātyāyana loko yad utāstitāñ ca niśrito nāstitāñ ca |
+etāni ced upadhyupādānāni cetaso 'dhiṣṭhānābhiniveśānuśayān nopaiti nopādatte nādhitiṣṭhati nābhiniviśaty ātmā meti |</p>
+
+<p>NidSa 19.5b duḥkham idam utpadyamānam utpadyate | duḥkhaṃ nirudhyamānaṃ nirudhyate |
+atra cen na kāṅkṣati na vicikitsati | aparapratyayaṃ jñānam evāsya bhavati |</p>
+
+<p>NidSa 19.6 iyatā kātyāyana samyagdṛṣṭir bhavati | iyatā tathāgataḥ samyagdṛṣṭiṃ prajñapaymānaḥ prajñapayati |</p>
+
+<p>NidSa 19.7 tat kasmād dhetoḥ | lokasamudayaṃ kātyāyana yathābhūtaṃ samyakprajñayā paśyato yā loke nāstitā sā na bhavati | lo<hi rend="it">ka</hi>nirodhaṃ yathābhūtaṃ samyakprajñayā paśyato yā loke 'stitā sā na bhavati |</p>
+
+<p>NidSa 19.8 ity etāv ubhāv antāv anupagamya madhyamayā pratipadā tathāgato dharmaṃ deśayati |</p>
+
+<p>NidSa 19.9 yad utāsmin satīdaṃ bhavaty asyotpādād idam utpadyate | yad utāvidyāpratyayāḥ saṃskārā iti pūrvavad yāvat samudayo nirodhaś ca bhavati |</p>
+
+<p>NidSa 19.10 asmin khalu dharmaparyāye bhāṣyamāṇa āyuṣmataḥ sandhākātyā<hi rend="it">ya</hi>nasyānupādāyāsravebhyaś c<hi rend="it">i</hi>ttaṃ vimuktam |</p>
+
+<p>Sūtra 20: acela (Nacktgänger)</p>
+
+<p>NidSa 20.1 bhagavān rājagṛhe viharati gṛdhrakūṭe parvate |</p>
+
+<p>NidSa 20.2 atha bhagavān pūrvāhṇe nivasya pātracīvaram ādāya gṛdhrakūṭaparvatād avatīrṇo rājagṛhaṃ piṇḍāya <hi rend="it">prāviśat |</hi></p>
+
+<p>NidSa 20.3 tena khalu samayenācelakā<hi rend="it">śya</hi>po rājagṛhaṃ gocarāya prasṛto 'bhūt kenacid eva karaṇīyena | adrākṣīd acelakāśyapo bhagavantaṃ dūrata eva | dṛṣṭvā ca punar yena bhaga<hi rend="it">vāṃ</hi>s tenopajagāma | upetya <hi rend="it">bhaga</hi>va<hi rend="it">n</hi>tam idam avocat |</p>
+
+<p>NidSa 20.4 pṛcchāma bho gautama kañcid eva pradeśam | saced avakāśaṃ kuryāt praśnasya vyākaraṇāya |</p>
+
+<p>NidSa 20.5 akālas tāvat tava kāśyapa praśnasya vy<hi rend="it">ā</hi>karaṇāya | rājag<hi rend="it">ṛ</hi>haṃ tāva<hi rend="it">t</hi> piṇḍāya caritavyam | bahir ārāmaṃ gaccha | tatra te kālo bhaviṣyati praśnasya vyākaraṇāya |</p>
+
+<p>NidSa 20.6 dvir apy evam eva v<hi rend="it">ā</hi>cyam |</p>
+
+<p>NidSa 20.7 trir apy acelakāśyapo bhagava<hi rend="it">n</hi>tam idam avocat |
+syād bho gautamāsmākaṃ vāntarāyo bhavati gautamasyānyathātvam | ihaiva vayaṃ bhavantaṃ gautamaṃ pṛcchāmaḥ | saced avakāśaṃ k<hi rend="it">u</hi>ryā<hi rend="it">ḥ</hi> praśnasya vyākaraṇāya |</p>
+
+<p>NidSa 20.8 pṛccha kāśyapa yad yad evākāṅkṣase |</p>
+
+<p>NidSa 20.9a kin nu bho gautama svayaṃkṛtaṃ duḥkham |
+avyākṛtam idaṃ mayā kāśyapa svayaṃkṛtaṃ duḥkham |</p>
+
+<p>NidSa 20.9b kin nu bho gautama parakṛtaṃ duḥkham |
+etad api kāśyapa avyākṛtaṃ mayā parakṛtaṃ duḥkham |</p>
+
+<p>NidSa 20.9c kin nu bho gautama svayaṃkṛtañ ca parakṛtañ ca duḥkham |
+etad api kāśyapa avyākṛtaṃ mayā svayaṃkṛtañ ca parakṛtañ ca duḥkham |</p>
+
+<p>NidSa 20.9d kin nu bho gautama asvayaṃkāraparakārahetusamutpannaṃ duḥkham |
+etad api kāśyapa avyākṛtaṃ mayā asvayaṃkāraparakārahetusamutpannaṃ duḥkham |</p>
+
+<p>NidSa 20.10 k<hi rend="it">i</hi>n nu bho gautama svayaṃkṛtaṃ duḥkham iti pṛṣṭo 'vyākṛtam iti vadasi
+parakṛtaṃ svayaṃkṛtañ ca parakṛtañ ca asvayaṃkāraparakārahetusamutpannaṃ duḥkham iti pṛṣṭo 'vyākṛtam iti vadasi |
+kin nu bho gautama nāsty eva duḥkham |</p>
+
+<p>NidSa 20.11 na kāśyapa nāsty eva duḥkham iti tv asty eva duḥkham |</p>
+
+<p>NidSa 20.12 sādhu me bhavān gautamas tathā dharmaṃ deśayatu yathāhaṃ duḥkhaṃ jāneyaṃ duḥkhaṃ paśyeyam |</p>
+
+<p>NidSa 20.13a sā eva kāśyapa vedanā sa vettīti yasyaivaṃ syāt svayaṃkṛtaṃ duḥkham
+evam ahaṃ na vadāmi |</p>
+
+<p>NidSa 20.13b anyā vedanā anyo vettīti yasyaivaṃ syāt parakṛtaṃ duḥkham
+evam ahaṃ na vadāmi |</p>
+
+<p>NidSa 20.13c vedanābhibhūtasyaivā sataḥ pare duḥkhaṃ samavadadhatīti yasyaivaṃ syāt svayaṃkṛtañ ca parakṛtañ ca duḥkham
+evam apy ahaṃ na vadāmi |</p>
+
+<p>NidSa 20.13d dasatsu ca pratyayeṣu duḥkhā<hi rend="it">ni sa</hi>nt<hi rend="it">ī</hi>ti <hi rend="it">ya</hi>syaivaṃ syād asvayaṃkāraparakārahetusamutpannaṃ duḥkham
+evam ahaṃ na vadāmi |</p>
+
+<p>NidSa 20.14 ity etāv ubhāv antāv anupagamya madhyamayā pratipadā tathāgato dharmaṃ d<hi rend="it">e</hi>śaya<hi rend="it">ti</hi> |
+<hi rend="it">ya</hi>d utāsmin satīdaṃ bhavaty asyotpādād idam utpadyate pūrvavad yāvat samudayo nirodhaś ca bhavati |</p>
+
+<p>NidSa 20.15 asmin khalu dharmaparyāye bhāṣyamāṇe 'celakāśyapasya virajo vigatamalaṃ dharmeṣu dharmacakṣur utpannam |</p>
+
+<p>NidSa 20.16 athācelakāśyapo dṛṣṭadharmā prāptadharmā viditadharmā paryavagāḍhadharmā tīrṇakāṅkṣas tīrṇavicikitso 'para<hi rend="it">pra</hi>tyayo 'nanyaneyaḥ śāstuḥ śāsane dharmeṣu vaiśāradyaprāpto yena bhagavāṃs tenāñjaliṃ praṇamya bhagavantam idam avocat |</p>
+
+<p>NidSa 20.17 abhikkrānto 'haṃ bhadanta abhikkrāntaḥ | eṣo 'haṃ bhagavantaṃ śaraṇaṃ gacchāmi dharmaṃ ca bhikṣusaṃghaṃ ca | upāsākaṃ ca māṃ dhārayādyāgreṇa yāvajjīvaṃ prāṇopetaṃ śaraṇagatam abhiprasannam |</p>
+
+<p>NidSa 20.18 athācelakāśyapo bhagavato bhāṣitam abhinandyānumodya bhagavatpādau śirasā vanditvā bhagavato 'ntikāt prakrāntaḥ |</p>
+
+<p>NidSa 20.19 athācelakāśyapo 'ciraprakrānto bhagavato 'ntikād gavā taruṇavatsayā jīvitād vyaparopitaḥ | tasya maraṇasamaye vi<hi rend="it">prasa</hi>nnānīndriyāṇi pariśuddho mukhavarṇaḥ paryavadātas tvagvarṇaḥ |</p>
+
+<p>NidSa 20.20 atha saṃbahulā bhikṣavaḥ pūrvāhṇe nivasya pātrac<hi rend="it">ī</hi>vara<hi rend="it">m</hi> ādāya rājagṛhaṃ piṇḍāya prāviśan | aśrauṣuḥ saṃbahulā bhikṣavo rājagṛhaṃ piṇḍāya carantaḥ | yo 'sāv acelakāśyapo bhagavantaṃ <hi rend="it">rāja</hi>gṛhe praśnaṃ pṛṣṭavān so 'ciraprakrānto bhaga<hi rend="it">va</hi>to 'nti<hi rend="it">kā</hi>d gavā taruṇavatsayā jīvitād vyaparopitaḥ | tasya maraṇasamaye vi<hi rend="it">pra</hi>sannānīndriyāṇi pariśuddho mukhavarṇaḥ paryavadātas tvagvarṇaḥ |</p>
+
+<p>NidSa 20.21 śrutvā ca punā rājagṛhaṃ piṇḍāya caritvā kṛ<hi rend="it">ta</hi>bha<hi rend="it">k</hi>takṛtyāḥ paścādbhaktapiṇḍapātaṃ pratikrāntāḥ | pātracīvaraṃ pratiśamya pādau prakṣālya yena bhagavāṃs tenopajagmuḥ | upetya bhagavatpādau śirasā vanditvaikānte nyaṣīdan | ekāntaniṣaṇṇāḥ saṃbahulā bhikṣavo bhagavantam idam avocan |</p>
+
+<p>NidSa 20.22 iha vayaṃ bhadanta saṃbahulā bhikṣavaḥ pūrvāhṇe nivasya pātracīvaram ādāya rājagṛhaṃ piṇḍāya prāviśāma | aśrauṣma vayaṃ saṃba<hi rend="it">hu</hi>lā bhikṣavo rājagṛhaṃ piṇḍā<hi rend="it">ya carantaḥ</hi> pūrvavad yāvat paryavadātas tva<hi rend="it">gva</hi>rṇaḥ |
+tasya bhadanta kā gatiḥ kopapattiḥ ko 'bhisaṃparāyaḥ |</p>
+
+<p>NidSa 20.23 dravyajātīyaḥ sa bhikṣavaḥ kulaputraḥ | pratyabhijñāsīc ca me dharmeṣv anudharmam | na ca m<hi rend="it">e</hi> viheṭhitavān dharmādhikārikī<hi rend="it">ṃ kathāṃ v</hi>y<hi rend="it">āk</hi>ṛtā<hi rend="it">ṃ</hi> sa kulaputraḥ | kuruta tasya śarīre śarīrapūjām iti |
+NidSa 20.24 tatra bhagavān acelakāśyapaṃ pa<hi rend="it">ramaṃ vyākaraṇam</hi> akārṣīt //</p>
+
+<p>Sūtra 21: Timburuka</p>
+
+<p>NidSa 21.1 etad eva sūtraṃ ti<hi rend="it">mburu</hi>kaparivrājakam |</p>
+
+<p>NidSa 21.2 sukhaduḥkha<hi rend="it">ṃ</hi> pṛcchatīti viśeṣaṇam |</p>
+
+<p>Sūtra 22: Bhūmika</p>
+
+<p>NidSa 22.1 bhaga<hi rend="it">v</hi>ān rājagṛhe viharati veṇuvane kalandakanivāpe |</p>
+
+<p>NidSa 22.2 tena khalu samayenāyuṣmān bhūmiko rājagṛhe viharati gṛdhrakūṭe parvate |</p>
+
+<p>NidSa 22.3 atha sa<hi rend="it">ṃ</hi>bahulā anyatīrthikaparivrājakā yenāyuṣmān bhūmikas tenopajagmuḥ | upetyāyuṣmatā bhūm<hi rend="it">i</hi>kena sārdhaṃ saṃmukhaṃ saṃmodanīṃ saṃrañjanīṃ kathāṃ vividhām upasaṃhṛtyaikānte <hi rend="it">nyaṣ</hi>ī<hi rend="it">da</hi>n | e<hi rend="it">k</hi>āntanisaṇṇāḥ saṃbahulā anyatīrthikaparivrājakā āyuṣmantaṃ bhūmikam idam avocan |</p>
+
+<p>NidSa 22.4 pṛcchāma bho bhūmika kañcid eva pradeśam | saced avakāśaṃ kuryāḥ praśnasya vyākaraṇā<hi rend="it">ya</hi> |</p>
+
+<p>NidSa 22.5 <hi rend="it">pṛccha</hi>ta bhavantaḥ | śrutvā te vedayiṣyāmi |</p>
+
+<p>NidSa 22.6a kin nu bho bhūmika svayaṃkṛtaṃ sukha<hi rend="it">duḥkha</hi>m |
+avyākṛtam ida<hi rend="it">ṃ</hi> bhada<hi rend="it">n</hi>ta bhaga<hi rend="it">va</hi>tā svayaṃkṛtaṃ sukhaduḥkham |</p>
+
+<p>NidSa 22.6b kin nu bho bhūmika parak<hi rend="it">ṛ</hi>taṃ svayaṃkṛtañ <hi rend="it">ca parakṛtañ ca as</hi>vayaṃkāraparakārahetusamutpannaṃ sukhaduḥkham |
+etad api bhadanta avyākṛtaṃ bhagavatā parakṛtaṃ svayaṃkṛtañ ca parakṛtañ ca asvayaṃkāraparakārahetusamutpannaṃ su<hi rend="it">khaduḥkha</hi>m |</p>
+
+<p>NidSa 22.7 kin nu bho bhūmika svayaṃkṛtaṃ sukhaduḥkham iti pṛṣṭo 'vyākṛtam iti vadasi |
+parakṛtaṃ svayaṃkṛtañ ca parakṛtañ ca asvayaṃkāraparakārahetusamutpannaṃ <hi rend="it">sukhadu</hi>ḥkham iti pṛṣṭo 'vyākṛtam iti vadasi |
+kathaṃ samutpannaṃ bha<hi rend="it">ga</hi>vatā gautamena sukhaduḥkhaṃ prajñaptam |</p>
+
+<p>NidSa 22.8 pratītyasamutpannaṃ bhava<hi rend="it">n</hi>to bhagavatā sukhaduḥkhaṃ prajñaptam |</p>
+
+<p>NidSa 22.9 atha sa<hi rend="it">ṃ</hi>ba<hi rend="it">hu</hi>lā anyatīrthikaparivrājakā āyuṣmato bhūmikasya bhāṣitaṃ nābhinandanti na pratikrośanti | anabhinandyāprakrośāś cotthāyāsanāt prakrāntāḥ |</p>
+
+<p>NidSa 22.10 tena khalu samayenāyuṣmāñ chāriputra āyuṣmato bhūmikas<hi rend="it">ya</hi> nā<hi rend="it">t</hi>i<hi rend="it">dūr</hi>e <hi rend="it">n</hi>i<hi rend="it">ṣaṇṇ</hi>o 'bhūd anyataraṃ vṛkṣamūlaṃ niśritya |</p>
+
+<p>NidSa 22.11 athāy<hi rend="it">u</hi>ṣmān bhūmiko 'ciraprakrāntān saṃbahulān anyatīrthikaparivrājakān viditvā yenāyuṣmāñ chāriputras ten<hi rend="it">opa</hi>ja<hi rend="it">gāma | upe</hi>tya yāvad evāsyābhūt sa<hi rend="it">ṃ</hi>bahulair anyatī<hi rend="it">rthikapa</hi>r<hi rend="it">i</hi>vrājakaiḥ sārdham antarākathāsamudāhāras tat sarvam āyuṣmataḥ <hi rend="it">śār</hi>ipu<hi rend="it">t</hi>r<hi rend="it">asya</hi> vistareṇārocayati | evaṃ cāha |</p>
+
+<p>NidSa 22.12 kaścid aham evam āyuṣmañ chāriputra vyākurvāṇo no ca bhagavantam abhyācakṣe | nātisarāmi | uktavādī cāhaṃ bhagavato dharmavādī ca | dharmasya cānudhar<hi rend="it">maṃ</hi> vyākaromi | na ca me kaścid āgacchet parataḥ sahadharmeṇa vādānuvādaṃ garhasthānīyo dharmaḥ |</p>
+
+<p>NidSa 22.13 tatthyaṃ tvam āyuṣman bhūmīka vyākurvāṇo no ca bhagavantam abhyākhyāsī<hi rend="it">ḥ | nā</hi>t<hi rend="it">isa</hi>rasi | uktavādī ca tvaṃ bhagavato dharmavādī ca | dharmasya cānudharmaṃ vyākaroṣi | na ca te kaścid āgacchet parataḥ sahadharmeṇa vādānuvādaṃ garhasthānīyo dharmaḥ |</p>
+
+<p>NidSa 22.14 tat kasmād dhetoḥ | pratītyasamu<hi rend="it">tpanna</hi>m āyuṣman bhūmika bhagavatā sukhaduḥkhaṃ prajñaptam |</p>
+
+<p>NidSa 22.15a tatrāyuṣman bhūmika ye te śramaṇabrāhmaṇāḥ svayaṃkṛtaṃ sukhaduḥkhaṃ prajñapayanti tad api pratītyasamutpannam | tad ba<hi rend="it">ta pra</hi>tītyasamutpannaṃ bhaviṣyati | nedaṃ sthā<hi rend="it">na</hi>ṃ vidyate |</p>
+
+<p>NidSa 22.15b parakṛtaṃ
+svayaṃkṛtañ ca parakṛtañ ca asvayaṃkāraparakārahetusamutpannaṃ sukhaduḥkhaṃ prajñapayanti ta<hi rend="it">d a</hi>pi pratītya<hi rend="it">samutpannam | ta</hi>d bata pratītyasamutpannaṃ bhaviṣyeti | nedaṃ sthānaṃ vidyate |</p>
+
+<p>NidSa 22.16a tatrāyuṣman <hi rend="it">bh</hi>ūmika ye te śramaṇabrāhmaṇāḥ svayaṃkṛtaṃ sukhaduḥkhaṃ prajñapayanti tad api spa<hi rend="it">r</hi>śapratyayam | <hi rend="it">tad bata a</hi>nyatrasparśāt pratisaṃvedayiṣyan<hi rend="it">t</hi>i | <hi rend="it">n</hi>e<hi rend="it">da</hi>ṃ sthānaṃ vidyate |</p>
+
+<p>NidSa 22.16b para<hi rend="it">kṛtaṃ</hi>
+svayaṃkṛtañ ca parakṛ<hi rend="it">tañ</hi> ca asvaya<hi rend="it">ṃ</hi>kāraparakārahetusamutpannaṃ sukhaduḥkhaṃ prajñāpayanti tad api sparśa<hi rend="it">prat</hi>y<hi rend="it">ayam</hi> | ta<hi rend="it">d</hi> bata anyatrasparśāt <hi rend="it">p</hi>ra<hi rend="it">ti</hi>saṃvedayi<hi rend="it">ṣyan</hi>ti | nedaṃ sthānaṃ vi<hi rend="it">dya</hi>te |</p>
+
+<p>NidSa 22.17 t<hi rend="it">e</hi>na khalu samayenāyuṣmān ānanda āyuṣmataḥ śāriputrasya nātidūre niṣaṇṇo 'bhūd anyataraṃ vṛkṣamūlaṃ niśri<hi rend="it">t</hi>ya |</p>
+
+<p>NidSa 22.18 <hi rend="it">a</hi>thāy<hi rend="it">u</hi>ṣ<hi rend="it">m</hi>ān ānando yāvad evābh<hi rend="it">ūd āyu</hi>ṣmato bhūmikasyāyuṣmatā śāriputreṇa sārdham antarākathāsamudāhāras tat sarvam udgṛhya paryavāpya yena bhagavāṃs tenopajagāma | upe<hi rend="it">tya bhagavatpā</hi>dau śirasā vandi<hi rend="it">tv</hi>ai<hi rend="it">k</hi>ān<hi rend="it">te</hi> 'sthāt | ekāntasthita āyu<hi rend="it">ṣmā</hi>n ānando <hi rend="it">yā</hi>vad evābhūd āyuṣmato bhūmikasyāyuṣmatā śāriputreṇā sārdham antarākathāsamudāhāras tat sa<hi rend="it">rvaṃ bhagavato vi</hi>stareṇā<hi rend="it">r</hi>o<hi rend="it">ca</hi>yati |</p>
+
+<p>NidSa 22.19 e<hi rend="it">vam u</hi>kto bhagavān āyuṣmantam <hi rend="it">ā</hi>nan<hi rend="it">dam idam a</hi>v<hi rend="it">o</hi>cat | sādhu sādhv ānanda paṇḍitaḥ śāriputro bhikṣuḥ | kālagatena praśnaḥ samyakprajñayā pṛṣṭena <hi rend="it">vyākṛtaḥ |</hi> <hi rend="it">icch</hi>āmi k<hi rend="it">a</hi>ś ca śrā<hi rend="it">va</hi>kaḥ k<hi rend="it">ā</hi>la<hi rend="it">ga</hi>te<hi rend="it">na p</hi>r<hi rend="it">aś</hi>n<hi rend="it">aṃ</hi> pṛṣṭo vyākuryā<hi rend="it">t</hi> tadyathā śāriputr<hi rend="it">e</hi>ṇa bh<hi rend="it">i</hi>kṣuṇā vyākṛtaḥ |</p>
+
+<p>NidSa 22.20 eko 'yaṃ samayaḥ | rājagṛhe viharāmi girivraje |
+tatra mamānyatīrthikāḥ parivrāja<hi rend="it">kā etad e</hi>vārtham ebhiḥ padair ebh<hi rend="it">i</hi>r <hi rend="it">vya</hi>ñjanaiḥ praśnaṃ pṛṣṭavantaḥ | teṣāṃ mayā eṣa evārtho ebhiḥ padair ebhir vyañjanaiḥ praśnaḥ pṛṣṭena vyākṛtas tadyathā śāriputreṇa bhikṣuṇā |</p>
+
+<p>NidSa 22.21 ta<hi rend="it">t</hi>r<hi rend="it">a ye kecic chramaṇa</hi>br<hi rend="it">ā</hi>hmaṇāḥ svayaṃkṛtaṃ sukhaduḥkhaṃ prajñapayanti tān aham upasaṃkramāmi | upasaṃkram<hi rend="it">y</hi>aivaṃ vadāmi |
+satyaṃ kila bhavantaḥ svayaṃkṛtaṃ sukhaduḥkhaṃ <hi rend="it">p</hi>rajñapayanti | te may<hi rend="it">ā pṛṣṭā evam iti prati</hi>jānanti | tān a<hi rend="it">ham e</hi>vaṃ vadāmi |
+asty etad bhadanta evam ucyate | yat punar a<hi rend="it">t</hi>r<hi rend="it">a bha</hi>vantaḥ sthāmaśaḥ parāmṛśyābhiniviśyānuvyavaharanti | idam eva satyaṃ moham anyat | idam atrā<hi rend="it">haṃ nānujānā</hi>mi |</p>
+
+<p>NidSa 22.22 tat kasmād dhetoḥ | anyathāsa<hi rend="it">m</hi>utpannaṃ mayā bhavantaḥ sukhaduḥkhaṃ prajñaptam |
+te mama pṛccha<hi rend="it">n</hi>t<hi rend="it">i</hi> | kathaṃ samutpannaṃ bhagavatā gautamena sukhaduḥkham prajñaptam | tān aham e<hi rend="it">vaṃ va</hi>dāmi | <hi rend="it">pratītyasamu</hi>tpannaṃ mayā sukhaduḥaṃ prajñaptam |</p>
+
+<p>NidSa 22.23 evaṃ parakṛtaṃ svayaṃkṛtañ ca parakṛtañ ca
+asvayaṃkārapa<hi rend="it">rak</hi>ārahetusamutpannaṃ sukhadukhaṃ prajñapayanti tān aham upasaṃkramāmi pūrvavad yāvat |</p>
+
+<p>NidSa 22.24 yathā khalv ahaṃ bhadanta bhagavato bhāṣitasyārtham ājānāmi jātyāṃ satyāṃ jarāmaraṇaṃ bhavati | n<hi rend="it">ā</hi>nyatrajātipratyayaṃ jarāmaraṇam | yāvad avidyāyāṃ satyāṃ saṃskārā bhavan<hi rend="it">ti</hi> | nānyatrāvidyāpratyayāḥ saṃskārāḥ |</p>
+
+<p>NidSa 22.25 evaṃ nirodho vācyaḥ |</p>
+
+<p>NidSa 22.26 etad eva bhagavān āyuṣmata ānandasya pratyācārayati |</p>
+
+<p>Sūtra 23: dṛṣṭisampanna (der rechten Ansicht teilhaft)</p>
+
+<p>NidSa 23.1 rājagṛhe nidānam |</p>
+
+<p>NidSa 23.2 tena khalu samayenā<hi rend="it">yu</hi>ṣmāñ chāriputra āyuṣmāṃś ca mahākoṣṭhilo rājagṛhe viharato gṛdhrakūṭe parvate |</p>
+
+<p>NidSa 23.3 athāyuṣmān mahākoṣṭhilaḥ sāyāhne pratisaṃlayanād vyutthāya yenāyuṣmāñ chāriputras tenopajagāma | upetyāyuṣmatā śāriputreṇa sārdhaṃ saṃmukhaṃ sammodanīṃ saṃraṃjanīṃ kathāṃ vividhām upasaṃhṛtyaikānte nyaṣīdat | ekāntaniṣaṇṇa āyuṣmān mahākoṣṭhila āyuṣmantaṃ śāriputram idam avocat |</p>
+
+<p>NidSa 23.4 pṛcchāma āyuṣmañ chāriputra kañcid eva pradeśam | sace<hi rend="it">d a</hi>vakā<hi rend="it">śa</hi>ṃ <hi rend="it">kuryāḥ</hi> praśnasya vyākaraṇāya |</p>
+
+<p>NidSa 23.5 pṛcchā<hi rend="it">yu</hi>ṣman mahā<hi rend="it">k</hi>o<hi rend="it">sṭh</hi>ila | śrutvā te vedayiṣyāmi |</p>
+
+<p>NidSa 23.6 kiyatāyuṣmañ chāriputra āryaśrāvako 'smin dharmavinaye dṛṣṭisaṃpannaś ca bhavati | <hi rend="it">ṛjv</hi>y<hi rend="it">ā ca</hi> dṛṣṭyā samanvāgato bhavati | buddhe cā<hi rend="it">v</hi>etyaprasādena samanvāgato bhavati | āgata imaṃ saddharmam upagata imaṃ saddharmam avaiti saddharmam ity ucyate |</p>
+
+<p>NidSa 23.7a yataś cāyaṃ mahākoṣṭhila āryaśrāvako 'kuśalaṃ yathābhūtaṃ prajānāti | akuśalamūlaṃ yathābhūtaṃ prajānāti | kuśalaṃ yathābhūtaṃ prajānāti | kuśalamūlaṃ yathābhūtaṃ prajānāti |</p>
+
+<p>NidSa 23.7b kim akuśalaṃ yathābhūtaṃ prajānāti | akuśalaṃ kāyakarma vākkarma manaḥkarma | idam akuśalam | evam akuśalaṃ yathābhūtaṃ prajānāti |</p>
+
+<p>NidSa 23.7c kim akuśalamūlaṃ yathābhūtaṃ prajānāti | trīṇy akuśalamūlāni | lobho 'kuśalamūlam | dveṣo moho 'kuśalamūlam | idam akuśala<hi rend="it">mūlam</hi> | evam akuśalamūlaṃ yathābhūtaṃ prajānāti |</p>
+
+<p>NidSa 23.7d kuśalaṃ kāya<hi rend="it">ka</hi>rma vākkarma manaḥkarma | idaṃ kuśalam | evaṃ kuśalaṃ yathābhūtaṃ prajānāti |</p>
+
+<p>NidSa 23.7e kiṃ kuśalamūlaṃ yathābhūtaṃ prajānāti | trīṇi <hi rend="it">ku</hi>śalamūlāni | alobhaḥ kuśalamūlam | adveṣo 'mohaḥ kuśalamūlam | idaṃ ku<hi rend="it">śa</hi>lamūlam | e<hi rend="it">vaṃ</hi> kuśalamūlaṃ yathābhūtaṃ prajānāti |</p>
+
+<p>NidSa 23.7f yataś cāyuṣman mahākoṣṭhila āryāśrāvaka evam akuśalaṃ yathābhūtaṃ prajānāti | akuśalamūlaṃ yathābh<hi rend="it">ū</hi>taṃ <hi rend="it">prajā</hi>nāti | <hi rend="it">kuśala</hi>ṃ yathābhūtaṃ prajānāti | kuśalamūlaṃ yathābhūtaṃ prajānāti |</p>
+
+<p>NidSa 23.7g iyatāryaśrāva<hi rend="it">ko '</hi>smin dha<hi rend="it">r</hi>mav<hi rend="it">i</hi>naye dṛṣṭisaṃpannaś ca bhavati | ṛjvyā ca dṛṣṭyā samanvāgato bhavat<hi rend="it">i | buddhe cāvet</hi>y<hi rend="it">a</hi>pra<hi rend="it">sādena</hi> sama<hi rend="it">nvā</hi>gato bhavati | āgata imaṃ saddharmam upagata imaṃ <hi rend="it">sa</hi>ddharmam avaiti sa<hi rend="it">ddha</hi>rmam ity ucyate |</p>
+
+<p>NidSa 23.8 kin nv āyuṣmañ chāriputra eṣa eva paryāyaḥ | aho svid a<hi rend="it">n</hi>yo 'pi | syād āyuṣman <hi rend="it">mahākoṣṭhila a</hi>nyo 'pi |</p>
+
+<p>NidSa 23.9a yataś cāryaśrāvaka āhārān yathābhūtaṃ prajānāti | āhārasamudayam āhāranirodham āhāranirodhagāminīṃ pratipadaṃ yathābhūtaṃ prajānāti |</p>
+
+<p>NidSa 23.9b <hi rend="it">kim āhārān yathā</hi>bhūtaṃ prajānāti | catvāra āhārāḥ | kabaḍiṃkāra āhāra au<hi rend="it">d</hi>ā<hi rend="it">r</hi>ikaḥ sūkṣmaś ca | sparśo dvitīyaḥ | manaḥsa<hi rend="it">ñ</hi>cetanā tṛtīyaḥ | vijñānaṃ caturthaḥ | ima āhārāḥ | evam ā<hi rend="it">hārān yathābhū</hi>taṃ prajānāti |</p>
+
+<p>NidSa 23.9c kim āhārasamudayaṃ yathābhūtaṃ prajān<hi rend="it">āti | tṛṣṇā p</hi>au<hi rend="it">na</hi>rbhavikī nandirāgasahagatā tatratatrābhinandinī | ayam āhārasamudayaḥ | eva<hi rend="it">m āhārasa</hi>mudayaṃ yathābhūtaṃ pra<hi rend="it">j</hi>ānāti |</p>
+
+<p>NidSa 23.9d k<hi rend="it">im ā</hi>hāranirodhaṃ yathābh<hi rend="it">ūtaṃ</hi> pra<hi rend="it">jā</hi>nāti | yad asyā eva tṛṣṇāyāḥ paunarbhavikyā nandirāgasahagatāyās tatratatrābhinandi<hi rend="it">nyā yad aśeṣaṃ p</hi>rāhāṇaṃ pratiniḥsargo vyantibhāvaḥ kṣayo virāgo nirodho vyupaśa<hi rend="it">mo</hi> 'staṃgamaḥ | ayam āhāranirodhaḥ | evam āhāranirodhaṃ yathābhūtaṃ prajānāti |</p>
+
+<p>NidSa 23.9e kim āhāranirodhagāminīṃ <hi rend="it">pratipadaṃ</hi> yathābhūtaṃ prajānāti | yadutāryā<hi rend="it">ṣ</hi>ṭāṅgo mārgaḥ | tadyathā samyagdṛṣṭiḥ samyaksaṃkalpaḥ samyagvāk sam<hi rend="it">ya</hi>kkarmāntaḥ samyagājīvaḥ samyagvyāyāmaḥ samyaksmṛtiḥ samyaksamādhiḥ | eṣa <hi rend="it">mārgaḥ | iya</hi>m āhā<hi rend="it">ra</hi>nirodhagāminī pratipat | evam āhāranirodhagāminīṃ pratipadaṃ yathābhūtaṃ prajānāti |</p>
+
+<p>NidSa 23.9f <hi rend="it">ya</hi>taś cāryaśrāvaka evam āhārān yathābhūtaṃ prajānāti | <hi rend="it">āh</hi>ārasamuda<hi rend="it">yam āhāranirodham āhā</hi>ranirodhagāminī<hi rend="it">ṃ</hi> pratipadaṃ yathābhūtaṃ prajānāti |</p>
+
+<p>NidSa 23.9g iyatāryaśrāvako 'smin dharma<hi rend="it">vi</hi>naye dṛṣṭisampannaś ca bhavati pūrvavat |</p>
+
+<p>NidSa 23.10 kin nv āyuṣmañ chāriputra eṣa <hi rend="it">eva paryāyaḥ | aho svid a</hi>nyo'pi |
+syād āyuṣman mahākoṣṭhila anyo'pi |</p>
+
+<p>NidSa 23.11a yataś cāryaśrāvaka āsravān yathābhūta<hi rend="it">ṃ</hi> prajānāti | āsravasamudayam āsravanirodham āsrava<hi rend="it">n</hi>i<hi rend="it">rodhagāminīṃ pratipadaṃ ya</hi>thābhūtaṃ prajānāti |</p>
+
+<p>NidSa 23.11b kim āsravān yathābhūtaṃ prajānāti | traya āsravāḥ | kāmāsravo bhavāsra<hi rend="it">vo '</hi>vidyāsravaḥ | ima āsravāḥ | evam āsravān yathābhūtaṃ praj<hi rend="it">ānāti</hi> |</p>
+
+<p>NidSa 23.11c k<hi rend="it">im ās</hi>r<hi rend="it">ava</hi>samudayaṃ yathābhūtaṃ prajānāti | avidyāsamudayād āsravasamudayaḥ | ayam āsravasamu<hi rend="it">da</hi>yaḥ | evam āsravasamudayaṃ yathābhūtaṃ prajānāti |</p>
+
+<p>NidSa 23.11d kim āsrava<hi rend="it">ni</hi>rodhaṃ yathābhūtaṃ prajānāti | avidyānirodhād āsra<hi rend="it">va</hi>nirodhaḥ | evam āsravanirodhaṃ yathābhūtaṃ prajā<hi rend="it">nā</hi>ti |</p>
+
+<p>NidSa 23.11e kim āsravan<hi rend="it">i</hi>rodhagāminī<hi rend="it">ṃ</hi> pratipadaṃ yathābhūta<hi rend="it">ṃ</hi> prajānāti | āryāṣṭāṅgo mārgaḥ pūrva<hi rend="it">va</hi>t |</p>
+
+<p>NidSa 23.11f yataś cāryaśrāvaka evam āsravān yathābhūtaṃ prajānāti | āsravasamudayam āsravanirodham āsra<hi rend="it">va</hi>nirodha<hi rend="it">gā</hi>minī<hi rend="it">ṃ</hi> pratipadaṃ yathābhūtaṃ prajānāti |</p>
+
+<p>NidSa 23.11g iyatāryaśrāvako 'smin dharmavinaye dṛṣṭisampannaś ca bhavati pūrvavat |</p>
+
+<p>NidSa 23.12 kin nv ā<hi rend="it">yu</hi>ṣmañ chāripu<hi rend="it">tra</hi> eṣa eva paryāyaḥ | aho svid anyo'pi | syād āyuṣman mahākoṣṭhila anyo'pi |</p>
+
+<p>NidSa 23.13a yataś cāryaśrāvako duḥkhaṃ yathā<hi rend="it">bhū</hi>taṃ prajānāti | duḥkhasamudayaṃ duḥkhanirodhaṃ duḥkha<hi rend="it">niro</hi>dhagāmi<hi rend="it">nīṃ pra</hi>tipadaṃ yathābhūtaṃ prajānāti |</p>
+
+<p>NidSa 23.13b kiṃ duḥkhaṃ yathābhūtaṃ prajānāti | jātir <hi rend="it">duḥ</hi>kham | jarā duḥkham | vyādhir duḥkham | <hi rend="it">mara</hi>ṇaṃ duḥkham | priyaviprayogo duḥkham | apriyasa<hi rend="it">ṃpra</hi>yogo duḥ<hi rend="it">kham</hi> | yad apīcchate paryeṣamāṇo na labhate tad api du<hi rend="it">ḥ</hi>kha<hi rend="it">m</hi> | saṃkṣiptena pañcopādānaskandhā duḥkham | idaṃ duḥkha<hi rend="it">m | evaṃ d</hi>u<hi rend="it">ḥ</hi>khaṃ yathābhūtaṃ prajānāti |</p>
+
+<p>NidSa 23.13c kiṃ duḥkhasamudayaṃ <hi rend="it">ya</hi>thābhūtaṃ praj<hi rend="it">ā</hi>nāti | tṛṣṇā paunarbhavikī pūrvavat | ayaṃ d<hi rend="it">u</hi>ḥkhasamudayaḥ | evaṃ duḥkhasamu<hi rend="it">da</hi>yaṃ yathābhūtaṃ prajānāti |</p>
+
+<p>NidSa 23.13d kiṃ du<hi rend="it">ḥ</hi>khanirodhaṃ yathābhūtaṃ prajānāti | yad asyā <hi rend="it">e</hi>va tṛṣṇāyāḥ paunarbhavikyāḥ pūrvavat | ayaṃ duḥkhanirodhaḥ | evaṃ duḥkhan<hi rend="it">i</hi>rodhaṃ yathābhūtaṃ prajānāti |</p>
+
+<p>NidSa 23.13e kiṃ duḥkhanirodhagāminīṃ pratipadaṃ yathābhūtaṃ prajānāti | āryā<hi rend="it">ṣṭ</hi>ā<hi rend="it">ṅg</hi>o<hi rend="it">m</hi>ārgaḥ pūrvavat | iya<hi rend="it">ṃ</hi> duḥkhanirodhagāminī pratipat | evaṃ duḥkhanirodhagāminīṃ pratipadaṃ yathābhūtaṃ prajānāti |</p>
+
+<p>NidSa 23.13f</p>
+
+<p>NidSa 23.13g iyatāryaśrāvako 'smin dharmavinaye dṛṣṭisampannaś ca bhava<hi rend="it">ti</hi> pūrvavat |</p>
+
+<p>NidSa 23.14 kin nv āyuṣmañ chāriputra eṣa eva paryāyaḥ | aho svid anyo 'pi | s<hi rend="it">y</hi>ā<hi rend="it">d ā</hi>yuṣman mahākoṣṭhila anyo 'pi |</p>
+
+<p>NidSa 23.15a yataś cāryaśrāvako jarāmaraṇaṃ ya<hi rend="it">thā</hi>bhūtaṃ prajānāti | jarāmaraṇa<hi rend="it">samu</hi>dayaṃ jarāmaraṇanirodhaṃ jarāmaraṇanirodhagāminīṃ pratipadaṃ yathābhūtaṃ prajānāti |</p>
+
+<p>NidSa 23.15b kiṃ jarāmaraṇaṃ yathābhūtaṃ <hi rend="it">p</hi>r<hi rend="it">aj</hi>ā<hi rend="it">nāti | pūrvavad yathā ā</hi>d<hi rend="it">i</hi>sūtre |</p>
+
+<p>NidSa 23.15c kiṃ jarāmara<hi rend="it">ṇa</hi>sa<hi rend="it">mu</hi>dayaṃ yathābhūtaṃ prajānāti | jāti<hi rend="it">sa</hi>mu<hi rend="it">da</hi>yāj jarāmaraṇasamuda<hi rend="it">yaḥ</hi> |</p>
+
+<p>NidSa 23.15d evaṃ jātinirodhāj jarāmaraṇanirodhaḥ |</p>
+
+<p>NidSa 23.15e āryāṣṭāṅgo <hi rend="it">m</hi>ārgaḥ pū<hi rend="it">rvavat</hi> |</p>
+
+<p>NidSa 23.15f <hi rend="it">yataś cāryaśrāvaka eva</hi>ṃ jarāmaraṇaṃ yathābhūtaṃ prajānāti | jarāmaraṇasamudayaṃ jarāmaraṇanirodhaṃ jarāma<hi rend="it">raṇa</hi>nirodhagāminīṃ pratipadaṃ yathābhūtaṃ prajānāti |</p>
+
+<p>NidSa 23.15g iya<hi rend="it">tā</hi>ryaśrāvako 'smin dharmavinaye dṛṣṭisampannaś ca bhavati pūrvavat |</p>
+
+<p>NidSa 23.16 evaṃ jātir bhava upādānaṃ tṛ<hi rend="it">ṣ</hi>ṇā v<hi rend="it">e</hi>danā sparśaḥ ṣadāya<hi rend="it">ta</hi>naṃ nāmarūpaṃ vijñānaṃ saṃskārāḥ |</p>
+
+<p>NidSa 23.17a yataś cāryaśrāvakaḥ saṃskārān yathā<hi rend="it">bhūtaṃ prajānā</hi>ti | sa<hi rend="it">ṃskā</hi>rasamudayaṃ saṃskāranirodhaṃ saṃskāranirodhagāminīṃ pratipadaṃ <hi rend="it">ya</hi>thābhūtaṃ prajānāti |</p>
+
+<p>NidSa 23.17b k<hi rend="it">iṃ</hi> saṃskārān yathābhūtaṃ prajānāti | trayaḥ saṃskārāḥ | kāyasaṃskāro vāksaṃ<hi rend="it">skāro</hi> manaḥsaṃskāraḥ |</p>
+
+<p>NidSa 23.17c kiṃ saṃs<hi rend="it">kārasa</hi>mudayaṃ yathābhūtaṃ prajānāti | avidyāyāḥ sa<hi rend="it">muda</hi>yāt saṃskārasamudayaḥ | ayaṃ saṃskārasamu<hi rend="it">da</hi>yaḥ | evaṃ saṃskārasamudayaṃ yathābhūtaṃ prajānāti |</p>
+
+<p>NidSa 23.17d kiṃ saṃskāranirodhaṃ yathābhūtaṃ prajānāti / <hi rend="it">avidyāyā nirodhāt saṃskāranirodhaḥ | a</hi>ya<hi rend="it">ṃ</hi> saṃskāranirodhaḥ |</p>
+
+<p>NidSa 23.17e kiṃ saṃskāranirodhagāminīṃ pratipadaṃ yathābhūtaṃ prajānāti | āryāṣṭāṅgo mā<hi rend="it">rgaḥ pūrvavat |</hi></p>
+
+<p>NidSa 23.17f <hi rend="it">yataś cāyuṣ</hi>m<hi rend="it">an</hi> mahākoṣṭhila āryaśrāvaka <hi rend="it">evaṃ</hi> saṃskār<hi rend="it">ān yathābhūtaṃ prajānāti saṃs</hi>kārasamudayaṃ saṃskāra<hi rend="it">ni</hi>rodhaṃ saṃskāranirodhagāminīṃ pratipadaṃ yathābhūtaṃ prajānāti |</p>
+
+<p>NidSa 23.17g iyatā<hi rend="it">ryaśrāvako '</hi>sm<hi rend="it">i</hi>n dharmavinaye dṛṣṭisa<hi rend="it">ṃ</hi>pa<hi rend="it">nnaś ca bhavati</hi> | <hi rend="it">ṛj</hi>vy<hi rend="it">ā ca dṛṣṭ</hi>y<hi rend="it">ā samanvāga</hi>to bhavati | buddhe cāvetyaprasādena samanvāgato bhavati | āgata imaṃ saddharmam upagata imaṃ saddharmam avait<hi rend="it">i saddharmam it</hi>y <hi rend="it">u</hi>cyate |</p>
+
+<p>NidSa 23.18 <hi rend="it">k</hi>i<hi rend="it">n nv ā</hi>y<hi rend="it">u</hi>ṣmañ chāriputra e<hi rend="it">ṣa eva paryā</hi>yaḥ | aho svid anyo 'pi |</p>
+
+<p>NidSa 23.19 ati<hi rend="it">sara</hi>sy atisarasy āyuṣ<hi rend="it">m</hi>an <hi rend="it">mahāko</hi>ṣṭhila | na śakṣyase praśnān āparyantam udgṛhītuṃ yataś c<hi rend="it">a</hi>rya<hi rend="it">ś</hi>r<hi rend="it">āvaka</hi>syāvidyā <hi rend="it">vi</hi>ra<hi rend="it">ktā bhavati vidyotpannā |</hi></p>
+
+<p>NidSa 23.20 atha ki<hi rend="it">n</hi> n<hi rend="it">v a</hi>syottare kara<hi rend="it">ṇīya</hi>m iti tau satpuruṣāv anyonya<hi rend="it">bhā</hi>ṣitam abhinan<hi rend="it">d</hi>yān<hi rend="it">um</hi>odya <hi rend="it">utthā</hi>yāsanāt prakrāntau |/</p>
+
+<p>Sūtra 24: bhūtam idam</p>
+
+<p>NidSa 24.1 tatra bhagavān āyuṣmantaṃ śāri<hi rend="it">p</hi>u<hi rend="it">t</hi>ra<hi rend="it">m</hi> āman<hi rend="it">trayati |</hi></p>
+
+<p>NidSa 24.2a <hi rend="it">uktam idaṃ śāripu</hi>tra mayā parāyaṇeṣv ajitapraśneṣ<hi rend="it">u</hi> |</p>
+
+<p>ye ca saṅkhyātadharmāṇi
+<hi rend="it">ye</hi> ca śaikṣā<hi rend="it">ḥ pṛthagv</hi>i<hi rend="it">dh</hi>āḥ |
+teṣā<hi rend="it">ṃ</hi> me nipakasyeryāṃ
+pṛṣṭaḥ prabrūhi māriṣa <hi rend="it">// //</hi></p>
+
+<p>NidSa 24.2b <hi rend="it">ke śāriputra śaikṣāḥ ke ca saṅ</hi>khyātadharmāṇi |</p>
+
+<p>NidSa 24.3 evam ukta āyuṣmā<hi rend="it">ñ chāriputras</hi> tūṣṇī |</p>
+
+<p>NidSa 24.4 dvir api trir api bhagavān āyuṣmantaṃ śār<hi rend="it">i</hi>pu<hi rend="it">t</hi>ram idam avocat |</p>
+
+<p>NidSa 24.5 uktam idaṃ śāriputra ma<hi rend="it">yā parāyaṇesv ajitapra</hi>śn<hi rend="it">e</hi>ṣ<hi rend="it">u</hi> |</p>
+
+<p><hi rend="it">ye ca</hi> saṅkhyātadharmāḥ pūrvavat |</p>
+
+<p>NidSa 24.6 dvir api trir apy āyu<hi rend="it">ṣmāñ chāripu</hi>tras tūṣṇīm abhūt |</p>
+
+<p>NidSa 24.7 tatra bhagavān āyuṣmantaṃ śāriputram āmantrayati |</p>
+
+<p>NidSa 24.8 bhūtam idaṃ śāri<hi rend="it">putra |</hi></p>
+
+<p>NidSa 24.9 <hi rend="it">evam etad bhū</hi>ta<hi rend="it">ṃ bhadanta | bhūta</hi>sya bhadan<hi rend="it">ta</hi> bhikṣur nirvide virāgāya nirodhāya pra<hi rend="it">tipanno bha</hi>vati |</p>
+
+<p>NidSa 24.10 tadāhārasaṃbhavaḥ | tadāhārasaṃbhavasya bhikṣ<hi rend="it">u</hi>r nirvide <hi rend="it">v</hi>irāgāya nirodhāya <hi rend="it">pratipanno bhavati |</hi></p>
+
+<p>NidSa 24.11 <hi rend="it">ta</hi>dāhārani<hi rend="it">rodha</hi> iti | ya<hi rend="it">d bh</hi>ūta<hi rend="it">ṃ tan</hi> nirodhadharmam iti viditvā nirodhadharmasya bhikṣur nirvi<hi rend="it">de vir</hi>āgāya nirodhāya pratipanno bhavati |</p>
+
+<p>NidSa 24.12 im<hi rend="it">a u</hi>cyante <hi rend="it">śai</hi>kṣāḥ |</p>
+
+<p>NidSa 24.13 bhūtam idaṃ śāripu<hi rend="it">tra</hi> |</p>
+
+<p>NidSa 24.14 <hi rend="it">evam etad bhūtaṃ bhadanta | bhūtasya</hi> bhadanta bhikṣ<hi rend="it">u</hi>r nirvide vir<hi rend="it">ā</hi>gāya nirodhāyānupādāyāsravebhyaḥ samyaksu<hi rend="it">vimu</hi>ktacitto <hi rend="it">bhava</hi>ti |</p>
+
+<p>NidSa 24.15 tadāhārasaṃbhavaḥ | tadāhārasaṃbhavasya bhik<hi rend="it">ṣu</hi>r nirvide <hi rend="it">virāgāya nirodhāyānu</hi>pādāyāsravebh<hi rend="it">yaḥ sa</hi>m<hi rend="it">yaksu</hi>vimuktacitto bhavati |</p>
+
+<p>NidSa 24.16 tadā<hi rend="it">hā</hi>ranirodha iti | <hi rend="it">yad bhūtaṃ tan nirodhadharmam i</hi>ti viditvā nirodhadharmasya bhikṣur nirvide virā<hi rend="it">gā</hi>ya <hi rend="it">nirodhāyānupādāyāsravebhyaḥ sa</hi>myaksuvimuktaci<hi rend="it">tto bhavati |</hi></p>
+
+<p>NidSa 24.17 <hi rend="it">ima</hi> ucyante sa<hi rend="it">ṅ</hi>khyātadharmāṇaḥ |</p>
+
+<p>NidSa 24.18 evam etac cchāriputra bhūtam | e<hi rend="it">vam e</hi>tac cchāriputra bhūtasya bhikṣur nirvide vir<hi rend="it">ā</hi>gāya pūrvavad yāva<hi rend="it">t saṅkh</hi>y<hi rend="it">ātadharmāṇaḥ |</hi></p>
+
+<p>NidSa 24.19 <hi rend="it">atha bha</hi>gavān utthāyāsanā<hi rend="it">d vi</hi>hāraṃ prāviśat pratisaṃlayanāya |</p>
+
+<p>NidSa 24.20 <hi rend="it">athāyu</hi>ṣmāñ chāriputro 'ciraprakrāntaṃ bhagavantaṃ vid<hi rend="it">i</hi>tvā bhikṣūn āmantrayati |</p>
+
+<p>NidSa 24.21 apra<hi rend="it">tisaṃviditaṃ mām</hi> āyuṣman<hi rend="it">to bha</hi>gavān <hi rend="it">e</hi>ta<hi rend="it">ṃ pratha</hi>m<hi rend="it">aṃ</hi> praśnaṃ pṛṣṭavā<hi rend="it">n</hi> | tasya me '<hi rend="it">bh</hi>ūd apū<hi rend="it">rvaṃ dhandhā</hi>yitatvam |</p>
+
+<p>NidSa 24.22 yataś ca me bhagavāṃs tat pra<hi rend="it">tha</hi>maṃ praśnavyākaraṇam abhyanumoditavān tasya me e<hi rend="it">tad abhavat |</hi></p>
+
+<p>NidSa 24.23 <hi rend="it">sacet kevalikāṃ rātriṃ</hi> bhagav<hi rend="it">ā</hi>n <hi rend="it">e</hi>tam evārtham anyaiḥ padair anyai<hi rend="it">r</hi> vya<hi rend="it">ñ</hi>janaiḥ praśna<hi rend="it">ṃ pṛ</hi>cchet kevalikām apy ahaṃ rātriṃ bhagav<hi rend="it">ata eta</hi>m evārtham anyaiḥ padair anyair vyañjanaiḥ pra<hi rend="it">śnaṃ</hi> pṛ<hi rend="it">ṣ</hi>ṭ<hi rend="it">o vyākuryām |</hi></p>
+
+<p>NidSa 24.24 <hi rend="it">saced ekam divasam | ekaṃ r</hi>ātridivasam | saptāpi rātridivasāni bhagavān mām etam evārtham anyaiḥ <hi rend="it">pad</hi>air anyair vyañ<hi rend="it">janaiḥ</hi> pr<hi rend="it">a</hi>śna<hi rend="it">ṃ</hi> pṛcchet | saptāpy ahaṃ rātridivasāni bhagavata e<hi rend="it">tam evārtham anyaiḥ padair anyair vyañjanaiḥ</hi> praśnaṃ pṛṣṭo vyākuryām |</p>
+
+<p>NidSa 24.25 athānyataro bhikṣur yena bhagavāṃs <hi rend="it">t</hi>enopajagām<hi rend="it">a | upe</hi>tya <hi rend="it">bhagavat</hi>pādau śirasā vanditvaikānte 'sthāt | ekāntasthitaḥ <hi rend="it">sa bhikṣur</hi> bha<hi rend="it">gavantam idam avocat |</hi></p>
+
+<p>NidSa 24.26 <hi rend="it">āyu</hi>ṣmatā bhadanta śāriputre<hi rend="it">ṇa</hi> udārārṣahī vā<hi rend="it">g bhā</hi>ṣ<hi rend="it">i</hi>taikāṃśa u<hi rend="it">dgṛhītaḥ pari</hi>ṣadi samyaksiṃhanādo nāditaḥ |</p>
+
+<p>NidSa 24.27 apratisaṃvidi<hi rend="it">taṃ mām āyuṣmanto</hi> bhaga<hi rend="it">vān etaṃ pūrvavat |</hi></p>
+
+<p>NidSa 24.28 <hi rend="it">sacet</hi> kevalikām apy ahaṃ r<hi rend="it">ātrim āyuṣmantaṃ śāriputra</hi>m etam evārtham anyaiḥ pad<hi rend="it">ai</hi>r anyair <hi rend="it">vyañja</hi>naiḥ praśnaṃ pṛccheyaṃ yāvat saptāpi rātridivasāni śāriputra <hi rend="it">etam evārtham</hi> any<hi rend="it">ai</hi>ḥ padair anyair vya<hi rend="it">ñjanaiḥ praśnaṃ pṛṣṭo vyākuryāt |</hi></p>
+
+<p>NidSa 24.29 tathā hi śāriputrasya <hi rend="it">bhi</hi>kṣ<hi rend="it">o</hi>r dharmadhātu<hi rend="it">ḥ</hi> supratividdhaḥ |
+Sūtra 25: abhavya (Unfähig)</p>
+
+<p>NidSa 25.1 magadheṣu nidānam |</p>
+
+<p>NidSa 25.2 t<hi rend="it">ra</hi>ya ime bhikṣavo dharm<hi rend="it">āḥ saṃvidyante aniṣṭā akāntā amanā</hi>pā <hi rend="it">l</hi>o<hi rend="it">ka</hi>sya | katame trayaḥ / tadyathā vyādhir jarā maraṇam |
+ime cet trayo dharmā aniṣṭā ak<hi rend="it">āntā amanāpā lokasya nābha</hi>viṣ<hi rend="it">y</hi>an tathāgatā <hi rend="it">arhantaḥ samyaksaṃbuddhā loke na</hi> utpatsya<hi rend="it">nte</hi> + + + + <hi rend="it">su</hi>praveditasya dha<hi rend="it">rmavinayasya prakāśanāya |</hi></p>
+
+<p>NidSa 25.3 <hi rend="it">yasmāt tu vyādhir jarā maraṇam ime trayo dharmā aniṣṭā akāntā amanāpā lokasya bhavanti</hi> tasmā<hi rend="it">t</hi> tath<hi rend="it">āgatā arhan</hi>taḥ samyaksaṃbuddhā lo<hi rend="it">ke utpadyante supraveditasya dharmavinayasya prakāsanāya |</hi></p>
+
+<p>NidSa 25.4 <hi rend="it">trīn dharmān aprahāya abhavyo vyādhiṃ jarāṃ maraṇaṃ prahātum | kata</hi>māṃ<hi rend="it">s</hi> tr<hi rend="it">īn |</hi>
+<hi rend="it">tadyathā rā</hi>gadveṣamoham | imāṃs trīn dharmān aprahāya abhavyovyādhiṃ jarāṃ maraṇaṃ prahātum |</p>
+
+<p>NidSa 25.5 <hi rend="it">trīn dharmān aprahāya abhavyo rāgadveṣamohaṃ prahātum | ka</hi>tamāṃs trī<hi rend="it">n |</hi>
+tadya<hi rend="it">thā satkā</hi>yadṛṣṭ<hi rend="it">iṃ</hi> śīlavratap<hi rend="it">a</hi>rām<hi rend="it">a</hi>rśaṃ vicikitsā<hi rend="it">m</hi> | imāṃs <hi rend="it">t</hi>rī<hi rend="it">n dharmān aprahāya abhavyo rāgadveṣamohaṃ prahātum |</hi></p>
+
+<p>NidSa 25.6 <hi rend="it">trīn dharmān aprahāya abhavyo satkāyadṛṣṭiṃ śīlavrataparāma</hi>rśaṃ vicikitsāṃ ca <hi rend="it">p</hi>r<hi rend="it">ahā</hi>t<hi rend="it">u</hi>m | katamāṃs trīn |
+ayoniś<hi rend="it">o</hi> mana<hi rend="it">s</hi>i<hi rend="it">kāraṃ kumārgasevanāṃ līnacittatāṃ ca | imāṃs trīn dharmān aprahāya abhavyo satkāyadṛṣṭiṃ śilavrataparāmarśaṃ viciki</hi>ts<hi rend="it">āṃ</hi> ca prahātum |</p>
+
+<p>NidSa 25.7 trī<hi rend="it">n dharmān aprahā</hi>ya abh<hi rend="it">avyo a</hi>yo<hi rend="it">niśo</hi> m<hi rend="it">anasi</hi>kāra<hi rend="it">ṃ kumārgasevanāṃ līcacittatāṃ ca prahātum | katamāṃs trīn |</hi></p>
+
+<l><hi rend="it">muṣṭasmṛtitām asaṃprajanyaṃ vikṣepaṃ ca | imāṃs trīn dharmā</hi>naprahāya abhavy<hi rend="it">o ayoniśo</hi> ma<hi rend="it">nasi</hi>kāraṃ <hi rend="it">kumār</hi>g<hi rend="it">aseva</hi>nā<hi rend="it">ṃ</hi> līnacitta<hi rend="it">tāṃ ca prahātum |</hi></l>
+
+<p>NidSa 25.8 <hi rend="it">trīn dharmān aprahāya abhavyo muṣṭasmṛtitām asaṃprajanyaṃ vikṣepaṃ ca prahātum | katamāṃ</hi>s trī<hi rend="it">n</hi> |
+auddhatyam asaṃ<hi rend="it">varaṃ duḥśīlaṃ ca | imāṃs trīn dha</hi>rmān aprahāya abhavyo muṣṭasmṛtit<hi rend="it">ā</hi>m <hi rend="it">a</hi>saṃpra<hi rend="it">janyaṃ vikṣepaṃ ca prahātum |</hi></p>
+
+<p>NidSa 25.9 <hi rend="it">trīn dharmān aprahāya abhavyo auddhatyam asaṃvaraṃ duḥśīlaṃ ca prahātum | katamāṃs trī</hi>n |
+āśr<hi rend="it">a</hi>ddhyam <hi rend="it">avadānyatāṃ kausīdya</hi>m | imāṃs trī<hi rend="it">n</hi> dharmān aprahāya abhavyo auddhatyam asaṃ<hi rend="it">varaṃ duḥśīlaṃ ca prahātum |</hi></p>
+
+<p>NidSa 25.10 <hi rend="it">trīn dharmān aprahāya abhavyo āśraddhyam avadānyatāṃ kausīdyaṃ prahātum | katamāṃs trīn |</hi></p>
+
+<l><hi rend="it">āryā</hi>ṇām adarśan<hi rend="it">akāmatām āryasya dharmasya aśrava</hi>ṇakāma<hi rend="it">tām u</hi>pālaṃbhacittatāṃ ca | imāṃs trī<hi rend="it">n</hi> dha<hi rend="it">r</hi>mān a<hi rend="it">p</hi>r<hi rend="it">ahāya abhavyo āśraddhyam avadānyatāṃ kausīdyaṃ prahātum |</hi></l>
+
+<p>NidSa 25.11 <hi rend="it">trīn dharmān aprahāya abhavyo āryāṇām adarśanakāmatām āryasya dharmasya aśra</hi>vaṇ<hi rend="it">akāmatām u</hi>pālaṃbhacittatāṃ ca prahātum | ka<hi rend="it">tamāṃs trīn |</hi></p>
+
+<l><hi rend="it">anādaryaṃ daurvacasyaṃ pāpamitratāṃ ca | imāṃs trīn dharmān aprahāya abhavyo āryāṇām adarśanakāmatām ārya</hi>sya <hi rend="it">dharmasya a</hi>ś<hi rend="it">r</hi>a<hi rend="it">va</hi>ṇakāmatām upālaṃbhacittatāṃ <hi rend="it">ca prahātum |</hi></l>
+
+<p>NidSa 25.12 <hi rend="it">trīn dharmān aprahāya abhavyo anādaryaṃ daurvacasyaṃ pāpa</hi>m<hi rend="it">i</hi>trat<hi rend="it">āṃ ca prahātum | katamāṃs trīn |</hi></p>
+
+<l><hi rend="it">āhrī</hi>kyam <hi rend="it">anapa</hi>trāpyaṃ pramāda<hi rend="it">m</hi> | imāṃs trī<hi rend="it">n dha</hi>rmā<hi rend="it">n aprahāya abhavyo anādaryaṃ daurvacasyaṃ pāpamitratāṃ ca prahātum |</hi></l>
+
+<p>NidSa 25.13 <hi rend="it">tat kasmād dhet</hi>oḥ |
+ahrīmā<hi rend="it">n anapatrāpī prama</hi>tto bhavati | sa pramattaḥ sann anādaro bh<hi rend="it">a</hi>v<hi rend="it">ati | sa anādaraḥ samānaḥ pāpamitro bhavati | sa pāpamitraḥ samānaḥ</hi> + + + + + + + + + + .o bhavaty u<hi rend="it">pālaṃbhacitto</hi> bhavati | sa upālaṃbhacittaḥ samāno '<hi rend="it">śra</hi>ddho bha<hi rend="it">vati | so 'śraddhaḥ samāno</hi> + + + <hi rend="it">bhavati | sa</hi> + + + + <hi rend="it">samānaḥ</hi> + + + + + + + + + + duḥśīlo bhavati | sa <hi rend="it">auddhatya</hi>kāma<hi rend="it">ḥ |</hi> sa muṣṭasmṛti<hi rend="it">tām a</hi>saṃp<hi rend="it">raja</hi>nyaṃ <hi rend="it">v</hi>i<hi rend="it">kṣepaṃ</hi> + + + + + + + + + + + + + <hi rend="it">līnacitto bhavati | sa līnacittaḥ samāno vicikitsāṃ satkāyadṛṣṭiṃ</hi> ca niviśati | śī<hi rend="it">la</hi>vrataṃ par<hi rend="it">ā</hi>mṛśat<hi rend="it">i</hi> | atīrṇak<hi rend="it">āṅk</hi>ṣ<hi rend="it">aḥ samānaḥ sarāgadveṣamoho bhavati | avītarāgadveṣamoho abhavyo vyādhim jarāṃ maraṇam apa</hi>krāmitum |</p>
+
+<p>NidSa 25.14 trīṃs tu dharm<hi rend="it">ā</hi>n prahāya bhavyo vyādhiṃ ja<hi rend="it">rāṃ ma</hi>raṇaṃ pra<hi rend="it">hātum | katamāṃs trīn |</hi></p>
+
+<l rend="it">rāgadveṣamohān | imāṃs trīn dharmān prahāya bhavyo vyādhiṃ jarāṃ maraṇaṃ prahātum |</l>
+
+<p>NidSa 25.15 <hi rend="it">trīṃs tu dharmān prahāya bhavyo rāgadveṣa</hi>mohān prahātum | kat<hi rend="it">amāṃ</hi>s <hi rend="it">tr</hi>ī<hi rend="it">n</hi> |
+<hi rend="it">sa</hi>tkāyadṛṣṭi<hi rend="it">ṃ</hi> śīlavrataparāma<hi rend="it">r</hi>śaṃ <hi rend="it">vicik</hi>itsā<hi rend="it">m | imāṃs trīn dharmān prahāya bhavyorāgadveṣamohān prahātum |</hi></p>
+
+<p>NidSa 25.16 <hi rend="it">trīṃs tu dharmān prahāya bhavyaḥ satkāyadṛṣṭiṃ śīlavrataparā</hi>marśaṃ vicikits<hi rend="it">āṃ ca prahātum | katamāṃs trīn |
+ayoni</hi>śo manasikāra<hi rend="it">ṃ</hi> ku<hi rend="it">mārgasevanāṃ līnacittatāṃ ca | imāṃs trīn dharmān prahāya bhavyaḥ satkāyadṛṣṭiṃ śīlavrataparāmarśaṃ vicikitsāṃ ca pra</hi>hātum |</p>
+
+<p>NidSa 25.17 trī<hi rend="it">ṃ</hi>s t<hi rend="it">u dharmān prahāya bhavyo ayoniśo ma</hi>nasikāraṃ kumā<hi rend="it">r</hi>g<hi rend="it">asevanāṃ līnacittatāṃ ca prahātum | katamāṃs trīn |</hi></p>
+
+<l><hi rend="it">muṣṭasmṛtitām asaṃprajanyaṃ vikṣepaṃ ca | imāṃs trīn dharmān prahāya bhavyo ayoniśo manasi</hi>kāra<hi rend="it">ṃ</hi> kumā<hi rend="it">rgasevanāṃ</hi> l<hi rend="it">ī</hi>n<hi rend="it">a</hi>cittatāṃ ca <hi rend="it">p</hi>r<hi rend="it">ahātum |</hi></l>
+
+  </body>
+</text>
+</TEI>

@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_zaGkhAyana-AraNyaka">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Śaṅkhāyana-Āraṇyaka</title>
+	<author></author>
+	<respStmt>
+	 <resp when-custom="13|01|2015">data entry</resp>
+	 <name>Martin Joachim Kümmel</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Martin Joachim Kümmel</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/1_veda/3_ara/sankharu.htm">sankharu.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Sankhayana-Aranyaka
+<lb/>Based on the ed. by Bhim Dev, Hoshiarpur 1980 (Vishveshvaranand Indological Series, 70),
+<lb/>and the ed. of Adhyāyas 7-15
+<lb/>published as an appendix to A.B. Keith: Aitareya Āraṇyaka, Oxford 1909, pp. 305-328
+<lb/>
+<lb/>Input by Martin Joachim Kümmel, Jena
+<lb/>(c) this edition M. J. Kümmel 13/01/2015
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>Bhim Dev, Hoshiarpur 1980 (Vishveshvaranand Indological Series, 70), and the ed. of Adhyāyas 7-15 published as an appendix to A.B. Keith: Aitareya Āraṇyaka, Oxford 1909, pp. 305-328</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Śaṅkhāyana-Āraṇyaka = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Veda -- Āraṇyaka</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+<div>
+<p>Śāṅkhāyanāraṇyakam</p>
+
+<p>ŚĀ 1,1
+prajāpatir vai saṃvatsaraḥ | tasyaiṣa ātmā yan mahāvratam | tasmād enat parasmai na śaṃsen net sarveṣāṃ bhūtānām ātmānaṃ parasmin dadhānīti || atho indrasyaiṣa ātmā yan mahāvratam | tasmād enat parasmai na śaṃsen ned indrasyātmānaṃ parasmin dadhānīti || atho yam evaitam ṛṅmayaṃ yajurmayaṃ sāmamayaṃ puruṣaṃ saṃskurvanti tasyaiṣa ātmā yan mahāvratam | tasmād enat parasmai na śaṃsen net sarveṣāṃ chandasām ātmanaṃ parasmin dadhānīti || kāmaṃ tu sattriṇāṃ hotā śaṃset | pitre vācāryāya vātmane haivāsya tacchandastaṃ bhavati | ātmanaiva tad yajñaṃ samardhayati | tasya pañcaviśaḥ stomaḥ | caturviṃśatir vai saṃvatsarasyārdhamāsāḥ, saṃvatsarasyaivāptyai | atho prajāpatir vai saṃvatsaraḥ pañcaviṃśaḥ | atho caturviṃśo vai purastāt kṛto bhavati tasyaiṣa gatir yat pañcaviṃśaḥ | aindraśca ṛṣabhaḥ prājāpatyaścāja upālabhyau | aindraṃ vā etad ahaḥ | indra u vai prajāpatiḥ | tat prājāpatyaṃ rūpam | atho etad eva paśuṣvaindraṃ rūpaṃ yad ṛṣabhaḥ ||</p>
+
+<p>ŚĀ 1,2
+tasya viśoviśo vo atithim iti dvādaśarcam ājyam | dvādaśa vai māsāḥ saṃvatsaraḥ saṃvatsarasyaivāptyai | tasmin vai dve chandasī bhavato gāyatryaścānuṣṭubhaśca | agniṃ naro dīdhitibhiraraṇyor ityetat pañcaviṃśatyṛcam upasaṃśaṃsati | pañcaviṃśo hi stomaḥ | tad vai śastraṃ samṛddhaṃ yat stomena saṃpadyate | tasmin vai dve chandasī bhavato virājaśca triṣṭubhaśca | tāni catvāri saṃpadyante | catuṣṭayaṃ vā idaṃ sarvam asyaiva sarvasyāptyai | traiṣṭubhaḥ praügaḥ | indrasyaivaitacchando yat triṣṭup | yad enaṃ svena chandasā samardhayati | kuvid aṅga namasā ye vṛdhāsa ity vāyavyaṃ mahadvad vṛdhavat | mahadvat - mahadvad dhyetad ahaḥ | ata evottaraṃ tṛcam aindravāyavaṃ yāvattarastanvo yāvadoja iti yāvannaraścakṣasā dīdhyānā ityetena rūpeṇa | ud vāṃ cakṣurvaruṇa supratīkam iti maitrāvaruṇaṃ devayoreti sūryastatanvān ityetena rūpeṇa | ka u śravat katamo yajñiyānām ityāśvinaṃ yaṃ Suryasya duhitāvṛṇītetyetena rūpeṇa | kathā mahām avṛdhat kasya hotur ityaindraṃ mahadvad vṛdhavat
+| mahadvad - mahadvad dhyetad ahaḥ | ko vastrāta vasavaḥ kau varūteti vaiśvadevaṃ sahīyaso varuṇa mitra martād ityetena rūpeṇa | uta syā naḥ sarasvatī juṣāṇeti sarasvataṃ dvārāvṛtasya subhago vyāvar ityetena rūpeṇa | eṣa vā u kadvāṃstraiṣṭubhas tṛcakl̥pto vāmadevyaḥ praügaḥ | prajāpatir vai vāmadevaḥ prajāpatāveva tat sarvān kāman ṛdhnuvanti | tad āhur na traiṣṭubhaṃ prātaḥsavanaṃ syāt | mohayati kl̥ptachandaso yajñamukham | aikāhikam eva syāt | brahma vā ekāhaḥ | brahmaitad ahaḥ | brahmaṇaiva tad brahma samardhayati ||</p>
+
+<p>ŚĀ 1,3
+ā tvā rathaṃ yathotaya iti marutvatīyasya pratipat | idaṃ vaso sutam andha ityanucaraḥ | eṣa eva nitya ekāhātānaḥ | tasyoktaṃ brāhmaṇam | asat su me jaritaḥ sābhivega iti vāsukraṃ pūrvaṃ śastvā mahāṁ indro nṛvad ā carṣaṇiprā ityetasmiṃstraiṣṭubhe nividaṃ dadhāti | tad yad vāsukraṃ pūrvaṃ śaṃsati | indra u vai vasukraḥ | atha yad mahāṁ indro nṛvad ā carṣaṇiprā iti mahadvat | mahadvad dhyetad ahaḥ ||</p>
+
+<p>ŚĀ 1,4
+athaitā ājyāhutīr juhoti | svastyayanam eva tat kurute | yajñasyaiva śāntyai yajamānānāṃ ca bhiṣajyāyai | tā vā aṣṭau bhavanti | etābhir vai devāḥ sarvā aṣṭīr āśnuvata | tatho evaitad yajamānā etābhir eva sarvā aṣṭīr aśnuvate | athaitān parisādāñ japāñ japati | parimādaḥ - āpo vai parimādaḥ | adbhir hīdaṃ sarvaṃ parimattam | atha vai parimādaḥ | annam etad uktham | āpo vā annasyāyataḥ pūrvā āyanti, āpaḥ parimādaḥ | atha vai parimādo yan nakhāni dantās tanūr lomānīti | tasmāt kṛtyāḥ saṃpadvatyo hi bhavanti | pañcaviṃśatir nidhanam | āṅgirasaṃ pratiṣṭhāyaiḥ tadrūpam, bhūtacchandāṃ sāma priyam indrasya dhāmopajagāmeti; krośānukrośe, arātsuḥ; apyeṣāṃ payaḥ, arātsuḥ; arkaṃ cārkapuṣpaṃ ca | ayaṃ vā agnirarkaḥ | asāvādityo 'rkapuṣpam | teṣu yadā paryāyaṃ sāmagāḥ stuvate, atha hotāram āhur anujapeti | te yadi stuvīran athānujapet | yadi
+caivaṃ stuvīran yadi ca stuvīran anveva japet ||</p>
+
+<p>ŚĀ 1,5
+tāni vā etani sapta devacchandāṃsi bhavanti | tasmād enān +anujapet | atho aindraṃ vā etad ahaḥ | aindrā japāḥ | tasmād enān anujapet | athātraiva tiṣṭhann agniṃ yathāṅgam upatiṣṭhate namo nama iti | nahi namaskāram ati devāḥ | samiddhasyaivaitān bhāgān upatiṣṭheta yadyuttaravedau bhavati | athātraiva tiṣṭhann ādityam upatiṣṭhate | ākāśaṃ śālāyai kuryur iti haika āhuḥ | deśena tvevopatiṣṭheta tirohito ha vā eṣa etasmin parama ukthe parama āśiṣo vadati - saṃ mahān mahatyādadhād iti | agnir vai mahan iyaṃ pṛthivī mahatī | etau hi samadhattām | saṃ devo devyādadhād iti | vāyur vai devo 'ntarikṣaṃ devī | etau hi samadhattām | saṃ brahma brāhmaṇyādadhād iti | asāv ādityo brahmāsau dyaur brāhmaṇī | etau hi samadhattām | tad imāṁl lokānt saṃdadhāti
+| etad ukthaṁ śaṃsiṣyate ||</p>
+
+<p>ŚĀ 1,6
+viśvāmitro ha vā indrasya priyaṃ dhāmopajagāma śastreṇa ca vratacaryayā | taṃ hendra uvāca viśvāmitra varaṃ vṛṇīṣveti | sa hovāca viśvāmitras tvām eva vijānīyām iti | dvitīyam iti | tvām eveti | tṛtīyam iti | tvām eveti | taṃ hendra uvāca mahāṃśca mahatī cāsmi | devaśca devī cāsmi | brahma ca brāhmaṇī cāsmīti | tata u ha viśvāmitro vijijñāsām eva cakre | taṃ hendra uvācaitad vā aham asmi yad etad avocaṃ yad vā ṛṣe 'to bhūyo 'tapās tadeva tat syād yad aham iti | tad vā indro vyāhṛtīr ūce tā upāptā āsann iti | athopanidhāya preṅkhaphalakaṃ trir abhyanya trir abhyavān iti ||</p>
+
+<p>ŚĀ 1,7
+tad vā audumbaraṃ bhavati | ūrg vā annādyam udumbara ūrjo 'nnādyasyopāptyai | athainad urasā saṃspṛśya dakṣiṇaṃ bhāgam ātmano 'tiharañ japati - arko 'si vasavastvā gāyatreṇa cchandasārohantu te ta āroḷhāra ityeva tad āha | tān aham anvārohāmi rājyāyeti | rājyaṃ ha vā idam u haiva cakṣate | athottaraṃ bhāgam ātmano 'tiharañ japati - rudrāstvā traiṣṭubhena chandasārohantu te ta āroḷhāra ityeva tad āha | tān aham anvārohāmi svārājyāyeti | svārājyaṃ ha vai rājyād adhitarām iva | atha dakṣiṇaṃ bhāgam ātmano 'tiharañ japati - ādityāstvā jagatena cchandasārohantu te ta āroḷhāra ityeva tad āha | tān aham anvārohāmi sāmrājyāyeti | sāmrājyaṃ ha vai svārājyād adhitarām iva | athottaraṃ bhāgam ātmano 'tiharañ japati - viśve tvā devā ānuṣṭubhena chandasārohantu te ta āroḷhāra ityeva tad āha | tān aham anvārohāmi kāmaprāyeti | kāmapraṃ ha vai sarveṣāṃ parārdhyam | atha samadhisṛpya prāñcau pādā upāvahṛtya bhūmau pratiṣṭhāpayati | udyatataro ha vā eṣo 'smāl lokād bhavati | tad yat pratiṣṭhāpayati | tad asmiṁl loke pratitiṣṭhati pratiṣṭhāyām
+apracyutyām | atha trit abhanya trir abhyavān iti | athopari preṅkhaphalake dakṣiṇottariṇam upasthaṃ kṛtvā dakṣiṇena prādeśena paścāt prāṅ preṅkhaphalakam upaspṛśati | prajāpatiṣ ṭvā rohatu vāyuḥ preṅkhayatv iti | prajāpatir vā etad ārohati vāyuḥ preṅkhayati yaj jīvam | atha trir abhanya trir abhavān iti | atha prāñcau pāṇī parigṛhya japati ||</p>
+
+<p>ŚĀ 1,8
+saṃ vāk prāṇena, sam ahaṃ prāṇena, saṃ cakṣur manasā sam ahaṃ manasā, saṃ prajāpatiḥ paśubhiḥ sam ahaṃ paśubhir ityāśiṣam eva tad vadate | suparṇo 'si garutmān iti | prāṇo vai suparṇaḥ | premāṃ vācaṃ vadiṣyāmīti pravadiṣyan hyeṣa etāṃ vācaṃ vadati bahu kariṣyantīṃ bahu kariṣyann iti | bahu hyeṣā vāk kariṣyantī bhavati | bahvayaṃ ya etasyāhnaḥ śastraṃ prāpnoti | bahor bhūyaḥ kariṣyantīṃ bahor bhūyaḥ kariṣyann iti bahor bhūyo hyeṣā vāk kariṣyantī bhavati bahor bhūyo 'yaṃ ya etasyāhnaḥ śastraṃ prāpnoti | svar gamiṣyantīṃ svar gamiṣyann iti svar hyeṣā vāg gamiṣyantī bhavati svar ayaṃ ya etasyāhnaḥ śastraṃ prāpnoti | svar imān yajamānān vakṣyan ity eva brūyāt | yaṃ dviṣyāt taṃ brūyān nā nāmuṃ nāmum iti | sa yāvato ha vā eṣa etasmād devasthāt pratisaṃkhyāya nirdhūnute niṣ ṭad dhūnute | tau ha na bhogyāyaiva bhavataḥ | tam evaitat pradharṣayati | tam evaitat pradharṣyātman dhatte | vāyur vā eṣa prāṇo bhūtvaitad ukthaṃ śaṃsati | tam evaitat pradharṣayati | tam evaitat
+pradharṣyātman dhatte | gurau vā eṣa yukto bhavati ya etasyāhnaḥ śatraṃ prāpnoti, tasya gurau yuktasyeśvaraḥ prāṇo yadi nāpaparājetoḥ | tam evaitat pradharsayati | tam evaitat pradharṣyātman dhatte | na ha vā etasyai devatāyai digdhena nāsinā na paraśunā na kenacanāvatardo 'sti | tad ya evaṃ vidvāṃsam apavadati sa eva pāpīyān bhavati | na sa ya evaṃ veda | naivaṃ viduṣo 'vatardo naivaṃ viduṣo 'vatardaḥ ||8||</p>
+
+<p>iti śāṅkhāyanāraṇyake prathamo 'dhyāyaḥ ||</p>
+
+</div>
+<div>
+
+<p>ŚĀ 2,1
+hiṃkāreṇa pratipadyata etad uktham | prāṇo vai hiṃkāraḥ prāṇenaivaitad ukthaṃ pratipadyate | atho ūrg vai raso hiṃkāra ūrjam eva tad rasam etasmin ukthe dadhāti / atho amṛtatvaṃ vai hiṃkāro 'mṛtatvam eva tad ātman dhatte | rājanaṃ pṛṣṭhaṃ bhavati | etad vai pratyakṣaṃ sāma yad rājanam | tad enat svena sāmnā samardhayati | tad aniruktāsu bhavati | anirukta u vai prajāpatiḥ | tat prājāpatyaṃ rūpam | kavatīṣu syād iti haika āhuḥ | ko vai prajāpatiḥ | tat prājāpatyaṃ rūpam | athaitaṃ tūṣṇīṃśaṃsam upāṃśu śaṃsati | vāg vā etad ahar manas tūṣṇīṃśaṃsaḥ | manasaiva tad vācaṃ samardhayati | tad id āsa bhuvaneṣu jyeṣṭham iti stotriyastṛcaḥ | vāvṛdhānaḥ śavasā bhūryojā iti vṛdhavan mahadvat | mahadvad dhyetad ahaḥ |
+sa eṣa ātmā pañcaviṃśaḥ | tan nadenupasṛṣṭaṃ śaṃsati | ātmā vai pañcaviṃśaḥ prajā paśava upasargaḥ | prajayaiva tat paśubhiḥ preṣyair annādyenetyātmānam upasṛjate | nadaṃ va odatīnām iti traiṣṭubhāni pūrvāṇi padāni karoti nadasyottarāṇi | prathamena traiṣṭubhena padena prathamaṃ nadasya padam uṣasamādhāyāvasyati | dvitīyena traiṣṭubhena dvitīyaṃ saṃdhāya praṇauti | tṛtīyena traiṣṭubhena tṛtīyaṃ saṃdhāyāvasyati | caturthena traiṣṭubhena caturthaṃ saṃdhāya praṇauti | evaṃ vihṛtāṃ prathamāṃ triḥ śaṃsati, parācīr uttarā evaṃ vihṛtā eva | yā tṛtīyā sūktasya tasyā uttaram ardharcam utsṛjati nadasya cottaram | so 'yaṃ mukhasya vivaras tena vācaṃ vadati mukhena vai vācaṃ vadati | tau purastād dvipadānāṃ śaṃsati tathā hāsya stotriyānantarhitā bhavatyātmānaṃ śastvā |
+atha sūdadohasaṃ parvāṇi saṃhitāni bhavanti | atho āpo vai sūdadohā adbhir vā imāni parvāṇi saṃhitāni bhavanti | atho amṛtatvaṃ vai sūdadohā amṛtatvaṃ eva tad ātman dhatte | atha vai sūdadohāsyaitad rūpam | tad yathā ha vai dāruṇaḥ śleṣma saṃśleṣaṇaṃ syāt paricarmaṇyaṃ vaivam tṛcāśītir evasūdadohāḥ sarveṣāṃ vedānāṃ śaṃśleṣiṇī ||</p>
+
+<p>ŚĀ 2,2
+athetāni śīrṣṇyāni śaṃsati | tāni vai trīṇi tṛcāni bhavanti | trīṇi vā asya śīrṣṇaḥ kapālāni bhavanti | tānyevaitaiḥ saṃdadhāti | tāni trīṇi punarevaikaṃ tredhā tredhā tā nava ṛco bhavanti | nava vai śirasi prāṇāḥ | tānyarkavanti bhavanti | tad etasyāhno rūpam ||</p>
+
+<p>ŚĀ 2,3
+athaitaṃ graivaṃ śaṃsati | tā vai tisra ṛco bhavanti | trīṇi vā āsāṃ grīvāṇāṃ parvāṇi bhavanti | tānyevaitābhiḥ saṃdadhāti | uṣṇig uttamā | so 'yaṃ skandho vidalo 'vyūḷhaḥ (laḥ) ||</p>
+
+<p>ŚĀ 2,4
+athaitāṃ akṣāṃ śaṃsati | sā vai triṣṭub bhavati | tasmād akṣaḥ sthaviṣṭhaḥ | ṛṣvā ta indra sthavirasya bāhū iti bāhvor abhirūpā | atha rathantarasya stotriyānurūpau śaṃsati | tayor uktaṃ brāhmaṇam | atha dhāyyāṃ śaṃsati | iyaṃ vai dhāyyā | iyaṃ hi sarveṣu bhūteṣu hitā | sā vai dakṣiṇe bhāge dhīyate | tasmād dakṣiṇaṃ bhāgaṃ puṃsaḥ stryadhiśete | atha rāthantaraṃ pragāthaṃ śaṃsati | tasyoktaṃ brāhmaṇam | sa eka id dhavyaś carṣaṇīnām iti sūktaṃ tat pacchaḥ | tasya dvitīyām uddhṛtya viśvo hyanyo arirājagāmeti | yaitasya dvitīyā tām iha dvitīyāṃ karoti | tad imau pakṣau vyatiṣajatyavivarhāya ||</p>
+
+<p>ŚĀ 2,5
+athaitaṃ prahastakaṃ śaṃsati | tā vai tisra ṛco bhavanti | trīṇi vā asya pāṇeḥ parvāṇi bhavanti | tānyevaitābhiḥ saṃdadhāti | aticchandāḥ prathamā so 'yam aṅguṣṭhaḥ | tasmād ayam aṅguṣṭhaḥ sarvā aṅgulīḥ pratyeti | dakṣiṇaḥ pakṣo rāthantaraḥ | atha vā uttaraḥ pakṣo bārhataḥ | etenaivokto brāhmaṇaḥ | tau vā etau pakṣau bārhatarāthantarau caturviṃśau | caturviṃśatir vai saṃvatsarasyārdhamāsāḥ saṃvatsarasyāptyai ||</p>
+
+<p>ŚĀ 2,6
+athaitāni caturuttarāṇi śaṃsati tad anūkam | tā ekaviṃśatir ṛco bhavanti | ekaviṃśatir vā asyānūkasya parvāṇi bhavanti | tānyevaitābhiḥ saṃdadhāti | tāni vai sapta tṛcāni bhavanti | sapta vai chandāṃsi sarveṣām eva chandasām āptyai | tānyarkavanti bhavanti | tad etasyāhno rūpam ||</p>
+
+<p>ŚĀ 2,7
+athaitā aśītīḥ śaṃsati | stotriyān evaitābhir anuśaṃsati gāyatryā gāyatram auṣṇihyā ca bārhatyā ca bṛhadrathantare | iyam eva dakṣiṇaṃ pārśvaṃ gāyatrī savyam auṣṇihī madhyaṃ bārhatī | madhye vā idam ātmano 'nnaṃ dhīyate | triṣṭubhāvantareṇa triṣṭum naividī | vaiśvāmitryāvarkavatyāvabhirūpe | viśvāmitro hyenad apaśyat | mahadvatyo vṛdhavatyaḥ pratipado bhavanti | mahadvad vṛdhavat | mahadvat - mahadvad dhyetad ahaḥ ||</p>
+
+<p>ŚĀ 2,8
+mahāṁ indro ya ojasetyetayā gāyatrīm aśītiṃ pratipadyate stomair vatsasya vāvṛdha iti mahadvatyā vṛdhavatyā | mahadvad vṛdhavat | mahadvat - mahadvad dhyetad ahaḥ ||</p>
+
+<p>ŚĀ 2,9
+yā indra bhuja ābhara ityetayā bārhatīm aśītiṃ pratipadyate stotāram in maghavann asya vardhayeti mahadvatyā vṛdhavatyā | mahadvad vṛdhavat | mahadvat - mahadvad dhyetad ahaḥ | ayaṃ te astu haryata ā mandrair indra haribhiḥ sūkte | tad yad ete antataḥ śaṃsati saṃsiddhābhir bṛhatībhir auṣṇihīm aśītiṃ samārohāṇīti ||</p>
+
+<p>ŚĀ 2,10
+indraḥ suteṣu someṣv ityetayauṣṇihīm aśītiṃ pratipadyate vide vṛdhasya dakṣaso mahān hi ṣa iti vṛdhavatyā mahadvatyā | vṛdhavan mahadvat | mahadvad dhyetad ahaḥ | tā vā etā aśītayaḥ saṃśastāḥ saptaviṃśatiśatānyṛcāṃ saṃpadyante | sapta vai viṃśati śatāni saṃvatsarasyāhorātrāṇāṃ tad aśītibhiḥ saṃvatsarasyāhorātrāṇyāpnoti | sāmanidhanair haike gāyatrīr uṣṇihaḥ saṃpādayanti | caturakṣarāṇyu haike punar ādadate | bārhatyā aśītyā aśītiṃ caturakṣarāṇyuddharati kākubhebhyaḥ pragāthebhyaś caturviṃśatiṃ caturakṣarāṇi tāni catuḥśataṃ caturakṣarāṇi catuḥśate gāyatrīṣūpadadhāti | tathā tā gāyatrīr uṣṇihaḥ saṃpadyante | nādriyeta | atraiva saṃpannam | indrāya sāma gāyateti | tad yad etad antataḥ śaṃsati saṃsiddhābhir uṣṇigbhir vaśaṃ samārohāṇīti ||</p>
+
+<p>ŚĀ 2,11
+atha vaśaṃ śaṃsati | udaraṃ vai vaśaḥ | tena saṃsiddhenānantaryaṃ jigamiṣet | yad ataḥ kiṃca bahirdhā tata eva tac chrapayati yad antar udare | tasmād bahvyo devatā bahūni cchandāṃsi vaśe śasyante | tasmād idaṃ bahu viśvarūpam udare 'nnam avadhīyate | athaitau vihṛtāvardharcau | atha sūdadohasam | sā tata evotsṛjyate | atra caturviṃśatikṛtvaḥ śastā bhavati ||</p>
+
+<p>ŚĀ 2,12
+athaitā dvipadāḥ śaṃsati | pratiṣṭhānīyaṃ vai chando dvipadāḥ pratiṣṭhityā eva ||</p>
+
+<p>ŚĀ 2,13
+athaitad aindrāgnaṃ sūktaṃ gāyatrīśaṃsaṃ śaṃsati | pratiṣṭhe vā indrāgnī pratiṣṭhityā eva ||</p>
+
+<p>ŚĀ 2,14
+athaitad āvapanaṃ śaṃsati | pratiṣṭhā vā āvapanaṃ pratiṣṭhityā eva | athau etānyeva punararvācīni bhavanti ||</p>
+
+<p>ŚĀ 2,15
+athaitam ānuṣṭubhaṃ samāmnāyaṃ śaṃsati | vāg vā etad ahar vāg anuṣṭub vācyeva tad vācaṃ pratiṣṭhāpayati | divaṃ yayeti devān evaitena sūktenaiti | sa pratnathā kavivṛdha iti tṛcam arkavat tena samṛddham | gāyatryuttamā tayā samṛddham | śāsa itthā mahāṁ asīti mahadvat | mahadvad dhyetad ahaḥ ||</p>
+
+<p>ŚĀ 2,16
+athaitaṃ triṣṭupchataṃ śaṃsati | +indrasyaivaitac chando yat triṣṭup tad enaṃ svena chandasā samardhayati | hairaṇyastūpīyaṃ ca yātaūtīyaṃ ca bārhatarāthantare bṛhadrathantare hi purastāt kṛte bhavataḥ | sajanīyaṃ cādhvaryavo bharatendrāya somam iti ca tāḥ saptaviṃśatir ṛco bhavanti | saptaviṃśatir vai nakṣatrāṇi | tan nakṣatriyāṃ virājaṃ āpnoti | viśvāmitrasya śaṃset | viśvāmitro hyenad apaśyat | vāmadevasya śaṃsed vāmaṃ hyetad devānām | vasiṣṭhasya śaṃsed vasiṣṭhaṃ hyetad devānām | tatra purastād udbrahmīyasya padānuṣaṅgāñ chaṃsati | sarve vai kāmā etasmin antarukthe | tad yathā vraje paśūn avasṛjyārgaleṣīke parivyayet | evam evaitaiḥ padānuṣaṅgaiḥ sarvān kāmān ubhayataḥ parigṛhyātman dhatte | atho udbrahmīyasyārkavatyuttamā | tad etasyāhno rūpam | triḥ śastayā paridadhāti | paridhāyokthavīryaṃ japati | aikāhikaṃ pūrvaṃ | pratiṣṭhā vā evāhaḥ pratiṣṭhityā eva | māhāvratikam uttaram | mahad asīti mahadvat |
+mahadvad dhyetad ahaḥ ||</p>
+
+<p>ŚĀ 2,17
+tad etat sakṛcchastāyāṃ sūdadohasi, yāvacchastraṃ upasarjanyāṃ saṃkhyāyamānāyām ṛte tūṣṇīṃśaṃsaṃ bṛhatīsahasraṃ saṃpadyate | tasya vā etasya bṛhatīsahasrasya ṣaṭtriṃśad akṣarāṇāṃ sahasrāṇi bhavanti | tāvanti śatasaṃvatsarasyāhāni bhavanti | tac chatasaṃvatsarasyāhānyāpnoti | anuṣṭupsaṃpannam u haike | vāg vā etad ahaḥ | vāg anuṣṭup | vāg +gha sarvāṇi bhūtāni | atho vāg idaṃ sarvam iti | bṛhatīsaṃpannam iti tveva sthitam | bārhato vā eṣa ya eṣa tapati | tad enaṃ svena chandasā samardhayati | trir evāhvayate | trayo vā ime lokāḥ | imān eva tal lokān āpnoti | ekāhikī yājyā pratiṣṭhā vā ekāhaḥ pratiṣṭhityā eva | ananuvaṣaṭ-kṛta eva preṅkhaṃ śrathnanti | sagraham evāyaṃ taṃ prāṅ upāvarohati pratyaṅ preṅkhaphalakam apohati | parāmṛśan grahaṃ japati - yam imaṃ prajayaṃ prājaiṣaṃ tam anvasānīti ned asmāt prajayād ātmānam apādadhānīti | vaiśvakarmaṇo 'tigrāhyaḥ | prājāpatyaṃ vā etad ahaḥ | prajāpatir viśvakarmā tad enaṃ svena rūpeṇa samardhayati | tad dhaitad ahar indro 'girase
+provācāṅgirā dīrghatamase | tata u ha dīrghatamā daśa puruṣāyuṣāṇi jijīva | tad apyetad ṛṣir āha dīrghatamā māmateyo jujurvān daśame yuga iti | tad etay āyuṣkāmasya śastram iti ha smāha kauṣītakiḥ | tad ya evaṃ vidvān etad ahaḥ śaṃsati sarvam āyur asmiṃl loka eti | āpnotyamṛtatvam akṣitiṃ svarge loke ||</p>
+
+<p>ŚĀ 2,18
+tat savitur vṛṇīmaha iti vaiśvadevasya +pratipat | vṛṇīmaha iti mahadvatī | mahadvat - mahadvat dhyetad ahaḥ | adyā no deva savitar ityanucaraḥ | viśvā vāmāni dhīmahīti mahadvat | mahadvad dhyetad ahaḥ | tad devasya savitur vāryaṃ mahad iti sāvitraṃ mahadvat| mahadvad dhyetad ahaḥ | te hi dyāvāpṛthivī viśvaśaṃbhuva iti dyāvāpṛthivīyam uruvyacaso mahinī asaścateti mahadvat | mahadvad dhyetad ahaḥ | kim u śreṣṭhaḥ kiṃ yaviṣṭho na ājagann ityārbhavam | na nindima camasaṃ yo mahākula iti mahadvat | mahadvad dhyetad ahaḥ | asya vāmasya palitasya hotur iti salilaṃ vaiśvadevam | salilaṃ hyetad devānām | aikāhike nividaṃ dadhāti | pratiṣṭhā vā ekāhaḥ pratiṣṭhityā eva | aikāhikaṃ vaiśvānarīyam |
+pratiṣṭhā vā ekāhaḥ pratiṣṭhityā eva | prayajyavo maruto bhrājadṛṣṭaya iti mārutam | bṛhan mahānta urviyā vi rājatheti bṛhadvat | mahadvat - mahadvat dhyetad ahaḥ | baḷa ityā tad vapeṣu dhāyi darśitam iti jātavedasīyaṃ tasya astāvyagniḥ śimīvadbhir arkair ity arkavatyuttamā | tad etasyāhno rūpam ityagnimārutasūktānīti | etasyāhnaḥ sūktāni | tad agniṣṭomaḥ saṃtiṣṭhate | brahma vā agniṣṭomaḥ | brahmaitad ahaḥ | brahmanyeva tad brahma pratiṣṭhāpyanti | te 'mṛtatvam āpnuvanti ya etad ahar upayanti ya etad ahar upayanti ||</p>
+
+<p>iti śāṅkhāyanāraṇyake dvitīyo 'dhyāyaḥ ||</p>
+
+</div>
+<div>
+
+<p>ŚĀ 3,1 = KU 1,1
+citro ha vai gāṅgyāyanir yakṣyamāṇa āruṇiṃ vavre | sa ha putraṃ śvetaketuṃ prajighāya yājayeti | taṃ hābhyāgataṃ papraccha - gotamasya putra, asti saṃvṛtaṃ loke yasmin mā dhāsyasi, anyatamo vādhvā, tasya mā loke dhāsyasīti | sa hovāca - nāham etad veda hantācāryaṃ pṛcchānīti | sa ha pitaram āsādya papraccha - itīti māprākṣīt kathaṃ pratibravāṇīti | sa hovāca - aham apyetan na veda | sadasyeva vayaṃ svādhyāyam adhītya harāmahe yan naḥ pare dadati | ehyubhau gamiṣyāva iti | sa hi samitpāṇiś citraṃ gāṅgyāyaniṃ praticakrama upāyānīti | taṃ hovāca - brahmārho 'si gotama yo na mānam upāgāḥ | ehi vyeva tvā jñapayiṣyāmīti ||</p>
+
+<p>ŚĀ 3,2 = KU 1,2
+sa hovāca ye vai ke cāsmāl lokāt prayanti candramasam eva te sarvaṃ gacchanti | teṣāṃ prāṇaiḥ pūrvapakṣa āpyāyate | tān aparapakṣeṇa prajanayati | etad vai svargasya lokasya dvāraṃ yac candramāḥ | taṃ yaḥ pratyāha tam atiṣrjate | atha yo na pratyāha tam iha vṛṣṭir bhūtvā varṣati | sa iha kīṭo vā pataṅgo vā matsyo vā śakunir vā siṃho vā varāho vā paraśvā vā śārdūlo vā puruṣo vānyo vā teṣu teṣu sthaneṣu pratyājāyate yathākarma yathāvidyam | tam āgataṃ pṛcchati, ko 'sīti | taṃ pratibrūyāt - vicakṣaṇād ṛtavo reta ābhṛtaṃ pañcadaśāt prasūtāt pitryāvataḥ | tan mā puṃsi kartaryerayadhvaṃ puṃsā kartrā mātari māsiṣiñca || sa jāyamāna upajāyamāno dvādaśotrayodaśopamāsaḥ | dvādaśatrayodaśena pitrā saṃ tad vide 'haṃ prati tad vide 'haṃ tan ma ṛtavo 'mṛtyava ārambhadhvam || tena satyena tena tapasā ṛtur asmi ārtavo 'smi | ko 'si tvam asmīti tam atisṛjate ||</p>
+
+<p>ŚĀ 3,3 = KU 1,3
+sa etaṃ devayānaṃ panthānam āpadyāgnilokam āgacchati | sa vāyulokam | sa varuṇalokam | sa indralokam | sa prajāpatilokam | sa brahmalokam | tasya vā etasya brahmalokasyārohadaḥ, muhūrtā yaṣṭihāḥ, vijarā nadī, ilyo vṛkṣaḥ, sālajyaṃ saṃsthanam, aparājitam āyatanam, indraprajāpatī dvāragopau, vibhu pramitam, vicakṣaṇāsandī, amitaujāḥ paryaṅkaḥ, priyā ca mānasī, pratirūpā ca cākṣuṣī, puṣpāṇyādāyāvayato vai ca jagāni, ambāś cāmbāyavīś cāpsarasaḥ, ambayā nadyaḥ | tam itthaṃvid āgacchati | taṃ brahmāha - abhidhāva ta mama yaśasā | vijarāṃ vā ayaṃ nadīṃ prāpat | na vā ayaṃ jarayiṣyatīti ||</p>
+
+<p>ŚĀ 3,4 = KU 1,4
+taṃ pañca śatānyapsarasāṃ pratiyanti - śataṃ phalahastāḥ, śatam āñjanahastāḥ, śataṃ mālyahastāḥ, śataṃ vāsohastāḥ, śataṃ cūṛnahastāḥ | taṃ brahmālaṅkāreṇālaṅkurvanti | sa brahmaālaṅkāreṇālaṅkṛto brahma vidvān brahmābhipraiti | sa āgacchatyāraṃ hradam | taṃ manasātyeti | tam itvā saṃprativido majjanti | sa āgacchati muhūrtān yaṣṭihān | te 'smād apadravanti | sa āgacchati vijarāṃ nadīm | tāṃ manasaivātyeti | tat sukṛtaduṣkṛte dhunuvāte | tasya priyā jñātayaḥ sukṛtam upayanti, apriyā duṣkṛtam | tad yathā rathena dhāvayan rathacakre paryavekṣeta | evam āhorātre paryavekṣeta | evaṃ sukṛtaduṣkṛte sarvāṇi ca dvandvāni | sa eṣa visukṛto duṣkṛto brahma vidvān brahmaivābhipraiti ||</p>
+
+<p>ŚĀ 3,5 = KU 1,5
+sa āgacchatīlyaṃ vṛkṣam | taṃ brahmagandhaḥ praviśati | sa āgacchati sālajyaṃ saṃsthānam | taṃ brahmarasaḥ praviśati | sa āgacchatyaparājitam āyatanam | taṃ brahmayaśaḥ praviśati | sa ācacchatīndraprajāpatī dvāragopau | tāv asmād apadravataḥ | sa āgacchati vibhu pramitam | taṃ brahmatejaḥ praviśati | sa āgacchati vicakṣanām āsandīm | bṛhadrathantare sāmanī pūrvau pādau | śyaitanaudhase cāparau | vairūpavairāje anūcye | śākvararaivate tiraścī | sā prajñā prajñayā hi vipaśyati | sa āgacchatyamitaujasaṃ paryaṅkam | sa prāṇaḥ | tasya bhūtaṃ ca bhaviṣyac ca pūrvau pādau | śrīś cerā cāparau | bhadrayajñāyajñīye śīrṣaṇye | bṛhadrathantare anūcye | ṛcaś ca sāmāni ca prācīnātānāni | yajūṃṣi tiraścīnāni | somāṃśavaḥ upastaraṇam | udgītho 'paśrayaḥ | śrīr upabarhaṇam | tasmin brahmāste | tam itthaṃvid pādenaivāgra ārohati | taṃ brahmā pṛcchati | - ko 'sīti | taṃ pratibrūyāt
+||</p>
+
+<p>ŚĀ 3,6 = KU 1,6
+ṛtur asmi | ārtavo 'smi | ākāśād yoneḥ saṃbhūto bhāryāyai retaḥ, saṃvatsarasya tejobhūtasya bhūtasyātmā | bhūtasya bhūtasya tvam ātmāsi | yas tvam asi so 'ham asmi | tam āha - ko 'ham asmīti | satyam iti brūyāt | kiṃ tad yatsatyam iti | yad anyad devebhyaśca prāṇebhyaś ca tat sat | atha yad devāś ca prāṇāś ca tat satyam | tad ekayā vācābhivyāhriyate sattyam iti | etāvad idaṃ sarvam | idaṃ sarvam asmītyevainaṃ tad āha | tad etac chlokenābhyuktam ||</p>
+
+<p>ŚĀ 3,7 = KU 1,7
+yajūdaraḥ sāmaśirā asāv ṛṅmūrttir avyayaḥ | sa brahmeti vijñeya ṛṣir brahmamayo mahān || iti | tad āha - kena me pauṃsnāni nāmānyāpnoṣīti | prāṇeneti brūyāt | kena napuṃsakānīti | manaseti | kena strīnāmānīti | vāceti | kena gandhān iti | ghrāṇeneti | kena rūpāṇīti | cakṣuṣeti | kena śabdān iti | śrotreṇeti | kenānnarasān iti | jihvayeti | kena karmāṇīti | hastābhyām iti | kena sukhaduḥkhe iti | śarīreṇeti | kenānandaṃ ratiṃ prajātim iti | upastheneti | kenetyā iti | pādābhyām iti | kena dhiyo vijnātavyaṃ kāmān iti | prajñayaiveti brūyāt |
+tam āha - āpo vai khalu me loko 'yaṃ te 'sāv iti | sā yā brahmaṇo jitir yā vyaṣṭiḥ, tāṃ jitiṃ jayati, tāṃ vyaṣṭiṃ vyaśnute ya evaṃ veda ya evaṃ veda ||</p>
+
+<p>iti śāṅkhāyanāraṇyake tṛtīyo 'dhyāyaḥ ||</p>
+
+</div>
+<div>
+
+<p>ŚĀ 4,1 = KU 2,1
+prāṇo brahmeti ha smāha kauṣītakiḥ | tasya vā etasya prāṇasya brahmaṇo mano dūtam, cakṣur goptṛ, śrotraṃ śrāvayitṛ, vāk pariveṣṭrī | sa yo ha vā etasya prāṇasya brahmaṇo mano dūtaṃ veda dūtavān bhavati | yaś cakṣur goptṛ goptṛmān bhavati | yaḥ śrotraṃ śrāvayitṛ saṃśrāvayitṛmān bhavati | yo vācaṃ pariveṣṭrīṃ pariveṣṭrīmān bhavati | tasmai vā etasmai brahmaṇa etā devatā ayācamānāya baliṃ haranti | evaṃ haivāsmai sarvāṇi bhūtānyayācamānāyaiva baliṃ haranti ya evaṃ veda | tasyopaniṣan na yāced iti | tad yathā grāmaṃ bhikṣitvālabdhvupaviśen nāham ato dattam aśnīyām iti | ta evainam upamantrayante ye purastāt pratyācakṣīran | eṣa dharmo 'yācato bhavati | annadās tvevainam upamantrayante - dadāma ta iti ||</p>
+
+<p>ŚĀ 4,2 = KU 2,2
+prāṇo brahmeti ha smāha paiṅgyaḥ | tasya vā etasya prāṇasya brahmaṇo vāk parastāc cakṣur ārundhate | cakṣuḥ parastātc chrotraṃ ārundhate | śrotraṃ parastān mana ārundhathe | manaḥ parastāt prāṇa ārundhate | tasmai vā etasmai prāṇāya brahmaṇa etā devatā ayācamānāya baliṃ haranti | evaṃ haivāsmai sarvāṇi bhūtānyayācamānāyaiva baliṃ haranti | ya evaṃ veda tasyopaniṣan na yāced iti | tad yathā grāmaṃ bhikṣitvālabdhvupaviśen nāham ato dattam aśnīyām iti | ta evainam upamantrayante ye purastāt pratyācakṣīran | eṣa dharmo 'yācato bhavati | annadās tvevainam upamantrayante - dadāma ta iti ||</p>
+
+<p>ŚĀ 4,3 = KU 2,3
+athāta ekadhanāvarodhanam | ya ekadhanam abhidhyāyāt paurṇamāsyāṃ vāmāvāsyāyāṃ vā śuddhapakṣe vā puṇye nakṣatra eteṣām ekasmin parvaṇyagnim upasamādhāya parisamuhya paristīrya paryukṣya dakṣiṇaṃ ānvācya sruveṇāyahutīr juhoti | vāṅ nāma devatāvarodhinī sā me 'muṣmād idam avarundhyāt tasyai svāhā | prāṇo nāma devatāvarodhinī sā me 'muṣmād idam avarundhyāt tasyai svāhā | śrotraṃ nāma devatāvarodhinī sā me 'muṣmād idam avarundhyāt tasyai svāhā | mano nāma devatāvarodhinī sā me 'muṣmād idam avarundhyāt tasyai svāhā | prajñā nāma devatāvarodhinī sā me 'muṣmād idam avarundhyāt tasyai svāhā | atha dhūmagandhaṃ prajighrāyājyalepanenāṅgānyanuvimṛjya vācaṃyamo 'bhipravrajyārthaṃ +brūyād dūtaṃ vā prahiṇuyāt | labhate haiva ||</p>
+
+<p>ŚĀ 4,4 = KU 2,4
+athāto daivaḥ smaraḥ | yasya priyo bubhūṣed yasyai yeṣāṃ vā yāsāṃ vaiteṣām evaikasmin parvaṇyetayaivāvṛtaitā ājyāhutīr juhoti | vācaṃ te mayi juhomyasau svāhā | prāṇaṃ te mayi juhomyasau svāhā | mayi cakṣus te juhomyasau svāhā | śrotraṃ te mayi juhomyasau svāhā | manas te mayi juhomyasau svāhā | prajñāṃ te mayi juhomyasau svāheti | atha dhūmagandhaṃ prajighrāyājyalepanenāṅgānyanuvimṛjya vācaṃyamo 'bhipravrajy saṃsparśaṃ jigamiṣet | abhivātād vā tiṣṭhet saṃbhāṣamāṇaḥ | priyo haiva bhavati | smarate haivāsya ||</p>
+
+<p>ŚĀ 4,5 = KU 2,5
+athātaḥ sāṃyamanaṃ prātardanam | āntaram agnihotram ityācakṣate | yāvad vai puruṣo bhāṣate na tāvat prāṇituṃ śaknoti | prāṇaṃ tadā vāci juhoti | yāvad vai puruṣaḥ prāṇiti na tāvad bhāṣituṃ śaknoti | vācaṃ tadā prāṇe juhoti | ete anante amṛte āhutī jāgracca svapaṃśca saṃtataṃ juhoti | atha yā anyā āhutayo 'ntavatyas tāḥ karmamayyo hi bhavanti | tad dha smaitat pūrve vidvāṃso 'gnihotraṃ na juhavāñcakruḥ ||</p>
+
+<p>ŚĀ 4,6 = KU 2,6
+ukthaṃ brahmeti ha smāha śuṣkabhṛṅgāraḥ | tad ṛg ityupāsīta | sarvāṇi hāsmai bhūtani śraiṣṭhyāyābhyacyante | tad yajur ityupāsīta | sarvāṇi hāsmai bhūtāni śraiṣṭhyāya yujyante | tat sāma ityupāsīta | sarvāṇi hāsmai bhūtāni śraiṣṭhyāya saṃnamante | tac chrīr ityupāsīt | tad yaśa ityupāsīta | tat teja ityupāsīta | tad yathaitac chrīmattamaṃ yaśasvitamaṃ tejasvitamam iti śastreṣu bhavati | evaṃ haiva sa sarveṣu bhūteṣu śrīmattamo yaśasvitamas tejasitamo bhavati ya evaṃ veda | tad etad aiṣṭikaṃ karma yam ātmānam adhvaryuḥ saṃskaroti | tasmin yajurmayaṃ pravayati | yajurmaya ṛṅmayaṃ hotā | ṛṅmaye sāmamayam udgātā | sa eṣa trayyai vidyāyā ātmā | eṣa u evaitad indrasyātmā bhavati ya evaṃ veda ||</p>
+
+<p>ŚĀ 4,7 = KU 2,7
+athātaḥ sarvajitaḥ kauṣītakes trīṇyupāsanāni bhavanti | sarvajid dha sma kauṣītakir udyantam ādityam upatiṣṭhate yajñopavītaṃ kṛtvodakam ānīya triḥ prasicyodakapātram | vargo 'si pāpmānaṃ me vṛṅdhīti | etayaivāvṛtā madhye santam | udvargo 'si pāpmānaṃ ma udvṛṅdhīti | etayaivāvṛtāstaṃ yantam | saṃvargo 'si pāpmānaṃ me saṃvṛṅdhīti | tad yad ahorātrābhyāṃ pāpaṃ karoti saṃ tad vṛṅkte | tatho evaivaṃ vidvān etayaivāvṛtādityam upatiṣṭhate | yad ahorātrābhyāṃ pāpaṃ karoti saṃ tad vṛṅkte ||</p>
+
+<p>ŚĀ 4,8 = KU 2,8
+atha māsimāsyāvāsyāyāṃ vṛttāyāṃ paścāc candramasaṃ dṛśyamānam upatiṣṭhetaitayaivāvṛtā | haritatṛṇe vā pratyasya - yan me susīmaṃ hṛdayaṃ divi candramasi śritam | manye 'haṃ māṃ tad vidvāṃsaṃ māhaṃ putryam aghaṃ rudam || iti | na hyasmāt pūrvā prajā praitīti nu jātaputrasya | athājātaputrasya - āpyāyasva sametu +te, saṃ te payāṃsi sam u yantu vājāḥ, yam ādityā aṃśum āpyāyayantītyetās tisra ṛco japitvā - māsmākaṃ prāṇena prajayā paśubhir āpyāyayiṣṭhāḥ | yo' smān dveṣṭi yaṃ ca vayaṃ dviṣmas tasya prāṇena prajayā paśubhir āpyāyayasvetyaindrīm āvṛtam āvarta ādityasyāvṛtam anvāvarta iti dakṣiṇaṃ bāhum anvāvartate ||</p>
+
+<p>ŚĀ 4,9 = KU 2,9
+atha paurṇamāsyāṃ purastāc candramasaṃ dṛśyamānam upatiṣṭhaitayaivāvṛtā | somo rājāsi vicakṣaṇaḥ pañcamukho 'si prajāpatiḥ | brāhmaṇas ta ekaṃ mukhaṃ tena mukhena rājño 'tsi | tena mukhena māṃ annādaṃ kuru | rājā ta ekaṃ mukhaṃ tena mukhena viśo 'tsi | tena mukhena māṃ annādaṃ kuru | śyenas ta ekaṃ mukhaṃ tena mukhena pakṣiṇo 'tsi | tena mukhena māṃ annādaṃ kuru | agniṣ ṭa ekaṃ mukhaṃ tena mukhenemaṃ lokam atsi | tena mukhena māṃ annādaṃ kuru | māsmākaṃ prāṇena prajayā paśubhir apakṣeṣṭhāḥ | yo' smān dveṣṭi yaṃ ca vayaṃ dviṣmas tasya prāṇena prajayā paśubhir apakṣīyasveti daivīm āvṛtam āvarta ādityasyāvṛtam anvāvarta iti dakṣiṇaṃ bāhum anvāvartate ||</p>
+
+<p>ŚĀ 4,10 = KU 2,10
+atha saṃvekṣyan jāyāyai hṛdayam abhi mṛśet - yat te susīme hṛdayaṃ śritam antaḥ prajāpatau | tenāmṛtatvasyeśāne mā tvaṃ putryam aghaṃ ni gā iti || na hyasyāḥ pūrvā prajā praitīti ||</p>
+
+<p>ŚĀ 4,11 = KU 2,11
+atha proṣyāyan putrasya mūrdhanam abhijighret - aṅgād aṅgāt saṃbhavasi hṛdayād adhi jāyase | ātmā vai putranāmāsi sa jīva śaradaḥ śatam iti nāmāsya dadhāti | aśmā bhava paraśur bhava, hiraṇyam astṛtaṃ bhava | tejo vai putrānāmāsi sa jīva śaradaḥ śatam iti nāmāsya gṛhṇāti | athainaṃ parigṛhṇāti | yena prajāpatiḥ prajāḥ paryagṛhṇāt tad ariṣṭyaitena tvā parigṛhṇāmi, asāv iti | athāsya dakṣiṇe karṇe japati - asme prayandhi maghavann ṛjīṣin iti | indraṃ śreṣṭhāni draviṇāni dhehīti savye | mā bhetthā mā vyathiṣṭhāḥ śataṃ śarada āyuṣaḥ | jīvasva putra te nāmnā mūrdhānam abhijighrāmīti trir asya mūrdānam abhijighret | gavāṃ tvāṃ hiṃkāreṇābhihiṃkaromīti trir asya mūrdhānam abhihiṃkaroti ||</p>
+
+<p>ŚĀ 4,12 = KU 2,12
+athato daivaḥ parimaraḥ | etad vai brahma dīpyate yad agnir jvalati | athaitan mriyate yan na jvalati | tasyādityam eva tejo gacchati vāyuṃ prāṇaḥ | etad vai brahma dīpyate yad ādityo dṛśyate | athaitan mriyate yan na dṛśyate | tasya candramasam eva tejo gacchati vāyuṃ prāṇaḥ | etad vai brahma dīpyate yac candramā dṛśyate | athaitan mriyate yan na dṛśyate | tasya vidyutam eva tejo gacchati vāyuṃ prāṇaḥ | etad vai brahma dīpyate yad vidyud vidyotate | athaitan mriyate yan na vidyotate | tasyādiśa eva tejo gacchati vāyuṃ prāṇaḥ | tā vā etā sarvā devatā vāyum eva praviśya vāyau mṛtvā na mṛcchante | tasmād eva punarudīrate | ityadhidaivam | athādhyātmam ||</p>
+
+<p>ŚĀ 4,13 = KU 2,13
+etad vai brahma dīpyate yad vācā vadati | athaitan mriyate yan na vadati | tasya cakṣur eva tejo gacchati | prāṇaṃ prāṇaḥ | etad vai brahma dīpyate yac cakṣuṣā paśyati | athaitan mriyate yan na paśyati | tasya śrotram eva tejo gacchati | prāṇaṃ prāṇaḥ | etad vai brahma dīpyate yac chrotreṇa śṛṇoti | athaitan mriyate yan na śṛṇoti | tasya mana eva tejo gacchati | prāṇaṃ prāṇaḥ | etad vai brahma dīpyate yan manasā dhyāyati | athaitan mriyate yan na dhyāyati | tasya prāṇam eva tejo gacchati | prāṇaṃ prāṇaḥ | tā vā etā sarvā devatā prāṇam eva praviśya prāṇe mṛtvā na mṛcchante | tasmād eva punar udīrate | tad yad iha vā evaṃ vidvāṃsam ubhau parvatāv abhipravarteyātāṃ dakṣiṇaścottaraś ca tustūrṣamāṇau na hainaṃ stṛṇvīyātām | atha ya enaṃ dviṣanti yāṃś ca svayaṃ dveṣṭi ta evainaṃ parimriyante ||</p>
+
+<p>ŚĀ 4,14 = KU 2,14
+athāto niḥśreyasādānam | etā ha vai devatā ahaṃśreyase vividamānā asmāc charīrād uccakramuḥ | tad dha papāta, śuṣkaṃ dārubhūtaṃ śiśye | athainad vāk praviveśa | tad vācā vadac chiśya eva | athainac cakṣuḥ praviveśa | tad vācā vadac cakṣuṣā paśyac chiśya eva | athainac chrotraṃ praviveśa | tad vācā vadac cakṣuṣā paśyac chrotreṇa śṛṇvac chiśya eva | athainan manaḥ praviveśa | tad vācā vadac cakṣuṣā paśyac chrotreṇa śṛṇvan manasā dhyāyac chiśya eva | athainat prāṇaḥ praviveśa | tat tata eva samuttasthau | tā vā etā sarvā devatā prāṇe niḥśreyasaṃ viditvā prāṇam eva prajñātmānam abhisaṃbhūya +sahaivaitaiḥ sarvair asmāc charīrād uccakramuḥ | te vāyupratiṣṭhā ākāśātmānaḥ svar īyuḥ | tatho evaivaṃ vidvān prāṇe niḥśreyasaṃ viditvā prāṇam eva prajñātmānam abhisaṃbhūya +sahaivaitaiḥ sarvair asmāc charīrād utkrāmati | sa vāyupratiṣṭha ākāśātmā svar eti | sa tad gacchati yatraite devāḥ | tat prāpya yad amṛtā devāḥ | tad amṛto bhavati ya evaṃ veda ||</p>
+
+<p>ŚĀ 4,15 = KU 2,15
+athātaḥ pitāputrīyaṃ saṃpradānam iti cācakṣate | pitā putraṃ preṣyann āhvayati | navais tṛṇair agāraṃ saṃstīryāgnim upasamādhāyodakumbhaṃ sapātram upanidhāyāhatena vāsasā saṃpracchannaḥ pitā śete | etya putra upariṣṭād abhinipadyata indriyair indriyāṇi saṃspṛśya | api vāsmā āsīnāyābhimukhāyaiva saṃpradadyāt | athāsmai saṃprayacchati | vācaṃ me tvayi dadhānīti pitā | vācaṃ te mayi dadha iti putraḥ | prāṇaṃ me tvayi dadhānīti pitā | prāṇaṃ te mayi dadha iti putraḥ | cakṣur me tvayi dadhānīti pitā | cakṣus te mayi dadha iti putraḥ | śrotraṃ me tvayi dadhānīti pitā | śrotraṃ te mayi dadha iti putraḥ | annarasān me tvayi dadhānīti pitā | annarasāṃs te mayi dadha iti putraḥ | karmāṇi me tvayi dadhānīti
+pitā | karmāṇi te mayi dadha iti putraḥ | sukhaduḥkhe me tvayi dadhānīti pitā | sukhaduḥkhe te mayi dadha iti putraḥ | ānandaṃ ratiṃ prajātiṃ me tvayi dadhānīti pitā | ānandaṃ ratiṃ prajātiṃ te mayi dadha iti putraḥ | ityāṃ me tvayi dadhānīti pitā | ityāṃ te mayi dadha iti putraḥ | dhiyo vijñātavyaṃ kāmān me tvayi dadhānīti pitā | dhiyo vijñātavyaṃ kāmāṃs te mayi dadha iti putraḥ | mano me tvayi dadhānīti pitā | manas te mayi dadha iti putraḥ | prajñāṃ me tvayi dadhānīti pitā | prajñāṃ te mayi dadha iti putraḥ | yad u vā upābhigadaḥ syāt samāsenaiva brūyāt | prāṇān me tvayi dadhānīti pitā | prāṇāṃs te mayi dadha iti
+putraḥ | atha dakṣiṇāvṛd upaniṣkrāmati | taṃ pitrānumantrayate | yaśo brahmavarcasaṃ kīrtis tvā juṣatām iti | athetaraḥ savyam anvaṃsam abhyavekṣate | pāṇināntardhāya vasanāntena vā pracchādya svargāṁl lokān kāmān āpnuhīti | sa yadyugadaḥ syāt putrasyaiśvarye pitā vaset | pari vā vrajet | yadyu vai preyāt tathaivainaṃ samāpayeyuḥ | yathā samāpayitavyo bhavati yathā samāpayitavyo bhavati ||</p>
+
+<p>iti śāṅkhāyanāraṇyake caturtho 'dhyāyaḥ ||</p>
+
+</div>
+<div>
+
+<p>ŚĀ 5,1 = KU 3,1
+pratardano ha vai daivodāsir indrasya priyaṃ dhāmopajagāma yuddhena ca pauruṣeṇa ca | taṃ indra uvāca pratardanaṃ varaṃ vṛṇīṣveti | sa hovāca pratardanaḥ - tvam eva me vṛṇīṣva yaṃ tvaṃ manuṣyāya hitatamaṃ manyasa iti | taṃ indra uvāca - na vai varo 'varasmai vṛṇīte | tvam eva vṛṇīṣveti | avaro vai kila meti hovāca pratardanaḥ | atho khalvindraḥ satyād eva neyāya | satyaṃ hīndraḥ | taṃ hendra uvāca - mām eva vijānīhi | etad evāhaṃ manuṣyāya hitatamaṃ manye yo māṃ vijānīyāt | triśīrṣāṇaṃ tvāṣṭram ahanam | arurmukhān yatīn sālāvṛkebhyaḥ prāyacchham | bahvīḥ saṃdhā atrikramya divi prahlādīyān atṛṇaham antarikṣe, paulomān pṛthivyāṃ kālakhañjā | tasya me tatra na lomacanāmīyata | sa yo māṃ veda na ha vai tasya kena ca karmaṇā loko mīyate | na steyena na bhrūṇahatyayā na mātṛvadhena na pitṛvadhena | nādya pāpaṃ cakruṣo mukhān nīlaṃ vyetīti ||</p>
+
+<p>ŚĀ 5,2 = KU 3,2
+sa hovāca prāṇo 'smi prajñātmā | taṃ mām āyur amṛtam ityupāsva | āyuḥ prāṇaḥ | prāṇo vā āyuḥ | yāvad +dhyasmin śarīre prāṇo bhavati yāvad āyuḥ | prāṇena hyevāsmiṁl loke 'mṛtatvam āpnoti | prajñayā satyaṃ saṃkalpaṃ | sa yo mām āyur amṛtam ityupāste | sarvam āyur asmil loka eti | āpnotyamṛtatvam akṣitiṃ svarge loke | tad dhaika āhur ekabhūyaṃ vai prāṇā gacchantīti | na hi kaścana śaknuyāt sakṛd vācā nāma prajñāpayituṃ cakṣuṣā rūpaṃ śrotreṇa śabdaṃ manasā dhyātum | ekabhūyaṃ vai prāṇā bhūtvaivaikaikam etāni sarvāṇi prajñāpayantīti | vācaṃ vadantīṃ sarve prāṇā anuvadanti | cakṣuḥ paśyat sarve prāṇā anupaśyanti | śrotraṃ śṛṇvat sarve prāṇā anuśṛṇvanti | mano dhyāyat sarve prāṇā anudhyāyanti | prāṇaṃ prāṇantaṃ sarve prāṇā anuprāṇanti | evam u haitad iti hendra uvāca | asti tveva prāṇānāṃ niḥśreyasam iti ||</p>
+
+<p>ŚĀ 5,3 = KU 3,3
+jīvati vāgapetaḥ | mūkān hi paśyāmaḥ | jīvati cakṣurapetaḥ | anvān hi paśyāmaḥ | jīvati śrotrāpetaḥ | badhirān hi paśyāmaḥ | jīvati mano'petaḥ | bālān hi paśyāmaḥ | jīvati bāhucchinnaḥ | jīvatyūrucchinnaḥ | ityevaṃ hi paśyāma iti | atha khalu prāṇa eva prajñātmedaṃ śarīraṃ parigṛhyotthāpayati | tasmād etad evoktham upāsīteti | saiṣā prāṇe sarvāptiḥ | yo vai prāṇaḥ sā prajñā | yā vā prajñā sa prāṇaḥ | tasyaiṣaiva dṛṣṭiḥ | etad vijñānam | yatraitat puruṣaḥ suptaḥ svapnaṃ na kaṃcana paśyati | athāsmin prāṇa evaikadhā bhavati | tad enaṃ vāk sarvair nāmabhiḥ sahāpyeti | cakṣuḥ sarvai rūpaiḥ sahāpyeti | śrotraṃ sarvaiḥ śabdaiḥ sahāpyeti | manaḥ sarvair dhyānaiḥ sahāpyeti | sa yadā pratibudhyate | yathāgner jvalataḥ sarvā diśo
+visphuliṅgā vipratiṣṭheran evam evaitasmād ātmanaḥ prāṇā yathāyatanaṃ vipratiṣṭhante | prāṇebhyo devāḥ | devebhyo lokāḥ | sa eṣa prāṇa eva prajñātmedaṃ śarīraṃ parigṛhyotthāpayati | tasmād etad evoktham upāsīteti | saiṣā prāṇe sarvāptiḥ | yo vai prāṇaḥ sā prajñā | yā vā prajñā sa prāṇaḥ | tasyaiṣaiva siddhiḥ | etad vijñānam | yatraitat puruṣa ārto mariṣyann ābalyam etya saṃmoham eti | tam āhuḥ - udakramīc cittam | na śṛṇoti | na paśyati | na vācā vadati | na dhyāyati | athāsmin prāṇa ekaikadhā bhavati | tad enaṃ vāk sarvair nāmabhiḥ sahāpyeti | cakṣuḥ sarvai rūpaiḥ sahāpyeti | śrotraṃ sarvaiḥ śabdaiḥ sahāpyeti | manaḥ sarvair dhyātaiḥ sahāpyeti | sa yadāsmāc charīrād utkrāmati sahaivaitaiḥ sarvair utkrāmati ||</p>
+
+<p>ŚĀ 5,4 = KU 3,4
+vāg evāsmin sarvāṇi nāmānyabhivisṛjyante | vācā sarvāṇi nāmānyāpnoti | prāṇa evāsmin sarve gandhā abhivisṛjyante | prāṇena sarvā gandhān āpnoti | cakṣur evāsmin sarvāṇi rūpāṇyabhivisṛjyante | cakṣuṣā sarvāṇi rūpāṇyāpnoti | śrotram evāsmin sarve śabdā abhivisṛjyante | śrotreṇa sarvāñ chabdān āpnoti | mana evāsmin sarvāṇi dhyātānyabhivisṛjyante | manasā sarvāṇi dhyātānyāpnoti | saha hyetāvasmiñ charīre vasataḥ sahotkrāmataḥ | atha yathāsmai prajñāyai sarvāṇi bhūtānyekaṃ bhavanti | tad vyākhyāsyāmaḥ ||</p>
+
+<p>ŚĀ 5,5 = KU 3,5
+vāg evāsyā ekam aṅgam udūḷham | tasyai nāma parastāt prativihitā bhūtamātrā | prāṇa evāsyā ekam aṅgam udūḷham | tasya gandhaḥ parastāt prativihitā bhūtamātrā | cakṣur evāsyā ekam aṅgam udūḷham | tasya rūpaṃ parastāt prativihitā bhūtamātrā | śrotram evāsyā ekam aṅgam udūḷham | tasya śabdaḥ parastāt prativihitā bhūtamātrā | jihvaivāsyā ekam aṅgam udūḷham | tasyā annarasaḥ parastāt prativihitā bhūtamātrā | hastāvevāsyā ekam aṅgam udūḷham | tayoḥ karma parastāt prativihitā bhūtamātrā | śarīramevāsyā ekam aṅgam udūḷham | tasya sukhaduḥkhe parastāt prativihitā bhūtamātrā | upastha evāsyā ekam aṅgam udūḷham | tasyānando ratiḥ prajātiḥ parastāt prativihitā bhūtamātrā | pādāvevāsyā ekam aṅgam udūḷham | tayor ityāḥ parastāt prativihitā bhūtamātrā | mana evāsyā ekam aṅgam udūḷham | tasya dhīḥ kāmāḥ parastāt prativihitā bhūtamātrā ||</p>
+
+<p>ŚĀ 5,6 = KU 3,6
+prajñayā vācaṃ samāruhya vācā sarvāṇi nāmānyāpnoti | prajñayā prāṇaṃ samāruhya prāṇena sarvān gandhān āpnoti | prajñayā cakṣuḥ samāruhya cakṣuṣā sarvāṇi rūpāṇyāpnoti | prajñayā śrotraṃ samāruhya śrotreṇa sarvāñ chabdān āpnoti | prajñayā jihvāṃ samāruhya jihvayā sarvān rasān āpnoti | prajñayā hastau samāruhya hastābhyāṃ sarvāṇi karmāṇyāpnoti | prajñayā śarīraṃ samāruhya śarīreṇa sukhaduḥkhe āpnoti | prajñayopasthaṃ samāruhyupasthenānandaṃ ratiṃ prajātim āpnoti | prajñayā pādau samāruhya pādābhyāṃ sarvā ityā āpnoti | prajñayā manaḥ samāruhya manasā sarvāṇi dhyātānyāpnoti |</p>
+
+<p>ŚĀ 5,7 = KU 3,7
+na hi prajñāpetā vāṅ nāma kiṃcana prajñāpayet | anyatra me mano 'bhūd ityāha | nāham etan nāma prājñāsiṣam iti | na hi prajñāpetaḥ prāṇo gandhaṃ kaṃcana prajñāpayet | anyatra me mano 'bhūd ityāha | nāham etaṃ gandhaṃ prājñāsiṣam iti | na hi prajñāpetaṃ cakṣū rūpaṃ kiṃcana prajñāpayet | anyatra me mano 'bhūd ityāha | nāham etad rūpaṃ prājñāsiṣam iti | na hi prajñāpetaṃ śrotraṃ śabdaṃ kaṃcana prajñāpayet | anyatra me mano 'bhūd ityāha | nāham etaṃ śabdaṃ prājñāsiṣam iti | na hi prajñāpetā jihvānnarasaṃ kaṃcana prajñāpayet | anyatra me mano 'bhūd ityāha | nāham etam annarasaṃ prājñāsiṣam iti | na hi prajñāpetau hastau karma kiṃcana prajñāpayetām | anyatra nau mano 'bhūd ityāhatuḥ | nāvām etat karma prājñāsiṣveti | na hi prajñāpetaṃ śarīraṃ na sukhaṃ na duḥkhaṃ kiṃcana prajñāpayet | anyatra me mano 'bhūd ityāha | nāham etaṃ na sukhaṃ na duḥkhaṃ prājñāsiṣam iti | na hi prajñāpeta upastha ānandaṃ na ratiṃ na prajātiṃ kāṃcana prajñāpayet | anyatra me mano 'bhūd ityāha | nāham etam ānandaṃ na ratiṃ prajātiṃ prājñāsiṣam iti
+| na hi prajñāpetau pādāv ityāṃ kāṃcana prajñāpayet | anyatra nau mano 'bhūd ityāha | nāvām etām ityāṃ prājñāsiṣveti | na hi prajñāpetā dhīḥ kāṃcana sidhyet,na prajñātavyaṃ prajñāyet ||</p>
+
+<p>ŚĀ 5,8 = KU 3,8
+na vācaṃ vijijñāsīti | vaktāraṃ vidyāt | na gandhaṃ vijijñāsīti | ghrātāraṃ vidyāt | na rūpaṃ vijijñāsīti | draṣṭāraṃ vidyāt | na śabdaṃ vijijñāsīti | śrotāraṃ vidyāt | nānnarasaṃ vijijñāsīti | annarasasya vijñātāraṃ vidyāt | na karma vijijñāsīti | kartāraṃ vidyāt | na sukhaduḥkhe vijijñāsīti | sukhaduḥkhayor vistāraṃ vidyāt | nānandaṃ na ratiṃ na prajātiṃ vijijñāsīti | ānandasya rateḥ prajāter vijñātāraṃ vidyāt | netyāṃ vijijñāsīti | etāraṃ vidyāt | na mano vijijñāsīti | mantāraṃ vidyāt | tā vā etā daśaiva bhūtamātrā adhiprajñam | daśa prajñāmātrā adhibhutam | yad dhi bhūtamātrā na syur na prajñāmātrāḥ syuḥ | yad vā prajñāmātrā na syur na bhūtamātrāḥ syuḥ |
+na hyanyatarato rūpaṃ kiṃcana sidhyet | no eta nānā | tad yathā rathasyāreṣu nemir arpitaḥ | nābhāvarā arpitāḥ | evam evaitā bhūtāmātrāḥ prajñāmātrāsvarpitāḥ | prajñāmātrāḥ prāṇe 'rpitāḥ | sa eṣa prāṇa eva prajñātmānanto 'jaro 'mṛto na sādhunā karmaṇā bhūyān bhavati np evāsādhunā kanīyān | eṣa hyeva sādhu karma kārayati taṃ yam ebhyo lokebhya unninīṣate | eṣa u evāsādhu karma kārayati taṃ yam adho ninīṣate | eṣa lokapālaḥ | eṣa lokādhipatiḥ | eṣa lokeśaḥ | sa ma ātmeti vidyāt sa ma ātmeti vidyāt ||</p>
+
+<p>iti śāṅkhāyanāraṇyake pañcamo 'dhyāyaḥ ||</p>
+
+</div>
+<div>
+
+<p>ŚĀ 6,1 = KU 4,1
+atha gārgyo bālākir anūcānaḥ saṃspaṣṭa āsa | so 'vasad uśīnareṣu so 'vasan matsyeṣu kurupañcāleṣu kāśivideheṣviti | sa hājātaśatruṃ kāśyam āvrajyovāca - brahma te bravāṇīti | taṃ hovācājataśatruḥ - sahasraṃ dadmi ta ityetasyāṃ vāci | janako janaka iti vā u janā dhāvantīti ||</p>
+
+<p>ŚĀ 6,2 = KU 4,2
+āditye bṛhat, candramasyannam, vidyuti satyam, stanayitnau śabdaḥ, vāyāvindro vaikuṇṭhaḥ, ākāśe pūrṇam, agnau viṣāsahiḥ, apsu tejaḥ | ityadhidaivatam | atādhyātmam - ādarśe pratirūpaḥ, chāyāyāṃ dvitīyaḥ, pratiśrutkāyām asuriti, śabde mṛtyuḥ, svapne yamaḥ, śarīre prajāpatiḥ, dakṣiṇe' kṣiṇi vācaḥ, savye 'kṣiṇi satyasya ||</p>
+
+<p>ŚĀ 6,3 = KU 4,3
+sa hovāca bālākiḥ - ya evaiṣa āditye puruṣas tam evāham upāsa iti | taṃ hovācājātaśatruḥ - mā maitasmin saṃvādayiṣṭhāḥ | bṛhan pāṇḍaravāsā atiṣṭhāḥ sarveṣāṃ bhūtānāṃ Mūrdheti vā aham etam upāsa iti | sa yo haitam evam upāste 'tiṣṭhāḥ sarveṣāṃ bhūtānāṃ mūrdhā bhavati ||</p>
+
+<p>ŚĀ 6,4 = KU 4,4
+sa hovāca bālākiḥ - ya evaiṣa candramasi puruṣas tam evāham upāsa iti | taṃ hovācājātaśatruḥ - mā maitasmin saṃvādayiṣṭhāḥ | annasyātmeti vā aham etam upāsa iti | sa yo haitam evam upāste 'nnasyātmā bhavati ||</p>
+
+<p>ŚĀ 6,5 = KU 4,5
+sa hovāca bālākiḥ - ya evaiṣa vidyuti puruṣas tam evāham upāsa iti | taṃ hovācājātaśatruḥ - mā maitasmin saṃvādayiṣṭhāḥ | satyasyātmeti vā aham etam upāsa iti | sa yo haitam evam upāste satyasyātmā bhavati ||</p>
+
+<p>ŚĀ 6,6 = KU 4,6
+sa hovāca bālākiḥ - ya evaiṣa stanayitnau puruṣas tam evāham upāsa iti | taṃ hovācājātaśatruḥ - mā maitasmin saṃvādayiṣṭhāḥ | śabdasyātmeti vā aham etam upāsa iti | sa yo haitam evam upāste śabdasyātmā bhavati ||</p>
+
+<p>ŚĀ 6,7 = KU 4,7
+sa hovāca bālākiḥ - ya evaiṣa vāyau puruṣas tam evāham upāsa iti | taṃ hovācājātaśatruḥ - mā maitasmin saṃvādayiṣṭhāḥ | indro vaikuṇṭho 'parājitā seneti vā aham etam upāsa iti | sa yo haitam evam upāste jiṣṇur ha vā aparājiṣṇur anyatastyajāyī bhavati ||</p>
+
+<p>ŚĀ 6,8 = KU 4,8
+sa hovāca bālākiḥ - ya evaiṣa ākāśe puruṣas tam evāham upāsa iti | taṃ hovācājātaśatruḥ - mā maitasmin saṃvādayiṣṭhāḥ | pūṛnam apravarti brahmeti vā aham etam upāsa iti | sa yo haitam evam upāste pūryate prajayā paśubhir yaśasā brahmavarcasena svargeṇa lokena sarvam āyur eti ||</p>
+
+<p>ŚĀ 6,9 = KU 4,9
+sa hovāca bālākiḥ - ya evaiṣo 'gnau puruṣas tam evāham upāsa iti | taṃ hovācājātaśatruḥ - mā maitasmin saṃvādayiṣṭhāḥ | viṣāsahir iti vā aham etam upāsa iti | sa yo haitam evam upāste viṣāsahir haivānyeṣu bhavati ||</p>
+
+<p>ŚĀ 6,10 = KU 4,10
+sa hovāca bālākiḥ - ya evaiṣo 'psu puruṣas tam evāham upāsa iti | taṃ hovācājātaśatruḥ - mā maitasmin saṃvādayiṣṭhāḥ | tejasa ātmeti vā aham etam upāsa iti | sa yo haitam evam upāste tejasa ātmā bhavati | ityadhidaivatam | athādhyātmam ||</p>
+
+<p>ŚĀ 6,11 = KU 4,11
+sa hovāca bālākiḥ - ya evaiṣa ādarśe puruṣas tam evāham upāsa iti | taṃ hovācājātaśatruḥ - mā maitasmin saṃvādayiṣṭhāḥ | pratirūpa iti vā aham etam upāsa iti | sa yo haitam evam upāste pratirūpo haivāsya prajāyām ājāyate nāpratirūpaḥ ||</p>
+
+<p>ŚĀ 6,12 = KU 4,12
+sa hovāca bālākiḥ - ya evaiṣa cchāyāyāṃ puruṣas tam evāham upāsa iti | taṃ hovācājātaśatruḥ - mā maitasmin saṃvādayiṣṭhāḥ | dvitīyo 'napaga iti vā aham etam upāsa iti | sa yo haitam evam upāste vindate dvitīyāt | dvitīyavān bhavati ||</p>
+
+<p>ŚĀ 6,13 = KU 4,13
+sa hovāca bālākiḥ - ya evaiṣa pratiśrutkāyāṃ puruṣas tam evāham upāsa iti | taṃ hovācājātaśatruḥ - mā maitasmin saṃvādayiṣṭhāḥ | asur iti vā aham etam upāsa iti | sa yo haitam evam upāste na purā kālāt saṃmoham eti ||</p>
+
+<p>ŚĀ 6,14 = KU 4,14
+sa hovāca bālākiḥ - ya evaiṣa śabde puruṣas tam evāham upāsa iti | taṃ hovācājātaśatruḥ - mā maitasmin saṃvādayiṣṭhāḥ | mṛtyur iti vā aham etam upāsa iti | sa yo haitam evam upāste na purā kālāt praiti ||</p>
+
+<p>ŚĀ 6,15 = KU 4,15
+sa hovāca bālākiḥ - yenaitat puruṣaḥ suptaḥ svapnayā carati tamu evāham upāsa iti | taṃ hovācājātaśatruḥ - mā maitasmin saṃvādayiṣṭhāḥ | yamo rājeti vā aham etam upāsa iti | sa yo haitam evam upāste sarvaṃ hāsmā idaṃ śraiṣṭhyāya yamyate ||</p>
+
+<p>ŚĀ 6,16 = KU 4,16
+sa hovāca bālākiḥ - ya evaiṣa śarīre puruṣas tam evāham upāsa iti | taṃ hovācājātaśatruḥ - mā maitasmin saṃvādayiṣṭhāḥ | prajāpatir iti vā aham etam upāsa iti | sa yo haitam evam upāste prajāyate prajayā paśbhir yaśasā brahmavaracasema svargeṇa lokena sarvam āyur eti ||</p>
+
+<p>ŚĀ 6,17 = KU 4,17
+sa hovāca bālākiḥ - ya evaiṣa dakṣiṇe 'kṣiṇi puruṣas tam evāham upāsa iti | taṃ hovācājātaśatruḥ - mā maitasmin saṃvādayiṣṭhāḥ | vāca ātmāgner ātmā jyotiṣa ātmeti vā aham etam upāsa iti | sa yo haitam evam upāste eteṣāṃ sarveṣām ātmā bhavati ||</p>
+
+<p>ŚĀ 6,18 = KU 4,18
+sa hovāca bālākiḥ - ya evaiṣa savye 'kṣiṇi puruṣas tam evāham upāsa iti | taṃ hovācājātaśatruḥ - mā maitasmin saṃvādayiṣṭhāḥ | satyasyātm vidyuta ātmā tejasa ātmeti vā aham etam upāsa iti | sa yo haitam evam upāste eteṣāṃ sarveṣām ātmā bhavati ||</p>
+
+<p>ŚĀ 6,19 = KU 4,19
+tata u ha bālākis tūṣṇīm āsa | taṃ hovācājātaśatruḥ - etāvān nu bālākā3 iti | etāvad iti hovāca bālākiḥ | taṃ hovācājātaśatruḥ - mṛṣā vai khalu mā saṃvādayiṣṭhā brahma te bravāṇīti | sa hovāca - yo vai bālāka eteṣāṃ puruṣāṇāṃ kartā yasya vaitat karma sa vai veditavya iti | tata u ha bālākiḥ samitpāṇiḥ praticakrama upāyānīti | taṃ hovācājātaśatruḥ - pratilomarūpam eva tan manye yat kṣatriyo brāhmaṇam upanayeta | ehi vyeva tvā jñapayiṣyāmīti | taṃ ha pāṇāvabhipadya pravavrāja | tau ha suptaṃ puruṣam ājagmatuḥ | taṃ hājātaśatrur āmantrayāñcakre - bṛhan pāṇḍaravāsaḥ soma rājann iti | sa u ha śiśya eva | tat u hainaṃ yaṣṭyā vicikṣepa | sa tata eva samuttasthau | taṃ hovācājātaśatruḥ - kvaiṣa etad bālāke puruṣo 'śayiṣṭa, yatraitad abhūt, yata etad āgād iti | hitā nama puruṣasya nāḍyo hṛdayāt purītatam abhipratanvanti tad yathā sahasradhā keśo vipāṭitastvāvad aṇvyaḥ |
+piṅgalasyāṇimnyas tiṣṭhanti śuklasya kṛṣṇasya pītasya lohitasya ca | tāsu tadā bhavati yadā suptaḥ svapnaṃ na kaṃcana paśyati ||</p>
+
+<p>ŚĀ 6,20 = KU 4,20
+athāsmin prāṇa ekaikadhā bhavati | tad enaṃ vāk sarvair nāmabhiḥ sahāpyeti | cakṣuḥ sarvai rūpaiḥ sahāpyeti | śrotraṃ sarvaiḥ śabdaiḥ sahāpyeti | manaḥ sarvair dhyātaiḥ sahāpyeti | sa yadA pratibudhyate, yathāgner jvalataḥ sarvā diśo visphuliṅgā vipratiṣṭheran evam evaitasmād ātmanaḥ prāṇā yathāyatanaṃ vipratiṣṭhante prāṇebhyo devāḥ devebhyo lokāḥ | sa eṣa prāṇa eva prajñātmedaṃ śarīram AtmAnam anupraviṣṭa ā lomabhya ā nakhebhyaḥ | tad yathā kṣuraḥ kṣuradhāne vopahito viśvaṃbharo vā viśvaṃbarakulāya evam evaiṣa prajñātmedaṃ śarīram ātmānam anupraviṣṭa ā lomabhya ā nakhebhyaḥ | tam etam ātmānam eta ātmāno 'nvavasyante yathā śreṣṭhinaṃ svāḥ | tad yatha śreṣṭhī svair bhuṅkte yathā vā svāḥ śreṣṭhinaṃ bhuñjanti | evam evaiṣa prajñātmaitair ātmabhir bhuṅkte | evam evaita ātmāna etam ātmānaṃ bhuñjanti | sa yāvad dha vā indra etam ātmānaṃ na vijajñe tāvad enam asurā abhibabhūvuḥ | sa yadā vijajñe 'tha hatvāsurān vijitya sarveṣāṃ ca devānāṃ śraiṣṭhyaṃ svārājyam ādhipatyaṃ paryait |
+tathau evaivaṃ vidvān sarvān pāpmano 'pahaty sarveṣāṃ ca bhūtānām śraiṣṭhyaṃ svārājya ādhipatyaṃ paryeti | ya evaṃ veda ya evaṃ veda ||</p>
+
+<p>iti śāṅkhāyanāraṇyake ṣaṣṭho 'dhyāyaḥ ||</p>
+
+</div>
+<div>
+
+<p>ŚĀ 7,1
+om ṛtaṃ vadiṣyāmi | satyaṃ vadiṣyāmi | tan mām avatu tad vaktāram avatvavatu mām avatu vaktāram | mayi bhargo mayi mahaḥ | vāṅ me manasi pratiṣṭhitā | mano me vāci pratiṣṭhitam | āvir āvir mayyābhūḥ | vedasya ma āṇīḥ | ṛta mā mā hiṃsīḥ | anenādhītenāhorātrān tsaṃvasāmi | agne iḷā nama iḷā namaḥ | ṛṣibhyo mantrakṛdbhyo mantrapatibhyo namo 'stu devebhyaḥ | śivā naḥ śaṭamā bhava sumṛḍīkā sarasvati mā te vyoma saṃdṛśi | adabdhaṃ mana iṣiraṃ cakṣuḥ sūryo jyotiṣāṃ śreṣṭhaḥ | dīkṣe mā mā hiṃsīḥ ||</p>
+
+<p>ŚĀ 7,2
+athātaḥ saṃhitāyā upaniṣat | pṛthivī pūrvarūpaṃ dyaur uttararūpaṃ vāyuḥ saṃhiteti śauravīro māṇḍūkeyaḥ | ākāśaḥ saṃhitetyasya māṇḍavyo vedayāñ cakre - sa hāviparihṛto mene na me 'sya putreṇa samagād iti | parihṛto mena ity āgastyaḥ | samānaṃ hyatra pituśca putrasya ca vāyuś cākāśaś ca | ityadhidaivatam | athādhyātmam | vāk pūrvarūpaṃ mana uttararūpaṃ prāṇaḥ saṃhiteti śauravīro māṇḍūkeyaḥ | atha ha smāsya putra āha dīrghaḥ - manasā vā agre kīrtayati tad vācā vadati | tasmān mana eva pūrvarūpaṃ vāg uttararūpaṃ mano vāk prāṇas tveva saṃhiteti | sa eṣo 'śvarathaḥ praṣṭivāhano manovākprāṇasaṃhitaḥ svargaṃ lokaṃ gamayati | sa ya evam etāṃ saṃhitāṃ veda saṃdhīyate prajayā paśubhir yaśasā brahmavarcasena svargeṇa lokena sarvam āyur etīti nu māṇḍūkeyānām ||</p>
+
+<p>ŚĀ 7,3
+śākalyasya pṛthivyagniḥ pṛthivī vāg anuvyāhārāḥ | sa yadi nirbhujaḥ khalu vai vayaṃ madhyamo vāk prāṇena mātā jāyā prajñā vāg bṛhadgatirvālisarvamuttamam ||</p>
+
+<p>ŚĀ 7,4
+atha śākalyasya | pṛthivī pūrvarūpaṃ dyaur uttararūpaṃ vāyuḥ saṃhitā vṛṣṭiḥ saṃdhiḥ saṃdhātā | tad utāpi yatraitad balavad anugṛhṇan mahāmegho vṛṣṭiṃ varṣati | dyāvāpṛthivyau samadhātām ityadhidaivatam | athādhyātmam | puruṣo 'yaṃ sarvam āṇḍam | dve vidale bhavataḥ | tatredam eva pūrvarūpam idam uttararūpam | tatrāyam antareṇākāśaḥ | yathāsau dyāvāpṛthivyor antareṇākāśa etasminn ākāśe prāṇa āyatto bhavati yathāmuṣminn ākāśe vāyur āyatto bhavati | yathāmūni trīṇi jyotīṃṣyevam imāni puruṣe trīṇi jyotīṃṣi | yathāsau divyāditya evam idaṃ śirasi cakṣuḥ | yathāsāvantarikṣe vidyud evam idam ātmani hṛdayam | yathāyam agniḥ pṛthivyam evam idam upasthe retaḥ | evamiva ha sma sarvata ātmānam anuvidhāyāha - idam eva pūrvarūpam idam uttararūpaṃ mano vāk prāṇas tveva saṃhiteti | sa eṣo ' śvarathaḥ praṣṭivahano manovākprāṇasaṃhitaḥ svargaṃ lokaṃ gamayati | sa ya evam etāṃ saṃhitāṃ +veda saṃdhīyate prajayā paśubhir yaśasā brahmavarcasena svargeṇa lokena
+sarvam āyur eti ||</p>
+
+<p>ŚĀ 7,5
+pṛthivī pūrvarūpaṃ dyaur uttararūpaṃ vāyuḥ saṃhitā diśaḥ saṃdhir ādityaḥ saṃdhāteti vaiśvāmitraḥ | ityadhidaivatam | athādhyātmam | vāk pūrvarūpaṃ mana uttararūpaṃ prāṇaḥ saṃhitā śrotraṃ saṃdhiś cakṣuḥ saṃdhātā | sa ya evam etāṃ etāṃ saṃhitāṃ veda saṃdhīyate prajayā paśubhir yaśasā brahmavarcasena svargeṇa lokena sarvam āyur eti ||</p>
+
+<p>ŚĀ 7,6
+agniḥ pūrvarūpaṃ candramā uttararūpaṃ vidyut saṃhiteti sūryadattaḥ | ityadhidaivatam | athādhyātmam - vāk pūrvarūpaṃ mana uttararūpaṃ satyaṃ saṃhitā | sa ya evam etāṃ etāṃ saṃhitāṃ veda saṃdhīyate prajayā paśubhir yaśasā brahmavarcasena svargeṇa lokena sarvam āyur eti ||</p>
+
+<p>ŚĀ 7,7
+pṛthivī pūrvarūpaṃ dyaur uttararūpaṃ kālaḥ saṃhiteti rādheyaḥ | ityadhidaivatam | athādhyātmam - vāk pūrvarūpaṃ mana uttararūpaṃ ātmā saṃhitā | sa ya evam etāṃ etāṃ saṃhitāṃ veda saṃdhīyate prajayā paśubhir yaśasā brahmavarcasena svargeṇa lokena sarvam āyur eti ||</p>
+
+<p>ŚĀ 7,8
+vāk pūrvarūpaṃ mana uttararūpaṃ vidyā saṃhiteti pauṣkarasādiḥ | sa ya evam etāṃ saṃhitāṃ veda saṃdhīyate prajayā paśubhir yaśasā brahmavarcasena svargeṇa lokena sarvam āyur eti ||</p>
+
+<p>ŚĀ 7,9
+athāto 'nuvyāhārāḥ | prāṇo vaṃśa iti vidyāt | sa ya enaṃ prāṇaṃ vaṃśaṃ bruvan param upavadet śaknuvan kaścic cen manyeta - prāṇaṃ vaṃśaṃ +samadhām | prāṇaṃ vaṃśaṃ saṃdhitsituṃ na śaknoṣītyāttha | prāṇas tvā vaṃśo hāsyatītyevainaṃ brūyāt | atha ced aśaknuvan manyeta prāṇaṃ vaṃśaṃ samadhitsīḥ taṃ nāśakaḥ saṃdhātuṃ prāṇas tvā vaṃśo hāsyatītyevainaṃ brūyāt | yathā nu kathā ca bruvan vābruvan vā brūyād abhyāśam eva yat tat tathā syāt | na tvevānyat kuśalād brāhmaṇaṃ brūyād atidyumna eva brāhmaṇaṃ brūyān nātidyumne ca na brāhmaṇaṃ brūyān namo 'stu brāhmaṇebhya iti śauravīro māṇḍūkeyaḥ ||</p>
+
+<p>ŚĀ 7,10
+sa yadi prāṇaṃ vaṃśaṃ bruvantaṃ param upavadet śaknuvantaṃ cen manyeta - prāṇaṃ vaṃśaṃ samadhitsiṣam prāṇaṃ vaṃśaṃ saṃdhitsituṃ na śaknoṣītyāttha | prāṇas tvā vaṃśo hāsyatītyevainaṃ brūyāt | atha ced aśaknuvantaṃ manyeta - prāṇaṃ vaṃśaṃ samadhitsīs tan nāśakaḥ saṃdhātum | prāṇas tvā vaṃśo hāsyatītyevainaṃ brūyāt | yathā nu kathā ca bruvantaṃ vābruvantaṃ vā brūyād abhyāśam eva yat tat tathā syāt | na tvevānyat kuśalād brāhmaṇaṃ brūyād atidyumna eva brāhmaṇaṃ brūyān nātidyumne ca na brāhmaṇaṃ brūyān namo 'stu brāhmaṇebhya iti śauravīro māṇḍūkeyaḥ ||</p>
+
+<p>ŚĀ 7,11
+athāto nirbhujapravādāḥ | pṛthivyāyatanaṃ nirbhujaṃ divāyatanaṃ pratṛṇṇam antartikṣāyatanam ubhayam antareṇa | sa ya enaṃ nirbhujaṃ bruvan param upavadet | pṛthivīṃ devatām āraḥ pṛthivī tvā devatāriṣyatītyenaṃ brūyāt | atha yadi pratṛṇṇam bruvan param upavaded divaṃ devatām āro dyaus tvā devatāriṣyatītyenaṃ brūyāt | atha yadyubhayam antareṇa bruvan param upavaded antarikṣaṃ devatām āra antarikṣaṃ tvā devatāriṣyatītiyenaṃ brūyāt | yad dhi saṃdhiṃ vivartayati tan nirbhujasya rūpam | atha yac chuddhe akṣare abhivyāharati tat pratṛṇṇasyāgra u eva | ubhayam antareṇobhayaṃ vyāptaṃ bhavati | annādyakāmo nirbhujaṃ brūyāt svargakāṃaḥ pratṛṇṇam ubhayakāma ubhayamantareṇa | sa ya enaṃ nirbhujaṃ bruvan param upavaded acyoṣṭhā avarābhyāṃ sthānābhyām ityenaṃ brūyāt | atha yadi pratṛṇṇam bruvan param upavaded acyoṣṭhā uttarābhyāṃ sthānābhyām ityevainaṃ brūyāt | yastvevobhayam antareṇāha tasya tasya nāstyupavādaḥ | yathā nu kathā ca bruvan vābruvan vā brūyād abhyāśam kuśalād brāhmaṇaṃ brūyād atidyumna evaṃ brāhmaṇaṃ brūyān nātidyumne ca na brāhmaṇaṃ brūyāt | namo 'stu brāhmaṇebhya iti śauravīro māṇḍūkeyaḥ ||</p>
+
+<p>ŚĀ 7,12
+atha khalvāhur nirbhujavaktrāḥ | pūrvam evākṣaraṃ pūrvarūpam uttaram uttararūpam | yakāravakārāvantareṇa sā saṃhiteti | sa ya evam etāṃ saṃhitāṃ veda saṃdhīyate prajayā paśubhir yaśasā brahmavarcasena svargeṇa lokena sarvam āyur eti ||</p>
+
+<p>ŚĀ 7,13
+atha vai vayaṃ brūmo nirbhujavaktrāḥ sma iti ha smāha hvastro māṇḍūkeyaḥ | pūrvam evākṣaraṃ pūrvarūpam uttaram uttararūpam | tad yāsau mātrā pūrvarūpottarūpe antareṇa yena saṃdhiṃ vivartayati yena mātrāmātraṃ vibhajati yena svarāt svaraṃ vijñāpayati sā saṃhiteti | sa ya evam etāṃ saṃhitāṃ veda saṃdhīyate prajayā paśubhir yaśasā brahmavarcasena svargeṇa lokena sarvam āyur eti ||</p>
+
+<p>ŚĀ 7,14
+atha ha smāsya putra āha madhyamaḥ prātiyodhīputro magadhavāsī pūrvam evākṣaraṃ pūrvarūpam uttaram uttararūpam | tad yāsau mātrā saṃdhivijñāpanī sāma tad bhavati sāmaihāvaṃ saṃhitāṃ manya iti | tad etad ṛcābhyuditam - mā naḥ stenebhyo ye abhi druhas pade nirāmiṇo ripavo 'nneṣu jāgṛdhuḥ | ā devānām ohate vi vrayo hṛdi bṛhaspate na paraḥ sāmno viduḥ || iti | sa ya evam etāṃ saṃhitāṃ veda saṃdhīyate prajayā paśubhir yaśasā brahmavarcasena svargeṇa lokena sarvam āyur eti ||</p>
+
+<p>ŚĀ 7,15
+vāk prāṇena saṃdhīyata iti kauṇṭharavyaḥ | prāṇaḥ pavamānena pavamāno viśvair devair viśve devāḥ svargeṇa lokena svargo loko brahmaṇā saiṣāvaraparā saṃhitā | sa ya evam etām avaraparāṃ saṃhitāṃ veda evaṃ haiva sa prajayā paśubhir yaśasā brahmavarcasena svargeṇa lokena saṃdhīyate yathaiṣāvaraparā saṃhitā | sa yadi pareṇa vopasṛṣṭaḥ svena vārthenābhivyāhared abhivyāharann eva vidyāt - divaṃ saṃhitāgamad viduṣo devān abhivyāhārārtham evaṃ bhaviṣyatīti | etenāvarapareṇa tathā haiva tad bhavati ||</p>
+
+<p>ŚĀ 7,16
+mātā pūrvarūpaṃ pitottararūpaṃ prajā saṃhiteti bhārgavaḥ | tad etad ekam eva sarvaṃ abhyanūktam | mātā ca hyevedaṃ pitā ca prajā ca sarvam | saiṣāditisaṃhitā | aditir hevedaṃ sarvaṃ yad idaṃ kiṃcid viśvabhūtam | tad etad ṛcābhyuditam - aditir dyaur aditir antarikṣaṃ aditir mātā sā pitā sa putraḥ | viśve devā aditiḥ pañca janā aditir jātam aditir janitvam || sa ya evam etāṃ saṃhitāṃ veda saṃdhīyate prajayā paśubhir yaśasā brahmavarcasena svargeṇa lokena sarvam āyur eti ||</p>
+
+<p>ŚĀ 7,17
+jāyā pūrvarūpaṃ patir uttararūpaṃ putraḥ saṃhitā retaḥ saṃdhiḥ prajananaṃ saṃdhānam iti sthaviraḥ śākalyaḥ | saiṣā prajāpatisaṃhitā | sa ya evam etāṃ saṃhitāṃ veda saṃdhīyate prajayā paśubhir yaśasā brahmavarcasena svargeṇa lokena sarvam āyur eti ||</p>
+
+<p>ŚĀ 7,18
+prajñā pūrvarūpaṃ śraddhottararūpaṃ karma saṃhitā satyaṃ saṃdhānam iti kāśyapaḥ | saiṣā satyasaṃhitā | tad āhur yat satyasaṃdhā devā iti | sa ya evam etāṃ saṃhitāṃ veda saṃdhīyate prajayā paśubhir yaśasā brahmavarcasena svargeṇa lokena sarvam āyur eti ||</p>
+
+<p>ŚĀ 7,19
+vāk saṃhiteti pañcālacaṇḍaḥ | vācā vai vedāḥ saṃdhīyante vācā chandāṃsi vācā mitrāṇi saṃdadhati | tad yatraitad adhīte vā bhāṣate vā vāci tadā prāṇo bhavati | vāk tadā prāṇaṃ reḷhi | atha yat svapiti vā tūṣṇīṃ vā bhavati prāṇe tadā vāg bhavati prāṇastadā vācaṃ reḷhi. tāv anyonyaṃ rīḷhaḥ | tad etad ṛcābhyuditam - ekaḥ suparṇaḥ sa samudram āviveśa, sa idaṃ viśvaṃ bhuvanaṃ vicaṣṭe | taṃ pākena manasāpaśyam antitas, taṃ mātā reḷhi sa u reḷhi mātaram || iti | vāg vai mātā prāṇo vatsaḥ | sa ya evam etāṃ saṃhitāṃ veda saṃdhīyate prajayā paśubhir yaśasā brahmavarcasena svargeṇa lokena sarvam āyur eti ||</p>
+
+<p>ŚĀ 7,20
+bṛhadrathaṃtareṇa rūpeṇa saṃhitā saṃdhīyata iti tārkṣyaḥ | vāg vai rathaṃtarasya rūpaṃ prāṇo bṛhataḥ | ubhābhyām u khalu saṃhitā saṃdhīyate vācā ca prāṇena ca | etasyāṃ ha smopaniṣadi saṃvatsaraṃ gā rakṣayata iti tārkṣyaḥ | sa ya evam etāṃ saṃhitāṃ veda saṃdhīyate prajayā paśubhir yaśasā brahmavarcasena svargeṇa lokena sarvam āyur eti ||</p>
+
+<p>ŚĀ 7,21
+gatiḥ pūrvvarūpaṃ nivṛttir uttararūpaṃ sthitiḥ saṃhiteti jāratkārava ārtabhāgaḥ | tasyām etasyāṃ saṃhitāyāṃ dhvaṃsayo nimeṣāḥ kāṣṭhāḥ kalāḥ kṣaṇā muhūrtā ahorātrā ardhamāsā māsā ṛtavaḥ saṃvatsarāś ca saṃdhīyante | saiṣā saṃhitainān kālān saṃdadhāti | kālo gatinivṛttisthitīḥ saṃdadhāti | gatinivṛttisthitibhir idaṃ sarvaṃ saṃdhīyate | ityadhidaivatam | athādhyātmam - bhūtaṃ pūrvarūpaṃ bhaviṣyad uttararūpaṃ bhavat saṃhiteti kālasaṃdhiḥ | tad etad ṛcābhyuditam - mahat tan nāma guhyaṃ puruspṛg yena bhutaṃ janayo yena bhavyam | pratnaṃ jātaṃ jyotir yad asya priyaṃ priyāḥ samaviśanta pañca || iti | sa ya evam etāṃ saṃhitāṃ veda saṃdhīyate prajayā paśubhir yaśasā brahmavarcasena svargeṇa lokena sarvam āyur eti ||</p>
+
+<p>ŚĀ 7,22
+athāto vāliśikhāyaner vacaḥ | pañcemāni mahābhūtāni bhavantīti ha smāha vāliśikhayaniḥ | pṛthivī vāyur ākāśam āpo jyautīṃṣi tāni mithaḥ saṃhitani bhavanti | aatha yānyanyāni kṣudrāṇi mahābhūtaiḥ saṃdhīyante saiṣā sarvavibhūtasaṃhitā | sa ya evam etāṃ saṃhitāṃ veda saṃdhīyate prajayā paśubhir yaśasā brahmavarcasena svargeṇa lokena sarvam āyur eti ||</p>
+
+<p>ŚĀ 7,23
+sarvā vāg brahmeti ha smāha lauhikyaḥ | ye tu kecana śabdā vācam eva tāṃ vidyāt | tad apyetad ṛṣir āha - ahaṃ rudrebhir vasubhiś carāmīti | saiṣā vāk sarvaśabdā bhavati | sa ya evam etāṃ saṃhitāṃ veda saṃdhīyate prajayā paśubhir yaśasā brahmavarcasena svargeṇa lokena sarvam āyur eti | yatā caitad brahma kāmarūpi kāmacāri bhavatyevaṃ haiva sa sarveṣu bhūteṣu kāmarūpī kāmacārī bhavati | ya evaṃ veda ya evaṃ veda ||</p>
+
+<p>iti śāṅkhāyanāraṇyake saptamo 'dhyāyaḥ ||</p>
+
+</div>
+<div>
+
+<p>ŚĀ 8,1
+prāṇo vaṃśa iti ha smāha sthaviraḥ śākalyaḥ | tadu yathā śālāvaṃśe sarve 'nye vaṃśāḥ samāhitāḥ syur evam evaitasmin prāṇe sarva ātmā samāhitaḥ | tasyaitadyātmanaḥ prāṇa ūṣmarūpam asthīni sparśarūpaṃ majjānaḥ svararūpaṃ māṃsaṃ lohitam ityetac caturtham antasthārūpam iti | treyaṃ tveva na etat proktam iti ha smāha hvastro māṇḍūkeyaḥ | tasyaitasya trayasya trīṇītaḥ ṣaṣṭiśatāni bhavanti saṃdhīnāṃ trīṇītas tāni saptaviṃśatiśatāni bhavanti | sapta vai viṃśatiśatāni saṃvatsarasyāhorātrāṇām | tat saṃvatsarasyāhorātrāṇyāpnoti | sa eṣa saṃvatsarasaṃmānaś cakṣurmayaś śrotramayaś chandomayo manomayo vāṅmaya ātmā | sa ya evam etaṃ saṃvatsarasaṃmānaṃ cakṣurmayaṃ śrotramayaṃ chandomayaṃ manomayaṃ vāmayam ātmānaṃ veda saṃvatsarasya sāyaujyaṃ salokatāṃ sarūpatāṃ sabhakṣatām aśnute | putrī paśumān bhavati sarvam āyur etyasyāruṇikeyo devayāñcakre ||</p>
+
+<p>ŚĀ 8,2
+atha kauṣṭharavyaḥ | trīṇi ṣaṣṭiśatānyakṣarāṇām | trīṇi ṣaṣṭiśatānyūṣmaṇām | trīṇi ṣaṣṭiśatāni saṃdhīnām | yānyakṣarāṇyavocāmāhāni tāni | yān ūṣmaṇo rātrayastāḥ | yān saṃdhīn avocāmāhorātrāṇāṃ te saṃdhayaḥ | ityadhidaivatam | athādhyātmam - yānyakṣarāṇyadhidaivatam avocāmāsthīni tānyadhyātmam | yān ūṣmaṇo 'dhidaivatam avocāma +majjānas te 'dhyātmam | eṣa u ha vai saṃpratiprāṇo yan majjā etad retaḥ na vā ṛte prāṇād retasaḥ siddhir asti | yad vā ṛte prāṇād retaḥ sicyeta tat pūyen na saṃbhavet | yān saṃdhīn adhidaivatam avocāma parvāṇi tānyadhyātmam | tasyaitasyāsthnāṃ +majjā parvaṇām iti pañcetaścatvāriṃśacchatāni bhavanti | saṃdhīnāṃ pañcetastadaśītisahasraṃ bhavati | aśītisahasraṃ vārkalino bṛhatīr aharahani saṃpādayanti | sa eṣo 'haḥsaṃmānaś cakṣurmayaś śrotramayaś chandomayo manomayo vāṅmaya ātmā | sa ya evam etad ahaḥsaṃmānaṃ cakṣurmayaṃ śrotramayaṃ chandomayaṃ manomayaṃ vāmayam ātmānaṃ veda ahnāṃ sāyaujyaṃ salokatāṃ sarūpatāṃ sabhakṣatām aśnute | putrī paśumān bhavati sarvam āyur eti ||</p>
+
+<p>ŚĀ 8,3
+catvāraḥ puruṣā iti vāstyaḥ - śarīrapuruṣaś chandaḥpuruṣo vedepuruṣo mahāpuruṣa iti | śarīrapuruṣa iti yam avocam ya evāyaṃ daivika ātmā tasyaitasya yo 'yam aśarīraḥ prajñātmā sa rasaḥ | chandaḥpuruṣa iti yam avocāmākṣarasamāmnāya eva | tasyaitasyākāro rasaḥ | vedapuruṣa iti yam avocāma yena devān vedargvedaṃ yajurvedaṃ sāmavedam iti tasyaitasya brahmarasaḥ | tasmād brahmiṣṭhaṃ brahmāṇam ṛtvijaṃ kurvīta yo yajñasyolvaṇaṃ vidyāt | mahāpuruṣa iti yam avocāma saṃvatsara eva tasyaitasyāsāv ādityo rasaḥ | sa yaś cāyam aśarīraḥ prajñātmā yaś cāsāv āditya ekam etad iti vidyāt | tad etad ṛcābhyuditam ||</p>
+
+<p>ŚĀ 8,4
+citraṃ devānām udagād anīkaṃ cakṣur mitrasya varuṇasyāgneḥ | āprā dyāvāpṛthivī antarikṣaṃ sūrya ātmā jagatas tasthuṣaś ca || iti | etām evānuvidyāṃ saṃhitāṃ saṃdhīyamānāṃ manya iti ha smāha vātsyaḥ -- etam u haiva bahvṛcā mahadukthe mīmāṃsanta etam agnāv adhvaryava etaṃ mahāvrate chandogā etam asyām etam antarikṣa etaṃ divi etam agnāv etaṃ vāyāv etaṃ candramasy etaṃ nakṣatreṣv etam apsv etam oṣadhīṣv etaṃ sarveṣu bhūteṣv etam akṣareṣv etam eva brahmetyupāsate | tad etad ṛcābhyuditam ||</p>
+
+<p>ŚĀ 8,5
+ud vayaṃ tamasas pari jyotiṣ paśyanta uttaram | devaṃ devatrā sūryam aganma jyotir uttamam || iti | sa eṣo 'kṣarasaṃmānaś cakṣurmayaḥ śrotramayaś chandamayo manomayo vāṅmaya ātmā | sa ya evam etam akṣarasaṃānaṃ cakṣurmayaṃ śrotramayaṃ chandamayaṃ manomayaṃ vāṅmayam ātmānaṃ parasmai śaṃsati dugdhadohā asya vedā bhavanti | abhāgo vāci bhavati abhāgo 'nūkte | tad etad ṛcābhyuditam ||</p>
+
+<p>ŚĀ 8,6
+yas tityāja sacividaṃ sakhāyaṃ na tasya vācy api bhāgo asti | yad īṃ śṛnoty alakaṃ śṛṇoti na hi praveda sukṛtasya panthām || iti | nāsyānūkte vāco bhāgo astīty eva tad āha tan na parasmā etad ahaḥ śaṃset | nāgniṃ cinuyān na mahāvratena stuyān ned ātmano 'pihīyā iti | sa yaś cāyam aśarīraḥ prajñātmā yaś cāsāv āditya ekam etad ity avocāma tau yatra vipradṛśyete ||</p>
+
+<p>ŚĀ 8,7
+candramā ivādityo dṛśyate na raśmayaḥ prādur bhavanti | lohinī dyaur bhavati yathā mañjiṣṭhāḥ | vyastaḥ pāyur bhavati | saṃpareto 'syātmā na ciram iva jīviṣyatīti vidyāt | sa yat karaṇīyaṃ manyeta tat kuryāt | athāpyādarśe vodake vā jihmaśirasaṃ vāśirasaṃ vātmānaṃ paśyen na vā paśyet | tad apy evam eva vidyāt | athāpi cchidrā chāyā bhavati na vā bhavati tad apy evam eva vidyāt | athāpi cchidra ivādityo rathanābhir ivākhyāyet tad apy evam eva vidyāt | athāpi nīla ivāgnir dṛśyeta yathā mayūragrīvā mahāmeghe vā marīcīr iva paśyet | anabhre vā vidyutaṃ paśyet | abhra enāṃ mna paśyet tad apy evam eva vidyāt | athāpy apidhāyākṣiṇī upekṣeta tatraitad varāṭakānīva na paśyet tad apy evam eva vidyāt | athāpy apidhāya karṇā upāsīta | ya eṣo 'gner iva jvalataḥ śabdo rathasyevopabdis taṃ na yadā śṛṇuyāt tad apy evam eva vidyāt | athāpi viparyaste kanyake dṛśyete dvijihmevā na vā dṛśyetetad apy evam eva vidyāt | sa yo 'to 'śruto 'mato 'vijñāto 'dṛṣṭo 'nādiṣṭo 'ghuṣṭaḥ śrotā mantā vijñātā draṣṭādeṣṭā ghoṣṭā sarveṣāṃ bhūtānām āntaraḥ puruṣaḥ sa ma ātmeti
+vidyāt | sa utkrāmann evaitam aśarīraṃ prajñātmānam abhisaṃpadyate vijahātītaraṃ dauhikam | saiṣā sarvasyai vāca upaniṣat | sarvā haivemāḥ sarvasyai vācaupaniṣadaḥ | imāṃ tv evam ācakṣate ||</p>
+
+<p>ŚĀ 8,8
+pṛthivyā rūpaṃ sparśā antarikṣasyoṣmāṇo divaḥ svarāḥ | agne rūpaṃ sparśā vāyor ūṣmāṇa ādityasya svarāḥ | ṛgvedasya rūpaṃ sparśā yajurvedasyoṣmāṇaḥ sāmavedasya svarāḥ | rathantarasya rūpaṃ sparśā vāmadevyasyoṣmāṇo bṛhataḥ svarāḥ | prāṇasya rūpaṃ sparśā apānasyoṣmāṇo manasaḥ svarāḥ | prāṇasya rūpaṃ sparśā apānasyoṣmāṇa udānasya svarāḥ svarā iti punardattaḥ | eṣa u haiva sarvāṃ vācaṃ veda ya evaṃ veda ||</p>
+
+<p>ŚĀ 8,9
+atha khalv iyaṃ daivī vīṇā bhavati tadanukṛtir asau mānuṣī bhavati | tad yatheyaṃ śastravatī tardmavatī bhavaty evam evāsau śastravatī tardmavatī bhavati | tad yathāsyāḥ śira evam amuṣyāḥ śiraḥ | tad yathāsyai vaṃśa evam amuṣyā daṇḍaḥ | tad yathāsyā udaram evam amuṣyā ambhaṇaṃ | tad yathāsyai mukhanāsike akṣiṇī ity evam amuṣyāś chidrāṇi | tad yathāsyā aṅgulinigrahā upastaraṇānīty evam amuṣyāḥ parvāṇi | tad yathāsyā aṅgulaya evam amuṣyās tantryaḥ | tad yathāsyai jihvaivam amuṣyā vādanam | tad yathāsyāḥ svarā evam amuṣyāḥ svarāḥ | tad yathā haiveyaṃ romaśena carmaṇāpihitā bhavaty evam evāsau romaśena carmaṇāpihitā bhavati | romaśena ha sma carmaṇā purā vīṇā apidadhati | saiṣā daivī vīṇā bhavati | sa ya evam etāṃ daivīṃ vīṇāṃ veda śrutavadanatamo bhavati bhūmiprāsya kīrtir bhavati +śuśrūṣante hāsya parṣatsu bhāṣyamāṇasyedam astu yad ayam īhate yatrāryā vāg vadati vidur enaṃ tatra ||</p>
+
+<p>ŚĀ 8,10
+athātas tāṇḍavindasya vacaḥ | tad yatheyaṃ akuśalena vādayitrāvīṇārabdhā na kṛtsnaṃ vīṇārthaṃ sādhayaty evam evākuśalena vaktrā vāg ārabdhā na kṛtsnaṃ vāg arthaṃ sādhayati | tad yathā haiveyaṃ kuśalena vādayitrā vīṇārabdhā kṛtsnaṃ vīṇārthaṃ sādhayaty evam eva kuśalena vaktrā vāg ārabdhā kṛtsnaṃ vāg arthaṃ sādhayati | tasyai vā etasyai vīṇāyai yā tviṣiḥ sā saṃhiteti kātyāyanīputro jātūkarṇyaḥ | atha ha smaitat kṛtsnahārito brāhmaṇam evodāharati ||</p>
+
+<p>ŚĀ 8,11
+prajāpatiḥ prajāḥ sṛṣṭvā vyasraṃsata sa chandobhir ātmānaṃ samadadhat | tad yac chandobhir ātmānaṃ samadadhat tasmāt saṃhitā | tasyai vā etasyai saṃhitāyai ṇakaro balaṃ ṣakāraḥ prāṇa ātmā saṃhitā | athaiṣā kṣudramiśrā vikṛtis tāni nakhāni romāṇi vyañjanānīti | sa yo 'tra vicikitset saṇakāraṃ eva brūyād ṛte ṇakāram iti saṇakāram eva brūyāt | evam eva yo 'tra vicikitset saṣakāraṃ eva brūyād ṛte ṣakāram iti saṣakāram eva brūyāt | tau vā etau ṇakāraṣakārau vidvān anusaṃhitam ṛco 'dhīyītāyuṣyam iti vidyād evam eva vidyāt | atha vāg itihāsapurāṇaṃ yac cānyat kiṃcid brāhmīkṛtyevādhīyīta tad apy evam eva vidyāt | te yad vayam anusaṃhitam ṛco 'dhīmahe yac ca māṇḍūkeyīyam adhyāyaṃ prabrūmas tena no ṇakāraṣakārā upāptāv iti ha smāha hrasvo māṇḍūkeyaḥ | atha yad vayam anusaṃhitam ṛco 'dhīmahe yac ca svādhyāyam adhīmahe tena no ṇakāraṣakārā upāptāv iti ha smāha sthaviraḥ śākalyaḥ | etad dha sma vai tad vidvāṃsa āhuḥ kāvaṣeyāḥ kimarthā vayaṃ yakṣyāmahe kimarthā vayam adheṣyāmahe vāci hi prāṇaṃ juhumaḥ prāṇe vācaṃ yo hy eva prabhavaḥ sa evāpyaya iti | tā etāḥ saṃhitā
+nānantevāsine brūyān nāsaṃvatsaravāsine nābrahmacāriṇe nāvedavide nāpavaktra ity ācāryā ity ācāryāḥ ||</p>
+
+<p>iti śāṅkhāyanāraṇyake aṣṭamo 'dhyāyaḥ ||</p>
+
+</div>
+<div>
+
+<p>ŚĀ 9,1
+om | tat savitur vṛṇīmahe | vayaṃ devasya bhojanam | śreṣṭhaṃ sarvadhātamam | turaṃ bhagasya dhīmahi | tat savitur vareṇyaṃ | bhargo devasya dhīmahi | dhiyo yo naḥ pracodayāt || adabdhaṃ mana iṣiraṃ cakṣuḥ | sūryo jyotiṣāṃ śreṣṭho dīkṣe mā mā hiṃsīḥ ||</p>
+
+<p>ŚĀ 9,2
+yo ha vai jyeṣṭhaṃ ca śreṣṭhaṃ ca veda jyeṣṭhaś ca ha vai śreṣṭhaś ca svānāṃ bhavati | prāṇo vai jyeṣṭhaś ca śreṣṭhaś ca | yo ha vai vasiṣṭhāṃ veda vasiṣṭho ha svānāṃ bhavati vāg vai vasiṣṭhā | yo ha vai pratiṣṭhāṃ veda prati ha tiṣṭhaty asmiṃś ca loke 'muṣmiṃś ca cakṣur ha pratiṣṭhā | yo ha vai saṃpadaṃ veda saṃ hāsmai kāmāḥ saṃpadyante śrotraṃ ha vā u saṃpat | yo ha vā āyatanaṃ vedāyatano ha svānāṃ bhavati mano vā āyatanam | atha hemā devatāḥ prajāpatiṃ pitaram etyābruvan ko vai naḥ śreṣṭha iti | sa hovāca prajāpatir yasmin va utkrānte śarīraṃ pāpiṣṭham iva manyate sa vai śreṣṭha iti ||</p>
+
+<p>ŚĀ 9,3
+sā ha vāg uccakrāma | yathā mūkā avadantaḥ prāṇantaḥ prāṇena paśyantaś cakṣuṣā śṛṇvantaḥ śrotreṇa dhyāyanto manasaivam iti ||</p>
+
+<p>ŚĀ 9,4
+cakṣur hoccakrāma | yathāndhā apaśyantaḥ prāṇantaḥ prāṇena vadanto vācā śṛṇvantaḥ śrotreṇa dhyāyanto manasaivam iti ||</p>
+
+<p>ŚĀ 9,5
+śrotraṃ hoccakrāma | yathā badhirā aśṛṇvantaḥ prāṇantaḥ prāṇena vadanto vācā paśyantaḥ cakṣuṣā dhyāyanto manasaivam iti ||</p>
+
+<p>ŚĀ 9,6
+mano hoccakrāma | yathā bālā amanasaḥ prāṇantaḥ prāṇena vadanto vācā paśyantaḥ cakṣuṣā śṛṇvantaḥ śrotreṇaivam iti ||</p>
+
+<p>ŚĀ 9,7
+prāṇo hoccakrāma | tatas tad yatheha saindhavaḥ suhayaḥ paḍbīśaśaṅkūn saṃkhided evam asau prāṇān samakhidat | te ha sametyocur bhagavan motkramīr iti | sa hovāca prāṇaḥ kiṃ me 'nnaṃ bhaviṣyatīti | yat kiṃcāśvabhya ivāśakunibhya iti | kiṃ me vāso bhaviṣyatīty āpa iti hocuḥ | tasmād vā ayam aśiṣyan purastāc copariṣṭāc cādbhiḥ paridadhāti | lambhuko hāsya vāso bhavaty anagno hi bhavati | had dha smaitat satyakāmo jābālo gośrute vaiyāghrapadyāyoktvovāca | apy evaṃ śuṣkasya sthāṇoḥ prabrūyāj jayerann asya śākhāḥ praroheyuḥ palāśanīti | vanaspate śatavalśo viroheti dyāṃ mā lekhīr antarikṣaṃ mā mā hiṃsīr iti ha yājñavalkyaḥ ||</p>
+
+<p>ŚĀ 9,8
+atha yadi mahaj jigamiṣet trirātraṃ dīkṣitvāmāvāsyāyāṃ sarvauṣadasya manthaṃ dadhimadhubhyām upamanthyāgnim upassamādhāya parisamuhya paristīrya paryukṣya dakṣiṇaṃ jānv ācyottarato 'gneḥ kaṃse manthaṃ kṛtvā hutvā homān manthe saṃpātaṃ ānayet | jyeṣṭhāya śreṣṭhāya svāhety agnau hutvā manthe saṃpātam ānayet | pratiṣṭhāyai svāhety agnau hutvā manthe saṃpātam ānayet | saṃpade svāhety agnau hutvā manthe saṃpātam ānayet | tat savitur vareṇyam iti pacchaḥ prāśya tat savitur vṛṇīmaha iti paccha ācāmati mahāvyāhṛtibhiś caturthaṃ nirṇijya kāṃsyaṃ carmaṇi vā sthaṇḍile vā saṃviśati | sa yadi striyaṃ paśyet samṛddhaṃ karmeti vidyāt samṛddhaṃ karmeti vidyāt ||</p>
+
+<p>iti śāṅkhāyanāraṇyake navamo 'dhyāyaḥ ||</p>
+
+</div>
+<div>
+
+<p>ŚĀ 10,1
+athāto 'dhyātmikam | āntaram agnihotram ity ācakṣate | etā ha vai devatāḥ puruṣa eva pratiṣṭhitā agnir vāci vāyuḥ prāṇa ādityaś cakṣuṣi candramā manasi diśaḥ śrotra āpo retasi | etāsu ha vai sarvāsu hutaṃ bhavati ya evaṃ vidvān aśnāti ca pibati cāśayati ca pāyayati ca | so 'śnāti sa pibati sa tṛpyati sa tarpayati ||</p>
+
+<p>ŚĀ 10,2
+sa tṛpto vācaṃ tarpayati | vāk tṛptāgniṃ tarpayati | agnis tṛptaḥ pṛthivīṃ tarpayati | pṛthivī tṛptā yat kiṃcit pṛthhivyāpihitaṃ bhavad bhaviṣyad bhūtaṃ tat sarvaṃ tarpayati | ya evaṃ vidvān aśnāti ca pibati cāśayati ca pāyayati ca so 'śnāti sa pibati sa tṛpyati sa tarpayati ||</p>
+
+<p>ŚĀ 10,3
+sa tṛptaḥ prāṇaṃ tarpayati | prāṇas tṛpto vāyuṃ tarpayati | vāyus tṛpta ākāśaṃ tarpayati | ākāśas tṛpto yat kiṃcākāśenāpihitam bhavad bhaviṣyad bhūtaṃ tat sarvaṃ tarpayati | ya evaṃ vidvān aśnāti ca pibati cāśayati ca pāyayati ca so 'śnāti sa pibati sa tṛpyati sa tarpayati ||</p>
+
+<p>ŚĀ 10,4
+sa tṛptaś cakṣus tarpayati | cakṣus tṛptam ādityaṃ tarpayati | ādityas tṛpto divaṃ tarpayati |dyaus tṛptā yat kiṃcid divāpihitam bhavad bhaviṣyad bhūtaṃ tat sarvaṃ tarpayati | ya evaṃ vidvān aśnāti ca pibati cāśayati ca pāyayati ca so 'śnāti sa pibati sa tṛpyati sa tarpayati ||</p>
+
+<p>ŚĀ 10,5
+sa tṛpto manas tarpayati | manas tṛptaṃ candramasaṃ tarpayati | candramās tṛpto nakṣatrāṇi tarpayati | nakṣatrāṇi tṛptāni māsāṃs tarpayanti | māsās tṛptā ardhamāsāṃs tarpayanti | ardhamāsās tṛptā ahorātre tarpayanti | ahorātre tṛpte ṛtūṃs tarpayataḥ | ṛtavas tṛptāḥ saṃvatsaraṃ tarpayanti | saṃvatsaras tṛpto yat kiṃcit saṃvatsareṇāpihitam bhavad bhaviṣyad bhūtaṃ tat sarvaṃ tarpayati | ya evaṃ vidvān aśnāti ca pibati cāśayati ca pāyayati ca so 'śnāti sa pibati sa tṛpyati sa tarpayati ||</p>
+
+<p>ŚĀ 10,6
+sa tṛptaḥ śrotraṃ tarpayati | śrotraṃ tṛptaṃ diśas tarpayati | diśas tṛptā avāntaradiśas tarpayanti | avāntaradiśas tṛptā yat kiṃcāvāntaradigbhir apihitam bhavad bhaviṣyad bhūtaṃ tat sarvaṃ tarpayati | ya evaṃ vidvān aśnāti ca pibati cāśayati ca pāyayati ca so 'śnāti sa pibati sa tṛpyati sa tarpayati ||</p>
+
+<p>ŚĀ 10,7
+sa tṛpto retas tarpayati | retas tṛptam apas tarpayati | āpas tṛptā nadīṃs tarpayanti | nadyas tṛptāḥ samudraṃ tarpayanti | samudro tṛpto yat kiṃcit samudreṇāpihitam bhavad bhaviṣyad bhūtaṃ tat sarvaṃ tarpayati | ya evaṃ vidvān aśnāti ca pibati cāśayati ca pāyayati ca so 'śnāti sa pibati sa tṛpyati sa tarpayati ||</p>
+
+<p>ŚĀ 10,8
+sa tṛptas tad etad vairājaṃ daśavidhaṃ agnihotraṃ bhavati | tasya prāṇa evāhavanīyaḥ | apāno gārhapatyo vyāno 'nvāhāryapacano mano dhūmo manyur arcir dantā aṅgārāḥ śraddhā payo vāk samit satyam āhutiḥ prajñātmā sa rasaḥ | tad etad vairājaṃ daśavidhaṃ agnihotraṃ hutaṃ bhavati | rohobhyāṃ rohobhyām abhyārūḷham abhi svargaṃ lokaṃ gamayati ya evaṃ vidvān aśnāti ca pibati cāśayati ca pāyayati ca | atha ya idam avidvān agnihotraṃ juhoti yathāṅgārān apohya bhasmani hutaṃ tādṛk tatyās tādṛk tat syāt ||</p>
+
+<p>iti śāṅkhāyanāraṇyake daśamo 'dhyāyaḥ ||</p>
+
+</div>
+<div>
+
+<p>ŚĀ 11,1
+prajāpatir vā imaṃ puruṣam udañcata | tasminn etā devatā āveśayad vācy agniṃ prāṇe vāyuṃ apāne vidyuta udāne parjanyaṃ cakṣuṣy ādityaṃ manasi candramasaṃ śrotre diśaḥ śarīre pṛthivīṃ retasy apo bala indraṃ manyāv īśānaṃ mūrdhany ākāśaṃ ātmani brahma | sa yathā mahān amṛtakumbhaḥ pinvamānas tiṣṭhed evaṃ haiva sa tasthau | atha hemā devatā īkṣāṃ cakrire kim ayam asmābhiḥ puruṣaḥ kariṣyati kiṃ vā vayam anena | hantāsmāc carīrād utkramāmeti | tā hoccakramuḥ | atha hedaṃ śarīraṃ riktam iva parisuṣiraṃ sa hekṣāñcakre prajāpatī randhrāya na kṣamam | hantāham imā aśanāyāpipāsābhyām upasṛjā iti | tā hopasasṛje | tā hopāṣrṣṭāḥ sukhaṃ alabhamānā imam eva puruṣaṃ punaḥ pratyāviviśuḥ ||</p>
+
+<p>ŚĀ 11,2
+vāṅ mamety agnir āviveśa | prāṇo mameti vāyur āviveśa | apāno mameti vidyuta āviviśuḥ | udāno mameti parjanya āviveśa | cakṣur mamety āditya āviveśa | mano mameti candramā āviveśa | śrotram asmākam iti diśa āviviśuḥ | śarīraṃ mameti pṛthivy āviveśa | reto 'smākam ity āpa āviviśuḥ | balaṃ mametīndra āviveśa | manyur mametīśāna āviveśa | mūrdhā mamety ākāśa āviveśa | ātmā mameti brahmāviveśa | sa yathā mahān vṛkṣa ārdra upasiktamūlas tiṣṭhed evaṃ haiva sa tasthau ||</p>
+
+<p>ŚĀ 11,3
+athāyaṃ puruṣaḥ preṣyan purā saṃvatsarāt saṃvatsarasya dṛṣṭīḥ paśyati | chidrā chāyā bhavati na vā bhavati | mahāmeghe vā marīcīr iva paśyed anabhre vā vidyutaṃ paśyed abhra enāṃ na paśyet | akṣiṇī vā apidhāya varāṭakānīvā na paśyati | karṇau vāpidhāyopabdim iva na śṛṇoti | nāsmiṁl loke ramate nainaṃ manaś chandayati | iti pratyakṣadarśanāni ||</p>
+
+<p>ŚĀ 11,4
+atha svapnāḥ | puruṣaṃ kṛṣṇaṃ kṛṣṇadantaṃ paśyati sa enaṃ hanti varāha enaṃ hanti markaṭa enaṃ hanti enaṃ hanti bisāni khādayati suvarṇaṃ bhakṣayitvāvagiraty ekapauṇḍarīkaṃ dhārayati gāṃ savatsāṃ dakṣiṇāmukho naladamālī vrājayati | sa yady eteṣāṃ kiṃcit paśyet pāṇḍuradarśanāṃ kālīṃ strīṃ muktakeśāṃ muṇḍāṃ tailābhyaṅgaṃ kausumbhaparidhānaṃ gītāny uṣṭrārohanaṃ dakṣiṇāśāgamanādīni vīkṣyopoṣya pāyasaṃ sthālīpākaṃ śrapayitvā sarūpavatsāyā goḥ payasi na tv eva tu kṛṣṇāyā agnim upasamādhāya parisamuhya paristīrya paryukṣya dakṣiṇaṃ jānv ācya sruveṇājyahutīr juhoti ||</p>
+
+<p>ŚĀ 11,5
+vāci me 'gniḥ pratiṣṭhitaḥ svāhā | prāṇe me vāyuḥ pratiṣṭhitaḥ svāhā | apāne me vidyutaḥ pratiṣṭhitāḥ svāhā | udāne me parjanyaḥ pratiṣṭhitaḥ svāhā | cakṣuṣi ma ādityaḥ pratiṣṭhitaḥ svāhā | manasi me candramāḥ pratiṣṭhitaḥ svāhā | śrotre me diśaḥ pratiṣṭhitāḥ svāhā | śarīre me pṛthivī pratiṣṭhitā svāhā | retasi ma āpaḥ pratiṣṭhitāḥ svāhā | bale ma indraḥ pratiṣṭhitaḥ svāhā | manyau ma īśānaḥ pratiṣṭhitaḥ svāhā | mūrdhani ma ākāśaḥ pratiṣṭhitaḥ svāhā | ātmani me brahma pratiṣṭhitaṃ svāhā | athaitad ājyāvaśeṣaṃ sthālīpāke samavaninīya sthālīpākasyopaghātaṃ juhoti ||</p>
+
+<p>ŚĀ 11,6
+vāci me 'gniḥ pratiṣṭhito vāg hṛdaye hṛdayam ātmani tat satyaṃ devānāṃ māham akāmo mariṣyāmy annavān annādo bhūyāsaṃ svāhā | prāṇe me vāyuḥ pratiṣṭhito prāṇo hṛdaye hṛdayam ātmani tat satyaṃ devānāṃ māham akāmo mariṣyāmy annavān annādo bhūyāsaṃ svāhā | apāne me vidyutaḥ pratiṣṭhitā apāno hṛdaye hṛdayam ātmani tat satyaṃ devānāṃ māham akāmo mariṣyāmy annavān annādo bhūyāsaṃ svāhā | udāne me parjanyaḥ pratiṣṭhita udānaṃ hṛdaye hṛdayam ātmani tat satyaṃ devānāṃ māham akāmo mariṣyāmy annavān annādo bhūyāsaṃ svāhā | cakṣuṣi ma ādityaḥ pratiṣṭhitaś cakṣur hṛdaye hṛdayam ātmani tat satyaṃ devānāṃ māham akāmo mariṣyāmy annavān annādo bhūyāsaṃ svāhā | manasi me candramāḥ pratiṣṭhito mano hṛdaye hṛdayam ātmani tat satyaṃ devānāṃ māham akāmo mariṣyāmy annavān annādo bhūyāsaṃ svāhā | śrotre me diśaḥ pratiṣṭhitā diśo hṛdaye hṛdayam ātmani tat satyaṃ devānāṃ māham akāmo mariṣyāmy annavān annādo bhūyāsaṃ svāhā | śarīre me pṛthhivī pratiṣṭhitā pṛthivī hṛdaye hṛdayam ātmani tat satyaṃ devānāṃ māham akāmo mariṣyāmy annavān annādo bhūyāsaṃ svāhā | bale ma indraḥ pratiṣṭhitā balaṃ hṛdaye hṛdayam ātmani tat satyaṃ devānāṃ māham akāmo mariṣyāmy annavān annādo bhūyāsaṃ svāhā | manyau ma īśānaḥ pratiṣṭhito manyur hṛdaye hṛdayam ātmani tat satyaṃ devānāṃ māham akāmo mariṣyāmy annavān annādo bhūyāsaṃ svāhā | mūrdhani ma ākāśaḥ pratiṣṭhito
+mūrdhā hṛdaye hṛdayam ātmani tat satyaṃ devānāṃ māham akāmo mariṣyāmy annavān annādo bhūyāsaṃ svāhā | ātmani me brahma pratiṣṭhitam ātmā hṛdaye hṛdayam ātmani tat satyaṃ devānāṃ māham akāmo mariṣyāmy annavān annādo bhūyāsaṃ svāhā | athaitat sthālīpākaśeṣam ātmani samavaninīya juhoti ||</p>
+
+<p>ŚĀ 11,7
+aśmā jāgatam ayas traiṣṭubhaṃ loham auṣṇihaṃ sīsaṃ kākubhaṃ rajataṃ svārājyaṃ suvarṇaṃ gāyatram annaṃ vairājaṃ tṛptir ānuṣṭubhaṃ nākaṃ sāmrājyaṃ bṛhaspatir bārhataṃ brahma pāṅktaṃ prajāpatir ātichandasaṃ sāvitrī sarvavedachandasena chandaseti ||</p>
+
+<p>ŚĀ 11,8
+aśmeva sthiro vasāni jāgatena chandasā | puruṣo maṇiḥ prāṇaḥ sūtram annaṃ granthis taṃ granthim udgrathnāmy annakāmaḥ | mṛtyave brāhmaṇaṃ api sarvam āyur aśīyāyuṣmān māham akāmo mariṣyāmy annavān annādo bhūyāsaṃ svāhā | aya iva sthiro vasāni traiṣṭubhena chandasā puruṣo maṇiḥ prāṇaḥ ... svāhā | loham iva sthiro vasāny auṣṇihena chandasā puruṣo maṇiḥ prāṇaḥ ... svāhā | sīsam iva sthiro vasāni kākubhena chandasā puruṣo maṇiḥ prāṇaḥ ... svāhā | rajatam iva sthiro vasāni svarājyena chandasā puruṣo maṇiḥ prāṇaḥ ... svāhā | suvarṇam iva sthiro vasāni gāyatreṇa chandasā puruṣo maṇiḥ prāṇaḥ ... svāhā | annam iva sthiro vasāni vairājena chandasā puruṣo maṇiḥ prāṇaḥ ... svāhā | tṛptir iva sthiro vasāny ānuṣṭubhena chandasā puruṣo maṇiḥ prāṇaḥ ... svāhā | nākam iva sthiro vasāni
+sāmrājyena chandasā puruṣo maṇiḥ prāṇaḥ ... svāhā | bṛhaspatir iva sthiro vasāni bārhatena chandasā puruṣo maṇiḥ prāṇaḥ ... svāhā | brahmeva sthiro vasāni pāṅktena chandasā puruṣo maṇiḥ prāṇaḥ ... svāhā | prajāpatir iva sthiro vasāny ātichandasena chandasā puruṣo maṇiḥ prāṇaḥ ... svāhā | sāvitrīr iva sthiro vasāni sarvavedachandasena chandasā puruṣo maṇiḥ prāṇaḥ ... svāhā | priyāyai vā jāyāyai priyāya vāntevāsine 'nyasmai vāpi yasmai kāmayeta tasmā ucchiṣṭaṃ dadyāt | sa hāpi śataṃ varṣāṇi jīvati punaḥ punaḥ prayuñjāno jīvaty eva jīvaty eva ||</p>
+
+<p>iti śāṅkhāyanāraṇyake ekādaśamo 'dhyāyaḥ ||</p>
+
+</div>
+<div>
+
+<p>ŚĀ 12,1
+om | hastivarcasaṃ prathatāṃ bṛhad vayo yad adityai tanvaḥ saṃbabhūva | tan mahyaṃ samaduḥ sarva eta ādityāso adityā saṃvidānāḥ ||1|| yat te varco jātavedo bṛhad bhavaty āhitam | tena mā varcasā tvam agne varcasvinaṃ kuru ||2|| yac ca varco vā puruṣe yac ca hastiṣv āhitam | suvarṇe goṣu yad varco mayi tad dhastivarcasam ||3|| yad akṣeṣu hiraṇyeṣu goṣv aśveṣu yad yaśaḥ | surāyāṃ pūyamānāyāṃ mayi tad dhastivarcasam ||4|| mayi bhargo mayi maho mayi yajñasya yad yaśaḥ | tan mayi prajāpatir divi divam iva dṛṃhatu ||5||</p>
+
+<p>ŚĀ 12,2
+aśvinā sāragheṇa mā sam aṅktāṃ madhunā payaḥ | yathā madhumatīṃ vācam āvadāni janeṣu ||6|| ghṛtād ullupto madhumān payasvān dhanaṃjayo dharuṇo dhārayiṣṇuḥ | rujan sapatnān adharāṃś ca kṛṇvan ā roha māṃ mahate saubhagāya ||7|| prajāpate na tvad etāny anyo viśvā jatāni pari tā babhūva | yatkāmās te juhumas tan no astu vayaṃ syāma patayo rayīṇām ||8|| ayaṃ sano nudatāṃ me sapatnān indra iva vṛtraṃ pṛtanāsu sāḷhā | agnir iva kakṣaṃ vibhṛtaḥ purutrā vāteṣu nas tigmajambho 'nu mārṣṭi ||9|| ayaṃ sano yo 'nuvādī kīla iva vṛtraṃ vi puro ruroja | anenendro vi mṛdho vihatyā śatrūyatām ābharā bhojanāni ||10||</p>
+
+<p>ŚĀ 12,3
+jayendra śatrūñ jahi śūra dasyūn vṛtraṃ hatveva kuliśenā vi vṛśca | augha iva śāpān pra ṇudāt sapatnāñ jahyāt sapatnān svadhitir vaneva ||11|| anu vṛśca madhyāt prati vṛścopariṣṭād vi vṛśca paścāt prati śūra vṛśca | tvayā praṇuttān maghavann amitrān śūra riṣantaṃ maruto 'nu yantu ||12|| tvāṃ rudrair hetibhiḥ pinvamānā indraṃ manvānā maruto juṣanta | suparṇāḥ kaṅkāḥ pra mṛśanto enān mahīyatāṃ daṃṣṭrī vardhaneṣu ||13|| brahmaṇuttasya maghavan pṛtanyato viṣvag indra bhaṅgāḥ patantu | mā jñātāram īśata mā pratiṣṭhāṃ mitho vighnānā upa yānti mṛtyum ||14|| agne yaśasvin yaśase sam arpayendravatīm apacitim ihā vaha | ayaṃ mūrdhā parameṣṭhī suvarcāḥ sajātānām uttamaśloko astu ||15||</p>
+
+<p>ŚĀ 12,4
+bhadraṃ paśyanta upa sedur āgan tato dīkṣām ṛṣayaḥ svarvidaḥ | tataḥ kṣatraṃ balam ojaś ca jātaṃ tad asmai devā abhi saṃ namantām ||16|| dhātā vidhātā paramota saṃdṛk prajāpatiḥ parameṣṭhī suvarccāḥ | stomāṃś chandāṃsi nivido ma āhur etasmai rāṣṭram abhi saṃ namantām ||17|| abhy ā vartadhvam upa sevatāgnim ayaṃ śāstādhipatir no astu | asya vijñānam anu saṃ rabhadhvam imaṃ paścād anu jīvātha sarve ||18|| alardo nāma jāto 'si purā sūryāt puroṣasaḥ | taṃ tvā sapatnakṣayaṇaṃ vedātha viṣṭambhajambhanam ||19|| nārdhe pramīyeta tared dviṣantaṃ kalpeta vākyaṃ pṛtanāḥ saheta | pramāyukaṃ tasya dviṣantam āhur irāmaṇiṃ bailvaṃ yo bibhartti ||20||</p>
+
+<p>ŚĀ 12,5
+na sa śaptam aśnāti kilbiṣaṃ kṛtaṃ nainaṃ divyo varuṇo hanti bhītam | nainaṃ kruddhaṃ manyavo 'bhi yantīrāmaṇiṃ bailvaṃ yo bibhartti ||21|| nāsya tvacaṃ hiṃsati jātvedā na māṃsam aśnāti na hanti tāni | śatāyur asmiñ jaradaṣṭiḥ praitīrāmaṇiṃ bailvaṃ yo bibhartti ||22|| nāsya prajā duṣyati jāyamānā na śailago bhavati na pāpakṛtyā | nānyan mithas tasya kuleṣu jāyata irāmaṇiṃ bailvaṃ yo bibhartti ||23|| nāsyāpavādā na pravādakā gṛhe na saṃpatatryo na viveśa tasmai | nāsminn alakṣmīḥ kurute niveśanam irāmaṇiṃ bailvaṃ yo bibhartti ||24|| nainaṃ rakṣo na piśāco hinasti
+na jambhako nāpy asuro na yakṣaḥ | na sūtikā tasya kuleṣu jāyate irāmaṇiṃ bailvaṃ yo bibhartti ||25||</p>
+
+<p>ŚĀ 12,6
+nainaṃ vyāghro na vṛko na dvīpī na śvāpadaṃ hiṃsati kiṃcanainam | na hastinaṃ kruddham upaiti bhītim irāmaṇiṃ bailvaṃ yo bibhartti ||26|| nainaṃ sarpo na pṛdākur hinasti na vṛściko na tiraścīnarājiḥ | nainaṃ kṛṣṇo 'hir abhi saṃhata irāmaṇiṃ bailvaṃ yo bibhartti ||27|| nainaṃ pramattaṃ varuṇo hinasti na makaro na grahaḥ śiṃśumāraḥ | pārāvarāc chivam asmai kṛṇotīrāmaṇiṃ bailvaṃ yo bibhartti ||28|| pramāyukam asya dviṣantam āhuḥ | puṣpam iva chinnaṃ saha bandhanena | ogha iva śāpān pra ṇudāt sapatnān | irāmaṇiṃ bailvaṃ yo bibhartti ||29|| ayaṃ maṇiḥ pratisaro
+jāmbo jīvāya badhyate | anenendro vṛtram ahann ṛṣiṇā ca manīṣiṇā ||30||</p>
+
+<p>ŚĀ 12,7
+sahendra dviṣataḥ sahasvārātīḥ sahasva pṛtanāyataḥ | nāga iva pūrvapādābhyām abhi tiṣṭha pṛtanyataḥ ||31|| āgād ayaṃ bailvo maṇiḥ sapatnakṣapaṇo vṛṣā | taṃ paśyanti kavayaḥ sarvavīrā yathā sapatnān samare saheyuḥ ||32|| anṛtaṃ me maṇau sūtram aśvināv api nahyatām | bailvaḥ sahasravīryo 'si mā te bhartā riṣam aham ||33|| ghṛtād ullupto madhumān payasvān dhanaṃjayo dharuṇo dhārayiṣṇuḥ | rujan sapatnān adharāṃś ca kṛṇvan ā roha māṃ mahate saubhagāya ||34|| prajāpate na tvad etāny anyo viśvā jatāni pari tā babhūva | yatkāmas te juhumas tan no astu vayaṃ syāma patayo rayīṇām ||35|| śāsa itthā mahāṁ asīti pañca ||</p>
+
+<p>ŚĀ 12,8
+athāto maṇikalpaḥ | bhūtikāmaḥ puṣpeṇa trirātropoṣito jīvato hastino dantān mātrām uddhṛtyāgnim upasamādhāya parisamuhya paristīrya paryukṣya dakṣiṇaṃ jānv ācyottarato 'gneḥ kaṃse maṇiṃ kṛtvā hutvā homān maṇau saṃpātam ānayet | hastivarcasam ity etābhiḥ pratyṛcam aṣṭābhiḥ saptarātraṃ madhusarpiṣor vāsayitvā trirātram ekāṃ vā badhnīyād ghṛtād ullupta ity etayarcā | ata evottaraṃ ṣaḍbhir hṛdayaśūlāgramaṇiṃ pratodāgramaṇiṃ vā muśalāgramaṇiṃ vā khadirasāramaṇiṃ vā māṃsaudane vāsayitvā trirātram ekāṃ vā badhnīyāt | ata evottaraṃ catasṛbhir vṛṣabhaśṛṅgāgramaṇiṃ ghṛtaudane vāsayitvā trirātram ekāṃ vā badhnīyāt | ata evottaraṃ ekayairaṇḍamaṇiṃ tilaudane vāsayitvā trirātram ekāṃ vā badhnīyāt | ata evottaraṃ ṣoḷaśabhir bailvaṃ saptarātraṃ madhusarpiṣor vāsayitvā trirātram ekāṃ vā badhnīyād ghṛtād ullupta ity etayarcā | ata evottaraṃ pañcabhir mahāvarāsyodohaṃ mudgaudane vāsayitvā trirātram ekāṃ vā badhnīyāc chaktau sati prathamaṃ hastichāyāyāṃ vaiyāghre vāpi carmaṇy āsīno vāpi juhuyād āsīno vāpi juhuyāt ||</p>
+
+<p>iti śāṅkhāyanāraṇyake dvādaśamo 'dhyāyaḥ ||</p>
+
+</div>
+<div>
+
+<p>ŚĀ 13,1
+athāto vairāgyasaṃskṛte śarīre brahmayajñaniṣṭho bhavet | apa punarmṛtyuṃ jayati | tad u ha vātmā draṣṭavyaḥ śrotavyo mantavyo nididhyāsitavya iti | tam etaṃ vedānuvacanena vividiṣanti brahmacaryeṇa tapasā śraddhayā yajñenānāśakena ceti māṇḍūkeyaḥ | tasmād evaṃvic chānto dānta uparatas titikṣuḥ śraddhāvitto bhūtvātmany evātmānaṃ paśyed iti māṇḍavyaḥ | yo 'yaṃ vijñānamayaḥ puruṣaḥ prāṇeṣu sa eṣa neti nety ātmā na gṛhya idaṃ brahmedaṃ kṣatram ime devā ime vedā ime lokā imāni sarvāṇi bhūtānīdaṃ sarvaṃ yad ayam ātmā | sa eṣa tat tvam asīty ātmāvagamyo 'haṃ brahmāsmīti | tad etad brahmāpūrvam aparam anaparam anantaram abāhyam ayam ātmā brahma sarvānubhūr ity anuśāsanam iti yājñavalkyaḥ | tad etan nāputrāya nānantevāsine vā brūyād iti | ya imām adbhiḥ parigṛhītāṃ vasumatīṃ dhanasya pūrṇāṃ dadyād idam eva tato bhūya idam eva tato bhūya ity anuśāsanam | tām etām upaniṣadaṃ vedaśiro na yathā kathaṃ cana vadet | tad etad ṛcābhyuditam ||</p>
+
+<p>iti śāṅkhāyanāraṇyake trayodaśamo 'dhyāyaḥ ||</p>
+
+</div>
+<div>
+
+<p>ŚĀ 14,1
+ṛcāṃ mūrdhānaṃ yajuṣām uttamāṅgam | sāmnāṃ śiro 'tharvāṇāṃ muṇḍamuṇḍam | nādhīte 'dhīte vedam āhus tam ajñam | śiraś chitvāsau kurute kabandham ||</p>
+
+<p>ŚĀ 14,2
+sthāṇur ayaṃ bhārahāraḥ kilābhūt | adhītya vedaṃ na vijānāti yo 'rtham | yo 'rthajña it sakalaṃ bhadram aśnute | nākam eti jñānavidhūtapāpmā ||</p>
+
+<p>iti śāṅkhāyanāraṇyake caturdaśamo 'dhyāyaḥ ||</p>
+
+</div>
+<div>
+
+<p>ŚĀ 15,1
+atha vaṃśaḥ | oṃ namo brahmaṇe nama ācāryebhyaḥ | guṇākhyāc chāṅkhāyanād asmābhir adhītam | guṇākhyaś śāṅkhāyanaḥ kahoḷāt kauṣītakeḥ | kahoḷaḥ kauṣītakir uddālakād āruṇeḥ | uddālaka āruṇiḥ priyavratāt saumāpeḥ | priyavrataḥ saumāpiḥ somapāt | somapaḥ saumāt prātiveśyāt | saumaḥ prātiveśyaḥ prativeśyāt | prativeśyo bṛhaddivāt | bṛhaddivaḥ sumnayoḥ | sumnayur uddālakāt | uddālako viśvamanasaḥ | viśvamanā vyaśvāt | vyaśvaḥ sākamaśvāt | sākamaśvo devarātāt | devarāto viśvāmitrāt | viśvāmitra indrāt | indraḥ prajāpateḥ | prajāpatir brahmaṇaḥ | brahmā svayaṃbhūḥ | namo brahmaṇe namo brahmaṇe ||</p>
+
+<p>iti śāṅkhāyanāraṇyake pañcadaśamo 'dhyāyaḥ ||</p>
+
+<p>iti śāṅkhāyanāraṇyakaṃ samāptam ||</p>
+
+  </div>
+</body>
+</text>
+</TEI>

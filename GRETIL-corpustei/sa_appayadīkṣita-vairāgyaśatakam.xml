@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_appayadIkSita-vairAgyazatakam">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Vairāgyaśatakam</title>
+	<author>Appayadīkṣita</author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>Dhaval Patel</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Dhaval Patel</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/5_poetry/2_kavya/appvairu.htm">appvairu.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Appayadiksita: Vairagyasataka
+<lb/>Based on the ed. by Pdt. Durgaprasad and Kasinath Pandurang Parab,
+<lb/>Kavyamala [old, cumulative series], vol. 1, 1886 (3rd ed., 1929), pp. 91-99.
+<lb/>
+<lb/>Input by Dhaval Patel
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>Pdt. Durgaprasad and Kasinath Pandurang Parab, Kavyamala [old, cumulative series], vol. 1, 1886 (3rd ed., 1929), pp. 91-99.</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Vairāgyaśatakam = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Poetry -- Kāvya</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+
+<p>śrīmadappayadīkṣitaviracitaṃ vairāgyaśatakam /</p>
+
+<lg>
+<l>āste kaścana bhikṣuḥ saṃgṛhṇannavyayāni daśa /</l>
+<l>na mametyavyayayugalaṃ yācāmastaṃ kimastyanyat // AppVs_1 //</l>
+</lg>
+
+<lg>
+<l>dhīsacivaṃ dhairyabalaṃ saṃkalpavirodhi śāntidhanam /</l>
+<l>viśvatrayaviṣayamidaṃ vairāgyaṃ nāma sāmrājyam // AppVs_2 //</l>
+</lg>
+
+<lg>
+<l>rājño bibheti loko rājānaḥ punarito 'pi vairibhyaḥ /</l>
+<l>ā brahmaṇaḥ kṛtāntādakutobhayamaspṛhārājyam // AppVs_3 //</l>
+</lg>
+
+<lg>
+<l>bhikṣāpradā jananyaḥ pitaro guravaḥ kumārakāḥ śiṣyāḥ /</l>
+<l>ekāntaramaṇahetuḥ śāntirdayitā viraktasya // AppVs_4 //</l>
+</lg>
+
+<lg>
+<l>ye na kimapi ceṣṭante kāryapratikaryayorvirahāt /</l>
+<l>santasta eva muktāḥ saṃdehe gautamaḥ sākṣī // AppVs_5 //</l>
+</lg>
+
+<lg>
+<l>patatu nabhaḥ sphuṭatu mahī calantu girayo milantu vāridhayaḥ /</l>
+<l>adharottaramastu jagatkā hānirvītarāgasya // AppVs_6 //</l>
+</lg>
+
+<lg>
+<l>ke corāḥ ke piśunāha ke ripavaḥ ke 'pi dāyādāḥ /</l>
+<l>jagadakhilaṃ tasya vaśe yasya vaśe syādidaṃ cetaḥ // AppVs_7 //</l>
+</lg>
+
+<lg>
+<l>viṣayā upatiṣṭhantāṃ viṣayairvā samavayantu karaṇāni /</l>
+<l>āntaramekaṃ karaṇaṃ śāntaṃ yadi kā tataścintā // AppVs_8 //</l>
+</lg>
+
+<lg>
+<l>kiṃ viṣayānparihartuṃ vastavyaṃ merukaṃdareṣvabudhaiḥ /</l>
+<l>nahyadbhiranāsektuṃ dhātuṣu rohanti padmāni // AppVs_9 //</l>
+</lg>
+
+<lg>
+<l>ajñānamiha nidānaṃ prāgrūpaṃ jananameva bhavaroge /</l>
+<l>paripākaḥ saṃsaraṇaṃ bhaiṣajyaṃ naiṣṭhikī śāntiḥ // AppVs_10 //</l>
+</lg>
+
+<lg>
+<l>svenopabhuktamarthaṃ sūkarajātismaro manuṣya iva /</l>
+<l>dūre jugupsamāno dhīro vairāgyamadriyate // AppVs_11 //</l>
+</lg>
+
+<lg>
+<l>śaiśavamiva kaumāre tattaruṇimnīva sa iva vṛddhatve /</l>
+<l>na svadate dhīrāṇāṃ kāmasya viceṣṭitaṃ śāntau // AppVs_12 //</l>
+</lg>
+
+<lg>
+<l>śataśaḥ parīkṣya viṣayānsadyo jahati kvacitkvaciddhavyāḥ /</l>
+<l>kākā iva vāntāśanamanye tāneva sevante // AppVs_13 //</l>
+</lg>
+
+<lg>
+<l>caramau mātāpitarau caramā gṛhiṇī sutāścaramāḥ /</l>
+<l>kartavye 'pi premaṇi kathamiha dhīrā virajyante // AppVs_14 //</l>
+</lg>
+
+<lg>
+<l>tṛṇavadbhramanti capalāḥ strīnāmani caṇḍamārute calati /</l>
+<l>dharaṇidharā iva santastatra na kiṃcitprakampante // AppVs_15 //</l>
+</lg>
+
+<lg>
+<l>kāmijanaparamabhogye kāmasukhe dhārayanti bībhatsam /</l>
+<l>santaḥ śamasukharasikāḥ sudhāśanāḥ sūkarānna iva // AppVs_16 //</l>
+</lg>
+
+<lg>
+<l>vikṣepamātrabhājo vikāsakāṣṭāgatajñānāḥ /</l>
+<l>svasyāpi ceṣṭitāni svayamīkṣante parasyeva // AppVs_17 //</l>
+</lg>
+
+<lg>
+<l>asthāne 'bhiniviṣṭānmūrkhānasthāna eva saṃtuṣṭān /</l>
+<l>anuvartante dhīrāḥ pitara iva krīḍato bālān // AppVs_18 //</l>
+</lg>
+
+<lg>
+<l>puṣṇati puruṣe salilairmuṣṇati puṣpaṃ phalaṃ ca tarava iva /</l>
+<l>vartante santaḥ samamupakartari cāpakartari ca // AppVs_19 //</l>
+</lg>
+
+<lg>
+<l>nityānityavivekaḥ sarveṣāṃ ghaṭaghaṭatvayorāste /</l>
+<l>sa viveko yaḥ śāntikṛdaviveko 'nyaḥ samasto 'pi // AppVs_20 //</l>
+</lg>
+
+<lg>
+<l>anadhigate kāmasukhe kālena yathā pravartate taruṇaḥ /</l>
+<l>evaṃ brahmasukhe 'pi pravartate ko 'pi bhāgyavaśāt // AppVs_21 //</l>
+</lg>
+
+<lg>
+<l>putraguṇāḥ svātantrye dāraguṇāścādhivedanāvasare /</l>
+<l>bhrātṛguṇā dāyavidhau draṣṭavyā mokṣyamāṇena // AppVs_22 //</l>
+</lg>
+
+<lg>
+<l>kā me gatiriti pṛcchati caramaśvāse 'pi yaḥ svārtham /</l>
+<l>tasya janasyāpi kṛte pāpāḥ pāpāni kurvanti // AppVs_23 //</l>
+</lg>
+
+<lg>
+<l>pitṛbhiḥ kalahāyante putrānadhyāpayanti pitṛbhaktim /</l>
+<l>paradārānupayantaḥ paṭhanti śāstrāṇi dāreṣu // AppVs_24 //</l>
+</lg>
+
+<lg>
+<l>śāntiralabhyāduparatirapātrabhāvaḥ pratigrahanivṛttiḥ /</l>
+<l>kṣāntirdurbalateti ca nivṛttidharmāḥ kalāvete // AppVs_25 //</l>
+</lg>
+
+<lg>
+<l>nītijñā niyatijñā vedajñā api bhavanti śāstrajñāḥ /</l>
+<l>brahmajñā api labhyāḥ svājñānajñānino viralāḥ // AppVs_26 //</l>
+</lg>
+
+<lg>
+<l>kalikaluṣe manasi sve kathamiva jagadārjavaṃ labhate /</l>
+<l>cakṣurdoṣe jāgrati candradvitvaṃ kuto yātu // AppVs_27 //</l>
+</lg>
+
+<lg>
+<l>viṣayānanukūlayituṃ viṣayiṇi hṛdaye vidhīyatāṃ yatnaḥ /</l>
+<l>dṛśi deyamauṣadhaṃ ko dṛśye dattvā sukhī bhavati // AppVs_28 //</l>
+</lg>
+
+<lg>
+<l>dārāḥ putreṣu ratāḥ putrāḥ pitṛdhanaparigrahavyagrāḥ /</l>
+<l>rodanaśaraṇā jananī paralokagatasya ko bandhuḥ // AppVs_29 //</l>
+</lg>
+
+<lg>
+<l>paśyanti mriyamāṇānmariṣyato 'numimate smaranti mṛtān /</l>
+<l>kathayante caivamasacceṣṭante nityavattu param // AppVs_30 //</l>
+</lg>
+
+<lg>
+<l>kalahāyante mūḍhāḥ kaḥ pratibhūḥ śvaḥ prabhāta iti /</l>
+<l>tasyāmeva rajanyāṃ kaḥ pratibhūḥ svasya sattāyām // AppVs_31 //</l>
+</lg>
+
+<lg>
+<l>kulyāḥ kṛtā viśālāḥ kuḍyānyupalairnibaddhāni /</l>
+<l>krītā balino mahipāḥ kṛtakṛtyāḥ sma iti manyante // AppVs_32 //</l>
+</lg>
+
+<lg>
+<l>ā prapadamā śiraskaṃ cāntaḥ kalimalamalīmase vapuṣi /</l>
+<l>viphalaṃ gaṅgājalamapi madyaghaṭe darbhamuṣṭiriva // AppVs_33 //</l>
+</lg>
+
+<lg>
+<l>daṇḍyaṃ yatsukhahetoḥ puṣṇanti janāḥ kathaṃ tadeva vapuḥ /</l>
+<l>nahi śarkarābhilāṣibhirikṣoḥ kāṇḍāni pūjyante // AppVs_34 //</l>
+</lg>
+
+<lg>
+<l>prāyo muhyati cetaḥ prāṇabhṛtaḥ prāṇanirgamāvasare /</l>
+<l>puṇyena yadi na muhyati putrāneva smaranmriyate // AppVs_35 //</l>
+</lg>
+
+<lg>
+<l>śamayitumaudaramagniṃ saṃsārākhyāmbudhau nimajjanti /</l>
+<l>tuhinavyathānivṛttyai nahi veśmani pāvako deyaḥ // AppVs_36 //</l>
+</lg>
+
+<lg>
+<l>āhṛtya parityaktā janayantyarthāḥ sukhābhāsam /</l>
+<l>atyantaparityaktāḥ paramānandāya kalpante // AppVs_37 //</l>
+</lg>
+
+<lg>
+<l>arthānāmadhikānāṃ rājñā caureṇa vā nāśaḥ /</l>
+<l>anne khalvatimukte vamanaṃ vā syādvireko vā // AppVs_38 //</l>
+</lg>
+
+<lg>
+<l>praṇamati parisāntvayati[praṇi]patati sadā paribhramati /</l>
+<l>āviṣṭa iva piśācyā puruṣastṛṣṇāvaśaṃ yātaḥ // AppVs_39 //</l>
+</lg>
+
+<lg>
+<l>jananādṛṣṭātpitarau putrā jāmātaro 'pyayādṛṣṭāt /</l>
+<l>kalahādṛṣṭājjñātaya iti nirṇīte kimeṣṭavyam // AppVs_40 //</l>
+</lg>
+
+<lg>
+<l>svapituḥ paralokāya svayamanudivasaṃ yadācarati /</l>
+<l>kriyatāmidamupamānaṃ kiṃ nālaṃ putravairāgye // AppVs_41 //</l>
+</lg>
+
+<lg>
+<l>ananugate dāridrye kimanugataṃ lakṣaṇaṃ dṛṣṭam /</l>
+<l>kāmasyāpūrtiryadi kṛpaṇaṃ jagadā caturvadanāt // AppVs_42 //</l>
+</lg>
+
+<lg>
+<l>na khalu dhanatvaṃ jātiryasya yadiṣṭaṃ tadeva tasya dhanam /</l>
+<l>tattadiva pāmarāṇāmākiṃcanyaṃ dhanaṃ viduṣām // AppVs_43 //</l>
+</lg>
+
+<lg>
+<l>svīkriyate yadi tṛṣṇā svīkartavyaṃ jagatsamastamapi /</l>
+<l>svīkriyate yadi śāntiḥ svātmāpi svasya bhavati na vā // AppVs_44 //</l>
+</lg>
+
+<lg>
+<l>yaddātāraṃ vaśayati yatparijanamasya sāntvayati /</l>
+<l>yadapatrapate nāntarbhāvālābhaḥ sa kasya samaḥ // AppVs_45 //</l>
+</lg>
+
+<lg>
+<l>prādeśamātramudaraṃ paripūrayituṃ kiyānayaṃ yatnaḥ /</l>
+<l>culakenāmbhaḥ pātuṃ svanitavyaḥ kiṃ taṭāko 'pi // AppVs_46 //</l>
+</lg>
+
+<lg>
+<l>yāmārdhamasaṃskārādyāmadvayamanaśanācca suvyakte /</l>
+<l>śārīre saundarye 'pyabhiniviśante kiyanmūḍhāḥ // AppVs_47 //</l>
+</lg>
+
+<lg>
+<l>vandhyetyāhustaruṇīṃ jaratīti parityajanti bahuputrām /</l>
+<l>abhinindantyalpasutāṃ kā gṛhiṇī kāmino hṛdyā // AppVs_48 //</l>
+</lg>
+
+<lg>
+<l>yānti śucamakṛtadārā dve bhārye neti kṛtadārāḥ /</l>
+<l>te paradārā neti strībhistṛptānna paśyāmaḥ // AppVs_49 //</l>
+</lg>
+
+<lg>
+<l>madanasyājñākaraṇe manye jagadakhilamekarūpamidam /</l>
+<l>tiryañca iti narā iti devā ityanyato bhedaḥ // AppVs_50 //</l>
+</lg>
+
+<lg>
+<l>śukravimokasthānaṃ malamūtratyāgadeśavatkimapi /</l>
+<l>striya iti vihitaṃ vidhinā kiyadatra janā nimajjanti // AppVs_51 //</l>
+</lg>
+
+<lg>
+<l>vedānadhītya vidhivanmīmāṃsitvā tadarthaṃ ca /</l>
+<l>dārāḥ kartavyā iti kenedaṃ prahasanaṃ kathitam // AppVs_52 //</l>
+</lg>
+
+<lg>
+<l>duḥkhenopārjyante pālyante pratyahaṃ ca lālyante /</l>
+<l>vāmāḥ striyo vimūḍhairupabhuñjānāḥ sukhaṃ viguṇam // AppVs_53 //</l>
+</lg>
+
+<lg>
+<l>aśnīta pibata svādata jāgrata saṃviśata tiṣṭhata vā /</l>
+<l>sakṛdapi cintayatāhnaḥ sāvadhiko dehabandha iti // AppVs_54 //</l>
+</lg>
+
+<lg>
+<l>kiṃ vijitayā pṛthivyā kiṃ kāñcanabhūbhṛtā karasthena /</l>
+<l>kiṃ divyābhiḥ strībhirmartavye brahmaṇā likhite // AppVs_55 //</l>
+</lg>
+
+<lg>
+<l>jīvati katicinnimiṣānkaticitteṣu śrutīradhīta iva /</l>
+<l>tāvatsaivākulayati tantrāṇi navāni cātanute // AppVs_56 //</l>
+</lg>
+
+<lg>
+<l>svalpo jīvanakālaḥ svalpā dhīḥ paricayaḥ svalpaḥ /</l>
+<l>tadapi tarema kathaṃcicchrutayo yadi nopajāyante // AppVs_57 //</l>
+</lg>
+
+<lg>
+<l>kuta āgataṃ na jāne kva nu vā gantavyamidamapi na jāne /</l>
+<l>saṃcarasi kvedānīṃ saṃsārapathe mahātamasi // AppVs_58 //</l>
+</lg>
+
+<lg>
+<l>tamasāvṛttāścarantaḥ savidhe dūre ca nāvayantyarthān /</l>
+<l>avayanti tu vispaṣṭaṃ taḍitābhihate śirasi mūḍhāḥ // AppVs_59 //</l>
+</lg>
+
+<lg>
+<l>nimiṣantyatra taruṇyastatra taruṇyo na nimiṣanti /</l>
+<l>īdṛkṣo hi viśeṣaḥ svargaḥ svarga iti kiṃ tatra // AppVs_60 //</l>
+</lg>
+
+<lg>
+<l>kopo maitrāvaruṇeḥ śāpo vā tārkikasya muneḥ /</l>
+<l>saṃsmaryate yadi sakṛcchatrorapi māstu śakrapadam // AppVs_61 //</l>
+</lg>
+
+<lg>
+<l>gacchatyamarāvatyāṃ gacchatu caturānanasya vā nagare /</l>
+<l>punarāgantavyaṃ yadi puṃsā kiṃ sādhitaṃ bhavati // AppVs_62 //</l>
+</lg>
+
+<lg>
+<l>bhuktā bahavo dārā labdhāḥ putrāśca pautrāśca /</l>
+<l>nītaṃ śatamapyāyuḥ satyaṃ vada martumasti manaḥ // AppVs_63 //</l>
+</lg>
+
+<lg>
+<l>viśleṣaṇasvabhāvānpaśyanviṣayānkaroti ko mamatām /</l>
+<l>naśyadavasthāpannaṃ kaḥ krīṇīte dhanairaśvam // AppVs_64 //</l>
+</lg>
+
+<lg>
+<l>annābhāve mṛtyuḥ śālibhirannāni śālayo vṛṣṭyā /</l>
+<l>vṛṣṭistapaseti vadannamṛtyave tattapaścaratu // AppVs_65 //</l>
+</lg>
+
+<lg>
+<l>kiṃ na nigṛhṇanti manaḥ kiṃ na bhajante janāḥ śivaṃ śaraṇam /</l>
+<l>abhisaṃdhibhedamātrānmokṣopāye na badhyante // AppVs_66 //</l>
+</lg>
+
+<lg>
+<l>bhogāya pāmarāṇāṃ yogāya vivekināṃ śarīramidam /</l>
+<l>bhogāya ca yogāya ca na kalpate durvidagdhānām // AppVs_67 //</l>
+</lg>
+
+<lg>
+<l>brāhmaṇacaṇḍālā ityāha muniryanmahāpathikān /</l>
+<l>bhavamārgamahāpathikānadhikṛtyaiva pravartitaṃ caitat // AppVs_68 //</l>
+</lg>
+
+<lg>
+<l>ekadvāḥ kṣitipatiṣu dvitrā deveṣu pañcaṣā druhiṇe /</l>
+<l>etāvanto jagati brahmānandārṇavasya kaṇāḥ // AppVs_69 //</l>
+</lg>
+
+<lg>
+<l>ajñānenāpihite vijñāne karma kiṃ kurute /</l>
+<l>vikale cakṣuṣi tamasā vyādāya mukhaṃ kimīkṣeta // AppVs_70 //</l>
+</lg>
+
+<lg>
+<l>atikaluṣamāśunaśvaramāpātasphuraṇamanabhilāṣakaram /</l>
+<l>api hṛṣyanti janāḥ kathamavalambya jñānakhadyotam // AppVs_71 //</l>
+</lg>
+
+<lg>
+<l>ayutaṃ niyutaṃ vāpi pradiśantu prākṛtāya bhogāya /</l>
+<l>krīṇanti na bilvadalaiḥ kaivalyaṃ pañcaṣairmūḍhāḥ // AppVs_72 //</l>
+</lg>
+
+<lg>
+<l>yāvatkila ceṣṭante tāvatpāśe nibadhyate granthiḥ /</l>
+<l>nibhṛtaṃ yadi vartante kālena sraṃsate pāśaḥ // AppVs_73 //</l>
+</lg>
+
+<lg>
+<l>uparundhanti śvāsānmunayo nāśnanti na pibanti /</l>
+<l>stūyante sujanaiḥ kiṃ kaṇṭhe kurvanti kanakapāśamime // AppVs_74 //</l>
+</lg>
+
+<lg>
+<l>kāmaṃ janāḥ smayante kailāsavilāsavarṇanāvasare /</l>
+<l>sādhanakathanāvasare sācīkurvanti vaktrāṇi // AppVs_75 //</l>
+</lg>
+
+<lg>
+<l>vaṅgāḥ kathamaṅgāḥ kathamityanuyuṅkte vṛthā deśān /</l>
+<l>kīdṛkkṛtāntapuramiti ko 'pi na jijñāsate lokaḥ // AppVs_76 //</l>
+</lg>
+
+<lg>
+<l>tyaktavyo mamakārastyaktuṃ yadi śakyate nāsau /</l>
+<l>kartavyo mamakāraḥ kiṃ tu sa sarvatra kartavyaḥ // AppVs_77 //</l>
+</lg>
+
+<lg>
+<l>putrā iti dārā iti poṣyānmūrkho janānbrūte /</l>
+<l>andhe tamasi nimajjannātmā poṣya iti nāvaiti // AppVs_78 //</l>
+</lg>
+
+<lg>
+<l>yaccintitamadhigarbhaṃ yacca ciraṃ cintitaṃ narake /</l>
+<l>viṣayānilasaṃsargānmamṛje tatsarvamekapade // AppVs_79 //</l>
+</lg>
+
+<lg>
+<l>bāhyagatāgataśīlā prāṇasya śvāsalakṣaṇā vṛttiḥ /</l>
+<l>karṣati manaso vṛttiṃ kulaṭeva kulastriyaṃ mugdhām // AppVs_80 //</l>
+</lg>
+
+<lg>
+<l>atigambhīramanāvilamakṣobhyamadṛṣṭapāramavilaṅghyam /</l>
+<l>aviralataraṅgasaṃkulamaikṣiṣi vijñānasāgaraṃ mahatām // AppVs_81 //</l>
+</lg>
+
+<lg>
+<l>ghoraṃ bhavamapahātuṃ kecidaghoraṃ prapadyante /</l>
+<l>saṃsaraṇakātarāṇāṃ saṃśaraṇaṃ śāṃbhavī śaktiḥ // AppVs_82 //</l>
+</lg>
+
+<lg>
+<l>pāśo yadi moktavyaḥ paśupatirevopasartavyaḥ /</l>
+<l>na khalu vyatimucyante paśavaḥ pāśena saṃbaddhāḥ // AppVs_83 //</l>
+</lg>
+
+<lg>
+<l>alamalamanubhūtābhirmātṛbhiralamastu pitṛbhiśca /</l>
+<l>bhavitavyaṃ yadi nityavadarthaṃ mātuḥ pituścāstu // AppVs_84 //</l>
+</lg>
+
+<lg>
+<l>dhanyāste bahudevāḥ svāmini yeṣāṃ na durbhikṣam /</l>
+<l>jātu na jānīmo vayamekaṃ taṃ svāminaṃ pūrṇam // AppVs_85 //</l>
+</lg>
+
+<lg>
+<l>santu bṛhanto devāḥ kiṃ tu na tānnantumīhate cetaḥ /</l>
+<l>āḍhyavadānyanyāyādantakajitameva cintayenmanasi // AppVs_86 //</l>
+</lg>
+
+<lg>
+<l>nidhyāyasi viṣayasukhaṃ na dhyāyasi viṣamamasya paripākam /</l>
+<l>bandhuṃ tameva cintaya baddhuṃ moktuṃ ca yaḥ kṣamate // AppVs_87 //</l>
+</lg>
+
+<lg>
+<l>sadanaṃ gurūpasadanaṃ śaraṇaṃ pañcākṣarīpuraścaraṇam /</l>
+<l>dhanamabhilāṣanirodhanamantyāśramavartināṃ puṃsām // AppVs_88 //</l>
+</lg>
+
+<lg>
+<l>kau pitarau kaḥ putraḥ kaḥ svāmī yaḥ prapañcasya /</l>
+<l>pratyastamite bhede kimidaṃ kimidamiti vipraśnaḥ // AppVs_89 //</l>
+</lg>
+
+<lg>
+<l>sa vidhiryatte vidadhati sa pratiṣedho yato nivartante /</l>
+<l>sopaniṣadyadbruvate śaivāśravamartino dhīrāḥ // AppVs_90 //</l>
+</lg>
+
+<lg>
+<l>tyaja saṃsāramasāraṃ bhaja śaraṇaṃ pārvatīramaṇam /</l>
+<l>viśvasihi śrutiśikharaṃ viśvamidaṃ tava nideśakaram // AppVs_91 //</l>
+</lg>
+
+<lg>
+<l>bhavyamabhavyaṃ vā naḥ pralikhatu vedhāḥ sudurmedhāḥ /</l>
+<l>savyamasavyaṃ vā naḥ śaraṇaṃ caraṇaṃ maheśasya // AppVs_92 //</l>
+</lg>
+
+<lg>
+<l>vedhāḥ kathaṃ hariḥ kathamiti tu praśne vayaṃ mūkāḥ /</l>
+<l>śivamekaṃ jānīmo na śivādanyaṃ vijānīmaḥ // AppVs_93 //</l>
+</lg>
+
+<lg>
+<l>dāruṇamasipattravanaṃ dāruṇatamamandhatāmisram /</l>
+<l>kā vā tataḥ kṣatirnaḥ śaivā vayamā caturvadanāt // AppVs_94 //</l>
+</lg>
+
+<lg>
+<l>kṛtadīkṣo ghoramakhe kulakūṭastho bharadvājaḥ /</l>
+<l>vidyeśvareṣu kaścana pitāmaho na iti visrambhaḥ // AppVs_95 //</l>
+</lg>
+
+<lg>
+<l>kalahaḥ kadāpi māstviti kalitaśarīraikyayoḥ śivayoḥ /</l>
+<l>ahamasmyahamasmīti prāptaḥ kalaho mama trāṇe // AppVs_96 //</l>
+</lg>
+
+<lg>
+<l>narakāyāpi na bhogānnarādhamāyāpi nānyasurān /</l>
+<l>manyante katicidamī māheśvaramāśritā yogam // AppVs_97 //</l>
+</lg>
+
+<lg>
+<l>jñātuṃ hātuṃ viṣayaṃ śrotuṃ mantuṃ gṛhītumātmānam /</l>
+<l>vatsā yadi na hi ghaṭate tatsādhayatāvimuktāya // AppVs_98 //</l>
+</lg>
+
+<lg>
+<l>sāṃkhyaṃ yogaṃ nigamā bhaktiḥ karma pratītiriti /</l>
+<l>ekatra sakalametatkevalamavimuktamekatra // AppVs_99 //</l>
+</lg>
+
+<lg>
+<l>baddhaḥ kaste vakṣyati mukto muktiṃ vijānāti /</l>
+<l>yāsyasi cedavimuktaṃ jñāsyasi viśveśvarasya mukhāt // AppVs_100 //</l>
+</lg>
+
+<lg>
+<l>na gṛhītaṃ śrutihṛdayaṃ na ca na gṛhītaṃ pariplavaṃ hṛdayam /</l>
+<l>icchāmi ca dhāma paraṃ gacchāmi tu viśvanāthapurīm // AppVs_101 //</l>
+</lg>
+
+<p>iti śrīmadappayadīkṣitaviracitaṃ vairāgyaśatakaṃ saṃpūrṇam /</p>
+
+  </body>
+</text>
+</TEI>

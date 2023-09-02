@@ -1,0 +1,1387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_govindkaul-pradezasaMgraha">
+  <teiHeader xml:lang="en">
+    <fileDesc>
+      <titleStmt>
+	<title>Pradeśasaṃgraha</title>
+	<author>Govind Kaul</author>
+	<respStmt>
+	  <resp>data entry</resp>
+	  <name>Katrin Züfle</name>
+	</respStmt>
+	<respStmt>
+	  <resp>contribution to GRETIL</resp>
+	  <name>Katrin Züfle</name>
+	  </respStmt><respStmt>
+	  <resp>normalization and conversion to TEI-conformant markup</resp>
+	  <name>Maximilian Mehner</name>
+	</respStmt>
+      </titleStmt>
+
+      <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	  <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	  If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	  The file will be immediately removed pending resolution of the claim.</p>
+
+	  <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2019-10-10"/>
+      </publicationStmt>
+
+      <notesStmt>
+	<note>This edition is based on <q>MS Stein or d 25</q>, Boldeian Library, Oxford (in Clauson: Catalogue of the Stein Collection of Sanskrit MSS. from Kashmir, JRAS 1912, p. 598 listed as MS 128: Rājataraṅgiṇīpradeśavyākhyā) and covers approx. half the text of this MS.</note>
+      </notesStmt>
+
+      <sourceDesc>
+	<bibl>Katrin Züfle: Govind Kaul: Pradeśasaṃgraha - Erstedition eines unikalen Manuskripts zur historischen Toponymie Kaśmīrs. Halle-Wittenberg 2014: Martin-Luther-Universität (unpublished Magister Thesis)</bibl>
+      </sourceDesc>
+    </fileDesc>
+
+    <encodingDesc>
+      <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+      </projectDesc>
+
+      <editorialDecl>
+	<correction>
+	  <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	  <p>GRETIL normalizes all texts contributed consistently for each language.
+	  Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	  <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	  Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	  These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	  <p><table>
+	    <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	    <row role="label">
+	      <cell>Character</cell>
+	      <cell>Character Name</cell>
+	      <cell>Unicode Code Point</cell>
+	    </row>
+	    <row>
+	      <cell>a</cell>
+	      <cell>LATIN SMALL LETTER A</cell>
+	      <cell>U+0061</cell>
+	    </row>
+	    <row>
+	      <cell>ā</cell>
+	      <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	      <cell>U+0101</cell>
+	    </row>
+	    <row>
+	      <cell>i</cell>
+	      <cell>LATIN SMALL LETTER I</cell>
+	      <cell>U+0069</cell>
+	    </row>
+	    <row>
+	      <cell>ī</cell>
+	      <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	      <cell>U+012B</cell>
+	    </row>
+	    <row>
+	      <cell>u</cell>
+	      <cell>LATIN SMALL LETTER U</cell>
+	      <cell>U+0075</cell>
+	    </row>
+	    <row>
+	      <cell>ū</cell>
+	      <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	      <cell>U+016B</cell>
+	    </row>
+	    <row>
+	      <cell>ṛ</cell>
+	      <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	      <cell>U+1E5B</cell>
+	    </row>
+	    <row>
+	      <cell>ṝ</cell>
+	      <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	      <cell>U+1E5D</cell>
+	    </row>
+	    <row>
+	      <cell>ḷ</cell>
+	      <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	      <cell>U+1E37</cell>
+	    </row>
+	    <row>
+	      <cell>ḹ</cell>
+	      <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	      <cell>U+1E39</cell>
+	    </row>
+	    <row>
+	      <cell>e</cell>
+	      <cell>LATIN SMALL LETTER E</cell>
+	      <cell>U+0065</cell>
+	    </row>
+	    <row>
+	      <cell>o</cell>
+	      <cell>LATIN SMALL LETTER O</cell>
+	      <cell>U+006F</cell>
+	    </row>
+	    <row>
+	      <cell>ṃ</cell>
+	      <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	      <cell>U+1E43</cell>
+	    </row>
+	    <row>
+	      <cell>ḥ</cell>
+	      <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	      <cell>U+1E25</cell>
+	    </row>
+	    <row>
+	      <cell>'</cell>
+	      <cell>APOSTROPHE</cell>
+	      <cell>U+0027</cell>
+	    </row>
+	    <row>
+	      <cell>k</cell>
+	      <cell>LATIN SMALL LETTER K</cell>
+	      <cell>U+006B</cell>
+	    </row>
+	    <row>
+	      <cell>g</cell>
+	      <cell>LATIN SMALL LETTER G</cell>
+	      <cell>U+0067</cell>
+	    </row>
+	    <row>
+	      <cell>ṅ</cell>
+	      <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	      <cell>U+1E45</cell>
+	    </row>
+	    <row>
+	      <cell>c</cell>
+	      <cell>LATIN SMALL LETTER C</cell>
+	      <cell>U+0063</cell>
+	    </row>
+	    <row>
+	      <cell>j</cell>
+	      <cell>LATIN SMALL LETTER J</cell>
+	      <cell>U+006A</cell>
+	    </row>
+	    <row>
+	      <cell>ñ</cell>
+	      <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	      <cell>U+00F1</cell>
+	    </row>
+	    <row>
+	      <cell>ṭ</cell>
+	      <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	      <cell>U+1E6D</cell>
+	    </row>
+	    <row>
+	      <cell>ḍ</cell>
+	      <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	      <cell>U+1E0D</cell>
+	    </row>
+	    <row>
+	      <cell>ṇ</cell>
+	      <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	      <cell>U+1E47</cell>
+	    </row>
+	    <row>
+	      <cell>t</cell>
+	      <cell>LATIN SMALL LETTER T</cell>
+	      <cell>U+0074</cell>
+	    </row>
+	    <row>
+	      <cell>d</cell>
+	      <cell>LATIN SMALL LETTER D</cell>
+	      <cell>U+0064</cell>
+	    </row>
+	    <row>
+	      <cell>n</cell>
+	      <cell>LATIN SMALL LETTER N</cell>
+	      <cell>U+006E</cell>
+	    </row>
+	    <row>
+	      <cell>p</cell>
+	      <cell>LATIN SMALL LETTER P</cell>
+	      <cell>U+0070</cell>
+	    </row>
+	    <row>
+	      <cell>b</cell>
+	      <cell>LATIN SMALL LETTER B</cell>
+	      <cell>U+0062</cell>
+	    </row>
+	    <row>
+	      <cell>m</cell>
+	      <cell>LATIN SMALL LETTER M</cell>
+	      <cell>U+006D</cell>
+	    </row>
+	    <row>
+	      <cell>y</cell>
+	      <cell>LATIN SMALL LETTER Y</cell>
+	      <cell>U+0079</cell>
+	    </row>
+	    <row>
+	      <cell>r</cell>
+	      <cell>LATIN SMALL LETTER R</cell>
+	      <cell>U+0072</cell>
+	    </row>
+	    <row>
+	      <cell>l</cell>
+	      <cell>LATIN SMALL LETTER L</cell>
+	      <cell>U+006C</cell>
+	    </row>
+	    <row>
+	      <cell>v</cell>
+	      <cell>LATIN SMALL LETTER V</cell>
+	      <cell>U+0076</cell>
+	    </row>
+	    <row>
+	      <cell>ś</cell>
+	      <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	      <cell>U+x015B</cell>
+	    </row>
+	    <row>
+	      <cell>ṣ</cell>
+	      <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	      <cell>U+1E63</cell>
+	    </row>
+	    <row>
+	      <cell>s</cell>
+	      <cell>LATIN SMALL LETTER S</cell>
+	      <cell>U+0073</cell>
+	    </row>
+	    <row>
+	      <cell>h</cell>
+	      <cell>LATIN SMALL LETTER H</cell>
+	      <cell>U+0068</cell>
+	    </row>
+	  </table>
+	</p>
+      </normalization>
+
+      <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+      </quotation>
+
+      <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+      </segmentation>
+
+      <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	  <item>Highlighting in <gi>hi</gi> elements,</item>
+	  <item>Corruptions in <gi>sic</gi> elements,</item>
+	  <item>Remarks in <gi>note</gi> elements with the <att>resp</att> attribute identifying the agency.</item>
+	</list></p>
+      </interpretation>
+    </editorialDecl>
+
+    <refsDecl>
+      <p>A reference is given in the <att>xml:id</att> attributes consisting of
+      <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Pradeśasaṃgraha = PradeSaṃ,</item>
+	<item>the number of the <label type="tocinclude">section</label> in arabic numerals.</item>
+      </list>
+      </p>
+    </refsDecl>
+
+  </encodingDesc>
+
+  <profileDesc>
+    <langUsage>
+      <language ident="en">English</language>
+      <language ident="sa-Latn">Sanskrit</language>
+    </langUsage>
+
+    <textClass>
+      <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Poetry -- Historical</term>
+      </keywords>
+    </textClass>
+  </profileDesc></teiHeader>
+
+  <text xml:lang="sa-Latn" xml:id="PradeSaṃ">
+    <body>
+      <div type="section" n="1. Kaśmīrā Maṇḍalam" xml:id="PradeSaṃ_1">
+	<head>1. Kaśmīrā Maṇḍalam</head>
+	<p>oṃ śrī gaṇeśāya namaḥ |
+	paṇḍitakalhaṇakṛtarājataraṅgiṇyāṃ prathame taraṅge ślokasaṃ 27 kaśmīrā |
+	asyāḥ satīsara iti dvitīyaṃ nāma |
+	asya niruktiḥ |
+	kaṃ jalaṃ śmīrati calaty asmād iti śmīra smīra calane iti dhātor auṇādikaṃ rūpam |
+	tathā ca nīlamate</p>
+	<lg>
+	  <l>kaṃ vāri halinā yasmād deśād asmād apākṛtam |</l>
+	</lg>
+	<p>ataḥ sarvajagatkhyātaṃ kaśmīrākhyaṃ bhaviṣyati |
+	anyac ca calanaṃ sampādanam ity api tanmatenaivāvagamyate |
+	tathā ca kaśyapena sampāditasyāpi maṇḍalasya kaśmīrā iti nāma |
+	etad api nīlamatād evāvabudhyate |
+	tathā hi</p>
+	<lg>
+	  <l>kaḥ prajāpatir uddiṣṭaḥ kaśyapaś ca prajāpatiḥ |</l>
+	  <l>atas tadākhyayā tīrthaṃ kāśmīrākhyaṃ bhaviṣyati || iti |</l>
+	</lg>
+	<p>asya kaśmīrāpadasya kaśīra iti kāśmīrikabhāṣāyāṃ nāma vartate |
+	ata eva kaśmīrotpannasya puṃsaḥ kaśur iti nāmāsti |
+	punaś cānyamatena kaśmīrāpadaniruktau bahavo vibhedāḥ santi |
+	tathā ca pārisekānuvādavidaḥ kecana kaśyapamar iti kathayanti |
+	tanmatena kaśmīrabhāṣāyāṃ marpadasya gṛham ity arthaḥ |
+	tathā ca kaśyapasya gṛham iti yāvat |
+	anye tu kaśūr iti kaścid rākṣasaḥ pūrvasmin kāle babhūva |
+	tasyaiva rakṣasasya marpadavācyā ekā apsarāḥ parīpadavācyā taddhastagatāpy āsīt |
+	tābhyām eva sarvatra bambhramyamāṇābhyāṃ yad atra manohare maṇḍale svanivāsārthaṃ sthitir āsāditā |
+	ataḥ kaśmar iti tadākhyayaiva prathām āgatyāyaṃ deśaḥ sarvajagatprasiddhaḥ sampanna ityādi svapustakeṣu likhanti |
+	paraṃ tu asmin nāmani grāmīṇānāṃ nāgarikānāṃ ca kvāpy uccāraṇādiviṣaye bhedo nāstīti śam ||</p>
+      </div>
+      <div type="section" n="2. Nīlanāgaḥ Varanāgo vā" xml:id="PradeSaṃ_2">
+	<head>2. Nīlanāgaḥ Varanāgo vā</head>
+	<p>ślo 28 nambara 2 nāgādhīśena nīlena |
+	ayaṃ nīlābhidho nāgaḥ kaśyaparṣiputraḥ |
+	kaśmīrasthāne ka nāgānām adhipatiḥ |
+	tena kaśyapena svakīyapitrā kaśmīrāsampādanakāla eva teṣām asaṃkhyānāṃ nāgānām ādhipatye sukarmaśikṣāyai kukarmaṇo nivṛttaye cābhiṣiktaḥ |
+	śāhūbād puragaṇo yo 'dhunā śrīraṇavīrasiṃghapurā iti nāma dhārayati tasminn eva puragaṇe pīr pañcāl iti khyāto yo 'yaṃ kaśmīradeśasya pañcanadadeśasya ca madhye sīmaiva gaṇanīyatām āgataḥ parvato 'sti |
+	tasmād eva parvatād ardhakrośamite kaśmīraunmukhyabhājimārge mahān aṣṭakoṇo 'gādhaḥ śītalajalaś ca nīlanāganivāsasthānaṃ jalāśayo vartate |
+	asya varanāgaḥ nīlanāgaḥ vīranāgaḥ ityādīni nāmāni santi |
+	tatra varanāgaḥ uttamanāgaḥ nīlanāgaḥ nīlanāmānāgaḥ nīlavarṇajalavān nāgaś ca vīranāgaḥ vīraś cāsau nāga iti grāmīṇas tu asya sthānasya vernāga iti nāma kathayanti |
+	eto vernāg evādhunā grāmanāmāpy asti |
+	varanāgaveranāgayoś ca sādṛśyam evoccāraṇe 'pi vartate |
+	kecana bhṛṅgīśasaṃhitāmatāmatāśrayiṇo vīrī iti grāmasya nāmoktā vīrīviṣayasthito nāgaḥ vīrīnāga iti nāma kathayanti |
+	asmiñ jalāśaye matsyā asaṃkhyāḥ santi |
+	punaś ca asya jalāśayasya pāścāttye taṭa ekā bṛhacchālā purātanakālīnena jyahāṃgīrarājñā sampāditā yasyām ādhunikarājñā jīrṇoddhārādikaṃ niramīyata |
+	atraika ārāmo 'pi purātanarājasampādito bhavati ||</p>
+      </div>
+      <div type="section" n="3. Kapaṭeśvaraḥ" xml:id="PradeSaṃ_3">
+	<head>3. Kapaṭeśvaraḥ</head>
+	<p>ślo 32 nambara 3 kāṣṭharūpam umāpatim |
+	kāṣṭharūpaṃ kāṣṭhākṛtim umāyāḥ pārvatyāḥ patir bhartā śivaḥ |
+	taṃ śivaṃ samyak sparśaṃ kurvatāṃ puruṣāṇāṃ bhogaprāptir bhavati |
+	purā sarvair munibhiḥ prārthitena śivena teṣām evānugrahārthaṃ kapaṭenaiva svamūrtiprākaṭyakaraṇaṃ munibhyo 'ṅgīkṛtam |
+	athaitādṛśaṃ śivād varaṃ labdhvāgatya cāsmin sthāne kāṣṭhā eva jale vivartamānā dṛṣṭāḥ |
+	ato 'sya tīrthībhūtasya jalāśayasya kapaṭeśvara iti nāma kṛtam |
+	adhunāpy asmiñ jalāśaya eko bṛhatkāṣṭho darīdṛśyate |
+	nīlamate 'pi kapaṭeśvaramāhātmyavarṇane kapaṭena darśanaṃ dāsyāmi bhavadbhya iti munīn prati śivenoktaṃ yadā tadaivāgatya munibhir asmiñ jale kāṣṭhākṛteḥ śivasya darśanaṃ kṛtam |
+	ato 'sya sthānasya kapaṭeśvara iti nāma sampannam |
+	etādṛśy eva kathā vistare soktāsti |
+	grāmīṇāḥ kaśmīrabhāṣayā asya sthānasya koṭyher iti nāma vadanti |
+	ata eva kuṭahārapuragaṇo 'pi anenaiva nāmnā prakhyātiṃ prāptaḥ yasminn ayam eko grāmaḥ koṭyher iti nāmnādhunāpi kathyamāno 'sti |
+	ayaṃ puragaṇaḥ pūrvoktāt śāhūbādapuragaṇād adhastāt krośacatuṣṭayena bhavati |
+	asminn eva achyabal iti sthānaṃ sarvajanamate priyaṃ sarvataḥ prakhyātaṃ ca bhavati |
+	grāmīṇā asya jalāśayasya saṅkarṣaṇ nāg iti nāmāpi vadanto vartante ||</p>
+      </div>
+      <div type="section" n="4. Pāpasūdanatīrtham" xml:id="PradeSaṃ_4">
+	<head>4. Pāpasūdanatīrtham</head>
+	<p>ślo 32 nambara 4 pāpasūdanaṃ tīrthāntaḥ |
+	pāpāni sūdayati nāśayati yat tat pāpasūdanaṃ pāpanāśakaṃ tīrtham |
+	tasmiṃs tīrthasaṃspṛśatāṃ snānaṃ kurvatāṃ puruṣāṇāṃ muktiprāptir bhavati |
+	atrāpi mahāñ jalāśayo vartate |
+	kaśmīrabhāṣāyām apy asya jalāśayasya pāpaharaṇ nāg iti nāma sarvatra grāmīṇāḥ kathayanti |
+	ayaṃ jalāśayaḥ pūrvoktāt kuṭahārapargaṇād alpāntaravartini vāmapārśvapuragaṇe ādhunike kāle khourpor iti khyāta puragaṇe 'sti |
+	tatrāpi sālīpāṃjamul iti khyātaṃ grāmadvayam asti |
+	tayor eva madhye 'yaṃ pāpaharaṇ nāg ityabhidho jalāśayo vartate |
+	atra pāpasūdanapāpaharaṇapadayoḥ sadṛśārthatvena saṃskṛte kaśmīrabhāṣāyām api asmin pade tādṛśo bhedo nāsti |
+	ayaṃ jalāśayaś catuṣkoṇo nīlanāgād alpataro 'pi vartate |
+	kadācana vāriparṇīyasya kaśmīrabhāṣāyāṃ muṅgol nāmāsti |
+	tathācchādito 'pi dṛśyate ||</p>
+      </div>
+      <div type="section" n="5. Trisandhyā Devī" xml:id="PradeSaṃ_5">
+	<head>5. Trisandhyā Devī</head>
+	<p>ślo 33 nambara 5 sandhyā devī |
+	samyak dhyāyate dvijātibhir yā sā sandhyā |
+	sā cāsau devī dyotanaśīlā krīḍanaśīlā ceti asya tīrthavarasya sarvajagatprasiddhaṃ trisandhyā iti nāma sarve kathayanti |
+	etat tīrthaṃ parvatasya kukṣau vartate |
+	atra jalāśayo vartulākāro 'dhastāt saṃkucita uparitane bhāge vistṛtākāro bhavati |
+	punaś cāyaṃ sadaiva śuṣko vasantakāle paripūrṇajalo grīṣmakāle trivāraṃ dine trivāraṃ rātrau ca paripūrṇajalaḥ śuṣkajalo 'pi bhavati |
+	arthāt cañcalatayā jalavān jalābhāvavāṃś ca bhavati |
+	tathā coktaṃ bhṛṅgīśasaṃhitādiśāstrabhedeṣu</p>
+	<lg>
+	  <l>sadā śuṣkā madhau pūrṇā grīṣme cañcalavāhinī |</l>
+	  <l>trikālavāhinī sandhyā sā sandhyā mokṣādāyinīti</l>
+	</lg>
+	<p>ato grīṣmakāle jyaiṣṭhe māsi yathā prabhāte madhyāhne sāyaṃkāle ca sandhyopāsanaṃ kriyate |
+	tathaivāsya tīrthavarasya yātrā sandhyeva bhavati |
+	ayaṃ jalāśayo madhye pārśvayoś ca vartulākāraiḥ prastarair bharito 'sti |
+	yasmin kāle sandhyāṃ vidhāya jalaṃ śuṣkatāṃ gacchati tasmin kāle tebhya eva pāṣāṇarandhrebhya ākhavo nirgatya bhaktaiḥ pūjārthaṃ jalāśaye pātitam akṣatādikaṃ bhakṣayanti |
+	asya tīrthavarasya samīpe saptarṣīṇāṃ saptajalāśayā bhavanti |
+	tebhya ekā kulyāpi nirgacchati |
+	sālpā nady asya parvatasthatīrthavarasyādhastād vartate |
+	sandhyākaraṇavelāyāṃ tīrthajalaṃ jalāśayān nirgatya nadījalamadhye patati |
+	tatra saṃgamatīrthe snānādikaṃ bhavati |
+	ayaṃ jalāśayo bhṛṅgpuragaṇe pūrvoktakuṭahārapuragaṇanikaṭavartini yo divalgāsanāmā grāmo 'sti |
+	tanmadhye khyātimad bhavati |
+	grāmīṇāḥ kāśmīrikāś cāsya tīrthasya sundabhrār iti nāma vadanti |
+	tatra bhrār kaśmīrabhāṣāyāṃ devīnāma bhavati |
+	ataḥ sundabhrār sundaradevīty arthaḥ |
+	asya puragaṇasya bhṛṅggrāmasya ca divalgon iti grāmīṇānām uccaraṇaviṣaye vartate |
+	asya grāmasyādhastāt bihū jalan gām iti khyātaṃ grāmadvayaṃ bhavati |
+	asya tīrthavarasya śirasi eko vṛkṣaḥ pippalavṛkṣa ivopalakṣaṇībhūto 'pi vartate |
+	sandhyākaraṇavelāyāṃ jalaprādurbhāvakāle puṣpākṣatanaivedyādipātanenāpy antardhānaṃ jalam āgacchati |
+	tadā jalāśayād eva jalaṃ uddhṛtya snānādikaṃ sarve kurvanti |
+	atha dvitīyasandhyākaraṇavelāyāṃ vinītatayā pratīkṣamāṇair janair yadā sthīyate tadā jalaṃ pūrvavad bahir nirgatya saṃgamajalena militvā snānādikaṃ sidhyati |
+	ye kecana daṇḍadhāriṇo rājapuruṣāḥ khaḍgādyāyudhādibhis sahaivāvinītavat sandhyākaraṇavelāyāṃ jalāśayasyāsya taṭe 'śucitayaivāgacchanti tān aśucīn avinītāṃś ca dṛṣṭvā jalam adarśanaṃ yāti |
+	ataḥ sarvathaivāyaṃ tīrthavaro 'dbhuto mānyaḥ pūjyaś cāsmin deśe khyātatamo 'pi vartate |
+	ata eva</p>
+	<lg>
+	  <l>darśanaṃ puṇyapāpānām anvayavyatirekayor</l>
+	</lg>
+	<p>iti kalhaṇoktaṃ satyatayā bhāti yato 'sya puṇyavanta eva darśanaṃ prāpnuvanti |
+	pāpinas tu tatra gatvāpi darśanarahitā eva pratyāgacchanti ||</p>
+      </div>
+      <div type="section" n="6. Svayambhūḥ Agniḥ" xml:id="PradeSaṃ_6">
+	<head>6. Svayambhūḥ Agniḥ</head>
+	<p>śloka 34 nambara 6 svayambhūr |
+	hutabhuk svayam eva na tu anyena kenāpi prajvālyamāno yo bhavati sa svayambhūḥ |
+	etādṛśo yo hutabhuk agniḥ |
+	asya māhātmyavarṇane purā kila munīnāṃ bhaktānāṃ ca prārthanayā śivena svakīyāyāḥ kālāgnirūdramūrteḥ prākaṭyam asmin sthāne sampāditam ityādi likhitam asti |
+	atra sarvatra marubhūmir yasyā bhāṣāyāṃ hindīty abhidhāyāṃ karevā kaśmīrabhāṣāyāṃ ca uḍarnāma vartate |
+	saiva bhūmir anekeṣu sthāneṣu pakvatām āptādādhā ca darīdṛśyate |
+	ato jñāyate 'gnir ayaṃ sarvadā ekasmād eva sthānān na samunmiṣati |
+	kiṃ tu kadāpy ekatra kadāpy anyatra kadācana tato 'py atra samudayaṃ prāpnoti |
+	vadanti ca vṛddhāḥ sarvadaivāyam agnir asmin eva sthāne dvādaśavarṣādhike kāle tato 'py adhike vā prādurbhavati |
+	atra yātrikā āgatya śuddhatayā svasvabhāṇḍāni saṃśodhya teṣv eva bhāṇḍeṣu yathāparimāṇaṃ taṇḍulaṃ jalaṃ ca sampātayya kāṣṭhollikhitāyāṃ bhūmau gartākāraṃ kṛtvā tāni bhāṇḍāni tasyām eva taptāyāṃ bhūmau muhūrtārdhaṃ sthāpayitvā yāvad gartebhyo 'svasvabhāṇḍāni niṣkāsayanti |
+	tāvad eva tad annaṃ teṣv annabhāṇḍeṣu supakvaṃ pratyuta sarvajanair indhanādipacyamānānnāc chobhanaṃ ca paśyanti |
+	atha te yātrikās tenaivānnena svapitṝṇāṃ piṇḍadānapūrvakaṃ yathāruci yathāvidhi ca śrāddhādi kurvanti |
+	ye kecana homavidhyabhilāṣiṇas te tu tasyām eva taptāyāṃ bhūmau sarvataḥ śuṣkakāṣṭhāni pātayitvā ghṛtādinā jvālā udbhāvayanti |
+	tāsv eva jvālāsu svagṛhyoktavidhānena homaṃ kurvanti |
+	ato</p>
+	<lg>
+	  <l>juhvatāṃ pratigṛhṇāti jvālābhujavanair havir</l>
+	</lg>
+	<p>ityādi kalhaṇoktam api saṃgacchate |
+	yataḥ prajvālyamānāgner adhikajvālāvān ayam agnir havir gṛhṇāti |
+	yasmin bhūbhāge 'syāgneḥ prādurbhāvaḥ sa bhūmibhāga atyuṣṇo hastādisparśenāpi lakṣyate |
+	asya sthānasya svayam iti sarvajagatprasiddhaṃ nāma grāmīṇā nāgarikāś ca vadanti |
+	etat sthānaṃ kramarājyasthe macchepor ityākhye puragaṇe vartate |
+	grāmīṇā etasmin kāle kramarājyapadasya kamrāj asya puragaṇasya tapay macchyapūr iti vadanti |
+	yasmin grāme 'yam agnis tasya grāmasya nicyahaum iti vadamānā dṛśyante |
+	asya nicyahaumgrāmasya nikaṭe 'nyad grāmadvayam apy asti |
+	tatraikasya nicyahaumsamīpavartino grāmasya rājypaur iti tasyādhastād vartino 'nyasya grāmasya jacyalaur iti te eva grāmīṇāḥ kathayanti |
+	asmin grāmadvaye rājyapadavācyā janā mlecchā nivasamānā bhavanti |
+	ayaṃ nicyahaumgrāmo 'syāgner āścaryībhūtaḥ suyyapurasthānād yasya grāmīṇoccaraṇena sopor iti nāmādhunikaṃ vartate |
+	tasmāt sthānād viṃśatikrośadūre pradeśo bhavati |
+	asmin grāme 'gnisamākalitasthānādau yady api marubhūmir evāsti tathāpi tasya nikaṭa ubhayor eva pārśvayoḥ sasyakṣetreṣu sasyādisamutpattir bhavaty eva ||</p>
+      </div>
+      <div type="section" n="7. Haṃsavāgīśvarī Bheḍā Devīty Aparaparyāyā" xml:id="PradeSaṃ_7">
+	<head>7. Haṃsavāgīśvarī Bheḍā Devīty Aparaparyāyā</head>
+	<p>śloka 35 nambar 7 haṃsarūpā sarasvatī |
+	devī haṃtyavidyālakṣaṇaṃ tama iti haṃsaḥ paramātmā |
+	tadrūpā tacchaktir iti yāvat |
+	etādṛśī yā sarasvatī vāgadhiṣṭhātrī devī vāgīśvarītyabhidhā eṣā haṃsarūpā sarasvatī |
+	bheḍākhyaparvato yo 'tiśayena gacchatyā bhṛṅgītyabhidhāyā nadyā udbhāvanena pavitrībhūtas tasya parvatasya śṛṅge śirasi sarvair dṛśyate |
+	atra parvatasyopari sara ekam asti |
+	tad eva saro haṃsavāgīśvaryāḥ sthānatām āptatayā vidyamānaṃ sarvathaiva vartate |
+	bhṛṅgākhyapuragaṇe yā nadī vahati sā bhṛṅgītyabhidhāsya pūrvoktasya parvatasya pāde vahantī bhavati |
+	grāmīṇās tu bhṛṅg iti puragaṇasya nāma vadamānāḥ |
+	tasya bheḍaparvatādhastād vartino grāmasya bheḍaśabdenaiva bhiḍar iti nāmāpi vadanti |
+	ādhunikās tu grāme tasmin vasamānās tasya bheḍaparvatasthasarovarasya kātyāyanītaḍāga iti nāma kecana kathayanti |
+	tatra kātyāyanyā devyā arthāt |
+	asyā eva haṃsavāgīśvaryās taḍāgaḥ sarovaram iti yāvat |
+	asya kātyāyanītaḍāgasya svabhāṣāyām apabhraṃśadoṣena kāntrāg iti nāma vadamānāś ca bhavanti |
+	tatra kān iti kātyāyanyāḥ trāg taḍāga iti |
+	paraṃ tu tasmin parvate sarovaraḥ śirasi parvatasya pāde nady api vahantī vartate |
+	ato</p>
+	<lg>
+	  <l>devī bheḍagireḥ śṛṅge gaṅgodbhedaśucau svayam |</l>
+	  <l>saro 'ntar dṛśyate yatra haṃsarūpā sarasvatīti</l>
+	</lg>
+	<p>paṇḍitakalhaṇoktam api saṃgacchate |
+	asmin bhiḍarākhyagrāme ekāśilāmayī devīmūrtir jalamadhye 'syā nadyā bhavati |
+	tatratyā grāmīṇās tām eva bheḍadevīṃ manyamānā bheḍadevīśabdenākārayantaḥ pūjayanti |
+	asya puragaṇasya bhṛṅg iti khyātasya madhye yeyaṃ nadī vahaty asyā nadyā bhṛṅgśabdavyapadiṣṭatayaiva bhṛṅgīti nāma yasyāḥ kalhaṇena svapustake gaṅgāśabdena nāmoktam |
+	anyac ca bheḍādevīśabdenaiva grāmasyāpi bhiḍar iti nāma sampannam |
+	vastutas tu parvate bhiḍargrāmasthite yat sarovaraṃ tat haṃsavāgīśvaryāḥ sthānam |
+	yā parvatasyādhastān nadī bhṛṅgīti vahamānā sāpi parvatād evodgacchati |
+	tajjalamadhye yā yā śilāmūrtiḥ sā bheḍādevīti grāmīṇamatenāsti |
+	asya sarovarasya jalaṃ sarvadaivaikākāraṃ bhavati |
+	na tu kadāpy adhikaṃ kadāpi vā nyūnaṃ bhavati |
+	asya jalaṃ atipācakaṃ śītalaṃ madhuraṃ ca bhavati ||</p>
+      </div>
+      <div type="section" n="8. Nandikṣetram" xml:id="PradeSaṃ_8">
+	<head>8. Nandikṣetram</head>
+	<p>śloka 36 nambara 8 nandikṣetre |
+	nandayati ānandayati sarvān svabhaktān yaḥ so nandī śivaḥ |
+	tasya yat kṣetraṃ tīrthaṃ tat nandikṣetraṃ |
+	atha vā nandīnāmā śivasyānucaro yo gaṇas tatprasādārthaṃ tīrthībhūtaṃ yat sthānaṃ tad eva nandikṣetraṃ |
+	purā kila haramukuṭākhye parvate pārvatyā rahaḥsthitayā tasya parvatasyādhastād dhārapradeśe nandīnāmā svānucaro gaṇamukhyaḥ sthāpitas |
+	tasmāt kālād ārabhyaiva tatra nandikṣetraṃ sampannam |
+	tathā ca bhṛṅgīśasaṃhitāyāṃ haramukuṭagaṅgāyātrāmāhātmyavarṇane kadācit pārvatyā śivasya śiraḥsthite kapardākhye jaṭāmukuṭe procchalaṃtī gaṅgā dṛṣṭā |
+	atha tāṃ svasapatnībhūtāṃ śivasya dayitāṃ dṛṣṭvā sapatnīrṣyayā krodhāndhakuṭiladṛśā ca tayā pārvatyā śivaṃ prati muñcaināṃ matsapatnīm ity uktam |
+	atha śivena bahuśo 'nunāthyamānāpi sā pārvatī yady ahaṃ bhavataḥ priyatamā tadāvaśyam eva tyajaitām ityākārakam āgraham eva dhārayām āsa |
+	punaś ca pārvatībhaktiparavaśena śivena sā gaṅgā svajaṭāmukuṭād yasmin kāle tyaktā tasminn eva kāle haramukuṭagaṅgā iti nāma tasyā gaṅgāyāḥ sajjātam |
+	yato harasya śivasya mukuṭād yā gaṅgā nirgatā sā haramukuṭagaṅgeti |
+	atha vā harasya mukuṭād vibhraṣṭā satī bhūmau yato 'ticañcalatayā gatā tato 'pi mukuṭagaṅgeti |
+	atha ca śivena pārvatīṃ prati bahusammānapuraḥsaram iti prārthanā kṛtā he devī yaiṣā gaṅgā mayā tvadājñayā śirastas tyaktā enāṃ punar api dhārayiṣyāmītīdṛśaṃ śivasya vākyaṃ śrutvaivātikrodhayutā devī śivam apahāya svamānadarśanāya svanivasanāspadībhūtaṃ haramukuṭākhyaṃ parvatam āruroha |
+	ārohaṇakāle tatparvatapālakaṃ śivasya mukhyānucaraṃ nandinam ityādideśa he nandin atra parvataśikhare rahasyam ekākinī kiṃcit kālaṃ sthāsyāmi |
+	ato dvāradeśe 'sya parvatasyādhastāt sthitena bhavatā tathā vidheyaṃ yathā rahaḥsthāyinī māṃ ko 'py anyo na paśyet |
+	punaś ca yadi matsamīpe praviṣṭakāmaḥ kaścanāgacchet asmai kasmā api praveśe 'tra na dātavyaḥ |
+	athaitādṛśīṃ śivasyājñāṃ labdhvā śilāvan niścalatayā yāvat nandī praveṣaṃ vārayamāṇas tiṣṭhati tāvad eva devīṃ sarvatra mṛgayamāṇaḥ śivo 'pi haramukuṭasya pādaṃ prāpa |
+	tatra śivaḥ śilāvat sthiratayā sthitaṃ nandinaṃ svānucaraṃ dṛṣṭvāpi devīsamīpaṃ praveśakāmo yāvat parvatārohaṇonmukho babhūva tāvad eva nandinātrārohaṇe rahaḥsthitāyā devyā ājñā na vartate |
+	ato nārohavyam ity uktvā ruddho niṣiddhaś ca tato yāvac chivaḥ svayaṃ taṃ nandinaṃ bahuśaḥ sambodhayann api svasmād evāgrahāt muhur muhur apracalantaṃ paśyati tāvad evātikrodhakuṭiladṛk sa devas tam iti śaśāpa re mūrkha yasmān māṃ parvatasyāsya parvatasthāyā devyāś ca svāminam apy avajānāsy ato 'tra parvatasyādhastane bhāge tvaṃ macchāyenātikaṭhinena jaḍabuddhir jaṭarūpo 'dyaprabhṛti bhaviṣyasi |
+	atra saṃskṛtavāṇyāṃ lakāraḍakārayor ekatayā samānārthāt |
+	tvaṃ jalarūpo bhaviṣyasi |
+	etac chivamukhapaṅkajāt nirgataṃ śāpavahniṃ śrutvā so nandy api aho śivārdhāyāḥ śivāyā ājñāṃ paripālayate katham ivānena śivenāvicārya vṛthaiva śāpām asyāṃ datta iti svamanasi vicārya taṃ svasvāminaṃ pratiśaptuṃ samudyatamanā ity uvāca |
+	yasmād bhavatā paravaśasyāpi mamāvicāryaiva śāpo datto 'to bhavān api macchāpenādyaprabhṛti kālarūpo 'traiva majjalāśayasamīpe bhaviṣyasi |
+	arthāt tvaṃ kālarūpajalavān jalāśayo 'traiva bhaviṣyasi |
+	atas tasmāt kālād ārabhyaiva haramukuṭaparvate 'sya nikaṭavarti jalāśayadvayaṃ śivasya varapradānena pāvakatīrthībhūtaṃ ca sampannam |
+	tatraikasya nandikṣetraṃ nāma anyasya kālakṣetraṃ nāma vartate |
+	ādhunike kāle 'pi uktam etaj jalāśayadvayam |
+	ābhyām eva nāmabhyāṃ nirdiśyamānaṃ śvetajalaṃ kṛṣṇajalaṃ ca yātrikadṛggocaraṃ bhavati |
+	kiṃ tu</p>
+	<lg>
+	  <l>nandikṣetre surāvāsaprāsāde dyucarārpitāḥ |</l>
+	  <l>adyāpi yatra vyajyante pūjācandanabindavaḥ ||</l>
+	</lg>
+	<p>iti yat paṇḍitakalhaṇena svapustake likhitaṃ |
+	tadādhunike kāle prāsādādīnām abhāvena candanabindūnāṃ darśanādi kim api na saṃgacchate |
+	ato jñāyate puratāne kāle tat sarvam abhaviṣyad eva asyoktajalāśayadvayasya kāśmīrikagrāmīṇabhāṣayā nund kol iti nāmadvayaṃ sarvajanakathyamāṇaṃ bhavati |
+	etat tīrthadvayaṃ laharābhidhapuragaṇasya paryantabhūmau haramukuṭagaṅgānikaṭe vartate |
+	haramukuṭagaṅgāyātrāmārge pūrvam asyaiva tīrthadvayasya darśanaṃ bhavati |
+	tadanu mukuṭagaṅgātīraṃ pratiyātrikāḥ samāgacchanti |
+	asya puragaṇasya grāmīṇabhāṣāyāṃ lārpargaṇa iti mukuṭagaṅgāyāś ca gaṅgabal iti nāma vartate |
+	yato bal iti kaśmīrabhāṣāyāṃ sthānasya nāma bhavati |
+	ato gaṅgabal iti gaṅgāsthānam iti yāvat |
+	asyāṃ haramukuṭagaṅgāyā yātrāyāṃ nunargrāmo yaḥ kaśmīranagarāt saptabhiḥ krośair dūre vartate |
+	tatra yātrikāḥ pūrvasmin dine samāgatya dvitīyasmin dine karaṅkanadī iti nāmnākhyātāṃ nadīm āśritya tanmārgenaiva rāmarādhan iti grāmaṃ samāgacchanti |
+	amuṃ rāmarādhangrāmaṃ yāvat sasyādikṣetrāṇi grāmavartino vṛkṣāś ca sarvathā dṛśyante |
+	asmāt sthānād ārabhya parvatā eva sarvatra bhavati |
+	tadagragaṇyatāyāṃ bharatābhidho parvato yasya grāmīṇamatena bharuth iti nāmāsti |
+	tam āruhya yātrikāṇāṃ gamanaṃ bhavati |
+	asmād eva sthānād ārabhya grāmādikaṃ kim api haramukuṭagaṅgāṃ yāvan na labhyate |
+	atratyā vṛkṣā api vanyavṛkṣā eva sarvatra darīdṛśyante |
+	bharataparvatād ārabhya haramukuṭaṃ yāvat kvāpi tādṛśā vṛkṣā naiva labhyante yebhyo 'nnapacanādyarthe indhanaṃ gṛhyeta |
+	kiṃ tu ekaṃ latākṛti kāṣṭhaṃ tādṛśaṃ vartate yad ārdram eva tasminn eva kāle samunmūlitaṃ sad dahati |
+	tasya kāṣṭhasya saṃskṛte vānarendhanam iti nāsti |
+	tathā ca kalhaṇaḥ na jvalaty agnisaṃge 'pi nivīryaṃ vānarendhanam |
+	ayaṃ kāṣṭhabhedo jvālārahito 'pi pākādikriyaṃ sampādayaty eva asya grāmīṇānāṃ bhāṣaṇe viṭhur vā viṭhar kāṭh nāma bhavatīti ||</p>
+      </div>
+      <div type="section" n="9. Śāradā Devī" xml:id="PradeSaṃ_9">
+	<head>9. Śāradā Devī</head>
+	<p>śloka 37 nambara 9 śāradā devī tatra śāradāpadaniruktiḥ |
+	śarāṇāṃ bāṇānāṃ samūhaḥ śāraṃ daityāsu jālaṃ dyati khaṇḍayati yā sā śāradā |
+	atha vā śāro vāyau sa tu triṣu karbure iti kośamatena |
+	śāraṃ māyārūpaṃ vāyuṃ dyati nāśayati yā sā |
+	anyac ca |
+	śāraṃ śavalaṃ nānāvidhaṃ śāstrīyaṃ śilpādikaṃ ca jñānaṃ dadāti yā sā |
+	atha ca śakārasakārayor aikyena śāradā sāradā ca |
+	tatra sāraṃ balaṃ yogyaṃ jñānaṃ varādikam uttamaṃ ca yā dadāti sā sāradā |
+	etādṛśīṃ śāradāṃ devīṃ dyotanaśīlāṃ ye paśyaṃti |
+	arthāt śāradātīrthayātrāṃ ye janāḥ kurvanti |
+	te 'vaśyam eva tasyāḥ prasādena kavisevitā |
+	kavibhir api sadā pūjyamānā |
+	vaikharīrūpāyā saṃskṛtavāṇītāṃ vāṇīṃ prāpnuvanti |
+	śāradāvaraprasādāt kavikarmanipuṇāḥ kāvyaśaktibhājaḥ kavayo bhavanti |
+	anyac ca |
+	ye tattīrthayātrāsamudyatās tatra gacchanti te 'vaśyaṃ madhumatīnāmanadīm api samprāpnuvanti |
+	arthāt tadyātrāmārgamadhyasthitā madhumatī nāmnā prakhyātaikā nady api vartate |
+	ato madhye mārgaṃ tām api te labhante |
+	atas</p>
+	<lg>
+	  <l>taraṅgiṇī madhumatī vāṇī ca kavisevitā</l>
+	</lg>
+	<p>ityādi kalhaṇoktaṃ yuktatamaṃ bhavati |
+	asyā eva śāradādevyāḥ samāśrayaṇenāsya kaśmīradeśasyāpi kecana janāḥ śāradāpīṭham iti nāma vadanti |
+	tatra śāradāyāḥ pīṭham āsanam iti vyutpattyā śāradāyā adhiṣṭhānībhūto 'yaṃ deśaḥ śāradāpīṭhapadavācya ity api samīcīnam eva |
+	atra śāradādevīsthāna eko jalāśayaḥ kuṇḍākṛtir asti |
+	yasyopari tādṛśy ekā bṛhacchilā vartate |
+	yayā tat kuṇḍaṃ sarvam antarhitaṃ darīdṛśyamānaṃ sarvathaivāsti |
+	atra bhādrapadamāsaśuklāṣṭamyāṃ yātrā yātrikaiḥ kriyate |
+	tathā ca vapanapūrvakaṃ śrāddhahomādikriyākalāpasya niṣpattir apy atra bhavati |
+	kaśmīranagarād aṣṭabhiḥ prayāṇakaiḥ paḍāv iti khyātaiḥ śāradātīrthaprāptir asti |
+	mārge durgamo 'tiśayena jalaprāyaś ca sarvathā yātrikair ullaṅghyate |
+	etac chāradāsthānaṃ sarvam eva kramarājyamaṇḍalam ullaṅghyāgravartini drauv iti khyāte sthāne vartate |
+	kaśmīrabhāṣāyāṃ asya śāradāsthānasya śārad iti nāmā kārayaṃti |
+	asya drauvpuragaṇasya karaṇāv mujapharābād gilgith ityādy anekaiḥ kaśmīraparyantabhūsthitapradeśais saha sambandho bhūmair bhavati |
+	etatsthānanivasamānā janā gujjer iti nāmnā khyātā bhavanti |
+	ete pañcanadadeśīyabhāṣyamāṇāṃ bhāṣāṃ vadanto darīdṛśyante |
+	etasya sthānasya yātrāyāṃ janānāṃ mārgadvayena gamanaṃ bhavati ||</p>
+      </div>
+      <div type="section" n="10. Cakradharaḥ" xml:id="PradeSaṃ_10">
+	<head>10. Cakradharaḥ</head>
+	<p>śloka 38 nambara 10 cakrabhṛt |
+	cakraṃ bibharti dhārayati yaḥ sa cakrabhṛt viṣṇuḥ |
+	atra bhṛdhātor bhṛṃdhātoś ca dhāranārthe samānatvāc cakrabhṛd eva cakradharaḥ |
+	purā kila devodvejakair nānāvidhair daityais tapobalād āptavaronmattair nānopadravakārakaiś cāta eva yā bhūmer bhārayamāṇair yadā sarvaiva pṛthvī durvyavasthabādhitā tadaiva sā devān samāgatya rudantīty uvāca |
+	he devā ete varadṛptā daityā māṃ sarvathaiva vādhan kiṃ vidhāsyāmi |
+	kathaṃ vā sthāsyāmi |
+	atha te devās tasyā bhūdevyāḥ karuṇaṃ paridevanaṃ śrutvā tāṃ devīṃ viśvāsādhāyibhir vacanaiḥ parisāntvayitvāsveno 'py udvegaṃ prāptāḥ santo 'titūrṇaṃ sarvajagaccharaṇyaṃ tayā bhūdevyā saha viṣṇuṃ bhagavantaṃ śaranaṃ samājagmuḥ |
+	tatra prāptvā te devās taṃ prabhum arthyābhir bahvībhiḥ stutibhir īḍayitvā ca svāgamanābhilāṣam iti procuḥ |
+	he prabho vayaṃ sarve tathaiṣā pṛthvy api duṣṭadaityair bādhitāḥ santo 'tividvalatayādhunā bhavantaṃ bhagavaṃ taṃ śaraṇaṃ prāptāḥ |
+	ato yathā vayam anayā devyā saha nirvṛtiṃ labhema tathā daityahananaṃ bhavān vidhātum arhati |
+	atha devābhimataṃ bhagavān samākarṇya tān devāṃs tāṃ bhūdevīṃ cāgrataḥ kṛtvā śivasya prasādanārthaṃ śivalokaṃ samājagāma |
+	tatra sa bhagavāṃs taṃ svamūrtim eva śivaṃ tair devais saha stutyādi yathārhapūjābhiḥ samprasādya svakīyāgamanaprayojanaṃ ca śivāya vinivedya tasmād yathāvat santoṣitāt sudarśanākhyaṃ cakraṃ daityasamūhanāśakaṃ tadaiva prāptavān |
+	tenaiva cakradhareṇa viṣṇunā tadāprabhṛti sarvatrasthāyidaityahananakarmavidhir ārabdhaḥ |
+	ata eva kaśmīrasthadaityahananārthaṃ viṣṇunātra vijayeśvaranikaṭavartini pradeśe sthitir āsāditā |
+	tasyaiva sthānasya pūrvoktacakradharasamāśrayaṇena cakradhara iti nāma sajjātam |
+	grāmīṇās tu etarhi tasya cakradharasya cakadhar iti nāma kaśṃīrabhāṣāyāṃ kathayanti |
+	tasya ca vijayeśvarasya yannikaṭe ayaṃ cakadhar bhavati tasya vijyabhror iti ādhunikaṃ nāmāsti |
+	ayaṃ vijyabhror tathāyaṃ cakadhar api dakṣiṇapārśvapuragaṇe yasyādhunā grāmīṇamatena dacchunporpargaṇa iti nāma bhavati tanmadhya eva vartate |
+	atra lambodarī nāma nadī yasyā adhunā grāmīṇabhāṣāyāṃ lidar iti nāmāsti tasyā eva nadyā vāmapārśvo dakṣiṇaś ca pārśvo yo 'sti |
+	tāv eva dakṣiṇapārśvavāmapārśvābhidheyau staḥ |
+	tatra kaśmīrabhāṣayā vāmapārśvasya khourporpargaṇa dakṣiṇapārśvasya ca dacchunporpargaṇa iti nāmadvayaṃ bhavati |
+	asya cakadharasya samīpe 'nyo grāmo yasya simathan ityabhidhāsti |
+	so 'pi vartate atra cakadhar adhunālpaḥ parvata iva dṛśyate |
+	ayaṃ cakadharākhyaḥ pradeśo vitastānadyā dakṣiṇapārśvasthe taṭe vartate |
+	kecid vadanti |
+	atra cakadharasyādhastād eko mahāvidhir asti |
+	pūrvasmin kāle ye kecana tena pathā gatāgataṃ kurvāṇā abhūvaṃs te 'vaśyam eva sarvadaivānusāreṇa prācīnarūpakaniṣkāparaparyāyadīnnārādilābhabhājo bhavanti sma |
+	ādhunike kāle 'pi yaḥ ko 'py atidurgatatamaḥ pumān daityam āśrityātibhaktyā cakadharam amuṃ pradeśaṃ tam eva cakradharam manyamāno dhanāśayā gacchati |
+	so 'py avaśyaṃ kim api dhanādikaṃ labhata eva |
+	ayaṃ pradeśaḥ kaśmīranagarāt pūrvasmin bhāge caturdaśabhiḥ krośair dūre bhavati |
+	anantanāgād ye kaśmīranagaraṃ samāgacchanti teṣāṃ tu pūrvam evāyaṃ pradeśas trīn eva krośān samullaṅghya dṛggocaram āgacchati |
+	vijayeśvarād ayam ekenaiva krośena dūro bhavati |
+	asya cakradharasya pādabhūmau cirā vṛkṣāḥ kāśmīrikā api santīti śam ||</p>
+      </div>
+      <div type="section" n="11. Vijayeśvaraḥ" xml:id="PradeSaṃ_11">
+	<head>11. Vijayeśvaraḥ</head>
+	<p>ślokasaṃ 38 nambara 11 vijayeśaḥ |
+	viśeṣeṇa sarveṣu devagaṇeṣu jayati sarvotkarṣeṇa vartate yaḥ sa vijayaḥ |
+	atha vā vividhān daityādigaṇāñ jayati parābhavati vā yaḥ sa vijayaḥ |
+	sa cāsāv īśaḥ īṣṭe aiśvaryaṃ vidadhāti yaḥ sa īśaḥ |
+	vijaya eva īśaḥ vijayeśaḥ |
+	asmin pradeśe sthitā śivasya mūrtir vijayeśapadavācyā yata īśapadābhidheyā sarvatra śivasyaiva mūrtiḥ paripaṭhyate |
+	ayaṃ vijayeśvarākhyaḥ pradeśo 'ticirakālād anenaiva nāmnā sarvadākhyātatamo 'py anumīyate |
+	yato 'tra jīrṇoddhārādikarmakartāra eva labhyante |
+	na tu sākṣāt kartur nāma prāyaśo niścīyate |
+	yasmāt kalhaṇapaṇḍito 'pi svakīyarājataraṅgiṇīyāḥ prathamataraṅgasyaikaśatādhike pañcamaśloke likhatīti |
+	tathā hi</p>
+	<lg>
+	  <l>jīrṇaṃ śrīvijayeśasya vinivārya sudhāmayam |</l>
+	  <l>niṣkalmaṣeṇāśmamayaḥ prākāro yena kāritaḥ ||</l>
+	</lg>
+	<p>yena rājñā aśokenety arthaḥ |
+	atra sudhāmayasya prākārasya vinivāraṇakathanena tathāśmamayasya prākārasya sampādanakathanenāpi aśokarājaḥ pūrvam apy asya pradeśasya sadbhāvenātiprācīnatvam evāvagamyate |
+	pārisekapustakeṣu kecid ayaṃ vijayeśvarākhyaḥ pradeśo rājñā surendreṇa yo 'śokād rājño 'py atipūrvakālīno 'bhūt tenaiva sampādito 'sty iti likhanti |
+	anye tu īśānadevīti khyātayā surendrāśokayo rājñor uttarakālabhāvino bhuvo bhartur jalaukasya rājñyā nirmito 'stīti kathayanti |
+	kecana aśokenaiva rājñā ca pradeśe prathamato nirmāṇaṃ kṛtam iti svapustake likhamānā dṛśyante |
+	paraṃ tu uktamatatrayāt kim api saṃgatatamaṃ samīcīnaṃ vā na bhāti |
+	tatra rājataraṅgiṇyāṃ prathamataraṅgasyaikādhikanavatitamaślokād varṇyamāne surendrasya rājño varṇane sarvasminn api vijayeśvarasya nāmāpi nāsti |
+	ataḥ surendrasampādito 'yam ity apy asaṃyuktam |
+	ye tu vadanti jalaukarājña īśānadevīti khyātayā rājñyāyaṃ pradeśo nirmita iti tatra rājataraṅgiṇyāṃ prathamataraṅgasyaikaśatādhikasaptamaślokād varṇyamāne jalaukasya rājñaś caritre tadantargata eva tadrājñyāḥ pūrvoktāyāś cāritre 'pi kvāpi vijayeśvarakhyātāṃ na labhyate |
+	atas tad apy asaṃgatam eva bhāti |
+	ye tu aśokarājānam eva vijayeśvarasampādakam manyamānāḥ svapustakeṣu aśoka eva vijayeśvarasampādaka ityādi likhanti te sudhāmayajīrṇaprākāraṃ nivārya navīnam aśmamayaprākārasampādanaṃ rājataraṅgiṇīta eva labdhvā tasyaiva jīrṇoddhārādikarmaṇaḥ sākṣāt sampādanaṃ jānantas tathā likhanti |
+	atas teṣāṃ tad apy avicāritam eva bhāti |
+	yataḥ sampādakajīrṇoddhārakartroḥ parasparaṃ mahān bhedo bhavati |
+	vastutas tu rājataraṅgiṇyāḥ prārambhe 'pi vijayeśvarasya nāma sarvathādas adṛśyamānaṃ yad bhavaty ato jñāyate kalhaṇapaṇḍitenāpi sākṣād asya pradeśasya kartā na saṃjñātaḥ yatas tenāpi aśokarājñaḥ pūrvam api varṇyamāne rājavṛnde kāpy eṣā vārtā noktāta evāsyātiprācīnatvaṃ samyaktayā pratibhāti |
+	atrānantanāgād āgamanamārgopalakṣyamāṇavitastāyā vāmapārśve vijayeśvarābhidham etad evāgāraṃ vartate |
+	kathayanti ca vṛddhāḥ |
+	asmin pradeśe mandirādhidhaṃ devatāgāraṃ pāṣāṇanirmitaṃ sadaivābhūd iti |
+	paraṃ tv etasmin kāle dṛśyamāṇaṃ pāṣāṇanirmitaṃ yat sthānaṃ pratibhāti tan nākaloke sadgatim āptena śrīraṇavīrasiṃharājñā kaśmīrajamvādyanekadeśādhipatinā bahubhir varṣair mahatāyāsenātiprabhūtena yatnenāpi sahasrasaṃkhyākān rūpakān vyayīkṛtya sampāditaṃ bhavati |
+	asmin mandire 'dhunā śivasya pratimāsti |
+	tatpūjādinirvāhāya rājñā eko grāmo 'py agrahāravyapadeśe nātithipūjāyai ca sthāpito 'sti |
+	grāmīṇās tu asya mandirasya haricandrakṛtatvam avagacchantaḥ svakīyakaśmīrabhāṣāyāṃ haricandrājan mandir tathāsya nadītaṭāj jalam anvavatīryamāṇasya sopānamārgasya ca haricandrājun yārabal iti nāmanī kathayanti |
+	tatra prathamanāmno haricandrakṛtaṃ mandiram ity arthaḥ |
+	dvitīyanāmnas tu haricandrasampādito 'yaṃ sopānamārga ity arthaḥ |
+	yataḥ kaśmīrabhāṣāyāṃ sarveṣāṃ sopānamārgānāṃ yārabalśabdenaiva vyapadeśaḥ |
+	tatra kaśmīrabhāṣāyāṃ yār iti sakhyur nāmāsti |
+	teṣām eva sakhīnāṃ bal sthānam iti yataḥ kaśmīradeśe prātaḥkāla eva sarve snānāya nadītaṭam āśrayante |
+	ato ye parasparaṃ sakhāyas te tatra saṃgacchante |
+	etasmād eva kāraṇād asya nadītaṭasya yārabal iti nāma sampannam atra vijayeśvarād ūrdhvaṃ katicid eva padāni gatvā cinār iti bhāṣāyāṃ prasiddhā ye śāstrīyabhāṣāyāṃ chāyāvṛkṣapadābhidheyās te bahavo vṛkṣāḥ santi |
+	tathā vitastāyā vijayeśvarasammukhavartini pāre taṭe 'pi bahava uktavṛkṣā bhavanti |
+	vadanti ca janā etat vṛkṣaṣaṇḍavalitaṃ sthānadvayaṃ prācīnarājña upavanadvayam asti |
+	anayor upavanayoḥ pādaśāhy bāg iti grāmīṇoktaṃ nāmāsti |
+	tathāsya pradeśasya tanmatena vijyabhror iti nāma |
+	atra vijayeśvaranikaṭa eva nadyāḥ pārāvāragamanāya ekaḥ prataro 'pi bhavati |
+	yasya vijyabhrori kadal iti vadanti |
+	atroktopavanabhūmau purācīne rājakṛtanirmāṇasya aikvaṣṭakādikam adyāpi darīdṛśyata iti śam ||</p>
+      </div>
+      <div type="section" n="12. Ādikeśavaḥ" xml:id="PradeSaṃ_12">
+	<head>12. Ādikeśavaḥ</head>
+	<p>ślokasaṃ 38 nambara 12 ādikeśavaḥ asya keśavasya niruktiḥ |
+	kaṃ brahmāṇaṃ aṃ viṣṇuṃ īśaṃ śivam api yo vyāpnoti svasminn avabhāsakatvena tān avabhāsyamānāc chādayati sa keśavaḥ |
+	tathā ca asya sarvasya jagataḥ sṛṣṭyāder ādāv api vartamāno yas sa ādikeśavaḥ |
+	arthāj jagatsarjanapālanāntakaraṇādikarmakārī |
+	ādyaḥ sanātanaḥ paramātmā viṣṇur yo 'yaṃ sa evādikeśavapadābhidheyaḥ |
+	sarvāsām asmin kaśmīramaṇḍale sthitānāṃ nānāvidhadevamūrtīnāṃ madhyā yasmād eṣaiva viṣṇor bhagavato mūrtir atrasthādyā bhavati |
+	ata evādikeśavapadavācyā sampannā |
+	asyaivādikeśavasya sadbhāvenāmuṣya puragaṇasyāpy ādyāvanir iti nāma saṃlagnam |
+	tatrādyādau bhavā avanir bhūmir ity arthaḥ |
+	ādikeśavasya sthityā yata eṣaiva bhūmis sarvābhyo bhūmibhyo 'gragaṇyatāthāspadībhūtāta evādyāvanir iti sampannā |
+	keṣāṃcin mate tu purāsyā bhuvaḥ satīsarorūpāvasthāyāṃ yadāmbhobhir eva sarvataḥ procchaladbhir āvartapuṭabhedādijalavikṛtiśālibhis sadaiva nadīmātṛkatvadeśaguṇasampattyā saraḥ-paripūrayadbhir evāyaṃ bhāgaḥ samākrāṃta āsīt tadā kaśyaparṣitapovibhūtisantuṣṭadevagaṇaprasādena jalasya deśanivasana-maṇḍalasthāpanādyarthaṃ sthalarūpatāsampādanakāle bhūmitvaprakaṭībhāve 'traivādyāvanau bhūmitvaṃ yadṛggocarībhūtam |
+	ata evāsya puragaṇasyādyāvanitvena vyapadeśa ityādy apy asti |
+	tatrādyāvanipadasya ādau bhavād yā sā cāsau bhūmir ādyabhūmir ity arthaḥ |
+	vartate cātrādyāvanipuragaṇe 'nena nāmnākhyāta eko jalāśayaḥ yasya keśavapadavācyasyākṛtir adhunetthaṃ dṛśyate |
+	uparitane bhāge vistṛtākṛtis tathādhastane bhāge saṃkocamuktaṃ bhavati |
+	ayaṃ jalāśayaḥ pūrvavarṇitasandhyādevījalāśaya iva vartulākāro bhavati |
+	grāmīṇās tv etarhy asya grāmasya ghaṭāyam ādikeśavamūrtir jalāśayo vartate tasya grāmasya phrasal iti nāma bruvāṇā bhavanti |
+	punaś cāsya puragaṇasya yatrāyaṃ grāmas tasya puragaṇasya āḍvin iti nāma vadanti |
+	asya jalāśayasyāpi keśavanāg iti tadbhāṣayā khyātaṃ nāmāsti |
+	tatra keśavasyāsyaivādikeśavasya nāg jalāśaya ity arthaḥ |
+	yataḥ kaśmīradeśe ye ye sarve jalāśayās te te nāgpadābhidheyā eva bhavanti |
+	asya phrasal iti khyātasya grāmasya nikaṭe 'nyo 'pi grāmo bhavati |
+	tasya ārvañ iti nāmāsti |
+	ataḥ kecana grāmīṇāḥ phrasal ārvañ iti samastam api kathayanti nāma |
+	asya jalāśayasyāspadībhūta āḍvinpuragaṇo devasarpuragaṇād adhastane bhūbhāge vartamāno bhavatīti ||</p>
+      </div>
+      <div type="section" n="13. Īśānaḥ" xml:id="PradeSaṃ_13">
+	<head>13. Īśānaḥ</head>
+	<p>ślokasaṃ 38 nambara 13 īśānaḥ |
+	sarvasmiñ jagati īṣṭe aiśvaryaṃ yaḥ karoti sa īśānaḥ |
+	sarvadevagaṇādhipati lokavarti sampacchāli aiśvaryam īhamāno yaḥ śivaḥ sarvarddhīnāṃ bhūtīnāṃ samastānāṃ prabhuś ca sa īśānapadābhidheyaḥ |
+	śiveśānayoḥ padayor ekaparyāyatvena varṇyamānapradeśasthaiṣā śivamūrtir ity arthaḥ |
+	atha vā kalhaṇapaṇḍitakṛtarājataraṅgiṇīdvitīyataraṅgavarṇyamānasandhimān sandhimatiś cety ākhyasya rājño yo gurur yasya prasādāt tena mṛtenāpi rājñā sandhimatinā punarjīvitaṃ samākalitaṃ sa eva īśānanāmā yatas tadākhyayāpy atrasthaiṣā śivamūrtir īśānapadavācyā saṃjātā |
+	tathā ca kalhaṇarājataraṅgiṇīdvitīyataraṅgasyaikaśatādhike saptatriṃśattame śloke</p>
+	<lg>
+	  <l>kṛtvā sandhīśvaraṃ dehasandhānapitṛkānane |</l>
+	  <l>īśānasya guror nāmnā vyadhād īśeśvaraṃ haram ||</l>
+	</lg>
+	<p>īśeśvara iti nāmnākhyāto 'pi bhaktasya tasyaiveśānasya nāmnā prakhyātim āgataḥ |
+	yadi apy e[...] śānakālāt pūrvam api śivamūrtiprākaṭyenātra pradeśe 'tipūtatvātimāhātmyavattvaṃ cāsīd eva tathāpi īśānasyevāticitrīyamāṇacaritraprākaṭyakaraṇavaśataḥ sarvathaiva khyātimattvaṃ sampannam |
+	atra dvitīyataraṅge pañcādhikaṃ ṣaṣṭitamaṃ ślokam ārabhya varṇanīyo yo jayendrākhyo rājño vijayasya putras tasyaivāyaṃ sandhimatir nāmā īśānasya śiṣyo mantrī matimaduttamo pūrvaṃ babhūva |
+	atha bhūtaṃ puruṣās taṃ capalakarṇaṃ mattakariṇam iva rājānam ayaṃ sandhimatir bhavanmantry atyadbhutam ativaibhavavān sarvathaivāsty ato 'smād rājyaharaṇādiśaṃkāvaśyaṃ vidheyetyādi kathayām āsuḥ |
+	asmād eva hetor anena bhūtaṃ vañcitena rājñā tasmin buddhimantriṇy api vairabuddhiḥ kopena samyaktam ākalitā |
+	atha tadvairavismāritatatprītis sa rājā svasabhāpraveśanivāraṇapūrvakaṃ tatsarvasvāpaharaṇapūrvakaṃ ca taṃ mantriṇam ahetukam eva yāvajjīvaṃ daridratām anayat |
+	etādṛśīṃ duravasthām āpto 'pi sa mantrī tat svasya rājyakāryādibhraṃśaṃ pratyūharahitaśivapūjāvasaralābhena vyathākāri nājñāsīt |
+	atha bhāvino 'rthasya balavattayā sandhimater eva rājyaṃ bhaviṣyatīdṛśy eva vāṇī prativeśmākasmāt prakhyātiṃ prāptā |
+	tathā ca dvitīyataraṅgasya catussaptatitame śloke</p>
+	<lg>
+	  <l>atha bhāvyarthamāhātmyāt paprathe pratimandiram |</l>
+	  <l>rājyaṃ sandhimater bhāvīty aśrutāpi sarasvatī ||</l>
+	</lg>
+	<p>tataś ca sa rājā pūrvoktāyā etādṛśyā vāṇyāḥ śravaṇenākasmād īdṛśī vāṇī nava pracaraty ato devādipreritaivāvaśyaṃ bhavatīti jñātvā ca samutpannamahābhītis taṃ maṃtriṇaṃ kārāgṛhe sthāpayām āsa |
+	tatra tasyogranigaḍapīḍitapādasyāta eva śoṣaṃ prāptasya daśavarṣāṇi pūrṇatām īyuḥ |
+	tāny eva daśavarṣāṇi sandhimatisvāmino 'sya jayendrasya rājña āyuḥ śeṣasyāvadhi bhūtāny athāsanathāputramararogakṛtapīḍas tasya mātreṇa ścintayā ca kṛtātipīḍāte eva mumūrṣarantar eva mahāntaṃ dāham āsasāda |
+	ittham eva tena mantrividveṣajvalanenāharniśaṃ jvalatā tāpyamānas sa bhūpo tasya mantriṇo vadhaṃ vinā bhavitavyapratīkāraṃ kim api na mene |
+	aho paṇḍitam manyāḥ pumāṃso asya bhāvino 'rthasya gopanāya yaṃ kaṃcanopāyaṃ vidadhati sa evopāya nivāritaṃ hāraṃ daivena tasyārthasya kalpate |
+	yathā daivaṃ svājñayā kāṣṭhavṛndasthasya stokatejaso 'py agnikaṇasya nirupamāṃ śaktim ādhātuṃ icchati |
+	tadā tasya mahatīm eva śaktim ādhāsyamānasyoktāgnikaṇasya nirvāpaṇaṃ yaḥ kaścana daivabalam ajānataḥ kartum īheta tasya tad daivaṃ tāpagalitaghṛtayute ghṛtakumbhe vārikumbhabhramaṃ karoti |
+	atha yadaiva rājñā mantrighātāya vadhakarmādhikāriṇaḥ samādiṣṭāḥ tadaiva sa sandhimatis taiḥ śūlaṃ samāropya hanyate sma |
+	tato 'pi tasmin mantriṇi śūlaṃ prote sati tasya rājña ādau sa mantricintād duḥkhaśaṅkur niragacchat |
+	paścāj jīvitam api nirjagāma |
+	atha tathāhatasya svakīyaśiṣyasya vadhaṃ śrutvā vaśino 'pīśānābhidhasya tadguror mano 'ntastaptaṃ babhūva |
+	atha eva tasya vinītasya śiṣyasyāntakālīno citasatkriyākarmaṇe sa īśāno yasyāṃ bhuvi sandhimati mṛtyur abhūt tām eva śmaśānabhuvam ājagāma |
+	tatra sa īśānas taṃ svaśiṣyaṃ tasminn eva śūlamūle 'vaṣṭabdhvāsthiśakalam adhastād vṛkair balāt kṛṣyamāṇām asthiśeṣam eva dadarśa |
+	dṛṣṭā ca samahatātiśokena hā vatsedṛśīṃ tvad avasthām eva draṣṭuṃ jīvāmīty uktā tasmiñ śūle protaṃ kaṅkālaṃ vāśato vṛkāt nivārayan sa nināya |
+	athocitaṃ saṃskāram antimaṃ kartuṃ yāvat sa īśānaḥ samudyatas tāvat asya svaśiṣyasya lalāṭapaṭṭe daivalikhitam idaṃ ślokaṃ papāṭha |
+	tadyathā |</p>
+	<lg>
+	  <l>yāvajjīvaṃ daridratvaṃ daśa varṣāṇi bandhanam |</l>
+	  <l>śūlasya pṛṣṭe maraṇaṃ punā rājyaṃ bhaviṣyati ||</l>
+	</lg>
+	<p>iti |
+	tataś ca sa gurur asyoktaślokapādatrayasya yathārthatayā jñātārtho 'taś caturthapādārthe 'vaśyadraṣṭavye kautukānvito bhūtvā manasi katham ivaitad bhaviṣyatīty acintayat |
+	atha sadaiva śaktim acintyaprabhāvāṃ yayā pūrvam arjunaparīkṣitkacādayo mṛtāḥ santaḥ punarjīvitaṃ prāptās tām evāghaṭyamānaghaṭakāṃ vicārya devaṃ sarvasiddhiṣu nirnirodham atipragalbhaṃ stutvā bhāvino 'rthasya siddhidarśanāyodyatas tasminn eva śmaśāne kṛtavasatis taṃ tasya kaṅkālaṃ rarakṣa |
+	athaikadā niśīthe tayaivāścaryacintayā jāgran sa īśānaḥ pūrvaṃ divyadhūpagandham akasmād āghrāya ḍamarugharāṭādinānāvādyānāṃ dhvaniṃ śuśrāva |
+	tataḥ sa śabdaṃ śrutvaiva yāvat tamo 'rim udghaṭyamānaḥ paśyati tāvad eva tena tejomaṇḍalavirājamānaṃ yoginīcakraṃ tasyāṃ pitṛvanabhūmau samāgataṃ dṛṣṭam |
+	atha tābhir yoginībhir yāvad eva tat asya kaṅkālam apavāsyate tāvad eva bhītasya tasya gurur dhṛtakhaḍgas tāṃ śmaśanabhūmim āgacchat |
+	āgatya sa vṛkṣacchannas tair yoginīgaṇais saṃpujyamānasamastāvayavam ata eva maṇḍale śāyitaṃ taṃ kaṅkālaṃ paśyati sma |
+	tābhir madirāpāpidevatābhir yoginībhir uttamavarasaṃyogakāminībhir yadānyo varaḥ ko 'pi na labdhas tadā sa eva kaṅkālo tviṣyāpasyataḥ |
+	atha tāḥ svam ekam ekam aṅgaṃ kṣaṇād eva tasmin saṃsthāpya kuto 'pi puruṣalakṣmyāpy ānīya taṃ pūrṇāṅgaṃ cakruḥ |
+	punaś ca yoginyo yad anākrāntānyavigrahaṃ puryaṣṭakam ata eva bhrāmyat tad eva yogabalena kuto'py ākṛṣya tasya sandhimateḥ kaṃkasya sthāpayām āsuḥ |
+	tataḥ sa sandhimatiḥ suptaprabuddha iva tābhir dattadivyāṅgarāgaś cakranāyakatvam ādadhānas tābhis saha yatheṣṭasambhogādilābhavān babhūva |
+	atha prabhātībhūtāyāṃ rātrau sa īśānas tadyoginīdattāṅgādivibhāgaṃ punar api nīyamānam āśaṅkabhītaḥ saṃs tadrakṣārthaṃ dhīras sann ata eva nadaś ca tad eva sthānaṃ yāvad eva samāgacchati tāvad eva tadyoginīvṛndaṃ kṣipram eva 'tirohitam |
+	tāsāṃ cāntarhitānāṃ yoginīnāṃ tenetthaṃ vāṇy api śrutā he īśāna tava bhayaṃ māstu |
+	yato 'smākam anena karmaṇām aṅgahānir nāsti |
+	asmin bate vañcanāpi nāsti |
+	pratyutāyam asmad varād divyaśarīreṇa sandhīyamāno 'taḥ sandhimannāmā rājā punaś cāryatayā āryarājākhyayā bhuvi khyato bhaviṣyati |
+	tataś ca sa sandhimatir divyāṃśuko divyabhūṣaṇaḥ sragvī labdhapūrvasmṛtiś ca prahvībhūya taṃ svaguruṃ vavande |
+	atha sa rājā tena guruṇā saha saṃsārasyāsāratāyāś cittatāyāś ca kathāṃ kṛtvā tad anumanyaiva katham api kṛccheṇa niḥspṛho rājyapālanam anumatavān itītthaṃ varṇito yo guros tasyānirvācyopakārasya vāsya varṇyamāneśeśvareti khyātapradeśasya nirmityādau mukhyo hetuḥ |
+	yady api pūrvam atrastho 'pi mahādevābhidhaḥ śivo 'bhūt tathāpi tasyeśānasyaiva nāmnādyāpi khyātimatvaṃ bhajate |
+	asya pradeśasyādhunā guptagaṅgā iti nāma sarvajagatkhyātaṃ bhavati |
+	tatra mahādevena gaṅgā yato guptāgopiteti yāvat atas sārthakaṃ guptagaṅgeti nāma etat |
+	pradeśanikaṭasthamahādevākhyagirim ārūḍhena mahādevena gopitā gaṅgā prativatsaraṃ vaiśākhyāṃ saṃkrānau guptagaṅgām atrasthāṃ gaṅgām eva manyamānāḥ sarva eva kāśmīrikāḥ sabālavṛddhāḥ snātuṃ samāyānti |
+	asya pradeśasyādhunā īśabhrāra iti nāmāpi vadanti |
+	tatra īśasya īśānasya bhrār devatā iti yataḥ kaśmīrabhāṣāyāṃ bhror bhrār iti khyātaṃ padadvayaṃ devadevyor arthe vidyamānaṃ dṛśyate |
+	tatrāpi bhror devaḥ bhrār devīti |
+	punaś ca devatāśabdasya śāstre striyāṃ vartamānasya bhrār iti bhāṣāyām api strītvenaiva vyapadeśaḥ |
+	grāmīṇās tu asya iśabhrār padasyāpabhraṃśavaśāt iśavar iti kathayanti |
+	punaś cāyaṃ pradeśo yasmin puragaṇo vartate tasya puragaṇasya phākpargaṇa iti nāma bruvāṇāḥ santi |
+	ayaṃ puragaṇaḥ kaśmīranagarāt krośatrayeṇa dūre vartate |
+	atra gamāgamau jalamārgeṇa naukābhis tathā sthalamārgeṇāpy aśvādinā bhavataḥ |
+	ayaṃ pradeśo niśāt vāgākhyo pavanāt pādonakrośadūratāyāṃ bhavati |
+	atraiko jalāśayaś śītalajaś catuṣkoṇākāro 'ntar asti |
+	punaś caitādṛśa evānyo 'pi jalāśayas tasyāntaḥsthajalāśayasya vārye pradeśe vartate |
+	ubhayor eva jalāśayayor madhye 'lpaḥ prākāra iṣṭakāpāṣāṇādinirmito 'dhunāpy avaśiṣṭo bhāti |
+	paraṃ tu snānādivyavahāro vārya eva jalāśaye bhavati |
+	āntare tu kevalaṃ pūjanādikam eva sarvaiḥ kriyate |
+	asya jalāśayasyoparitane bhāge purātanarājanirmitam ekaṃ mandiram api sarvathāvinaṣṭam ākṛtyaivopalakṣyamāṇaṃ ādyāpi dṛśyate |
+	kathayanti tatratyā anyāś ca vṛddhāḥ |
+	ayaṃ devālayo rajñā sandhimatinā svasya guror arthe sampādito 'stīti mandirasaṃgrahādāv api sandhimatir evāsya pradeśasya kartā jñāto bhavati |
+	asmāt pradeśād ūrdhvaṃ parvato 'py anyo 'sti |
+	ata evedaṃ sthānaṃ parvatasya pādadeśe bhāti |
+	asmin parvate kiyanmātradūratāyāṃ gopītīrthābhidhaṃ tīrtham api bhavati |
+	grāmīṇā apabhraṃśāt tasya gupatrath iti nāma vadanti |
+	atreśānatīrthāt katicit padāni gatvādhastane bhāge guhāpy asti |
+	tasyā guhāyā nikaṭe sāhibapadavācyānāṃ vaiṣṇavabrāhmaṇānāṃ gṛham apy asti |
+	te brāhmaṇāḥ kadāpi māṃsādi na bhakṣayanti |
+	atrādhunikarājakṛtārambhamandiram ardhasampannam apy asti |
+	etaj jalāśayadvayaṃ caturbhir eva digbhiḥ prākāraveṣṭitam adhunā vartate ||</p>
+      </div>
+      <div type="section" n="14. Loloraṃ Lolaraṃ vā" xml:id="PradeSaṃ_14">
+	<head>14. Loloraṃ Lolaraṃ vā</head>
+	<p>ślokasaṃ 86 nambara 14 caturaśīti ślokād ārabhya varṇyamāne lavarājñaś caritre loloraṃ lolaraṃ vā |
+	tatra loloraniruktiḥ |
+	lolāś cañcalamanasaḥ rānti dadati ye te rāḥ dātāra iti yāvat |
+	na rāḥ arā adātāraḥ |
+	lolāś ca arāś ca janā yasmin sthāne nivasanto bhavanti sa loloraḥ |
+	atha vā laḥ śeṣe ca bhaye khyātaḥ śāstrataḥ pūrvasūribhir ity ekākṣarakośokter laḥ śeṣaṃ bhayaṃ ca tatrāsya maṇḍalasya śeṣatayā prāntasthitirūpayā yad ayaṃ pradeśaḥ sthito yataś cātiprāntarakāntāragahvarādimārgair bhayayutaś ca |
+	kiṃ tu kevalaṃ sthānamanoharatvādinaiva raḥ sukhado yaḥ so 'pi loloraḥ |
+	atha dvitīyasya lolaranāmno niruktiḥ |
+	nānāvidhavṛkṣalatāgulmajalaṃ sthalādibhaṃgībhiś cañcalo yaḥ sa lolaḥ |
+	atimanoharatvena ratisukhaṃ dadāti yas sa raḥ |
+	lolaś cāsau raḥ lolaraḥ |
+	yad atra pradeśe tena lavanāmnā rājñātyadbhutaṃ nagaraṃ nirmitam ato 'tra lolaraṃ lavapuram ity arthapratītir api samīcīnā |
+	tathā ca paṇḍitakalhaṇasya rājataraṅgiṇyāḥ prathamataraṅgasya pañcāśītitame śloke</p>
+	<lg>
+	  <l>tena ṣoḍaśabhir lakṣyair vihīnām aśmaveśmanām |</l>
+	  <l>koṭiṃ niṣpādya nagaraṃ lolaraṃ niramīyateti ||</l>
+	</lg>
+	<p>lavapuraśabdasyaivāpabhraṃśavaśato 'yaṃ lolareti nāmānumīyate |
+	kecit pārisekabhāṣānirmitarājataraṅgiṇyanuvādakartāraḥ |
+	so lavābhidho rājā sarvadaiva gītipriyo 'tiśayenābhūt |
+	atas tadrājyakāle ye tatkṛtalolaranāmni nagare nivasamānā janapadā āsaṃs te tṛptasya rājño gānapriyatvam eva sarvathā samākalayya gāyanaśikṣāyām evāniścayaṃ kurvāṇās sarva eva gītividyākuśalā babhūvuḥ |
+	ata eva kaśmīrabhāṣāgānaviṣaye tasyaiva rājño lavalaveti nāma prathamaṃ gānārambha evākarayamāṇās tasthuḥ |
+	yasya lavalaveti bhūpanāmnaḥ kālena mahatā lolo iti śabdo 'pabhraṃśavaśāt sphuṭībhūtaḥ tenaiva lolośabdena deśo 'pi saḥ khyātiṃ prāptaḥ |
+	ato lolav iti nāmāsya sthānasya ityādi svapustakeṣu likhanti |
+	vartate cādhunike kāle 'pi kaśmīrabhāṣāyāṃ ayaṃ luḥluḥśabdo gānamadhye pādapūraṇārtho gāne varṇanīyasya priyasya sambodhanārthaś ceti sarvajanaviditaṃ bhavati |
+	asmin puragaṇe eko grāmas tādṛśo 'pi bhavati |
+	yasyādhunike kāle sarve janā lulur iti nāma vadanti |
+	ato hetor api grāmasyāsya nāmnaivāyaṃ sarvaḥ puragaṇo 'pi lolavśabdābhidheyaḥ sajjāta ity api |
+	kecid grāmīṇā nāgarikāś ca svamataṃ sthāpayanti |
+	ekena madhyasthitena grāmeṇāpi puragaṇaḥ sarvas tacchabdābhidheyo bhavatīty anyeṣu sthāneṣv api jñāyate |
+	tathā hi nāgām ityākhyapuragaṇa ekenaiva madhyasthitena kasavanāgām ity ākhyena grāmenaiva nāgāmpadavācyo bhavati |
+	grāmīṇās tu etarhi asya lolarākhyapradeśasya lolavpargaṇa iti nāmaiva prakhyāpayanto bhavanti |
+	aparaṃ ca asya grāmasya lulur iti khyātasya yat nāma puragaṇo 'pi sarvo bibharti |
+	tasya lālpor iti nāma kathayanti |
+	asmiṃl lolarapradeśa-gamanāgamane madhya ekaḥ parvato 'pi bhavati |
+	yam āruhyaiva sarvadā janānāṃ gamāgamau bhavataḥ |
+	ayaṃ puragaṇaḥ kramarājyasthapuragaṇayor utar khuyahom ityākhyayor madhye bhavati |
+	yata uktapuragaṇadvaya-mārgeṇāpi yiyāsūnāṃ mārgalābho bhavati |
+	ayaṃ pradeśaḥ kramarājyasyāpi prāntabhūmau yataḥ sthito 'sty ato 'sya niruktau śeṣatayā sthityādikathanam api samīcīnam eva saṃgacchate |
+	paraṃ tu ṣoḍaśalakṣyavihīnā yā koṭir arthāc caturaśītilakṣyāṇy aśmamayagṛhāṇāṃ sampādya nagaraṃ lavena rājñā niramāyītyādi kalhaṇena yat svapustake likhitam astīti |
+	tāni gṛhāṇy ādhunike kāle 'tiyātacirakālavaśād vinaṣṭāny ato naiva dṛśyante |
+	kiṃ tu pāṣāṇagaṇāḥ sarvatra bahavo darīdṛśyante 'to jñāyate te pāṣāṇās teṣām eva gṛhāṇāṃ śeṣībhūtopalakṣaṇībhūtāś ca syuḥ |
+	asya lolavpuragaṇasyādyo yo grāmaḥ saḥ khumariyāl ityākhyayā yaś cāsyānte grāmaḥ sa lālporākhyayā prakhyāto bhavati |
+	asya khumariyālgrāmasya madhye 'tiśītalajalo jalāśayo vartate |
+	punaś cāsya nikaṭa eva caṇḍīgrāmaś caṇḍīdevyāspadībhūtajalāśayayuto bhavati |
+	tasya caṇḍīgrāmasya grāmīṇabhāṣāyāṃ caṇāgom iti nāma |
+	īdṛśā evānye bahavo grāmā devatāspadībhūtāḥ satīti śam ||</p>
+      </div>
+      <div type="section" n="15. Ledarī" xml:id="PradeSaṃ_15">
+	<head>15. Ledarī</head>
+	<p>ślokasaṃ 87 nambara 15 lavasyaiva rājñaś caritre ledarī |
+	atra niruktiḥ |
+	laḥ śeṣe ca bhaye khyāta iti śivaproktaikākṣarakośoktyā lo bhayaṃ tasmin le bhaye bhayotpādanavelāyām iti yāvat darī guhā vadati |
+	gabhīrā gahanā dustarā ca yā dṛśyate sā ledarī |
+	atha vā daḥ kalattrebudhaiḥ prokto dānacchedanadātṛṣu ity ekākṣarakośamatena |
+	le bhaye daṃ chedanaṃ bhayacchedanaṃ rāti dadāti yā sārī |
+	arthāt bhaye saṃjāte tacchedanadātrī bhayacchettrīty arthaḥ |
+	etādṛśī yā nadī |
+	asyā ledarīnadyā bhṛṅgīśasaṃhitām atāvalambanena lambodarīti nāmāpi kecid vadanti |
+	tatra lambam udaṃ rayasya sa lambodaro gaṇeśas tanmukhāt niḥsṛtāyā nadī tasyā lambodarīśabdena vyapadeśaḥ vartate |
+	cāmareśvarayātrāmārge gaṇeśabalābhidhe pradeśe mahaty ekā nadīmadhyasthitā gaṇeśasyāśmamayī pūjyatamā prakhyātamūrtiḥ |
+	yasyā mūrtes sākṣād gajīkṛtitvaṃ dhārayantyāḥ puṣkarāt nirgacchantī pītojjhitevaiṣā nadī bhāti |
+	paraṃ tu ledarīti nāmnāpy asyā nadyāḥ sopapattikaṃ saṃhitāsaṃgataṃ cāpy asti |
+	yato 'smin dakṣiṇapārśvākhyapuragaṇe yasminn eṣā nadī pravahati tatra lidar ityākhyo grāmo 'syā nadyās taṭapradeśasthito 'sty atas tadākhyayāpy eṣā nadī prakhyātiṃ prāptā |
+	yato lidare grāme yā pravahati sā ledarī nadī |
+	bhṛṅgīśasaṃhitāyāṃ mārtāṇḍamāhātmyavarṇane 'py anenaiva nāmnāsyā nadyā nāmagrahaṇam |
+	tathā hi yāvac cākā pravahati nadī ledarī toyapūrṇā yāvan nāgau yamalakamalau tiṣṭhato matsyam uktau yāvad bhāsvāṃs tapati gagane nityaśaḥ kālaśaktyā tāvat svarge vasati |
+	satataṃ śrāddhakṛtsūryakṣetre itīdṝṃśi sthalāni ledarīnāmadyotakāni bhavanty eva asyā eva nadyā dakṣiṇapārśvau yo dvau pradeśo tayor madhye nady eṣā pravahati |
+	grāmīṇās tu ādhunike kāle 'syā lambodarī ledarīnadyā vā lidar āra iti nāma vadanti |
+	tatra yā nadī bṛhatpāṣāṇair madhye pūrṇātivegena calantī dustarā ca bhavet |
+	tasyāḥ kaśmīrabhāṣāyāṃ ār iti nāma vadanti |
+	ayaṃ ca lidarākhyo grāmo 'syā nadyā āspadībhūto yo 'sti tasya grāmīṇabhāṣāyām api lidar ity eva nāma vartate |
+	ayaṃ grāmo 'sya dakṣiṇapārśvasya dacchunporpargaṇa iti prasiddhasya madhye ledarīnadyās taṭe vartamānaḥ kathyate |
+	asyā lambodaryā api grāmīṇamatena lidar ity eva nāma bhavati yasmād gaṇeśabalākhyapradeśād āgacchantī nady eṣāsti |
+	tasya kaśmīrabhāṣāyāṃ gaṇiśabal iti nāma khyātaṃ vartate |
+	tatra gaṇiśasya gaṇeśasya bal sthānam ity arthaḥ |
+	ayaṃ gaṇeśabalākhyaḥ pradeśo 'mareśvarayātrāyāṃ prathamaḥ prayāṇakaḥ |
+	asmāt tribhiḥ krośair dūrastham adhvānam ullaṅghya pahalgāmākhyaḥ pradeśo dvitīyaḥ prayāṇako 'mareśvarayātrā bhavati yaḥ samāyāti |
+	ayaṃ lidarākhyo grāmo 'nantanāgāt pāścime sthāne dvādaśakrośadūratāyām asti |
+	atra mandirākhyaṃ devāgāraṃ vinaṣṭaprāyaṃ bṛhatpāṣāṇanirmitaṃ bhavati |
+	tat sthānaṃ vikramādityasya navatitame varṣe meghavāhanarājñā tṛtīyataraṅge varṇyamānena nirmitam ityādi |
+	mandirasaṃgrahāl labdham atra sthāpitam ||</p>
+      </div>
+      <div type="section" n="16. Levāraḥ" xml:id="PradeSaṃ_16">
+	<head>16. Levāraḥ</head>
+	<p>ślokasaṃ 87 nambara 16 lavasya caritre levāraṃ |
+	yasya levārasya niruktiḥ |
+	laḥ śeṣe ca bhaye khyāta iti |
+	tathā vaḥ sāntvane rasevāte ity ekākṣarakośokteś ca levighnāde bhaye vaṃ sāntvanaṃ tatnivāraṇarūpamāsam antāt rāti dadāti yaḥ sa levāraḥ |
+	vighnanivārako gaṇeśaḥ |
+	tathā ca nīlamatavarṇyaṃ mānadevāyatanakīrtanākhye prastāve</p>
+	<lg>
+	  <l>bhūrjasvāmī hiḍambeśo levāraḥ śrīvināyakaḥ |</l>
+	  <l>utaṅkeśo guhāvāsī bhīmeśaḥ saumukhas tathā ||</l>
+	</lg>
+	<lg>
+	  <l>bhadreśvaro mahāsyaś ca mahāśanagaveṣaṇau |</l>
+	  <l>paulastyo girivāsī ca jayeśvaramaheśvarau ||</l>
+	</lg>
+	<lg>
+	  <l>ekaikam ebhyo dṛṣṭvā tu gaṇeśaṃ susamāhitaḥ |</l>
+	  <l>kāryasiddhim avāpnoti puṇyaṃ phalam upāśnute ||</l>
+	</lg>
+	<p>ity ādau |
+	asya levārākhyagaṇeśasya kaśmīrasthagaṇeśamūrtiṣu varṇyamānatvaṃ sphuṭatayā bhavati |
+	eṣā gaṇeśamūrtiḥ pūrvoktaledarīnadyā vāmapārśve yo 'dhunā grāmīṇabhāṣāvyavahṛtau khourporpargaṇa iti nāma dhārayati tasminn eva pradeśe sarvaviditā vartate |
+	asya gaṇeśasya nāmnevāyaṃ gaṇeśamūrtyāśrayavān grāmo levar iti nāmnaiva prakhyāta[...]ḥ sampannaḥ vartate |
+	cāyaṃ grāmo 'smin puragaṇe levarśabdābhidheyo grāmīṇaiḥ kathyamānaḥ |
+	asya grāmasya nikaṭe 'nyo 'pi grāmaḥ sarvaviditaḥ sīr ityākhyo bhavati |
+	tasyaivaṃ kiṃcid dūratāyām ayaṃ grāmaḥ pūrvam eva levārākhyasya gaṇapater āśrayatayaiva tādṛśanāmayuta eva tena varṇyamānena lavarājñā agrahāratvavyapadeśavān samapādi |
+	ata eva paṇḍitakalhaṇenāpi prathame taraṅge</p>
+	<lg>
+	  <l>dattvāgrahāraṃ ledaryāṃ levāraṃ dvijaparṣade |</l>
+	  <l>sa dyāmanindyaśauryaśrīr āruroha mahābhujaḥ ||</l>
+	</lg>
+	<p>ity ādyuktam |
+	anayaiva vidhayā yo 'yaṃ grāmo levārākhyaḥ pūrvam eva babhūva |
+	sa eva rājñāpi brāhmaṇebhyo 'grahārasamarpaṇakāle ca pūrvaprakhyātanāmnaiva saṃsthāpitaḥ |
+	dānavelāyām api gaṇeśamūrtyāśrayatvavyapadiṣṭaṃ levārākhyaṃ nāmaiva rājñāpy asyāpi tamasyeti budhyate |
+	kathayanti ca tatratyāḥ |
+	asmin grāme eko mahāvṛkṣo yaṃ vṛkṣaṃ kāśmīrikā braṇ iti śabdenākārayanti |
+	tenāpy upalakṣaṇībhūto bhavati sa eva vṛkṣo 'py asyoktagaṇeśasyādhiṣṭhānībhūto bhavati |
+	yato bahavo vṛkṣāḥ anena braṇvṛkṣena kathyamānāḥ kaśmīradeśe devatāmūrtīnām adhiṣṭhānībhūtāḥ sarvato darīdṛśyante iti śam ||</p>
+      </div>
+      <div type="section" n="17. Kuruhāraḥ" xml:id="PradeSaṃ_17">
+	<head>17. Kuruhāraḥ</head>
+	<p>ślokasaṃ 88 nambara 17 kuśasya rājṇo varṇane kuruhār |
+	asya nirvacanam |
+	kaś cātmāpi samākhyātaḥ kaḥ pradeśa udāhṛta iti kośamatena |
+	kair nānāvidhajalasthalādipradeśaiḥ urur mahān ata eva hāro manoharaś ca yaḥ sa kuruhāraḥ |
+	nānāvidhapradeśamattayāntyā ledarīnadyā hāro muktāhāra iva yaḥ so 'pi kuruhāraḥ |
+	atha vā kurunāmakair janapadair etaddeśanivāsibhir hriyate yo 'grahāratayāgra eva so 'pi kuruhāraḥ |
+	pūrvam etan nāmni pradeśe kuru ityākhyāṃ bibhrāṇā vāstavyā babhūvuḥ |
+	tair yato 'sya grāmasya sasyādisampattir ādāv eva hriyate smāto 'pi kuruhāraḥ |
+	ata eva paṇḍitakalhaṇenāpi</p>
+	<lg>
+	  <l>kuruhārāgrahārasya dātābhūt tadanantaram |</l>
+	</lg>
+	<p>iti kathanavaśād asya kuruhārāgrahāra iti samastaṃ nāma likhitam |
+	yataḥ sarveṣām evāgrahārāṇāṃ sasyādisampatte rājagrāhya bhāgāt pūrvam eva nayanenāgrahāratvena vyapadeśaḥ |
+	asya kuruhārapradeśasyādhunike kāle sarve grāmīṇāḥ svabhāṣāyāṃ kular iti sarvakāśmīrakaviditaṃ nāma kathayanti |
+	ayaṃ kuruhāra vā kularākhyo grāmo dakṣiṇapārśve dacchunporpargaṇa ityākhyayā janaiḥ sarvataḥ kathyamāno vartate |
+	asya kular grāmasya nikaṭe anyo 'pi grāmo 'tiprasiddho bhavati 'yam adhunā salar ityākhyayā janāḥ samastapuragaṇaprasiddhaṃ nāma vadanto dṛśyante |
+	ubhāv evaitau kularsalar ityākhyau grāmau yātrikāṇām amareśvarayātrāyāṃ madhye mārgaṃ dṛggocaram āgacchataḥ |
+	pratyutobhayor eva tīrthibhūtayor grāmayos teṣāṃ snānapūjādikartavyatāpy amareśvarayātrām atāśrayaṇenāsti |
+	asyaiva kuruhārapradeśasyāpabhraṃśavaśāc cirakālāgatāt kular iti nāma sajjātam |
+	kecit tu asya kuruhārākhyasya pradeśasya kāṭhus iti nāma kathayanti |
+	tanmatena kāṭhus iti kular ity asyaiva cirakālāgatam apabhraṃśadoṣotthaṃ nāma bhavati |
+	vastutas tu kuruhāraśabdasya kāṭhusśabdena tādṛśyaṃ sāmyam uccaraṇena jñāyate yādṛśaṃ tasya kularśabde na bhāti |
+	atas samīcīnaṃ kular ity evāsya kuruhārasyāpabhraṃśadoṣotthaṃ nāma paraṃ tu ayaṃ kāṭhusākhyo grāmo 'py asminn eva dacchunporpargaṇe 'mareśvarayātrāmārgamadhye bhavati |
+	yātrikāṇāṃ tatrāpy uktagrāmadvayaravasnānādikartavyatā bhavati |
+	ataḥ salarkularākhyagrāmadvayanaikaṭyabhāg ayaṃ tṛtīyo grāmaḥ kuruhār iti vyapadiṣṭo bhrameṇaivāsti ||</p>
+      </div>
+      <div type="section" n="18. Khāgi" xml:id="PradeSaṃ_18">
+	<head>18. Khāgi</head>
+	<p>ślokasaṃ 90 namba 18 khagendrasya rājyavarṇane khāginirvacanam |
+	atra khe ākāśe gacchatīti khagaḥ |
+	khaga e[...]gaḥ |
+	atha vā khe ākāśe āsamantād gacchatīti khāgaḥ |
+	garuḍābhidho viṣṇor yānaṃ pakṣī khāgo vidyate yasya saḥ khāgī viṣṇuḥ |
+	ayaṃ pradeśo viṣṇor murter adhiṣṭhanitvaṃ yato bibhārti |
+	ata eva khāgīti tasya viṣṇor eva nāmnā prakhyātiṃ samāgataḥ |
+	anyac ca etat pradeśanikaṭavartino garuḍanāmāṅkitasya garuḍāśramābhidhasya sthānasya sāmīpyena garuḍasya sadaiva viṣṇor vāhanatvena ca tatnāmnāpy ayaṃ prathāṃ prāpto 'taḥ khāgīti nāmāsya pradeśasya yuktatamaṃ bhāti |
+	asmin khāgīti prathite grāme viṣṇoḥ pratimāyā adhiṣṭhānaṃ nārāyaṇakuṇḍeti sarvajanavidito madhyam aparīmāṇa eko jalāśayo bhavati |
+	kāśmīrakās tu tasya nārāyaṇakuṇḍasyādhunike kāle svabhāṣayā nārāṇ nāg iti prathitaṃ nāma kathayanti |
+	punaś ca yasyoktagaruḍāśramasya naikaṭyasattayāpy ayaṃ pradeśa enāṃ khāg ityākhyāṃ dhārayati |
+	tasya garuḍāśramasyāpi yathā khāgīti pradeśasyāpabhraṃśadoṣotthaṃ khāg iti nāmadheyaṃ samudbhūtaṃ tathaiva tena doṣeṇa gaṇiśram iti nāma grāmīṇāḥ sarvato bruvāṇā bhavanti |
+	ato varṇitam etat sthānadvayaṃ bahurūpa ityākhye puragaṇe tīrthībhūtam adhunāpy asti |
+	asyāpi bahurūpapuragaṇasya grāmīṇaiḥ prakhyāpitaṃ bīrūpargaṇa iti nāmādhunike kāle saṃlagnam |
+	asmin bahurūpākhye puragaṇe nārāyaṇakuṇḍādīnām etādṛśānāṃ tīrthānāṃ sadbhāvenaivātimāhātmyavattvaṃ sarvatra prasiddham asti |
+	tathā ca nīlamate bahurūpe naraḥ snātvā viṣṇuloke mahīyate |</p>
+	<lg>
+	  <l>bahurūpe ca kathitaṃ phalam etan narottama ||</l>
+	</lg>
+	<p>ityādi |
+	ayaṃ nārāyaṇ nāgākhyo jalāśayaś catuṣkoṇākāro 'tiśayena śītalasparśajalavās tathāmadhurāsvādaś ca bhavati |
+	asya jalāśayasya mukhaṃ bṛhatpāṣāṇaiś catasṛṣv eva dikṣu ghaṭitam asti |
+	ayaṃ pradeśaḥ svalpair marubhūmisadṛśaiḥ parvataiḥ prāptabhūmau parivṛto dṛśyate |
+	ayam api khāgiti prācīnam eva nāma bibhrāṇo rājñāgrahāreti vyapadeśayutaḥ samapādita ity anumīyate ||</p>
+      </div>
+      <div type="section" n="19. Khonamuṣaḥ" xml:id="PradeSaṃ_19">
+	<head>19. Khonamuṣaḥ</head>
+	<p>ślokasaṃ 90 namba 19 khagendrasya varṇane khonamuṣaḥ |
+	asya niruktiḥ |
+	kham indriyaṃ samākhyātaṃ kham ākāśe nigadyate |
+	tathāṃśuke ca khaṃ proktaṃ khaṃ śūnyaṃ ca prakīrtitaṃ iti kośamatena |
+	khair vastrair ūno rahito digambaraḥ śiva iti yāvat |
+	taṃ khonaṃ śivaṃ parvatasthaguhāyāṃ muṣṇāti corayati yaḥ saḥ khonamuṣaḥ |
+	atha vā khena śūnyo nono rahitaḥ paripūrṇaḥ pūrṇimācandras taṃ svakīyayā śītalayā manohāriṇyā ca śobhayā muṣṇāti yaḥ so 'pi khonamuṣaḥ |
+	ayaṃ khonamuṣākhyaḥ pradeśaḥ parvatasya pādabhūmāv kham indriyaṃ samākhyātaṃ kham ākāśam udāhṛtam || khaṃ svarge ca samākhyātaṃ khaṃ sarpe ca prakīrtitam |
+	tathā śvabhre ca khaṃ prāhuḥ khaṃ śūnye ca prakīrtitam || adhastād vartate |
+	asminn evāsya parvatasyoparitane śikhare bṛhaty ekāntaḥ prakāśarahitā guhā vartate |
+	tasyā guhāyā bhittibhūmiṣu parito devatānāṃ vaddhyo mūrtayaḥ saṃlakṣyante |
+	tāsāṃ mūrtīnāṃ mukhyatamā ekā mahatī liṅgā kāravatī śivasya mūrtir harṣeśvara ityākhyāṃ sarvamaṇḍalaprakhyātāṃ dhārayantī bhūmau niṣarāṇā dṛśyate |
+	asyā guhāyā antare 'nyālpāpy ekā guhāsti |
+	tasyāṃ guhāyāṃ śivasya svacchandākhyā pañcabhir mukhair upaśobhitā mūrtir bahir eva darśanam āgacchati yatas tasyām alpāyāṃ guhāyāṃ praveśo 'pi sarvathā duṣkaro bhavati |
+	pūrvaṃ bhasmāsurābhidhasyāsurasya vināśanavelāyāṃ śivena tasyoktadurjātāsurasya vañcanāyai kiṃcit kālaṃ svakīyā mūrtir asyāṃ guhāyāṃ guptatayā sthāpitā |
+	atha taṃ duṣṭam asuraṃ vināśya yadātena mahān harṣabharaḥ samākalitas tadaiva tena devena harṣeśvara ityākhyā samāsāditā |
+	ato 'sya pradeśasya guhayā śivamoṣaṇaṃ sārthakam evāvagamyate |
+	grāmīṇā ādhunike kāle 'sya khonamuṣākhyapradeśasya khunamoh ityākhya śivamūrtibhedasya harimur iti nāmāpi vadantaḥ santi |
+	asya harṣeśvarasya kathā harṣeśvaramāhātmye bhṛṅgīśasaṃhitāsaṅkalite vistareṇoktā bhavati |
+	asya khonamoṣasya samīpe jayavanaṃ yasya kaśmīrabhāṣāyāṃ jivan iti nāma prasiddham asti |
+	so 'pi grāmas tathānyo mābur ityākhyo grāmaś ca nikaṭe vartate |
+	ayaṃ khunamuh ākhyo grāmaḥ vihī ityākhye puragaṇe prasiddhiṃ dhāryamāṇo bhavati |
+	kaśmīranagarāt pañcakrośadūratāyāṃ grāmo 'yaṃ puragaṇaś cāstīti śam ||</p>
+      </div>
+      <div type="section" n="20. Daraddeśaḥ" xml:id="PradeSaṃ_20">
+	<head>20. Daraddeśaḥ</head>
+	<p>ślokasaṃ 93 namba 20 surendrasya rājño varṇane daraddeśantike |
+	tatra daraddeśanirvacanam |
+	daradāṃ darajjātīyānāṃ janapadānāṃ yo nivāsasthānaṃ deśa ity asti ca |
+	kaśmīranagaraprāntabhūmau parvatādiṣu nivāsino darat ityākhyā bahavo janapadāḥ |
+	yeṣāṃ āśrayībhūtā bahavo deśāḥ kaśmīrād bahiḥ prāntabhūmiṣu daradāṃ nāmnaiva prakhyātim āgatāḥ santi |
+	tasya ca tair darajjātīyair āśritasya deśasyādhunike kāle kaśmīrabhāṣāyāṃ dāradin hunu deś iti nāma vadanti |
+	teṣāṃ ca taddeśanivāsināṃ janānāṃ dārady iti nāma khyātaṃ sarvatraivāsti |
+	tathā nīlamate 'pi</p>
+	<lg>
+	  <l>dārvābhisāragāndhārajuhuṇḍaraśakān khaśān |</l>
+	  <l>taṅganān māṇḍavān madrān antargiribahirgirīn ||</l>
+	</lg>
+	<p>ity uktyā ya ete deśā janapadāśrayībhūtā gaṇitās te darajjātīyā evānumīyante |
+	eteṣām anyeṣāṃ cāśrayasthānāni sarvāṇi daraddeśaśabdenaivābhidhīyante |
+	ato 'yaṃ deśaḥ kaśmīrakarājñām ājñāsu sarvadaiva vidheyatayā tiṣṭhati |
+	anenaiva hetunā kāśmīrako rājaiva daraddeśājñākṛt sarvadaivāstīty avagamyate ||</p>
+      </div>
+      <div type="section" n="21. Saurakaṃ Nagaraḥ" xml:id="PradeSaṃ_21">
+	<head>21. Saurakaṃ Nagaraḥ</head>
+	<p>ślokasaṃ 93 namba 21 surendrasya rājye saurakākhyaṃ pattanam |
+	tatra saurakaśabdasya niruktiḥ |
+	saḥ kope vāraṇe caiva auṃ kāraḥ syāt tathābrahma aur apy ānanda ucyate |
+	kaś cātmāpi samākhyātaḥ kaḥ pradeśa udāhṛta iti kośavākyāvalambanena saḥ vārako duḥkhāt ya au ānandas tam ānandaṃ rāti dadāti yaḥ sa soraḥ |
+	etādṛśa eva yaḥ kaḥ pradeśaḥ sa saurakaḥ |
+	arthāt duḥkhavāraka ānandadāyakaś ca deśaḥ |
+	atha vā sūrasyāpatyaṃ sauropamaḥ śanir vā sopama iva yaḥ prāntaratayā durdarśaḥ kāntārakuñjādimattayā ca bhūmāpamāno ta eva śyāmāyamāno malīmasaś ca śanir iva yaḥ kaḥ pradeśaḥ iti vā enam evaitādṛśaṃ pattanaṃ nagaram |
+	pattanaṃ puṭabhedanam ity amaraḥ |
+	pūrvavarṇitasya daraddeśasyālike virecitavān sa surendra ity ārthaḥ |
+	saurakākhyaṃ nagaraṃ kaśmīramaṇḍalavāryasthalavartini daraddeśe rājñā pṛthak sampādinam iti kalhaṇapaṇḍitavacanenaivāvagamyate |
+	tathā hi</p>
+	<lg>
+	  <l>daraddeśāntike kṛtvā saurakākhyaṃ sapattanam |</l>
+	  <l>śrīmātvihāraṃ vidadhe narendrabhavatābhidham ||</l>
+	</lg>
+	<p>anyac ca</p>
+	<lg>
+	  <l>tena svamaṇḍale khaṇḍayaśasā puṇyakarmaṇā |</l>
+	  <l>vihāraḥ sukṛtodāro nirmitaḥ sorasābhidha ||</l>
+	</lg>
+	<p>ity ādy ukteḥ svamaṇḍale kaśmīrākhye svamaṇḍalād anyatra daraddeśe ca rājño 'sya nirmāṇādikam abhūt |
+	asya saurakākhyasya nagarasya kaśmīrabhāṣāyāṃ hasaur iti prathitatamaṃ nāma sarve kathayanti |
+	vartate ca hasaurākhyaṃ nagaraṃ daraddeśe |
+	daraddeśasyāpy asya dāradyan hundradeś vā dāradyan hundra mulak iti nāma prasiddham asti |
+	punaś ca te ye haṇer gilgith hauja karṇāha ity ādayo deśāḥ kaśmīramaṇḍalāt pṛthaksthā api kaśmīrarājyāntar gaṇitā eva tathaitatmaṇḍalapālakasyājñāpālayamānāḥ sarvadaiva bhavanti |
+	atas tasya rājño 'pi daraddeśe nagaranirmāṇam ucitatamaṃ bhavati |
+	kecit tu pārisekānuvādavidaḥ saurakākhyam amuṃ pattanam ajānanto buddhibhrameṇa svakapolakalpitakalpanayā ca vṛthotthayā sindhaṣurath ityākhyaṃ kam api pradeśaṃ saurakaśabdābhidheyaṃ parikalpya rājño sindhuṣurathākhyo deśo nirmita ityādi likhanti |
+	tat sarvaṃ teṣāṃ likhanam asatyatamam asti |
+	yato rājataraṅgiṇyukte surendrasya varṇane kim apy etādṛśaṃ deśanirmāṇaṃ kvāpi na dṛṣṭam |
+	ato 'tra prayojanam ajñātvaiva tanmatam astīti budhyate ||</p>
+      </div>
+      <div type="section" n="22. Narendrabhavanābhidho Vihāraḥ" xml:id="PradeSaṃ_22">
+	<head>22. Narendrabhavanābhidho Vihāraḥ</head>
+	<p>śloka 93 nambara 22 surendrarājye narendrabhavanābhidhaṃ vihāraṃ |
+	atra narendrabhavanaśabdasya niruktiḥ |
+	narāṇāṃ manuṣyāṇām indro rājā narendraḥ |
+	narendrasya bhavanaṃ gṛhaṃ narendrabhavanaṃ rājagṛham ity arthaḥ |
+	yathā rājabhiḥ svakīyāni veśmāni svarṇarajataratnātādibhiḥ khacitāni śuddhatamarītyā kārubhir nirmīyante tathaiva rājñā surendreṇa daraddeśasya nikaṭe hasaurābhidhaṃ nagaraṃ nirmāya tatraiva narendrabhavanākhyaṃ vihāraṃ bauddhajananivasanādyupayogigṛham ity arthaḥ |
+	bauddhānāṃ tu vihāro strī |
+	gaṃjā tu madirāgṛham ity amaraḥ |
+	tādṛśaṃ bauddhamandiram api nirmitam |
+	vartate cāsya daraddeśamadhyavartino hasaurākhyasya nagarasya nikaṭe narendrabhavanākhyaṃ sthānam |
+	tasya ca narendrabhavanasyādhunike kāle kāśmīrakamatena nagūr iti prathitaṃ nāmāsti |
+	so nagūrākhyaḥ pradeśo hasaurnikaṭa eva yato vartate 'ta eva narendrabhavanaśabdābhidheyaḥ sa eva pradeśo bhāti |
+	ittham eva rājño daraddeśamadhye hasaurnagūrākhyayoḥ pradeśayoḥ svamaṇḍalād vāryasthale nirmāṇam svamaṇḍale nirmitapradeśanirmāṇam agre likhiṣyati ||</p>
+      </div>
+      <div type="section" n="23. Sorasaḥ Vihāraḥ" xml:id="PradeSaṃ_23">
+	<head>23. Sorasaḥ Vihāraḥ</head>
+	<p>śloka 94 namba 23 surendrasya rājye sorasābhidhaḥ vihāraḥ |
+	tatra pūrvaṃ sorasaśabdaniruktiḥ |
+	saḥ kope vāraṇe caiveti kośokteḥ |
+	sovāraka ūṣpādeḥ pipāsādeś ca tathā ukāraḥ śaṅkare prokta ūkāraś caiva rakṣake iti kośokteś ca |
+	ū rakṣako jīvanam iti yāvat |
+	tathā ca raso gandharase jale śṛṅgārādau viṣe vīrye tiktādau dravarāgayoḥ dehadhātuprabhede ca pāradasvādayoḥ pumān iti medinīkośamatāvalambanena |
+	raso jalaṃ yasya saḥ sorasaḥ |
+	atra rasaśabdasya jīvanaṃ bhuvanaṃ vanam ity amaramatena |
+	jalaparyāyeṇa jīvanaśabdena saha samānārthatvād rakṣakajīvanaśabdayoś ca tulyārthatayā rakṣakatvaviśeṣaṇaṃ samīcīnam evāsti |
+	ato gharmādivārakajalavānayavihārasaṃjñabauddhamandirayutaḥ pradeśa ity arthaḥ |
+	ādhunike kāle 'sya sorasākhyasya pradeśasya kaśmīrabhāṣayā suras yār iti nāma grāmīṇāḥ kathayanti |
+	asmin pradeśe dugdhagaṅgākhyā nadī śītalasparśā madhurāsvādajalā pārvāyatrī ca pravahati |
+	ataḥ soraseti sārthakaṃ nāmāsya eṣā yā dugdhagaṅgākhyā nadī dhārayati |
+	asyāḥ kāśmīrakā dūdgaṅgā iti prathitaṃ nāmāsti |
+	anyad ayaṃ sorasākhyaḥ pradeśo nāgom ityākhye puragaṇe vartate |
+	tatrāpi parvatasya pādadeśo bhavati |
+	asya sorasasya nikaṭe ḍāḍa um pūr tathā mici um pūr ityākhyaṃ grāmadvayaṃ bhavati ||</p>
+      </div>
+      <div type="section" n="24. Hastiśālākhyaḥ Agrahāraḥ" xml:id="PradeSaṃ_24">
+	<head>24. Hastiśālākhyaḥ Agrahāraḥ</head>
+	<p>ślokasaṃ 96 namba 24 rājño godharasya varṇane hastiśālākhyaṃ agrahāram |
+	tatra hastiśālākhyaśabdanirvacanam |
+	hastino śālante śobhante 'treti gajāḥ hastiśālam |
+	śālante iti śālyaślāghāyām iti dhāto rūpam |
+	atha vā hastināṃ śālā hastiśālā hastināṃ gṛhaṃ nivasanasthānam iti yāvat |
+	etādṛśam agrahāraṃ godhareṇa rājñā nirmitaṃ nirmāya ca viprebhyo dattam ity arthaḥ |
+	atrāyam āśayaḥ rājño 'sya gṛhe ye madotkaṭā mataṅgajāḥ kariṇyaḥ kalabhāś ca babhūvus teṣāṃ pālanām upayogisthānaṃ yasmād asminn eva pradeśe niyamitaṃ tenāto 'sya pradeśasya hastiśālam ity etādṛśaṃ nāma saṃlagnam |
+	vartate ca devasarasākhye puragaṇe hastiśālākhyo grāmaḥ |
+	tasya ca devasarasākhyapuragaṇasyādhunike kāle grāmīṇabhāṣāyāṃ devasarpargaṇa ity ākārakanāmāsti |
+	tathā cāsya hastiśālākhyagrāmasya hasty hel iti sarva viditaṃ nāmāpy asti |
+	asya hasty hel grāmasya samīpe kulagrāmākhyo grāmaḥ |
+	sarvasyāsya devasarpargaṇasya mūlagrāmatām adhiṣṭhānatāṃ ca dhārayanyaṃ janāḥ samprati kulgom iti nāmnākārayanti |
+	sa grāmaḥ samīpe bhavati |
+	kecana asya hastiśālākhyagrāmasya ḍal ityākhyo 'tyantaprathito mahājalāśayo 'yaṃ phākpuragaṇe sarvakāśmīrakāviditas tathā yasya taṭabhūmiṣu niśātbāg śālabāg ity ādayo mahāprasiddhā ārāmā bahavo 'dhunāpi darīdṛśyante |
+	tasyaiva jalāśayasyaikasyāṃ taṭabhūmāv anayā hasty hel ākhyayā kathyamāna ekaḥ pradeśo bhavatīti bruvanti |
+	paraṃ tu yady apy ayaṃ hastiśālākhyapradeśo 'py avaśyaṃ likhita ḍal ityākhyajalāśayasya taṭabhūmau haj ratabal iti tattaṭasya pradeśaprathitāgragaṇyapradeśasya kiṃcid dūratāyāṃ tathā tatratyasya āśiyabāg iti sthānasya nikaṭatāyām asty eva tathāpi atratyasyāsya hastiśālasya jalaprāyatayāyarthārhāvakāśābhāvādidarśanena ca hastiśālopayogitvāsambhavāc ca jalaprāyasya vipreṣu pratipādanānarhatayāpi godharabhūpanirmitaḥ sa eva devasarasapuragaṇamadhyavartī hastiśālākhyo 'grahāro bhāti |
+	na tv ayaṃ jalaprāyo 'grahāratvavyapadeśasampādanānarho 'nyo hastiśālākhyapradeśa iti |
+	aparaṃ ca pārisekānuvādimate 'pi devasarasodbhavasyaiva hastiśālasya godhārabhūpāgrahāranirmāṇaṃ likhitam asti |
+	na tv asyānyasya phākpuragaṇīyasyeti bhadram ||</p>
+      </div>
+      <div type="section" n="25. Suvarṇamaṇikulyā" xml:id="PradeSaṃ_25">
+	<head>25. Suvarṇamaṇikulyā</head>
+	<p>ślokasaṃ 97 namba 25 suvarṇasya rājyavarṇane suvarṇamaṇikulyā |
+	tatra suvarṇamaṇikulyāśabdaniruktiḥ |
+	śobhano varṇo yasya tat suvarṇaṃ kāṃcanaṃ svarṇaṃ suvarṇaṃ kanakam iti maṇīratnam |
+	ratnaṃ maṇir dvayor aśmajātau muktādike 'pi cety amaraḥ |
+	suvarṇasya maṇīnāṃ ca yā kulyālpā nadī kṛtrimā ca |
+	kulyālpākṛtrimā sarit ity amaraḥ |
+	arthāt suvarṇamaṇikulyākhyā nadī tena suvarṇābhidhena rājñā sampāditety arthaḥ |
+	atra suvarṇena maṇibhiś ca yasyās taṭau talasya bhūmiś ca śobhitā nirmitā cābhūd etādṛśī nadī tena pravartitā |
+	atha vā suvarṇatulyaśuddhavarṇāmaṇitulyanirmalamanohārijalā ca sā nadī sampanneti sārthakam eva nāmāsyā nadyāḥ sūkṣmekṣikayā avagamyate |
+	atra</p>
+	<lg>
+	  <l>tasya sūnuḥ suvarṇākhyas tato 'bhūt svarṇado 'rthinām |</l>
+	  <l>suvarṇamaṇikulyāyāḥ karāle yaḥ pravartaka ||</l>
+	</lg>
+	<p>iti paṇḍitakalhaṇaḥ |
+	suvarṇasya rājyavarṇane suvarṇamaṇikulyāṃ vyapadiśya yal likhati |
+	tatrāvaśyam evāsyāḥ kulyāyāḥ karālābhidhe pradeśe pravartanam itīdṛśy evārthapratītir buddhāvārohati |
+	paraṃ tu yasmin puragaṇe nady eṣādhunāpi pravahati tasmin sarvasminn eva puragaṇe mahatā yatnenāyāsenāpy anviṣṭāyaṃ ko 'pi karālābhidhaḥ pradeśo grāmo vā kutrāpi na milati |
+	ataḥ karālābhidhe pradeśe suvarṇamaṇikulyāpravartanam ity arthapratītir bhramotthātopārthakaiva pratibhāti |
+	tattvadṛśā tu kaver ayaṃ kalhaṇasyāśayo 'numīyate |
+	tatra karālo danturaṃ turo ity amaramatena |
+	atituṅgo yaḥ ko 'pi pradeśaḥ sa eva karālaśabdābhidheyo bhavati |
+	tathā tv eva karāle tuṅgapradeśe rājñā nadī pravartitety arthapratītiḥ samīcīnatamābhāti |
+	yata eṣā nadī sarva kaśmīrakabhūmibhyo 'tituṅgāyām ādyāvanibhūmau vartate 'to 'pi karālaparyāyatuṅgabhūmipravartanaṃ nadyā kavyuktaṃ sarvathā saṃgacchate |
+	asyāṃ kaśmīrāyāṃ pūrvam atīte kāle sarovararūpatvenāvasthitāyāṃ yadā kvāpi bhūmir eva na babhūva tadā kaśyaparṣiprasāditadevatrayyanukampayādau yatraiva bhūmiḥ sajjātā tasyā eva bhūmer adyāvanīty anvarthaṃ nāma saṃlagnam |
+	yata ādau bhavā ādyā sā cāsāv avanir avanī vā bhūmir ity arthaḥ |
+	kṣmāvanir medinī mahīty amaraḥ |
+	avanī medinī mahīti mediniś ca |
+	atas sarvathāsya puragaṇasyāyasārthaka ādyāvanītyāhvayaḥ |
+	asyā cādyāvanipuragaṇasyādhunike kāle nāgarikair grāmīṇaiś ca prakhyāpitaṃ āḍavinpargaṇa iti nāmāpabhraṃśadoṣamūlaṃ bhavati |
+	yaiṣā suvarṇamaṇikulyākhyā nadī suvarṇabhūparājye suvarṇitāsyāś ca nadyāḥ sunamaṇ kul atha vā sunamaṇ nor iti nāma sarvaprasiddham asti |
+	tatra pūrvapakṣe sunamaṇākhyā kul nadīty arthaḥ |
+	dvitīye tu sunamaṇākhyā nor praṇālīty arthaḥ |
+	dvayoḥ praṇālī payasaḥ padavyām ity amaraḥ |
+	kiṃ tu eṣā suvarṇamaṇikulyākhyā nadī yato 'sya puragaṇasyaikasmin eva grāme na pravahaty ato 'sya niyamitaḥ pradeśaḥ ko 'pi nāsti |
+	asya puragaṇasyānekeṣu grāmeṣu varṇitāyā sunamaṇākhyāyā nadyā jalenaiva sasyādiniṣpattiḥ sambhavati |
+	pārisekānuvādeṣv api te varṇite 'sminn ādyāvanipuragaṇa eva sunamaṇ-nadyāḥ pravartanaṃ rājñā tatsthānekagrāmasasyaphalaśrīḥ sarvadāsmād ity abhiprāyeṇa kṛtam ityādi varṇayanti |
+	ato 'pi hetoḥ karālābhidhe pradeśe nadyāḥ pravahanaṃ samyaktayaivāpārthakaṃ pratibhāti yatas tair api svasvavarṇanavelāyām ayaṃ karālābhidhaḥ ko 'pi pradeśo na labdho 'sti |
+	ato yathā tathā karālaśabdenātrādyāvanibhūmir eva kathituṃ tasya vyaṅgyajñasya kalhaṇasya kaver abhiprāya iti śam ||</p>
+      </div>
+      <div type="section" n="26. Jāloraḥ Vihāro 'grahāraś ca" xml:id="PradeSaṃ_26">
+	<head>26. Jāloraḥ Vihāro 'grahāraś ca</head>
+	<p>ślokasaṃ 98 namba 26 suvarṇajasya janakasya varṇane jālorākhyaṃ vihāraṃ agrahāraṃ ca |
+	atra jāloraśabdanirvacanam |
+	jālaiḥ puṣpajālair ūḥ rakṣakaḥ pūtigandhāder iti jālo 'ta eva ras sukhadāyako yaḥ sujāloraḥ ūkāraś caiva rakṣake iti kośaḥ |
+	atha vā jalānaṃ samūho jālaṃ tena jālena ū rakṣako ras sukhapradāteti |
+	atraiva jālorākhye pradeśe tena rājñā vihārābhidheyaṃ bauddhamandiraṃ nirmitam ayam eva jālorāgrahāratvena prakhyāpitaś ca |
+	asya jāloragrāmasyādhunike kāle prakhyātaṃ jālur iti nāma grāmīṇāḥ kathayanti |
+	ayaṃ jālurgrāmaḥ śamālāpuragaṇe vartate |
+	tasya ca śamālākhyapuragaṇasya hamalpargaṇa iti nāma tair evāpabhraṃśadoṣavaśāt sthāpitam asti |
+	ayaṃ jālurgrāmaḥ kadāpi mahāpadmasarasa ullolasya vā nāgasya vāribhiḥ pūryamāṇo 'pi dṛśyate 'to jalasamūhasattayā jalānāṃ samūho jālam iti varṇitānvarthatāsya pradeśasya yuktatamaiva |
+	asya jālurgrāmasya nikaṭe uccha kuṇḍal markuṇḍal ity ādayo bahavo grāmāḥ sāmīpyabhājas santīti bhadram ||</p>
+      </div>
+      <div type="section" n="27. Śamāṅgāsaḥ" xml:id="PradeSaṃ_27">
+	<head>27. Śamāṅgāsaḥ</head>
+	<p>ślokasaṃ 100 namba 27 śacīnarasya janakajasya varṇane śamāṅgāsaḥ |
+	atra śamāṅgāsaśabdaniruktiḥ |
+	nānāvidhasaṅkalpavikalpādibhyaś cittasyoparamaḥ śamaḥ śamu upaśame ity asya dhātor uparativācakatvāt |
+	tathā śamavanti aṅgāni yeṣāṃ te śāntā munayaḥ śamāṅgaśabdābhidheyāḥ ta eva śamāṅgā āsante |
+	yatra sa śamāṅgāsaḥ śāntānāṃ munīnāṃ ca nivāsasthānam iti yāvat |
+	vartate cāyaṃ pradeśo vanyair eva saralādivṛkṣair upaśobhito 'ta eva vanaprāyas tapopalakṣitaś ca tapaścaryākṣamaḥ |
+	yasmin kuṭahārākhye puragaṇe 'yaṃ pradeśas tiṣṭhati saḥ sarvaḥ puragaṇo 'pi sarvadā prāyaśaḥ kānanapradeśair eva samāvṛto bhāti |
+	ata eva kūṭaiḥ parvataśṛṅgair hāro mānohara iti sārthakam eva nāmāsya puragaṇasya asyādhunike kāle sarva eva kuṭahārpargaṇa iti prathitaṃ nāma bruvanti |
+	asyāpi śamāṅgāsapradeśasyaitarhi śāṅgās iti prakhyāpitam apabhraṃśadoṣotthaṃ nāma sarvaviditaṃ bhavati |
+	ayaṃ śāṅgāsākhyo grāmaḥ parvatasyālpocchāyasyādhastād dharātala eva vartate |
+	anyeṣām asyāṃ kaśmīrāyāṃ sthitānāṃ kānanānāṃ yādṛśī śobhākṛtiś cāsti tādṛśy evāsya pradeśasyākṛtiḥ śobhā ca yato 'sti tata eva munijananivāsasthānam ity ākārakaṃ sārthakaṃ nāmāsya |
+	asmin pradeśe sarvadaiva sarve sāhibeti śobhananāmānapurupadeśanivāsina ākheṭakādyarthe gatāgataṃ kurvāṇā mṛgayāṃ vidadhato darīdṛśyante 'taḥ prathitatamo 'yaṃ pradeśa iti bodhyam |
+	asya śāṅgasākhyapradeśasya nikaṭavartino bahavo grāmā navgām utarus cerapor ity ādayaḥ prakhyātās santi |
+	punaś cāyaṃ śamāṅgāsākhyo grāmaḥ pūrvam eva munijanais tapaścaryākaraṇayogyatayā svanivasanāsya dattvam ākalito 'pi tena rājño janakajena mukhyāgrahāratvābhidhayā saṃyojitaḥ |
+	arthāt tebhyas tatpradeśasthebhyas tapasvibhyaḥ samarpitaḥ sarvo 'py ayaṃ puragaṇas tapasvipriyas tapaścaryāsthānam iti vartante vādhunāpi utarus ityādi grāmeṣu teṣāṃ pūrveṣāṃ tapasvināṃ śiṣyā nand jānyaṅkitās tapasvino yeṣāṃ śiṣyapraśiṣyadvārā adhunāpi santatiḥ pracalatīti śam ||</p>
+      </div>
+      <div type="section" n="28. Aśanāraḥ" xml:id="PradeSaṃ_28">
+	<head>28. Aśanāraḥ</head>
+	<p>śloka 100 namba 28 asyaiva śacīnarasya varṇane aśanāraḥ |
+	tatrāsya niruktiḥ |
+	aśyate bhujyate yat tad aśanaṃ bhojanam aśabhojane ity asya dhātor lyuṭi rūpam |
+	aśanasya icchā aśanāyā kṣud ity arthaḥ |
+	aśanāyā bubhukṣā kṣud ity amaraḥ |
+	tathā ca aśanāyā eva aśanā tām aśanāṃ ā samantād rāti dadāti yaḥ sa aśanāraḥ |
+	asmin pradeśe jalaṃ yat pravahati tasya jalasyātyata pācakatayā bhuktasya caturvidhasyānnāder jīrṇayitṛtvaṃ |
+	sarve tatrasthā yad aṅgīkurvanti |
+	ata eva bubhukṣotpādakatvam aśanārety abhidhābhidhāsya mānamatvarthatayaiva pratibhāti |
+	ayam aśanārākhyaḥ pradeśo vyūhākhyapuragaṇe tiṣṭhati |
+	tasya ca vyūhākhyapuragaṇasya vihīpargaṇa iti grāmīṇaiḥ prakhyāpitaṃ nāma bhavati |
+	asyāpi adeśasya śār iti nāmata eva sarvato bruvāṇā darīdṛśyante |
+	asmin śārgrāme lohasya khanir api vartate |
+	yebhyaḥ pāṣāṇaviśeṣebhyaḥ pākādinā loham utpadyate tair eva pāṣāṇair upalakṣita ekaḥ parvato 'pi vartate |
+	ato 'sya grāmasya yaj jalaṃ lohakhaner utpannaṃ vartate tad avaśyaṃ pācakatamaṃ sarveṣu sthāneṣu bhavati |
+	ataḥ sarvathāśanāreti grāmasya nāmānvarthatayāsti |
+	asya śārgrāmasya maṇḍikhpāl iti grāmaḥ prathito nikaṭe 'sti luḍhavgrāmo 'py anyo 'sya nikaṭe bhavati ||</p>
+      </div>
+      <div type="section" n="29. Śuṣkaletraḥ" xml:id="PradeSaṃ_29">
+	<head>29. Śuṣkaletraḥ</head>
+	<p>ślokasaṃ 102 namba 29 aśokasya rājño varṇane śuṣkaletraḥ |
+	tatra śuṣkaletraniruktiḥ |
+	śuṣkāni śoṣaṃ prāptāni tṛṇaparṇādīni lāti ādatte iti śuṣkalo vāyuḥ |
+	lā ādāne ity asya dhāto rūpaṃ |
+	tathā ca lakṣmīr īkāra ucyate iti kośāt |
+	īr lakṣmī śuṣkalasya īḥ sampattiḥ śuṣkale vāyusampat |
+	mahān vāyusamūha iti yāvat |
+	tāṃ śuṣkale vāyusampattiṃ trāyate iti śuṣkaletraḥ traiṅ pālane dhātur atra |
+	yato 'yaṃ pradeśo marubhūmistho 'ta eva mahatyā vānyayāyuta ity arthaḥ |
+	ayam eva pradeśas tena rājñāśokena stūpapadavācyair bauddhānāṃ devāyatanair ācchāditaḥ |
+	asya śuṣkaletrākhyapradeśasyādhunike kāle grāmīṇaiḥ prakhyāpitaṃ hukhalitar iti nāma bhavati |
+	ayaṃ hukhalitarākhyo grāmaḥ daiñcho ityākhye puragaṇe vidyamāno 'sti |
+	kaśmīranagarāt krośacatuṣṭayadūratāyām evāyaṃ puragaṇo vartate |
+	asya ca hukhalitargrāmasya śīly pūr ity ādayo grāmā nikaṭe santi |
+	asmin sarvasminn eva puragaṇe sarvatra marubhūmisthe vāyoḥ pracalato 'nyabhūmibhya uccaistvenādhikyaṃ yato bhavaty ata eva śuṣkaletra iti vāyor ādhikyasadbhāvopalakṣitam anvartham eva nāmeti śam ||</p>
+      </div>
+      <div type="section" n="30. Vitastātraḥ" xml:id="PradeSaṃ_30">
+	<head>30. Vitastātraḥ</head>
+	<p>ślokasaṃ 102 namba 30 aśokasya rājyakāle vitastātraḥ |
+	tatra vitastātraniruktiḥ |
+	aṃguṣṭham sa kaniṣṭhe syād vitastir dvādaśāṅgula ity amarokteḥ |
+	sarvasyāpi janasya svasya parimāṇamitā dvādaśa aṅgulā vitastiśabdābhidheyāḥ |
+	tena vitastimānena parimitā yā nadī sā vitastāpadavācyā |
+	tathā ca nīlamatasthe satīdevyā vitastārūpāvirbhāvavarṇane bṛhadaśvaḥ iti tathyaṃ viditvā sā kṣamayā parayādhutā |
+	uvāca devī bhartāraṃ cārucandranibhānanā rasātale nadīrūpaṃ kariṣyāmi jagadguro kuruś calaprahāraṃ tvaṃ nīlaveśmasamīpataḥ ya cāsīl lāṅgalamukhaṃ prākprabhoḥ śailadāraṇe tena śūlaprahāreṇa niṣkramyāhaṃ rasātalāt śūlamārgeṇa yāsyāmi yāvat sindhumahānadam |
+	tathā kṛte śarveṇa tathā cakre satī śubhā |
+	tasyā nāma vitasteti kṛtavāñ śaṅkaraḥ svayam |
+	vitastimātraṃ gartaṃ tu śūlena kṛtavān haraḥ |
+	rasātalagatā yena niṣkrāntā sā saridvarā tasmād vitasteti kṛtaṃ nāma tasyāḥ |
+	svayambhuvā tato 'pi sarvadeśeṣu vārttābhūd iyam utthitā maheśvarī muneḥ prītyā punar deśaṃ vyapīpavat |
+	teṣu teṣu ca deśeṣu lokāḥ śuśruvur utkayā satī devī nadī bhūtvā kaśmīrebhyo vinirgatā iti kathanenāsyā nadyā vitastāyā vitaleti nāmānvartham evāstīti siddham |
+	kiṃ tv atra vitastiparimitau pañcaviṃśativarṣavayasaḥ puṃsa ete dvādaśa aṅgulāgrāsyā iti bodhyam |
+	enām eva varṇitāṃ vitastāṃ ya ākaratayādhiṣvānatayā ca trāyate |
+	srotorūpeṇa jalapūraṇenāpy āyayati so vitastātraḥ |
+	atrāpi pūrvat traiṅ eva dhātuḥ |
+	asmin vitastātrākhye pradeśe nadyām nākarībhūte yadyapy alpasaṃkhyākaiḥ kiyadbhir eva varṣair atīte kāle vitastiparimitam eva gartaṃ dṛṣṭacaram abhūt tathāpy etarhi nākasthaśrīraṇavīrasiṃhābhidhakaśmīradeśādhipasampādito mahāñ jalāśayo dṛśyate |
+	paraṃ tu asya rājño navīnanirmāṇajīrṇoddhārādikālāt pūrvaṃ dvādaśāṅgulamitam eva gartaṃ babhūva |
+	ato nīlamatapurāṇavitastāmāhātmyādivacanāni yāni nadīparimāṇavācakāni tāni saṃgatāni samīcīnāni ca bhānti |
+	asya vitastātrākhyasya pradeśasyādhunike kāle vithavatur iti nāma nāgarīkā grāmīṇāś ca kathayanti |
+	tatra vith vitastāyāḥ vatur ākaraḥ iti kaśmīrabhāṣayāpy arthasaṃgatiḥ |
+	ayaṃ vithavaturākhyo grāmaḥ śāhūbād iti devasarasa iti cākhyayo puragaṇayoḥ sandhyau vartate |
+	tatrāsya śāhūbādpuragaṇasya śrīraṇavīrasiṃghapur iti asyāpi devasarasapuragaṇasya divasarpargaṇa iti nāmadvayaṃ prakhyātam anayor ādhunike kāle sarve vadanti |
+	kecana pārisekānuvādakartāro 'sya vitastātrākhyasya pradeśasya vatarahel iti nāma svapustakeṣu likhanti |
+	so vatarahel iti grāmaḥ daiñcho ityākhye puragaṇe vartate |
+	ato yo 'yaṃ śuṣkaletra |
+	atha vā hukhalitarākhyo grāmaḥ pūrvaṃ varṇitas tenāsya vitastātra |
+	atha vā vithavaturgrāmasya sahoktatvāt athobhayor eva pradeśayor ekasyaivāśokābhidhasya rājño nirmāṇakartṛkatvāc cāmuṃ vitastātram api pradeśaṃ śuṣkaletravaddaiñchopuragaṇe sthitam uktabhrameṇa manyamānā vitastātraṃ vatarahel ity eva svamate sthāpayanti |
+	tatra daiñchopuragaṇe sarvasmin vitastāyā nāmno 'py asattvena katham iva vitastātrasya vatarahel iti nāma kathayituṃ śaknumaḥ |
+	atas teṣāṃ tal likhanaṃ svakapolakalpitam eva bhātīty āstām |
+	anye kecana tanmatānuyāyino 'muṃ vitastātrākhyaṃ pradeśaṃ vithanār iti bhrameṇa manyamānā vatarahelpradeśād vibhinnaṃ vithanār ity eva vitastātrasyāsya nāma kathayanto darīdṛśyante |
+	tatra vith vitastāyā nār praṇālīty arthaḥ |
+	asti cāyaṃ vithanārākhyaḥ pradeśaḥ kaśmīranagarād ekakrośadūravartī vitastānadītīrasthaḥ |
+	atra vṛddhāḥ kathayantīti pūrvasmin kāle yadā prativarṣaṃ jalasamūhair udīpajanmabhir eṣā vitastā nadī pūryamāṇā satī sarvam evāmuṃ maṇḍalaṃ bruḍanonmukhaṃ sampādayanty āsīt tadā tatkālīnaiḥ kaśmīrāt pālayadbhir bhūpair ekāṃ kulyātulyāṃ praṇālīṃ sampādayituṃ kārava |
+	ādiṣṭāḥ tair eva kārubhir yā praṇālīkulyārūpodīpotthajalāplāvanabhayaṃ nivārayantī sampāditā |
+	tasyā eva kulyāyā vithanār iti varṇitarītyā nāma saṃlagnam |
+	atra kaveḥ kalhaṇasya śuṣkaletra-vitastātrai tastāra stūpamaṇḍalair ityādi kathanena yo 'yaṃ vatarahel-ākhyaḥ pradeśo yaś cāyaṃ vithanārabhidhaḥ pradeśaś cāsti |
+	tāv ubhāv eva stūpapadavācyabauddhāyatanāc chādanānarhau bhātaḥ |
+	ekasya vatarahel ity asya vitastānadyā anāśrayatvena vitastātra iti nāma karmaṇo 'tyanaucityāt |
+	dvitīyasya vithanār ity asya kulyārūpapraṇālīmayatvena stūpādhiṣṭhānarhatvāc ca |
+	ato 'yaṃ vithavaturgrāma eva vitastātra-śabdābhidheya iti siddham |
+	yatas tasyaiva stūpādhiṣṭhānasambhavatvam asti na tv anyasyeti śam ||</p>
+      </div>
+      <div type="section" n="31. Dharmāraṇyaṃ Vihāraḥ" xml:id="PradeSaṃ_31">
+	<head>31. Dharmāraṇyaṃ Vihāraḥ</head>
+	<p>śloka 103 namba 31 pūrvavarṇitasyāsyāśokasya rājye dharmāraṇyavihārāntaḥ vitastātrapure yatkṛtaṃ caityaṃ |
+	tatra pūrvam asya dharmāraṇyavihāraśabdasya niruktiḥ |
+	rāgadveṣarahitais sadvidvadbhir [...] dayenānumataḥ svargāpavargādisādhakaḥ kriyākalāpodharmaḥ |
+	dharmasya araṇyaṃ dharmāraṇyam |
+	aṭavy-araṇyaṃ vipinaṃ gahanaṃ kānanaṃ vanam ity amarokte |
+	yathā vane sarveṣāṃ vanyānāṃ paśupakṣitarugulmaśaṣyādīnāṃ sambhavaḥ |
+	tathaiva yatra sarveṣāṃ dharmasyāṅgabhūtānāṃ śaucasnānādīnāṃ sadbhāvaḥ ato dharmāraṇyaṃ dharmavanam iti yāvat |
+	bauddhopayogigṛhaṃ bauddhānāṃ tu vihāro strīty amaraḥ |
+	etādṛśasya dharmāraṇyavihārasya antar madhya ity arthaḥ |
+	tathā ca vitastātrapure iti pūrvaṃ varṇito yo 'yaṃ vitastātrākhyaḥ pradeśaḥ asminn eva vitastātrapure tena aśokena rājñā dharmāraṇyākhyo vihāraḥ sampādita iti dharmāraṇyavihārasya tathā tadāśrayībhūtasya vitastātrapurasya ca siddhau saṃjātāyāṃ yatkṛtaṃ caityam iti yenāśokenaiva rājñā nirmitaṃ caityaṃ devatāyatanam iti yāvat |
+	caityam āyatanaṃ tulye vājiśālā tu mandurety amaraḥ |īdṛśam eva caityaṃ yasya caityasyautratyāvadhiṃ paśyatāṃ lokānām īkṣaṇāni nissāmarthyāni santi |
+	yatnenāpi na prāyuḥ tathātra paṇḍitakalhaṇasyāpi vṛttam dharmāraṇyavihārāntar vitastātrapure 'bhavat |
+	yatkṛtaṃ caityam utsedhāvadhiprāptyakṣamekṣaṇam iti kathanena |
+	vitastātrapure dharmāraṇyavihārābhidhaṃ bauddhopayogigṛhaṃ tad anusampādayitvā tatraiva vihāre tādṛśam ekaṃ caityam atyunnataṃ sa rājā nirmitavān |
+	yasya caityasyoccais tv adarśanābhilāṣiṇāṃ janānāṃ netrāṇi tadonnatyaṃ draṣṭuṃ paryāptāni na babhūvuḥ |
+	atyunnatatayā netramārgadūravarti tac caityam abhūd ity arthaḥ |
+	paraṃ tv ādhunike kāle 'sya nirmāṇasyāticirakālīnasya nāmāpi kvāpi na labhyate |
+	yato 'tra vitastātrapure darśadarśam api pūrva-nimāṇasya cihnādikam api kiṃcit nāsti |
+	yaiḥ kaiś cana bhrameṇāsya vitastātra-pradeśasya vatarahel iti yaiś cāsya pradeśasya vithanār iti ca svapustakeṣu nāma likhitam |
+	tayor ubhayoḥ pradeśayoḥ sūkṣmekṣikayāpi vihāracaityādi-nāmāpi naiva dṛśyate naiva śrūyate ca |
+	ato vitastātrapradeśasya vithavatur-nāma dānam asaṃgataṃ nāsti |
+	pratyutānvarthatathā samīcīnam eva yaddharmāraṇyavihārākhyavihāratatsthacaityādicihnābhāvo 'trāsti tadgatasya bahutithasya kālasya balavattayeti bodhyam ||</p>
+      </div>
+      <div type="section" n="32. Śrīnagarī" xml:id="PradeSaṃ_32">
+	<head>32. Śrīnagarī</head>
+	<p>ślokasaṃ 104 namba 32 asyaivāśokasya rājye śrīnagarīm |
+	tatrādau śrīnagarīśabdaniruktiḥ |
+	na gacchanti kvāpi ye te nagāḥ parvatāḥ nagaiḥ parvatair ātiśobhāṃ dadāti |
+	yat tat nagaraṃ alpaṃ nagaraṃ nagarī yathālpo ghaṭaḥ ghaṭīti |
+	pūḥ strī purīnagaryau vā pattanaṃ puṭabhedanam ity amarokter |
+	nagarīśabdo 'pi nagaravācakaḥ śrīmatī cāsau nagarī śrīnagarī |
+	etādṛśīṃ śrīnagaryabhidhāṃ nagarīṃ so 'śoko rājā nirmitavān ity arthaḥ |
+	tathā lakṣmyā śobhayā sāmagryādisampattyā ca sampakvenodgatadīptimanti tathānipuṇakārukṛtakāryāni puṇyagarīyastvaśālīni yāni ṣaḍadhikanavatilakṣyasaṃkhyākāni gehāni tair eva gehaiḥ pūrṇā samujjvalā ca nagarī tannirmitā babhūvety arthaḥ |
+	tathā cātra paṇḍitakalhaṇo likhitaḥ</p>
+	<lg>
+	  <l>sa ṣaṇnavatyā gehānāṃ lakṣyair lakṣmīsamujjvalaiḥ |</l>
+	  <l>garīyasīṃ purī śrīmāṃś cakre śrīnagarīṃ tṛpa ||</l>
+	</lg>
+	<p>ityādi |
+	ata evāsya rājño 'tisaṃkhyāyutanagaranirmāṇakartṛtvaṃ kavyuktyājñāyate |
+	asya śrīnagarīti khyātanagarasyādhunike kāle grāmīṇair nāgarikaiś ca khyāpitaṃ |
+	tathā sarvānyadeśaviditaṃ śrīnagar iti prasiddhataraṃ nāma sarvathā vartate |
+	asya śrīnagar iti nagarasya niyamitaḥ ko 'pi pradeśo na labhyate |
+	ato jñāyate asmāt kaśmīrākhyamaṇḍalād vibhinnaṃ tat kim api nagaraṃ nāsti |
+	asyaivāśokanirmitasya nagarasya nāmnaiva sarvam apīdaṃ maṇḍalaṃ prakhyātaṃ sampannam |
+	ata evāsya kaśmīradeśasya sarvāsu dikṣu prathitatām āptaṃ sarvādigdeśanivāsijanaiḥ kathyamānaṃ śrīnagar iti nāma sphuṭatayā vartate |
+	kāśmīrakair vinā sarve 'muṃ maṇḍalam anenaiva śrīnagar nāmnākārayanti ca ye kecana pārisekānuvādakartāras tanmatānu-yāyinaś ca te svapustakeṣu |
+	asya śrīnagaryākhyasya deśasyāśrayībhūtau dakṣiṇapārśvavāmapārśvau yāv ādhunike kāle dacchunporpargaṇa tathā khourporpargaṇa ityākhyau puragaṇau vartate tāv evāśrayībhūtau bhavata ityādi likhanti arthāt |
+	yāv etau dvau puragaṇau stas tayor eva śrīnagarīti nāmāsti |
+	atha vāgatasyātikālasya balavatayā tasya śrīnagaryākhyadeśasya cihnabhūtāv iva puragaṇau bhavata iti teṣām abhiprāyaḥ |
+	paraṃ tu kalhaṇa-paṇḍitaḥ svapustake dakṣiṇapārśvavāmapārśvāv eva śrīnagarīty ākhyāv ityādi kiṃcid api na likhati |
+	atas tat pārisekānuvādināṃ svakapolakalpanaiveti bhadram ||</p>
+      </div>
+      <div type="section" n="33. Aśmamayaḥ Prākāraḥ" xml:id="PradeSaṃ_33">
+	<head>33. Aśmamayaḥ Prākāraḥ</head>
+	<p>ślokasaṃ 105 namba 33 asyāśokasya rājye aśmamayaḥ prākāraḥ |
+	asya niruktiḥ |
+	aśmānaḥ prācuryeṇāsmin atha vā aśmānaḥ prakṛtir vāsyety aśmamayaḥ |
+	tad atra pracuraṃ sāsya prakṛtir vety arthe mayaṭ pratyayo 'tra |
+	aśmamayaḥ yaḥ prākāraḥ sāla ity arthaḥ |
+	prākāro varaṇaḥ sāla ity amaraḥ |
+	etādṛśaḥ prākāras tena rājñāśokena sampāditaḥ |
+	atra pūrvaṃ nambarapadābhidheyo dvādaśasaṃkhyāko vijayeśvarābhidho yo 'yaṃ pradeśo varṇito 'sti tasminn eva vijayeśvare pūrvakālīnai rājabhiḥ sudhamayaḥ prākāro nirmita āsīt |
+	taṃ sudhāmayaṃ prākāraṃ nivārya sa rājā navīnam aśmamayaṃ prākāraṃ kārayām āsa |
+	tathā ca paṇḍitakalhaṇaḥ</p>
+	<lg>
+	  <l>jīrṇaṃ śrīvijayeśasya vinivārya sudhāmayam |</l>
+	  <l>niṣkalmaṣeṇāśmamayaḥ prākāro yena kārita ||</l>
+	</lg>
+	<p>iti |
+	asya prākārasyādhunike kāle vinaṣṭatayā nāmāpi na labhyate |
+	cihnādivārttā dūrata evāstām |
+	ato 'sya kathyamāṇaṃ janair etatkālīnaṃ nāmādikaṃ na likhitam astīti jñeyam |
+	kiṃ tv atra kasmiṃścit purātane kāle 'trāśmamayaḥ prākāro 'py āsīd ity ata evāsmin pradeśasaṃgrahe 'sya parigaṇanaṃ kṛtam |
+	yathādhunike kāle śrīraṇavīrasiṃhabhūpanirmitaṃ śivasya caityam ādainābhūd iti ||</p>
+      </div>
+      <div type="section" n="34. Aśokaḥ Īśvaraś ca Prāsādaḥ" xml:id="PradeSaṃ_34">
+	<head>34. Aśokaḥ Īśvaraś ca Prāsādaḥ</head>
+	<p>ślokasaṃ 106 namba 34 aśokasya rājye aśokaḥ īśvarasaṃjñakaś ca prāsādaḥ |
+	anayor niruktiḥ |
+	avidyamānaḥ śoko manyur yasya so 'śokaḥ |
+	manyuśokau tu śuk striyām ity amaraḥ |
+	īśanaśīlaḥ īśanadharmā īśanaṃ sādhu karoti yaḥ sa īśvaraḥ |
+	etādṛśāv aśokeśvarasaṃjñakau yau prāsādau devatāyatane iti yāvat |
+	harmyādi dhanināṃ vāsaḥ prāsādo devabhūbhujām ity amaraḥ |
+	anenaiva pūrvaṃ varṇitena rājñāśokenaitanmaṇḍalaprakhyāte vijayeśvarākhyapradeśo 'śmamayaṃ prākāraṃ sampādayitvā tasyaiva sabhāsthāne varṇitanāma dvayayutaṃ prāsādadvayaṃ nirmitaṃ |
+	yatas tasmin kāle ye kecana tam īśvarābhidhaṃ prāsādaṃ paśyanti sma te tatkṣaṇād eva tasya manohāritvaguṇasampadāṃ camatkāreṇa śokarahitā babhūvur |
+	atas tasyāśoketi nāmānvarthatayā pratīyamānaṃ bhāti |
+	tathā ca kartum akartum anyathā-kartuṃ sāmarthyaśālina īśvarasyaiva nāmnāpy ayaṃ dvitīyaḥ prāsādaḥ prakhyātiṃ yataḥ prāptavān ato 'yam api sārthakatām eva prāpto bhāti |
+	etayor ubhayoḥ prāsādayor aticirantanakālikatayā nirmāṇasya cihnādikam api kiṃcid yato na bhavaty ataḥ kaśmīrabhāṣāyāṃ janair ādhunike kāle kathyamānaṃ kim api nāmādikam atra na likhitaṃ |
+	paraṃ tu paṇḍitakalhaṇo yat</p>
+	<lg>
+	  <l>sabhāyāṃ vijayeśasya samīpe ca vinirmame |</l>
+	  <l>śāntāvasādaḥ prāsādāv aśokeśvarasaṃjñitau ||</l>
+	</lg>
+	<p>ityādi likhaty anenaivaitat prāsādadvayaṃ labhyate |
+	anyathā kutrāpi vārttaitayor na labhyata iti bhadram ||</p>
+      </div>
+    </body>
+  </text>
+</TEI>

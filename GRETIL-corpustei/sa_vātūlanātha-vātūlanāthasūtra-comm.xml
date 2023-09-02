@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_vAtUlanAtha-vAtUlanAthasUtra-comm">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Vātūlanāthasūtra with the Vṛtti of Anantaśaktipāda</title>
+	<author>Vātūlanātha</author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>Somadeva Vasudeva</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Somadeva Vasudeva</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/saiva/vatnsuau.htm">vatnsuau.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Vatulanatha: Vatulanathasutra with the Vrtti of Anantasaktipada.
+<lb/>
+<lb/>Based on the edition by Madhusudana Kaul Sastri, Srinagar 1923
+<lb/>(Kashmir Series of Texts and Studies ; 39)
+<lb/>
+<lb/>Input by Somadeva Vasudeva
+<lb/>
+<lb/>ANALYTIC VERSION according to BHELA conventions
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>Madhusudana Kaul Sastri, Srinagar 1923 (Kashmir Series of Texts and Studies ; 39)</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Vātūlanāthasūtra+comm = VaSu,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Śāstra -- Philosophy -- Śaiva</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn" xml:id="VaSu">
+  <body>
+    <head>atha śrīvātūlanāthasūtrāṇi
+    <lb/>Śrīmad-Anantaśaktipāda-viracita-vṛtti-sametāni</head>
+
+    <lg xml:id="VaSu_p9672">
+      <l xml:id="VaSu_m1ab">saṃghaṭṭaghaṭṭanabaloditanirvikāra śūnyātiśūnyapadam avyayabodhasāram</l>
+      <l xml:id="VaSu_m1cd">sarvatra khecaradṛśā pravirājate yat tan naumi sāhasavaraṃ guruvaktragamyam</l>
+    </lg>
+<note type="analysis" corresp="#VaSu_p9672">
+<lg>
+      <l>saṃghaṭṭa-ghaṭṭana-bala-udita-nirvikāra- śūnya-atiśūnya-padam avyaya-bodha-sāram</l>
+      <l>sarvatra khecara-dṛśā pravirājate yat tan naumi sāhasa-varaṃ guru-vaktra-gamyam</l>
+    </lg>
+</note>
+
+    <lg xml:id="VaSu_p9935">
+<l xml:id="VaSu_m2ab">sarvollaṅghanavṛttyeha nirviketo 'kramākramaḥ</l>
+<l xml:id="VaSu_m2cd">ko 'py anuttaracidvyoma svabhāvo jayatād ajaḥ</l>
+    </lg>
+<note type="analysis" corresp="#VaSu_p9935">
+<lg>
+<l>sarva-ullaṅghana-vṛttya īha nirviketo 'krama-akramaḥ</l>
+<l>ko 'py anuttara-cid-vyoma- svabhāvo jayatād ajaḥ</l>
+    </lg>
+</note>
+
+    <lg xml:id="VaSu_p10126">
+<l xml:id="VaSu_m3ab">śrīmadvātūlanāthasya hṛdayāmbhodhisaṃbhavam</l>
+<l xml:id="VaSu_m3cd">pūjyapūjakapūjābhiḥ projjhitaṃ yan namāmi tat</l>
+    </lg>
+<note type="analysis" corresp="#VaSu_p10126">
+<lg>
+<l>śrīmad-vātūlanāthasya hṛdaya-ambhodhi-saṃbhavam</l>
+<l>pūjya-pūjaka-pūjābhiḥ projjhitaṃ yan namāmi tat</l>
+    </lg>
+</note>
+
+    <lg xml:id="VaSu_p10314">
+<l xml:id="VaSu_m4ab">yeneha sarvavṛttīnāṃ madhyasaṃstho 'pi sarvadā</l>
+<l xml:id="VaSu_m4cd">mahāvyomasamāviṣṭas tiṣṭhāmy asmin nirāvaliḥ</l>
+    </lg>
+<note type="analysis" corresp="#VaSu_p10314">
+<lg>
+<l>yena iha sarva-vṛttīnāṃ madhya-saṃstho 'pi sarvadā</l>
+<l>mahā-vyoma-samāviṣṭas tiṣṭhāmy asmin nirāvaliḥ</l>
+    </lg>
+</note>
+
+    <lg xml:id="VaSu_p10504">
+<l xml:id="VaSu_m5ab">tam apūrvam anāveśam asparśam aniketanam</l>
+<l xml:id="VaSu_m5cd">saṃvidvikalpasaṃkalpa ghaṭṭanaṃ naumy anuttaram</l>
+    </lg>
+<note type="analysis" corresp="#VaSu_p10504">
+<lg>
+<l>tam apūrvam anāveśam asparśam aniketanam</l>
+<l>saṃvid-vikalpa-saṃkalpa- ghaṭṭanaṃ naumy anuttaram</l>
+    </lg>
+</note>
+
+    <lg xml:id="VaSu_p10689">
+<l xml:id="VaSu_m6ab">yoginīvaktrasaṃbhūta sūtrāṇāṃ vṛttir uttamā</l>
+<l xml:id="VaSu_m6cd">kenāpi kriyate samyak paratattvopabṛṃhitā</l>
+    </lg>
+<note type="analysis" corresp="#VaSu_p10689">
+<lg>
+<l>yoginī-vaktra-saṃbhūta- sūtrāṇāṃ vṛttir uttamā</l>
+<l>kena api kriyate samyak- para-tattva-upabṛṃhitā</l>
+    </lg>
+</note>
+
+<p xml:id="VaSu_p10870">iha kila ṣaḍdarśanacaturāmnāyādimelāpaparyantasamastadarśanottīrṇam akathyam api śrīmadvātūlanāthasya pīṭheśvaryocchuṣmapādaugham uktvā tad anu paramarahasyopabṛṃhitatrayodaśakathāsākātkāradṛśā kramākramāstināstitathyātathyabhedābhedasavikalpanirvikalpabhavanirvāṇakalaṅkojjhitaṃ kim apy anavakāśaṃ paraṃ tattvaṃ sūtramukhenādiśanti -
+yatredam ādisūtram</p>
+<note type="analysis" corresp="#VaSu_p10870">
+<p>iha kila ṣaḍ-darśana-catur-āmnāya-ādi-melāpa-paryanta-samasta-darśana-uttīrṇam akathyam api śrīmad-vātūlanāthasya pīṭheśvarya ucchuṣma-pāda-augham uktvā tad anu parama-rahasya-upabṛṃhita-trayodaśa-kathā-sākātkāra-dṛśā krama-akrama-asti-nāsti-tathya-atathya-bheda-abheda-savikalpa-nirvikalpa-bhava-nirvāṇa-kalaṅka-ujjhitaṃ kim apy anavakāśaṃ paraṃ tattvaṃ sūtra-mukhenā adiśanti --
+yatra idam ādi-sūtram</p>
+</note>
+
+<p xml:id="VaSu_01">mahāsāhasavṛttyā svarūpalābhaḥ //</p>
+<note type="analysis" corresp="#VaSu_01">
+<p>mahāsāhasavṛttyā svarūpalābhaḥ //</p>
+</note>
+
+<p xml:id="VaSu_p11349">atitīvrātitīvrataraviśṛṅkhalaśaktipātāghrātasya svasvarūpasamāviṣṭasya kasya cit kva cit kadā cid akasmād eva "*mahāsāhasavṛttyā*" ghasmaramahāghanataraparanādollāsasphāreṇa savikalpanirvikalpātmakasamastasaṃvinnivahaghaṭṭanān nirāvaraṇamahāśūnyatāsamāveśaniṣṭhayā "*svarūpalābhaḥ*" samastakalpanottīrṇatvād akṛtakaniravakāśaniruttaranistaraṅganiravadhinirniketāsparśasaṃvitprāptir bhavati - iti rahasyārthaḥ / mahāsāhasavṛttyānupraveśaś ca vakṣyamāṇakathitakrameṇādhigantavyaḥ //</p>
+<note type="analysis" corresp="#VaSu_p11349">
+<p>ati-tīvrātitīvratara-viśṛṅkhala-śaktipāta-āghrātasya sva-svarūpa-samāviṣṭasya kasya cit kva cit kadā cid akasmād eva "*mahā-sāhasavṛttyā*" ghasmara-mahāghanatara-para-nāda-ullāsa-sphāreṇa savikalpa-nirvikalpa-ātmaka-samasta-saṃvin-nivaha-ghaṭṭanān nirāvaraṇa-mahāśūnyatā-samāveśa-niṣṭhayā "*svarūpa-lābhaḥ*" samasta-kalpanā-uttīrṇatvād akṛtaka-niravakāśa-niruttara-nistaraṅga-niravadhi-nirniketa-asparśa-saṃvit-prāptir bhavati -- iti rahasya-arthaḥ / mahāsāhasa-vṛttya ānupraveśaś ca vakṣyamāṇa-kathita-krameṇa adhigantavyaḥ //</p>
+</note>
+
+<p xml:id="VaSu_p11898">jhaṭiti sarvollaṅghanakrameṇāniketasvarūpaprāptisākṣātkāramahāsāhasacarcāsaṃpradāyaṃ nirūpya, idānīṃ tatraiva sarvavṛttimahāsāmarasyam ekakāle pracakṣate</p>
+<note type="analysis" corresp="#VaSu_p11898">
+<p>jhaṭiti sarva-ullaṅghana-krameṇa aniketa-svarūpa-prāpti-sākṣātkāra-mahā-sāhasa-carcā-saṃpradāyaṃ nirūpya, idānīṃ tatraiva sarva-vṛtti-mahā-sāmarasyam ekakāle pracakṣate</p>
+</note>
+
+<p xml:id="VaSu_02">tallābhācchuritā [yud?]yugapadvṛttipravṛttiḥ</p>
+<note type="analysis" corresp="#VaSu_02">
+<p>tal-lābha-ācchuritā [yud-?]yugapad-vṛtti-pravṛttiḥ</p>
+</note>
+
+<p xml:id="VaSu_p12169">vṛttīnāṃ dṛgādimarīcirūpāṇāṃ tathā rāgadveṣādyunmeṣavatīnāṃ "*yugapat*" tulyakālaṃ kramaparipāṭyullaṅghanenākramapravṛttyā "*tallābhācchuritā*" tat tena prāguktamahāsāhasadaśāsamāveśakramaprāpyeṇa svarūpalābhena kālākālakalpanottīrṇālaṃgrāsavapuṣā mahānirīheṇācchuritā spṛṣtā svasvarūpatāṃ nītāḷ"*pravṛttir*" prakarṣeṇa vartamānā vṛttir satatam acyutatayā tatsamāveśāvasthānam ity arthaḥ / ity anayoktibhaṅgyā sarvavṛttīnāṃ samanantaram eva sarvottīrṇamahāśūnyatādhāmni dhāmarūpe tanmayatayā parasparavibhedavigalanenodayapadavyām eva satatam avasthitir sthitetyarthaḥ //</p>
+<note type="analysis" corresp="#VaSu_p12169">
+<p>vṛttīnāṃ dṛg-ādi-marīci-rūpāṇāṃ tathā rāga-dveṣa-ādy-unmeṣavatīnāṃ "*yugapat*" tulyakālaṃ krama-paripāṭy-ullaṅghanena akrama-pravṛttyā "*tal-lābha-ācchuritā*" tat tena prāg-ukta-mahāsāhasa-daśā-samāveśa-krama-prāpyeṇa svarūpa-lābhena kāla-akāla-kalpanā-uttīrṇa-alaṃgrāsa-vapuṣā mahānirīheṇā acchuritā spṛṣtā sva-svarūpatāṃ nītāḷ"*pravṛttir-*" prakarṣeṇa vartamānā vṛttir satatam acyutatayā tat-samāveśa-avasthānam ity arthaḥ / ity anaya ūkti-bhaṅgyā sarva-vṛttīnāṃ samanantaram eva sarva-uttīrṇa-mahā-śūnyatā-dhāmni dhāma-rūpe tanmayatayā paraspara-vibheda-vigalanena udaya-padavyām eva satatam avasthitir sthita īty-arthaḥ //</p>
+</note>
+
+<p xml:id="VaSu_p12813">ityanayoktibhaṅgyā tulyakālakathanopadeśam uktvedānīṃ pustakakathāṃ nirūpayanti</p>
+<note type="analysis" corresp="#VaSu_p12813">
+<p>ity-anaya ūkti-bhaṅgyā tulya-kāla-kathana-upadeśam uktva īdānīṃ pustaka-kathāṃ nirūpayanti</p>
+</note>
+
+<p xml:id="VaSu_03">ubhayapaṭṭodghaṭṭanān mahāśūnyatāpraveśaḥ</p>
+<note type="analysis" corresp="#VaSu_03">
+<p>ubhaya-paṭṭa-udghaṭṭanān mahāśūnyatā-praveśaḥ</p>
+</note>
+
+<p xml:id="VaSu_p13000">śrīmanniṣkriyānandanāthānugrahasamaye śrīgandhamādanasiddhapādair akṛtakapustakapradarśanena yā parapade prāptir upadiṣṭā saiva vitatya nirūpyate / saptarandhrakramoditasaptaśikhollāsātmakaḥ prāṇapravāhodayaḥ saivordhvapaṭṭakaḥ pūrṇavṛttyudayaḥ, randhradvayasuṣiranālikāpravāhaprasṛto 'pānarūpo 'dhaḥpaṭṭakaḥ pañcendriyaśaktiveṣṭitaḥ pañcaphaṇadharmānibandhako 'dhaḥsthitaḥ / tasya valayadvayaṃ jāgratsvapnātmakam unmudrya granthinibandhanam apahṛtya "*ubhayapaṭṭodghaṭṭanāt*" prāṇāpānadvayavidāraṇān madhyavartī yaḥ prāṇarūpo mahāśūnyatāsvabhāvaḥ kulākulavikalpadaśojjhito 'vyapadeśyamahānirāvaraṇaniratyayavedyavedakanirmukto varṇāvarṇanivarṇottīrṇaḥ sparśāsparśaprathāparivarjitopacārāt paramākāśādyabhidhānaiḥ
+abhidhīyate / tatra "*praveśaḥ*" tatsamāveśatayā sāmarasyāvasthitir saiva prāptamahopadeśanāmāvirbhavatītyarthaḥ //</p>
+<note type="analysis" corresp="#VaSu_p13000">
+<p>śrīman-niṣkriyānandanātha-anugraha-samaye śrīgandhamādana-siddha-pādair akṛtaka-pustaka-pradarśanena yā para-pade prāptir upadiṣṭā sa aiva vitatya nirūpyate / sapta-randhra-krama-udita-sapta-śikhā-ullāsa-ātmakaḥ prāṇa-pravāha-udayaḥ sa evā urdhva-paṭṭakaḥ pūrṇa-vṛtty-udayaḥ, randhra-dvaya-suṣira-nālikā-pravāha-prasṛto 'pāna-rūpo 'dhaḥ-paṭṭakaḥ pañca-indriya-śakti-veṣṭitaḥ pañca-phaṇa-dharma-anibandhako 'dhaḥsthitaḥ / tasya valaya-dvayaṃ jāgrat-svapna-ātmakam unmudrya granthi-nibandhanam apahṛtya "*ubhaya-paṭṭa-udghaṭṭanāt*" prāṇa-apāna-dvaya-vidāraṇān madhya-vartī yaḥ prāṇa-rūpo mahā-śūnyatā-svabhāvaḥ kula-akula-vikalpa-daśā-ujjhito 'vyapadeśya-mahā-nirāvaraṇaniratyaya-vedya-vedaka-nirmukto varṇa-avarṇa-nivarṇa-uttīrṇaḥ sparśa-asparśa-prathā-parivarjita upacārāt parama-ākāśa-ādy-abhidhānaiḥ
+abhidhīyate / tatra "*praveśaḥ*" tat-samāveśatayā sāmarasya-avasthitir sa eva prāpta-mahā-upadeśa-nāmā avirbhavati ity-arthaḥ //</p>
+</note>
+
+<p xml:id="VaSu_p13936">itthaṃ mahānayoktadṛśā sarvaśāstraprapañcottīrṇātvād avācyaṃ kim api mahopadeśasākṣātkāram ubhayapaṭṭakākārasadasadrūpadvayanivāraṇena nistaraṅgaparavyomasamāveśavivarjitam āsūtritamahāśūnyatāsamāveśam āvedya, idānīṃ yugmopasaṃhārāt kaivalyaphalaṃ tanmayatopavarṇyate</p>
+<note type="analysis" corresp="#VaSu_p13936">
+<p>itthaṃ mahānaya-uktadṛśā sarvaśāstra-prapañca-uttīrṇātvād avācyaṃ kim api mahā-upadeśa-sākṣātkāram ubhaya-paṭṭaka-ākāra-sad-asad-rūpa-dvaya-nivāraṇena nistaraṅga-paravyoma-samāveśa-vivarjitam āsūtrita-mahāśūnyatā-samāveśam āvedya, idānīṃ yugma-upasaṃhārāt kaivalyaphalaṃ tanmayata ūpavarṇyate</p>
+</note>
+
+<p xml:id="VaSu_04">yugmagrāsān niravakāśasaṃvinniṣṭhā //</p>
+<note type="analysis" corresp="#VaSu_04">
+<p>yugma-grāsān niravakāśa-saṃvin-niṣṭhā //</p>
+</note>
+
+<p xml:id="VaSu_p14318">pṛthivyādimahābhūtapañcakasyaikaikasmin grāhyagrāhakatayā "*yugma*" vṛttyudayasaṃvyavasthitiḥ / tatra gandhaprādhānyād dharātattvasya pāyughrāṇarūpeṇa dviprakāratā / aptattvasya ca rasapradhānatayopastharasanārūpeṇadvaividhyam / tejastattvasya rūpaprādhānyāt pādanetrabhedena dvayarūpatā / vāyutattvasya sparśaprādhānyāt tvakpāṇisvabhāvato dvidhā gatiḥ / ākāśatattvasya śabdaprādhānyād vākśrotrabhedena dviprakāratayaiva bahudhātvam / athavā pṛthivyapsvarūpau bhogyasvarūpāvasthitau / tejovāyvākhyau bhoktṛsvabhāvau saṃsthitau / ākāśaṃ caitad yugmāntarasthaṃ satsuṣiratayā sarvapranāḍikāntaroditaṃ ca bahudhā vibhaktam / pṛthivyādivāyvantaṃ bhūtacatuṣṭayaṃ bhogyarūpam ākāśaṃ ca bhoktṛsvabhāvam iti vā / bhogye 'pi bhoktā sadaiva tiṣṭhati; bhoktary api bhogaḥ
+nityaṃ vibhāti / evamuktayuktyā pratyekaṃ pṛthivyādimahābhūtapañcakaṃ yugmena dvayavibhūtyānārataṃ prollasatītyabhiprāyaḥ / athavā pratyekaṃ vyaktāvyaktatayā bahirantaratayā śāntodriktatayā vā vibhāti / etat pañcakasthānasaṃthitayugmasya ``grāsāt'' saṃharaṇat ``niravakāśasaṃvinniṣṭhā'' niravakāśā yeyaṃ saṃvit tasyā niṣṭhā samyagaviparyastatayā saṃthitiḥ / niravakāśasaṃvittvena nāpi savikalpasaṃvidunmeṣair avakāśo labhyate, nāpi nirvikalpasaṃvitsvabhāvena praveśo 'dhigamyate / ittham aprameyatvān niruttaraparamādvayasvabhāvatvāc ca niravakāśasaṃvid ihocyate / tasyā niṣṭhā varagurupradarśitadṛśā satatam ucyatā gatir keṣāṃcid bhavatīty arthaḥ / evaṃ dvayātmakakulakaulakavalanena nirupādhinīrūpaniḥsvarūpatādātmyaṃ bhavatīty arthaḥ //4//</p>
+<note type="analysis" corresp="#VaSu_p14318">
+<p>pṛthivy-ādi-mahābhūta-pañcakasya eka-ekasmin grāhya-grāhakatayā "*yugma*" -vṛtty-udaya-saṃvyavasthitiḥ / tatra gandha-prādhānyād dharā-tattvasya pāyu-ghrāṇa-rūpeṇa dvi-prakāratā / ap-tattvasya ca rasa-pradhānataya ūpastha-rasanā-rūpeṇadvaividhyam / tejas-tattvasya rūpaprādhānyāt pāda-netra-bhedena dvaya-rūpatā / vāyu-tattvasya sparśa-prādhānyāt tvak-pāṇi-svabhāvato dvidhā gatiḥ / ākāśa-tattvasya śabda-prādhānyād vāk-śrotra-bhedena dvi-prakārataya aiva bahudhātvam / athavā pṛthivy-ap-svarūpau bhogya-svarūpa-avasthitau / tejo-vāyv-ākhyau bhoktṛ-svabhāvau saṃsthitau / ākāśaṃ ca etad yugma-antarasthaṃ sat-suṣiratayā sarva-pranāḍikā-antara-uditaṃ ca bahudhā vibhaktam / pṛthivy-ādi-vāyv-antaṃ bhūta-catuṣṭayaṃ bhogya-rūpam ākāśaṃ ca bhoktṛ-svabhāvam iti vā / bhogye 'pi bhoktā sada aiva tiṣṭhati; bhoktary api bhogaḥ
+nityaṃ vibhāti / evam-ukta-yuktyā pratyekaṃ pṛthivy-ādi-mahā-bhūta-pañcakaṃ yugmena dvaya-vibhūtya ānārataṃ prollasati ity-abhiprāyaḥ / athavā pratyekaṃ vyakta-avyaktatayā bahir-antaratayā śānta-udriktatayā vā vibhāti / etat pañcaka-sthāna-saṃthita-yugmasya ``grāsāt'' saṃharaṇat- ``niravakāśa-saṃvin-niṣṭhā'' niravakāśā ya īyaṃ saṃvit tasyā niṣṭhā samyag-aviparyastatayā saṃthitiḥ / niravakāśa-saṃvittvena na api savikalpa-saṃvid-unmeṣair avakāśo labhyate, na api nirvikalpa-saṃvit-svabhāvena praveśo 'dhigamyate / ittham aprameyatvān niruttara-paramādvaya-svabhāvatvāc ca niravakāśa-saṃvid iha ucyate / tasyā niṣṭhā vara-guru-pradarśita-dṛśā satatam ucyatā gatir keṣāṃcid bhavati ity arthaḥ / evaṃ dvayā atmaka-kula-kaula-kavalanena nirupādhi-nīrūpa-niḥsvarūpa-tādātmyaṃ bhavati ity arthaḥ //4//</p>
+</note>
+
+<p xml:id="VaSu_p15947">dvayavigalanena paratattvāvasthitiṃ yugmacarcāgamanikayehoktvā, tad anu saṃghaṭṭakathāsākṣātkāro nirūpyate</p>
+<note type="analysis" corresp="#VaSu_p15947">
+<p>dvaya-vigalanena para-tattva-avasthitiṃ yugma-carcāgamanikaya īha uktvā, tad anu saṃghaṭṭa-kathā-sākṣātkāro nirūpyate</p>
+</note>
+
+<p xml:id="VaSu_05">siddhayoginīsaṃghaṭṭān mahāmelāpodayaḥ</p>
+<note type="analysis" corresp="#VaSu_05">
+<p>siddhayoginī-saṃghaṭṭān mahāmelāpa-udayaḥ</p>
+</note>
+
+<p xml:id="VaSu_p16157">siddhā ca yoginyaś ca tā siddhayoginyo viṣayakaraṇeśvarīrūpā / tāsāṃ saṃghaṭṭaḥ saṃgamo grāhyagrāhakobhayasaṃśleṣaḥ parasparāgūraṇakrameṇāliṅganam / tenāliṅganena sadaiva ``mahāmelāpodayaḥ'' mahāmelāpasyāhaṃtedaṃtātmakadvayavigalanān niruttaracidvyomni satataṃ mahāsāmarasyātmakasya sarvatra pratyakṣatayodayaḥ samullāso bhavatīty arthaḥ / vedyavedakadvayāprathanapravṛttyā paramādvayasamāveśaḥ sarvatrāvasthitety uktaṃ bhavati //5//</p>
+<note type="analysis" corresp="#VaSu_p16157">
+<p>siddhā ca yoginyaś ca tā siddhayoginyo viṣaya-karaṇeśvarī-rūpā / tāsāṃ saṃghaṭṭaḥ saṃgamo grāhya-grāhaka-ubhaya-saṃśleṣaḥ paraspara-āgūraṇa-krameṇā aliṅganam / tenā aliṅganena sada aiva ``mahāmelāpa-udayaḥ'' mahāmelāpasya ahaṃtā-idaṃtā-ātmaka-dvaya-vigalanān niruttara-cidvyomni satataṃ mahāsāmarasya-ātmakasya sarvatra pratyakṣataya ūdayaḥ samullāso bhavati ity arthaḥ / vedya-vedaka-dvaya-aprathana-pravṛttyā paramādvaya-samāveśaḥ sarvatra avasthita ity uktaṃ bhavati //5//</p>
+</note>
+
+<p xml:id="VaSu_p16647">ubhayavigalanena sadaiva mahāmelāpodayam uktvā, tad anu kañcukatrayollaṅghanena niruttarapadaprāptiṃ kaṭākṣayanti</p>
+<note type="analysis" corresp="#VaSu_p16647">
+<p>ubhaya-vigalanena sada aiva mahāmelāpa-udayam uktvā, tad anu kañcuka-traya-ullaṅghanena niruttara-pada-prāptiṃ kaṭākṣayanti</p>
+</note>
+
+<p xml:id="VaSu_06">trikañcukaparityāgān nirākhyapadāvasthitiḥ</p>
+<note type="analysis" corresp="#VaSu_06">
+<p>trikañcuka-parityāgān nirākhya-pada-avasthitiḥ</p>
+</note>
+
+<p xml:id="VaSu_p16868">trikañcukasya bhāvikabhautikaśūnyabhedabhinnasya / tatra bhāvikaṃ śabdādyahaṃkāraparyantaṃ tanmātrarūpaṃ, bhautikaṃ pṛthivyādirūpaṃ, śūnyaṃ nirīhākhyaṃ vāsanāsvarūpaṃ ca / athavā bhāvikaṃ ghaṭākāraṃ bāhyaṃ grāhyaviṣayarūpaṃ, bhautikaṃ puno'antaram indriyātmakaṃ grahaṇarūpam, śūnyaṃ tadubhayamadhyamākāśam / athavā bhāvikaṃ svapnāvasthā sṛṣṭir ucyate, bhautikaṃ jāgratprathā sthitir nigadyate, śūnyaṃ suṣuptadaśā saṃhāro 'bhidhīyate / itthaṃsaṃsthitasya trikañcukasya ``parityāgāt'' sannyāsāt ``nirākhyapadāvasthitir''nirgatākhyābhidhānaṃ yasyāsau nirākhyo 'vyapadeśyam anuttaraṃ vāguttīrṇaṃ paraṃ dhāma, tasmin sarvottīrṇāniketanaparamākāśe 'vasthitir sadaivāparicyutasvabhāvaniṣṭhā bhavatīti saṃbandhaḥ //6//</p>
+<note type="analysis" corresp="#VaSu_p16868">
+<p>trikañcukasya bhāvika-bhautika-śūnya-bheda-bhinnasya / tatra bhāvikaṃ śabda-ādy-ahaṃkāra-paryantaṃ tanmātra-rūpaṃ, bhautikaṃ pṛthivy-ādi-rūpaṃ, śūnyaṃ nirīha-ākhyaṃ vāsanā-svarūpaṃ ca / athavā bhāvikaṃ ghaṭa-ākāraṃ bāhyaṃ grāhya-viṣaya-rūpaṃ, bhautikaṃ puno-'antaram indriya-ātmakaṃ grahaṇa-rūpam, śūnyaṃ tad-ubhaya-madhyama-ākāśam / athavā bhāvikaṃ svapna-avasthā sṛṣṭir ucyate, bhautikaṃ jāgrat-prathā sthitir nigadyate, śūnyaṃ suṣupta-daśā saṃhāro 'bhidhīyate / itthaṃ-saṃsthitasya trikañcukasya ``parityāgāt'' sannyāsāt ``nirākhya-pada-avasthitir-''nirgatā ākhya ābhidhānaṃ yasya asau nirākhyo 'vyapadeśyam anuttaraṃ vāg-uttīrṇaṃ paraṃ dhāma, tasmin sarvottīrṇa-aniketana-paramākāśe 'vasthitir sada aiva aparicyuta-svabhāva-niṣṭhā bhavati iti saṃbandhaḥ //6//</p>
+</note>
+
+<p xml:id="VaSu_p17647">itthaṃ kañcukatrayollaṅghanena turyapadaprāptiṃ nirūpya, idānīṃ sarvavākprathāsu nirāvaraṇāsu svarabhūtivijṛmbhaiva prathate sadaiva, - iti nirūpayanti</p>
+<note type="analysis" corresp="#VaSu_p17647">
+<p>itthaṃ kañcuka-traya-ullaṅghanena turya-pada-prāptiṃ nirūpya, idānīṃ sarva-vāk-prathāsu nirāvaraṇāsu svara-bhūti-vijṛmbha aiva prathate sada aiva, -- iti nirūpayanti</p>
+</note>
+
+<p xml:id="VaSu_07">vākcatuṣṭayodayavirāmaprathāsu svaraḥ prathate</p>
+<note type="analysis" corresp="#VaSu_07">
+<p>vāk-catuṣṭaya-udaya-virāma-prathāsu svaraḥ prathate</p>
+</note>
+
+<p xml:id="VaSu_p17915">ādau tāvad vākcatuṣṭayaṃ nirṇīyate / nirāvaraṇaniravakāśodayaniruttaranistaraṅgaparamanabhasy ucchalatkimciccalanātmakaprathamaspandavikāsasvabhāvā varṇaracanāṃ māyūrāṇḍarasanyāyenādvayamahāsāmarasyatayāntodhārayantī pareti prathitā / saiva cānāhatanādasvarūpatām avāptā nirvibhāgadharmiṇī samastavarṇodayaṃ vaṭadhānikāvad antodhārayantī draṣṭṛsvabhāvā paśyantīti vyapadeśyā / saiva ca saṃkalpavikalpanivahaniścayātmabuddhibhūmiṃ svīkṛtavatī varṇapuñjaṃ śimbikāphalanyāyenāntodhārayantī madhyametyabhihitā / saiva hṛtkaṇṭhatālvādisthānakaraṇakrameṇāhatā satī varṇavibhavamayaślokādivad bhedarūpaṃ prakaṭayantī rūpādisamastaviśvaprathāṃ ca vyaktatām āpādayantī vaikharīty uktā / itthaṃ niravakāśāt saṃvitpadāt
+vākcatuṣṭayam aviratam anirodhatayā prathate / evam īdṛksvabhāvavākcatuṣṭayasyodayaś ca virāmaś ca tāvad udayavirāmau sṛṣṭisaṃhārau, tayor prathā vyaktāvyaktatayā sadaivāviratam ullasantyaḥ sphurantyaḥ, tāsu ``svaraḥ'' anāhatahatottīrṇamahānādollāsavikāsasvabhāvaḥ ``prathate'' savikalpanirvikalpasaṃviduttīrṇaparaviyadudayam eva prakāśitaṃ satatam akaraṇapravṛttyā prayātīty arthaḥ / itthaṃ nānābhedollāsaprakāśarūpeṣu varṇanivahodvahodayeṣu madhyāt prativarṇāntare vākcatuṣṭayakrameṇākhaṇḍitavṛttyā svasvarūpam aparityajya yathāmukhopadiṣṭanītyā svaraiva prathate, -- ityuktaṃ bhavati //7//</p>
+<note type="analysis" corresp="#VaSu_p17915">
+<p>ādau tāvad vāk-catuṣṭayaṃ nirṇīyate / nirāvaraṇa-niravakāśa-udaya-niruttara-nistaraṅga-parama-nabhasy ucchalat-kimcic-calana-ātmaka-prathama-spanda-vikāsa-svabhāvā varṇa-racanāṃ māyūra-aṇḍa-rasa-nyāyena advaya-mahāsāmarasyataya ānto-dhārayantī para īti prathitā / sa aiva ca anāhata-nāda-svarūpatām avāptā nirvibhāga-dharmiṇī samasta-varṇa-udayaṃ vaṭadhānikāvad anto-dhārayantī draṣṭṛ-svabhāvā paśyanti īti vyapadeśyā / sa aiva ca saṃkalpa-vikalpa-nivaha-niścaya-ātma-buddhi-bhūmiṃ svīkṛtavatī varṇa-puñjaṃ śimbikā-phala-nyāyena anto-dhārayantī madhyama īty-abhihitā / sa aiva hṛt-kaṇṭha-tālv-ādi-sthāna-karaṇa-krameṇā ahatā satī varṇa-vibhava-maya-śloka-ādi-vad bheda-rūpaṃ prakaṭayantī rūpa-ādi-samasta-viśva-prathāṃ ca vyaktatām āpādayantī vaikhari īty uktā / itthaṃ niravakāśāt saṃvit-padāt-
+vāk-catuṣṭayam aviratam anirodhatayā prathate / evam īdṛk-svabhāva-vāk-catuṣṭayasya udayaś ca virāmaś ca tāvad udaya-virāmau sṛṣṭisaṃhārau, tayor prathā vyakta-avyaktatayā sada aiva aviratam ullasantyaḥ sphurantyaḥ, tāsu ``svaraḥ'' anāhata-hata-uttīrṇa-mahānāda-ullāsa-vikāsa-svabhāvaḥ ``prathate'' savikalpa-nirvikalpa-saṃvid-uttīrṇa-para-viyad-udayam eva prakāśitaṃ satatam akaraṇa-pravṛttyā prayāti ity arthaḥ / itthaṃ nānā-bheda-ullāsa-prakāśa-rūpeṣu varṇa-nivaha-udvaha-udayeṣu madhyāt prativarṇa-antare vāk-catuṣṭaya-krameṇa akhaṇḍita-vṛttyā sva-svarūpam aparityajya yathā-mukha-upadiṣṭa-nītyā svara eva prathate, --- ity-uktaṃ bhavati //7//</p>
+</note>
+
+<p xml:id="VaSu_p19356">iti vākcatuṣṭayodayakrameṇa nirāvaraṇasvarodayaḥ sarvatra sarvakālaṃ sphurati, -- iti nirūpya, idānīṃ rasatritayābhoge sati paraṃ dhāmaiva niruttaraṃ cakāsti, -- iti nigadyate</p>
+<note type="analysis" corresp="#VaSu_p19356">
+<p>iti vāk-catuṣṭaya-udaya-krameṇa nirāvaraṇa-svara-udayaḥ sarvatra sarva-kālaṃ sphurati, --- iti nirūpya, idānīṃ rasa-tritaya-ābhoge sati paraṃ dhāma eva niruttaraṃ cakāsti, --- iti nigadyate</p>
+</note>
+
+<p xml:id="VaSu_08">rasatritayāsvādanenānicchocchalitaṃ vigatabandhaṃ paraṃ brahma //</p>
+<note type="analysis" corresp="#VaSu_08">
+<p>rasa-tritaya-āsvādanena anicchā-ucchalitaṃ vigata-bandhaṃ paraṃ brahma //</p>
+</note>
+
+<p xml:id="VaSu_p19668">rasatrayaṃ gurumukhoditadṛśā manāg īṣat prakāśyate / mūlādhārapayodharādhāraprathitākṛtrimarasatritayābhoge sati "*anicchocchalitam*" niṣkāmatayā prollasitaṃ "*vigatabandhaṃ*" virahitabhedaprathātmakasaṃsārāvagrahaṃ śāntacitrobhayavidhabrahmasvarūpasamuttīrṇaṃ kim api niruttaraprakṛṣṭatarāmarśasaṃvitsvabhāvaṃ "*paraṃ brahma*" eva satatam anastamitasthityā vijṛmbhatety arthaḥ / etad eva rahasyakrameṇocyate / mūlādhāras tu prathamapratibhollāsamahānādaviśeṣaḥ sṛṣṭisvabhāvo bhedābhedātmakasaṃvitpadārthaprathamāśrayabhittimūrtatvāt / payidharas tu payaḥ samastāpyāyakatvāt sarvāśrayasaṃvitsvarūpaṃ tad eva dhārayati sthitipraroham avalambayati yaḥ spando 'dyonmeṣaiva sarvapadārthāvabhāsanāt sthitirūpaḥ / ādhāras tu
+jaḍājaḍabhāvapadārthopasaṃhārakatvāt pratyāvṛttisaṃvitsvabhāvaḥ saṃhāraḥ / etattrayodhūtaṃ rasarūpaṃ tattadanubhavacamatkārasāmarasyam āsvādya svātmany akṛtakakhamudrānupraveśād vimṛśya, turyasvabhāvo mahāsaṃhārākhyo 'navarataṃ paramādvayatayā vibhātīti rahasyārthaḥ //8</p>
+<note type="analysis" corresp="#VaSu_p19668">
+<p>rasa-trayaṃ guru-mukha-udita-dṛśā manāg īṣat prakāśyate / mūlādhāra-payodhara-ādhāra-prathita-akṛtrima-rasa-tritaya-ābhoge sati "*anicchā-ucchalitam*" niṣkāmatayā prollasitaṃ "*vigata-bandhaṃ*" virahita-bheda-prathā-ātmaka-saṃsāra-avagrahaṃ śānta-citra-ubhayavidha-brahma-svarūpa-samuttīrṇaṃ kim api niruttara-prakṛṣṭatara-āmarśa-saṃvit-svabhāvaṃ "*paraṃ brahma*" eva satatam an-astam-ita-sthityā vijṛmbhata ity arthaḥ / etad eva rahasya-krameṇa ucyate / mūlādhāras tu prathama-pratibhā-ullāsa-mahānāda-viśeṣaḥ sṛṣṭisvabhāvo bheda-abheda-ātmaka-saṃvit-padārtha-prathama-āśraya-bhitti-mūrtatvāt / payidharas tu payaḥ samasta-āpyāyakatvāt sarva-āśraya-saṃvit-svarūpaṃ tad eva dhārayati sthiti-praroham avalambayati yaḥ spando 'dya-unmeṣa eva sarva-padārtha-avabhāsanāt sthiti-rūpaḥ / ādhāras tu
+jaḍa-ajaḍa-bhāva-padārtha-upasaṃhārakatvāt pratyāvṛtti-saṃvit-svabhāvaḥ saṃhāraḥ / etat-traya-udhūtaṃ rasa-rūpaṃ tat-tad-anubhava-camatkāra-sāmarasyam āsvādya svātmany akṛtaka-kha-mudrā-anupraveśād vimṛśya, turya-svabhāvo mahāsaṃhāra-ākhyo 'navarataṃ parama-advayatayā vibhāti iti rahasya-arthaḥ //8</p>
+</note>
+
+<p xml:id="VaSu_p20763">evaṃ niravakāśabhaṅgyā rasatritayacarcāsaṃpradāyaṃ nirūpya, idānīṃ devīcatuṣṭayakathāsākṣātkāraḥ prakāśyate</p>
+<note type="analysis" corresp="#VaSu_p20763">
+<p>evaṃ niravakāśa-bhaṅgyā rasa-tritaya-carcā-saṃpradāyaṃ nirūpya, idānīṃ devī-catuṣṭaya-kathā-sākṣātkāraḥ prakāśyate</p>
+</note>
+
+<p xml:id="VaSu_09">devīcatuṣṭayollāsena sadaiva svaviśrāntyacasthitiḥ //</p>
+<note type="analysis" corresp="#VaSu_09">
+<p>devī-catuṣṭaya-ullāsena sada aiva sva-viśrānty-acasthitiḥ //</p>
+</note>
+
+<p xml:id="VaSu_p20991">"*devīcatuṣṭayaṃ*" kṣuttṛḍīrṣyāmananākhyam / tatra ca sarvagrāsaniratatvāt kṣud eva mahāsaṃhāraḥ / sarvaśoṣakatvāt tṛḍ eva saṃhāraḥ / īrṣyā dvayaprathāpādikā grāhyagrāhakaparigrahagrathitā sthitirūpā / mananā ca saṃkalpavikalpollāsarūpā sṛṣṭiḥ / etadrūpasya devīcatuṣṭayasya ca "*ullāsena*" ghasmarasaṃvitpravāhapravṛttyā prathanena "*sadaiva*" sarvakālaṃ pratyekaṃ cāturātmyenodyogābhāsacarvaṇālaṃgrāsavapuṣā svasvarūpāvasthitir pañcamapadātiśāyinī niravakāśasaṃvinniṣṭhā sthitety arthaḥ / /9</p>
+<note type="analysis" corresp="#VaSu_p20991">
+<p>"*devī-catuṣṭayaṃ*" kṣut-tṛḍ-īrṣyā-mananā-ākhyam / tatra ca sarva-grāsa-niratatvāt kṣud eva mahāsaṃhāraḥ / sarva-śoṣakatvāt tṛḍ eva saṃhāraḥ / īrṣyā dvaya-prathā-āpādikā grāhya-grāhaka-parigraha-grathitā sthiti-rūpā / mananā ca saṃkalpa-vikalpa-ullāsa-rūpā sṛṣṭiḥ / etad-rūpasya devī-catuṣṭayasya ca "*ullāsena*" ghasmara-saṃvit-pravāha-pravṛttyā prathanena "*sada aiva*" sarva-kālaṃ pratyekaṃ cāturātmyena udyoga-ābhāsa-carvaṇa-alaṃgrāsa-vapuṣā sva-svarūpa-avasthitir pañcama-pada-atiśāyinī niravakāśa-saṃvin-niṣṭhā sthita īty arthaḥ / /9</p>
+</note>
+
+<p xml:id="VaSu_p21550">ity anena sūtreṇa devīcatuṣṭayakathākramaṃ prakāśya, idānīṃ dvādaśavāhacakrarahasyaṃ nirūpyate</p>
+<note type="analysis" corresp="#VaSu_p21550">
+<p>ity anena sūtreṇa devī-catuṣṭaya-kathā-kramaṃ prakāśya, idānīṃ dvādaśa-vāha-cakra-rahasyaṃ nirūpyate</p>
+</note>
+
+<p xml:id="VaSu_10">dvādaśavāhodayena mahāmarīcivikāsaḥ //</p>
+<note type="analysis" corresp="#VaSu_10">
+<p>dvādaśa-vāha-udayena mahā-marīci-vikāsaḥ //</p>
+</note>
+
+<p xml:id="VaSu_p21748">manaḥsaṃhitaṃ śrotrādibuddhīndriyapañcakaṃ, tathā buddhisaṃhitaṃ vāgādikarmendriyapañcakaṃ, etadubhayasamūhaḥ "*dvādaśavāhaḥ*" / tasyollāso 'hetukena kenāpy ativiśṛṅkhalataradhāmaniruttaranistaraṅgaparasvātantryavṛttyā ghasmarasaṃvitpravāhaḥ / tena "*mahāmarīcīnām*" nirāvaraṇakrameṇa pratyekasmin pravāhodyogāvabhāsacarvaṇālaṃgrāsaviśrāntirūpāṇāṃ mahāsaṃvidraśmīnāṃ "*vikāsaḥ*" niyatāniyatacidacitprathāvigalanena nityavikasvarasvabhāvo mahāprabodhaḥ satatam avinaśvaratayā sarvatra sarvataḥ sarvadaiva sthiteti mahāvākyārthaḥ //</p>
+<note type="analysis" corresp="#VaSu_p21748">
+<p>manaḥ-saṃhitaṃ śrotra-ādi-buddhīndriya-pañcakaṃ, tathā buddhi-saṃhitaṃ vāg-ādi-karmendriya-pañcakaṃ, etad-ubhaya-samūhaḥ "*dvādaśa-vāhaḥ*" / tasya ullāso 'hetukena kena apy ati-viśṛṅkhalatara-dhāma-niruttara-nistaraṅga-para-svātantrya-vṛttyā ghasmara-saṃvit-pravāhaḥ / tena "*mahā-marīcīnām*" nirāvaraṇa-krameṇa pratyekasmin pravāha udyoga-avabhāsa-carvaṇa-alaṃgrāsa-viśrānti-rūpāṇāṃ mahāsaṃvid-raśmīnāṃ "*vikāsaḥ*" niyata-aniyata-cid-acit-prathā-vigalanena nitya-vikasvara-svabhāvo mahā-prabodhaḥ satatam avinaśvaratayā sarvatra sarvataḥ sarvada aiva sthita iti mahāvākya-arthaḥ //</p>
+</note>
+
+<p xml:id="VaSu_p22350">ity akaraṇasiddhaṃ sadaiva nirāvaraṇapadasamāveśaṃ dvādaśavāhodayadṛśā prakāśya, idānīṃ caryāpañcakasaṃpradāyaṃ nirūpyanti</p>
+<note type="analysis" corresp="#VaSu_p22350">
+<p>ity akaraṇa-siddhaṃ sada aiva nirāvaraṇa-pada-samāveśaṃ dvādaśa-vāha-udaya-dṛśā prakāśya, idānīṃ caryā-pañcaka-saṃpradāyaṃ nirūpyanti</p>
+</note>
+
+<p xml:id="VaSu_11">caryāpañcakodaye nistaraṅgasamāveśaḥ //</p>
+<note type="analysis" corresp="#VaSu_11">
+<p>caryā-pañcaka-udaye nistaraṅga-samāveśaḥ //</p>
+</note>
+
+<p xml:id="VaSu_p22579">"*caryāpañcakaṃ*" tv anāśritāvadhūtonmattasarvabhakṣyamahāvyāpakasvarūpaṃ / tasyodayo niyatāniyataśaktisamūhāntarodito vikāsasvabhāvollāsaḥ / tasmin sati "*nistaraṅgasamāveśaḥ*" āṇavaśāktaśāmbhavodayarūpasamastataraṅgaparivarjitasamāveśalakṣaṇaniruttarasamāveśadharmaiva prathatetyarthaḥ / caryāpañcakakramaṃ ca vitatya nirūpayāmi / tatrānāśritā nirādhāratvāt paramākāśarūpā śrotrasuṣirapradeśagamanena svagrāhyavastūpasaṃharaṇāyodgatā / avadhūtā cāniyatatayā sarvatraviharaṇadṛkśaktimārgeṇa svasaṃhāryasvīkaraṇāyonmiṣitā / unmattā ca vicittavatsvatantratayā grāhyāgrāhyasaṃbandhāvivakṣayā svaviṣayagrahaṇāya prathitā / sarvabhakṣyā bhakṣyasaṃskāranikhilakavalanaśīlā svasaṃhāryapadārthagrasanāyoditā / sarvavyāpikā ca
+tvagvṛttigamanikayā nikhilavyāpakatvād aśeṣasparśasvīkaraṇāyonmiṣitā; -- iti caryāpañcakodayaḥ //</p>
+<note type="analysis" corresp="#VaSu_p22579">
+<p>"*caryā-pañcakaṃ*" tv anāśrita-avadhūta-unmatta-sarvabhakṣya-mahāvyāpaka-svarūpaṃ / tasya udayo niyata-aniyata-śakti-samūha-antara-udito vikāsa-svabhāva ullāsaḥ / tasmin sati "*nistaraṅga-samāveśaḥ*" āṇava-śākta-śāmbhava-udaya-rūpa-samasta-taraṅga-parivarjita-samāveśa-lakṣaṇa-niruttara-samāveśa-dharma aiva prathata ity-arthaḥ / caryā-pañcaka-kramaṃ ca vitatya nirūpayāmi / tatra anāśritā nirādhāratvāt parama-ākāśa-rūpā śrotra-suṣira-pradeśa-gamanena sva-grāhya-vastu-upasaṃharaṇāya udgatā / avadhūtā ca aniyatatayā sarvatra-viharaṇa-dṛk-śakti-mārgeṇa sva-saṃhārya-svīkaraṇāya unmiṣitā / unmattā ca vicittavat-svatantratayā grāhya-agrāhya-saṃbandha-avivakṣayā sva-viṣaya-grahaṇāya prathitā / sarvabhakṣyā bhakṣya-saṃskāra-nikhila-kavalana-śīlā sva-saṃhārya-padārtha-grasanāya uditā / sarva-vyāpikā ca
+tvag-vṛtti-gamanikayā nikhila-vyāpakatvād aśeṣa-sparśa-svīkaraṇāya unmiṣitā; --- iti caryā-pañcaka-udayaḥ //</p>
+</note>
+
+<p xml:id="VaSu_p23499">satatasiddhacaryākramaṃ nirūpya, idānīṃ nirniketaparajñānaprakāśāvalambanena puṇyapāpanivṛttikathāṃ nirūpayanti</p>
+<note type="analysis" corresp="#VaSu_p23499">
+<p>satata-siddha-caryā-kramaṃ nirūpya, idānīṃ nirniketa-para-jñāna-prakāśa-avalambanena puṇya-pāpa-nivṛtti-kathāṃ nirūpayanti</p>
+</note>
+
+<p xml:id="VaSu_12">mahābodhasamāveśāt puṇyapāpasaṃbandhaḥ //</p>
+<note type="analysis" corresp="#VaSu_12">
+<p>mahābodha-samāveśāt puṇya-pāpa-saṃbandhaḥ //</p>
+</note>
+
+<p xml:id="VaSu_p23720">"*mahābodhaḥ*" ca jñātṛjñānajñeyavikalpasaṃkalpakāluṣyanirmukto niḥśamaśamāniketanirdhāmadhāmaprathātmakaḥ paratarajñānasvabhāvaḥ kramākramottīrṇatvān mahāgurubhir sākṣātkṛtaḥ / tasya "*samāveśaḥ*" akaraṇakrameṇa yathāsthitasaṃniveśena tyāgasvīkāraparihārataḥ satatam acyutavṛttyā tadrūpeṇa sphuraṇam / tasmāt "*mahābodhasamāveśat*" puṇyapāpayor śubhāśubhalakṣaṇakarmaṇor dvayor svaphaladvayavitaraṇaśīlayor "*asaṃbandhaḥ*" asaṃśleṣo 'saṃyogaś cānavarataṃ jīvata eva vīravarasyāpaścimajanmanaḥ kasya cit sarvakālam akṛtakānubhavarasacarvaṇasaṃtṛptasya bhavabhūmāv eva bandhamokṣobhayottīrṇamahāmuktir karatalāmalakavat sthitety arthaḥ //</p>
+<note type="analysis" corresp="#VaSu_p23720">
+<p>"*mahā-bodhaḥ*" ca jñātṛ-jñāna-jñeya-vikalpa-saṃkalpa-kāluṣya-nirmukto niḥśama-śama-aniketa-nirdhāma-dhāma-prathā-ātmakaḥ paratara-jñāna-svabhāvaḥ krama-akrama-uttīrṇatvān mahā-gurubhir sākṣātkṛtaḥ / tasya "*samāveśaḥ*" akaraṇa-krameṇa yathāsthita-saṃniveśena tyāga-svīkāra-parihārataḥ satatam acyuta-vṛttyā tad-rūpeṇa sphuraṇam / tasmāt "*mahābodha-samāveśat*" puṇya-pāpayor śubha-aśubha-lakṣaṇa-karmaṇor dvayor sva-phala-dvaya-vitaraṇa-śīlayor "*asaṃbandhaḥ*" asaṃśleṣo 'saṃyogaś ca anavarataṃ jīvata eva vīra-varasya apaścima-janmanaḥ kasya cit sarva-kālam akṛtaka-anubhava-rasa-carvaṇa-saṃtṛptasya bhava-bhūmāv eva bandha-mokṣa-ubhaya-uttīrṇa-mahāmuktir kara-tala-āmalaka-vat sthita īty arthaḥ //</p>
+</note>
+
+<p xml:id="VaSu_p24438">svasvarūpaprāptipūrvakaṃ puṇyapāpatiraskāracarcākramam uktvā, idānīṃ svarasiddhamaunakathām udghāṭayanti</p>
+<note type="analysis" corresp="#VaSu_p24438">
+<p>sva-svarūpa-prāpti-pūrvakaṃ puṇya-pāpa-tiraskāra-carcā-kramam uktvā, idānīṃ svara-siddha-mauna-kathām udghāṭayanti</p>
+</note>
+
+<p xml:id="VaSu_13">akathanakathābalena mahāvismayamudrāprāptyā khasvaratā //</p>
+<note type="analysis" corresp="#VaSu_13">
+<p>akathana-kathā-balena mahā-vismaya-mudrā-prāptyā kha-svaratā //</p>
+</note>
+
+<p xml:id="VaSu_p24671">"*akathanakathābalaṃ*" gurumukhopadiṣṭasaṃpradāyakrameṇa manāg iha carcyate / asya akārasya (1)hata(2)anāhata(3)anāhatahata(4)anāhatahatottīrṇatayā caturdhoditarūpasya kathanaṃ vaktrāmnāyacarcāsaṃniveśanam ity akathanaṃ / tatra hatas tāvat kathyate - hṛtkaṇṭhatālvādisthānakaraṇasaṃniveśair hato 'kārādihakāraparyantanānāpadārthāvabhāsakaḥ / anāhataś cāsvaramūlollasitaparanādavisphāras tantrīmadhyamāsvarasaṃketako 'akaṇṭhakūpāntād upacārataḥ kṛtapratiṣṭhaḥ / anāhatahataś cobhayāśritonmiṣito 'hato viśrāntaśaṣkulīśravaṇagopanodbhinnaprathaḥ śravaṇayugmamadhyavartyākāśāt tattvapratibimbatattvadehato 'pi hato 'nāhatahataḥ / anāhatahatottīrṇaś ca mahānirāvaraṇadhāmasamullasito 'vikalpaḥ
+īṣaccalattātmakamahāspandaprathamakoṭirūpaḥ svaraḥ saṃkocavikāsavirahāt paramavikāsarūpo 'sparśadharmānuccāryamahāmantraprathātmakaḥ / tathā cānāhatahatottīrṇo yaḥ sa śṛṅgāṭakākāro raudrīsvabhāvas turyaḥ / anāhatahataś cānackakalātmakavaktrasaṃsthāno vāmarūpaḥ suṣuptaḥ / anāhataś ca bāhurūpāmbikāśaktir yāgame nirūpitā tatsvarūpaḥ svapnaḥ / hataś cāyudhākāro jyeṣṭhāsvabhāvo jāgrat / ity etaccatuṣṭayasvabhāvasyādyavarṇasya kathanaṃ pāramparyamukhayuktiviśeṣaḥ / tasya balaṃ hatādirūpatrayollasitānāhatahatottīrṇarāvasphurattārūpaṃ vīryaṃ tena "*akathanakathābalena*" / tatraivam akathanaṃ vākprapañcottīrṇam akathanam eva kathanaṃ saṃkramaṇakrameṇa nirniketasvarūpāvadhānaṃ tad eva balaṃ akṛtakasphārasāraṃ / tena saṃkramaṇaṃ ca manāg iha vitanyate / prāṇapuryaṣṭakaśūnyapramātṛniviniṣṭābhimānavigalanena nistaraṅgapravikacacciddhāmabaddhāspado daiśikavaro niḥspandānandasundaraparamaśūnyadṛgbalena kāryakaraṇakarmanirapekṣatayā yad yat kiṃ cit sarvagatātmasvarūpapratipattāv avalokayati tat tat parataracinmayam eva satataṃ bhavati,  iti nāsty atra sandehaḥ / tathā cānyad vyākhyāntaram āha  kathanaṃ tāvat ṣaḍdarśanacaturāmnāyamelāpakramasamūheṣu pūjanakramoditaniyatāniyatadevatācakrāvalambanena sphurati / iha punaḥ pūjyapūjakapūjanasaṃbandhaparihāreṇa śrīmadvātūlanāthādisiddhapravaravaktrāmnāyadṛśā satatasiddhamahāmarīcivikāsaiva sarvottīrṇasvarūpāvibhinnaḥ sarvadaiva sarvatra virājate,  ity akathanakathābalaṃ tena mahāvismayaprāptir bhavatīti saṃbandhaḥ / "*mahāvismayaḥ*" ca vigato vinaṣṭaḥ smayo mitāmitāhaṅkāradarpaḥ sarvollaṅghanavṛttyā svarūpānupraveśaḥ / atha ca mahāvismayaḥ svaparabhedavismaraṇāj jhaṭiti nirantaranirargalakhecaravṛttisamāveśaḥ / saiva sarvamudrāṇāṃ kroḍīkaraṇāt "*mudrā*" tasyā maunapadasamāveśamayatā / tayā hetubhūtayā "*khasvaratā*" trayodaśakathākathanasāmarasyātmakaḥ khasvaras tasya bhāvaḥ sāmarasyaprathanaṃ bhavatīty arthaḥ / khasvaras tu kham api bhāvaśūnyam api svena rāti vyāpnoti svīkarotīty ādatte, iti khasvaraḥ //</p>
+<note type="analysis" corresp="#VaSu_p24671">
+<p>"*akathana-kathā-balaṃ*" guru-mukha-upadiṣṭa-saṃpradāya-krameṇa manāg iha carcyate / asya akārasya (1)hata-(2)anāhata-(3)anāhata-hata-(4)anāhata-hata-uttīrṇatayā caturdhā-udita-rūpasya kathanaṃ vaktra-āmnāya-carcā-saṃniveśanam ity akathanaṃ / tatra hatas tāvat kathyate -- hṛt-kaṇṭha-tālv-ādi-sthāna-karaṇa-saṃniveśair hato 'kāra-ādi-hakāra-paryanta-nānā-padārtha-avabhāsakaḥ / anāhataś ca asvara-mūla-ullasita-paranāda-visphāras tantrī-madhyamā-svara-saṃketako 'a-kaṇṭha-kūpa-antād upacārataḥ kṛta-pratiṣṭhaḥ / anāhata-hataś ca ubhaya-āśrita-unmiṣito 'hato viśrānta-śaṣkulī-śravaṇa-gopana-udbhinna-prathaḥ śravaṇa-yugma-madhya-varty-ākāśāt tattva-pratibimba-tattva-dehato 'pi hato 'nāhata-hataḥ / anāhata-hata-uttīrṇaś ca mahā-nirāvaraṇa-dhāma-samullasito 'vikalpaḥ
+īṣac-calattā-ātmaka-mahā-spanda-prathama-koṭi-rūpaḥ svaraḥ saṃkoca-vikāsa-virahāt parama-vikāsa-rūpo 'sparśa-dharma-anuccārya-mahā-mantra-prathā-ātmakaḥ / tathā ca anāhata-hata-uttīrṇo yaḥ sa śṛṅgāṭaka-ākāro raudrī-svabhāvas turyaḥ / anāhata-hataś ca anacka-kalā-ātmaka-vaktra-saṃsthāno vāma-rūpaḥ suṣuptaḥ / anāhataś ca bāhurūpa-ambikā-śaktir yā āgame nirūpitā tat-svarūpaḥ svapnaḥ / hataś cā ayudha-ākāro jyeṣṭhā-svabhāvo jāgrat / ity etac-catuṣṭaya-svabhāvasyā adya-varṇasya kathanaṃ pāramparya-mukha-yukti-viśeṣaḥ / tasya balaṃ hata-ādi-rūpa-traya-ullasita-anāhata-hata-uttīrṇa-rāva-sphurattā-rūpaṃ vīryaṃ tena "*akathana-kathā-balena*" / tatra evam akathanaṃ vāk-prapañca-uttīrṇam akathanam eva kathanaṃ saṃkramaṇa-krameṇa nirniketa-svarūpa-avadhānaṃ tad eva balaṃ akṛtaka-sphāra-sāraṃ / tena saṃkramaṇaṃ ca manāg iha vitanyate / prāṇa-puryaṣṭaka-śūnya-pramātṛ-niviniṣṭa-abhimāna-vigalanena nistaraṅga-pravikacac-cid-dhāma-baddha-āspado daiśika-varo niḥspanda-ānanda-sundara-parama-śūnya-dṛg-balena kārya-karaṇa-karma-nirapekṣatayā yad yat kiṃ cit sarva-gata-ātma-svarūpa-pratipattāv avalokayati tat tat paratara-cinmayam eva satataṃ bhavati, - iti na asty atra sandehaḥ / tathā ca anyad vyākhyā-antaram āha - kathanaṃ tāvat ṣaḍdarśana-caturāmnāya-melāpa-krama-samūheṣu pūjana-krama-udita-niyata-aniyata-devatā-cakra-avalambanena sphurati / iha punaḥ pūjya-pūjaka-pūjana-saṃbandha-parihāreṇa śrīmad-vātūlanātha-ādi-siddha-pravara-vaktrāmnāya-dṛśā satata-siddha-mahā-marīci-vikāsa eva sarva-uttīrṇa-svarūpa-avibhinnaḥ sarvada aiva sarvatra virājate, - ity akathana-kathā-balaṃ tena mahā-vismaya-prāptir bhavati iti saṃbandhaḥ / "*mahā-vismayaḥ*" ca vigato vinaṣṭaḥ smayo mita-amita-ahaṅkāra-darpaḥ sarva-ullaṅghana-vṛttyā svarūpa-anupraveśaḥ / atha ca mahā-vismayaḥ sva-para-bheda-vismaraṇāj jhaṭiti nirantara-nirargala-khecara-vṛtti-samāveśaḥ / sa aiva sarva-mudrāṇāṃ kroḍīkaraṇāt "*mudrā*" tasyā mauna-pada-samāveśa-mayatā / tayā hetu-bhūtayā "*kha-svaratā*" trayodaśa-kathā-kathana-sāmarasya-ātmakaḥ kha-svaras tasya bhāvaḥ sāmarasya-prathanaṃ bhavati ity arthaḥ / kha-svaras tu kham api bhāva-śūnyam api svena rāti vyāpnoti svīkaroti ity ādatte, iti kha-svaraḥ //</p>
+</note>
+
+<p xml:id="VaSu_p27583">ṣaḍdarśanacāturāmnāyikasarvamelāpakathātrayodaśakathāsākṣātkāropadeśabhaṅgyānuttarapadādvayatayā kasyacidavadhūtasya pīṭheśvarībhir mahāmelāpasamaye sūtropanibaddho vaktrāmnāyaḥ prakāśitaḥ / tasyaiveha manāk satām avabodhārtham asmābhir vṛttir iyaṃ kṛteti śivaṃ /</p>
+<note type="analysis" corresp="#VaSu_p27583">
+<p>ṣaḍdarśana-cāturāmnāyika-sarva-melāpa-kathā-trayodaśa-kathā-sākṣātkāra-upadeśa-bhaṅgyā-anuttara-pada-advayatayā kasya-cid-avadhūtasya pīṭheśvarībhir mahā-melāpa-samaye sūtra-upanibaddho vaktrāmnāyaḥ prakāśitaḥ / tasya eva iha manāk satām avabodha-artham asmābhir vṛttir iyaṃ kṛta īti śivaṃ /</p>
+</note>
+
+<lg xml:id="VaSu_p27898">
+<l>iti paramarahasyaṃ vāgvikalpaugham uktaṃ <lb/>bhavavibhavavibhāgabhrāntimuktena samyak /</l>
+<l>kṛtam anupamam uccair kena cic cidvikāsāt <lb/>akalitaparasattāsāhasollāsavṛttyā //</l>
+</lg>
+<note type="analysis" corresp="#VaSu_p27898">
+<lg>
+<l>iti parama-rahasyaṃ vāg-vikalpa-ogham uktaṃ <lb/>bhava-vibhava-vibhāga-bhrānti-muktena samyak /</l>
+<l>kṛtam anupamam uccair kena cic cid-vikāsāt <lb/>akalita-para-sattā-sāhasa-ullāsa-vṛttyā //</l>
+</lg>
+</note>
+
+
+<p xml:id="VaSu_p28131">samāpto 'yaṃ śrīmadvātūlanāthasūtravṛttiḥ /
+kṛtir śrīmadanantaśaktipādānām //</p>
+<note type="analysis" corresp="#VaSu_p28131">
+<p>samāpto 'yaṃ śrīmad-vātūlanātha-sūtra-vṛttiḥ /
+kṛtir śrīmad-anantaśaktipādānām //</p>
+</note>
+
+
+<lg xml:id="VaSu_p28244">
+<l>śrīmatpratāpabhūbhartur ājñayā prītaye satāṃ /</l>
+<l>Madhusūdanakaulena saṃpadyeyaṃ prakāśitā //</l>
+</lg>
+<note type="analysis" corresp="#VaSu_p28244">
+<lg>
+<l>śrīmat-pratāpa-bhūbhartur ājñayā prītaye satāṃ /</l>
+<l>Madhusūdanakaulena saṃpadya iyaṃ prakāśitā //</l>
+</lg>
+</note>
+
+  </body>
+</text>
+</TEI>

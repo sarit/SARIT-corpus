@@ -1,0 +1,1591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_mahAvadAnasUtra">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Mahāvadānasūtra</title>
+	<author></author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>Takamichi Fukita</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Takamichi Fukita</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/mavadsuu.htm">mavadsuu.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Mahavadanasutra
+<lb/>Based on the edition by Takamichi Fukita: The Mahāvadānasūtra, A New Edition Based on Manuscripts Discovered in Northern Turkestan. Göttingen 2003 (Sanskrit-Wörterbuch der buddhistischen Texte aus den Turfan-Funden, Beiheft 10).
+<lb/>
+<lb/>Input by Takamichi Fukita
+<lb/>
+<lb/>CAPITAL initial letters for names
+<lb/>
+<lb/>BOLD for pagination and headings
+<lb/>ITALIC for emendations
+<lb/>
+<lb/>METRICS:
+<lb/>^ = short
+<lb/>_ = long
+<lb/>X = short/long
+<lb/>XX = short-short/long
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>Takamichi Fukita: The Mahāvadānasūtra, A New Edition Based on Manuscripts Discovered in Northern Turkestan. Göttingen 2003 (Sanskrit-Wörterbuch der buddhistischen Texte aus den Turfan-Funden, Beiheft 10).</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Mahāvadānasūtra = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Religious Literature -- Buddhist</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+
+<note><hi rend="bold">MAV 30</hi></note>
+
+<p><hi rend="bold">I. Prologue</hi></p>
+
+<p>evaṃ mayā <hi rend="it">ś</hi>r<hi rend="it">utam</hi> ekasmiṃ samaye bhagavāṃ Śrāvastyāṃ viharati Jetavane A<hi rend="it">nā</hi>thapiṇḍadārāme /</p>
+
+<p>atha saṃbahulān<hi rend="it">āṃ bhikṣūṇā</hi>ṃ Karīrikamaṇḍalavāṭe saṃniṣaṇṇānāṃ s<hi rend="it">a</hi>ṃ<hi rend="it">nipatitā</hi>nām ayam evaṃrūpo 'bhūd antarākath<hi rend="it">āsa</hi>mudāhāraḥ</p>
+
+<p>āścaryam āyuṣmanto <hi rend="it">yāvac ca bhaga</hi>vat<hi rend="it">aḥ atīteṣu</hi> samyaksaṃbuddheṣu atītāṃśa<hi rend="it">bhāvaga</hi>t<hi rend="it">eṣ</hi>u <hi rend="it">ch</hi>inna<hi rend="it">vartma</hi>su chinnapuṭeṣu niṣprapaṃceṣu prapaṃcātīteṣu parinirvṛteṣu kāruṇike<hi rend="it">ṣu nirāśiṣ</hi>e<hi rend="it">ṣu evaṃ</hi> s<hi rend="it">amyak</hi> pr<hi rend="it">at</hi>y<hi rend="it">ā</hi>tmaṃ jñānadarśanaṃ pravartat<hi rend="it">e</hi> / e<hi rend="it">vaṃśī</hi>lā bata te <hi rend="it">bu</hi>ddhā bhagavaṃto babhūvur ity api evaṃdharmāṇ<hi rend="it">a</hi> evaṃpr<hi rend="it">ajñā evamabhijñā e</hi>vaṃv<hi rend="it">i</hi>muktaya evaṃ<hi rend="it">vi</hi>hāriṇo bata te buddhā bhagavanto babhūvur ity api /</p>
+
+<p>kiṃ nu bha<hi rend="it">ga</hi>va<hi rend="it">to dha</hi>rmadhātuḥ supratividdhaḥ āho svid deva<hi rend="it">tā ārocayaṃti yena tathāgata</hi>syātīteṣu samyaksaṃbuddheṣu atītāṃśabhā<hi rend="it">vagate</hi>ṣu chinnava<hi rend="it">rtmasu chinnapu</hi>ṭeṣu niṣprapaṃceṣu prapañcā<hi rend="it">tī</hi>teṣu (<hi rend="bold">MAV 32</hi>) par<hi rend="it">i</hi>nirvṛte<hi rend="it">ṣu kāruṇikeṣu nirāśiṣeṣu evaṃ samyak pratyātmaṃ</hi> jñ<hi rend="it">ā</hi>nadarśanaṃ pravartate evaṃśīlā bata te bud<hi rend="it">dhā bhagavaṃto babhū</hi>vur ity apy evaṃdharmāṇa evaṃ<hi rend="it">prajñā</hi> evamabhij<hi rend="it">ñ</hi>ā <hi rend="it">evaṃvimuktaya evaṃvihāriṇo bata te buddhā bhagavaṃto</hi> babhūvur ity api /</p>
+
+<p>iyaṃ<hi rend="it">teṣāṃ saṃbahulānāṃ bhikṣūṇāṃ Karīri</hi>k<hi rend="it">a</hi>maṇḍalavāṭe saṃniṣaṇṇānāṃ sannipatitānām a<hi rend="it">ntarākathā viprakṛtā /</hi></p>
+
+<p>aśrauṣīd bhagavāṃ divāvihāropagato divyena śrotreṇa viśuddhenātikrāntamā<hi rend="it">nuṣeṇa śrutvā ca</hi> punas tasmāt samādher vyu<hi rend="it">tthā</hi>ya yena Karīrikamaṇḍala<hi rend="it">vā</hi>ṭas tenopajagāma upetya purastād bhikṣusaṃghasya prajñapt'; evāsanne nyaṣīdat</p>
+
+<p>niṣadya bha<hi rend="it">ga</hi>vā<hi rend="it">ṃ</hi> bhikṣūn āmantrayati kā <hi rend="it">nu yuṣmākaṃ bhikṣavaḥ saṃbahulānāṃ</hi> bh<hi rend="it">i</hi>kṣūṇāṃ Karīrikamaṇḍalavāṭe saṃniṣaṇṇānāṃ saṃnipatitā<hi rend="it">nām anta</hi>rākathā viprakṛtā kayā cāp<hi rend="it">i</hi> katha<hi rend="it">y</hi>aitarhi <hi rend="it">sa</hi>n<hi rend="it">n</hi>i<hi rend="it">ṣa</hi>ṇṇā<hi rend="it">ḥ saṃnipa</hi>t<hi rend="it">i</hi>tāḥ</p>
+
+<p>ihāsmākaṃ bhadanta <hi rend="it">saṃ</hi>bahu<hi rend="it">lānāṃ bhikṣ</hi>ū<hi rend="it">ṇ</hi>ā<hi rend="it">ṃ</hi> Karīrik<hi rend="it">ama</hi>ṇḍalav<hi rend="it">āṭe</hi> s<hi rend="it">a</hi>ṃ<hi rend="it">niṣaṇṇānāṃ saṃnipatitānā</hi>m ay<hi rend="it">am evaṃrū</hi>p<hi rend="it">o</hi> 'bhūd antarākathāsamudāhāraḥ āścaryam āyuṣma<hi rend="it">ṃ</hi>to yāvac ca bhagavataḥ atīteṣu samyaksaṃbuddheṣu atītāṃśabhāvagateṣu chinnava<hi rend="it">rtma</hi>su chinnapuṭe<hi rend="it">ṣu niṣprapañceṣu</hi> prapañcātīteṣu parinirvṛteṣu kāruṇikeṣu nirāśiṣeṣu evaṃ samyak pratyātmaṃ jñānadarśanaṃ pravartate evaṃśīlā bata te buddhā bh<hi rend="it">agava</hi>nt<hi rend="it">o babhūvu</hi>r <hi rend="it">i</hi>ty api evaṃdharmāṇa evaṃprajñā eva<hi rend="it">ma</hi>bhij<hi rend="it">ñ</hi>ā evaṃvim<hi rend="it">u</hi>ktaya evaṃ<hi rend="it">vihā</hi>riṇo bata te buddhā bhagavanto babhūvur ity api / kiṃ nu bhagavato <hi rend="it">dhar</hi>m<hi rend="it">a</hi>dhātu<hi rend="it">ḥ s</hi>upratividdha āho svid devatā āroca<hi rend="it">yaṃti yena</hi> (<hi rend="bold">MAV 34</hi>) <hi rend="it">tathāgata</hi>syātīteṣu samya<hi rend="it">k</hi>s<hi rend="it">aṃ</hi>bu<hi rend="it">ddheṣu atī</hi>tāṃśabhāvagateṣu chinnavartmasu chinnapuṭeṣu niṣprapañceṣu prapañcā<hi rend="it">tīteṣu</hi> parinirvṛteṣu kāruṇike<hi rend="it">ṣu nirāśiṣeṣu e</hi>vaṃ samyak pratyātm<hi rend="it">aṃ jñānadarśanaṃ</hi> pravartate evaṃśīlā bata te buddhā bhagavanto babhūvur ity api evaṃdhar<hi rend="it">māṇa evaṃ</hi>prajñā evamabhij<hi rend="it">ñ</hi>ā <hi rend="it">evaṃvimuktaya evaṃvihāriṇo bata te buddhā bhagavaṃto ba</hi>bhūvur ity api / iyam asmākaṃ bhadaṃta saṃbahulānāṃ bhiksūṇāṃ Karīrikamaṇḍalavāṭe sa<hi rend="it">ṃ</hi>niṣaṃṇ<hi rend="it">ānāṃ saṃnipatitānām antarākathā vip</hi>r<hi rend="it">ak</hi>ṛ<hi rend="it">tā tayā cāpi bhagavan ka</hi>thayā etarhi saṃniṣaṃṇāḥ saṃnipatitā api me bhikṣavo dharmadhātuḥ supratividdha api me devatā āroca<hi rend="it">yanti iyam atra dhar</hi>matā tasmād idam u<hi rend="it">c</hi>y<hi rend="it">a</hi>te ||</p>
+
+<p><hi rend="it">pūrvaṃ</hi> kathā dhārmikī arthasaṃhitā
+udāhṛtā maṇḍalavāṭabhikṣubhiḥ
+aśrauṣīd divyena hi śrotradhātunā
+<hi rend="it">divāvihār</hi>opagato mahāmu<hi rend="it">niḥ 1</hi>
+<hi rend="it">div</hi>y<hi rend="it">ena</hi> śr<hi rend="it">o</hi>treṇa niśāmya śāstā
+upāgato maṇḍalav<hi rend="it">āṭa</hi>bhi<hi rend="it">kṣūn</hi>
+nyaṣīdat sa hi bhikṣugaṇasya madhye
+Śakro ya<hi rend="it">then</hi>dr<hi rend="it">as</hi> tr<hi rend="it">ida</hi>śeṣu madhye <hi rend="it">2</hi>
+<hi rend="it">p</hi>r<hi rend="it">a</hi>tivi<hi rend="it">ddho</hi> dharmadhātur bud<hi rend="it">dh</hi>enādityabandhunā /
+yenābhyatītāṃ jānāti saṃbuddhāṃ dvipad<hi rend="it">o</hi>tt<hi rend="it">amaḥ 3</hi>
+<hi rend="it">evaṃ</hi>nāmā evaṃjātyā evaṃgotrāś ca te 'bh<hi rend="it">avan</hi>
+yathā yathā ca te āsaṃ sarve vyākṛtavā<hi rend="it">ṃ</hi> muni<hi rend="it">ḥ 4</hi>
+<hi rend="it">nā</hi>nādīrghāyuṣo devā varṇavanto yaśasvinaḥ
+evam ārocayaṃty arthaṃ saṃbuddhānāṃ yaśasvinām <hi rend="it">5 ||</hi></p>
+
+<note><hi rend="bold">MAV 36</hi></note>
+<p><hi rend="bold">II. How was the Dharmadhātu Realized?</hi>
+<hi rend="it">ka</hi>thaṃ dharmadhātuḥ supratividdhaḥ</p>
+
+<p><hi rend="bold">A. The Characteristics of the Seven Buddhas
+1. Kalpa</hi>
+itaḥ sa e<hi rend="it">kanavataḥ ka</hi>lp<hi rend="it">o yasmiṃ kalpe Vipaś</hi>y<hi rend="it">ī</hi> samyaksaṃbuddho loke utpannaḥ itaḥ sa ekatriṃśattamaḥ kalpo <hi rend="it">yasmiṃ kalp</hi>e <hi rend="it">Śikhī ca Viśvabhuk ca samyaksaṃbuddhau loka utpannau asminn eva</hi> Bhadrakalpe c<hi rend="it">at</hi>v<hi rend="it">āraḥ samyaksaṃ</hi>buddhā loke utpannā Krakasundaḥ Kanaka<hi rend="it">mun</hi>i<hi rend="it">ḥ K</hi>āś<hi rend="it">ya</hi>p<hi rend="it">o vayaṃ cāpy etarhi Śākyamuniḥ iyam atra dharmatā tasmād idam ucyate || </hi></p>
+
+<p>X kaś ca kal<hi rend="it">p</hi>o ^ ^ _ ^ _ X
+yadā Vipaśyī udapādi _ X <hi rend="it">|</hi>
+X _ ^ _ _ ^ ^ _ ^ _ X
+X _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">1</hi>
+<hi rend="it">Viśva</hi>bhu<hi rend="it">ja</hi>ṃ _ ^ ^ _ ^ _ X
+v<hi rend="it">i</hi>nāyakāḥ Krakasun<hi rend="it">d</hi> ^ _ X <hi rend="it">|</hi>
+X _ ^ _ _ ^ ^ _ ^ _ X
+X _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">2 ||</hi>
+<note><hi rend="bold">MAV 38</hi></note>
+<hi rend="bold">2. Life Span</hi></p>
+
+<l><hi rend="it">Vipaśyinaḥ samyaksaṃbu</hi>ddha<hi rend="it">sya</hi> a<hi rend="it">śītir varṣasaha</hi>srāṇy āyuṣpramāṇam abhūt Śikhinaḥ sa<hi rend="it">myaksaṃbuddhasya saptatiḥ Viśvabhujaḥ samyaksaṃbuddhasya ṣaṣṭiḥ Krakasundasya samyaksaṃbu</hi>d<hi rend="it">dhas</hi>y<hi rend="it">a</hi> catvāriṅśat Kanakamuneḥ samyak<hi rend="it">s</hi>aṃbud<hi rend="it">dh</hi>asya triṅśat Kāśya<hi rend="it">pasya samyaksaṃbuddhasya viṃśatiḥ asmākam apy etarhi varṣaśatam āyuṣpramā</hi>ṇ<hi rend="it">aṃ sa</hi>myaks<hi rend="it">u</hi>khe<hi rend="it">na</hi> paripri<hi rend="it">ya</hi>māṇ<hi rend="it">a</hi>m iyam atra dha<hi rend="it">rma</hi>tā ta<hi rend="it">s</hi>m<hi rend="it">ā</hi>d idam ucy<hi rend="it">ate ||</hi></l>
+
+<p>X _ ^ _ _ ^ ^ _ ^ _ X
+X _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">|</hi>
+X _ ^ _ _ ^ ^ _ sa _ X
+X _ ^ _ <hi rend="it">Viśva</hi>bhujo jinasya 1
+catvāriṃśat Krakasundasya śā<hi rend="it">stuḥ</hi>
+X _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">|</hi>
+X _ ^ _ _ ^ ^ _ ^ _ X
+X _ ^ _ <hi rend="it">Śā</hi>kyamu<hi rend="it">ni</hi> ^ _ X <hi rend="it">2 || </hi></p>
+
+<p><hi rend="bold">3. Caste</hi></p>
+
+<l><hi rend="it">Vipaśyī</hi> samyaksaṃbuddhaḥ kṣatriyo <hi rend="it">jātyābhūt Śikhī samyaksaṃbuddhaḥ kṣatriyo jātyābhūd Viśvabhuk ca / Krakasundaḥ samyaksaṃbuddho brāhmaṇo jātyābhūt Kana</hi>kamuniḥ <hi rend="it">Kāś</hi>y<hi rend="it">apaś ca / asmāka</hi>m apy etarhi kṣatriyā jāti<hi rend="it">r bhavati iyam atra dharmatā tasmād idam ucyate ||</hi></l>
+
+<p>X _ ^ _ _ ^ ^ _ ^ _ X
+X _ ^ _ _ ^ babhūva kṣat<hi rend="it">r</hi>i<hi rend="it">yāḥ</hi>
+X _ ^ _ Kanakamuniś ca Kāśyapa
+et'; ekajāty. ^ ^ _ ^ _ ^ X <hi rend="it">1</hi>
+X _ ^ _ _ ^ ^ _ ^ _ X
+X _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">|</hi>
+X <hi rend="it">y</hi>ā ^ _ _ ^ ^ _ ^ k<hi rend="it">a</hi>lpāṃ
+niṣk<hi rend="it">r</hi>āntavāṃ Cchākyakulāc ca kṣa<hi rend="it">triyāt 2 ||</hi></p>
+
+<note><hi rend="bold">MAV 40</hi></note>
+<p><hi rend="bold">4. Family Name
+Sanskrit text is completely lost</hi></p>
+
+<p><hi rend="bold">5. Bodhi Trees
+Sanskrit text is completely lost</hi></p>
+
+<p><hi rend="bold">6. The Aśembly of Bhikṣus</hi>
+<hi rend="it">Vipaśyinaḥ samyaksaṃbuddhasya śrāvakāṇāṃ trayo mahāsannipātā babhūvuḥ eko mahāsannipāto dvāṣaṣṭabhikṣuśatasahasrāṇi / dvitīyo mahāsannipāto bhikṣuśatasahasram tṛtīyo mahāsannipāto 'śītir bhikṣusahasrāṇi / Śikhinaḥ samyaksaṃbuddhasya śrāvakāṇāṃ trayo mahāsannipātā babhūvuḥ eko mahāsannipāto bhikṣuśatasahasram dvitīyo mahāsannipāto 'śītir bhikṣusahasrāṇi / tṛtīyo mahāsannipātaḥ saptatir bhikṣusahasrāṇi / Viśvabhujaḥ samyaksaṃbuddhasya śrāvakāṇāṃ dvau mahāsannipātau babhūvat</hi>u eko mahāsannip<hi rend="it">ā</hi>taḥ saptatir bh<hi rend="it">i</hi>kṣusahasrāṇi / dvitīyo mahāsannipāta ṣaṣṭir bh<hi rend="it">i</hi>kṣusahasrāṇi / Krakasundasya samyaksa<hi rend="it">ṃ</hi>buddhasya śrāvakān<hi rend="it">ā</hi>m eko mahāsannipāto babhūva cat<hi rend="it">v</hi>āriṃśad bhikṣusahasrāṇi / Kanakamuneḥ samyaksaṃbuddhasya śrāvakānām eko mahāsaṃnipāto babhūva triṃśad bhikṣusahasrāṇi / Kāśyapasya samyaksaṃbuddhasya śrāvakānām eko mahāsannipāto babhūva viṅśatir bhikṣusahasrāṇi / asmākam apy et<hi rend="it">arhi</hi> (<hi rend="bold">MAV 42</hi>) <hi rend="it">śrāvakā</hi>nām eko mahāsaṃnipāta ardhatrayodaśa bhikṣuśatāni iyam atra dharmatā tasmād idam ucyate ||</p>
+
+<p>trayo Vipaśyisya trayaḥ Śikh<hi rend="it">ino</hi>
+X _ ^ _ Viśvabhujo jinasya /
+caturṇāṃ buddhānām ekaikaśa
+ṛṣisannipātā muninā prakāśitā 1
+te saṃn<hi rend="it">i</hi>pātā paramārthadarśinān
+nāgeṣu nāge ^ ^ _ ^ _ ^ X <hi rend="it">|</hi>
+saṃghādikānām akhilā<hi rend="it">nāṃ</hi> tā<hi rend="it">y</hi>i<hi rend="it">n</hi>āṃ
+pannadhvajānāṃ virajasām ṛjūnām 2 ||</p>
+
+<p><hi rend="bold">7. A Pair of Disciples</hi>
+Vipaś<hi rend="it">y</hi>inaḥ samya<hi rend="it">ksaṃbuddhasya Khaṇḍaś ca Tiṣya</hi>ś <hi rend="it">ca</hi> śrā<hi rend="it">va</hi>k<hi rend="it">ayugam abhūd agrayugaṃ bhadrayuga</hi>m eko 'grya ṛddhimatā<hi rend="it">ṃ</hi> dvi<hi rend="it">tī</hi>y<hi rend="it">o</hi> 'grya prajñāvatām Śikhinaḥ samyaksaṃbuddhasya Abhibhūḥ Saṃ<hi rend="it">bha</hi>v<hi rend="it">aś</hi> c<hi rend="it">a śrāvakayu</hi>gam a<hi rend="it">bhūd a</hi>gr<hi rend="it">a</hi>yu<hi rend="it">gaṃ</hi> bhadra<hi rend="it">yugam eko 'grya ṛddhi</hi>matāṃ dvitīyo 'grya prajñāvatām Viśvabhujaḥ samyaksaṃbuddhasya Śroṇaś ca Uttaraś ca śrāvakayug<hi rend="it">a</hi>m <hi rend="it">a</hi>bhūd agrayugaṃ bhadrayugam eko 'grya ṛ<hi rend="it">ddhima</hi>t<hi rend="it">ā</hi>ṃ dvi<hi rend="it">tīyo 'gryaḥ</hi> prajñāvatām Krakasundasya samyaksaṃbuddhasya Saṃjīvaś ca Viduraś ca śrāvakayugam abhūd agrayugaṃ bhadrayugam eko 'grya ṛddhim<hi rend="it">atāṃ dvitīyo 'gryaḥ pra</hi>jñāvatām Kanakamuneḥ samyaksaṃbuddhasya Bhujiṣyaś ca bhikṣur Uttaraś ca śrāvakayugam abhūd agrayugaṃ bhadrayugam eko 'grya ṛddhim<hi rend="it">a</hi>tā<hi rend="it">ṃ d</hi>v<hi rend="it">itīyo</hi> 'grya prajñāvatām Kāśyapasya samyaksaṃbuddhasya Tiṣyaś ca Bharadvājaś ca śrāvakayugam abhūd agrayugaṃ bhadr<hi rend="it">a</hi>yugam eko 'grya ṛddhimatā<hi rend="it">ṃ</hi> dvitīyo 'grya prajñāvatām <hi rend="it">asm</hi>ākam apy etarhi ŚāriputraMaudgalyāyanau bhikṣū agrayugaṃ bhadrayugam eko 'grya ṛddhimatāṃ dvitīyo 'grya prajñāvatām iyam atra dharmatā tasmād idam ucy<hi rend="it">ate</hi> <hi rend="it">||</hi></p>
+
+<note><hi rend="bold">MAV 44</hi></note>
+<p>Kh<hi rend="it">a</hi>ṇḍaś ca Tiṣyaś ca Vipaśyino 'gryau
+Śikhino buddha<hi rend="it">syā</hi>bhibhūḥ Saṃbhavaś ca /
+Śroṇottarau Viśvabhujo jinasya
+oghātigau kāmabhaveṣv asaktau 1
+Saṃjīvabhikṣur Viduraś ca paṇḍitaḥ
+agryāv etau Krakasundasya śāstu /
+<hi rend="it">b</hi>uddh<hi rend="it">a</hi>sya ca K<hi rend="it">a</hi>nakamuner ihāgryau
+Bhujiṣyo bhikṣur athottaraś ca 2
+TiṣyaBharadvājayugaṃ maharṣer
+et<hi rend="it">ā</hi>v <hi rend="it">ag</hi>r<hi rend="it">yau bha</hi>gavataḥ Kāśyapasya /
+ŚāriputraMaudgalyāyanau bhikṣū
+tāv etāv Aṅgiraso 'graśrāvakau 3 ||</p>
+
+<p><hi rend="bold">8. Attendants</hi>
+Vipaśyinaḥ samyaksaṃbuddhasya Aśoko nāma bhikṣur u<hi rend="it">pa</hi>sthāyako 'bhūt Śikhinaḥ samyaksaṃbuddhasya Kṣemakāro nāma bhikṣur upasthāyako 'bhūt Viśvabhujaḥ samyaksaṃbuddhasya Upaśānto nā<hi rend="it">ma bhikṣur upa</hi>sthāyako 'bhūt Krakasundasya samyaksaṃbuddhasya Bhadriko nāma bhikṣur upasthāyako 'bhūt Kanakamuneḥ samyaksaṃbuddhasya Svastiko nāma bhikṣur upasthā<hi rend="it">yako</hi> 'bhūt Kāśyapasya samyaksaṃbuddhasya <hi rend="it">Sa</hi>rvamitro nāma bhikṣur upasthāy<hi rend="it">ak</hi>o 'bhūt asmākam apy etarhi <hi rend="it">Ānand</hi>o bhi<hi rend="it">kṣu</hi>r <hi rend="it">u</hi>pas<hi rend="it">th</hi>āyakaḥ iyam atra dharmatā ta<hi rend="it">smād i</hi>dam ucyate ||</p>
+
+<p>Aśoka Kṣemakāraś ca Up<hi rend="it">aśā</hi>ntaś ca Bhadrikaḥ
+Svastikaḥ<hi rend="it">Sa</hi>rvamitraś ca Ānando bhavati <hi rend="it">saptamaḥ 1</hi>
+<hi rend="it">bhi</hi>kṣava e<hi rend="it">te</hi> ma<hi rend="it">hā</hi>tmānaḥ śarīrānt<hi rend="it">i</hi>madhāriṇaḥ
+<lg>
+<l>vaiyyāpatyakarā āsaṃ cittanimitteṣu kovidā 2</l>
+<l>sarve kālasya kuśalā nimittaprativedhinaḥ</l>
+<l>sarveṣām āsravā kṣīṇā nāsti teṣāṃ punarbhavaḥ 3 ||</l>
+</lg></p>
+
+<note><hi rend="bold">MAV 46</hi></note>
+<p><hi rend="bold">9. Sons</hi></p>
+
+<p>Vipaśyinaḥ samyaksaṃbuddhasya Susaṃvṛttaskandho nāma putro 'bhūt Śikhinaḥ samyaksaṃbuddhasya Atulo nāma putro 'bhūt Viśvabhujaḥ sa<hi rend="it">mya</hi>ksaṃbu<hi rend="it">ddhasya</hi> Suprabuddho nāma putro 'bhūt Krakasunda<hi rend="it">s</hi>y<hi rend="it">a</hi> samyaksaṃbuddhasya Pratāpano nāma putro 'bhūt Kanakamuneḥ samyaksaṃbuddhasya Sā<hi rend="it">rthavā</hi>ho nāma putro 'bhūt Kāśyapasya samyaksaṃbuddhasya Vijitaseno nāma putro 'bhūt asmākam apy etarhi Rāhula putra iyam atra dharmatā tasmād idam ucyate ||</p>
+
+<p><hi rend="it">Su</hi>saṃvṛttaskandho 'tula Suprabuddha Pratāpanaḥ
+Sārthavāho Vijitaseno Rāhulo bhavati saptama 1
+ete putrā mahātmānaḥ śarīrāntimadhāriṇaḥ
+<hi rend="it">sarveṣā</hi>m <hi rend="it">ā</hi>sravā kṣīṇā nāsti teṣāṃ punarbhava 2 ||</p>
+
+<p><hi rend="bold">10. Mother, Father, King and the Capital</hi>
+Vi<hi rend="it">paś</hi>y<hi rend="it">i</hi>naḥ samyaksaṃbuddhasya pitābhūd Bandhumo nāma rājā kṣatriyo mūrdhābhiṣikto mātābhūd Bandhuvatī nāma Bandhumāvatī nāma nagarī rājadhānī babhūva ṛddh<hi rend="it">ā ca sphī</hi>tā ca kṣemā ca subhikṣā cākīrṇabahujanamanuṣyā ca / Śikhinaḥ samyaksaṃbuddhasya pitābhūd Aruṇo nāma rājā kṣatriyo mūrdhābhiṣikta mātābhūt <hi rend="it">P</hi>rabhāvatī nāma / Aruṇāvatī nāma nagarī rājadhānī babhū<hi rend="it">va /</hi> ṛddhā ca pūrva<hi rend="it">va</hi>t Viśvabhujaḥ samyaksaṃbuddhasya pitābhūt Supradīpo nā<hi rend="it">ma</hi> rājā kṣatriyo mūrdhābhiṣiktaḥ mātābhūd Uttarā nā<hi rend="it">ma</hi> Anopamā n<hi rend="it">ā</hi>ma <hi rend="it">na</hi>garī <hi rend="it">rā</hi>jadhānī babhūva pūrvavat Krakasundasya samyaksaṃbuddhasya pitābhūd Agnidatto nāma brāhmaṇaḥ purohitaḥ mātābhūd Dhanavatī nā<hi rend="it">ma tena khalu sama</hi>yena Kṣemo (<hi rend="bold">MAV 48</hi>) nāma rājābhūt Kṣemasya khalu rājñaḥ Kṣemāvatī nāma nagarī rājadhānī babhūva pūrvavat Kanakamuneḥ <hi rend="it">sam</hi>y<hi rend="it">aksa</hi>ṃ<hi rend="it">buddhasya pitābhūd Ya</hi>jñadatto nāma brāhmaṇaḥ purohitaḥ mātābhūd Yaśovatī nāma tena <hi rend="it">kha</hi>lu samayena Śobho nāma rājābhūc Ch<hi rend="it">obha</hi>sy<hi rend="it">a</hi> kh<hi rend="it">a</hi>lu <hi rend="it">rāj</hi>ñ<hi rend="it">aḥ Śobhavatī nāma nagarī</hi> rājadhānī babhūva pūrvavat Kāśyapasya samyaksaṃbuddhasya pitābhūd Brahmadatto nāma brāhmaṇaḥ purohitaḥ mātābhūd Viśākhā nā<hi rend="it">ma tena khalu</hi> samayena Kṛkī nāma rājābhūt Kṛkiṇaḥ khalu rājñ<hi rend="it">o</hi> Bārāṇasī nāma nagarī rājadhānī babhūva pūrvavat a<hi rend="it">sm</hi>āk<hi rend="it">a</hi>m apy etarhi <hi rend="it">pitā</hi> Śuddho<hi rend="it">dano</hi> nāma rājā kṣatriyo mūrdhābhiṣiktaḥ mātā <hi rend="it">Ma</hi>hāmāyā <hi rend="it">n</hi>āma nagarī Kapilavastur nāma rājadhānī ṛddhā ca sphītā <hi rend="it">ca</hi> kṣemā ca subhi<hi rend="it">kṣā ca</hi> ākīrṇabahujanamanuṣyā ca Śākyānāṃ gaṇarāj<hi rend="it">y</hi>am i<hi rend="it">yam a</hi>tr<hi rend="it">a</hi> dharmatā tasmād idam ucyate ||</p>
+
+<p>Vipaśyino buddhavarasya Bandhumā
+pitābhava<hi rend="it">d</hi> Bandh<hi rend="it">uva</hi>tī <hi rend="it">ca</hi> mātā /
+na<hi rend="it">gar</hi>ī <hi rend="it">ta</hi>thā Bandh<hi rend="it">u</hi>ma<hi rend="it">t</hi>ī suramyā
+yatra jino dharma<hi rend="it">m a</hi>d<hi rend="it">e</hi>ś<hi rend="it">a</hi>yac chiva<hi rend="it">m 1</hi>
+buddhasya Śikhinaḥ Aruṇaḥ pitābhūt
+Prabhāvatī mātā prabhākar<hi rend="it">a</hi>sya <hi rend="it">/</hi>
+nagarī tathāruṇavatī suramyā
+Aruṇasya rājñaḥ p<hi rend="it">ara</hi>śatrumardinaḥ 2
+yat Supra<hi rend="it">d</hi>īpa ud<hi rend="it">a</hi>pādi kṣatriyaḥ
+pitā abhūd Viśvabhujo jinasya /
+mātā tathaivottara satyanāmā
+Anopamā nagarī rājadhānī 3
+<note><hi rend="bold">MAV 50</hi></note>
+yad Agnidatta udapādi brāhmaṇaḥ
+pitā abhūt Krakasundasya śāstuḥ
+mātāpi ca Dhanavatī satyanāmā
+Kṣemo rājā Kṣemāvatī rājadhānī 4
+yad Yajñadatta udapādi brāhmaṇaḥ
+pitā abhūt Kanakamuner jinasya /
+mātāpi ca Yaśovatī satyanāmā
+Śobho rāj<hi rend="it">ā</hi> Ś<hi rend="it">o</hi>bhā<hi rend="it">va</hi>tī rājadhānī 5
+yad Brahmadatta udapādi brāhmaṇaḥ
+pitā abhūd bhagavataḥ Kāśyapasya <hi rend="it">/</hi>
+mātāpi ca Viśākhā satyanāmā
+Kṛkī rā<hi rend="it">jā</hi> Bā<hi rend="it">rāṇa</hi>sī rājadhānī 6
+<lg>
+<l>Śuddhodano nāma pitā maharṣer</l>
+<l>mātā Mahāmāya prabhākarasya /</l>
+<l>nagarī tathā ṛddhā sphītā suramyā</l>
+<l>Kapilāhvayā yatra jino ^ _ te 7 ||</l>
+</lg></p>
+
+<p><hi rend="bold">11. Mnemonic Keywords of This Chapter</hi>
+uddānam ||</p>
+
+<lg>
+<l>kalpo 'tha āyur jātiś ca gotraṃ vṛkṣāś ca pañcamā /</l>
+<l>saṃnipāto yugam upasthāyakā putrā mātā pitā tathā ||</l>
+</lg>
+
+<note><hi rend="bold">MAV 52</hi></note>
+<p><hi rend="bold">B. The Legend of Vipaśyin Buddha
+Part One
+[The Bodhisattva's Entrance into His Mother's Womb]
+1. Descent from Tuṣita Heaven</hi>
+dharmatā khalu <hi rend="it">yasm</hi>iṃ <hi rend="it">samay</hi>e <hi rend="it">Vipa</hi>śy<hi rend="it">ī</hi> bodhisatvas Tuṣitād devanikāyāc cyavitvā mātuḥ kukṣāv avakrāmati atyarthaṃ tasmiṃ samaye mahāpṛthiv<hi rend="it">ī</hi>cālaś cābhūt sarvaś cā<hi rend="it">yaṃ</hi> l<hi rend="it">oka udāreṇāvabhāse</hi>na sphuṭo 'bhūt yā api tā lokasya lokāntarikā andhastamā andhākāratamisrā yatremau sūryācandramasāv evaṃmahardhikau mahānubhāvau ābha<hi rend="it">yā</hi> ābh<hi rend="it">āṃ nā</hi>nubhavataḥ tā api tasmiṃ samaye udāreṇāvabhāsena sphuṭā abhūvaṃ tatra ye satvā upapannās te tayā ābhayā anyonyaṃ sa<hi rend="it">t</hi>vaṃ saṃjān<hi rend="it">ate a</hi>nye 'pi bhavaṃtaḥ satvā ihopapannā anye 'pi bhavaṃtaḥ satvā ihopapannā iyam atra dharmatā tasmād idam ucyate ||</p>
+
+<p>yathāpi megho <hi rend="it">vipu</hi>laḥ susaṃbhṛto
+bahūdako mārutavegamūrcchitaḥ
+tathopamaṃ kukṣim avākramaṃ muniḥ
+śatahradāṃ sūrya ivābhyupāgataḥ 1
+<note><hi rend="bold">MAV 54</hi></note>
+avabhāsayaṃ hi janatās sama<hi rend="it">ntata</hi>ḥ
+<lg>
+<l>pṛthūś ca lokāntarikās tamovṛtāḥ</l>
+<l>yad utkramet kukṣim asahyasannibhas</l>
+<l>tathā tad āsīd iyam atra dharmatā 2 ||</l>
+</lg></p>
+
+<p><hi rend="bold">[In His Mother's Womb]
+2. The Four Devaputras</hi></p>
+
+<p>dharmatā khalu yasmiṃ samaye Vipaśyī bodhisatvas Tuṣitād devanikāyāc cyavitvā mātuḥ kukṣāv asthāt tato 'sya Śakreṇa devendreṇa catvāro devaputrā mātur ārakṣakā sthāpitā mā etāṃ kaścid viheṭhayiṣyati ma<hi rend="it">nuṣ</hi>y<hi rend="it">o</hi> vā amanuṣyo vā iyam atra dharmatā tasmād idam ucyate ||</p>
+
+<p>te devaputrā sahitāś caturdiśaṃ
+mahātmadevānugatā yaśasvinā /
+Śakreṇa pro<hi rend="it">k</hi>tāḥ param<hi rend="it">ā</hi>rthadarśino
+rakṣāṃ kurudhvaṃ sugatasya mātuḥ 1
+<note><hi rend="bold">MAV 56</hi></note>
+niṣkṛṣṭaśastrāyudhakhaḍgapāṇayaḥ
+sutīkṣṇarūpāṃ vyavalaṃbya śaktim
+mā tāṃ ma<hi rend="it">nuṣy</hi>ā atha vāpi rākṣasā
+viheṭhayeyuḥ sugatasya mātaram 2
+sā devaguptā varabhūtarakṣitā
+yaśasvinī devagaṇaiḥ supāli<hi rend="it">tā /</hi>
+<hi rend="it">krīḍa</hi>ty asāv apsarasa iva Nandane
+tathā tad āsīd iyam atra dharmatā 3 ||</p>
+
+<p><hi rend="bold">3. He is as Pure as a Jewel</hi>
+dharmatā khalu yasmiṃ samaye Vipaśyī bodhisatvas Tuṣitād devanikāyāc cyavitvā mātuḥ kukṣāv asthāt kośogata evāsthād amrakṣito garbhamalena jubhramalena rudhiramalena anyatamānyatamena vā aśuciprākṛte<hi rend="it">na</hi> tadyathā maṇiratnaṃ Kā<hi rend="it">ś</hi>ika<hi rend="it">ra</hi>tne upanikṣiptaṃ naiva maṇiratnaṃ Kāśikaratnenopalipyate na Kāśikaratnaṃ maṇiratnena iyam atra dharmatā tasmād idam ucy<hi rend="it">ate</hi> ||</p>
+
+<p>yath<hi rend="it">ā</hi>pi taṃ maṇiratnaṃ prabhāsvaraṃ
+<lg>
+<l>na lipyate paramaśucau hi Kāśike /</l>
+<l>tathopamaḥ kukṣigato narottamo</l>
+<l>na lipyate aśucikṛtena paṇḍitaḥ 1 ||</l>
+</lg></p>
+
+<note><hi rend="bold">MAV 58</hi></note>
+<p><hi rend="bold">4. He is Like an EightFaceted Gem</hi>
+dharmatā khalu yasmiṃ samaye Vipaśyī bodhisatvas Tuṣitād devanikāyāc cyavitvā mātuḥ kukṣāv asthāt sarvam enaṃ mātā paripūrṇaṃ kukṣigataṃ paśyati tadyathā maṇir vaiḍūrya aṣṭāṃśo
+j<hi rend="it">ā</hi>timāṃ śuddho viprasanna anāvilaḥ pañcaraṅgike sūtre arpita syān nīle pīte lohite avadāte māṃjiṣṭhe taṃ cakṣuṣmāṃ puruṣo dṛṣṭvā jānīyād idaṃ sūtram ayaṃ maṇi<hi rend="it">ḥs</hi>ūtre ma<hi rend="it">ṇir a</hi>rpita iyam atra dharmatā tasmād idam ucyate ||</p>
+
+<p>yathāpy asau vaiḍūryako mahāmaṇi
+prabhāsvaraḥ sūryamarīcisaṃnibhaḥ
+tathopamaṃ ku<hi rend="it">kṣ</hi>ig<hi rend="it">ata</hi>ṃ narottamaṃ
+Vipaśyimātā paripūrṇam īk<hi rend="it">ṣ</hi>ate ||</p>
+
+<p><hi rend="bold">5. He Does Not Fatigue His Mother</hi>
+dharmatā khalu yasmiṃ samaye Vipaśyī bodhisatvas Tuṣitād devanikāyāc cyavitvā mātuḥ kuk<hi rend="it">ṣ</hi>āv as<hi rend="it">th</hi>ā<hi rend="it">n nāsya tasmiṃ samaye mātā śrāntakāyā vābhūt klāntakāyā vā ya</hi>d uta bodhi<hi rend="it">satvaṃ dhārayaṃtī</hi> iyam atra <hi rend="it">dharmatā tasmād ida</hi>m ucyate ||</p>
+
+<p>X _ cāsau kukṣim upe ^ _ ^ X
+X _ <hi rend="it">c</hi>yutaḥ karmav. _ ^ _ ^ X <hi rend="it">|</hi>
+X _ ^ _ _ ^ ^ _ ^ _ X
+te dhārayaṃtī i<hi rend="it">yam atra</hi> dharmatā ||</p>
+
+<note><hi rend="bold">MAV 60</hi></note>
+
+<p><hi rend="bold">6. His Mother Keeps the Five Precepts</hi>
+dharmatā khalu yasmiṃ sa<hi rend="it">maye Vipaśyī</hi> bodhisatvas Tu<hi rend="it">ṣ</hi>i<hi rend="it">tād devanikāyāc cyavitvā</hi> mātuḥ kukṣāv asthāt tato <hi rend="it">mātrā yāvajjīvaṃ pañca vratapadāni samā</hi>dattāni yāvajjīvam asya mātā prāṇātipātāt prati<hi rend="it">viratādattādānā</hi>d abrahmacaryān mṛṣāv<hi rend="it">ādāt surāmaireyamadyapramādasthānāt prativiratā iya</hi>m atra dharmatā tasmād idam ucyate ||</p>
+
+<p>prā<hi rend="it">ṇān aha</hi>ṃtī nā<hi rend="it">dattam ādadau</hi>
+<hi rend="it">mṛṣā na</hi> bhāṣen na ca madyapānam
+abra<hi rend="it">hmacaryād viratā ca maithunād</hi>
+<hi rend="it">Vipaśyi</hi>mātā iyam atra dharmatā ||</p>
+
+<p><hi rend="bold">7. His Mother Has No Mental Attachment</hi>
+dharmatā kha<hi rend="it">lu yasmiṃ samaye Vipaśyī bodhi</hi>satvas Tu<hi rend="it">ṣitād deva</hi>n<hi rend="it">i</hi>kāyāc cyavitvā mātuḥ ku<hi rend="it">kṣāv asthān nāsya mātā tataḥ puruṣeṣu mānasaṃ ni</hi>baddhavatī yad uta kāmag<hi rend="it">u</hi>ṇo<hi rend="it">pa</hi>saṃhi<hi rend="it">tam iyam atra dharmatā</hi> tasmād i<hi rend="it">dam ucyate ||</hi></p>
+
+<p>X _ ^ _ nāpi ca rajyate tadā
+<hi rend="it">na kāmahetoḥ paridahyate manaḥ</hi>
+<hi rend="it">na cāsya mā</hi>tuḥ puruṣena mānasaṃ
+nibadhyate kā<hi rend="it">maguṇopa</hi>saṃhit<hi rend="it">am ||</hi></p>
+
+<note><hi rend="bold">MAV 62</hi></note>
+<p><hi rend="bold">[The Bodhisattva's Birth]
+8. Birth</hi>
+<hi rend="it">dharmatā</hi> khalu <hi rend="it">yasmiṃ sama</hi>ye Vipaśyī bodhisatv<hi rend="it">o mātuḥ kukṣer niṣkrānto 'tyarthaṃ tasmiṃ samaye mahāpṛthivī</hi>cāl<hi rend="it">a</hi>ś c<hi rend="it">ā</hi>bhūt sa<hi rend="it">r</hi>v<hi rend="it">a</hi>ś c<hi rend="it">ā</hi>y<hi rend="it">aṃ</hi> l<hi rend="it">oka udā</hi>reṇāvabh<hi rend="it">āsena s</hi>phuṭo 'bh<hi rend="it">ūt</hi> pū<hi rend="it">rvavad yāvad anye 'pi bhava</hi>nt<hi rend="it">a</hi>ḥ s<hi rend="it">a</hi>t<hi rend="it">v</hi>ā i<hi rend="it">hopapannāḥ iyam atra dharmatā tasmād idam ucya</hi>te ||</p>
+
+<p>utpad<hi rend="it">y</hi>amāne pṛthivī prakampit<hi rend="it">ā</hi>
+pṛ<hi rend="it">thu</hi>s tathābhā visṛ<hi rend="it">tā</hi> ^ _ ^ X <hi rend="it">|</hi></p>
+
+<p>X _ ^ _ _ ^ ^ _ ^ śobhate
+<hi rend="it">ta</hi>thā tad <hi rend="it">āsīd iyam atra dharmatā ||</hi></p>
+
+<p><hi rend="bold">9. The Newborn Bodhisattva is Born Without Stain</hi></p>
+
+<l><hi rend="it">dharmatā khalu yasmiṃ sa</hi>maye Vipaśyī bodhisatvo mātuḥ kukṣer niṣkrānt<hi rend="it">as kośogata ivāsir niṣkrānto 'mrakṣito garbhamalena ju</hi>bh<hi rend="it">r</hi>amalena rudhirama<hi rend="it">lenānyatamānyatamena vāśuciprākṛtena</hi> iyam atra dharmatā tasmād idam ucya<hi rend="it">te ||</hi></l>
+
+<p><hi rend="it">yathāpi taṃ maṇiratanaṃ prabhāsvaraṃ</hi></p>
+
+<l><hi rend="it">na</hi> lip<hi rend="it">y</hi>ate paramaśucau <hi rend="it">hi Kāśike /</hi></l>
+<p>X _ ^ _ _ ^ ^ _ ^ _ X
+X ciḥ sunirdhāntam ivāṃśukāñcanam ||</p>
+
+<p><hi rend="bold">10. His Mother Gives Birth in the Standing Position</hi>
+dharmatā khalu yasmi<hi rend="it">ṃ</hi> samaye Vipaśyī bodhisatvo mātuḥ kukṣe<hi rend="it">r</hi> niṣkrā<hi rend="it">nto nāsya mātā niṣaṇṇā vābhūn nipannā vā sthi</hi>taiva sā kṣatriyā kṣatriyaṃ prajātā <hi rend="it">iyam at</hi>r<hi rend="it">a</hi> dharmatā tasmād idam ucyate ||</p>
+
+<note><hi rend="bold">MAV 64</hi></note>
+<p>na sā niṣaṃṇā na nipanna kṣatriyā
+s<hi rend="it">th</hi>i<hi rend="it">tai</hi>va sā .r. pad ^ _ ^ _ ^ X <hi rend="it">|</hi>
+X _ ^ _ _ varasatya vikramo
+jagrāha taṃ surapatide<hi rend="it">va</hi> u<hi rend="it">ts</hi>uka ||</p>
+
+<p><hi rend="bold">[After the Bodhisattva's Birth]
+11. He Takes Seven Steps</hi>
+dharmatā khalu sāṃpratajāto Vipaś<hi rend="it">y</hi>ī <hi rend="it">bodhi</hi>satvaḥ sapt<hi rend="it">a padāni prakrāntaḥ parigṛhīto na kasmiṃ</hi>ś<hi rend="it">c</hi>ic catu<hi rend="it">rdiśa</hi>ñ ca vyavalokayati vācañ ca bhāṣate iyaṃ me bhave<hi rend="it">t paśc</hi>imā jā<hi rend="it">tiḥ</hi></p>
+
+<p><hi rend="it">devāḥ ś</hi>v<hi rend="it">e</hi>taṃ ca chatraṃ maṇ<hi rend="it">idaṇḍakaṃ ca cāmaraṃ ca dhārayanti iyam a</hi>t<hi rend="it">ra</hi> dhar<hi rend="it">matā ta</hi>smād ida<hi rend="it">m u</hi>cyate ||</p>
+
+<p>jāto hy <hi rend="it">e</hi>ṣa sapta padāni prakramad
+di _ ^ _ lo<hi rend="it">k</hi>y<hi rend="it">a</hi> v<hi rend="it">ācaṃ</hi> ca bhāṣ<hi rend="it">at</hi>e <hi rend="it">/</hi>
+ś<hi rend="it">r</hi>e _ ^ _ _ ^ ^ _ ^ _ ^ X
+X _ ^ _ _ ^ ^ _ nti deva <hi rend="it">||</hi></p>
+
+<p><hi rend="bold">12. Warm and Cool Streams Fall from Above</hi>
+dharm<hi rend="it">atā</hi> kh<hi rend="it">alu sā</hi>ṃpratajātasya Vipaśyino bodhisatvasya <hi rend="it">dve vāridhāre 'n</hi>t<hi rend="it">a</hi>rīkṣāt pr<hi rend="it">a</hi>patite e<hi rend="it">kā śītāsyaik</hi>oṣṇ<hi rend="it">ā</hi>sya ye <hi rend="it">bo</hi>dhisatvaṃ <hi rend="it">snāpitavat</hi>yau i<hi rend="it">yam at</hi>r<hi rend="it">a</hi> dha<hi rend="it">rmatā tasmād ida</hi>m ucyate ||</p>
+
+<note><hi rend="bold">MAV 66</hi></note>
+<p>jāte kumāre sumahābhiṣaṭke
+<hi rend="it">dv</hi>e <hi rend="it">vāridhāre</hi> patite a<hi rend="it">ntarikṣāt</hi>
+X _ ^ _ _ ṇa ca anāvilā ca
+snātaḥ s ^ _ _ <hi rend="it">dvipa</hi>dottamo X <hi rend="it">||</hi></p>
+
+<p><hi rend="bold">13. A Stream Manifests from a Well</hi>
+<hi rend="it">dhar</hi>matā khal<hi rend="it">u sāṃ</hi>pratajātasya Vipaśyino bodhisatvasya <hi rend="it">mātu</hi>r jan<hi rend="it">ayitr</hi>y<hi rend="it">ā</hi>ḥ purastāṃ mahad u<hi rend="it">dapānaṃ</hi> prādurbhūtaṃ vāri viṣyandi ya<hi rend="it">to 'sya mā</hi>tā ud<hi rend="it">akakār</hi>yam akār<hi rend="it">ṣ</hi>īd iyam atra dharmatā
+tasmād idam ucyate ||</p>
+
+<p>kurvaṃti nāgāsya sadaivapūjāṃ
+yasmiṃ ^ _ <hi rend="it">jā</hi>yate bodhisatvaḥ
+te hṛṣṭā<hi rend="it">s</hi> tuṣṭā muditā udagrā<hi rend="it">ḥ</hi>
+<hi rend="it">vā</hi>riṃ sṛjantīha athodapānam ||</p>
+
+<p><hi rend="bold">14. The Deities Scatter Flowers and Play Music</hi>
+dharmatā khalu sāṃpratajātasya Vi<hi rend="it">paś</hi>y<hi rend="it">i</hi>no bodhisatvasya <hi rend="it">d</hi>e<hi rend="it">vatā antarīkṣād divyāny utpa</hi>lāni padmāni kumudāni puṇḍarīkāṇi agarucūrṇāni tagarucūrṇāni candanacūrṇāni divyāni m<hi rend="it">a</hi>ndā<hi rend="it">rakā</hi>ni puṣpāṇi kṣipa<hi rend="it">nti divyāni ca vādyāni saṃpravādayanti</hi> cailavikṣe<hi rend="it">pa</hi>ṃ <hi rend="it">cākā</hi>r<hi rend="it">ṣu</hi>r iyam atra dharmatā tasmād idam ucyate ||</p>
+
+<note><hi rend="bold">MAV 68</hi></note>
+<p>jāte kumāre sumahābhiṣaṭ<hi rend="it">k</hi>e
+d.e _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">|</hi>
+X _ ^ _ _ ^ ^ _ ^ _ X
+X _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">1</hi>
+X _ ^ _ _ <hi rend="it">a</hi>nubhāvam īkṣya
+yāvat sujāto b. ^ _ ^ _ utaḥ
+rāj _ ^ _ _ ^ ^ _ ^ _ X
+X _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">2</hi>
+X _ ^ _ _ ^ ^ _ ^ _ X
+X _ ^ _ āṃ paripūrayiṣyati X
+itīha <hi rend="it">d</hi>e<hi rend="it">vā</hi> akaniṣṭhavāsina
+ā _ ^ _ _ ^ ṣv agh<hi rend="it">o</hi>ṣa _ ^ X <hi rend="it">3 ||</hi></p>
+
+<p><hi rend="bold">15. Mnemonic Keywords of This Chapter</hi></p>
+
+<l rend="it">uddānam ||</l>
+
+<p>X _ ^ _ _ ^ ^ _ ^ _ X
+X _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">|</hi>
+<hi rend="it">utpādakośasthi</hi>ti saptapadaṃ
+dve vāridhāre udapāna devatā ||</p>
+
+<note><hi rend="bold">MAV 70</hi></note>
+
+<p><hi rend="bold">Part Two
+[After the Bodhisattva's Birth: Continued]
+1. His Wet Nurse</hi>
+dharma<hi rend="it">tā khalu sāṃpra</hi>tajātaṃ Vipaśyi<hi rend="it">naṃ bodhisatvaṃ mātāpitarau dhātr</hi>yā anuprayaccha<hi rend="it">taḥ ayaṃ tvayā dhātri kumāraḥ kālena</hi> kālam udvartayitavyaḥ kālena kālaṃ snāpayitavyaḥ kālena kā<hi rend="it">laṃ bhojayitavyaḥ kā</hi>lena kālaṃ samyak su<hi rend="it">khena parihartavyaḥ tam enaṃ dhātry ubhābhyāṃ pāṇibhyāṃ prati</hi>gṛhītvā kālena kālam udvartaya<hi rend="it">ti kā</hi>le<hi rend="it">na</hi> kāl<hi rend="it">aṃ snāpayati kālena</hi> kālaṃ bhojayati kā<hi rend="it">lena kālaṃ samyak sukhena pariharati / apīdānīṃ ye</hi> gandhā loke manojñarūpās tair vilipya sa<hi rend="it">rvālaṃkārair alaṃkṛtaṃ pitur Bandhumato 'nuprayaccha</hi>t<hi rend="it">i /</hi> enaṃ Bandhumā rā<hi rend="it">jā gṛhītvāṅke niṣādya punaḥ punaḥ prekṣate harṣaṃ ja</hi>nayati iyam atra dharmatā tasmād ida<hi rend="it">m ucyate</hi> ||</p>
+
+<p>X _ ^ _ _ ^ ^ _ ^ _ X
+X _ ^ _ _ m adadat sa dhātryāḥ
+tato 'pi _ _ ^ ^ _ ^ _ X
+X _ ^ _ _ ^ ^ _ y<hi rend="it">a</hi>ti caiva 1
+ye gandha loke sumanojñar<hi rend="it">ūpāḥ</hi>
+X _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">|</hi>
+X _ ^ _ _ bhir alaṅkṛ _ X
+X _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">2</hi>
+X bā ^ .ā l. sagataṃ kumāraṃ
+punaḥ puna<hi rend="it">ḥ p</hi>rekṣ<hi rend="it">ati har</hi>ṣ<hi rend="it">a</hi>jāt<hi rend="it">a</hi>ḥ
+su _ ^ _ _ ^ ^ _ ^ _ X
+X _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">|</hi>
+X _ ^ _ _ ^ ^ _ ^ _ X
+abhyudyamo _ kula _ ^ .y . nti <hi rend="it">3</hi> ||</p>
+
+<note><hi rend="bold">MAV 72</hi></note>
+<p><hi rend="bold">2. The Seer
+[Two Paths: To Be a Universal Monarch or to Become a Buddha]</hi>
+dharmatā khalu sāṃpratajātaṃ Vipaśy<hi rend="it">inaṃ bodhisatvaṃ mā</hi>tāpitarau br<hi rend="it">āh</hi>m<hi rend="it">aṇānāṃ naimittānāṃ vipañcanānāṃ copa</hi>d<hi rend="it">ar</hi>ś<hi rend="it">a</hi>ya<hi rend="it">taḥ kaścid bhavantaḥ samanvāgataḥ</hi> kumāro dvā<hi rend="it">tr</hi>iṃ<hi rend="it">śa</hi>dbhir mahāpuruṣalakṣaṇair yaiḥ samanvā<hi rend="it">gatasya mahā</hi>puruṣasya dve gatī <hi rend="it">bhavato 'nanyathā saced gṛhy a</hi>gāram adhyāvasa<hi rend="it">ti rājā bhavati cakravartī cā</hi>turantyāṃ vi<hi rend="it">jetā dhā</hi>rmiko dharmarājā saptaratnasamanvāgataḥ tasyemāṇy e<hi rend="it">vaṃrūpāṇi sapta ratnāni</hi> bhavaṃti tadyathā cakr<hi rend="it">a</hi>r<hi rend="it">a</hi>tn<hi rend="it">aṃ</hi> h<hi rend="it">as</hi>t<hi rend="it">iratnam aśvaratnaṃ maṇiratnaṃ strīra</hi>tnaṃ gṛhapatiratnaṃ pariṇāyakaratna<hi rend="it">m eva sa</hi>pt<hi rend="it">a</hi>maṃ pū<hi rend="it">rṇaṃ cāsya bhavati saha</hi>sraṃ putrāṇāṃ śūrā<hi rend="it">ṇā</hi>ṃ <hi rend="it">vīrāṇāṃ varā</hi>ṅgarūpiṇāṃ pa<hi rend="it">ra</hi>s<hi rend="it">ainyapramarda</hi>kānāṃ sa imām eva samudraparyantāṃ m<hi rend="it">ahāpṛthivīm akhilām akaṇṭakām anutpīḍām adaṇḍe</hi>nāśastreṇa dharme<hi rend="it">ṇa samenābhinirjityādhyā</hi>vasati sacet keś<hi rend="it">aś</hi>m<hi rend="it">a</hi>śrūṇy avatārya kāṣāyāṇi vastrāṇy ācchā<hi rend="it">dya samyag eva śraddhayāgārād anagārikāṃ pravrajati ta</hi>thā<hi rend="it">ga</hi>to bhavaty arhaṃ samyaksa<hi rend="it">ṃ</hi>bud<hi rend="it">dh</hi>o <hi rend="it">vi</hi>ghuṣṭaśabdo loke tathyaṃ deva s<hi rend="it">a</hi>manvāgataḥ kumāro dvātriṃśadbhir ma<hi rend="it">hāpuruṣalakṣaṇaiḥ pūrvavad yāvat tathāgato bhavaty arhan samyaksaṃbuddho</hi> vighuṣṭa<hi rend="it">śa</hi>b<hi rend="it">d</hi>o loke <hi rend="it">i</hi>yam atra <hi rend="it">dha</hi>rmatā tasm<hi rend="it">ād ida</hi>m ucyate ||</p>
+
+<p>jātaṃ kumāraṃ sumahābhiṣaṭkaṃ
+te bo<hi rend="it">dhisa</hi>tvam ^ ^ _ ^ _ X <hi rend="it">|</hi>
+X _ ^ _ _ ^ n<hi rend="it">a</hi> pr<hi rend="it">a</hi>vraj<hi rend="it">i</hi>t<hi rend="it">o</hi>
+rājā bhaviṣyati cakravartī 1
+<note><hi rend="bold">MAV 74</hi></note>
+X _ ..ṃ tāṃ _ ^ ^ _ ^ _ X
+dharmeṇa kṣemeṇa śivāṃ vasundharām
+yad _ ^ _ _ ^ ^ _ ^ _ bhaṃta<hi rend="it">m</hi>
+X _ ^ _ yaṃ sa k. _ .r. m eva 2
+y<hi rend="it">a</hi>t sarvasauva<hi rend="it">r</hi>ṇa sa ku ^ _ X
+X _ ^ _ _ ^ ^ _ ^ nemi /
+yad asya pūrve pṛthivīṃ vijeṣyate
+<hi rend="it">tac cakraratnaṃ prathamaṃ ni</hi>yāsyati 3
+sujāta saptāṅgapratiṣṭhitaṃ ṛjum
+avadāt<hi rend="it">am</hi> _ ^ ^ _ ^ _ ^ X <hi rend="it">|</hi>
+X _ ^ _ _ ^ ^ _ ^ kuñjaraṃ
+dvitīyaṃ ratnaṃ hi bhṛśaṃ niyā<hi rend="it">syati 4</hi>
+yaḥ prāt<hi rend="it">a</hi>rāśe samayena medinīṃ
+samaṃtataḥ prāpya pun<hi rend="it">ar n</hi>irvartate /
+X _ ^ _ _ ^ ^ _ ^ _ X
+<hi rend="it">a</hi>śvaṃ tṛtīyaṃ ratnaṃ niyāsyati 5
+maṇiñ ca vaiḍūryam ayaṃ sunirmalaṃ
+samaṃtato yojanam āvabhāsate /
+ya<hi rend="it">thaiva rātrau</hi> ^ ^ _ ^ _ ^ X
+X _ ^ _ _ vimalaṃ niyāsyati 6
+yā rūpaśab<hi rend="it">de</hi>ṣv atha gandhasparśe
+nārī pradhānā pra ^ dottamā ca /
+<note><hi rend="bold">MAV 76</hi></note>
+yathānta arāḥ sarvataś cāruhāsinī
+ta<hi rend="it">t pañcamaṃ strīratnaṃ niyāsyati 7</hi>
+X _ ^ _ vaiḍūryaṃ ma<hi rend="it">ṇ</hi>iratnaṃ
+śilāpravāḍaṃ ca suvarṇarū<hi rend="it">pam</hi>
+dadāti yaḥ śreṣṭhivaro mahā _ ^ X
+gṛ<hi rend="it">hapatiṃ ratna</hi>ṃ ṣ<hi rend="it">a</hi>ṣ<hi rend="it">ṭhaṃ</hi> niyā<hi rend="it">syati 8</hi>
+<hi rend="it">ya</hi> _ ^ _ _ ^ ^ _ ^ _ X ṃ
+senāsu sthānaṃ gamanaṃ <hi rend="it">n</hi>ivartanam
+yo _ tidakṣaḥ pariṇāyakottamas
+tat saptamaṃ ratn<hi rend="it">a</hi>vara<hi rend="it">ṃ</hi> n<hi rend="it">i</hi>y<hi rend="it">ā</hi>sya<hi rend="it">ti</hi> 9
+<hi rend="it">jana</hi> ^ _ _ ^ ^ _ ^ _ ^ X
+X _ ^ _ _ ^ ^ _ .garūp<hi rend="it">i</hi>ṇām
+sacet punaḥ pravrajat'; ānagārikāṃ
+niḥsaṃśayaṃ buddhavaro bhaviṣyati 10
+evaṃvidha e<hi rend="it">ṣa s</hi>utas tavāst<hi rend="it">i</hi>
+X _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">|</hi>
+X anyatarānyatarā gatir dhruvā
+tathā hy etaṃ mantrapadeṣu dṛśyate 11 ||</p>
+
+<p><hi rend="bold">[The Thirtytwo Distinguishing Marks of a Great Man]</hi>
+katamāni tāni bhavaṃt<hi rend="it">i ku</hi>mārasya<hi rend="it">dvātri</hi>ṃś<hi rend="it">an</hi> mahāp<hi rend="it">u</hi>ruṣa<hi rend="it">lakṣaṇāni yaiḥ samanvāgatasya mahāpuruṣasya dve</hi> gatī bhavato (<hi rend="bold">MAV 78</hi>) 'nanyathā saced agāram adhyāvasati pūrvavad yāvad vighu<hi rend="it">ṣṭaśa</hi>b<hi rend="it">d</hi>o <hi rend="it">loke</hi></p>
+
+<p><hi rend="it">supratiṣṭhitap</hi>ādo <hi rend="it">de</hi>va kumāra i<hi rend="it">daṃ mahāpuruṣasya mahāpuruṣalak</hi>ṣ<hi rend="it">a</hi>ṇam <hi rend="it">1</hi></p>
+
+<p>adhas tasya pādayoś cakre jāte sahasrāre sanābhike s<hi rend="it">an</hi>emike sarvākāra<hi rend="it">pa</hi>r<hi rend="it">i</hi>pūrṇe idaṃ ma<hi rend="it">hāpuruṣasya mahāpuruṣalakṣaṇam 2</hi></p>
+
+<p><hi rend="it">dīrghā</hi>ṅgulir deva kumāra idaṃ mahāpuruṣasya mahāpuru<hi rend="it">ṣa</hi>lakṣ<hi rend="it">a</hi>ṇam 3 āyatapādapārṣṇir deva <hi rend="it">kumāra idaṃ mahāpuruṣasya mahāpuru</hi>ṣalak<hi rend="it">ṣa</hi>ṇam 4 mṛdutaruṇapāṇipādo deva kumāra mṛdukam as<hi rend="it">ya pāṇipādaṃ tad</hi>y<hi rend="it">a</hi>th<hi rend="it">ā</hi> tūlapicur vā karpāsapi<hi rend="it">cur vā idaṃ mahāpuruṣasya mahāpuruṣalakṣaṇam 5</hi></p>
+
+<p><hi rend="it">jālin</hi>īpāṇipādo deva kumāra jālinī asya pā<hi rend="it">ṇipād</hi>eṣu t<hi rend="it">a</hi>dy<hi rend="it">a</hi>thābhijātasya haṃsarājñaḥ id<hi rend="it">a</hi>ṃ <hi rend="it">mahāpuruṣasya mahāpuruṣalakṣaṇam 6</hi></p>
+
+<note><hi rend="bold">MAV 80</hi></note>
+<p><hi rend="it">ucchaṅga</hi>caraṇo deva kumāra idaṃ mah<hi rend="it">ā</hi>pu<hi rend="it">ruṣas</hi>y<hi rend="it">a</hi> mahāpu<hi rend="it">ruṣalakṣaṇam 7 aiṇeyajaṅgho</hi> deva kumāra i<hi rend="it">daṃ mahāpuruṣasya mahāpuruṣalakṣa</hi>ṇam 8 anavanatakāyo deva kumā<hi rend="it">raḥ anavanat</hi>e<hi rend="it">na kāyenobhau jānumaṇḍalāv āmārjati parimā</hi>rjati idaṃ ma<hi rend="it">hāpuruṣasya mahāpuruṣalakṣa</hi>ṇam 9</p>
+
+<p>kośogatavastiguhyo de<hi rend="it">va k</hi>umāraḥ k<hi rend="it">ośogatam asya va</hi>stiguhy<hi rend="it">aṃ</hi> tadyathābhijātasya hastyā<hi rend="it">jāneyasya</hi> vā<hi rend="it">ś</hi>v<hi rend="it">asy</hi>ā<hi rend="it">j</hi>ā<hi rend="it">n</hi>e<hi rend="it">yasya vā idaṃ</hi> mahāpuruṣasya ma<hi rend="it">hā</hi>puruṣalakṣaṇa<hi rend="it">m</hi> 10</p>
+
+<p><hi rend="it">n</hi>yagrodhaparimaṇḍalo deva <hi rend="it">kumā</hi>ro yāvat kāye<hi rend="it">na</hi> tāvad vyāmena yāvad vyāmena tāvat kāyena ida<hi rend="it">ṃ mahāpuruṣas</hi>y<hi rend="it">a ma</hi>h<hi rend="it">ā</hi>puruṣalakṣa<hi rend="it">ṇam</hi> 11</p>
+
+<p>ūrdhvāṅgaromā deva kumāra idaṃ mahāpuruṣa<hi rend="it">s</hi>ya mahāpuruṣal<hi rend="it">a</hi>kṣaṇam 12 ekaikaromā deva kumāra ekaikam asya roma kāye jātaṃ nīlaṃ kuṇḍalajātaṃ pradakṣiṇāvartam idaṃ mahāpuruṣas<hi rend="it">y</hi>a mahāpuru<hi rend="it">ṣa</hi>lakṣaṇam 13</p>
+
+<p>suvarṇavarṇo deva kumāra<hi rend="it">ḥ k</hi>āñcana<hi rend="it">saṃnibhatvacaḥ i</hi>daṃ mahāpuruṣasya mahāpuruṣalakṣaṇam 14</p>
+
+<p><hi rend="it">sūkṣmacchavi</hi>r de<hi rend="it">va</hi> kumāraḥ (<hi rend="bold">MAV 82</hi>) sūkṣmatvāt tvaco rajojalaṃ kāye na saṃtiṣṭhate idaṃ <hi rend="it">mahāpuruṣasya mahāpuruṣa</hi>lakṣaṇam 15</p>
+
+<p>saptotsado deva kumāraḥ saptāsyotsadā kāye jātā dvau hast<hi rend="it">a</hi>yo dvau pādayo dvāv aṃsayor eko grīvāyām idaṃ mahāpuru<hi rend="it">ṣasya mahāpuruṣalakṣaṇam</hi> 16</p>
+
+<p>citāntarāṃso deva kumāra idaṃ mahāpuruṣasya mahāpuruṣalakṣaṇam 17 siṃhapūrvārdh<hi rend="it">akā</hi>yo dev<hi rend="it">a</hi> k<hi rend="it">u</hi>mā<hi rend="it">ra</hi> idaṃ mahāpuruṣasya <hi rend="it">mahāpuruṣalakṣaṇam 1</hi>8 bṛhadṛjugātro deva kumāra idaṃ mahāpuruṣasya mahāpuruṣalakṣaṇam 19 su<hi rend="it">saṃvṛttaskandho deva kumāra idaṃ mahāpuru</hi>ṣas<hi rend="it">ya mahā</hi>puruṣalakṣaṇam 20 <hi rend="it">catvāriṃśaddanto deva</hi> kumāra idaṃ mahāpuruṣasya mahāpuruṣalakṣaṇam 21 samada<hi rend="it">nto deva k</hi>u<hi rend="it">māra idaṃ mahāpuruṣasya mahāpuru</hi>ṣalakṣa<hi rend="it">ṇa</hi>m 22 aviraḍadaṃto <hi rend="it">deva kumāra</hi> idaṃ mahāpuruṣasya mahāpuruṣalakṣaṇam 23 suśukladaṃ<hi rend="it">ṣṭ</hi>ro <hi rend="it">deva kumāra idaṃ mahāpuruṣasya mahāpuru</hi>ṣalakṣaṇam 24 siṃha<hi rend="it">hanu</hi>r deva kumāra idaṃ mahāpuruṣasya mahāpuruṣalakṣaṇam 25 rasarasāgr<hi rend="it">aprāpto deva kumāra idaṃ mahāpuruṣasya mahāpuruṣala</hi>kṣaṇam 26</p>
+
+<p>prabhūtatanujihvo deva kumāra prabhūtatvāj jihvayā mukhā<hi rend="it">j</hi> jihvāṃ <hi rend="it">nirṇāmayitvā sarvaṃ mukha maṇḍa</hi>laṃ praticchā<hi rend="it">dayati yāvat keśaparyantam upādā</hi>ya idaṃ mahāpuruṣasya mahāpuruṣalakṣaṇam 2<hi rend="it">7</hi></p>
+
+<note><hi rend="bold">MAV 84</hi></note>
+<p><hi rend="it">brahma</hi>svaro deva kumāraḥ kalavi<hi rend="it">ṅkamanojñabhāṣī dundubhisvaranirgh</hi>o<hi rend="it">ṣaḥ</hi> idaṃ <hi rend="it">mahāpuruṣasya mahāpuruṣalakṣaṇa</hi>m 28</p>
+
+<p>abhinīla<hi rend="it">netro</hi> d<hi rend="it">e</hi>va kumāra idaṃ mahāpuruṣasya mahāpuruṣalakṣaṇa<hi rend="it">m 29 gopakṣmā deva kumāra idaṃ mahāpuruṣasya mahāpuru</hi>ṣalakṣaṇam 30 uṣṇī<hi rend="it">ṣa</hi>śirā deva k<hi rend="it">u</hi>mār<hi rend="it">a idaṃ mahāpuruṣasya mahā</hi>puruṣalakṣaṇam 31 ūrṇā cāsya <hi rend="it">bh</hi>ruvo<hi rend="it">r madhye śvetā śaṅkhanibhā pradakṣi</hi>ṇā<hi rend="it">var</hi>tā idaṃ mahāpuruṣasya mahāpu<hi rend="it">ruṣalakṣaṇam 32</hi></p>
+
+<p><hi rend="it">imāni dvātriṃśan ma</hi>hāpuruṣalakṣaṇāni yai<hi rend="it">ḥ</hi> sama<hi rend="it">nvāgatasya ma</hi>hāpuruṣasya dve <hi rend="it">gatī bhavato 'nan</hi>yathā pūrvavad y<hi rend="it">āvad iyam atra dharmatā tasmād idam ucyate</hi> ||</p>
+
+<p>hantāhaṃ kīrtayiṣyāmi la<hi rend="it">kṣaṇāni mahā</hi>muneḥ
+kāye<hi rend="it">'sm</hi>iṃ <hi rend="it">bhāvitātmasya śa</hi>rīrāntimadhāri<hi rend="it">ṇaḥ 1</hi>
+X X X X ^ _ _ X X X X X ^ _ ^ X <hi rend="it">|</hi>
+<hi rend="it">adhaś ca pāda</hi>yos tasya cakre jāte susaṃsthite 2
+dīrghāṅguliḥ s<hi rend="it">a</hi> bh<hi rend="it">a</hi>v<hi rend="it">a</hi>t<hi rend="it">i pādapārṣṇī ca ā</hi>yate /
+jālini X ^ _ _ X X X X X ^ _ ^ X <hi rend="it">3</hi>
+X X X X ^ _ _ X X X X X ^ _ ^ X <hi rend="it">|</hi>
+X X X ś cāpi kāyena spṛśate jānumaṇḍalam <hi rend="it">4</hi></p>
+
+<l><hi rend="it">kośogataṃ</hi> vastiguhyaṃ X X X X ^ _ ^ X <hi rend="it">|</hi></l>
+<p>X X X X ^ _ _ X X X X X ^ <hi rend="it">dakṣiṇam 5</hi>
+X X <hi rend="it">s</hi>. <hi rend="it">ḍ</hi>. <hi rend="it">k</hi>. <hi rend="it">t</hi>. <hi rend="it">ṇ</hi>. <hi rend="it">bhā vy</hi> X X X X samaṃtataḥ
+sūkṣmatvaco 'sau bhavati sapta kāy<hi rend="it">asya utsadāḥ 6</hi>
+<hi rend="it">citāntarāṃso h</hi>. _ X <hi rend="it">siṃhapūrvārdhakāyavān</hi>
+<hi rend="it">bṛhadṛjūni gātrāṇi skandhau tasya su</hi>saṃskṛtau 7
+<note><hi rend="bold">MAV 86</hi></note>
+catuṣkā daśa <hi rend="it">dan</hi>tānāṃ paripūrṇā anūnakāḥ
+samā aviraḍ<hi rend="it">āś caiva śuklāś caiva susaṃsthitāḥ 8</hi>
+<hi rend="it">suśukladaṃṣṭro 'sau h</hi> _ X X X <hi rend="it">rasarasāgra</hi>tām
+prabhū<hi rend="it">tata</hi>nuji<hi rend="it">hvaś ca</hi> tathā brahmasvaro mu X <hi rend="it">9</hi></p>
+
+<l><hi rend="it">a</hi>bhinīlanetro gopakṣmā uṣṇīṣaṃ cā<hi rend="it">sya mūrdhani /</hi></l>
+<p><hi rend="it">ūrṇā cā</hi>sya bhruvo<hi rend="it">r madhye</hi> śvetā bhavati prada<hi rend="it">kṣi</hi>ṇā 10
+dve ca <hi rend="it">tr</hi>iṃ<hi rend="it">śat tathaitāni lakṣaṇāni mah</hi>ā<hi rend="it">mu</hi>neḥ
+kāye<hi rend="it">'sm</hi>i<hi rend="it">ṃ bhāvitā</hi>tmasya śarīrāntimadhāriṇa<hi rend="it">ḥ</hi> 11
+<hi rend="it">dvātriṃśatiṃ</hi> yasya viva<hi rend="it">rdhi</hi>tāni
+bhavaṃti kāye 'sm<hi rend="it">iṃ</hi> X _ v<hi rend="it">i</hi>dhasya /
+rājā vijitya pṛthi<hi rend="it">vīṃ viśāsti</hi>
+<hi rend="it">buddho 'tha vā bhavati hitānukampī 1</hi>2
+smṛtimāṃ bahuputraś ca alpābādhaś ca paṇḍi<hi rend="it">ta</hi>ḥ
+lābhī annasya pānasya vastraśayyāsanasya ca 13
+abhedyaparivāro 'sau <hi rend="it">manā</hi>p<hi rend="it">aḥ sar</hi>v<hi rend="it">adehinām</hi>
+<hi rend="it">anvāvartanti taṃ</hi> devā manujāś ca tathāvidham 14
+agryo mahādhipatyeṣu bhaven martyas tathāvidhaḥ
+asamaś cā<hi rend="it">prat</hi>isama atu<hi rend="it">l</hi>y<hi rend="it">a</hi>ś ca vināyaka 1<hi rend="it">5</hi></p>
+
+<p><hi rend="bold">3. His Mother Passes Away</hi>
+<hi rend="it">dharmatā kha</hi>lu saptāhajātasya Vipaśyino bodhisatvasya mātā janetrī kālagatā <hi rend="it">samanantarakā</hi>lagatā tridaśe devanikāye upapannā iyam atra dharmatā tasmād idam ucyate ||</p>
+
+<p>vidhṛtya māsāṃ hi daśaiva kukṣyā
+Vipaśyimātā asamaṃ prajātā /
+<note><hi rend="bold">MAV 88</hi></note>
+kāyasya bhedāt tridaśopapa<hi rend="it">nnā</hi>
+d<hi rend="it">e</hi>v<hi rend="it">ani</hi>kāyā bhagavajjanetrī ||</p>
+
+<p><hi rend="bold">4. The Physical Beauty of the Bodhisattva</hi>
+dharmatā khalu sāṃpratajāto Vipaśyī bodhisatvo 'bhirūpo darśanīya prāsādiko 'tikrāntaś ca mānuṣyakaṃ varṇam asaṃprāptaś ca divyaṃ varṇaṃ nirīkṣamāṇā narāś ca nāryaś ca tṛptiṃ na gacchaṃti a<hi rend="it">n</hi>ūnavarṇ<hi rend="it">am</hi> tad<hi rend="it">y</hi>athā jāṃbūnadamayī suvarṇaniṣkā dakṣakarmāraputraparimṛṣṭā āhate pāṇḍukambale upanikṣiptā atyarthaṃ bhāsate tapate virocate evam eva sāṃ<hi rend="it">p</hi>r<hi rend="it">a</hi>t<hi rend="it">a</hi>j<hi rend="it">ā</hi>t<hi rend="it">o</hi> Vipaśyī bodhisatvo 'bhirūpo darśanīyo yāvad anūnavarṇam iyam atra dharmatā tasmād idam ucyate ||</p>
+
+<p>śiśu kumāro manaseva nirm<hi rend="it">itaḥ</hi>
+yathāpi niṣkā kuśalena niṣṭhitā <hi rend="it">/</hi>
+nirīkṣamāṇā hi narāś ca nāryas
+tṛptiṃ na gacchaṃti anūnavarṇam ||</p>
+
+<p><hi rend="bold">5. The Attractiveness of the Bodhisattva</hi>
+dharmatā khalu sāṃpratajāto Vipaśyī bodhisatvo mahājanakāyasya priyaś cābhūn manāpaś ca apīdānīṃ mahājanakāyā aṃsenāṃsaṃ (<hi rend="bold">MAV 90</hi>) parivartayaṃti tadyathā śāradakaṃ padmaṃ mahājanakāyasya priyaṃ ca bhavati manāpaṃ ca apīdānīṃ mahājanakāyaḥ pāṇinā pāṇiṃ saṃvārayati evam eva sāṃpratajāto Vipaśyī bodhi<hi rend="it">sat</hi>v<hi rend="it">o</hi> m<hi rend="it">a</hi>hājanakāyasya priyaś cābhūn manāpaś ca apīdānīṃ mahājanakāyaḥ aṃsenāṃsa<hi rend="it">ṃ</hi> parivartayati iyam atra dharmatā tasmā<hi rend="it">d ida</hi>m ucyate ||</p>
+
+<p>priyo manāpo mahato janasya
+<lg>
+<l>tadā Vipaśyī daharas samānaḥ</l>
+<l>aṃsena cāṃsaṃ parivartayaṃti</l>
+<l>padmaṃ yathā śāradakaṃ sujātam ||</l>
+</lg></p>
+
+<p><hi rend="bold">[The Bodhisattva's Youth]</hi>
+<hi rend="bold">6. The Bodhisattva's Eyes Do Not Blink</hi>
+dha<hi rend="it">r</hi>matā khalu Vipaśyī bodhisatvo 'nimiṣo rūpāṇi <hi rend="it">paśyat</hi>i na <hi rend="it">n</hi>imiṣati / tadyathā devās tridaśopapannakā iyam atra dharmatā tasmād idam ucyate ||</p>
+
+<p>nāsau kumāro nimiṣaṃ hi paśyati
+<lg>
+<l>yathāpi devās tridaśopapannakāḥ</l>
+<l>dṛṣṭveha rūpāṇi manoramāṇi</l>
+<l>athāpi dṛṣṭvā amanoramāṇi ||</l>
+</lg></p>
+
+<note><hi rend="bold">MAV 92</hi></note>
+<p><hi rend="bold">7. His Maturation</hi>
+dharmatā khalu Vipaśyī bodhisatvaḥ karmavipākajena divyena cakṣuṣā samanv<hi rend="it">āga</hi>to yena sa <hi rend="it">pa</hi>śyati divā ca rātrau ca samaṃtayojanam iyam atra dharmatā tasmād idam ucyate ||</p>
+
+<p>vipākajaṃ tasya babhūva cakṣur
+divyaṃ vi<hi rend="it">śuddhaṃ vi</hi>malaṃ prabhāsvaram
+yenāsau paśya<hi rend="it">ti</hi> bodhisatvo
+divā ca rātrau ca samantayojanam ||</p>
+
+<p><hi rend="bold">8. The Beauty of His Voice</hi>
+dharmatā khalu Vipaśyī bodhisatvo valgusvaraś cābhūn manojñasvaraś ca kalaviṅkamanojñ<hi rend="it">a</hi>bh<hi rend="it">āṣī ca</hi> dundubhisvaranirghoṣaś ca tadyathā haimavataḥ śakunto valg<hi rend="it">u</hi>svar<hi rend="it">aś cābhūn manojñasva</hi>raś ca kal<hi rend="it">aviṅkaman</hi>oj<hi rend="it">ñabh</hi>āṣī ca d<hi rend="it">undubhisva</hi>ranirghoṣaś ca evam eva Vipaśyī bodhi<hi rend="it">satvo va</hi>lgusvaraś cābhūn manojñasvaraś ca <hi rend="it">kalaviṅka</hi>manojñabhā<hi rend="it">ṣī ca dundubhisvaranirghoṣaś ca iyam atra dharmatā</hi> tasmād idam ucyate ||</p>
+
+<p><hi rend="it">yathāpy a</hi>sau haimavataḥ śakunto
+nikūjate ku<hi rend="it">s</hi>umarasena mattaḥ
+<note><hi rend="bold">MAV 94</hi></note>
+tathaiva valgukalaviṅkabhāṣī
+<hi rend="it">sa cāp</hi>y <hi rend="it">a</hi>bhūd apratikūlabhāṣī ||</p>
+
+<p><hi rend="bold">9. Becoming Sagacious</hi></p>
+
+<p>dharmatā khalu Vipaśyī bodhisatvaḥ paṇḍito 'bhūd <hi rend="it">v</hi>yakto medhāvī ta<hi rend="it">nt</hi>r<hi rend="it">opamikayā mīmāṃsikayā prajñayā samanvāgataḥ</hi> apīdānīṃ pitur Bandhuma<hi rend="it">to</hi> 'rthakaraṇe niṣadya gambhīrān arthān nistārayati iyam atra dharmatā tasmād ida<hi rend="it">m ucyate ||</hi></p>
+
+<p>X _ ^ _ _ ^ ^ _ ^ _ X
+X _ ^ toyāmbudhara iva sāgaraḥ
+anuśiṣṭavān
+Bandhumatīnikete
+naikāṃ janāṃ jānapadāṃś ca kṣatriyān <hi rend="it">1</hi>
+hitānukampaṃ sam ^ _ ^ _ ^ X
+<lg>
+<l>X _ ^ _ _ ^ ^ _ ^ _ daḥ</l>
+<l>tataḥ samājñā udapādi bhadrikā</l>
+<l>bhūyo Vipaśyīti samaṃtacakṣuḥ 2 ||</l>
+</lg></p>
+
+<p><hi rend="bold">10. The Four Excursions
+[On Seeing an Old Man]</hi>
+dharmatā khalu Vipaśyī bodhisatva udyānabhūmiṃ niryātukāma<hi rend="it">ḥ sārathim āmantrayati</hi></p>
+
+<p><hi rend="it">yojaya sā</hi>r<hi rend="it">a</hi>the kṣipraṃ bhadraṃ yānam u<hi rend="it">dyā</hi>nabhūmiṃ niryāsyāmi</p>
+
+<note><hi rend="bold">MAV 96</hi></note>
+<p>evaṃ deveti sārathir Vipaśyino bodhisatvasya pratiśruty<hi rend="it">a</hi> kṣipraṃ bhadraṃ yānaṃ yojayitvā yena <hi rend="it">Vi</hi>p<hi rend="it">a</hi>śyī bodhisatvas te<hi rend="it">nopajagāma upetya</hi> Vipaśyinaṃ bodhi<hi rend="it">satva</hi>m idam avocat yuktaṃ devasya bhadraṃ yānaṃ yasyedānīṃ devaḥ kālaṃ manyate /</p>
+
+<p>atha Vipaśyī bodhisatvo bhadraṃ yānam a<hi rend="it">bhiruhyodyānabhūmiṃ niryāti adrākṣī</hi>d Vipaśyī bodhisatva udyānabhūmiṃ niryāyaṃ puruṣaṃ kubjaṃ gopānasīvaṅgaṃ daṇḍam ava<hi rend="it">ṣ</hi>ṭ<hi rend="it">a</hi>bhya purataḥ pravepamānena kāyena gacchantam <hi rend="it">dṛ</hi>ṣṭvā ca punaḥ <hi rend="it">sārathim ā</hi>maṃ<hi rend="it">trayati</hi></p>
+
+<p><hi rend="it">kim eṣa</hi> sārathe puruṣaḥ kubjo gopānasīvaṅka daṇḍam avaṣṭabhya purataḥ pravepamānena kāyena gacchati keśāś cāsya vi<hi rend="it">var</hi>ṇā na tath<hi rend="it">ā</hi>ny<hi rend="it">eṣām</hi></p>
+
+<p><hi rend="it">eṣa de</hi>va puruṣo <hi rend="it">jīrṇ</hi>o nāma</p>
+
+<p>kim eṣa sārathe jīrṇo nāma</p>
+
+<p>anena deva puruṣeṇa na cirāṃ martavy<hi rend="it">aṃ bha</hi>viṣyati sa eṣa deva jīrṇo nāma</p>
+
+<p><hi rend="it">aham api sārathe</hi> j<hi rend="it">a</hi>rādharmā jarādharmatāṃ cānatītaḥ</p>
+
+<p>devo 'pi jarādharmā jarādharmatāṃ cānatītaḥ</p>
+
+<p>tena<hi rend="it">h</hi>i sārathe pratinivartaya ratham aṃtaḥpuram eva gaccha yad aham aṃtaḥpuramadhya<hi rend="it">ga</hi>ta et<hi rend="it">a</hi>m <hi rend="it">e</hi>vārthaṃ cintayiṣyām<hi rend="it">i</hi> jarāṃ k<hi rend="it">i</hi>lāham avyativṛttaḥ</p>
+
+<p>pratinivartayati sārathī rath<hi rend="it">am antaḥ</hi>puram eva yāti tatredānīṃ Vipaśyī bodhisatvo 'ntaḥpu<hi rend="it">ramadhyagataḥ</hi></p>
+
+<note><hi rend="bold">MAV 98</hi></note>
+<p>athāpratītaḥ karuṇāni dhyāti j<hi rend="it">a</hi>rā<hi rend="it">ṃ</hi> kilāham avyativṛtta iyam atra dharmatā tasmād idam ucyate |
+|
+puruṣaṃ dṛṣṭveha vyatītayauvanaṃ
+jīrṇāturaṃ palitaṃ daṇḍapāṇim
+athāpratītaḥ karuṇāni dhyāti
+jarāṃ kilāhaṃ nopā<hi rend="it">t</hi>ivṛttaḥ ||</p>
+
+<p><hi rend="bold">[The King's Perturbation 1]</hi>
+atha Bandhumā rājā sārathim āmantrayati</p>
+
+<p>kaccit sārathe kumāra āptamanaska udyānabhūmiṃ gataḥ abhirato vā udyāne</p>
+
+<p>no deva / adrākṣīd deva kumāra udyānabhūmiṃ niryāyaṃ puruṣaṃ kubjaṃ gopānasīvaṅkaṃ daṇḍam avaṣṭabhya purataḥ pravepamānena kāyena gacchantaṃ / dṛṣṭvā ca punar mām āmaṃtrayati kim eṣa sārathe puruṣaḥ kubjo gopānasīvaṅko daṇḍ<hi rend="it">a</hi>m avaṣṭabhya purataḥ pravepamānena kāyena gacchati keśāś cāsya vivarṇā na tathānyeṣāṃ tam enam (<hi rend="bold">MAV 100</hi>) evaṃ vadāmi eṣa <hi rend="it">d</hi>e<hi rend="it">va p</hi>uruṣ<hi rend="it">o</hi> jīrṇo nāma sa e<hi rend="it">va</hi>m āh<hi rend="it">a</hi> k<hi rend="it">i</hi>m <hi rend="it">e</hi>ṣa sārathe jīrṇo nāma tam enam evaṃ vadāmi anena deva puruṣeṇa na cirā martavyaṃ bhaviṣyati sa eṣa deva jīrṇo nāma sa evam āha aha<hi rend="it">m a</hi>p<hi rend="it">i</hi> sā<hi rend="it">rathe jarādharmā</hi> jarādharmatāṃ cānatītaḥ tam enam evaṃ vadāmi devo 'pi jarādharmā jarādharmatāṃ cānatītaḥ sa evam āha tena hi sārathe pratinivartaya ratham antaḥpuram eva gaccha yad aham antaḥpuramadhyagata etam evārthaṃ cintayiṣyāmi jarāṃ kilāham avyativṛttaḥ sa eṣa deva kumāra antaḥpuramadhyagata athāpratītaḥ karuṇāni dhyāti jarāṃ kilāham avyativṛttaḥ</p>
+
+<p>atha Bandhumato rājña etad abhavan mā haiva brāhmaṇānāṃ naimittānāṃ vivañcanānāṃ vacanaṃ bhūtaṃ satyaṃ bhaviṣyati mā haiva kumāraḥ keśaśmaśrūṇy avatārya kāṣāyāṇi vastrāṇy ācchādya samyag eva śraddhayā agārād anagārikāṃ pravrajiṣyati yanv aham asya bhūyasyā mātrayā pañca kāmaguṇān anupradadyām apy eva rato na pravrajeta /</p>
+
+<note><hi rend="bold">MAV 102</hi></note>
+<p>atha Bandhumā rājā Vipaśyin<hi rend="it">e</hi> bodhisatvāya bhūyasyā mātrayā pañca kāmaguṇān anuprayacchati apy eva rato na pravrajeta iyam atra dharmatā tasmād idam ucyate ||</p>
+
+<lg>
+<l>śrutvā sa saṃgrāhakavākyam evaṃ</l>
+<l>pitā Vipaśyisya priyasya Bandhumā /</l>
+<l>dadau tataḥ kāmaguṇāṃ hi paṃca</l>
+<l>rato hy asau yeṣu na pravrajeta ||</l>
+</lg>
+
+<p><hi rend="bold">[On Seeing a Sick Man]</hi>
+dharmatā khalu Vipaśyī bodhisatva udyānabhūmiṃ niryātukāmaḥ sārathim āmaṃtrayati pūrvavad yāvad</p>
+
+<p>adrākṣīd Vipaśyī bodhisatva udyānabhūmiṃ niryāyaṃ puruṣam utpāṇḍūtpāṇḍukaṃ kṛśaṃ rukṣaṃ durvarṇaṃ vyatibhinnendriyaṃ no ca nibandhanīyaṃ bahujanasya cakṣuṣo darśan<hi rend="it">ā</hi>ya dṛṣṭvā ca punaḥ sārathim āmantrayati</p>
+
+<note><hi rend="bold">MAV 104</hi></note>
+<p>kim eṣa sārathe puruṣa utpaṇḍūtpāṇḍukaḥ kṛśa rukṣo durvarṇa vyatibhinnendriya no ca nibandhanīyo bahujanasya cakṣuṣo darśanāya</p>
+
+<p>eṣa deva puruṣo vyādhito nāma</p>
+
+<p>kim eṣa sārathe vyādhito nāma</p>
+
+<p>anena deva puruṣeṇa sthānam etad vidyate yad anenaivābādhena martavyaṃ bhaviṣyati sa eṣa deva vyādhito nāma</p>
+
+<p>aham api sārathe vyādhidharmā vyādhidharmatāṃ cā<hi rend="it">nat</hi>ītaḥ</p>
+
+<p>devo<hi rend="it">'p</hi>i <hi rend="it">vy</hi>ādhidha<hi rend="it">rmā vyā</hi>dhidharmatāṃ cānatītaḥ</p>
+
+<p>tena hi sārathe pratinivartaya ratham antaḥpuram eva gaccha yad aham antaḥpuramadhyagata etam evārthaṃ <hi rend="it">cintayiṣ</hi>y<hi rend="it">āmi v</hi>y<hi rend="it">ādhiṃ</hi> k<hi rend="it">i</hi>l<hi rend="it">āha</hi>m avyativṛttaḥ</p>
+
+<p>pratinivartayati sārathī ratham antaḥpuram eva yāti tatredānīṃ Vipaśyī bodhisatva antaḥpuramadhyagata</p>
+
+<p>athāpratītaḥ karuṇāni dhyāti vyādh<hi rend="it">iṃ</hi> k<hi rend="it">i</hi>lāham avyativṛttaḥ iyam atra dharmatā tasmād idam ucyate ||</p>
+
+<p>dṛṣṭveha rogeṇa viṣaktarūpaṃ
+pāṇḍuṃ manuṣyaṃ kṛśam asvatantram
+athāpratītaḥ karuṇāni dhy<hi rend="it">ā</hi>ti
+vyādhiṃ kilāhaṃ nopātivṛtta ||</p>
+
+<note><hi rend="bold">MAV 106</hi></note>
+<p><hi rend="bold">[The King's Perturbation 2]</hi>
+atha Bandhumā rājā sārathim āmaṃtrayati</p>
+
+<p>kaccit sārathe kumāra āptamanaska udyānabhūmiṃ gata abhirato vā udyāne</p>
+
+<p>no deva adrākṣīd deva kumāra udyānabhūmiṃ niry<hi rend="it">ā</hi>yaṃ puruṣam utpāṇḍūtpāṇḍukaṃ kṛśaṃ rukṣaṃ durvarṇaṃ vya<hi rend="it">t</hi>ibhinnendriyaṃ no ca nibandhanīyaṃ bahujanasya cakṣuṣo darśanāya dṛṣṭvā ca punar mām āmaṃtrayati kim eṣa sārathe puruṣa utpāṇḍūtpāṇḍukaḥ kṛśa rukṣa durvarṇa vyatibhinnendriya no ca nibandhanīya bahujanasya cakṣuṣo darśanāya tam enam evaṃ vadāmi eṣa deva puruṣo vyādhito nāma sa evam āha kim eṣa sārathe vyādhito nāma tam enam evaṃ vadāmi anena deva puruṣeṇa sthān<hi rend="it">a</hi>m <hi rend="it">e</hi>tad vidyate yad anenaivābādhena martavyaṃ bhaviṣyati sa eṣa deva vyādhito nāma sa evam āha aham api sārathe vyādhidharmā vyādhidharmatāṃ cānatītaḥ <hi rend="it">ta</hi>m enam evaṃ vadāmi devo 'pi vyādhidharmā vyādhidharmatāṃ cānatītaḥ sa evam āha tena hi sārathe pratinivartaya (<hi rend="bold">MAV 108</hi>) ratham antaḥpuram eva gaccha yad aham antaḥpuramadhyagata etam evārthaṃ cintayiṣyāmi vyādhiṃ kilāham avyativṛttaḥ sa eṣa deva kumāra antaḥpuram<hi rend="it">a</hi>dhy<hi rend="it">a</hi>ga<hi rend="it">taḥ</hi> athāpratītaḥ karuṇāni dhyāti vyādhiṃ kilāham <hi rend="it">a</hi>vyativṛttaḥ</p>
+
+<p>atha Bandhumato rājña etad abhavaṃ mā haiva brāhmaṇānāṃ naimittānāṃ pūrva<hi rend="it">vat</hi> iyam atra dhar<hi rend="it">matā tasmā</hi>d idam ucyate ||</p>
+
+<p>rūpāṇi śabdāṃś ca tathaiva gandhāṃ
+rasān atha sparśaguṇopapannāṃ /
+dadau tataḥ kā<hi rend="it">maguṇāṃ</hi> h<hi rend="it">i</hi> p<hi rend="it">añca</hi>
+rato h<hi rend="it">y</hi> asau ye<hi rend="it">ṣu na pravrajeta ||</hi></p>
+
+<p><hi rend="bold">[Seeing a Corpse]</hi>
+<hi rend="it">dharmatā</hi> khalu Vipaśyī bodhisatva udyānabhūmiṃ niryātukāma sārathim āmaṃtrayati pūrvavad</p>
+
+<p>adrākṣīd Vip<hi rend="it">aś</hi>y<hi rend="it">ī bodhisatva ud</hi>y<hi rend="it">ānabhūmiṃ ni</hi>ryā<hi rend="it">yan nānāraṅgair vastraiś caila</hi>vitānaṃ vitataṃ śivikā ca pragṛhītā ulkā ca purato nīyate mahājanakāyaś ca purato gacchati nāryaś ca prakīrṇakeśyo (<hi rend="bold">MAV 110</hi>) rudanty<hi rend="it">aḥ</hi> pṛṣṭhataḥ pṛ<hi rend="it">ṣṭhataḥ sa</hi>manubaddhā dṛṣṭvā ca punaḥ sārathim āmaṃtrayati</p>
+
+<p>kim etat sārathe nānāraṅgair vastraiś cailavitānaṃ vitataṃ śivikā ca pūrvavat pṛṣṭha<hi rend="it">taḥ</hi> pṛṣṭh<hi rend="it">ataḥ sama</hi>nubaddhā</p>
+
+<p>eṣa deva puruṣo mṛto nāma</p>
+
+<p>kim eṣa sārathe mṛto nāma</p>
+
+<p>eṣa deva puruṣo na bhūyaḥ priyau mātāpitarau drakṣyati priyam api m<hi rend="it">ā</hi>t<hi rend="it">ā</hi>pi<hi rend="it">tarāv etaṃ</hi> puruṣaṃ na drakṣyataḥ sa eṣa deva mṛto nāma</p>
+
+<p>aham api sārathe maraṇadharmā maraṇadharmatāñ cānatītaḥ</p>
+
+<p>devo 'pi maraṇadharmā maraṇadharmat<hi rend="it">ā</hi>ñ cānatīt<hi rend="it">aḥ</hi></p>
+
+<p><hi rend="it">tenah</hi>i sārathe pratinivartaya ratham antaḥpuram eva gaccha yad aham antaḥpuramadhyagata etam evārthaṃ cintayiṣyāmi maraṇaṃ kilāham avyativṛttaḥ</p>
+
+<p>pratinivar<hi rend="it">taya</hi>ti sārathī ratham antaḥpuram eva yāti tatredānī<hi rend="it">ṃ</hi> Vipaśyī bodhisatva antaḥpuramadhyagata</p>
+
+<p>athāpratītaḥ karuṇāni dhyāti maraṇaṃ kilāham avyativṛtta iyam atra dharmatā tasmād idam ucyate ||</p>
+
+<p>puruṣaṃ dṛṣṭveha vyatītacetasaṃ
+mṛtaṃ visaṃjñaṃ kṛtamāyuṣakṣayam
+<note><hi rend="bold">MAV 112</hi></note>
+athāpratītaḥ karuṇāni dhyāti
+m<hi rend="it">a</hi>raṇaṃ ki<hi rend="it">lāhaṃ</hi> nopātivṛtta ||</p>
+
+<p><hi rend="bold">[The King's Perturbation 3]</hi>
+atha Bandhumā rājā sārathim āmaṃtrayati</p>
+
+<p>kaccit sārathe kumāra āptamanaska udyānabhūmiṃ gata abhirato vā ud<hi rend="it">y</hi>ane
+no <hi rend="it">deva</hi> adrākṣīd deva kumāra udyānabhūmiṃ niryāyaṃ nānāraṅgair vastraiś cailavitānaṃ vitataṃ śivikā ca pūrvavad yāvat pṛṣṭhataḥ pṛṣṭhataḥ sam<hi rend="it">a</hi>nuba<hi rend="it">ddhāḥ dṛṣṭvā ca</hi> punar mām āmaṃtrayati kim etat sārathe nānāraṅgair vastraiś cailavitānaṃ vitataṃ śivikā ca pūrvavat pṛṣṭhataḥ pṛṣṭhataḥ samanubad<hi rend="it">dh</hi>ā <hi rend="it">ta</hi>m enam evaṃ va<hi rend="it">dāmi eṣa de</hi>va puruṣo mṛto nāma sa evam āha kim eṣa sārathe mṛto nāma tam enam evaṃ vadāmi eṣa deva puruṣo na bhūyaḥ priyau mātāpitarau drakṣyati priyam api mātāpitarau etaṃ puruṣaṃ na drakṣyata sa eṣa deva mṛto nāma sa evam āha aham api sārathe maraṇadharmā maraṇadharmatāṃ cānatītaḥ tam enam evaṃ (<hi rend="bold">MAV 114</hi>) va<hi rend="it">dāmi</hi> devo 'pi maraṇadharmā maraṇadharmatāṃ cānatītaḥ sa evam āha tena hi sārathe pratinivartaya ratham antaḥpuram eva gaccha yad aham antaḥpuramadhyagata et<hi rend="it">a</hi>m evārthaṃ cintayiṣyāmi maraṇaṃ kilāham avyativṛttaḥ sa eṣa deva kumāra antaḥpuramadhyagata athāpratītaḥ karuṇāni dhyāti maraṇaṃ kilāham avyativṛttaḥ</p>
+
+<p>atha Bandhumato rājña etad abhavaṃ mā haiva brāhmaṇānāṃ naimittānāṃ pūrvavad yāvad iyam atra dharmatā tasmād idam ucyate ||</p>
+
+<p>purottame nagaravare suramye
+<lg>
+<l>tadā Vipaśyī daharaḥ samānaḥ</l>
+<l>āmodate kāmaguṇair hi pañcabhiḥ</l>
+<l>sahasranetra iva Nandane vane ||</l>
+</lg></p>
+
+<p><hi rend="bold">[Seeing an Ascetic]</hi>
+dharmatā khalu Vipaśyī bodhisatva udyānabhūmiṃ niryātukāmaḥ sārathim āmaṃtrayati pūrvavad yāvad</p>
+
+<p>adrākṣīd Vipaśyī bodhisatva udyānabhūmiṃ niryāyaṃ puruṣaṃ muṇḍaṃ kapālapāṇim anuveśmānuveśma kulāny upasaṃkramantaṃ dṛṣṭvā ca punaḥ sārathim āmaṃtrayati</p>
+
+<note><hi rend="bold">MAV 116</hi></note>
+<p>kim eṣa sārathe puruṣa muṇḍaḥ kapālapāṇir anuveśmānuveśma kulāny upasaṃkrāmati vastrāṇi cāsya vivarṇāni na tathānyeṣām</p>
+
+<p>eṣa deva pravrajito nāma</p>
+
+<p>kim eṣa sārathe pravrajito nāma</p>
+
+<p>eṣa deva puruṣaḥ sādhu damaḥ sādhu saṃyamaḥ sādhv arthacaryā sādhu dharmacaryā sādhu kuśalacaryā sādhu kalyāṇacaryeti keśaśmaśrūṇy avatārya kāṣāyāṇi vastrāṇy āchādya samyag eva śraddhayā agārād anagārikāṃ pravrajitaḥ sa eṣa deva pravrajito nāma /</p>
+
+<p>tena hi sārathe yena sa pravrajitas tena rathaṃ preraya</p>
+
+<p>evaṃ deveti sārathir Vipaśyino bodhisatvasya pratiśrutya yena sa pravrajitas tena rathaṃ prerayati /</p>
+
+<p>atha Vipaśyī bodhisatvas taṃ pravrajitam idam avocat</p>
+
+<p>kaḥ punas tvaṃ bhoḥ puruṣa muṇḍaḥ kapālapāṇi anuveśmānuveśma kulāny upasaṃkrāmasi vastrāṇi ca te vivarṇāni na tathānyeṣām</p>
+
+<p>ahaṃ kumāra pravrajito nāma</p>
+
+<p>yathā kathaṃ tvaṃ bhoḥ puruṣa pravrajito nāma /</p>
+
+<p>ahaṃ kumāra sādhu damaḥ sādhu saṃyamaḥ sādhv arthacaryā sādhu dharmacaryā sādhu kuśalacaryā sādhu kalyāṇacaryeti keśaśmaśrūṇy (<hi rend="bold">MAV 118</hi>) avatārya kāṣāyāṇi vastrāṇy āchādya samyag eva śraddhayā agārād anagārikāṃ pravrajitaḥ so 'haṃ pravrajito nāma /</p>
+
+<p>sādhu tvaṃ bhoḥ puruṣa arth<hi rend="it">acaryā dha</hi>rmac<hi rend="it">a</hi>ryā kuśalacaryā kalyāṇacaryeti keśaśmaśrūṇy a<hi rend="it">va</hi>tārya kāṣāyāṇi vastrāṇy āchādya samyag eva śraddhayā agārād anagāri<hi rend="it">kāṃ</hi> pr<hi rend="it">a</hi>vr<hi rend="it">a</hi>j<hi rend="it">itaḥ</hi></p>
+
+<p>tena hi tvaṃ sārathe imaṃ ca ratham imāni cābharaṇāni asmākaṃ jñātibhyo 'nuprayaccha aham api ca kāmaguṇāṃ prahāya ihaiva pravrajyām abhyupagamiṣyāmi iyam atra dharmatā tasmād idam ucyate ||</p>
+
+<p>imaṃ rathaṃ cābharaṇāni caiva
+anuprayaccha mama jñātikebhyaḥ
+kṣipram ahaṃ kāma<hi rend="it">gu</hi>ṇāṃ prahāya
+ihaiva pravrajyām upāga<hi rend="it">m</hi>iṣye ||</p>
+
+<p><hi rend="bold">[Renunciation]</hi>
+tatredānīṃ Vipaśyī bodhisatvo jīrṇaṃ ca dṛṣṭvā vyādhitaṃ ca dṛṣṭvā mṛtaṃ ca dṛṣṭvā kāṣāyadhāriṇaṃ pravrajitaṃ ca dṛṣṭvā p<hi rend="it">rav</hi>r<hi rend="it">a</hi>jyā<hi rend="it">ṃ</hi> tatra samupāgato 'sau iyam atra dharm<hi rend="it">a</hi>tā tasmād idam ucyate ||</p>
+
+<p>jīrṇāñ ca dṛṣṭvā duḥkhitaṃ vyādhitaṃ ca
+mṛtañ ca dṛṣṭvā samatītacetasam
+<note><hi rend="bold">MAV 120</hi></note>
+kāṣā<hi rend="it">ya</hi>kaṇṭhaṃ pravrajita ca vīkṣya
+tatraiva pravrajyām upāgato 'sau ||</p>
+
+<p><hi rend="bold">11. Mnemonic Keywords of This Chapter</hi>
+uddānam ||</p>
+
+<p>dhātrī brāhmaṇa mātā ca abhirūpo manāpatā /
+animiṣo vipākadharmaś ca
+valgusva<hi rend="it">ra</hi>ḥ pa<hi rend="it">ṇḍita</hi>ś ca udyānam ||</p>
+
+<note><hi rend="bold">MAV 122</hi></note>
+<p><hi rend="bold">Part Three
+1. The Eightythousand People of Bandhumatī Renounce the World</hi>
+aśrauṣur Bandhumatyāṃ rājadhānyām aśītiprāṇasahasrāṇi Vipaśyī bodhisatvaḥ keśaśmaśrūṇy avatārya kāṣāyāṇi vast<hi rend="it">r</hi>āṇ<hi rend="it">y ācchā</hi>dya samyag eva śraddhayā agārād anagārikāṃ pravraji<hi rend="it">taḥ</hi> śrutvā ca punar eṣām etad abhavan na batāvaro dharmo bhaviṣyati nāvaraṃ dharmākhyānaṃ <hi rend="it">yatredānīṃ</hi> Vipaśyī bodhisatvas tathā sukumāras tathā sukhaiṣi keśaśmaśrūṇy avatārya kāṣāyāṇi vastrāṇy āchādya samyag eva śraddhayā agārād anagārikāṃ pra<hi rend="it">v</hi>r<hi rend="it">ajitaḥ</hi></p>
+
+<l><hi rend="it">atha</hi> c<hi rend="it">a</hi> punas te 'pi keśaśmaśrūṇy avatārya kāṣāyāṇi vastrāṇy āchādya samyag eva śraddhayā agārād anagārikāṃ p<hi rend="it">r</hi>av<hi rend="it">r</hi>a<hi rend="it">jitāḥ</hi> iyam a<hi rend="it">tra</hi> dharma<hi rend="it">tā tasm</hi>ā<hi rend="it">d</hi> i<hi rend="it">dam ucyate ||</hi></l>
+
+<p><hi rend="it">āś</hi>caryarūpaṃ pratibhāti me tad
+yāvat susaṃvejakāḥ śuddhasatvā
+Vipaśyinaṃ pravrajitaṃ hi śrutvā
+tatraiva pravra<hi rend="it">jyām anuvrajanti ||</hi></p>
+
+<p><hi rend="bold">2. The Eightythousand Disciples Leave on Peregrination</hi>
+<hi rend="it">a</hi>th<hi rend="it">āśī</hi>t<hi rend="it">i</hi>r bh<hi rend="it">ikṣusahasrāṇi yena Vipaśyī</hi> bodhisatvas tenopajagmur upetya Vipaśyino bodhisatvasya pādau śirasā vanditvā ekānte nyaṣīdaṃn ekāntaniṣaṃṇāny aśītir bhikṣusahasrāṇi Vipaśyī bodh<hi rend="it">isatvo dhā</hi>rmyā kathayā sandarśayati sa<hi rend="it">mā</hi>dāpayati samuttejayati saṃpraharṣayati /</p>
+
+<p>atha Vipaśyino bodhisatvasyaitad abhavan na mama pratirū<hi rend="it">pa</hi>ṃ <hi rend="it">s</hi>yā<hi rend="it">d yad a</hi>ham ananuprāptasvakārtha eva samāna śrāvakair ākīrṇo vihareyaṃ yanv ahaṃ śrāvakān udyojayeyaṃ carata bhikṣavaś caryāṃ (<hi rend="bold">MAV 124</hi>) bahuja<hi rend="it">na</hi>hi<hi rend="it">tāya</hi> bah<hi rend="it">u</hi>janasukhāya lokānukaṃpāya arthāya hitāya sukhāya devamanuṣyāṇāṃ yadā yūyaṃ śṛṇutha Vipaśyī bodhisatva anuttarāṃ samyaksaṃbodhim abhi<hi rend="it">saṃb</hi>u<hi rend="it">ddho de</hi>ś<hi rend="it">a</hi>yati Bandhumatyāṃ rājadhānyāṃ dharmaṃ tadā yūyam āgacchata Bandhumatyāṃ rājadhānīṃ dharmaśravaṇāya</p>
+
+<p>atha Vipaśyī bodhisatva śrāvakān udyojayati carata bhikṣavaś caryāṃ pūrvavad yāvad dharmaśravaṇāya /</p>
+
+<p>atha Vipaśyino bodhisatvasya śrāvakā Vipaśyinā bodhisatvenodyojitā janapadacaryāṃ prakrāntā iyam atra dharmatā tasmād idam ucyate ||</p>
+
+<p>anyena te pravrajitā acārṣur
+<lg>
+<l>ucchena bhikṣācaryeṇa jīvikām</l>
+<l>anyena śūro dvipadottamas tadā</l>
+<l>eṣaty ādīptaśira iva nirvṛtim ||</l>
+</lg></p>
+
+<p><hi rend="bold">3. The Bodhisattva Sits under the Bodhi Tree</hi>
+atha Vipaśyī bodhisatvo yāvasikasya puruṣasya sakāśāt tṛṇāny ādāya yena bodhimūlaṃ tenopajagāma upetya svayam eva tṛṇasaṃstarakaṃ saṃstīrya nyaṣīdat paryaṃ<hi rend="it">ga</hi>m ābh<hi rend="it">uj</hi>y<hi rend="it">a</hi> ṛjuṃ kāyaṃ praṇidhāya pratimukhāṃ smṛtim upasthāpya cittam utpādayati vācaṃ ca bhāṣate tāvan na bhetsyāmi paryaṃkaṃ yāvad aprāptā<hi rend="it">s</hi>r<hi rend="it">a</hi>v<hi rend="it">a</hi>kṣ<hi rend="it">ayaḥ</hi></p>
+
+<p><hi rend="it">sa</hi> tāvan na bhinatti paryaṅgaṃ yāvad aprāptāsravakṣaya iyam atra dharmatā tasmād idam ucyate ||</p>
+
+<p>paryaṅgam ābhujya tato niṣaṇṇo
+drumamūle mahar<hi rend="it">ṣ</hi>e<hi rend="it">r bodhima</hi>ṇḍe /
+duḥkhaṃ jarāmaraṇam idaṃ viditvā
+nirvāṇaśāntatvam ahaṃ prapadye 1
+na bhinadmi paryaṃgam ahaṃ hy alabdh<hi rend="it">v</hi>ā
+<hi rend="it">anuttarā</hi>ṃ bo<hi rend="it">dhi</hi>m anu ^ _ X ḥ
+<note><hi rend="bold">MAV 126</hi></note>
+ity e<hi rend="it">va</hi> _ _ ^ ^ _ <hi rend="it">Vipa</hi>śyī
+na sraṃsayati vīryam alabdhanirvṛtiḥ <hi rend="it">2</hi> ||</p>
+
+<p><hi rend="bold">4. The Realization of Dependent Origination
+[The Pravṛtti Process]</hi>
+atha Vi<hi rend="it">paśyino bodhisattva</hi>syai<hi rend="it">kākino rahasigatasya pratisaṃlīnasyaivaṃ cetasi cetaḥparivitarka uda</hi>pādi kṛchraṃ batāyaṃ loka āpanno <hi rend="it">ya</hi>d <hi rend="it">u</hi>t<hi rend="it">a</hi> j<hi rend="it">ā</hi>yat<hi rend="it">e</hi> 'pi <hi rend="it">jīryate 'pi mriyate 'pi cyavate 'py upapadyate 'pi atha ca punar ime satvā jarāmaraṇasyottare niḥsaraṇaṃ</hi> yathābhūtaṃ na prajānanti /</p>
+
+<p>tasyait<hi rend="it">a</hi>d <hi rend="it">a</hi>bhavat k<hi rend="it">asmiṃ nu sati jarāmaraṇaṃ bhavati kiṃpratyayaṃ ca punar jarāmaraṇaṃ tasya yoniśo manasikurvata evaṃ</hi> yathābhūtasyābhisamaya udapādi / jā<hi rend="it">ty</hi>āṃ<hi rend="it">satyāṃ jarāmaraṇaṃ bhavati jātipratyayaṃ ca punar jarāmaraṇaṃ</hi></p>
+
+<p><hi rend="it">tasyaitad abhavat kasmiṃ nu sati jāti</hi>r bhavati kiṃp<hi rend="it">r</hi>atyayā ca punar jāti tasya yoniśo manasikurvata evaṃ yath<hi rend="it">ābhū</hi>tasy<hi rend="it">ā</hi>bhisamaya udapādi / bhave sati jāti<hi rend="it">r</hi> bha<hi rend="it">vati bhavapratya</hi>yā ca p<hi rend="it">u</hi>nar jāti</p>
+
+<p>tasyaitad abhavat kasmiṃ nu sati bhavo bhavati kiṃpratyayaś c<hi rend="it">a</hi> punar bhavaḥ tasya yoniśo manasikurvata evaṃ yath<hi rend="it">ābhūtasyābhisama</hi>ya udapādi / upādāne sati bhavo bhavati upādānapratyayaś ca punar bhavaḥ</p>
+
+<note><hi rend="bold">MAV 128</hi></note>
+<p>tasyaitad abhavat kasmiṃ nu sati upādānaṃ bhavati kiṃpratyayaṃ ca punar upādān<hi rend="it">a</hi>ṃ tas<hi rend="it">ya</hi> yoniśo manasikurvata evaṃ yathābhūtasyābhisamaya udapādi / tṛ<hi rend="it">ṣ</hi>ṇ<hi rend="it">āyāṃ sa</hi>tyām upādā<hi rend="it">na</hi>ṃ bhavati tṛṣṇāpratyayaṃ ca p<hi rend="it">u</hi>nar upādānaṃ</p>
+
+<p>tasyaitad abhavat kasm<hi rend="it">i</hi>ṃ nu sati tṛṣṇā bhavati kiṃpratyayā ca punas tṛ<hi rend="it">ṣ</hi>ṇ<hi rend="it">ā tasya yo</hi>niśo manasikurvata evaṃ yathābh<hi rend="it">ū</hi>tas<hi rend="it">y</hi>ā<hi rend="it">bhisamaya u</hi>dapādi <hi rend="it">/</hi> vedanāyāṃ saty<hi rend="it">ā</hi>ṃ <hi rend="it">tṛ</hi>ṣṇā bhavati vedanāpratyayā ca punas tṛṣṇā</p>
+
+<p>tasyaitad abhavat kasm<hi rend="it">i</hi>ṃ nu sa<hi rend="it">ti vedanā bhava</hi>ti <hi rend="it">ki</hi>ṃ<hi rend="it">p</hi>r<hi rend="it">a</hi>ty<hi rend="it">a</hi>y<hi rend="it">ā</hi> ca punar vedan<hi rend="it">ā</hi> tasya yo<hi rend="it">ni</hi>ś<hi rend="it">o</hi> man<hi rend="it">asiku</hi>rvata evaṃ yathābhūtasyābhisamaya udapādi / sparśe sati ved<hi rend="it">a</hi>nā bh<hi rend="it">avati s</hi>parśapratyayā ca punar vedanā /</p>
+
+<p>tasyaitad abhavat ka<hi rend="it">smiṃ nu sati</hi> sparśo bhava<hi rend="it">ti</hi> kiṃpratyayaś ca puna sparśaḥ tasya yon<hi rend="it">i</hi>śo manasikurvata evaṃ yathābhūtasyābhisamaya <hi rend="it">udapādi / ṣaḍāyatane sa</hi>ti sparśo bhavati ṣaḍāyatanapratyayaś ca puna sparśaḥ</p>
+
+<p>tasyaitad abhavat kasmiṃ nu sati ṣaḍāyatanaṃ <hi rend="it">bhavati kiṃpratyayaṃ ca</hi> punaḥ ṣaḍāyatanaṃ tasya yoniśo man<hi rend="it">a</hi>s<hi rend="it">i</hi>ku<hi rend="it">rva</hi>ta evaṃ yathābhūtasyābhisamaya udapādi / nāmarūpe sati ṣaḍāyatanaṃ bhavati nāmarūpapratyayaṃ ca punaḥ ṣaḍā<hi rend="it">yatana</hi>ṃ</p>
+
+<p>tasyaitad abhavat kasmiṃ nu sati nāmarūpaṃ bhavati kiṃpratyayaṃ ca punar nāmarūpaṃ tasya yoniśo manas<hi rend="it">i</hi>ku<hi rend="it">rvata e</hi>vaṃ yathā<hi rend="it">bhū</hi>t<hi rend="it">asyābhisama</hi>ya u<hi rend="it">dapād</hi>i / vij<hi rend="it">ñ</hi>ā<hi rend="it">n</hi>e s<hi rend="it">at</hi>i <hi rend="it">nāma</hi>rūpaṃ <hi rend="it">bhavati</hi> vi<hi rend="it">jñā</hi>napratyayaṃ ca punar nāmarūpaṃ</p>
+
+<p>tasyaitad abhavat ka<hi rend="it">s</hi>miṃ <hi rend="it">nu</hi> sati vijñānaṃ bh<hi rend="it">a</hi>vati kiṃpratya<hi rend="it">ya</hi>ṃ ca puna<hi rend="it">r vij</hi>ñ<hi rend="it">ānam</hi> tasya y<hi rend="it">o</hi>n<hi rend="it">i</hi>ś<hi rend="it">o</hi> m<hi rend="it">a</hi>n<hi rend="it">asikurva</hi>ta ev<hi rend="it">aṃ</hi> yathābhūtasyābhisamaya udapādi / nāmarū<hi rend="it">p</hi>e sati vijñānaṃ bha<hi rend="it">vati</hi> nāmarūpapratyayañ<hi rend="it">c</hi>a punar vijñā<hi rend="it">n</hi>aṃ</p>
+
+<note><hi rend="bold">MAV 130</hi></note>
+<p>tasya vijñānāt <hi rend="it">p</hi>ratyu<hi rend="it">dāvartate</hi> m<hi rend="it">ānasaṃ</hi> nātaḥ parato vyativartate yad uta nāmarūpapratyayaṃ vijñānaṃ vijñānapra<hi rend="it">tya</hi>yaṃ nāmarūp<hi rend="it">a</hi>ṃ <hi rend="it">nā</hi>marū<hi rend="it">papra</hi>tyayaṃ ṣaḍāyatanaṃ ṣaḍāyatanapratyay<hi rend="it">a</hi>ḥ sp<hi rend="it">a</hi>rśaḥ sparśapratyayā vedanā vedanāpratyayā tṛṣṇā tṛṣṇāpratyayam upādānam u<hi rend="it">p</hi>ā<hi rend="it">dā</hi>napratyayo bh<hi rend="it">avaḥ bha</hi>vapratyayā jāti jātipratyayaṃ jarāmaraṇaṃ śokaparidevaduḥkhad<hi rend="it">aurma</hi>nasyopāyāsā saṃbhavaṃty evam asya keval<hi rend="it">a</hi>sya mahato duḥkhaska<hi rend="it">ndha</hi>sya samudayo bhavati /</p>
+
+<p><hi rend="bold">[The Nivṛtti Process]</hi>
+tasyaitad abhavat kasmi<hi rend="it">ṃ</hi> nv asati jarāmaraṇaṃ na bhavati kasya nirodhāj jarāmaraṇanirodhaḥ tasya yoniśo manasikurva<hi rend="it">ta e</hi>vaṃ yathābhūta<hi rend="it">s</hi>yābhisamaya udapādi / jātyām asatyāṃ jarāmaraṇaṃ na bha<hi rend="it">va</hi>ti jātinirodhāj jarāmaraṇanirodhaḥ</p>
+
+<p>tasyaitad abhavat kasmiṃ nv asati <hi rend="it">jātir</hi> n<hi rend="it">a</hi> bhavati ka<hi rend="it">sya</hi> n<hi rend="it">i</hi>rodhāj jātinirodhaḥ <hi rend="it">ta</hi>sya yoniśo manasikurvata evaṃ yathābhūtasyābhisamaya udapādi / bhave asati jātir na bhavati bhavaniro<hi rend="it">dhāj jātiniro</hi>dhaḥ</p>
+
+<p>tasyaitad abh<hi rend="it">a</hi>va<hi rend="it">t ka</hi>s<hi rend="it">m</hi>i<hi rend="it">ṃ nv a</hi>sati bhavo <hi rend="it">na</hi> bhava<hi rend="it">ti</hi> kasya nirodhād bha<hi rend="it">va</hi>nirodhaḥ tasya yoniśo manasikurvata evaṃ yathābhūtasyābhisamaya u<hi rend="it">dapādi / upādāne 'sati bhavo na bhavati upādānanirodhād bha</hi>vani<hi rend="it">ro</hi>dhaḥ</p>
+
+<p>tasyaitad<hi rend="it">abhava</hi>t kasmi<hi rend="it">ṃ</hi> nv asati upād<hi rend="it">ā</hi>naṃ na bhavati kasya nirodhād upādānanirodh<hi rend="it">aḥ tasya yoniśo manasikurvata evaṃ yathābhūtasyābhisamaya uda</hi>pādi <hi rend="it">/</hi> tṛṣṇāyā<hi rend="it">m a</hi>satyām upādāna<hi rend="it">ṃ</hi> na bhav<hi rend="it">at</hi>i <hi rend="it">tṛṣṇānirodhād up</hi>ādā<hi rend="it">na</hi>ni<hi rend="it">rodhaḥ</hi></p>
+
+<p><hi rend="it">ta</hi>syaitad a<hi rend="it">bhavat kasmiṃ nv asati tṛṣṇā na bhavati kasya nirodhāt tṛṣṇānirodhaḥ tasya</hi> yo<hi rend="it">niśo manasiku</hi>r<hi rend="it">vata e</hi>vaṃ <hi rend="it">yathābhūtasyābhisamaya udapādi / vedanāyām asatyāṃ tṛṣṇā na bhavati vedanānirodhāt tṛṣṇānirodhaḥ</hi></p>
+
+<note><hi rend="bold">MAV 132</hi></note>
+<p><hi rend="it">tasyaitad abhavat kasmiṃ nv asati vedanā na bhavati kasya nirodhād vedanānirodhaḥ tasya yoniśo manasikurvata evaṃ yathābhūtasyābhisamaya udapādi / sparśe 'sati vedanā na bhavati sparśanirodhād vedanānirodhaḥ</hi></p>
+
+<p><hi rend="it">tasyaitad abhavat kasmiṃ nv asati sparśo na bhavati kasya nirodhāt sparśanirodhaḥ tasya yoniśo manasikurvata evaṃ yathābhūtasyābhisamaya udapādi / ṣaḍāyatane 'sati sparśo na bhavati ṣaḍāyatananirodhāt sparśanirodhaḥ</hi></p>
+
+<p><hi rend="it">tasyaitad abhavat kasmiṃ nv asati ṣaḍāyatanaṃ na bhavati kasya nirodhāt ṣaḍāyatananirodhaḥ tasya yoniśo manasikurvata evaṃ yathābhūtasyābhisamaya udapādi / nāmarūpe 'sati ṣaḍāyatanaṃ na bhavati nāmarūpanirodhāt ṣaḍāyatananirodhaḥ</hi></p>
+
+<p><hi rend="it">tasyaitad abhavat kasmiṃ nv asati nāmarūpaṃ na bhavati kasya nirodhān nāmarūpanirodhaḥ tasya yoniśo manasikurvata evaṃ yathābhūtasyābhisamaya udapādi / vijñāne 'sati nāmarūpaṃ na bhavati vijñānanirodhān nāmarūpanirodhaḥ</hi></p>
+
+<p><hi rend="it">tasyaitad abhavat kasmiṃ nv asati vijñānaṃ na bhavati kasya nirodhād vijñānanirodhaḥ tasya yoniśo manasikurvata evaṃ yathābhūtasyābhisamaya udapādi / saṃskāreṣv asatsu vijñānaṃ na bhavati saṃskārani</hi>ro<hi rend="it">dhā</hi>d vijñān<hi rend="it">a</hi>n<hi rend="it">i</hi>r<hi rend="it">o</hi>dhaḥ</p>
+
+<p>tasyaitad<hi rend="it">a</hi>bh<hi rend="it">a</hi>vat ka<hi rend="it">smiṃ nv asati saṃskārā na bha</hi>v<hi rend="it">anti kasya nirodhāt saṃskāranirodhaḥ tasya yoniśo manasikurvata evaṃ yathā</hi>bhūtasyābhisamaya udapādi <hi rend="it">/</hi> avidy<hi rend="it">ā</hi>yām asa<hi rend="it">t</hi>y<hi rend="it">ā</hi>ṃ sa<hi rend="it">ṃ</hi>skārā na <hi rend="it">bhavaṃ</hi>ti avidy<hi rend="it">ā</hi>ni<hi rend="it">rodh</hi>āt sa<hi rend="it">ṃskāranirodhaḥ</hi></p>
+
+<p><hi rend="it">iti avidyānirodhāt saṃskāranirodhaḥ saṃskāraniro</hi>dh<hi rend="it">ā</hi>d vijñānanirodho: vijñānanirodhān nāmarūpanirodho: nāmarūpanirodhāt ṣaḍāyatananirodhaḥ ṣaḍāyatanan<hi rend="it">iro</hi>dhāt sparśaniro<hi rend="it">dhaḥ</hi> sp<hi rend="it">ar</hi>ś<hi rend="it">ani</hi>rodhād ve<hi rend="it">da</hi>nāniro<hi rend="it">dho: ve</hi>danānirodhāt tṛṣṇānirodhaḥ (<hi rend="bold">MAV 134</hi>) tṛṣṇānirodhād upādānanirodhaḥ upādānanirodhād bhavanirodho: bhavanirodhāj jātinirodho: jātinirodhāj jarāmaraṇanirodhaḥ śoka<hi rend="it">pa</hi>ridevaduḥkhadaurmanasyopāyāsā nirudhyaṃty evam asya kevalasya mahato duḥkhaskandhasya nirodho bhavati iyam atra dharmatā tasmād ida<hi rend="it">m u</hi>cya<hi rend="it">t</hi>e ||</p>
+
+<p>imāṃ kathāṃ pariṣadi vartamānāṃ
+mahānuśaṃsāṃ vadata śṛṇudhvam
+yā bodhisatvasya babhūva pūrve
+dharmeṣv avekṣā ananuśruteṣu 1
+<hi rend="it">ra</hi>ho<hi rend="it">gatasya</hi> ^ ^ tasya dhyāyato
+Vipaśyino 'bhūn manasābhicintitam
+kutonidānaṃ maraṇaṃ jarā ca
+saṃbhavati nānāvividhaṃ ca duḥkham 2
+tasyaikam ekāgramanasya dhyā<hi rend="it">yato</hi>
+X _ ^ _ ry. m <hi rend="it">u</hi>dapādi jñānam
+jātinidānaṃ maraṇaṃ jarā ca
+saṃbhavati nānāvividhaṃ ca duḥkham 3
+jātir athaiṣā<hi rend="it">pi</hi> k<hi rend="it">u</hi>tonidā<hi rend="it">n</hi>ā
+<hi rend="it">k</hi>iṃprat<hi rend="it">yayā kaḥ punar asya h</hi>e<hi rend="it">tuḥ</hi>
+<hi rend="it">bhavanidā</hi>n<hi rend="it">ā</hi> bhavamūlikā ca
+jātir bha<hi rend="it">va</hi>pratyayatāṃ pratītya 4
+upādadānaḥ punas tatra tatra
+punarbhavaṃ v. ^ ^ _ pr<hi rend="it">atī</hi>t<hi rend="it">ya |</hi>
+X _ ^ _ _ ^ ^ _ ^ _ X
+X _ <hi rend="it">upādā</hi>nam idaṃ pratītya 5
+<note><hi rend="bold">MAV 136</hi></note>
+prabhūtabhakṣasya hi pāvakasya
+samīritaṃ vāyuvaśād yathārci /
+evam upādā<hi rend="it">na</hi>m idaṃ hi bhavati
+tṛṣṇānidānaṃ jval<hi rend="it">a</hi>ti yathā<hi rend="it">rciḥ</hi> 6
+<hi rend="it">tṛṣṇā puna</hi>r vedayitaṃ pratītya
+utpadyate jālinī duḥkhamūlikā /
+viṣakti<hi rend="it">kā</hi> saritā sīvanī ca
+sukhena duḥkhena ca saṃprayuktā 7
+sparśas tath<hi rend="it">aivāyatanaṃ</hi> pratītya
+utpadyate vedayitaṃ narāṇām
+sātā asātā atha vāpy upekṣā
+tisra imā vedanā sparśasaṃbhavā 8
+sparśas tathaivāyat<hi rend="it">a</hi>naṃ<hi rend="it">p</hi>r<hi rend="it">at</hi>ītya
+utpadyate so 'pi hitasya hetuḥ
+cakṣuś ca śrotraṃ ca tathaiva ghrāṇaṃ
+jihvā ca kāyaś ca manaś ca ṣaṣṭham 9
+idaṃ hi ṣaḍāyatanaṃ sahe<hi rend="it">tu</hi>kam
+utpadyate nām<hi rend="it">a</hi>rūpaṃ pratītya /
+riktaṃ ca tucchañ ca asārakañ ca
+anāśvāsikaṃ vipariṇāmadharmam 10
+nāma ca <hi rend="it">r</hi>ūpaṃ ca kutoni<hi rend="it">dā</hi>naṃ
+kiṃpratyayaṃ<hi rend="it">ka</hi>ḥ p<hi rend="it">u</hi>nar <hi rend="it">a</hi>sya hetuḥ
+it<hi rend="it">y</hi> e<hi rend="it">ta</hi>m artha<hi rend="it">ṃ</hi> paricintayāno
+dadarśa vijñānanidānam eva 11
+vijñānam eta<hi rend="it">c</hi> c<hi rend="it">a</hi> kut<hi rend="it">o</hi>nidāna<hi rend="it">ṃ</hi>
+ki<hi rend="it">ṃ</hi>p<hi rend="it">r</hi>atyayaṃ kaḥ punar asya hetuḥ
+ity etam artha<hi rend="it">ṃ</hi> pravaṇe vicintya
+dadarśa saṃskāranidānam eva 12
+kṛtsnaṃ ca saṃskāragataṃ yad etat
+kiṃpratyayaṃ kaḥ punar asya hetuḥ
+ity etam arthaṃ bhagavāṃ Vipaśyī
+dadarśa ajñānanidānam eva 13
+<note><hi rend="bold">MAV 138</hi></note>
+evam idaṃ bhavati sahetukaṃ bhṛśaṃ
+sapratyayam asti nidānam asya /
+tasmād duḥkhe vipariṇāmadharme
+jñātvā pipāsāṃ vinayanti paṇḍitā 14
+tad idaṃ hi devair na kṛtaṃ na mānuṣair
+na ceśvarair nirmitaṃ nābhivādyaiḥ
+pratyeti vidvāṃ kuśalasmṛtaś ca
+duḥkhasya jñātvā prabhavaṃ śamaṃ ca 15
+ajñānam etac ca yadā nirudhyate
+ime 'pi saṃskāras tadā na santi /
+ime 'pi saṃskāra yadā na santi
+idaṃ ca vijñānam atho nirudhyate 16
+vijñānam etac ca yadā nirudhyate
+nāma ca rūpaṃ ca tato nirudhyate /
+nāma ca rūpaṃ ca yadā aśeṣaṃ
+nirudhyate nāyatanāni santi 17
+imāni ced āyatanāny aśeṣaṃ
+yadā nirudhyaṃti na santi sparśā /
+sparśeṣv asatsu na bhavaṃti vedanā
+avedayānasya na saṃti tṛṣṇā 18
+tṛṣṇānirodhān nopādadāti
+anupādadānasya bhavā na santi /
+bhavasya cādhyastagamān nirodhāj
+jātiḥ kadācin na kathaṃcid asti 19
+<note><hi rend="bold">MAV 140</hi></note>
+jāter nirodhān maraṇaṃ jarā ca
+śokaś ca duḥkhaṃ paridevitaṃ ca /
+sarvasya cādhyastagamo nirodhaś
+cakṣuṣmatā evam idaṃ nibuddham 20
+gaṃbhīram etaṃ nipuṇaṃ sudurdṛśaṃ
+pratītyasamutpādam avaiti śāstā /
+asmiṃ satīdaṃ hi sadā pravartate
+asati ca tasmiṃ hi sadā na bhavati 21
+yadā prajānāti yatonidānaṃ
+yāṃ pratyayān āyatanāni santi /
+na tasya bhūya ito bahirdhā
+paryeṣaṇā bhavati svayaṃ viditvā 22
+yadā ca taṃ paśyaty ātmanaiva
+na nāma bhavati pariva<hi rend="it">r</hi>takaḥ saḥ
+prahāya moham udapādi jñānaṃ
+duḥkhasya jñātvā prabhavaṃ śamaṃ ca 23
+cittaṃ yadā caitasikāś ca dharmā
+anityatas suviditā bhavanti /
+hīnaṃ praṇītaṃ ca yad asti rūpaṃ
+samyagdṛśo vetti pralopadharmam 24
+yam āha duḥkhopanayaṃ sukhāvahaṃ
+mārgaṃ śivaṃ yātum ananyaneya<hi rend="it">m</hi>
+.ai _ ^ _ _ ^ ^ _ ^ _ X
+X _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">|| 2</hi>5
+<note><hi rend="bold">MAV 142</hi></note>
+yā vā akopyā atulā anaṅgaṇā
+virā ^ _ _ ^ ^ _ ^ _ ^ X <hi rend="it">|</hi>
+X kaḥ sa _ _ ^ ^ _ ^ _ ^ X
+X _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">26</hi>
+X _ ^ _ _ ^ ^ _ ^ _ X
+X _ ^ _ _ ^ ^ _ kuleṣu <hi rend="it">/</hi></p>
+
+<p>vālam iva tiro vitatakṣureṇa
+prati ^ _ _ ^ ^ _ ^ _ X <hi rend="it">27</hi>
+X _ ^ _ _ ^ ^ _ ^ _ X
+X _ ^ _ _ vigatāsya saṃjñā /
+nā<hi rend="it">n</hi>ān ^ _ _ ^ ^ _ ^ _ ṣe
+sa rāṣṭṛ _ _ ^ ^ _ ^ _ X <hi rend="it">2</hi>8 ||</p>
+
+<p><hi rend="bold">5. The Four Noble Truths</hi>
+tatredānīṃ Vipaśyī bodhisa<hi rend="it">t</hi>vo jarāmaraṇa<hi rend="it">m adr</hi>ākṣīj jarāmaraṇasa<hi rend="it">mudayaṃ jarāmaraṇani</hi>rodhaṃ jarā<hi rend="it">maraṇanirodhagāminīṃ pratipadam adrākṣīt evaṃ jātiṃ bha</hi>va<hi rend="it">m upādānaṃ tṛṣṇāṃ</hi> vedanāṃ sparśaṃ ṣaḍāyatanaṃ nāmarūpaṃ
+vijñānaṃ saṃskārā<hi rend="it">n a</hi>drākṣīt sa<hi rend="it">ṃ</hi>skārasamu<hi rend="it">da</hi>yaṃ saṃskāranirodhaṃ saṃskāra<hi rend="it">nirodhagāmi</hi>n<hi rend="it">ī</hi>ṃ pratipa<hi rend="it">dam a</hi>drākṣīt</p>
+
+<p>rūpam adrākṣīd rūpasamudayaṃ rūpaniro<hi rend="it">dhaṃ</hi> rūpani<hi rend="it">r</hi>odhagāminīṃ pratipadam adrākṣīt vedanāṃ saṃjñāṃ saṃskārāṃ vijñā<hi rend="it">nam a</hi>drākṣīt vijñānasamudayaṃ vijñānanirodhaṃ vijñ<hi rend="it">ānanirodhagāminīṃ pratipa</hi>d<hi rend="it">a</hi>m <hi rend="it">a</hi>drākṣīt</p>
+
+<p>jñānaṃ cāsya darśanaṃ cotpannaṃ saṃbodhapakṣikeṣ<hi rend="it">u</hi> dharmeṣu k<hi rend="it">ṣ</hi>īṇā me jātir uṣitaṃ brahmacaryaṃ kṛta<hi rend="it">ṃ</hi> ka<hi rend="it">ra</hi>ṇī<hi rend="it">yaṃ</hi> nāpa<hi rend="it">ram asmād bhavaṃ
+prajānāmy an</hi>u<hi rend="it">tta</hi>rāṃ <hi rend="it">sa</hi>my<hi rend="it">aksaṃ</hi>bodhim abhi<hi rend="it">saṃ</hi>buddho 'smīty adhyajñāsīd iyam atra dharmatā tasmād idam ucyate ||</p>
+
+<note><hi rend="bold">MAV 144</hi></note>
+<p>rūpaṃ ca saṃ<hi rend="it">jñā</hi>ṃ ca tathaiva vedanāṃ
+saṃ<hi rend="it">skāraṃ vijñāna</hi>m anityam adhya X <hi rend="it">|</hi>
+na e ^ _ _ ^ ^ _ ^ _ ^ tis
+tatraiva saṃprāptava<hi rend="it">n āsrava</hi>kṣayam <hi rend="it">1</hi>
+picur yathā mārutavegapreritaṃ
+diśo diśaṃ ga<hi rend="it">cchat</hi>i <hi rend="it">pre</hi>ryamāṇ<hi rend="it">aḥ</hi>
+tathaiva mārasya balaṃ su _ ^ X
+X _ ^ _ s tūlapicu ^ _ X 2 ||</p>
+
+<p><hi rend="bold">6. The Two Questions</hi>
+acirābhisaṃbuddhasya Vip<hi rend="it">aś</hi>y<hi rend="it">i</hi>naḥ samyaksaṃbuddhasya <hi rend="it">dv</hi>au vi<hi rend="it">tark</hi>au bahulaṃ samudācā<hi rend="it">riṣṭām naiṣkramyavita</hi>rkaś ca pravi<hi rend="it">ve</hi>k<hi rend="it">avitarkaś ca iyam a</hi>tra dharmatā <hi rend="it">tasmād ida</hi>m ucyat<hi rend="it">e</hi> ||</p>
+
+<p>tathāgatasyāpratituly. _ X
+X _ ^ _ _ ^ ^ _ ^ _ l. <hi rend="it">|</hi>
+babhū<hi rend="it">va</hi> _ _ ^ ^ _ katā ^ X
+X _ ^ _ _ ^ ^ _ ^ <hi rend="it">tā</hi>yinaḥ 1
+X _ ^ _ <hi rend="it">dha</hi>rmavaśimān aśeṣo
+viś<hi rend="it">v</hi>ottaras tṛṣṇākṣayād virakta<hi rend="it">ḥ</hi>
+vi<hi rend="it">m</hi>ukt<hi rend="it">a</hi>citto hy <hi rend="it">a</hi>khilo anāsrav<hi rend="it">o</hi>
+vy<hi rend="it">a</hi> _ ^ _ _ ^ ^ _ ^ _ ^ X <hi rend="it">2 ||</hi></p>
+
+<p><hi rend="bold">7. The Resolution to Preach</hi>
+<hi rend="it">atha Vipaśyinaḥ samyaksaṃbuddha</hi>syaitad abhavat kasya nv ahaṃ Bandhumatyāṃ rājadhānyāṃ prathamato dharman deśayeyam</p>
+
+<p>atha Vipaś<hi rend="it">y</hi>i<hi rend="it">naḥ samyaksaṃbuddhasyaitad abhavat yanv ahaṃ Khaṇḍasya ca rājakumāra</hi>sya Tiṣyasya ca purohitaputrasya prathamato dharman de<hi rend="it">śa</hi>yeyam iyam atra dharmatā <hi rend="it">tasmād idam ucyate ||</hi></p>
+
+<note><hi rend="bold">MAV 146</hi></note>
+<p><hi rend="it">śaile yathā parvatamūrdhani sthito</hi>
+<hi rend="it">ya</hi>dvāṃ hi paśyej janatāṃ samantāt
+tath<hi rend="it">ā hy a</hi>s<hi rend="it">au</hi> dharmam<hi rend="it">a</hi>yaṃ <hi rend="it">s</hi>um<hi rend="it">e</hi>dha
+prāsādam āruhya samanta<hi rend="it">cakṣuḥ</hi>
+<hi rend="it">śokābhi</hi>bhū<hi rend="it">tāṃ janatām aśoko</hi>
+<hi rend="it">'drākṣīd imāṃ jātija</hi>rābhibhūtām ||</p>
+
+<p><hi rend="bold">8. The Buddha Goes to Bandhumatī</hi>
+atha Vipaśyī samy<hi rend="it">aksaṃbuddho bo</hi>dhimūlaṃ yathābhiramyaṃ <hi rend="it">v</hi>ihṛtya yena Bandhumatī rājadhānī te<hi rend="it">na caryāṃ p</hi>r<hi rend="it">akrāntaḥ Vipaśyī samyaksaṃbuddho Ba</hi>ndhumatī<hi rend="it">ṃ rājadhān</hi>īm <hi rend="it">anu</hi>prāptaḥ i<hi rend="it">yam atra dharmatā tasm</hi>ād idam ucyate ||</p>
+
+<p>siṃho yathā parvatakuṃjavāsī
+viś _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">|</hi>
+X _ ^ _ _ ^ ^ mo ^ _ X
+X <hi rend="it">bandhuma</hi>tyāṃ ^ ^ _ ^ _ X <hi rend="it">||</hi></p>
+
+<p><hi rend="bold">9. The First Sermon to the Two Principal Disciples</hi>
+<hi rend="it">a</hi>th<hi rend="it">a Vi</hi>paśyī samyaksaṃbuddho dāvapālaṃ p<hi rend="it">ur</hi>u<hi rend="it">ṣa</hi>m <hi rend="it">ā</hi>m<hi rend="it">ant</hi>r<hi rend="it">aya</hi>ti
+e<hi rend="it">hi tvaṃ bho dāvapāla yena Khaṇḍaś ca rājaku</hi>māras Tiṣyaś c<hi rend="it">a</hi> pu<hi rend="it">rohitaputras teno</hi>pasa<hi rend="it">ṃk</hi>r<hi rend="it">āma upet</hi>y<hi rend="it">a</hi> Khaṇḍañ ca rājakumāraṃ Tiṣyañ ca purohitaputram ev<hi rend="it">aṃ vada Vi</hi>paśyī y<hi rend="it">u</hi>v<hi rend="it">ā</hi>ṃ <hi rend="it">samyaksaṃbuddho āgataḥ sa vāṃ draṣṭukāmaḥ</hi></p>
+
+<p><hi rend="it">evaṃ bhadanteti sa dā</hi>vapāl<hi rend="it">o pur</hi>u<hi rend="it">ṣo Vipa</hi>śy<hi rend="it">i</hi>naḥ samyaksaṃbudhasya pratiśrutya yena Khaṇḍa<hi rend="it">ś ca rājakumāras Tiṣyaś ca purohitaputras tenopajagāma upetya Khaṇḍaṃ ca rājakumāraṃ Ti</hi>ṣyañ ca purohitaputram idam avocat</p>
+
+<p>Vipaś<hi rend="it">y</hi>ī y<hi rend="it">uvāṃ sa</hi>myaksaṃbud<hi rend="it">dho</hi> ā<hi rend="it">gataḥ sa vāṃ draṣṭukāmaḥ</hi></p>
+
+<p><hi rend="it">atha khalu Khaṇḍaś ca rājakumāras Tiṣyaś ca purohi</hi>taputras tasya puruṣasya pratiśrutya yena Vipaśyī samya<hi rend="it">ksaṃbuddhas tenopajagmatuḥ upetya Vipaśyinaḥ samyaksaṃbuddhasya pādau śirasā va</hi>nditvā ekāṃte nyaṣīdatām (<hi rend="bold">MAV 148</hi>) ekāntaniṣaṇṇau Khaṇḍañ ca rājakumāraṃ <hi rend="it">Tiṣyaṃ ca purohitaputraṃ Vipaśyī samyaksaṃbuddhas tri</hi>bhiḥ prātihāryair avavadati ṛddhipr<hi rend="it">ā</hi>t<hi rend="it">ihāryeṇādeśanāprā</hi>tihāryeṇa ānuśāsanāprātihāryeṇa</p>
+
+<p>tau tribh<hi rend="it">i</hi>ḥ prātihāryaiḥ samya<hi rend="it">g ava</hi>vadyamānau<hi rend="it">samyag anuśiṣyamāṇau tatraiva saṃ</hi>pr<hi rend="it">ā</hi>ptavantāv ā<hi rend="it">s</hi>r<hi rend="it">avakṣayam iyam atra</hi> dharmatā tasmād idam ucyate ||</p>
+
+<p>saṃbodhilabdhas tad upāgama<hi rend="it">j jinaḥ</hi>
+X _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">|</hi>
+X _ ^ _ _ m amṛtaṃ prakāśitaṃ
+<hi rend="it">p</hi>r<hi rend="it">avarti</hi>taṃ bhagavatā dharmacakram <hi rend="it">1</hi>
+tau KhaṇḍaTiṣyau sugatasya śrā<hi rend="it">vak</hi>au
+X _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">|</hi>
+X _ ^ _ _ pratividhyatus tadā
+ta<hi rend="it">t</hi>rai<hi rend="it">va</hi> prāptavantāv āsravakṣayam 2 ||</p>
+
+<p><hi rend="bold">10. Another Eightythousand People of Bandhumatī Renounce the World</hi>
+aśrauṣur Bandhum<hi rend="it">atyā</hi>ṃ <hi rend="it">rājadhānyām aśī</hi>ti<hi rend="it">p</hi>r<hi rend="it">āṇasahasrāṇi Khaṇḍaś</hi> c<hi rend="it">a</hi> rājakum<hi rend="it">ā</hi>r<hi rend="it">a</hi>s Tiṣyaś ca purohitapu<hi rend="it">traḥ keśaśmaśrūṇy a</hi>vatārya kāṣāyāṇi vastrāṇy āchā<hi rend="it">dya samyag eva śra</hi>ddhayā ag<hi rend="it">ā</hi>rād <hi rend="it">a</hi>nagārikāṃ pravraj<hi rend="it">itau</hi></p>
+
+<p><hi rend="it">śrutvā</hi> c<hi rend="it">a</hi> punar <hi rend="it">eṣā</hi>m etad abhavan na batāvaro <hi rend="it">dharmo bhaviṣyati nā</hi>varaṃ dharmākhyānaṃ yatredānīṃ Khaṇḍaś <hi rend="it">ca rājakumāras Tiṣya</hi>ś ca purohitaputras ta<hi rend="it">thā</hi> sukumārau <hi rend="it">ta</hi>thā s<hi rend="it">ukhaiṣi</hi>ṇau keśaśmaśrūṇy avatār<hi rend="it">ya kāṣāyāṇi vastrā</hi>ṇy āchādya samyag eva śraddhayā agār<hi rend="it">ād anagārikāṃ pravrajitau</hi>
+<hi rend="it">śru</hi>tvā ca punas te 'pi keśaśmaśrūṇy avatā<hi rend="it">rya kāṣāyāṇi</hi> vastrāṇy āchādya samyag e<hi rend="it">va śraddhayāgārā</hi>d <hi rend="it">a</hi>nagārikāṃ pravrajitā iyam atra <hi rend="it">dharmatā ta</hi>smād idam ucyate ||</p>
+
+<note><hi rend="bold">MAV 150</hi></note>
+<p>āścaryarūpaṃ prati<hi rend="it">bhāti me tad</hi>
+<hi rend="it">yāvat susaṃve</hi>jakāḥ śuddhasatvā /
+śrutvā<hi rend="it">hi pra</hi>vrajitau KhaṇḍaTiṣyau
+pravrajyāṃ tatra samup<hi rend="it">ā</hi>g<hi rend="it">atāś ca</hi> ||</p>
+
+<p><hi rend="bold">11. The Display of the Three Attainments</hi>
+athāśītir bhikṣusahasrāṇi yena <hi rend="it">Vipaśyī samyaksaṃbuddhaste</hi>nopajagmur upetya <hi rend="it">Vipaśyi</hi>naḥ samyaksaṃbuddhasya pādau śirasā vanditvā ekānte <hi rend="it">nyaṣīdan ekānta</hi>niṣaṇṇāny aśītir bhikṣu<hi rend="it">sa</hi>hasrāṇi Khaṇ<hi rend="it">ḍo</hi> <hi rend="it">rā</hi>jak<hi rend="it">u</hi>māra ṛ<hi rend="it">ddhiprātihāryeṇāvava</hi>dati Tiṣyaḥ purohitaputra ādeśanāprātihāryeṇā<hi rend="it">vavadati Vipaśyī samyaksaṃ</hi>b<hi rend="it">u</hi>d<hi rend="it">dh</hi>a ānuśāsa<hi rend="it">nā</hi>p<hi rend="it">r</hi>ātihāryeṇā<hi rend="it">vavada</hi>ti</p>
+
+<p>te <hi rend="it">tribhiḥ prātihāryaiḥ sa</hi>myag avavadyamānāḥ samyag anuśiṣyamānās tatraiva saṃ<hi rend="it">p</hi>r<hi rend="it">āptavanta āsravakṣayam iyam atra dharma</hi>tā t<hi rend="it">a</hi>sm<hi rend="it">ā</hi>d <hi rend="it">i</hi>d<hi rend="it">a</hi>m ucy<hi rend="it">ate</hi> ||</p>
+
+<p>Kh<hi rend="it">a</hi>ṇḍ<hi rend="it">a</hi>ś c<hi rend="it">a</hi> _ _ ^ ^ _ ^ _ ^ X
+X _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">|</hi>
+X _ ^ _ _ ^ ^ _ ^ _ X
+X _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">||</hi></p>
+
+<p><hi rend="bold">12. Return of the First Eightythousand Renunciants of Bandhumatī</hi>
+<hi rend="it">a</hi>śrauṣus tāni pūrvakāṇy aśītir bhikṣusaha<hi rend="it">s</hi>r<hi rend="it">āṇi Vipaśyī samyaksaṃbuddho 'nuttarāṃ samyaksaṃbodhim abhisaṃbuddho deśayati Bandhumatyāṃ rājadhānyāṃ dharmam</hi></p>
+
+<l><hi rend="it">śru</hi>tvā ca pu<hi rend="it">nas te 'pi yena Bandhuma</hi>tī rājadhānī tena caryāṃ prakrāntā iya<hi rend="it">m atra dharmatā tasmād idam ucyate ||</hi></l>
+
+<p>X _ ^ _ _ ^ ^ _ ^ _ X
+X _ ^ _ _ hi yath. ^ _ ^ X <hi rend="it">|</hi>
+<note><hi rend="bold">MAV 152</hi></note>
+X _ ^ _ _ ^ m asārasaṃjñina
+upāgatā Bandhumatyāṃ ^ _ ^ X <hi rend="it">||</hi></p>
+
+<p><hi rend="bold">13. The Display of the Three Attainments to the Eightythousand Renunciants</hi>
+<hi rend="it">athāśītir bhikṣusahasrāṇi yena Vipaśyī sam</hi>yaksaṃbuddha<hi rend="it">s tenopajagamuḥ upetya Vipaśyinaḥ</hi> samyaksaṃbuddhasya pādau śirasā van<hi rend="it">d</hi>i<hi rend="it">tvaikānte nyaṣīdan ekāntaniṣaṇṇāny aśītir bhikṣusahasrāṇi Vipaśyī</hi> samyaksaṃb<hi rend="it">uddhas tribhiḥ prātihāryair avava</hi>dati ṛddhiprātihāryeṇādeśanāprā<hi rend="it">tihāryeṇānuśāsa</hi>n<hi rend="it">ā</hi>prāti<hi rend="it">hāryeṇa</hi></p>
+
+<p><hi rend="it">te tribhiḥ prātihāryaiḥ samyag avava</hi>dyamānāḥ <hi rend="it">samyag anuśiṣyamāṇās tatraiva saṃ</hi>prāptāsravak<hi rend="it">ṣa</hi>yam iyam atr<hi rend="it">a dharmatā tasmād idam u</hi>cyate ||</p>
+
+<p>s X _ ^ _ _ ^ ^ _ ^ _ X
+X _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">|</hi>
+X _ ^ _ _ ^ ^ pākaḥ _ ^ X
+X _ ṇa bhavanaśrit. _ ^ _ ^ X <hi rend="it">||</hi></p>
+
+<p><hi rend="bold">14. Six More Years of Peregrination</hi>
+<hi rend="it">tena</hi> khalu samayen<hi rend="it">a</hi> Bandhumatyā<hi rend="it">ṃ</hi> rājadhāny<hi rend="it">ā</hi>ṃ <hi rend="it">mahān bhikṣusaṃghaḥ</hi> prativasati <hi rend="it">yad uta dvāṣaṣṭabhikṣuśatasaha</hi>sr<hi rend="it">ā</hi>ṇ<hi rend="it">i</hi></p>
+
+<p>ath<hi rend="it">a Vipa</hi>śy<hi rend="it">i</hi>naḥ <hi rend="it">sa</hi>myaksa<hi rend="it">ṃbuddhasyaitad a</hi>bha<hi rend="it">va</hi>d etarhi Bandhumatīṃ rā<hi rend="it">jadhānīṃ niḥśṛtya mahān</hi> bhikṣusaṃgh<hi rend="it">aḥ prativasati yad uta dvāṣaṣṭabhikṣuśatasahasrāṇi</hi> yanv ahaṃ śrāvakān udyojaye<hi rend="it">ya</hi>m <hi rend="it">cara</hi>ta bhik<hi rend="it">ṣa</hi>vaś caryāṃ bahujanahit<hi rend="it">āya ba</hi>hujanasukh<hi rend="it">āya lokānukampāyārthāya hitāya sukhāya
+devamanuṣyāṇām api tu</hi> ṣaṇṇāṃ yūyaṃ varṣāṇām a<hi rend="it">tyayād Ba</hi>ndhumatīṃ rājadhānīm āgacchata prāti<hi rend="it">m</hi>o<hi rend="it">kṣasūtr</hi>o<hi rend="it">ddeśaṃ śrotum</hi></p>
+
+<p><hi rend="it">atha devatāḥ Śuddhāvāse sthitās tasya cetasā cittam ājñāya bhagavantam avocan</hi></p>
+
+<note><hi rend="bold">MAV 154</hi></note>
+<p><hi rend="it">e</hi>tarhi Bandhumatīṃ rājadhānīn niḥśṛtya <hi rend="it">mahān bhikṣusaṃghaḥ pra</hi>tiva<hi rend="it">sat</hi>i yad uta <hi rend="it">dvāṣaṣṭabhikṣuśatasahasrāṇi bhagavān śrāvakān udyojayet aham api</hi> tathā kariṣyāmi yathā bhikṣavaḥ ṣaṇṇāṃ <hi rend="it">varṣāṇām atyayād Bandhumatīṃ rājadhānīm āgamiṣyanti p</hi>r<hi rend="it">ātimokṣas</hi>ūtr<hi rend="it">oddeśaṃ śrotum</hi></p>
+
+<p><hi rend="it">atha Vipaśyī samyaksaṃbuddhaḥ</hi> śrāvakā<hi rend="it">n ā</hi>maṃtrayati</p>
+
+<p>carata bhikṣava<hi rend="it">ś caryāṃ bahujanahi</hi>tāy<hi rend="it">a ba</hi>huj<hi rend="it">anasukhāya lo</hi>kānukampāyārthā<hi rend="it">ya hitāya sukhāya devamanuṣyāṇām api tu ṣaṇṇāṃ</hi> yūyaṃ varṣā<hi rend="it">ṇ</hi>ā<hi rend="it">m a</hi>tyayād Bandhumatīṃ rā<hi rend="it">jadhānīm āgacchata prāti</hi>mokṣasūtroddeśaṃ śrotum</p>
+
+<p>evaṃ bhadaṃta iti <hi rend="it">bhikṣavo Vipaśyinaḥ samyaksaṃbuddhasya pratiśrutya janapada</hi>c<hi rend="it">a</hi>ryāṃ p<hi rend="it">rakrāntāḥ i</hi>yam at<hi rend="it">ra</hi> dharma<hi rend="it">tā tasmād idam ucyate</hi> ||</p>
+
+<p>yaḥ sārthavāhaḥ sumahāj. _ ^ X
+X _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">|</hi>
+X _ ^ _ _ ^ ^ _ ^ _ X
+X _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">1</hi>
+X _ ^ _ _ ^ ^ _ ^ _ X
+X reṇa śiṣyāsaṅgāt pramu _ ^ X <hi rend="it">|</hi>
+X _ ^ _ _ ^ ^ _ ^ _ X
+X _ ^ _ _ ^ ^ tā diśo di<hi rend="it">śam 2 ||</hi></p>
+
+<p><hi rend="bold">15. The Deities Announce the Years of Peregrination Remaining</hi>
+<hi rend="it">ni</hi>rgate ekasmin varṣe d<hi rend="it">evatā āro</hi>cayaṃti nirgataṃ bhadaṃtā<hi rend="it">ḥ</hi> ṣaṇ<hi rend="it">ṇā</hi>ṃ <hi rend="it">varṣānāṃ ekaṃ varṣam pañcanāṃ varṣāṇām atyayād bhavadbhir Bandhumātīṃ</hi> rājadhānīṃ gantavyaṃ prātimokṣasūtroddeśaṃ śro<hi rend="it">tum</hi></p>
+
+<p><hi rend="it">nirgatayor dvayor varṣayor devatā ārocayanti nirgate bhadantāś ṣaṇṇāṃ varṣānāṃ dve varṣe caturṇāṃ varṣāṇām atyayād</hi> bhavadbhi<hi rend="it">r Ba</hi>ndhumatīṃ rājadhānīṃ gaṃtavya<hi rend="it">ṃ prātimokṣasūtroddeśaṃ śrotum</hi></p>
+
+<p><hi rend="it">nirgateṣu triṣu varṣeṣu yāvan nirgateṣu ṣaṭsu varṣeṣu devatāḥ Śuddhāvāse</hi> sthitā bhikṣugaṇaṃ vadanti varṣāṇi ṣaṣṭhā<hi rend="it">ni nirgatāni bhavadbhir Bandhumatīṃ rājadhānīṃ gantavyaṃ prātimokṣasūtroddeśaṃ śrotum</hi></p>
+
+<note><hi rend="bold">MAV 156</hi></note>
+<l><hi rend="it">atha te bhikṣava ekatya svānubhā</hi>vena ekatya devatānubhāve<hi rend="it">na</hi> tata eva ā<hi rend="it">jagmur Bandhumatīṃ rājadhānīm iyam atra dharmatā tasmād idam ucyate ||</hi></l>
+
+<p>X _ ^ _ _ ^ ^ _ ^ _ X
+X _ ^ _ _ ^ ṛṣiṃ praveditām
+śikṣāṃ śrotu _ ^ ta bhikṣa<hi rend="it">vaḥ</hi> ^ X
+X _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">1</hi>
+X _ ^ _ _ ^ ^ _ ^ _ X
+X _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">|</hi>
+nāgā yathā _ ^ t<hi rend="it">ṛ</hi>ṣābhitaptāḥ
+s<hi rend="it">a</hi>ṃ _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">2 ||</hi></p>
+
+<p><hi rend="bold">16. The Recitation of the Pratimokṣasūtra</hi>
+<hi rend="it">yadopajagmur dvāṣaṣṭabhikṣuśatasahasrā</hi>ṇ<hi rend="it">i</hi> B<hi rend="it">a</hi>ndhum<hi rend="it">a</hi>tyāṃ tadā ni<hi rend="it">r</hi>m<hi rend="it">āṇaratīnāṃ devatānām evam abhavat Vipaśyī sam</hi>y<hi rend="it">a</hi>ksa<hi rend="it">ṃ</hi>buddhas tasya <hi rend="it">d</hi>vāṣaṣṭasya bhikṣuś<hi rend="it">a</hi>t<hi rend="it">asahasrāṇāṃ purataḥ</hi> paryaṃge paryaṃgena niṣī<hi rend="it">d</hi>e<hi rend="it">t niṣadya Vipaśyī samyaksaṃbuddhaḥ prātimokṣasūtroddeśam ud</hi>diśe<hi rend="it">t</hi></p>
+
+<p>evam eva Vipaśyī samyaksaṃbuddhas tas<hi rend="it">ya dvāṣaṣṭasya bhikṣuśatasahasrāṇāṃ purataḥ paryaṅke paryaṅkena nya</hi>ṣīdan niṣadya Vipaśyī <hi rend="it">samyaksaṃbuddhaḥ prātimokṣasūtroddeśam uddiśati</hi> ||</p>
+
+<p>kṣāṃtiḥ paramaṃ tapas titīkṣā
+nirvāṇaṃ pa<hi rend="it">ramaṃ vadanti buddhāḥ</hi>
+<hi rend="it">na hi pravrajitaḥ paropatāpī</hi></p>
+
+<l><hi rend="it">śramaṇo bha</hi>vati parāṃ viheṭhay<hi rend="it">ānaḥ ||</hi></l>
+
+<l rend="it">iyam atra dharmatā tasmād idam ucyate ||</l>
+
+<p>Vipaśyi śikṣāpadasūtram uktavān
+X _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">|</hi>
+X _ ^ _ _ ^ ^ _ ^ _ X
+X _ ^ _ _ ^ ^ _ ^ .iddhaḥ ||</p>
+
+<note><hi rend="bold">MAV 158</hi></note>
+
+<p><hi rend="bold">III. How Did the Devatā Preach ?</hi>
+<hi rend="it">katha</hi>ṃ <hi rend="it">devatā</hi> ārocayaṃti</p>
+
+<p><hi rend="bold">[Visiting Śuddhāvāsa Heaven]</hi>
+tasya me etad abhavad a + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + na gatapūrvo vā
+tasya me etad abhavan nā<hi rend="it">ham</hi> + + + + + + + + + + ti + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + sthāpayi<hi rend="it">tvā</hi> + + Śuddhāvāsān devāṃ + + + + + + + <hi rend="it">v</hi>iṣyetāhaṃ lo + + + + + + + + + + + + + + + + + + + + <hi rend="it">yanv ahaṃ devān Śuddhāvāsān darśanāy</hi>o<hi rend="it">pasaṃkrameyam</hi></p>
+
+<p><hi rend="bold">[Abṛha Heaven]</hi>
+<hi rend="it">so</hi> 'h<hi rend="it">a</hi>ṃ <hi rend="it">tadya</hi>thā ba<hi rend="it">lavān puruṣaḥ saṃmiñjita</hi>ṃ vā bāhuṃ prasā<hi rend="it">rayet prasāritaṃ vā saṃmiñjayed evam evāhaṃ Jambudvīpe 'ntarhito 'bṛhe devani</hi>kāye pratyasthām</p>
+
+<p>a<hi rend="it">darśann A</hi>bṛhakāy<hi rend="it">ikā devatā māṃ dūrata e</hi>va dṛṣṭvā ca puna<hi rend="it">r evam āhuḥ ehi bhagavaṃ svāgataṃ bhadanta kuto bhagavāṃś ciracira</hi>sy<hi rend="it">a</hi> paryāyam akārṣīd ihā<hi rend="it">ga</hi>m<hi rend="it">a</hi>nāya niṣīdatu bha<hi rend="it">gavān prajñapta evāsane</hi></p>
+
+<p>nyaṣīdam ahaṃ <hi rend="it">p</hi>r<hi rend="it">ajñapta evāsane</hi></p>
+
+<p><hi rend="it">athābṛhakāyikā devatā mama pā</hi>dau śirasā vanditvā ekānte nyaṣīdann ekāntaniṣaṇṇā Abṛha<hi rend="it">kāyikā devatā ahaṃ dhā</hi>rmyā katha<hi rend="it">yā saṃdarśayāmi samādāpayāmi samuttejayāmi saṃpraharṣayāmi</hi></p>
+
+<p><hi rend="it">a</hi>thaikat<hi rend="it">y</hi>ā Abṛhakāyikā devatā utthāyā<hi rend="it">sanād ekāṃsam uttarāsaṅgaṃ kṛtvā yenāhaṃ</hi> tenā<hi rend="it">ṃ</hi>jal<hi rend="it">iṃ</hi> praṇ<hi rend="it">amya mām idam avocan</hi></p>
+
+<note><hi rend="bold">MAV 160</hi></note>
+<p><hi rend="it">vayaṃ bhadanta</hi> Vipaśyinaḥ samyaksaṃbuddhasya śrāvakā <hi rend="it">Vipaśyinaḥ samyaksaṃbuddhasyāntike brahmacaryaṃ caritve</hi>hopapannā<hi rend="it">ḥ</hi> vayaṃ Śi<hi rend="it">khinaḥ vayaṃ Viśvabhujaḥ</hi> vayaṃ Krakasundasya vayaṃ Kanakamune<hi rend="it">ḥ vayaṃ Kāśyapasya vayaṃ bhagavataḥ śrāvakā</hi> bhagavato 'ntike brahmaca<hi rend="it">ryaṃ caritvehopapannāḥ</hi></p>
+
+<p><hi rend="bold">[From Atapa Heaven to Sudarśana Heaven]</hi>
+<hi rend="it">so</hi> <hi rend="it">'ha</hi>m Abṛhakāyikā devatā<hi rend="it">dhā</hi>rmyā kathayā <hi rend="it">saṃdarśayitvā samādāpayitvā</hi> samuttejayitvā saṃpra<hi rend="it">harṣayitvā tadrūpaṃ samādhiṃ samāpanno yathā samāhit</hi>e citte Ab<hi rend="it">ṛ</hi>hakāyikābhir devatā<hi rend="it">bh</hi>i<hi rend="it">ḥ sārdham Abṛhe</hi> d<hi rend="it">e</hi>vanikāye 'ntarhito <hi rend="it">'tape devanikāye yāvat Sudarśane devanikāye pratyasthām pūrvavad yā</hi>v<hi rend="it">a</hi>d</p>
+
+<p><hi rend="bold">[Akaniṣṭha Heaven]</hi>
+y<hi rend="it">a</hi>nv ahaṃ devān apy Akaniṣṭhakāyikāṃ darśanāyopasaṃkrameyam</p>
+
+<p>so 'haṃ t<hi rend="it">adyathā balavān puruṣaḥ saṃmiñjitaṃ vā bāhuṃ prasārayet prasāritaṃ vā saṃmiñja</hi>yed evam evāham Abṛhakāyikābhir de<hi rend="it">vat</hi>ābhiḥ sār<hi rend="it">dha</hi>m Atapak<hi rend="it">āyikābhir devatābhiḥ sārdhaṃ Sudṛśakāyikābhir devatābhiḥ sārdhaṃ</hi> Sudarśanakāyikābhir devatābhiḥ sārdhaṃ Sudarśane de<hi rend="it">vanikāye</hi> 'ntarh<hi rend="it">i</hi>to 'kaniṣṭhe <hi rend="it">devanikāye pratyasthām</hi></p>
+
+<p><hi rend="it">adarśann Akaniṣṭhakā</hi>yikā devatā māṃ dūra<hi rend="it">ta eva dṛṣṭvā</hi> ca punar evam āhuḥ ehi bhagavaṃ svā<hi rend="it">gataṃ bha</hi>da<hi rend="it">n</hi>ta kuto bhagavāṃ <hi rend="it">ciracirasya</hi> paryāya<hi rend="it">m akār</hi>ṣ<hi rend="it">īd i</hi>h<hi rend="it">ā</hi>g<hi rend="it">a</hi>m<hi rend="it">anāya</hi> niṣīd<hi rend="it">a</hi>tu bh<hi rend="it">a</hi>gavāṃ prajñ<hi rend="it">a</hi>pt<hi rend="it">a</hi> evās<hi rend="it">a</hi>n<hi rend="it">e</hi></p>
+
+<p>ny<hi rend="it">a</hi>ṣīdam ahaṃ prajñapta evāsane</p>
+
+<p>athākaniṣṭhakāyikā devatā mam<hi rend="it">a pādau śira</hi>sā vanditvā ekāṃte nyaṣīdann (<hi rend="bold">MAV 162</hi>) ekāṃtaniṣaṇṇā Akaniṣṭhakāyikā devatā ahaṃ dhārmyā kathayā saṃdarśayāmi samādāpayāmi samuttejayāmi saṃpraha<hi rend="it">r</hi>ṣayāmi</p>
+
+<p>athaikatyā Akaniṣṭhakāyikā devatā utthāyāsanād ekāṃsam uttarāsaṅgaṃ kṛtvā yenāhaṃ tenāṃjaliṃ praṇamya mām idam avocan</p>
+
+<p>vayaṃ bhadan<hi rend="it">ta</hi> Vipaśyinaḥ samyaksaṃbuddhasya śrāvakā Vipaśyinaḥ samyaksaṃbuddhasyāntike brahmacaryaṃ caritvā ihopapannāḥ vayaṃ Śikhinaḥ vayaṃ Vi<hi rend="it">śva</hi>bhujaḥ vayaṃ Krakasundasya vayaṃ Kanakamuneḥ vayaṃ Kāśyapasya vayaṃ bhagavataḥ śrāvakā bhagavato 'ntike brahmacaryaṃ caritvehopapa<hi rend="it">n</hi>nāḥ</p>
+
+<p><hi rend="bold">[Return to Jambudvīpa]</hi>
+so 'ham Akan<hi rend="it">i</hi>ṣṭhakāyikā devatā dhārmyā kathayā saṃdarśayitvā samādāpayitvā samuttejayitvā saṃpraharṣayitvā tadrūpaṃ samādhiṃ samāpanno yathā samāhite <hi rend="it">ci</hi>tte Ak<hi rend="it">a</hi>niṣṭhe devanikāye aṃtarhito Jambudvīpe pratyasthām</p>
+
+<p>evaṃ devatā ārocayaṃti iyam atra dharmatā tasmād idam ucyate ||</p>
+
+<p><hi rend="it">ba</hi>la<hi rend="it">vā</hi>n y<hi rend="it">a</hi>thā naro ^ _ ^ _ X
+<l><hi rend="it">pra</hi>sā<hi rend="it">r</hi>i<hi rend="it">taṃ</hi> vā <hi rend="it">par</hi>isaṃhareta <hi rend="it">/</hi></l>
+ta<hi rend="it">th</hi>aiv<hi rend="it">a</hi> ś<hi rend="it">ū</hi>ro d<hi rend="it">v</hi>ipadott<hi rend="it">a</hi>mo <hi rend="it">mu</hi>ni<hi rend="it">r</hi>
+<hi rend="it">Abṛ</hi>hāṃs tadā devagaṇān upāgamat <hi rend="it">1</hi>
+yā _ ^ _ _ ^ ^ _ ^ _ X
+X _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">|</hi>
+<note><hi rend="bold">MAV 164</hi></note>
+X _ ^ _ _ ^ ^ _ ^ _ X
+<hi rend="it">Atapāṃ</hi>s tadā devagaṇān upāgamat 2
+vārī ya<hi rend="it">thā</hi> _ ^ ^ _ ^ _ sthitaṃ
+vi<hi rend="it">va</hi>rtate na ^ ca tena lipyate /
+tathaiva śūr<hi rend="it">o dvi</hi>padottamo muniḥ
+Sudṛśāṃs tadā devagaṇān upāgamat 3
+Abṛhaiś ca sārdham Atapaiś ca sārdhaṃ
+par<hi rend="it">ivā</hi>ritaḥ Sudṛśadevatābhiḥ
+anaṃtavarṇo hi śriyā jvalaṃtaṃ
+Sudarśanān devagaṇān upāgamat 4
+Śuddhādhivāsair anugamyamāna<hi rend="it">ḥ</hi>
+parivārito devatānāṃ sahasraiḥ
+anaṃtavarṇaḥ śatapuṇyalakṣaṇaḥ
+Akaniṣṭhabhūmiṃ samupāgato jinaḥ 5
+dharmadṛśo dharmaniyāmakovidā
+Vipaśyino buddhavarasya śr<hi rend="it">ā</hi>vakāḥ
+tathāga<hi rend="it">taṃ</hi> prā<hi rend="it">ṃ</hi>jalayo 'bhyupāgatā
+vyabhre dine yathaiva sūryam udgatam 6
+buddh<hi rend="it">a</hi>sya Śikhinaḥ sametya śrāvakā
+ājñātadharmāḥ svayam āgatāḥ phale <hi rend="it">/</hi>
+tathāgataṃ prāṃjalayo 'bhyupāgatās
+tripañcarātrābhyuditam iva candram 7
+te Viśvabhu<hi rend="it">j</hi> _ ^ ^ masya śrāvakāḥ
+prahāya pañcāvaraṇāni cetasaḥ
+tathāgataṃ prāṃjalayo 'bhyupāgatā
+niśi jvalaṃtaṃ pravana iva pāvakam 8
+<note><hi rend="bold">MAV 166</hi></note>
+te vītarāgāḥ Krakasundaśrāvakāḥ
+kāmeṣu cchandaṃ pratighaṃ vinodya /
+tathāgataṃ prāṃjalayo 'bhyupāgatāḥ
+<hi rend="it">Śa</hi>ṃkaraṃ bhūtapatim iva devatā<hi rend="it">ḥ 9</hi>
+jinas<hi rend="it">ya</hi> te Kanakam<hi rend="it">u</hi>ne<hi rend="it">s tu</hi> śrāvakā
+bhāvyeha mārgam amṛtopalabdhaye <hi rend="it">/</hi>
+<hi rend="it">tathā</hi>gataṃ prāṃjalayo 'bhyupāgatā
+yaśasvinaṃ vaiśravaṇam i _ ^ X <hi rend="it">10</hi>
+X _ ^ _ _ ^ ^ _ ^ _ X
+an _ ^ _ _ ^ <hi rend="it">ba</hi>huhetucint<hi rend="it">a</hi>kāḥ
+tathāgataṃ prāṃjalayo 'bhyupāgatā<hi rend="it">ḥ </hi>
+X _ ^ _ _ ^ ^ _ ^ _ X m 11
+tathāgato vyupaśa ^ _ ^ _ ^ do
+devāṃ gato varavipulardhiyuktaḥ
+athāgatā dṛḍhasthirabandha<hi rend="it">n</hi> _ X
+X _ ^ _ _ ^ ^ <hi rend="it">ś</hi>rāva<hi rend="it">k</hi>ā vayam 12
+āvāsaśreṣṭhā khalu pañca ete
+śuddhair ihādhyuṣitās tatvadarśibhiḥ
+viśuddhaśīlaṃ sama _ <hi rend="it">up</hi>āgatā
+jinam an<hi rend="it">a</hi> _ ^ ^ _ ^ _ vayam <hi rend="it">13</hi>
+<hi rend="it">e</hi>ṣo hi saptānyatamo vinā<hi rend="it">ya</hi>ka<hi rend="it">ḥ</hi>
+oghaṃjahaḥ kāmabhaveṣv asaktaḥ
+<note><hi rend="bold">MAV 168</hi></note>
+evaṃ hi devā Akaniṣ<hi rend="it">ṭhakāyikāḥ</hi>
+X _ ^ _ _ ^ ^ _ ^ _ X <hi rend="it">14</hi>
+aratira<hi rend="it">ti</hi>saho hi bhikṣur e<hi rend="it">vam</hi>
+XX _ _ śayanāsanaṃ bhajeta /
+tatra ca vihared ihāpramatto
+bhava _ _ ^ ^ _ ^ _ ^ _ _ <hi rend="it">15 ||</hi></p>
+
+  </body>
+</text>
+</TEI>
