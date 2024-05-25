@@ -1,0 +1,1427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_mInanAtha-smaradIpikA">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Smaradīpikā</title>
+	<author>Mīnanātha</author>
+	<respStmt>
+	 <resp when-custom="2001|02">data entry</resp>
+	 <name>Oliver Hellwig</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Oliver Hellwig</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/6_kama/minsmaru.htm">minsmaru.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Minanatha: Smaradipika
+<lb/>
+<lb/>Based on the edition included in: Kamakunjalata,
+<lb/>Benares : The Chowkhamba Sanskrit Series Office, 1967.
+<lb/>
+<lb/>Input by Oliver Hellwig (hellwig7@gmx.de), Berlin, 2001/02
+<lb/>
+<lb/>Der digitalisierte Text kann in jedem Rahmen ohne
+<lb/>Einschraenkungen genutzt werden. Allerdings sollte ein
+<lb/>Hinweis auf den Einleser enthalten sein.
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>included in: Kamakunjalata, Benares : The Chowkhamba Sanskrit Series Office, 1967.</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Smaradīpikā = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Śāstra -- Kāmaśāstra</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+
+<lg>
+<l>harakopānalenaiva bhasmībhūyākarot smaraḥ /</l>
+<l>arddhaṃ nārīśarīraṃ hi yaś ca tasmai namo 'stu te // MinSd_1 //</l>
+</lg>
+
+<lg>
+<l>samyag ārādhitaḥ kāmaḥ sugandhikusumādibhiḥ /</l>
+<l>vidadhāti varastrīṇāṃ mānagranthivimocanam // MinSd_2 //</l>
+</lg>
+
+<lg>
+<l>smaran nirjitya rudreṇa paścād uddīpitaḥ smaraḥ /</l>
+<l>tena tannāmadheyena nirmitā smaradīpikā // MinSd_3 //</l>
+</lg>
+
+<lg>
+<l>anekakāmaśāstrāṇāṃ sāram ākṛṣya yatnataḥ /</l>
+<l>bālavyutpattaye strīṇāṃ cittasantoṣaṇāya ca /</l>
+<l>prabodhāya varastrīṇāṃ tuṣṭyai ratisukhāya ca // MinSd_4 //</l>
+</lg>
+
+<lg>
+<l>gargeṇābhāṣitāṃ samyag vakṣyāmi smaradīpikām /</l>
+<l>yasya vijñānamātreṇa mūrkho 'pi ratiraṅgadhīḥ // MinSd_5 //</l>
+</lg>
+
+<lg>
+<l>bālikā taruṇī prauḍhā vṛddhā ceti viśeṣataḥ /</l>
+<l>jñātavyo hy anvitaḥ kāmo dhruvaṃ śṛṅgāram icchatā // MinSd_6 //</l>
+</lg>
+
+<lg>
+<l>kāmaśāstrasya tattvajñā jāyante sundarīpriyāḥ /</l>
+<l>kāmaśāstram ajānanto ramante paśuvat striyam // MinSd_7 //</l>
+</lg>
+
+<lg>
+<l>nānānibandhaiḥ suratopacāraiḥ krīḍāsukhaṃ janmaphalaṃ narāṇām /</l>
+<l>kiṃ saurabheyīśatamadhyavartī vṛṣo 'pi saṃbhogasukhaṃ na bhuṅkte // MinSd_8 //</l>
+</lg>
+
+<lg>
+<l>svanārīrakṣaṇaṃ puṃsāṃ paranāryanurañjanam /</l>
+<l>bandhabhedeṅgitajñānam etat phalam udāhṛtam // MinSd_9 //</l>
+</lg>
+
+<lg>
+<l>yena saṃvatsaro dṛṣṭaḥ sakṛt kāmaḥ susevitaḥ /</l>
+<l>tena sarvam idaṃ dṛṣṭaṃ punar āvartitaṃ jagat // MinSd_10 //</l>
+</lg>
+
+<lg>
+<l>prathamaṃ lakṣaṇaṃ puṃsāṃ strīṇāṃ ca tadanantaram /</l>
+<l>dhvajasya lakṣaṇaṃ proktaṃ bhagalakṣaṇasaṃyutam // MinSd_11 //</l>
+</lg>
+
+<lg>
+<l>kāmasthānāni saṃlakṣya punaḥ samyakpracālanam /</l>
+<l>punaḥ ṣoḍaśa bandhāś ca tathaivādhomukhāś ca ṣaṭ // MinSd_12 //</l>
+</lg>
+
+<lg>
+<l>dvau bandhau sundarīṇāṃ ca paścān mukharataṃ tathā /</l>
+<l>bāhyaṃ rataṃ tataḥ kuryād rataṃ deśaviśeṣajam // MinSd_13 //</l>
+</lg>
+
+<lg>
+<l>iṅgitasya parijñānaṃ dūtyāś ca tadanantaram /</l>
+<l>tathāṣṭanāyikāyāś ca mantrauṣadhisutodayaḥ // MinSd_14 //</l>
+</lg>
+
+<lg>
+<l>śaśo mṛgo vṛṣaś caiva caturthas tu hayas tathā /</l>
+<l>kathayāmi kramāt puṃsām etaj jāticatuṣṭayam // MinSd_15 //</l>
+</lg>
+
+<l>mṛducapalasuśīlaḥ komalāṅgaḥ suveṣaḥ sakalaguṇanidhānaṃ satyavādī śaśo 'sau // MinSd_16 //</l>
+
+<lg>
+<l>vadati madhuravāṇīṃ nṛtyagītānuraktaḥ /</l>
+<l>dvijasuragurubhakto bandhuyukto dhanāḍhyaḥ // MinSd_17 //</l>
+</lg>
+
+<lg>
+<l>strījito gāyanaś caiva nārīsattvaparaḥ sukhī /</l>
+<l>ṣaḍaṅgulo bhaven meḍhraḥ śrīmāṃś ca śaśako mataḥ // MinSd_18 //</l>
+</lg>
+
+<l>vadati madhuravāṇīṃ raktanetraḥ suśīlaḥ calamatiratibhīruḥ śīghragāmī mṛgo 'sau // MinSd_19 //</l>
+
+<l>udarakaṭikṛśaḥ syād dīrghabimbādharauṣṭho daśanavadanadīrgho dīrghabāhuḥ pratāpī // MinSd_20 //</l>
+
+<lg>
+<l>alpabhug dhārmikaś caiva satyavādī priyaṃvadaḥ /</l>
+<l>aṣṭāṅgulo bhaven meḍhro rūpayukto mṛgo mataḥ // MinSd_21 //</l>
+</lg>
+
+<l>vṛṣo yathā udarakaṭikṛśāsyaḥ śīghragāmī natāṃsaḥ kanakaruciradehaḥ kaṣṭavādī vṛṣo 'sau // MinSd_22 //</l>
+
+<l>vyasanakṛpaṇabuddhiḥ strīvaśaḥ strīvilāso bahuguṇabahutejāḥ dīrghanetro 'bhimānī // MinSd_23 //</l>
+
+<lg>
+<l>upakāraparo nityaṃ strīvaśī śleṣmalas tathā /</l>
+<l>lubdhaś ca kṛpaṇaś caiva mithyāvādī ca nirbhayaḥ /</l>
+<l>daśāṅgulaśarīras tu medasvī vṛṣabho mataḥ // MinSd_24 //</l>
+</lg>
+
+<lg>
+<l>hayo yathā udarakaṭikṛśāsyo dīrghakaṇṭhādharoṣṭhaḥ /</l>
+<l>daśanavadananetraṃ tasya dīrgho 'pi nābhiḥ // MinSd_25 //</l>
+</lg>
+
+<l>lubdhaś ca kṛpaṇaś caiva mithyāvādī ca nirbhayaḥ // MinSd_26 //</l>
+
+<l>dvādaśāṅgulameḍhras tu kuśalo 'pi hayo mataḥ // MinSd_27 //</l>
+
+<l>iti puruṣalakṣaṇāni catvāri // MinSd_28 //</l>
+
+<lg>
+<l>atha strīṇāṃ jāticatuṣṭayaprakaraṇam /</l>
+<l>padminī citriṇī caiva śaṅkhinī hastinī tathā /</l>
+<l>pratyekaṃ ca varastrīṇāṃ khyātaṃ jāticatuṣṭayam // MinSd_29 //</l>
+</lg>
+
+<l>padminī yathā bhavati kamalanetrā nāsikād ūrdhvarandhrā aviralakucayugmā dīrghakeśā kṛśāṅgī // MinSd_30 //</l>
+
+<l>mṛdugamanasuśīlā nṛtyagītānuraktā sakalaguṇasuveṣā padminī padmagandhā // MinSd_31 //</l>
+
+<lg>
+<l>śaśivadanā bimbauṣṭhī tanvī tāmranakhī tathā /</l>
+<l>mandagā lajjitā śyāmā raktaprāntavilocanā // MinSd_32 //</l>
+</lg>
+
+<lg>
+<l>gāyanī suratāḍhyā ca pārāvatakalasvanā /</l>
+<l>svalpāhārā sukeśī ca padmagandhā ca padminī // MinSd_33 //</l>
+</lg>
+
+<l>citriṇī yathā bhavati vipulakeśā nātidīrghā na kharvā tilakusumasunāsā snigdhadehotpalākṣī // MinSd_34 //</l>
+
+<l>kaṭhinaghanakucāḍhyā sundarī bandhaśīlā nikhilaguṇavicitrā citriṇī citraveṣā // MinSd_35 //</l>
+
+<lg>
+<l>gaurāṅgī tyaktalajjā ca bāhyasaṃbhogasaṃratā /</l>
+<l>uttānaśāyinī coṣṇā pārāvatakalasvanā // MinSd_36 //</l>
+</lg>
+
+<lg>
+<l>snigdhāṅgī māṃsagandhā ca svalpakāmā kṛśodarī /</l>
+<l>dhūrtā gurunitambā ca citriṇī śrīphalastanī // MinSd_37 //</l>
+</lg>
+
+<lg>
+<l>dīrghākṛtidīrghasuvarṇanetrā dīrghādharā dīrghanitambabimbā /</l>
+<l>leṣātapālaṅkṛtakaṇṭhadeśā puṃsaikacittā khalu śaṅkhinī syāt // MinSd_38 //</l>
+</lg>
+
+<lg>
+<l>śobhanā komalā coṣṇā dīrghā dīrghaśiroruhā /</l>
+<l>mṛdvaṅgī kṣāragandhā ca nātisthūlā na durbalā // MinSd_39 //</l>
+</lg>
+
+<lg>
+<l>gaurāṅgī tīkṣṇanāsā ca pīnastanī vicakṣaṇā /</l>
+<l>viśālajaghanā krūrā suratāḍhyā ca śaṅkhinī // MinSd_40 //</l>
+</lg>
+
+<lg>
+<l>hastinī yathā sthūlākṛtiḥ sthūlapayodharā ca sthūlādharā sthūlanitambabimbā /</l>
+<l>kāmotsukā gāḍharatipriyā ca madhye ca puṣṭā kariṇī matā ca // MinSd_41 //</l>
+</lg>
+
+<lg>
+<l>sthūlā kaṭhinakucā krūrā nātyuṣṇā nātiśītalā /</l>
+<l>gaurāṅgī kṣīṇanāsā ca pīnastanavilakṣaṇā // MinSd_42 //</l>
+</lg>
+
+<lg>
+<l>viśālajaghanā krūrā phullanāsātiśītalā /</l>
+<l>kharvā ca kharvanāsā ca bahulomā ca kāmukī // MinSd_43 //</l>
+</lg>
+
+<lg>
+<l>madagandhatanur nityaṃ mattamātaṅgagāminī /</l>
+<l>lubdhā pīnastanī kruddhā hastinī sā prakīrtitā // MinSd_44 //</l>
+</lg>
+
+<lg>
+<l>padminī pikavāṇī ca snigdhavāṇī ca citriṇī /</l>
+<l>śaṅkhinī krūravāṇī ca meghavāṇī ca hastinī // MinSd_45 //</l>
+</lg>
+
+<lg>
+<l>padminī pādaśobhā ca keśaśobhā ca citriṇī /</l>
+<l>śaṅkhinī mukhaśobhā ca kaṭiśobhā ca hastinī // MinSd_46 //</l>
+</lg>
+
+<lg>
+<l>padminī padmagandhā ca kṣīragandhā ca citriṇī /</l>
+<l>śaṅkhinī mīnagandhā ca madagandhā ca hastinī // MinSd_47 //</l>
+</lg>
+
+<lg>
+<l>padminī padmanidrā ca dīrghanidrā ca citriṇī /</l>
+<l>śaṅkhinī ghoranidrā ca gajanidrā ca hastinī // MinSd_48 //</l>
+</lg>
+
+<lg>
+<l>padminī padmabandhena nāgabandhena citriṇī /</l>
+<l>śaṅkhinī mīnabandhena gajabandhena hastinī // MinSd_49 //</l>
+</lg>
+
+<lg>
+<l>padminī svalpabhogā ca laghubhogā ca citriṇī /</l>
+<l>śaṅkhinī bahubhogā ca gajabhogā ca hastinī // MinSd_50 //</l>
+</lg>
+
+<l>śaśakaḥ padminīṃ caiva citriṇīṃ ca mṛgas tathā // MinSd_51 //</l>
+
+<lg>
+<l>śaṅkhinīṃ vṛṣabhaś caiva hastinīṃ tu hayas tathā /</l>
+<l>ramate tulyabhāvena tadā samarataṃ bhavet // MinSd_52 //</l>
+</lg>
+
+<l>uccanīcātinīcaṃ ca tathātyuccaṃ ca varjitam // MinSd_53 //</l>
+
+<l>khyātaṃ samarataṃ caiva tad virahaty anyathā striyaḥ // MinSd_54 //</l>
+
+<lg>
+<l>iti strīṇāṃ jāticatuṣṭayam /</l>
+<l>atha dhvajalakṣaṇaprakaraṇam /</l>
+<l>musalaṃ raṅgavīraṃ ca dvividhaṃ dhvajalakṣaṇam /</l>
+<l>sthūlaṃ musalam ity āhur dīrghaṃ tad raṅgavīrakam // MinSd_55 //</l>
+</lg>
+
+<lg>
+<l>nātihrasvaṃ nātidīrghaṃ sthūlaṃ sthūlāntikaṃ varam /</l>
+<l>kṣatraśīrṣe prasannaṃ ca liṅgāni syuḥ śubhāni ṣaṭ // MinSd_56 //</l>
+</lg>
+
+<lg>
+<l>atha bhagalakṣaṇaprakaraṇam /</l>
+<l>kūrmapṛṣṭhā gajaskandhā padmanābhisamā tathā /</l>
+<l>alomā mṛduvistīrṇā ṣaḍ ete subhagā bhagāḥ // MinSd_57 //</l>
+</lg>
+
+<lg>
+<l>śītalaṃ coṣṇam atyuṣṇaṃ gojihvāsadṛśaṃ kharam /</l>
+<l>ity uktaṃ kāmaśāstrajñair bhagacihnacatuṣṭayam // MinSd_58 //</l>
+</lg>
+
+<lg>
+<l>śītalaṃ sukhadaṃ proktam uṣṇaṃ ca madhyamaṃ smṛtam /</l>
+<l>atyuṣṇam asukhaṃ caiva kharaṃ prāṇaharaṃ smṛtam // MinSd_59 //</l>
+</lg>
+
+<lg>
+<l>atha kāmacālanaprakaraṇam /</l>
+<l>aṅguṣṭhe caraṇe gulphe bhage nābhau kuce hṛdi /</l>
+<l>kakṣe kaṇṭhe 'dhare netre kapole ca śrutāv api /</l>
+<l>śīrṣe sarvaśarīre tu vaset kāmas tithikramāt // MinSd_60 //</l>
+</lg>
+
+<lg>
+<l>savye puṃsaḥ striyo vāme kṛṣṇe śukle viparyayaḥ /</l>
+<l>ūrddhvaṃ pratipadādau ca kṛṣṇe cādhaḥ pracakṣate // MinSd_61 //</l>
+</lg>
+
+<lg>
+<l>evaṃ caiva vaset kāmaḥ sthāne caiva viśeṣataḥ /</l>
+<l>pāde jaṅghe ūrudeśe stane kakṣe gale śrutau // MinSd_62 //</l>
+</lg>
+
+<lg>
+<l>nakhakṣataṃ pradātavyaṃ bhage nābhau ca mardanam /</l>
+<l>gaṇḍe netre lalāṭe ca cumbanaṃ kāmukair iha /</l>
+<l>hṛdaye tāḍanaṃ hastād dantenādharapīḍanam // MinSd_63 //</l>
+</lg>
+
+<lg>
+<l>ātmāsyenduśaradvisaptatithayaḥ khyātaṃ nalinyā rate paulastyābdhirasāṣṭabhāskaratithau prītā bhavec citriṇī /</l>
+<l>rudrānaṅgagaṇeśaśambhutithayaḥ syuḥ śaṅkhinībhuktaye śeṣāḥ syuḥ suratotsaveṣu kariṇāṃ jātāṃ striyaḥ prītaye // MinSd_64 //</l>
+</lg>
+
+<lg>
+<l>aṅguṣṭhe caraṇe ca gulphanicaye jānudvaye bāstike nābhau vakṣasi kakṣayor nigaditā kaṇṭhe kapole 'dhare /</l>
+<l>netre karṇayuge lalāṭaphalake dhautaṃ ca vāmabhruvām ūrdhvādhaścalanakrameṇa tithayaś cāndrīkalāpakṣaye // MinSd_65 //</l>
+</lg>
+
+<lg>
+<l>sīmante nayane 'dhare ca galake kakṣātaṭe cūcuke nābhau śroṇitaṭe manobhavagṛhe jaṅghātaṭe piṇḍake /</l>
+<l>gulphe pādatale tadaṅgulitale 'ṅguṣṭhe ca tiṣṭhaty asau vṛddhakṣīṇasamaṃ tadā śaśikalāpakṣadvaye yoṣitām // MinSd_66 //</l>
+</lg>
+
+<lg>
+<l>maulau kuntalakarṣaṇaṃ nayanayor ācumbanaṃ gaṇḍayoḥ dantenādharapīḍanaṃ hṛdi hatim muṣṭyā ca nābhau śanaiḥ /</l>
+<l>kakṣākaṇṭhakapolamaṇḍalakucaśroṇīṣu deyā nakhāḥ sīmante śikharaṃ nakhair urasijau gṛhṇīta gāḍhaṃ tataḥ // MinSd_67 //</l>
+</lg>
+
+<lg>
+<l>kurvāṇo viratiṃ manobhavagṛhe mātaṅgalīlāyitaṃ jānvaṅguṣṭhapadorugulphahananaṃ cānyonyataḥ kāminām /</l>
+<l>ity evaṃ gaditaṃ pradeśakalanād indoḥ kalāropaṇaṃ kartavyaṃ ca narais tu strīṣu rabhasād uktaḥ prabodhādhikaḥ // MinSd_68 //</l>
+</lg>
+
+<lg>
+<l>iti kāmukasaṃghātaiḥ kartavyaṃ kāmacālanam /</l>
+<l>dravaty anena kāmo hi ghṛtabhāṇḍam ivāgninā // MinSd_69 //</l>
+</lg>
+
+<lg>
+<l>āliṅganaṃ cumbanaṃ ca dantakṣatanakhakṣate /</l>
+<l>mardanaṃ nakhacāṭuś cādharapānaṃ kucagrahaḥ // MinSd_70 //</l>
+</lg>
+
+<lg>
+<l>cumbanaṃ saṃpraharaṇaṃ nārīkṣobhaṇam eva ca /</l>
+<l>etad bāhyarataṃ kuryāt kāmaprakaṭahetave // MinSd_71 //</l>
+</lg>
+
+<lg>
+<l>adhare gaṇḍayor bhāle kapole galake hṛdi /</l>
+<l>stane ca kakṣayor haste nābhimūle bhagasthale // MinSd_72 //</l>
+</lg>
+
+<lg>
+<l>kukṣau jaghanayor mūle hṛdayor netrayor mukhe /</l>
+<l>kaṭyāṃ ca cumbanaṃ dantakṣataṃ netre tu varjitam // MinSd_73 //</l>
+</lg>
+
+<lg>
+<l>bhage mardanam āpūrya tato maithunam ācaret /</l>
+<l>kṛtvā vivastrāṃ kāntāṃ tu meḍhraṃ tatra praveśayet // MinSd_74 //</l>
+</lg>
+
+<lg>
+<l>vakṣasā stanayugmaṃ tu sampīḍya bāhubandhanam /</l>
+<l>anyonyaṃ dṛḍham ākramya kuryād āliṅganaṃ striyaḥ // MinSd_75 //</l>
+</lg>
+
+<lg>
+<l>rasikena rasajñena satataṃ ratim icchatā /</l>
+<l>gāḍham āliṅganaṃ deyaṃ tatsakhyā hy anurāgataḥ // MinSd_76 //</l>
+</lg>
+
+<lg>
+<l>gale vakṣaḥsthale kukṣau kaṇṭhapārśve bhage tathā /</l>
+<l>jaghanorunitambeṣu pṛṣṭhe haste śiraḥsu ca // MinSd_77 //</l>
+</lg>
+
+<l>kaṇṭhamūle kapole ca nakhakṣatam athācaret // MinSd_78 //</l>
+
+<lg>
+<l>kakṣākaṇṭhakapoleṣu nābhiśroṇikucau tathā /</l>
+<l>bhagaskandhau karṇamūlau trayodaśa nakhālayaḥ // MinSd_79 //</l>
+</lg>
+
+<lg>
+<l>sthāneṣv eteṣu kukṣau ca nakhacāṭuṃ samācaret /</l>
+<l>romāñcahetusukhadaṃ madanoddīpanaṃ matam // MinSd_80 //</l>
+</lg>
+
+<lg>
+<l>itthaṃ ca manmathotpanne keliṃ kuryāt tathaiva ca /</l>
+<l>stanayor yugayoś caiva sanābhikabhagasthale // MinSd_81 //</l>
+</lg>
+
+<l>jaghanorunitambeṣu kāmuko muhur arpayet // MinSd_82 //</l>
+
+<lg>
+<l>bhujayoḥ stanayoś caiva bhage nābhau tathaiva ca /</l>
+<l>ṣaṭsu sthāneṣu vidhinā mardanaṃ parikīrtitam // MinSd_83 //</l>
+</lg>
+
+<lg>
+<l>kakṣākaṇṭhakapoleṣu nābhau śroṇyāṃ payodhare /</l>
+<l>karṇamūle tathā skandhe cumbanaṃ dvādaśasthale // MinSd_84 //</l>
+</lg>
+
+<lg>
+<l>gaṇḍauṣṭhaṃ ca tathā vaktraṃ kakṣā nābhir bhagas tathā /</l>
+<l>kucau ca bāhumūlaṃ ca dvādaśaitāni cumbanam // MinSd_85 //</l>
+</lg>
+
+<lg>
+<l>gaṇḍau netre tathā vaktraṃ kakṣā nābhir bhagas tathā /</l>
+<l>kucau ca bāhumūlaṃ ca sthānāny etāni cumbane // MinSd_86 //</l>
+</lg>
+
+<lg>
+<l>adharauṣṭhe ca sampīḍya nāyako nāyikādharam /</l>
+<l>pūrṇacandranibhaṃ peyān nāryāś ca sarasaṃ mukham // MinSd_87 //</l>
+</lg>
+
+<lg>
+<l>payodharauṣṭhajihvāyā dvayor eva kucāgrayoḥ /</l>
+<l>pañcasthānasya vai pānaṃ kuryāt kṛśavicakṣaṇaḥ // MinSd_88 //</l>
+</lg>
+
+<lg>
+<l>oṣṭhena cauṣṭhagrahaṇapūrvakaṃ keśakarṣaṇam /</l>
+<l>śiraḥpradeśe kṛtvā tām upaviṣṭāṃ ca kārayet // MinSd_89 //</l>
+</lg>
+
+<lg>
+<l>yathā kokilaśabdaḥ syād yathā pārāvatadhvaniḥ /</l>
+<l>yathā haṃsamayūrādeḥ kalarāvaṃ tathā caret // MinSd_90 //</l>
+</lg>
+
+<lg>
+<l>muṣṭāmuṣṭinitambe ca kuryāc caiva parasparam /</l>
+<l>upahastenābalāyās tāḍayej jaghanadvaye // MinSd_91 //</l>
+</lg>
+
+<lg>
+<l>bhagagarbhasya madhye tu nāḍikā dhvajarūpiṇī /</l>
+<l>pūrṇā kāmajalair nityaṃ vāmasthā mṛdupīvarā /</l>
+<l>marditā cāṅgulībhyāṃ tu janayet kāmajaṃ jalam // MinSd_92 //</l>
+</lg>
+
+<p>tatra ekaviṃśatiprakāraḥ /
+<lg>
+<l>teṣāṃ nāmāni kākapadaḥ viparītakaḥ nāgarikaḥ ratipāśaḥ keyūraḥ priyatoṣaṇaṃ samapadaḥ ekapadaḥ ūrdhvasaṃpuṭaḥ saṃpuṭakaḥ manmathapriyaḥ ratisundaraḥ urupīḍanaḥ smaracakraṃ nāgapāśakaḥ gaganakaḥ vaṃśadārakaḥ kanakakṣayaḥ nāgaraḥ kuliśanāmakaḥ kāmasundara iti /</l>
+<l>yathākramaṃ teṣāṃ lakṣaṇāny apy āha /</l>
+<l>strīpādau skandhayugmasthau kṣiptvā dhvajaṃ bhagaṃ laghu /</l>
+<l>kāmayet kāmuko nārīṃ bandhaḥ kākapado hi saḥ // MinSd_93 //</l>
+</lg></p>
+
+<lg>
+<l>pādam ekaṃ kare dhṛtvā dvitīyaṃ skandhasaṃsthitam /</l>
+<l>nārīṃ kāmayate kāmī bandhaḥ syād viparītakaḥ // MinSd_94 //</l>
+</lg>
+
+<lg>
+<l>ūrumūlopari nyasya yoṣidūruṃ naro yadi /</l>
+<l>grīvāṃ dhṛtvā karābhyāṃ tu bandho nāgariko mataḥ // MinSd_95 //</l>
+</lg>
+
+<lg>
+<l>pīḍayed ūruyugmena kāmukaṃ yadi kāminī /</l>
+<l>ratipāśas tadā khyātaḥ kāminīnāṃ manoharaḥ // MinSd_96 //</l>
+</lg>
+
+<lg>
+<l>strīṇāṃ jaṅghāntarāviṣṭo gāḍhāliṅgya ca sundarīm /</l>
+<l>ramate vihvalaḥ kāmī bandhaḥ keyūrasaṃjñakaḥ // MinSd_97 //</l>
+</lg>
+
+<lg>
+<l>narīpādau svahastena hṛdaye dhārayed yadi /</l>
+<l>stanārpitakaraḥ kāmī kāmayet priyatoṣaṇam // MinSd_98 //</l>
+</lg>
+
+<lg>
+<l>yoṣitpādau hṛdi nyasya karābhyāṃ dhārayet kucau /</l>
+<l>yatheṣṭaṃ tāḍayed yonau bandhaḥ samapadaḥ smṛtaḥ // MinSd_99 //</l>
+</lg>
+
+<lg>
+<l>pādam ekaṃ kare dhṛtvā dvitīyaṃ skandhasaṃsthitam /</l>
+<l>stanārpitakaraḥ kāmī bandhas tv ekapado hi saḥ // MinSd_100 //</l>
+</lg>
+
+<lg>
+<l>samprasārya striyāḥ pādau śayyārpitakaphoṇikaḥ /</l>
+<l>bhage liṅgasya saṃyogād ramate sampuṭo hi saḥ // MinSd_101 //</l>
+</lg>
+
+<lg>
+<l>strīpādau saralīkṛtya bhūmau kuñcitajānukaḥ /</l>
+<l>stanalagno ramet kāmī bandhaḥ sampuṭako mataḥ // MinSd_102 //</l>
+</lg>
+
+<lg>
+<l>svajaṅghādvayabāhye ca vā yoṣitpadadvayam /</l>
+<l>stanau dhṛtvā ramet kāmī bandhaḥ syān manmathapriyaḥ // MinSd_103 //</l>
+</lg>
+
+<lg>
+<l>nārīpādadvayaṃ kāmī dhārayet kucamaṇḍale /</l>
+<l>dhṛtvā kaṇṭhaṃ ramen nārīṃ bandho 'yaṃ ratisundaraḥ // MinSd_104 //</l>
+</lg>
+
+<lg>
+<l>striyā ūruyugaṃ dhṛtvā karābhyāṃ pīḍayet punaḥ /</l>
+<l>kuryāc ca nirbhayāṃ kāmī bandhaḥ syād ūrupīḍanaḥ // MinSd_105 //</l>
+</lg>
+
+<lg>
+<l>dhṛtvā vāmakareṇoruṃ pādaṃ cāpi śiraḥsthitam /</l>
+<l>ramate sudṛḍhaḥ kāmī smaracakraṃ prakīrtitam // MinSd_106 //</l>
+</lg>
+
+<lg>
+<l>svajānudvayamadhyābhyāṃ hastābhyāṃ dhārayet striyam /</l>
+<l>ramen niḥśaṅkitaḥ kāmī bandhaḥ syān nāgapāśakaḥ // MinSd_107 //</l>
+</lg>
+
+<lg>
+<l>samāśliṣya yadā kāntaḥ kāminyā jaghanadvayam /</l>
+<l>ūrdhvagaṃ ramate dorbhyāṃ bandho gaganakaḥ smṛtaḥ // MinSd_108 //</l>
+</lg>
+
+<lg>
+<l>nārīpādadvayaṃ caiva skandhe yaḥ parivartanam /</l>
+<l>kṛtvā kānto ramed āśu bandho 'yaṃ vaṃśadārakaḥ // MinSd_109 //</l>
+</lg>
+
+<lg>
+<l>mukhaṃ mukhe yadā bāhyaṃ bāhye jaṅghe 'pi jaṅghayoḥ /</l>
+<l>vakṣo vakṣaḥsthale dattvā bhavet sa kanakakṣayaḥ // MinSd_110 //</l>
+</lg>
+
+<lg>
+<l>sundarīṃ ca ramet kāntaḥ kaṭyāsaktabhujadvayām /</l>
+<l>hṛdi tatkāntahastāṃ ca bandho 'yaṃ nāgaro mataḥ // MinSd_111 //</l>
+</lg>
+
+<lg>
+<l>strīpādadvayam āliṅgya vimukhākṣiptaliṅgakaḥ /</l>
+<l>yonim āpīḍayet kāmī bandhaḥ kuliśanāmakaḥ // MinSd_112 //</l>
+</lg>
+
+<lg>
+<l>svajaṅghādvayabāhyena dhārayet kucamaṇḍalam /</l>
+<l>dhṛtvā kaṇṭhaṃ ramet kāmī bandhaḥ syāt kāmasundaraḥ // MinSd_113 //</l>
+</lg>
+
+<lg>
+<l>ityādikaṇṭhavinyāsād gāḍhaṃ sampādayet sukham /</l>
+<l>tasmād vidagdhasaṃghātaiḥ kāryā bandhāḥ prayatnataḥ // MinSd_114 //</l>
+</lg>
+
+<lg>
+<l>striyam ānatapūrvāṅgīṃ pādāhitakaradvayām /</l>
+<l>dhṛtodaro ramet kāmī bandho 'yaṃ paśunāmakaḥ // MinSd_115 //</l>
+</lg>
+
+<lg>
+<l>pādālīḍhastanīṃ nārīm utkṣiptajaghanāṃ yadi /</l>
+<l>kāntaḥ kāmayate paścāt kathitas tv ekabandhakaḥ // MinSd_116 //</l>
+</lg>
+
+<lg>
+<l>uddhṛtya pādam ekaṃ tu bhuvi saṃsthāpya cāparam /</l>
+<l>kuḍyāśritāṃ ramet kāntāṃ bandhas traivikramo mataḥ // MinSd_117 //</l>
+</lg>
+
+<lg>
+<l>hṛdi saṃsthāpya pādaikaṃ bāhubhyāṃ veṣṭayed yadi /</l>
+<l>kāntaḥ kuḍyāśritāṃ nārīṃ bandho veṣṭanako mataḥ // MinSd_118 //</l>
+</lg>
+
+<lg>
+<l>nārījānudvayaṃ dhṛtvā ātmajānudvayopari /</l>
+<l>kuḍyāśritāṃ ramet kāntāṃ bandho dolādināmakaḥ // MinSd_119 //</l>
+</lg>
+
+<lg>
+<l>nārībāhudvayaṃ nyasya svīyabāhudvaye tathā /</l>
+<l>grīvāṃ dhṛtvā ramet kāmī bandho dolāyitaḥ smṛtaḥ // MinSd_120 //</l>
+</lg>
+
+<lg>
+<l>kuḍyāśritāṃ ramet kāntāṃ kaṇṭhāsaktakaradvayām /</l>
+<l>pādābhyāṃ madhyam āveṣṭya bandhaḥ prālambako mataḥ // MinSd_121 //</l>
+</lg>
+
+<lg>
+<l>striyāḥ pādadvayaṃ kāntaḥ kāntasyorudvayopari /</l>
+<l>kaṭim ālolayed āśu bandho 'yaṃ haṃsalīlakaḥ // MinSd_122 //</l>
+</lg>
+
+<lg>
+<l>liṅgoparisthitā nārī bhūmau dattvā karadvayam /</l>
+<l>hṛdaye dattahastā ca bandho līlāsano mataḥ // MinSd_123 //</l>
+</lg>
+
+<lg>
+<l>viparītarate nārīm ṛtusnātāṃ na gurviṇīm /</l>
+<l>yojayet kāmaśāstrajñaḥ sadyo bhuktavatīṃ tathā // MinSd_124 //</l>
+</lg>
+
+<lg>
+<l>bhage niḥkṣiptajihvāgro vilolaṃ cumbati priyaḥ /</l>
+<l>tathaiva ramaṇasyāpi nārī liṅgaṃ prakarṣati // MinSd_125 //</l>
+</lg>
+
+<lg>
+<l>madhyadeśabhavā nāryo nakhadantapade ratāḥ /</l>
+<l>cumbāghātaratā nāryas tathā madhyamadeśajāḥ // MinSd_126 //</l>
+</lg>
+
+<lg>
+<l>adhomukharatāś caiva keśagrāheṣu sindhujāḥ /</l>
+<l>nānārataratā nāryas tathā siṃhaladeśajāḥ // MinSd_127 //</l>
+</lg>
+
+<lg>
+<l>cumbanāliṅgane raktās tathā kṛtrimaliṅgakaiḥ /</l>
+<l>mahārāṣṭre ratā rāmāḥ strīrājye kośaleṣu ca // MinSd_128 //</l>
+</lg>
+
+<lg>
+<l>kṣatāghātāṃśukākṣepais tathā kṛtrimaliṅgakaiḥ /</l>
+<l>dhvajavṛṣaṇalubdhāś ca rāmāḥ kārṇāṭadeśajāḥ // MinSd_129 //</l>
+</lg>
+
+<lg>
+<l>cumbakeśagrahaiś caiva jihvāvakṣojamardanaiḥ /</l>
+<l>vṛṣaṇais tāḍanenāṅge ratā drāviḍadeśajāḥ // MinSd_130 //</l>
+</lg>
+
+<lg>
+<l>nitāntarasikā bandhe cumbanāliṅganādiṣu /</l>
+<l>lubdhāś cādharapāneṣu na tu lāvaṇyavigrahāḥ // MinSd_131 //</l>
+</lg>
+
+<lg>
+<l>tīrthayātrābhilubdhāś ca gauḍavaṅgāṅganāḥ kila /</l>
+<l>niḥsahā mardanāghāte nepālāḥ kāmarūpajāḥ // MinSd_132 //</l>
+</lg>
+
+<lg>
+<l>strīṇāṃ viṣayasātmyaṃ ca jñātvā maithunam ācaret /</l>
+<l>samāne sukhasampattir anyathā vai dviṣanti tāḥ // MinSd_133 //</l>
+</lg>
+
+<lg>
+<l>mṛduhrasvadhvajo yatra priyo 'śakto drutacyutiḥ /</l>
+<l>yatra strīṇāṃ ca kāṭhinyaṃ tatra nīcarato bhavet // MinSd_134 //</l>
+</lg>
+
+<lg>
+<l>nāryo nīcaratodvignā dviṣanti puruṣaṃ kṣaṇāt /</l>
+<l>śrūyate caiva karṇāṭe kāntayā nihataḥ patiḥ // MinSd_135 //</l>
+</lg>
+
+<lg>
+<l>aṅgulīnāṃ praveśais tu tathā kṛtrimaliṅgakaiḥ /</l>
+<l>mṛduhrasvadhvajaiḥ kāmī ramet strītoṣahetave // MinSd_136 //</l>
+</lg>
+
+<lg>
+<l>atha prāsaṅgikaṃ kanyāparīkṣaṇaprakaraṇam /</l>
+<l>idānīṃ yad ahaṃ vakṣye kanyāyāḥ lakṣaṇaṃ tataḥ /</l>
+<l>nirūpya lakṣaṇādīṃs tāṃ paritaḥ svīyasampadam // MinSd_138 //</l>
+</lg>
+
+<lg>
+<l>na kṛṣṇā nātigaurāṅgī tanvī mṛduvacās tathā /</l>
+<l>na kharvā nātidīrghā ca suvaktrā cārulocanā // MinSd_139 //</l>
+</lg>
+
+<lg>
+<l>kambugrīvā ca mṛdvaṅgī śyāmarukthodarī tu yā /</l>
+<l>alpanidrālpabhoktrī ca samāṅgī nimnanāsikā // MinSd_140 //</l>
+</lg>
+
+<lg>
+<l>āraktā sutarāṃ netre nakhe dantacchade 'pi ca /</l>
+<l>padmaraktādicihnaṃ ca pāṇau pāde viśeṣataḥ // MinSd_141 //</l>
+</lg>
+
+<lg>
+<l>samadantā guruśroṇī bimbauṣṭhī ca sugāyanī /</l>
+<l>bhavet kanyā praśaṃsyā sā dharmakāmārthasiddhaye // MinSd_142 //</l>
+</lg>
+
+<lg>
+<l>bhūmau pādakaniṣṭhā vānāmikā vārpayed yugam /</l>
+<l>kanyā sā varjanīyā ca saivopapatikā matā // MinSd_143 //</l>
+</lg>
+
+<lg>
+<l>kanyā sā puṃścalī kharvā yā syāc chabalamadhyamā /</l>
+<l>pīvarā karkaśāṅgī ca piṅganetrā kace jaṭā // MinSd_144 //</l>
+</lg>
+
+<lg>
+<l>dīrghanetrā dīrghavaktrā kharvā paruṣavādinī /</l>
+<l>jaṅghāyām uttaroṣṭhe ca bibhratī lomasaṃcayam // MinSd_145 //</l>
+</lg>
+
+<lg>
+<l>karoti yadi vā nityaṃ bhojanaṃ vipulaṃ bahu /</l>
+<l>nimnagrīvā nimnakaṇṭhā bahukeśī sulocanā // MinSd_146 //</l>
+</lg>
+
+<lg>
+<l>gaṇḍakūpe hasantī ca dantapaṅktyā tu danturā /</l>
+<l>sā vijñair varjanīyā ca sukhaiśvaryasamīhayā // MinSd_147 //</l>
+</lg>
+
+<lg>
+<l>tad yathā kuladvayaṃ cāpi vininditā strī yaśovibhūtiṃ ca tiraskaroti /</l>
+<l>nimagnacandreva niśāsamānā prayāti naivādaratāṃ pṛthivyām // MinSd_148 //</l>
+</lg>
+
+<lg>
+<l>sevanaṃ yoṣitāṃ kuryān matvā doṣabalābalam /</l>
+<l>bālāyogyātirūḍhānām ṛtuyogavibhāgataḥ // MinSd_149 //</l>
+</lg>
+
+<lg>
+<l>bālā ca taruṇī prauḍhā vṛddhā bhavati nāyikā /</l>
+<l>ebhiḥ prakārair vikhyātā yuvatī nāgarī sadā // MinSd_150 //</l>
+</lg>
+
+<lg>
+<l>bāleti gīyate nārī yāvat ṣoḍaśavatsaram /</l>
+<l>tasmāt paraṃ ca yogyā sā yāvad viṃśativatsaram // MinSd_151 //</l>
+</lg>
+
+<lg>
+<l>vidvadbhiḥ sarvajagati taruṇīty abhidhīyate /</l>
+<l>tadūrdhvam atirūḍhā syād yāvat pañcāśataṃ punaḥ // MinSd_152 //</l>
+</lg>
+
+<lg>
+<l>vṛddhā tataḥ paraṃ jñeyā suratotsavavarjitā /</l>
+<l>prīṇāti bālā mālādyais taruṇī vastradānataḥ // MinSd_153 //</l>
+</lg>
+
+<lg>
+<l>premavākyādibhiḥ prauḍhā vṛddhā ca dṛḍhatāḍanāt /</l>
+<l>phalatāmbūlavāsobhir bālā vaśyā bhaven nṛṇām // MinSd_154 //</l>
+</lg>
+
+<lg>
+<l>vividhābharaṇaiḥ snehais taruṇī vaśavartinī /</l>
+<l>gāḍhāliṅganacumbanaiś ca atirūḍhās tu yoṣitaḥ // MinSd_155 //</l>
+</lg>
+
+<lg>
+<l>gauravair madhurālāpair bhaved vṛddhā priyaṃvadā /</l>
+<l>tathā kusumadharmiṇyaḥ striyo vṛddhaparigrahāḥ // MinSd_156 //</l>
+</lg>
+
+<lg>
+<l>upakrāmanti viśvāsād dviṣanti puruṣaṃ kṣaṇāt /</l>
+<l>nidāghaśarador bālā sevyā viṣayiṇāṃ bhavet // MinSd_157 //</l>
+</lg>
+
+<lg>
+<l>hemante śiśire yogyā prauḍhā varṣāvasantayoḥ /</l>
+<l>satataṃ sevyamānāpi bālā vardhayate balam // MinSd_158 //</l>
+</lg>
+
+<lg>
+<l>kṣemaṃ nayati yogyā strī vṛddhā prakurute jarām /</l>
+<l>utsāhahāniṃ vṛddhā strī diśed rogakṣayādikam // MinSd_159 //</l>
+</lg>
+
+<lg>
+<l>bālā ca prāṇadā proktā taruṇī prāṇahāriṇī /</l>
+<l>prauḍhā karoti vṛddhatvaṃ vṛddhā maraṇam ādiśet // MinSd_160 //</l>
+</lg>
+
+<lg>
+<l>āsīne lālayed bālāṃ taruṇīṃ śayane tathā /</l>
+<l>utthāne tv atirūḍhāṃ ca lālanaṃ trividhaṃ matam // MinSd_161 //</l>
+</lg>
+
+<lg>
+<l>adhvaklāntā ṛtusnātā prathamajvaritā tathā /</l>
+<l>madhupānaprasannā ca nartitā virahī tathā // MinSd_162 //</l>
+</lg>
+
+<lg>
+<l>ṣaṇmāsagarbhiṇī māsaprasūtā navaraṅgiṇī /</l>
+<l>etā vahanti sutarāṃ striyo na suratotsavam // MinSd_163 //</l>
+</lg>
+
+<lg>
+<l>āliṅganavihīnaṃ tu yo vetti suratotsavam /</l>
+<l>paśor iva bhavet tasya siddhiḥ svārthaikasiddhaye // MinSd_164 //</l>
+</lg>
+
+<lg>
+<l>āliṅgacumbane daṃśo bhagastanavimardanam /</l>
+<l>nakhadānaṃ ca ghātaś ca grahaṇaṃ kucakeśayoḥ // MinSd_165 //</l>
+</lg>
+
+<lg>
+<l>karoti cinmayaṃ hāsyaṃ jihvākaṇṭhādharagrahaḥ /</l>
+<l>etad daśaprabhedaṃ hi kṣaraṇasya prakīrtitam // MinSd_166 //</l>
+</lg>
+
+<lg>
+<l>nārīṇāṃ mohanaṃ tāvad yāvan notkaṇṭhitā priyā /</l>
+<l>anyathā tatsukhocchitir aśītārkakarād iva // MinSd_167 //</l>
+</lg>
+
+<lg>
+<l>śītkāraṃ cātha huṃkāraṃ hasitaṃ ca trapākṣayaḥ /</l>
+<l>prasvinnavadanaṃ caiva vikāro 'tha bhagasya ca // MinSd_168 //</l>
+</lg>
+
+<lg>
+<l>buddhvā caitāni liṅgāni yoṣitāṃ surate budhaḥ /</l>
+<l>tayā tulyasukhaṃ vāñchann anurāgaṃ samācaret // MinSd_169 //</l>
+</lg>
+
+<lg>
+<l>puṣpaṃ mālyaṃ suvarṇaṃ ca rājataṃ taruṇīsukham /</l>
+<l>taruṇīrahite kānte vyarthaṃ deśaviceṣṭitam // MinSd_170 //</l>
+</lg>
+
+<lg>
+<l>daivād yadi kadācid dhi vicchedaḥ kramaśas tadā /</l>
+<l>daśamīṃ manmathāvasthāṃ prāpnoty eva na saṃśayaḥ // MinSd_171 //</l>
+</lg>
+
+<lg>
+<l>abhilāṣaś cintanaṃ cānusmṛtir guṇakīrtanam /</l>
+<l>unmādo vipralāpaś ca udvego vyādhir aṣṭamaḥ // MinSd_172 //</l>
+</lg>
+
+<lg>
+<l>jaratā maraṇaṃ ceti daśāvasthā manobhuvaḥ /</l>
+<l>pramadānāṃ narāṇāṃ ca smaronmathitacetasām // MinSd_173 //</l>
+</lg>
+
+<lg>
+<l>lakṣayitveṅgitaṃ strīṇāṃ hṛdi vijñaḥ pravartate /</l>
+<l>satyaṃ vallabhatāṃ yāti sumadhyānāṃ ca yoṣitām // MinSd_174 //</l>
+</lg>
+
+<lg>
+<l>vijñaḥ sādhyāṃ yatnasādhyāṃ vacasā caiva sādhayet /</l>
+<l>sādhanaṃ kaṭhinaṃ strīṇāṃ durnirūpyā bhavanti tāḥ // MinSd_175 //</l>
+</lg>
+
+<lg>
+<l>prākāśīṃ bāhumūlasya kakṣodarakucasya ca /</l>
+<l>bālāliṅganamokṣaṃ ca kavarīmocanaṃ tathā // MinSd_176 //</l>
+</lg>
+
+<lg>
+<l>svīyāṅgāvayavasyaiva nirantaravilokanam /</l>
+<l>aśrupāto 'ṅgulīmardaśleṣmotsargaṃ muhurmuhuḥ // MinSd_177 //</l>
+</lg>
+
+<lg>
+<l>kāntasya rūpasaubhāgyasaṃkrīḍāguṇasampadām /</l>
+<l>saṃkīrtanaṃ mahollāsaḥ svāṅgabhadrāvamardanam // MinSd_178 //</l>
+</lg>
+
+<lg>
+<l>śrutivartmāṅgulikṣepaḥ sasmite vadanekṣaṇe /</l>
+<l>etāny aphalasādhyāni liṅgāni ca samunnayet // MinSd_179 //</l>
+</lg>
+
+<lg>
+<l>vrīḍayālaṃkṛtā kāntā ūṣmārtā lobhavarjitā /</l>
+<l>sādhyā liṅgarthavīryas tā asādhyā sā prakīrtitā // MinSd_180 //</l>
+</lg>
+
+<lg>
+<l>yatnasādhyā sādhuvaktrī dhanahīnā pravāsinī /</l>
+<l>sādhyeṅgitaviparyastā yatnasādhyā kuṭumbinī // MinSd_181 //</l>
+</lg>
+
+<lg>
+<l>udyānotsavatīrtheṣu adhvavāṭīvaneṣu ca /</l>
+<l>aniṣṭayuvatīsaṅge kṣetre pitṛgṛhe tathā // MinSd_182 //</l>
+</lg>
+
+<lg>
+<l>devāgāre kuṭau caiva tathā vāpyādisevane /</l>
+<l>naṭane gogṛhe caiva tathā bandhugṛhotsave /</l>
+<l>rakṣitavyā sadā nāryaḥ sadbhir ātmaprayatnataḥ // MinSd_183 //</l>
+</lg>
+
+<lg>
+<l>satyapradānair madhurair vacobhiḥ saṃrakṣitavyā taruṇī sadaiva /</l>
+<l>arakṣitā cāpi kulasya nāśaṃ kuryāddhi vai bāhyajanānurāgāt // MinSd_184 //</l>
+</lg>
+
+<lg>
+<l>agrāmyamaṇḍanaḥ prājñaḥ śuciḥ śrīmāṃś ca gāyanaḥ /</l>
+<l>narmagoṣṭhīpraviṣṭaś ca ṣaḍguṇo nāgaro mataḥ // MinSd_185 //</l>
+</lg>
+
+<lg>
+<l>tyāgī vivekī kuśalaḥ kulīnaḥ kalābhivijñaḥ sumatir dhanāḍhyaḥ /</l>
+<l>bhavakṣamaḥ sarvasahaḥ sukhī ca śrīmān suśīlaḥ sa hi nāyakaḥ syāt // MinSd_186 //</l>
+</lg>
+
+<lg>
+<l>rajakī mālinī dhātrī yoginī prativeśinī /</l>
+<l>sakhī gopālikā ceṭī nāpitā vidhavā naṭī // MinSd_187 //</l>
+</lg>
+
+<lg>
+<l>sairandhrī kanyakā caiva daivajñā dūtikā matā /</l>
+<l>vicitrābharaṇā dakṣā parijñātapareṅgitā // MinSd_188 //</l>
+</lg>
+
+<lg>
+<l>pravīṇā sthirabhāvā ca pragalbhā dūtikā matā /</l>
+<l>dūtī niyujyate kārye bahubhāṣāvibhūṣitā // MinSd_189 //</l>
+</lg>
+
+<lg>
+<l>roṣānurūpakopā yā anunītā ca tuṣyati /</l>
+<l>lakṣyate sā bhṛśaṃ nāthaguṇahāryamanojñayā // MinSd_190 //</l>
+</lg>
+
+<lg>
+<l>aharahar anurāgā dūtikāṃ preṣya pūrvaṃ sarabhasam upayāti kvāpi saṃketadeśe /</l>
+<l>na mīlati khalu yasyā vallabho daivayogān nigadati bharatas tāṃ nāyikāṃ vipralabdhām // MinSd_191 //</l>
+</lg>
+
+<lg>
+<l>yasyā ratiguṇākṛṣṭaḥ patiḥ pārśve na muñcati /</l>
+<l>vicitravibhramāsaktā sā syāt svādhīnabhartṛkā // MinSd_192 //</l>
+</lg>
+
+<lg>
+<l>yā nityaṃ priyavicchede kāntasaundaryaceṣṭite /</l>
+<l>dhyāyed ekamanā bhūtvā syāt sā virahiṇī matā // MinSd_193 //</l>
+</lg>
+
+<lg>
+<l>uddāmamanmathaśarajvaravepamānā romāñcakarṇakusumaṃ kuśalaṃ vahantī /</l>
+<l>niḥśaṅkinī vrajati yā priyasaṃgamāya sā nāyikā khalu bhaved abhisāriketi // MinSd_194 //</l>
+</lg>
+
+<lg>
+<l>yā nirlajjā kṛtā gāḍhaṃ madena madanena ca /</l>
+<l>abhiyāti priyaṃ sābhisārikā kathitā budhaiḥ // MinSd_195 //</l>
+</lg>
+
+<lg>
+<l>ajñānān na gato yasyāḥ saṃketam ucitapriyaḥ /</l>
+<l>tadanāgamasaṃtaptā khaṇḍitā sā prakīrtitā // MinSd_196 //</l>
+</lg>
+
+<lg>
+<l>nirasto manyunā kāntaḥ samartho hi yayā punaḥ /</l>
+<l>avasthitā vinā tena kupitā kathitā budhaiḥ // MinSd_197 //</l>
+</lg>
+
+<lg>
+<l>bhaved vāsakasajjā sā dūtīdvāreṇa nirjane /</l>
+<l>niścityāgamanaṃ bhartur dvārekṣaṇaparāyaṇā // MinSd_198 //</l>
+</lg>
+
+<lg>
+<l>durvāradāruṇamanobhavayogam āpya paryākulākalitamānasamudvahantīm /</l>
+<l>durvāramanmathaśarajvaravepamānām utkaṇṭhitāṃ vadati tāṃ bharataḥ kavīndraḥ // MinSd_199 //</l>
+</lg>
+
+<lg>
+<l>priyaikavartinī coṣṇā dhāvatyunmādinī tathā /</l>
+<l>tatraivāvasthite kānte virahotkaṇṭhitā matā // MinSd_200 //</l>
+</lg>
+
+<lg>
+<l>asādhyāyāḥ sukhaṃ siddhiḥ sādhyāyāś cānurañjanam /</l>
+<l>svecchayā vardhate samyakkāmaśāstraprayojanam // MinSd_201 //</l>
+</lg>
+
+<lg>
+<l>atha śuddhaṃ tathāśuddhaṃ samāsāditatatkriyaḥ /</l>
+<l>mantro gurumukhāl labdhaḥ sidhyaty atra na saṃśayaḥ // MinSd_202 //</l>
+</lg>
+
+<lg>
+<l>tricāmuṇḍe iti padaṃ tataḥ kvanu kvanu smṛtam /</l>
+<l>tataḥ padaṃ chanu chanu svakīyaṃ vaśam ānayet // MinSd_203 //</l>
+</lg>
+
+<lg>
+<l>sādhyānāma dvitīyāntaṃ dattvā svāheti yojayet /</l>
+<l>sāmānyenāmukīnāmajapaṃ kṛtvā vaśaṃ nayet // MinSd_204 //</l>
+</lg>
+
+<lg>
+<l>hrīṃ svāheti mantreṇa sādhyānāmānvitena ca /</l>
+<l>saptābhimantritaṃ puṣpaṃ yaiva gṛhṇāti sā vaśā // MinSd_205 //</l>
+</lg>
+
+<lg>
+<l>kākajihvālipakṣau ca suvarṇamalam aśru ca /</l>
+<l>raktaṃ rateś ca lepena vaśīkuryur manīṣiṇaḥ // MinSd_206 //</l>
+</lg>
+
+<lg>
+<l>sambhogajaṃ vacābījaṃ jihvā cārkadalaṃ sitam /</l>
+<l>saṃcūrṇyāñjitanetrāṇāṃ bhāryāpi vaśatāṃ nayet // MinSd_207 //</l>
+</lg>
+
+<lg>
+<l>haritālaṃ manaḥśilā raktacandanam etat sarvaṃ cūrṇīkṛtya /</l>
+<l>puṣpeṇa saha yasyāḥ śirasi dīyate sā paśuvad vaśyā bhavati /</l>
+<l>pecakasya hṛdayaṃ kuṅkumena saha sampiṣya tilakaṃ kuryāt tena loko vaśyo bhavati // MinSd_208 //</l>
+</lg>
+
+<lg>
+<l>aśvagandhā vacā kuṣṭhaṃ balā nāgabalā tathā /</l>
+<l>māhiṣaṃ navanītaṃ ca gajapippalīsaṃyutam // MinSd_209 //</l>
+</lg>
+
+<lg>
+<l>piṣṭvā teṣāṃ vilepena gāḍhīkaraṇam uttamam /</l>
+<l>sampiṣṭaṃ chāgamūtreṇa śūkaśimbīsamudbhavam // MinSd_210 //</l>
+</lg>
+
+<lg>
+<l>nūnaṃ tasya pralepena liṅgaṃ lauhopamaṃ bhavet /</l>
+<l>nīlotpalasitāmbhojakesaraṃ madhu śarkarā // MinSd_211 //</l>
+</lg>
+
+<lg>
+<l>amīṣāṃ nābhilepena ramate kāmukaś ciram /</l>
+<l>kṣīreṇa kamalaṃ piṣṭvā salilaṃ guṭikākṛtam // MinSd_212 //</l>
+</lg>
+
+<lg>
+<l>upasthe nihitaṃ kuryāt prakīrṇam api ca kvacit /</l>
+<l>asthi kṛṣṇabiḍālasya dakṣiṇapārśvasambhavam // MinSd_213 //</l>
+</lg>
+
+<lg>
+<l>baddhaṃ kaṭitaṭe bījaṃ vibandhaṃ kurute dhruvam /</l>
+<l>saptaparṇasya bījaṃ hi stambhayec chukram ātmagam // MinSd_214 //</l>
+</lg>
+
+<lg>
+<l>sitaśarapuṃṣāmūlaṃ pāradasahitaṃ kare dhṛtvā /</l>
+<l>karañjabījaṃ madhyasthaṃ samūlaṃ bandhayed bījam // MinSd_215 //</l>
+</lg>
+
+<lg>
+<l>ketakībhūmilatāsanamūlībandhavipakvaṃ kusumbhatailam /</l>
+<l>pādatale lepenāvaśyaṃ bījastambhaṃ nayati puṃsām // MinSd_216 //</l>
+</lg>
+
+<lg>
+<l>māhiṣadadhisahadevītilamadhusitapadmakesaraṃ militam /</l>
+<l>cūrṇaṃ nābhivilepād vīryastambhaṃ karoty avaśyam // MinSd_217 //</l>
+</lg>
+
+<lg>
+<l>bṛhatkarañjabījasthaṃ pāradaṃ padmaveṣṭitam /</l>
+<l>mukhe kṣiptam idaṃ bījaṃ stambhayaty eva niścitam // MinSd_218 //</l>
+</lg>
+
+<lg>
+<l>kuryād ādau paricchedaṃ mardanaṃ ca viśeṣataḥ /</l>
+<l>saptāhaṃ bhāvayen māṣaṃ nistuṣaṃ vidalaṃ tataḥ // MinSd_219 //</l>
+</lg>
+
+<lg>
+<l>nālikerodakenātha punas teṣāṃ ca bhāvanā /</l>
+<l>tatpaścād ghanabhraṣṭaṃ ca bhakṣayet kṣīrasādhitam // MinSd_220 //</l>
+</lg>
+
+<l>vadhūśatasahasrāṇi kāmī kāmayate tataḥ // MinSd_221 //</l>
+
+<lg>
+<l>yas tūpānaham ākuñcya samānena niyojayet /</l>
+<l>pādāṅguṣṭhena bhūmau tāṃ pīḍayet tu samāhitaḥ // MinSd_222 //</l>
+</lg>
+
+<lg>
+<l>bhakṣayed athavā dagdhaiś campakīkadalīyutam /</l>
+<l>atyagrabhāgasaṃyuktaḥ punā ṛddhiṃ prayacchati // MinSd_223 //</l>
+</lg>
+
+<lg>
+<l>kallolinīkānanakandarādau duḥkhāśraye cārpitacittavṛttiḥ /</l>
+<l>samṛddham ābaddham abhinnadhairyaḥ ślatho 'pi dīrghaṃ ramate rate // MinSd_224 //</l>
+</lg>
+
+<lg>
+<l>pāradaṃ ṭaṅkanaṃ vyoṣā kākamācī tathā madhu /</l>
+<l>kṣiptaliṅgaś ciraṃ nārīṃ drāvayed ramaṇaḥ sadā // MinSd_225 //</l>
+</lg>
+
+<lg>
+<l>tumbīpatraṃ ca lodhraṃ ca samabhāgena lepayet /</l>
+<l>bhagalepapradatte 'smin prasūtāpy akṣatā bhavet // MinSd_226 //</l>
+</lg>
+
+<lg>
+<l>palāśodumbaraṃ cāpi tailaṃ kusumasambhavam /</l>
+<l>madhunā yonisaṃlepād gāḍhīkaraṇam uttamam // MinSd_227 //</l>
+</lg>
+
+<lg>
+<l>svīyeṣṭadevatāmantro japtaḥ svārtham ahiṃsakaḥ /</l>
+<l>yathāvibhūtidānaṃ hi brahmacarye ca tiṣṭhati // MinSd_228 //</l>
+</lg>
+
+<lg>
+<l>kṛtvādau tatra śuddhiṃ tu punaḥ kṣetre śubhekṣaṇe /</l>
+<l>sūryodayapradoṣābhyāṃ viśeṣāc ca svayaṃ balī // MinSd_229 //</l>
+</lg>
+
+<lg>
+<l>kṛtvā caikamanā vijño yadi bījaṃ vimuñcati /</l>
+<l>sūte māsodaye nūnaṃ guṇavantaṃ yaśasvinam // MinSd_230 //</l>
+</lg>
+
+  </body>
+</text>
+</TEI>

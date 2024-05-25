@@ -1,0 +1,2580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_mAtRkAbhedatantra">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Mātṛkābhedatantra</title>
+	<author></author>
+	<respStmt>
+	 <resp when-custom="2001|02">data entry</resp>
+	 <name>Oliver Hellwig</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Oliver Hellwig</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/saiva/mabhedtu.htm">mabhedtu.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Matrkabhedatantra
+<lb/>
+<lb/>Input by Oliver Hellwig (hellwig7@gmx.de), Berlin, 2001/02
+<lb/>
+<lb/>Der digitalisierte Text kann in jedem Rahmen ohne
+<lb/>Einschraenkungen genutzt werden. Allerdings sollte ein
+<lb/>Hinweis auf den Einleser enthalten sein.
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl></bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Mātṛkābhedatantra = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Religious Literature -- Śaiva</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+
+<p>Mātṛkābhedatantra</p>
+
+<lg>
+<l>Mātṛkābhedatantra, prathamaḥ paṭalaḥ</l>
+<l>kailāsaśikhare ramye nānāratnopaśobhite /</l>
+<l>papraccha parayā bhaktyā bhairavaṃ parameśvaram // MBhT_1.1</l>
+</lg>
+<lg>
+<l>śrīcaṇḍikovāca /</l>
+<l>tripurāpūjanaṃ nātha svarṇaratnair viśeṣataḥ /</l>
+<l>kalikāle svarṇarūpyaṃ guptabhāvaṃ tathā maṇim // MBhT_1.2</l>
+</lg>
+<lg>
+<l>kenopāyena deveśa svarṇarūpyādi labhyate /</l>
+<l>tad vadasva viśeṣeṇa yathā ratnādikaṃ bhavet // MBhT_1.3</l>
+</lg>
+<l>yan noktaṃ sarvatantreṣu tad vadasva dayānidhe // MBhT_1.4</l>
+<lg>
+<l>śrīśaṅkara uvāca /</l>
+<l>śṛṇu devi pravakṣyāmi yathā ratnādikaṃ bhavet /</l>
+<l>mattejasā pāradena kiṃ ratnaṃ na hi labhyate // MBhT_1.5</l>
+</lg>
+<lg>
+<l>tathā sāmudrakeṇaiva suśubhralavaṇena ca /</l>
+<l>sambalasya prakāraṃ hi śṛṇu devi prayatnataḥ // MBhT_1.6</l>
+</lg>
+<lg>
+<l>cīnatantrānusāreṇa pūjayet siddhakālikām /</l>
+<l>athavā pūjayed devīṃ dakṣiṇāṃ kālikāṃ parām /</l>
+<l>kālītantroktavidhinā saptāhaṃ japapūjanam // MBhT_1.7</l>
+</lg>
+<lg>
+<l>satye caikaṃ tu tretāyāṃ dviguṇaṃ dvāpare trayam /</l>
+<l>evaṃ sarvatra jānīyāc caturguṇajapaḥ kalau // MBhT_1.8</l>
+</lg>
+<lg>
+<l>ānīya bahuyatnena sambalaṃ toladvayam /</l>
+<l>vasur ādyaṃ śivaṃ cādyaṃ māyābinduvibhūṣitam /</l>
+<l>bījatrayaṃ cāṣṭaśataṃ prajapet sambalopari // MBhT_1.9</l>
+</lg>
+<lg>
+<l>aśītitolakaṃ mānaṃ kṛṣṇadhenusamudbhavam /</l>
+<l>dugdham ānīya yatnena cāṣṭottaraśataṃ japet // MBhT_1.10</l>
+</lg>
+<lg>
+<l>vastrayuktena sūtreṇa dugdhamadhye vinikṣipet /</l>
+<l>uttāpaṃ janayed dhīmān mandamandena vahninā // MBhT_1.11</l>
+</lg>
+<lg>
+<l>bindu vedāntaparyantam ardhaśoṣaṃ bhaved yadā /</l>
+<l>tadaivottolya tad dravyaṃ toyamadhye vinikṣipet // MBhT_1.12</l>
+</lg>
+<lg>
+<l>tataḥ parīkṣā kartavyā pradadyāt pāvakopari /</l>
+<l>nirdhūmaṃ vāvake dravyaṃ dṛṣṭvā utthāpya yatnataḥ // MBhT_1.13</l>
+</lg>
+<lg>
+<l>tatraiva prajapen mantraṃ sarvavandyanavātmakam /</l>
+<l>ānīya bahuyatnena śuddhaṃ tāmraṃ manoharam // MBhT_1.14</l>
+</lg>
+<lg>
+<l>sārdhena tolakaṃ tāmraṃ vahnimadhye vinikṣipet /</l>
+<l>yathā vahnis tathā tāmraṃ dṛṣṭvā utthāpya yatnataḥ // MBhT_1.15</l>
+</lg>
+<lg>
+<l>guñjāpramāṇaṃ tad dravyaṃ tatkṣaṇād yadi yojayet /</l>
+<l>satyaṃ satyaṃ hi girije raupyaṃ bhavati niścitam // MBhT_1.16</l>
+</lg>
+<lg>
+<l>śrīcaṇḍikovāca /</l>
+<l>kāraṇaṃ dugdharūpaṃ vā kena rūpeṇa śaṅkaraḥ /</l>
+<l>tatprakāraṃ mahādeva kṛpayā vada śaṅkara // MBhT_1.17</l>
+</lg>
+<lg>
+<l>śrīśaṅkara uvāca /</l>
+<l>ṭaṅkanam ānayed dhīmān tolakaṃ tu catuṣṭayam /</l>
+<l>vahniyogena girije lājarūpaṃ cakāra ha // MBhT_1.18</l>
+</lg>
+<lg>
+<l>āmrapuṣpaṃ tad dviguṇaṃ piṣṭvā milanam ācaret /</l>
+<l>tasyopari japen mantraṃ mahāmāyāṃ hi caṇḍike // MBhT_1.19</l>
+</lg>
+<lg>
+<l>etat tu guṭikāṃ kṛtvā melanaṃ kārayed yadi /</l>
+<l>tadaiva dugdharūpaṃ syāt satyaṃ satyaṃ hi śailaje // MBhT_1.20</l>
+</lg>
+<lg>
+<l>śrīcaṇḍikovāca /</l>
+<l>gandhahīnaṃ bhaven madyaṃ kenopāyena śaṅkara /</l>
+<l>tat sarvaṃ śrotum icchāmi yadi sneho 'sti mā prati // MBhT_1.21</l>
+</lg>
+<lg>
+<l>śrīśaṅkara uvāca /</l>
+<l>śivaṃ vahnisamārūḍhaṃ vāmanetravibhūṣitam /</l>
+<l>bindunādasamāyuktaṃ gandham ādāya saṃlikhet // MBhT_1.22</l>
+</lg>
+<lg>
+<l>uhyatāṃ padam uccāryaṃ cāṣṭottaraśataṃ yadi /</l>
+<l>prajapet sādhakaśreṣṭho durgandhādivināśanam // MBhT_1.23</l>
+</lg>
+
+<lg>
+<l>Mātṛkābhedatantra, dvitīyaḥ paṭalaḥ</l>
+<l>śrīdevy uvāca /</l>
+<l>vada īśāna sarvajña sarvatattvavidāṃ vara /</l>
+<l>yat tvayā kathitaṃ nātha mama saṅge vihārataḥ // MBhT_2.1</l>
+</lg>
+<lg>
+<l>kathaṃ vā jāyate putraḥ śukrasya katra saṃsthitiḥ /</l>
+<l>vardhamānaṃ sadā liṅgaṃ praveśo vā kathaṃ bhavet // MBhT_2.2</l>
+</lg>
+<l>bhītiyuktā hy ahaṃ nātha trāhi māṃ duḥkhasaṅkaṭāt // MBhT_2.3</l>
+<lg>
+<l>śrīśaṅkara uvāca /</l>
+<l>maṇipūraṃ mahāpadmaṃ suṣumṇāmadhyasaṃsthitam /</l>
+<l>tasya nālena deveśi nābhipadmaṃ manoharam // MBhT_2.4</l>
+</lg>
+<lg>
+<l>vakratrayasamāyuktaṃ sadā śukravibhūṣitam /</l>
+<l>ūrdhvaṃ nālaṃ sahasrāre ataḥ śukravibhūṣitam // MBhT_2.5</l>
+</lg>
+<l>tasmād eva stanadvandvaṃ vardhamānaṃ dine dine // MBhT_2.6</l>
+<lg>
+<l>madhyanālaṃ suṣumṇāntaṃ vṛntākāraṃ suśītalam /</l>
+<l>āyonyagram adhonālaṃ sadānandamayi śive // MBhT_2.7</l>
+</lg>
+<lg>
+<l>śṛṇu cārvaṅgi subhage tanmadhye liṅgatāḍanāt /</l>
+<l>yad rūpaṃ paramānandaṃ tan nāsti bhuvanatraye // MBhT_2.8</l>
+</lg>
+<lg>
+<l>nābhipadmaṃ tu yad rūpaṃ tac chṛṇuṣva samāhitaḥ /</l>
+<l>bindusthānaṃ madhyadeśe sadā padmavirājitam // MBhT_2.9</l>
+</lg>
+<lg>
+<l>bāhyadeśe cāṣṭapatraṃ caturasraṃ tu tadbahiḥ /</l>
+<l>caturdvārasamāyuktaṃ suvarṇābhaṃ savṛttakam // MBhT_2.10</l>
+</lg>
+<lg>
+<l>tatpatreṇa bhavet puṣpaṃ vṛntayuktaṃ tripattrakam /</l>
+<l>praphulle tu tripatrāre bāhye rudhiradarśanam // MBhT_2.11</l>
+</lg>
+<lg>
+<l>etanmadhye maheśāni yadi syāl liṅgatāḍanam /</l>
+<l>padmamadhye gate śukre saṃtatis tena jāyate // MBhT_2.12</l>
+</lg>
+<lg>
+<l>puruṣasya tu yac chukraṃ śakteraktādhiko bhavet /</l>
+<l>tadā kanyā bhaved devi viparītaḥ pumān bhavet // MBhT_2.13</l>
+</lg>
+<l>ubhayos tulyaśukreṇa klībaṃ bhavati niścitam // MBhT_2.14</l>
+<lg>
+<l>śṛṇu cārvaṅgi subhage puṣpamāhātmyam uttamam /</l>
+<l>madhye tacchukrasaṃyoge vardhate tad dine dine /</l>
+<l>evaṃ diṅmāsasamprāpte tatpuṣpaṃ vṛntasaṃyutam // MBhT_2.15</l>
+</lg>
+<l>galite parameśāni vyakto bhavati saṃtatiḥ // MBhT_2.16</l>
+<lg>
+<l>śrīdevy uvāca /</l>
+<l>kiṃcid rogādisambhūte kṛmikīṭādisambhave /</l>
+<l>tasmajjīvaṃ praṇaśyanti sā nārī jīvyate katham // MBhT_2.17</l>
+</lg>
+<lg>
+<l>śrīśaṅkara uvāca /</l>
+<l>asya puṣpasya māhātmyaṃ kiṃ vaktuṃ śakyate mayā /</l>
+<l>bindusthānaṃ sahasraṃ tu puṣpamadhye priyaṃvade // MBhT_2.18</l>
+</lg>
+<lg>
+<l>budbudā yatra tiṣṭhanti tatraiva saṃtatir bhavet /</l>
+<l>evaṃ krameṇa deveśi sahasraṃ saṃtatir yadi /</l>
+<l>vardhamānaṃ mahāpuṣpaṃ pīḍā kiṃcin na jāyate // MBhT_2.19</l>
+</lg>
+<lg>
+<l>mayā sārdhaṃ maheśāni vihāraṃ kuru yatnataḥ /</l>
+<l>vihāre yo bhavet putro gaṇeśaḥ sa ca kīrtitaḥ // MBhT_2.20</l>
+</lg>
+<lg>
+<l>apare parameśāni tava putraprasādataḥ /</l>
+<l>pṛthivyāṃ jāyate sṛṣṭir nirvighnena yathocitam // MBhT_2.21</l>
+</lg>
+<lg>
+<l>etac chrutvā tato devi madanānalavihvalā /</l>
+<l>śivenāliṅgitā devī śivākāreṇa vai tadā // MBhT_2.22</l>
+</lg>
+
+<lg>
+<l>Mātṛkābhedatantra, tṛtīyaḥ paṭalaḥ</l>
+<l>śrīdevy uvāca /</l>
+<l>sarvatrāhaṃ śrutā nātha bhogaṃ cendriyapuṣṭidam /</l>
+<l>bhogena mokṣam āpnoti kathaṃ vadasi yogabhṛt // MBhT_3.1</l>
+</lg>
+<lg>
+<l>śrīśaṅkara uvāca /</l>
+<l>bhogena labhate yogaṃ bhogena kulasādhanam /</l>
+<l>bhogena siddhim āpnoti bhogena mokṣam āpnuyāt // MBhT_3.2</l>
+</lg>
+<lg>
+<l>tasmād bhogaṃ sadā kāryaṃ bāhyapūjā yathecchayā /</l>
+<l>bhojanasya vidhānaṃ yat tac chṛṇuṣva priyaṃvade // MBhT_3.3</l>
+</lg>
+<lg>
+<l>ādhāre tu yā śaktir bhujagākārarūpiṇī /</l>
+<l>ātmā parameśāni tanmadhye vartate sadā // MBhT_3.4</l>
+</lg>
+<lg>
+<l>bhojanecchā bhavet tasmān nirlipto jīvasaṃjñakaḥ /</l>
+<l>saiva sākṣād guṇamayo nirguṇo jīva ucyate // MBhT_3.5</l>
+</lg>
+<lg>
+<l>jīvasya bhojanaṃ devi bhrāntir eva na saṃśayaḥ /</l>
+<l>guṇayuktā kuṇḍalinī candrasūryāgnirūpiṇī // MBhT_3.6</l>
+</lg>
+<lg>
+<l>mūlādhārāc ca tāṃ devīm ājihvāntāṃ vibhāvayet /</l>
+<l>śodhitān matsyamāṃsādīn saṃmukhe sthāpayed budhaḥ // MBhT_3.7</l>
+</lg>
+<lg>
+<l>mūlamantraṃ samuccārya juhomi kuṇḍalīmukhe /</l>
+<l>anena manunā devi pratigrāsaṃ samāharet // MBhT_3.8</l>
+</lg>
+<lg>
+<l>pratigrāse pareśāni evaṃ kuryād vicakṣaṇaḥ /</l>
+<l>tadaiva brahmarūpo 'sau satyaṃ satyaṃ sureśvari // MBhT_3.9</l>
+</lg>
+<lg>
+<l>bhujyate kuṇḍalī devī iti cintāparo hi yaḥ /</l>
+<l>mantrasiddhir bhavet tasya jñānasiddhir na cānyathā // MBhT_3.10</l>
+</lg>
+<lg>
+<l>evaṃ kṛte brahmarūpaḥ śivarūpaḥ svayaṃ hariḥ /</l>
+<l>yogasiddhir bhavet tasya cāṣṭasiddhir bhaviṣyati // MBhT_3.11</l>
+</lg>
+<lg>
+<l>śatrubhir dīyate yat tu kṛtrimaṃ dāruṇaṃ viṣam /</l>
+<l>bhakṣaṇāt tat kṣaṇe devi hy amṛtaṃ nātra saṃśayaḥ // MBhT_3.12</l>
+</lg>
+<lg>
+<l>mantreṇa śodhitaṃ dravyaṃ bhakṣaṇād amṛtaṃ bhavet /</l>
+<l>yadaiva kālakūṭaṃ tu samudramathane priye // MBhT_3.13</l>
+</lg>
+<l>tadā cānena manunā tatkṣaṇāt khāditaṃ mayā // MBhT_3.14</l>
+<lg>
+<l>sarpākārā kuṇḍalinī yā devī paramā kalā /</l>
+<l>bhujyate sarparūpeṇa tatraiva dāruṇaṃ viṣam // MBhT_3.15</l>
+</lg>
+<lg>
+<l>iti te kathitaṃ kānte bhojanasya vidhānakam /</l>
+<l>etat sarvaṃ maheśāni goptavyaṃ paśusaṃkaṭe // MBhT_3.16</l>
+</lg>
+<lg>
+<l>śrīdevy uvāca /</l>
+<l>śṛṇu nātha parānanda parāparakulātmaka /</l>
+<l>vada me parameśāna homakuṇḍaṃ tu kīdṛśam // MBhT_3.17</l>
+</lg>
+<lg>
+<l>śrīśiva uvāca /</l>
+<l>maṇipūrasya bāhye tu nābhipadmaṃ manoharam /</l>
+<l>aṣṭapatraṃ tathā vṛttaṃ tanmadhye kuṇḍadurlabham // MBhT_3.18</l>
+</lg>
+<lg>
+<l>caturasrādikaṃ devi tat kuṇḍaṃ kāmarūpakam /</l>
+<l>sarvakuṇḍasya deveśi vipraḥ kartā vidhīyate // MBhT_3.19</l>
+</lg>
+<l>vartulaṃ bāhujātasya vaiśyasya cārdhacandrakam // MBhT_3.20</l>
+<lg>
+<l>trikoṇaṃ pādajātasya homakuṇḍaṃ sureśvari /</l>
+<l>evaṃ kuṇḍaṃ maheśāni nālatrayavibhūṣitam // MBhT_3.21</l>
+</lg>
+<lg>
+<l>ūrdhvanālaṃ sahasrāre parāmṛtavibhūṣitam /</l>
+<l>madhyanālaṃ nābhipadme mūlādhāre ca sundari // MBhT_3.22</l>
+</lg>
+<lg>
+<l>āliṅgāgram adhonālaṃ sadānandamayaṃ śive /</l>
+<l>homakuṇḍam idaṃ devi sarvatantre pariṣkṛtam // MBhT_3.23</l>
+</lg>
+<lg>
+<l>yena homaprasādena sākṣād brahmamayo bhavet /</l>
+<l>viprasya cāhutihomaṃ vijñātavyaṃ catuṣṭayam // MBhT_3.24</l>
+</lg>
+<lg>
+<l>kṣatriyasya trayaṃ devi vaiśyasya cāhutidvayam /</l>
+<l>śūdrasyaikāhutir devi muktiś cāpi caturvidhā // MBhT_3.25</l>
+</lg>
+<lg>
+<l>mahāmokṣaṃ brāhmaṇasya sāyujyaṃ kṣatriyasya ca /</l>
+<l>sārūpyaṃ corujātasya sālokyaṃ śūdrajātiṣu // MBhT_3.26</l>
+</lg>
+<lg>
+<l>bāhyakuṇḍaṃ bāhyahome eva hi suravandite /</l>
+<l>jātibhede kuṇḍabhedaṃ kuryāt sādhakasattamaḥ // MBhT_3.27</l>
+</lg>
+<lg>
+<l>bāhyahome kāmyasiddhir bhaviṣyati na saṃśayaḥ /</l>
+<l>jñānahome mokṣasiddhir labhate nātra saṃśayaḥ // MBhT_3.28</l>
+</lg>
+<lg>
+<l>iti te kathitaṃ kānte tantrāṇāṃ sāram uttamam /</l>
+<l>na vaktavyaṃ paśor agre śapatho me tvayi priye // MBhT_3.29</l>
+</lg>
+<lg>
+<l>śrīdevy uvāca /</l>
+<l>madyapāne mahāpuṇyaṃ sarvatantre śrutaṃ mayā /</l>
+<l>jātibhedaṃ na kathitam idānīṃ tat prakāśaya // MBhT_3.30</l>
+</lg>
+<lg>
+<l>śrīśaṅkara uvāca /</l>
+<l>sarvayajñādhipo vipraḥ saṃśayo nāsti pārvati /</l>
+<l>sautrāmaṇyāṃ kulācāre catvāro brāhmaṇādayaḥ // MBhT_3.31</l>
+</lg>
+<lg>
+<l>brāhmaṇasya mahāmokṣaṃ madyapāne priyaṃvade /</l>
+<l>brāhmaṇaḥ parameśāni yadi pānādikaṃ caret // MBhT_3.32</l>
+</lg>
+<l>tatkṣaṇāc chivarūpo 'sau satyaṃ satyaṃ hi śailaje // MBhT_3.33</l>
+<lg>
+<l>toye toyaṃ yathā līnaṃ yathā tejasi tejasam /</l>
+<l>ghaṭe bhagne yathākāśaṃ vāyau vāyur yathā priye // MBhT_3.34</l>
+</lg>
+<lg>
+<l>tathaiva madyapānena brāhmaṇo brahmaṇi priye /</l>
+<l>līyate nātra saṃdehaḥ paramātmani śailaje // MBhT_3.35</l>
+</lg>
+<lg>
+<l>sāyujyādi mahāmokṣaṃ niyuktaṃ kṣatriyādiṣu /</l>
+<l>sā nārī mānavī madyapāne devi na saṃśayaḥ // MBhT_3.36</l>
+</lg>
+<lg>
+<l>sūkṣmasūtre yathā vahnir dehamadhye tathā śivā /</l>
+<l>taporūpaṃ bṛhatsūtraṃ pūjārūpaṃ tathā hariḥ // MBhT_3.37</l>
+</lg>
+<lg>
+<l>saṃyuktaṃ kurute yatra vardhamāno mahāṅkuśaḥ /</l>
+<l>madyapānaṃ vinā devi tajjñānaṃ na hi labhyate /</l>
+<l>ata eva hi vipreṇa madyapānaṃ sadā caret // MBhT_3.38</l>
+</lg>
+<lg>
+<l>vedamātājapenaiva brāhmaṇo na hi śailaje /</l>
+<l>brahmajñānaṃ yadā devi tadā brāhmaṇa ucyate // MBhT_3.39</l>
+</lg>
+<lg>
+<l>devānām amṛtaṃ brahma tad iyaṃ laukikī surā /</l>
+<l>suratvaṃ bhogamātreṇa surā tena prakīrtitā // MBhT_3.40</l>
+</lg>
+<lg>
+<l>mantratrayaṃ sadā pāṭhyaṃ brahmaśāpādi mocanam /</l>
+<l>prakuryāt tu dvijenaiva tadā brahmamayī surā // MBhT_3.41</l>
+</lg>
+<lg>
+<l>havir āropamātreṇa vahnir dīpto yathā bhavet /</l>
+<l>śāpamocanamātreṇa surā muktipradāyinī // MBhT_3.42</l>
+</lg>
+<lg>
+<l>ata eva hi deveśi brāhmaṇaḥ pānam ācaret /</l>
+<l>sa brāhmaṇaḥ sa vedajñaḥ so 'gnihotrī sa dīkṣitaḥ // MBhT_3.43</l>
+</lg>
+<l>bahu kiṃ kathyate devi sa eva triguṇātmakaḥ // MBhT_3.44</l>
+<lg>
+<l>muktimārgam idaṃ devi goptavyaṃ paśusaṃkaṭe /</l>
+<l>prakāśāt kāyahāniḥ syān nindanīyo na cānyathā // MBhT_3.45</l>
+</lg>
+
+<lg>
+<l>Mātṛkābhedatantra, caturthaḥ paṭalaḥ</l>
+<l>śrīcaṇḍikovāca /</l>
+<l>kāraṇena mahāmokṣaṃ nirmālyena śivasya ca /</l>
+<l>śrutaṃ vede purāṇe ca tava vaktre sureśvara // MBhT_4.1</l>
+</lg>
+<lg>
+<l>agrāhyaṃ tava nirmālyam agrāhyaṃ kāraṇaṃ vibho /</l>
+<l>mṛṣā vākyaṃ mahādeva kathaṃ vadasi yogabhṛt // MBhT_4.2</l>
+</lg>
+<lg>
+<l>kāraṇena vinā devi mokṣajñānādikaṃ na hi /</l>
+<l>mahāśaṅkhaṃ vinā devi na mantraḥ siddhidāyakaḥ // MBhT_4.3</l>
+</lg>
+<lg>
+<l>sākṣād brahmamayī mālā mahāśaṅkhākhyayā punaḥ /</l>
+<l>śilāyantre ca vṛndāyāṃ gaṅgāyāṃ surapūjite /</l>
+<l>naiva spṛśen mahāśaṅkhaṃ sparśanāt kāṣṭhavad bhavet // MBhT_4.4</l>
+</lg>
+<lg>
+<l>śrīcaṇḍikovāca /</l>
+<l>gaṅgā tu kāraṇaṃ vāri madyaṃ paramakāraṇam /</l>
+<l>kāraṇasparśamātreṇa mālāḥ śuddhā bhavanti hi // MBhT_4.5</l>
+</lg>
+<lg>
+<l>gaṅgāsparśena deveśa kāṣṭhavan mālikā katham /</l>
+<l>vada me parameśāna iti me saṃśayo hṛdi // MBhT_4.6</l>
+</lg>
+<lg>
+<l>śrīśaṃkara uvāca /</l>
+<l>kāraṇaṃ devadeveśi mokṣadaṃ sarvajātiṣu /</l>
+<l>tathā svargādijanakaṃ gaṅgātoyaṃ na saṃśayaḥ // MBhT_4.7</l>
+</lg>
+<lg>
+<l>kāraṇe nivased devi mahākālī parā kalā /</l>
+<l>mahāvidyā vasen nityaṃ surāyāṃ parameśvari // MBhT_4.8</l>
+</lg>
+<lg>
+<l>mahāśaṅkhe vasen nityaṃ pañcāśadvarṇarūpiṇī /</l>
+<l>mahāvidyā vasen nityaṃ mahāśaṅkhe ca sarvadā // MBhT_4.9</l>
+</lg>
+<lg>
+<l>gaṅgāsparśanamātreṇa gaṅgāyāṃ līyate priye /</l>
+<l>kāṣṭhasparśanamātreṇa kāṣṭhe vahnis tṛṇe yathā // MBhT_4.10</l>
+</lg>
+<lg>
+<l>gaṅgāsparśe tathā devi gaṅgāyāṃ līyate priye /</l>
+<l>tatkṣaṇe ca mahāśaṅkhaḥ kāṣṭhavan nātra saṃśayaḥ // MBhT_4.11</l>
+</lg>
+<l>śilāyantre tulasyādau tathaiva parameśvari // MBhT_4.12</l>
+<lg>
+<l>mahāśaṅkhākhyamālāyāṃ yo japet sādhakottamaḥ /</l>
+<l>aṣṭasiddhiḥ kare tasya sa eva śambhur avyayaḥ /</l>
+<l>maulau gaṅgā sthitā yasya gaṅgāsnānena tasya kim // MBhT_4.13</l>
+</lg>
+<lg>
+<l>vārāṇasī kāmarūpaṃ haridvāraṃ prayāgakam /</l>
+<l>gaṇḍakī badarikā devi gaṅgāsāgarasaṃgamam // MBhT_4.14</l>
+</lg>
+<lg>
+<l>yasya bhaktir mahāśaṅkhe tasya darśanamātrataḥ /</l>
+<l>tīrthasnānaphalaṃ sarvaṃ labhate nātra saṃśayaḥ // MBhT_4.15</l>
+</lg>
+<lg>
+<l>iti te kathitaṃ kānte sarvaṃ paramadurlabham /</l>
+<l>na vaktavyaṃ paśor agre prāṇānte parameśvari // MBhT_4.16</l>
+</lg>
+
+<lg>
+<l>Mātṛkābhedatantra, pañcamaḥ paṭalaḥ</l>
+<l>śrīcaṇḍikovāca /</l>
+<l>pāradaṃ bhasmanirmāṇaṃ kenopāyena śaṃkara /</l>
+<l>tad ahaṃ śrotum icchāmi yadi te 'sti kṛpā mayi // MBhT_5.1</l>
+</lg>
+<lg>
+<l>śrīśaṃkara uvāca /</l>
+<l>pārade bhasmanirmāṇe nānāvighnāni pārvati /</l>
+<l>ata eva hi tatrādau śāntiṃ kuryād dvijottamaḥ // MBhT_5.2</l>
+</lg>
+<lg>
+<l>varayet karmakartāraṃ vakṣyamāṇavidhānataḥ /</l>
+<l>pūjayet ṣoḍaśaliṅgaṃ pārthivaṃ parvatātmaje // MBhT_5.3</l>
+</lg>
+<lg>
+<l>ṣoḍaśenopacāreṇa toḍaloktavidhānataḥ /</l>
+<l>bhogayogyaṃ pradātavyaṃ madhuparkaṃ sureśvari // MBhT_5.4</l>
+</lg>
+<lg>
+<l>pañcāmṛtena deveśaṃ snāpayec chuddhavāriṇā /</l>
+<l>puruṣasya yathāyogyaṃ yugmavastraṃ nivedayet // MBhT_5.5</l>
+</lg>
+<lg>
+<l>caturaṅgulivistāraṃ raupyanirmāṇapīṭhakam /</l>
+<l>alaṃkāraṃ yathāyogyaṃ puruṣasya nivedayet // MBhT_5.6</l>
+</lg>
+<lg>
+<l>alaktakayutaṃ vāpi dadyān malayajaṃ śive /</l>
+<l>ṣaḍaṅgadhūpaṃ deveśi pradadyāc ca punaḥ punaḥ // MBhT_5.7</l>
+</lg>
+<lg>
+<l>ghṛtayuktaṃ tathā dīpaṃ dadyāt kalyāṇahetave /</l>
+<l>naivedyaṃ vividhaṃ ramyaṃ nānāphalasamanvitam // MBhT_5.8</l>
+</lg>
+<lg>
+<l>śarkarāsaṃyutaṃ kṛtvā pāyasaṃ vinivedayet /</l>
+<l>dadyāt toyaṃ maheśāni vijayāsaṃyutaṃ priye // MBhT_5.9</l>
+</lg>
+<lg>
+<l>ṣaḍakṣaraṃ mahāmantraṃ gajāntakasahasrakam /</l>
+<l>prajapet sādhakaśreṣṭhas tataḥ siddho bhaved dhruvam // MBhT_5.10</l>
+</lg>
+<lg>
+<l>athavā parameśāni dhanadāṃ dhanadāyinīm /</l>
+<l>pūjayed bahuyatnena ṣoḍaśenopacārataḥ // MBhT_5.11</l>
+</lg>
+<lg>
+<l>dvādaśāhvaṃ yajed dhīmān diksahasraṃ tato japet /</l>
+<l>taddaśāṃśaṃ maheśāni homaṃ kuryād vicakṣaṇaḥ // MBhT_5.12</l>
+</lg>
+<lg>
+<l>homakarmādyaśaktaś ced dviguṇaṃ japam ācaret /</l>
+<l>yadi prītā bhavet sā hi tadā kiṃ vā na sidhyati // MBhT_5.13</l>
+</lg>
+<lg>
+<l>pratyahaṃ parameśāni kubero dīyate vasu /</l>
+<l>bhasmanirmāṇakaṃ devi vicitraṃ tasya kiṃ śive // MBhT_5.14</l>
+</lg>
+<lg>
+<l>gurave dakṣiṇāṃ dadyād yathāvibhavavistaraiḥ /</l>
+<l>tataḥ siddho bhaven mantrī nātra kāryā vicāraṇā // MBhT_5.15</l>
+</lg>
+<lg>
+<l>śrīcaṇḍikovāca /</l>
+<l>vidhānaṃ devadeveśa bhasmanirmāṇakarmaṇi /</l>
+<l>sakṛt kṛte yena rūpe bhasmasāj jāyate vibho // MBhT_5.16</l>
+</lg>
+<lg>
+<l>śrīśaṃkara uvāca /</l>
+<l>ānīya pāradaṃ devi sthāpayet prastaropari /</l>
+<l>tasyopari japen mantraṃ sarvavandyanavātmakam // MBhT_5.17</l>
+</lg>
+<lg>
+<l>sāṣṭasahasraṃ deveśi prajapet sādhakāgraṇīḥ /</l>
+<l>syayambhupuṣpasaṃyukte vastre cāruṇasaṃnibhe // MBhT_5.18</l>
+</lg>
+<lg>
+<l>saṃsthāpya pāradaṃ devi mṛtpātrayugale śive /</l>
+<l>puṣpayuktena sūtreṇa badhnīyād bahuyatnataḥ // MBhT_5.19</l>
+</lg>
+<lg>
+<l>muktidhārājalenaiva dhānyasya parameśvari /</l>
+<l>lepayed bahuyatnena raudre śuṣkaṃ ca kārayet // MBhT_5.20</l>
+</lg>
+<lg>
+<l>punaś ca lepayed dhīmān tato vahnau vinikṣipet /</l>
+<l>aṣṭamīnavamīrātrau kṣipen naiva sureśvari // MBhT_5.21</l>
+</lg>
+<lg>
+<l>athavā parameśāni mṛtpātre sthāpayed rasam /</l>
+<l>vallīrasena taddravyaṃ śodhayed bahuyatnataḥ // MBhT_5.22</l>
+</lg>
+<lg>
+<l>ghṛtanārīrasenaiva tathaiva śodhanaṃ caret /</l>
+<l>evaṃ kṛte tu guṭikā yadi syād dṛḍhabandhanam // MBhT_5.23</l>
+</lg>
+<lg>
+<l>dhusturaṃ ca samānīya madhye śūnyaṃ ca kārayet /</l>
+<l>kṛṣṇākhyatulasīyoge tathā ghṛtakumārikā // MBhT_5.24</l>
+</lg>
+<lg>
+<l>evaṃ kṛte vahniyoge bhasmasāj jāyate kila /</l>
+<l>bhasmayoge bhavet svarṇaṃ dhanadāyāḥ prasādataḥ // MBhT_5.25</l>
+</lg>
+<l>vivarṇaṃ jāyate dravyaṃ yadi pūjāṃ na cācaret // MBhT_5.26</l>
+<lg>
+<l>śrīcaṇḍikovāca /</l>
+<l>svayambhu kīdṛśaṃ nātha kuṇḍagolaṃ tu kīdṛśam /</l>
+<l>svapuṣpaṃ kīdṛśaṃ nātha vajrapuṣpaṃ tu kīdṛśam /</l>
+<l>sarvakālodbhavaṃ nātha kīdṛśaṃ vada śaṃkara // MBhT_5.27</l>
+</lg>
+<lg>
+<l>śrīśaṃkara uvāca /</l>
+<l>vivāharahitā kanyā prathamaṃ puṣpasaṃyutā /</l>
+<l>tacchoṇitaṃ maheśāni svayambhu nātra saṃśayaḥ // MBhT_5.28</l>
+</lg>
+<lg>
+<l>bhartari vidyamāne tu yā kanyā cānyajā śive /</l>
+<l>tadudbhavaṃ kuṇḍapuṣpaṃ sarvakāryārthasādhakam // MBhT_5.29</l>
+</lg>
+<lg>
+<l>mṛte bhartari deveśi yā kanyā anyajā śive /</l>
+<l>tadudbhavaṃ golapuṣpaṃ devavaśyakaraṃ param // MBhT_5.30</l>
+</lg>
+<lg>
+<l>vivāhitāyāḥ kanyāyāḥ prathame ṛtusambhave /</l>
+<l>tacchoṇitaṃ maheśāni svapuṣpaṃ sarvamohanam // MBhT_5.31</l>
+</lg>
+<lg>
+<l>vivāhitāyāḥ kanyāyāḥ puruṣasya ca tāḍanāt /</l>
+<l>yadi puṣpaṃ samudbhūtaṃ vajraṃ tat parikīrtitam // MBhT_5.32</l>
+</lg>
+<lg>
+<l>vivāhitāyāḥ kanyāyāḥ pratimāse ca yad bhavet /</l>
+<l>sarvakālodbhavaṃ puṣpaṃ kathitaṃ vīravandite // MBhT_5.33</l>
+</lg>
+<lg>
+<l>samakrośaṃ vahnimadhye sthāpayed bahuyatnataḥ /</l>
+<l>tata utthāya tad dravyaṃ svarṇapātre nidhāya ca // MBhT_5.34</l>
+</lg>
+<lg>
+<l>prajapet parameśāni prāsādākhyaṃ mahāmanum /</l>
+<l>tataḥ siddho bhaven mantrī nānyathā mama bhāṣitam // MBhT_5.35</l>
+</lg>
+<lg>
+<l>etan mantraṃ maheśāni gajāntakasahasrakam /</l>
+<l>japitvā pūjayet paścāt pārthivaṃ śivaliṅgakam // MBhT_5.36</l>
+</lg>
+<lg>
+<l>tataḥ parīkṣā kartavyā śṛṇu matprāṇavallabhe /</l>
+<l>śuddhatāmraṃ vahnimadhye mṛtpātre tolakaṃ mitam // MBhT_5.37</l>
+</lg>
+<lg>
+<l>dravībhūte ca tāmre ca guñjāmānaṃ kṣiped yadi /</l>
+<l>tatkṣaṇe parameśāni svarṇaṃ bhavati niścitam // MBhT_5.38</l>
+</lg>
+<lg>
+<l>guñjāpramāṇaṃ tad dravyaṃ bhojanaṃ kurute yadi /</l>
+<l>sarvarogaparityakto jāyate madanopamaḥ /</l>
+<l>mantrasiddhir bhavet tasya jāyate cirajīvitā // MBhT_5.39</l>
+</lg>
+<lg>
+<l>pratyahaṃ parameśāni śatanārīṃ ramed yadi /</l>
+<l>vīryādirahitaṃ na syāt tejovṛddhikaraṃ param // MBhT_5.40</l>
+</lg>
+<lg>
+<l>maraṇaṃ naiva paśyāmi yadi dhyānayuto bhavet /</l>
+<l>tasya vittaṃ vilokyaiva kubero 'pi tiraskṛtaḥ // MBhT_5.41</l>
+</lg>
+<lg>
+<l>gānena tumburuḥ sākṣād dānena vāsavo yathā /</l>
+<l>maheśa iva yogīndro nirṛtir iva durdharaḥ // MBhT_5.42</l>
+</lg>
+<lg>
+<l>mahābalo mahāvīryo mahāsāhasikaḥ śuciḥ /</l>
+<l>mahāsvaccho dayāvāṃś ca sarvaprāṇihite rataḥ /</l>
+<l>bahu kiṃ kathyate devi sa eva gaṇanāyakaḥ // MBhT_5.43</l>
+</lg>
+
+<lg>
+<l>Mātṛkābhedatantra, ṣaṣṭaḥ paṭalaḥ</l>
+<l>śrīcaṇḍikovāca /</l>
+<l>vada īśāna sarvajña sarvatattvavidāṃ vara /</l>
+<l>mahāroge mahāduḥkhe mahādāridryasaṃkaṭe // MBhT_6.1</l>
+</lg>
+<lg>
+<l>nānā vyādhigate vāpi nānāpīḍādisaṃkaṭe /</l>
+<l>rājyanāśe rājabhaye kārāgāragate punaḥ // MBhT_6.2</l>
+</lg>
+<lg>
+<l>rāyadaṇḍe ca deveśa tathā ca grahapīḍite /</l>
+<l>kenopāyena deveśa mucyate vada śaṃkara // MBhT_6.3</l>
+</lg>
+<lg>
+<l>śrīśaṃkara uvāca /</l>
+<l>śṛṇu cārvaṅgi subhage yan māṃ tvaṃ paripṛcchasi /</l>
+<l>tat tat sarvaṃ pravakṣyāmi sāvadhānāvadhāraya // MBhT_6.4</l>
+</lg>
+<lg>
+<l>yā cādyā paramā vidyā cāmuṇḍā kālikā parā /</l>
+<l>tasyāḥ prayogamātreṇa kiṃ na sidhyati bhūtale // MBhT_6.5</l>
+</lg>
+<lg>
+<l>śrīcaṇḍikovāca /</l>
+<l>rāhuś caṇḍālo vikhyātaḥ sarvatra parameśvara /</l>
+<l>puṇyakālaḥ kathaṃ deva tasya sparśe divākare // MBhT_6.6</l>
+</lg>
+<lg>
+<l>niśākare tathā nātha iti me saṃśayo hṛdi /</l>
+<l>kathayasva parānanda paścād anyat prakāśaya // MBhT_6.7</l>
+</lg>
+<lg>
+<l>śrīśaṃkara uvāca /</l>
+<l>śṛṇu cārvaṅgi subhage grahaṇaṃ cottamottamam /</l>
+<l>grahaṇaṃ trividhaṃ devi candrasūryāgnisaṃyutam // MBhT_6.8</l>
+</lg>
+<lg>
+<l>śakter lalāṭake netre vahnis tiṣṭhati sarvadā /</l>
+<l>vāmanetre tathā candro dakṣe sūryaḥ pratiṣṭhitaḥ // MBhT_6.9</l>
+</lg>
+<lg>
+<l>śambhunāthena deveśi ramaṇaṃ kriyate yadā /</l>
+<l>tadaiva grahaṇaṃ devi śaktiyukto yadā śivaḥ // MBhT_6.10</l>
+</lg>
+<lg>
+<l>vāmanetre cumbane tu śaśāṅkagrahaṇaṃ tadā /</l>
+<l>dakṣanetre cumbane ca bhāskaragrahaṇaṃ tadā // MBhT_6.11</l>
+</lg>
+<lg>
+<l>lalāṭe cumbane cāgnigrahaṇaṃ parameśvari /</l>
+<l>śivavīryaṃ yato vahnirato 'dṛśyaḥ sureśvari // MBhT_6.12</l>
+</lg>
+<lg>
+<l>rāhuḥ śivaḥ samākhyātas triguṇā śaktir īritā /</l>
+<l>śivaśaktyoḥ samāyogo grahaṇaṃ parameśvari // MBhT_6.13</l>
+</lg>
+<lg>
+<l>śivaśaktisamāyogaḥ kālaṃ brahmamayaṃ priye /</l>
+<l>ata eva maheśāni rāśyādīn na vicārayet // MBhT_6.14</l>
+</lg>
+<lg>
+<l>tithinakṣatrayogena yad yogaṃ parameśvari /</l>
+<l>tadaiva parameśāni rāśyādigaṇanaṃ caret // MBhT_6.15</l>
+</lg>
+<lg>
+<l>śivaśaktisamāyogāt sarvaṃ brahmamayaṃ jagat /</l>
+<l>māsapakṣatithīnāṃ ca noccāryaṃ parameśvari // MBhT_6.16</l>
+</lg>
+<lg>
+<l>dṛṣṭimātreṇa japtavyaṃ tadā siddhir bhaved dhruvam /</l>
+<l>tatkālaṃ paramaṃ kālaṃ vijñeyaṃ vīravandite // MBhT_6.17</l>
+</lg>
+<lg>
+<l>tatra yad yat kṛtaṃ sarvam anantaphalam īritam /</l>
+<l>puraiva kathitaṃ sarvaṃ bahu kiṃ kathyate 'dhunā // MBhT_6.18</l>
+</lg>
+<lg>
+<l>etat suguptabhedaṃ hi tava snehāt prakāśitam /</l>
+<l>na vaktavyaṃ paśor agre na vaktavyaṃ sureśvari // MBhT_6.19</l>
+</lg>
+<lg>
+<l>etat tattvaṃ prayatnena brahmā jānāti mādhavaḥ /</l>
+<l>pragoptavyaṃ prayatnena svayonir iva śailaje // MBhT_6.20</l>
+</lg>
+<lg>
+<l>śrīcaṇḍikovāca /</l>
+<l>cāmuṇḍāyā mahāmantraṃ kīdṛśaṃ parameśvara /</l>
+<l>ārādhanaṃ kīdṛśaṃ vā tad vadasva dayānidhe // MBhT_6.21</l>
+</lg>
+<lg>
+<l>śrīśaṃkara uvāca /</l>
+<l>śṛṇu cārvaṅgi subhage cāmuṇḍāmantram uttamam /</l>
+<l>yasya vijñānamātreṇa punarjanma na vidyate // MBhT_6.22</l>
+</lg>
+<lg>
+<l>kālībījayugaṃ devi kūrcabījaṃ tataḥ param /</l>
+<l>tryakṣarī paramā vidyā cāmuṇḍā kālikā svayam // MBhT_6.23</l>
+</lg>
+<lg>
+<l>saptāhaṃ pūjayed devīm upacāraiś ca ṣoḍaśaiḥ /</l>
+<l>pūjānte prajapen mantraṃ trisahasraṃ varānane // MBhT_6.24</l>
+</lg>
+<lg>
+<l>rātrau tu pañcatattvena pūjayet parameśvarīm /</l>
+<l>tathā rātrau japen mantraṃ kulaśaktisamanvitam // MBhT_6.25</l>
+</lg>
+<lg>
+<l>yantranirmāṇayogyaṃ hi pīṭhaṃ dadyāt suvistaram /</l>
+<l>bhogayogyaṃ pradātavyaṃ madhuparkaṃ yathocitam // MBhT_6.26</l>
+</lg>
+<lg>
+<l>śakter yathā vidheyaṃ syād yuvatyāḥ parameśvari /</l>
+<l>tathā vastraṃ pradātavyaṃ sarvakalyāṇahetave // MBhT_6.27</l>
+</lg>
+<lg>
+<l>alaṃkāraṃ yathāyogyaṃ tatra tatra niyojayet /</l>
+<l>naivedyaṃ vividhaṃ ramyaṃ nānādravyasamanvitam // MBhT_6.28</l>
+</lg>
+<lg>
+<l>sāmiṣānnaṃ pradātavyaṃ paramānnaṃ saśarkaram /</l>
+<l>pūjayet parayā bhaktyā balidānaṃ tataḥ param // MBhT_6.29</l>
+</lg>
+<lg>
+<l>pratyahaṃ parameśāni cādyante vā baliṃ haret /</l>
+<l>sāṅge jāte maheśāni cāthavā balim āharet // MBhT_6.30</l>
+</lg>
+<lg>
+<l>evaṃ kṛte mahāsiddhiṃ labhate nātra saṃśayaḥ /</l>
+<l>dhanārthī dhanam āpnoti putrārthī putravān bhavet // MBhT_6.31</l>
+</lg>
+<lg>
+<l>vivāde jayam āpnoti rājadvāre jayī bhavet /</l>
+<l>sarvatra vijayī bhūtvā devīputra iva kṣitau // MBhT_6.32</l>
+</lg>
+<lg>
+<l>rogebhyo ghorarūpebhyaḥ pūjayitvā pramucyate /</l>
+<l>icchāsiddhir bhavet tasya sarvasiddhir na cānyathā // MBhT_6.33</l>
+</lg>
+<lg>
+<l>kārāgāragate devi mucyate nātra saṃśayaḥ /</l>
+<l>prayogaṃ parameśāni sāraṃ paramadurlabham // MBhT_6.34</l>
+</lg>
+<lg>
+<l>atisnehena deveśi tava sthāne prakāśitam /</l>
+<l>athavā parameśāni paṭhec caṇḍīṃ sanātanīm // MBhT_6.35</l>
+</lg>
+<lg>
+<l>pūjayec caṇḍikāṃ devīṃ sugandhipuṣpasaṃyutaiḥ /</l>
+<l>dhūpadīpena gandhena naivedyena sureśvari // MBhT_6.36</l>
+</lg>
+<l>avaśyaṃ pañcatattvena pūjayec caṇḍikāṃ parām // MBhT_6.37</l>
+<lg>
+<l>ādāv ṛṣyādisūktena cārghyānte parameśvari /</l>
+<l>pañcatattvaṃ samānīya śodhayec chāstravittamaḥ // MBhT_6.38</l>
+</lg>
+<lg>
+<l>tarpaṇaṃ ca tataḥ kṛtvā cārghyapātre vinikṣipet /</l>
+<l>arghyodakena saṃprokṣya pūjayet pīṭhadevatām // MBhT_6.39</l>
+</lg>
+<lg>
+<l>praṇavaṃ ca samuddhṛtya māyābījaṃ tataḥ param /</l>
+<l>prabhāṃ māyāṃ jayāṃ sūkṣmāṃ viśuddhāṃ nandinīṃ tathā // MBhT_6.40</l>
+</lg>
+<lg>
+<l>suprabhāṃ vijayāṃ sarvasiddhidāṃ paripūjayet /</l>
+<l>vajranakhadaṃṣṭrāyudhāya hūṃ phaḍ ityantatas tataḥ // MBhT_6.41</l>
+</lg>
+<lg>
+<l>namo 'ntena tu deveśi āsanaṃ ca samarcayet /</l>
+<l>gurupaṅktiṃ pūjayitvā punar dhyānaṃ samācaret // MBhT_6.42</l>
+</lg>
+<lg>
+<l>āvāhanaṃ tato mudrāṃ jīvanyāsaṃ prapūjanam /</l>
+<l>ṣaḍaṅgena tu sampūjya parivārān prapūjayet // MBhT_6.43</l>
+</lg>
+<lg>
+<l>śaṅkhanidhiṃ padmanidhiṃ tathā brāhmyādikaṃ yajet /</l>
+<l>indrādīṃś caiva vajrādīn pūjayet sādhakottamaḥ // MBhT_6.44</l>
+</lg>
+<lg>
+<l>praṇavādinamo 'ntena pūjayet sādhakottamaḥ /</l>
+<l>punar devīṃ maheśāni pañcatattvena pūjayet // MBhT_6.45</l>
+</lg>
+<lg>
+<l>prāṇāyāmaṃ tataḥ kṛtvā gurumantreṣṭadevatām /</l>
+<l>aikyaṃ vibhāvya deveśi mūlamantraṃ japec chatam // MBhT_6.46</l>
+</lg>
+<lg>
+<l>prāṇāyāmaṃ tataḥ kṛtvā kāraṇādīn samāharet /</l>
+<l>tasyai dattvā svayaṃ pītvā paṭhec caṇḍīṃ sureśvari // MBhT_6.47</l>
+</lg>
+<lg>
+<l>sāṅge jāte tu māhātmye punaḥ pānaṃ samācaret /</l>
+<l>tatas tu prapaṭhed dhīmān krameṇa pānam ācaret // MBhT_6.48</l>
+</lg>
+<lg>
+<l>samāpte tu vilomena punar mantraṃ śataṃ japet /</l>
+<l>yadi bhāgyavaśād devi śaktiyogaṃ labhen naraḥ // MBhT_6.49</l>
+</lg>
+<lg>
+<l>tatkṣaṇe hi vijānīyāt sarvasiddhiḥ kare sthitā /</l>
+<l>evaṃ kṛtvā maheśāni yadi pāṭhaṃ samācaret // MBhT_6.50</l>
+</lg>
+<lg>
+<l>māhātmyaṃ tasya pāṭhasya kiṃ vaktuṃ śakyate mayā /</l>
+<l>śatavaktraṃ yadi bhavet tadā vaktuṃ na śakyate // MBhT_6.51</l>
+</lg>
+<lg>
+<l>pañcavaktreṇa deveśi kiṃ vaktuṃ śakyate 'dhunā /</l>
+<l>sakṛt pāṭhena deveśi kiṃ punar brahma kevalam // MBhT_6.52</l>
+</lg>
+<lg>
+<l>avaśyaṃ labhate śāntiṃ sarvatra parameśvari /</l>
+<l>yadi śāntiṃ na labhate mama vākyaṃ mṛṣā tadā // MBhT_6.53</l>
+</lg>
+<lg>
+<l>ṣoḍaśenopacāreṇa prathamaṃ pūjanaṃ caret /</l>
+<l>dvitīye pañcatattvena pūjayec caṇḍikāṃ priye // MBhT_6.54</l>
+</lg>
+<lg>
+<l>sahasrāvṛttipāṭhena yat phalaṃ labhate naraḥ /</l>
+<l>sakṛt pāṭhasya deveśi kalāṃ nārhati ṣoḍaśīm // MBhT_6.55</l>
+</lg>
+<l>dhyānam asyāḥ pravakṣyāmi yathā dhyātvā paṭhen naraḥ // MBhT_6.56</l>
+<lg>
+<l>oṃ yā caṇḍī madhukaiṭabhādidaityadalanī māhiṣonmādinī yā dhūmrekṣaṇacaṇḍamuṇḍamathanī yā raktabījāśanī /</l>
+<l>śaktiḥ śumbhaniśumbhadaityadalanī yā siddhilakṣmīḥ parā sā devī navakoṭimūrtisahitā māṃ pātu viśveśvarī // MBhT_6.57</l>
+</lg>
+<l>dhyānam etac caṇḍikāyāḥ śṛṇuṣva vīravandite // MBhT_6.58</l>
+<lg>
+<l>śṛṇu mantraṃ pravakṣyāmi trailokyeṣu ca durlabham /</l>
+<l>vedādyaṃ vāgbhavaṃ māyāṃ kāmabījaṃ tataḥ param // MBhT_6.59</l>
+</lg>
+<lg>
+<l>sthiramāyāṃ mahāmāyāṃ kāmabījaṃ tato namaḥ /</l>
+<l>navākṣaraṃ mahāmantraṃ japed ādau śataṃ priye // MBhT_6.60</l>
+</lg>
+<lg>
+<l>viparītaṃ mahāmantraṃ pāṭhānte tu śataṃ japet /</l>
+<l>śṛṇu devi pravakṣyāmi ṛṣicchandaḥ sudurlabham // MBhT_6.61</l>
+</lg>
+<l>oṃ saptaśatīmahāstotrasya medhātithiṛṣir gāyatryanuṣṭubbṛhatīpaṃktitriṣtubjagatyaś chandāṃsi mahākālīmahālakṣmīmahāsarasvīdevatāstavakaṃ aiṃ hrīṃ klīṃ bījāni kṣrauṃ śaktiḥ mamāmukakāmasiddhyarthe viniyogaḥ // MBhT_6.62</l>
+<lg>
+<l>praṇavena maheśāni ṣaḍaṅganyāsam ācaret /</l>
+<l>iti te kathitaṃ kānte caṇḍīpāṭhasya lakṣaṇam // MBhT_6.63</l>
+</lg>
+<l>sārvaṇiḥ sūrya ityādi sārvaṇir bhavitā manuḥ etanmātraṃ paṭhed devi kiṃcin nyūnādhikaṃ na hi // MBhT_6.64</l>
+<l>vāratrayaṃ paṭhed devi saṃjapya tu dinatrayam // MBhT_6.65</l>
+<lg>
+<l>mahāroge sahāduḥkhe rājapīḍādidāruṇe /</l>
+<l>nānā vyādhigate vāpi rājyanāśe tathā bhaye // MBhT_6.66</l>
+</lg>
+<lg>
+<l>grahapīḍādisaṃjāte brahmahatyādipātake /</l>
+<l>evaṃ pāṭhena deveśi mucyate nātra saṃśayaḥ // MBhT_6.67</l>
+</lg>
+<lg>
+<l>bahu kiṃ kathyate devi sarvaśāntiṃ labhen naraḥ /</l>
+<l>sarvaśaṅkāvinirmukto jāyate madanopamaḥ // MBhT_6.68</l>
+</lg>
+<lg>
+<l>evaṃ kṛte maheśāni yadi siddhir na jāyate /</l>
+<l>punas tenaiva kartavyaṃ tataḥ siddho bhaved dhruvam // MBhT_6.69</l>
+</lg>
+
+<lg>
+<l>Mātṛkābhedatantra, saptamaḥ paṭalaḥ</l>
+<l>śrīśiva uvāca /</l>
+<l>athātaḥ sampravakṣyāmi tripurāmantram uttamam /</l>
+<l>yasya vijñānamātreṇa punarjanma na vidyate // MBhT_7.1</l>
+</lg>
+<lg>
+<l>tripurā trividhā devi bālā proktā purā śive /</l>
+<l>tathaiva bhairavī devī nityātantre mayoditā /</l>
+<l>idānīṃ sundarīṃ devī śṛṇu pārvati sādaram // MBhT_7.2</l>
+</lg>
+<lg>
+<l>śrīdevy uvāca /</l>
+<l>mahāmantraṃ śrutaṃ nātha vāmakeśvarayāmale /</l>
+<l>prātaḥkṛtyādi deveśa ārādhanakramaṃ vada // MBhT_7.3</l>
+</lg>
+<lg>
+<l>śrīśiva uvāca /</l>
+<l>prātar utthāya mantrajñaḥ sahasrāre nijaṃ gurum /</l>
+<l>pūrvoktadhyānam uccārya pūjayed bahuyatnataḥ // MBhT_7.4</l>
+</lg>
+<lg>
+<l>tathā ca śrīguror dhyānaṃ guptasādhanatantrake /</l>
+<l>kathitaṃ ca mayā pūrvaṃ mantraṃ śṛṇu varānane // MBhT_7.5</l>
+</lg>
+<lg>
+<l>vāgbījaṃ ca mahāmāyāṃ viṣṇuśaktiṃ samuccaret /</l>
+<l>hasakhaphreṃ tathānandabhairavasya manuṃ tataḥ // MBhT_7.6</l>
+</lg>
+<lg>
+<l>tasya śakter manuṃ paścāt tataś caivaṃ hasauḥ smṛtaḥ /</l>
+<l>śrīguroś ca tathā śakter mantram etat sureśvari // MBhT_7.7</l>
+</lg>
+<lg>
+<l>śrīguror ānandanāthānte athātaḥ śaktir īritā /</l>
+<l>vāgbījādīn samuccārya amukānandanātha ca // MBhT_7.8</l>
+</lg>
+<lg>
+<l>śrīpādukāṃ samuccārya pūjayāmi namas tataḥ /</l>
+<l>vāgbījaṃ ca śambhupatnīṃ taduttare haripriyām // MBhT_7.9</l>
+</lg>
+<lg>
+<l>bhūtabījaṃ samuccārya pravadec ca tadātmakam /</l>
+<l>samarpayāmi deveśi pūjāvidhir iti priye // MBhT_7.10</l>
+</lg>
+<lg>
+<l>tataś cāṣṭākṣaraṃ mantram aṣṭottaraśataṃ japet /</l>
+<l>japaṃ samarpayitvā tu named añjalinā priye // MBhT_7.11</l>
+</lg>
+<lg>
+<l>śrīdevy uvāca /</l>
+<l>stutiṃ ca kavacaṃ nātha śrotum icchāmi sāmpratam /</l>
+<l>śrīguroḥ kavacaṃ stotraṃ tvayā proktaṃ purā prabho // MBhT_7.12</l>
+</lg>
+<lg>
+<l>idānīṃ strīguroḥ stotraṃ kavacaṃ mayi kathyatām /</l>
+<l>yasya vijñānamātreṇa punarjanma na vidyate // MBhT_7.13</l>
+</lg>
+<lg>
+<l>śrīśiva uvāca /</l>
+<l>śṛṇu devi pravakṣyāmi stotraṃ paramagopanam /</l>
+<l>yasya śravaṇamātreṇa saṃsārān mucyate naraḥ // MBhT_7.14</l>
+</lg>
+<lg>
+<l>namas te devadeveśi namas te harapūjite /</l>
+<l>brahmavidyāsvarūpāyai tasyai nityaṃ namo namaḥ // MBhT_7.15</l>
+</lg>
+<lg>
+<l>ajñānatimirāndhasya jñānāñjanaśalākayā /</l>
+<l>yayā cakṣur unmīlitaṃ tasyai nityaṃ namo namaḥ // MBhT_7.16</l>
+</lg>
+<lg>
+<l>bhavabandhanapārasya tāriṇī jananī parā /</l>
+<l>jñānadā mokṣadā nityā tasyai nityaṃ namo namaḥ // MBhT_7.17</l>
+</lg>
+<lg>
+<l>śrīnāthavāmabhāgasthā sadā yā surapūjitā /</l>
+<l>sadā vijñānadātrī ca tasyai nityaṃ namo namaḥ // MBhT_7.18</l>
+</lg>
+<lg>
+<l>sahasrāre mahāpadme sadānandasvarūpiṇī /</l>
+<l>mahāmokṣapradā devī tasyai nityaṃ namo namaḥ // MBhT_7.19</l>
+</lg>
+<lg>
+<l>brahmaviṣṇusvarūpā ca mahārudrasvarūpiṇī /</l>
+<l>triguṇātmasvarūpā ca tasyai nityaṃ namo namaḥ // MBhT_7.20</l>
+</lg>
+<lg>
+<l>candrasūryāgnirūpā ca sadāghūrṇitalocanā /</l>
+<l>svanāthaṃ ca samāliṅgya tasyai nityaṃ namo namaḥ // MBhT_7.21</l>
+</lg>
+<lg>
+<l>brahmaviṣṇuśivatvādijīvanmuktipradāyinī /</l>
+<l>jñānavijñānadātrī ca tasyai nityaṃ namo namaḥ // MBhT_7.22</l>
+</lg>
+<lg>
+<l>idaṃ stotraṃ maheśāni yaḥ paṭhed bhaktisaṃyutaḥ /</l>
+<l>sa siddhiṃ labhate nityaṃ satyaṃ satyaṃ na saṃśayaḥ // MBhT_7.23</l>
+</lg>
+<lg>
+<l>prātaḥkāle paṭhed yas tu gurupūjāpuraḥsaram /</l>
+<l>sa eva dhanyo loke 'smin devīputra iva kṣitau // MBhT_7.24</l>
+</lg>
+<lg>
+<l>śrīśaṅkara uvāca /</l>
+<l>stotraṃ samāptaṃ deveśi kavacaṃ śṛṇu sādaram /</l>
+<l>yasya śravaṇamātreṇa vāgīśasamatāṃ vrajet // MBhT_7.25</l>
+</lg>
+<lg>
+<l>strīguroḥ kavacasyāsya sadāśiva ṛṣiḥ smṛtaḥ /</l>
+<l>tadākhyā devatā proktā caturvargaphalapradā // MBhT_7.26</l>
+</lg>
+<lg>
+<l>klīṃ bījaṃ me śiraḥ pātu tad ākhyātaṃ lalāṭakam /</l>
+<l>klīṃ bījaṃ cakṣuṣoḥ pātu sarvāṅgaṃ me sadāvatu // MBhT_7.27</l>
+</lg>
+<lg>
+<l>aiṃ bījaṃ me mukhaṃ pātu hrīṃ jaṅghāṃ parirakṣatu /</l>
+<l>śrīṃ bījaṃ skandhadeśaṃ me vāgbhavaṃ me bhujadvayam // MBhT_7.28</l>
+</lg>
+<lg>
+<l>hakāraṃ me dakṣabhujaṃ kṣakāraṃ vāmahastakam /</l>
+<l>kṣamaṇau tadadhaḥ pātu lakāraṃ hṛdayaṃ mama // MBhT_7.29</l>
+</lg>
+<lg>
+<l>rakāraṃ pṛṣṭhadeśaṃ ca rakāraṃ dakṣapārśvakam /</l>
+<l>jūṅkāraṃ vāmapārśve tu sakāraṃ merum eva tu // MBhT_7.30</l>
+</lg>
+<lg>
+<l>makāraṃ cāṅgulīḥ pātu lakāraṃ me nakhopari /</l>
+<l>vakāraṃ me nitambaṃ ca rakāraṃ jānuyugmakam // MBhT_7.31</l>
+</lg>
+<lg>
+<l>yīḥkāraṃ pādayugalaṃ hasauḥ sarvāṅgam eva tu /</l>
+<l>hasaur liṅgaṃ ca lomaṃ ca keśaṃ ca parirakṣatu // MBhT_7.32</l>
+</lg>
+<lg>
+<l>aiṃ bījaṃ pātu pūrve tu hrīṃ bījaṃ dakṣiṇe 'vatu /</l>
+<l>śrīṃ bījaṃ paścime pātu uttare bhūtasambhavam // MBhT_7.33</l>
+</lg>
+<lg>
+<l>śrīṃ pātu cāgnikoṇe ca tadākhyāṃ nairṛte 'vatu /</l>
+<l>devy ambā pātu vāyavyāṃ śambhoḥ śrīpādukāṃ tathā // MBhT_7.34</l>
+</lg>
+<lg>
+<l>pūjayāmi tathā cordhvaṃ namaś cādhaḥ sadāvatu /</l>
+<l>iti te kathitaṃ kānte kavacaṃ paramādbhutam // MBhT_7.35</l>
+</lg>
+<lg>
+<l>gurumantraṃ japitvā tu kavacaṃ prapaṭhed yadi /</l>
+<l>sa siddhaḥ sagaṇaḥ so 'pi śivaḥ sākṣān na saṃśayaḥ // MBhT_7.36</l>
+</lg>
+<lg>
+<l>pūjākāle paṭhed yas tu kavacaṃ mantravigraham /</l>
+<l>pūjāphalaṃ bhavet tasya satyaṃ satyaṃ sureśvari // MBhT_7.37</l>
+</lg>
+<l>trisaṃdhyaṃ yaḥ paṭhed devi sa siddho nātra saṃśayaḥ // MBhT_7.38</l>
+<lg>
+<l>bhūrje vilikhya guṭikāṃ svarṇasthā dhārayed yadi /</l>
+<l>tasya darśanamātreṇa vādino niṣprabhāṃ gatāḥ // MBhT_7.39</l>
+</lg>
+<lg>
+<l>vivāde jayam āpnoti raṇe ca nirṛtir iva /</l>
+<l>sabhāyāṃ jayam āpnoti mama tulyo na saṃśayaḥ // MBhT_7.40</l>
+</lg>
+<lg>
+<l>sahasrāre bhāvayaṃ stāṃ trisandhyaṃ prapaṭhed yadi /</l>
+<l>sa eva siddho lokeśo nirvāṇapadam īhate // MBhT_7.41</l>
+</lg>
+<lg>
+<l>samastamaṅgalaṃ nāma kavacaṃ paramādbhutam /</l>
+<l>yasmai kasmai na dātavyaṃ na prakāśyaṃ kadācana // MBhT_7.42</l>
+</lg>
+<lg>
+<l>deyaṃ śiṣyāya śāntāya cānyathā patanaṃ bhavet /</l>
+<l>abhaktebhyo 'pi deveśi putrebhyo 'pi na darśayet // MBhT_7.43</l>
+</lg>
+<lg>
+<l>idaṃ kavacam ajñātvā daśavidyāṃ ca yo japet /</l>
+<l>sa nāpnoti phalaṃ tasya pare ca narakaṃ vrajet // MBhT_7.44</l>
+</lg>
+<lg>
+<l>samāptaṃ kavacaṃ devi kim anyac chrotum icchasi /</l>
+<l>tava snehānubandhena kiṃ mayā na prakāśitam // MBhT_7.45</l>
+</lg>
+<lg>
+<l>kūrcabījaṃ samuccārya prāṇamantraṃ tataḥ priye /</l>
+<l>anena vāyuyogena kuṇḍalīcakraṃ saṃcaret // MBhT_7.46</l>
+</lg>
+<lg>
+<l>aṣṭottaraśataṃ mūlamantraṃ japtvā namet sudhīḥ /</l>
+<l>snānakarma tataḥ kṛtvā saṃdhyāṃ kuryāt puroditām // MBhT_7.47</l>
+</lg>
+<lg>
+<l>śrīdevy uvāca /</l>
+<l>saṃdhyāyāḥ kīdṛśaṃ dhyānaṃ vada me parameśvara /</l>
+<l>śrīvidyāviṣaye nātha viśeṣo mayi kathyatām // MBhT_7.48</l>
+</lg>
+<lg>
+<l>śrīśiva uvāca /</l>
+<l>dhyāyec ca sundarīṃ devīṃ trividhāṃ bījarūpiṇīm /</l>
+<l>prabhāte vāgbhavāṃ devī madhyāhne madanātmikām // MBhT_7.49</l>
+</lg>
+<lg>
+<l>sāyāhne śaktirūpāṃ ca trividhāṃ bindurūpiṇīm /</l>
+<l>pūjākāle mahādevīṃ dhyānānurūpiṇīṃ śivām // MBhT_7.50</l>
+</lg>
+<lg>
+<l>vāgbhavenendusadṛśāṃ śuklavarṇāṃ vicintayet /</l>
+<l>śaktibījaṃ svarṇavarṇaṃ raktavarṇāṃ vibhāvayet // MBhT_7.51</l>
+</lg>
+<lg>
+<l>prabhāte śuklavarṇābhāṃ madhyāhne nīlasaṃnibhām /</l>
+<l>sāyāhne raktavarṇābhāṃ bhāvayet sādhakottamaḥ // MBhT_7.52</l>
+</lg>
+<lg>
+<l>evaṃ dhyātvā maheśāni saṃdhyāṃ kuryād vicakṣaṇaḥ /</l>
+<l>śivapūjāṃ tataḥ kṛtvā pūjayet paradevatām // MBhT_7.53</l>
+</lg>
+<lg>
+<l>tatas tu pūjayed devīṃ tripurāṃ mokṣadāyinīm /</l>
+<l>tripurā paramā vidyā mahāvidyā pativratā // MBhT_7.54</l>
+</lg>
+<lg>
+<l>patipūjāṃ vinā pūjāṃ na gṛhṇāti kadācana /</l>
+<l>ata eva maheśāni ādau liṅgaṃ prapūjayet // MBhT_7.55</l>
+</lg>
+<lg>
+<l>pañcākṣaraṃ pañcavaktraṃ pūjayed bahuyatnataḥ /</l>
+<l>tatas tu pūjayed devīṃ tripurāṃ mokṣadāyinīm // MBhT_7.56</l>
+</lg>
+<lg>
+<l>śrīdevy uvāca /</l>
+<l>kimādhāre yajec chambhuṃ kṛpayā vada śaṃkara /</l>
+<l>ādhārabhede deveśa sādhakaḥ phalabhāg bhavet // MBhT_7.57</l>
+</lg>
+<lg>
+<l>śrīśaṃkara uvāca /</l>
+<l>pūjayet pārthive liṅge pāṣāṇe liṅgake tathā /</l>
+<l>svarṇaliṅge 'thavā devi raupye tāmre ca kāṃsyake // MBhT_7.58</l>
+</lg>
+<lg>
+<l>pārade vātha gaṅgāyāṃ sphāṭike mārakate 'pi vā /</l>
+<l>kāryabhede lauhaliṅge bhasmanirmāṇaliṅgake // MBhT_7.59</l>
+</lg>
+<lg>
+<l>vālukānirmite liṅge gomaye vātha pūjayet /</l>
+<l>pārthive pūjanaṃ devi toḍalākhye mayoditam // MBhT_7.60</l>
+</lg>
+<lg>
+<l>saṃskāreṇa vinā devi pāṣāṇādau na pūjayet /</l>
+<l>saṃskāraṃ ca pravakṣyāmi viśeṣa iha yad bhavet // MBhT_7.61</l>
+</lg>
+<lg>
+<l>raupyaṃ ca svarṇaliṅgaṃ ca svarṇapātre nidhāya ca /</l>
+<l>tasmād uttolya taṃ liṅgaṃ dugdhamadhye dinatrayam // MBhT_7.62</l>
+</lg>
+<lg>
+<l>tryambakeṇa sthāpayitvā kālarudraṃ prapūjayet /</l>
+<l>ṣoḍaśenopacāreṇa vedyān tu pārvatīṃ yajet // MBhT_7.63</l>
+</lg>
+<lg>
+<l>tasmād uttolya taṃ liṅgaṃ gaṅgātoye dinatrayam /</l>
+<l>tato vedoktavidhinā saṃskāram ācaret sudhīḥ // MBhT_7.64</l>
+</lg>
+<lg>
+<l>śrīcaṇḍikovāca /</l>
+<l>liṅgapramāṇaṃ deveśa kathayasva mayi prabho /</l>
+<l>pārthive ca śilādau ca viśeṣo yadi vā bhavet // MBhT_7.65</l>
+</lg>
+<lg>
+<l>śrīśiva uvāca /</l>
+<l>mṛttikātolakaṃ grāhyam athavā tolakadvayam /</l>
+<l>etadanyaṃ na kartavyaṃ kadācid api pārvati // MBhT_7.66</l>
+</lg>
+<lg>
+<l>śilādau parameśāni sthūlaṃ ca phaladāyakam /</l>
+<l>aṅguṣṭhamānaṃ deveśi yad vā hemādrimānakam // MBhT_7.67</l>
+</lg>
+<lg>
+<l>evaṃ krameṇa deveśi phalaṃ bahuvidhaṃ labhet /</l>
+<l>sthūlāt sthūlataraṃ liṅgaṃ rudrākṣaṃ parameśvari // MBhT_7.68</l>
+</lg>
+<l>pūjanād dhāraṇād devi phalaṃ bahuvidhaṃ smṛtam // MBhT_7.69</l>
+
+<lg>
+<l>Mātṛkābhedatantra, aṣṭamaḥ paṭalaḥ</l>
+<l>śrīdevy uvāca /</l>
+<l>śṛṇu nātha parānanda parāparakulātmaka /</l>
+<l>tvāṃ vinā trāṇakartā ca mama jñāne na vartate // MBhT_8.1</l>
+</lg>
+<lg>
+<l>pūrṇaliṅgaṃ maheśāna śivabījaṃ na cānyathā /</l>
+<l>śilāmadhye tathā cakraṃ lakṣmīnārāyaṇaṃ param // MBhT_8.2</l>
+</lg>
+<lg>
+<l>pāradasya śatāṃśaikaṃ mama jñāne na vartate /</l>
+<l>śivabījaṃ mahādeva śivarūpaṃ na cānyathā /</l>
+<l>liṅgarūpaṃ kathaṃ deva tad vadasva mayi prabho // MBhT_8.3</l>
+</lg>
+<lg>
+<l>śrīśiva uvāca /</l>
+<l>yathā jyotirmayaṃ liṅgaṃ kailāsaśikhare mama /</l>
+<l>tasyaiva ṣoḍaśāṃśaikaḥ kāśyāṃ viśveśvaraḥ sthitaḥ // MBhT_8.4</l>
+</lg>
+<lg>
+<l>pūrṇaliṅgaṃ maheśāni śivabījaṃ na cānyathā /</l>
+<l>śilāmadhye tathā cakraṃ lakṣmīnārāyaṇaṃ param // MBhT_8.5</l>
+</lg>
+<lg>
+<l>pāradasya śatāṃśaikaṃ lakṣmīnārāyaṇaṃ na hi /</l>
+<l>pakāraṃ viṣṇurūpaṃ ca ākāraṃ kālikā tathā // MBhT_8.6</l>
+</lg>
+<lg>
+<l>rephaṃ śivaṃ dakāraṃ ca brahmarūpaṃ na cānyathā /</l>
+<l>pāradaṃ parameśāni brahmaviṣṇuśivātmakam // MBhT_8.7</l>
+</lg>
+<lg>
+<l>yo yajet pāradaṃ liṅgaṃ sa eva śambhur avyayaḥ /</l>
+<l>sa eva dhanyo deveśi sa jñānī sa tu tattvavit // MBhT_8.8</l>
+</lg>
+<lg>
+<l>sa brahmavettā sa dhanī sa rājā bhuvi pūjitaḥ /</l>
+<l>aṇimādivibhūtīnām īśvaraḥ sādhakottamaḥ // MBhT_8.9</l>
+</lg>
+<lg>
+<l>striyaḥ svabhāvacapalā gopituṃ na hi śakyate /</l>
+<l>ata eva hi deveśi viratā bhava pārvati // MBhT_8.10</l>
+</lg>
+<lg>
+<l>śrīdevy uvāca /</l>
+<l>kathayasva kṛpānātha karuṇā yadi vartate /</l>
+<l>tava vākyaṃ vinā deva kva muktiḥ kva ca sādhutā // MBhT_8.11</l>
+</lg>
+<lg>
+<l>śrīśiva uvāca /</l>
+<l>pāradaṃ śivabījaṃ hi tāḍanaṃ na hi kārayet /</l>
+<l>tāḍanād vittanāśaḥ syāt tāḍanāt sutahīnatā /</l>
+<l>tāḍanād rogayuktaḥ syāt tāḍanān maraṇaṃ bhavet // MBhT_8.12</l>
+</lg>
+<lg>
+<l>śrīdevy uvāca /</l>
+<l>etad vighnādikaṃ nātha satyam eva na saṃśayaḥ /</l>
+<l>vighnādirahitaṃ nātha kathayasva dayānidhe // MBhT_8.13</l>
+</lg>
+<lg>
+<l>śrīśiva uvāca /</l>
+<l>pārade śivanirmāṇe nānāvighnaṃ yataḥ śive /</l>
+<l>ata eva hi tatrādau śāntisvastyayanaṃ caret // MBhT_8.14</l>
+</lg>
+<lg>
+<l>dvādaśaṃ pārthivaṃ liṅgam upacāraiś ca ṣoḍaśaiḥ /</l>
+<l>paṭṭādisūtranirmāṇaṃ racitaṃ śuklam eva vā // MBhT_8.15</l>
+</lg>
+<lg>
+<l>puruṣasya yathāyogyaṃ yugmavastraṃ nivedayet /</l>
+<l>bhogayogyaṃ pradātavyaṃ madhuparkaṃ sureśvari // MBhT_8.16</l>
+</lg>
+<lg>
+<l>alaṃkāraṃ yathāśakti dadyāt kalyāṇahetave /</l>
+<l>pūjayed bahuyatnena bilvapattreṇa pārvati // MBhT_8.17</l>
+</lg>
+<lg>
+<l>toḍaloktena vidhinā pratyekenāyutaṃ japet /</l>
+<l>ādau pañcākṣaraṃ mantram aṣṭottaraśataṃ japet // MBhT_8.18</l>
+</lg>
+<lg>
+<l>pūjānte prajapet paścāt prāsādākhyaṃ mahāmanum /</l>
+<l>dakṣiṇāntaṃ samācarya haviṣyāśī jitendriyaḥ // MBhT_8.19</l>
+</lg>
+<lg>
+<l>tāmbūlaṃ ca tathā matsyaṃ varjayen na kadācana /</l>
+<l>asmiṃs tantre haviṣyānnaṃ tāmbūlaṃ mīnam uttamam // MBhT_8.20</l>
+</lg>
+<lg>
+<l>homayet parameśāni daśāṃśaṃ vā śatāṃśam /</l>
+<l>homasya dakṣiṇā kāryā tadā vighnair na lipyate // MBhT_8.21</l>
+</lg>
+<lg>
+<l>tataḥ parasmin divase pāradam ānayed budhaḥ /</l>
+<l>tasyopari japen mantraṃ sarvavandyanavātmakam // MBhT_8.22</l>
+</lg>
+<lg>
+<l>vyomabījaṃ śivāntaṃ ca vargādyaṃ bindumastakam /</l>
+<l>vāyubījaṃ ca tritayaṃ tritayaṃ tryambakaṃ priye // MBhT_8.23</l>
+</lg>
+<lg>
+<l>imaṃ mantraṃ maheśāni prajaped auṣadhopari /</l>
+<l>pārade prajapen mantram aṣṭottaraśataṃ yadi // MBhT_8.24</l>
+</lg>
+<l>tad evauṣadhayogena baddho bhavati nānyathā // MBhT_8.25</l>
+<lg>
+<l>tataḥ parasmin divase śṛṇu matprāṇavallabhe /</l>
+<l>varayet karmakartāraṃ yathoktavibhavāvadhi // MBhT_8.26</l>
+</lg>
+<lg>
+<l>suvarṇaṃ campakākāraṃ karṇayugme nivedayet /</l>
+<l>catuṣkoṇayutaṃ svarṇaṃ grīvāyāṃ sumanoharam // MBhT_8.27</l>
+</lg>
+<lg>
+<l>hastadvaye maheśāni dadyād valayayugmakam /</l>
+<l>valayaṃ śuklavarṇaṃ ca aṅgarīyaṃ tathaiva ca // MBhT_8.28</l>
+</lg>
+<lg>
+<l>ūrmiṃ dadyāt pītavastraṃ kṣaumavastrayugaṃ śive /</l>
+<l>evaṃ kṛtvā maheśāni śivarūpaṃ vicintayet // MBhT_8.29</l>
+</lg>
+<lg>
+<l>athātaḥ sampravakṣyāmi vidhānaṃ śṛṇu pārvati /</l>
+<l>prastare caiva saṃsthāpya jhiṇṭīpattrarasena ca /</l>
+<l>prastareṇa samāloḍya kuryāt kardamavat priye // MBhT_8.30</l>
+</lg>
+<lg>
+<l>nirmāṇayogyaṃ tatraiva yadi syāt surasundari /</l>
+<l>tadā nirmāya taṃ liṅgaṃ punar dṛḍhataraṃ caret // MBhT_8.31</l>
+</lg>
+<lg>
+<l>svapuṣpasaṃyute vastre aṅgāre ca karīṣake /</l>
+<l>kiṃcid uṣṇaṃ prakartavyaṃ yato dṛḍhataro bhavet // MBhT_8.32</l>
+</lg>
+<lg>
+<l>tato nirmāya taṃ liṅgaṃ punar dṛḍhataraṃ caret /</l>
+<l>svapuṣpasaṃyute vastre sthāpayet pārthive punaḥ // MBhT_8.33</l>
+</lg>
+<lg>
+<l>kiṃcid uṣṇaṃ prakartavyaṃ yāvad dṛḍhataro bhavet /</l>
+<l>vinā hy auṣadhayogena bhasma bhavati nānyathā // MBhT_8.34</l>
+</lg>
+
+<lg>
+<l>Mātṛkābhedatantra, navamaḥ paṭalaḥ</l>
+<l>śrīśiva uvāca /</l>
+<l>bhasmaprakāraṃ deveśi śṛṇu matprāṇavallabhe /</l>
+<l>kartāraṃ varayed ādau yathoktavibhavāvadhi // MBhT_9.1</l>
+</lg>
+<lg>
+<l>suvarṇaṃ mauktikayutaṃ karṇayugme nivedayet /</l>
+<l>hastayugme ca valayam aṅgurīyaṃ tathaiva ca // MBhT_9.2</l>
+</lg>
+<lg>
+<l>toḍhadvayaṃ bāhuyugme śuddhakāñcananirmitam /</l>
+<l>grīvāyāṃ dāpayet svarṇaṃ catuṣkoṇaṃ manoramam // MBhT_9.3</l>
+</lg>
+<lg>
+<l>vastrayugmaṃ paṭṭasūtranirmitaṃ ca suśobhanam /</l>
+<l>uṣṇīṣaṃ śuklavarṇaṃ ca uṣṇīṣaṃ pītavāsasam // MBhT_9.4</l>
+</lg>
+<lg>
+<l>evaṃ hi varayed devi karmayogyaṃ vicintayet /</l>
+<l>cintayec chivarūpaṃ ca cintayet triguṇātmakam // MBhT_9.5</l>
+</lg>
+<lg>
+<l>tataḥ parasmin divase śāntisvastyayanaṃ caret /</l>
+<l>nirmitaṃ śuddhasvarṇena bilvapattreṇa sundari // MBhT_9.6</l>
+</lg>
+<lg>
+<l>sahasrasaṅkhyayā devi pārthivaṃ dvādaśaṃ yajet /</l>
+<l>ṣoḍaśenopacāreṇa paṭṭavastrayugena ca // MBhT_9.7</l>
+</lg>
+<lg>
+<l>alaṃkāravicitraiś ca pūjayet parameśvaram /</l>
+<l>bhogayogyaṃ pradātavyaṃ madhuparkaṃ nivedayet // MBhT_9.8</l>
+</lg>
+<lg>
+<l>svarṇāsanena saṃsthāpya pratyekaṃ pūjanaṃ caret /</l>
+<l>pūjānte prajapen mantram aṣṭottaraśataṃ sudhīḥ // MBhT_9.9</l>
+</lg>
+<lg>
+<l>ṣaḍakṣaraṃ mahāmantraṃ prāsādākhyaṃ manuṃ tataḥ /</l>
+<l>diksahasraṃ japen mantraṃ taddaśāṃśaṃ hunet priye // MBhT_9.10</l>
+</lg>
+<lg>
+<l>homasya dravyaṃ deveśi śṛṇu matprāṇavallabhe /</l>
+<l>vālukānirmite vāpi kuṇḍe vā parameśvari // MBhT_9.11</l>
+</lg>
+<lg>
+<l>dvātriṃśadaṅgulimānaṃ vistṛtaṃ tatsamaṃ priye /</l>
+<l>ṣoḍaśāṅgulimānaṃ hi kuṇḍaṃ kuryāt sulakṣaṇam // MBhT_9.12</l>
+</lg>
+<lg>
+<l>tadūrdhve parameśāni vedanetrāṅguliṃ śive /</l>
+<l>eva hi svarṇakumbhaṃ ca tāmrakumbhāsamarthinā // MBhT_9.13</l>
+</lg>
+<lg>
+<l>etad anyataraṃ kumbhaṃ sthāpayed vedikopari /</l>
+<l>paṭṭavastreṇa yugmena saṃveṣṭya bahuyatnataḥ // MBhT_9.14</l>
+</lg>
+<lg>
+<l>homayed bilvapattreṇa yathoktena sureśvari /</l>
+<l>trimadhvaktena vidhinā tataḥ siddho bhaved dhruvam // MBhT_9.15</l>
+</lg>
+<lg>
+<l>tatas tu dakṣiṇā kāryā yathoktavibhavāvadhi /</l>
+<l>sarvadravyamayaṃ mūlyaṃ dviguṇaṃ vā pradāpayet // MBhT_9.16</l>
+</lg>
+<lg>
+<l>dakṣiṇāvihīnā yajñāḥ siddhidā na ca mokṣadāḥ /</l>
+<l>ata eva maheśāni dakṣiṇā vibhavāvadhi // MBhT_9.17</l>
+</lg>
+<lg>
+<l>varāhavat samānīya janmamātre 'pi sundari /</l>
+<l>pāradaṃ tolakaṃ mānaṃ bhakṣayed bahuyatnataḥ // MBhT_9.18</l>
+</lg>
+<lg>
+<l>punas tolakamānaṃ hi mātṛdugdhaṃ tataḥ param /</l>
+<l>punaś ca bhakṣayed dhīmāṃs tato dugdhaṃ tu bhakṣayet // MBhT_9.19</l>
+</lg>
+<lg>
+<l>tataś ca vatsam ānīya navadvāraṃ prayatnataḥ /</l>
+<l>sūtrayogeṇa deveśi baddhaṃ kuryāt prayatnataḥ // MBhT_9.20</l>
+</lg>
+<lg>
+<l>tataś ca helakīmantram aṣṭottaraśataṃ japet /</l>
+<l>gajapramāṇaṃ deveśi dīrghaprasthaṃ tu khātakam // MBhT_9.21</l>
+</lg>
+<lg>
+<l>karīṣakeṇa deveśi pūrṇaṃ kuryād vicakṣaṇaḥ /</l>
+<l>tanmadhye sthāpayed vatsaṃ saṃdahed bahuyatnataḥ // MBhT_9.22</l>
+</lg>
+<lg>
+<l>vahnisthite maheśāni na spṛśet kuṇḍam uttamam /</l>
+<l>kuṇḍe suśītale jāta utthāpya bahuyatnataḥ // MBhT_9.23</l>
+</lg>
+<lg>
+<l>sarvaprakāśakaṃ mantram aṣṭottaraśataṃ japet /</l>
+<l>viśveśvaraṃ pravakṣyāmi śṛṇu pārvati sādaram // MBhT_9.24</l>
+</lg>
+<lg>
+<l>pāradaṃ tolakaṃ mānaṃ tāmrapātre tu lepayet /</l>
+<l>cūrṇaṃ kuryān maheśāni gandhakaṃ sārdhaṃ tolakam // MBhT_9.25</l>
+</lg>
+<lg>
+<l>samācchādya prayatnena cūrṇena parameśvari /</l>
+<l>saṃdahed bahuyatnena mandamandena vahninā // MBhT_9.26</l>
+</lg>
+<lg>
+<l>kṛṣṇavarṇaṃ reṇuyutaṃ dṛṣṭvā utthāpya sundari /</l>
+<l>rattipramāṇaṃ tad dravyaṃ bhakṣayed yadi sundari // MBhT_9.27</l>
+</lg>
+<lg>
+<l>satyaṃ satyaṃ sarvakuṣṭhaṃ bhakṣaṇān nāśam āpnuyāt /</l>
+<l>anupānam uṣṇatoyaṃ matsyādīn parivarjayet // MBhT_9.28</l>
+</lg>
+<lg>
+<l>evaṃ prayogaṃ deveśi na kuryāt putravān gṛhī /</l>
+<l>prathame divase putrān dvitīye divase dhanam // MBhT_9.29</l>
+</lg>
+<lg>
+<l>tṛtīye divase śaktiṃ caturthe divase gṛham /</l>
+<l>pañcame divase rogaṃ nāśaṃ tu jāyate dhruvam // MBhT_9.30</l>
+</lg>
+<lg>
+<l>ata eva maheśāni ātmasvastyayanaṃ caret /</l>
+<l>pūrvoktavidhinā mantrī caturguṇaṃ samācaret // MBhT_9.31</l>
+</lg>
+
+<lg>
+<l>Mātṛkābhedatantra, daśamaḥ paṭalaḥ</l>
+<l>śrīdevy uvāca /</l>
+<l>narākṛtiṃ guruṃ nātha mantraṃ varṇātmakaṃ tathā /</l>
+<l>dhyānānurūpiṇaṃ devam ekatvaṃ vā kathaṃ vada // MBhT_10.1</l>
+</lg>
+<lg>
+<l>śrīśiva uvāca /</l>
+<l>guruvaktrān mahāmantro labhyate sādhakottamaiḥ /</l>
+<l>yady eko jāyate vīryas tasya mūrtir bhaved dhruvam // MBhT_10.2</l>
+</lg>
+<lg>
+<l>devatāyāḥ śarīraṃ ca bījād utpadyate priye /</l>
+<l>guror ājñānusāreṇa cānyamūrtis tu jāyate // MBhT_10.3</l>
+</lg>
+<lg>
+<l>gurvādibhāvanād devi bhāvasiddhiḥ prajāyate /</l>
+<l>ata eva maheśāni caikatvaṃ parikathyate // MBhT_10.4</l>
+</lg>
+<lg>
+<l>śrīdevy uvāca /</l>
+<l>yac cākṣuṣaṃ mahādeva tadākaraṃ vicintayet /</l>
+<l>acākṣuṣe mahādeva dhyānaṃ vā kīdṛśaṃ bhavet // MBhT_10.5</l>
+</lg>
+<lg>
+<l>śrīśiva uvāca /</l>
+<l>śabdabrahmamayaṃ devi mama vaktrād vinirgatam /</l>
+<l>ākārarahite devi yathā dhyānādikaṃ bhavet // MBhT_10.6</l>
+</lg>
+<lg>
+<l>tathaivoccāraṇenaiva bhaktiyuktena cetasā /</l>
+<l>satyaṃ satyaṃ maheśāni pratyakṣaṃ nātra saṃśayaḥ // MBhT_10.7</l>
+</lg>
+<lg>
+<l>śrīdevy uvāca /</l>
+<l>paśupradāne vākyaṃ tu kīdṛśaṃ vada śaṃkara /</l>
+<l>yena vākyena deveśa devī tuṣṭā bhavaty api // MBhT_10.8</l>
+</lg>
+<lg>
+<l>śrīśiva uvāca /</l>
+<l>mṛge mahiṣe coṣṭre ca paśuśabdaṃ na yojayet /</l>
+<l>chāgale ca tathā siṃhe vyāghre ca parameśvari // MBhT_10.9</l>
+</lg>
+<lg>
+<l>paśuśabdaṃ yojayitvā mahādevyai nivedayet /</l>
+<l>paśubhāvasthito mantrī mahiṣo dīyate yadi // MBhT_10.10</l>
+</lg>
+<lg>
+<l>balidānaṃ prakartavyaṃ na māṃsaṃ bhakṣayen naraḥ /</l>
+<l>samyak phalaṃ na labhate daśāṃśaṃ labhate priye // MBhT_10.11</l>
+</lg>
+<lg>
+<l>mahiṣādi pradātavyaṃ divyavīramate sthitaḥ /</l>
+<l>sa eva siddhim āpnoti phalaṃ samyak priyaṃvade // MBhT_10.12</l>
+</lg>
+<lg>
+<l>paśudānaṃ vinā devi pūjayen na kadācana /</l>
+<l>tathā ca nityapūjāyāṃ yadi śakto bhaven naraḥ // MBhT_10.13</l>
+</lg>
+<lg>
+<l>kevalaṃ balidānena siddho bhavati nānyathā /</l>
+<l>nirdhanaḥ parameśāni yadi pūjādikaṃ caret // MBhT_10.14</l>
+</lg>
+<lg>
+<l>vatsarānte pradātavyaṃ balim ekaṃ sureśvari /</l>
+<l>anyathā naiva siddhiḥ syād ājanma pūjanād api // MBhT_10.15</l>
+</lg>
+<lg>
+<l>balidānaṃ mahāyajñaṃ kalikāle ca caṇḍike /</l>
+<l>aśvamedhādikaṃ yajñaṃ kalau nāsti sureśvari // MBhT_10.16</l>
+</lg>
+<lg>
+<l>kevalaṃ balidānena cāśvamedhaphalaṃ bhavet /</l>
+<l>yajñāvaśeṣaṃ yad dravyaṃ bhojanīyaṃ na cānyathā // MBhT_10.17</l>
+</lg>
+<lg>
+<l>yajñāvaśeṣabhogena sa yajñī nātra saṃśayaḥ /</l>
+<l>na bhakṣed yadi mohena na yajñaphalabhāg bhavet // MBhT_10.18</l>
+</lg>
+<lg>
+<l>tyājyaṃ dravyaṃ kathaṃ devi mahādevyai nivedayet /</l>
+<l>brahmarūpaṃ mahātantraṃ mama vaktrād vinirgatam // MBhT_10.19</l>
+</lg>
+<lg>
+<l>sa pūtaḥ sarvapāpebhyo yadi caikākṣaraṃ śrutam /</l>
+<l>mahābhaktiyuto bhūtvā śṛṇoti paṭalaṃ yadi // MBhT_10.20</l>
+</lg>
+<lg>
+<l>kiṃ tasya dhyānapūjāyāṃ tīrthasnānena tasya kim /</l>
+<l>śabdabrahmamayaṃ jñātvā samastaṃ yadi caṇḍike // MBhT_10.21</l>
+</lg>
+<lg>
+<l>kevalaṃ śravaṇenaiva sa siddho nātra saṃśayaḥ /</l>
+<l>aṣṭādaśapurāṇānāṃ śravaṇenaiva yat phalam // MBhT_10.22</l>
+</lg>
+<lg>
+<l>caturvedena sāṅgena śravaṇenaiva yataḥ phalam /</l>
+<l>asya tantrasya deveśi kalāṃ nārhanti ṣoḍaśīm // MBhT_10.23</l>
+</lg>
+<l>brahmarūpam idaṃ tantraṃ sārāt sāraṃ parāt param // MBhT_10.24</l>
+
+<lg>
+<l>Mātṛkābhedatantra, ekādaśaḥ paṭalaḥ</l>
+<l>śrīcaṇḍikovāca /</l>
+<l>prāsādaṃ maṇḍapaṃ vāpi yadi devyai nivedayet /</l>
+<l>vidhānaṃ tasya māhātmyaṃ vada me parameśvara // MBhT_11.1</l>
+</lg>
+<lg>
+<l>kūpādikaṃ mahādeva yadi devyai nivedayet /</l>
+<l>vidhānaṃ tasya māhātmyaṃ vada me parameśvara // MBhT_11.2</l>
+</lg>
+<lg>
+<l>śrīśaṅkara uvāca /</l>
+<l>śṛṇu devi pravakṣyāmi yena prāsādam utsṛjet /</l>
+<l>tasyaiva paścime bhāge vedikāṃ caturasrakām // MBhT_11.3</l>
+</lg>
+<lg>
+<l>prakuryād bahuyatnena vastreṇa veṣṭanaṃ careta /</l>
+<l>tadabhāve maheśāni tṛṇenainaṃ ca veṣṭayet // MBhT_11.4</l>
+</lg>
+<lg>
+<l>kumbhayugmaṃ sthāpayitvā kṣaumavastreṇa veṣṭayet /</l>
+<l>yugmaṃ yugmaṃ kṣaumavastraṃ kumbhayugme niyojayet // MBhT_11.5</l>
+</lg>
+<lg>
+<l>īśakumbhe yajed devīm āgneyām agnidaivatam /</l>
+<l>catuḥṣaṣṭyupacāreṇa pūjayed iṣṭadevatām // MBhT_11.6</l>
+</lg>
+<lg>
+<l>abhāve pūjayed devīṃ tadardhena prayatnataḥ /</l>
+<l>athavā parameśāni yathāśaktyupacārataḥ // MBhT_11.7</l>
+</lg>
+<lg>
+<l>pūjayed bahuyatnena tato homādikaṃ caret /</l>
+<l>āgamoktena vidhinā kuryāt tatra kuśaṇḍikām // MBhT_11.8</l>
+</lg>
+<lg>
+<l>trimadhvaktena deveśi bilvapatreṇa homayet /</l>
+<l>sahasraṃ homayen mantrī śatanyūnaṃ na kārayet // MBhT_11.9</l>
+</lg>
+<lg>
+<l>pūrṇāhutiṃ tato dattvā tato vākyaṃ samācaret /</l>
+<l>adyetyādi samuccāryaṃ sauramāsaṃ samuccaret // MBhT_11.10</l>
+</lg>
+<lg>
+<l>tithigotraṃ cāmuko 'haṃ dharmārthakāmam eva vā /</l>
+<l>prāptaye parameśāni tato mūlaṃ samuccaret // MBhT_11.11</l>
+</lg>
+<lg>
+<l>devatāyai namaḥ paścād dakṣiṇāṃ dāpayed gurau /</l>
+<l>kumbhatoyena deveśi snāpayed yajamānakam // MBhT_11.12</l>
+</lg>
+<lg>
+<l>surās tv ādīn samuccārya śāntiṃ kuryāt tato guruḥ /</l>
+<l>sarvādau gurudevasya varaṇaṃ kārayet sudhīḥ // MBhT_11.13</l>
+</lg>
+<lg>
+<l>suvarṇaṃ campakākāraṃ karṇayugme nivedayet /</l>
+<l>catuṣkoṇayutaṃ svarṇaṃ grīvāyāṃ pariyojayet // MBhT_11.14</l>
+</lg>
+<lg>
+<l>uṣṇīṣaṃ ca tato dadyāt kaṇṭhe mālāṃ niyojayet /</l>
+<l>tāḍayugmaṃ tato bāhau valayaṃ maṇibandhake // MBhT_11.15</l>
+</lg>
+<lg>
+<l>aṅgulyām aṅgurī deyā divyavastraṃ niyojayet /</l>
+<l>evaṃ hi varaṇaṃ kṛtvā karmayogyaṃ vicintayet // MBhT_11.16</l>
+</lg>
+<lg>
+<l>guruṃ vā guruputraṃ vā varayed yatnataḥ sudhīḥ /</l>
+<l>sadasyaṃ na hi kartavyaṃ tantradhāraṃ na tatra vai // MBhT_11.17</l>
+</lg>
+<lg>
+<l>brahmāṇaṃ na hi kartavyaṃ kevalaṃ varayed gurum /</l>
+<l>guror bhṛtyo maheśāni bhairavo nātra saṃśayaḥ // MBhT_11.18</l>
+</lg>
+<lg>
+<l>svīyena paridhānena vāsasā toṣayet svayam /</l>
+<l>svayaṃ hotā bhaved vipro guror ājñānusārataḥ // MBhT_11.19</l>
+</lg>
+<lg>
+<l>māyābījaṃ samuccārya ādhāraśaktaye namaḥ /</l>
+<l>anena manunā devi vedisaṃskāram ācaret // MBhT_11.20</l>
+</lg>
+<lg>
+<l>bhūrasītyādimantreṇa ghaṭayugmābhimantritam /</l>
+<l>astrāntenaiva mūlena uṣṇīṣaṃ pariyojayet // MBhT_11.21</l>
+</lg>
+<lg>
+<l>vedoktaṃ caiva smṛtyuktaṃ mantraṃ na yojayet sudhīḥ /</l>
+<l>evaṃ kūpādidāneṣu kartavyaṃ parameśvari // MBhT_11.22</l>
+</lg>
+<lg>
+<l>anyat sarvaṃ samānaṃ hi prāsādādisthale punaḥ /</l>
+<l>kūpādiyojanaṃ kuryāt yaṣṭiprotanam ācaret // MBhT_11.23</l>
+</lg>
+<lg>
+<l>caturhastapramāṇaṃ ca madhyabhāge tu protanam /</l>
+<l>mūlamantraṃ samuccārya tato vahnivadhūṃ nyaset // MBhT_11.24</l>
+</lg>
+<lg>
+<l>tato yaṣṭiṃ samuccārya potayāmi vadet sudhīḥ /</l>
+<l>tatra saṃtaraṇaṃ dhenuṃ naiva kuryād vicakṣaṇaḥ // MBhT_11.25</l>
+</lg>
+<lg>
+<l>dhenusaṃtaraṇenaiva phalahāniḥ prajāyate /</l>
+<l>svarṇaṃ rūpyaṃ pravālaṃ ca dakṣiṇāṃ pariyojayeta // MBhT_11.26</l>
+</lg>
+<l>snāpayitvā kumbhatoyaiḥ śāntiṃ kuryāt tato guruḥ // MBhT_11.27</l>
+<lg>
+<l>anenaiva vidhānena kūpādyutsargam ācaret /</l>
+<l>vāpīkūpataḍāgādi hy anenotsargam ācaret // MBhT_11.28</l>
+</lg>
+<lg>
+<l>dīrghikāṃ ca puṣkariṇīṃ hy anenaiva jalāśayam /</l>
+<l>utsṛjya parayā bhaktyā mahādevyai prayatnataḥ // MBhT_11.29</l>
+</lg>
+<lg>
+<l>puruṣaṃ saptamaṃ kānte pitṛvaṃśe ca mātari /</l>
+<l>saptamaṃ puruṣaṃ kānte mātṛvaṃśe samaṃ priye // MBhT_11.30</l>
+</lg>
+<lg>
+<l>kailāse nivasen nityaṃ devyā varaprasādataḥ /</l>
+<l>svayaṃ devasvarūpaś ca jīvanmukto na saṃśayaḥ // MBhT_11.31</l>
+</lg>
+<lg>
+<l>aśvamedhasahasreṇa vājapeyaśatena ca /</l>
+<l>yat phalaṃ labhate devi tasmāl lakṣaguṇaṃ bhavet // MBhT_11.32</l>
+</lg>
+<lg>
+<l>merutulyaṃ suvarṇaṃ tu brāhmaṇe vedapārage /</l>
+<l>dattvā yat phalam āpnoti tasmāl lakṣaguṇaṃ bhavet // MBhT_11.33</l>
+</lg>
+<lg>
+<l>pūrṇaśasyena deveśi saptadvīpāṃ vasuṃdharām /</l>
+<l>pradadyād bahuyatnena brāhmaṇe vedapārage // MBhT_11.34</l>
+</lg>
+<l>tasmāl lakṣaguṇaṃ puṇyam anena parameśvari // MBhT_11.35</l>
+<lg>
+<l>sadakṣiṇaṃ vrataṃ sarvaṃ dānaṃ yad vedasaṃmatam /</l>
+<l>tasmāl lakṣaguṇaṃ puṇyam anena parameśvari // MBhT_11.36</l>
+</lg>
+<lg>
+<l>śrīcaṇḍikovāca /</l>
+<l>yajñasūtradhāraṇena bhūpūjyo nātra saṃśayaḥ /</l>
+<l>idānīṃ yajñasūtrasya vidhānaṃ mayi kathyatām // MBhT_11.37</l>
+</lg>
+<lg>
+<l>śrīśaṃkara uvāca /</l>
+<l>yajñasūtrasya yan mānaṃ tac chṛṇuṣva varānane /</l>
+<l>ṛgvedī dhārayet sūtraṃ nābher ūrdhvaṃ stanād adhaḥ // MBhT_11.38</l>
+</lg>
+<lg>
+<l>yajuṣāṃ sūtramānaṃ hi āścaryaṃ śailaje param /</l>
+<l>bāhumūlapramāṇena yajñasūtraṃ dvijātibhiḥ /</l>
+<l>dhāraṇīyaṃ prayatnena nānyad dairghyaṃ kadācana // MBhT_11.39</l>
+</lg>
+<lg>
+<l>sāmagasya yajñasūtraṃ trividhaṃ varavarṇini /</l>
+<l>brahmarandhrān nābhideśaparyantaṃ yajñasūtrakam // MBhT_11.40</l>
+</lg>
+<lg>
+<l>athavāpi ca grīvāyām āropya nābhiṃ saṃspṛśet /</l>
+<l>tasmāt pṛṣṭhān merudaṇḍaparyantaṃ yajñasūtrakam // MBhT_11.41</l>
+</lg>
+<lg>
+<l>athavā parameśāni prakārāntarakaṃ śṛṇu /</l>
+<l>grīvāyā dakṣiṇāṅguṣṭhaparyantaṃ yajñasūtrakam // MBhT_11.42</l>
+</lg>
+<lg>
+<l>athavā dhārayet sūtraṃ yatnena yajuṣāṃ matam /</l>
+<l>athavā dhārayet sūtraṃ sāmagasya pramāṇataḥ // MBhT_11.43</l>
+</lg>
+<lg>
+<l>atharvī dhārayed yajñasūtraṃ paramamohanam /</l>
+<l>ājñācakrān nābhideśaparyantaṃ yajñasūtrakam // MBhT_11.44</l>
+</lg>
+<lg>
+<l>etat saṃketam ajñātvā yaḥ kuryāt sūtradhāraṇam /</l>
+<l>sa caṇḍālasamo devi yadi vyāsasamo bhavet // MBhT_11.45</l>
+</lg>
+
+<lg>
+<l>Mātṛkābhedatantra, dvādaśaḥ paṭalaḥ</l>
+<l>śrīśaṃkara uvāca /</l>
+<l>athātaḥ sampravakṣyāmi pūjādhāraṃ sudurlabham // MBhT_12.1</l>
+</lg>
+<l>śālagrāme maṇau yantre pratimāyāṃ ghaṭe jale // MBhT_12.2</l>
+<lg>
+<l>pustikāyāṃ ca gaṅgāyāṃ śivaliṅge prasūnake /</l>
+<l>śālagrāme śataguṇaṃ maṇau tadvat phalaṃ labhet // MBhT_12.3</l>
+</lg>
+<lg>
+<l>yantre lakṣaguṇaṃ puṇyaṃ mūrtau lakṣaṃ sulocane /</l>
+<l>ghaṭe caikaguṇaṃ puṇyaṃ jale caikaguṇaṃ priye // MBhT_12.4</l>
+</lg>
+<lg>
+<l>pustikāyāṃ sahasraṃ tu gaṅgāyāṃ tatsamaṃ phalam /</l>
+<l>śivaliṅge hy anantaṃ hi vinā pārthivaliṅgake // MBhT_12.5</l>
+</lg>
+<lg>
+<l>puṣpayantre maheśāni pūjanāt sarvasiddhibhāk /</l>
+<l>śālagrāme ca pūjāyāṃ na likhed yantram uttamam // MBhT_12.6</l>
+</lg>
+<lg>
+<l>maṇau sthite maheśāni na likhed yantram uttamam /</l>
+<l>pratimāyāṃ ca pūjāyāṃ na likhed yantram uttamam // MBhT_12.7</l>
+</lg>
+<lg>
+<l>pratimāyāś ca purato ghaṭaṃ saṃsthāpya yatnataḥ /</l>
+<l>parivārān yajet tatra ghaṭe tu parameśvari // MBhT_12.8</l>
+</lg>
+<lg>
+<l>yantrādhiṣṭhātṛdevāṃś ca ghaṭe yantre prapūjayet /</l>
+<l>samastadevatārūpaṃ ghaṭaṃ tu paricintayet /</l>
+<l>suradrumasvarūpo 'yaṃ ghaṭo hi parameśvari // MBhT_12.9</l>
+</lg>
+<lg>
+<l>janmasthānaṃ mahāyantraṃ yadi kuryāt tu sādhakaḥ /</l>
+<l>tatra mūrtiṃ na kuryāt tu kadācid api mohataḥ // MBhT_12.10</l>
+</lg>
+<lg>
+<l>yadi mūrtiṃ prakuryāt tu tatra yantraṃ na kārayet /</l>
+<l>yadi kuryāt tu mohena yajed vāradvayaṃ priye // MBhT_12.11</l>
+</lg>
+<lg>
+<l>dviguṇaṃ pūjanaṃ tatra dviguṇaṃ balidānakam /</l>
+<l>dviguṇaṃ prajapen mantraṃ dviguṇaṃ homayet sudhīḥ // MBhT_12.12</l>
+</lg>
+<lg>
+<l>anyathā viphalā pūjā viphalaṃ balidānakam /</l>
+<l>sarvaṃ hi viphalaṃ yasmāt tasmād yantraṃ na kārayet // MBhT_12.13</l>
+</lg>
+<l>iti te kathitaṃ kānte pūjādhāraṃ sudurlabham // MBhT_12.14</l>
+<lg>
+<l>athātaḥ sampravakṣyāmi śivaliṅgasya lakṣaṇam /</l>
+<l>pārthive śivapūjāyāṃ sarvasiddhiyuto bhavet // MBhT_12.15</l>
+</lg>
+<lg>
+<l>pāṣāṇe śivapūjāyāṃ dviguṇaṃ phalam īritam /</l>
+<l>svarṇaliṅge ca pūjāyāṃ śatrūṇāṃ nāśanaṃ matam // MBhT_12.16</l>
+</lg>
+<lg>
+<l>sarvasiddhīśvaro raupye phalaṃ tasmāc caturguṇam /</l>
+<l>tāmre puṣṭiṃ vijānīyāt kāṃsye ca dhanasaṃcayam // MBhT_12.17</l>
+</lg>
+<lg>
+<l>pāradasya ca māhātmyaṃ puraiva kathitaṃ mayā /</l>
+<l>gaṅgāyāṃ ca lakṣaguṇaṃ lākṣāyāṃ rogavān bhavet // MBhT_12.18</l>
+</lg>
+<lg>
+<l>sphāṭike sarvasiddhiḥ syāt tathā mārakate priye /</l>
+<l>lauhaliṅge ripor nāśaṃ kāmadaṃ bhasmaliṅgake // MBhT_12.19</l>
+</lg>
+<lg>
+<l>vālukāyāṃ kāmyasiddhir gomaye ṛtuhiṃsanam /</l>
+<l>sarvaliṅgasya māhātmyaṃ dharmārthakāmamokṣadam // MBhT_12.20</l>
+</lg>
+<lg>
+<l>ādhārabhede yat puṇyaṃ cādhikaṃ kathitaṃ tu te /</l>
+<l>atiriktaphalāny etaddhārasya sulocane // MBhT_12.21</l>
+</lg>
+<lg>
+<l>śivasya pūjanād devi caturvargādhipo bhavet /</l>
+<l>aṣṭaiśvaryayuto martyaḥ śambhunāthasya pūjanāt // MBhT_12.22</l>
+</lg>
+<lg>
+<l>svayaṃ nārāyaṇaḥ prokto yadi śambhuṃ prapūjayet /</l>
+<l>svarge martye ca pātāle ye devāḥ saṃsthitāḥ sadā /</l>
+<l>teṣāṃ pūjā bhaved devi śambhunāthasya pūjanāt // MBhT_12.23</l>
+</lg>
+<lg>
+<l>svarṇapuṣpasahasreṇa yat phalaṃ labhate naraḥ /</l>
+<l>tasmāl lakṣaguṇaṃ puṇyaṃ bhagnaikabilvapattrake // MBhT_12.24</l>
+</lg>
+<lg>
+<l>bhagnaikabilvapattrasya sahasrakena bhāgataḥ /</l>
+<l>merutulyasuvarṇena tatphalaṃ na hi labhyate // MBhT_12.25</l>
+</lg>
+<lg>
+<l>śuddhāśuddhavicāro 'pi nāsti tac chivapūjane /</l>
+<l>yena tena prakāreṇa bilvapattraiḥ prapūjanāt /</l>
+<l>sarvasiddhiyuto bhūtvā sa naraḥ siddho hi // MBhT_12.26</l>
+</lg>
+<lg>
+<l>brahmāṇḍamadhye ye devās tadbāhye yāś ca devatāḥ /</l>
+<l>te sarve tṛptim āyānti kevalaṃ śivapūjanāt // MBhT_12.27</l>
+</lg>
+<lg>
+<l>puṣpaṃ gandhaṃ jalaṃ dravyaṃ liṅgopari niyojayet /</l>
+<l>liṅgamadhye mahāvahniḥ saiva rudraḥ prakīrtitaḥ // MBhT_12.28</l>
+</lg>
+<l>rudropari kṣiped yat tu tad eva bhasmatāṃ gataḥ // MBhT_12.29</l>
+<lg>
+<l>sākṣād dhomo maheśāni śivasya pūjanād bhavet /</l>
+<l>mahāyajñeśvaro martyaḥ śivasya pūjanād bhavet // MBhT_12.30</l>
+</lg>
+<lg>
+<l>kuśāgramānaṃ yat toyaṃ tat toyena yajed yadi /</l>
+<l>satyaṃ satyaṃ hi girije taj jalaṃ sāgaropamam // MBhT_12.31</l>
+</lg>
+<lg>
+<l>puṣpaṃ ca merusadṛśaṃ liṅgopari niyojanāt /</l>
+<l>liṅgasya mastake devi yad annaṃ paritiṣṭhati // MBhT_12.32</l>
+</lg>
+<l>tadannasya ca dānena kṣitidānaphalaṃ labhet // MBhT_12.33</l>
+<lg>
+<l>ekena taṇḍulenaiva yadi liṅgaṃ prapūjayet /</l>
+<l>brahmāṇḍapātrasampūrṇam annadānaphalaṃ labhet // MBhT_12.34</l>
+</lg>
+<lg>
+<l>ekayā dūrvayā vāpi yo 'rcayec chivaliṅgakam /</l>
+<l>sarvadevasya śīrṣe tu cārdhadānaphalaṃ labhet // MBhT_12.35</l>
+</lg>
+<lg>
+<l>sāmānyatoyam ānīya yadi snāyān maheśvaram /</l>
+<l>sārdhatrikoṭitīrthasya snānasya phalabhāg bhavet // MBhT_12.36</l>
+</lg>
+<lg>
+<l>śrīcaṇḍikovāca /</l>
+<l>tāriṇī brahmaṇaḥ śaktis tripurā vaiṣṇavī parā /</l>
+<l>kathaṃ śākambharī tārā tripurā śāmbhavī katham // MBhT_12.37</l>
+</lg>
+<lg>
+<l>śrīśaṃkara uvāca /</l>
+<l>kālī dehād yadā jātā sāvitrī vedamātṛkā /</l>
+<l>trivargadātrī sā devī brahmaṇaḥ śaktir eva ca // MBhT_12.38</l>
+</lg>
+<lg>
+<l>guptarūpā mahāvidyā śaivī saikajaṭā parā /</l>
+<l>tasmāl lakṣmīr vaiṣṇavī yā trivargadāyinī śivā // MBhT_12.39</l>
+</lg>
+<lg>
+<l>guptarūpā mahāvidyā śrīmattripurasundarī /</l>
+<l>śāmbhavī paramā māyā tripurā mokṣadāyinī // MBhT_12.40</l>
+</lg>
+<lg>
+<l>ekaiva hi mahāvidyā nāmamātraṃ pṛthak pṛthak /</l>
+<l>tathaiva puruṣaś caiko nāmamātravibhedakaḥ // MBhT_12.41</l>
+</lg>
+<lg>
+<l>śrīcaṇḍikovāca /</l>
+<l>mantradhāraṇamātreṇa tadātmā tanmayo bhavet /</l>
+<l>kathaṃ vā vātulaḥ so 'pi kathaṃ vā rogavān bhavet // MBhT_12.42</l>
+</lg>
+<lg>
+<l>śrīśaṃkara uvāca /</l>
+<l>mantracchannād vātulatvaṃ rogo dehe na jāyate /</l>
+<l>mantracchannaṃ pravakṣyāmi śṛṇu devi samāhitā // MBhT_12.43</l>
+</lg>
+<lg>
+<l>abhaktiś cākṣare bhrāntir luptiś channas tathaiva ca /</l>
+<l>hrasvo dīrghaś ca kathanaṃ svapne tu cāṣṭadhā smṛtaḥ // MBhT_12.44</l>
+</lg>
+<lg>
+<l>abhaktyā naiva siddhiḥ syāt kalpakoṭiśatair api /</l>
+<l>evaṃ mantraś cānyathā vā ceti bhrāntyā ca vātulaḥ // MBhT_12.45</l>
+</lg>
+<lg>
+<l>luptavarṇe buddhināśaś chinne nāśo bhavet kila /</l>
+<l>hrasvoccāre vyādhiyukto dīrghajāpe vasukṣayaḥ // MBhT_12.46</l>
+</lg>
+<lg>
+<l>kathane mṛtyum āpnoti svapne 'pi śṛṇu śailaje /</l>
+<l>kālikāyāś ca tārāyā mantro 'pi jvaladagnivat // MBhT_12.47</l>
+</lg>
+<lg>
+<l>viprarūpeṇa devena premabhāvena cetasā /</l>
+<l>yadi mantraṃ hared devi śṛṇu sādhakalakṣaṇam // MBhT_12.48</l>
+</lg>
+<lg>
+<l>sarvāṅge vai bhavej jvālā dehamadhye viśeṣataḥ /</l>
+<l>toye śaityaṃ na jāyeta tathaivauṣadhasevane // MBhT_12.49</l>
+</lg>
+<lg>
+<l>sadā vātulavat sarvaṃ pratyakṣe svapnavad bhavet /</l>
+<l>varṣamadhye trivarṣe vā mṛtyus tasya na saṃśayaḥ // MBhT_12.50</l>
+</lg>
+<lg>
+<l>śrīcaṇḍikovāca /</l>
+<l>mantracchannaṃ cāṣṭavidhaṃ tava vaktrāc chrutaṃ mayā /</l>
+<l>yadi daivād bhaved deva tasyopāyaṃ vadasva me // MBhT_12.51</l>
+</lg>
+<lg>
+<l>śrīśaṃkara uvāca /</l>
+<l>bahujāpāt tathā homāt kāyakleśādivistarāt /</l>
+<l>yadi bhaktir bhaved devi tasya siddhir adūrataḥ // MBhT_12.52</l>
+</lg>
+<lg>
+<l>guruṇā tatsutenaiva sādhakena varānane /</l>
+<l>akṣare dūṣaṇaṃ hitvā punar mantraṃ prakāśayet // MBhT_12.53</l>
+</lg>
+<lg>
+<l>guruṇā tatsutenaiva sādhakena samāhitaḥ /</l>
+<l>luptavarṇaṃ samutthāpya punar mantraṃ prakāśayet // MBhT_12.54</l>
+</lg>
+<lg>
+<l>cakrabhedena ṣaṭkoṇaṃ tathaiva yonimudrayā /</l>
+<l>ekoccāre japen mantraṃ lakṣam ekaṃ varānane /</l>
+<l>gurvādinā maheśāni chinnadoṣanikṛntanam // MBhT_12.55</l>
+</lg>
+<lg>
+<l>guruṇā lakṣajāpena tan mantraṃ śrāvayet tridhā /</l>
+<l>dūṣaṇaṃ hrasvadīrghasya śāntiś cātra na saṃśayaḥ // MBhT_12.56</l>
+</lg>
+<lg>
+<l>guruṇā tatsutenaiva sādhakenaiva śailaje /</l>
+<l>uktamārgeṇa deveśi japel lakṣacatuṣṭayam // MBhT_12.57</l>
+</lg>
+<l>taddaśāṃśaṃ hunet paścāt tarpaṇādi samācaret // MBhT_12.58</l>
+<lg>
+<l>tato 'pi yadi naivābhūt sādhakaḥ sthiramānasaḥ /</l>
+<l>caturguṇaṃ hi kartavyaṃ śiṣyasya muktihetave // MBhT_12.59</l>
+</lg>
+<lg>
+<l>yadi mṛtyur bhavet tasya tathāpi muktibhāg bhavet /</l>
+<l>kathanasya doṣaśāntir bhavaty eva na saṃśayaḥ // MBhT_12.60</l>
+</lg>
+<lg>
+<l>svapne 'pi mantrakathane śmaśāne caiva śailaje /</l>
+<l>uktamārgeṇa deveśi japel lakṣaṃ catuṣṭayam // MBhT_12.61</l>
+</lg>
+<lg>
+<l>taddaśāṃśaṃ hunet paścāt tarpaṇādi samācaret /</l>
+<l>tato 'pi yadi naivābhūt sādhakaḥ sthiramānasaḥ // MBhT_12.62</l>
+</lg>
+<lg>
+<l>caturguṇaṃ hi kartavyaṃ pūrvoktaṃ pūjanaṃ caret /</l>
+<l>kuje vā śanivāre vā prathame gamanaṃ caret /</l>
+<l>saptāhaṃ vā yajed devīṃ turīyaṃ vādinaṃ yajet // MBhT_12.63</l>
+</lg>
+<lg>
+<l>śmaśānasādhanaṃ vakṣye śṛṇu caikāgracetasā /</l>
+<l>svarṇaṃ raupyaṃ tathā vastraṃ dattvā varaṇam ācaret // MBhT_12.64</l>
+</lg>
+<lg>
+<l>svarṇapīṭhaṃ pradātavyaṃ caturaṅgulivistṛtam /</l>
+<l>bhogayogyaṃ pradātavyaṃ madhuparkaṃ yathoditam // MBhT_12.65</l>
+</lg>
+<lg>
+<l>rājapatnī yena tuṣṭā toṣayet tena vāsasā /</l>
+<l>alaṃkāraṃ yathāyogyaṃ tatra tatra niyojayet // MBhT_12.66</l>
+</lg>
+<lg>
+<l>naivedyaṃ vividhaṃ ramyaṃ nānādravyasamanvitam /</l>
+<l>sāmiṣānnaṃ guḍaṃ chāgaṃ surāpiṣṭakapāyasam // MBhT_12.67</l>
+</lg>
+<lg>
+<l>bhogyadravyaṃ jale dadyād yadi bhoktā na tiṣṭhati /</l>
+<l>evaṃ pūjāṃ samāpyādau śivapūjāṃ samācaret // MBhT_12.68</l>
+</lg>
+<lg>
+<l>ṣoḍaśair upacāraiś ca liṅgānāṃ caikaviṃśatim /</l>
+<l>aṣṭottaraśatenaiva bilvapattraiḥ sacandanaiḥ // MBhT_12.69</l>
+</lg>
+<lg>
+<l>pratyekaṃ pūjayen mantraṃ gajāntakasahasrakam /</l>
+<l>sahasraṃ homayet paścād bilvapattrair varānane // MBhT_12.70</l>
+</lg>
+<l>evaṃ kṛte labhec chāntiṃ dīrghāyur nātra saṃśayaḥ // MBhT_12.71</l>
+
+<p>Mātṛkābhedatantra, trayodaśaḥ paṭalaḥ
+<lg>
+<l>śrīcaṇḍikovāca /</l>
+<l>śṛṇu nātha parānanda parāparajagatpate /</l>
+<l>idānīṃ śrotum icchāmi mālāyāḥ kīdṛśo japaḥ /</l>
+<l>kā mālā kasya devasya tad vadasva samāhitaḥ // MBhT_13.1</l>
+</lg>
+<lg>
+<l>śrīśaṃkara uvāca /</l>
+<l>vaiṣṇave tulasīmālā gajadantair gaṇeśvare /</l>
+<l>kālikāyā mahāmantraṃ japed rudrākṣamālayā // MBhT_13.2</l>
+</lg>
+<lg>
+<l>tārāyāś ca japen mantrī mahāśaṅkhākhyamālayā /</l>
+<l>mahāśaṅkhākhyamālāyāṃ sarvāṃ vidyāṃ japet sudhīḥ // MBhT_13.3</l>
+</lg>
+<lg>
+<l>akasmād vai mahāsiddhir mahāśaṅkhākhyamālayā /</l>
+<l>tathaiva sakalā vidyā mahāśaṅkhe vaset sadā // MBhT_13.4</l>
+</lg>
+<lg>
+<l>sphāṭikī sarvadevasya pravālaiḥ sakalāṃ japet /</l>
+<l>svarṇaraupyasamudbhūtāṃ sarvadeveṣu yojitām // MBhT_13.5</l>
+</lg>
+<lg>
+<l>kālikāyāś ca sundaryā rudrākṣaiḥ prajapet sadā /</l>
+<l>bhairavyāḥ prajapen mantrī śaṅkhapadmākhyayā priye // MBhT_13.6</l>
+</lg>
+<lg>
+<l>śmaśāne dhusturair mālā japed dhūmāvatīvidhau /</l>
+<l>iti te kathitaṃ kānte mahāmālāvinirṇayam // MBhT_13.7</l>
+</lg>
+<lg>
+<l>atha granthiṃ pravakṣyāmi śṛṇu kānte samāhitā /</l>
+<l>yena mālā susiddhā ca nṇāṃ sarvaphalapradā // MBhT_13.8</l>
+</lg>
+<lg>
+<l>mālāyāś cādhikā kānte granthiś caikā phalapradā /</l>
+<l>ekapañcāśikāyāṃ ca mālāyāṃ parameśvari // MBhT_13.9</l>
+</lg>
+<lg>
+<l>brahmagranthiyutāṃ mālāṃ sārdhadvitayaveṣṭitām /</l>
+<l>sapādaveṣṭanaṃ devi nāgapāśaṃ manoharam // MBhT_13.10</l>
+</lg>
+<lg>
+<l>sarvadevasya mālāyāṃ sarvatra parameśvari /</l>
+<l>brahmagranthiṃ vidhāyetthaṃ nāgapāśam athāpi vā // MBhT_13.11</l>
+</lg>
+<lg>
+<l>mālāyāṃ tv adhikāṃ devi caikāṃ granthiṃ pradāpayet /</l>
+<l>mūlena grathitaṃ kuryāt praṇavenāthavā priye // MBhT_13.12</l>
+</lg>
+<lg>
+<l>granthimadhye ca guṭikāṃ kuryād atimanoharām /</l>
+<l>sūtradvayaṃ maheśāni milanaṃ kārayet tataḥ // MBhT_13.13</l>
+</lg>
+<lg>
+<l>meruṃ ca grathanaṃ kuryāt tadūrdhve granthisaṃyutam /</l>
+<l>evaṃ mālāṃ vinirmāya gopayed bahuyatnataḥ // MBhT_13.14</l>
+</lg>
+<lg>
+<l>kampanaṃ dhūnanaṃ śabdaṃ naiva tatra prakāśayet /</l>
+<l>karabhraṣṭaṃ tathā chinnaṃ mahāvighnasya kāraṇam // MBhT_13.15</l>
+</lg>
+<lg>
+<l>kampane siddhihāniḥ syād dhūnanaṃ bahuduḥkhadam /</l>
+<l>śabde jāte bhaved rogaḥ karabhraṣṭād vināśakṛt // MBhT_13.16</l>
+</lg>
+<lg>
+<l>chinnasūtre bhaven mṛtyus tasmād yatnaparo bhavet /</l>
+<l>evaṃ jñātvā maheśāni śāntisvastyayanaṃ caret // MBhT_13.17</l>
+</lg>
+<lg>
+<l>kampane yo japen mantraṃ yadi siddhiṃ prayacchati /</l>
+<l>yatnena gurum ānīya dvāviṃśadupacārataḥ // MBhT_13.18</l>
+</lg>
+<lg>
+<l>kumbhasthāpanakaṃ kṛtvā pūjayed iṣṭadevatām /</l>
+<l>tato huned bilvapattrair aṣṭottaraśatāhutim // MBhT_13.19</l>
+</lg>
+<lg>
+<l>trimadhvaktena vidhinā dhūnane 'pi ca sundari /</l>
+<l>saśabde japane caṇḍi hy evaṃ kuryād vicakṣaṇaḥ // MBhT_13.20</l>
+</lg>
+<lg>
+<l>karabhraṣṭe tathā chinne puraścaraṇam ācaret /</l>
+<l>japādyante yajed devīṃ ṣoḍaśair upacārakaiḥ // MBhT_13.21</l>
+</lg>
+<lg>
+<l>pratyahaṃ prajapen mantraṃ pratyahaṃ balidānakam /</l>
+<l>pañcāṅgasya pramāṇena sarvakarma samāpayet // MBhT_13.22</l>
+</lg>
+<lg>
+<l>daridraḥ parameśāni yadi vighnaparāyaṇaḥ /</l>
+<l>ādyante mahatīṃ pūjāṃ diksahasraṃ japen manum // MBhT_13.23</l>
+</lg>
+<lg>
+<l>sahasraikaṃ hunet paścāt sarvavighnasya śāntaye /</l>
+<l>kumbhatoyaiḥ snāpayitvā punar mālāṃ pradāpayet // MBhT_13.24</l>
+</lg>
+<l>anenaiva vidhānena vighnajālair na lipyate // MBhT_13.25</l></p>
+
+<lg>
+<l>Mātṛkābhedatantra, caturdaśaḥ paṭalaḥ</l>
+<l>śrīcaṇḍikovāca /</l>
+<l>mantradhāraṇamātreṇa tatkṣaṇe tanmayo bhavet /</l>
+<l>jīvātmā kuṇḍalīmadhye pradīpakalikā yathā // MBhT_14.1</l>
+</lg>
+<lg>
+<l>nijeṣṭadevatārūpā dehasaṃsthā ca kuṇḍalī /</l>
+<l>bhujyate saiva dehasthā kā cintā sādhakasya ca /</l>
+<l>tan me brūhi mahādeva yady ahaṃ tava vallabhā // MBhT_14.2</l>
+</lg>
+<lg>
+<l>śrīśaṃkara uvāca /</l>
+<l>bhogas tu trividho devi divyavīrapaśukramāt /</l>
+<l>nirlipto divyabhāvasthaḥ kuṇḍalī bhujyate yadi // MBhT_14.3</l>
+</lg>
+<lg>
+<l>ajihvāntā kuṇḍalinī vīrasya vīravandite /</l>
+<l>mahādevyāḥ prītaye ca prasādaṃ bhujyate paśuḥ // MBhT_14.4</l>
+</lg>
+<lg>
+<l>dvijāter divyabhāvaś ca sadā nirvāṇadāyakaḥ /</l>
+<l>vipro vīraś ca nirvāṇī bhavaty eva na saṃśayaḥ // MBhT_14.5</l>
+</lg>
+<lg>
+<l>sāyujyādi mahāmokṣaṃ niyuktaṃ kṣatriyādiṣu /</l>
+<l>paśunā bhaktiyuktena prasādaṃ bhujyate yadi // MBhT_14.6</l>
+</lg>
+<lg>
+<l>svargabhogī bhavaty eva maraṇe nādhikāritā /</l>
+<l>janmāntaram avāpnoti mahādevyāḥ prasādataḥ // MBhT_14.7</l>
+</lg>
+<lg>
+<l>divyavīramate dṛṣṭir jāyate nātra saṃśayaḥ /</l>
+<l>divyavīraprasādena nirvāṇī nātra saṃśayaḥ // MBhT_14.8</l>
+</lg>
+<lg>
+<l>prasādabhogī yo devi sa paśur nātra saṃśayaḥ /</l>
+<l>maraṇe nādhikāro 'sti paśubhāvasthitasya ca // MBhT_14.9</l>
+</lg>
+<l>naiva muktir bhavet tasya janma cāpnoti niścitam // MBhT_14.10</l>
+<lg>
+<l>śrīcaṇḍikovāca /</l>
+<l>vada me parameśāna divyavīrasya lakṣaṇam /</l>
+<l>yat kṛte divyavīrasya mahāmuktir bhaviṣyati // MBhT_14.11</l>
+</lg>
+<lg>
+<l>śrīśaṃkara uvāca /</l>
+<l>sākṣād brahmamayī devī cābhiśaptā ca vāruṇī /</l>
+<l>śāpamocanamātreṇa brahmarūpā sudhā parā // MBhT_14.12</l>
+</lg>
+<lg>
+<l>nivedanān mahādevyai tat tad devī bhavet kila /</l>
+<l>mūlādhārāt kuṇḍalinīm ājihvāntāṃ vibhāvayet // MBhT_14.13</l>
+</lg>
+<lg>
+<l>tanmukhe dānamātreṇa jñānavān sādhako bhavet /</l>
+<l>yathaiva kuṇḍalī devī dehamadhye vyavasthitā // MBhT_14.14</l>
+</lg>
+<lg>
+<l>tathaiva vāruṇīṃ dhyāyet kalāṅge sveṣṭadevatām /</l>
+<l>kuṇḍalyā samabhāvena śaktivaktre pradāpayet // MBhT_14.15</l>
+</lg>
+<lg>
+<l>ātmocchiṣṭaṃ mahāpūtaṃ tanmukhāt paramāmṛtam /</l>
+<l>avaśyam eva gṛhṇīyāt tādātmyena varānane // MBhT_14.16</l>
+</lg>
+<lg>
+<l>utsṛṣṭādivicāro 'pi kadācin nāsti brahmaṇi /</l>
+<l>gaṅgātoyaṃ paraṃ brahma prasādaṃ kasya tad vada // MBhT_14.17</l>
+</lg>
+<lg>
+<l>gaṅgāsāgaratoyaṃ vā prasādaṃ kasya vā bhavet /</l>
+<l>śṛṇu devi pravakṣyāmi tajjale snānamātrataḥ // MBhT_14.18</l>
+</lg>
+<lg>
+<l>muktibhāgī bhaven martyaḥ snānāvagāhanāt kila /</l>
+<l>pādādimastakāntaṃ vai snānakāle pramajjati // MBhT_14.19</l>
+</lg>
+<lg>
+<l>pādasparśo na doṣāya parabrahmaṇi śailaje /</l>
+<l>paramātmani līne ca tathaiva parameśvari // MBhT_14.20</l>
+</lg>
+<lg>
+<l>iti te kathitaṃ devi divyavīrasya lakṣaṇam /</l>
+<l>vīratantre ca kathitaṃ māhātmyaṃ prāṇavallabhe // MBhT_14.21</l>
+</lg>
+<lg>
+<l>śṛṇu devi pravakṣyāmi sādhikāyāś ca lakṣaṇam /</l>
+<l>divyaśaktir vīraśaktir guruśaktis tathā parā // MBhT_14.22</l>
+</lg>
+<lg>
+<l>kulaśaktiḥ kāminī ca navaśaktiḥ kumārikā /</l>
+<l>śrīguruṃ pūjayed bhaktyā svadehadānapūrvakam // MBhT_14.23</l>
+</lg>
+<lg>
+<l>anyathā tu svadehasya nigraho jāyate dhruvam /</l>
+<l>saptajanmani sā devī pukkasī pativarjitā // MBhT_14.24</l>
+</lg>
+<lg>
+<l>śivaṃ matvā svakāntaṃ ca pūjāsādhanam ācaret /</l>
+<l>kadācin na yajec cānyaṃ puruṣaṃ parameśvari // MBhT_14.25</l>
+</lg>
+<lg>
+<l>anyasya yajanāc caṇḍi sarvanāśo bhaved dhruvam /</l>
+<l>kāntasyāyurvihīnatvaṃ vipatiṃ ca pade pade // MBhT_14.26</l>
+</lg>
+<lg>
+<l>dhananāśo bhaven nityaṃ devyāḥ krodhaś ca jāyate /</l>
+<l>avaśyaṃ pūjayen nityaṃ gurudevaṃ sanātanam // MBhT_14.27</l>
+</lg>
+<lg>
+<l>bhadrābhadravicāraṃ ca yā karoti gurusthale /</l>
+<l>tasyā mantraṃ krodhayuktaṃ vipattiś ca pade pade // MBhT_14.28</l>
+</lg>
+<lg>
+<l>varaṃ janamukhān nindā varaṃ prāṇān parityajet /</l>
+<l>tathāpi pūjayed devaṃ sākṣān nirvāṇadāyakam // MBhT_14.29</l>
+</lg>
+<l>sadā bhayaṃ ca kāpaṭyaṃ varjayed gurupūjane // MBhT_14.30</l>
+<lg>
+<l>śrīguros tejasaṃ bhaktyā yadi dhāraṇam ācaret /</l>
+<l>satyaṃ satyaṃ punaḥ satyaṃ kāśī sā nātra saṃśayaḥ // MBhT_14.31</l>
+</lg>
+<lg>
+<l>abhaktyā parameśāni yadi dhāraṇam ācaret /</l>
+<l>japapūjādikaṃ tasyāḥ saṃdahet tena tejasā // MBhT_14.32</l>
+</lg>
+<lg>
+<l>śrīcaṇḍikovāca /</l>
+<l>sapatnīkaṃ yajed devaṃ guruṃ nirvāṇadāyakam /</l>
+<l>tasya saṅgaṃ parityajya katham ātmaniyojanam // MBhT_14.33</l>
+</lg>
+<lg>
+<l>śrīśaṃkara uvāca /</l>
+<l>śṛṇu devi pravakṣyāmi guror ājñānusārataḥ /</l>
+<l>dhārayet tejasaṃ bhaktyā svayaṃ lipsāvivarjitā // MBhT_14.34</l>
+</lg>
+<lg>
+<l>gurupatnyāś cātmajaś ca śrīguror ātmajo yataḥ /</l>
+<l>gurupatnī guruḥ sākṣād guruputro na saṃśayaḥ // MBhT_14.35</l>
+</lg>
+<lg>
+<l>ekasya pūjanāt kānta ubhayoḥ pūjanaṃ bhavet /</l>
+<l>guruputro gaṇeśaś ca guruputraḥ ṣaḍānanaḥ // MBhT_14.36</l>
+</lg>
+<lg>
+<l>ekaṃ gurusutaṃ kānte pūjane yā sadā ratā /</l>
+<l>anyaṃ gurusutaṃ kānte pūjayen na kadācana // MBhT_14.37</l>
+</lg>
+<lg>
+<l>vīraṃ vā divyamūrtiṃ vā kadācin na hi pūjayet /</l>
+<l>ekasya pūjanād devi mahāsiddhīśvaro bhavet // MBhT_14.38</l>
+</lg>
+<lg>
+<l>ubhayos trīṇi catvāri yā nārī pūjanaṃ caret /</l>
+<l>tasyāḥ samastaṃ viphalaṃ dhyānādijapapūjanam // MBhT_14.39</l>
+</lg>
+<lg>
+<l>yadi bhāgyavaśād devi ekaṃ gurusutaṃ labhet /</l>
+<l>manojñaṃ śāstravettāraṃ nigrahānugrahe ratam // MBhT_14.40</l>
+</lg>
+<lg>
+<l>sundaraṃ yauvanonmattaṃ gurutulyaṃ jitendriyam /</l>
+<l>prāṇānte 'pi ca kartavyaṃ pūjanaṃ mokṣadāyakam // MBhT_14.41</l>
+</lg>
+<l>no yajed yadi mohena saiva pāpamayī bhavet // MBhT_14.42</l>
+
+  </body>
+</text>
+</TEI>

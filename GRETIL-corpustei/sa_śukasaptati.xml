@@ -1,0 +1,4821 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_zukasaptati">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Śukasaptati</title>
+	<author></author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>members of the Sansknet Project</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>members of the Sansknet Project</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/5_poetry/4_narr/suksaptu.htm">suksaptu.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Sukasaptati
+<lb/>
+<lb/>Input by members of the Sansknet project
+<lb/>(formerly: www.sansknet.org)
+<lb/>
+<lb/>This GRETIL version has been converted from a custom Devanagari encoding.
+<lb/>Therefore, word boundaries are usually not marked by blanks.
+<lb/>
+<lb/>THE TEXT IS NOT PROOF-READ!
+<lb/>
+<lb/>REFERENCE SYSTEM (added):
+<lb/>Suk_n.n (=n) = Sukasaptati_kathā.verse (=cumulative verse number)
+<lb/>
+<lb/>NOTE:
+<lb/>- Verses of the Sanskrit chaya are asterisked
+<lb/>- Occasional jumps in the cumulative verse numbering of the Sansknet version have been retained.
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl></bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Śukasaptati = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Poetry -- Narrative Literature</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+<div>
+<p>// śrīḥ //</p>
+
+<p>śukasaptatiḥ //</p>
+
+<p>"vinodinī' saṃskṛta-hindī-vyākhyopetā //</p>
+
+<lg>
+<l>START Suk 1:</l>
+<l>praṇamya śāradāṃ devīṃ divyavijñānaśālinīm /</l>
+<l>vacmi cetovinādārthamuddhāraṃ kīrasammateḥ // Suk_1.1 (=1) //</l>
+</lg>
+
+<p>asti candrapuraṃ nāma nagaram /
+tatra vikramaseno nāma rājā babhūva /
+tasminnagare haridatto nāma śreṣṭhī tasya bhāryā śṛṅgarasundarīnāmnī /
+tatputro madanāvinodanāmā babhūva /
+tasya patnī prabhāvatī /
+sā somadattaśreṣṭhinaḥ kanyā /
+madanavinodastu atīvaviṣayāsaktaḥ kuputraḥ pituḥ śikṣāṃ na śṛṇoti /
+tasya dyūtamṛgayāveśyāmadyādiṣu atīva āsaktiḥ /
+kumārgacāriṇaṃ taṃ kuputraṃ dṛṣṭvā tatpitā haridattaḥ sapatnīkaḥ atīva duḥkhitaḥ sañjātaḥ /
+taṃ haridattaṃ kuputraduḥkhena pīḍitaṃ dṛṣṭvā tasya sakhā trivikramanāmā dvijaḥ svagṛhato nītinipuṇaṃ śukaṃ sārikāṃ ca gṛhītvā tadgṛhe gatvā prāha-"sakhe haridatta! enaṃ śukaṃ sapatnīkaṃ putravattvaṃ paripālaya /
+etatsaṃrakṣaṇena tava duḥkhaṃ dūrībhaviṣyati' /
+haridattastu taṃ śukaṃ gṛhītvā putrāya samarpayāmāsa /
+madanavinodena śayanamandire svarṇapañjarasthaḥ sthāpitaḥ paripoṣitaśca /
+athaikadā rahasi śuko madanaṃ prāha-
+he sakhe!</p>
+
+<lg>
+<l>pitroste duḥkhinorduḥkhātpatatyaśrucayo bhuvi /</l>
+<l>tena pāpena te vatsa patanaṃ devaśarmavat // Suk_1.2 (=2) //</l>
+</lg>
+
+<p>sa prāha-"kathametat?' śuka āha-asti pañcapuraṃ nāma nagaram /
+tatra satyaśarmā brāhmaṇaḥ /
+tadbhāryā dharmaśīlānāmnī putrastu devaśarmā /
+sa ca adhītavidyaḥ pitṛpracchannavṛttyā deśāntaraṃ gatvā bhāgīrathītīre tapaḥ kṛtavān /
+ekadā sa tapasvī gaṅgātīre japārthamupaviṣṭaḥ /
+tasminkāle kayācit balākayā uḍḍīyamānayā tadaṅgopari purīṣotsargaḥ kṛtaḥ /
+sa ca tapasvī krodhākulitanetraḥ yāvadūrdhvaṃ paśyati tāvattatkrodhāgninā bhasmībhūtāṃ balākāṃ bhūmau patitāṃ dṛṣṭvā [balākāṃ dagdhvā] nārāyaṇadvijagṛhe bhikṣārthaṃ yayau /
+svabhartṛśuśrūṣāparayā tatpatnyā kopābhiviṣṭo nirbhartsitaḥ satpakṣihāyamuktaśca- "nāhaṃ balākeva tvatkopasthānam' /
+sa ca pracchannapātakajñānādbhīto vismitaśca, preṣitaśca tayā dharmavyādhapārśva vāraṇasīṃ nagarīṃ yayau /
+tatra raktāktahastaṃ yamapratibhaṃ māṃsavikrayaṃ vidadhānaṃ taṃ dṛṣṭvā dṛśāmantaḥsthitaḥ /
+vyādhena svāgatapraśnapūrvakaṃ svagṛhaṃ nītvā nijapitarau sabhaktikaṃ bhojayitvā paścāttasya bhojanaṃ dattam /
+tadanantaraṃ sa ca vyādhaṃ jñānakāraṇaṃ papraccha-"kathaṃ satī jñānavatī, kathaṃ ca tvaṃ jñānavān' /
+tena vyādhenoktam-</p>
+
+<lg>
+<l>nijānvayapraṇītaṃ yaḥ samyagdharmaṃ niṣevate /</l>
+<l>uttamādhamamadhyeṣu vikāreṣu parāṅmukhaḥ // Suk_1.3 (=3) //</l>
+</lg>
+
+<lg>
+<l>sa gṛhī sa muniḥ sādhuḥ sa ca yogī sa dhārmikaḥ /</l>
+<l>pitṛśuśrūṣako nityaṃ jantuḥ sādhāraṇaśca yaḥ // Suk_1.4 (=4) //</l>
+</lg>
+
+<p>ahaṃ sāpi ca evaṃ jñāninau tvaṃ ca nijapitarau parityajya bhramanmādṛśāṃ na sambhāṣaṇārhaḥ /
+paramatithiṃ matvā jalpitaḥ /
+evamuktaḥ sa brāhmaṇo vinayaparaṃ vyādhaṃ papraccha /
+tenoktam-</p>
+
+<lg>
+<l>na pūjayanti ye pūjyānmānyānna mānayanti ye /</l>
+<l>jīvanti nindyamānāste mṛtāḥ svargaṃ na yānti ca // Suk_1.5 (=5) //</l>
+</lg>
+
+<lg>
+<l>vyādhena bodhitastena sa yayau gṛhamātmanaḥ /</l>
+<l>abhavatkīrtimāṃlloke parataḥ kīrtibhājanam // Suk_1.6 (=6) //</l>
+</lg>
+
+<p>tasmādvaṇigdharmaṃ svakulodbhavaṃ smara pitrośca vinayaparo bhava' /
+evamuktaḥ sa madanaḥ pitarau namaskṛtya tadanujñāto bhāryāñcāpṛcchyapravahaṇamadhirūḍhaṃvān gato deśāntaram /
+paścāttatpatnī katiciddināni śokayuktā nirvāhya svairiṇībhiḥ sakhībhiḥ pratibodhitā puruṣāntarābhilāṣukābhavat /
+yatastābhirevamuktam-</p>
+
+<lg>
+<l>tāvatpitā tathā bandhuryāvajjīvati mānavaḥ /</l>
+<l>mṛto mṛta iti jñātvā kṣaṇātsneho nivartate // Suk_1.7 (=7) //</l>
+</lg>
+
+<p>atastvaṃ svapatimaprāpyamāṇā nijaśarīrasya katiciddinasthāyiyauvanasya puruṣāntararamaṇād gṛhāṇa phalam /
+tatastāsāṃ vacanena puruṣāntarasya guṇacandrasaṃjñasya ramaṇāya śṛṅgāraṃ vidhāya yāvatpracalitā tāvatsārikayā mā gacchetyādivacanairnirbhartsitā /
+tato yāvatsā tāṃ sārikāṃ galamoṭanapūrvaṃ vināśayati tāvaduḍḍīya yayau /
+tataḥ kṣaṇaṃ sthitvā sveṣṭadevatāṃ hṛdi smṛtvā tāmbūlaṃ pragṛhya yāvaccalitā tāvat śukaḥ prāha-"siddhirastu /
+kva gantavyam', ityādivākyaiḥ pṛṣṭā /
+sā ca śukavacanaṃ śakunamiti kṛtvā prahasya tamāha-"he śukarāja! narāntarāsvādaṃ vijñātuṃ pracalitāsmi' /
+śuka uvāca- "yuktamidaṃ karttavyameva paraṃ duṣkaraṃ ninditaṃ ca kulastrīṇām /
+kiñca, tadā gamyatā yadi viparīte samāyāte sati tava buddhirasti /
+yadi nāsti tadā parābhavapadaṃ bhaviṣyasi /
+yataḥ-</p>
+
+<lg>
+<l>kautukānveṣiṇo nityaṃ durjanā vyasanāgame /</l>
+<l>māsopavāsinī yadvadvaṇikputrakacagrahe // Suk_1.8 (=8) //</l>
+</lg>
+
+<lg>
+<l>papraccha sā tadā sārdhaṃ puṃścalībhiḥ kṛtādarā /</l>
+<l>sasambhramā jagādedaṃ kimidaṃ bhāṣitaṃ śukaḥ // Suk_1.9 (=9) //</l>
+</lg>
+
+<lg>
+<l>yadi te kautukaṃ subhru parārthaṃ gaccha sundari /</l>
+<l>sthirībhūya tvayā paścāt śrāvyeyaṃ mahatī kathā // Suk_1.10 (=10) //</l>
+</lg>
+
+<p>evaṃ śukoktaṃ śrutvā yadā sā kautukākulacetasā nijagṛha āsīnāsti tadā śukaḥ kathāṃ prāha- asti candrāvatī puro /
+tasyāṃ bhīmanāmā nṛpaḥ /
+tatra sudhano nāma mohanaśreṣṭhisutaḥ tannagaravāsino haridattasya kalatraṃ lakṣmīṃ rantumīhate /
+tadvatsā na manyate /
+tato māsopavāsinīṃ pūrṇābhidhānāṃ gatvā pūrṇadhanāvarjitāṃ kṛtvā haridatte nagarādbahirgate tadgṛhe dūtītvena preṣayāmāsa /
+sāpi cāṭūktibhirlakṣmīṃ prasādayāmāsa /
+prasannayā ca tayetyuktam- "yattvaṃ yācase tatkaromi" /
+pūrṇayoktam- "tarhi manmataṃ naraṃ bhaja" /
+tayoktam- "kulastrīṇāṃ naitadyujyate paraṃ yattavāgre pratipannaṃ tatkaromi' /</p>
+
+<p>uktañca-</p>
+
+<lg>
+<l>chijjau sīsaṃ aha hou bandhaṇaṃ caau savvahā lacchī /</l>
+<l>paḍivaṇṇapālaṇe supurisāṇaṃ jaṃ hou taṃ hou // Suk_1.11 (=11) //</l>
+</lg>
+
+<lg>
+<l>[śīrṣa chidyatām atha bhavatu bandhanaṃ calatu savathā lakṣmīḥ /</l>
+<l>pratipannapālane supuruṣāṇāṃ yad bhavatu tad bhavatu] // Suk_1.11* (=11*) //</l>
+</lg>
+
+<lg>
+<l>tathāca</l>
+<l>diḍhalohasiṃkhalāṇaṃ assāṇa vivihapāsabandhāṇaṃ /</l>
+<l>tāṇaṃ cia ahiaraaro vāābandho supurisassa // Suk_1.12 (=12) //</l>
+</lg>
+
+<lg>
+<l>[dṛḍhalohaśṛṅkhalānāṃ bhavatu vivadhapāśabandhanam /</l>
+<l>tābhyāmapi adhikataro vācābandhaḥ supuruṣasya] // Suk_1.12* (=12*) //</l>
+</lg>
+
+<lg>
+<l>adyāpi nojjhati haraḥ kila kālakūṭaṃ, kūrmo bibharti dharaṇīṃ khalu cātmapṛṣṭhe /</l>
+<l>ambhonidhirvahati duḥsahavāḍavāgnimaṅgīkṛtaṃ sukṛtinaḥ paripālayanti // Suk_1.13 (=13) //</l>
+</lg>
+
+<p>tacchrutvā hṛṣṭā pūrṇā /
+"evamevaitat' /
+tatastāṃ lakṣmīṃ pratividhāya guṇamohanārthe pradoṣe svagṛhe nināya /
+tataḥ sa mohanaḥ kathitavelopari nāgataḥ kiñcitkāryādivaiyagryeṇa /
+tato lakṣmyā sakāmayoktam- "yatkamapi naraṃ samānaya' /
+tataḥ pūrṇayā mūḍhayā tatpatireva samānītaḥ /
+svabhartari samāyāte sā kathaṃ bhavatviti kathaṃ gṛhaṃ yātviti tvaṃ sakhyastava vā kathayantu /
+tā āhuḥ- "na jānīmaḥ /
+tvameva kathaya' /
+śuka āha- "yadi na yāsi tadā kathayāmi' /
+tayoktam-- "na yāsyāmi' /
+śukaḥ-sā āgacchanneva svapatiriti jñātvā taṃ kacagrahaṃ pragṛhyaivamuvāca-he śaṭha! sarvadā tvamiti mamāgre jalpasi yanme tvāṃ vinā nānyā vallabhā asti /
+adhunā tu mayā parīkṣito jñātaśceti kopaṃ cakre' /
+sa ca tāṃ kaṣṭena sukomalavacanairanunīya svagṛhaṃ ninye /</p>
+
+<lg>
+<l>kathāṃ śrutvā śukenoktāṃ bhayavismayakāriṇīm /</l>
+<l>puṃścalīvṛndasaṃyuktā suptā rātrau vaṇikpriyā // Suk_1.14 (=14) //</l>
+</lg>
+
+<p>iti śukasaptatau prathamā kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 2:</p>
+
+<lg>
+<l>sā tathaiva samaṃ tābhirdvitīyo 'hni niśāmukhe /</l>
+<l>śukamāpṛcchya calitā śukastāmidamabravīt // Suk_2.1 (=15) //</l>
+</lg>
+
+<lg>
+<l>yatheṣṭaṃ gaccha suśroṇi yadi jānāsi duḥkṛte /</l>
+<l>pratyuttaraṃ samāyāte yaśodevīva saṅkaṭe // Suk_2.2 (=16) //</l>
+</lg>
+
+<p>tataḥ prabhāvato pṛcchati- "kā yaśodevī /
+kadā kasminsaṅkaṭe tayā ka upāyaḥ kṛta' iti /
+śukaḥ- "yadā kathayāmi tadā mayi suratavighātena tava kopaḥ prāṇaniṣūdanaḥ syāt' /
+sā āha- "suhṛdāṃ sādhvasādhvapi śrotavyameva' ityanujñātaḥ śukaḥ āha- asti nandanaṃ nāma nagaram /
+tatra nandano nāma rājā /
+tatputro rājaśekharaḥ /
+tadvadhūḥ śaśiprabhā /
+tāṃ dhanasenasuto vīranāmā dṛṣṭvā sakāmaḥ san jvarapīḍito 'bhūt /
+bhojanādi na vidhatte /
+sa ca mātrā yaśodevyā pṛṣṭaḥ sansagadgadaṃ kāraṇamāha- "sā ca rājakanyā durlabhā /
+sa kathaṃ jīvatu' iti praśnaḥ /
+tayoktam- "tvameva kathaya' /
+śukaḥ-yadi prabhāvati! adya na yāsi tadā kathayāmi, ityukte sā āha- "kathayeti' /
+atha śukaḥ-sā yaśodevī ekāṃ śunīṃ bhojanādyairāvarjayitvā ābharaṇāni paridhāyātmanā sārdhaṃ gṛhītvā śaśiprabhāpārśve gatvā tāṃ vijane sagadgadā jagāda-ahaṃ ca tvaṃ ca iyaṃ ca pūrvabhave bhaginyo 'bhūvan /
+mayā niḥśaṅkayā tvayā tu saśaṅkayā paranarābhilāṣaḥ pūritaḥ /
+anayā tu naiva /
+ato 'syāḥ śīlaprabhāvātkevalaṃ jātismaraṇameva na bhogāḥ śunikā ca sañjātā /
+sambhogavighnājjātismaraṇaṃ ca na te vartate /
+mama punarbhogānnirvighnānnirvighnajātismaraṇaṃ ca /
+ato 'hamanukampayā imāṃ śunakīṃ tvāṃ ca dṛṣṭvā kathayitumāgatā /
+atastvayārthināṃ kāṅkṣitaṃ dātavyameva /
+yo dānaṃ kuryātsa bhavetsarvasampadāṃ sthānam /
+uktañca--</p>
+
+<lg>
+<l>kathayanti na yācante bhikṣāhārā gṛhe gṛhe /</l>
+<l>arthibhyo dīyatāṃ nityamadātuḥ phalamīdṛśam // Suk_2.3 (=17) //</l>
+</lg>
+
+<p>tataḥ śaśiprabhā sakaṇṭhagrāhaṃ ruditvā prāha-- "māmapi kalyāṇi! puruṣāntareṇa yojaya' /
+tato yaśodevī tāṃ svasthīkṛtya bhartṛviditāṃ svagṛhaṃ nītvā svaputreṇa yojayāmāsa /
+sa ca rājaśekharo dravyādidānatoṣitaḥ sakhīyamiti kṛtvā na nivārayāmāsa /</p>
+
+<lg>
+<l>rājaputraṃ rājaputrīṃ pratāryaivaṃ ca bhāmini /</l>
+<l>yaśodevyā mahadbuddhya nijakāryamanuṣṭhitam // Suk_2.4 (=18) //</l>
+</lg>
+
+<lg>
+<l>buddhirasti yadaiṣā te vraja subhru parāntikam /</l>
+<l>bhaja nidrāṃ viśālākṣi mānyathā svaṃ viḍambaya // Suk_2.5 (=19) //</l>
+</lg>
+
+<lg>
+<l>iti śukakathāṃ śrutvā prabhāvatī suptā /</l>
+<l>iti śukasaptatau dvitīyā kathā //</l>
+</lg>
+
+</div>
+<div>
+
+<p>START Suk 3:</p>
+
+<p>athānyadine prabhāvatī śukaṃ pṛcchati /
+śukaḥ-</p>
+
+<lg>
+<l>gaccha deva kimāścaryaṃ yatra te ramate manaḥ /</l>
+<l>nṛpavadyadi jānāsi paritrāṇaṃ tvamātmanaḥ // Suk_3.1 (=20) //</l>
+</lg>
+
+<p>prabhāvatī pṛcchati-kathametat /
+śukaḥ kathayati-asti viśālā nagarī /
+tatra sudarśano rājā /
+tatra ca vimalo nāma vaṇik /
+tasya ca patnīdvayaṃ subhagaṃ rūpasampannaṃ dṛṣṭvā kuṭilanāmā dhūrtastadbhāryādvayagrahaṇecchayā ambikāṃ devīmārādhya vimalarūpaṃ yayāce /
+labdhvā ca tatprakṛtiṃ vimale bahirgate tadgṛhaṃ gatvā prabhutvaṃ cakāra /
+prasādadhanadānairvaśīkṛto 'khilo 'pi parijanavargaḥ /
+tadbhāryādvayaṃ bahumānadānādinā santoṣya svecchayā bhuṅkte /
+vimalo 'yaṃ dhanādyanityatāṃ śrutvā dātā babhūveti parijano 'navarataṃ cintayati /
+atha satyavimalo 'pi dvāramāgataḥ kuṭilājñayā dvārapālena niṣiddhaḥ /
+tato bahiḥsthaḥ phutkaroti "vañcito 'haṃ dhūrtarājena' /
+tasya caivaṃ krandato gotrajā janāḥ kautukācca militāḥ /
+tatkṣaṇāt haṭṭāni muktvā vaṇiksārtho militvā ārakṣikamantrimukhyānāṃ purataḥ phūccakre /
+"rājanvañcito 'smi dhūrtarājena' /
+tato rājñā tadavalokanāya prahitāḥ puruṣāḥ /
+tenāpi te dravyādidānena sānukūlāḥ kṛtāḥ /
+taṃ dhanadāyakaṃ gṛhe dṛṣṭvā jano vadati-"svāminvimalo gṛhe vidyate /
+ayaṃ ca dhūrtarāṭ dvārasthaḥ' /
+tato nṛpeṇa dvāvapyekatra kṛtau /
+tato dvayormadhyānna ko 'pi dhūrtetarayorvyaktiṃ jānāti /
+jātaḥ kolāhalo 'khilalokavyavahāranāśakaro rājñaścapavādaḥ /
+yato rājñāṃ duṣṭanigrahaḥ śiṣṭapālanaṃ ca svargāya /
+<lg>
+<l>uktañca-</l>
+<l>prajāpīḍanasantāpātsamudbhūto hutāśanaḥ /</l>
+<l>rājñaḥ kulaṃ śriyaṃ prāṇānnādagdhvā vinivartate // Suk_3.2 (=21) //</l>
+</lg></p>
+
+<p>tato rājā ekānte tayornirṇayamacintayat /
+tatkathaya kathaṃ niścayaḥ syāditi praśnaḥ /
+śukaḥ-sa rājā labdhopāyastadvimalabhāryādvayaṃ pṛthakpṛthaksaṃsthāpya pṛṣṭavān-"kiṃ yuvayoḥ pāṇigrahaṇe bhartrā vibhūṣaṇaṃ pradattaṃ dhanaṃ ca /
+paścātkiṃ jalpitaṃ prathamasaṅgena ca kā vārttā bhartrā sahābhūt /
+kā mātā kaśca pitā /
+kiṃ kulam /
+kā jātiḥ' /
+ityevaṃ pṛṣṭābhyāṃ yathālabdhaṃ yathāvṛttaṃ yathāproktaṃ yathāsuptaṃ sarvaṃ tābhyāṃ kathitam /
+paścātu tau puruṣau pṛṣṭau parasparaṃ visaṃvadantau /
+tato bhāryādvayasya rukmiṇīsundarīnāmadheyasya yaḥ saṃvādaṃ vadati sa satyaḥ /
+<lg>
+<l>itarastu dhūrto rājñā nirvāsitaḥ /</l>
+<l>satyastu rājñā sabhāryaḥ saskṛtaḥ svagṛhaṃ gataḥ /</l>
+<l>iti mahārājabuddhiḥ /</l>
+<l>iti kathāṃ śrutvā prabhāvatī suptā //</l>
+</lg></p>
+
+<p>iti śukasaptatau tṛtīyā kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 4 :</p>
+
+<p>athānyadā prabhāvatī śukaṃ pṛcchati /
+śukaḥ-"māṃ kṛtāvajñaṃ kṛtvā mā gaccha /
+yato bālakādapi hitaṃ vākyaṃ grāhyam /</p>
+
+<lg>
+<l>kṛtāvajñaḥ purā devi vṛddhavākyaparāṅmukhaḥ /</l>
+<l>patito brāhmaṇo 'narthe viṣakanyāvivāhane // Suk_4.1 (=22) //</l>
+</lg>
+
+<p>prabhāvatī pṛcchati-"kathametat" /
+śukaḥ-asti somaprabhaṃ nāma dvijasthānam /
+tatra vidvāndhārmikaḥ somaśarmā nāma vipraḥ /
+tatputrī rūpaudāryaguṇopetā viṣakanyeti vijñātābhūt /
+tena tāṃ bhayena ko 'pi na vivāhayati /
+tataḥ somaśarmā varārthaṃ bhuvaṃ paryaṭan samprāpto dvijasthānaṃ janasthāna nāma /
+tatra govindanāmā brāhmaṇo jaḍo nirdhanaśca /
+tasmai kanyā pradattā /
+tena suhṛdāṃ nivārayatāmapi kṛtāvajñenoḍhā sarvarūpalāvaṇyaguṇopetā mohinī viṣakanyā /
+sā vidagdhā govindastu mūrkhaḥ laghuvayāśca /
+tataśca sā ātmano rūpalāvaṇyayauvanaṃ śuśoca /</p>
+
+<lg>
+<l>avidagdhaḥ patiḥ strīṇāṃ, prauḍhānāṃ nāyako 'guṇī /</l>
+<l>guṇināṃ tyāgināṃ stoko vibhavaśceti duḥkhakṛt // Suk_4.2 (=23) //</l>
+</lg>
+
+<lg>
+<l>pāusasamaapavāso jovvaṇadiahe tahā a dāliddaṃ /</l>
+<l>paḍhamasiṇehavioo tiṇi vi garuāidukkhāiṃ // Suk_4.3 (=24) //</l>
+</lg>
+
+<lg>
+<l>[pravṛṭsamayapravāso yauvanadivase tathā ca dāridryam /</l>
+<l>prathamasnehaviyogastrīṇyapi gurukāṇi duḥkhāni] // Suk_4.24* (=24*) //</l>
+</lg>
+
+<lg>
+<l>appatthāve paḍhiaṃ kaṇṭhavihūṇaṃ ca gāiaṃ gīaṃ /</l>
+<l>mā mā bhaṇanti suraaṃ tiṇi vi garuāi dukkhāiṃ // Suk_4.4 (=25) //</l>
+</lg>
+
+<lg>
+<l>[aprastāve paṭhitaṃ kaṇṭhavihīnaṃ ca gāyanaṃ gītam /</l>
+<l>mā mā bhaṇantyāṃ surataṃ trīṇyapi gurukāṇi duḥkhāni] // Suk_4.4* (=25*) //</l>
+</lg>
+
+<p>sānyadā govindaṃ patimityabravīt-"mama piturgehātsamāgatāyā bahūni dināni sañjātāni /
+tato 'haṃ tvayaiva saha gamiṣye nānyathā' /
+tataḥ śakaṭaṃ mārgayitvā sabhāryakaḥ sa calitaḥ /
+<lg>
+<l>yāvatprayāti tāvatpathi eko yuvā vāggmī surūpaḥ śūraśca viṣṇunāmā brāhmaṇo militaḥ /</l>
+<l>tasya brāhmaṇasya tasyāścānyonmanurāgaḥ sañjātaḥ /</l>
+<l>uktañca- prītiḥ syāddarśanādyaiḥ prathamamatha manaḥsaṅgasaṅkalpabhāvo, nidrāchedastanutvaṃ vapuṣi kaluṣatā cendriyāṇāṃ nivṛttiḥ /</l>
+<l>hrīnāśonmādamūrcchāmaraṇamiti jagadyātyavasthā deśaitāḥ, lagnairyatpuṣpabāṇaiḥ sa jayati madanaḥ sannirastānyadhanvī // Suk_4.5 (=26) //</l>
+</lg></p>
+
+<p>sa pathiko dampatyoḥ pūgapatroccayaṃ dadāti /
+ityevaṃ grāmyabrāhmaṇorohaviṣṇorviśvastaḥ ātmano nirodhasaṅgabhayāduttīrya ta gantrīvāhamārohayati /
+viṣṇunā ca patyau vṛkṣāntaragate sā mohino bhuktā ātmavaśīkṛtā /
+tayā cātmīyaṃ nāma gotraṃ kulakramaṃ cājñāpitaḥ /
+patyuśca samāgatasya "tvaṃ coro 'sīti' gantryārohaṇaṃ kuvato niṣedhaḥ kṛtaḥ /
+viṣṇurapi tāṃ kṛhītvā govindaṃ dharṣitavān /
+tatastayoḥ keśākeśi saṃvṛttam /
+govindastu viṣṇunā viṣakanyāprabhāveṇa nirjitaḥ /
+tatastāṃ gṛhītvā viṣṇuḥ svagṛhaṃ praticalitaḥ /
+govindaḥ pṛṣṭhastho mārgāsanne grāme gatvā phūtkṛtavān-"yadanena caureṇa mama bhāryā gṛhītā /
+trāyatāṃ tām /
+mama śaraṇaṃ bho janāḥ' /
+atha grāmādhipena viṣṇurmohinīyuto dhṛtaḥ /
+pṛṣṭenottaraṃ dattaṃ viṣṇunā yatheyaṃ mayā pariṇītā /
+madīyāṃ ca bhāryāmeṣa pathiko mārge dṛṣṭvā grahilo babhūva /
+govindenāpi pṛṣṭena idamevottaritam /
+tato mantrī tayorekamevottaraṃ śratvā jātyādikaṃ pṛṣṭavān /
+trayamapi tu saṃvadati tataḥ kathaṃ niścayaḥ" /
+iti śukapraśnaḥ /
+tatastayā pṛṣṭaḥ śuka āha-mantriṇoktam, "kiyanti dināni saṅgamasya yuṣmākaṃ prayāṇe" /
+tairuktam-"kalye bhojanāntaraṃ saṃvṛttaḥ samāgamaḥ' /
+tato mantriṇā brāhmaṇau pṛthakpṛthakpṛṣṭau-"kimanayā kalye bhojanavelāyāṃ bhuktam' /
+yacca tayā bhuktaṃ tadgovindo jānāti itarastu na /
+tataḥ sa viḍambitaḥ sacivena /
+gonindaḥ śikṣitaḥ /
+dhigimāṃ brāhmaṇīṃ paratreha ca duḥkhadāṃ muñca śīghram /
+uktañca-</p>
+
+<lg>
+<l>vaidyaṃ pānarataṃ naṭaṃ kupaṭhitaṃ mūrkhaṃ parivrājakaṃ yodhaṃ kāpuruṣaṃ viṭaṃ vivayasaṃ svādhyāyahīnaṃ dvijam /</l>
+<l>rājyaṃ bālanarendramantrirahitaṃ mitraṃ chalānveṣi ca bhāryāṃ yauvanagarvitāṃ pararatāṃ muñcanti ye paṇḍitāḥ // Suk_4.6 (=27) //</l>
+</lg>
+
+<lg>
+<l>tathāpi kāminīlubdho dhikkṛtaḥ sādhubhistadā /</l>
+<l>tāmevādāya calitastatkṛte nihataḥ pathi // Suk_4.7 (=28) //</l>
+</lg>
+
+<lg>
+<l>taddevi yaḥ karotyevamavajñāṃ vṛddhaśikṣitaḥ /</l>
+<l>sa parābhavamāpnoti govindo brāhmaṇo yathā // Suk_4.8 (=29) //</l>
+</lg>
+
+<p>iti kathāṃ śrutvā prabhāvatī suptā //</p>
+
+<p>iti śukasaptatau caturtho kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 5:</p>
+
+<p>punaranyadine sā gamanāya śukaṃ pṛcchati /
+śukaḥ-</p>
+
+<lg>
+<l>gaccha devi vijānāsi yadi kartuṃ tvamuttaram /</l>
+<l>sabhāyāṃ nṛpateryadvadviṣame bālapaṇḍitā // Suk_5.1 (=30) //</l>
+</lg>
+
+<p>prabhāvatīpṛṣṭaḥ śukaḥ kathāṃ prāha-asti ujjayinī nāma nagarī /
+tatra vikramādityo rājā /
+tasya rājño kāmalīlā nāma uttamakule jātā /
+sā ca rājño 'tīva vallabhā /
+ekadā nṛpastayā sārdhaṃ bhojanaṃ kurvanbhṛṣṭamatsyāṃstasyai dāpayāmāsa /
+sā āha-svāmin! nāhametānpuruṣānavalokayitumapi samarthā kiṃ punaḥ sparśanam /
+iti śṛtvā matsyā aṭṭahāsena tathā jahasuryathā nāgarikaloke śrutam /
+rājā ca tanmatsyahāsyakāraṇaṃ mantrijyotirvicchākunikakovidānpṛcachati /
+yadā na ko 'pi jānāti tadā sarvadvijāgresaraṃ purohitaṃ prāha-yathā tvayaiva matsyahāsyakāraṇaṃ kathanīyamanyathātvaṃ deśānnirvāsaṃ prāpnoṣi /
+purodhā apyetadvacaḥ śrutvā dinapañcakaṃ vyavadhāne yācayitvā saviṣādo gṛhamagamat /
+sa purohitaḥ taduttaramajānanpurastādrājñā nirvāsyate /
+sa kathaṃ bhavatviti praśnaḥ /
+uttaramapyāha śukaḥ-sa brāhmaṇo viṣādāpannaḥ putryā bālapaṇḍitayā babhāṣe, tāta! kathamudvignacitta iva lakṣyase /
+kathaya viṣādasya kāraṇam /
+vidvadbhirvipadyapyuccaiḥ sthātavyam /
+uktañca-</p>
+
+<lg>
+<l>sampadi yasya na harṣo vipadi viṣādo raṇe ca bhīrutvam /</l>
+<l>taṃ bhuvanatrayatilakaṃ jananī janayati sutaṃ viralam // Suk_5.2 (=31) //</l>
+</lg>
+
+<p>tato brāhmaṇo 'viralaṃ vṛttāntamācaṣṭe anena kāraṇena rājā māṃ nāgarānnirvāsayati /
+yataḥ-</p>
+
+<lg>
+<l>na sauhṛdaṃ na viśvāso na sneho na ca bandhutā /</l>
+<l>kenāpi saha saṃsāre kuto rājñā chalārthinā // Suk_5.3 (=32) //</l>
+</lg>
+
+<p>uktañca-</p>
+
+<lg>
+<l>kāke śaucaṃ dyūtakāre ca satyaṃ sarpe kṣāntiḥ strīṣu kāmopaśāntiḥ /</l>
+<l>klībe dhairyaṃ madyape tattvacintā rājā mitraṃ kena dṛṣṭaṃ śrutaṃ vā // Suk_5.4 (=33) //</l>
+</lg>
+
+<lg>
+<l>kiñca- nadīnāṃ nakhināñcaiva śṛṅgiṇāṃ śastrapāṇinām /</l>
+<l>viśvāso naiva kartavyaḥ śtrīṣu rājakuleṣu ca // Suk_5.5 (=34) //</l>
+</lg>
+
+<lg>
+<l>bhoginaḥ kañcukāsaktāḥ krūrāḥ kuṭilagaminaḥ /</l>
+<l>duḥkhopasarpaṇīyāśca rājāno bhujagā iva // Suk_5.6 (=35) //</l>
+</lg>
+
+<lg>
+<l>hasannapi nṛpo hanti mānayannapi durjanaḥ /</l>
+<l>spṛśannapi gajo hanti jighrannapi bhujaṅgamaḥ // Suk_5.7 (=36) //</l>
+</lg>
+
+<p>eṣa rājā ā bālyātsevito 'pi mayi viparīto babhūva /
+tasmānmayā jīvitumicchatā dvijaiḥ saha paradeśaṃ gantavyam /
+uktañca-</p>
+
+<lg>
+<l>tyajedekaṃ kulasyārthe grāmasyārthe kulaṃ tyajet /</l>
+<l>grāmaṃ janapadasyārthe ātmārthe pṛthivīṃ tyajet // Suk_5.8 (=37) //</l>
+</lg>
+
+<p>tataḥ sā bālikā tātavacanaṃ śrutvā prāha-tāta! tvayā yuktamuktam /
+paraṃ svāmirahitānāṃ na kvāpi pūjā /
+yata uktam-</p>
+
+<lg>
+<l>apradhānaḥ pradhānaḥ syādyadi seveta pārthivam /</l>
+<l>pradhāno 'pyapradhānaḥ syādyadi sevāvivarjitaḥ // Suk_5.9 (=38) //</l>
+</lg>
+
+<lg>
+<l>āsannameva nṛpatirbhajate manuṣyaṃ vidyāvihīnamakulīnamasaṃstutaṃ vā /</l>
+<l>prāyeṇa bhūmipatayaḥ pramadā latāśca yaḥ pārśvato bhavati taṃ pariveṣṭayanti // Suk_5.10 (=39) //</l>
+</lg>
+
+<lg>
+<l>ārohanti śanairmṛtyā dhunvantamapi pārthivam /</l>
+<l>kopaprasādavastūnāṃ vicinvanti samīpagāḥ // Suk_5.11 (=40) //</l>
+</lg>
+
+<p>tathā ca-</p>
+
+<lg>
+<l>vidyāvatāṃ mahecchānāṃ śilpavikramaśālinām /</l>
+<l>sevāvṛttividāñcaiva nāśrayaḥ pārthivaṃ vinā // Suk_5.12 (=41) //</l>
+</lg>
+
+<lg>
+<l>ye jātyādimahotsāhā nopagacchanti pārthivam /</l>
+<l>teṣāmāmaraṇaṃ bhikṣā prāyāścittaṃ vinirmitam // Suk_5.13 (=42) //</l>
+</lg>
+
+<lg>
+<l>rogairgrahairnṛpargraisto yo na vetti jaḍakriyaḥ /</l>
+<l>madhyamantramupāyaṃ ca so 'vaśyaṃ tāta na sthiraḥ // Suk_5.14 (=43) //</l>
+</lg>
+
+<p>uktañca-</p>
+
+<lg>
+<l>sarpānvyāghrān gajānsiṃhāndṛṣṭvopāyairvaśīkṛtān /</l>
+<l>rājeti kiyatī mātrā dhīmatāmapramādinām // Suk_5.15 (=44) //</l>
+</lg>
+
+<p>tathā ca-</p>
+
+<lg>
+<l>rājānameva saṃśritya vidvānyāti paronnatim /</l>
+<l>vinā malayamanyatra candanaṃ na vivardhate // Suk_5.16 (=45) //</l>
+</lg>
+
+<lg>
+<l>dhavalānyātapatrāṇi vājinaśca manoramāḥ /</l>
+<l>sadā mattāśca mātaṅgāḥ prasanne sati bhūpatau // Suk_5.17 (=46) //</l>
+</lg>
+
+<p>tasmāttāt, tvaṃ rājñā mānyaḥ prasādapātrañca /
+tataḥ sandehe 'sminmā viṣādībhava /
+yataḥ-</p>
+
+<lg>
+<l>rājagrahe samāyāte viṣame kāryasaṃśaye /</l>
+<l>sandigdhamanasāṃ rājñāṃ pradhānāḥ saṃśayacchidaḥ // Suk_5.18 (=47) //</l>
+</lg>
+
+<p>tato he tāta! sthirībhava /
+matsyahasanottaraṃ rājñaḥ purato mayābhidheyamiti /
+snāhi bhuṅkṣva /
+tataḥ sa evaṃ kṛtvā rājño 'grato gatvā sarvaṃ nivedayāmāsa /
+nṛpo 'pi tuṣṭastāmājuhāva /
+sā āśīrvādaṃ dattvā rājānamabravīt-rājanmā mudhā viprānviḍambaya /
+kiṃ tvayā evaṃvidhaṃ matsyānāṃ hāsyaṃ dṛṣṭaṃ śrutaṃ vā /
+kathaṃ māmabalājana pṛcchanna vilajjase /</p>
+
+<lg>
+<l>yataḥ- itaro 'pi na sāmānyo nṛpatirdivyarūpabhṛt /</l>
+<l>tvaṃ punarvikramādityo yathārtho 'si parantapa // Suk_5.19 (=48) //</l>
+</lg>
+
+<p>uktañca-</p>
+
+<lg>
+<l>indrātprabhutvaṃ jvalanātpratāpaṃ krodhaṃ yamādvaiśravaṇācca vittam /</l>
+<l>sattvasthite rāmajanārdanābhyāmādāya rājñaḥ kriyate śarīram // Suk_5.20 (=49) //</l>
+</lg>
+
+<p>tathā ca bhārate-</p>
+
+<lg>
+<l>mā vṛkodara pādena ekādaśacamūpatim /</l>
+<l>pañcanāmapi yo bharttā nāsāprakṛtimānavī &lt;1&gt; &lt;1. `māninā' iti pā-&gt; // Suk_5.21 (=50) //</l>
+</lg>
+
+<p>svāminkathaṃ na tvaṃ svayameva vicārayasi /
+yatastvameva sarvasaṃśayacchettā /
+athānyebhyaścet śrotuṃ kautukaṃ tarhi śṛṇu /</p>
+
+<lg>
+<l>iyaṃ rājñī na spṛśati hyasmānmatsyānmahāsatī /</l>
+<l>puruṣākhyānato rājan hasitāḥ śapharā dhruvam // Suk_5.22 (=51) //</l>
+</lg>
+
+<lg>
+<l>paribhāvyastvayā rājan ślokārtho 'yaṃ sadā hṛdi /</l>
+<l>mūḍhadhīranyathā deva yadi pṛcchasi māṃ punaḥ // Suk_5.23 (=52) //</l>
+</lg>
+
+<p>rājanrājapatnyāḥ sūryamapaśyantyāstatkathamasatītvaśaṅkā syāt /</p>
+
+<lg>
+<l>ślokārthe prastutārthe ca matsyānāṃ hasanaṃ budhāḥ /</l>
+<l>sanṛpā na vijānanti api sarvārthakovidāḥ // Suk_5.24 (=53) //</l>
+</lg>
+
+<lg>
+<l>tataḥ sado mūḍhaṃ dṛṣṭvā bālapaṇḍitā utthāya yayau /</l>
+<l>śuko 'pyāha-ahaṃ prātaḥ kathayiṣye /</l>
+<l>iti kīroktiṃ śrutvā prabhāvatī suptā //</l>
+</lg>
+
+<p>iti śukasaptatau pañcamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 6:</p>
+
+<p>athāparasmindivase prabhāvatī śukaṃ prāha-
+śuka! sa matsyahāsyavyatikaro rājñā jñāto na veti /
+śuka āha- nṛpaḥ ślokārthamajānanna nidrāṃ lebhe /
+<lg>
+<l>uktañca-</l>
+<l>nidrā bhadre kutasteṣāṃ ye ṛṇavyādhipīḍitāḥ /</l>
+<l>avidheyakalatrāśca ye cānye kṛtavairiṇaḥ // Suk_6.1 (=54) //</l>
+</lg></p>
+
+<p>rājā nidrābhāve kaṣṭena niśāṃ nītvā prātarbālapaṇḍitāmākārya prāha-bālike! ślokārtho na jñāto mayā /
+tasmānmatsyahāsyakāraṇe nivedaya /
+sā āha-rājanmāṃ mā pṛccha /
+yataḥ-</p>
+
+<lg>
+<l>paścāttāpo 'tra bhavitā bhāryāyā vaṇijo yathā /</l>
+<l>āgraheṇa kṛtaḥ patyau maṇḍakāgamanaṃ prati // Suk_6.2 (=55) //</l>
+</lg>
+
+<p>rājā-kathametat /
+śukaḥ-astyatra jayantī nāma nagarī /
+tatra vaṇikasutaḥ sumatirnāma tasya priyā padminī nāma /
+tasya ca vaṇijaḥ puṇyakṣayāddhanaṃ kṣīṇam /
+sa ca janaiḥ parityaktaḥ /
+yato jano dhanamitraḥ /
+uktañca-</p>
+
+<lg>
+<l>yasyārthāstasya mitrāṇi yasyārthāstasya bāndhavāḥ /</l>
+<l>yasyārthāḥ sa pumāṃlloke yasyārthāḥ sa ca paṇḍitaḥ // Suk_6.3 (=56) //</l>
+</lg>
+
+<p>tathā ca bhārate-</p>
+
+<lg>
+<l>jīvanto 'pi mṛtāḥ pañca śrūyante kila bhārata /</l>
+<l>daridro vyādhito mūrkhaḥ pravāsī nityasevakaḥ // Suk_6.4 (=57) //</l>
+</lg>
+
+<p>tathā ca-</p>
+
+<lg>
+<l>iha loke hi dhanināṃ paro 'pi svajanāyate /</l>
+<l>svajano 'pi draridrāṇāṃ tatkṣaṇāddurjanāyate // Suk_6.5 (=58) //</l>
+</lg>
+
+<p>so 'pi ca tṛṇakāṣṭhādikamānīya purīmadhye vikrīṇāti /
+anyadā anena tṛṇakāṣṭhādikaṃ kimapi vane na prāptam /
+dṛḍhakāṣṭhamayo 'pi vighnavināyakaḥ prāptaḥ /
+tataścintitam-kimasau mama vidhāsyati? uktañca-</p>
+
+<lg>
+<l>bubhukṣitaḥ kiṃ na karoti pāpaṃ kṣīṇā narā niṣkaruṇā bhavanti /</l>
+<l>prāṇārthamete hi samācaranti mataṃ satāṃ yanna mataṃ tadeṣām // Suk_6.6 (=59) //</l>
+</lg>
+
+<p>yāvatsa tasya vināyakasya pāṭanāyottiṣṭhati tāvattuṣṭaḥ san jagāda-ahaṃ tava pratidinaṃ pañca pañca maṇḍakāndāsye khaṇḍaghṛtayutān /
+mamālaye prātaryāyāḥ /
+paraṃ kasyāpi idaṃ rahasyaṃ na kathanīyam /
+kathite tu madvaco vitathaṃ bhaviṣyati /
+so 'pi ca "tathe'ti pratipādya nityaṃ maṇḍakapañcakaṃ bhāryāyā arpayati /
+taddaivaṃ maṇḍakapañcakaṃ ghṛtakhaṇḍayuktamādāya tadbhāryā nijakuṭumbaṃ tṛptīkaroti /
+nityaṃ ca tānmaṇḍakān gotriṇāṃ gṛhe vāhayāmāsa /
+nijasakhyā mandodaryāstṛptyarthaṃ nityaṃ prāhiṇot /
+anyadā sā sakhī tāṃ papraccha /
+padminyapi maṇḍakāgamanamidaṃ na jānāti /
+tatastasyāḥ purā sā sakhī kapaṭādbrūte-sakhi! yadi tvaṃ mama purato guhyaṃ na kathayasi tatkaḥ snehaḥ /
+uktañca-</p>
+
+<lg>
+<l>dadāti pratigṛhṇāni guhyamākhyāti pṛcchati /</l>
+<l>bhuṅkte bhojayate caiva ṣaḍvidhaṃ prītilakṣaṇam // Suk_6.7 (=60) //</l>
+</lg>
+
+<p>tataḥ padminyāha-madīyaḥ patiridaṃ guhyaṃ mamāgre kathamapi na brate mayā śataśaḥ pṛṣṭo 'pi /
+tayoktam-tarhi tvadīyaṃ jīvitaṃ rūpaṃ yauvanaṃ savamapi nirarthakameva yadidaṃ nājñāyi /
+tataḥ padminī patiṃ pṛcchati-kathaṃ maṇḍakaprāptiḥ? patirāha-vidheḥ prasādāt /
+uktañca-</p>
+
+<lg>
+<l>dvīpādanyasmādapi madhyādapi jalanidherdiśo 'pyantāt /</l>
+<l>ānīya jhaṭiti ghaṭayati vidhirabhimatamabhimukhobhūtaḥ // Suk_6.8 (=61) //</l>
+</lg>
+
+<p>kiñca-</p>
+
+<lg>
+<l>kṣutkṣāmasya karaṇḍapiṇḍitatanormlāndriyasya kṣudhā kṛtvākhurvivaraṃ svayaṃ nipatito naktaṃ mukhe bhoginaḥ /</l>
+<l>tṛptastatpiśitena satvaramasau tenaiva yātaḥ pathā svasthāstiṣṭhata daivameva hi nṛṇāṃ vṛddhau kṣaye kāraṇam // Suk_6.9 (=62) //</l>
+</lg>
+
+<p>yadā na kathayati tadānaśanaṃ cakre /
+patirāha-asminkathite mahatī hāniḥ paścāttāpaśca bhaviṣyati /
+evaṃ bodhitāpi sā yāvannāgrahaṃ muñcati tadā tena daivopahatacittena kathitam /
+uktañca-</p>
+
+<lg>
+<l>yasmai devāḥ prayacchanti puruṣāya parābhavam /</l>
+<l>buddhiṃ tasyāpakarṣanti na sa vetyātmano hitam // Suk_6.10 (=63) //</l>
+</lg>
+
+<p>tena ca rājanvikramārkabuddhimuktena guhyaṃ kīrtitam /
+yato hīnapuṇyo buddhyā mucyate /
+uktañca-</p>
+
+<lg>
+<l>rāmo hemamṛgaṃ na vetti nahuṣo yāne yunakti dvijān viprādeva savatsadhenuharaṇe jātā matiścārjune /</l>
+<l>dyūte bhrātṛcatuṣṭayaṃ ca mahiṣīṃ dharmātmajo dattavān prāyaḥ satpuruṣo 'pyanarthasamaye buddhyā parityajyate // Suk_6.11 (=64) //</l>
+</lg>
+
+<p>sā ca patimukhāt śrutvā sakhīpurī jagāda /
+tayā cātmapatiḥ kuṭhārahastaḥ preṣito vināyakapārśve /
+so 'pi padminīpatiśca prātastatra jagāma /
+vināyako 'pi dvāvapi mayūrabandhairbandhayāmāsa /
+so 'pi ca padminīpatiruktaḥ re tvadīya evāyamanarthaḥ /
+tatastvayyeva daṇḍo yujyate /
+tataḥ sakhīpatiryayāce /
+tānpañca maṇḍakāntasmai sa pradadau /
+tau dvāvapi svaṃ svaṃ gṛhaṃ jagmatuḥ /
+tataḥ patyā dāpitāḥ /
+paścāttāpaṃ ca kurute /
+tatastvamapi rājendra! māṃ mā pṛccha /
+tava paścāttāpo bhaviṣyati /
+idaṃ ślokaṃ svayameva vicintaya /
+iti kathayitvā bālapaṇḍitā utthāya svagṛhaṃ gatā /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau ṣaṣṭhī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 7:</p>
+
+<p>anyasmindine prabhāvatī śukaṃ papraccha-kīra! punastanmatsyahāsyakāraṇaṃ rājñā jñātaṃ śṛtaṃ na vā /
+śukaḥ prāha-prātaḥ punarbālapaṇḍitāmākārayitvā rājā prāha-ki tanmatsyahāsyakāraṇam? brūhi śīghraṃ bālike! sā cāha-</p>
+
+<lg>
+<l>devāgraho na kartavyaḥ paścāttāpo bhaviṣyati /</l>
+<l>sthagikāsaktacittasya viprasyābhūtpurā yathā // Suk_7.1 (=65) //</l>
+</lg>
+
+<p>asti dharaṇītale vatsonanāma paṭṭanam /
+tatra vīrākhyo rājā tatra ca keśavo nāma brāhmaṇaḥ /
+tena kadāciditi cintitaṃ yadahaṃ pitṛdhanaṃ na bhokṣye /
+uktañca-</p>
+
+<lg>
+<l>uttamāḥ svaguṇaiḥ khyātā madhyamāśca piturguṇaiḥ /</l>
+<l>adhamā mātulaiḥ khyātā śvaśuraiścādhamādhamāḥ // Suk_7.2 (=66) //</l>
+</lg>
+
+<lg>
+<l>kiñca- piara viḍhattai davvḍai caḍḍiri ko ṇa karei /</l>
+<l>saiṃ biḍhavai saiṃ bhojaai viralā jaṇaṇi jaṇei // Suk_7.3 (=67) //</l>
+</lg>
+
+<lg>
+<l>[pitrarjitaṃ dravyaṃ bhoginaṃ kaṃ na karoti /</l>
+<l>svayamarjayati svayaṃ bhuṅkte viralā jananī janayati] // Suk_7.3* (=67*) //</l>
+</lg>
+
+<p>ityavadhārya sa medinyāṃ babhrāma devatīrthaśmaśānanagareṣu dhanārtham /
+anyadā sa nirjane pradeśe prasiddhe śivacatvare karālāyāḥ śmaśāne ca paribhramya pariśrāntaḥ kapilakamaṭhamapaśyat /
+tatra ca paryaṅkasanasthaṃ tāpasaṃ dadarśa sa ca viprastasyāgre kṛtāñjalipuṭastasthau /
+tāpaso dhyānaṃ śanairmuktvā evamuktavān-</p>
+
+<lg>
+<l>kiṃ kasmai dīyate loke trāyate ko bhavārṇavāt /</l>
+<l>asādhyaṃ sādhyate kasya kāle 'sminnatitheraho // Suk_7.4 (=68) //</l>
+</lg>
+
+<p>tataḥ sa brāhmaṇa ūrdhvabāhurjagāda-tavāhamatithirdhanārthī /
+tāpaso 'pi taṃ vipramalpayācaka dṛṣṭvā manasi duḥkhībabhūva /
+uktañca-</p>
+
+<lg>
+<l>stokārthaprārthanāndīnāndṛṣṭvodārānhi yācakān /</l>
+<l>khidyante 'tīva manasi api prāṇapradāyinaḥ // Suk_7.5 (=69) //</l>
+</lg>
+
+<p>kiñca-</p>
+
+<lg>
+<l>ahihūo vi a vivaā karei suaṇo parassa upaāraṃ /</l>
+<l>oṇei aṇṇadādhaṃ candaṇataruo sakhaṇḍo vi // Suk_7.6 (=70) //</l>
+</lg>
+
+<lg>
+<l>[abhibhūto 'pi vipadā karoti sujanaḥ parasya upakāram /</l>
+<l>apanayatyanyatāpaṃ candanatarukaḥ sahasrakaṇḍo 'pi] // Suk_7.6* (=70*) //</l>
+</lg>
+
+<p>tato yogīndro "yadā tvametatsparśanaṃ kariṣyasi tadā hemnaḥ pañcaśatāni nityaṃ dāsyatī'tyuktvā viprāya paryaṅkīkṛtaṃ sindūramarpayāmāsa /
+uktaśca-"etattvayānyasmai na dātavyaṃ na kathanīyañca /
+anyathā mama samīpe vyāvṛtya sameṣyati /
+tadarpitaṃ yadā sa dvijaḥ prātaḥ spṛśati tadā suvarṇaśatapañcakaṃ dadāti /
+sa ca ratnāvatīṃ purīṃ gataḥ /
+tatra sthagikāṃ nāma veśyāṃ nityaṃ kāmayate /
+sā ca taddravyāgamanaṃ na jānāti /
+kuṭṭinī pṛcchati-hale! eṣa vipraḥ kimapi vyavasāyādikaṃ na vidhatte /
+paraṃ dravyaṃ kuto 'smākaṃ vitarati kasmādvilasatīti /
+tato veśyā taṃ pṛcchati /
+sa vipraḥ sarvathā na kathayati /
+tato veśyayā svakalayā bhaktyā cārādhitaḥ /
+tataḥ pṛṣṭaḥ sankathayāmāsa yatsindūrāddravyāgamaḥ /
+tayā ca suptasya sindūraṃ gṛhītam /
+tato dravyābhāve kuṭṭinyā gṛhānniṣkāsitaḥ /
+uktañca-</p>
+
+<lg>
+<l>viśvāsapratipannānāṃ vañcane kā vidagdhatā /</l>
+<l>aṅkamāruhya suptaṃ hi hantuṃ kiṃ nāma pauruṣam // Suk_7.7 (=71) //</l>
+</lg>
+
+<p>sa viprastatsindūramapaśyanphūtkurvanrājadvāraṃ yayau, muṣito 'hamiti vadan /
+tato vivādaḥ sañjātaḥ /
+kuṭṭinyāha-</p>
+
+<lg>
+<l>dhūrto 'sau matsutālubdho dhanahīno bhavatyasau /</l>
+<l>manobhavagrahagrasto asamañjasamīdṛśam // Suk_7.8 (=72) //</l>
+</lg>
+
+<lg>
+<l>janairguṇairasambhāvyaṃ rājñā kathaṃ sambhāvyate /</l>
+<l>paraṃ satyamidaṃ jātaṃ sindūraṃ dhanadaṃ yataḥ // Suk_7.9 (=73) //</l>
+</lg>
+
+<p>sa ca janairvaideśiko 'yamiti jñātvā nirvāsitaḥ /
+tacca sindūraṃ yogīndrameva yayau /
+tato rājanvikramāditya! sthagikāprītinibandhanāttenākhyāte ca sindūre sthagikā naiva viprasya babhūva na ca sindūram /
+evaṃ tavāpi rājan! ratiḥ prītiśca na bhaviṣyati /
+evamuktvā bālapaṇḍitā gṛhaṃ jagāma /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau saptamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 8:</p>
+
+<p>athāparedyuḥ prabhāvatī śukaṃ pṛcchati /
+śuka uttaraṃ dadau-devi! bālapaṇḍitā dvitīye 'hni saṃyāte rājānaṃ prāha-deva! nāgrahaḥ kartuṃ yujyate /
+yataḥ-</p>
+
+<lg>
+<l>rājñā naivāgrahaḥ kāryaḥ śubhe vāśubhakarmaṇi /</l>
+<l>tadaṅgāni hi bhūtāni rājñāṃ hi mahatī tanuḥ // Suk_8.10 (=74) //</l>
+</lg>
+
+<lg>
+<l>ākhyāte ca tava mayā viṇikputryā yathābhavat /</l>
+<l>na bahirna gṛhaṃ rājaṃstathā te 'pi bhaviṣyati // Suk_8.11 (=75) //</l>
+</lg>
+
+<p>rājā pṛcchati-kathametat? bālapaṇḍitā prāha-asti pṛthvītale tripuraṃ nāma sthānam /
+tasmintrivikramo nāma rāja /
+tatra sundarābhidhāno vaṇik /
+tadbhāryā subhagā nāmātīva kulaṭā /
+sā ca bhartrā gṛhānniryāntī prayatnena niyantritā /
+tāñca niyantraṇātpūrvameko vaṇigyakṣagṛhe sthitaḥ sakāmāmabhajat /
+yadā ca bahirnirgacchanto patinā nivāritā tadā sakhīṃ prāha-sakhi! adya tvayā sa mānavo yakṣāyatana ākāraṇīyaḥ yathāhaṃ tatra gatvā taṃ rame /
+tvayā ca mayi gatāyāṃ paścādasmadgṛhaṃ jvālanīyaṃ yathā gṛhakāryāsakto jano māṃ gātaṃ na jānāti /
+atrāntare 'haṃ taṃ svecchayā bhuktvā samupāgacchāmi /
+tataḥ sakhīvacanātsa pumāṃstatrāyātaḥ /
+sāpyāgatā /
+tadā ca gatāyāṃ tasyāṃ sā sakhī tadgṛhaṃ prajvālitavatī /
+sa pumānprajvalane kutūhalī yakṣāyatanaṃ muktvā tatrāvalokanāya gataḥ /
+sā ca tatra sthitāsamāptātmaprayojanā yāvatā gṛhamāgatā tāvatā gṛhaṃ dagdham /</p>
+
+<lg>
+<l>na gṛhaṃ na bahirbhūpa vaṇigvadhvā yathābhavat /</l>
+<l>tathā tava mahārāja bhaviṣyati suniścayam // Suk_8.12 (=76) //</l>
+</lg>
+
+<lg>
+<l>atha cet jñātena ślokārthena prayojanaṃ tadā kalye svayameva jñāpayiṣyāmi /</l>
+<l>ityuktvā sā gṛhaṃ yayau /</l>
+<l>iti kathāṃ śrutvā prabhāvatī suptā //</l>
+</lg>
+
+<p>iti śukasaptatau aṣṭamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 9:</p>
+
+<p>athāparedyuḥ savismayā prabhāvatī śukaṃ pṛcchati sma-śuka! kiṃ vijñātaṃ vikramārkeṇa matsyahasanakāraṇam? śukaḥ prāha-devi! na kimapi rājñā svayaṃ jñātam /
+tato rājā prātardvijasutāmāhuya bālapaṇḍitāṃ prāha-tvayā ityuktaṃ yattvaṃ svayameva jñāsyasi /
+mayā tu kimapi na jñātam /
+bālapaṇḍitā prāha-yadi rājannevamapi mayā kathyamānaṃ na vetsi, tataḥ śṛṇu /
+puṣpahāso nāma mantrī sarvamantriṇāmagraṇīrnirdeṣo guptaḥ /
+kimiti niyantrito 'sti /
+rājā prāha-anvartho 'yaṃ puṣpahāsaḥ /
+yataḥ yadāso madīyāyāṃ saṃsadi hasati tadāsyāsyātpuṣpaprakaro nipatati /
+iyañca kathāpararājyamaṇḍaleṣu khyātābhūt /
+tatastaiḥ preṣitāḥ svīyapumāṃsaḥ kutūhalānveṣaṇāya /
+teṣu samāyāteṣu tena na hasitaṃ puṣpaprakaro 'pi nābhūt /
+iti kāraṇātguptibandhaḥ /
+bālapaṇḍitā prāha-kenāpi kāraṇena mantriṇā na hasitam, rājan! tatkāraṇaṃ tvayā jñātaṃ na vā? rājā prāha-mayā kimapi na jñātam /
+bālapaṇḍitā prāha-tarhi kathamidaṃ daṇḍaṃ kurvanpāpabhāk na bhavasi? uktañca-</p>
+
+<lg>
+<l>dharmeṇa rāṣṭraṃ vindena dharmeṇaivānupālayet /</l>
+<l>dharmāccharaṇyatāṃ yāti rājā sarvabhayāpahaḥ // Suk_9.1 (=77) //</l>
+</lg>
+
+<p>yathā āgrahānmāṃ matsyahāsyakāraṇaṃ pṛcchasi tathā tamapi pṛccha hāsyakāraṇam /
+sa evātmīyahāsyasya matsyahāsyasya ca kāraṇaṃ vaktā /
+rājāpi tadvacanātpuṣpahāsaṃ mantriṇaṃ vastradānapūrvaṃ mantripade pratiṣṭhāpya matsyahāsyakāraṇaṃ papraccha /
+mantryāha-yadyapi gṛhaduścaritamakathyam /
+yataḥ-</p>
+
+<lg>
+<l>arthanāśaṃ manastāpaṃ gṛhe duścaritāni ca /</l>
+<l>vañcanaṃ cāpamānaṃ ca matimānna prakāśayet // Suk_9.2 (=78) //</l>
+</lg>
+
+<p>tathāpi tu rājājñā mahatī /
+<lg>
+<l>yataḥ-</l>
+<l>prabhuḥ prītisnigdhāṃ dṛśamapi na pāpeṣu visṛjet kutaḥ ślāghyāmājñāṃ praṇayarasasāndreṇa manasā /</l>
+<l>atītyādityāgniprabhṛti bhuvi dharmendriyamayaṃ nṛpākhyaṃ hi jyotiḥ prasabhamidamaindraṃ vijayate // Suk_9.3 (=79) //</l>
+</lg></p>
+
+<p>tato rājan! me kalatraṃ narāntararataṃ jātaṃ tacca mayā jñātam, tena ca duḥkhena na hasitam /
+rājāpīdamākarṇya puṣpahastakai rājñīmāhṛtya sammukhamavalokayāmāsa /
+sā ca tena prahāreṇa kapaṭamūrcchāṃ nāṭayati sma /
+puṣpahāso 'pi tāmavalokya sahāso babhūva puṣpotkaraśca samajani /
+rājāpi tāmāśvāsya kṛtakopo dvijātmajāsyaṃ vilokya mantriṇamavādīt kathamasmadduḥkhe sahāso 'si? mantryapi sabhayamañjaliṃ baddhvābhāṣata-rājan! poṭakajanaistvadīyā rājñī rātrau nāḍikābhirāhatāpi na mūrcchitā, adhunā mūrcchiteti hāsyakāraṇam /
+rājāpi sakopo "mantrinnidaṃ tvayā dṛṣṭaṃ śrutaṃ ve'ti papraccha /
+mantryāha-svāmindṛṣṭamevedam /
+yadi svāmī na pratyeti tadā kañcukamuttāryāvalokayatu /
+evaṃ kṛte rājā sarvamajñāsīt /
+mantriṇo dvijasutāyāśca mukhamavalokya kimidamityavādīt /
+mantryāha-svāmin! yadidaṃ dvijaputryā gūḍhārthaṃ matsyahāsyakāraṇaṃ niveditaṃ tanmayā prakaṭīkṛtam /
+ityevamukto rājā āsthānaṃ vyasarjayat /
+atha dvijasutāpuṣpahāsāvapi bhītahṛṣṭau svaṃ svaṃ gṛhaṃ jagmatuḥ /
+tena ca rājñā tasyā mañjūṣāsthito naro dṛṣṭo vināśitaḥ /
+sā ca nijavāsādvisarjitā /
+śukaḥ prabhāvatīmāha-</p>
+
+<lg>
+<l>tathā tvamapi kalyāṇi mā kuruṣva vṛthāgraham /</l>
+<l>yadāgrahaparo loke vilakṣo vikramārkavat // Suk_9.4 (=80) //</l>
+</lg>
+
+<p>iti kathā śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau navamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 10:</p>
+
+<p>anyadā saśṛṅgārā prabhāvatī śukamāha-</p>
+
+<lg>
+<l>kiṃ kartavyaṃ mayā kīra tvaṃ vadādya priyamvada /</l>
+<l>yadi te 'sti sakhī yāhi śṛṅgārīva sahāyinī // Suk_10.1 (=81) //</l>
+</lg>
+
+<p>prabhāvatyāha-kathametat? śuka āha-asti rājapuraṃ nāma sthānam /
+tatra devasākhyaḥ kauṭumbikaḥ, tatkalatre śṛṅgāravatī subhagā ca /</p>
+
+<lg>
+<l>parasparaparitrāṇakṛtabandhaparāyaṇe /</l>
+<l>parapuruṣalampaṭe prasiddhe ratakarmaṇi // Suk_10.2 (=82) //</l>
+</lg>
+
+<p>anyadā yāvatsubhagā upapatinā saha gṛhāntarvidyeta tāvadbahiḥ sthānāt patirjhiṇṭahasto gṛhadvāri samāyayau /
+tadā sā kathaṃ bhavatviti praśnaḥ? uttaramāha śukaḥ-tataḥ śṛṅgāradevyā sā nagnīkṛtya gṛhādbahirniṣkāsitā /
+patirapi "kimidami'ti bruvāṇo 'tyādarāt śṛṅgāradevyā uktaḥ-yattvayā etāni jhiṇṭāni devyā upavanādānītāni tata iyaṃ grahilā sañjātā /
+tato yathāsthānaṃ gatvā muñca yathā praguṇā syāt /
+tataḥ sa mūḍho yāvadevaṃ kartuṃ bahirjagāma tāvattayā gṛhādupapatirniṣkāsitaḥ /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau daśamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 11:</p>
+
+<lg>
+<l>pradoṣasamaye 'nyasminkāminī kāmamohitā /</l>
+<l>vinayena śukaṃ prāha gacchāmi yadi manyase // Suk_11.1 (=83) //</l>
+</lg>
+
+<p>śukaḥ prāha-</p>
+
+<lg>
+<l>avaśyameva gantavyaṃ tvayetthaṃ mama niścayaḥ /</l>
+<l>mano 'bhīṣṭe payo nimne gacchatkaḥ prativārayet // Suk_11.2 (=84) //</l>
+</lg>
+
+<lg>
+<l>gatayāpi tvayā tatra kartavyaṃ kiñcidadbhutam /</l>
+<l>yathā rambhikayā pūrvaṃ brāhmaṇārthe 'dbhutaṃ kṛtam // Suk_11.3 (=85) //</l>
+</lg>
+
+<p>prabhāvatyāha-kathametat? śuka āha-asti dābhilākhyo grāmaḥ /
+tatra vilocano grāmaṇīḥ /
+tadbhāryā rambhikābhidhā paranapriyā /
+tāṃ ca tadbhartṛbhayānna ko 'pi kāmayate /
+tataḥ sā jalavyājāt ghaṭamādāya vāpīṃ yayau /
+dṛṣṭvā ca tatra surūpaṃ pathikaṃ bhaṭṭaputraṃ krīḍārthaṃ dṛṣṭisaṃjñayā babhāṇa /
+so 'pi kāminīdṛṣṭisañcāracaturo viveda tadākūtam /
+uktañca-</p>
+
+<lg>
+<l>udīrito 'rthaḥ paśunāpi gṛhyate hayāśca nāgāśca vahanti noditāḥ /</l>
+<l>anuktamapyūhati paṇḍito janaḥ pareṅgitajñānaphalā hi buddhayaḥ // Suk_11.4 (=86) //</l>
+</lg>
+
+<lg>
+<l>kiñca ṇaabbhantaragholantīe haaramaṇarāadiṭṭhīe /</l>
+<l>puṇaruttapecchirīe bālaa kiṃ kiṃ ṇa bhaṇio si // Suk_11.5 (=87) //</l>
+</lg>
+
+<lg>
+<l>[nābhyantaraṃ ghūrṇayantyā hṛdayamanorāma dṛṣṭyā /</l>
+<l>punurutprekṣamāṇayā bālaka kiṃ kiṃ na bhaṇito 'si] // Suk_11.5* (=87*) //</l>
+</lg>
+
+<lg>
+<l>acchīhiṃ cia bhaṇiaṃ hiaattthaṃ jo jaṇo ṇa lakkhei /</l>
+<l>teṇa paḍibohieṇa e kiṃ kīrai ṇa kkhu alleṇa // Suk_11.6 (=88) //</l>
+</lg>
+
+<lg>
+<l>[akṣibhyāṃ cirabhaṇitaṃ hṛdayasthaṃ yo jano na lakṣayati /</l>
+<l>tena pratibodhitena ca kiṃ kriyate nu khalu ajñena] // Suk_11.6* (=88*) //</l>
+</lg>
+
+<p>tataḥ sa tadantikamāgatya jagāda-bhadre kiṃ vidheyam? sāha-tvayā mama pṛṣṭhalagnena asmadgṛhaṃ samāgantavyaṃ mama patyuśca namaskāro vidheyaḥ /
+sarvamanyadahaṃ kariṣye /
+tvayā tathaiveti vācyam /
+evamuktvā sā gṛhaṃ praviṣṭā /
+so 'pi gṛhaṃ praviṣṭastatpatyaragre tasthau /
+patirapi vismitaḥ /
+tataḥ sā kumbhaṃ muktvā patyuḥ sakāśamāgatyāvravīt- nātha! upalakṣasva enam /
+sa āha-ne vedmīti /
+tataḥ sā prāha-ayaṃ mātṛmvasuḥ suto yo mayā śiśutve muktaḥ /
+sa dhavalo nāma mama milanārthaṃ samāgamat /
+tato mayā āliṅgya sarvāpi svajanavārtā pṛṣṭā /
+sa ca brāhmaṇa "evamiti' jalpati /
+tataḥ patinā sānujñātā taṃ mahānasaṃ nītvā bhojanācchādanasaṃskāraistoṣayāmāsa /
+patirapi tuṣṭaḥ prāha-bhadra! tvayā nijabāndhavasya mahatī bhaktiḥ kāryetyuktvā suptaḥ /
+tadā ca rambhikā brāhmaṇakhaṭṭavāyāmupāvaśat /
+tatastenoktam-tvayā patyugre ityuktaṃ yanmadīyo bhrātā samāgataḥ /
+tattvaṃ me pratipannā bhaginī pratipannaṃ ca nirvāhyate /
+uktañaca-</p>
+
+<lg>
+<l>chijjau sīsuṃ aha hou bandhaṇaṃ caau savvahā lacchī /</l>
+<l>paḍivaṇṇapālaṇe supurisāṇa jaṃ hou taṃ hou // Suk_11.7 (=89) //</l>
+</lg>
+
+<lg>
+<l>[chidyatāṃ śīrṣamatha bhavatu bandhanaṃ calatu sarvathā lakṣmīḥ /</l>
+<l>pratipannapālane supuruṣāṇāṃ yad bhavatu tad bhavatu] // Suk_11.7* (=89*) //</l>
+</lg>
+
+<lg>
+<l>lajjijjai jeṇa maṇo mailijjai ṇiakulakkamo jeṇa /</l>
+<l>kaṇṭhaṭṭhie vi jīe mā sundari taṃ kuṇijjāsu // Suk_11.8 (=90) //</l>
+</lg>
+
+<lg>
+<l>[lajjate yena mano malinayati nijakulakramo yena /</l>
+<l>kaṇṭhasthite 'pi jīve mā sundari taṃ kariṣyasi] // Suk_11.8* (=90*) //</l>
+</lg>
+
+<p>rambhikā prāha-mā evaṃ vada /</p>
+
+<lg>
+<l>yato 'tidurlabhā rāmā pitṛmātṛparāyaṇā /</l>
+<l>pitṛmātṛmayairbhūtvā bhoktavyā kāminī raiḥ // Suk_11.9 (=91) //</l>
+</lg>
+
+<p>uktañca-</p>
+
+<lg>
+<l>kāmārtāṃ svayamāyātāṃ yo na bhuṅkte nitambinīm /</l>
+<l>so 'vaśyaṃ narakaṃ yāti tanniḥśvāsahato naraḥ // Suk_11.10 (=92) //</l>
+</lg>
+
+<lg>
+<l>so kiṃ va māṇai para mahila jo ṇavi jaṃpi emva /</l>
+<l>.... .... .... // Suk_11.11 (=93) //</l>
+</lg>
+
+<lg>
+<l>[sa kimeva manyate paramahilāṃ yo viparītaṃ jalpatyevam /</l>
+<l>.... .... ....] // Suk_11.11* (=93*) //</l>
+</lg>
+
+<lg>
+<l>jo ṇavi māṇai... so kiṃ va māṇai thī avarāi /</l>
+<l>... ... ... mā kari ṇeha amhahaṃ bhaṅgu // Suk_11.12 (=94) //</l>
+</lg>
+
+<lg>
+<l>[yo viparītaṃ manyate...sa kimiva manyate striyamaparām /</l>
+<l>... ... ...] // Suk_11.12* (=94*) //</l>
+</lg>
+
+<lg>
+<l>śrūyate rukmiṇī pūrvaṃ kṛṣṇeva madanāturā /</l>
+<l>gṛhītā bhrātṛjāyāpi kaḥ kāmamatilaṅghayet // Suk_11.13 (=95) //</l>
+</lg>
+
+<lg>
+<l>virañcirapi kāmārtaṃ svasutāmabhilāṣukaḥ /</l>
+<l>dṛśyate 'dyāpi viyati hāriṇīṃ tanumāśritaḥ // Suk_11.14 (=96) //</l>
+</lg>
+
+<lg>
+<l>vivāhe pārvatī dṛṣṭvā harasya haravallabhām /</l>
+<l>caskanda retastasyāpi bālakhilyāstadudbhavāḥ // Suk_11.15 (=97) //</l>
+</lg>
+
+<lg>
+<l>tayaivaṃ bodhito mūrkhaḥ sa yāvadramate na tām /</l>
+<l>phūtkṛtaṃ muṣitāsmīti trāyatāṃ trāyatāmaho // Suk_11.16 (=98) //</l>
+</lg>
+
+<p>tayā ca phūtkṛte kimidamiti kurvāṇo bāndhavaiḥ saha dhāvito bhartā /
+sa ca kathaṃ mucyate? iti praśnaḥ /
+uttaram-evaṃ ca sa brāhmaṇaḥ sabhayaḥ sannataḥ pādayoḥ patito jagāda-svāmini! prāṇān rakṣa /
+tavehitaṃ kariṣyāmi /
+evaṃ sthite sā dugdhasahitaṃ bhaktamaḍhaṇḍholayat antike jvalinamajvālayat /
+āgataṃ ca patiṃ jagāda-asya viṣūcikā upapannā /
+tato mayā phūtkṛtam /
+evamuktvā dugdhabhaktaṃ pradaśitam /
+patirapi mūrkho dṛṣṭvā yayau /
+tataḥ sā patyau supte yadṛcchayā surataṃ cakāra /
+so 'pi ca māndyavyājānmāsamekaṃ sthitaḥ paścājjagāma /
+iti śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau ekādaśī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 12:</p>
+
+<p>athānyadā sā calitā /
+śukaḥ prāha-</p>
+
+<lg>
+<l>viparīte samāyāte yadi vetsi tvamutaram /</l>
+<l>yathā śobhikayā proktaṃ vavvūle carite sati // Suk_12.1 (=99) //</l>
+</lg>
+
+<p>astyatra nalauḍāgrāme kulālo mahādhanaḥ /
+<lg>
+<l>tasya bhāryā śobhikā nāma paraṃ kulaṭā naralampaṭā ca /</l>
+<l>sā patyau bahirgate upapatisahitā gṛhāntaḥ krīḍati /</l>
+<l>tasyāścaivaṃ sthitāyā bhartā gṛhaṃ samāgamat /</l>
+<l>tadanantaraṃ sā kathaṃ bhavatviti praśnaḥ //</l>
+</lg></p>
+
+<p>śukaḥ prāha-yadā ca tayā sa āgacchan jñānastadā upapatiruktaḥ-"ca] tvaṃ vavvūlavṛkṣam' /
+evaṃ ca sa tayo proktastathā cakāra /
+tasya ca vṛkṣe caṭataḥ paridhānavastraṃ vilagnaṃ nagno 'pi vṛkṣamārūḍhaḥ /
+tasmiṃśca vṛkṣamārūḍhe patiḥ prāha-kamidamiti /
+sā āha-ayaṃ śatrubhirabhibhūto 'dovastramapi tyaktvā vavvūlamadhirūḍhaḥ /
+tataḥ samāgatya tasyāḥ patinā vṛkṣānmandaṃ mandamuttārya sa svagṛhaṃ preṣitaḥ /
+tayā dhūrtayā ca sahahastatālaṃ hasitam /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau dvādaśokathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 13:</p>
+
+<p>athānyedyuḥ prabhāvatī śukaṃ pṛcchati /
+śuka āha-</p>
+
+<lg>
+<l>vraja devi sukhaṃ bhuṅkṣva ardhabhukte patau yathā /</l>
+<l>kṛtaṃ rājikayā cittamuttaraṃ dhūlisaṃyutam // Suk_13.1 (=100) //</l>
+</lg>
+
+<p>asti nāgapuraṃ nāma sthānam /
+yatraiko vaṇika /
+tatpatnī rājikānāmnī surūpā paraṃ duścāriṇo /
+vaṇiksutaśca tāṃ narāntarāsaktāṃ na jānāti /
+tataśca ekadā sa bhojanāya yadopaviṣṭastadā upapatiḥ kṛtasaṃketo mārge gacchan tayā dṛṣṭaḥ /
+taṃ ta dṛṣṭvā gṛhe 'dya dhṛtaṃ nāsti ityuktvā dravyaṃ tatsakāśādādāya ghṛtānayanadambhena veśmato nirgatya ca sā bahirjāreṇa saha ciraṃ sthitā /
+patistu gṛhe kṣudhārtaḥ kruddhaśca /
+tataḥ sā kathaṃ gṛhaṃ gantumarhati-iti praśnaḥ /
+uttaram-tataḥ sā hastau pādau mukhaṃ ca dhūlidhūsaraṃ vidhāya sadrammā dhūliṃ gṛhītvā gṛhamāgatā /
+patiḥ kruddho raktekṣaṇaḥ kimidamityāha /
+sā ca saniḥśvāsaṃ rudatī dhūlipuñjaṃ darśayitvā idamuvāca-yatkṛte tvaṃ kruddhaḥ sa te dravyo 'tra dhūlyāṃ patitaḥ /
+enāmutkṣipya gṛhāṇa tvam /
+evamuktaḥ sa vilakṣaḥ tadaṅgāni vastrāñcalena sammārjya sāntvayāmāsa vividhalālanaiḥ /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau trayodaśī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 14:</p>
+
+<p>sā nitambini anyedyuścalitā /</p>
+
+<lg>
+<l>śukenoktam- yuktameva viśālākṣi paraṃ rantuṃ yadṛcchayā /</l>
+<l>yadyāyāte patau vetsi dhanaśrīriva bhāṣitum // Suk_14.1 (=101) //</l>
+</lg>
+
+<p>prabhāvatyāha-kimetat /
+śukaḥ prāha-asti padmāvatī purī /
+tatra dhanavālo nāma vaṇik /
+tasya bhāryā prāṇebhyo 'pi priyā dhanaśrornāma /
+tacca mithunaṃ parasparaṃ snehanirbharaṃ krīḍati /
+anyadā tu vaṇigdravyasāramādāya tāmāpṛcchya deśāntaraṃ jagāma /
+sā ca tasmingate saṃsthiteva gṛhasthitā /</p>
+
+<lg>
+<l>na snāti na ca sā bhuṅkte na jalpati sakhīsamam /</l>
+<l>nirastāśeṣasaṃskārā svadehe 'pi parāṅmukhī // Suk_14.2 (=102) //</l>
+</lg>
+
+<lg>
+<l>malayānilamārūḍhaḥ kokilālāpaḍiṇḍimaḥ /</l>
+<l>mallikāmodadūtaśca madhupāravamaṅgalaḥ // Suk_14.3 (=103) //</l>
+</lg>
+
+<lg>
+<l>anyadā tu samāyāto vasantaḥ kālarāṭ kṣitau /</l>
+<l>mano 'pi vikriyāṃ yasminyāti saṃyamināṃ kila // Suk_14.4 (=104) //</l>
+</lg>
+
+<p>tasminvasantotsave gṛhopari sthitā nagarīrāmaṇīyakamālokya yauvanaṃ rūpaṃ ca nininda /
+sakhī ca tadiṅgitajñā jagāda-bhāmini! rūpaṃ vayaśca mā vyarthaṃ vidhehi /</p>
+
+<lg>
+<l>yataḥ- vādyate śṛṇu rambhoru kokilārāvaḍiṇḍimaḥ /</l>
+<l>madanasya nṛpasyeva vasantena dharātale // Suk_14.5 (=105) //</l>
+</lg>
+
+<lg>
+<l>muñcantu māninaḥ sarve mānaṃ sevantu vallabhāḥ /</l>
+<l>gatvaraṃ yauvanaṃ loke jīvitaṃ ca tathā calam // Suk_14.6 (=106) //</l>
+</lg>
+
+<p>tatastvamapi kuru vayaḥsāphalyamityukte dhanaśrīrjagāda-nāhaṃ vilambituṃ sahāmi /
+yattvayā bhavati tat śīghraṃ vidhehi /
+tatastayā sā narāntareṇa yojitā /
+yadā ca sā tenātmāsaktā jñātā tadā tadīyaśiroveṇī chinnā /
+tatkāle ca patirdeśāntarādājagāma /
+tadā sā kathaṃ bhavatviti praśnaḥ /
+śukaḥ prāha-yadā ca patirgṛhadvāramāyayau tadā tayottaraṃ vicintyokm-nātha! tvayā tādavadgṛhadvāri sthīyatāṃ yāvatsarvaṃ sajjaṃ vidhīyate /
+tena caivaṃ pratipanne sā madhye gatvā bhaṭṭārikāṃ pūjayitvā purato veṇīṃ sthāpayāmāsa /
+evaṃ kṛtvā bahirnirgatya caraṇamaṇḍakaiḥ patiṃ gṛhantardevīpurato nītvā jagāda-nātha! pūjaya gṛhādhidevatām /
+tena pūjayatā veṇīṃ dṛṣṭvā uktam-kimidamiti /
+tayoktam-mayopayācitamāsīt /
+yadā me patiḥ sameṣyati tadā svāminyahaṃ tavāgre veṇīṃ chetsyāmi /
+tadadhunā mayā kṛtam /
+sa ca mugdho devīṃ namaskṛtya tāṃ bahu mānayāmāsa /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau caturdaśī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 15:</p>
+
+<p>anyadā sā calitā /</p>
+
+<lg>
+<l>hasannāha śuko yāhi yadi kartuṃ tvamuttaram /</l>
+<l>vetsi yathā śriyādevyā nūpure 'pahṛte kṛtam // Suk_15.1 (=107) //</l>
+</lg>
+
+<p>asti śālipuraṃ nāma nagaram /
+tatra śāligo vaṇik /
+tatpatnī jayikā /
+tayoḥ suto guṇākaro nāmābhūt /
+tadbhāryā śriyādevī /
+<lg>
+<l>sā cāpareṇa subuddhināmnā vaṇijā saha ramate /</l>
+<l>tato lokāpavāde 'pi saṃjāte 'nuraktastadīyaḥ patirna kimapi karṇe karoti /</l>
+<l>uktañca- rattā picchanti guṇā dosā picchanti je virattatti /</l>
+<l>majjhatthā uṇa purisā dosā vi guṇā vi picchanti // Suk_15.2 (=108) //</l>
+</lg></p>
+
+<lg>
+<l>[raktāḥ pṛcchanti guṇān doṣān pṛcchanti ye viraktāḥ /</l>
+<l>madhyasthāḥ punaḥ puruṣā doṣānapi guṇānapi pṛcchanti] // Suk_15.2* (=108*) //</l>
+</lg>
+
+<lg>
+<l>kiñca- mahilārattā purisā cheā vi ṇa saṃbharanti appāṇaṃ /</l>
+<l>iare uṇa taruṇīṇaṃ purisā salilaṃ va hatthagaaṃ // Suk_15.3 (=109) //</l>
+</lg>
+
+<lg>
+<l>[mahilāraktāḥ puruṣāśchekā api na sambharanti ātmanām /</l>
+<l>itare punastaruṇīnāṃ puruṣāḥ salilameva hastagatam] // Suk_15.3* (=109*) //</l>
+</lg>
+
+<p>anyadā sā śvaśureṇa narāntarasahitā suptā dṛṣṭā /
+tataścaraṇānnūpuraṃ śvaśureṇa cottāritaṃ tayā ca jñātam /
+tataḥ sā taṃ jāraṃ prasthāpya bhartāraṃ tatrānīya tena saha suptā /
+nidrāntare ca patirutthāpitaḥ kathitañca-tvadoyena pitrā nūpuramasmatpādādavartāya gṛhītam /
+evaṃvidhaṃ ca pātakaṃ kvāpi na dṛṣṭaṃ yadvadhūpādāt śvaśuro nūpuraṃ gṛhṇāti /
+tenoktam-prātaḥ pituḥ sakāśātsvayamarpayiṣyāmi /
+tena ca guṇākareṇa pitara nirbhartsya tatsakāśānnūpuraṃ yācitam /
+pitrā coktam-yadiyaṃ parapuruṣeṇa saha suptā dṛṣṭā ato mayā nūpuraṃ gṛhītam /
+tayoktam-tvatputreṇa saha suptāhamāsam /
+ityarthe divyaṃ karomi /
+atraiva grāme uttarasyāṃ diśi yakṣo 'sti /
+tasya jaṅghāntarānnirgamiṣyāmi /
+yaḥ kaścitsatyo bhavati sa jaṅghayorantarānniṣkrāmyatīti prasiddham /
+evaṃ śvaśureṇa cāṅgīkṛte sā kulaṭā sati dine jārasya gṛhe gatvā tamuvāca-bho kānta! prātarahaṃ divyārthaṃ yakṣasya jaṅghāntarānnirgamiṣyāmi /
+tvayā tatra samāgatya vātūlatvamāśritya mama kaṇṭhagraho vidheyaḥ /
+tena ca tathokte sā svagṛhamājagāma /
+atha prāpaḥ samastamahājanaṃ malayitvā puṣpākṣatādikamādaya yakṣāyatane gatvā samīpasarasi snānaṃ kṛtvā yakṣapūjārthaṃ samāgacchantyāstasyāḥ pūrvasaṅketito jāro grahilībhūtastatkaṇṭhe nijabāhudvayaṃ yojayāmāsa /
+tata āḥ kimetadityabhidhāya sā punaḥ snānārthaṃ yayau /
+so 'pi grahilo lokaiḥ kaṇṭhe gṛhītvā tasmātpradeśāddūrīkṛtaḥ /
+sāpi snānaṃ kṛtvā yakṣasamīpamāgatya puṣpagandhādyairabhyarcya sarvalokānāṃ śṛṇvatāmuvāca-bho bhagavanyakṣa! nijabhartāramenaṃ ca grahilaṃ vinā yadyanyapuruṣaḥ spṛśati kadācana māṃ tadā tava jaghābhyāṃ sakāśānmama niṣkramaṇaṃ mā bhavatvityabhidhāya sarvalokasamakṣameva jaṅghayormadhye praviśya niṣkrāntā /
+yakṣo 'pi tadbuddhi manasi ślāghamāna eva sthitaḥ /
+sāpi satīti samastalokaiḥ pūjitā svabhavanaṃ jagāma /
+evaṃ cet śriyādevīvatkartuṃ jānāsi tadā vraja /
+iti śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau pañcadaśī katā //</p>
+
+</div>
+<div>
+
+<p>START Suk 16:</p>
+
+<p>anyadā sā calitā śukaṃ prāha-śukāhaṃ narāntaraṃ gamiṣyāmi /</p>
+
+<lg>
+<l>śukaḥ prāha- satyameva tvayābhāṇi kartavyaṃ yanmano 'nugam /</l>
+<l>manastu mugdhikā yadvadaśakyānkhedayatyalam // Suk_16.1 (=110) //</l>
+</lg>
+
+<p>tacdhrutvā prabhāvatyāha-kathametat /
+so 'bravīt-asti vidiśā nāma purī /
+tasyāṃ janavallabho nāma vaṇik /
+tasya bhāryā mugdhikā nāma capalā svairiṇī /
+yadā ca tayātiśayena vidūṣito 'yaṃ tadā bandhūnāṃ kathayāmāsa yadiyaṃ bahiḥśāyinī /
+yadā ca tairevamuktā tadā tayāpyuktam-ayameva bahiḥśāyī sadaiva /
+māṃ mudhāpavādayati /
+tatastairmilitvā nirbandhaḥ kṛtaḥ "yaḥ ko 'pi adyaprabhṛti bahiḥśāyī so 'parādho" /
+evaṃ nirbandhe kṛte 'pi sā suptaṃ patiṃ vihāya bahirgatā /
+tasyāṃ ca bahirgatāyāṃ sa patirdvāraṃ datvā suptaḥ /
+yadā cabahiḥ krīḍāṃ kṛtvā samāgatāyāḥ sa patirdvāraṃ nodghāṭayati tadā sā kūpe dṛṣadaṃ kṣiptvā dvāradeśa eva sthitā /
+patirapi kūpe patitā bhaviṣyatīti jñātvā dvāramudghāṭyabahirnirgataḥ /
+tadā sā dvāraṃ pidhāya madhye sthitā /
+so 'pi ca bahiḥ sthito "hā priye' evaṃ vadanmahatā śabdena goditumārabdhaḥ /
+sāpi vigopakabhayādbahirnirgatya patiṃ madhye nināya /
+tatastanmithuna parasparaṃ nirbandhaṃ cakāra /
+yadadyaprabhṛti mayā tvayā visaṃvādo na vidheyaḥ /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau ṣoḍaśī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 17:</p>
+
+<p>anyadā sā hasantī narāntaragamanāya śukaṃ pṛcchati /
+śuka āha-yadeva manaso 'bhīṣṭaṃ tadeva kāryam /</p>
+
+<lg>
+<l>uktañca- dṛṣṭipūtaṃ nyasetpādaṃ vastrapūtaṃ jalaṃ pibet /</l>
+<l>satyapūtaṃ vadedvākyaṃ manaḥpūtaṃ samācaret // Suk_17.1 (=111) //</l>
+</lg>
+
+<lg>
+<l>mano 'nukūlaṃ kurvantu tanvi te duḥkhamāgatam /</l>
+<l>soḍhuṃ śaktāstathā vaktuṃ guṇāḍhyo brāhmaṇo yathā // Suk_17.2 (=112) //</l>
+</lg>
+
+<p>prabhāvatī pṛcchati-kathametat /
+śukaḥ kathayati-asti viśālā purī /
+tatra yāyajūko brāhmaṇaḥ /
+tasya patnī pāhinī nāma surūpā ativallabhā /
+tatputraḥ pitrā sarvāmapi kramādvidyāṃ grāhitaḥ /
+anyadā sa pitarau muktvā deśāntaraṃ gataḥ /
+guṇāḍhya iti viśruto babhūva /
+jayantyāṃ ca nagaryāṃ buddhijīvanaṃ vyacintayat /
+tataḥ ṣaṇḍaṃ yavakāśādibhiḥ pupoṣa /
+so 'pi ṣaṇḍastamanu paribhramati /
+anyadā sabandhanaṃ ṣaṇḍaṃ vidhāya vaṇijārakaveṣadhārī madanāyā veśyāyāḥ kṭuṭinīṃ jagāda-asmadīyā balīvardāḥ savastukā prātareṣyanti /
+adyāhaṃ tṛṇānayanārthamāgataḥ /
+tadyatra asmadīyasya balīvardasya sthānaṃ bhavati tatrāhaṃ svapimi /
+ityukte sā kuṭṭinī balīvadadhanaiṣiṇī taṃ sthāpayāmāsa /
+so 'pi taṃ ṣaṇḍaṃ baddhvā vilāsinīpārśve yayau /
+tayā ca snāpito bhojitaśca guṇāḍhyo rajanyāṃ śṛṅgāritaḥ tatsakāśe sthitaḥ /
+so 'pi ca prabhātāyāṃ niśi prathamamevotthāya svarṇaśṛṅkhalā gṛhītvā jagāma /
+gate ca tasminnekā ceṭī utthitā ṣaṇḍamadṛṣṭvā kuṭṭinīṃ pratyāha "āue kimidam' /
+tatastaṃ vilāsinīpārśvādgataṃ jñātvā maunaṃ vidhāya sthitā /</p>
+
+<lg>
+<l>uktañca- arthanāśaṃ manastāpaṃ gṛhe duścaritāni ca /</l>
+<l>vañcanaṃ cāpamānaṃ ca matimānna prakāśayet // Suk_17.3 (=113) //</l>
+</lg>
+
+<p>anyadā guṇāḍhyo dyūtanirjitaḥ khaṭikāhasto veśyayā dhṛtaḥ /
+tenopāyaścinnitaḥ-śambalo śambalīti jagāda /
+tatastayā rājabhayānmuktaḥ /
+tatastasyāṃ calitāyāṃ pṛṣṭhalagna eva śambalīti vadan gacchati /
+tatastayā vijane nītvā hastātprasādya svarṇābharaṇaṃ dattam /</p>
+
+<lg>
+<l>soḍhuṃ tyaktuṃ ca yaḥ śakto manasā kṛtamanyathā /</l>
+<l>mano 'nukūlatāṃ kurvanna sa nindyaḥ sadā satām // Suk_17.4 (=114) //</l>
+</lg>
+
+<p>iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau saptadaśī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 18:</p>
+
+<p>anyadā sā calitā śukenoktā /</p>
+
+<lg>
+<l>gaccha devi na te deṣo gacchantyāḥ paraveśmani /</l>
+<l>yadi kāciccharīre te buddhiḥ sarṣapacauravat // Suk_18.1 (=115) //</l>
+</lg>
+
+<p>asti śubhasthānaṃ nāma nagaram /
+tatra daridro nāma vaṇik /
+tasya gṛhe cauraḥ praviṣṭaḥ /
+so 'pi ca tatrānyatkimapyalabhamānaḥ sarṣapān gṛhītvā nirgato rājapuruṣaiḥ prāptaḥ /
+sarṣapān gale baddhvā bhrāmito rājakulātsa kathaṃ mucyate /
+uttaram-yo yaḥ pṛcchati tasya tasyāgre vadati-aho sarṣapāṇāṃ madhye na kiñcit /
+tato rājñā sabhāyāmākārya pṛṣṭaḥ-tava vaco 'bhiprāyaṃ na jāne /</p>
+
+<lg>
+<l>prāha- balervarṣadine lokaḥ sarṣapānpañcarakṣakān /</l>
+<l>haste badhnāti tannūnamapramāṇamataḥ param // Suk_18.2 (=116) //</l>
+</lg>
+
+<p>yato 'hametāvadbhirapi gale baddhairbaddhaḥ rājāpi tadākarṇya hasaṃstaṃ mumoca /
+iti śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau aṣṭādaśī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 19:</p>
+
+<p>anyadā prabhāvatī calitā /</p>
+
+<lg>
+<l>śukaḥ prāha- kuru yadrocate bhīru yadi kartuṃ tvamīśvarā /</l>
+<l>yathā santikayā bhartā svacchandā ca vimocitā // Suk_19.1 (=117) //</l>
+</lg>
+
+<p>asti karahaḍābhidhaṃ puram /
+tatra rājā guṇapriyo nāma yathārthaḥ /
+tatra ca soḍhoko nāma śreṣṭhiḥ /
+tadbhāryā santikā nāma pativratā /
+tatraiva cānyo vaṇik /
+tadbhāryā svacchandā nāma puṃścalī /
+sā ca soḍhākaṃ nityamicchati paraṃ so 'bhivāñchāṃ na vidhatte /
+anyadā ca manorathābhidhaṃ yakṣaṃ namaskartuṃ jagāma saḥ /
+tataḥ svacchandā pṛṣṭhalagnā tatra praviṣṭā /
+sa ca hāvabhāvādyairanukūlito bhuktaḥ /
+yuktamuktañca-</p>
+
+<lg>
+<l>sanmārge tāvadāste prabhavati puruṣastāvadevendriyāṇāṃ lajjāṃ tāvadvidhatte vinayamapi samālambate tāvadeva /</l>
+<l>bhrūcāpākṛṣṭamuktāḥ śravaṇapathajuṣo nīlapakṣmāṇa ete yāvallīlāvatīnāṃ na hṛdi dhṛtimuṣo dṛṣṭibāṇāḥ patanti // Suk_19.2 (=118) //</l>
+</lg>
+
+<p>tacca mithunaṃ dṛṣṭvā rājapuruṣaḥ tadbandhanāya yakṣagṛhaṃ veṣṭitam /
+santikā ca śuddhiṃ jñātvā rātrau mahatā tūryaśabdena yakṣagṛhaṃ gatā /
+teṣāmārakṣakāṇāṃ purata uktam-ahamadyadinavratā yakṣaṃ dṛṣṭvā bhojanaṃ vijane vidhāsye /
+māṃ ca kiñciddhanaṃ gṛhītvā madhye praveśayatu /
+tairapi tathaiva kṛtam /
+tatastayā svacchandā svaveṣāṃ kārayitvā bahirniṣkāsitā /
+svayaṃ madhye sthitā /
+taṃ ca prātarnijakāntāsahitaṃ dṛṣṭvā ārakṣakā vilakṣībabhūvuḥ /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau ekonaviṃśatitamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 20:</p>
+
+<p>anyadā prabhāvatī śukaṃ papraccha /</p>
+
+<lg>
+<l>śukaḥ prāha- gaccha devi mano yatra ramate te narāntare /</l>
+<l>kelikāvadyadā vetsi pativañcanamadbhutam // Suk_20.1 (=119) //</l>
+</lg>
+
+<p>asti sābhramatyā nadyāstaṭe śaṅkhapuraṃ nāma sthānam /
+tatra ca karṣukaḥ sūrākhyo dhanī /
+tasya kelikā bhāryā paraṃ kuṭilā kulaṭā ca /
+sānyasminnadītīre siddheśvarapurasthaṃ brāhmaṇaṃ kāmayate /
+tadāsaktā ca rātrau prātiveśikādūtikāsāhāyyānnadīṃ tīrtvā tadantikaṃ prāpnoti /
+anyadā bhartrā jñātam /
+sa ca tatra gatastaccaritragaveṣaṇāya /
+yāvatsā nadītīre tatra samāgatā tayā ca tāvaddṛṣṭaḥ /
+tatastaraṇaghaṭaṃ pānīyabhṛtaṃ vidhāya prātiveśmikāgṛhamadhye bhaṭṭārikāṃ maṇḍayitvā tena payasā snāpayitvā pratyuvāca prathamasaṃketitāṃ dūtikāmuddiśya-"svāmini! purā tvayā uktaṃ yadi tvaṃ siddheśvarīṃ na snāpayasi tataḥ pañcānāṃ dinānāṃ madhye tvadbhartṛbharaṇaṃ bhaviṣyati tato yadi tvadvacanapramāṇaṃ tadā mama patiściraṃ jīvatu /
+prātiveśmikayoktam evamastviti śrutvā patistuṣṭo bhūtvālakṣita eva jagāma /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau viṃśatitamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 21:</p>
+
+<p>anyasmindine prabhāvatyā puṣṭaḥ śukaḥ prāha-</p>
+
+<lg>
+<l>vraja devi na doṣo 'sti vrajatāṃ sarvakarmasu /</l>
+<l>buddhirasti yadā yeṣāṃ mandodaryāḥ sahāyinī // Suk_21.1 (=118) //</l>
+</lg>
+
+<p>prabhāvatyāha-kathametat /
+śukraḥ-asti pratiṣṭhānaṃ nāma nagaram /
+tatra hemaprabho nāma rājā /
+śrutaśīlo mantrī /
+śreṣṭhī yaśodharaḥ /
+mohinī bhāryā /
+tayostanayā mandodarī /
+sa śrīvatsāya vaṇije kāntipurīsamāgatāya dattā /
+tanmithunamatīva snehalampaṭam /
+sā ca prātiveśmikayā pitṛbhāryayā kuṭṭinyā daṃṣṭrākarālayā yojitamanyaṃ rājaputramupabhuṅke /
+sā'pannasattvā bhūtā garbhasaṃbhavātsaṃjāte dohade rājavallabhaṃ mayūraṃ mārayitvā bhakṣitavatī /
+rājā tu tasminmayūre samāgate bhuṅkte iti sthitiḥ /
+tasmindivase tu bhojanavelāyāṃ na labdhaḥ /
+ḍiṇḍimaghoṣaṇe kṛte kuṭṭinyā paṭahaḥ spṛṣṭaḥ /
+tayā ca jñātaṃ yatkayācidāpannasattvayā mayūro dohadādbhakṣitaḥ /
+tataḥ sā garbhavatī pṛṣṭā tayā kuṭṭino gṛhamāgatā sammānitā /
+uktañca-</p>
+
+<lg>
+<l>mādhuryaṃ pramadājane sulalitaṃ dākṣiṇyamārye jane, śauryaṃ śatruṣu mārdavaṃ gurujane dharmiṣṭhatā sādhuṣu /</l>
+<l>marmajñeṣvanuvartanaṃ bahuvidhaṃ mānaṃ jane garvite, śāṭhyaṃ pāpajane narasya kathitāḥ paryantamaṣṭau guṇāḥ // Suk_21.2 (=119) //</l>
+</lg>
+
+<p>tayā ca sarvo 'pi mayūravṛttānto niveditaḥ /
+sā cakuṭṭinī viśvāsaghātikā /
+uktañca-</p>
+
+<lg>
+<l>na viśvasedaviśvaste viśvaste 'pi na viśvaset /</l>
+<l>viśvāsād bhayamutpannaṃ mūlādapi nikṛntati // Suk_21.3 (=120) //</l>
+</lg>
+
+<lg>
+<l>dāreṣu gopyaṃ puruṣasya kiñcidgopyaṃ vayasyeṣu suteṣu kiñcit /</l>
+<l>yuktaṃ na yuktaṃ manasā vicintya vadedvipaścinmahato 'nurodhāt // Suk_21.4 (=121) //</l>
+</lg>
+
+<p>kiñca-</p>
+
+<lg>
+<l>sopacārāṇi vākyāni śatrūṇāmiha lakṣayet /</l>
+<l>avicāritagītārthāṃ mṛgā yānti parābhavam // Suk_21.5 (=122) //</l>
+</lg>
+
+<p>kirāte 'pyuktam-</p>
+
+<lg>
+<l>vrajanti te mūḍhadhiyaḥ parābhavaṃ bhavanti māyāviṣu ye na māyinaḥ /</l>
+<l>praviśya hi ghnanti śaṭhāstathāvidhānasaṃvṛtāṅgānniśitāiveṣavaḥ // Suk_21.6 (=123) //</l>
+</lg>
+
+<p>kuṭṭinyā tatsarvaṃ jñātvā mantriṇe niveditam /
+mantriṇāpi rājñe /
+rājā prāha-</p>
+
+<lg>
+<l>mā hohi suhaggāhi mā pattihi jaṃ ṇa diṭṭhapaccakkhaṃ /</l>
+<l>paccakkhammi vi diṭṭhe juttājuttaṃ viutaṇāhi // Suk_21.7 (=124) //</l>
+</lg>
+
+<lg>
+<l>[mā bhava sukhagrāhī mā pratyehi yanna dṛṣṭaṃ pratyakṣam /</l>
+<l>pratyakṣe 'pi dṛṣṭe yuktāyuktaṃ vijānīhi] // Suk_21.7* (=124*) //</l>
+</lg>
+
+<p>tadvaṇijo nagarapradhānasya vadhvā naitanniṣpadyate /
+yāvadātmanā na dṛṣṭaṃ tāvadasau na viḍambyaḥ /
+tacca kuṭṭinyā agre mantriṇā niveditam /
+kuṭṭinī ca mantriṇaṃ peṭāyāṃ nikṣipya tadgṛhe nyāsavyājena mumoca /
+svayaṃ ca tatra gatvā tāmabhāṣata- mugdhe! yanmayūrabhakṣaṇaṃ kṛtaṃ tattvaṃ me ślāghyā /
+uktañca-</p>
+
+<lg>
+<l>eṇaḥ kuraṅgo harimastittirirlāva eva ca /</l>
+<l>mayūracarmikūrmāśca śreṣṭhā māṃsagaṇeṣvapi // Suk_21.8 (=125) //</l>
+</lg>
+
+<p>punarapi samagro vṛttāntaḥ puṣṭaḥ /
+kathyamānaśca peṭāhananakṛtasaṃjñena mantriṇā śrutaḥ /
+tatkathaṃ sā śreṣṭhivadhūstatpitā śvaśuraśca mucyantām /
+uktañca-</p>
+
+<lg>
+<l>na nīcajanasaṃsargānnaro bhadrāṇi paśyati /</l>
+<l>darśayatyeva vikṛrtiṃ supriye 'pi khalo yataḥ // Suk_21.9 (=126) //</l>
+</lg>
+
+<lg>
+<l>nāśayitumeva nīcaḥ parakāryaṃ vetti na prasādhayitum /</l>
+<l>pāṭayitumeva śaktirnakhoruddhartumannapiṭam // Suk_21.10 (=127) //</l>
+</lg>
+
+<lg>
+<l>dujjaṇajaṇaṇaṃ sagge kāaccāo vi hoi vibuhāṇaṃ /</l>
+<l>pecchaha tilehi pattaṃ khalasaṃge pīḍaṇaṃ jatto // Suk_21.11 (=128) //</l>
+</lg>
+
+<lg>
+<l>[durjanajanānāṃ saṃge kāyatyāgo 'pi bhavati vibudhānām /</l>
+<l>prekṣasva tilānāmapi khalasaṅge pīḍanaṃ yataḥ] // Suk_21.11* (=128*) //</l>
+</lg>
+
+<p>yāvatsā kuṭṭinī peṭāṃ hastena hanti tāvatsā vaṇikputrī savitarkamavādīt-</p>
+
+<lg>
+<l>vibhātā rajanī tāvadyāvadevaṃ kṛtaṃ mayā /</l>
+<l>prabuddhaṃ ca tadā mātarnāgre kiñcidvidṛśyate // Suk_21.12 (=129) //</l>
+</lg>
+
+<p>mārtamayā evaṃvidhaḥ svapno dṛṣṭa /
+<lg>
+<l>yaḥ kaścidarthapramāṇo me bhavati sa kathyatām /</l>
+<l>evaṃ śrutvā mantrī dvāramāhatya bahirnirgataḥ /</l>
+<l>tataḥ sammānitā vaṇigvadhūḥ sā tu kuṭṭinīti nirvāsitā /</l>
+<l>iti kathāṃ śrutvā prabhāvatī suptā //</l>
+</lg></p>
+
+<p>iti śukasaptatau ekaviṃśatītamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 22:</p>
+
+<p>punaḥ prabhāvatyā pṛṣṭaḥ śukaḥ prāha-</p>
+
+<lg>
+<l>yāhi devi punaryāhi madīyaṃ matamīdṛśam /</l>
+<l>yadi vetsyuttaraṃ kicidyathā māḍhukayā kṛtam // Suk_22.1 (=130) //</l>
+</lg>
+
+<p>tacchrutvā prabhāvatyāha-kathametat /
+śukaḥ prāha-dāmbhilāgrāme soḍhāko nāma karṣukaḥ /
+tadbhāryā māḍhuka nāma /
+tāṃ ca bhaktahāriṇīṃ pathi gacchantīm eko bahiḥ sūrapālākhyo naro bhuṅkte /
+sā kadācinmārge bhaktaṃ muktvā tena saha sthitā /
+tato mūledavena dhūrtena tasminbhakte uṣṭrikā kṛtā /
+tayā ca evaṃ jātaṃ bhaktamanutpāṭayitvā nīnam /
+yāvacca bhartrā uṣṭikā dṛṣṭā tāvatkimiditi sā pṛṣṭā /
+tatastayā tatkālottaraṃ kṛtvoktam-nātha! adya rātrau svapne uṣṭrikayā bhakṣito dṛṣṭastvam /
+tato mayā vighnāpahārāya viparītamidaṃ kṛtam /
+viśrabdhaṃ bhakṣaya yathā vighno naśyati /
+iti śrutvā ratātmanā tenoṣṭrikāpi bhakṣitā /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau dvāviṃśatitamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 23:</p>
+
+<p>anyadā sakhyastāṃ puruṣāntarābhisaraṇāyaivamūcuḥ-</p>
+
+<lg>
+<l>yatra svedalavairalaṃ vilulitairvyālupyate candanaṃ sacchedairmaṇitaiśca yatra raṇitaṃ na śrūyate nūpuram /</l>
+<l>yatrāyāntyacireṇa sarvaviṣayāḥ kāmaṃ tadekāgrataḥ sakhyastatsurataṃ bhaṇāmi rataye śeṣā ca lokasthitiḥ // Suk_23.1 (=131) //</l>
+</lg>
+
+<lg>
+<l>tathā ca- saṃsaatulaṇa jahiṃ caḍai tassuṇa jīviu dhaṇu /</l>
+<l>āi parā jahi lahijjai taṃ ji bhaṇijjii pemmu // Suk_23.2 (=132) //</l>
+</lg>
+
+<lg>
+<l>[saṃśayatulāyāṃ na yaḥ ārohati tasya na jīvitaṃ dhanyam /</l>
+<l>āgate parā yā labhyate tadeva bhaṇyate prema] // Suk_23.2* (=132*) //</l>
+</lg>
+
+<lg>
+<l>ārogyaṃ paramānandaḥ sukhamutsāha eva ca /</l>
+<l>aiśvaryaṃ priyasambhogaṃ vinā sarvaṃ nirarthakam // Suk_23.3 (=133) //</l>
+</lg>
+
+<lg>
+<l>uktañca-</l>
+<l>ātmānamālokya ca śobhamānamādarśabimbe stimitāyatākṣī /</l>
+<l>haropayāne tvaritā babhūva strīṇāṃ priyālokaphalo hi veṣaḥ // Suk_23.4 (=134) //</l>
+</lg>
+
+<p>śukaḥ prāha-</p>
+
+<lg>
+<l>sulabhāḥ puruṣā rājansatataṃ priyavādinaḥ /</l>
+<l>apriyasya tu pathyasya vaktā śrotā ca durlabhaḥ // Suk_23.5 (=135) //</l>
+</lg>
+
+<lg>
+<l>tataḥ kiṃ bahunoktena tvaṃ caitāḥ kṛtyakovidāḥ /</l>
+<l>kuṭṭinīcaritaṃ śrutvā tadvicāryaṃ tvarānvitāḥ // Suk_23.6 (=136) //</l>
+</lg>
+
+<p>prabhāvatyāha-kathametat /
+śuko 'bravīt-asti padmāvatī purī /</p>
+
+<lg>
+<l>yatra maṇikuṭṭimamārgeṣu śobhate ravivistaraḥ /</l>
+<l>śeṣaphaṇamaṇirāgo vasudhāmivopāgataḥ // Suk_23.7 (=137) //</l>
+</lg>
+
+<p>tatra śudarśano nāma rājā /</p>
+
+<lg>
+<l>śaśinā hariṇā caiva balinā kuśabhūbhujā /</l>
+<l>kuśaśakticchalatyāgasampadyasya na khaṇḍyate // Suk_23.8 (=138) //</l>
+</lg>
+
+<lg>
+<l>kiṃ tasya varṇyate rājñaḥ prajāpālanaśalinaḥ /</l>
+<l>yasmiṃlloke na dṛṣṭā hi doṣā ravikarairiva // Suk_23.9 (=139) //</l>
+</lg>
+
+<p>tasya śṛṅgārasundarī nāma bhāryā /
+tasya nṛpatestayā saha krīḍato groṣmakālo 'vātarat /</p>
+
+<lg>
+<l>yatra sūraḥ kharo ghasro yatra dīrgho 'tiduḥsahaḥ /</l>
+<l>kharaśca pavano bhīru grīṣme sarvamidaṃ kharam // Suk_23.10 (=140) //</l>
+</lg>
+
+<lg>
+<l>candanaṃ śucivastraṃ ca pānīyaṃ śuci śītalam /</l>
+<l>sevyamāno 'pi madhuraḥ śucirjayati nānyathā // Suk_23.11 (=141) //</l>
+</lg>
+
+<lg>
+<l>madhyāhne candanaṃ yeṣāṃ sāyaṃ majjanasevanam /</l>
+<l>rātrau vyajanavātaśca teṣāṃ grīṣmo 'pi kiṅkaraḥ // Suk_23.12 (=142) //</l>
+</lg>
+
+<p>evaṃvidhe grīṣme ca candranāmā vaṇik prabhāvatībhāryāsameto gṛhoparibhūmikāyāmāruḍhaḥ /
+karairyukto 'pi nirālambaḥ ādityaḥ paścimābhyonidhitaṭaṃ gataḥ /
+uktañca-</p>
+
+<lg>
+<l>pratikūlatāmupagate hi vidhau viphalatvameti bahu sādhanatā /</l>
+<l>avalambanāya dinabharturabhūnna patiṣyataḥ karasahasramapi // Suk_23.13 (=143) //</l>
+</lg>
+
+<lg>
+<l>tatrasthaḥ sa tathā bhānū rāgaśeṣo gatāṃśukaḥ /</l>
+<l>bhātīva vidrumaghaṭaḥ srastaḥ saṃdhyāvadhūkarāt // Suk_23.14 (=144) //</l>
+</lg>
+
+<lg>
+<l>atrāntare viśālākṣi candro hantuṃ tamoripum /</l>
+<l>udayādriśiraḥ sthātumudyatoṃ'śubhaṭairvṛtaḥ // Suk_23.15 (=145) //</l>
+</lg>
+
+<lg>
+<l>prācīmukhe vibhātīndurudayādriśiraḥsthitaḥ /</l>
+<l>dīpastribhuvanasyeva pracchannasya tamisrayā // Suk_23.16 (=146) //</l>
+</lg>
+
+<lg>
+<l>udayācalamāruḍho bhāti candro niśāmukhe /</l>
+<l>yāminīvanitotsaṅga śulkaḥ kṛṣṇaśiraḥsthitaḥ // Suk_23.17 (=147) //</l>
+</lg>
+
+<p>evaṃvidhe niśāmukhe sa vaṇik vikrīḍitayā tayā sārdhaṃ krīḍitaḥ /
+asya rāmanāmā sutaḥ saṃjātaḥ /
+tasmai pitrā vidyāścāśeṣā grāhitāḥ /
+tasya mātānyadā candraṃ prāha-mama eka eva putraḥ /
+tato 'hamatiśayena duḥkhārtā /
+candraḥ prāha-eko 'pi tvadīyaḥ sutaḥ ślāghyaḥ /
+uktañca-</p>
+
+<lg>
+<l>caturo madhurastyāgī gambhīraśca kalālayaḥ /</l>
+<l>guṇagrāhī tathā caivaṃ eko 'pīdṛgvaraḥ sutaḥ // Suk_23.18 (=148) //</l>
+</lg>
+
+<p>tathā ca-</p>
+
+<lg>
+<l>kiṃ jātairbahubhiḥ putraiḥ śokasantāpakārakaiḥ /</l>
+<l>varamekaḥ kulālambī yatra viśrūyate kulam // Suk_23.19 (=149) //</l>
+</lg>
+
+<p>ityuktvā dhūrtamāyāṃ kuṭṭinīmākāryedamabravīt--tava kanakasahasraṃ dāsye /
+mama putraṃ strīmāyāvañcanadakṣaṃ kuru /
+tatheti tayā pratijñāte putraṃ samākṣikaṃ tasyai dattvā yadyasmatputraḥ kvāpi veśyāyāḥ kapaṭena jito bhavati tadāhaṃ dviguṇaṃ kanakaṃ grahīṣye /
+tayoktam evamastviti /
+lekhayitvā putraṃ tadgṛhe preṣayāmāsa /
+sa ca tatrastho veśyājanodbhavānvikārān gṛhṇāti /
+tadyathā--</p>
+
+<lg>
+<l>vaiśikīṃ kṛtrimāṃ vāṇīṃ vyalīkān śapathāṃstathā /</l>
+<l>kauṭilyaṃ kṛtrimaṃ bhāvaṃ kṛtrimaṃ ruditaṃ tathā // Suk_23.20 (=150) //</l>
+</lg>
+
+<lg>
+<l>hāsyaṃ ca kṛtrimaṃ duḥkhaṃ sukhaṃ caivamapārthakam /</l>
+<l>yācanaṃ vinayopetaṃ snehabhāvo nirīhatā // Suk_23.21 (=151) //</l>
+</lg>
+
+<lg>
+<l>samatvaṃ sukhaduḥkheṣu dharmādharmasamakriyā /</l>
+<l>bhujaṅgapurataścaiva kauṭilyakramadarśanam // Suk_23.22 (=152) //</l>
+</lg>
+
+<p>tathā ca-</p>
+
+<lg>
+<l>aharaṃ karaṃ kavolaṃ thaṇajualaṃ ṇāhimaṇḍalaṃ ramaṇaṃ /</l>
+<l>itthiajaṇasāmaṇṇaṃ hiaaṃ jaṃ jassa taṃ tassa // Suk_23.23 (=153) //</l>
+</lg>
+
+<lg>
+<l>[adharaḥ karaḥ kapolaḥ stanayugalaṃ nābhimaṇḍalaṃ ramaṇam /</l>
+<l>strījanasāmānyaṃ hṛdayaṃ yad yasyā tat tasyāḥ] // Suk_23.23* (=153*) //</l>
+</lg>
+
+<p>ityevamādi samagraṃ veśyānugaṃ caritaṃ śikṣitam /
+tataḥ sa putraḥ pratijñāpūrvaṃ vaṇije samarpitaḥ /
+piturvākyena ca suvarṇadvīpe vāṇijyāya preṣitaḥ /
+tatra ca kalāvatī veśyā /
+tayā saha varṣamekaṃ sthitaḥ /
+tāṃ vaiśikāni kurvantīṃ sa prāha-viśeṣaṃ vada /
+eva mamānujāpi vadati /
+tato bahubhirapi vaiśikairna tatsarvasvaṃ gṛhītuṃ śaknoti /
+tatastayā sarvamapi māturniveditam /
+mātāpi prāha-niścitameṣa veśyāsutaḥ /
+nedṛśairgṛhyate /
+prapañcenaiva grāhyaḥ /
+tato yadāyaṃ svadeśaṃ gantukāmastvāmutkalāpayati tadā tvayā vācyam--"ahamapi tatra yāsyāmi /
+yadi na nayasi tadā mariṣyāmītyuktvā kūpe jhampā deyā /
+tato 'sau prītastvāṃ prati sarvaṃ dāsyati' /
+tayoktam--mātarmāṃ vinā taddravyeṇa kim /
+<lg>
+<l>ūktañca--</l>
+<l>atikleśena ye hyarthā dharmasyātikrameṇa ca /</l>
+<l>śatrūṇāṃ praṇipātena mā sma teṣu manaḥ kṛthāḥ // Suk_23.24 (=154) //</l>
+</lg></p>
+
+<p>mātā āha-bhīru! mā maivaṃ vada /
+mṛtyudo 'rthaḥ prāṇadaśca /
+uktañca-</p>
+
+<lg>
+<l>nāsāhasaṃ samālambya naro bhadrāṇi paśyati /</l>
+<l>sāhasī sarvakāryeṣu lakṣmībhājanamuttamam // Suk_23.25 (=155) //</l>
+</lg>
+
+<lg>
+<l>nābhittvā paramarmāṇi nākṛtvā karma duṣkaram /</l>
+<l>nāhatvā matsyaghātīva prāpnoti mahatīṃ śriyam // Suk_23.26 (=156) //</l>
+</lg>
+
+<lg>
+<l>kālaḥ samaviṣamakaraḥ paribhavasanmānakārakaḥ kālaḥ /</l>
+<l>kālaḥ karoti puruṣaṃ dātāraṃ yācitārañca // Suk_23.27 (=157) //</l>
+</lg>
+
+<p>ahaṃ ca tatrādho jālaṃ viracayiṣye /
+iti kuṭṭinīvacanamākaṇyaṃ tayā tathā kṛtat /
+tathā ca kṛte tena sarvasva dattam /
+koṭisaṃkhyaṃ ca dravyaṃ gṛhītvā mānarahito niṣkāsitaḥ /
+uktañca-</p>
+
+<lg>
+<l>vesā vi ramanti jaṇaṃ piaṃ pi vañcanti atthaloheṇa /</l>
+<l>tāṇa ṇamo vesāṇaṃ appā vi ṇa vallaho jāṇa // Suk_23.28 (=158) //</l>
+</lg>
+
+<lg>
+<l>[veśyā api ramante janaṃ priyamapi vañcayanti arthalobhena /</l>
+<l>tābhyo namo veśyābhyaḥ ātmāpi na vallabho yāsām] // Suk_23.28* (=158*) //</l>
+</lg>
+
+<p>sa ca tathā dhanamānaparibhavaṃ prāpitaḥ parapotamāruhya svagṛhamāgamat /
+ekākinaṃ sutaṃ dhanaparijanavarjitaṃ dṛṣṭvā pitā sabāṣpaṃ dhanakṣayakāraṇaṃ pṛcchati /
+so 'pi svayaṃ lajjan gṛhamantrimukhena niveditavān /
+pitroktam-vatsa mā viṣādaṃ vidhehi /
+vipadaḥ sampado 'pi puṃsaḥ sampadyante /
+uktañca-</p>
+
+<lg>
+<l>cintāmimāṃ vahasi kiṃ gajayūthanātha yūthādviyogavinimīlitanetrayugm /</l>
+<l>piṇḍaṃ gṛhāṇa piṣa vāri yathopanītaṃ daivādbhavanti vipadaḥ kila sampado vā // Suk_23.29 (=159) //</l>
+</lg>
+
+<lg>
+<l>kimanena dhanenāpi satvareṇa manasvinām /</l>
+<l>gatena jāyate khedo darṣaścaivāgatena ca // Suk_23.30 (=160) //</l>
+</lg>
+
+<p>evaṃ sutaṃ samāśvāsya dhūrtamāyāmākārya idamabravīt--śṛṇu yadatra kautukaṃ saṃvṛttam /
+tvayyadhyuṣito 'pi suto gatasarvasvaḥ samāyayau /
+sā'ha--strībhiḥ ko na khaṇḍitaḥ /
+uktañca-</p>
+
+<lg>
+<l>ko 'rthānprāpya na garvito viṣayiṇaḥ kasyāpado 'staṃ gatāḥ strībhiḥ kasya na khaṇḍitaṃ bhuvi manaḥ ko nāma rājñāṃ priyaḥ /</l>
+<l>kaḥ kālasya na gocarāntaragataḥ ko 'rthī gato gauravaṃ ko vā durjanavāgurāsu patitaḥ kṣemeṇa yātaḥ pumān // Suk_23.31 (=161) //</l>
+</lg>
+
+<lg>
+<l>ramaṇasihiṇantarāle bahalaare romarāitarugahaṇe /</l>
+<l>hariharaṇaragobindā biḍambiā maaṇacoreṇa // Suk_23.32 (=162) //</l>
+</lg>
+
+<lg>
+<l>[ramaṇaśikhino 'ntarāle bahulatare rolarājitarugahane /</l>
+<l>hariharanaragovindāḥ viḍambitā madanacoreṇa] // Suk_23.32* (=162*) //</l>
+</lg>
+
+<p>tattvaṃ punaḥ potaṃ bhṛtaṃ kṛtvā māṃ putrānvitāṃ tatra preṣaya /
+uktañca-</p>
+
+<lg>
+<l>kṛte pratikṛtaṃ kuryā hiṃsite pratihiṃsitam /</l>
+<l>tvayā luñcāpitāḥ pakṣā mayā luñcāpitaṃ śiraḥ // Suk_23.33 (=163) //</l>
+</lg>
+
+<p>mayāpyuktam-yadi tvadīyaputraḥ kvāpi striyā vañcyate tadā mama dūṣaṇam /
+uktañca-</p>
+
+<lg>
+<l>diggajakūrmakulācalaphaṇipatividhṛtāpi calati vasudheyam /</l>
+<l>pratipannamamalamanasāṃ na calati puṃsāṃ yugānte 'pi // Suk_23.34 (=164) //</l>
+</lg>
+
+<p>tathā ca-</p>
+
+<lg>
+<l>acalā calanti palae majjāaṃ sāarā vilaṅghanti /</l>
+<l>karuā vi taha vikāle paḍivaṇṇa sādha siḍhilenti // Suk_23.35 (=165) //</l>
+</lg>
+
+<lg>
+<l>[acalāścalanti pralaye maryādāṃ sāgarā vilaṅghante /</l>
+<l>gurukā api tathā vikāle pratipannasādhanaṃ na śithilayanti] // Suk_23.35* (=165*) //</l>
+</lg>
+
+<lg>
+<l>dhīrā jāṇa pamāṇaṃ jimiavve taha vi jaṃpiavve a /</l>
+<l>ai jimiajaṃpiāiṃ pacchā vacche apacchāiṃ // Suk_23.36 (=166) //</l>
+</lg>
+
+<lg>
+<l>[dhīrā jānanti pramāṇaṃ jemanasya tathāpi kathanasya ca /</l>
+<l>api bhuktaṃ jalpitaṃ paścād vatse na tapyanti] // Suk_23.36* (=166*) //</l>
+</lg>
+
+<p>tataḥ śreṣṭhī taṃ putraṃ preṣayāmāsāśu tayā samaṃ suvarṇadvīpe /
+tatastasminsarvo 'pi paurajanaḥ prīto babhūva /
+sā ca kalāvatī sānukūlā taṃ vinayenājuhāva /
+tathā ca sa tayāvarjito yathāsau ātmāyattaḥ kṛtaḥ /
+dravyaṃ ca sarvaṃ gṛhītam /
+tataḥ sā dhūrtamāyā kuṭṭinī kiṃ karotu-iti praśnaḥ /
+sā prāha-śuka! na jāne /
+tvaṃ vada /
+śukaḥ-yadyadya na yāsi tadā kathayāmi /
+sā āha-na yāsyāmi /
+śukaḥ-yadā tasya sarvaṃ gṛhītam tasminsamaye kaiściddinaiścāgre 'pi cāṇḍālarūpadhāriṇī dhūrtamāyā nityaṃ nityaṃ gaveṣamāṇaiva kiñcit /
+anyadā sa kalāvatyā sahitaḥ khaṭvāyāmupaviṣṭastayā dṛṣṭaḥ /
+tā dvāri dṛṣṭvā sahasotthāya nāśayitumudyataḥ pūrvameva saṃketitam /
+tamuttiṣṭhantamanu kalāvatyapyutthitā /
+uktañca-kimidamiti /
+rāmastāmuvāca-bhadre! iyaṃ mama jananī /
+ahaṃ ca hṛtārthako bahudinebhyo na tayā dṛṣṭaḥ /
+dhūrtamāyāpi taṃ saṃketasthaṃ dvārasthaiva saśaṅkā hastasaṃjñayā ājuhāva /</p>
+
+<lg>
+<l>jāgadeti cirāllabdho veśyāgṛhagato bhavān /</l>
+<l>mlecchībhūtā iyaṃ veśyā sarvasvaṃ me tvayā hṛtam // Suk_23.37 (=167) //</l>
+</lg>
+
+<p>yāvadevaṃ gṛhāṅgaṇagatā śapati tāvatsa vaṇik cāṇḍālarūpī samāgatya tatpādayoḥ patitaḥ /
+etacca dṛṣṭvā kalāvatī kuṭṭinīsahitā tām gṛhamadhye nītvā pṛcchati sma--amba! ko 'yam? kiṃ jātīyaḥ? tvaṃ kā? tayoktam--padmāvatīpurīnāthasya rājñaḥ sudarśanasya mātaṅgī gāyinī aham /
+ayaṃ ca madīyaṃ dravyaṃ hṛtvā ihāgataḥ /
+tacca tvayā'ptam /
+tanmayā jñātam paramadhunā sa samāgacchatu /
+tataḥ kuṭṭinī kalāvatāsahitā tatpadāyorlagnā uvāca--gṛhāṇedaṃ dravyam /
+dhūrtamāyā prāha--nāhaṃ gṛhakoṇe grahīṣye /
+rājaviditaṃ grahīṣyāmi /
+tato veśyāmātāpi atiśayena bhītā mātaṅgīṃ pratijagāda-imāṃ matsutāṃ rakṣa rakṣa /
+pāramparyāgataṃ dravyaṃ gṛhāṇa sarvasvam, paraṃ māṃ maivaṃ viḍambaya /
+dhūrtamāyā prāha-grahīṣye /
+tataḥ sā veśyayā kuṭṭinyā saha hastapādau gṛhītvā sammānitā /
+dhūrtamāyāpi nijaṃ tadīyaṃ dravyaṃ sarvasvaṃ ca gṛhītvā rāmeṇa saha potamāruhya svagṛhamāgatya bhahotsavamakārayat /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau trayoviṃśatitamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 24:</p>
+
+<p>athānyasmindine prabhāvatī śukaṃ papraccha /
+śuko 'pyāha--</p>
+
+<lg>
+<l>yāhi devi vijānāsi yadi jārasamanvitā /</l>
+<l>sajjanīva purā vaktuṃ bharturagre kacagrahe // Suk_24.1 (=168) //</l>
+</lg>
+
+<p>prabhāvatyāha-kimetat /
+kīro 'bravīt-asti candrapuraṃ nāma nagaram /
+tatrābhūdvardhakiḥ sūrapālākhyaḥ śrīmān /
+tasya sajjanī nāma bhāryā atyantaṃ parapuruṣalampaṭā /
+tāṃ ca tadgṛhasthāṃ devako nāma ramate /
+iti lokādetadākarṇya vardhakiḥ kapaṭena gṛhānnirgatya prātaḥsandhyāyāmācchannaḥ samāgatya talpasyādhobhāge sthitaḥ /
+sā ca jāreṇa saha tatrārūḍhā patyā keśeṣu gṛhītā kathaṃ mucyate /
+uttaram-sā patyā dhṛtā satī dvitīyapatimukhamālokya prāha-mayā tava kathitaṃ yadrathakāro mama patirgṛhena vidyate /
+sa cāgatastava tadaiva aucityaṃ vidhāsyati /
+yadyapi pūrvaṃ patyā tvadīyaṃ dravyamapahṛtaṃ tathāpi kṣantavyam /
+rathakṛti samāgate tava gṛhaṃ gamiṣyāmi yuvayoḥ saṃgatiṃ vā kariṣye /
+nātra saṃśayaḥ /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau caturviśatitamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 25:</p>
+
+<p>anyadā prabhāvatī śukaṃ gamanāya pṛcchati /
+śukaḥ prāha-</p>
+
+<lg>
+<l>kuru yadrocate kartuṃ yadi vetsi pratīṅgitam /</l>
+<l>śvetāmbareṇa ruddhena yathā pūrvaṃ kṛtaṃ tathā // Suk_25.1 (=169) //</l>
+</lg>
+
+<p>asti candrapurī nāma nagarī /
+tatra siddhaseno nāma kṣapaṇako janapūjitaḥ /
+tasminneva nagare 'nyaḥ sitapaṭo guṇināṃ mukhyaḥ samāgataḥ /
+tena ca guṇinā sarvo 'pi jana āvarjitaḥ śrāvakā apyātmāyattāḥ kṛtāḥ /
+sa kṣapaṇako 'pi tasya pūjāṃ kriyamāṇāmasahamānaḥ svayaṃ tadīyopāśraye veśyāṃ preṣayitvā asau veśyālubdho na suśīla iti śvetāmbarasya lokapravādamakarot /
+taddarśanāya janamākārayāmāsa /
+brūte ca--kṣapaṇakā eva brahmacāriṇaḥ śvetāmbarāstu viplutāḥ /
+so 'pi śvetāmbaro dīpāgninā upādhiṃ prajvālya prabhātaprāptāyāṃ rajanyāṃ nagnobhūya veśyāyā dattahasto nirgataḥ /
+tato lokāpavādaḥ saṃvṛttaḥ /
+yadasau kṣapaṇako na sitavastraḥ /
+iti śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau pañcaviṃśatitamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 26:</p>
+
+<p>anyadā sā calitā /
+śukaḥ prāha--</p>
+
+<lg>
+<l>yāhi devi na te doṣo yadi jānāsi bhāṣitum /</l>
+<l>ratnādevīva patyā tu prāptā jāradvayānvitā // Suk_26.1 (=170) //</l>
+</lg>
+
+<p>asti jalaudābhidhāno grāmaḥ /
+tatra rājaputraḥ kṣemarājaḥ śūraḥ /
+ratnādevī tasya bhāryā /
+tatraiva grāmaṇīrdevasākhyaḥ /
+tasya suto dhavalo nāma /
+tau dvāvapi ramete ratnādevīṃ parasparamajñātau /
+anyadā pitṛputrau tadgṛhasthau yadā tadā rājaputraḥ samāgataḥ /
+tadā kimuttaram? śuka āha-tatastayā kṛtasaṃjño gṛhādaṅgulyā tarjayannayāt /
+tasmiṃścaiva gacchati bhayātpatiḥ kimidamityāha /
+tataḥ sā hasantī prāha-asya putrastvadgṛhe śaraṇāgataḥ /
+mayā ca nārpitaḥ /
+yataḥ-</p>
+
+<lg>
+<l>sa kṣatriyastrāṇasahaḥ satāṃ yastatkārmukaṃ karmasu yasya śaktiḥ /</l>
+<l>vahandvayīmapyaphale 'rthajāte karotyasaṃskārahatāmivoktim // Suk_26.2 (=171) //</l>
+</lg>
+
+<p>ato ruṣṭo vrajati /
+gaccha tvaṃ samarpaya sutam /
+tena ca tathā kṛtam /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau ṣaḍviṃśatitamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 27:</p>
+
+<p>anyadā prabhāvatī gamanāya śukaṃ pṛcchati sma /
+śukaḥ prāha-</p>
+
+<lg>
+<l>rambhoru gaccha kāmināṃ ko vighnaṃ kartumarhati /</l>
+<l>mohinīva samarthā cedvicārīkartumīśvari // Suk_27.1 (=172) //</l>
+</lg>
+
+<p>asti śaṅkhapuraṃ nāma nagaram /
+tatrāryo vaṇigabhūt /
+tasya mohinī nāma bhāryā /
+tāñcabahirgatāṃ kumukho nāma dhūrto ramate /
+tatpatinā cābhijñāyi /
+tatpatiścātiśayena bhīruḥ /
+tato 'sau tāṃ bahiryāntīṃ nivārya pārśvasthita eva tiṣṭhati /
+tathāpi tayā dhūrtasya kathitam-māṃ rātrau bhartṛkhaṭvāsthitāmarvāksuptāṃ bhaja tvam /
+tena tathā kṛtam /
+tacca kurvanbhartrāsau puṃścihne dhṛtaḥ kathaṃ gacchatu? uttaram-dhṛtvā ca patiḥ prāha-pradopamānaya mayā coro dhṛto 'sti /
+tayoktam-bahiryāntī bibhemyaham /
+enaṃ grahīṣye tvaṃ dīpamānaya /
+tena ca tathā kṛtam /
+sā ca jāraṃ muktvā gṛhāntarbaddhasya paṭṭakasya jihvāṃ gṛhītvā tathaiva suptā yāvatpatirlakuṭahasto dīpaṃ gṛhītvā samāyātaḥ pṛcchati-kimiyaṃ paṭṭakasya jihvā kathamatra? tayoktam-kṣudhārto 'yam /
+anena muktā lālākṛśā sthitā /
+uktipratyuktivādena nirjitaḥ /
+uktaśca-hataka! anena pauruṣeṇa kṣayaṃ vrajasi /
+iti nirbhartsito lajjitaśca suptaḥ /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau saptaviṃśatitamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 28:</p>
+
+<p>anyadā prabhāvatī gamanāya śukaṃ papraccha /
+śukaḥ prāha--</p>
+
+<lg>
+<l>kṛśodari vrajādya tvaṃ yadi jānāsi bhāṣitum /</l>
+<l>jārasaṃyuktayā pūrvaṃ yathā devikayā kṛtam // Suk_28.1 (=173) //</l>
+</lg>
+
+<p>asti kuhāḍākhyo mahāgrāmaḥ tatra jarasākhyo kauṭumbiko mahāmūrkhaḥ /
+tadbhāryā devikā puṃścalī /
+tāṃ ca prabhākaro brāhmaṇaḥ kṣetramadhye vibhītakavṛkṣasamīpe guptasthāne mudā ramater /
+idṛśaṃ vyatikaraṃ janācchratvā tatpatistatrāvalokanāya svayaṃ gataḥ /
+tena ca vṛkṣārūḍhena tattathaiva dṛṣṭam /
+dṛṣṭvā tatrasthenāpi jalpitam, dhūrtike! bahudinebhyo 'dya samprāptā-ityuktā kathamiyaṃ bhartāraṃ pratyāyayatu /
+tayoktam--nāhaṃ jāne tvameva kathaya /
+"yadi na yāsi tadā kathayāmi' /
+tayā tatheti pratipanne śukaḥ prāha--sā ca tadvacaḥ śrutvā taṃ jāraṃ preṣayāmāsa patyā cāvatīrya samāgatena upālabdhā /
+sā'ha--he prabhor! idṛśa eva vṛkṣaḥ, atrārūḍhairmithunaṃ dṛśyate /
+tena patinā uktam--tvamāruhya avalokaya /
+tayā tathā kṛtam /
+vṛkṣārūḍhayā ca tayā proktaṃ kapaṭena /
+"vahudivasebhyo 'nyāṃ nārīmabhigaman dṛṣṭo 'si" /
+tena mūrkheṇa jñātam--satyamidam /
+sa ca tāṃ śāntayitvā gṛhaṃ nināya /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau aṣṭāviṃśatitamo kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 29:</p>
+
+<p>anyedyuḥ prabhāvatī gamanāya śukaṃ pṛcchati sma /
+so 'pyāha--</p>
+
+<lg>
+<l>vraja devi vicāraṃ cetkartuṃ jānāsi bhāmini /</l>
+<l>samaṃ jāreṇa samprāptā sundarīva yathā gṛhe // Suk_29.1 (=174) //</l>
+</lg>
+
+<p>"kathametat'? so 'bravīt--asti sīhūlo nāma grāmaḥ /
+tatra mahādhano vaṇik /
+tadbhāryā sundarī /
+tāṃ ca mohano nāma upapatirnityaṃ gṛhamāgatya bhuṅkte /
+anyadā yāvatsā tathā tiṣṭhati tāvattatpatiḥ samāgataḥ /
+sā kathaṃ bhavatu /
+uttaram--sā patimāgacchantaṃ dṛṣṭvā jāraṃ vivastraṃ śikye kṛtvā muktakeśā gṛhānnirgatya dūrasthā patimāha-asmadgṛhamadhye nagnabhūtaṃ śikyārūḍhaṃ vidyate /
+māntrikānākārayituṃ gacchetyukte sa mūrkhastadarthaṃ jagāma /
+tadā ca tadantare tayā ulmukaṃ haste kṛtvā upapatirniṣkāsitaḥ /
+patyau ca āgate sā jagāda-yadulmukenāpi bhūtaṃ naṣṭam /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau ekonatriṃśattamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 30:</p>
+
+<p>anyedyuḥ prabhāvatyā pṛṣṭaḥ śukaḥ prāha /</p>
+
+<lg>
+<l>gaccha devi viruddhaṃ te gamanaṃ na mataṃ mama /</l>
+<l>viṣame yadi vetsi tvamuttaraṃ mūladevavat // Suk_30.1 (=175) //</l>
+</lg>
+
+<p>astīha pṛthivyāṃ bhūtavāsaṃ nāma śmaśānam /
+tatra dvau piśācau karālottālanāmānau /
+bhārye ca dhūmaprabhāmeghaprabhākhye, tayośca bhāryārāmaṇīya katve vivādaḥ saṃvṛttaḥ /
+anyadā ca tābhyāṃ bhāryāsahitābhyāṃ mūledavodṛṣṭo bāhubhyāṃ vidhṛtya pṛṣṭaḥ-kā anayormadhyādramaṇīyā, anṛtaṃ vadantaṃvyāpādayiṣyāvaḥ /
+tatkalatre virūpe bhīṣaṇe vṛddhe piśācinyau /
+sa ca yathārthavādī bhakṣitaḥ syāt kimuttaraṃ kuryāditi /
+uttaram--tenoktam-</p>
+
+<lg>
+<l>yā yasya vallabhā loke ramyā sā tasya nāparā /</l>
+<l>gadite dhūrtarājena tābhyāṃ muktaśca tatkṣaṇāt // Suk_30.2 (=176) //</l>
+</lg>
+
+<p>iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau triṃśattamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 31:</p>
+
+<p>anyadā ca prabhāvatyā pṛṣṭaḥ śukaḥ provāca-</p>
+
+<lg>
+<l>yatheṣṭaṃ vraja kalyāṇi keliṃ karttuṃ kṛśodari /</l>
+<l>śaśakasyeva te buddhirasti cetsusahāyinī // Suk_31.1 (=177) //</l>
+</lg>
+
+<p>madhurākhye vane piṅgalanāmā siṃhaḥ /
+sa sattvāni bahūni hanansarvaiḥ paśubhirvicārya pratidinamekaikasattvaparikalpanavyavasthayā nivāritaḥ /
+anyadā śaśakasyaikasya vārakaḥ sañjātaḥ /
+sa ca na yāti śvāpadairbhaṇito 'pi-"gaccha tvamanyathā pūrvavatsarvāṇi bhūtāni sa bhakṣayiṣyati /
+sa cādyaprabhṛti tadantike sattvāni na yāsyanti'-ityuktvā bahukālakṣepaṃ cakāra /
+madhyāhnasamaye eva ca mandaṃ mandaṃ siṃhasyāgre gantuṃ vyasitaḥ /
+tenāpi sahasākrāntaḥ kathaṃ mucyate? uttaram-śaśakaḥ siṃhiṃ prāha-svaminnahaṃ śaśakacatuṣṭayena saha āgacchanmārge tava śatruṇā dhṛto 'to velātikramo babhūva /
+tenoktam-sa śatruṃ kvāste? tataḥ sa śaśakena dhūrtena vāṭīṃ nītvā tasyaiva pratibimbaḥ kūpe darśitaḥ /
+siṃho 'pi mūrkhastaṃ jale dṛṣṭvā kupito jhampādānmṛtaśca /</p>
+
+<lg>
+<l>buddhirbalavatī bhīru sattvānāṃ na parākramaḥ /</l>
+<l>śaśakenālpasattvena hataḥ siṃhaḥ parākramī // Suk_31.2 (=178) //</l>
+</lg>
+
+<p>uktañca-</p>
+
+<lg>
+<l>ekaṃ hanyānna vā hanyādiṣurmukto dhanuṣmatā /</l>
+<l>sarārṣṭa saprajaṃ hanti rājānaṃ mantriniścayaḥ // Suk_31.3 (=179) //</l>
+</lg>
+
+<p>iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau ekatriṃśattamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 32:</p>
+
+<p>athānyedyuḥ prabhāvatī calitā śukaṃ papraccha gamanāya /
+śukaḥ-</p>
+
+<lg>
+<l>yādi devi mano yatra gantuṃ te kamalānane /</l>
+<l>rājinīva vijānāsi vaktuṃ dhūliviparyaye // Suk_32.1 (=180) //</l>
+</lg>
+
+<p>asti śāntipuraṃ nāma nagaram /
+tatra mādhavaḥ śreṣṭhī /
+tasya mohinī bhāryā /
+tayostanayaḥ sohaḍābhidhaḥ /
+tasya bhāryā rājinīnāmnī rūpasampannā caturā puṃścalī /
+sānyadā drammarpayitvā śvaśrvajñaptā "godhūmān haṭṭe gṛhītvā gaccha' /
+sā ca haṭṭe gatā /
+krīṇatyā copapatirdṛṣṭaḥ saṃjñitaśca samīpamāyayau /
+godhūmānmoṭāyāṃ baddhvā haṭṭe muktvā tena sārdhaṃ sā yayau /
+vaṇijāpi godhūmānutsārya moṭāyāṃ dhūlirbaddhā /
+sāpi tena saha ciraṃ sthitvā āgatyākulā moṭāmanutpāṭayitvā gṛhaṃ yayau /
+tāṃ choṭayitvā yāvat śvaśrūḥ paśyati kodṛśā godhūmā iti tāvaddhūliṃ paśyati /
+atra kimuttaram /
+<lg>
+<l>śukaḥ-kimidamiti yadā śvaśrvā pṛṣṭā tadā tayoktam-"mātarmama hastād drammaḥ haṭṭāgre bhūmau patitaḥ /</l>
+<l>tato mayā dhūlirāhṛtā /</l>
+<l>tataḥ sā śvaśrūrdrammamanavalokamānā vikalībhūtā /</l>
+<l>iti kathāṃ śrutvā prabhāvatī suptā iti śukasaptatau dvātriṃśattamī kathā //</l>
+</lg></p>
+
+</div>
+<div>
+
+<p>START Suk 33:</p>
+
+<p>athānyedyuḥ prabhāvatī gamanāyotsukā śukaṃ papraccha /
+śukaḥ prāha-</p>
+
+<lg>
+<l>ko doṣo gamyatāṃ devi yadi kartuṃ tvamīśvarā /</l>
+<l>viṣame mālinī yadvadrambhikā patisannidhau // Suk_33.1 (=181) //</l>
+</lg>
+
+<p>prabhāvatī-"kathametat'? śuko 'bravīt-asti śaṅkhapuraṃ nāma nagaram /
+tatra śaṅkaro nāma mālikaḥ samṛddhimān /
+tasya rambhikā nāma bhāryā bahuratipriyā subhagā surūpā bahubhartṛkā ca /
+anyadā śaṅkaragṛhe pitṛkāryamāgatam tasmindine tayopapatayaścatvāro nimantritāḥ puṣpāṇāṃ vikrayāya gatayā catuṣpathe grāmaṇīrvaṇiksūnustalāraśca balādhipaśca pratyekaṃ te te pṛthakpṛthak ākāritāḥ parasparamajānantaḥ-madīyaṃ bhavanaṃ prati prāgeva samāgantavyamiti /
+dvitīye 'hni mālike vāṭikāṃ gate vaṇiksūnuḥ snātvā bhuktvā ca tayā saha rantuṃ samāyayau /
+vaṇiji ardhasnāte grāmakūṭo gṛhadvāraṃ samāpatandṛṣṭaḥ tataḥ snānaṃ kurvanvaṇiktathābhūto vaṃśamaye koṣṭhe khaliyukte kṣipto bhayayuktaśca /
+grāmakūṭe 'pyardhasnāte bahistalāraḥ samāyātaḥ /
+taṃ dṛṣṭvā so 'pi tasminneva koṣṭhe kṣipta uktaśca-yadadhaḥ sarpiṇī prasūtāsti /
+tato 'pyanatarāla evaṃ sthātavyamiti talāro 'pyardhasnāto balādhipaṃ dṛṣṭvā bhāṇḍasamūhe kṣiptaḥ /
+balādhipo 'pyardhasnāto mālikaṃ dṛṣṭvā tatraiva kṣiptaḥ /
+tato māliko lokaśca tasmin pitṛkārye yadṛcchayā bhijitāḥ /
+evaṃ kṛtvā te ṣāṃ caturṇāmapi parasparamalakṣitānāṃ pṛthakpṛthak bhojanaṃ paramānnāmṛtaṃ samarpitam /
+vaṇijā tu bhuñjānena bahu phūtkṛtam /
+tadoparisthitena ca sarpiṇīṃ śaṅkamānena mūtritam /
+vaṇijā tu ghṛtāmiti jñātvā bhājanamutkṣiptam /
+uparisthitasya mukhe lagnam /
+tataḥ sa śaṅkitaḥ /
+so 'pi ca lagnaṃ lagnamiti vadandattajhampo niryayau /
+anye 'pi lagnākṣarabhayākulā yāvannirgatāḥ śaṅkareṇa janaiśca dṛṣṭāḥ savismayaṃ khalikharaḍitāḥ /
+tataḥ sā kathaṃ bhavatu? uttam-yadā sā patyā pṛṣṭā kimidamiti tadā tayoktam-</p>
+
+<lg>
+<l>śraddhāhīnaṃ kṛtaṃ śrāddhamidaṃ nūnaṃ tvayā priya /</l>
+<l>ato 'bhuktvā kṣudhākrāntāḥ pitaraste vinirgatāḥ // Suk_33.2 (=182) //</l>
+</lg>
+
+<p>tataḥ sa punaḥ śrāddhaṃ cakāra /
+rambhikāvacanāttena nirgatāḥ /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau trayastriṃśattamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 34:</p>
+
+<p>athānyasmindine gamanārthaṃ prabhāvatī śukaṃ papraccha /
+śukaḥ prāha-</p>
+
+<lg>
+<l>yāhi devi gatā vetsi bhaṅguraṃ yadi bhāṣitum /</l>
+<l>kumāryai pāraḍī dattvā yathoktaṃ śambhunā purā // Suk_34.1 (=183) //</l>
+</lg>
+
+<p>prabhāvatyāha-kathametat /
+śukaḥ prāha--purā kasmiṃścinnagare śambhunāmā vipro 'bhūt dyūtakṛnnānādeśaparibhramaṇaśīlo mārge gacchan kṣetrarakṣikāṃ surūpāṃ bālikāṃ dṛṣṭvā tāmbūlaṃ datvā sāntvayannidamuvāca yanmatsambhogakaraṇe imāṃ madīyāṃ pāraḍīṃ gṛhāṇa mayā saha rataṃ kuru /
+sukhāśrayaṃ tayā tathā vihitam /
+sa ca siddhe kārye tāṃ yācate /
+kathaṃ labhate? uttaram-yāvattena yācitā tāvatsā calitā gṛhaṃ prati /
+so 'pi ca pañca kaṇiśāni gṛhītvā pṛṣṭhe lagnaḥ /
+tena ca grāmagatena phūtkṛtam-aho grāmamukhyāḥ! paśyata /
+grāme 'sminmahadadbhutam /
+pañcakaṇiśakāraṇenānayā madīyaṃ vastramapahṛtam /
+grāmyaistatsamarpitam /
+tayā ca na kiñciduktaṃ lajjayā /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau catustriṃśattamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 35:</p>
+
+<p>apare 'hni sā śṛṅgārānvitā śukaṃ papraccha /
+śukaḥ prāha-</p>
+
+<lg>
+<l>gaccha devi na te doṣo yadi tatra gatā satī /</l>
+<l>svārthaṃ kartuṃ vijānāsi tilakrayakaro yathā // Suk_35.1 (=184) //</l>
+</lg>
+
+<p>"kathametat? śukaḥ prāha-purā kasmiṃścid grāme śambakanāmā vaṇiktilagrāhakaḥ /
+sa ca saragrāmaṃ yathau /
+tatrasthasya bhāṇḍaśālikasya gṛhe gataḥ /
+sa gṛhe nāsti /
+tasya bhāryāsti paraṃ kulaṭā /
+netrasaṃjñayā parasparaṃ prītirutpannā /
+tatraiva sā bhuktā aṅgulīyakaṃ dattvā /
+sambandhādanantaraṃ sa tadaṅgulīyakaṃ jighṛkṣati /
+anena vidhinā dattamaṅgulīyakaṃ sa kathaṃ gṛhṇātviti praśnaḥ /
+śukaḥ prāha-tilagrāhakastadalabhamāno vipaṇisthaṃ bhāṇḍaśālikamāha-"dehi me tilaprasthaśataṃ yatsatyaṅkāritaṃ mayā' /
+evamuktaḥ sa āha-"ke tilāḥ kaśca vaktā tvaṃ satyaṅkāraśca kīdṛśaḥ? tenoktam-prasthaṃ prati dvikapravṛddhyā tvadbhāryayā satyaṅkāre 'ṅgulīyakaṃ gṛhītam /
+tato ruṣṭena vaṇijā bhāryāpāraśve nijaṃ sutaṃ preṣayitvā iti kathayāmāsa-tvadīyenedṛśena vyavahāreṇāsmadgṛhaṃ vṛddhimāpsyati /
+putro 'pyaṅgulīyakamādāya tilagrāhakasyārpayāmāsa /
+so 'pi yathāgataṃ tathā yayau /
+tato yadi prabhāvi tavāpyevaṃ buddhirasti tadā gamyatāṃ nānyathā /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau pañcatriṃśattamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 36:</p>
+
+<p>niśāmukhe 'nyedyuḥ prabhāvatī śukaṃ punarāha-he kīra! gamiṣyāmi cirakāṅkṣitaṃ sukhaṃ bhoktum /
+śuka āha-</p>
+
+<lg>
+<l>sukhamevānubhoktavyaṃ saṃsāre sundari! dhruvam /</l>
+<l>nāyinīva vijānāsi yadi vaktuṃ tvamuttaram // Suk_36.1 (=185) //</l>
+</lg>
+
+<p>prabhāvatyāha-kathametat /</p>
+
+<lg>
+<l>kā kīra nāyinī kutra tayā kiṃ kṛtamuttaram /</l>
+<l>kathāṃ kathaya kalyāṇīṃ kautukaṃ me kathākrame // Suk_36.2 (=186) //</l>
+</lg>
+
+<p>śuka āha-asti saraḍākhye grāme grāmaṇīḥ śūrapālaḥ /
+tasya bhāryā nāyinī /
+sā ātmapatiṃ nityaṃ paṭṭasūtrakañcukaṃ yācate /
+sa āha-vayaṃ karṣukāḥ kārpāsacīvarāḥ /
+asmadgṛhe paṭṭasūtravārttāmapi ko 'pi na jānāti /
+anyadā sā taṃ grāmasaṃsadisthaṃ jagāda-gṛhamehi gṛhādhipa! rāvaḍī bhuṅkṣva /
+sa ca tadvacanaṃ śrutvā bhāryāmāha gṛhāgataḥ-bhadre! tvayā ninditaṃ vaco lajjākārakaṃ mamāpriyaṃ saṃsadi kimitthamuktam? tayoktam--tvayā mama priyaṃ kathaṃ na kṛtam? grāmaṇīrāha--dāsyāmi kañcukaṃ te 'dya /
+nijaṃ vākyaṃ vṛthā kuru /
+tayoktam--kañcuke datte uttārayiṣye /
+dattaḥ kañcukastena /
+tadvacaḥ kathaṃ vṛthā bhavatviti praśnaḥ /
+śukaḥ prāha-anyadā nāyinī jagāda-yadādya tvāṃ saṃsadisthaṃ pūrvavadākārayāmi tadā tvayā saṃsadā saha gṛhamāgantavyam /
+tena ca evameva kṛtam /
+tayā ca gṛhāgatāyāḥ saṃsado bhavyarotyā bhojanaṃ dattam /
+tato grāmajano vadati-śūrapālaḥ samṛddhaḥ /
+paraṃ tadbhāryā auddhatyaparihāreṇa evaṃ vadati /
+iti vacanamuttāritam /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau ṣaṭtriṃśattamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 37:</p>
+
+<p>athāpare 'hni prabhāvatī gamanāya śukaṃ pṛcchati sma /
+śuko 'pyāha-</p>
+
+<lg>
+<l>yatheṣṭaṃ vraja kalyāṇi na te doṣo 'sti kaścana /</l>
+<l>lāṅgalīva vijānāsi yadi kartuṃ tvamuttaram // Suk_37.1 (=189) //</l>
+</lg>
+
+<p>prabhāvatyāha-kathametat /
+śuko 'pyāhṛ-saṅgamākhye grāme śūraḥ kauṭumbikaḥ /
+tasyāsti pūrṇapālastu hālikaḥ /
+sarvatra ca tasya śūrapaterveśmani kṣetre khale pramāṇam /
+tasya ca hālikasya kṣetrasthasya śūrapatisutā subhagā nāma nityaṃ bhuktiṃ nayati /
+sa tāṃ kāmayate kṣetragahvare śūrapālānniḥśaṅkitaḥ /
+taṃ ca vṛttāntamasamañjasamiti kṛtvā prativeśmahālikāstasya kathayāmāsuḥ /
+anyadāsau śūrastayorhālikasutayoḥ sambandhaṃ pratyakṣīkartuṃ kṣetraṃ gatvā gahvarasyādūrasamante 'lakṣitastasthau /
+tanmithunaṃ ratasthaṃ dṛṣṭaṃ kathaṃ bhavatu? uttarañca kimiti praśnaḥ /
+śukaḥ prāha-yāvatsa hālikastāṃ bhuktvotthitaḥ tāvat śūrapatiṃ dadarśa /
+tadā sa niḥśvasannāha-dhiṅme karmārjanāṃ ca yanmayā halakheṭanaṃ vidheyam, iyaṃ ca granthirogiṇī /
+ato dvayorapi jīvitaṃ rasātalaṃ yātu /
+mayā tu nityaṃ halekheṭanaṃ grantherākarṣaṇaṃ ca dvayamapi vidheyam /
+tadahaṃ kimarthamasya śūrapālasya hāliko bhavāmi /
+<lg>
+<l>itthamevāhaṃ kṣayaṃ yāsyāmi /</l>
+<l>iti hālikavacanaṃ śrutvā nirdeṣo 'yamiti lokasya vacanaṃ vitathīkṛtya śūrapatirlajjito gṛhaṃ yayau /</l>
+<l>sā ca prabhāvatī śukoktāṃ kathāṃ śrutvā suptā /</l>
+<l>iti śukasaptatau saptatriṃśattamo kathā //</l>
+</lg></p>
+
+</div>
+<div>
+
+<p>START Suk 38:</p>
+
+<p>aparedyuryāminīsamaye prabhāvatī gamanāya śukaṃ papraccha /
+śukaḥ-</p>
+
+<lg>
+<l>vāñchitaṃ kartukāmānāṃ nāntarāyaṃ kṛśodari /</l>
+<l>yadi kartuṃ vijānāsi yathā vipraḥ priyaṃvadaḥ // Suk_38.1 (=188) //</l>
+</lg>
+
+<p>prabhāvatī papraccha-kathametat? śukaḥ-purābhūd devi? priyaṃvado nāma vipraḥ pathikaḥ /
+ekadā mārge gacchansudarśanagrāme kasyacidvaṇijo gṛhaṃ yayau /
+tatpatnī ca puṃścalī /
+sa ca brāhmaṇastāṃ dṛṣṭvā ātmānaṃ susthānakṛtavāsakaṃ mene /
+sa ca rātrau sakāmastāṃ prārthayāmāsa /
+aṅgulīyakadānena ca haṭṭamārgaṃ vaṇiksute gate reme tayā samam /
+prātaḥ so 'ṅgulīyakaṃ yācate /
+sā nārpayati /
+anena vidhinā dattamaṅgulīyakaṃ sa kathaṃ gṛhṇātu-iti praśnaḥ /
+uttaram-yadā tu yācitā na dadāti tadā sa brāhmaṇaḥ khaṭvācaraṇaṃ gṛhītvā vaṇijaḥ sannidhiṃ yayau /
+khaṭvācaraṇaṃ darśayitvā phūtkṛtam /
+vaṇik prāha-bho dvijaḥ! kimetat? sa āha-bhagne 'smintvadīyabhāryayā madīyamagulīyakaṃ jagṛhe /
+sa ca vaṇik tadvacanaṃ śrutvā kupito bhāryāmāha-anena pramādena asmadgṛhe ko 'pi pathiko na sameṣyati /
+ityuktvā niṣṭhuraṃ vacastatkuṇḍāduttīrya aṅgulīyakaṃ pathikāya samarpitam /
+sa ca yathāgataṃ yayau /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau aṣṭatriṃśattamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 39:</p>
+
+<p>apare 'hni sandhyāsamaye puruṣāntaragamanāya prabhāvatī śukaṃ pṛcchati sma-he śuka! ahaṃ gamiṣyāmi /
+śukaḥ prāha-</p>
+
+<lg>
+<l>vraja devi! varaṃ yānaṃ tvaṃ bhoktuṃ subhagaṃ naram /</l>
+<l>vaktuṃ cedviṣame vetsi tulāgrāhīva bhāmini // Suk_39.1 (=189) //</l>
+</lg>
+
+<p>prabhāvatī prāha-"kathametat?</p>
+
+<lg>
+<l>kastulāgrāhakaḥ kīra! gṛhītā ca tulā kutaḥ /</l>
+<l>viṣamaṃ ca kimāyātaṃ kathāṃ kathaya śobhanām // Suk_39.2 (=190) //</l>
+</lg>
+
+<p>astyatra kuṇḍinaṃ nāma nagaram /
+tatra bhūdharo nāma vaṇikpuṇyakṣayātkṣīṇadhano janaistyaktaḥ /
+uktañca-</p>
+
+<lg>
+<l>vidvāndhanī dhanī dātā dhanī sādhurguṇāgraṇīḥ /</l>
+<l>sarvabandhurdhanī pujyo dhanahīno gataprabhaḥ // Suk_39.3 (=191) //</l>
+</lg>
+
+<p>yadā tu sa tulāmātradhano 'bhavattadānyavaṇiggṛhe tulāṃ muktvā deśāntaraṃ gataḥ /
+tatra dhanamarjayitvā nijanagaramāgatya taṃ vaṇijaṃ tulāṃ yayāce /
+vaṇikpārśvāttulā na labdhā /
+tulāyāṃ tu lubdho vaṇikmūrkha uttaraṃ cakre yattvadīyā tulā mūṣikairbhakṣiteti śrutvā bhūdharastūṣṇīṃ sthitaḥ /
+sa ca ekadā tasya veśmani bhojanāya gataḥ krīḍantaṃ bālakaṃ dṛṣṭvā pracchannaṃ gṛhītvā nijagṛhaṃ yayau /
+bālakapitā ca duḥkhapūritāṅgo ruroda sakuṭumbaḥ /
+tañca rudantaṃ dṛṣṭvā prativeśmiko jagāda-re tvadīyaḥ suto bhūdhareṇa gṛhītaḥ /
+tato 'sau tadgṛhaṃ gatvā bhūdharātsutaṃ yācitavān /
+bhūdhareṇoktam-mitra! tvatputro matsaṃge snānārthe nadītīre gatastatra śyenenāpahṛtaḥ /
+iti śrutvā tena vaṇijā rājakule gatvā putraharaṇavṛttānto niveditaḥ /
+bhūdharo 'pi rājakulaṃ yayau /
+tatkathaya sa bālahartā kathaṃ mucyatāmiti-praśnaḥ /
+śukaḥ yadā bhūdharo rājasamakṣaṃ mantriṇā pṛṣṭastadā evaṃ jagāda-</p>
+
+<lg>
+<l>tulāṃ lohamayīṃ yatra khādante deva! mūṣakāḥ /</l>
+<l>gajaṃ tatra haret śyeno dārake ko 'tra vismayaḥ // Suk_39.4 (=192) //</l>
+</lg>
+
+<p>śrutvaitadvacanaṃ mantriṇoktam-yadāyaṃ dhūrtastava tulāṃ samarpayati tadā dārako 'pi dātavyo nānyathā /
+tena dārakaḥ samarpitaḥ /
+tulāgrāhī daṇḍitaḥ san tulāṃ samarpayāmāsa /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau ekonacatvāriṃśattamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 40:</p>
+
+<p>anyedyuḥ sā prabhāvatī gamanāya śukaṃ pṛcchati sma /
+śukaḥ-</p>
+
+<lg>
+<l>gaccha tvaṃ gantukāmānāṃ gamanaṃ ca śubhaṃ bhuvi /</l>
+<l>subiddhiriva cedvaktuṃ vijānāsi kṛtākṛtām // Suk_40.1 (=193) //</l>
+</lg>
+
+<p>prabhāvatyāha-kathametat? śukaḥ-nagarābhighe pattane subuddhi- kubuddhiśceti mitradvayaṃ jane prasiddham /
+anyadā subuddhirdeśāntaraṃ yayau /
+kubuddhistu mitrastriyaṃ yayau /
+subuddhiśca dhanamarjayitvā deśāntarātsamāgataḥ /
+tataḥ kubuddhiḥ subuddheḥ kapaṭasnehaṃ darśayati /
+subuddhināpi sammānitaḥ /
+kubuddhistaṃ pratyāha-bhavatā kvāpi kiñcitkautukaṃ dṛṣṭam? tenoktam-sarasvatīnadītīre kūpamadhye taramāṇamakālajamāmraphalaṃ dṛṣṭaṃ manoramanāmini grāme /
+kubuddhirāha-mithyedam /
+subuddhirāha-satyametat /
+tenoktam-yadi satyaṃ bhavati tadā yadasmadgṛhe dvābhyāṃ hastābhyāṃ grahītuṃ śakyate tattvayā grāhyam /
+alīke tvadīyagṛhādahaṃ gṛhṇāmi /
+iti paṇbandhaṃ kṛtvā kubuddhī rātrau kūpāttatphalaṃ jagrāha /
+phalābhāve tu subuddhinā haritam /
+atha sa tadbhāryāṃ grahītukāmaḥ paṇabandhaṃ yācate /
+tadatra subuddhirnijabhāryārakṣaṇe kamupāyaṃ karotviti praśnaḥ /
+uttaraṃ śuka āha-subuddhistaṃ duṣṭāśayaṃ jñātvā nijagṛhavastujātaṃ nijakalatraṃ ca prāsādopari kṣiptvā /
+ārohaṇikāṃ pātayāmāsa /
+kubuddhiḥ samāyātaḥ /
+subuddhirāha-evaṃ yadrocate tadasmadgṛhād gṛhyatām /
+sa ca kalatrāharaṇāya niḥśreṇikāṃ dvābhyāṃ hastābhyāṃ jagrāha /
+tadā subuddhinoktam-mayaivaṃ pūrvaṃ gaditañca yad dvābhyāṃ hastābhyāṃ grahīṣyase tava tadave nānyat /
+tataḥ kubuddhirvilakṣo bhūtvā bahiryayau /
+janaiśca ninditaḥ /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau catvāriṃśattamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 41:</p>
+
+<p>anyadā vaṇigvadhūḥ prāha-kīra! yadi tvaṃ manyase tadā gacchāmi /
+śukaḥ prāha--</p>
+
+<lg>
+<l>yuktaṃ te gamanaṃ devi yadi tatra gatā satī /</l>
+<l>saṅkaṭe khalu vetsi tvaṃ kiñcidvaktuṃ dvijo yathā // Suk_41.1 (=194) //</l>
+</lg>
+
+<p>prabhāvatī prāha-"kathametat'? śukaḥ-asti pañcapuraṃ nāma nagaram /
+tatra śatrumardano nāma rājā /
+tatsutāyā madanarekhāyā gale granthirbabhūva /
+vaidyairasādhyetyuktvā parityaktā tato rājñā ḍiṇḍimāghoṣaṇaṃ kāritaṃ yathā yaḥ ko 'pi matsutāṃ gatarogāṃ karoti tamahaṃ dāridryarahita karomīti śrutvā paragrāmādāgatayā kayāciddvijabhāryayā ḍiṇḍimaḥ spṛṣṭaḥ /
+tasminpṛṣṭe tayoktam-yanmama patirmāntrikaḥ /
+sa rājasutā praguṇāṃ vidhāsyati /
+tato rājapuruṣaiḥ samānītaḥ /
+tasya ca nīyamānasya bhāryā jagāda-"nātha! gaccha nagaram /
+rājasutāyāṃ praguṇīkṛtāyāṃ tava bahu phalaṃ bhāvi /
+sa ca maṇḍalopaviṣṭo mantrādikamajānam kathaṃ bhavatviti praśnaḥ /
+śuka uttaraṃ prāha-sa māntrika ācāryavistāraṃ kṛtvā mantramityuccārayāmāsa /</p>
+
+<lg>
+<l>hauṃ jīvaṇu jāṇauṃ kāiṃ caḍuḍai vāvai sāiṃ /</l>
+<l>ghalliu bambhaṇi vīsāsu paiṃ bhuñjasu sukaasu hāiṃ // Suk_41.2 (=195) //</l>
+</lg>
+
+<lg>
+<l>[ahaṃ jīvanaṃ jānāmi kim tat piṣyate vihīyate /</l>
+<l>gṛhe brāhmaṇi viśrāmya patiṃ sevasva sukhamevaṃ bhavati] // Suk_41.2* (=195*) //</l>
+</lg>
+
+<lg>
+<l>vaṇaṃ iha ākhuriadantappahasantaaṃ /</l>
+<l>kahiṃ pi aurantaambehi siṃgariaṃ // Suk_41.3 (=196) //</l>
+</lg>
+
+<lg>
+<l>[vanamidamaṅkuritadantaprahasantaṃ /</l>
+<l>kutrāpi aṅkuritāmraiḥ śṛṅgāritam] // Suk_41.3* (=196*) //</l>
+</lg>
+
+<lg>
+<l>sarasakhīramāliaphalabhāraṇājhipraṃ /</l>
+<l>kahiṃ pi ṭisburiṇijambuiṇiaasohiaṃ // Suk_41.4 (=197) //</l>
+</lg>
+
+<lg>
+<l>[sarasakṣīramālikāphalabhāranāmitam /</l>
+<l>kutrāpi ṭimburiṇījambūnicayaśobhitam] // Suk_41.4* (=197*) //</l>
+</lg>
+
+<lg>
+<l>kahiṃ pi karavandāijālasaṃrāiaṃ /</l>
+<l>kahiṃ pi kappūrakaṅkolagandhavahaṃ // Suk_41.5 (=198) //</l>
+</lg>
+
+<lg>
+<l>[kutrāpi karavindajālasaṃrājitam /</l>
+<l>kutrāpi karpūrakaṅkolagandhavaham] // Suk_41.5* (=198*) //</l>
+</lg>
+
+<lg>
+<l>devadāruppiaṅgucūamallīlāṃ /</l>
+<l>kahiṃ pi sirikhaṇḍaaigarutarumaṇḍiaṃ // Suk_41.6 (=199) //</l>
+</lg>
+
+<lg>
+<l>[devadārupriyaṅgucūtamallolatam /</l>
+<l>kutrāpi śrīkhaṇḍāgarutarumaṇḍitam] // Suk_41.6* (=199*) //</l>
+</lg>
+
+<lg>
+<l>ṇāapuṃṇāadāḍimavaraṇāḍambaraṃ /</l>
+<l>maaraborīrhi kavivīhipīlughaṇaṃ // Suk_41.7 (=200) //</l>
+</lg>
+
+<lg>
+<l>[nāgapunnāgadāḍimāvaraṇāḍambaram /</l>
+<l>makarabadarokapitthavīthīpīlughanam] // Suk_41.7* (=200*) //</l>
+</lg>
+
+<lg>
+<l>dīhaghaṇavāsa jalīrhi aikhohiaṃ /</l>
+<l>kahiṃ pi ratta-----ḍambaraṃ // Suk_41.8 (=201) //</l>
+</lg>
+
+<lg>
+<l>[dīrghaghanavāsajālaiḥ atikṣobhitam /</l>
+<l>kutrāpi rakta------ḍambaram] // Suk_41.8* (=201*) //</l>
+</lg>
+
+<l>poṣphalīviḍavaghaṇakarammaruddhambaraṃ // Suk_41.9 (=202) //</l>
+
+<l>[poppalīviṭapaghanakamraruddhāmbaram] // Suk_41.9* (=202*) //</l>
+
+<lg>
+<l>kiñca-</l>
+<l>rattakaṇavīre kaṇavīriaṃ phaliaṃ /</l>
+<l>aṇṇavacchammi sevattiā phulliā // Suk_41.10 (=203) //</l>
+</lg>
+
+<lg>
+<l>[raktakarṇavīre karṇavīrakaṃ phalitam /</l>
+<l>anyavṛkṣake sevantikā phullitā] // Suk_41.10* (=203*) //</l>
+</lg>
+
+<lg>
+<l>aṇṇavacchammi kāranda āvacchaaṃ /</l>
+<l>aṇṇavacchammi sindūraaṃ phulliaṃ // Suk_41.11 (=204) //</l>
+</lg>
+
+<lg>
+<l>[anyavṛkṣake kāraṇḍamācchāditam /</l>
+<l>anyavṛkṣake sindūrakaṃ phullitam] // Suk_41.11* (=204*) //</l>
+</lg>
+
+<lg>
+<l>aṇṇavaccammi phullastamandāraaṃ /</l>
+<l>sirisauttuṅgagandhohavaramāruaṃ // Suk_41.12 (=205) //</l>
+</lg>
+
+<lg>
+<l>[anyavṛkṣake phullamandārakam /</l>
+<l>śirīṣottuṅgagandhaharamārutam] // Suk_41.12* (=205*) //</l>
+</lg>
+
+<lg>
+<l>aṇṇavacchammi siriātoraṇaṃ /</l>
+<l>phulliaṃ maṇoharaṃ jaṇiaparisohiaṃ // Suk_41.13 (=206) //</l>
+</lg>
+
+<lg>
+<l>[anyavṛkṣake sindūrikātoraṇam /</l>
+<l>phullitaṃ manoharaṃ janitapariśobhitam] // Suk_41.13* (=206*) //</l>
+</lg>
+
+<lg>
+<l>aṇṇavacchammi juttaddaaṃ kundaaṃ /</l>
+<l>malliṇomāliākusumā ghaṇapupphiā // Suk_41.14 (=207) //</l>
+</lg>
+
+<lg>
+<l>[anyavṛkṣake yuktadalaṃ kundakam /</l>
+<l>mallīnavamālikākusumāni ghanapuṣpitāni] // Suk_41.14* (=207*) //</l>
+</lg>
+
+<p>ityevaṃ bāhmaṇasya vadato rājaputryā hasitam /
+hāsyatirekeṇa galagrandhirdvidhā babhūva /
+dvidhā jāte ca tasmin rājasutāyāḥ sukhamutpannam /
+nṛpeṇa ca kṛtārthīkṛto vipraḥ svasadana gataḥ /
+iti kathāṃ śrutvo prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau ekacatvāriṃśattamo kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 42:</p>
+
+<p>arepadyuḥ prabhāvatī "gacchāmī"ti śukaṃ pratyāha /
+<lg>
+<l>śukaḥ-</l>
+<l>sukhopabhogaḥ saṃsāre sāraṃ sarvāṅgasundari /</l>
+<l>vraja cedvyāghramārīva vetsi vaktuṃ tvamuttaram // Suk_42.1 (=208) //</l>
+</lg></p>
+
+<p>tacchrutvā prabhāvatyāha-"sukhopabhogaḥ saṃsāre kora! kathāṃ kathaya" /
+śukaḥ kathāṃ prāha- asti deulākhyo grāmaḥ /
+tatra rājasiṃho nāma rājaputraḥ tadbhāryā kalahapriyeti viśrutā /
+sānyadā bhartrā sārdhaṃ kalahaṃ vidhāya putradvayopetā piturgṛhaṃ prati calitā /
+sā ca kopavaśātpattanāni bahūni vanāni ca bahūnyatikramya gatā malayapāśvasthaṃ mahākānanam /
+tacca kathaṃ bhūtam /</p>
+
+<lg>
+<l>candaṇasattacchaāsaṇṇaaṃ saralavaratuṅgatarusāhasaṃchaṇṇaaṃ /</l>
+<l>kahiṃ pi sahaārakhajjūriaṃ phaṇasaa mattālivihaṅgabhāriaṃ // Suk_42.2 (=209) //</l>
+</lg>
+
+<lg>
+<l>[candanasaptacchadasannaddhaṃ saralavaratuṅgataruśākhāsaṃcchannam /</l>
+<l>kvāpi sahakārakharjūrikaṃ panase mattālivihaṅgabharitam] // Suk_42.2* (=209*) //</l>
+</lg>
+
+<l>kahiṃ pi selupīluphapūriantaaṃ sarasavorabahutintaḍīchaṇṇaaṃ dāḍimīphalabillaphalasugandhivāaaṃ // Suk_42.3 (=210) //</l>
+
+<l>[kvāpi selupīlūprapūritāntaraṃ sarasabadarabahutintiḍīcchannam dāḍimīphalabilvaphalasugandhivātakam] // Suk_42.3* (=210*) //</l>
+
+<p>evaṃvidhe gahane gatā sā kalahapriyā vyāghraṃ dadarśa /
+sa ca vyāghrastava saputrāṃ dṛṣṭvā pucchena bhūmimāhatya dhāvitaḥ /
+tataḥ sā kathaṃ bhavatu? iti praśnaḥ /
+uttaraṃ śukaḥ prāha-sā vyāghramāgacchamānaṃ dṛṣṭvā ghārṣṭyāt putrau capeṭayā hatvā iti jagāda- kathamekaikaśo vyāghrabhakṣaṇāya kalahaṃ kuruthaḥ /
+ayamekastāvadvibhajya bhujyatām /
+paścādanyo dvitīyaḥ kaścillakṣyate /
+iti śrutvā vyāghramārī kācidiyamiti matvā vyāghro bhayākulacitto naṣṭaḥ /</p>
+
+<lg>
+<l>nijabuddhyā vimuktā sā bhayādvyāghrasya bhāmini /</l>
+<l>anyo 'pi buddhimāṃlloke mucyate mahato bhayāt // Suk_42.4 (=211) //</l>
+</lg>
+
+<p>iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau dvicatvāriṃśattamo kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 43:</p>
+
+<p>anyedyuḥ śukamāpṛcchati sma kāminī /
+śukaḥ prāha-</p>
+
+<lg>
+<l>vraja devi na te 'yuktaṃ vrajanaṃ gajagāmini /</l>
+<l>vyāghramārīva buddhiste dvitīyāpi yadi sthirā // Suk_43.1 (=212) //</l>
+</lg>
+
+<p>prabhāvatī pṛcchati, kathametat?</p>
+
+<lg>
+<l>vyāghramāryāḥ kṛtāṃ buddhiṃ dvitīyāṃ vivadādhunā /</l>
+<l>mahatkautukamatrārthe vidyate me priyaṃvada! // Suk_43.2 (=213) //</l>
+</lg>
+
+<p>śukaḥ-</p>
+
+<lg>
+<l>taṃ dṛṣṭvā kānane vyāghraṃ naṣṭaṃ jātaṃ bhayākulam /</l>
+<l>mṛgadhūrto hasannāha vyāghro naṣṭaḥ kuto bhayāt // Suk_43.3 (=214) //</l>
+</lg>
+
+<p>vyāghraḥ-gaccha gaccha jambuka tvamapi kiṃñcidgūgpradeśam /
+yato vyāghramārīti yā śāstre śrūyate tayāhaṃ hantumārabdhaḥ paraṃ gṛhītakarajīvito naṣṭaḥ śīghraṃ tadagrataḥ /
+mṛgadhūrtaḥ-vyāghra! tvayā mahatkautukamāveditaṃ yanmāṃsapiṇḍād mānuṣādapi bibheṣi /
+vyāghraḥ-pratyakṣameva mayā sātmaputrāvekaikaśo māmattuṃ kalahāyamānau capeṭayā ghnannī dṛṣṭā /
+jambukaḥ-svāmin! yatrāste sā dhūrtā tatra gamyatām /
+yadi vyāghra! tava tatra gatasya sā sammukhamapīkṣate tadā mama tvadīyā velā smaraṇīyā /
+vyāghraḥ-śṛgāla! yadi tvaṃ māṃ muktvā yāsi tadā velāpyavelā syāt /
+jambukaḥ-yadyevaṃ tahi māṃ nijagale baddhvā cala śīghram /
+sa vyāghrastathā kṛtvā kānana yayau /
+vyāghramāryapi prāptā putrasahitā tena jambukakṛtotsāhād vyāghrātsā kathaṃ mucyatām /
+iti praśnaḥ /
+śukaḥ-tayā vyāghramāryā tadā cintitaṃ yadayaṃ mṛgadhūrtenānītastasmādamumeva jambukamākṣipantyaṅgulyā tarjayantyuvāca-</p>
+
+<lg>
+<l>re re dhūrta tvayā dattaṃ mahyaṃ vyāghratrayaṃ purā /</l>
+<l>viśvasyādyaikamānīya kathaṃ yāsi vadādhunā // Suk_43.4 (=215) //</l>
+</lg>
+
+<lg>
+<l>ityuktvā dhāvitā tūrṇaṃ vyāghramārī bhayaṅkarā /</l>
+<l>vyāghro 'pi sahasā naṣṭo galabaddhaśṛgālakaḥ // Suk_43.5 (=216) //</l>
+</lg>
+
+<lg>
+<l>nijabuddhyā punarmuktā vyāghrajād devi sā bhayāt /</l>
+<l>buddhirvalavatī tanvi sarvakāryeṣu sarvadā // Suk_43.6 (=217) //</l>
+</lg>
+
+<p>iti kathāṃ śratvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau tricatvāriṃśattamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 44:</p>
+
+<p>athānyedyardināvasāne prabhāvatī śukaṃ pṛcchati /
+śukaḥ-</p>
+
+<lg>
+<l>ātmānaṃ saṅkaṭād devi yāhi cedvetsi rakṣitum /</l>
+<l>yathātmā saṅkaṭāttena jambukenāpi rakṣitaḥ // Suk_44.1 (=218) //</l>
+</lg>
+
+<p>sa ca jambuko galabaddho nighṛṣṭapṛṣṭhacaraṇo galadrudhirapravāho mūmūrṣuriva deśāntaraṃ gantumicchatā vyāghramārībhayādvyāghreṇa noyate /
+tato mahato 'pāyāt śṛgālaḥ kathaṃ mucyate-iti praśnaḥ /
+uttaraṃ prāha śukaḥ-tatastaṃ vyāghraṃ bahunadīkānanaviṣamasamapredeśaparvatānullaṅghayantaṃ satvaraṃ dṛṣṭvā ātmānaṃ mocayitukāmaḥ śṛgālo bhṛśaṃ jahāsa pīḍito 'pi san /
+vyāgreṇoktam-kathaṃ hasitam /
+sa āha-deva! sā mayā vyāghramārīti dhūrtikā jñātā /
+tvatprasādācca dūradeśamāgato 'haṃ jīvitaḥ /
+paraṃ yadi sāsmadraktasrāvasaṃlagnā pāpinī pṛṣṭhataḥ sameti tadā kathaṃ jīvitavyam /
+ato 'ha hasitaḥ /
+vyāghrasvāmin! sthirībhūya vicāraya /
+atha tuṣṭo vyāghrastena vākyena "tathe'tyuktvā jambukaṃ muktvā sahasā naṣṭaḥ /
+śṛgālo 'pi sukhaṃ tasthau /</p>
+
+<lg>
+<l>buddhirvaraṃ varāroha dhanamānasukhaiṣiṇām /</l>
+<l>buddhihīnāḥ paraṃ kleśaṃ prāpnuvanti kṛśodari // Suk_44.2 (=219) //</l>
+</lg>
+
+<lg>
+<l>balaṃ prajñāvihīnasya parakāryāya kevalam /</l>
+<l>girikūṭopamāṅgasya kuñjarasyeva dṛśyate // Suk_44.3 (=220) //</l>
+</lg>
+
+<p>iti kathāṃ śrutvā prabhāvatī śukavākyavismitā suptā /</p>
+
+<p>iti śukasaptatau catuścatvāriṃśattamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 45:</p>
+
+<p>anyedyuḥ sā kāminī sandhyāyāṃ śukaṃ papraccha-"gamiṣyāmī'ti /
+śukaḥ prāha--</p>
+
+<lg>
+<l>samayojyaṃ priyaṃ bhoktuṃ tava bhāmini samprati /</l>
+<l>vañcitā vetsi cetkartuṃ kiñcidviṣṇuḥ purā yathā // Suk_45.1 (=221) //</l>
+</lg>
+
+<p>prabhāvatyāha--"kathametat' /
+śukaḥ prāha-asti vilāsapuraṃ nāma nagaram /
+tatra arindamo nāma rājā /
+tatra ca viṣṇunāmā brāhmaṇo ratilolupaḥ kuṭumbavarjito ratikarmaṇi sarvanārīduḥsaha iti nagare prasiddho babhūva /
+veśyābhirapi na śakyate jetuṃ kimpunaḥ kulāṅganābhiḥ /
+tatra ratipriyā nāma gaṇikā /
+atha sā ṣoḍaśa drammān gṛhītvā tamājuhāva /
+tamāyāntaṃ dṛṣṭvā sā cāṭūktibhiḥ paricaryāṃ cakāra /
+so 'pi cānyakāryanivṛttastasminneva ratikarmaṇi dattamanāstāṃ rantu jetumārebhe /
+tayā ca sa ratilolupaḥ dravyārthaṃ vā parājayārthaṃ vā praharadvayaṃ yāvatsoḍhaḥ /
+niśīthe cādhobhūmikāmāgatya kuṭṭinyagrato niveditaṃ "yadduḥsaho 'yaṃ dvijaḥ /
+paṇabandhaṃ samarpayitvā tamutkālaya /
+mayi jīvantyāṃ prāgeva bāhulyaṃ bhaviṣyati' /
+kuṭṭinyāha-"asmadgṛhe na ko 'pi kāmuko gaṇikāṃ jitvā paṇabandhaṃ jagrāha /
+tato 'hamenaṃ yāvatprapañcena niḥsārayāmi tāvatsoḍhavya iti /
+yadā cāhaṃ pippalamāruhya sūrpadvayena pakṣaśabdaṃ kukkuṭadhvaniṃ vidadhāni tadā vibhātamiti kṛtvā niḥsāraṇayaḥ'-ityuktvā preṣitoparibhūmau gaṇikā /
+yathoktaṃ ca kuṭṭinyā tāvatkṛtam /
+tasminkṛte vibhātamiti kṛtvā niḥsārito dvijaḥ /
+yāvad gṛhadvarastho vyomamālokayate tadopari niśīthovartate /
+tadā sa vipraḥ kuṭṭinīparājito janamadhye parājayaṃ kathaṃ vahatu-iti praśnaḥ /
+śukaḥ-yadā vipraḥ kukkuṭadhvanisthānamavalokayati tāvatsūrpadvayayutāṃ kuṭṭinīṃ dadarśa /
+tena ca sā loṣṭenāhatya bhūmau pātitā pramādajanaiśca dhikkṛtā /
+sa ca brāhmaṇo grahaṇakaṃ dviguṇaṃ gṛhītvā puramadhye gaṇikāṃ vinindya /
+svagṛhaṃ yayau /</p>
+
+<p>iti śukasaptatau pañcacatvāriṃśattamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 46:</p>
+
+<p>athānyedyuḥ prabhāvatī śukaṃ pṛcchati /
+śukaḥ-</p>
+
+<lg>
+<l>yāhi devi gṛhaṃ muktvā yadi vetsi tvamuttaram /</l>
+<l>yathā karagarānāthaḥ kṛtavānbhūtanigrahe // Suk_46.1 (=222) //</l>
+</lg>
+
+<p>asti devi vatsomaṃ nāma nagaram /
+tatra vidvāndaridro brāhmaṇaḥ /
+tasya priyā ca karagarābhidhānā yathārthanāmno sarvajantūdvegakāriṇī, yattaddvāradeśavṛkṣasthito bhūtastasyāḥ karagarāyā bhayātpalāyyāṭavyāṃ gataḥ /
+brāhmaṇo 'pi tasyā udvegāddeśāntarābhimukho 'bhūt /
+so 'pi ca tena bhūtena dṛṣṭo jalpitaśca mārgaśrāntastvam /
+tena tvayādya mamātithinā bhāvyam /
+vipreṇa bhīruṇoktam-yadātithyaṃ karoṣi tadvidhehi śīghram /
+bhūtenoktam-na tvayā bhetavyam /
+tvaṃ mama svāmī yato 'haṃ tvadgṛhadvāravṛkṣastho bhūtaḥ karagarābhayenehāgataḥ /
+tatastava nijasvāminī guṇavadupakartavyameva /
+tasmāttvaṃ dvija mṛgāvatīṃ rājadhānīṃ madanabhūpatisanāthāṃ gaccha /
+tatra cāhaṃ tatputrīṃ mṛgalocanāṃ grahīṣye /
+sā cānyairmantrikairnorujā na bhaviṣyati /
+tattvayi samāgate tava darśanādevāhaṃ tyakṣyāmi /
+tataḥ paraṃ tu mantravādo na vidheyaḥ /
+iti bhaṇitvā so 'pi bhūto gatvā tāṃ rājaputrīṃ jagrāha /
+vipro 'pi tatra yayau /
+tena ca ḍiṇḍimaḥ spṛṣṭaḥ /
+tato rājakulaṃ gato vipra ācāryavistaraṃ vidadhe /
+bhūta ācāryavistaraṃ yāvannamuñcati tāvatkiṃ karotviti praśnaḥ /
+śuka-bhūtagrahe 'nivartite vipreṇoktam-</p>
+
+<lg>
+<l>karagaraṇāhau āiau bhūa eu vīsasiu ṭhiu dhutta /</l>
+<l>āpiṇi boliu saṃbhari re kūḍauṃ kiṃ maiṃ deva jutta // Suk_46.2 (=223) //</l>
+</lg>
+
+<lg>
+<l>[karagarānātho 'hamāgatya bhūta iha viśvasya sthito dhūrta /</l>
+<l>ātmano vacanaṃ saṃbhṛhi re kūṭakaṃ kiṃ mayi deva yuktam] // Suk_46.2* (=223*) //</l>
+</lg>
+
+<p>uktañca-</p>
+
+<lg>
+<l>manuṣyāḥ sukulotpannā api ca brahmacārimaḥ /</l>
+<l>na bhavanti mṛṣāvācaḥ kiṃ punardevayonayaḥ // Suk_46.3 (=224) //</l>
+</lg>
+
+<p>tato bhūtaḥ tyaktvā jagāma /
+iyaṃ muktetyuktvā brāhmaṇāya rājñā sutāḥ rājyārdhañca pradattam /
+vipro 'pi pūrṇamanoratho jagāma /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau ṣaṭcatvāriṃśattamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 47:</p>
+
+<p>dinamativāhya prabhāvatī śukaṃ pṛcchati /
+śukaḥ-</p>
+
+<lg>
+<l>gaccha devi gatā vetsi yadi kartuṃ tvamuttaram /</l>
+<l>yathā karagarānāthaḥ kṛtavānbhūtasaṅkaṭe // Suk_47.1 (=225) //</l>
+</lg>
+
+<p>sa karagarāpatiḥ rājakanyayā saha rājalakṣmīṃ bhuṅkte /
+atrāntare sa bhūtaḥ karṇāvatīṃ gatvā rājño bhāryāṃ sulocanāṃ jagrāha /
+sā madanasya pitṛṣvasā /
+sā cātyarthaṃ pīḍitā jīvitaśeṣābhūt /
+sāpi śatrughnanarapaterbhāryā mātṛrājye keśavamāntrikamākārayāmāsa /
+sa ca nijadūtāpreṣayitvā keśavo 'pi rājñā priyavākyaiḥ prahito 'pyagantukāmukaḥ /
+tadā sa karagarāpatirbhāryānurodhato jagāma /
+tatra gataḥ sanmānito mahībhujā śatrughnena gataḥ sulocanāveśmani /
+sa ca bhūtastamāyāntaṃ dṛṣṭvā paruṣairvākyaistarjayannityāha-"mayā pratipannamekadeśe kṛtam /
+adhunā tu vipra tvayā ātmā rakṣaṇīyaḥ' /
+sa ca dvijo na mantraṃ na tantraṃ vijānāti /
+kathaṃ bhavatviti praśnaḥ /
+śukaḥ- tadā taṃ bhūtaṃ jñātvā kālavedī kṛtāñjalirbhūtvā tatkarṇamāśrityeti jagāda dvijaḥ /</p>
+
+<lg>
+<l>prāptā karagarā bhūta pṛṣṭhalagnātra me 'dhunā /</l>
+<l>yadbhartā cātra samprāptastadvyākhyātumihāgataḥ // Suk_47.2 (=226) //</l>
+</lg>
+
+<lg>
+<l>śrutvaitadvacanaṃ bhīto bhūto vismitamānasaḥ /</l>
+<l>yāmīti brāhmaṇaṃ proktvā pātraṃ tyaktvā jagāma tat // Suk_47.3 (=227) //</l>
+</lg>
+
+<p>tadā pātre svasthībhūte śatrughnarājñā satkṛto brāhmaṇo mṛgāvatīnagaraṃ yayau /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau saptacatvāriṃśattamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 48:</p>
+
+<p>athānyedyuḥ prabhāvatī śukaṃ pṛcchati-gacchāmi narāntaramiti /
+śukaḥ-</p>
+
+<lg>
+<l>sambhogasukhamevātra paramaṃ vraja sundari /</l>
+<l>viṣame nirṇayaṃ kartuṃ vetsi cecchakaṭālavat // Suk_48.1 (=228) //</l>
+</lg>
+
+<p>pāṭalīpurapaṭṭane sārvabhaumo nando nāma rājabhūt /
+śakaṭālastasya nṛpateḥ sacivāgraṇīrabhat /
+tadbuddhivibhavākrāntāśca bhūpālāḥ sarve 'pi karadā abhavan /
+uktañca-</p>
+
+<lg>
+<l>aprājñena ca kātareṇa ca guṇaḥ syātsānurāgeṇa kaḥ prajñāvikramaśālino 'pi hi bhavet kiṃ bhaktihīnātphalam /</l>
+<l>prajñāvikramabhaktayaḥ samuditā yeṣāṃ guṇā bhūtaye te bhṛtyā nṛpateḥ kalatramitare sampatsu cāpatsu ca // Suk_48.2 (=229) //</l>
+</lg>
+
+<p>kiñca-</p>
+
+<lg>
+<l>prajñāguptaśarīrasya kiṃ kariṣyanti saṃhatāḥ /</l>
+<l>hastopadhṛtachatrasya vāridhārā ivārayaḥ // Suk_48.3 (=230) //</l>
+</lg>
+
+<p>sa ca rājā dharmanāśakaṃ kurvannirdravyāṃ ca medinīṃ vidadhāno niṣiddho mantriṇā /
+tatastenāpi mūrkheṇa rājñā sacivo 'vaṭe nikṣiptaḥ /
+sa ca saputrastatra ciraṃ tasthau /
+tataḥ śakaṭāle mahāmātye tatrasthe sarvatra mṛto mṛta iti vārttābhūt /
+tato baṅgālanāthena tatparīkṣārthamātmoyapuruṣā ghoṭikādvayaṃ samarpya nandapārśve preṣitāḥ /
+yadetayormadhyātkā mātā kā ca putrī iti jñātvā samāgantavyam /
+sarvalakṣaṇasampūrṇe sadṛśe ghoṭiketāni ca lakṣaṇāni śālihotrajñātavyāni /
+yadā ca ko 'pi nandarājye ghoṭikānirṇayaṃ kartuṃ na kṣamastadā nando rājā vyacintayāt-"śakaṭālaṃ vināhaṃ paribhavāspadaṃ jātaḥ" /
+uktañca-</p>
+
+<lg>
+<l>bhūmeśca deśasya guṇānvitasya bhṛtyasya vā buddhimataḥ praṇāśe /</l>
+<l>bhṛtyapraṇāśe maraṇaṃ nṛpāṇāṃ naṣṭāpi bhūmiḥ sulabhā na bhṛtyāḥ // Suk_48.4 (=231) //</l>
+</lg>
+
+<p>vicintyaiva daṇḍapāśikamabravīt "yacchakaṭālakule kaścitkūpagato vidyate na vā" /
+tenoktam-"kaścidasti paraṃ vyaktito na jñāyate /
+yataḥ pūrvoddiṣṭaṃ bhaktaṃ kaścitkūpagato gṛhṇāti /
+taṃ ca kūpādākṛṣya sammānya ca eva muktavān-</p>
+
+<lg>
+<l>mānyastvaṃ mama mitraṃ ca guruḥ svāmī niyogakaḥ /</l>
+<l>āśrayasya sadā dātā ki ka na tvaṃ sadānagha // Suk_48.5 (=232) //</l>
+</lg>
+
+<p>uktañca-</p>
+
+<lg>
+<l>svāmī durṇayavāraṇavyatikare śāstropadeśe gururviśrambhe hṛdayaṃ niyogasamaye dāso bhaye cāśrayaḥ /</l>
+<l>dātā saptasamudrasīmaraśanādāmāntikāyāḥ kṣiteḥ sarvākāramabhūtsvayaṃ varasuhṛtko na karṇo mama // Suk_48.6 (=233) //</l>
+</lg>
+
+<p>mantriṇoktam-"svāmin kiṃ vidheyaṃ tadādiśa' /
+rājñoktam-"asya vaḍavāyugalasya madhye kā mātā kā ca putrī iti sandehamamīṣāṃ chalātmanāṃ dūtānāṃ śīghraṃ chindhi /
+sa kathaṃ chinattu tatsandehamiti praśnaḥ /
+śukaḥ-tato mantriṇā tadvaḍavāyugaṃ saparyāṇaṃ kārayitvā bāhyālyāmativāhya paryāṇarahitaṃ vidhāya śrāntaṃ sammocitam /
+tadanu tadyugalaṃ ca mātṛsutāviceṣṭitaṃ cakāra /
+mātā jihvayā sutāṃ lileha sutā ca tāṃ prati ativatsalābhūt /
+tataḥ sumantriṇā mātṛsutāviśeṣā rājño 'gre niveditaḥ /
+tataśca śakaṭālaḥ parāṃ lakṣmīṃ prasiddhiṃ ca lebhe /
+iti kathāṃ śratvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau aṣṭacatvāriṃśattamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 49:</p>
+
+<p>athāparedyuḥ dinakṛtyaṃ sā vidhāya śukamāpṛcchate /
+śukaḥ-</p>
+
+<lg>
+<l>sambhogasukhamevādya bhoktuṃ te devi yujyate /</l>
+<l>viṣame 'pi pravīṇāsi punaścecchakaṭālavat // Suk_49.1 (=234) //</l>
+</lg>
+
+<p>yathāpūrvaṃ tathaiva baṅgālanātho yaṣṭikāṃ suvṛttāṃ dhvajācchidriṇīmayīṃ jīvacachakaṭālaparīkṣāyai taireva puṃbhiḥ preṣayāmāsa /
+yathā yuṣmābhirnandarājye gatvā asyā yaṣṭikāyā ratnasuvarmavajrairkhacitāyā ādimantaṃ jñātvā samāgantavyamityādeśātte pumāṃso nandapārśvamāgatya yaṣṭikāṃ tatpurato muktvā ādimantaṃ ca papracchuḥ /
+tacchratvā pradhānaiḥ kalābhijñairvaṇigvaraistolitā ānyaiśca kovidairavalokitā /
+paraṃ kenāpi ādyantavibhāgo na jñātaḥ /
+tato rājā śakaṭālamādiśat yattvāṃ vinā ādyantavibhāgaṃ na ko 'pi jānāti /
+tatastvayā nirṇayo vidheya eva /
+tato mantrī vadati-"svāmin! yuṣmatkṛtā sambhāvanāpi na niṣphalā /</p>
+
+<lg>
+<l>uktañca suvaṃśasyāvadātasya śaśāṅkasyeva lāñchanam /</l>
+<l>kṛcchreṣu vyarthayā yatra bhūpaterbharturājñayā // Suk_49.2 (=235) //</l>
+</lg>
+
+<p>tataśca sa mantrī sambhāvito 'pi kathaṃ jñāsyatīti praśnaḥ /
+uttaram-śukaḥ prāha-"tato 'sau buddhimānmantrī yaṣṭikāṃ jale cikṣepa /
+jñātañca yato yanmūlaṃ tadīṣajjale magnam /
+tacca nṛpaterniveditam /
+tena ca teṣāṃ dūtānāmapi kathitam /
+tataste śrutvāsvarājñe nyavedayan /
+tataśca te rājāno nandādhirājasya pūrvajalpitaṃ karaṃ daduḥ /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau ekonapañcāśattamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 50:</p>
+
+<p>anyadā pradoṣe prabhāvatī calitā śukaṃ papraccha /
+śukaḥ-</p>
+
+<lg>
+<l>gaccha devi na te doṣo gamane ko 'pi dṛśyate /</l>
+<l>viṣame yadi vetsi tvaṃ dharmabuddhirivehitam // Suk_50.1 (=236) //</l>
+</lg>
+
+<p>"kathametat?" śukaḥ-astiḥ devi dharāpṛṣṭhe jāṅgalābhidho grāmaḥ /
+tatra mitradvayaṃ vartate dharmabuddhirduṣṭabuddhiśceti /
+anyadā tau dvāvapi dhanāśayā deśāntaraṃ gatau /
+kiyadbhirdinaiḥ pracuraṃ dhanamarjayitvā svagrāmāgatau parasparaṃ mantraṃ cakrāte yatpippalādho dhanaṃ kiñchitkṣiptvānyadgṛhe nīyate /
+paścātkrameṇa vibhajyate lagnam /
+iti kṛtvā tau nijagṛhaṃ jagmaturhṛṣṭatuṣṭau sukhāsvādatatparau sthitau /
+atrāntare yatkṛta duṣṭabuddhinā tanniśamyatām /
+naca yujyate vaktum /
+yataḥ-</p>
+
+<lg>
+<l>na vaktavyaṃ dhruvaṃ devi pāpaṃ dṛṣṭaṃ śrutaṃ mayā /</l>
+<l>kathāpi khalu pāpānāmalamaśreyase yataḥ // Suk_50.2 (=237) //</l>
+</lg>
+
+<p>tena ca duṣṭabuddhinā taddravyamutpāṭya gṛhītvā nijagṛhamānītam /
+kālakrameṇa ca sammilitau pippalādhaḥsthitaṃ dravyaṃ grahītuṃ gatau yāvadālokayataḥ tāvaddravyaṃ nāsti /
+dharmabuddhistato gatvā mantriṇo 'gre ācakhyau dhanavṛttāntaṃ hṛtaṃ cāpi kubuddhinā /
+kubuddhināhṛtena uttaraṃ kṛtam /
+sahasrasya paṇo muktaḥ /
+etadarthe śapathaṃ dāpayiṣyāmi /
+mantriṇoktamevamevāstu /
+dvitīyenāpi pratipannaṃ yadā tadā mantriṇā pratibhuvau gṛhītvā muktau gatau gehaṃ pṛthakpṛthak /
+tato duṣṭabuddhirnijaṃ pitaraṃ viditārthaṃ kṛtvā vṛkṣakoṭare cikṣepa /
+prabhāte sacivastau ca vādino kotukī lokaśca taṃ pippalaṃ yayuḥ /
+duṣṭabuddhiḥ snātaḥ kṛtāñjaliḥ satyaṃ kṛtvā jagāda /
+"idaṃsatyaṃ brūhi nagottama yadi mayā dravyamapahṛtaṃ tadānena hṛtamiti vācyam /
+yadi na hṛtaṃ tadānena na hṛtamiti vācyam" /
+iti śrutvā tatpitrā nahīti jalpitaṃ sarvalokapratyakṣam /
+tato dharmabuddhiḥ kathaṃ bhavatu-iti praśnaḥ /
+tatsandiṣṭaḥ śuka-prāha--"dharmabuddhistaṃ śabdaṃ tatpiturjñātvā koṭare vahniṃ jajvāla /
+taṃ pitaraṃ koṭarāt phūtkūrvantamardhajvalitaṃ ca patitaṃ dṛṣṭvā duṣṭabuddhernigrahaṃ vidhāya mantrī dharmabuddhimānandayāmāsa /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau pañcāśattamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 51:</p>
+
+<p>anyadā sā bālā śukaṃ papraccha /
+śukaḥ-</p>
+
+<lg>
+<l>yādi devi ratāsvādalubdhe kāmini taṃ naram /</l>
+<l>gāṅgilavadvijānāsi viṣame yadi bhāṣitum // Suk_51.1 (=238) //</l>
+</lg>
+
+<p>prabhāvatī brūte-"nāhe vedmi /
+tatkathaya" /
+śukaḥ-"asti camatkārapuraṃ nāma nagaram /
+tacca caturvedacaturvarṇacaturāśramasamākulam /
+tataḥ kadācittatrasthā brāhmaṇā vallabhīnāthayātrāyāṃ calitā gantrībhiraśvavāhanaiḥ sakautukā vṛddhimantaḥ pūrṇapārthayādisāmagrīkā sāranepathyāḥ saputrakalatrāḥ /
+mārge caurairgṛhītumārabdhāḥ /
+te 'pi sarve bhayākulā naṣṭāḥ /
+gāṅgilanāmā viprastairvipraiḥ saha gantumaśaktaḥ khañjaḥ san samantato gantryārūḍho dhṛtaḥ /
+tataḥ sa kathaṃ bhavatviti praśnaḥ /
+śukaḥ-tataḥ sarveṣu dvijepu naṣṭeṣu sa śakaṭasthaḥ udbhrāntaṃ bhrātaraṃ sāhasika iva jagāda /
+bhrātaḥ kiyanto gajāḥ kiyantaśca vājinaḥ santi /
+iti kathaya satūrmaṃ ca tvaṃ dhanurarpaya yathaitāndivyāstreṇa yugapanmārayāmi /
+iti vacaḥ śrutvā te taskarāḥ sarve 'pi naṣṭāḥ /</p>
+
+<lg>
+<l>tasmādyo bhāṣituṃ vetti dharme cārthe smare tathā /</l>
+<l>kastaṃ dharṣayituṃ śakto nareṣu kamalānane // Suk_51.2 (=239) //</l>
+</lg>
+
+<p>iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau ekapañcāśattamo kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 52:</p>
+
+<p>atikramya divā prabhāvatī triyāmāsamaye dvijaṃ prāha-vrajāmīti /
+śukaḥ-</p>
+
+<lg>
+<l>vrajābhoṣṭaṃ naraṃ devi yadi kāryaṃ nijaṃ gatā /</l>
+<l>jayaśrīriva jānāsi kāryaṃ kartuṃ nijaṃ hitam // Suk_52.1 (=240) //</l>
+</lg>
+
+<p>kathametat? śukaḥ-śṛṇu devi! asti dharāpṛṣṭhe pratiṣṭhānaṃ nāma pattanam /
+tatra sattvaśīlo rājā /
+tatputro durdamano nāma /
+tena iti cintitaṃ yanmayā svabhujopārjitameva bhoktavyaṃ na tu paitṛkamiti sañcintya nijanagaraṃ tyaktvā samaśīlairmitraiḥ brāhmaṇakāṣṭhataḍvaṇikputraiḥ samaṃ niryayau deśāntaropari /
+tataśca tairmilitaiścintitaṃ yadaramākaṃ ratnabhūmirmahodadhiḥ sevituṃ yujyate /
+uktaṃ yataḥ-</p>
+
+<lg>
+<l>vidyāvatāṃ kulīnānāṃ śauryasampattiśālinām /</l>
+<l>sthānaṃ nareśabhavanamathavā yattato 'dhikam // Suk_52.2 (=241) //</l>
+</lg>
+
+<p>uktañca-</p>
+
+<lg>
+<l>santa eva satāṃ nityamāpattaraṇahetavaḥ /</l>
+<l>gajānāṃ paṅkamagnānāṃ gajā eva dhurandharāḥ // Suk_52.3 (=242) //</l>
+</lg>
+
+<p>vicāryaivaṃ sevitaḥ payasāṃ patiḥ trisaptakṛtva upoṣitaistaiḥ /
+tatastuṣṭo 'mbhonidhiḥ tebhyaścaturbhyaścatvāri cintāmaṇiguṇāni ratnāni dadau /</p>
+
+<lg>
+<l>nivṛttāḥ kṛtakṛtyāste labdhvā ratnacatuṣṭayam /</l>
+<l>viśvastā vaṇijaḥ pārśve sarvaṃ eva samārpayan // Suk_52.4 (=243) //</l>
+</lg>
+
+<p>tato duṣṭena tena lobhābhibhūtena tadratnacatuṣṭayaṃ jaṅghāntare kṣiptvā sīvitam /
+ekadā anyadā ca mārge phūtkṛtaṃ paścāddūrasthitena vaṇijā muṣito 'smīti vadanaiḥ /
+tairuktam-kena hetunā /
+sā āha-mama mūtrotsargārthaṃ paścātsthitasya caureṇa mātrāpahṛtā viśvāpi /
+eve ca nivedite tairjñātaṃ-paśya dhūrto 'yam /
+nūnamanena vaṇijākimapi kṛṭaṃ kṛtaṃ bhaviṣyatīti manyamānā vivadantaḥ airāvatīṃ purīṃ yayuḥ /
+tatra ca nītisāra ityākhyāto bhūpatiḥ /
+tasya ca mantrī buddhisāro nāma jagadvikhyātaḥ yasyaivaṃ prasiddhirdeśe deśāntare ca yadvivādināṃ vacanamuktamātraṃ jānāti /
+tataste rājaputrādyāstasmai mantriṇe ācakhyuḥ nijaṃ ratnagamanavṛttānta yathā jātam /
+tathaiva virīkṣyāsmākaṃ madhye ratnajātaṃ vadhabandhaṃ vinā pṛthak pṛthak ekaikaṃ samarpaya /
+yadi ca nārpayasi tāni jñātvā tadā prasiddhirbhivite vyarthatāṃ yāti /
+buddhisāra iti śrutvā cintāvaṣṭabdhaḥ sthitaḥ /
+sa ca rājā nītisāraḥ kathaṃ syāditi praśnaḥ /
+śukaḥ prāha-yadā sa mantrī ratnacatuṣṭayaṃ tanmadhye sthitaṃ na janāti tadā viṣaṇṇo gṛhamāyayau /
+atrāntare mantriputrī prāptanavayauvanā pārvatīṃ natvā piturnamaskāraṇāya gatā jayaśrīnāmadeyā /
+pitaraṃ tādṛśaṃ sacintaṃ dṛṣṭvā viṣādakāraṇaṃ pṛcchati sma /
+tato mantrī yathāsthitamācaṣṭe /
+sutā prāha-tāta! mā viṣīda /
+teṣāṃ nirṇayamahaṃ kariṣyate /
+te vivādinaḥ pumāṃso yadā kāraṇāyāgacchanti tadā gṛhe preṣaṇīyāḥ yathāhaṃ tanmadhyādratnajātahartāraṃ samarpayāmi /
+sā āha- putri! yanmayā na jñātaṃ tattvaṃ kathaṃ jñāsyasi? sā āha-</p>
+
+<lg>
+<l>na caitattāta vaktavyaṃ bhinnā buddhirhi dehiṣu /</l>
+<l>ko 'pi kiñcidvijānāti jagatyatra kalāparaḥ // Suk_52.5 (=244) //</l>
+</lg>
+
+<p>kiñca-</p>
+
+<lg>
+<l>muṇḍe muṇḍe matirbhinnā kuṇḍe kuṇḍe navaṃ payaḥ /</l>
+<l>tuṇḍe tuṇḍe navā vāṇī gehe gehe pativratā // Suk_52.6 (=245) //</l>
+</lg>
+
+<lg>
+<l>prajñāvisphāritākṣāṇāṃ vidravanti vipattayaḥ /</l>
+<l>hastodyatapradīpānāmandhakāra ivāgrataḥ // Suk_52.7 (=246) //</l>
+</lg>
+
+<p>tasmāttāta! nātra kāpi cintā kāryā /
+prasthāpyāste 'nyadeśinaḥ yathā tānprabodhayāmi /
+prasthāpitāste mantriṇā tayāpi snāpitā bhojitāśca pṛthakpṛthaka śāyitāḥ /
+tataḥ sā śṛṅgāraṃ vidhāya pradhānaṃ rājaputraṃ prāha-ahaṃ ratyarthinī tava pārśvaṃ samāgatā /
+tvaṃ ca mahyaṃ kāñcanaśataṃ dattvā māṃ bhuṅkṣva /
+tenoktam-ahaṃ tava dravyaṃ rājyaṃ copārjya dāsyāmi /
+paramadhunā na kiñcana vidyate /
+iti taṃ nirdravyaṃ jñātvā brāhmaṇaṃ gatā /
+brāhmaṇamapi pūrvoktamevoktavatī /
+brāhmaṇo jagāda-yadasmatpituḥ pārśve dravyaṃ śāsanabaddhā bhūmirapi tatsarvaṃ tubhyaṃ dāsye /
+tamapi nirdhanaṃ jñātvā parityajya sūtradhāraṃ yayau /
+āha ca saḥ-sāmprataṃ mama pārśve kiñcinna vidyate paraṃ paścāllakṣaṃ dāsyāmi /
+tamapi nirdravyaṃ parityajya vaṇiksutaṃ yayau /
+tathaiva gaditavatī /
+sa āha-svāmini! ratnacatuṣṭayaṃ gṛhītvā māṃ bhuṅkṣva /
+tato jaṅghāyāḥ samākṛṣya ratnajātaṃ samarpayāmāsa /
+tataḥ sā savyājamutthāya śīlarakṣāṃ kurvāṇā jayaśrīrgṛhamāyayau /
+ratnacatuṣṭayaṃ piturarpayāmāsa /
+mantryapi tānākārya nijaṃ nijaṃ ratnaṃ samarpayāmāsa /
+te 'pi svaratnalābhātkṛtakṛtyā nijaṃ nijaṃ gṛhaṃ yayuḥ /
+iti kathāṃ śrutbā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatī dvipañcāśattamo kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 53:</p>
+
+<p>athāparedyuḥ prabhāvatī gamanāya śukaṃ pṛcchati /
+śukaḥ provāca-</p>
+
+<lg>
+<l>vraja rambhoru yuktaṃ te gamanaṃ viṣame sati /</l>
+<l>cetkartumuttaraṃ vetsi carmakārakalatravat // Suk_53.1 (=247) //</l>
+</lg>
+
+<p>prabhāvatī pṛcchati-kathametat? śukaḥ-carmaṇvatīnadītīre carmakūṭa iti grāmaḥ /
+tatra ca dohaḍo nāma carmakāraḥ /
+tasya devikā nāma bhāryā paraṃ parapuruṣalampaṭā /
+tataḥ sa carmakāraścarmaṇāṃ krayaṇāya yadā bahirnirgataḥ tadā tayā upapatiḥ samānītaḥ /
+tayoścānte suratasevinoḥ patiścarmasamāyukto bahirāgataḥ /
+tataḥ sa upapatiḥ sā ca kathaṃ bhavetām iti praśnaḥ /
+tatpṛṣṭaḥ śukaḥ prāha-
+yadā ca tayā patirjñātaḥ samāgacchantadā-</p>
+
+<lg>
+<l>rūhaṃ cucuhuñcūkaraūṃhūṃ āaucalihaṃ nāvahaṃ madraṃ /</l>
+<l>uvāipāu caliyau phiriyā khaṃligāvaha // Suk_53.2 (=247,1) //</l>
+</lg>
+
+<p>iti vākyaṃ vadati tvaritaṃ niḥsṛtā /
+tatastadvākyaṃ śrutvā bhīto māntrikamākaraṇāya sa mūrkho bhramituṃ gato grāme yāvattāvattayā ca niḥsārito jāraḥ svaveśma gataḥ /
+tatastvamapyuttaraṃ viṣame yadi vetsi tadā gaccha /
+anyathā śayana kuru /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau tripañcāśattamo kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 54:</p>
+
+<p>athātivāhya dinaṃ prabhāvatī gamanotsukā punaḥ śukaṃ pṛcchati /
+sa prāha-</p>
+
+<lg>
+<l>ko doṣo gamyatāṃ devi yādi tvaṃ vetsi bhāṣitum /</l>
+<l>dūtena bhāṣitaṃ yadvadviṣame nṛpateḥ puraḥ // Suk_54.1 (=248) //</l>
+</lg>
+
+<p>prabhāvatyāha-kathametat /
+śukaḥ-asti śakrāvatī nāma purī /
+tasyāṃ dharmadatto nāma rājā dharmādiguṇopetaḥ /
+tasyāmātyaḥ suśīlo nāma /
+tasya ca suto viṣṇunāmā saṃdhivigrahikaḥ pūrvamāsīt /
+tasmātpadādyadā bhraṣṭo dravyahīnaḥ kulāmātyo 'hamityahaṅkṛtaḥ karkaśaśca /
+tato rājā na kiñcidvadati /
+mantrī ca kadācinnṛpamāha-svāminnayaṃ viṣṇurbhakto raktaḥ pravīṇo dūtakarmaṇi /
+taddevapādaiḥ kvāpi preṣayitvā parīkṣaṇīyaḥ /
+tato rājā tadvākyaṃ śrutvā tatpratikūlaḥ sanbhasmaprābhṛtaṃ mudrayā mudritaṃ samarpya śatrudamananṛpapārśve vidiśāyāṃ nagaryāṃ taṃ preṣayāmāsa /
+so 'pi ca tatra gatastatprābhṛtaṃ bhasmamayamajānanmudritaṃ rājñaḥ puro muktavān /
+tasmiṃścāmaṅgalakāriṇi prābhṛte rājño 'gre mukte rājā kopāṭopasahito babhūva /
+tataḥ sa dūtastasminprābhṛte samānīte kathaṃ kṣemamavāpnotu iti praśnaḥ /
+śuka uttaraṃ prāha-sa viṣṇustaṃ kruddhaṃ dṛṣṭvā buddhimānidamuvāca-svāmin! madīyena nāthenāśvamedho yajñaḥ kṛtaḥ /
+tasya kuṇḍasya tretāgrisambhavaṃ pavitraṃ śreyaskaramaghāpahaṃ bhasma vandanāya samarpitavān /
+yataḥ-</p>
+
+<lg>
+<l>gajāḥ santi hayāḥ santi vicitrāḥ santi sampadaḥ /</l>
+<l>tvadīye ca madīye ca durlabhaṃ bhasma yājñikam // Suk_54.2 (=249) //</l>
+</lg>
+
+<p>ityuktvā sahasotthāya kare bhasma kṛtvā rājñe samarpayāmāsa /
+sa ca tena vacasā tuṣṭiparo vavande /
+tenāpi tuṣṭena pratiprābhṛtaṃ mahatpreṣitam /
+sa ca viṣṇuḥ sammānya visarjitaḥ /
+tatastvamapi bhāmini! viṣame uttaraṃ jānāsi yadi tadā gamyatāmanyathā tiṣṭha /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau catuḥpañcāśattamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 55:</p>
+
+<p>anyadā yāminīsamaye prabhāvatī gamanāya śukamāpṛcchati /
+kīra uvāca-</p>
+
+<lg>
+<l>gaccha rambhoru gamanaṃ yujyate gajagāmini /</l>
+<l>yadi vetsyuttaraṃ kartuṃ śrīdharo brāhmaṇo yathā // Suk_55.1 (=250) //</l>
+</lg>
+
+<p>prabhāvatyāha-kathametat? śuko brūte-carmakūṭe grāme dvijaḥ śrīdharo nāma /
+tatraiva candanākhyaścaryakāraḥ /
+tatpārśvāt śrīdhareṇopānahayugalaṃ kāritam /
+carmakāro 'pi nityameva dravyaṃ yācate /
+vipro 'pi vadati-tvāṃ hṛṣṭacittaṃ kariṣye /
+evaṃ sumahatkālaṃ yayau /
+sa vipro 'nyadā carmakāreṇa vidhṛtaḥ /
+dhanaṃ vinā sa vipraḥ kathaṃ mucyate /
+tatkathayeti praśnaḥ /
+uttaram /
+śukaḥ prāha-etasminnantare grāmapālasya gṛhe suto jātaḥ /
+tato dvijaḥ prāha chalānveṣo san-carmakṛnmayā pūrvamuktam tvāṃ hṛṣṭacittaṃ kariṣyāmi /
+tadasminsute jāte tvaṃ hṛṣṭacitto na veti /
+yadi sa brūte nāhaṃ hṛṣṭacitta iti tadā rājñā grāhyaḥ syāt /
+anyathā ca dravyaṃ yāti /
+tatastenoktam-hṛṣṭacitto 'haṃ jātaḥ /
+tato dvijaśchalenātmānaṃ vimucya gataḥ /
+tato bhāmini! yadyevamuttaraṃ jānāsi tadā gaccha /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau pañcapañcāśattamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 56:</p>
+
+<p>athāparedyuḥ prabhāvatī gamanāya śukaṃ pṛcchati /
+śukaḥ--</p>
+
+<lg>
+<l>yādi devi gatā vetsi yadi kartuṃ tvamuttaram /</l>
+<l>viṣame sāntako yadvadvaṇikputraḥ purākarot // Suk_56.1 (=251) //</l>
+</lg>
+
+<p>astyatra tripatho nāma grāmaḥ /
+tatra sāntako nāma vaṇik mahādhanī kṛpaṇo duṣṭaśīlo grāmāntarapriyaśca /
+tataśca grāmāntarādudgrahaṇikāṃ kṛtvā āgacchanpathi caurairdhṛtaḥ sa bhāmini kathaṃ corabhayānmucyate iti praśnaḥ /
+uttaram /
+śukaḥ-sa vaṇikputraḥ ātmānaṃ corairdhṛtaṃ jñātvā galagrahanāmno yakṣasya samīpavartino 'ntikaṃ yayau /
+tasyāgrataśca dravyaṃ muktvā haste ca khaṭikāmādāya yakṣādhāśāmidamabravīt-</p>
+
+<lg>
+<l>dhanodgrāhaṇikā deva kṛteyaṃ tava sarvataḥ /</l>
+<l>idaṃ dravyaṃ mayā labdhaṃ tiṣṭhatyanyacca vṛddhimat // Suk_56.2 (=252) //</l>
+</lg>
+
+<p>taṃ lekhakaṃ ca dṛṣṭvā yakṣadhanamiti jñātvā taṃ praṇamya te gatāścorāḥ /
+sa ca dravyaṃ gṛhītvā kṣemeṇa gṛhaṃ yayau /</p>
+
+<p>iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>itiśukasaptatau ṣaṭpañcāśattamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 57:</p>
+
+<lg>
+<l>pradoṣe 'nyatra sā bālā punaḥ prāha vihaṅgamam /</l>
+<l>sukhaṃ bhoktuṃ vrajāmyadya narāntararatodbhavam // Suk_57.1 (=253) //</l>
+</lg>
+
+<p>śakuḥ-</p>
+
+<lg>
+<l>yādi devi yadā jñātā bhartrā tvaṃ vetsi bhāṣitum /</l>
+<l>yatā jñātaḥ purā rājñā vadadvidvāñ śubhaṅkaraḥ // Suk_57.2 (=254) //</l>
+</lg>
+
+<p>avantopuryāṃ vikramārko nṛpaḥ /
+tasya candralekhānāmnī rājñī /
+sā rājapaṇḍitaṃ śubhaṅkaranāmānaṃ kāmārtā iyeṣa ramate ca dūtīdāsīviparyayāt /
+nityaṃ tadgṛhaṃ gatvā yadṛcchayā krīḍate /
+evaṃ ca vilasatostayoḥ paṇḍitarājñyoḥ prāvṛṭkālaḥ samāyayau /
+yatra ca-</p>
+
+<lg>
+<l>taḍinnirghoṣapaṭaho ghanagarjitagītakaḥ /</l>
+<l>śikhisvarajayadhvajaḥ prāvṛṭkālanṛpo yayau // Suk_57.3 (=255) //</l>
+</lg>
+
+<lg>
+<l>durdinaṃ vegavṛṣṭiśca paṅkaśca taḍitaḥ prabhā /</l>
+<l>sadābhisārikāṇāṃ ca snehavyatikarāṇi ha // Suk_57.4 (=256) //</l>
+</lg>
+
+<p>uktañca-</p>
+
+<lg>
+<l>jai sasaṇehī to muai aha jīvai ṇiṇṇeha /</l>
+<l>duhia payārehiṃ gaia dhaṇa kiṃ gajjahi khalameha // Suk_57.5 (=257) //</l>
+</lg>
+
+<lg>
+<l>[yadi sasnehā tat mṛtā atha jīvati niḥsnehā /</l>
+<l>dvābhyāmapi prakārābhyāṃ gatā dhanyā, kiṃ garjasi khalamegha] // Suk_57.5* (=257*) //</l>
+</lg>
+
+<p>kiñca-</p>
+
+<lg>
+<l>x x x x x /</l>
+<l>x x x x x // Suk_57.6 (=258) //</l>
+</lg>
+
+<p>etasminsamaye rātrau rājñīṃ śubhaṅkaragṛhaṃ calitāṃ jñātvā pṛṣṭhata ajñātacaryayā haste khaḍgamādāya nīlavāsāḥ san kautuko vikramārko rājā tāmanucalitaḥ /
+śubhaṅkaro 'pi tāṃ rājñīṃ gṛhadvārasamāgatāṃ dṛṣṭvā jagāda-</p>
+
+<lg>
+<l>unnādāmbudavarddhitāndhatamasi prabhṛṣṭadiṅmaṇḍale kāle yāmikajāgarūkasubhaṭavyākīrṇakolāhale /</l>
+<l>bhūpasyāsuhṛdarṇavāmbuvaḍavāvahnestvamantaḥpurādāyātāsi yadambujākṣi kṛtakaṃ manye bhayaṃ yoṣitām // Suk_57.7 (=259) //</l>
+</lg>
+
+<p>idaṃ vacanaṃ śrutvā nṛpatiḥ svaprāsādamājagām /
+śubhaṅkaro 'pi bhogasaṃskāraiścāṭūktibhiśca mahiṣīṃ toṣayāmāsa /
+uktañca-</p>
+
+<lg>
+<l>ṇa kuṇanti je pahuttaṃ kuviaṃ dāsa vya je pasāanti /</l>
+<l>te ccia mahilāṇa piā sesā sāmīciavarāā // Suk_57.8 (=260) //</l>
+</lg>
+
+<lg>
+<l>[na kurvanti ye prabhutvaṃ kupitāṃ dāsa iva ye prasādayanti /</l>
+<l>te eva mahilānāṃ priyāḥ śeṣāḥ svāmina eva varākāḥ] // Suk_57.8* (=260*) //</l>
+</lg>
+
+<lg>
+<l>nāyakeṣūttamaḥ so 'tha mahiṣī nāyikāsu ca /</l>
+<l>śayanaṃ cottamaṃ ninye tridhā bhedavikalpanāt // Suk_57.9 (=261) //</l>
+</lg>
+
+<lg>
+<l>uttamādhamamadhyaiśca bhedaiḥ snayānnāyakastridhā /</l>
+<l>nāyikāśca tathā jñeyāstayośca śayanaṃ tridhā // Suk_57.10 (=262) //</l>
+</lg>
+
+<p>tatra nāyakaguṇāḥ-</p>
+
+<lg>
+<l>hato manyuhasrairyaḥ santapto madanāgninā /</l>
+<l>raktaśca yo viraktāyāṃ so 'dhamaḥ parikīrtitaḥ // Suk_57.11 (=263) //</l>
+</lg>
+
+<lg>
+<l>kāminībhiḥ smarārtābhiḥ satataṃ kāmyate hi yaḥ /</l>
+<l>na tāḥ kāmayate namro madhyamo nāyakaḥ smṛtaḥ // Suk_57.12 (=264) //</l>
+</lg>
+
+<lg>
+<l>raktāṃ yo bhāminīṃ devi saktāṃ kāmayate sadā /</l>
+<l>tayāpi kāmyate 'tyarthamuttamaḥ so 'bhidhīyate // Suk_57.13 (=265) //</l>
+</lg>
+
+<p>nāyikāstridhā-</p>
+
+<lg>
+<l>kārye gṛhṇāti roṣaṃ yā gataroṣā priyānugā /</l>
+<l>rasajñā kṛtyakuśalā sottamā nāyikā smṛtā // Suk_57.14 (=266) //</l>
+</lg>
+
+<lg>
+<l>asthāne kopamānā yā yā duḥkhānunayā tathā /</l>
+<l>māninī mānahīnā ca kṣaṇātsā madhyamā smṛtā // Suk_57.15 (=267) //</l>
+</lg>
+
+<lg>
+<l>lubdhā yātīva capalā vacane nīrasākṣarā /</l>
+<l>duḥkhaprasādhanābhijñākṛtajñā sādhamā matā // Suk_57.16 (=268) //</l>
+</lg>
+
+<p>tayośca śayanaṃ tridhā-</p>
+
+<lg>
+<l>pārśvayorunnati nītaṃ nimnamadhye priyasya tat /</l>
+<l>vimardaṃ sahate 'tyarthaṃ suratāsaktayostayoḥ // Suk_57.17 (=269) //</l>
+</lg>
+
+<lg>
+<l>madhyamasya punaḥ kāryaṃ śayanaṃ samabhūmikam /</l>
+<l>praviralāṅgasaṃsparśā nityaṃ yāti niśā yathā // Suk_57.18 (=270) //</l>
+</lg>
+
+<lg>
+<l>dveṣyasya tulyamuttuṅgaṃ madhye nīcaṃ ca pārśvayoḥ /</l>
+<l>na śakyeta kalākalpo yatra rantuṃ nirantaram // Suk_57.19 (=271) //</l>
+</lg>
+
+<lg>
+<l>ityanunnatatalpasthā bhuktā muktā vipaścitā /</l>
+<l>mahiṣī ratisantuṣṭā pratyūṣe svagṛhaṃ yayau // Suk_57.20 (=272) //</l>
+</lg>
+
+<p>rājā ca prātaḥ sarvāvasarānantaram paṇḍitaṃ rājñīṃ cājuhāva /
+siṃhāsane ca paṇḍitamupaveśayāmāsa /
+śubhaṅkaraṃ prati hasanvārtāprabandheneti jagāda-"kṛtakaṃ manye bhayaṃ yoṣitā"miti vacanaṃ śrutvā svadoṣavismitamānasaḥ sañjātaḥ /
+sa rājñā jñātaḥ kathaṃ bhavitviti praśnaḥ /
+yataḥ-</p>
+
+<lg>
+<l>dīnasyāpi gṛhe doṣe kṛte bhavati nigrahaḥ /</l>
+<l>kiṃ punaḥ pṛthivīpālagṛhe doṣo vimucyate // Suk_57.21 (=273) //</l>
+</lg>
+
+<p>uttaram /
+śukaḥ prāha-tataśca sa budho rājñā jñāto 'hamiti sañcintyeti vāṇībhudairayat-</p>
+
+<lg>
+<l>ugragrāhamudanvato jalamatikrāmatyanālambane vyomni sthāpi ca durgamakṣitibhṛtāṃ mūrdhānamārohati /</l>
+<l>vyāptaṃ yāti viṣākulairahikulaiḥ pātālamekākinī kīrtiste madanāvatāra kṛtakaṃ manye bhayaṃ yoṣitām // Suk_57.22 (=274) //</l>
+</lg>
+
+<p>iti paṇḍite paṭhitaṃ śrutvā rājā taṃ budhaṃ tāṃ ca rājñīṃ dṛṣṭvā iti cintayāmāsa-"durlabho 'yaṃ budhaḥ /
+sulabhāḥ khalu nārya' iti vicintya mahiṣīṃ haste dhṛtvā tasmai viduṣe dadau /
+uvāca ca-"gṛhāṇemāṃ mahiṣīm' /
+paritoṣitaḥ paṇḍito 'pi "mahāprasāda' ityavocat /
+uktañca-</p>
+
+<lg>
+<l>guṇadoṣau na śāstrajñaḥ kathaṃ vibhajate janaḥ /</l>
+<l>kimandhasyādhikāro 'sti rūpadoṣopalavdhiṣu // Suk_57.23 (=275) //</l>
+</lg>
+
+<p>paṇḍito 'pi rājñaḥ prasādātsukhaṃ bhuṅkte tayā samam /
+yadyevaṃ prabhāvati! tvamapi samaye vaktuṃ jānāsi tadā gamyatām /
+anyathā sthīyatām /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau saptapañcāśattamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 58:</p>
+
+<p>anyadā pradoṣe calitā prabhāvatī śukaṃ pṛcchati /
+śukaḥ-</p>
+
+<lg>
+<l>ratyarthino vrajātha tvaṃ rantuṃ cetsamayocitam /</l>
+<l>duḥśīlāpativadvetsi kartuṃ gaṇapateḥ puraḥ // Suk_58.1 (=276) //</l>
+</lg>
+
+<p>prabhāvatyāha-kathametata? śukaḥ-asti lohapurī nāma nagaram /
+tasmiṃśca rājaḍo nāma pāmaraḥ /
+tasyāpi patnī parapuruṣalampaṭā duḥśīletyāhvayā /
+sā ca sūtravikrayārthaṃ sakhībhiḥ sametya padmāvatīṃ purīṃ prayāti /
+tataśca grāmasamīpasthasya gaṇapatestābhiḥ pṛthakpṛthak upayācitamuktam /
+tayā ca cumbanamupayācitamuktaṃ madanākrāntadehayā /
+sa ca tāsāṃ prabhūtaṃ lābhaṃ cakre /
+tataḥ sarvābhiranyābhirātmīyamupayācitaṃ tasmai gaṇeśāya pradattam /
+tayā ca nagnībhūya cumbanaṃ kṛtam /
+tataḥ kelipriyeṇa tena sā adhare dhṛtā /
+tasmiṃśca dhṛte sā kukkuṭīva tatra sthitā /
+tañca vṛttāntaṃ tanmokṣaṇāya tadbhartuḥ sakhyopahasamānā nivedayāmāsuḥ /
+so 'pi tadvacanaṃ śrutvā tatrāgamat tāṃ tathāvidhāṃ dṛṣṭvā sa vyacintayat-kathamiyaṃ mucyata iti praśnaḥ /
+śukaḥ-tāṃ tathāsthitāṃ dṛṣṭvā sakāmaḥ san rāsabhaṃ rantumārebhe /
+tataśca sa gaṇapatistatāvidhaṃ kautukaṃ dṛṣṭvā jahāsa /
+hasatastasya oṣṭhau śithilau jātau /
+tataḥ sā muktā satī praṇamya nijaṃ nāthaṃ tarjayantī gṛhaṃ yayau /</p>
+
+<lg>
+<l>kṛtaṃ tena rataṃ devi samayocitamīdṛśam /</l>
+<l>svakārye mocitā sāpi duḥśīlā vighnanāyakāt // Suk_58.2 (=277) //</l>
+</lg>
+
+<lg>
+<l>samayocitamārambhaṃ kurute yastu kṛtyavit /</l>
+<l>sarvadā tu phalaṃ tasya samayajño di śiṣyate // Suk_58.3 (=278) //</l>
+</lg>
+
+<p>iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau aṣṭapañcāśattamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 59:</p>
+
+<p>atha dinānte sā śukaṃ gamanāya pṛcchati sma /
+śukaḥ-</p>
+
+<lg>
+<l>gaccha devi svakāryañca kuru cintitamadbhutam /</l>
+<l>rukmiṇīvadvijānāsi patiṃ vañcitumuddhatam // Suk_59.1 (=279) //</l>
+</lg>
+
+<p>prabhāvatyāha-kathametat? śukaḥ-asti saṅgamo nāma grāmaḥ /
+tatra rāhaḍo nāma rājaputraḥ sakopaḥ /
+tasya bhāryā rukmiṇī nāma /
+sa ca tayā sārdhaṃ devayātrāyāṃ calitaḥ /
+sā ca narāntaraṃ kaṭākṣayanto tena dṛṣṭā pumāṃśca /
+tataḥ sa tanmithunaṃ tathāvidhaṃ jñātvā tāṃ tadanuraktāṃ mene /
+<lg>
+<l>uktañca</l>
+<l>baddhamaṇiāi kanto tahea addhacchipicchilā dhāri /</l>
+<l>asasiaṃ pi muṇijjai chaillajanasaṃkule gāme // Suk_59.2 (=280) //</l>
+</lg></p>
+
+<lg>
+<l>[baddhahṛdayāyāḥ kāntaḥ tathaiva arddhākṣapicchilā vāmā /</l>
+<l>niḥśvasitamapi jñākṣayate vidagdhajanasaṃkule grāme] // Suk_59.2* (=280*) //</l>
+</lg>
+
+<p>tāṃ tathāvidhāṃ vikṛtāṃ jñātvā ca rāhaḍo gṛhamagamat /
+dhikkṛtya paruṣākṣarairgṛhāntare yantritāṃ dhārayāmāsa /
+sā ca cintayati-mama janma jīvitaṃ yauvanaṃ ca tadā saphalaṃ yadā etasya pratyakṣaṃ narāntaramupabhokṣye /
+pratijñātaṃ ca manasā dṛḍham /
+tata ātmoyapratijñāṃ kathaṃ nirvāhayatviti praśnaḥ /
+śukaḥ-tataḥ sā kadācittaṃ hṛdayasthaṃ naraṃ gṛhapārśve gacchantaṃ dṛṣṭvā taṃ pratyāha-adya rātrau tvayāsmadgṛhāṅgaṇasthaciñciṇīmūle nijakāyākāragartāyāmūrdhvaliṅginā śayanaṃ vidheyamiti /
+sa tatheti pratijñāya rātrau tathā bhūtvā sthitaḥ /
+sā ca kāmārtā sarvakaraṇacaturā tatra yayau /
+āgārabhūmimuddiśya bhartāramāhvayati sma /
+sā ciñciṇīcchāyāyāṃ gatvā tasya liṅgasyopari upaviśya satūmadhanuṣaṃ tamabravīt /</p>
+
+<lg>
+<l>dhānuṣko 'si pradhāno 'si loke khyātiṃ gato 'si ca /</l>
+<l>chindhi me candrikāmadya pauruṣaṃ gaṇayāmi te // Suk_59.3 (=281) //</l>
+</lg>
+
+<p>sa ca mūrkhastadvacanamidaṃ śrutvā saśaraṃ dhanurādāya candrikāṃ lakṣīkṛtya bāṇaṃ mumoca /
+tena mukto 'pi bāṇo nākāśagatāṃ candrikāṃ bhinatti /
+adhaḥ sa vedhyād bhraṣṭaḥ /
+tasmiṃśca patyāvaparāddheṣau sati sā viṃparītaratakṣamā sahastatālaṃ tamidamāha-</p>
+
+<p>X X X</p>
+
+<lg>
+<l>[rāhaḍa bhūlaḍaṃ cāndraṇīyāhaṃ hiṃ rūpavadīsai nīyaḍaḍaṃ /</l>
+<l>tāhaṃ valikījinhaṃ tādahīvāhaṃ maiṃ rāṣajjevadraḍhīchāhaṃ] // Suk_59.3* (=282*) //</l>
+</lg>
+
+<p>rāhaḍo 'pi tāmevaṃ jalpantīṃ śrutvā taṃ śaraṃ gaveṣayan ciraṃ babhrāma /
+tatastayā yadṛcchayā viparītaṃ vihitam /
+evamuktaśca patiḥ-</p>
+
+<lg>
+<l>yadṛcchayā rataṃ mūrkha te puro 'dya mayā kṛtam /</l>
+<l>śūro hi kuhito 'si tvaṃ yāsyāmīti jagāda tam // Suk_59.4 (=283) //</l>
+</lg>
+
+<p>ityuktvopapattyā samānītaṃ hayamāruhyajagāma /
+gacchantīṃ ca tāṃ tato dṛṣṭvā rāhaḍo 'pi lajjito viguptaśca /
+tataḥ strīṇāṃ vaśagaḥ ko na viḍambitaḥ /
+yataḥ-</p>
+
+<lg>
+<l>ānanarta purā śambhurgovindo rāsakṛttathā /</l>
+<l>brahmā paśutvamāpannaḥ strībhiḥ ko na viḍambitaḥ // Suk_59.5 (=284) //</l>
+</lg>
+
+<lg>
+<l>saṃsāravṛkṣamūlaṃ yāḥ pāpakandalabhūmikā /</l>
+<l>santāpaphalapuṣpāṇi yoṣitaḥ kiṃ sukhāvahāḥ // Suk_59.6 (=285) //</l>
+</lg>
+
+<lg>
+<l>māyāmūlamidaṃ sarvaṃ tasyā mūlaṃ hi yoṣitaḥ /</l>
+<l>saṃyogo yoṣitāṃ mūlaṃ taṃ tyaktvā ca sukhāni naḥ // Suk_59.7 (=286) //</l>
+</lg>
+
+<p>tasyedaṃ vacaḥ śrutvā prabhāvatī prāha-</p>
+
+<lg>
+<l>utpattikāraṇaṃ tanvī tanvī vṛddheśca kāraṇam /</l>
+<l>sukhasya kāraṇaṃ tanvī sā kathaṃ kīra duṣyate // Suk_59.8 (=287) //</l>
+</lg>
+
+<lg>
+<l>vinā tābhirna sambhogo vinā tābhiḥ sukhaṃ na ca /</l>
+<l>vinā tābhirna cātmānaṃ kṛtārthaṃ manyete janaḥ // Suk_59.9 (=288) //</l>
+</lg>
+
+<p>uktañca-</p>
+
+<lg>
+<l>amṛtasyeva kuṇḍāni sukhānāmiva khānayaḥ /</l>
+<l>rateriva nidhānāni yoṣitaḥ kena nirmitāḥ // Suk_59.10 (=289) //</l>
+</lg>
+
+<lg>
+<l>priyādarśanemevāstu kimanyairdarśanāntaraiḥ /</l>
+<l>prāpyate yatra nirvāṇaṃ sarogeṇāpi cetasā // Suk_59.11 (=290) //</l>
+</lg>
+
+<p>iti tasyā vacaḥ śrutvā śukaḥ prāha-</p>
+
+<lg>
+<l>vājivāraṇalohānāṃ kāṣṭhapāṣāṇavāsasām /</l>
+<l>nārīpuruṣatoyānāmantaraṃ bahu vidyate // Suk_59.12 (=291) //</l>
+</lg>
+
+<p>etattvayoktaṃ pativratāviṣayaṃ nānyāsu /</p>
+
+<p>iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau ekonapaṣṭitamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 60:</p>
+
+<p>anyadā sā prabhāvatī gamanāya śukaṃ prapaccha /
+śukaḥ prāha-</p>
+
+<lg>
+<l>gaccha devi yadā vetsi saṃśaye kṛtyamāgate /</l>
+<l>vīrasya napateryadvatsabhāyāṃ nṛpadūtakaḥ // Suk_60.1 (=292) //</l>
+</lg>
+
+<p>prabhāvatyāha-kathametat? śukaḥ-</p>
+
+<lg>
+<l>kacchādhipatinā devi tasya rājñaḥ sabhā śrutā /</l>
+<l>vicitrā devanirmitā sarvaratnavibhūṣitā // Suk_60.2 (=293) //</l>
+</lg>
+
+<lg>
+<l>tāṃ draṣṭuṃ prahito dūto haridatta iti śrutaḥ /</l>
+<l>sahasraprābhṛto bhīru suratnahayahastakaḥ // Suk_60.3 (=294) //</l>
+</lg>
+
+<p>sa dūtastatpurīṃ gatvā nṛpaṃ dṛṣṭvā taṃ jagāda, "matsvāmināhaṃ sacitrāṃ tava sabhāmavalokayitumutkalitaḥ /
+rājā prāha-prātardarśayiṣye /
+tato rājñā dvitīyadine dūta ākāritaḥ /
+sa ca sahasāgatastāṃ sabhāṃ vicitraratnakhacitāṃ dṛṣṭvā jalamayīṃ sthalamayīṃ veti niścetumaśaktaḥ kathaṃ bhavatviti praśnaḥ /
+śukaḥ tataḥ sa pūgīphalaṃ puraḥ kṣiptvā sthalaṃ jñātvā gṛhaṃ yayau /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau ṣaṣṭitamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 61:</p>
+
+<p>anyadā sā śukaṃ pacchati sma /
+śuka prāha-</p>
+
+<lg>
+<l>gaccha devi gatā vetsi rantuṃ cettvaṃ nijaṃ naram /</l>
+<l>yathā tejukayā pūrvaṃ kṛtaṃ ciramākāṅkṣitam // Suk_61.1 (=295) //</l>
+</lg>
+
+<p>prabhāvatyāha-kathametat? śukaḥ kathayati-asti khorasamabhidhāno grāmaḥ /
+tatra vaṇikputraḥ pārśvanāganāmā /
+tasya bhāryā rūpasampannā ratalolupā kulaṭā tejukā nāma /
+sānyadā sakhībhirvṛtā devayātrālokanāya gatā surūpasyaikasya puṃsaḥ rūpa prekṣya saṅgamāya manaścakre /
+yataḥ-</p>
+
+<lg>
+<l>vivāha devayātrāyāṃ rājaveśmani saṅkaṭe /</l>
+<l>paragehe vivāde ca devi nārī vinaśyati // Suk_61.2 (=296) //</l>
+</lg>
+
+<p>uktañca-</p>
+
+<lg>
+<l>gṛhe 'raṇye tathā deve havye tīrthe jalāśaye /</l>
+<l>vivāhe cotsave nityaṃ mālinīnilaye tathā // Suk_61.3 (=297) //</l>
+</lg>
+
+<lg>
+<l>yātrāyāṃ strīsamūhe ca nirjane janasaṅkule /</l>
+<l>pattane ca tathā grāme svacchandā dvāravartinī // Suk_61.4 (=298) //</l>
+</lg>
+
+<lg>
+<l>khale kṣetre pravāse ca mārge veśmani catvare /</l>
+<l>praveśe nirgame rājñāṃ sadā yā kautukapriyā // Suk_61.5 (=299) //</l>
+</lg>
+
+<p>prativeśmagṛhe śūnye rajakīsūcikīgṛhe /</p>
+
+<lg>
+<l>divā rātrau ca sandhyāyāṃ durdine rājacatvare /</l>
+<l>śoke ca vyasane bhartuḥ svacchandā strī vinaśyati // Suk_61.6 (=300) //</l>
+</lg>
+
+<p>tejukā ca taṃ dṛṣṭvā bhrūsaṃjñayā āhūyedamabravīt-ahaṃ tavāsaktā paraṃ madīyo bhartā duḥsaho niṣṭhuraśca gṛhādbahirnirgantuṃ notsahe /
+ato yasmiṃstasmindivase 'smadgṛhadvāri ghaṭe kṣiptvā vṛściko moktavyaḥ /
+tadāhaṃ paścikadaṣṭā bhaviṣyāmi /
+tvayāsmadgṛhadvāri vaidyena bhāvyam /
+iti saṅketaṃ vidhāya svagṛhaṃ jagmatuḥ /
+tenāpi tathā kṛtam /
+sāpi ghaṭaṃ khaṭvocchīrṣake kṣiptvā iti jagāda-ahamanena vṛścikena ghaṭasthena daṣṭā'-iti rāraṭīti /
+so 'pi ca puruṣastadā vaidyo bhūtvā tadgṛhadvāri tasthau /
+"tāḍaṃ bandhau poṭṭaṃ malau sūlaṃ pheḍau visaṃ harau"
+[tālaṃ badhnāmi, udaraṃ marddayāmi, śūlaṃ spheṭayāmi, viṣaṃ harāmi] iti jalpati /
+tadā ca sā bhartāraṃ jagāda /</p>
+
+<lg>
+<l>dehi kāṣṭhāni me nātha mariṣyāmi na saṃśayaḥ /</l>
+<l>āhūya mantrikānvaidyān gatārttiṃ vā kuruṣva mām // Suk_61.7 (=301) //</l>
+</lg>
+
+<p>tatastadbhartā gṛhādbahiḥ sthitaṃ tamākārayāmāsa /
+vaidyo 'pi tāṃ dṛṣṭvā tatpatiṃ jagāda /
+yadyeṣā kāladaṣṭā jīvati tatastvaṃ bhāgyavānahamapi yaśaḥpātraṃ bhavāmi /
+vaṇigāha-vaidya! prasādaṃ vidhāya enāṃ viṣarahitāṃ kuru /
+tataḥ sa vaidyaḥ kenāpi kaṭukabhaiṣajyena vanitauṣṭhamālipya tatpatimāha- aho vaṇiksarveṣāmapi viṣāṇāṃ samadhikaṃ mānuṣaviṣameva /
+tato viṣasya viṣamauṣadhamiti kṛtvā tvamasyā oṣṭhaṃ dhāva /
+tato vaṇik tathā kartumārebhe /
+kṣaṇamātreṇatasya vaṇijaḥ kaṭukauṣadhamiśrauṣṭhāsvādena mukhaṃ kaṭukaṃ sañjātam /
+tato vaṇigāha-tvamevoṣṭha dhāvetyuktvā vaṇik sthitaḥ /
+vaṇijo 'pi viṣaśaṅkārūḍhā /
+tato bahirgate vaṇiji vaidyena sā kāmārtā yathecchaṃ bhojitā /
+tadanantaraṃ sā māyinī svasthābhūt /
+vaṇigapi kṣaṇena svastho babhūva /
+upakṛtaśca vaidyastena caraṇaiḥ spṛṣṭvā tvadīyo 'smīti /
+tataḥ sa vaidyacchadmanā gṛhamāyāti satataṃ vaṇiji bahirgate bhuṅkte ca tāṃ nityam /
+tato bhāmini evaṃ kartuṃ vaktuṃ ca yadi jānāsi tato yāhi /</p>
+
+<lg>
+<l>evaṃ kartuṃ ca vaktuṃ ca yo jānāti chalapriyaḥ /</l>
+<l>sa karotu sa yātvevaṃ kartuṃ bhoktuṃ nijaṃ hitam // Suk_61.8 (=302) //</l>
+</lg>
+
+<p>iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau ekaṣaṣṭitamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 62:</p>
+
+<p>anyadā sā prabhāvatī śukamāpṛcchati /
+śakuḥ prāha-</p>
+
+<lg>
+<l>priyamevānubhoktavyaṃ yāhi devi tadarthinī /</l>
+<l>kuhanasya yathā kānte saṅkaṭe 'si kṣamottare // Suk_62.1 (=303) //</l>
+</lg>
+
+<p>asti gambhīrākhyo grāmaḥ /
+tatra kuhano nāma rājaputrar irṣyāluḥ śūro jaḍaḥ strīpriyo durdharaśca /
+tasyābhūtāṃ dve kalatre śobhikātejikākhye ratalolupe parapuruṣalampaṭe surūpe /
+tadbhartā tadrakṣaṇāya grāmādbahirnadītīre gṛhaṃ keca dvārasthaste rakṣayati /
+anyadā sa tābhyāmuktaḥ-yadā kaścinnāpitaḥ samabhyeti tadā bhavyaṃ bhavati /
+tatastenāpi bhrāmako nāpitaḥ preṣitaḥ pratisīrāntaraistayornakhakalpanāya /
+tataśca tayoścaraṇān tiraskariṇībahiḥsthānnāpitaḥ prakṣalayati /
+patiścādūre pathi niviṣṭaḥ /
+tābhyāṃ ca sa nāpitaḥ suvarṇakaṭakamarpayitvā pracchannamevamuktaḥ-etad dravyaṃ gṛhītvā āvayoḥ kenāpi sārdhaṃ saṃyogaṃ vidhehi /
+divākīrtirapi tatheti pratijñāya rājaputramāpṛcchya jagāma /
+anyadātmamitraṃ navayauvanaṃ kalāpātramanudgataśmaśruṃ strīveṣaṃ kārayitvā tayoḥ patyuḥ pārśve tena saha samāgatya nāpita idamāha-mameyaṃ vallabhā /
+ahaṃ ca grāmāntaraṃ jigamiṣuryuṣmadgṛhaṃ vinānyatra moktuṃ na śaknomi /
+yato bhavatāṃ gṛhe strīyantraṇā bhavyā /
+ityukte tena pratipannaṃ muñceti /
+tataścaṇḍālo 'pi taṃ muktvā tayoḥ pārśve gato jagāda-yadiyaṃ yuṣmābhirātmīyā karaṇīyā /
+tataste taṃ caṇḍālānītaṃ jñātvā bahu menāte /
+sa ca divā strīrūpī rātrau ca kāmukaḥ rājaputrakalatre prativāraṃ bhuṅkta /
+sa ca rājaputraḥ strīlolupastatsaṅgamāya spṛhayati /
+yayāce ca tāṃ nityam /
+sā tu kapaṭīstrī neti jagāda /
+rājaputrasya strītve bhrāntirutpannā tadbhāntimapanetuṃ nijakalatre jagāda-tato devyādeśānmayā prātarmahotsavo vidheyaḥ /
+tatra bhavatībhirvivastrābhistisṛbhirapi nartitavyam /
+tataḥ sa strīcchannā kathaṃ nṛtyatu iti praśnaḥ /
+uttaram śukaḥ-tantryā liṅgāgraṃ niyamya gudamadhyagamānamya sphuṭāṃ bhagākṛtiṃ kṛtvā patyau samāgate sahastatālaṃ sarvā evaṃ vadantyo nanṛtuḥ /</p>
+
+<lg>
+<l>nisuhara ṇāccai saṃkalidaṃ jaṃ manasi kidaṃ makkaṭījālaṃ /</l>
+<l>ṇāhi ṇāhi pṛchaha attha dharei ṇāda bhilukalattu karei // Suk_62.2 (=304) //</l>
+</lg>
+
+<lg>
+<l>[niśāmaya nṛtyati saṅkalitaṃ yanmanasi kṛtaṃ markaṭījālam /</l>
+<l>nahi nahi pṛccha athodhriyate jñātaṃ bhinnakalatraṃ karoti] // Suk_62.2* (=304*) //</l>
+</lg>
+
+<p>rājaputro 'rthaṃ papraccha /
+tābhyāmuktam-markaṭā kaṭisandhirucyate /
+tatastasyāṃ truṭitāyāṃ rājaputronyatkalatraṃ kuryādityarthaḥ /
+tato rājaputraḥ strīcaritraparāṅmukho mūḍhadhīḥ pratītaḥ, itarastu tathaiva strīveṣeṇa kalatre bhuṅkte /</p>
+
+<lg>
+<l>tasmādyaḥ saṅkaṭe vetti kartuṃ vaktuṃ ca bhāmini /</l>
+<l>sa yātvatra yathākāmaṃ yathākālaṃ yathāsukham // Suk_62.3 (=305) //</l>
+</lg>
+
+<p>iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau dviṣaṣṭitamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 63:</p>
+
+<p>anyasminpradoṣe prabhāvatī yāmīti śukaṃ pratyāha /
+śukaḥ prāha-</p>
+
+<lg>
+<l>yāhi devi na doṣo 'tra manoduḥkhe samāgate /</l>
+<l>tadrduḥkhaśamanaṃ kartuṃ vetsi cecchakaṭālavat // Suk_63.1 (=306) //</l>
+</lg>
+
+<p>yathā śakaṭālena nijakuṭumbabharaṇāya samudbhavadduḥkhaṃ cāṇakyapārśvannandakulamucchedya duḥkhaśamanaṃ kṛtaṃ tathā tvameva.................... tasmāttava paragṛhaṃ gantuṃ na yujyate /
+uktañca-</p>
+
+<lg>
+<l>uḍugaṇaparivāro nāyako 'pyoṣadhīnāmamṛtamayaśarīraḥ kāntiyukto 'pi candraḥ /</l>
+<l>bhavati vikalamūrtirmaṇḍalaṃ prāpya bhānoḥ parasadananiviṣṭaḥ ko na dhatte laghutvam // Suk_63.2 (=307) //</l>
+</lg>
+
+<p>iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau triṣaṣṭitamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 64:</p>
+
+<p>anyadā prabhāvatī śukamāpṛcchati sma /
+so 'pyāha-</p>
+
+<lg>
+<l>gaccha cedviṣame vetsi kartuṃ kiñcitkṛśodari /</l>
+<l>kṛtaṃ devikayā yadvatsakhījāravimuktaye // Suk_64.1 (=308) //</l>
+</lg>
+
+<p>prabhāvatī prāha-kathametat? śukaḥ asti kūṭapurābhidho grāmaḥ /
+rājaputraḥ somarājaḥ /
+tasya maṇḍukā nāma patnī priyadarśanā narāntaralolupā /
+tāñcaiko naraḥ kṛtasaṃketaḥ saghaṇṭako rātrau gṛhāṅgaṇe bhuṅkte /
+tatpatirghaṇṭāśabdaṃ śṛṇvannekadā laguḍamādāya pradhāvitaḥ ṣaṇḍaśaṅkayā /
+tataḥ ṣaṇḍaveśadhārī upapatiḥ /
+kathaṃ bhavitviti praśnaḥ /
+śukaḥ-devikā nāma sakho maṇḍukāyāḥ patiṃ ghaṇṭāśabdānusāriṇamāgacchantaṃ dṛṣṭvā jārasya naśyato ghaṇṭātālāṃ haste dhṛtvā taṃ prati jagāda bhāvuka! kāndiśīko vṛṣo naṣṭaḥ /
+tataḥ sa vyāvṛtya nijapauruṣaṃ patnyai kathayāmāsa /
+iti katāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau catuḥṣaṣṭitamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 65:</p>
+
+<p>anyadā prabhāvatī śukaṃ pṛcchati /
+śukaḥ-</p>
+
+<lg>
+<l>yujyate gamanaṃ devi tava tatra prabhāvati /</l>
+<l>vetsi cedviṣame vaktuṃ sitavastra ivākulaḥ // Suk_65.1 (=309) //</l>
+</lg>
+
+<p>asti devi janasthānaṃ nāma pattanam /
+tatra nandano nāma rājā yathārthaḥ /
+tatpattane śrīvatso nāma śrāvakaḥ paraṃ maheśvararataḥ /
+tena anyadā vāraṇasīṃ nagarīṃ prati prasthitena saśiṣyena pathi gacchatā /
+ekaḥ śiṣyaḥ māṃsaharaṇāya sthāpitaḥ /
+anyaśrāvakairdṛṣṭaḥ sa kathaṃ bhavatviti praśnaḥ /
+śukaḥ prāha-yadā sarvaśrāvakā āgatyopaviṣṭāḥ tadāṭṭahāsaṃ jahāsa /
+pṛṣṭaḥ sarvairjagādar-idṛśo 'yaṃ śiṣya- /
+mayoktaṃ māṃ saṃvartata abuddhyā anena māṃsasya........ /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau pañcaṣaṣṭitamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 66:</p>
+
+<p>anyadā sā prabhāvatī calitā śukaṃ pṛcchati /
+śukaḥ-</p>
+
+<lg>
+<l>gaccha devi na kartavyo vilambaḥ puṇyakarmaṇi /</l>
+<l>yadi vetsi bhaye kartuṃ subuddhirhaṃsarāḍiva // Suk_66.1 (=310) //</l>
+</lg>
+
+<lg>
+<l>asti devi dharāpṛṣṭhe ramyaṃ kṣīṇanarākulam /</l>
+<l>daśayojanavistīrṇaṃ vanaṃ vihagavallabham // Suk_66.2 (=311) //</l>
+</lg>
+
+<p>tatra gavyūtivistīrṇe śītacchāye jalāśayatīrasthite vaṭe śaṅkhadhavalo nāma haṃsarāṭ sakuṭumbo medinīṃ bhrāntvā dinātyaye śete /
+anyadā teṣu haṃseṣu bhramaṇāya gateṣu pāparddhinā jālaṃ baddham /
+pradoṣāgatāḥ patitāḥ sarve 'pi kathaṃ mucyante-iti praśnaḥ /
+śukaḥ-tatastu svaṃ kuṭumbaṃ tathā baddhaṃ jñātvā rātrau śaṅkhadhavalaḥ prāha-re re putrāḥ! yādasau lubdhakaḥ prātarbhūruhaṃ samāruhya yuṣmānavalokayati tadā bhavadbhirmṛtakalpairucchvāsaniḥśvāsarahitaiḥ sthātavyam /
+so 'pi yuṣmānmṛtāniti jñātvā yadā bhūmau sarvān kṣipati tadā sarvairapyuḍḍīya gantavyam /
+iti kṛte lubdhakaḥ prātaḥ samāyayau /
+tena te mṛtā iti jñātvā bhūmau kṣiptāstadā te uḍḍīya kāṅkṣitaṃ deśaṃ yayuḥ /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau ṣaṭṣaṣṭitamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 67:</p>
+
+<p>anyadā calitā prabhāvatī śukaṃ pṛcchati sma /
+śukaḥ-</p>
+
+<lg>
+<l>atha cedyāsi kāmārtā yāhi bhīru gatā satī /</l>
+<l>plavaṅgama ivātmīyaṃ vaktuṃ vetsi yathāhitam // Suk_67.1 (=312) //</l>
+</lg>
+
+<p>asti puṣpākaraṃ nāma vanam /
+tatra vanapriyo nāma vāmanavānaraḥ /
+sa kadācitsamudrāntamaryādājale luṭhantaṃ makaraṃ dṛṣṭvā prāha-"mitra! kiṃ jīvitanirviṇṇastvaṃ yadadya dharābhūmau samāgataḥ' /
+iti vacaḥ śrutvā makaro 'pyāha-</p>
+
+<lg>
+<l>yasya yadvihitaṃ sthānaṃ yasya yadvetanaṃ kṛtam /</l>
+<l>tatraiva ramate cittaṃ tasya nānyatra vānara // Suk_67.2 (=313) //</l>
+</lg>
+
+<p>uktañca-</p>
+
+<lg>
+<l>sarvasvarṇamayī laṅkā na me lakṣmaṇa rocate /</l>
+<l>pitṛkramāgatāyodhyā nirdhanāpi sukhāyate // Suk_67.3 (=314) //</l>
+</lg>
+
+<lg>
+<l>jaṇaṇīṃ jammaṇabhūmiṃ piasaṃgaṃ jīviaṃ dhaṇāsaṃghaṃ /</l>
+<l>pacchimaṇiddā virikāmiṇiṃ ca dukkhehi muñcanti // Suk_67.4 (=315) //</l>
+</lg>
+
+<lg>
+<l>[jananīṃ janmabhūmiṃ priyasaṅgaṃ jīvitaṃ dhanāsaṅgam /</l>
+<l>paścimanidrāṃ varakāminīñca duḥkhena muñcanti] // Suk_67.4* (=315*) //</l>
+</lg>
+
+<p>tadahaṃ saphalajanmā saṃvṛttastvadīyadarśanena /
+uktañca-</p>
+
+<lg>
+<l>sādhūnāṃ darśanaṃ puṇyaṃ tīrthabhūtā hi sādhavaḥ /</l>
+<l>tīrthaṃ phalati kālena sadyaḥ sādhusamāmamaḥ // Suk_67.5 (=316) //</l>
+</lg>
+
+<p>tasmātsthalotpannaḥ prāṇivargastu dhanyo yatra bhavādṛsaśāḥ priyavādino vartante /
+iti śrutvā vānara āha-"aho makara! tvamadyaprabhṛti me prāṇādhikaṃ mitram /
+tvameva sauhṛdyavacasāṃ vaktā /
+uktañca- yataḥ satāṃ sannatagātri saṅgataṃ manīṣibhiḥ sāptapadīnasucyate /
+ityuktvā punaḥ prāha-mitra! tvamadyātithirasmākaṃ bhava' /
+iti bhaṇitvā amṛtasadṛśāni pakvaphalāni dadau /
+tataḥ prabhṛti pratidinaṃ kadalīphalāni yacchati /
+makaro 'pi nijadayitāyā arpayati /
+sā ca patiṃ tatphalavṛttāntaṃ pṛcchati /
+sa ca sarvaṃ yathāsthitaṃ nivedayati /
+tataḥ sā garbhānubhāvataścintayāmāsa-"yo vānaro nityamīdṛśāni phalāni bhuṅkte tasyaurasyaṃ māṃsamamṛtopamaṃ syāt' /
+iti vicintya patiṃ prāha-"mama garbhānubhāvato vānarahṛdayapiśitabhakṣaṇe dohado vidyate /
+tadyadi pūrayasi tadā jīvāmi anyathāsaṃśayaṃ mama mṛtyurbhaviṣyati' /
+iti śrutvā dayitāgrahācca samudrataṭamāgatya vānaraṃ prāha-"mitra! tvadīyabhrātuḥ priyā tvāmākārayati /
+asmadīyo gṛhopacāro vilokanīyaḥ' /
+ityuktvā viśvāsya pṛṣṭhe cāropya pracalitaḥ /
+vānarastaṃ gacchantaṃ śaṅkitaḥ prāha-tatra gatena mayā kiṃ videyam? ityākarṇya makareṇa cintitam-"vānaro 'sau tasmātsthānānmayā nītaḥ kathamambhonidhitaṭaṃ yāsyati, tasmātkathayāmi'-ityavadhārya yathāsthitaṃ jagāda /
+tato vānaraḥ kathaṃ bhavatviti praśnaḥ /
+śukaḥ-vānaraḥ prāha-bho makara! tarhi tvaṃ māṃ tatra vṛthā nayasi yato 'haṃ hṛdayahīno bhavāmi /
+mama hṛdayaṃ mama pārśve nāsti /
+makaraḥ-kva muktaṃ tvayā /
+vānaraḥ-mitra! kiṃ na śrutaṃ tvayā?</p>
+
+<lg>
+<l>sarvadodumbaro vṛkṣe hṛdayaṃ vṛṭabhūruhe /</l>
+<l>cittamasti gṛhītvā tadāgacchāmi punarjalam // Suk_67.6 (=317) //</l>
+</lg>
+
+<p>ityukte tadā makaro mūrkhaḥ samudrāntamāyayau /
+vānaro 'pi tatpṛṣṭhataḥ samuttīrya śākhinamārohati sma /
+tato makaraṃ jagāda gaccha /
+nāhaṃ bhāvadṛśairatrastho gṛhītuṃ śakyaḥ /</p>
+
+<lg>
+<l>jalajantucarairnityaṃ jalamārgānusāribhiḥ /</l>
+<l>sthalajaiḥ saṃgatirna syāt dhruveti munibhāṣitam // Suk_67.7 (=318) //</l>
+</lg>
+
+<p>iti nirbhartsito vānareṇa makaraḥ svagṛhaṃ yayau /
+uktañca-</p>
+
+<lg>
+<l>utpannā yuktikāryeṣu buddhiryasya na hīyate /</l>
+<l>sa eva tarate durgaṃ jalānte vānaro yathā // Suk_67.8 (=319) //</l>
+</lg>
+
+<p>iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau saptaṣaṣṭitamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 68:</p>
+
+<p>athānyedyuḥ śukaṃ prāha prabhāvatī /
+śukaḥ-</p>
+
+<lg>
+<l>yāhi devi sukhaṃ bhuṅkṣva yadi te 'sti sahāyinī /</l>
+<l>vitarkasadṛśī kāle viṣame varavarṇini // Suk_68.1 (=320) //</l>
+</lg>
+
+<p>asti vidyāsthānaṃ nāma grāmaḥ brāhmaṇānām /
+tatra keśavo brāhmaṇaḥ /
+tena ca snānāya gatena taṭāke ramyā vaṇikputrī dṛṣṭā /
+sa ca tāṃ rantumicchati /
+anyadā tayā prokto dvijaḥ snānādutthitaḥ-"yattvaṃ mama śirasi dvitīyaṃ ghaṭamāropaya' /
+atastena ghaṭamāropayatā tasyā oṣṭhaścumbitaḥ sa ca tathā kurvan patinā dṛṣṭaḥ /
+nīto rājakulaṃ kathaṃ mucyatām iti praśnaḥ /
+uttaraṃ śukaḥ prāha-atha tanmitraṃ vitarko nāma /
+sa ca tatsamīpamāgagatyedamabravīt-"mitra! tvayā rājakulagatena vacacevatyeva vākyaṃ jalpanīyaṃ nānyat /
+tathā kṛte ca mantriṇoktam-"nāyaṃ doṣabhāk /
+prakṛtirevaṃvidhaivāsya /
+tenaiva cottareṇa loke sādhutāṃ gato vitarkasāhāyikabuddhyā /
+yadi tvamapi tathā jānāsi tadā gaccha /
+iti kathāṃ śrutvā prabhāvatī supta /</p>
+
+<p>iti śukasaptatau aṣṭaṣṭitamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 69:</p>
+
+<p>anyadā prabhāvatī śukaṃ pṛcchati /
+śukaḥ prāha-</p>
+
+<lg>
+<l>kuru jāraṃ viśālākṣi vijāraṃ kuruṣe yadi /</l>
+<l>yathā vejikayā pūrvamardhasnāte patau kṛtam // Suk_69.1 (=321) //</l>
+</lg>
+
+<p>asti sthānaṃ kalāsthānaṃ nāma /
+tatraiko vaṇiksutaḥ tasya bhāryā ca vejikā nāmātivallabhā /
+anyadā ca taṃ bhartāraṃ snāpayantī upapatiṃ pūrvakṛtasaṅkenaṃ pathi gacchataṃ dṛṣṭvā nātra pānīyaṃ pracuramiti miṣāntaraṃ kṛtvā pānīyānayanavyājādgṛhānnirgatā jāreṇa sākaṃ bahukālaṃ ca sthitā /
+tato 'rdhasnātaṃ patiṃ muktvā tathā sthitā kumuttaraṃ karotviti praśnaḥ /
+uttaram- śukaḥ tataḥ jāreṇa bhuktā svapativañcanaṃ vicintyātmānaṃ kūpe cikṣepaḥ /
+tataḥ kolāhalaḥsaṃvṛttaḥ /
+kūpe kāpi varākī patitāstīti pravādaḥ sañjātaḥ /
+tena tatpatistadvacanaṃ śrutvā vyacintayat-nūnaṃ sā matpatnī kūpe patitā bhaviṣyati-iti drutaṃ gatvāvalokayāmāsa /
+tatastāṃ kūpādākṛṣyānīyāmānayat /
+iti kathāṃ śrutvā prabhāvatī suptā /</p>
+
+<p>iti śukasaptatau ekonasaptatitamī kathā //</p>
+
+</div>
+<div>
+
+<p>START Suk 70:</p>
+
+<p>etāvatīnāṃ kathānāṃ paryante tadbhatī madano deśāntarādāgataḥ /
+tasmiṃścāgate sā tathaiva tasminsnehalābhūt /
+śuka evaṃ mandaṃ mandaṃ paṭhati-</p>
+
+<lg>
+<l>anurāgo vṛthā stroṣu strīṣu garvo vṛthā tathā /</l>
+<l>priyo 'haṃ sarvadā haysyā mamaiṣā sarvadā priyā // Suk_70.1 (=322) //</l>
+</lg>
+
+<p>paraṃ madano na śṛṇoti /
+upahāsya tadā caivaṃ vadati-"yaḥ kaściddhitaṃ vākyaṃ śṛṇoti karoti ca sa paratreha ca śarmabhāgbhavati' /
+iti muhurmuhuḥ paṭhitaṃ madanaḥ śrutvā pṛcchati /
+tataḥ sā svayameva śaṅkitā kathayati /
+uktañca-</p>
+
+<lg>
+<l>sarvatra śucayo dhīrāḥ sukarmabalagarvitāḥ /</l>
+<l>kukarmamayasaṃtrastāḥ pāpāḥ sarvatra śaṅkitāḥ // Suk_70.2 (=323) //</l>
+</lg>
+
+<p>āryaputra! tvameva vandyo yasya veśmani trivikramānītayugamadhyādekaḥ śukaḥ sarveṣā lokānāṃ hitabhāṣako 'tra bandhupitṛsthānīyo viśeṣato mama /
+yathā yathā sā śukaṃ stauti tathā tathā śuko lajjate /
+uktañca-</p>
+
+<lg>
+<l>bau jai mārai macchalī to uṇṇau karei /</l>
+<l>sīhu ju mārai mattagaaṇahacampiā dharei // Suk_70.3 (=324) //</l>
+</lg>
+
+<lg>
+<l>[bakaḥ yadi mārayati matsyān sa punarna karoti /</l>
+<l>siṃho yo mārayati mattagajanātha sevito dhriyate] // Suk_70.3* (=324*) //</l>
+</lg>
+
+<p>tato madanastadvacanaṃ śrutvāha-kiṃ tava śukenopakṛtan /
+kathamīdṛgguṇo 'sau jātaḥ /
+sā prāha--svāmin! satyasya vāco vaktā śrotā ca na labhyate /
+uktañca--</p>
+
+<lg>
+<l>sulabhā puruṣā rājan satataṃ priyavādinaḥ /</l>
+<l>apriyasya tu patyasya vaktā śrotā ca durlabhaḥ // Suk_70.4 (=325) //</l>
+</lg>
+
+<lg>
+<l>mahilā capalā svāminniḥsnehā guṇavarjitā /</l>
+<l>kuvikalpā tanuprajñā yathoktaṃ satyameva tat // Suk_70.5 (=326) //</l>
+</lg>
+
+<lg>
+<l>manyate sukṛtaṃ naiva patiputraparāṅmukhī /</l>
+<l>pūrvasnehamayī mṛdvī kṛtakāryātiniṣṭhurā // Suk_70.6 (=327) //</l>
+</lg>
+
+<p>uktañca-</p>
+
+<lg>
+<l>kurvanti tāvatprathamaṃ priyāṇi yāvanna jānanti naraṃ prasaktam /</l>
+<l>jñātvā ca taṃ manmathapāśabaddhaṃ grastāmiṣaṃ mīnamivoddharanni // Suk_70.7 (=328) //</l>
+</lg>
+
+<lg>
+<l>samudravīcīva calasvabhāvāḥ sandhyābhrarekheva muhurtarāgāḥ /</l>
+<l>striyaḥ kṛtārthāḥ puruṣaṃ nirarthaṃ niṣpīḍitālaktakavattyajanti // Suk_70.8 (=329) //</l>
+</lg>
+
+<lg>
+<l>sammohayanti madayanti viḍambayanti nirbhartsayanti ramayanti viṣādayanti /</l>
+<l>etāḥ praviśya hṛdayaṃ sadayaṃ narāṇāṃ kiṃ nāma vāmanayanā na samācaranti // Suk_70.9 (=330) //</l>
+</lg>
+
+<p>svāmin! tvayi proṣite mayā kañcitkālaṃ tvadviyogaḥ soḍhaḥ /
+paścācca kusakhīsaṅgatā /
+puruṣāntaraṃ rantukāmayā mayā gamanavighātinī sārikā hatā /
+anena śukena tu vacanaprapañcena saptatidināni sthāpitāham /
+ato mayā karmaṇā pāpaṃ na vihitaṃ manasā tu kṛtam /
+adyaprabhṛti tvaṃ mama jīvanamaramasvāmī /
+iti śrutvā madanaḥ śukaṃ pṛcchati /
+sa āha-</p>
+
+<lg>
+<l>prayojanamavijñāya jñātvā cātha manīṣiṇā /</l>
+<l>sahasaiva na vaktavyamacintyo vidhinirṇayaḥ // Suk_70.10 (=331) //</l>
+</lg>
+
+<lg>
+<l>vihivihiaṃ laddha piasaṃgo jīviaṃ dhaṇaṃ dhaṇṇaṃ /</l>
+<l>juttaṃ savvaṃ jaṇavaaṇaṃ viaṇaviḍambaṇā ṇihilā // Suk_70.11 (=332) //</l>
+</lg>
+
+<lg>
+<l>[vidhivihitaṃ ciralabdhaṃ priyasaṅgo jīvitaṃ dhana dhānyam /</l>
+<l>yuktaṃ sarvaṃ janavacanaṃ vacanaviḍambanā nikhilā] // Suk_70.11* (=332*) //</l>
+</lg>
+
+<p>svāmin! yadyapi kathayituṃ na yujyate tarhi śṛṇu /</p>
+
+<lg>
+<l>mūrkhāṇāṃ madyapānāṃ ca nārīṇāṃ rogiṇāmapi /</l>
+<l>svāminkāmāturāṇāṃ ca khinnānāṃ kopināṃ tathā // Suk_70.12 (=333) //</l>
+</lg>
+
+<lg>
+<l>mattapramattabhīrūṇāṃ kṣudhārtānāṃ viśeṣataḥ /</l>
+<l>sukṛtaṃ skhalitaṃ cāryā na gṛhṇānti kṣamānvitāḥ // Suk_70.13 (=334) //</l>
+</lg>
+
+<p>uktañca bhārate-</p>
+
+<lg>
+<l>daśa dharmaṃ na jānanti dhṛtarāṣṭra nibodha tān /</l>
+<l>mattaḥ pramatta unmattaḥ śrāntaḥ kruddho bubhukṣitaḥ /</l>
+<l>tvaramāṇaśca lubdhaśca bhītaḥ kāmī ca te daśa // Suk_70.14 (=335) //</l>
+</lg>
+
+<p>asyāśca kukṛtaṃ kṣamyatām /
+atrārthe nāsyā doṣaḥ /
+kusakhīsaṅgādiyam /
+uktam-</p>
+
+<lg>
+<l>asatāṃ saṅgadoṣeṇa sādhavo yānti vikriyām /</l>
+<l>duryodhanaprasaṅgena bhīṣmo goharaṇe gataḥ // Suk_70.15 (=336) //</l>
+</lg>
+
+<lg>
+<l>vidyādhareṇa tanayā bhuktā rājñaḥ purā chalāt /</l>
+<l>patināpi subhuktāpi nirdeṣiti vicāritā // Suk_70.16 (=337) //</l>
+</lg>
+
+<p>śukaḥ kathāṃ madanāgre kathayāmāsa-asti jagatītale malayo nāma parvataḥ /
+tasya śṛṅge manoharaṃ nāma gandharvapuram /
+tatra madanonāma gandharvaḥ /
+tasya bhāryā ratnāvalī /
+tayoḥ sutā madanamañjarī /
+tasyā rūpasampadaṃ dṛṣṭvā devo vā dānavo vādhomukho muhyati /
+na ko 'pi tadanurūpo varo labhyate yasya sā dīyate /
+athānyadā nāradaḥ samāyātaḥ /
+so 'pyasyā rūpamavalokya mūrcchitaḥ sakāmo 'bhūt /
+paścāllabdhasaṃjñena ṛṣiṇā sā śaptā /
+uktañca-</p>
+
+<lg>
+<l>taruṇī ramaṇī ratiramyatayā pramadā sukhadā ca sadā samadā /</l>
+<l>yadi sā subhagā hṛdayenihitā kva jayaḥ kva jayaḥ kva jayaḥ kva jayaḥ // Suk_70.17 (=338) //</l>
+</lg>
+
+<p>yadetasyā rūpe dṛṣṭe me smarajvaro jātaḥ tadiyaṃ śīlaviḍambanāṃ prāpsyate /
+tato rājā praṇamya prāha--svāmin! prasanno bhūtvā prasādaṃ kuru /
+nārada āha- "nāsyāḥ śīlakhaṇḍena doṣo bhaviṣyati na ca pativirahaḥ /
+meruparvate vipulāpurīnivāsī kanakaprabho nāma gandharvaḥ /
+sa tava putryā varo bhaviṣyati' /
+ityuktvā nārado yayau /
+tato munivacanena tena gandharveṇa sodvāhitā /
+so 'nyadā tāṃ muktvā kailāsaṃ yayau /
+sāpi tadvayogārtā śilāpaṭṭe luṭhantī vastrādirahitā kenacidvidyādhareṇa rūpātiśamavalokya saṃyogārthaṃ prārthitā /
+sā taṃ na vācchati /
+tatastena tadbharturgandharvarūpa kṛtvā sā bhuktā /
+tataḥ kālakrameṇa tasyā bhartā gṛhamāgataḥ /
+tāṃ suratasukhasantuṣṭāmapaśyat /
+"paropabhuktadeheyam' iti tāṃ dṛṣṭāṃ matvā sāvaśyaṃ vadhyeti niścitya caṇḍikālayaṃ yayau /
+yāvattadagrato mārayati tāvadanyayā phūtkṛtam-"svāmini! mama tvayā varo datto yattava gandharvacakravartī putro bhaviṣyati /
+tatkathaṃ putramukhama dṛṣṭvā vipatsye' /
+evaṃ vilapantyāstasyāḥ puratastāṃ prati devī prāha-he gandharvavīra! nāsyāḥ ko 'pi doṣaḥ /
+kintu vidyādhareṇeyaṃ tvadīyarūpamayena māyayā bhuktā /
+tato 'jānantyā asyā na doṣaḥ /
+anyacca muniśāpo vidyate /
+tata idaṃ sañjātam-"śāpavṛttāntaśca niveditaḥ, tato munivacanādiyaṃ nirdeṣā tvayā grāhyā'-iti gaurīvacanaṃ śrutvā sa niḥśaṅkaṃ tayā saha svasthānaṃ gatastathaiva sukhato 'bhūt" /
+tato vaṇikputra /
+yadi madvacaḥ pramāṇaṃ tadaināmaduṣṭāṃ prati prasādaṃ kartumarhasi' /
+iti kīravacanānmadanenānugṛhītā /
+tato haridatto 'pi putrāgamanatuṣṭo mahotsavaṃ cakāra /
+tasminmahotsave divyamālā patitā /
+taddarśane śukasārikātrivikramāṇāṃ śāpamokṣātsvargagamanaṃ babhūva /
+madano 'pi priyayā prabhāvatyā saha sukhāni bhuṅkte /</p>
+
+<p>iti śukasaptatau saptatitamī kathā /</p>
+
+<p>iti śukasaptatiḥ samāptā //</p>
+
+  </div>
+</body>
+</text>
+</TEI>

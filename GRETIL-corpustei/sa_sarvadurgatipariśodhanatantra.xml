@@ -1,0 +1,3501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_sarvadurgatiparizodhanatantra">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Sarvadurgatipariśodhanatantra</title>
+	<author></author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>Klaus Wille</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Klaus Wille</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/sdurst_u.htm">sdurst_u.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Sarvadurgatiparisodhana Tantra = Sdp
+<lb/>Based on the ed. by Tadeusz Skorupski: The Sarvadurgatiparisodhana Tantra,
+<lb/>Elimination of All Destinies, Sanskrit and Tibetan Texts with Introduction,
+<lb/>English Translation and Notes. Delhi 1983.
+<lb/>
+<lb/>Input by Klaus Wille (Göttingen, Germany)
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>Tadeusz Skorupski: The Sarvadurgatiparisodhana Tantra, Elimination of All Destinies, Sanskrit and Tibetan Texts with Introduction, English Translation and Notes. Delhi 1983.</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Sarvadurgatipariśodhanatantra = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Religious Literature -- Buddhist</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+
+<note><hi rend="bold">Sdp 120</hi></note>
+
+<p>I</p>
+
+<p>oṃ namaḥ śrīvajrasattvāya /</p>
+
+<p>evaṃ mayā śrutam ekasmin samaye bhagavān sarvadevottamanandavane viharati sma / maṇisuvarṇaśākhālatābaddhavanaspatigulmauṣadhikamalotpalakarṇikārabakulatilakāśokamāndāravamahāmāndāravādibhir nānāvidhaiḥ puṣpair upaśobhite / kalpavṛkṣasamalaṃkṛte / nānālaṃkāravibhūṣite / nānāpakṣigaṇakūjite / tūryamukundaveṇubherīprabhṛtipraṇadite / śakrabrahmādidevāpsarobhir nānāvidhābhir vikrīḍite / sarvabuddhabodhisattvādhiṣṭhite / sarvaśakrabrahmādidevavidyādharadevāpsaraḥparṣatkoṭīniyutaśatasahasrair anekayakṣarākṣasāsuragaruḍagandharvakinnaramahoraganāgādiparṣadbhir nānāvidhābhir mahābodhisattvakoṭīśatasahasrair aṣṭābhiḥ /</p>
+
+<p>tadyathā /</p>
+
+<p>pratibhānamatinā ca bodhisattvena mahāsattvena / acalamatinā ca / vipulamatinā ca / samantamatinā ca / anantamatinā ca / asamantamatinā ca / kamalamatinā ca / mahāmatinā ca / divāmatinā ca / vividhamatinā ca / aśeṣamatinā ca / samantabhadreṇa ca / evaṃ pramukhair avaivartikabodhisattvamahāsattvasaṃghair anantāparyantaiḥ satkṛtaḥ /
+gurukṛto 'rcitaḥ pūjitaḥ suprakṛṣṭo mahāparṣadgaṇamadhye mahābrahmā padmāsane niṣaṇṇaḥ sarvadurgatipariśodhananāmasamādhiṃ samāpannaḥ samanantaram evāpāyatrayasantativimokṣakanāmamahābodhisattvaraśmispharaṇasaṃharaṇānekamālā svorṇākośānniścacāra / tena trisahasramahāsahasralokadhātur avabhāsitaḥ / tenāvabhāsena sarvasattvāś cittakleśabandhanān mocayitvā pṛthak pṛthak saṃprāpito nandavanaṃ ca samantādavabhāsayitvā / (<hi rend="bold">Sdp 122</hi>) nānāpūjāmeghaiḥ pūjayitvā śatasahasraṃ pradakṣiṇīkṛtya śirasā vanditvā bhagavataḥ purastād vimalāsaner upari niṣadyaivam āhuḥ aho buddha aho buddhasya dharmaśobhanam //</p>
+
+<p>tat kasya hetoḥ //</p>
+
+<p>asmākaṃ durgatipariśodhanam //</p>
+
+<p>bodhisattvacaryāpratiṣṭhāpanañ ca //</p>
+
+<p>atha devendro bhagavantaṃ śatasahasraṃ pradakṣiṇīkṛtya vanditvā bhagavantam etad avocat / bhagavan kena kāraṇena buddharaśmisamantāvabhāsena durgatisamantān mocayitvā vimuktimārge pratiṣṭhāpitā āścaryaṃ sugata / bhagavān āha / nedaṃ devendrāścaryaṃ buddhānāṃ bhagavatāṃ sūpacitāpramāṇapuṇyasaṃbhārāṇām /</p>
+
+<p>devendra samyaksaṃbuddhā aparimitaguṇaratnākarabhūtāḥ / devendra samyaksaṃbuddhānām apramāṇopāyāḥ parmiṣpannāḥ / devendra buddhānāṃ bhagavatām aparimitā prajñopacitā / devendra buddhānām apramāṇā vīryā / buddhena bhagavatāpramānā vineyajanā bhājanībhūtāḥ kṛtāḥ / asamasamajñānābhi buddhā bhagavanto 'samasamarddhisamanvāgatāḥ / bhagavanto 'samasamapraṇidhānasamanvāgatāḥ / tasmād devendra buddhānāṃ bhagavatāṃ yathā bhājanaṃ tathā sattvārthakaraṇañ ca / yathā vineyaṃ tathā sattvānām arthakaraṇañ ca / yathābhiprāyaṃ tathā sattvārthakaraṇaṃ bhavatīti / jñātavyam ity atra saṃśayaśaṅkāvimatir na kartavyā / tathāgatavaineyaṃ na bhavatīti nedaṃ sthānaṃ vidyate /</p>
+
+<p>atha devendraḥ svakīyād āsanād utthāya punar api bhagavato vipulāṃ mahatīṃ pūjāṃ kṛtvā bhagavantam etad avocat / sarvasattvānāṃ hitakaraṇāyānukampākaraṇāya śaraṇakaraṇāya samahākṛpākaraṇāya sarvāśāparipūraṇakaraṇāya bhagavan mama pratibhānam utpādaya sugata mama pratibhānam utpādaya / bhagavan (<hi rend="bold">Sdp 124</hi>) itas trayastriṃśaddevanikāyād vimalamaṇiprabhanāmno devaputrasya cyutasya kālagatasya saptadivasā abhūvan / bhagavan sa kutropapannaḥ sukhaṃ duḥkhaṃ vānubhavati / idaṃ bhagavan vyākuru sugata vyākuru / bhagavān āha / devendra prāptakālasamayaṃ jñātvā śroṣyasi / devendra āha / bhagavan ayaṃ kālaḥ / ayaṃ samayaḥ sugata / bhagavān āha / devendra vimalamaṇiprabhanāmadevaputra itaś cyutvāvīcau mahānaraka utpannas tatra dvādaśavarṣasahasrāṇi tīvraṃ kaṭukaṃ duḥkham anubhavati / punar alpanarake daśavarṣasahasrāṇi duḥkham anubhavati / punar api tiryakpreteṣūtpanno daśavarṣasahasrāṇi duḥkham anubhavati / punar api pratyantajanapadeṣūtpanno badhiramūkāvyaktasvabhāvatām anubhavati ṣaṣṭivarṣasahasrāṇi / punar api caturaśītivarṣasahasrāṇi vyādhiraktātisārakuṣṭhavighātapīḍitaś ca bahujananindito 'śeṣaparityakto hīnakulo bhavati / duḥkhaduḥkhaparaṃparāṃ na vicchedayati / anyeṣām apy ahitaṃ karoti / nānākarmāvaraṇāni cāvicchedena karoti / punar apy anyonyaduḥkhaparaṃparām anubhavati /</p>
+
+<p>atha khalu śakrādayaḥ sarvadevaputrāḥ śrutvā bhrāntās trastāḥ khinnā adhomukhaṃ patitāḥ / punar utthāyaivam āhuḥ / kathaṃ bhagavan tasmād duḥkhaparaṃparāto mucyate / kathaṃ sugata mucyate / kenopāyena bhagavan duḥkharāśeḥ tasmān mucyata iti / paritrānaṃ kuru bhagavan / paritrāṇaṃ kuru sugata / bhagavān āha / devendra caturaśītibuddhakoṭibhir bhāṣitam idam aham api bhāṣe śṛṇu / atha khalu devendraḥ punar api bhagavantaṃ māndāravamahāmāndāravapuṣpair nānāvidhair ratnamukuṭakeyūrakarṇālaṃkārahārārdhahārādyanekālaṃkāraviśeṣair abhyarcyānekaśatasahasravāraṃ pradakṣiṇīkṛtya praṇamya sādhu bhagavan sādhu sugateti / sādhukāreṇa harṣayitvā sadevakasya lokasya hitasukhakaraṇāyānāgatānāṃ sattvānām apāyasantativimokṣaṇāya subhāṣitārthaṃ vijñāpayāmi / atha punar api brahmādayo devagaṇā
+(<hi rend="bold">Sdp 126</hi>) evam āhuḥ / sādhu bhagavan sādhu sugata yenānāgatānāṃ sattvānāṃ nāmamātram api śrutavatām apāyatrayamārgavimokṣo bhavati / svargadevaloke vā manuṣyaloke cotpannānām anuttarasamyaksaṃbodhiprāptyarthaṃ bhāṣatu /</p>
+
+<p>atha khalu bhagavān śakrabrahmādidevaputrāṇāṃ sarvatathāgatahṛdayenādhiṣṭhānārtham amoghavajrādhiṣṭhānanāmasamādhiṃ samāpannaḥ /</p>
+
+<p>oṃ vajrādhiṣṭhānasamaye huṃ /</p>
+
+<p>evañ ca samādhiṃ samāpanno 'nabhibhavanīyavajrādhiṣṭhānenādhiṣṭhāyedaṃ sarvadurgatipariśodhanarājanāmatathāgatahṛdayaṃ niścārayām āsa /</p>
+
+<p>oṃ śodhane śodhane sarvapāpaviśodhani śuddhe viśuddhe sarvakarmāvaraṇaviśuddhe svāhā /</p>
+
+<p>asyā vidyāyā bhāṣaṇānantaram eva sarvasattvānāṃ durgatir vinipātitā sarvanarakatiryakpretagatiḥ śodhitā /</p>
+
+<p>tīvraduḥkhāni praśāntāni bahavaś ca jātāḥ sukhīmukhībhūtāḥ / punar aparaṃ guhyahṛdayam abhāṣata /</p>
+
+<p>oṃ śodhane śodhane śodhaya sarvāpāyān sarvasattvebhyo huṃ punar aparaṃ devendredaṃ sarvatathāgatahṛdayaṃ /</p>
+
+<p>oṃ sarvāpāyaviśodhani huṃ phaṭ /</p>
+
+<p>punar aparaṃ devendredaṃ sarvatathāgatahṛdayopahṛdayam /</p>
+
+<p>oṃ trāṭ /</p>
+
+<p>punar aparaṃ devendra sarvadurgatipariśodhanahṛdayam / huṃ / punar aparaṃ devendra saṃkṣepataḥ smaraṇamātreṇāpy alpapuṇyasattvānāṃ sarvadurgatiśāntikaraṇāyānāyāsato vimokṣaṇakaram idaṃ bhavati /</p>
+
+<p>oṃ namo bhagavate sarvadurgatipariśodhanarājāya tathāgatāyārhate samyaksaṃbuddhāya / tadyathā /</p>
+
+<p>oṃ śodhane śodhane sarvapāpaviśodhani śuddhe viśuddhe sarvakarmāvaraṇaviśodhani svāhā / mūlavidyā /
+(<hi rend="bold">Sdp 128</hi>) oṃ sarvavit sarvāvaraṇāni viśodhaya hana huṃ phaṭ /
+oṃ sarvavid huṃ /
+oṃ sarvavid hrīḥ phaṭ /
+oṃ sarvavid aḥ / oṃ sarvavit trāṃ trāṭ / oṃ sarvavid oṃ /
+oṃ sarvavid dhīm / oṃ sarvavid huṃ / oṃ sarvavit krīṃ traṭ /
+oṃ sarvavid mahāvajrodbhavadānapāramitāpūje huṃ / lāsyāyā mantraḥ /
+oṃ sarvavid mahāvajrodbhavaśīlapāramitāpūje trāṃ / mālāyā mantraḥ /
+oṃ sarvavid mahāvajrodbhavakṣāntipāramitāpūje hrīḥ / gītāyā mantraḥ /
+oṃ sarvavid mahāvajrodbhavavīryapāramitāpūje aḥ / nṛtyāyā mantraḥ /
+oṃ sarvavit sarvāpāyaviśodhani dhama dhama dhyānapāramitāpūje huṃ huṃ phaṭ / dhūpāyā mantraḥ /
+oṃ sarvavit sarva durgatipariśodhane kleśopakleśacchedani puṣpālokini prajñāpāramitāpūje trāṃ huṃ phaṭ / puṣpāyā mantraḥ /
+oṃ sarvavit sarvāpāyaviśodhani jñānālokakari praṇidhipāramitāpūje hrīḥ huṃ phaṭ / dīpāyā mantraḥ /
+oṃ sarvavit sarvāpāyagandhanāśani vajragandhopāyapāramitāpūje aḥ huṃ phaṭ / gandhāyā mantraḥ /
+oṃ sarvavid narakagatyākarṣaṇi huṃ jaḥ phaṭ / vajrāṅkuśasya mantraḥ /
+oṃ sarvavid narakoddharaṇi huṃ huṃ phaṭ / vajrapāśasya mantraḥ /
+oṃ sarvavit sarvāpāyabandhanamocani huṃ vaṃ phaṭ / vajrasphoṭasya mantraḥ /
+oṃ sarvavit sarvāpāyagatigahanaviśodhani huṃ hoḥ phat / vajrāveśasya mantraḥ /
+oṃ maitrīyaharaṇāya svāhā / maitreyasya mantraḥ /
+oṃ amoghe amoghadarśini huṃ / amoghadarśinaḥ /
+<note><hi rend="bold">Sdp 120</hi></note>
+oṃ sarvāpāyajahe sarvāpāyaviśodhani huṃ / sarvāpāyajahasya/
+oṃ sarvaśokatamonirghātanamati huṃ / sarvaśokatamonirghātanamateḥ /
+oṃ gandhahastini huṃ / gandhahastinaḥ /
+oṃ śūraṃgame huṃ / śūraṃgamasya /
+oṃ gagane gaganalocane huṃ / gaganagañjasya /
+oṃ jñānaketo jñānavati huṃ / jñānaketoḥ /
+om amṛtaprabhe amṛtavati huṃ / amṛtaprabhasya /
+oṃ candrasthe candravyavalokini svāhā / candraprabhasya /
+oṃ bhadravati bhadrapāle / bhadrapālasya /
+oṃ jālini mahājālini huṃ / jālinīprabhasya /
+oṃ vajragarbhe huṃ / vajragarbhasya /
+om akṣaye huṃ huṃ akṣayakarmāvaraṇaviśodhani svāhā / akṣayamateḥ /
+oṃ pratibhāne pratibhānakūṭe svāhā / pratibhānakūṭasya /
+oṃ samantabhadre huṃ / samantabhadrasya /</p>
+
+<p>ete bhadrakalpikasya bodhisattvasya mantrān yathākramam uccārayet /</p>
+
+<p>anena yathoktatantrānusārānukrameṇa vidhānena pratyahaṃ prabhātakāla utpattikrameṇa bhāvayamāno bhāvayet / devatāyogaṃ samādhitrayam uttamaṃ yatnato durgatipariśodhanasiddhir bhavati / punar aparaṃ devendra sarvadurgatipariśodhanatejorājasya tathāgatasya guhyahṛdayam idam / kulaputro vā kuladuhitā vā yaḥ kaścid nāmamātraṃ śṛṇoti dhārayati vācayati likhitvā ca śirasi śikhāyāṃ vā bāhau grīvāyāṃ vā baddhvā dhārayati tasyehaiva janmany aṣṭāv akālamaraṇāni nmaraṇasaṃbandhasvapnaprakārā (<hi rend="bold">Sdp 132</hi>) vā durgatinimittāni vā tāni sarvāṇi svapnamātrato nopasarpanti / maṇḍalañ ca yathāvat praveśyābhiṣikto hṛdayañ ca japtvā mantrārthaṃ ye kecid bhāvayanti kaḥ punar vādas tesāṃ yāni kānicit pāpāni na nikaṭībhavantīti na durgatiṃ gacchantīti /
+puruṣastrīdevanāgayakṣarākṣasapretatiryagnarakādīnāṃ yeṣāṃ keṣāñcit mṛtakāyeṣu maṇḍalaṃ praveśyābhiśikteṣu te narakeṣūtpannāḥ samanantaram evaṃ vimucyante devanikāyeṣūtpadyante / tatrotpannāḥ santaḥ sarvatathāgatānāṃ dharmatām abhimukhīkurvanty avaivartikāś ca bhavanti / santatiś ca niyatā bhavati / sarvatathāgatakule prajātāś ca bhavanti / prahīṇāvaraṇāś ca / sarvatathāgatakuleṣu devakuleṣu vānyasmin vā sukham anubhavanti / devendra saṃkṣepato laukikalokottarasarvahitasukham anubhavanti /</p>
+
+<p>atha devendro bhagavantaṃ pūrvavat pradakṣiṇīkṛtya vanditvaivam āha / bhagavan sarvadurgativaśībhūtānāṃ hitasukhakaraṇāya yathāsattvaiḥ sarvadurgatipṛṣṭhīkaraṇāyānāyāsato 'nuttarasamyaksaṃbodhyadhigamārthaṃ dharmaṃ deśayatu /</p>
+
+<p>atha khalu bhagavān śākyamuniḥ sarvadurgatipariśodhanajñānavajranāmasamādhiṃ samāpadya sarvatathāgatasarvadurgatipariśodhanatejorājanāmamaṇḍalam abhāṣata /</p>
+
+<p>tatsādhanaṃ śākyanāthena bhāṣitam /</p>
+
+<p>prathamaṃ tāvad yogī vijane mano 'nukūlapradeśe mṛdusukumārāsane niṣaṇṇaḥ sugandhena maṇḍalaṃ kṛtvā pañcopahārapūjā karaṇīyā / tataḥ sarvadharmanairātmyaṃ bhāvayitvā / ātmānaṃ huṃkāreṇa vajrajvālānalārkaṃ bhāvayet / tasya kaṇṭhe hrīḥkāreṇa padmaṃ tasyopari dalāgra ākāreṇa candramaṇḍalaṃ tasyopari huṃkāreṇa pañcasūcikavajram / tad vajraṃ jihvāyāṃ rīṇaṃ bhavati / vajrajihveti / tena vajrajihvā bhavati / mantrajāpakṣamo bhavet / hastadvayasya madhye sitākāreṇa candramaṇḍalaṃ tasyopari huṃkāreṇa pañcasūcikavajram / tad vajraṃ karamadhye nilīyate vajrahasto bhavati /</p>
+
+<p>sarvamudrābandhakṣamo bhavet /
+<note><hi rend="bold">Sdp 134</hi></note>
+tato rakṣācakrabhāvanā kartavyā /</p>
+
+<p>oṃ gṛhṇa vajrasamaye huṃ vam / iti bruvan krodhaterintirīṃ badhnīyāt /
+vajrabandhaṃ tale kṛtvā cchādayet kruddhamānasaḥ // gāḍham aṅguṣṭhavajreṇa krodhaterintir smṛtā //</p>
+
+<p>tato vajrārdhāsananiṣaṇṇo vajraterintirīṃ baddhvā vajramālābhiṣekaṃ gṛhṇīyāt /</p>
+
+<p>oṃ vajrajvālānalārka huṃ abhiṣiñca mām iti /</p>
+
+<p>vajrabandhe 'ṅguṣṭhadvayaṃ sahitotthitaṃ vajrabandhasyopari śliṣṭhaṃ dhārayet / vajraterintirī /</p>
+
+<p>oṃ ṭuṃ iti / anena dvyakṣarakavacena kavacayitvā /
+oṃ vajrajvālānalārka huṃ ity udīrayet /</p>
+
+<p>vāmavajramuṣṭiṃ hṛdaye kṛtvā dakṣiṇavajramuṣṭim ullālayan sarvavighnān hanyāt /</p>
+
+<p>tato vajrānalena mudrāsahitena vighnadahanādikaṃ kuryāt /</p>
+
+<p>oṃ vajrānala hana daha paca matha bhañja rana huṃ phaṭ</p>
+
+<p>ity udīrayet / abhyantaravajrabandhe 'ṅgulijvālāgarbhe 'ṅguṣṭhavajram utthitam iyaṃ vajrānalamudrā /</p>
+
+<p>tad anu / vajranetri bandha sarvavighnān iti / mudrāyuktyā sarvavighnabandhaṃ kuryāt / vajrabandhaṃ baddhvāṅguṣṭhadvayaṃ prasārya samaṃ dhārayet / vajranetrimudrā /</p>
+
+<p>prasāritavajrabandhaṃ bhūmyāṃ pratiṣṭhāpyādhobandhaṃ kuryāt /</p>
+
+<p>oṃ vajra dṛḍho me bhava rakṣa sarvān svāhā /</p>
+
+<p>vajrabhairavanetreṇa mudrāsahitenordhvabandhaṃ kuryāt /</p>
+
+<p>oṃ hulu hulu huṃ phat / iti /</p>
+
+<p>vajramuṣṭidvayaṃ baddhvālātacakraṃ bhrāmayitvā śirasopari tarjanyaṅkuśākāreṇa dhārayet / vajrabhairavanetramudrā / tasyādhastād vajrayakṣeṇa mudrāsahitena punar bandhaṃ kuryāt /</p>
+
+<note><hi rend="bold">Sdp 136</hi></note>
+<p>oṃ vajrayakṣa huṃ iti / vajrāñjaler aṅguṣṭhadvayaṃ prasāritaṃ tarjanīdvayaṃ damṣṭrā / vajrayakṣamudrā /</p>
+
+<p>vajroṣṇīṣeṇa mudrāyuktena pūrvāṃ diśaṃ bandhayet /</p>
+
+<p>oṃ druṃ bandha haṃ iti / druṃ 'iti vā /</p>
+
+<p>vajramuṣṭidvayaṃ kanyasāśrṅkhalābandhena tarjanīdvayasūcīmukhaṃ parivartoṣṇīṣe sthāpayet / vajroṣṇīṣamudrā /</p>
+
+<p>punar vajrapāśena tām eva bandhayet /</p>
+
+<p>huṃ vajrapāśe hrīḥ iti / vajramuṣṭidvayena bāhugranthiṃ kuryāt / vajrapāśamudrā /</p>
+
+<p>vajrapatākayā paścimāṃ diśaṃ bandhet /</p>
+
+<p>oṃ vajrapatāke pataṃgini raṭeti / vajrabandhe 'ṅguṣṭhasattvaparyaṅkasūcīṃ kṛtvāgrāsamānāmāvidāritāntyapaṭāgrī / vajrapatākāyāḥ /</p>
+
+<p>digvidikṣv adha ūrdhvañ ca vighnanikṛntanaṃ kuryāt / vajrakālyottarāṃ diśaṃ bandhet /</p>
+
+<p>hrīḥ vajrakāli ruṭ maṭ / iti / vajrayakṣamudrām eva mukhe dṛḍhīkṛtya vajrakālyāḥ / vajraśikharayā dakṣiṇāṃ diśaṃ bandhet /</p>
+
+<p>oṃ vajraśikhare ruṭ maṭ / iti / vajramuṣṭidvayena parvatotkarṣaṇābhinayākāraṃ vajraśikharāyāḥ /</p>
+
+<p>vajrakarmanā maṇḍalabandhaṃ kṛtvā prākāraṃ dadyāt /</p>
+
+<p>huṃ vajrakarmeti / punar abhyantaraprākāraṃ vajrahuṃkāreṇa huṃ iti / vajramuṣṭidvayaṃ baddhvā bāhuvajraṃ samādhāya kaniṣṭhāṅkuśabandhitā trilokavijayanāmatarjanīdvayaṃ tarjanī / vajrahuṃkārasya / iyam eva madhyāgradvayaṃ vajraṃ vajrakarmaṇaḥ /</p>
+
+<note><hi rend="bold">Sdp 138</hi></note>
+<p>tato vajracakramudrayā sarvadurgatipariśodhanamanṇḍalaṃ purato niṣpādayet /</p>
+
+<p>oṃ vajracakra huṃ / iti /</p>
+
+<p>vajramuṣṭidvayaṃ baddhvā dvyagrāntyāvajrabandhanāt //</p>
+
+<p>vajracakreti vikhyātā sarvamaṇḍalasādhikā //</p>
+
+<p>anayā sarvadikṣu pradakṣiṇatayā bhrāmayitvā sarvamaṇḍalanirmāṇaṃ bhavati / imām eva mukhe nyasya nirīkṣamāṇo 'ṣṭau vārān vajracakraṃ japet /</p>
+
+<p>tataḥ pratyakṣam iva maṇḍalaṃ buddhyālagyapuṣpādibhiḥ saṃpūjya sarvadikṣu pañcamaṇḍalakena praṇamed anena /</p>
+
+<p>oṃ sarvavit kāyavākcittapraṇāmena vajrabandhanaṃ karomīti / tataś catuḥpraṇāmaṃ kuryāt / tadyathā /</p>
+
+<p>sarvaśarīreṇa vajrāñjaliprasāritena pūrvasyāṃ diśi praṇamed anena /</p>
+
+<p>oṃ sarvavit pūjopasthānāyātmānaṃ niryātayāmi / sarvatathāgatavajrasattvādhitiṣṭhasva mām / iti /</p>
+
+<p>tatas tathaivotthāya vajrāñjaliṃ hṛdi kṛtvā dakṣiṇasyāṃ diśi lalāṭeṇa bhūmiṃ spṛśan praṇamed anena /</p>
+
+<p>oṃ sarvavit pūjābhiṣekāyātmānaṃ niryātayāmi / sarvatathāgatavajraratnābhiṣiñca mām / iti /</p>
+
+<p>tatas tathaivotthāya vajrāñjalibandhena śirasā paścimāyāṃ diśi mukhena bhūmiṃ spṛśan praṇamed anena /</p>
+
+<p>oṃ sarvavit pūjāpravartanāyātmānaṃ niryātayāmi / sarvatathāgatavajradharma pravartaya mām / iti /</p>
+
+<p>tatas tathaivotthito vajrāñjaliṃ śiraso 'vatārya hṛdi kṛtvottarasyāṃ diśi mūrdhnā bhūmiṃ spṛśan praṇamed anena /</p>
+
+<p>oṃ sarvavit pūjākarmaṇā ātmānaṃ niryātayāmi / sarvatathāgatavajrakarma kuruṣva mām / iti /</p>
+
+<p>jānumaṇḍaladvayaṃ pṛthivyāṃ pratiṣṭhāpya vajrāñjaliṃ hṛdi kṛtvā sarvapāpaṃ pratideśayet /</p>
+
+<note><hi rend="bold">Sdp 138</hi></note>
+<p>samanvāharantu māṃ daśasu dikṣu sarvabuddhabodhisattvāḥ sarvatathāgatavajramaṇipadmakarmakulāvasthitāś ca sarvamudrāmantravidyādevatā aham amukavajro daśasu dikṣu sarvabuddhabodhisattvānāṃ purataḥ sarvatathāgatavajramaṇipadmakarmakulāvasthitānāṃ sarvamudrāmantravidyādevatānāṃ ca purataḥ sarvapāpaṃ pratideśayāmi /</p>
+
+<p>vistareṇa daśasu dikṣv atītānāgatapratyutpannānāṃ sarvabuddhabodhisattvapratyekabuddhāryaśrāvakasamyaggatasamyakpratipannānāṃ sarvasattvanikāyānāṃ ca sarvapuṇyam anumodayāmi / daśasu dikṣu sarvabuddhān bhagavataḥ / apravartitadharmacakrān adhyeṣe dharmacakrapravartanāya / daśasu dikṣu sarvabuddhān bhagavataḥ parinirvātukāmān yāce 'parinirvāṇāya /</p>
+
+<p>tataḥ puṣpamudrāṃ baddhvaivaṃ vadet /
+oṃ sarvavit puṣpapūjāmeghasamudraspharaṇasamaye huṃ / iti /</p>
+
+<p>dhūpamudrāṃ baddhvaivaṃ vadet /
+oṃ sarvavid dhūpapūjāmeghasamudraspharaṇasamaye huṃ /</p>
+
+<p>dīpamudrāṃ baddhvaivaṃ vadet /
+oṃ sarvavid ālokapūjāmeghasamudraspharaṇasamaye huṃ /</p>
+
+<p>gandhamudrāṃ baddhvaivaṃ vadet /
+oṃ sarvavid gandhapūjāmeghasamudraspharaṇasamaye huṃ /</p>
+
+<p>saṃpuṭānjaliṃ baddhvaivaṃ vadet /
+oṃ sarvavid bodhyaṅgaratnālaṃkārapūjāmeghasamudraspharaṇasamaye huṃ / iti /</p>
+
+<p>oṃ sarvavid hāsyalāsyaratikrīḍāsaukhyānuttarapūjāmeghasamudraspharaṇasamaye huṃ / iti /</p>
+
+<p>oṃ sarvavid anuttaravastrapūjāmeghasamudraspharaṇasamaye huṃ / iti /</p>
+
+<note><hi rend="bold">Sdp 142</hi></note>
+<p>tataḥ sarvasattvasaṃsāraduḥkham anusmṛtya bhagavato vajrasattvasya karmamudrāṃ baddhvā karuṇāvaśena sarvasattvottāraṇāya bodhicittam utpādayet / atīrṇatāraṇāyāmuktamocanāyānāśvastāśvāsanāyāparinirvṛtaparinirvātanāya sakalasattvadhātoḥ saṃsārasamudrād uttāraṇāya ca /</p>
+
+<p>oṃ sarvavid vajrapūjāmeghasamudraspharaṇasamaye huṃ / iti /</p>
+
+<p>tato lāsyāmudrāṃ baddhvaivaṃ vadet /
+sarvasattvāḥ sarvopakaraṇasamanvāgatā bhavantu / icchāmātrapratibaddhasarvasaṃpattayaḥ /</p>
+
+<p>oṃ sarvavid mahāvajrodbhavadānapāramitāpūjāmeghasamudraspharaṇasamaye huṃ / iti /</p>
+
+<p>vajramālāmudrāṃ baddhvaivaṃ vadet /
+sarvasattvāḥ sarvākuśalakāyavāgmanaskarmāntavigatā bhavantu / sarvakuśalakāyavāgmanaskarmāntasamanvāgatā bhavantu /</p>
+
+<p>oṃ sarvavid anuttaramahābodhyāhāraśīlapāramitāpūjāmeghasamudraspharaṇasamaye huṃ / iti /</p>
+
+<p>gītāmudrāṃ baddhvaivaṃ vadet /
+sarvasattvāḥ sarvalakṣaṇānuvyañjanena samalaṃkṛtagātrā bhavantu / parasparato nityam abhayāvairapratipannā hṛdayanayanābhirāmā gambhīradharmakṣāntikāś ca /</p>
+
+<p>oṃ sarvavid anuttaramahādharmāvabodhakṣāntipāramitāpūjāmeghasamudraspharaṇasamaye huṃ / iti /</p>
+
+<p>nṛtyāmudrāṃ baddhvaivaṃ vadet /
+sarvasattvā bodhisattvacaryābhiyuktā bhavantu / buddhatattvaparāyaṇāḥ saṃsārāparityāgavīryayuktāḥ /
+oṃ sarvavit saṃsārāparityāgavīryapāramitāpūjāmeghasamudraspharaṇasamaye huṃ / iti /</p>
+
+<p>puṣpāmudrāṃ baddhvaivaṃ vadet /
+sarvasattvāḥ sarvakleśopakleśavigatā bhavantu / sarvadhyānavimokṣasamādhisamāpattyabhijñāvidyāvaśitāsaṃpannāḥ /</p>
+
+<p>oṃ sarvavid anuttarasaukhyavihāradhyānapāramitāpūjāmeghasamudraspharaṇasamaye huṃ / iti /</p>
+
+<note><hi rend="bold">Sdp 144</hi></note>
+<p>dhūpāmudrāṃ baddhvaivaṃ vadet /
+sarvasattvāḥ sarvalaukikalokottaraprajñājñānasamanvitā bhavantu / catuḥpratisaṃvitprāptāḥ sarvaśāstraśilpajñānakalāyogaguṇaguhyavidhijñās tattvadarśinaḥ sarvakleśajñeyāvaraṇasamuchedajñānaprāptāḥ /</p>
+
+<p>oṃ sarvavid anuttarakleśachedamahāprajñāpāramitāpūjāmeghasamudraspharaṇasamaye huṃ / iti /</p>
+
+<p>dīpāmudrāṃ baddhvaivaṃ vadet /
+sarvasattvāḥ sarvāpāyavigatā bhavantu /</p>
+
+<p>oṃ sarvavit sarvāpāyaviśodhani jñānālokapraṇidhānapāramitāpūjāmeghasamudraspharaṇasamaye huṃ / iti /</p>
+
+<p>gandhāmudrāṃ baddhvaivaṃ vadet /
+sarvasattvāḥ sarvājñānavigatā bhavantu /</p>
+
+<p>oṃ sarvavit sarvāpāyagandhanāśani vajragandhopāyapāramitāpūjāmeghasamudraspharaṇasamaye huṃ / iti /
+daśasu dikṣv aśeṣasarvatathāgatapādamūlagatam ātmānam adhimucya kāyaparicaryārthaṃ /</p>
+
+<p>oṃ sarvavit kāyaniryātanapūjāmeghasamudraspharaṇasamaye huṃ / iti /
+asamācaletyādi / sarvatra jihvāśatamukhena stotropahāram adhimucya /</p>
+
+<p>oṃ sarvavid vāgniryātanapūjāmeghasamudraspharaṇasamaye huṃ / iti /
+sarvabodhisattvaikāśayaprayogatayā dharmasamatām adhimucya /</p>
+
+<p>oṃ sarvavit cittaniryātanapūjāmeghasamudraspharaṇasamaye huṃ / iti /
+abhāvasvabhāvāḥ sarvadharmāḥ śūnyatānimittāpraṇihitākārā ity adhimucya /</p>
+
+<p>oṃ sarvavid guhyaniryātanapūjāmeghasamudraspharaṇasamaye huṃ / iti /
+evaṃ viṃśatiprakārapūjayā sarvatathāgatān saṃpūjyātmānaṃ niryātayet /</p>
+
+<p>ātmānaṃ sarvabuddhabodhisattvebhyo niryātayāmi / sarvadā sarvakālaṃ pratigṛhṇantu māṃ mahākāruṇikā nāthā mahāsamayasiddhiñ ca prayacchantu / tac ca kuśalamūlaṃ sarvasattvasādhāraṇaṃ kartavyaṃ / anena kuśalamūlena sarvasattvāḥ sarvalaukikalokottaravipattivigatā bhavantu /</p>
+
+<note><hi rend="bold">Sdp 146</hi></note>
+<lg>
+<l>sarvalaukikalokottarasaṃpattisamanvāgatāś ca bhavantu /</l>
+<l>sahaiva sukhena sahaiva saumanasyena buddhā bhavantu narottamā iti /</l>
+<l>anena cāhaṃ kuśalakarmaṇā bhaveya buddho //</l>
+</lg>
+
+<p>na cireṇa loke deśaye dharmaṃ jagato hitāya //</p>
+
+<p>mocaye sattvān bahuduḥkhapīḍitān iti //</p>
+
+<lg>
+<l>anuttarāyāṃ samyaksaṃbodhau pariṇāmāya saṃvaraṃ gṛhṇīyāt /</l>
+<l>utpādayāmi paramaṃ bodhicittam anuttaram //</l>
+</lg>
+
+<p>yathā traiyadhvikanāthāḥ saṃbodhau kṛtaniścayāḥ //</p>
+
+<p>trividhāṃ śīlaśikṣāṃ ca kuśaladharmasaṃgraham //</p>
+
+<p>sattvārthakriyāśīlaṃ ca pratigṛhṇāmy ahaṃ dṛḍham //</p>
+
+<p>buddhaṃ dharmaṃ ca saṅghaṃ ca triratnāgram anuttaram //</p>
+
+<p>adyāgreṇa grahīṣyāmi saṃvaraṃ buddhayogajam //</p>
+
+<p>vajraghaṇṭāṃ ca mudrāṃ ca pratigṛhṇāmi tattvataḥ //</p>
+
+<p>ācāryaṃ ca grahīṣyāmi mahāvajrakuloccaye //</p>
+
+<p>caturdānaṃ pradāsyāmi ṣaṭkṛtvā tu dine dine //</p>
+
+<p>mahāratnakule yoge samaye ca manorame //</p>
+
+<p>saddharmaṃ pratigṛhṇāmi bāhyaṃ guhyaṃ triyānikam //</p>
+
+<p>mahāpadmakule śuddhe mahābodhisamudbhave //</p>
+
+<p>saṃvaraṃ sarvasaṃyuktaṃ pratigṛhṇāmi tattvataḥ //</p>
+
+<p>pūjākarma yathāśaktyā mahākarmakuloccaye //</p>
+
+<p>utpādayitvā paramaṃ bodhicittam anuttaram //</p>
+
+<p>gṛhītaṃ saṃvaraṃ kṛtsnaṃ sarvasattvārthakāraṇāt //</p>
+
+<p>atīrṇān tārayiṣyāmy amuktān mocayiṣyāmy aham //</p>
+
+<p>anāśvastān āśvāsayiṣyāmi sattvān sthāpayāmi nirvṛttāv iti //</p>
+
+<p>tata ākāśasthaṃ maṇḍalaṃ devādibhiḥ pūjyanānaṃ vicintayet / pañcopahārādinā pūjayet / samyak prapūjya buddhānāṃ guṇavarṇānāṃ stutiṃ kuryāt /</p>
+
+<p>aho buddha aho buddha sādhu buddha kṛtottama //</p>
+
+<p>sarvadurgatiṃ saṃśodhya sattvānāṃ bodhiḥ prāpyate //</p>
+
+<note><hi rend="bold">Sdp 148</hi></note>
+<p>tata oṃ vajrāñjalīti / vajrabandhanaṃ hṛdaye sphoṭayet /
+oṃ sarvavid vajrabandha trāṭ bruvan / vajrāveśamudrāṃ baddhvā /</p>
+
+<p>oṃ tiṣṭha vajra dṛḍho me bhava śāśvato me bhava hṛdayaṃ me 'dhitiṣṭha sarvasiddhiṃ ca me prayaccha huṃ ha ha ha ha hoḥ / iti /</p>
+
+<p>oṃ vajramuṣṭi vaṃ /
+sattvavajrīṃ baddhvā /</p>
+
+<p>oṃ sarvavit śodhane śodhane sarvapāpān apanaya huṃ / pāpākarṣaṇamantraḥ /</p>
+
+<p>vajrabandhaṃ dṛḍhaṃ baddhvā vajramudrādhiṣṭhāntarāt //</p>
+
+<p>samutkṣipet kṣaṇād ūrdhvaṃ patitotkṣepaṇaṃ param // iti /</p>
+
+<p>oṃ sarvavit sarvāpāyaviśodhani huṃ phaṭ / pāpaviśodhanamantraḥ /</p>
+
+<p>vajrabandhaṃ dṛḍhīkṛtya madhyamā mukhasahitā //</p>
+
+<p>caturantyamukhāsaktā pāpaṃ sphoṭayati kṣaṇāt //</p>
+
+<p>oṃ sarvavit trāṭ huṃ / sattvavajrīṃ baddhvā /</p>
+
+<p>oṃ sarvavit sarvāvaraṇaviśodhane muḥ huṃ phaṭ / uddharaṇalakṣaṇam /</p>
+
+<p>tataḥ paścād yogino hṛdayamadhye 'kāreṇa candramaṇḍalaṃ tasyopari /</p>
+
+<p>oṃ mune mune mahāmunaye svāhā /
+oṃ namaḥ sarvadurgatipariśodhanarājāya tathāgatāyārhate samyaksaṃbuddhāya / tadyathā /</p>
+
+<p>oṃ śodhane śodhane sarvapāpaviśodhaṃ śuddhe viśuddhe sarvakarmāvaraṇaviśuddhe svāhā /</p>
+
+<p>etena mantreṇa durgatipariśodhanamaṇḍalaṃ pariniṣpannaṃ bhavati / tato vajrāṅkuśādyair ākṛṣya praveśya baddhvā vaśīkṛtyākāśamaṇḍalapūjāṃ kṛtvā hṛdayamaṇḍale niveśayet / dvayamaṇḍalenaikamaṇḍalaṃ bhavatīti / niṣpannayogo bhūtvā samayamaṇḍalaṃ devatāparipūrṇaṃ bhavati / tatra maṇḍalamadhye cakravartirūpam ātmabhāvaṃ śākyasiṃhaṃ vibhāvayet / tataḥ śākyamuner hṛdyakāreṇa candramaṇḍalaṃ bhāvayet / candramaṇḍalamadhye /</p>
+
+<note><hi rend="bold">Sdp 150</hi></note>
+<p>oṃ mune mune mahāmunaye svāhā /</p>
+
+<p>tato vajrahetukarmamudrayā maṇḍalaṃ nirmāya /</p>
+
+<p>oṃ sarvavid vajracakra huṃ / iti /</p>
+
+<p>sattvavajrīṃ baddhvaiva madhyāṅgulidvayena mālām ādāya manasā praviśet / samaye huṃ ity anena tāṃ ca mālāṃ svaśirasi kṣipet / anena praticcha vajra hoḥ / iti / tataḥ svaśirasi bandhed anena /</p>
+
+<p>oṃ pratigṛhṇa tvam imāṃ sattva mahābaleti //</p>
+
+<p>mukhabandhaṃ cānena muñcet /</p>
+
+<p>oṃ vajrasattvaḥ svayaṃ te 'dya cakṣūdghāṭanatatparaḥ //</p>
+
+<p>udghāṭayati sarvākṣo vajracakṣur anuttaram // iti /</p>
+
+<p>he vajra paśya / iti /</p>
+
+<p>tato mahāmaṇḍale tāvat paśyed yāvad bhagavantaṃ śākyamuniṃ / punaḥ sattvavajrīṃ baddhvā hṛdaye muñcet / vajrādhiṣṭitakalaśād udakābhiṣekaṃ vajramuṣṭyā dadyāt /</p>
+
+<p>oṃ sarvavid vajrābhiṣiñca mām / iti /</p>
+
+<p>punar vajradhātvīśvaryādimudrayābhimu drayet /</p>
+
+<p>oṃ sarvavid vajradhātvīśvari huṃ abhiṣiñca mām /
+oṃ sarvavid vajravajriṇi huṃ abhiṣiñca mām /
+oṃ sarvavid ratnavajriṇi huṃ abhiṣiñca mām /
+oṃ sarvavid dharmavajriṇi huṃ abhiṣiñca mām /
+oṃ sarvavit karmavajriṇi huṃ abhiṣiñca mām /
+oṃ ṭūṃ ṭūṃ ṭūṃ vajra tuṣya hoḥ /</p>
+
+<p>dvyakṣarakavacena kavacayitvā / tataḥ svavajrābhiṣekaṃ gṛhṇīyāt / adyābhiṣiktas tvam asi buddhair vajrābhiṣekataḥ //</p>
+
+<p>idaṃ tat sarvabuddhatvaṃ gṛhṇa vajrasusiddhaye //</p>
+
+<p>oṃ vajrādhipati tvām abhiṣiñcāmi tiṣṭha vajrasamayas tvaṃ vajranāmābhiṣekataḥ /</p>
+
+<p>oṃ vajrasattva tvām abhiṣiñcāmi /</p>
+
+<p>idaṃ tat sarvabuddhatvaṃ vajrasattvakare sthitam //</p>
+
+<p>tvayāpi hi sadā dhāryaṃ vajrapāṇidṛḍhavratam //</p>
+
+<p>oṃ sarvatathāgatasiddhivajrasamaya tiṣṭhaiṣa tvāṃ dhārayāmi vajrasattva hi hi hi hi huṃ / iti /</p>
+
+<p>oṃ sarvavid vajrādhiṣṭhānasamaye huṃ / ātmādhiṣṭhānamantraḥ /</p>
+
+<note><hi rend="bold">Sdp 152</hi></note>
+<p>vajramuṣṭidvayaṃ baddhvāṅguṣṭhamadhyamākaniṣṭhordhvaṃ sthitvā mukhe śliṣyet tarjanyanāmikāsattvaparyaṅkaṃ kṛtvā / vajramudrā / hṛtkaṇṭhalalāṭa ūrṇābhrūmadhye nāsikākarṇakaṭijānupādadvaye jaṃghāyāṃ cakṣurdvaye guhye 'dhiṣṭhāṇaṃ tu kārayet /</p>
+
+<p>tataḥ svakāyasamaya akāreṇa candramaṇḍalam / sarvabījasamutpannacihnāhaṃkāraṃ mantram udvahan /
+oṃ sarvavid jaḥ huṃ vaṃ hoḥ samayas tvaṃ samaya hoḥ /
+oṃ mune mune mahāmunaye svāhā / trir uccārayet sāmānyam api /
+tataḥ svakāye vajrasamājamudrāṃ baddhvā /</p>
+
+<lg>
+<l>jaḥ huṃ vaṃ hoḥ pravartayet /</l>
+<l>yathāsthāneṣv ākṛṣya praveśya baddhvā vaśīkuryāt /</l>
+<l>svahṛdi huṃkārayogena pañcasūcikavajram //</l>
+</lg>
+
+<p>samayaṃ tu pravakṣyāmi śākyasiṃhasya mudrayā //</p>
+
+<p>samādhyagrasthito madhye mudrāsamaya ucyate //</p>
+
+<p>vajrabandhaṃ dṛḍhīkṛtya madhyamā mukhasaṃhitā //</p>
+
+<lg>
+<l>vajroṣṇīṣamudrā /</l>
+<l>saiva madhyamā ratnaṃ tu padmākāraṃ tu madhyamā //</l>
+</lg>
+
+<p>saiva madhyamā vajraṃ tu śeṣā jvālāṃgulīkṛtā //</p>
+
+<p>saivāṃgulī jvālākṛtā teja uṣṇīṣamudrayā //</p>
+
+<p>saiva tu samānāmikā kaniṣṭhādvayam utsṛjet //</p>
+
+<p>tarjanī padmapattraṃ tu madhyamā vajraṃ utthitā //</p>
+
+<p>saiva purataḥ sthitvā vajrapañjarakārakā //</p>
+
+<p>hṛdaye tu samāṃguṣṭhā suprasāritamālinī //</p>
+
+<p>añjalyagramukhoddhāntā nṛtyato mūrdhni saṃpuṭā //</p>
+
+<p>vajrabandhaṃ tv adhodānāt svāñjalisthordhvadāyikā //</p>
+
+<p>samāṃguṣṭhanipīḍā ca suprasāritalepanā //</p>
+
+<p>vajramuṣṭidvayaṃ baddhvā tarjanyaṃguṣṭhamadhyamāḥ //</p>
+
+<p>pratyekam apy anyonyam abhimukhaṃ dhārayet //</p>
+
+<p>ekatarjanīṃ saṃkucya dvyaṃguṣṭhau granthiṃ bandhitau //</p>
+
+<p>aṃguṣṭhāgrakaṭibandhā vajramuṣṭyagrasaṃhitā // iti /
+dharmamudrāṃ bhāvayet kaṇṭhe padmendumaṇḍale //</p>
+
+<p>pūrvam utsargamantreṇa dharmamudrā vidhīyate //</p>
+
+<p>karmamudrā hṛdaye viśvavajram //</p>
+
+<note><hi rend="bold">Sdp 154</hi></note>
+<p>dharmacakraṃ yathoktasya śākyarājasya mudrayā //</p>
+
+<p>bhūsparśavaradadhyānam abhayādyā yathākramam //</p>
+
+<p>tejoṣṇīṣasya mudrayā samādhyagrāvasthitā //</p>
+
+<p>dakṣiṇabāhudaṇḍā ca hṛdvāmakhaḍgadhāriṇī //</p>
+
+<p>vāmatarjanīm utsṛjya dakṣiṇena prasārayet //</p>
+
+<p>dvayahastena saṃmīlya chatrākāreṇa dhārayet //</p>
+
+<p>karmamudrāvidhir yena navasaṃbuddhatāyinām //</p>
+
+<p>vajragarvaprayogeṇa named āśayakampitaiḥ //</p>
+
+<p>mālābandhā mukhoddhāntā nṛtyataḥ parivartitā //</p>
+
+<p>vajramuṣṭiprayogeṇa dadyād dhūpādayas tathā //</p>
+
+<p>tarjanyaṃkuśabandhena kaniṣṭhāyāṃ mahāṃkuśī //</p>
+
+<p>bāhugranthikaṭāgrābhyāṃ pṛṣṭhayoś ca nipīḍayet //</p>
+
+<p>athātaḥ saṃpravakṣāmi bodhisattvamahātmanām //</p>
+
+<p>karmamudrāprabandhena yathānukramalakṣaṇam //</p>
+
+<p>vajramuṣṭidvayaṃ baddhvānyonyaṃ sahani mīlayet //</p>
+
+<p>tarjanīmadhyamākuñcya puṣpākāreṇa dhārayet //</p>
+
+<lg>
+<l>maitreyasya mudrā /</l>
+<l>vāmamuṣṭiṃ kaṭau nyasya dakṣiṇaṃ bāhupārśvataḥ //</l>
+</lg>
+
+<p>tarjanīmadhyamotsṛjya netrākāreṇa dhārayet //</p>
+
+<lg>
+<l>amoghadarśinaḥ /</l>
+<l>vajramuṣṭidvayaṃ baddhvā tarjanīs saṃprasārayet //</l>
+</lg>
+
+<p>savyenāṃkuśaṃ saṃdhārya sarvāpāyajahasya ca //</p>
+
+<p>vāmamuṣṭiṃ kaṭiṃ nyasya dakṣiṇadaṇḍam ākṛtiḥ //</p>
+
+<p>dhārayed ūrdhvataś caiva sarvaśokatamasya ca //</p>
+
+<p>vāme nābhasthitā muṣṭir gajapuṣkaram ākṛtiḥ //</p>
+
+<p>dhārayed dakṣiṇe haste gandhahastino mudrayā //</p>
+
+<p>vāmamuṣṭiṃ kaṭiṃ nyasya dakṣiṇe khaḍgakārataḥ //</p>
+
+<lg>
+<l>śūraṃgamasya /</l>
+<l>vāmamuṣṭiṃ hṛdi dhārya dakṣiṇaṃ ūrdhvaṃ bhrāmayet //</l>
+</lg>
+
+<lg>
+<l>gaganagañjasya /</l>
+<l>vajramuṣṭidvayaṃ baddhvā dakṣiṇena tu dhārayet //</l>
+</lg>
+
+<p>dhvajagṛhitākāreṇa jñānaketoś ca mudrayā //</p>
+
+<p>dvayahastena saṃdhārya kalaśākāreṇa dhārayet //</p>
+
+<p>amṛtaprabhasya /
+<note><hi rend="bold">Sdp 156</hi></note>
+vāmamuṣṭim urau sthitvā dakṣiṇamuṣṭiṃ pārśvataḥ //</p>
+
+<p>prasārya kaniṣṭhāṃguṣṭhau candrarekhā tu ākṛtiḥ //</p>
+
+<lg>
+<l>candraprabhasya /</l>
+<l>dvayahastaṃ hṛdi deśe padmākāraṃ vikāsayet //</l>
+</lg>
+
+<p>anyonyaṃ mukham āsajya bhadrapālasya mudrayā //</p>
+
+<p>vajramuṣṭidvayaṃ baddhvā kavacākāreṇa dhārayet //</p>
+
+<p>stanadvaye ca saṃdhārya jālinīprabhamudrayā //</p>
+
+<p>vāmamuṣṭiḥ kaṭiṃ nyasto dakṣiṇahṛdayasthitaḥ //</p>
+
+<p>madhyamāṃgulim utsṛjya vajragarbhasya mudrayā //</p>
+
+<p>vāmamuṣṭir hṛdi nyasto varadākāraṃ dakṣiṇe //</p>
+
+<lg>
+<l>akṣayamater mudrā /</l>
+<l>vāme nābhasthitā muṣṭir dakṣiṇe choṭikāṃ dadan //</l>
+</lg>
+
+<lg>
+<l>pratibhānakūṭasya /</l>
+<l>vāmamuṣṭiṃ kaṭiṃ dhārya dakṣiṇaratnamuṣṭikā //</l>
+</lg>
+
+<lg>
+<l>samantabhadrasya /</l>
+<l>cihnarahitena vidhinā karmamudrā coktitā //</l>
+</lg>
+
+<p>hṛdaye vajraṃ saṃdhārya pañcasūcikarūpiṇam //</p>
+
+<p>utsargeṣu yathādhārya mudrāsāyudhadhāriṇāṃ //</p>
+
+<p>vajraghaṇṭādharo bhūtvā hṛdaye vajraṃ dhārayet //</p>
+
+<p>mahāmudreti boddhavyā bodhisattvamahātmanām //</p>
+
+<p>utsargeṣu yathāgṛhya mudrāpraharaṇadhāriṇām //</p>
+
+<p>yāṃ yāṃ mudrāṃ tu badhnīyād yasya yasya mahātmanaḥ //</p>
+
+<p>japan tu hṛdayārthena bhāvayet tu svam ātmānam //</p>
+
+<p>caturmudrā vidhātavyā devatāsarvamudritum //</p>
+
+<p>sarvajñaguṇasaṃpannāḥ sarvasattvārthakāraṇāt //</p>
+
+<p>sarvadurgatiṃ saṃśodhya sattvānāṃ bodhiḥ prāpyate //</p>
+
+<p>atha mantraṃ pravakṣāmi sarvadurgatimaṇḍale //</p>
+
+<p>mudrāmantraprayogeṇa sarvakāryakṣamo bhavet //</p>
+
+<p>pratiprativajranṛtyaṃ kṛtvā mantraiś codāhṛtam //</p>
+
+<p>oṃ namaḥ sarvadurgatipariśodhanarājāya //</p>
+
+<p>tathāgatāyārhate samyaksaṃbuddhāya tadyathā //</p>
+
+<p>oṃ śodhane śodhane sarvapāpaviśodhane śuddhe //</p>
+
+<p>viśuddhe sarvakarmāvaraṇaviśuddhe svāhā //</p>
+
+<note><hi rend="bold">Sdp 158</hi></note>
+<p>vāmavajramuṣṭyā vajraghaṇṭām ādāya dakṣiṇahastena vajraṃsagarvam ullalayan evaṃ vadet / vajravācāṭakki huṃ jaḥ jaḥ jaḥ / svahṛdy utkarṣaṇayogena dhārayet / ṭakki jaḥ hoḥ iti vadet /</p>
+
+<p>tadanuśatākṣareṇadṛḍhīkṛtya / etena daśabhūmīśvarabodhisattvasadṛśo bhavati / tān dṛṣṭvā sarvapūjāṃ prapūjayet /</p>
+
+<lg>
+<l>tataḥ tābhiḥ sarvābhiḥ stutibhiḥ saṃpūjayet /</l>
+<l>namas te śākyasiṃhāya dharmacakrapravartakaḥ //</l>
+</lg>
+
+<p>traidhātukaṃ jagatsarvaṃ śodhayet sarvadurgatim //</p>
+
+<p>namas te vajroṣṇīṣāya dharmadhātusvabhāvataḥ //</p>
+
+<p>sarvasattvahitārthāya ātmatattvapradarśakaḥ //</p>
+
+<p>namas te ratnoṣṇīṣāya samatātattvabhāvanaiḥ //</p>
+
+<p>traidhātukaṃ sthitaṃ sarvam abhiṣekapradāyakaḥ //</p>
+
+<p>namas te padmoṣṇīṣāya svabhāvapratyavekṣakaḥ //</p>
+
+<p>āśvāsayati sattveṣu dharmāmṛtapravarṣaṇaiḥ //</p>
+
+<p>namas te viśvoṣṇīṣāya svabhāvakṛtyānuṣṭhitaḥ //</p>
+
+<p>viśvakarmakaro hy eṣāṃ sattvānāṃ duḥkhaśāntaye //</p>
+
+<p>namas te tejoṣṇīṣāya traidhātukam avabhāsayet //</p>
+
+<p>sarvasattveṣv apāyeṣu satyadṛṣṭvā kariṣyati //</p>
+
+<p>namas te dhvajoṣṇīṣāya cintāmaṇidhvajadharaḥ //</p>
+
+<p>dānena sarvasattvānāṃ sarvāśā paripūrayet //</p>
+
+<p>namas te tīkṣṇoṣṇīṣāya kleśopakleśachedakaḥ //</p>
+
+<p>caturmārabalabhagnaṃ sattvānāṃ bodhiḥ prāpyate //</p>
+
+<p>namas te chatroṣṇīṣāya sitātapatraśobhanam //</p>
+
+<p>traidhātukaṃ jagatsarvaṃ dharmarājatvaṃ prāpyate //</p>
+
+<note><hi rend="bold">Sdp 160</hi></note>
+<p>lāsyā mālā tathā gītā nṛtyā devyaś catuṣṭayāḥ //</p>
+
+<p>puṣpā dhūpā ca dīpā ca gandhā devī namo 'stu te //</p>
+
+<p>dvāramadhye sthitā āveśo 'ṃkuśaḥ pāśas sphoṭakaḥ //</p>
+
+<p>śraddhādyabhāvanirjātā dvārapālā namo'stu te //</p>
+
+<p>vedikādau sthitā ye ca catvaradvārapārśvataḥ //</p>
+
+<p>muditādau daśe sthitvā bodhisattvā namo 'stu te //</p>
+
+<p>brahmendrau rudracandrādyair lokapālacaturdiśam //</p>
+
+<p>agnirākṣasavāyuś ca bhūtādhipa namo 'stu te //</p>
+
+<p>anena stotrarājena saṃstutya maṇḍalāgrataḥ //</p>
+
+<p>vajraghaṇṭādharo mantrī idaṃ stotram udāharet //</p>
+
+<p>paścād ātmadeheṣu ātmamaṇḍalaṃ kalpayet //</p>
+
+<p>evaṃ bhāvayamānāṃ vai maṇḍalam ādiyogataḥ //</p>
+
+<p>ādiyoganāmasamādhiḥ /
+tato maṇḍalarājāgrīnāma pravakṣyāmi /
+oṃ akāro mukhaṃ sarvadharmāṇām ādyanutpannatvāt / tadarthādhimokṣato daśadikṣarvalokadhātuṣoḍaśaśūnyatām adhimucya śūnyatāhaṃkāram ātmānaṃ paśyet /</p>
+
+<p>tato huṃkāreṇa niṣpannavajreṇa vāyumaṇḍalaṃ tasyopari raṃkāreṇāgnimaṇḍalaṃ tasyopari vaṃkāreṇa mahodadhiṃ tasyopari kaṃkāreṇa kāñcanamaṇḍalaṃ tadmadhye huṃ suṃ huṃ iti / tena sumeruṃ caturasraṃ ratnamayaṃ sarvaratnavibhūṣitaṃ niṣpādya / oṃ vajra dṛḍhetyādinā vajrabandhenādhitiṣṭhet / tasyopari vajrahetukarmamudrayā bhūṃkārasitaniṣpannavajramaṇiratnaśikharakūṭāgāram /</p>
+
+<p>caturasraṃ caturdvāraṃ catustoraṇabhūsitam //</p>
+
+<p>catuṣkoṇeṣu sarveṣu dvāraniryūhasaṃdhiṣu //</p>
+
+<p>candrārkavajracihnitaṃ hārārdhahāraracitam //</p>
+
+<p>catussūtrasamāyuktaṃ paṭasragdāmabhūṣitam //</p>
+
+<p>abhyantaramaṇḍalam aṣṭāracakraṃ vajrāvalīparivṛtam / tasya nābhopari siṃhāsanaṃ tasyopari candramaṇḍalaṃ / cakrāṣṭāramadhyeṣu candramaṇḍalaṃ devatāsthānam / (<hi rend="bold">Sdp 162</hi>)
+bāhyamaṇḍalasya devatāsthānaṃ paṭikāyām aṣṭāviṃśaticandramaṇḍalaṃ paśyet / siṃhāsanopari candramaṇḍale / akārādikakārādyakṣaraprajñopāyasvarūpaṃ dravībhūtam ākāśaspharaṇaka samādhisamāpannaṃ bodhicittasvarūpeṇa sattvārthahetusaṃpannamantrarūpaṃ bhavati /</p>
+
+<p>oṃ mune mune mahāmunaye svāhā /</p>
+
+<p>anena mantreṇa śrīśākyasiṃharājaniṣpanno bhavati / sarvanīvāraṇaṃ nāma samādhisamāpannaḥ /
+tatas samādhisamāpanno buddho bhagavān tasya mudrāmantraṃ udāharet /</p>
+
+<p>vajramuṣṭidvayaṃ baddhvā paripāṭyā vikāsayet //</p>
+
+<p>mudreyaṃ dharmacakrasya sarvasaṃsārachedanī //</p>
+
+<p>tadyatheti dṛṣṭāntaḥ /</p>
+
+<p>yathā padmeṣu āsaktā bhramarādyā vibandhitāḥ //</p>
+
+<p>tathā padmavikāsena vibandhā duḥkhamocitāḥ //</p>
+
+<p>tathaiva duḥkhasaṃsāre vibandhās tnbhave gatau //</p>
+
+<p>evaṃ vibandhā mucyante śākyasiṃhakṛpātmanaḥ //</p>
+
+<p>tataś śākyamuner hṛdaye 'kāreṇa candramaṇḍalam / tataś candramaṇḍale sarvāsāṃ mantrāṇi niṣpādyante / vajroṣṇīṣam ārabhya yāvad vajrāveśaparyantaṃ bhāvayet / tato mantrāṇi bhavanti /</p>
+
+<p>oṃ namas sarvadurgatipariśodhanarājāya tathāgatāyārhate samyaksaṃbuddhāya / tadyathā /</p>
+
+<p>oṃ śodhane śodhane sarvapāpaviśodhane śuddhe viśuddhe sarvakarmāvaraṇaviśuddhe svāhā / idaṃ mantram udāharet /</p>
+
+<note><hi rend="bold">Sdp 164</hi></note>
+<lg>
+<l>athātaḥ saṃpravakṣāmi paripāṭyā yathākramam /</l>
+<l>oṃ vajra huṃ phaṭ /</l>
+<l>niścārya mukhadvāreṇa nirgatya pañcaraśmikaṃ //</l>
+</lg>
+
+<p>samantato daśasu dikṣv avabhāsya sarvasattvānām //</p>
+
+<p>duḥkhasyāntaṃ kariṣyati punar āgatya raśmīnām //</p>
+
+<p>praviśya hṛdaye tataḥ //</p>
+
+<p>mantraraśmidvayaṃ mīlya niṣpannarūpasaṃbhavam //</p>
+
+<p>abhyantaramaṇḍalasya cakrāre pūrvadiśi padmacandrasthaḥ //</p>
+
+<p>vajroṣṇīṣas tathāgato hṛdayād avatīrya niṣīdeta //</p>
+
+<p>hitārthataḥ /</p>
+
+<p>śuklavarṇaprabhādivyo mudrābhūsparśasaṃsthitaḥ //</p>
+
+<p>evaṃ raśmispharaṇasaṃhārapūrvoktena sarvaśaḥ //</p>
+
+<p>spharaṇasaṃhārayogena mantraraśminimilanam //</p>
+
+<p>bimbaniṣpattisaṃpūrṇahṛdayād avatīrya ca //</p>
+
+<p>niṣīdeta yathāsthāne dakṣiṇāreṣu susthitaḥ //</p>
+
+<p>oṃ ratnottama traṃ utsṛjet /</p>
+
+<p>padmasthacandramadhyeṣu ratnoṣṇīṣas tathāgataḥ //</p>
+
+<p>avatīrya hṛdayād buddhalakṣaṇaiḥ samalaṃkṛtaḥ //</p>
+
+<p>nīlavarṇasvabhāvaṃ tu mudreyaṃ varadasya tu //</p>
+
+<p>traidhātukam aśeṣaṃ tu sarvasattvābhiṣekadaḥ //</p>
+
+<p>pūrvavat spharaṇasaṃhāraṃ bimbotpattikrameṇa ca //</p>
+
+<p>oṃ padmottama hrīḥ utsṛjet /</p>
+
+<p>tataḥ paścimārasthapadmopari candramaṇḍale //</p>
+
+<p>raśmibījena niṣpannaḥ padmoṣṇīṣas tathāgataḥ //</p>
+
+<p>hṛdayād nirgato bhūtvā niṣīded anuśāsakaḥ //</p>
+
+<p>padmarāgaprabhādivyo dhyānamudrāvyavasthitaḥ //</p>
+
+<p>oṃ viśvottama aḥ utsṛjet /</p>
+
+<p>uttare cakra ārasthapadmoparīndumaṇḍale //</p>
+
+<p>avatīrya hṛdayād buddho viśvoṣṇīṣas tathāgataḥ //</p>
+
+<p>haritavarṇaprabhājvālyo mudrā cāsyābhayapradaḥ //</p>
+
+<p>viśvakarmakaro buddhaḥ sattvān saṃsārād uttaret //</p>
+
+<note><hi rend="bold">Sdp 166</hi></note>
+<p>oṃkārenotsṛjed buddhas tejoṣṇīṣas tathāgataḥ //</p>
+
+<p>āgneyāre sthitaḥ samyak padmasthacandramaṇḍale //</p>
+
+<p>savyena sūryaṃ saṃgṛhya vāmahaste kaṭisthitaḥ //</p>
+
+<p>śitaraktakavarṇābhas traidhātukam ābhāsayet //</p>
+
+<p>huṃkārabījasaṃjāto dhvajoṣṇīṣas tathāgataḥ //</p>
+
+<p>utsṛjed hṛdayātīrṇo nairṛtyāre niṣaṇṇakaḥ //</p>
+
+<p>padmasthacandrabimbe ca raktakṛṣṇakavarṇikaḥ //</p>
+
+<p>cintāmaṇidhvajaṃ dhārya sattvamātsaryaśodhakaḥ //</p>
+
+<p>dhīḥkārabījaniṣpannas tīkṣṇoṣṇīṣas tathāgataḥ //</p>
+
+<p>kleśopakleśān saṃchedya vāyavyāre ca utsṛjet //</p>
+
+<p>padmacandre niṣīdeś ca mudrāsya khaḍgadakṣiṇaḥ //</p>
+
+<p>gaganavarṇanibhakāyo vāme pustakadhāriṇaḥ //</p>
+
+<p>krīṃkārabījanirjātaś chatroṣṇīṣas tathāgataḥ //</p>
+
+<p>dharmasvāmī ca sattvānām īśānāre ca utsṛjet //</p>
+
+<p>kundenduvarṇasannibho mudreyaṃ chatradhāriṇaḥ //</p>
+
+<p>sarve te viśvapadmasthā niṣanṇāś candramaṇḍale //</p>
+
+<p>huṃ trāṃ hrīḥ aḥ /</p>
+
+<p>tena mantreṇa uccārya hṛdayād utsṛjanti ca //</p>
+
+<p>caturṣu koṇasthāneṣu padmasthacandramaṇḍale //</p>
+
+<p>lāsyādidevyaś catasraḥ kulavarṇakadhāriṇyaḥ //</p>
+
+<p>sitaṃ pītaṃ raktaṃ viśvavarṇakam //</p>
+
+<p>teṣāṃ mudrā vidhīyate yathoktitam //</p>
+
+<p>tenaiva mantram uccārya utsṛjed hṛdayād api //</p>
+
+<p>dhūpādidevyaś catasraḥ padmasthacandramaṇḍale //</p>
+
+<p>caturṣu koṇasarveṣu varṇakulakrameṇa tu //</p>
+
+<p>oṃ sarvasaṃskārapariśuddhe dharmate gaganasamudgate svabhāvaviśuddhe mahānayaparivāre svāhā /</p>
+
+<p>mantreṇa utsṛjet pūrvadvārapārśvadvaye sthitāḥ //</p>
+
+<p>maitreyādicatuṣkasya padmasthacandramaṇḍale //</p>
+
+<p>sattvaparyaṃkinaḥ sarve mudrāvarṇakramena tu //</p>
+
+<p>pītavarṇaprabhādivyo nāgapuṣpakadakṣiṇe //</p>
+
+<p>vāmena kuṇḍikāṃ gṛhya maitrīcittaviśuddhitaḥ //</p>
+
+<p>dvitīyo 'moghadarśī tu pītavarṇaprabhojvalaḥ //</p>
+
+<p>vāmahastakaṭinyasto dakṣiṇapadmanetrakaḥ //</p>
+
+<note><hi rend="bold">Sdp 168</hi></note>
+<p>tṛtīyo bodhisattvaś ca nāmnāpāyajahasya ca //</p>
+
+<p>śvetavarṇaprabhājvālo mudrā aṃkuśadhāriṇaḥ //</p>
+
+<p>caturthaḥ sarvaśokatamanirghātanamatis tathā //</p>
+
+<p>sitapītamiśravarṇābho mudrā daṇḍadhāriṇaḥ //</p>
+
+<p>vāmamuṣṭikaṭinyastaḥ sattvaparyaṃkinā sthitaḥ //</p>
+
+<p>catvāro bodhisattvāś ca dakṣiṇadvāre pratiṣṭhitāḥ //</p>
+
+<p>prathamo gandhahastī ca sitaśyāmaś ca varṇakaḥ //</p>
+
+<p>mudreyaṃ dakṣiṇahaste gandhaśaṃkhaṃ prapūritam //</p>
+
+<p>vāmahastakaṭinyastaḥ sarvāvaraṇaśodhanaḥ //</p>
+
+<p>dvitīyo śūraṃgamo nāma sarvakleśapramocakaḥ //</p>
+
+<p>sphaṭikavarṇaprabhādivyo mudreyaṃ khaḍgadhāriṇaḥ //</p>
+
+<p>vāmahastakaṭinyastaḥ sattvānāṃ duḥkhaśantakaḥ //</p>
+
+<p>tṛtīyaḥ gaganagañjaḥ sarvābharaṇabhūṣitaḥ //</p>
+
+<p>sitapītamiśravarṇābhaḥ sarvāvaraṇavarjitaḥ //</p>
+
+<p>mudreyaṃ dakṣiṇahaste padmasthadharmagañjataḥ //</p>
+
+<p>vāmahastakaṭinyastaḥ sarvākāśadhanadharaḥ //</p>
+
+<p>caturtho jñānaketuś ca sarvāśāparipūrakaḥ //</p>
+
+<p>nīlavarṇakasaṃkāśaś cintāmaṇidhvajadharaḥ //</p>
+
+<p>vāmamuṣṭikaṭinyastaḥ dāridraduḥkhamocakaḥ //</p>
+
+<p>paścimadvāra āsīnaḥ padmasthacandramaṇḍale //</p>
+
+<p>prathamam amṛtaprabhaś candravarṇavirājitaḥ //</p>
+
+<p>amṛtakalaśaṃ saṃdhārya mukuṭaṃ ratnapāṇinā //</p>
+
+<p>vāmamuṣṭikaṭinyasto vistīrṇam āyurdāyakaḥ //</p>
+
+<p>dvitīyaś candraprabho nāmājñānatamadhvaṃsakaḥ //</p>
+
+<p>śuklavarṇatanudivyo mudrā dakṣiṇapāṇinā //</p>
+
+<p>padmasthacandrabimbaṃ tu vāmamuṣṭikaṭisthitaḥ //</p>
+
+<note><hi rend="bold">Sdp 170</hi></note>
+<p>tṛtīyo bhadrapāleti sitaraktaṃ tu varṇikaḥ //</p>
+
+<p>sarvadharmaprakāśako mudrā dakṣiṇapāṇinā //</p>
+
+<p>jvalitaratnaṃ saṃdhārya vāmamuṣṭikaṭisthitaḥ //</p>
+
+<p>caturtho bodhisattvaś ca jālinīprabhasaṃjñitaḥ //</p>
+
+<p>raktavarṇaprabhādivyo vajrapañjaradhāriṇaḥ //</p>
+
+<p>prathamabuddhaputras tu vajragarbhetināmataḥ //</p>
+
+<p>sitanīlavarṇasaṃyukto mudrā dakṣiṇapāṇinā //</p>
+
+<p>utpalaṃ vajrasaṃyuktaṃ vāmamuṣṭikaṭisthitaḥ //</p>
+
+<p>dvitīyo akṣayo nāma matir anteṣu saṃsthitaḥ //</p>
+
+<p>kundenduvarṇasaṃkāśo mudrāhastadvayena tu //</p>
+
+<p>jñānakalaśaṃ saṃdhārya sarvasattvān prapīnayet //</p>
+
+<p>tṛtīyo buddhaputraś ca pratibhākūṭasaṃjñitaḥ //</p>
+
+<p>raktavarṇaprabhājvālo mudrā dakṣiṇapāṇinā //</p>
+
+<p>padmastharatnakūṭaṃ tu vāmamuṣṭikaṭisthitaḥ //</p>
+
+<p>caturtho bodhisattvaś ca samantabhadranāmataḥ //</p>
+
+<p>suvarṇavarṇasaṃkāśo mudrā dakṣiṇapāṇinā //</p>
+
+<p>ratnamañjarikādivyaṃ vāmamuṣṭikaṭisthitaḥ //</p>
+
+<p>evaṃ rūpeṇa saṃyuktā bodhisattvakṛpātmanaḥ //</p>
+
+<p>maṇḍalarājāgrī nāmasamādhiḥ /
+<note><hi rend="bold">Sdp 172</hi></note>
+oṃ mune mune mahāmunaye svāhā /
+oṃ namas sarvadurgatipariśodhanarājāya tathāgatāyārhate samyaksaṃbuddhāya l tadyathā /</p>
+
+<p>oṃ śodhane śodhane sarvapāpaviśodhane śuddhe viśuddhe sarvakarmāvaraṇaviśuddhe svāhā /</p>
+
+<p>anena mantreṇa śrīśākyasiṃharājapramukhasaptatriṃśaddevatāparipūrṇaṃ bhāvayet / tataḥ paścād jñānamaṇḍalam ākarṣayet /</p>
+
+<p>dvārodghāṭanaṃ kṛtvā mantramudrāsamāyutaḥ //</p>
+
+<p>vajramuṣṭidvayaṃ baddhvā tarjanī dve prasārayet //</p>
+
+<p>kaniṣṭhāṃ śṛṃkhalīkṛtya dvārodghāṭanamudrayā //</p>
+
+<p>oṃ sarvavid dvāram udghāṭaya huṃ /</p>
+
+<p>dvārodghāṭanamantramudrayā dvāram udghāṭayet /
+vajracakramudrayā maṇḍalaṃ parikalpayet /</p>
+
+<p>oṃ sarvavid vajracakre huṃ /</p>
+
+<p>bāhubhyāṃ vajrabandhena vajrachaṭakavimokṣaṇe //</p>
+
+<p>śrīśākyarājayogātmā sarvabuddhān samājayet //</p>
+
+<p>vāme chaṭakatālena samatālena siddhyati //</p>
+
+<p>dakṣiṇena tu tāloktaṃ saṃnipātāv ubhāv api //</p>
+
+<p>oṃ vajrasamāja jaḥ huṃ vaṃ hoḥ /</p>
+
+<p>asyā ājñāyā mātreṇa saparṣaccakrasaṃcayaḥ //</p>
+
+<p>sarvabuddhāḥ samāyānti kā kathānyeṣu varttate //</p>
+
+<p>tato 'grata ākāśadeśe maṇḍalacakraṃ dṛṣṭvā vajrayakṣamantreṇa / japtārghabhājane sthitagandhavāriṇā saṃprokṣyācamanaṃ dadyāt / tato 'rghamudrayārghaṃ dadyāt / tataḥ pādyamudrayā pādyaṃ dadyāt / tataḥ /</p>
+
+<p>vajrapuṣpe huṃ / vajradhūpe huṃ / vajradīpe huṃ / vajragandhe huṃ /</p>
+
+<p>vajrayakṣamantreṇa vighnān utsārya maṇḍaleṣu praveśayet /
+<note><hi rend="bold">Sdp 174</hi></note>
+tataś caturmudrāḥ /</p>
+
+<p>prathamaṃ pūrvoktavidhimudrayā samayamudrā nibandhayet / tataḥ pūrvoktamantreṇa dharmamudrā vidhīyate / tataḥ karmamudrāmantreṇa karmamudrāṃ badhmyāt / tato mahāmudrāmantreṇa mahāmudrāṃ badhnīyāt /</p>
+
+<p>tato vajroṣṇīṣāditathāgataiḥ sattvavajrīratnavajrīdharmavajrīkarmavajrīṃ sphārayitvā samāṇḍaleyadevatāśrīśākyarājapramukhavajrāveśaparyantam abhiṣekaṃ dadyāt / pañcābhiṣekādhipatMaśaparyantaṃ dadyāt / abhiṣekānantaram /</p>
+
+<p>oṃ sarvatathāgatadhūpapūjāmeghasamudraspharaṇasamaye huṃ /
+oṃ sarvatathāgatapuṣpapūjāmeghasamudraspharaṇasamaye huṃ /
+oṃ sarvatathāgatadīpapūjāmeghasamudraspharaṇasamaye huṃ /
+oṃ sarvatathāgatagandhapūjāmeghasamudraspharaṇasamaye huṃ /
+tato lāsyādicatuṣṭayena pūjayet /
+vajram ullālayan vajravācāśatākṣarapūrvavat stutiṃ kuryāt / tataḥ /</p>
+
+<lg>
+<l>asamācalāsamitasāradharmiṇaḥ /</l>
+<l>karuṇātmakā jagati duḥkhahāriṇaḥ /</l>
+<l>asamantasarvaguṇasiddhidāyinaḥ //</l>
+</lg>
+
+<p>asamācalāsamavarāgradharmiṇaḥ //</p>
+
+<p>gagane samopamagatā na vidhyate //</p>
+
+<p>guṇareṇureṇukaṇikāpy asīmike //</p>
+
+<p>sphuṭasattvadhātuvarasiddhidāyiṣu //</p>
+
+<p>vigatopameṣu asamantasiddhiṣu //</p>
+
+<p>satatāmalā karuṇavegatotthitā //</p>
+
+<p>praṇidhānasiddhir anirodhadharmatā //</p>
+
+<p>jagato 'rthasādhanaparāsamantinī //</p>
+
+<p>satataṃ virocati mahākṛpātmanām //</p>
+
+<p>na nirodhatāṃ karuṇacārikācarā //</p>
+
+<p>vrajate trilokavarasiddhidāyikā //</p>
+
+<p>amitāmiteṣu susamāptitāṃ gatā //</p>
+
+<p>sugatiṃ gateṣv api aho sudharmatā //</p>
+
+<note><hi rend="bold">Sdp 176</hi></note>
+<p>samayāgrasiddhivaradā dadantu me //</p>
+
+<p>varadānatā sugatitāṃ gatā sadā //</p>
+
+<p>sakalatrilokavarasiddhidāyikā //</p>
+
+<p>sugatatriyādhvagatitā anāvṛtā //</p>
+
+<p>sarvatra jihvāśatamukhena stotropahāram adhimucya vajraghaṇṭādharaḥ stutiṃ karyāt /</p>
+
+<p>tato daśasu dikṣu sarvatathāgatabodhisattvebhyo laukikalokottarabāhyadevatābhyaś ca sarvapūjābhir balividhim upakaraṇena sahitaṃ baliṃ dadyāt /</p>
+
+<p>subahupāṭhāṃ paṭhet /</p>
+
+<p>ādau chaṭādiśabdenākarṣayet pāparāśayaḥ //</p>
+
+<p>trilokavijayamudreṇa tryakṣarādisamanvitaṃ //</p>
+
+<p>sarvāpāyasamāpattilokadhātum aśeṣataḥ //</p>
+
+<p>ākarṣaṇam uddharaṇabandhavināśanāni //</p>
+
+<p>catvāri mantrāṇī suyojanāni /</p>
+
+<lg>
+<l>tāḍyādimantraiḥ sitasarṣapatāḍamānaiḥ /</l>
+<l>prakṣālyam asthi sitavastrasahitam //</l>
+</lg>
+
+<p>oṃ śodhana ityādimantreṇa udakena kṣālayet trayabhavanamalaṃ /
+oṃ kaṃkaṇītyādimantreṇa kṣalayet pañcagavyena /
+oṃ ratne ratna ityādimantreṇa kṣālayet sarvagandhataḥ /
+oṃ amoghāvaraṇetyādimantreṇa kṣālayet kṣīragāvitaḥ /
+oṃ amṛte amṛta ityādimantreṇa kṣālayet madyam uttamam /
+oṃ puṇye puṇya ityādimantreṇodakena kṣālayet antarāntataḥ /</p>
+
+<p>punar maṃgalagāthāṃ pāṭhayed abhiṣiñcet / mārgaśodhanaṃ kartavyaṃ / dhūpādideyāś caturvidhamantrāḥ /</p>
+
+<note><hi rend="bold">Sdp 178</hi></note>
+<p>hastamātram idaṃ kuṇḍaṃ kartavyaṃ homayet tataḥ //</p>
+
+<p>anusmṛtya ca taṃ sattvam apāyagatisaṃsthitam //</p>
+
+<p>homayet śubhasaṃtānaḥ pāpāvaraṇaśāntaye //</p>
+
+<p>ghṛtakṣīrasamākṣikair lājāsarṣapamiśritaiḥ //</p>
+
+<p>tilataṇḍulavrīhyādi samidhāsu karadvayam //</p>
+
+<p>anyāny api tu karmāṇi yathā pūrvaṃ tathā kuryāt //</p>
+
+<p>tena saṃpadyate kṣipraṃ sattvānāṃ ca sukhāvaham // iti /</p>
+
+<p>karmarājāgrīnāmasamādhiḥ /</p>
+
+<p>tasmiṃś ca sattve kṛte sati / tatas te nārakaduḥkhād vimuktāḥ santas tuṣiteṣu sarvasattvahitakāriṇaḥ / sugatavad utpannāḥ / tata indreṇa sahitamahāyaśaso devā nṛtyanto 'nantaiḥ pūjāmeghair iha janmani tathāgatapūjārthaṃ puraskṛtya devagaṇā utpātitabodhicittā divyanānāvidhapuṣpadhūpadīpagandhachatradhvajapatākādibhir anekākārābhiś ca śobhitam / vastraratnavarṣādibhiś ca paripūritaṃ kurvanti sma nandanavanam / tato mahāścaryaṃ bhūtam /</p>
+
+<p>II
+atha bhagavān vajrapāṇir bodhisattvo bhagavato 'dhiṣṭhānena mantrakalparājottarakalpam abhāṣata / vīrāsanād utthāya praharṣan vajram ullalayan śākyādhipaṃ nandan munīśvaraṃ praṇamya sarvāvaraṇaviśodhanavajraṃ nāma samādhiṃ samāpadyedaṃ durgatipariśodhanaṃ nāma hṛdayaṃ svahṛdayād niścacāra /</p>
+
+<p>oṃ sarvapāpadahanavajra huṃ phaṭ /
+oṃ sarvāpāyaviśodhanavajra huṃ phaṭ /
+oṃ sarvakarmāvaraṇāni bhasmīkuru huṃ phaṭ /
+oṃ bhruṃ vināśayāvaraṇāni huṃ phaṭ /
+oṃ druṃ viśodhayāvaraṇāni huṃ phaṭ /
+oṃ jvala jvala dhaka dhaka hana hanāvaraṇāni huṃ phaṭ /
+oṃ sruṃ sara sara prasara prasarāvaraṇāni huṃ phaṭ /
+oṃ huṃ hara hara sarvāvaraṇāni huṃ phaṭ /
+oṃ huṃ phaṭ sarvāvaraṇāni sphoṭaya huṃ phaṭ /
+oṃ bhṛta bhṛta sarvāvaraṇāni huṃ phaṭ /
+oṃ traṭa traṭa sarvāvaraṇāni huṃ phaṭ /
+oṃ chinda chinda vidrava vidrava sarvāvaraṇāni huṃ phaṭ /
+oṃ daha daha sarvanarakagatihetuṃ huṃ phaṭ /
+oṃ paca paca sarvapretagatihetuṃ huṃ phaṭ /
+oṃ matha matha sarvatiryaggatihetuṃ huṃ phaṭ /</p>
+
+<p>tatas teṣām upakaraṇāny abhāṣata /</p>
+
+<p>oṃ sarvapāpaviśodhani dhama dhama dhūpaya huṃ phaṭ /
+oṃ sarvadurgativiśodhani puṣpavilokini huṃ phaṭ /
+oṃ sarvāpāyaviśodhani jñānālokakari huṃ phaṭ /
+oṃ sarvāpāyagatināśani gandha huṃ phaṭ /
+oṃ narakagatyākarṣaṇi huṃ phaṭ /
+oṃ sarvanarakagatyuddharaṇi huṃ phaṭ /
+oṃ sarvāpāyabandhanavimocani huṃ phaṭ /
+oṃ sarvāpāyagatigahanavināśani huṃ phaṭ /</p>
+
+<note><hi rend="bold">Sdp 182</hi></note>
+<lg>
+<l>tato maṇḍalam abhāṣata /</l>
+<l>cakrāntaraṃ tu maṇḍalam aṣṭāraiś ca subhūṣitam //</l>
+</lg>
+
+<p>nābhinemikasaṃyuktam abhyantarāvaraṇikam //</p>
+
+<p>saṃlikhya nābhau śākyādhipendramuniṃ saṃlikhet //</p>
+
+<p>tato vīrāgrato likhed vajrapāṇiṃ mahābalam //</p>
+
+<p>pṛṣṭhato 'bhisaṃlikhec cakravartinaṃ ca //</p>
+
+<p>dakṣiṇe jayoṣṇīṣaṃ ca vāmato vijayaṃ likhet //</p>
+
+<p>tejorāśim apy āgneyāṃ sitātapatram aiśānyām //</p>
+
+<p>vikiriṇaṃś caiva vāyavyāṃ nairṛtyāṃ vidhvaṃsakaṃ likhet//</p>
+
+<p>tato bāhyaṃ saṃlikhet /</p>
+
+<p>caturaśraṃ caturdvāraṃ catustoraṇaśobhitam //</p>
+
+<p>vīreṇāṃkuśapāśasphoṭaghaṇṭāḥ sthāpanīyāḥ //</p>
+
+<p>sarvakoneṣu puṣpādayo lekhyāḥ //</p>
+
+<p>tataḥ sraggandhagandhādinā svakāyam anulepayet //</p>
+
+<p>tathaiva vajrācāryaḥ praviśet / jaḥ huṃ vaṃ hoḥ / bhagavan ehi mahākaruṇika dṛśya hoḥ / iti / sarvadevān ākarṣayet / tathaiva praveśyābhiṣiktāḥ sarvadurgatibhyo vimuktāḥ svargalokottarabhūmiṣūdpadyante / sarvasiddhayo 'pi siddhyanti / samyaksaṃbodhiś cāvaśyaṃ prāpyate / pūrvavat sarvakarmāṃ kurvanti / sarvatrāpratihatā bhavanti / unmārjanena sarvajvaragrahādīn mokṣayanti / vajrapāṇir huṃkāreṇa sarvakarmāṇi karoti / anyakalpavidhināpi sarvasādhako bhavati / devanāgayakṣagandharvāsurarākṣasādīnāṃ durgativaśībhūtānāṃ sarvapratibimbādikam abhilikhya japahomābhiṣekaiḥ sarvadurgatibhyo muktir bhavati / atha bhagavān vajradharaḥ siṃhāvalokitena bhagavato mukham avalokya praṇamyaitad avocat / bhagavan paramamudrālakṣaṇam uttamam ābhāṣe karuṇāvedanāvaśagacittena sarvajinā adhiṣṭhānaṃ kurvanti /</p>
+
+<note><hi rend="bold">Sdp 184</hi></note>
+<p>samādhistho lalā@ṭe 'ñjaliṃ kṛtvā praṇamet / buddhānāṃ praṇāmamudrā / yogavit kaṇṭhapradeśe 'ñjaliṃ mukulitapadmākṛtiṃ kuryāt / padmakule padmamudrā / hṛdi vajrāñjaliṃ kṛtvā madhyamāṃgulīsūcīyojayati / vajrakule samayamudrā / vāmahastam uttānam utsaṃge sthāpayitvā tasyopari dakṣiṇaṃ vyavasthāpyāṃguṣṭhadvayaṃ yojayitvā śāntaṃ dṛṣṭvā nirīkṣayet / iyaṃ tathāgatakule samādhimudrā samayaḥ /</p>
+
+<p>tām eva parivartyānyonyaṃ yojayitvā kaniṣṭhāṃguṣṭhakāni śṛṃkhalākārāṇi baddhvā hṛdi sthāpayet / iyaṃ vajrakule samayamudrā / pūrṇāñjaliṃ kṛtvā kanyasāṃguṣṭhau sūciṃ dhārayec cheṣān prasārayet / iyaṃ padmakule padmamudrā /</p>
+
+<p>vajrabandhaṃ dṛḍhīkṛtya madhyamāṃguliṃ vajrasūcīkṛtya kanyasāṃguṣṭhau prasārayet / iyaṃ vajrapāṇer vajramudrā / tasyā eva kaniṣṭhāṃguṣṭhadvayaṃ tathaiva kṛtvā tarjanyanāmike padmapatrākāraiḥ kuryāt / iyaṃ sarvadurgatipariśodhanarājasya sarvaśodhanamudrā / tasyā eva tarjanyanāmike ratnākāraṃ kuryāt / iyam abhiṣekamudrā / kanyasāṃguṣṭhau pṛthak pṛthag yojayitvā śeṣāḥ prasāritāḥ / sarvaprasahanamudrā /</p>
+
+<p>vāmahastas tathaiva parivartitaḥ sarvakarmikamudrā /
+añjaler ūrdhvakṣepād dhūpamudrā /
+tasyā evādhaḥkṣepāt puṣpamudrā /
+saiva śaṃkhākāro gandhamudrā /
+etām eva prasāritāṃ dhārayed balimudrā /
+tasyā eva madhyamādvayād antaram arpaṇamudrā /
+vajrabandhamadhyamādvayaṃ madhye parvabhaṃgaṃ kṛtvā sarvāṃgulīḥ prasārayed vikīriṇamudrā /
+tasyā eva kanyasādvayāṃguṣṭhadvayam ākṛṣṭaṃ vidhvaṃsanamudrā /
+saivāñjaliḥ prabhākāras tejorāśimudrā /
+tām evoṣṇīṣasthāne bhrāmayet sitātapatramudrā /
+vajrabandhe kanyasāṃguṣṭhadvayaṃ śṛṃkhalākāreṇa baddhvordhvaṃ bhrāmayet / cakramudrā /
+<note><hi rend="bold">Sdp 186</hi></note>
+vajrabandhe madhyame vajrākāreṇa tarjanyo ratnākārau kṛtvā śeṣāḥ prabhākārā jayoṣṇīṣamudrā /
+tathaiva tarjanīdvayaṃ vajrīkṛtya śeṣāṃgulyo baddhvā vajrākārāh kuryād vijayāsya /
+dakṣiṇena varadā vāmenābhayadā tathāgatī /
+vajrabandhe tarjanīdvayaṃ vajrākāraṃ kuryād vajramudrā /
+etasyā evāṃguladakṣiṇatarjanyākṛṣṭāṃkuśī /
+saiva ropākārā śaraḥ / saivāgrāṃguṣṭhā sthāpitā sādhumateḥ /
+saiva madhye bhagnā ratnam /
+tasyā evāṃgulayaḥ prabhākārās tejaḥ /
+tām evoṣṇīṣe sthāpayet ketumudrā /
+tām evāgrataḥ sthāpayed vāśamudrā /
+saiva padmākārā padmā /
+saivāgrākṛṣṭā khaḍgaḥ /
+tām eva valayākārāṃ kuryāc cakram /
+tām eva padmapatrākārāṃ jihvā /
+saivāgraprasāritā viśvā /
+saiva suprasāritā rakṣā /
+saivāgrataḥ kuṃcitā yakṣā /
+saivākuṃcitā bandham /
+tasyā eva tarjanīdvayaṃ kuṃcitam aṃkuśam /
+saivāgragrastā pāśaḥ /
+saivānyonyaṃ granthitā sphoṭaḥ /
+tām eva cālayed toṣā /</p>
+
+<p>atha khalu bhagavān vajrapāṇis taṃ śakrabrahmāpramukhaṃ mahāparṣadmaṇḍalam avalokya sādhukāraiḥ saṃtoṣya sādhu sādhu śakrapramukhā devaputrā yad yuṣmākam īdṛśaṃ pratibhānaṃ sajātaṃ tat sādhu pratipadyadhvaṃ deśayāmi /</p>
+
+<note><hi rend="bold">Sdp 188</hi></note>
+<p>atha khalu bhagavān vajrapāṇiḥ sarvāmitāyusspharaṇasaṃbhavavajraṃ nāma samādhiṃ samāpadyāparimitāyuḥpuṇyajñānasaṃbhāravardhanaṃ nāma sarvatathāgatahṛdayaṃ svahṛdayād niścacāra /</p>
+
+<p>oṃ puṇye puṇye mahāpuṇye 'parimitapuṇye 'parimitāyuḥpuṇyajñānasaṃbhāropacayakāriṇi svāhā /</p>
+
+<p>asyāṃ sarvatathāgatahṛdayadhāraṇyāṃ bhāṣitamātrāyāṃ sarvāpāyāḥ praśāntā mocitaś cātmā sarve narakapretatiryaggatipannāḥ sattvāḥ prajānanti /</p>
+
+<p>sarve ca lokadhātavo 'vabhāsitā avabhāsya ca dvādaśakāraṃ buddhakṛtyaṃ kṛtvā tasmin eva sarvatathāgatahṛdayadharmākṣare praviṣṭāny abhūvan /</p>
+
+<p>atha khalu bhagavān punar apy amitāyurvajraprabhākarīṃ nāma samādhiṃ samāpadyemaṃ sarvatathāgatāyurvajraṃ nāma hṛdayadhāraṇīm abhāṣata /</p>
+
+<p>oṃ amṛte 'mṛte 'mṛtodbhave 'mṛtasaṃbhave 'mṛtavikrāntagāmini sarvakleśakṣayaṃkari svāhā /</p>
+
+<p>athāsyāṃ bhāṣitamātrāyāṃ tathaiva sarvasattvānāṃ sarvaduḥkhāni praśāntāni /</p>
+
+<p>atha bhagavān punar apy amoghāvaraṇavināśanīṃ nāma samādhiṃ samāpadyemaṃ sarvatathāgatāvaraṇatroṭanaṃ nāma hṛdayadhāraṇīṃ svahṛdayād niścacāra /</p>
+
+<p>oṃ kaṃkaṇi kaṃkaṇi rocani rocani troṭani troṭani pratihana pratihana sarvakarmaparaṃparāṇi sarvasattvānāṃ svāhā /</p>
+
+<p>asyāṃ bhāṣitamātrāyāṃ tathaiva sarvam abhūt /</p>
+
+<p>atha khalu bhagavān punar api sarvāvaraṇavimalaviśuddhivajraṃ nāma samādhiṃ samāpadyemāṃ sarvatathāgatāśeṣāvaraṇavināśanīṃ nāma hṛdayadhāraṇīṃ svahṛdayād niścacāra /</p>
+
+<p>oṃ ratne ratne mahāratne ratnasaṃbhave ratnakiraṇe ratnamālāviśuddhe śodhaya sarvapāpaṃ huṃ phaṭ /</p>
+
+<p>asyāṃ bhāṣitamātrāyāṃ sarvamārabhavanāni dhvastāni vidhvaṃsitāny abhūvan /</p>
+
+<note><hi rend="bold">Sdp 190</hi></note>
+<p>atha khalu bhagavān punar apy amoghāpratihatasarvāvaraṇavidhvaṃsanināmasamādhiṃ samāpadyemāṃ sarvatathāgatahṛdayadhāraṇīṃ svahṛdayād niścacāra /</p>
+
+<p>om amoghāpratihatasarvāvaraṇavināśani hara hara huṃ phaṭ /</p>
+
+<p>asyāṃ bhāṣitamātrāyāṃ sarvopamalokadhātuḥ kampitaḥ prakampitaḥ saṃprakampitaś calitaḥ pracalitaḥ saṃpracalitaḥ kṣubhitaḥ prakṣubhitaḥ saṃprakṣubhitaḥ /
+anekāny āścaryādbhutāni loke saṃdṛśyante sma /
+tathaiṣāṃ maṇḍalaṃ bhavati /</p>
+
+<p>caturasraṃ caturdvāraṃ catuḥpārśve samanvitam //</p>
+
+<p>catustoraṇasaṃyuktaṃ neminiryūhasaṃyutam //</p>
+
+<p>tasyābhyantarato lekhyaṃ cakramaṇḍalam uttamam //</p>
+
+<p>caturārasamāyuktaṃ nābhimaṇḍalam uttamam //</p>
+
+<p>tasya madhye likhed nāthaṃ vajrapāṇiṃ mahābalam //</p>
+
+<p>vajraghaṇṭākaraṃ saumyaṃ pūrṇenduhasitānanam //</p>
+
+<p>pūrvāramadhyabhāgeṣu likhed akṣobhyanāyakam //</p>
+
+<p>dakṣiṇena likhed ratnaṃ paścimenāmbujottamam //</p>
+
+<p>uttareṇāmoghākhyātaṃ likhed vīraṃ mahābalam //</p>
+
+<p>cakravartikṛtāṭopān likhet sarvatathāgatān //</p>
+
+<p>candramaṇḍalasaṃkāśān sarvābharaṇabhūṣitān //</p>
+
+<p>varadābhayahastān tu vajraparyaṃkasusthitān //</p>
+
+<p>koṇabhāgeṣu sarveṣu lekhyā dhūpādayas tathā //</p>
+
+<p>dvārapālāś ca te lekhyāḥ kruddhāḥ krodhaparāyaṇāḥ //</p>
+
+<p>tataḥ praviśya svayaṃ yogī ākarṣayed mantradevatāḥ //</p>
+
+<p>jaḥ huṃ vaṃ hoḥ bhagavan vajra ehy ehi samayas tvam //</p>
+
+<p>tataś cāgataṃ nāthaṃ pūjayitvā samāsataḥ //</p>
+
+<p>praveśayed mṛtyuhānāya mṛtyūragabhayāni ca //</p>
+
+<p>oṃ vajrasamaye huṃ /</p>
+
+<p>vajraterintirīṃ baddhvā praveśayed ratnakarānvitam //</p>
+
+<p>puṣpamālānvito vāpi kṣepayed maṇḍale tu tam //</p>
+
+<p>oṃ pratīccha vajra huṃ /</p>
+
+<note><hi rend="bold">Sdp 192</hi></note>
+<p>tataḥ samayaṃ deyaṃ / oṃ vajrasamaye huṃ /
+tato 'nenodghāṭayed vajram / oṃ vajrahāsodghāṭaya huṃ /
+tato 'nena darśayet / oṃ vajra dṛśya hoḥ /
+tato 'bhiṣekam anena dadyāt /
+oṃ vajrābhiṣiñca huṃ / oṃ buddhābhiṣiñca oṃ / oṃ ratnābhiṣiñca trāṃ /
+oṃ padmābhiṣiñca hrīḥ / oṃ karmābhiṣiñca aḥ /
+tataḥ kalaśābhiṣekaṃ dadyāt /
+oṃ vajrakalaśābhiṣiñca huṃ / oṃ buddhakalaśābhiṣiñca oṃ /
+oṃ ratnakalaśābhiṣḥiñca trāṃ / oṃ padmakalaśābhiṣiñca hrīḥ /
+oṃ karmakalaśābhiṣiñca aḥ /
+oṃ mālābhiṣiñca trāṃ / oṃ vajrapaṭāvalambanābhiṣiñca trīṃ /
+oṃ buddhamudrābhiṣiñca om / oṃ vajramudrābhiṣiñca huṃ /
+oṃ ratnamudrābhiṣiñca trāṃ / oṃ padmamudrābhiṣiñca hrīḥ /
+oṃ karmamudrābhiṣiñca aḥ /
+oṃ vajranāmābhiṣiñca oṃ huṃ trāṃ hrīḥ aḥ / oṃ karmābhiṣiñca huṃ aḥ /
+oṃ vajracakrābhiṣiñca huṃ bhrūm /
+oṃ vajracakrādhipatis tvām abhiṣiñca (yet) oṃ oṃ oṃ / huṃ huṃ huṃ / trāṃ trāṃ trāṃ / hrīḥ hrīḥ hrīḥ / aḥ aḥ aḥ /
+oṃ vajradhāriṇy abhiṣiñca huṃ / oṃ tathāgatadhāriṇy abhiṣiñca oṃ /
+oṃ ratnadhāriṇy abhiṣiñca trāṃ / oṃ padmadhāriṇy abhiṣiñca hrīḥ /
+oṃ karmadhāriṇy abhiṣiñca aḥ /
+oṃ sarvatathāgataguhyābhiṣiñca om / oṃ vajraguhyābhiṣiñca huṃ /
+oṃ ratnaguhyābhiṣiñca trāṃ / oṃ padmaguhyabhiṣiñca hrīḥ /
+oṃ karmaguhyābhiṣiñca aḥ /
+oṃ prajñopāyasamāyogābhiṣiñca huṃ aḥ /</p>
+
+<note><hi rend="bold">Sdp 194</hi></note>
+<p>evam abhiṣiñcyāyurvardhanīṃ vidyāṃ dadyāt / oṃ vajrāyuṣi huṃ aḥ /
+asyaḥ sādhanaṃ bhavati /</p>
+
+<p>vajrāyur bhagavāñ candramaṇḍalārūḍhaś candrābhaḥ sarvābharaṇamaṇḍitaḥ / abhayahasto varadaś ca / amṛtaṃ kṣarantaṃ / tasyādhastāt sādhakaṃ prasāritāṃjalihastaṃ ūrdhvamukhaṃ bhagavantaṃ nirīkṣayantaṃ likhet / pañcopacāreṇa pūjāṃ kṛtvā tasyāgrataḥ śatasahasraṃ japet /</p>
+
+<p>tataḥ pūrṇamāsyāṃ mahatīṃ pūjāṃ kṛtvā kapilāgoghṛtaṃ nave bhāṇḍe sthāpya vāmavajreṇākramya bhagavantaṃ pradhyāyan sakalāṃ rātrīṃ japet / tato gandhaṃ vinasyati / apūrvaṃ vā gandham udvahati / ūṣmā dhūmaḥ śikhā vā niścarati / raśmyulkā pramuñcati / evam ādibhir nimittais tad ghṛtaṃ navanītaṃ tailaṃ vā / udakaṃ dadhi kṣīraṃ madyaṃ rudhiraṃ vasām asthikāṃ vā / māṃsaṃ vānyatamaṃ vā saṃprasādhya pratyūṣe rakṣādikaṃ ca kṛtvā / ātmānaṃś ca saṃśodhya pibed bhakṣayet / yathā nimittena yāvadā candrārkāyur bhavati / vajrasattvaś ceti / adhamenādhamā siddhir bhavet / nātra saṃśayaḥ / nirmittena bhavel loke nirvyādhir medhānvitaḥ / valipalitasukhātmā dṛḍhakāyaḥ śatāyuḥ / anyāny api karmāṇi śāntipuṣṭivaśādikaṃ karoty avicāreṇa jāpamātrāt / na saṃśayaḥ /</p>
+
+<p>atha catvāro mahārājāno bhagavantaṃ vajrapāṇiṃ praṇipatyaivam āhuḥ / vayam api bhagavan sarvasattvānām arthāya hitāya sukhāya svakasvakāni hṛdayāni bhāṣayāmaḥ / ājñāpayatu bhagavān ājñāpayatu vajradhṛk / sādhu sādhu mahārājāno deśayadhvam aham anumode / adhitiṣṭhāmi svasamayam /</p>
+
+<p>atha vaiśravaṇo mahāyakṣarājā bhagavadanujñāto 'numodito 'dhiṣṭhitas svahṛdayaṃ svahṛdayād niścacāra / oṃ vaiḥ / atha dhṛtarāṣṭras tathaiva svahṛdayam abhāṣata / oṃ dhṛḥ / atha virūḍhakaḥ kumbhāṇḍamahārājā svahṛdayam abhāṣata / oṃ viḥ / atha virūpākṣo nāgamahārājā tathaiva svahṛdayam abhāṣata / oṃ kṣaḥ /</p>
+
+<note><hi rend="bold">Sdp 196</hi></note>
+<p>atha teṣāṃ maṇḍalaṃ bhavati /</p>
+
+<p>caturasraṃ caturdvāraṃ pañcamaṇḍalamaṇḍitam //</p>
+
+<p>tasya madhye likhed nāthaṃ vajrapāṇiṃ sagarvitam //</p>
+
+<p>tasya vāme pārśve tu likhed vaiśravaṇaṃ śubham //</p>
+
+<p>gadānakulikāhastaṃ ratnābharaṇamaṇḍitam //</p>
+
+<p>sthūlaṃ siṃhāsanārūḍhaṃ hemavarṇaṃ mahādyutim //</p>
+
+<p>bhadrakumbhādiratnaughavarṣayantaṃ likhed budhaḥ //</p>
+
+<p>purato dhṛtarāṣṭraṃ tu vīṇāvādanatatparam //</p>
+
+<p>lalitaṃ śyāmavarṇaṃ tu sarvābharaṇabhūṣitam //</p>
+
+<p>dakṣiṇena likhed vīraṃ khaḍgahastaṃ virūḍhakam //</p>
+
+<p>paścimena virūpākṣaṃ vajrapāśadharaṃ paraṃ //</p>
+
+<p>phaṇaiḥ saptabhiḥ saṃpūrṇaṃ lohitākṣibhir nirgatam //</p>
+
+<p>dvāradeśeṣu sarveṣu dvārapālās tathaiva ca //</p>
+
+<p>tataḥ praviśet svayaṃ mantrī mudrayā cakrasaṃjñayā //</p>
+
+<p>ākarṣayed bhagavantaṃ tato rājñaḥ samāharet //</p>
+
+<p>ākṛṣya pūjayed vidvān arghapātrair yathāvidhi //</p>
+
+<p>tataḥ praveśayec chiṣyān puṣpamālāvibhūṣitān //</p>
+
+<p>rājānaṃ kṣatriyaṃ vāpi brāhmaṇādikam eva vā //</p>
+
+<p>mantreṇānena mantrajño mudrayā vajradhārayā //</p>
+
+<p>oṃ vajrasamaye huṃ /</p>
+
+<lg>
+<l>tataḥ puṣpaṃ ratnaṃ vā kṣepayed anena ca /</l>
+<l>oṃ vaḥ pratīcchadhvaṃ mahottamāḥ /</l>
+<l>patati yasya rājasya so 'sya sidhyati nānyathā //</l>
+</lg>
+
+<p>tato 'bhiṣiñcet kalaśaiś caturbhiḥ koṇasaṃsthitaiḥ //</p>
+
+<p>pañcamaṃ vajrapāṇes tu mudrayaivābhiṣiñcayet //</p>
+
+<p>evam ādikrameṇaiva maṇḍalākhyābhiṣiñcanāt //</p>
+
+<p>atha rājābhavate rājā rājā bhavate mahān //</p>
+
+<p>jambudvīpapatiś śrīmāñ caturdvīpapatir varaḥ //</p>
+
+<p>caturabhiṣekāc ca caturdvārapraveśanāt //</p>
+
+<p>tasyāhaṃ vajradharo rājā pālayāmi svaputravat //</p>
+
+<p>vayaṃ caturmahārājāḥ pālayāmaḥ satataṃ nṛpam //</p>
+
+<p>sabhṛtyaparijanan tu sarāṣṭrapuramaṇḍalam //</p>
+
+<p>duṣṭān tasya haniṣyāmaḥ pararāṣṭraṃ ca tasya ca //</p>
+
+<p>vyādhimṛtyubhayaṃ cāpi durbhikṣam ītyupadravam //</p>
+
+<p>vaiśravaṇaḥ kurute puṣṭiṃ dhṛtarāṣṭras tu śāntikaṃ //</p>
+
+<note><hi rend="bold">Sdp 198</hi></note>
+<p>virūḍhako 'kālamṛtyuṃ hanyāt sapaśubāndhavān //</p>
+
+<p>virūpākṣaḥ kurute kṣemaṃ durbhikṣādivināśanam //</p>
+
+<p>saṃkṣepato vayaṃ tasya sarvāśāṃ sarvacintitaṃ //</p>
+
+<p>karoma vajrapāṇis tu drohaṃ yadi na niścayāt //</p>
+
+<p>atha daśadiglokapālā bhagavantaṃ praṇipatyaivam āhuḥ //</p>
+
+<p>vayam api bhagavan sarvasattvahitasukhāya //</p>
+
+<p>svakasvakāni hṛdayāni pradadāmaḥ //</p>
+
+<p>sādhu sādhu lokapālāḥ sādhu sādhu vadateti //</p>
+
+<p>atheśāno bhūtādhipatir hṛdayaṃ dadāti /</p>
+
+<p>oṃ i / om ī / oṃ aḥ / oṃ yaḥ / oṃ ṛḥ / oṃ vaḥ / oṃ yaḥ / oṃ kuḥ / oṃ āḥ / oṃ vraḥ /</p>
+
+<lg>
+<l>athaiṣāṃ maṇḍalaṃ bhavati /</l>
+<l>maṇḍalaṃ pūrvavad likhed madhye nāthaṃ tathaiva ca //</l>
+</lg>
+
+<p>dikpālās tu svadigbhāge sthāpayet purato dvayam //</p>
+
+<p>ādityaṃ varāharūpan tu dvārapālās tathaiva ca //</p>
+
+<p>tataś cākṛṣya tān sarvān pūjayet sarvapūjayā //</p>
+
+<p>tataḥ praveśayet śiṣyān praviśya svayam eva tu //</p>
+
+<p>abhiṣiñcayet kalaśaiś ca dikpālādimantritaiḥ //</p>
+
+<p>tato dadyād dhṛdayaṃ sādhanāya hitaiṣaṇataḥ //</p>
+
+<p>sidhyante 'vicārāś ca dikpālās svadiksthitāḥ //</p>
+
+<p>atha te tuṣṭā evam āhuḥ / yaḥ kaścid bhagavan rājā kṣatriyo vā mūrdhny abhiṣiktaḥ / etad maṇḍalaṃ praviśyābhiṣekaṃ gṛhṇet / anyo vā śrāddhaḥ kulaputro vā kuladuhitā vā / tasya vayaṃ bhagavan sarvadā sarvatra rakṣāvaraṇaguptiṃ saṃvidhāsyāmaḥ / pararāṣṭrāṇi ca vardhayiṣyāmaḥ / kālena kālaṃ varṣiṣyāmaḥ / sasyapuṣpaphalāni ca niṣpādayiṣyāmaḥ /</p>
+
+<p>atha yamo mahādharmarājā bhagavantaṃ praṇamyaivam āha /</p>
+
+<p>ahaṃ bhagavan tasya mahārājña āyur dadāmi / aṣṭakālamaraṇāni pratibādhayāmi /</p>
+
+<note><hi rend="bold">Sdp 200</hi></note>
+<p>nairṛto mahārākṣasādhipatir evam āha / ahaṃ bhagavan tasya rājño rājaputrasya brāhmaṇasya kṣatriyasya vānyatareṣu vā manuṣyeṣu na vyādhipretapiśācabhayaṃ na rākṣasabhayādikaṃ nākālamṛtyubhayaṃ kariṣyāmi / sarvadā rakṣāvaraṇaguptiṃ kariṣyāmi /</p>
+
+<p>atha varuṇo mahārājaivam āha / ahaṃ bhagavan tasya mahārājñaḥ sarvadā sarvatra sarvaviṣayaṃ pratipālayiṣyāmi / ārakṣāṃ ca kariṣyāmi / sasyāni ca niṣpādayiṣyāmi / nāgadoṣāni ca na prayacchāmi / viṣāśanīñ ca notsṛjāmi / sarvākālamaraṇāni ca pratibādhayāmi /</p>
+
+<p>atha vāyavyādhipatir evam āha /</p>
+
+<p>aham api bhagavan tasya mahāsattvasya sarvadā vāyubhayaṃ notsṛjāmi / nākālavātaṃ cotsṛjāmi / sarvasasyapuṣpaphalāni ca pariniṣpādayiṣyāmi / sarvabhayañ ca pratibādhayāmi /</p>
+
+<p>atha kuvero mahāyakṣarājā bhagavantaṃ namasyaivam āha / ahaṃ bhagavan tasya mahāsattvasyāṣṭāśītibhir mahāyakṣasenāpatibhiḥ sahāgatya sarvakālodyogena sarvadā sarvabhayaṃ pratibādhayāmi / sarvadhanadhānyasamṛddhiñ ca karomi / svajanaparijanadeśaviṣayabhṛtyabandhubāndhavamitraputraduhitṛbhāryādirakṣāṃ ca karomi / gogavyakharoṣṭrameṣagajavājicchāgalādirakṣaṃ karomi /</p>
+
+<p>atheśānaḥ sarvabhūtādhipatir bhagavantaṃ praṇipatyaivam āha / ahaṃ bhagavan tasya rājño rājaputrasya kṣatriyasya brāhmaṇasya vā / ihāmutra paritrāṇaṃ parigrahaṃ paripālanaṃ śāntiṃ svastyayanaṃ daṇḍaparihāraṃ śastraparihāraṃ viṣadūṣaṇaṃ viṣanāśanaṃ sīmābandhaṃ dharaṇībandhaṃ digbandhaṃ vajraprākāraṃ vajrakīlanaṃ vajrapañjaraṃ ca karomi / sarvakāryeṣu pratyupasthāpayāmi / kāryeṣv akāryesu nimittaṃ ca darśayāmi / svapne ca sarvaṃ śubhaṃ kathayāmi / sādhayato 'vighnena sarvasiddhiṃ ca dāsyāmi /</p>
+
+<note><hi rend="bold">Sdp 202</hi></note>
+<p>athākāśacārī khagapatir bhagavantaṃ praṇipatyaivam āha / ahaṃ bhagavan sarvadā sarvaṃ ca pathigatasya rājño rājaputrasya rājāmātyasya brāhmaṇasya kṣatriyasya vā svayam āgatya sarvaparivāreṇa rakṣāvaraṇaguptiṃ saṃvidhāsyāmi / sarvāvaraṇaṃ prativārayāmi / sarvavyādhim apanayāmi / sarvadā cānubaddho bhavati / atha pātālādhipatir mahāvarāho bhagavantaṃ namasyaivam āha / ahaṃ bhagavantasya narādhipateś ca nṛpasutasya vā dvijāter dvijasutasya vā kṣatriyavaiśyaśūdrasya vānyatarasya śrāddhasya kulaputrasya kuladuhitur vā sarvadā sarvārthaṃ niṣpādayiṣyāmi / sarvabhayeṣu ca rakṣāṃ kariṣyāmi / anenāpi paritrāyiṣyāmi /</p>
+
+<p>athāṣṭau mahāgrahāḥ sanakṣatraparivārā evam āhuh / vayaṃ bhagavan saparivārāḥ svakasvakāni hṛdayāni dadāmaḥ / tad bhagavān adhitiṣṭhatu / sādhu sādhv adhitiṣṭhaṃtu mayā bhāṣadhvaṃ mahāgrahāḥ / athādityādayo mahāgrahā bhagavantaṃ namasyābhāṣanta /</p>
+
+<p>om āḥ / oṃ soḥ / oṃ aḥ / oṃ buḥ /
+oṃ brḥ / oṃ śuḥ / oṃ sāḥ / oṃ rāḥ /</p>
+
+<p>athaiṣāṃ maṇḍalaṃ bhavati /</p>
+
+<p>madhye bhagavantaṃ vajrapāṇiṃ trailokavijayarūpaṃ saṃlikhya /</p>
+
+<p>samantāc catvāro mahāsamudrān likhet //</p>
+
+<p>śukrantu tasya purataḥ somaṃ pṛṣṭhato likhet //</p>
+
+<p>dakṣiṇe bṛhaspatiṃ likhed vāmataś ca budhaṃ likhet //</p>
+
+<p>agnisthāne tu cāṃgāram ādityaṃ vāyavyāṃ diśi //</p>
+
+<p>śaniścaraṃ tu aiśānyāṃ rāhuṃ rākṣasasannidhau //</p>
+
+<p>nakṣatraṃ sarvatra lekhyaṃ samantād bāhyamaṇḍale //</p>
+
+<p>dvāre dvāre tathā dvārīṃ likhec ca krodhamānasam //</p>
+
+<p>vajradhāryā praviśya sarvān āvāhayet //</p>
+
+<p>vajrāṃkuśādibhir iti tataś śiṣyān praveśayet //</p>
+
+<p>oṃ vajra hana huṃ phaṭ /
+oṃ vajragrahasamaye huṃ phaṭ /
+oṃ vajragraha pratīccha samaye huṃ /</p>
+
+<p>tato 'ṣṭabhiḥ kalaśair abhiṣiñcet //</p>
+
+<note><hi rend="bold">Sdp 204</hi></note>
+<p>aṣṭagrahābhimantritaiḥ //</p>
+
+<p>tato vajramudrayābhiṣiñcet //</p>
+
+<p>tatas sarvagrahaṃ sādhayet //</p>
+
+<p>atha te mahāgrahā bhagavantaṃ namasyaivam āhuḥ / vayaṃ bhagavan aṣṭau mahāgrahās tasya mahārājño rājaputrasya vā sarvadā sarvatra tathaiva sarvaṃ kariṣyāmaḥ / atha nakṣatrakṣaṇalavamuhūrtakaraṇatithiyogarāśilagnaviṣṭimaṇḍalādidevatās tathaiva namāsyaivam āhuḥ / vayam api bhagavan sarvadā tasya mahāsattvasyājñāṃ notsṛjāmaḥ / bhṛtyavat pratipālayāmaḥ / sarvanagaranigamajanapadarāṣṭrarājadhānīṃ ca pratipālayāmaḥ / utpanne tu mahābhaye yuṣmākaṃ pūjayiṣyati tasyāvaśyaṃ tad bhayaṃ na bhaviṣyati /</p>
+
+<p>athāṣṭau mahānāgāḥ phuṃkāradhvaninā bhagavantaṃ saṃtoṣyaivam āhuḥ /</p>
+
+<p>vayaṃ bhagavan sarveṣāṃ guhyahṛdayaṃ dāsyāmaḥ /</p>
+
+<p>sādhu sādhu mahānāgā dadadhvaṃ hṛdayaṃ varam /
+atha te tuṣṭā mahānāgā bhagavantaṃ namasyaivam āhuḥ /</p>
+
+<p>oṃ phuḥ / oṃ phaḥ / oṃ phuṃ / oṃ phāṃ /
+oṃ phīḥ / oṃ pheḥ / oṃ phaīḥ / oṃ phauḥ /</p>
+
+<p>athaiṣāṃ maṇḍalaṃ bhavati /</p>
+
+<p>aṣṭapatraṃ mahāpadmaṃ saṃlikhec chvetavarṇakam //</p>
+
+<p>tasya madhye likhed nāthaṃ vajrapāṇiṃ sukṛṣṇakam //</p>
+
+<lg>
+<l>samantāt saptaphaṇaṃ tarjayantaṃ mahoragam /</l>
+<l>anantaṃ takṣakaṃ caiva karkoṭaṃ kulikaṃ tathā //</l>
+</lg>
+
+<p>vāsukiṃ śaṃkhapālaṃ ca padmaṃ vai vāruṇaṃ tathā //</p>
+
+<p>ete lekhyāḥ samāsena patre patre phanajvalāḥ //</p>
+
+<p>saptasaptaphaṇā lekhyāḥ sabhāryāḥ kaṇṭhasamāgamāḥ //</p>
+
+<p>kalaśāṣṭakaṃ saṃsthāpya balinaivedyaśobhitam //</p>
+
+<p>ghṛtakṣīrasamākṣikaṃ kṛtrimāś cāpi bhedakāḥ //</p>
+
+<p>tataḥ saṃpraviśya vajrātmākarṣayet pāṇinā phaṇaiḥ //</p>
+
+<p>phuṃkārasahitais tu jaḥ huṃ vaṃ hoḥ pravartayet //</p>
+
+<p>tataḥ praveśya tān sarvān rājaṃ kṣatriyam eva vā / abhiṣiñcet phuṃkārair viṣadoṣamalāpahaiḥ /</p>
+
+<p>tataḥ sidhyanti sarve te nāgā nāmagrahād api //</p>
+
+<note><hi rend="bold">Sdp 206</hi></note>
+<p>atha te samantaṃ tuṣṭā bhagavantaṃ namasya ca //</p>
+
+<p>praṇidhānaṃ prakurvanti sthitvā prāñjalayaḥ puraḥ //</p>
+
+<p>vayaṃ bhagavataḥ śāsanābhiratasya yad idaṃ maṇḍalaṃ praviṣṭasya viṣaṃvādayāmaḥ / tadā bhagavantam eva viṣaṃvādayāmaḥ / tadāsmākaṃ taptavālukā bhaviṣyantu / ādīptena vajrenāsmākaṃ mūrdhni sphuṭiṣyanti / satataṃ samitaṃ ca tasya mahāsattvasya rakṣāvaraṇaguptiṃ kariṣyāmaḥ / mahaujobalavīryaṃ kṣepsyāmaḥ / nirviṣaṃ cāpi viṣaṃ kariṣyāmaḥ / kālena kālaṃ varṣayiṣyāmaḥ / sarvasasyāni niṣpādayiṣyāmaḥ / sarvapararāṣṭrāṇi ca vikālavṛṣṭim utsṛjāmaḥ / sarvabhayaṃ vināśayiṣyāmaḥ/ jinājñayā vajradharājñayā pratipālayiṣyāmaḥ /</p>
+
+<p>atha sādhanaṃ bhavati /</p>
+
+<p>phuṃkāraṃ japel lakṣaṃ dhyātvā vajradharaṃ prabhum //</p>
+
+<p>sitāṃśumālinaṃ divyaṃ śikhāyāṃ phaṇāvasthitam //</p>
+
+<p>tato viṣaṃ gṛhya dhyātvā phuṃkāramaṇḍalam //</p>
+
+<p>raśmimālākulaṃ divyaṃ phuṃkāraṃ tatra cintayet //</p>
+
+<p>ākarṣayed hṛtakṛtiphaṇipāśākṛtikareṇa //</p>
+
+<p>phuṃkāravātena samīrayet taṃ viṣaṃ samastam //</p>
+
+<p>tanurasthimāṃsagam //</p>
+
+<p>tataḥ sarvakarmāṇi kuryād viṣajvaragarādikaṃ //</p>
+
+<p>muṣṭyā vai haret sarvaṃ kiṃ punaḥ phaṇamudrayeti //</p>
+
+<p>atha mahābhairavo mahādevādhipatir aṣṭabhir mahāmātṛkābhiḥ parivṛto bhagavantaṃ praṇipatyaivam āha / madbhayān mātṛkābhayāc ca bhagavan sarvadevanāgādayaḥ saṃtrastā vitrastāḥ pratrastā adhomukhībhūtā nimagnā naṣṭacetasaḥ paribhramanti tu teṣāṃ hitārthāya hṛdayaṃ pradāsyāmi / tat sādhu bhagavān adhitiṣṭhatu / sādhu sādhu mahābhairava subhairava bhāṣasva svahṛdayaṃ divyamātṛkāṇāṃ ca sarvāsām /</p>
+
+<note><hi rend="bold">Sdp 208</hi></note>
+<p>atha mahābhairavaḥ subhairavanādaṃ nadan evam āha /</p>
+
+<p>oṃ bhairavaiḥ bhīḥ svāhā /
+oṃ bhāḥ svāhā / oṃ bhīḥ svāhā / oṃ bhūḥ svāhā / oṃ bheḥ svāhā /
+oṃ bhaiḥ svāhā / oṃ bhoḥ svāhā / oṃ bhaṃ svāhā / oṃ bhaḥ svāhā /</p>
+
+<p>ity ete bhagavan aṣṭau bhairavāḥ samājñākarāḥ /
+athaiṣāṃ maṇḍalaṃ bhavati /</p>
+
+<p>aṣṭāraṃ mahācakraṃ likhya madhye niveśayet //</p>
+
+<p>vajrapāṇiṃ mahākrodhaṃ trilokavijayāvahaṃ //</p>
+
+<p>tasya pādatale kruddhaṃ bhairavāṇāṃ mahādhipam //</p>
+
+<p>likhitvā bhairavīyuktaṃ likhed anyān yathāsukham //</p>
+
+<p>āramadhyeṣu sarveṣu likhed bhairavam aṣṭakam //</p>
+
+<p>mātṛkābhiś ca samāyuktaṃ tatkrodhāsyakruddhamānasam //</p>
+
+<p>dvāre dvāre tathaiveha likhed dvāriṃ sukrodhanam //</p>
+
+<p>tato vāhyāṃkuśādibhiḥ pujayitvā kapālayā rudhirapūrṇayā //</p>
+
+<p>madyaṃ māṃsaṃ baliṃ divyaṃ rudhirapūrṇabhājanam //</p>
+
+<p>kapālaṃ muṇḍanakhaṇḍaṃ cāṣṭau kalaśān pūritān //</p>
+
+<p>rudhirair āsavair vāpi sthāpayet tasya maṇḍale //</p>
+
+<p>tataḥ praveśayec chiṣyān trilokavijayāparaḥ //</p>
+
+<p>abhiṣiñcet kapālena kalaśair api cāṣṭabhiḥ //</p>
+
+<lg>
+<l>tataḥ karmāṇi dadyāt /</l>
+<l>mātṛkāgṛha ekaliṃge vā trilokamathane varaṃ //</l>
+</lg>
+
+<p>pūjāṃ kṛtvā yathānyāyaṃ japel lakṣacatuṣṭayaṃ //</p>
+
+<p>tato nādaṃ praśruyate bhairavasya mahātmanaḥ //</p>
+
+<p>nirbhīr arghaṃ prayacchet kapālena suraktinā //</p>
+
+<p>tataḥ paśyati taṃ kruddhaṃ bhairavaṃ duṣṭamānasam //</p>
+
+<p>mātṛkāgaṇasaṃpūrṇam aṣṭabhir bhairavair vṛtam //</p>
+
+<p>taṃ dṛṣṭvā nirbhayo bhūtvā dadyād māṃsasupūritam //</p>
+
+<p>kapālaṃ vāsavaiḥ pūrṇaṃ huṃkāram anusmareṇa //</p>
+
+<p>tatas tuṣṭaḥ prasidhyeta bhairavo duṣṭaghātakaḥ //</p>
+
+<p>brūyāt kim iccheti tad dadyāt tuṣṭamānasaḥ //</p>
+
+<p>rasarasāyanaṃ dravyaṃ khaḍgaṃ cakraṃ triśūlakam //</p>
+
+<p>svargamartyapātālaṃ rājyaṃ dvīpacatuṣṭayaṃ cāpi //</p>
+
+<note><hi rend="bold">Sdp 210</hi></note>
+<p>śakratvaṃ yakṣeśvaryaṃ rākṣasatvaṃ vidyādharatvaṃ //</p>
+
+<p>vidyādharacakravartitvaṃ trailokyādhipatitvam //</p>
+
+<lg>
+<l>muktvā bhūmidānañ ceti /</l>
+<l>kiṃkaratvaṃ cāpi svayagaṇaṃ mātṛkāṃ vā dadāti //</l>
+</lg>
+
+<p>yatheṣṭānyatamāṃ siddhiṃ prārthayet //</p>
+
+<p>huṃhṛtinā sukhinā dattvā vihasan yāti //</p>
+
+<p>bhītaṃ mārayate kṣaṇāt //</p>
+
+<p>atha brahmādayo mahādevā bhagavantaṃ namasyaivam āhuḥ / vayam api bhagavata ājñayā svakalpaṃ bhāṣayāmaḥ / tad bhagavān kampām upādāyādhitiṣṭhatu / atha brahmādayo devāḥ svahṛdayam abhāṣanta /</p>
+
+<p>oṃ oṃ / oṃ viḥ / oṃ ruḥ / oṃ iḥ / oṃ kaḥ / oṃ gaḥ / oṃ bhṛḥ / oṃ kaḥ /</p>
+
+<p>athaiṣāṃ maṇḍalaṃ bhavati /</p>
+
+<p>maṇḍalaṃ pūrvaval likhed madhye trailokyasaṃgraham //</p>
+
+<p>tasyāgrato likhed vīram īśvaraṃ śūlapāṇim //</p>
+
+<p>pṛṣṭhato vilikhed brahmāṇaṃ vāmataś cakrapāṇim //</p>
+
+<p>dakṣiṇena likhed indraṃ svamudrākaracihnitam //</p>
+
+<p>dvārapālās tathaiveha bhāryā esāṃ svamaṇḍale //</p>
+
+<p>kalaśān pūrṇakumbhāṃś ca sthāpayed bāhyamaṇḍale //</p>
+
+<p>balabhadraṃ dīptamaharddhikam //</p>
+
+<p>tataḥ praviśya tān devān āhvayati vicakṣaṇaḥ //</p>
+
+<p>jaḥ huṃ vaṃ hoḥ surāḥ sarve praviśadhvaṃ purottame //</p>
+
+<p>atha tān tato drṣṭvā pūjayed mahāsukhaiḥ //</p>
+
+<p>tataḥ praveśayec chiṣyān mudrayā vajradhārayā //</p>
+
+<p>oṃ pratīcchadhvaṃ mahāsattvā vajradharājñayā huṃ ha ha ha hoḥ /</p>
+
+<p>puṣpān prakṣipya yathāvac cakṣur udghāṭya darśayet //</p>
+
+<p>tato 'bhiṣiñcet toyena kalaśād abhimantritam //</p>
+
+<p>tataḥ sarvaṃ pradadyāt tad devānāṃ tu yathepsitam //</p>
+
+<p>lakṣam ekaṃ dvilakṣaṃ vā kṛtvā sevāprarocitam //</p>
+
+<p>sādhayet sādhakas teṣām īśvarādisurottamān //</p>
+
+<note><hi rend="bold">Sdp 212</hi></note>
+<p>ekaliṃgādiṣu sthāna atha vā vajrapāṇinaḥ //</p>
+
+<p>gṛhe tathāgate cāpi sadhātuvaracaityake //</p>
+
+<p>sādhayet sādhako nityaṃ sarvadevān yathāvad iti //</p>
+
+<p>ardharātre tato devā gatvā vedaya te dhruvam //</p>
+
+<p>īpsitaṃ tvayā kiṃ hitaṃ dāsyāmo yathāsukhaṃ //</p>
+
+<p>vada bhadra drutaṃ cintya yena dāsyāmas te varam //</p>
+
+<p>tato yācate mantrajño varasiddhiṃ tu devate //</p>
+
+<p>rasarasāyanaṃ divyam antardhānaṃ tu khe gamam //</p>
+
+<p>gulikārājadravyādi yācayed manaiṣiṇām // iti</p>
+
+<p>atha maheśvarādayo bhagavantaṃ praṇipatyaivam āhuḥ / ye bhagavan laukikalokottaramaṇḍale praviśanti teṣāṃ vayaṃ bhagavan sarvadevāḥ sarvāvaraṇāni viśodhayāmaḥ / svargamārgaṃ ca darśayāmaḥ / sugatimārgaṃ ca darśayāmaḥ / apāpamārgaṃ ca darśayāmaḥ / saddharmamārgaṃ ca darśayāmaḥ / anāmārgaṃ ca darśayāmaḥ / vivekamārgaṃ ca darśayāmaḥ / sāramārgaṃ ca darśayāmaḥ / nirvāṇamārgaṃ ca darśayāmaḥ / prahāṇamārgaṃ ca darśayāmaḥ / niḥkleśamārgaṃ ca darśayāmaḥ / buddhatvaṃ ca darśayāmaḥ / bodhisattvatvaṃ ca darśayāmaḥ / vajradharatvaṃ ca darśayāmaḥ / iti / sarvadā sarvabhayeṣu ca rakṣāvaraṇaguptim kariṣyāmaḥ / nagaranigamajanapadarājyarāṣṭrarājadhānīṃ ca rakṣayiṣyāmaḥ / viṣayadeśagrāmagoṣṭhaṃ ca rakṣayiṣyāmaḥ / rājyaṃ ca dāsyāmaḥ / prāptarājyasya rājavṛddhiṃ kariṣyāmaḥ / ekadvīpaṃ dvitīyaṃ tṛtīyaṃ caturthaṃ svargamartyapātālaṃ cakravartitvaṃ ca dāsyāmaḥ / saṃkṣepataḥ / śakratvaṃ brahmatvaṃ viṣṇutvaṃ maheśvaratvaṃ ca dāsyāma iti / atha bhagavān vajrapāṇiḥ punar api svaparṣanmaṇḍalam avalokya smitam akārṣīt / tataḥ pariṣanmaṇḍalaṃ pracalan saṃpracalan kṣubhan prakṣubhan saṃprakṣubhan jvalan prajvalan saṃprajvalan harṣan praharṣan saṃpraharṣan krīḍan prakrīḍan saṃprakrīḍan anekāny āścaryādbhutāni ca loke saṃpradṛśyante sma /</p>
+
+<note><hi rend="bold">Sdp 214</hi></note>
+<p>atha brahmādayo devagaṇāḥ suvismayajātā bhagavantaṃ praṇipatyaivam āhuḥ / kim etad bhagavan smitasya kāraṇaṃ nākāraṇena buddhā bhagavanto bodhisattvā vā smitam utsṛjanti / tasmād bhagavān vyākarotu smitasya kāraṇam iti / atha bhagavān vajrapāṇir devānām adhyeṣaṇāvācam upaśrutyaivam āha / śrutaṃ brahmādayo devā yat puraḥ sarvabuddhaiś ca bhāṣitā mṛtyunāśanī vidyā vidyāmantramahātejā akālamṛtyunāśanī /</p>
+
+<p>atha bhagavantaṃ vajrapāṇiṃ praṇipatya te brahmādayo mahādevāḥ saṃhṛṣṭaromakūpajātāḥ / sādhukāraṃ prādaduḥ / sādhu sādhu bhagavan sādhu sādhu vajradhara / deśaya tu vidyāṃ mahātejāṃ mahābalaparākramāṃ yenālpāyuṣāḥ sattvā dīrgāyuṣā bhavanti / akālamṛtyugrastāś ca yenākālamaraṇād vimucyeran / apāyopapannāś ca sarvāpāyagatipathād vimucyeran / saṃsārabhayabhītāś ca sattvāḥ sukhopāyena saṃsāraparāṃmukhā bhavanti / āśur evānuttarasamyaksaṃbodhim abhisaṃbudhyanta iti / atha bhagavān vajrapāṇir brahmādīnāṃ devānām adhyeṣaṇāvacanam upaśrutyemāṃ sarvatathāgatahṛdayavidyāṃ svakāyavākcittavajrebhyo niścacāra /</p>
+
+<p>oṃ puṇye puṇye mahāpuṇye 'parimitāyuḥpuṇye jñānasaṃbhāropacite svāhā / hṛdayavidyā /</p>
+
+<p>oṃ hrīḥ svāhā / upahṛdayavidyā /
+oṃ bhrūṃ svāhā / hṛdayopahṛdayavidyā /
+oṃ kruṃ svāhā / hṛdayasaṃcodanīvidyā /
+oṃ trāṃ svāhā / hṛdayottarā /
+oṃ haṃ svāhā / guhyahṛdayā /</p>
+
+<p>athaiṣāṃ maṇḍalaṃ bhavati /</p>
+
+<p>maṇḍalaṃ caturāraṃ kṛtvā madhye niveśayed aparimitāyuḥpuṇyajñānasaṃbhāratejorājaṃ nāma tathāgatam / bhrūṃkārahṛdayam/ tasyāgrato vajrapāṇim / hrīṃkārahṛdayaṃ / vāmataḥ krodham / kruṃkārahṛdayam / dakṣiṇenākāśagarbham / trāṃkārahṛdayam/ pṛṣṭhato 'bhayaṃdadaṃ nāmāryāvalokiteśvaram / haṃkārahṛdayaṃ / (<hi rend="bold">Sdp 216</hi>) tathāgatasya prabhāmaṇḍale vidyā lekhyāḥ / pañcāṣṭau kalaśāḥ sthāpyāś cakravartyabhimantritāḥ / sarvakarmikakrodhenābhimantritās ca dhūpādikaṃ sthāpayet pūjādikaṃ sarvadvārapālān eva ca /</p>
+
+<p>tataḥ saṃpraviśya svayaṃ mantrī / ākarṣayet sugatottamaṃ saputrabhṛtyasaṃghaiś ca vṛtaṃ vidyayā saha / vidyā ca sugatavāmapārśve lekhyā / tataś cātmānam abhiṣiñcya paryaṃkena niṣadya śatasahasraṃ japet / tathāgataṃ saṃmukhaṃ paśyati vajradharāryāvalokiteśvaraṃ vā / yathepsitaṃ varaṃ pratilabhate / yadā samāhitas tadā manasā sarvakarmasamartho bhavati / tataḥ śiṣyān praveśayed vajradharamudrayā / ityabhimānam utpādayet /</p>
+
+<p>oṃ vajradhara ratnadhara padmadhara viśvadhara tathāgatasamayātikrama tathāgatasamayadhārako 'ham /</p>
+
+<p>tato 'nena kṣepayet puṣpān / oṃ sarvatathāgata pratīccha hoḥ samayas tvaṃ / tatas tayā mālayāveṣṭayābhiṣiñcayet / oṃ sarvatathāgatābhiṣiñca vajradharājñāpaya huṃ bhrūṃ / oṃ vajravajrābhiṣiñca huṃ huṃ / oṃ vajraratnābhiṣiñca huṃ trāṃ / oṃ vajrapadmābhiṣiñca huṃ hrīḥ / oṃ karmaviśvābhiṣiñca aḥ huṃ kaṃ /</p>
+
+<p>tataḥ samayaṃ dadyād ājñābhiṣekaṃ ca / tatra samayaṃ /</p>
+
+<p>triratnaṃ na parityājaṃ bodhicittañ ca sadgurum //</p>
+
+<p>prāṇinaś ca na saṃghātyā adattaṃ naiva cāharet //</p>
+
+<p>mṛṣā naiva ca bhāṣeta nācaret tatparastriyaṃ //</p>
+
+<p>gurunindā na saṃkāryā nāpi chāyāṃ tu laṃghayet //</p>
+
+<p>anācāryān na gṛhṇīyād nāmamācāryavajriṇaḥ //</p>
+
+<p>mantramudrā na nindeta devatāṃ cāpi kadācana //</p>
+
+<p>ninded yadi mohātmā mriyate vyādhibhir dhruvam //</p>
+
+<p>nirmālyadevatācchāyāṃ mudrāṃ cākṣaracihnakām //</p>
+
+<p>laukikalokottarāṃ ca pādābhyāṃ cāpi nākramet //</p>
+
+<note><hi rend="bold">Sdp 218</hi></note>
+<p>ratnatrayādidrugdhānāṃ mūḍhānāṃ buddhaśāsane //</p>
+
+<p>gurunindāparāṇāṃ yatnāt ghātayed vicakṣaṇaḥ //</p>
+
+<p>adharmikān pāparatān sattvadrohanatān sadā //</p>
+
+<p>hanet kṛpāyā mantrī mantreṇa samayadviṣān //</p>
+
+<p>kṛpaṇārthaṃ ca saṃgṛhya dadyāt sattve suduḥkhite //</p>
+
+<p>gurupūjānimittaṃ ca tathā samayasādhane //</p>
+
+<p>maṇḍalārthe hared arthaṃ kṛpaṇārthaṃ cāpi cintitam //</p>
+
+<p>samayināṃ hitārthāya pūjārthāya jinaurasām //</p>
+
+<p>rakṣaṇārthāya bhāṣeta mṛṣā sattvahite rataḥ //</p>
+
+<p>samayagurudravyaṃ ca prāṇāṃ prāṇiṣu sarvadā //</p>
+
+<p>rāganārthāya buddhānāṃ samayapālanāya ca //</p>
+
+<p>sevayet paradārāṃ tu sādhanārthāya mantravit //</p>
+
+<p>sarvakṛt sarvabhug vā kiṃ vajrasattvapade sthitaḥ //</p>
+
+<p>sidhyate naiva duṣyeta kiṃ punaḥ kṛpayānvitaḥ // iti /</p>
+
+<p>tato 'nena kiṃ me abhiṣekaṃ dadyāt /
+oṃ sarvatathāgatājñāṃ te dāsyāmi gṛhṇa vajrasusiddhaye /
+oṃ vajra tiṣṭha huṃ /</p>
+
+<p>anena vajraṃ haste datvā karmābhiṣekaṃ dadyāt //</p>
+
+<p>oṃ sarvakarmāṇi kuru buddhānāṃ huṃ /</p>
+
+<p>tato gurugauravaṃ tena dātavyaṃ deham uttamam //</p>
+
+<p>dravyaṃ dhanadhānyaṃ ca āsanaṃ yānam eva ca //</p>
+
+<p>varabhṛtyapuraṃ caiva rājyam aiśvaryam eva ca //</p>
+
+<p>putraduhitṛkalatraṃ ca mātābhaginībhaginīm //</p>
+
+<p>anyān apīpsitāṃs sarvān guror deyān hitāśayaḥ //</p>
+
+<p>tataḥ siddhiṃ tu prārthayed buddhānāṃ bodhisādhikām //</p>
+
+<p>anyāni ca yatheṣṭāni laukikāni varddhikāni //</p>
+
+<note><hi rend="bold">Sdp 220</hi></note>
+<p>tato dadyād dhitārthāya siddhiṃ putrasya mantravit //</p>
+
+<p>amatsareṇa cittena śraddhayā śrāddhacetasā //</p>
+
+<p>niḥsvabhāvaṃ tu dharmāṇāṃ bhāvayitvā tu cetasā //</p>
+
+<p>akārendumaṇḍalaṃ cintya tasya madhye svabījakam //</p>
+
+<p>dhyātvā samayamudrāṃ tu cintayet tam eva ca //</p>
+
+<p>sā eva parivarteta devatākārayogataḥ //</p>
+
+<p>tato 'dhitiṣṭhet tāṃ mudrāṃ svabijena tu mudrayā //</p>
+
+<p>abhiṣiñced buddhais tu yathāvad anupūrvaśaḥ //</p>
+
+<p>tato 'bhimānam utpādya sādhayed vicakṣaṇaḥ //</p>
+
+<p>siddhiṃ tathāgatiṃ cāpi kiṃ punaś cānyasiddhayaḥ //</p>
+
+<p>atha bhagavantaṃ praṇipatya brahmādayo mahādevā evam āhuḥ / kiṃ bhagavan tasya rājaputrasya rājāmātyasya kṣatriyasya brāhmaṇasya vaiśyasya śūdrasyānyasya vā hīnajaghanasya pratyantikajanapadakulajātyasyāsya maṇḍalarājapraviṣṭasya vipākaṃ bhavati /</p>
+
+<p>bhagavān āha / sādhu sādhu mahābrahmādayo devagaṇā yan mamedam anāgatānāṃ sattvānāṃ hitāya paripraṣṭavanta iti / śṛṇuta devagaṇasya maṇḍalarājapraviṣṭasyābhiṣiktasya likhitasya likhāpayitasyānumoditasya vanditasya pūjitasya phalavipākaṃ ceti / aham api devaputrāḥ saṃkṣepato notsāhāmi / anuśaṃsā vaktuṃ yan mama puṇyasaṃbhāraṃ tam anekaśatasahasraguṇitaṃ kṛtvā saṃkhyām api gaṇanām apy upamām api na kṣamate / yāvat sarvatathāgatānām api puṇyaskandhaṃ na kṣamate / iti /</p>
+
+<p>āścaryaṃ bhagavan āścaryaṃ vajradhara yad evaṃ maṇḍalapraviṣṭānāṃ sattvānāṃ phalavipākam iti / utsāhāmo vayaṃ bhagavan utsāhāmo bhagavan vajradhara maṇḍalādipraveśam /</p>
+
+<p>atha te devās tathaiva namasyaivam āhuḥ / santi bhagavan sattvā jambudvīpakā alpāyuṣo mandapuṇyā apāyagatikā narakapretatiryakpratyupapannā vā tesāṃ kathaṃ vayaṃ bhagavan pratipatsyāmaḥ /</p>
+
+<note><hi rend="bold">Sdp 222</hi></note>
+<p>teṣāṃ bho devaputrā ihaiva maṇḍale praveśayadhvaṃ / praveśya cābhiṣiñcayadhvam / dharmatākṣaraṃ ca japayadhvam / tena te sattvā dīrghāyuṣkā bhavanti / puṇyahīnāḥ puṇyavanto bhavanti / apāyād vinirmuktā bhavanti / ye cāpāyotpannās teṣāṃ bho devaputrā nāmābhiṣekaṃ kuruta / pratibimbābhiṣekaṃ kuruta / stūpābhiṣekaṃ kuruta / svadevatākāyābhiṣekaṃ kuruta / antaśas tajjanyaṃ tatputraṃ tadgotraṃ tannāmadhārakaṃ vā bhṛtyaṃ vābhiṣiñcadhvaṃ saptarātradivasya saptabhir maṇḍale praveśyābhiṣekair vimucyata apāyāvaraṇāt / tannāmakenāpi devaputrā japadhvaṃ dvilakṣaṃ trilakṣaṃ catullakṣaṃ yāval lakṣaśatasahasraṃ pañcānantaryakāriṇo 'pi vimucyante / kiṃ puṇaḥ svalpapāpakāriṇa iti /</p>
+
+<p>hastamātraṃ devaputrā vartulaṃ dvihastaṃ vā śāntikaṃ kuṇḍaṃ kṛtvā hīnotkṛṣṭamadhyamaṃ tannāmnā śvetasarṣapānāṃ śatasahasraṃ juhuyāt / sarvāpāyād vimucyate / tanmāṃsāsthikeśabhasmādikaṃ vā tenaiva vidhānena juhuyāt / sarvapāpād vimucyate /</p>
+
+<p>tanmadhye likhec cakram aṣṭāraśvetajvālinam //</p>
+
+<p>samantāl likhed vajraṃ pañcaśūlaṃ sitāṃśulam //</p>
+
+<p>viśvavajraṃ tato kuryād vajraratnāmbujottamaṃ //</p>
+
+<p>tato nānāvidhāmudrāṃ kuryāt pāpahananāya //</p>
+
+<p>bāhyavajrakulānāṃ tu mudrā bāhyato likhet //</p>
+
+<p>grahanakṣatracihnāni tathā lokabhṛtyān api //</p>
+
+<p>paṭapratimāṃ tu nāthasya sthāpayed vajriṇā saha //</p>
+
+<p>kalaśān pūrṇakumbhāṃś ca balinaivedyaśuklakān //</p>
+
+<p>sūtrayitvā samāsena saṃlikhya ca yathāvidhaiḥ //</p>
+
+<p>śvetāmbaradharo bhūtvā buddharūpī viśāradaḥ //</p>
+
+<p>anusmṛtya ca taṃ sattvam apāyagatisaṃsthitam //</p>
+
+<p>homayec chuddhasaṃtānaḥ pāpāvaraṇaśāntaye //</p>
+
+<p>ghṛtakṣīrasamākṣikair lājasarṣapamiśritaiḥ //</p>
+
+<p>asthimāṃsādikaṃ tasyātha vā nāmamātrakair // iti //</p>
+
+<p>utpādya sugatau tasya puṣṭiṃ kuryād vicakṣaṇaḥ //</p>
+
+<p>dvihastaṃ caturhastaṃ vāṣṭahastaṃ tathottamam //</p>
+
+<p>kṛtvā kuṇḍaṃ catuḥkoṇaṃ samantād vedikāyuktam //</p>
+
+<note><hi rend="bold">Sdp 224</hi></note>
+<p>tasya madhye ratnapadmaṃ tu likhet pītaraśminam //</p>
+
+<p>samantāl likhed ratnaṃ vedikāyāṃ tu aṃbujaṃ //</p>
+
+<p>kulapañcakabhedena likhed mudrāṃ tu bāhyataḥ //</p>
+
+<p>tathaiva bāhyadevānāṃ likhed aṃkuśādikam //</p>
+
+<p>pītāmbaradharo bhūtvānusmṛtya sugatisaṃsthitam //</p>
+
+<p>kuryāt pauṣṭikakarma puṣṭyarthāya taddhitam //</p>
+
+<p>āyuḥśrīkāntisaubhāgyaṃ vardhayet tasya dehinaḥ //</p>
+
+<p>tataḥ kuryād vaśyaṃ tu tasya karma hitāya //</p>
+
+<p>dvihastaṃ caturhastaṃ tu kṛtvā kuṇḍaṃ dhanurākṛtim //</p>
+
+<p>hastaṃ vā tasya madhye tu saṃlikhya raktam ambujam //</p>
+
+<p>tasyopari ca saṃlikhet saśaraṃ dhanur eva ca //</p>
+
+<p>samantāc ca likhec cāpaṃ saśaraṃ raktavarṇakam //</p>
+
+<p>bāhyatas tadvad evāsya kuryād mantrabhūtaḥ sadā //</p>
+
+<p>smṛtvā tasya sattvasya raktāmbarabhuṣitaḥ //</p>
+
+<p>raktapuṣpāmbujaṃ vāpi phalaṃ raktaṃ sadhātukam //</p>
+
+<p>bhavet tasya devādayo ghṛtamiśritakuṃkumaiḥ //</p>
+
+<p>raktacandanacūrṇaiś ca sarve tiṣṭhanti tadvaśāḥ //</p>
+
+<p>tasya duṣṭavināśāya abhicāraṃ samārabhet //</p>
+
+<p>dvyardhahastaṃ trihastaṃ vā navahastaṃ tathottamam //</p>
+
+<p>kṛtvā koṇatrayair yuktair madhye vajranavātmakam //</p>
+
+<p>trisūcikair vṛtāṃ vedīṃ kṛtvā viśvaiś ca vajribhiḥ //</p>
+
+<p>daṇḍamuṇḍatriśūlāṃkair vajraparaśusūcikaiḥ //</p>
+
+<p>kārayed bāhyato cāpi tripuṭaṃ pūrvavac citram //</p>
+
+<p>kalaśān balikumbhāṃś ca naivedyān sthāpayed bahu //</p>
+
+<p>māṃsarudhirasaṃpūrṇāḥ kapālāś cāpi sarvataḥ //</p>
+
+<p>kṛṣṇāmbaradharaḥ kruddhas trailokyavijayī svayam //</p>
+
+<p>sarvapāpādivighnānāṃ nāśayet tasya dehinaḥ //</p>
+
+<p>tataḥ sauhatapāpātmā nirvighnaś carate sukham //</p>
+
+<p>svargalokeṣu mānuṣye yāvat trailokyadhātuṣu //</p>
+
+<p>anenaiva krameṇāśu kuryāj janmanīha sthitān //</p>
+
+<p>tatas tathaiva syāt teṣāṃ yeṣām uddiśya kāryate //</p>
+
+<p>anyāny api karmāṇi yathā pūrvaṃ tathā kuryāt //</p>
+
+<p>tena saṃpadyate kṣipraṃ sattvānāṃ ca sukhāvaham //</p>
+
+<note><hi rend="bold">Sdp 226</hi></note>
+<p>atha brahmādayo devāḥ saṃhṛṣṭamanaso bhagavantaṃ namasyaivam āhuḥ / yo bhagavan apāyopapannānāṃ sattvānām arthāya hitāya sukhāya / etaṃ kalparājaṃ likhiṣyati likhāpayiṣyati / kiṃ punar yathānirdiṣṭam avikalpayataḥ kariṣyati / vayaṃ brahmāddayo devās tasya kulaputrasya kuladuhitur vā bhṛtyavat paripālayiṣyāmaḥ / yaś ca rājaiva rājaputro vā rājāmātyo vā yathāpaṭhituṃ mantraṃ vartayiṣyati tasya rājavṛddhiṃ kariṣyāmaḥ / viṣayadeśāṃś ca janaparivārajanasasyādirakṣāṃ ca kariṣyāmaḥ / bahudhanadhānyasamṛddhiṃ kariṣyāmaḥ / strīpuruṣadārakadārikāsaṃpadaṃ ca kariṣyāmaḥ / ṛddhiṃ ca sphītaṃ ca subhikṣaṃ ca kṣemaṃ ca kariṣyāmaḥ / yaś cedaṃ kalparājaṃ śrāddho dhvajāgrāvaropitaṃ kṛtvā nagaranigamādisu praveśayet svayaṃ vā pratyudgacched dhastiskandhāvaropitaṃ ca kṛtvā sarvagrāmanagarādikaṃ bhrāmayet / sarvamṛtyūpadravaṃ ca naśyati / tasya mahāsattvasya padaṃ jñāsyāmo bhṛtyatvena putratvena vā / yatra pāpaṃ pracariṣyati tatra bhagavān vajrapāṇiḥ svayam eva saṃbhogikaiḥ kāyair vajrasattvarūpeṇa vyavasthita iti manyāmaḥ / sa eva bhagavān vajrasattvaḥ samantabhadraḥ sarvāśāparipūrakaḥ kalparājarūpeṇa viharatīti manyāmaḥ / sarvatathāgatāś ca saparivārā viharanta iti manyāmaḥ / taṃ ca pṛthivīpradeśaṃ caityabhūtaṃ manyāmaḥ / pūjayāmo vandayāmaḥ / ārakṣiṣyāmaḥ / yaś cainaṃ kalparājaṃ pracariṣyati vajrācāryamahātapā tasya vayaṃ brahmādayo devā bhṛtyā bhavāmaḥ / ceṭatvenopatiṣṭhāmaḥ / kiṃkaratvenopatiṣṭhāmaḥ / sarvājñātve kariṣyāmaḥ / sarvahitaṃ sukhaṃ ca kariṣyāmaḥ / sarvasiddhiṃ ca prayacchāmaḥ / saṃkṣepataś ca bhagavan tasya pādarajāṃsi śirasā dhārayāmaḥ /</p>
+
+<note><hi rend="bold">Sdp 228</hi></note>
+<p>vandayāmo bhagavan pūjayāmo bhagavan tasya pṛṣṭhataś cānugacchāmaḥ / ye bhagavan sattvā maṇḍale 'bhiṣiktās te 'smākaṃ prabhur iti manyāmaḥ / vajrapāṇir iti manyāmaḥ / vajrasattva iti manyāmaḥ / mahāsukhasamantabhadra iti manyāmaḥ / tathāgataś ceti manyāmaḥ /</p>
+
+<p>atha bhagavān vajrapāṇis tān brahmādīn devān evāha / sādhu sādhu brahmādayo devā yena dharmagauraveṇaiva bhūtāṃ pratijñāṃ kurvatas tat sādhu pratipadyadhvam iti /</p>
+
+<note><hi rend="bold">Sdp 230</hi></note>
+<p>III
+atha bhagavān vajrapāṇiḥ sarvamantravidyāhṛdayadṛḍhīkaraṇārthaṃ svahṛdayam abhāṣata /</p>
+
+<p>oṃ bhrūṃ trūṃ vajrapāṇi dṛdhaṃ tiṣṭha huṃ / oṃ huṃ /
+oṃ vajra huṃ phat / oṃ dṛḍhavajra huṃ / oṃ vajra huṃ saḥ /
+oṃ vajra huṃ sraḥ /</p>
+
+<p>athāsya maṇḍalaṃ bhavati /</p>
+
+<p>maṇḍalaṃ pūrvaval likhya madhye vajraṃ samālikhet //</p>
+
+<p>atha vā vajrasattvaṃ tu samantabhadraṃ mahāsukham //</p>
+
+<p>purato vajrapāṇiṃ tu dakṣiṇe ratnapāṇinam //</p>
+
+<p>paścime padmapāṇiṃ tu viśvapāṇiṃ tu cottare //</p>
+
+<p>bāhyato maṇḍalīkṛtya sarva buddhān niveśayet //</p>
+
+<p>tasya bāhye tu sattvākhyaṃ saṃlikhed tu yathākramam //</p>
+
+<p>tadbāhye 'pi likhet sattvān maitreyādīn mahottamān //</p>
+
+<p>tadbāhye tu likhed bhikṣūn ānandādīn munīn tathā //</p>
+
+<p>brahmādīṃś ca likhed bāhye sabhāryāyantramaṇḍitān //</p>
+
+<p>grahanakṣatracandrasūryaṃ caturnāmavīrajinām //</p>
+
+<p>diglokapālānāṃ saṃlikhed asmin maṇḍale //</p>
+
+<p>bāhyatas tu nārakādīn tiryagupamām //</p>
+
+<p>dvāre dvāre tathaivāpi //</p>
+
+<p>dineṣv eteṣu daśasu prayatnato maṇḍalaṃ likhet //</p>
+
+<p>kṛṣṇapakṣe 'pi yadbalyo maṇḍalaṃ na virudhyate //</p>
+
+<p>pañcamyām atha saptamyāṃ pūrṇamāsyāṃ viśeṣataḥ //</p>
+
+<p>śasyate padmahastasya maṇḍalānāṃ kriyāvidhiḥ //</p>
+
+<p>yāni ca krūrakarmāsu tāny ālikhet kṛṣṇe 'pi //</p>
+
+<p>krodhānāṃ maṇḍalāni ca pūrṇamāsyāṃ viśeṣena //</p>
+
+<p>śasyante jinamaṇḍalāḥ //</p>
+
+<note><hi rend="bold">Sdp 232</hi></note>
+<p>athādhivāsanāṃ kuryāt svobhūte maṇḍalodyame //</p>
+
+<p>digbhāgaṃ lakṣayet pūrvam udayena vivasvataḥ //</p>
+
+<p>tato maṇḍalavinyāsaṃ manasā parikalpayet //</p>
+
+<p>mantratantroditaṃ snigdhaṃ mantrarūpaśubhaṃ śuci //</p>
+
+<p>mano 'nukūlaṃ bhoktavyaṃ svaśiṣyaiḥ saha mātrayā //</p>
+
+<p>tataḥ pradoṣe susnātaḥ śitāmbaradharaḥ śuciḥ //</p>
+
+<p>saha śiṣyair gurur dhīmān āgacchen maṇḍalāntikaṃ //</p>
+
+<p>sūpalipte susaṃmṛṣṭe pradeśe maṇḍalasya tu //</p>
+
+<p>mahākrodhābhijaptena prokṣite gandhavāriṇā //</p>
+
+<p>madhye 'dhivāsanāṃ kuryāt kulānāṃ hṛdayena tu //</p>
+
+<p>maṇḍalādhipamantreṇa sarvakarmāṇi kārayet //</p>
+
+<p>gandhamaṇḍalakaṃ kṛtvā medinyāṃ dvādaśāṃgulam //</p>
+
+<p>saptaśaḥ pāṇinālabhya japen maṇḍalavidyayā //</p>
+
+<p>devatānāṃ tu paścān mahatāṃ nāma bodhiyā //</p>
+
+<p>hṛdayena yathābhāgaṃ gandhapuṣpādipūjanaṃ //</p>
+
+<p>kṛtvā baliś ca dātavyo dhūpaś caivābhimantritaḥ //</p>
+
+<p>tato 'bhimantrayet toyaṃ candanena vimiśritam //</p>
+
+<p>tasmin deyāni puṣpāṇi dhūpayec ca vidhānataḥ //</p>
+
+<p>audumbaraṃ dantakāṣṭam aśvatthaṃ vāpi nirvraṇam //</p>
+
+<p>nātikṛśaṃ nātisthūlaṃ dvādaśāṃgulasaṃmitam //</p>
+
+<p>kṣālitaṃ gandhatoyena sūtrakena viveṣṭitam //</p>
+
+<p>dhūpitaṃ gandhadigdhaṃ ca japed ālabhya pāṇinā //</p>
+
+<p>hṛdayaṃ ca bahuśaḥ saptaśo vā kulasya tu //</p>
+
+<p>śiṣyāṇāṃ parimāṇena dantakāṣṭhādisaṃgrahaḥ //</p>
+
+<p>ekādyāni ca karyāṇi agreṇaiva khādayet //</p>
+
+<p>tato rakṣāṃ dṛḍhaṃ kṛtvā śiṣyāṇām ātmanā budhaḥ //</p>
+
+<p>homakarma saghṛtāktābhiḥ samidbhiś ca //</p>
+
+<p>tilaiś ca ghṛtamiśritair ghṛtair āhutihomaiś ca //</p>
+
+<p>dadhyannena ca homayet //</p>
+
+<note><hi rend="bold">Sdp 234</hi></note>
+<p>prathamaṃ vighnaśāntyarthaṃ tato 'nuhṛdayena ca //</p>
+
+<p>tato 'nuśāntihomaṃ ca kuryāc chāntiṃ vā pāpasya //</p>
+
+<p>tataḥ śiṣyān parīkṣayed vidhinā cādhivāsayet //</p>
+
+<p>tadahaḥ śaktitaḥ kuryāt saṃvaraṃ grahaṇaṃ tathā //</p>
+
+<p>teṣām evaṃ vidhānaṃ tu śucīnāṃ śuklavāsasām //</p>
+
+<p>prāṅmukhānāṃ niṣaṇṇānām ārabhed adhivāsanām //</p>
+
+<p>ādau triśaranaṃ dadyād bodhicittaṃ tato guruḥ //</p>
+
+<p>udpādayed anutpannam utpannaṃ smārayet punaḥ //</p>
+
+<p>tataḥ krodhābhijaptena vāriṇābhyukṣayec chiraḥ //</p>
+
+<p>śirasi ālabhya japet saptavārān samāhitaḥ //</p>
+
+<p>vidyārajasya hṛdayaṃ gandhadigdhena pāṇinā //</p>
+
+<p>ālabhya bhayaṃ varteta saptavāraṃ vicakṣaṇaḥ //</p>
+
+<p>cakravartijinakule vidyārājaikam akṣaram //</p>
+
+<p>hayaśvetāmbujakule vidyārājo daśākṣaraḥ //</p>
+
+<p>sumbhatathāvajrakule vidyārājo maharddhikaḥ //</p>
+
+<p>yuktaś caturbhir huṃkāraiḥ pracaṇḍaḥ sarvakarmasu //</p>
+
+<p>kulatrayeṣu sāmānyaḥ krodho hy amṛtakuṇḍaliḥ //</p>
+
+<p>sarvavighnavināśāya guhyakādhipabhāṣitaḥ //</p>
+
+<p>sarvakarmikamantreṇa mūrdhny ālabhya tato japet //</p>
+
+<p>prokṣayec cāpi tenaiva dhūpanena ca dhūpayet //</p>
+
+<p>abhiṣekāya kalaśaṃ sarvavrīhyādisaṃyutam //</p>
+
+<p>stokaṃ toyasya nikṣipya vidyārājābhimantritam //</p>
+
+<p>adhivāsayed vidhivad datvārghaṃ gandhavāriṇā //</p>
+
+<p>kusumāni vinikṣipya dhūpanenādhivāsayet //</p>
+
+<p>ahany ahani trisaṃdhyaṃ tatsamyak parijaped budhaḥ //</p>
+
+<p>tenābhiṣekaṃ kurvīta punar japtena maṇḍale //</p>
+
+<p>śiṣyāṇāṃ tu samagrāṇām añjalyā uttarāmukham //</p>
+
+<p>dantakāṣṭhaṃ tato dadyād āsanānāṃ yathākramaṃ //</p>
+
+<p>khādayan prāṅmukhān śiṣyān dantakāṣṭhādi bāhyatāt //</p>
+
+<p>sphuṭayet pūrṇaṃ khāditvā kṣipeyuś ca na pārśvataḥ //</p>
+
+<note><hi rend="bold">Sdp 236</hi></note>
+<p>samyak kṣiptaṃ dantakāṣṭhaṃ pated abhimukhaṃ yadā //</p>
+
+<p>jñeyāt tasyottamāsiddhir yasya cāpi unmukhaṃ bhavet //</p>
+
+<p>prāgagreṇa tathā siddhir madhyamā parikīrtitā //</p>
+
+<p>udaṅmukhena tu cakṣu vidyāsiddhis tu laukikī //</p>
+
+<p>dantakāṣṭhaṃ bhavet kṣiptaṃ kathañcid yadādhomukhaṃ //</p>
+
+<p>tadā pātālasiddhiḥ syād bhavān nāsty atra saṃśayaḥ //</p>
+
+<p>śiṣyāṇām upaspṛṣṭhānām āsīnānāṃ tu pūrvavat //</p>
+
+<p>sarvakarmikamantreṇa dadyād gandhodakaṃ guruḥ //</p>
+
+<p>ekaikasya tu pānāya dadyāc culukatrayam //</p>
+
+<p>tatraiva pītvā vyutthāya ekānekabhir ācaret //</p>
+
+<p>tataḥ pūjāṃ punaḥ kṛtvā dhūpam utkṣipya pāṇinā //</p>
+
+<p>adhyeṣayed matimān bhaktim āsthāya devatām //</p>
+
+<p>pūrvam āmantrayed mantraṃ yasya tad maṇḍalaṃ bhavet //</p>
+
+<p>tenānukramayogena devatānāṃ nimantraṇaṃ //</p>
+
+<p>bhagavan amukanāma vidyārāja namo 'stu te //</p>
+
+<p>svo 'haṃ likhitum icchāmi maṇḍalaṃ karūṇātmakam //</p>
+
+<p>śiṣyāṇām anukampāya yuṣmākaṃ pūjanāya ca //</p>
+
+<p>tan me bhaktasya bhagavan prasādaṃ kartum arhasi //</p>
+
+<p>samanvāharantu māṃ buddhā lokanāthāḥ kṛpālavaḥ //</p>
+
+<p>arhanto bodhisattvāś ca yā cānyā mantradevatā //</p>
+
+<p>devatālokapālāś ca ye ca bhutanmaharddhikāḥ //</p>
+
+<p>śāsanābhiratāḥ sattvā ye kecid divyacakṣuṣaḥ //</p>
+
+<p>aham amukanāmnā tu amukaṃ maṇḍalaṃ śubham //</p>
+
+<p>svabhūte tu kariṣyāmi yathāśaktyupacārataḥ //</p>
+
+<p>anukampām upādāya saśiṣyasya tu tan mama //</p>
+
+<p>maṇḍale sahitāḥ sarve sānidhyaṃ kartum arhatha //</p>
+
+<p>evam uktvā tu yā vācā namas kṛtvā bhagavataḥ //</p>
+
+<p>stotropahāraṃ kṛtvā ca tataḥ kuryād visarjanam //</p>
+
+<p>virāgapratisaṃyuktāṃ śiṣyāṇāṃ dharmadeśanām //</p>
+
+<p>kṛtvā prācchiraso dhīmān sthāpayet kuśalaṃ stare //</p>
+
+<p>prabhātāyāṃ tato rātryāṃ prcchate svapnadarśanaṃ //</p>
+
+<p>śrutvā dine nirviśaṃkaḥ śubhaṃ vā yadi vāśubhaṃ //</p>
+
+<p>buddhadharo rājānāṃ samayet saptakulāni tu //</p>
+
+<note><hi rend="bold">Sdp 238</hi></note>
+<p>tatas tvaṃ samayaṃ putra saṃvaraṃ jinabhāṣitam //</p>
+
+<p>śraddhayā guror ājñāṃ ca pālaya prāṇino na tvayā ghātyāḥ //</p>
+
+<p>nādattaṃ grāhyaṃ kāmamithyā na kāryā siddhim icchatām //</p>
+
+<p>na madyaṃ peyaṃ māṃsādi bhakṣaṃ naiva kadācana //</p>
+
+<p>sattvānām ahitaṃ na kāryaṃ tyājyaṃ ratnatrayaṃ na ca //</p>
+
+<p>bodhicittahṛnmudrā tu gurudevās tathaiva ca //</p>
+
+<p>alaṃghyā guror ājñā yataḥ pāpaṃ tu laṃghayet //</p>
+
+<p>na laṃghayec ca nirmālyaṃ tacchāyāṃ nākramet //</p>
+
+<p>mudrākārān tathaiva ca //</p>
+
+<p>na nindayed mantradevatāṃ grahakarmāṇi na kurvīta //</p>
+
+<p>tīrthikāṃś ca na nindayet //</p>
+
+<p>saṃkṣepato vimatikāṃkṣā vicikitsā na kāryā //</p>
+
+<p>ātmatantradevādiṣu tathaiva ca //</p>
+
+<p>dṛḍhaśraddhayā yathāvat sarvavidābhiṣekataḥ //</p>
+
+<p>kumbhādibhiḥ samagrair daśānāṃ daśābhiṣeko yatheccham //</p>
+
+<p>tato vajraghaṇṭāś ca haste dātavyāḥ //</p>
+
+<p>tataś cakrādisaptaratnāni gṛhītvā //</p>
+
+<p>rājyaiśvaryādicakravartitvaprāptaye //</p>
+
+<p>pāpasphoṭanāya cābhiṣiñcet //</p>
+
+<p>mantrasādhayitukāmasya śiṣyasyājñāṃ śrāvayet //</p>
+
+<p>tataḥ śraddhayā śirasā praṇamya vidyamānadravyam //</p>
+
+<p>gurave deyam //</p>
+
+<p>ratnanidhānavrīhihiraṇyasuvarṇavāhanagṛhāḥ //</p>
+
+<p>āsanadārakadārikāpuruṣastriyo deyāḥ //</p>
+
+<p>grāmanagarāṇi ca yathepsitāni //</p>
+
+<p>svacittaprasādena dakṣiṇāni veśayet //</p>
+
+<p>āśusiddhaye gurave saṃkṣipta ātmānam api nivedayet //</p>
+
+<p>ihaiva janmany anavaśeṣasukhāni paraloke cottamasukhaṃ //</p>
+
+<p>buddhatvaṃ prāpyate kiṃ punar devasukham //</p>
+
+<p>sarvabuddhasamaṃ guruṃ vajrācāryanindayā //</p>
+
+<p>nityaduḥkhāvāptir iti ācāryaṃ na nindayet //</p>
+
+<p>vajrabbhātṛbhaginīmātā yogī na nindayet //</p>
+
+<p>upanāhaṃ ca na kuryāt // ratnatrayopakāriṇo na kṣamet //</p>
+
+<p>gurunindakān duṣṭān samayātikramiṇo 'pi tathaiva ca //</p>
+
+<p>evamādyapakārakāinś ca //</p>
+
+<p>evaṃ santi sarvavidbhāṣitāṃ siddhim āpnoti //</p>
+
+<note><hi rend="bold">Sdp 240</hi></note>
+<p>sarvasattvānukampī siddhiṃ prāpnoti śigrajām //</p>
+
+<p>atha khalu bhagavān devendrasadevalokahitasukhārthāya sādhanavidhim abhāṣata / paṭe bhagavantaṃ sarvavidaṃ tathaiva likhet / dakṣiṇe sarvadurgatipariśodhanarājaṃ tathāgatam / vāme śākyamunim / sarvadurgatipariśodhanasyādhastād āryāvalokiteśvaraṃ candrārkavarṇapadmapāṇim / śākyamuner adhastād vajrapāṇim / tayor madhye bhaiṣajyarājaṃ nīlavarṇam ekena hastena hāritakīphalaṃ dhārayantam apareṇa varadaṃ kārayantam / hayagrīvatrailokyavijayau ca duṣṭadamanatatparau svadevatābhimukhau likhet / tayor madhye locanāmāmakīpāṇḍuravāsinītārāḥ svacihnakarā likhet / tāsām adhastāt puṣkariṇīṃ makaramatsyaśvetamaṇḍukādisahitām anekajalajapuṣpaparipūrṇāṃ likhet / dhūpadīpagandhamālyanaivedyapuṣpaphalāni nānāprakārāṇi ca likhet / adhastāc ca sādhakaṃ añjaliṃ kṛtvā praṇamantaṃ likhed niṣaṇṇam /</p>
+
+<p>tataḥ paṭasatyādhiṣṭhānam avalambya cakṣurunmīlanaṃ kṛtvā pūjayet / tato yadi nimittaṃ paśyet siddhyati śīgram / yadi na paśyec ciraṃ siddhyati / hasituṃkarmaśabdaṃ ca ghaṇṭādhvanigarjitam eva ca //</p>
+
+<p>bhikṣubrāhmaṇakanyāś ca phalāni ca dṛṣṭvā śīghram //</p>
+
+<p>sidhyaty uttamamadhyamādhamasiddhiṣu //</p>
+
+<p>tataḥ paṭaṃ mantramudrābhir adhitiṣṭhet //</p>
+
+<p>yathāprāptena ca pūjayet tasyāgrato niṣadya //</p>
+
+<p>trailokyavijayenātmarakṣādikaṃ kṛtvā //</p>
+
+<p>ātmatatvaṃ ca dhyātvā //</p>
+
+<p>lakṣatrayaṃ ṣaṭlakṣāṇi vā japed yāvat siddhinimittaṃ bhūtam /</p>
+
+<p>tato vivekasthāne 'ṣṭau 'śatāni pūrayet / mantraṃ cānūnādhikaṃ japet /</p>
+
+<p>tato japāvasāne maṇḍalaṃ pūrvavac cintayitvā /
+vipulāṃ ca pūjāṃ kṛtvā rātrīm ekāṃ japet /
+<note><hi rend="bold">Sdp 242</hi></note>
+tataḥ pradhānaṃ ca tatputraṃ ca devāṃś ca yadi paśyati /
+tadā yathābhājanam īpsitottamasiddhiṃ vijñāpayet /
+devatā nityaṃ tuṣṭāḥ siddhiphalaṃ tasya dadati /
+namaskṛtya ca siddhim uttamādikāṃ gṛhṇīyāt /
+gururatnatrayasvabhāgaṃ datvā /
+tato nityaṃ vicaret tadabhāveṣu prājñaḥ /</p>
+
+<p>gṛhītvā svayaṃ samācaret / sarvasattvahitakārī cānekakalpaṃ tiṣṭhet / asiddhau sarvakarmakaro bhavet / yakṣanakṣatragrahādayo vacanamātreṇa bhṛtyavac chāntikādisarvakarmakarā bhavanti /</p>
+
+<p>atha khalu devendro bhagavantam etad avocat / bhagavan pāpakāriṇāṃ nārakādivaśībhūtānāṃ sattvānāṃ nārakādiduḥkhaprahāṇāya kathaṃ pratipattavyam / bhagavān āha / devendra śṛṇu nārakavaśagatasattvānāṃ mahāpāpakāriṇāṃ teṣāṃ yathā nārakaduḥkhebhyo 'nāyāsato muktir bhavati tathā śṛṇu / tathaiva maṇḍalaṃ likhitvāṣṭottaraśatajaptaiḥ kalaśaiḥ pūrvavad abhiṣekaṃ kalpayet / tataḥ sarvapāpagatāḥ sarvanārakādiduḥkhebhyaḥ śīghraṃ vimucyante / te ca vimuktapāpamahātmānaḥ śuddhāvāsadeveṣūtpannāḥ / satataṃ buddhadharmasaṃgītim prāpnuvanti / avaivartikabhūmipratiṣṭhitāś ca krameṇa bodhiṃ sākṣāt kurvanti /</p>
+
+<p>tatpratibimbaṃ vā nāma ca kuṃkumena likhitvā //</p>
+
+<p>apāyatrayamahābhayāt sattvānāṃ mokṣaṇāya //</p>
+
+<p>mantrī parahite rataḥ kṛpāyā abhiṣiñcet //</p>
+
+<p>tataḥ sa yogī mantramudrābhir abhiṣiñcet //</p>
+
+<p>devatārūpaṃ kalpayitvā caityamadhye sthāpayet //</p>
+
+<p>svaparadevatāhṛdayaṃ tadhṛdaye pradeśe likhitvā //</p>
+
+<p>devatātulyacittam utpādya gṛhe vā sthāpayet //</p>
+
+<p>tannāma ca vidarbhya mantraṃ kuṃkumena likhitvā //</p>
+
+<note><hi rend="bold">Sdp 244</hi></note>
+<p>caityakarma kuryād yāval lakṣaṃ paripūrṇam //</p>
+
+<p>mahāpāpinaḥ pāpakṣayāya koṭim api pūrayet //</p>
+
+<p>evaṃ kṛte te 'vaśyaṃ narakād muktā bhavanti //</p>
+
+<p>tathā tiryagbhyaś ca muktā devanikāyeṣūtpadyante //</p>
+
+<p>tannāma ca vidarbhya yathoktamantraṃ sahasraṃ japet //</p>
+
+<p>kadācit śatasahasram api pūrayed yāvat koṭim api pūrayet //</p>
+
+<p>devanikāyeṣūtpadyante //</p>
+
+<p>tannāmavidarbhya kuśalo lakṣaśataṃ vā yāvac chatasahasram //</p>
+
+<p>homaṃ kuryān mahānarakapāpamuktā bhavanti //</p>
+
+<p>yāvan nimittaṃ jvalitāgnīsthāne samutpadyate //</p>
+
+<p>tilaśvetasarṣapataṇḍulā ajākṣīrasaṃyuktāḥ //</p>
+
+<p>samidhāś ca gandhāktās tāvad yathāvidhi hotavyāḥ //</p>
+
+<p>tatas te niyataṃ devanikāyeṣūtpannā nimittam upadarśayanti /</p>
+
+<p>kadācid devottamā utpannā atha vā kuṇḍamadhye śvetapradakṣiṇajvālā nirmalordhvajvalanam / avakīrṇasaṃdattajvalanaṃ vidyudiva nirmalaṃ sthiram / etāny aganimittāni paśyati / atha vaiśvānalatātmānaṃ tathaiva darśayanti / candravannirmalaṃ śuklamukhavarṇajvalitam / etannimittadarśanāt teṣāṃ narakādi vimuktipāpasphoṭanasvargotpattayo jñātavyāḥ /</p>
+
+<p>caturhastapramāṇaṃ ca yathāvidhi kuṇḍaṃ khanet //</p>
+
+<p>paryante vajraparivṛtaṃ likhen madhye cakram //</p>
+
+<p>yathāvat pañcakulamudrāḥ svadikṣu likhet //</p>
+
+<p>tathāvat sattvānāṃ lokādhipaṃ ca likhet //</p>
+
+<p>ataḥ pūrṇakalaśā balipūrṇabhājanāni //</p>
+
+<p>cāṣṭau ṣoḍaśaṃ vā sthāpyāni bhakṣabhojananaivedyāni ca /
+puṣpamālādayas tathaiva ca vitānadhvajapaṭādibhir uttamachatraiś ca / samyagvibhūṣaṇīyam /
+<lg>
+<l>evam uttamahomakuṇḍe samyak hotavyam /</l>
+<l>likhitvaivaṃ vidhijño devagaṇam ākarṣayet //</l>
+</lg></p>
+
+<p>mantrajño mantramudrayārgha upadhaukanīyaḥ //</p>
+
+<note><hi rend="bold">Sdp 246</hi></note>
+<p>saṃkṣepataḥ pūjāṃ kṛtvā devagaṇanāgayakṣagandharvāvasthitaḥ / karpūracandanakuṃkumavastrālaṃkārabhūṣito 'bhimantritadhūpaṃ dhūpayet / puṣpamālādibhiś ca pūjayet / cūḍāyāṃ bāhau ca tathaiva mantraṃ likhitvā bandhayet / hṛtkaṇṭhamukhapradeśe sarvavidyādhiṣṭhānaṃ kuryāt / lalāṭorṇākarṇadvaye śiraḥśikhābāhudvaye / nāsākaṭijānupādanāsikāgracakṣurdvaye / guhyendriyapradeśeṣv evam anyeṣv api mantrākṣarāṇy ekāntaśubhāni vinyaset/ tato durgatipariśodhanāyāsanasahitaṃ tanmadhye sthāpayet /</p>
+
+<p>tataś ca mantry abhimantritavastreṇa chādayet /</p>
+
+<p>tato hutabhujaṃ samyakprajvālya / sahasrajvālya / sahasrajvālākulakāyaṃ kuṇḍendudusannibhaṃ śāntam anantam agnim ākṛṣyārghaṃ parikalpayet / tathaiva ca buddhimān agrataḥ pratimādikaṃ sthāpayet / tathāgatagaṇaṃ tathaivākṛṣyārghādikaṃ parikalpayet tathaiva yathoktapūjā kartavyā /</p>
+
+<p>tata āhutiṃ havyaṃ pūrayitvā jvalanāya parikalpayitvā jinādinīm aṣṭottaraśataṃ parikalpayet / tataḥ śodhanamantrarājasyaikaviṃśatim āhutiṃ parikalpayet /</p>
+
+<p>tataś cākṛṣya śvetamukham upakaraṇair vā vāratrayam arghādinā ca pūjayet / vajrapāṇiṃ padmapāśadharaṃ trailokyarūpaṃ pādapadmākrāntapāpaṃ sarvālaṃkārālaṃkṛtaṃ saṃbuddhakirīṭinaṃ cintayed atha vā likhet / tasya ḥrdayena śatasahasraṃ yāvat koṭiṃ vā juhuyāt /</p>
+
+<note><hi rend="bold">Sdp 248</hi></note>
+<p>nimitte ca samutpanne pāpasaṃtatiprahāṇaṃ tathaiva jñātavyam / tato bhasmībhūtaṃ vajrasaṃhāramantreṇa yathāvidhi saṃharet / bhasmāny asthirajāṃsi ca gandhodakapañcagavyasahitāni śodhanamantreṇa lakṣaṃ japtvā pindīkṛtya karpūragandhamṛdbhir miśrīkṛtya pratimāṃ caityadevatāṃ vā kuryāt / ekadvitricatuḥpañcavāraṃ vāṣṭottaraśatavāraṃ vā /</p>
+
+<p>mantramudrābhir adhiṣṭhāya lakṣadvayaṃ japet //</p>
+
+<p>tataś caityaṃ jvalati pratimā vā hasati //</p>
+
+<p>gandhadhūpaprabhā jighrati paśyati devādīṃ nānāprakārām yasya ṛddhiprātihāryāṇi ca patanti puṣpādīni / śaṃkhabherīvaṃśavīṇādīnāṃ ca śabdāḥ śrūyante /</p>
+
+<p>kadācid devatāni nimittāni pāpabahalatayā yadi na paśyet tadāṣṭau lakṣasahasrāṇi japet /</p>
+
+<p>yāvan nimittaṃ bhavati tathāgataṃ pūjayitvā // susamāhito japet /</p>
+
+<p>tato 'nte rātrīm ekāṃ vidhijño japet /
+tadāvaśyaṃ pāpaviśuddhātmā paśyati /
+devatārūpakāyaṃ tatsantānaṃ parijānāti /
+etāni nimittāni jñātvā avikalpacitto /
+maitrīkṛpāparītaḥ sarvakarmāṇi kuryāt /</p>
+
+<p>evam api yadi na saṃbhavati tadā tannāmamātraṃ likhitvā caityamālāṃ kuryāt pratimāṃ vā kṛtvā / homābhiṣekakṛte sati / niyataṃ svargeṣūtpadyante / bhasmasarṣapavālukādīṃś ca nāma vidarbhyābhimantrya samudragāminyāṃ nadyāṃ kṣipet / tataḥ pāpīyaso 'pi durgati vimokṣati /</p>
+
+<p>uttamakuśalabījam utpāditavato buddhatvaphalasamanvāgatasya dānaśīlakṣāntivīryadhyānaprajñāhetuprabhāvitasya puṇyavato lokasya durgati bhagneti /</p>
+
+<p>kaḥ punaḥ vādo nātra saṃśayaḥ /</p>
+
+<p>yaś cānutpāditakuśalamūlo yaś ca nāstikadṛṣṭir bodhimārgād nivṛttas tasya śāsanavidveṣiṇo 'pakāriṇaḥ pāpānabhijñasyamātṛ pitṛvipriyacittasya bodhicittanisṛtavītarāgaghātakasya devatābuddhadharmasaṃghamantramudrāganādīnāṃ (<hi rend="bold">Sdp 250</hi>) ca nāstitvādṛṣṭyādīnāṃ ca pāpīyasām eṣāṃ prajñopāyābhāve muktir nāstīti sugatajinair bhāṣitam /</p>
+
+<p>atha śakrādaya utpalapadmalocanāḥ sādhv iti toṣayanti sma / saṃtoṣayitvā pūjayanti sma / śakreṇa ca parahitaratena yathāvijñaptaṃ /</p>
+
+<p>dvitīyaṃ trisūcikavajrasahitena varado vāmenaikena triśūladhāri dvitīyena khaḍgadhārī sarpayajñopavītanīlakaṇṭho lekhyo 'nena /</p>
+
+<p>oṃ paśupati nīlakaṇṭha umāpriya svāhā /</p>
+
+<p>athāsya mudrā bhavati / dakṣiṇahastena vāmamuṣṭina kṛtvā kanīyasīm aṃguṣṭhenākramya śeṣāṃgulavajralakṣaṇāḥ kṛtvānāmikāṃ tarjanīṃ ca vajrākāreṇa kañcin nāmayet / iyaṃ paśupater mudrā / viṣṇur garudārūḍhaḥkṛṣṇavarṇaś caturbhujaḥ / dakṣiṇabhujābhyāṃ gadāvajradharaḥ / vāmābhyāṃ śaṃkhacakradharaḥ /</p>
+
+<p>vajrahemā kanakavarṇā āsanabhujāyudhaviṣṇuvat /</p>
+
+<p>vajraghaṇṭāmayūrārūḍho raktavarṇaḥ ṣaḍmukho dakṣiṇabhujābhyāṃ śaktivajradharaḥ / vāmābhyāṃ kukkuṭaghaṇṭāvajradharaś ca /</p>
+
+<p>vajrakaumārī vajraghaṇṭāvad eva jñeyā /</p>
+
+<p>maunavajro haṃsārūḍhaḥ kanakavarṇaś caturmukho dakṣiṇabhujābhyāṃ vajrākṣasūtradhārī / vāmābhyāṃ daṇḍakamaṇḍaludhārī /</p>
+
+<p>vajraśāntir brahmavad jñeyā /</p>
+
+<p>vajrāyudhaḥ śvetagajārūḍho gauravarṇo vāmabhujena viśvavajradharo dakṣiṇena lokottaravajradharaḥ /</p>
+
+<p>vajramuṣṭir vajrāyudhavaj jñeyā /</p>
+
+<p>vajrakuṇḍalī krodhaś ca rathārūḍho dakṣiṇakareṇa sapadmena vajradharo vāmena sapadmenādityamaṇḍaladharo raktavarṇaḥ / vajrāmṛtā vajrakuṇḍalikrodhavad eva /</p>
+
+<p>vajraprabhakrodhaḥ sitavarṇo haṃsārūḍho dakṣiṇakareṇa vajradhārī vāmena padmacandradharaḥ /</p>
+
+<p>vajrakāntir vajraprabhakrodhavat /</p>
+
+<note><hi rend="bold">Sdp 252</hi></note>
+<p>vajradaṇḍakrodhaḥ kacchapārūḍho nīlavarṇo dakṣiṇakareṇa vajradhārī vāmena daṇḍadharaḥ /</p>
+
+<p>daṇḍavajrāgrī vajradaṇḍakrodhavat /</p>
+
+<p>vajrapiṃgalakrodho 'jārūḍho raktavarṇo dakṣiṇakareṇa vajradharo vāmena mānuṣam ādāya bhakṣayan avasthitaḥ /</p>
+
+<p>vajramekhalā vajrapiṃgalakrodhavat /</p>
+
+<p>vajraśauṇḍo gaṇapatir gajavāhano dakṣiṇakareṇa vajraṃ dhārayed vāmena lāṃgalaṃ dhārayed avasthitaḥ / sitavarṇaḥ /</p>
+
+<p>vajraviṇayā vajraśauṇḍavad ayan tu viśeṣo yad uta vāmakareṇa khaṭvāṃgadhāriṇīti /</p>
+
+<p>vajramālo gaṇapatiḥ śyāmavarṇaḥ kaukilarathārūḍho dakṣiṇakareṇa vajradharo vāmena kusumamālādharaḥ /</p>
+
+<p>vajrāsanā vajramālāvad ayan tu viśeṣo yad uta vāmakareṇa śaktidhāriṇīti /</p>
+
+<p>vajravaśī śukarathārūḍho gauravarṇo dakṣiṇakareṇa vajradharo vāmena makaradhvajadhārī /</p>
+
+<p>vajravaśā vajravaśīvad ayan tu tasyā viśeṣo yad uta raktavarṇeti /</p>
+
+<p>vijayavajro gaṇapatir maṇḍūkārūḍhaḥ sitavarṇo dakṣiṇakareṇa vajradharo vāmena khaḍgadharaḥ /</p>
+
+<p>vajrasenā vijayavajravat /</p>
+
+<p>vajramusaladūtaḥ puṣpavimānārūḍho gauravarṇo dakṣiṇakareṇa vajradharo vāmena musaladharaḥ /</p>
+
+<p>vajradūtī vajramusalavad ayan tu tasyā viśeṣo yad uta vāmena khaṭvāṃgadhāriṇīti /</p>
+
+<p>vajrāniladūto nīlavarṇo mṛgārūḍho dakṣiṇakareṇa vajradhārī vāmena paṭadhārī / vegavajriṇī vajrāniladūtavat /</p>
+
+<p>vajrānaladūto 'jārūḍho raktavarṇa ūrdhvajvālāprabhas triśikhājvālo dakṣiṇabhujābhyāṃ vajrakavacadharo vāmābhyāṃ daṇḍakamaṇḍaludharaś ca / vajrajvālā vajrānalavat /</p>
+
+<p>vajrabhairavadūto nīlo vetālārūḍho dakṣiṇakareṇa vajradhārī vāmena gadādhārī /</p>
+
+<note><hi rend="bold">Sdp 254</hi></note>
+<p>vajravikaṭā dūtī vajrabhairavavad ayan tu viśeṣo 'syā yad uta vāmena pāśadhāriṇīti /</p>
+
+<p>vajrāṃkuśaceṭaḥ śeṣanāgārūḍho nīlo varāhamukhaḥ / dakṣiṇena vajradharo vāmenāṃkuśadharaḥ /</p>
+
+<p>vajramukhī ceṭī puruṣavāhanā nīlā varāhamukhī dakṣiṇena vajradharā vāmena khaḍgadharā /</p>
+
+<p>vajrakālaceṭako mahiṣārūḍho nīlo dakṣiṇakareṇa vajradharo vāmena yamadaṇḍadharaḥ /</p>
+
+<p>vajrakālī ceṭī vetālavāhanā vāmakareṇa khaṭvāṃgadhāriṇī dakṣiṇakareṇa vajradhāriṇī kṛṣṇavarṇā /</p>
+
+<p>vajravināyakaceṭaka undurārūḍhaḥ sitavarṇo gajamukho dakṣiṇakarābhyāṃ vajraparaśudharo vāmābhyāṃ triśūladharo daṇḍadharaś ca / sarpayajñopavītaḥ / vajrapūtanā ceṭī nīlavarṇa dakṣiṇena vajradharā vāmena saṃmārjanikādharā / undurārūḍhā /</p>
+
+<p>nāgavajraceṭako makarārūḍho 'ṣṭaphaṇaḥ sitavarṇo dakṣiṇena vajradharo vāmena nāgapāśadharaḥ /</p>
+
+<p>vajramakarā ceṭī makarārūḍhā sitavarṇā / aṣṭaphaṇā / dakṣiṇena vajradharā vāmena vajrāṃkitamakaradharā /</p>
+
+<p>bhīmā śyāmavamā dakṣiṇena vajradhāriṇī vāmena khaḍgapheṭakadhāriṇī /</p>
+
+<p>śrī gauravarṇā dakṣiṇena vajradharā vāmena padmadharā /</p>
+
+<p>sarasvatī vīṇāhastā vāmena dakṣiṇena vajradharā /</p>
+
+<note><hi rend="bold">Sdp 256</hi></note>
+<p>durgā śyāmavarṇā siṃhārūḍhā dakṣiṇabhujābhyāṃ vajracakradharā vāmābhyāṃ paṭṭiśāśaṃkhaḍharā /</p>
+
+<p>sarvāsāṃ mātṛṇāṃ rudrādīnāṃ ca varuṇaparyantānāṃ yad dakṣiṇakareṣu vajram uktaṃ tat trisūcikaṃ jñeyam iti / sarvalaukikalokottarāś ca devatā vairocanasaṃmukhalekhyā iti /</p>
+
+<p>tataḥ sandhyākāle saṃprāpte vajraterintirīṃ baddhvā nīlapuṣpamālām ādāya maṇḍalaṃ praviśec caturhuṃkāram udāharan vajravairocanasaptapradakṣiṇaṃ ca śaṃkhavajraghaṇṭāṃ vādayan kuryāt / sarvamaṇḍalaṃ cānātiriktadośaśāntaye nirīkṣya mālāṃ bhagavato niryātya vajranṛtyaṃ kṛtvā / ādāya svaśirasi bandhec caturhuṃkāreṇaiva /</p>
+
+<p>tathā yathoktaṃ yad ūnaṃ paripūrayet //</p>
+
+<p>vijahyād adhikaṃ buddha ābādhayed vajraghaṇṭām //</p>
+
+<p>sidhyate na ca duṣyate // iti /</p>
+
+<p>tato madhye sthito bhūtvā vajrācaryasamāhitaḥ //</p>
+
+<p>manasodghāṭayec caiva vajradvāracatuṣṭayam //</p>
+
+<p>oṃ vajrodghāṭaya samaye praveśaya huṃ / iti /</p>
+
+<p>mudrā cāsya bhavati /</p>
+
+<p>dvivajrāgrāṃgulī samyak saṃdhāryottānato dṛḍham //</p>
+
+<p>vidhārayet susaṃkruddho dvārodghāṭanam uttamam //</p>
+
+<p>iti /</p>
+
+<p>tato 'ṃkuśādibhiḥ karmāṇi kṛtvā saptaratnamayaṃ kalaśaṃ mṛnmayaṃ vākālamūlam uccagrīvaṃ lambauṣṭhaṃ mahodaram divyagandhodakaṃ</p>
+
+<note><hi rend="bold">Sdp 258</hi></note>
+<p>sarvaratnauṣadhisarvadhānyaparipūrṇaṃ saphalaṃ sapallavaṃ sadvastrāvabaddhakaṇṭhakaṃ kṛtarakṣaṃ bahiḥ samantād divyagandhānuliptaṃ sragviṇaṃ vajrāṃkitam upari mahāvajrādhiṣṭhitaṃ krodhaterintirīparigṛhītayā vajrakusumalatayā /</p>
+
+<p>oṃ vajrodaka huṃ ity anenāṣṭottarasahasrābhimantritaṃ caturhuṃkāreṇa cāṣṭaśatābhimantritaṃ kṛtvā bhagavato vajrahuṃkārasyāgrataḥ saṃsthāpya / praveśadvārābhimukhaṃ ca bahir dvitīyaṃ kalaśaṃ caturhuṃkāreṇāṣṭaśatajaptaṃ sthāpayet / tenodakenātmaśiṣyābhiṣekaṃ kṛtvā / praveśamudrāṃ baddhvā na bandhayed vā / pravālaṃ jātarūpaṃ ca śaṃkhaṃ muktāmaṇis tathā / sarvaratnāni siṃhīvyāghrīgirikarṇāsahadevāś ceti sarvauṣadhayaḥ / tilān māṣān yavān dhānyān godhūmāṃś cāpi pañcamān / śabdena sarvavrīhīṇāṃ pañca tān upalakṣayet / tad anu catuḥpraṇāmādipūrvakaṃ saṃvaraṃ grāhayitvā vajrayakṣeṇa nīlavastrāṇi parijapya sattvoṣṇīṣeṇa vastraṃ dvārapālair mukhaveṣṭanaṃ vajrakavacenottarīyam ābaddhoṣṇīṣādika ācāryaḥ krodhaterintiryā nīlapuṣpam ādāya /</p>
+
+<p>oṃ vajrasamayaṃ praviśyāmīty udīrayan praviśya sarvatathāgatān vijñāpayet / ahaṃ bhagavan ityādinā /</p>
+
+<p>tato vajrodakaṃ pītvātmāveśaṃ kṛtvā tāṃ mālāṃ mahāmaṇḍale prakṣipya svaśirasi baddhvā mukhabandhaṃ muktvā yathāvad maṇḍalaṃ dṛṣṭvā tiṣṭha vajretyādinā praveśamudrāmokṣaṃ ca kṛtvā / udakābhiṣekaṃ pañcabuddhamukuṭaṃ paṭṭavajramālādhipativajranāmābhiṣekaṃ</p>
+
+<note><hi rend="bold">Sdp 260</hi></note>
+<p>bhagavataḥ sakāśād bhagavantaṃ praṇamya gṛhītvā / tattvaṃ dharmasamayaṃ siddhivajravrataṃ cādāya / puṣpādibhir lāsyādibhiś cātmānaṃ saṃpūjya / gāthāpañcakenānujñāṃ ca tu huṃkāram udgatāvyākaraṇaṃ cādāya punaḥ svādhiṣṭhānādikaṃ kṛtvā yathābhirucitajāpaṃ ca huṃkāravajro 'haṃ huṃkāravajro 'ham iti / svanāmoccāraṇaṃ kṛtvā vairocanamahāmudrāṃ baddhvā / tanmantreṇa aḥkārāntena vairocanasthāne tathāgatavajram ātmānam āveśayet / vajro 'ham iti vajrāhaṃkāraṃ vibhāvya / tad vajraṃ vairocanaṃ bhāvayet / vajradhātur aham iti / evaṃ yāvad vajrāveśamahāmudrāṃ baddhvottaradvāre tanmantreṇāḥkārāntena vajraghaṇṭām ātmānam āveśayet / vajraghaṇṭāham ity ahaṃkāram utpādya tāṃ vajrāveśakrodho 'ham iti bhāvayed evaṃ vajreṇa sādhitaṃ bhavati / sattvavajrāṃkuśīṃ baddhvā vajrācāryaḥ tataḥ punaḥ kurvan acchaṭāsaṃghātaṃ sarvabuddhān samājayet / oṃ vajrasamāja jaḥ vaṃ hoḥ iti / ekaviṃśativāraṃ pravartayet / tataḥ śīghraṃ mahāmudrāṃ vajrakrodhasamayam uccārayet / sakṛd vāraṃ nāmāṣṭakaṃ śataṃ uttamam / tato vajrāṃkuśādibhiḥ svadvāreṇākṛṣya praveśya baddhvā vaśī kṛtya yathāvac caturhuṃkāreṇārghaṃ datvā / śrīvairocanādīn samayamudrābhir bhadrakalpikaparyantān sādhayet / svamantram uccārya vadet / jaḥ huṃ vaṃ hoḥ samayas tvaṃ samayas tvam aham /</p>
+
+<p>tataḥ svamantram uccārayed eva siddhā bhavanti //</p>
+
+<lg>
+<l>atha samayamudrā bhavanti /</l>
+<l>vajrād vikarṣasaṃbhūtāḥ samayāgrās tu kīrtitāḥ //</l>
+</lg>
+
+<p>tāsāṃ bandhaṃ pravakṣāmi krodhabandham anuttaram //</p>
+
+<p>bāhuvajraṃ samādhāya kaniṣṭhāṃkuśabandhitā //</p>
+
+<p>trilokavijayā nāma tarjanī dvayatarjanī //</p>
+
+<p>tathaivāgrā mukhasaṃgā maṇis tu pravikuñcitā //</p>
+
+<p>samotthamadhyamā padmā tu madhyāgradvayatarjanī //</p>
+
+<note><hi rend="bold">Sdp 262</hi></note>
+<p>tarjanīdvayaṃ vajraṃ tu dakṣiṇāṃkucitāṃkuśī //</p>
+
+<p>tathaivāgrastahuṃkārāḥ sādhukārās tathaiva hi //</p>
+
+<p>dvyagrasaṃsthā bhṛkuṭyāṃ tu hṛdi suryāgramaṇḍalā //</p>
+
+<p>prasāritabhujā mūrdhni tarjanī mukhahāsinī //</p>
+
+<p>tarjanī nakhasaṃsaktā kośamuṣṭis tu dakṣiṇā //</p>
+
+<p>samamadhyaguṇṭhacakrā tu mukhataḥ pratiniḥśṛtā //</p>
+
+<p>tarjanīmadhye vajrā tu grīvāveṣṭitatarjanī //</p>
+
+<p>agrādikamahādamṣṭrā grastāgrāvajramuṣṭitā // iti /</p>
+
+<p>lāsyādīnāṃ tu vajradhātu uktā eva huṃkṛtā / tadyathā /
+vajrabandhaṃ baddhvā hṛdayaṃ tu samāṃguṣṭhā //</p>
+
+<p>suprasāritamālinī //</p>
+
+<p>añjalyagramukhoddhāntā nṛtyato mūrdhni saṃyutā //</p>
+
+<p>vajrabandhaṃ tv adhodānāt svañjaliś cordhvadāyikā //</p>
+
+<p>samāṃguṣṭhā nipīḍā ca suprasāritalepanā //</p>
+
+<p>ekatarjanī saṃkocā dvyaṃguṣṭhagranthibandhitā //</p>
+
+<p>aṃguṣṭhāgrakaṭābandhā vajramuṣṭyagrasaṃdhitā //</p>
+
+<p>hṛdayamaṇḍale pañcasūcikavajraṃ vicintya / huṃkāram evoccārayatā sarvamudrā bandhanīyā /</p>
+
+<p>atha mudrāyā niyamo bhavati / vairocanavajrahuṃkāraratnahuṃkāradharmahuṃkārakarmahuṃkārasthāne ca / atha ratnahuṃkārādīnāṃ mantrāṇi bhavanti /</p>
+
+<p>oṃ vajrabhṛkuṭīkrodhānaya sarvaratnāni hrīḥ phaṭ /
+oṃ vajradṛṣṭikrodha duṣṭān māraya huṃ phaṭ /
+oṃ vajraviśvakrodha kuru sarvaviśvarūpayā sādhaya huṃ phaṭ /</p>
+
+<p>anyamudrāḥ sattvavajrīm ārabhya draṣṭavyāḥ / tathā hi sarvavidyottamānāṃ vijayamantretyuktam / savajrahuṃkāramudrāsaṃgrahaś ca bhagavān vajrahuṃkāro paṭhyate / na cānyā vajrahuṃkārā bhavatum arhanti / sarvatantreṣu vajrahuṃkārā nirdiṣṭeti // tad anu tathaiva jihvāyāṃ vajraṃ nyasya yathākrameṇa buddhavajradharādīnāṃ dharmākṣarāṇi nyasyet / etāni ca tāni /</p>
+
+<note><hi rend="bold">Sdp 264</hi></note>
+<p>huṃkāro buddhavajribhyāṃ traḥkāro vajragarbhataḥ /
+hrīḥkāro vajrasenasya aḥkāro vajraviśvataḥ /
+huṃ sattvavajryāḥ / traḥ ratnavajryāḥ / hrīḥ dharmavajryāḥ /
+aḥ karmavajryāḥ /
+huṃ he trāṃ traṃ hi hrīḥ deḥ haḥ / iti vajrasattvādīnām /
+mahārate huṃ / rūpaśobhe huṃ / śrotrasaukhye huṃ / sarvapūjye huṃ /
+prahlādini huṃ / phalāgame huṃ / sutejāgri huṃ / sugandhāgri huṃ /
+āpāhī jaḥ huṃ / āhi huṃ huṃ huṃ / he sphoṭa vaṃ huṃ / ghaṇṭa aḥ aḥ huṃ /
+iti / vajralāsyādīnāṃ vajrāveśaparyantānām iti /</p>
+
+<p>tadanantaram aḥkārāṇi hṛdi viśvavajrān niṣpādya karmamudrām badhnīyāt / tatremāḥ krodhamuṣṭidvidhākṛtya / vāmavajrāṃgulī grāhyā dakṣiṇena samutthitā //</p>
+
+<p>bodhyagri nāma mudreyaṃ buddhabodhipradāyikā // sagarvotkarṣanaṃ dvābhyāṃ vajrahuṃkāravajrasattvasattvavajrīṇām /</p>
+
+<p>aṃkuśagrahanasaṃsthitā vāṇaghaṭanayogā ca //</p>
+
+<p>sādhukāraṃ hṛdi sthitā abhiṣekaṃ dvivajraṃ tu //</p>
+
+<lg>
+<l>ratnahuṃkāravajrabhṛkuṭikrodharatnavajrīṇām /</l>
+<l>hṛdi sūryapradarśanaṃ vāmasthabāhudaṇḍā ca //</l>
+</lg>
+
+<p>tathāsya parivartitā savyāpasavyavikoca //</p>
+
+<lg>
+<l>dharmahuṃkāravajradharmadharmavajrīṇām /</l>
+<l>hṛdvāmā khaḍgadhāriṇī alātacakrabhramitā //</l>
+</lg>
+
+<p>vajradvayamukhotthitā vajranṛtyabhramonmuktā //</p>
+
+<p>kapotoṣṇīṣasaṃsthitā // karmahuṃkāravajrakarmakarmavajrīṇāṃ, /
+kavacakaniṣṭhādamṣṭrāgrā muṣṭidvayanipīḍitā //</p>
+
+<p>vajragarvaprayogeṇa named āśayakampitaiḥ //</p>
+
+<p>mālabandhā mukhoddhāntā nṛtyato mūrdhani saṃsthitā //</p>
+
+<p>adhaḥkṣeporddhvaprakṣepā samāṃguṣṭhanipīḍitā //</p>
+
+<note><hi rend="bold">Sdp 266</hi></note>
+<p>gandhalepanayogāc ca pūjāmudrā prakīrtitā //</p>
+
+<p>tarjanyaṃkuśabandhena kaniṣṭhāyā mahāṃkuśī //</p>
+
+<p>bāhugranthikaṭāgrābhyāṃ pṛṣṭhayoś ca nipīḍitā // iti /
+dvārapālamudrāḥ /
+sarvāś ca karmamudrā nṛtyodbhavāḥ /</p>
+
+<p>tato yathālekhānusārato vairocanādīnāṃ mahāmudrābandhaṃ kuryāt / vajrasattvaratnadharmakarmakrodhānāṃ yā mahāmudrās tāḥ sattvaratnadharmakarmavajriṇām api vajrādyantargatāḥ strīrūpadhāriṇyaś ca tāḥ / yāṃ yāṃ mudrāṃ tu badhnīyād yasya yasya mahātmanaḥ /</p>
+
+<p>sarvamudrāsamayaḥ /</p>
+
+<p>vāmatathāgatamuṣṭim uttānaṃ kṛtvā dakṣiṇahastatarjanyaṃguṣṭhābhyāṃ kanyasām ārabhya vikāsya saṃpuṭāñjaliṃ kuryāt / iyaṃ maitreyādīnāṃ samayamudrā / vidyā caiṣāṃ pūrvoktā / tām eva vidyāṃ teṣāṃ jihvāsu nyased iyaṃ teṣāṃ dharmamudrāḥ / akāreṇa svahṛdi viśvavajraṃ niṣpādya teṣāṃ lekhyānusārato mahāmudrā baddhvā karmamudrā bhavanti /</p>
+
+<p>svahṛdi pañcasūcikaṃ vajraṃ vicintya lekhyānusārata eva teṣāṃ mahāmudrā badhnīyāḥ / saiva vidyā sāmānyaiveti / kaniṣṭhāṃguṣṭhabandhe tu vāmamadhyāṃgulitrike triśūke madhyaśūlaṃ tu vajramudrāparigrahaṃ vajravidyottameyaṃ vajraśūleti kīrtitā /</p>
+
+<p>ataḥ paraṃ pravakṣāmi māyāvajrādisaṃjñinām //</p>
+
+<p>vajrabandhaṃ dṛḍhīkṛtya vāmavajraṃ tu bandhayet //</p>
+
+<p>vajramuṣṭir iti khyātā sarvavajrakuleṣv iyam //</p>
+
+<p>dvidhīkṛtya tu tad vajraṃ sarvacihnaniveśitam //</p>
+
+<note><hi rend="bold">Sdp 268</hi></note>
+<p>sarvavajrakulānāṃ tu mudrāsu ca niveśayet //</p>
+
+<p>prasāritāgrapṛṣṭhasthā jyeṣṭhāṃguṣṭhagrahādhakā //</p>
+
+<p>oṃkāramūrdhni saṃsthā tu vajratvarāpratiṣṭhitā //</p>
+
+<lg>
+<l>vidyārājamahāmudrāgaṇaḥ /</l>
+<l>prasāritāgrītāpāṇir hastapṛṣṭhe tathaiva ca //</l>
+</lg>
+
+<p>muṣṭisaṃsthā bhujadvā ca mukhataḥ parivartitā //</p>
+
+<lg>
+<l>vajrakrodhamahāmudrāgaṇaḥ /</l>
+<l>vāmāṃguṣṭhasusaṃsthā tu mālābandhaniyojitā //</l>
+</lg>
+
+<p>dakṣiṇenārthadāyī ca khaḍgamudrāgramuṣṭigā //</p>
+
+<lg>
+<l>mahāganapatimudrāgaṇaḥ /</l>
+<l>dakṣiṇagrastamusalā prasāritabhujas tathā //</l>
+</lg>
+
+<p>dakṣiṇajvāle saṃdarśya vajramuṣṭiprakampitā //</p>
+
+<lg>
+<l>dūtamahāmudrāgaṇaḥ /</l>
+<l>sagarvamukhaḍamṣṭrāgrā daṇḍaghātaprayojitā //</l>
+</lg>
+
+<p>bāhusaṃkocalagnā ca vajradakṣiṇahāriṇī //</p>
+
+<lg>
+<l>ceṭamahāmudrā /</l>
+<l>athomādimātṛgaṇamudrā bhavati /</l>
+<l>vāmavajrabandhena triśūlāṃjaṃ tu pīḍayet //</l>
+</lg>
+
+<p>anayā baddhayā samyak siddhyed vidyottamaḥ svayam //</p>
+
+<p>sarvavajrakulānāṃ tu vāmavajrāgrasaṃgraham //</p>
+
+<p>mudrābandhaṃ pravakṣāmi samayānāṃ yathāvidhi //</p>
+
+<p>cakrasarvāgrasaṃpīḍā ghaṇṭāmudrā tathaiva ca //</p>
+
+<p>tathaivauṃkāramudrā tu siṃhakarṇiparigrahā //</p>
+
+<p>mudrā rājanikā jvālāparigrahā caiva //</p>
+
+<p>prabhāsaṃgraham eva ca //</p>
+
+<p>daṇḍamuṣṭigrahā caiva mukhataḥ parivartitā //</p>
+
+<lg>
+<l>krodhasamayaḥ /</l>
+<l>phaṇāmudrā ca mālā ca vajrāvastabhyanāmikā //</l>
+</lg>
+
+<p>mūrdhni sthā caiva gaṇikā maṇḍalavadvāraphaṇikā //</p>
+
+<lg>
+<l>gaṇikāsamayāḥ /</l>
+<l>bāhusaṃkocavaktrā ca pṛṣṭhataḥ parivartitā //</l>
+</lg>
+
+<p>jvālāsphuliṃgamokṣā ca vidāritamukhasthitā //</p>
+
+<p>dūtasamayāḥ /
+<note><hi rend="bold">Sdp 270</hi></note>
+dvyantapraveśitamukhī pīḍya caiva prapātinī //</p>
+
+<p>bāhuveṣṭanaveṣṭā ca sahasāhāriṇī tatheti //</p>
+
+<p>ceṭāsamayā iti //</p>
+
+<p>tato mahādevādijihvāsu tadmantraṃ nyasya / akāreṇa svahṛdi tathaiva vajraṃ niṣpādya / teṣāṃ mudrā baddhāḥ karmamudrā bhavanti / svahṛdi pañcasūcikavajraṃ vibhāvya / mahāmudrā lekhyānusārato bandhanīya iti /</p>
+
+<p>tato bhagavantaṃ vairocanaṃ bhadrakalpikaṃ bāhyavajrakulāni ca vajraratnābhiṣekenābhiṣiñcya / śrīvajrahuṃkārādīn pañcabuddhamukuṭavajramālāpaṭābhiḥṣekair abhiṣiñcet / tato 'rghaṃ datvā pūjāṃ kuryāt / tatra tāvad ratnādimayān kalaśān pūrvoktalakṣaṇān vajrādisvacihnakān vairocanādimantrair aṣṭottaraśatajaptān bāhyamaṇḍalaṃ bāhyato niveśayet / pūrṇakumbhāś ca vastrayugalakṣaṃ daśasahasrakaṃ śataṃ pratyekam ekaṃ vā sarvasāmānyam / nānāprakārāṇi vitānāni catuḥkoṇe vicitrapatākāvasaktāni chatradhvajapatākāś ca / oṃkāreṇa śrīvajrahuṃkāreṇa ca parijapya / vajraspharaṇam ity anena sarvadevatān niryātayet / puṣpavṛkṣaśataṃ caturo vā vṛkṣān sarvapuṣpāṇi ca / vajrānalena mudrāyuktena /</p>
+
+<p>oṃ vajrapuṣpe huṃ iti ca puṣpamudrayābhimantrya / sarvagandhān suvāsāṃś ca vilepanasugandhakān tathaiva vajrānalena / oṃ vajragandhe huṃ ity anayā ca gandhamudrāyuktayā karpūrāguruturuskāni candanādisaṃmiśrāṇi / tathaiva vajrānalena oṃ vajradhūpe huṃ ity anayā dhūpamudrāsahitayā dhūpaghaṭikālakṣaṃ daśasahasraṃ śataṃ yathālābhaṃ vā pradīpalakṣaṃ daśasahasraṃ śataṃ sarvapradīpān pradīpavartijvalitayuktaṃ kuṇḍaṃ sahasraṃ ca daśaikaṃ vā / tathaiva vajrānalena oṃ vajrāloke ity anayā pradīpamudrāyuktayā parijapya / oṃ vajraspharaṇam ity udīrayan niryātayet / balyupahāraṃ ca lakṣaṃ daśasahasraṃ śataṃ daśasaṃkhyāṃ vā svastikam āditaḥ kṛtvā nānāprakārāṇi ca bhakṣāṇi / tathaiva vajrānalena parijapya /</p>
+
+<note><hi rend="bold">Sdp 272</hi></note>
+<p>akāro mukhaṃ sarvadharmāṇām ādyanutpannatvād ity udīrayan niryātayet / daśavādyasahasrāṇi sahasraśataṃ vādyāni daśavādyāni vā huṃkāreṇa vādyamudrābhir vajramuṣṭibhyāṃ karāṃgulibhir vādyābhinayadaśaprakārāḥ / tadyathā vīṇāvaṃśāmurajāmukundākāṃsābherīmṛdaṃgapaṭahaguṃjātimilābhinayaś ceti / vādyanaṭanartakakuṇḍalamukuṭādipājāś ca / oṃkāreṇābhimantrya / tathā paṭāvalambanā kāryā srak cāmaravibhūṣitā / hārārdhahāraracitāracitārdhacandropaśobhitā / turaṃgahastigoyūthā dātavyāś ca sukalpitāḥ /</p>
+
+<p>toraṇāni ca ramyāṇi ghaṇṭādisahitāni ca / vajraspharaṇam ity anena /</p>
+
+<p>oṃ vajrasattvasaṃgrahād vajraratnam anuttaraṃ vajradharma gāyanair vajrakarmakaro bhaved ity udīrayan / nṛtyaṃ kṛtvā vajralāsyādyaṣṭavidhapūjābhiḥ krodhamuṣṭidvayayuktakarmamudrābhiḥ sarvamaṇḍalaṃ pūjayet / vajramuṣṭidvayaṃ baddhvā tarjanīdvayaṃ prasārya krodhamuṣṭidvayaṃ bhavati / punar vajrakulamaṇḍaloktaṣoḍaśakarmamudrābhir api saṃpūjya sarvakrodhakulavijñaptiṃ kuryāt / sarvasattvārthaṃ kurudhvaṃ sarvasiddhaya iti / tato bāhyabaliṃ dadyād uttarasādhakaṃ maṇḍale pratiṣṭhāpya / salājaṃ satilaṃ sāmbhaḥ sabhaktaṃ kusumaih saha satilakādibhaktaiś cākārādinā parijapya / pūrvadigbhāgam ārabhya trikṣepāṃ gandhapuṣpadhūpadīpārghaṃ cādāv ante dadyāt / tatra pūrvaṃ tāvan maṇḍalāni kārayet / tata āvāhayet / tataḥ samayaṃ darśayet / arghaṃ ca datvā gandhādibhiḥ saṃpūjya baliṃ dadyāt / tato visarjayed iti /</p>
+
+<note><hi rend="bold">Sdp 274</hi></note>
+<p>tatreme mudrāmantrā bhavanti /
+ālīḍhapadena sthitaḥ / prāṅmukho vāmavajraṃ darśayet / dakṣiṇaṃ kaṭideśe saṃdhārya tarjanyaṃkuśyāvāhayet / tarjany aṃkuśarahitā / śakrasya samayamudrā /</p>
+
+<p>pratyālīḍhapadena sthitvāvāhanamudrāyas tarjanīṃ prasārya visarjanamudrā / athāsya mantraḥ / namo vajrasya diśi vajrapāṇe rakṣa svāhā / dakṣiṇakaratarjanī kuṇḍalākāreṇa kuṃcayitvā madhyamāsūcyās tṛtīyaparve dhārayed aṃguṣṭhakaṃ ca karamadhye / agner āvāhanamudrā /</p>
+
+<p>āvāhanamudrāyā aṃguṣṭhaṃ tarjanīpārśvaśritam / agneḥ samayamudrā / asyā eva mudrāyāḥ karamadhye 'bhimukhāv aṃguṣṭhatarjanīnakhāv ekato yojyau visarjanamudrā /</p>
+
+<p>mantraḥ /</p>
+
+<p>agne ehi ehi kapila jvala jvala daha śikhito lola virūpākṣa svāhā /</p>
+
+<p>yāmyām abhimukho yogī / abhimukhakarau kṛtvābhyantaravajrabandhe madhye 'ṃguṣṭhayugalaṃ bahir anāmikādvayāsaktasūcī punar abhyantare dhārayet / yamasyāvāhanamudrā / anāmikām punar bāhyataḥ sūcīṃ tathaiva kṛtvā / hṛdaye dhārayet / samayamudrā / anayaivānāmikāsūcyā visarjanaṃ bhavati /</p>
+
+<p>asya / mantraḥ / yamāya svāhā /</p>
+
+<p>nairṛtyām abhimukhaḥ samapadasthito dakṣiṇakaramuṣṭim kṛtvā / madhyamātarjanyāv evam ākuṃcya dhārayet khaḍgākāreṇa saṃsthāpya vāmakaraṃ kaṭideśe dhārayet / vāmatarjanīṃ kuṃcayitvā / nairṛtyer āvāhanamudrā /</p>
+
+<p>asyā eva mudrāyā vāmakaraṃ kaṭideśe 'vasthitaṃ khaḍgamudrā / nairṛteḥ samayamudrā / āvāhanamudrāyās tarjanīm prasārya visarjanamudrā / mantro 'sya / sarvabhūtabhayaṃkaram kuru kuru svāhā /</p>
+
+<note><hi rend="bold">Sdp 276</hi></note>
+<p>vāruṇyāṃ diśi samapadasthito dakṣiṇakaratarjanyaṃguṣṭhāv ekato yojayed vāmamuṣṭiṃ hṛdi saṃdhārya vāmatarjanyaṃkuśenāvāhayet / varuṇasyāvāhanamudrā / asyā eva vāmatarjanīmuṣṭiyogato dhārayet pāśamudrā / āvāhanamudrāyās tarjanīṃ prasārya visarjanamudrā / mantro 'sya / tṛtṛpuṭa tṛtṛśikhitoli virūpākṣa svāhā /</p>
+
+<p>vāyavyāṃ diśy abhimukhaṃ sthitvā vāmakaramadhyamā sūcīmuktā tarjanī kuṇḍalākāreṇa tṛtīyaparve saṃdadhyābhimukhaṃ prasārayed dakṣiṇakaraṃ kaṭideśe saṃsthāpya / kuṃcitāṃguṣṭhena vāyor āvāhanamudrā / asyā cvāṃguṣṭhaṃ pūrvavat saṃdhārya vāyor samayamudrā / āvāhanamudrāyā aṃguṣṭhaṃ prasārya visarjanamudrā / mantraḥ / oṃ śvasa khākhe khukhaḥ svāhā /</p>
+
+<p>kauberyabhimukhaṃ sthitaḥ karadvayam abhimukhaṃ kṛtvābhyantaravajrabandhaṃ kaniṣṭhādvayasūcīṃ tasyāḥ pṛṣṭhato 'nāmikāyugalaṃ pṛthak saṃdhārya madhyamāsūcīṃ vajrākāreṇa nāmayet kuberāvāhanamudrā / asyā eva mudrāyā madhyamādvayam abhyantaravajrabandhayogato nyasya kuberasya samayamudrā / āvāhanamudrāyā madhyamādvayaṃ prasārya visarjanamudrā / mantro 'sya / oṃ kuberāya svāhā /</p>
+
+<p>aiśānyāṃ diśy abhimukhaṃ sthitvā karāv ekato yojyāṃjaliṃ kṛtvā kanyasānāmikātalavajrabandhaṃ kṛtvāṃguṣṭhayugalaṃ madhyamāśritaṃ madhyamāsūcyo bahir vajrākāreṇa tarjanīdvayaṃ nyasya tad evākuṃcyopari parasparanakhāsaktaṃ kuryād īśānāvāhanamudrā / asyā eva tarjanyau pūrvavad vajrākāreṇa dhārayed īśānasamayamudrā / āvāhanamudrāyās tarjanyau prasārya visarjanamudrā /</p>
+
+<note><hi rend="bold">Sdp 278</hi></note>
+<p>mantraḥ / oṃ juṃ juṃ śiva svāhā /</p>
+
+<p>pratyālīḍhasthānastho 'ṃjalyākāreṇa hastau saṃdhārya / ūrdhvaṃ dṛṣṭvā tarjanīdvayāṃkuśyā brahmādīnāṃ āvāhanamudrā / asyā eva tarjanīdvayaṃ pūrvavat saṃsthāpya samayamudrā / āvāhanamudrāyās tarjanīdvayaṃ prasārya visarjanamudrā / mantrās teṣām / oṃ ūrdhvaṃ brahmaṇe svāhā / oṃ sūryāya grahādhipataye svāhā / oṃ candrāya nakṣatrādhipataye svāhā /</p>
+
+<p>samapadaṃ sthānam āsthāya hastadvayam ekato yojyāvicalānyony āṃgulyagrā samyojyāṃguṣṭhau vartulākāreṇādhodṛṣṭiṃ kṛtvā pṛthivyādīnāṃ tarjanyaṃkuśābhyām āvāhanam / tarjanyau pūrvavad vyavasthāpya samayamudrā / āvāhanamudrāyāḥ prasāritatarjanībhyāṃ visarjanamudrā / mantraḥ / om adhaḥ pṛthivyai svāhā / oṃ asurebhyaḥ svāhā / oṃ nāgebhyaḥ svāhā /</p>
+
+<p>tata ācamanaṃ svamantrair eva sarveṣāṃ datvā / saśiṣyagaṇasya mamāvighnaṃ kuruta karmasiddhiṃ ca me prayaccha / ity uktvā sarvān visarjayed iti /</p>
+
+<p>atha subāhuparipaṭhitagāthābhir baliṃ dadyāt /</p>
+
+<p>devāsurāḥ sarvabhujaṃgasiddhāḥ //</p>
+
+<p>tārkṣāḥ suparṇāḥ kaṭapūtanāś ca //</p>
+
+<p>gandharvayakṣā grahajātayaś ca //</p>
+
+<p>ye kecid bhūmau nivasanti divyāḥ //</p>
+
+<p>nyastaikajānuḥ pṛthivītale 'smin //</p>
+
+<p>kṛtāṃjalir vijñāpayāmi tāṃs tu //</p>
+
+<p>saputradāraiḥ saha bhṛtyasaṃghaiḥ //</p>
+
+<p>śrutvā ihāyāntu anugrahārtham //</p>
+
+<p>ye merupṛṣṭhe nivasanti bhūtāḥ //</p>
+
+<note><hi rend="bold">Sdp 280</hi></note>
+<p>ye nandane ye ca surālayeṣu //</p>
+
+<p>ye codayāste ravimaṇḍale ca //</p>
+
+<p>nagareṣu sarveṣu ca ye vasanti //</p>
+
+<p>saritsu sarvāsu ca saṃgameṣu //</p>
+
+<p>ratnālaye cāpi kṛtādhivāsāḥ //</p>
+
+<p>vāpītaṭāgeṣu ca palvaleṣu //</p>
+
+<p>kūpeṣu vapreṣu ca nirjhareṣu //</p>
+
+<p>grāmaghoṣeṣu surakānane vā //</p>
+
+<p>śūnyālaye devagṛheṣu ye ca //</p>
+
+<p>vihāracaityāvasathāśrameṣu //</p>
+
+<p>maṭheṣu śālāsu ca kuñjarāṇām //</p>
+
+<p>ye bhūbhṛtāṃ citragṛhe vasanti //</p>
+
+<p>rathyāsu vīthīṣu ca catvareṣu //</p>
+
+<p>ye caikavṛkṣeṣu mahāpatheṣu //</p>
+
+<p>mahāśmaśāneṣu mahāvaneṣu //</p>
+
+<p>siṃhebha ṛkṣādhyuṣiteṣu ye ca //</p>
+
+<p>vadanti ghorās mahāṭavīṣu //</p>
+
+<p>dvīpeṣu divyeṣu kṛtālayāś ca //</p>
+
+<p>merau śmaśāne nivasanti ye ca //</p>
+
+<p>hṛṣṭāḥ prasannāḥ srajagandhamālyam //</p>
+
+<p>dhūpaṃ baliṃ dxpaṃ vidhiṃ ca bhaktyā //</p>
+
+<p>gṛhṇantu bhuṃjantu pibantu cedam //</p>
+
+<p>idaṃ ca karmaṃ saphalaṃ juṣantu //</p>
+
+<p>evaṃ tu kṛtvā grahapūjanaṃ tu //</p>
+
+<p>digarcanaṃ tv ekamanā prakuryā //</p>
+
+<p>indrā tu vajrī saha devasaṃghaiḥ //</p>
+
+<p>imāṃ ca gṛhṇantu baliṃ viśiṣṭam //</p>
+
+<p>agnir yamo nairṛtir bhūpatiś ca //</p>
+
+<note><hi rend="bold">Sdp 282</hi></note>
+<p>apāṃ patir vāyudhanādhipatiḥ //</p>
+
+<p>īśānabhūtādhipatiś ca devāḥ //</p>
+
+<p>ūrdhvaṃ tu candro 'rkaḥ pitā mahāṃś ca [/
+devāḥ samastā bhuvi ye ca nāgāḥ //</p>
+
+<p>dharādharā guhyagaṇaiḥ sametāḥ //</p>
+
+<p>pratipratitvekanivedanaṃ tu //</p>
+
+<p>svakasvakāś caiva diśāsu bhūtāḥ //</p>
+
+<p>gṛhṇantu tuṣṭāḥ sabalāḥ sasainyāḥ //</p>
+
+<p>saputramitrasvajanaiḥ sametāḥ //</p>
+
+<p>dhūpaṃ baliṃ dīpaṃ puṣpavilepanaṃ ca //</p>
+
+<p>bhuṃjantu jighrantu pibantu cedam //</p>
+
+<p>idaṃ ca karmaṃ saphalaṃ juṣantu // iti /</p>
+
+<p>tatrāyaṃ sabāhyābhyantare balipradānamantraḥ / akāro mukhaṃ sarvadharmāṇām ādyanutpannatvād iti /</p>
+
+<p>tato paspṛśya pūrvadvārābhimukhāvasthitaḥ sarvakarmikakuṇḍamadhye śrītrailokyavijayamaṇḍalasarvadevatāmantrān udāharan kusumair niveśya / homavidhinā śrīvajrahuṃkāramantreṇāṣṭottaraśataṃ goghṛtenāhutiṃ dadyāt / śrīvairocanādimantrair api vajrāveśakrodhaparyantaiḥ saptasaptāhutiḥ punaḥ /</p>
+
+<p>tato yathāvad agnikuṇḍe vairocanādīn puṣpair avākṛṣya vairocanādimantrair ālikhite maṇḍale svasthāneṣu niveśayet /</p>
+
+<p>tataḥ sarvatathāgatān praṇamya /</p>
+
+<p>aham amukanāmnā ca vajrācāryo mahātapāḥ //</p>
+
+<p>śiṣyān praveśayiṣyāmi sarvasattvahitārthataḥ //</p>
+
+<p>atra ca maṇḍalapraveśe pātrāpātraparīkṣā na kāryā / tat kasya hetoḥ / santi bhadantas tathāgatāḥ kecit sattvā mahāpāpakāriṇas ta idaṃ vajrahuṃkāramaṇḍalaṃ dṛṣṭvā praviṣṭvā ca sarvāpāyavigatā bhaviṣyanti /</p>
+
+<note><hi rend="bold">Sdp 284</hi></note>
+<p>santi bhagavantaḥ sattvāḥ sarvārthabhojanakāmaguṇagṛddhāḥ samayadviṣṭāḥ puraścaraṇādīṣṭāśaktās teṣām apy atra yathākāmakaraṇīyā praviṣṭānāṃ sarvāśāparipūrtir bhaviṣyati /</p>
+
+<p>santi ca bhagavantaḥ sattvā nṛtyagītahāsyalāsyāhāravihārapriyatayā sarvatathāgatamahāyānadharmatānavabodhād anyadevakulamaṇḍalāni praviśanti / sarvāśāparipūrtīsaṃgrahabhūteṣu niruttararatiprītiharṣasaṃbhavakareṣu sarvatathāgatakulamaṇḍaleṣu śikṣābhayabhītān na praviśanti / teṣām apāyamaṇḍalapraveṣe yathāvasthitasukhātmasamayam eva vajrahuṃkāramaṇḍalapraveśo yujyate / sarvaratiprītyuttamasukhasaumanasyābhivarddhanārthaṃ sarvāpāyagatipraveśābhimukhapathavinivartanāya ca / santi ca punar bhagavanto dhārmikāḥ sattvāḥ sarvatathāgataśīlasamādhiprajñottamasiddhyupāyair buddhabodhiṃ prārthayanto dhyānavimokṣādibhir bhūmibhir yatnataḥ kliṣyante / teṣām atraiva vajrahuṃkāramaṇḍalepraveśamātreṇaiva sarvatathāgatatvam api na durlabham / kim aṃga punar anyasiddhir iti vijñāpayet / tataḥ śiṣyān praveśayet / tatra pañcaśikṣāpadaparigṛhītena śrāmaṇerakabhikṣusaṃvaragṛhītena vā / ācāryābhiṣekārhe nācāryapādayoḥ praṇipatyaivaṃ vaktavyam / tvaṃ me śāstā mahārataḥ //</p>
+
+<p>icchāmy ahaṃ mahānātha mahābodhinayaṃ dṛḍham //</p>
+
+<p>dehi me samayatattvaṃ saṃvaraṃ ca dadasva me // iti /
+tato vajrayakṣaparijaptaṃ nīlavastranivasanottarīyaṃ vajrāṃkuśādidvārapālacatuṣṭayaparijaptaṃ mukhaveṣṭanaṃ śiṣyaṃ kṛtvā catuḥpraṇāmaṃ kārayet /</p>
+
+<note><hi rend="bold">Sdp 286</hi></note>
+<p>punaḥ puṣpakareṇa śiṣyeṇācāryaṃ puṣpakareṇaiva deśanānumodanādhyeṣaṇāyācanāṃ ca kṛtvā vaktavyam /</p>
+
+<p>dehi me saṃvaraṃ vibho //</p>
+
+<p>samanvāharantu māṃ buddhā aśeṣā munibhāskarāḥ //</p>
+
+<p>aham amukanāmnā vaī ācāryasamakṣaṃ sthitaḥ //</p>
+
+<p>praviśāmi mahāguhyaṃ buddhanāṭakasaṃbhavam //</p>
+
+<p>avaivartikacakrādyaṃ mahāmokṣapuraṃ varaṃ //</p>
+
+<p>praveśa māṃ mahācārya sarvaguhyakuloccayam //</p>
+
+<p>dadasva me mahābhāgaṃ avaivartyabhiṣecanaṃ //</p>
+
+<p>dadasva me mahācārya lakṣaṇasyānumodanaṃ //</p>
+
+<p>anuvyañjanasaṃyuktaṃ buddhakāyaṃ manoramam //</p>
+
+<p>dadasva me mahācārya abhiṣekaṃ mahādbhutam //</p>
+
+<p>ācāryo 'haṃ bhaven nityaṃ sarvasattvārthakāraṇāt //</p>
+
+<lg>
+<l>tata ācāryeṇa sarvakulavijñaptiḥ kāryā /</l>
+<l>ayaṃ evāmukanāmnā bodhicittaparigrahaḥ //</l>
+</lg>
+
+<p>icchate guhyacakre 'smin praveṣṭāṃ samayasaṃvaram //</p>
+
+<p>tata ācāryeṇa vaktavyam /</p>
+
+<p>icchase tvaṃ mahātman mahāguhyakulaṃ śuddhaṃ rahasyaṃ parigrhṇitum /</p>
+
+<p>buddhaṃ dharmaṃ ca saṅghaṃ ca triratnaśaraṇaṃ vraja //</p>
+
+<p>etad buddhakule ramye saṃvaraṃ bhavate dṛḍham //</p>
+
+<p>vajraṃ ghaṇṭā ca mudrā ca tvayā grāhyā mahāmate //</p>
+
+<p>yad bodhicittaṃ tad vajraṃ prajñā ghaṇṭā iti smṛtā //</p>
+
+<p>ācāryaś ca gṛhītavyaḥ sarvabuddhasamo guruḥ //</p>
+
+<p>etad vajrakule śuddhe saṃvaraṃ samayocyate //</p>
+
+<p>caturdānaṃ pradātavyaṃ tridive ca trirātrike //</p>
+
+<p>āmīṣābhayadharmākhyā maitrī ratnakuloccaye //</p>
+
+<note><hi rend="bold">Sdp 288</hi></note>
+<p>saddharmaṃ ca tvayā grāhyaṃ guhyaṃ triyānikam //</p>
+
+<p>etat padmakule śuddhe saṃvaraṃ samayocyate //</p>
+
+<p>saṃvaraṃ sarvasaṃyuktaṃ parigṛhṇīṣva tattvataḥ //</p>
+
+<p>pūjākarma yathāśaktyā mahākarmakuloccaye //</p>
+
+<p>etat pārājikākhyātāś caturdaśam ataḥ param //</p>
+
+<p>na tyājyaṃ na ca kṣeptavyaṃ mūlāpattir iti smṛtam //</p>
+
+<p>tridive ca trirātrau ca vartitavyaṃ dine dine //</p>
+
+<p>yadā hānir bhaved yogī sthūlāpattyo bhaviṣyati //</p>
+
+<p>prāṇinaś ca na te ghātyā adattaṃ naiva cāharet //</p>
+
+<p>nācaret kāmamithyāyāṃ mṛṣā naiva ca bhāṣayet //</p>
+
+<p>mūlaṃ sarvasyānarthasya madyapānaṃ vivarjayet //</p>
+
+<p>akriyāṃ varjayet sarvāṃ sattvārthaṃ vinayena ca //</p>
+
+<p>sādhūnām upatiṣṭheta yogināṃ paryupāsanam //</p>
+
+<p>trividhaṃ kāyikaṃ karma vacasā ca caturvidham //</p>
+
+<p>manasā triprakāraṃ ca yathāśaktyānupālayet //</p>
+
+<p>manasā triprakāraṃ ca yathāśaktyānupālayet //</p>
+
+<p>hīnayānaspṛhā naiva sattvārthaṃ vimukhaṃ na ca //</p>
+
+<p>na saṃsāraparityāgī na nirvāṇaratiḥ sadā //</p>
+
+<p>apamānaṃ na te kāryaṃ devatā na ca guhyake //</p>
+
+<p>na ca cihnaṃ samākramyaṃ mudrā vāhanam āyudham //</p>
+
+<p>etat samayam ity uktaṃ rakṣitavyaṃ tvayā mate //</p>
+
+<p>tasyaiva cāpi vaktavyaṃ ācārya tu śṛṇuṣva me //</p>
+
+<p>evam astu kariṣyāmi yathā jñāpayase vibho //</p>
+
+<p>utpādayāmi paramam ityādi yāvat sarvān sthāpayiṣyāmi nirvṛtāv iti /
+yas tu saṃvaraṃ na gṛhṇāti tasya praveśamātram eva dātavyam /
+adya tvam ityādi na brūyād ācāryābhiṣekaṃ ca na kuryāt /
+tataḥ / oṃ sarvayogacittam utpādayāmīty anena /
+utpādayitvā paramaṃ bodhicittam anuttaram //</p>
+
+<p>vajram asya pratiṣṭhāpya hṛdaye hṛdayena tu //</p>
+
+<p>surate samayas tvaṃ hoḥ vajrasiddhi yathāsukham // ity anena /</p>
+
+<note><hi rend="bold">Sdp 290</hi></note>
+<p>tatas taṃ vajrahuṃkāram adhiṣṭhāya gandhapuṣpādibhir abhyarcya sragvinaṃ surabhitānanaṃ ca kṛtvottamāṃ dakṣiṇām ādāya bahiḥ sthitakalaśodakenābhiṣiñcya / oṃ gṛhṇa vajrasamaya huṃ vaṃ ity anena krodhaterintirīṃ svayaṃ baddhvā śiṣyena bandhayet /</p>
+
+<p>vajrabandhaṃ tale kṛtvā chādayet kruddhamānasaḥ //</p>
+
+<p>gāḍham aṃguṣṭhavajreṇa krodhaterintirī smṛtā //</p>
+
+<p>tatas tayaivāṃgusthābhyāṃ puṣpamālāṃ grāhayitvā praveśayed anena hṛdayena / oṃ vajrasamayaṃ praviśāmīti / pūrvadvāre ca vajrāṃkuśena tam ākarṣayet / dakṣiṇena pāśena praveśayet / paścimena sphoṭena badhnīyāt / uttare vajrāveśena veśayet / punaḥ pūrvadvāreṇa praveśyaivaṃ vadet / abhyarcya sarvatathāgatakule praviṣṭas tad ahaṃ tu vajrajñānam utpādayiṣyāmi / yena jñānena sarvatathāgatasiddhir api prāpsyase / kim anyā siddhiḥ / na ca tvayādṛṣṭamaṇḍalasya purato vaktavyam / mā te samayo vyathed iti /</p>
+
+<p>tataḥ svayaṃ vajrācāryaḥ krodhaterintirīm evaṃ ūrdhvamukhīṃ baddhvā vajraṃ śiṣyasya mūrdhni sthāpyaivaṃ vadet / ayaṃ te samayavajro mūrdhniṃ te sphārayed yadi tvaṃ kasyacid brūyāḥ / tatas tayaiva samayamudrayodakaṃ śayathā hṛdayena satkṛtya parijapya tasmai vajraśiṣyāya pāyayed iti / tatredaṃ śayathā hṛdayam /
+vajrasattvaḥ svayaṃ te 'dya hṛdaye samavasthitaḥ //</p>
+
+<p>nirbhidya tat kṣaṇaṃ yāyād yadi brūyā imaṃ nayam //</p>
+
+<p>vajrodaka / iti / tataḥ śiṣyāya brūyād adya prabhtti te 'haṃ vajrapāṇir yad ahaṃ brūyām idaṃ kuru tat kartavyaṃ na ca tvayāham avamantavyo mā te viṣamāparihāreṇa kālakriyāṃ kṛtvā narake patanaṃ syād iti /</p>
+
+<note><hi rend="bold">Sdp 292</hi></note>
+<p>tad anu akāraṃ vajraraśmimālāyuktaṃ svahṛdi cintayet / tataḥ śiṣyahṛdūrṇākaṇṭhamūrdhniṣu candramaṇḍalasthapañcasūcikaṃ jvālāvajraṃ ratnaṃ padmaṃ viśvavajraṃ ca cintayet / ebhir yathākrameṇa huṃ traṃ hrīḥ aḥ iti /</p>
+
+<p>kapāṭodghāṭanamudrayā svakīyaṃ śiṣyahṛdayaṃ codghāṭya svahṛdayād akāraṃ niścārya śiṣyahṛdgatavajramadhye buddhyā praveśya sarvakāyam āpūryamāṇaṃ cintayet / evaṃ vadet / brūhi saratathāgatāś cādhiṣṭhantāṃ vajrasattvo me āviśatu / tatas vartamānena b vajrācāryeṇa krodhaterintirīṃ baddhvedam uccārayitavyam / ayan tat samayavajraṃ vajrasattva iti smṛtam //</p>
+
+<p>āveśayatu te 'dyaiva vajrajñānam anuttaram //</p>
+
+<p>vajrāveśa aḥ iti / 10 / 20 / 30 / 40 / 50 / 60 / 70 / 80 / 90 / 100 vārānuccārya niyatam āviśati /</p>
+
+<p>tataḥ krodhamuṣṭiṃ baddhvā sattvavajrīmudrāṃ sphoṭayed idam udīrayet /</p>
+
+<p>oṃ sumbhani sumbhani huṃ / oṃ gṛhṇa gṛhṇa huṃ / oṃ gṛhṇāpaya gṛhṇāpaya huṃ /
+oṃ ānaya hoḥ bhagavan vajrarāja huṃ phaṭ / aḥ aḥ aḥ aḥ / 10 / 20 / 30 / 40 / 50 / 60 / 70 / 80 / 90 / śatavārān uccārayet / bhagavatā ca vajravātamaṇḍalyā ca vajrahuṃkāreṇa raktavarṇajvālāprabheṇāpāryamāṇaṃ cintayet / punar api yady āveśo na bhavati / tato ghaṇṭāsahitāṃ vajrāveśasamayamudrāṃ baddhvā vāmapādena tasya dakṣiṇapādam ākraṃyopary ākāśadeśe vairocanaṃ śrīvajrahuṃkārasyopari tasyaivāveśanāya kruddhahuṃkāraraśmisamūhenākramyamāṇam adhastāc ca vajravātamandalyā huṃkāreṇotthāpyamānam evaṃ pūrvādidikṣthitair akṣobhyādibhiḥ / huṃ trāṃ hrīḥ iti svabījaraśmivyūhaiḥ saṃpātyamānaṃ cintayaṃs tam āveśayet / huṃ vajrāveśa aḥ śatadho ccārayet /</p>
+
+<p>atha pāpabahutvād āveśo na bhavati / tadā pāpasphoṭanamudrayā (<hi rend="bold">Sdp 294</hi>) tasya pāpāni sphoṭayet / tataḥ /</p>
+
+<p>samidbhir madhurair agniṃ prajvālya susamāhitaḥ //</p>
+
+<p>nirdahet sarvapāpāni tilahomena tasya tu //</p>
+
+<p>oṃ sarvapāpadahanavajrāya svāhā / iti dakṣiṇahastatale kṛṣṇatilaiḥ pāpapratikṛtiṃ kṛtvā huṃkāraṃ madhye vicintya / tarjanyaṃguṣṭhābhyāṃ homayet / tato homakuṇḍān nirgatya jvālākulair vajrais tasya śarīre pāpaṃ dahyamānaṃ cintayet / tataḥ punar vajrāveśaṃ tathaivaṃ baddhvāveśayet / niyatam āviśati / evam api yasyāveśo na bhavati tasyābhiṣekaṃ na kuryād iti / āviṣṭasya ca pañcābhijñādiniṣpattis tat kṣaṇād eva bhavati / tataḥ samāviṣṭaṃ jñātvā punaḥ / oṃ vajrasattvasattvasaṃgrahādigītim uccārya / krodhamuṣṭyā tathaiva sattvavajrīmudrāṃ sphoṭayet / sa ced āviṣṭo vajrasattvakrodhamudrāṃ badhnīyāt / tadācāryeṇa vajramuṣṭiṃ krodhamudrāṃ badhniyāt / evaṃ yāvat sa cet vajrahāsamudrāṃ badhnīyāt / tadā vajradharmakrodhamudrāṃ bandhayed ity evaṃ sāṃnidhyaṃ kalpayanti / tatas tasya jihvāyāṃ vajraṃ vicintya / brūhi vajra / iti vaktavyam / tataḥ sarvaṃ kathayati / tatas tāṃ mālāṃ mahāmaṇḍale kṣepayet / praticcha vajra hoḥ / iti / tato yatra patati so 'sya siddhyati / tatas tāṃ mālāṃ tasyaiva śirasi bandhayet / oṃ pratigṛhṇa tvam imāṃ vajrasattva mahābala / iti / tato mukhabandhaṃ muñced anena /</p>
+
+<p>oṃ vajrasattvaḥ svayaṃ te 'dya cakṣūdghāṭanatatparaḥ //</p>
+
+<p>udghāṭayati sarvākṣo vajracakṣur anuttaram // iti / he vajra paśya / iti / tato mahāmaṇḍalavajrāṃkuśād ārabhya yāvad vairocanaparyantaṃ darśayet / tatas tiṣṭha vajretyādinā śiṣyapraveśamudrāṃ mokṣayet /</p>
+
+<p>tato bāhyamaṇḍalābhyantare candramaṇḍalaṃ pūrvadvārābhimukhaṃ saṃlikhya bāhyato vā śiṣyaṃ śrīvajrahuṃkāramudrayā sattvavajrādibhiś cādhiṣṭhāya mahāmudrayā tataḥ pratiṣṭhāpyābhiṣiñcet /</p>
+
+<note><hi rend="bold">Sdp 296</hi></note>
+<p>gandhapuṣpādibhir abhyarcyārghaṃ datvā / chatradhvajapatākādibhis turyaśaṃkhanināditaiś ca /</p>
+
+<p>tato maalagāthābhir abhinandyādau tāvad udakābhiṣekena tato mudrābhiṣekena mukuṭapatṭavajrādhipatināmābhiṣekaiś cābhiṣiñcet / punaḥ puṣpādibhir lāsyādyaṣṭavidhapūjayā ca pūjayet / śiṣyenācāryaṃ valitavajrāṃjalinā praṇamyottamāṃ dakṣiṇāṃ datvā puṣpādyabhiṣekāś ca grāhyā iti / ācāryābhiṣekaṃ tu śrīvajrahuṃkāramudrayā tathaiva pratiṣṭhāpya yathā nirdiṣṭeṣu sthāneṣu samayamudrābhis tasya kāye śrīvajrahuṃkārādīn nyasya / punar api anenāṣṭottaraśatasahasraparijaptaṃ vijayakalaśaṃ kṛtvā /</p>
+
+<p>oṃ vajrādhipati tvām abhiṣiñcāmi dṛḍho me bhava jaḥ huṃ vaṃ hoḥ huṃ phaṭ iti / tata imaṃ codīrayan / oṃ vajrābhiṣiñca / iti codakābhiṣekaṃ vajramuṣṭinodakaṃ vijayakalaśād gihītvā dadyād idaṃ ca brūyāt //</p>
+
+<p>idaṃ te nārakaṃ vāri samayātikramād dahet //</p>
+
+<p>samayābhirakṣāt siddhiḥ siddhaṃ vajrāmṛtodakam //</p>
+
+<p>vajraghaṇṭāṃ ca mudrāṃ ca yady amaṇḍalino vadet //</p>
+
+<p>hased vāśraddhadānena janasaṃgaṇikāsthitaḥ // iti /</p>
+
+<p>tataḥ sarvavidhim anuṣṭhāya nāmāṣṭaśatena saṃstutya gāthāpañcakenānujñāṃ datvodgatanvyākaraṇena sarvaśiṣyān sarvaśiṣyān vyākuryād iti /</p>
+
+<p>atha guhyābhiṣeko bhavati / ācāryābhiṣekārhaṃ praveśya sarvamaṇḍalaṃ tu tat kurusva / iti /</p>
+
+<p>anekakarmasaṃsiddhiṃ siddhim. cāpi yathepsitām //</p>
+
+<p>prāpnoti niyataṃ kṛtsnām adhamottamamadhyamām //</p>
+
+<p>nirvighnena parāṃ bhūmiṃ kiṃ punaḥ kṣudrasiddhayaḥ //</p>
+
+<p>buddhatvaṃ bodhisattvatvaṃ vajrasattvatvam adurlabham // iti /
+yasya siddhir nirjāyate yasya pāpā mahāgrahāḥ //</p>
+
+<p>vighnā vināyakāś cāpi mṛtyavo mārakāyikāḥ //</p>
+
+<note><hi rend="bold">Sdp 298</hi></note>
+<p>nānābhayaśastrais tīvrāḥ siddhikarmavidhāriṇaḥ //</p>
+
+<p>te tasya naśyanti nāpi jāyante ca mahottamā //</p>
+
+<p>homakarmavidhānena dhruvam āśu prasiddhayaḥ //</p>
+
+<p>devatāś ca mahātuṣṭīṃ pralabhanti kṣaṇena ca //</p>
+
+<p>ītyupadravadoṣādi dūraṃ gurutaraṃ bhṛśam //</p>
+
+<p>naśyanti tatra deśe 'smin vyādhijvaragrahādikam //</p>
+
+<p>paracakrā vinaśyanti durbhikṣāś ca sarauravāḥ //</p>
+
+<p>devā nāgā mahotsāhāḥ pālayantī sukhena tu //</p>
+
+<p>caturaś ca mahārājāḥ pālayanti maharddhikāḥ //</p>
+
+<p>lokapālāḥ sanakṣatrā yakṣāś cāpi grahādikāḥ //</p>
+
+<p>atha śakrabrahmādayo devāḥ praṇipatya muhuḥ //</p>
+
+<p>pūjāṃ nānāvidhāṃ kṛtvā ratnachatrādibhir varām //</p>
+
+<p>vajrapāṇiṃ jinādhṛṣṭaṃ saṃstuvur muditāśrayāḥ //</p>
+
+<p>sarvabuddhādisaṃbuddhaṃ sarvājñānamalāpaham //</p>
+
+<p>vajravajradharo rājā vajravajrasavajradhṛk //</p>
+
+<p>vajrakāyo mahākāyo vajrapāṇir namo namaḥ //</p>
+
+<p>vajravajrāgravajrāgro vajrajvālo mahājvalaḥ //</p>
+
+<p>vajrāveśo mahāveśo vajrāyudho mahāyudhaḥ //</p>
+
+<p>vajrapāṇir mahāpāṇir vajravāṇaḥ suvedhakaḥ //</p>
+
+<p>vajratīkṣṇo mahātīkṣṇo mahāmahān mahodadhiḥ //</p>
+
+<p>vajrapadmo mahābodho baudhibuddhaḥ svayaṃ bhuvaḥ //</p>
+
+<p>vajrodāro mahodāro vajramāyāviśodhakaḥ //</p>
+
+<p>vajrahetur mahāyakṣo vajrapadmaviśodhakaḥ //</p>
+
+<p>vajrakrodho mahācaṇḍo vajrāriduṣṭahā vibhuḥ //</p>
+
+<p>vajrabhīmo mahārakṣo vajrāṃkuśaś cāmoghakṛt //</p>
+
+<p>vajravetālo vetālo vajrarākṣasabhakṣakaḥ //</p>
+
+<p>vajrayakṣo mahāyakṣo vajragraho grahottamaḥ //</p>
+
+<p>bhīṣaṇo raudro rudro bhairavabhīkaraḥ //</p>
+
+<p>asādhyaḥ sādhakaḥ sādhuḥ vajrasādhupraharṣakaḥ //</p>
+
+<p>vajraprītir mahāprītir vajrāyudhavaśaṃ karaḥ //</p>
+
+<p>vajratejo mahātejo jvālāprabhayamāntakṛt //</p>
+
+<p>vajraghoro mahāghoro ghanaprabho mahāghanaḥ //</p>
+
+<note><hi rend="bold">Sdp 300</hi></note>
+<p>ākāśasamasarvāśaḥ sarvāśāparipūrakaḥ //</p>
+
+<p>vajrābhiṣekatattvāgro vajradhvajo guṇodadhiḥ //</p>
+
+<p>vajrajñānaṃ mahājñānaṃ vidyākoṭigaṇārcitaḥ //</p>
+
+<p>hālāhalamahākālaḥ kolāhalavilāsakaḥ //</p>
+
+<p>vajrakāmo mahākāmaḥ kaṣāyakarināśakaḥ //</p>
+
+<p>velācapaladolāgro vidyujjihvāsphuradmukhaḥ //</p>
+
+<p>vajrānalo pracaṇḍāsyaś candapradyotadyotakaḥ //</p>
+
+<p>sahasrasūryaprabhāsyo lohitākṣo bhayānakaḥ //</p>
+
+<p>krodhānekaspharadraśmir bhujānekaśatāyudhaḥ //</p>
+
+<p>mukhānekasahasrāṃgaḥ kuṭilaḥ kuṭilāṃgakaḥ //</p>
+
+<p>anaṃgaś cittadharmātmā vikalpāśeṣavarjitaḥ //</p>
+
+<p>avidyāghātako brahmā rāgadveṣamalāntakaḥ //</p>
+
+<p>rāgo dveṣo mahāmoho bhavābhavaviśodhakaḥ //</p>
+
+<p>śānto dānto mahāśuddho buddho buddhaprabodhakaḥ //</p>
+
+<p>buddhātmā buddharūpī ca vajrasattvaḥ suvajrajaḥ //</p>
+
+<p>samantabhadro mahābhadraḥ sarvalakṣaṇalakṣitaḥ //</p>
+
+<p>sarvadhātumayo vyāpī sarvavajramayaḥ śuciḥ // iti /
+yena likhet paṭhed vāpi dhārayed arthataḥ sadā //</p>
+
+<p>smaret śṛṇuyād vāpi vajrapāṇisamo bhavet // iti /</p>
+
+<p>idam avocad bhagavān āttamanaḥ / śakrabrahmādidevaparṣat sadevamānuṣāsuragandharvayakṣasādibhir hitasukhaprāptaye bhagavato bhāṣitam abhyanandan iti //</p>
+
+<p>āryasarvadurgatipariśodhanatejorājasya tathāgatasyārhataḥ samyaksaṃbuddhasya kalpaikadeśaḥ samāptaḥ //</p>
+
+  </body>
+</text>
+</TEI>

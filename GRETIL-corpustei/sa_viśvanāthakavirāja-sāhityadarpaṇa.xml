@@ -1,0 +1,4403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_vizvanAthakavirAja-sAhityadarpaNa">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Sāhityadarpaṇa</title>
+	<author>Viśvanāthakavirāja</author>
+	<respStmt>
+	 <resp when-custom="23|1|2204">data entry</resp>
+	 <name>Jan Brzezinski</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Jan Brzezinski</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/5_poetry/1_alam/visvsdpu.htm">visvsdpu.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Visvanatha (kaviraja):
+<lb/>Sahityadarpana
+<lb/>Based on the edition by Satyavrata Simha,
+<lb/>9th edition. Varanasi: Chowkhamba Vidya Bhavan, 1992.
+<lb/>(Vidya Bhavan Sanskrit Granthamala, 29)
+<lb/>
+<lb/>Input by Jan Brzezinski
+<lb/>23.1.2204
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>Satyavrata Simha, 9th edition. Varanasi: Chowkhamba Vidya Bhavan, 1992. (Vidya Bhavan Sanskrit Granthamala, 29)</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Sāhityadarpaṇa = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Poetry -- Alaṃkāra</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+<div>
+<p>śrīḥ
+sāhitya-darpaṇaḥ</p>
+
+<p>kārikā-mātraḥ</p>
+
+<p>(1)
+prathamaḥ prakāśaḥ</p>
+
+<lg>
+<l>śarad-indu-sundara-ruciś cetasi sā me girāṃ devī /</l>
+<l>apahṛtya tamaḥ santatam arthān akhilān prakāśayatu // VisSd_1.1 //</l>
+</lg>
+
+<lg>
+<l>caturvarga-phala-prāptiḥ sukhād alpa-dhiyām api /</l>
+<l>kāvyād eva yatas tena tat-svarūpaṃ nirūpyate // VisSd_1.2 //</l>
+</lg>
+
+<lg>
+<l>kāvyaṃ rasātmakaṃ kāvyaṃ doṣās tasyāpakarṣakāḥ /</l>
+<l>utkarṣa-hetavaḥ proktā guṇālaṅkāra-rītayaḥ // VisSd_1.3 //</l>
+</lg>
+
+<p>iti sāhitya-darpaṇe kāvya-svarūpa-nirūpaṇo nāma
+prathamaḥ paricchedaḥ</p>
+
+</div>
+<div>
+
+<p>(2)
+dvitīyaḥ prakāśaḥ</p>
+
+<lg>
+<l>vākyaṃ syād yogyatākāṅkṣā-satti-yuktaḥ padoccayaḥ /</l>
+<l>vākyoccayo mahā-vākyam itthaṃ vākyaṃ dvidhā matam // VisSd_2.1 //</l>
+</lg>
+
+<lg>
+<l>varṇāḥ padaṃ prayogārhān anvitaikārtha-bodhakāḥ /</l>
+<l>artho vācyaś ca lakṣyaś ca vyaṅgaś ceti tridhā matā // VisSd_2.2 //</l>
+</lg>
+
+<lg>
+<l>vācyo 'rtho 'bhidhayā bodhyo lakṣyo lakṣaṇayā mataḥ /</l>
+<l>vyaṅgyo vyañjanayā tāḥ syus tisraḥ śabdasya śaktayaḥ // VisSd_2.3 //</l>
+</lg>
+
+<lg>
+<l>tatra saṅketitārthasya bodhanād agrimā matā /</l>
+<l>saṅketo gṛhyate jātau guṇa-dravya-kriyāsu ca // VisSd_2.4 //</l>
+</lg>
+
+<lg>
+<l>mukhyārtha-bādhe tad-yukto yayānyo 'rthaḥ pratīyate /</l>
+<l>rūḍheḥ prayojanād vāpi lakṣaṇā śaktir arpitā // VisSd_2.5 //</l>
+</lg>
+
+<lg>
+<l>mukhyārthasyetarākṣepo vākyārthe 'nvaya-siddhaye /</l>
+<l>syād ātmano 'py upādānād eṣopādāna-lakṣaṇā // VisSd_2.6 //</l>
+</lg>
+
+<lg>
+<l>arpaṇaṃ svasya vākyārthe parasyānvaya-siddhaye /</l>
+<l>upalakṣaṇa-hetutvād eṣā lakṣaṇa-lakṣaṇā // VisSd_2.7 //</l>
+</lg>
+
+<lg>
+<l>āropādhyavasānābhyāṃ pratyekaṃ tā api dvidhā /</l>
+<l>viṣayāsyānigīrṇasyā-(a)nya-tādātmya-pratīti-kṛt // VisSd_2.8 //</l>
+</lg>
+
+<lg>
+<l>sāropā syān nigīrṇasya matā sādhyavasānikā /</l>
+<l>sādṛśyetara-saṃbandhāḥ śuddhās tāḥ sakalā api // VisSd_2.9 //</l>
+</lg>
+
+<lg>
+<l>sādṛśyāt tu matā gauṇyas tena ṣoḍaśa-bhedikā /</l>
+<l>vyaṅgyasya gūḍhāgūḍhatvād dvidhā syuḥ phala-lakṣaṇā // VisSd_2.10 //</l>
+</lg>
+
+<lg>
+<l>dharmi-dharma-gatatvena phalasyaitā api dvidhā /</l>
+<l>tad evaṃ lakṣaṇābhedāś catvāriṃśan matā budhaiḥ // VisSd_2.11 //</l>
+</lg>
+
+<lg>
+<l>pada-vākya-gatatvena pratyekaṃ tā api dvidhā /</l>
+<l>viratāsvabhidhādyāsu yathārtho bodhyate 'paraḥ // VisSd_2.12 //</l>
+</lg>
+
+<lg>
+<l>sā vṛttir vyañjanā nāma śabdasyārthādikasya ca /</l>
+<l>abhidhā-lakṣaṇā-mūlā śabdasya vyañjanā dvidhā // VisSd_2.13 //</l>
+</lg>
+
+<lg>
+<l>anekārthasya śabdasya saṃyogādyair niyantrite /</l>
+<l>ekatrārthe 'nyadhī-hetur vyañjanā sābhidhāśrayā // VisSd_2.14 //</l>
+</lg>
+
+<lg>
+<l>lakṣaṇopāsyate yasya kṛte tat tu prayojanam /</l>
+<l>yayā pratyākhyāyate sā syād vyañjanā lakṣaṇāśrayā // VisSd_2.15 //</l>
+</lg>
+
+<lg>
+<l>vaktṛ-bodhavya-vākyānām anya-sannidhi-vācyayoḥ /</l>
+<l>prastāva-deśa-kālānāṃ kākoś ceṣṭādikasya ca // VisSd_2.16 //</l>
+</lg>
+
+<lg>
+<l>vaiśiṣṭyād anyam arthaṃ yā bodhayet sārtha-saṃbhavā /</l>
+<l>traividhyād iyam arthānāṃ pratyekaṃ trividhā matā // VisSd_2.17 //</l>
+</lg>
+
+<lg>
+<l>śabda-bodhyo vyanakty arthaḥ śabdo 'py arthāntarāśrayaḥ /</l>
+<l>ekasya vyañjakatve tad anyasya sahakāritā // VisSd_2.18 //</l>
+</lg>
+
+<lg>
+<l>abhidhādi-trayopādhi-vaiśiṣṭyāt trividho mataḥ /</l>
+<l>śabdo 'pi vācakas tadval lakṣako vyañjakas tathā // VisSd_2.19 //</l>
+</lg>
+
+<lg>
+<l>tātparyākhyāṃ vṛttim āhuḥ padārthānvaya-bodhane /</l>
+<l>tātparyārthaṃ tad-arthaṃ ca vākyaṃ tad-bodhakaṃ pare // VisSd_2.20 //</l>
+</lg>
+
+<p>iti sāhitya-darpaṇe vākya-svarūpa-nirūpaṇo nāma
+dvitīyaḥ paricchedaḥ</p>
+
+</div>
+<div>
+
+<p>(3)
+tṛtīyaḥ paricchedaḥ</p>
+
+<lg>
+<l>vibhāvenānubhāvena vyaktaḥ saṃcāriṇā tathā /</l>
+<l>rasatām eti ratyādiḥ sthāyī bhāvaḥ sa-cetasām // VisSd_3.1 //</l>
+</lg>
+
+<lg>
+<l>sattvodrekād akhaṇḍa-svar-prakāśānanda-cin-mayaḥ /</l>
+<l>vedyāntara-sparśa-śūnyo brahmāsvāda-sahodaraḥ // VisSd_3.2 //</l>
+</lg>
+
+<lg>
+<l>lokottara-camatkāra-prāṇaḥ kaiścit pramātṛbhiḥ /</l>
+<l>svākāravad abhinnatven(a)--āyam āsvādyate rasaḥ // VisSd_3.3 //</l>
+</lg>
+
+<lg>
+<l>karuṇādāv api rase jāyate yatparaṃ sukham /</l>
+<l>sacetasām anubhavaḥ pramāṇaṃ tatra kevalam // VisSd_3.4 //</l>
+</lg>
+
+<lg>
+<l>kiṃ ca teṣu yadā duḥkhaṃ na ko 'pi syāt tad-unmukhaḥ /</l>
+<l>tathā rāmāyaṇādīnāṃ bhavitā duḥkha-hetutā // VisSd_3.5 //</l>
+</lg>
+
+<lg>
+<l>hetutvaṃ śoka-harṣāder gatebhyo loka-saṃśrayāt /</l>
+<l>śoka-harṣādayo loke jāyantāṃ nāma laukikāḥ // VisSd_3.6 //</l>
+</lg>
+
+<lg>
+<l>alaukika-vibhāvatvaṃ prāptebhyaḥ kāvya-saṃśrayāt /</l>
+<l>sukhaṃ sañjāyate tebhyaḥ sarvebhyo 'pīti kā kṣatiḥ // VisSd_3.7 //</l>
+</lg>
+
+<lg>
+<l>aśru-pātādayas tadvad drutatvāc cetaso matāḥ /</l>
+<l>na jāyate tad-āsvādo vinā raty-ādi-vāsanām // VisSd_3.8 //</l>
+</lg>
+
+<lg>
+<l>vyāpāro 'sti vibhāvāder nāmnā sādhāraṇī-kṛtiḥ /</l>
+<l>tat-prabhāveṇa yasyāsan pāthodhi-plavanādayaḥ // VisSd_3.9 //</l>
+</lg>
+
+<lg>
+<l>pramātā tad-abhedena svātmānaṃ pratipadyate /</l>
+<l>utsādādi-samudbodhaḥ sādhāraṇyābhimānataḥ // VisSd_3.10 //</l>
+</lg>
+
+<lg>
+<l>nṛṇām api samudrādi-laṅghanādau na duṣyati /</l>
+<l>sādhāraṇyena raty-ādir api tadvat pratīyate // VisSd_3.11 //</l>
+</lg>
+
+<lg>
+<l>parasya na parasyeti mameti na mameti ca /</l>
+<l>tad-āsvāde vibhāvādeḥ paricchedo na vidyate // VisSd_3.12 //</l>
+</lg>
+
+<lg>
+<l>vibhāvanādi-vyāpāram alaukikam upeyuṣām /</l>
+<l>alaukikatvam eteṣāṃ bhūṣaṇaṃ na tu dūṣaṇam // VisSd_3.13 //</l>
+</lg>
+
+<lg>
+<l>kāraṇa-kārya-sañcāri-rūpā api hi lokataḥ /</l>
+<l>rasodbodhe vibhāvādyāḥ kāraṇāny eva te matāḥ // VisSd_3.14 //</l>
+</lg>
+
+<lg>
+<l>pratīyamānaḥ prathamaṃ pratyekaṃ hetur ucyate /</l>
+<l>tataḥ saṃvalitaḥ sarvo vibhāvādiḥ sa-cetasām // VisSd_3.15 //</l>
+</lg>
+
+<lg>
+<l>prapāṇaka-rasa-nyāyāc carvyamāṇo raso bhavet /</l>
+<l>sad-bhāvaś ced vibhāvāder dvayor ekasya vā bhavet // VisSd_3.16 //</l>
+</lg>
+
+<lg>
+<l>jhaṭity anyasam ākṣepe tadā doṣo na vidyate /</l>
+<l>pārimityyāl laukikatvāt sāntarāyatayā tathā // VisSd_3.17 //</l>
+</lg>
+
+<lg>
+<l>anukāryasya ratyāder udbodho na raso bhavet /</l>
+<l>śikṣābhyāsādi-mātreṇa rāghavādeḥ svarūpatām // VisSd_3.18 //</l>
+</lg>
+
+<lg>
+<l>darśayan nartako naiva rasasyāsvādako bhavet /</l>
+<l>kāvyārtha-bhāvenāyam api sabhya-padāspadam // VisSd_3.19 //</l>
+</lg>
+
+<lg>
+<l>nāyaṃ jñāpyaḥ sva-sattāyāṃ pratīty avyabhicārataḥ /</l>
+<l>yasmād eṣa vibhāvādi-samūhālambanātmakaḥ // VisSd_3.20 //</l>
+</lg>
+
+<lg>
+<l>tasmān na kāryaḥ no nityaḥ pūrva-saṃvedanojjhitaḥ /</l>
+<l>asaṃvedana-kāle hi na bhāvo 'py asya vidyate // VisSd_3.21 //</l>
+</lg>
+
+<lg>
+<l>nāpi bhaviṣyan sākṣād ānanda-maya-svaprakāśa-rūpatvāt /</l>
+<l>kārya-jñāpya-vilakṣaṇa-bhāvān no vartamāno 'pi // VisSd_3.22 //</l>
+</lg>
+
+<lg>
+<l>vibhāvādi-parāmarśa-viṣayatvāt sacetasām /</l>
+<l>parānandamayatvena saṃvedyatvād api sphuṭam // VisSd_3.23 //</l>
+</lg>
+
+<lg>
+<l>na nirvikalpakaṃ jñānaṃ tasya grāhakam iṣyate /</l>
+<l>tathābhilāpa-saṃsarga-yogyatva-virahān na ca // VisSd_3.24 //</l>
+</lg>
+
+<lg>
+<l>savikalpaka-saṃvedyaḥ sākṣātkāratayā na ca /</l>
+<l>parokṣas tat-prakāśo nā-parokṣaḥ śabda-saṃbhavāt // VisSd_3.25 //</l>
+</lg>
+
+<lg>
+<l>tasmād alaukikaḥ satyaṃ vedyaḥ sahṛdayair ayam /</l>
+<l>pramāṇaṃ carvaṇaivātra svābhinne viduṣāṃ matam // VisSd_3.26 //</l>
+</lg>
+
+<lg>
+<l>niṣpattyā carvaṇasyāsya niṣpattir upacārataḥ /</l>
+<l>avācyatvādikaṃ tasya vakṣye vyañjana-rūpaṇe // VisSd_3.27 //</l>
+</lg>
+
+<lg>
+<l>ratyādi-jñāna-tādātmyād eva yasmād raso bhavet /</l>
+<l>ato 'sya sva-prakāśatvam akhaṇḍatvaṃ ca sidhyati // VisSd_3.28 //</l>
+</lg>
+
+<lg>
+<l>raty-ādy-udbodhakā loke vibhāvāḥ kāvya-nāṭyayoḥ /</l>
+<l>ālambanoddīpanākhyau tasya bhedāv ubhau smṛtau /</l>
+<l>ālambanaṃ nāyakādis tam ālambya rasodgamāt // VisSd_3.29 //</l>
+</lg>
+
+<lg>
+<l>tyāgī kṛtī kulīnaḥ su-śrīko rūpa-yauvanotsāhī /</l>
+<l>dakṣo 'nurakta-lokas tejo-vaidagdhya-śīlavān netā // VisSd_3.30 //</l>
+</lg>
+
+<lg>
+<l>dhīrodātto dhīroddhatas tathā dhīra-lalitaś ca /</l>
+<l>dhīra-praśānta ity ayam uktaḥ prathamaś caturbhedaḥ // VisSd_3.31 //</l>
+</lg>
+
+<lg>
+<l>avikatthanaḥ kṣamāvān atigambhīro mahā-sattvaḥ /</l>
+<l>stheyān nigūḍhamāno dhīrodātto dṛḍha-vrataḥ kathitaḥ // VisSd_3.32 //</l>
+</lg>
+
+<lg>
+<l>māyā-paraḥ pracaṇḍaś capalo 'haṅkāra-darpa-bhūyiṣṭhaḥ /</l>
+<l>ātma-ślāghā-nirato dhīrair dhīroddhataḥ kathitaḥ // VisSd_3.33 //</l>
+</lg>
+
+<lg>
+<l>niścinto mṛdur aniśaṃ kalā-paro dhīra-lalitaḥ syāt /</l>
+<l>sāmānya-guṇair bhūyān divjādiko dhīra-praśāntaḥ syāt // VisSd_3.34 //</l>
+</lg>
+
+<lg>
+<l>ebhir dakṣiṇa-dhṛṣṭānukūla-śaṭha-rūpibhis tu ṣoḍaśadhā /</l>
+<l>eṣu tv aneka-mahilāsu samarāgo dakṣiṇaḥ kathitaḥ // VisSd_3.35 //</l>
+</lg>
+
+<lg>
+<l>kṛtāgā api niḥśaṅkas tarjito 'pi na lajjitaḥ /</l>
+<l>dṛṣṭa-doṣo 'pi mithyāvā-kvathito dhṛṣṭa-nāyakaḥ // VisSd_3.36 //</l>
+</lg>
+
+<lg>
+<l>anukūla eka-nirataḥ śaṭho 'yam ekatra baddha-bhāvo yaḥ /</l>
+<l>darśita-bahir-anurāgo vipriyam anyatra gūḍham ācarati // VisSd_3.37 //</l>
+</lg>
+
+<lg>
+<l>eṣāṃ ca traividhyād uttama-madhyādhamatvena /</l>
+<l>uktā nāyaka-bhedāś catvāriṃśat tathāṣṭau ca // VisSd_3.38 //</l>
+</lg>
+
+<lg>
+<l>dūrānvartini syāt tasya prāsāṅgiketivṛtte tu /</l>
+<l>kiñcit tad-guṇa-hīnaḥ sahāya evāsya pīṭha-mardākhyaḥ // VisSd_3.39 //</l>
+</lg>
+
+<lg>
+<l>śṛṅgāro 'sya sahāyā viṭa-ceṭa-vidūṣakādyāḥ syuḥ /</l>
+<l>bhaktā narmasu nipuṇāḥ kupita-vadhū-māna-bhañjanāḥ śuddhāḥ // VisSd_3.40 //</l>
+</lg>
+
+<lg>
+<l>saṃbhoga-hīna-sampad viṭas tu dhūrtaḥ kalaika-deśa-jñaḥ /</l>
+<l>veśopacāra-kuśalo vāgmī madhuro 'tha bahu-mato goṣṭhyām // VisSd_3.41 //</l>
+</lg>
+
+<lg>
+<l>kusuma-vasantādy-abhidhaḥ karma-vapur veṣa-bhāṣādyaiḥ /</l>
+<l>hāsya-karaḥ kalaha-ratir vidūṣakaḥ syāt sva-karma-jñaḥ // VisSd_3.42 //</l>
+</lg>
+
+<lg>
+<l>mantrī syād arthānāṃ cintāyāṃ tadvad avarodhe /</l>
+<l>vāmana-ṣaṇḍa-kirāta-mlecchābhīrāḥ śakāra-kubjādyāḥ // VisSd_3.43 //</l>
+</lg>
+
+<lg>
+<l>mada-mūrkhatābhimānī duṣkulataiśvarya-saṃyuktaḥ /</l>
+<l>so 'yam anūḍha-bhrātā rājñaḥ śyālaḥ śakāra ity uktaḥ // VisSd_3.44 //</l>
+</lg>
+
+<lg>
+<l>daṇḍe suhṛt-kumārāṭavikāḥ sāmanta-sainikādyāś ca /</l>
+<l>ṛtvik-purodhasaḥ syur brahma-vidas tāpasās tathā dharme // VisSd_3.45 //</l>
+</lg>
+
+<lg>
+<l>uttamāḥ pīṭhamardādyāḥ madhyau viṭa-vidūṣakau /</l>
+<l>tathā śakāra-ceṭādyā adhamā parikīrtitāḥ // VisSd_3.46 //</l>
+</lg>
+
+<lg>
+<l>nisṛṣṭārtho mitārthaś ca tathā sandeśa-hārakaḥ /</l>
+<l>kārya-preṣyas tridhā dūto dūtyaś cāpi tathāvidhāḥ // VisSd_3.47 //</l>
+</lg>
+
+<lg>
+<l>ubhayor bhāvam unnīya svayaṃ vadati cottaram /</l>
+<l>suśliṣṭaṃ kurute kāryaṃ nisṛṣṭārthas tu sa smṛtaḥ // VisSd_3.48 //</l>
+</lg>
+
+<lg>
+<l>mitārtha-bhāṣī kāryasya siddha-kārā mitārthakaḥ /</l>
+<l>yāvad bhāṣita-sandeśa-hāraḥ sandeśa-hārakaḥ // VisSd_3.49 //</l>
+</lg>
+
+<lg>
+<l>śobhā vilāso mādhuryaṃ gāmbhīryaṃ dhairya-tejasī /</l>
+<l>lalitaudāryam ity aṣṭau sattvajāḥ pauruṣā guṇāḥ // VisSd_3.50 //</l>
+</lg>
+
+<lg>
+<l>śūratā dakṣatā satyaṃ mahotsāho 'nurāgitā /</l>
+<l>nīce ghūṇādhike spardhā yataḥ śobheti tāṃ viduḥ // VisSd_3.51 //</l>
+</lg>
+
+<lg>
+<l>dhīrā dṛṣṭir gatiś citrā vilāse sasmitaṃ vacaḥ /</l>
+<l>sāṅkṣobheṣv apy anudvego mādhuryaṃ parikīrtitam // VisSd_3.52 //</l>
+</lg>
+
+<lg>
+<l>bhī-śoka-krodha-harṣādyair gāmbhīryaṃ nirvikāratā /</l>
+<l>vyavasāyād acalanaṃ dhairyaṃ vighne mahaty api // VisSd_3.53 //</l>
+</lg>
+
+<lg>
+<l>adhikṣepāpamānādeḥ prayuktasya pareṇa yat /</l>
+<l>prāṇātyaye 'py asahanaṃ tat-tejaḥ samudāhṛtam // VisSd_3.54 //</l>
+</lg>
+
+<lg>
+<l>vāg-veśayor madhuratā, tadvac chṛṅgāra-ceṣṭitaṃ lalitam /</l>
+<l>dānaṃ sa-priya-bhāṣaṇam audāryaṃ śatru-mitrayoḥ samatā // VisSd_3.55 //</l>
+</lg>
+
+<lg>
+<l>atha nāyikā tri-bhedā svānyā sādhāraṇā strīti /</l>
+<l>nāyaka-sāmānya-guṇair bhavati yathā-saṃbhavair yuktā // VisSd_3.56 //</l>
+</lg>
+
+<lg>
+<l>vinayārjavādi-yuktā gṛha-karma-parā pati-vratā svīyā /</l>
+<l>sāpi kathitā tribhedā mugdhā madhyā pragalbheti // VisSd_3.57 //</l>
+</lg>
+
+<lg>
+<l>prathamāvatīrṇa-yauvana-madana-vikārā ratau vāmā /</l>
+<l>kathitā mṛduś ca māne samadhika-lajjāvatī mugdhā // VisSd_3.58 //</l>
+</lg>
+
+<lg>
+<l>madhyā vicitra-suratā prarūḍha-smara-yauvanā /</l>
+<l>īṣat-pragalbha-vacanā madhyama-vrīḍitā matā // VisSd_3.59 //</l>
+</lg>
+
+<lg>
+<l>smarāndhā gāḍhatāruṇyā samasta-rata-kovidā /</l>
+<l>bhāvonnatā dara-vrīḍā pragalbhākrānta-nāyakā // VisSd_3.60 //</l>
+</lg>
+
+<lg>
+<l>te dhīrā cāpy adhīrā ca dhīrādhīreti ṣaḍ-vidhe /</l>
+<l>priyaṃ sotprāsa-vakroktyā madhyā dhīrā dahed ruṣā // VisSd_3.61 //</l>
+</lg>
+
+<lg>
+<l>dhīrādhīrā tu ruditair adhīrā puruṣoktibhiḥ /</l>
+<l>pragalbhā yadi dhīrā syāc channa-kopākṛtis tadā // VisSd_3.62 //</l>
+</lg>
+
+<lg>
+<l>udāste surate tatra darśayanty ādarān bahiḥ /</l>
+<l>dhīrādhīrā tu solluṇṭha-bhāṣitaiḥ khedayaty amum // VisSd_3.63 //</l>
+</lg>
+
+<lg>
+<l>tarjayet tāḍayed anyā pratyekaṃ tā api dvidhā /</l>
+<l>kaniṣṭha-jyeṣṭha-rūpatvān nāyaka-praṇayaṃ prati // VisSd_3.64 //</l>
+</lg>
+
+<lg>
+<l>madhyā-pragalbhayor bhedās tasmād dvādaśa kīrtitāḥ /</l>
+<l>mugdhā tv ekaiva tena syuḥ svīyābhedās trayodaśā // VisSd_3.65 //</l>
+</lg>
+
+<lg>
+<l>parakīyā dvidhā proktā paroḍhā kanyakā tathā /</l>
+<l>yātrādi-nirastānyoḍhā kulaṭā galita-trapā // VisSd_3.66 //</l>
+</lg>
+
+<lg>
+<l>kanyā tv ajātopayamā sa-lajjā nava-yauvanā /</l>
+<l>dhīrā kalā-pragalbhā syād veśyāsāmānya-nāyikā // VisSd_3.67 //</l>
+</lg>
+
+<lg>
+<l>nirguṇān api na dveṣṭi na rajyati guṇiṣv api /</l>
+<l>vitta-mātraṃ samālokya sā rāgaṃ darśayed bahiḥ // VisSd_3.68 //</l>
+</lg>
+
+<lg>
+<l>kāmaṃ aṅgīkṛtam api parikṣīṇa-dhanaṃ naram /</l>
+<l>mātrā niḥsārayed eṣā punaḥ-sandhāna-kāṅkṣayā // VisSd_3.69 //</l>
+</lg>
+
+<lg>
+<l>taskarāḥ ṣaṇḍakā mūrkhāḥ sukha-prāpta-dhanās tathā /</l>
+<l>liṅginaś channa-kāmādyā asyāḥ prāyeṇa vallabhāḥ // VisSd_3.70 //</l>
+</lg>
+
+<lg>
+<l>eṣāpi madanāyattā kvāpi satyānurāgiṇī /</l>
+<l>raktāyāṃ vā viraktāyāṃ ratam asyāṃ satyānurāgiṇī // VisSd_3.71 //</l>
+</lg>
+
+<lg>
+<l>avasthābhir bhavanty aṣṭāv etāḥ ṣoḍaśa-bheditāḥ /</l>
+<l>svādhīna-bhartṛkā tadvat khaṇḍitāthābhisārikā // VisSd_3.72 //</l>
+</lg>
+
+<lg>
+<l>kalahāntaritā vipra-labdhā proṣita-bhartṛkā /</l>
+<l>anyā vāsaka-sajjā syād virahotkaṇṭhitā tathā // VisSd_3.73 //</l>
+</lg>
+
+<lg>
+<l>kānto rati-guṇākṛṣṭo na jahāti yad-antikam /</l>
+<l>vicitra-vibhramāsaktā sā syāt svādhīna-bhartṛkā // VisSd_3.74 //</l>
+</lg>
+
+<lg>
+<l>pārśvam eti priyo yasyā anya-saṃyoga-cihnitaḥ /</l>
+<l>sā khaṇḍiteti kathitā dhīrair īrṣyā-kaṣāyitā // VisSd_3.75 //</l>
+</lg>
+
+<lg>
+<l>abhisārayate kāntaṃ yā manmatha-vaśaṃvadā /</l>
+<l>svayaṃ vābhisaraty eṣā dhīrair uktābhisārikā // VisSd_3.76 //</l>
+</lg>
+
+<lg>
+<l>saṃlīnā sveṣu gātreṣu mūkīkṛta-vibhūṣaṇā /</l>
+<l>avaguṇṭhana-saṃvītā kulajābhisared yadi // VisSd_3.77 //</l>
+</lg>
+
+<lg>
+<l>vicitrojjvala-veṣā tu raṇan-nūpura-kaṅkaṇā /</l>
+<l>pramoda-smera-vadanā syād veśyābhisared yadi // VisSd_3.78 //</l>
+</lg>
+
+<lg>
+<l>mada-skhalita-saṃlāpā vibhramotphulla-locanā /</l>
+<l>āviddha-gati-sañcārā syāt preṣyābhisared yadi // VisSd_3.79 //</l>
+</lg>
+
+<lg>
+<l>kṣetraṃ vāṭī bhagna-devālayo dūtī-gṛhaṃ vanam /</l>
+<l>mālā-pañcaḥ śmaśānaṃ ca nadyādīnāṃ taṭī tathā // VisSd_3.80 //</l>
+</lg>
+
+<lg>
+<l>evaṃ kṛtābhisārāṇāṃ puṃścalīnāṃ vinodane /</l>
+<l>sthānāny aṣṭau tathā dhvānta-cchanne kutracid āśraye // VisSd_3.81 //</l>
+</lg>
+
+<lg>
+<l>cāṭukāram api prāṇa-nāthaṃ roṣād apāsya yā /</l>
+<l>paścāt tāpam avāpnoti kalahāntaritā tu sā // VisSd_3.82 //</l>
+</lg>
+
+<lg>
+<l>priyaḥ kṛtvāpi saṅketaṃ yasyā nāyāti saṃnidhim /</l>
+<l>vipralabdhā tu sā jñeyā nitāntam avamānitā // VisSd_3.83 //</l>
+</lg>
+
+<lg>
+<l>nānā-kārya-vaśād yasyā dūra-deśaṃ gataḥ patiḥ /</l>
+<l>sā manobhava-duḥkhārtā bhavet proṣita-bhartṛkā // VisSd_3.84 //</l>
+</lg>
+
+<lg>
+<l>kurute maṇḍanaṃ yasyāḥ sajjite vāsa-veśmani /</l>
+<l>sā tu vāsaka-sajjā syād vidita-priya-saṅgamā // VisSd_3.85 //</l>
+</lg>
+
+<lg>
+<l>āgantuṃ kṛta-citto 'pi daivān nāyāti yat priyaḥ /</l>
+<l>tad-anāgata-duḥkhārtā virahotkaṇṭhitā tu sā // VisSd_3.86 //</l>
+</lg>
+
+<lg>
+<l>iti sāṣṭāviṃśati-śatam uttama-madhyādhama-svarūpeṇa /</l>
+<l>caturadhikāśīti-yutaṃ śata-trayaṃ nāyikā-bhedāḥ // VisSd_3.87 //</l>
+</lg>
+
+<lg>
+<l>kvacidanyonya-sāṅkaryam āsāṃ lakṣyeṣu dṛśyate /</l>
+<l>itarā apy asaṅkhyās tā noktā vistara-śaṅkayā // VisSd_3.88 //</l>
+</lg>
+
+<lg>
+<l>yauvane sattvajās tāsām aṣṭāviṃśati-saṅkhyakāḥ /</l>
+<l>alaṅkārās tatra bhāva-hāva-helās trayo 'ṅgajāḥ // VisSd_3.89 //</l>
+</lg>
+
+<lg>
+<l>śobhā kāntiś ca dīptiś ca m ādhuryaṃ ca pragalbhatā /</l>
+<l>audāryaṃ dhairyam ity ete saptaiva syur ayatnajāḥ // VisSd_3.90 //</l>
+</lg>
+
+<lg>
+<l>līlā vilāso vicchittir bibbokaḥ kilakiñcitam /</l>
+<l>moṭṭāyitaṃ kuṭṭamitaṃ vibhramo lalitaṃ madaḥ // VisSd_3.91 //</l>
+</lg>
+
+<lg>
+<l>vihṛtaṃ tapanaṃ maugdhyaṃ vikṣepaś ca kutūhalam /</l>
+<l>hasitaṃ cakitaṃ kelir ity aṣṭādaśa-saṅkhyakāḥ // VisSd_3.92 //</l>
+</lg>
+
+<lg>
+<l>svabhāvājāś ca bhāvādyā daśa puṃsāṃ bhavanty api /</l>
+<l>nirvikārātmake citte bhāvaḥ prathama-vikriyā // VisSd_3.93 //</l>
+</lg>
+
+<lg>
+<l>bhrū-netrādi-vikārais tu saṃbhogecchā-prakāśakaḥ /</l>
+<l>bhāva evālpa-saṃlakṣya-vikāro hāva ucyate // VisSd_3.94 //</l>
+</lg>
+
+<lg>
+<l>helātyanta-samālakṣya-vikāraḥ syāt sa eva tu /</l>
+<l>rūpa-yauvana-lālitya-bhogādyair aṅga-bhūṣaṇam // VisSd_3.95 //</l>
+</lg>
+
+<lg>
+<l>saiva kāntir manmathāpyāyita-dyutiḥ /</l>
+<l>kāntir evātivistīrṇā dīptir ity abhidhīyate // VisSd_3.96 //</l>
+</lg>
+
+<lg>
+<l>sarvāvasthā-viśeṣeṣu mādhuryaṃ ramaṇīyatā /</l>
+<l>niḥsādhvasatvaṃ prāgalbhyam audāryaṃ vinayaḥ sadā // VisSd_3.97 //</l>
+</lg>
+
+<lg>
+<l>muktātma-ślāghanā dhairyaṃ manovṛttir acañcalā /</l>
+<l>aṅgair veṣair alaṅkāraiḥ premibhir vacanair api // VisSd_3.98 //</l>
+</lg>
+
+<lg>
+<l>prīti-prayojaitair līlāṃ priyasyānukṛtiṃ viduḥ /</l>
+<l>yānasthānāsanādīnāṃ mukha-netrādi-karmaṇām // VisSd_3.99 //</l>
+</lg>
+
+<lg>
+<l>viśeṣas tu vilāsaḥ syād iṣṭa-sandarśanādinā /</l>
+<l>stokāpy ākalpa-racanā vicchittiḥ kānti-poṣa-kṛt // VisSd_3.100 //</l>
+</lg>
+
+<lg>
+<l>smita-śuṣka-rudita-hasita-trāsa-krodha-śramādīnām /</l>
+<l>sāṅkaryaṃ kilakiñcitam īṣṭatama-saṅgamādijād dharṣāt // VisSd_3.101 //</l>
+</lg>
+
+<lg>
+<l>tad-bhāva-bhāvite citte vallabhasya kathādiṣu /</l>
+<l>moṭṭāyitam iti prāhuḥ karṇa-kaṇḍūyanādikam // VisSd_3.102 //</l>
+</lg>
+
+<lg>
+<l>keśastanādharādīnāṃ grahe harṣe 'pi saṃbhramāt /</l>
+<l>āhuḥ kuṭṭamitaṃ nāma śiraḥ-kara-vidhūnanam // VisSd_3.103 //</l>
+</lg>
+
+<lg>
+<l>tvarayā harṣa-rāgāder dayitā-gamanādiṣu /</l>
+<l>asthāne vibhramādīnāṃ vinyāso vibhramo mataḥ // VisSd_3.104 //</l>
+</lg>
+
+<lg>
+<l>sukumāratayāṅgānāṃ vinyāso lalitaṃ bhavet /</l>
+<l>mado vikāraḥ saubhāgya-yauvanādy-avalepajaḥ // VisSd_3.105 //</l>
+</lg>
+
+<lg>
+<l>vaktavya-kāle 'py avaco vrīḍayā vihṛtaṃ matam /</l>
+<l>tapanaṃ priya-vicchede smara-vegottha-ceṣṭitam // VisSd_3.106 //</l>
+</lg>
+
+<lg>
+<l>ajñānād iva yā pṛcchā pratītasyāpi vastunaḥ /</l>
+<l>vallabhasya puraḥ proktaṃ maugdhyaṃ tat-tattva-vedibhiḥ // VisSd_3.107 //</l>
+</lg>
+
+<lg>
+<l>bhūṣāṇām ardha-racanā mithyā viṣvag-avekṣaṇam /</l>
+<l>rahasyākhyānam īṣāc ca vikṣepo dayitāntike // VisSd_3.108 //</l>
+</lg>
+
+<lg>
+<l>ramya-vastu-samāloke loltā syāt kutūhalam /</l>
+<l>hasitaṃ tu vṛthā-hāso yauvanodbheda-saṃbhavaḥ // VisSd_3.109 //</l>
+</lg>
+
+<lg>
+<l>kuto 'pi dayitasyāgre cakitaṃ bhaya-saṃbhramaḥ /</l>
+<l>vihāre saha kāntena krīḍitaṃ kelir ucyate // VisSd_3.110 //</l>
+</lg>
+
+<lg>
+<l>dṛṣṭvā darśayati vrīḍāṃ saṃmukhaṃ naiva paśyati /</l>
+<l>pracchannaṃ vā bhramantaṃ vā-(a)tikrāntaṃ paśyati priyam // VisSd_3.111 //</l>
+</lg>
+
+<lg>
+<l>bahudhā pṛcchyamānāpi manda-mandam adhomukhī /</l>
+<l>sagadgada-svaraṃ kiñcit priyaṃ prāyeṇa bhāṣate // VisSd_3.112 //</l>
+</lg>
+
+<lg>
+<l>anyaiḥ pravartitāṃ śaśvat sāvadhānā ca tat-kathām /</l>
+<l>śṛṇoty anyatra dattākṣī priye bālānurāgiṇī // VisSd_3.113 //</l>
+</lg>
+
+<lg>
+<l>cirāya savidhe sthānaṃ priyasya bahu manyate /</l>
+<l>vilocana-pathaṃ cāsya na gacchaty analaṅkṛtā // VisSd_3.114 //</l>
+</lg>
+
+<lg>
+<l>kvāpi kuntala-saṃvyāna-saṃyama-vyapadeśataḥ /</l>
+<l>bāhu-mūlaṃ stanau nābhi-paṅkajaṃ darśayet sphuṭam // VisSd_3.115 //</l>
+</lg>
+
+<lg>
+<l>ācchādayati vāg-ādyaiḥ priyasya paricārakān /</l>
+<l>viśvasity asya mitreṣu bahu-mānaṃ karoti ca // VisSd_3.116 //</l>
+</lg>
+
+<lg>
+<l>sakhī-madhye guṇān brūte sva-dhanaṃ pradadāti ca /</l>
+<l>supte svapiti duḥkhe 'sya duḥkhaṃ dhatte sukhe sukham // VisSd_3.117 //</l>
+</lg>
+
+<lg>
+<l>sthitā dṛṣṭi-pathe śaśvat-priye paśyati dūrataḥ /</l>
+<l>ābhāṣate parijanaṃ saṃmukhaṃ smara-vikriyam // VisSd_3.118 //</l>
+</lg>
+
+<lg>
+<l>yat kiñcid api saṃvīkṣya kurute hasitaṃ mudhā /</l>
+<l>karṇa-kaṇḍūyanaṃ tadvat kavarī-mokṣa-saṃyamau // VisSd_3.119 //</l>
+</lg>
+
+<lg>
+<l>jṛmbhate sphoṭayaty aṅgaṃ bālam āśliṣya cumbati /</l>
+<l>bhāle tathā vayasyāyā racayet tilaka-kriyām // VisSd_3.120 //</l>
+</lg>
+
+<lg>
+<l>aṅguṣṭhāgreṇa likhati sakaṭākṣaṃ nirīkṣate /</l>
+<l>daśati svādharaṃ cāpi brūte priyam adhomukhī // VisSd_3.121 //</l>
+</lg>
+
+<lg>
+<l>na muñcati ca taṃ deśaṃ nāyako yatra dṛśyate /</l>
+<l>āgacchati gṛhaṃ tasya kārya-vyājena kenacit // VisSd_3.122 //</l>
+</lg>
+
+<lg>
+<l>dattaṃ kim api kāntena dhṛtvāṅge muhur īkṣate /</l>
+<l>nityaṃ hṛṣyati tad-yoge viyoge malinā kṛśā // VisSd_3.123 //</l>
+</lg>
+
+<lg>
+<l>manyate bahu tac-chīlaṃ tat-priyaṃ manyate priyam /</l>
+<l>prārthayaty alpa-mūlyāni suptā na parivartate // VisSd_3.124 //</l>
+</lg>
+
+<lg>
+<l>vikārān sāttvikān asya saṃmukhī nādhigacchati /</l>
+<l>bhāṣate sūnṛtaṃ snigdhām anuraktā nitambinī // VisSd_3.125 //</l>
+</lg>
+
+<lg>
+<l>eteṣv adhika-lajjāni ceṣṭitāni nava-striyāḥ /</l>
+<l>madhya-vrīḍāni madhyāyāḥ sraṃsamāna-trapāṇi tu // VisSd_3.126 //</l>
+</lg>
+
+<lg>
+<l>anya-striyāḥ pragalbhāyās tathā syur vāra-yoṣitaḥ /</l>
+<l>lekhya-prasthāpanaiḥ snigdhair vīkṣitair mṛdu-bhāṣitaiḥ // VisSd_3.127 //</l>
+</lg>
+
+<lg>
+<l>dūtī-saṃpreṣaṇair nāryā bhāvābhivyaktir iṣyate /</l>
+<l>dūtyaḥ sakhī naṭī dāsī dhātreyī prativeśinī // VisSd_3.128 //</l>
+</lg>
+
+<lg>
+<l>bālā pravrajitā kārūḥ śilpinyādyāḥ svayaṃ tathā /</l>
+<l>kalā-kauśalam utsāho bhaktiś cittajñatā smṛtiḥ // VisSd_3.129 //</l>
+</lg>
+
+<lg>
+<l>mādhuryaṃ narma-vijñānaṃ vāgmitā ceti tad-guṇāḥ /</l>
+<l>etā api yathaucityād uttamaādhama-madhyamāḥ // VisSd_3.130 //</l>
+</lg>
+
+<lg>
+<l>dhīrodhataḥ pāpakārī vyasanī pratināyakaḥ /</l>
+<l>uddīpana-vibhāvās te rasam uddīpayanti ye // VisSd_3.131 //</l>
+</lg>
+
+<lg>
+<l>ālambanasya ceṣṭādyā deśa-kālādayas tathā /</l>
+<l>udbuddhaṃ kāraṇaiḥ svaiḥ svari bahir bhāvaṃ prakāśayan // VisSd_3.132 //</l>
+</lg>
+
+<lg>
+<l>loke yaḥ kārya-rūpaḥ so 'nubhāvaḥ kāvya-nāṭyayoḥ /</l>
+<l>uktāḥ strīṇām alaṅkārā aṅgajāś ca svabhāvajāḥ // VisSd_3.133 //</l>
+</lg>
+
+<lg>
+<l>tad-rūpāḥ sāttvikā bhāvās tathā ceṣṭāḥ parā api /</l>
+<l>vikārāḥ sattva-saṃbhūtāḥ sāttvikāḥ parikīrtitāḥ // VisSd_3.134 //</l>
+</lg>
+
+<lg>
+<l>sattva-mātrodbhavatvāt tu bhinnā apy anubhāvataḥ /</l>
+<l>stambhaḥ svedo 'tha romāñcaḥ svara-bhaṅgo 'tha vepathuḥ // VisSd_3.135 //</l>
+</lg>
+
+<lg>
+<l>vaivarṇyam aśru-pralaya ity aṣṭau sāttvikāḥ smṛtāḥ /</l>
+<l>stambhaś ceṣṭā-pratīghāto bhaya-harṣāmayādibhiḥ // VisSd_3.136 //</l>
+</lg>
+
+<lg>
+<l>vapur jalodgamaḥ svedo rati-gharma-śramādibhiḥ /</l>
+<l>harṣādbhuta-bhayādibhyo romāñco roma-vikriyāḥ // VisSd_3.137 //</l>
+</lg>
+
+<lg>
+<l>mada-saṃmada-pīḍādyair vaisvaryaṃ gadgadaṃ viduḥ /</l>
+<l>rāga-dveṣa-śramādibhyaḥ kampo gātrasya vepathuḥ // VisSd_3.138 //</l>
+</lg>
+
+<lg>
+<l>viṣāda-mada-roṣādyair varṇānyatvaṃ vivarṇatā /</l>
+<l>aśru netrodbhavaṃ vāri krodha-duḥkha-praharṣajam // VisSd_3.139 //</l>
+</lg>
+
+<lg>
+<l>pralayaḥ sukha-duḥkhābhyāṃ ceṣṭā-jñāna-nirākṛtiḥ /</l>
+<l>viśeṣād ābhimukhyena caraṇād vyabhicāriṇaḥ /</l>
+<l>sthāyiny unmagna-nirmagnās trayastriṃśac ca tad-bhidāḥ // VisSd_3.140 //</l>
+</lg>
+
+<lg>
+<l>nirvedāvega-dainya-śrama-mada-jaḍatā augrya-mohau vibodhaḥ svapnāpasmāra-garvā maraṇam alasatāmarṣa-nidrāvahitthāḥ |</l>
+<l>autsukyonmāda-śaṅkāḥ smṛti-mati-sahitā vyādhi-satrāsa-lajjā harṣāsūyā-viṣādāḥ sadhṛti-capalatā glāni-cintā-vitarkāḥ // VisSd_3.141 //</l>
+</lg>
+
+<lg>
+<l>tattva-jñānāpad-īrṣyāder nirvedaḥ svāvamānanam /</l>
+<l>dainya-cintāśru-niḥśvāsa-vaivarṇyocchvasitādi-kṛt // VisSd_3.142 //</l>
+</lg>
+
+<lg>
+<l>āvegaḥ saṃbhramas tatra varṣaje piṇḍitāṅgatā /</l>
+<l>utpātaje srastatāṅge dhūmādyākulatāgnije // VisSd_3.143 //</l>
+</lg>
+
+<lg>
+<l>rāja-vidravajādes tu śastra-nāgādi-yojanam /</l>
+<l>gajādeḥ stambhakampādi pāṃsvādyākulatānilāt // VisSd_3.144 //</l>
+</lg>
+
+<lg>
+<l>iṣṭād dharṣāḥ śuco 'niṣṭāj jñeyāś cānye yathāyatham /</l>
+<l>daurgatyādyair anaujasyaṃ dainyaṃ malinatādikṛt // VisSd_3.145 //</l>
+</lg>
+
+<lg>
+<l>khedo raty-adhva-gatyādeḥ śvāsa-nidrādi-kṛc chramaḥ /</l>
+<l>saṃmohānanda-saṃbhedo mado madyopayogajaḥ // VisSd_3.146 //</l>
+</lg>
+
+<lg>
+<l>amunā cottamaḥ śete madhyo hasati gāyati /</l>
+<l>adhama-prakṛtiś cāpi paruṣaṃ vakti roditi // VisSd_3.147 //</l>
+</lg>
+
+<lg>
+<l>apratipattir jaḍatā syād iṣṭāniṣṭa-darśana-śrutibhiḥ /</l>
+<l>animiṣa-nayana-nirīkṣaṇa-tūṣṇīmbhāvādayas tatra // VisSd_3.148 //</l>
+</lg>
+
+<lg>
+<l>śauryāparādhādi-bhavaṃ bhavec caṇḍatvam ugratā /</l>
+<l>tatra sveda-śiraḥ-kampa-tarjanā-tāḍanādayaḥ // VisSd_3.149 //</l>
+</lg>
+
+<lg>
+<l>moho vicittatā bhīti-duḥkhāvegānucintanaiḥ /</l>
+<l>mūrcchanājñāna-patana-bhramaṇādarśanādi-kṛt // VisSd_3.150 //</l>
+</lg>
+
+<lg>
+<l>nidrāpagama-hetubhyo vibodhaś cetanāgamaḥ /</l>
+<l>jṛmbhāṅga-bhaṅga-nayana-mīlanāṅgāvaloka-kṛt // VisSd_3.151 //</l>
+</lg>
+
+<lg>
+<l>svapno nidrām upetasya viṣayānubhavas tu yaḥ /</l>
+<l>kopāvega-bhaya-glāni-sukha-duḥkhādi-kārakaḥ // VisSd_3.152 //</l>
+</lg>
+
+<lg>
+<l>manaḥ-kṣepas tv apasmāro grahādy-āveśanādijaḥ /</l>
+<l>bhūpāta-kampa-prasveda-phena-lālādi-kārakaḥ // VisSd_3.153 //</l>
+</lg>
+
+<lg>
+<l>garvo madaḥ prabhāva-śrī-vidhyā-sat-kulatādijaḥ /</l>
+<l>avajñā-sa-vilāsāṅga-darśanāvinayādi-kṛt // VisSd_3.154 //</l>
+</lg>
+
+<lg>
+<l>śarādyair maraṇaṃ jīva-tyāgo 'ṅga-patanādi-kṛt /</l>
+<l>ālasyaṃ śrama-garbhādyair jāḍyaṃ jṛmbhāsitādi-kṛt // VisSd_3.155 //</l>
+</lg>
+
+<lg>
+<l>nindākṣepāpamānāder amarṣo 'bhiniviṣṭatā /</l>
+<l>netra-rāga-śiraḥ-kampa-bhrū-bhaṅgottajanādi-kṛt // VisSd_3.156 //</l>
+</lg>
+
+<lg>
+<l>cetaḥ saṃmīlanaṃ nidrā śrama-klama-madādijā /</l>
+<l>jṛmbhākṣi-mīlanocchvāsa-gātra-bhaṅgādi-kāraṇam // VisSd_3.157 //</l>
+</lg>
+
+<lg>
+<l>bhaya-gaurava-lajjāder harṣādyākāra-guptir avahitthā /</l>
+<l>vyāpārāntara-sakty-anyathāvabhāṣaṇa-vilokanādi-karī // VisSd_3.158 //</l>
+</lg>
+
+<lg>
+<l>iṣṭānavāpter autsukyaṃ kāla-kṣepā-sahiṣṇutā /</l>
+<l>citta-tāpa-tvarā-sveda-dīrgha-niḥśvasitādi-kṛt // VisSd_3.159 //</l>
+</lg>
+
+<lg>
+<l>citta-saṃmoha unmādaḥ kāma-śoka-bhayādibhiḥ /</l>
+<l>asthāna-hāsa-rudita-gīta-pralapanādi-kṛt // VisSd_3.160 //</l>
+</lg>
+
+<lg>
+<l>para-krauryātma-doṣādyaiḥ śaṅkānarthasya tarkaṇam /</l>
+<l>vaivarṇya-kampa-vaisvarya-pārśvālokāsya-śoṣa-kṛt // VisSd_3.161 //</l>
+</lg>
+
+<lg>
+<l>sadṛśa-jñāna-cintādyair bhrū-samunnayanādi-kṛt /</l>
+<l>smṛtiḥ pūrvānubhūtārtha-viṣaya-jñānam ucyate // VisSd_3.162 //</l>
+</lg>
+
+<lg>
+<l>nīti-mārgānusṛtyāder artha-nirdhāraṇaṃ matiḥ /</l>
+<l>smeratā dhṛti-satoṣau bahu-mānaś ca tad-bhavāḥ // VisSd_3.163 //</l>
+</lg>
+
+<lg>
+<l>vyādhir jvarādir vātādyair bhūmīcchotkampanādi-kṛt /</l>
+<l>nirghāta-vidyud-ulkādyais trāsaḥ kampādi-kārakaḥ // VisSd_3.164 //</l>
+</lg>
+
+<lg>
+<l>dhārṣṭyābhāvo vrīḍā vadanānamanādi-kṛd durācārāt /</l>
+<l>harṣas tv iṣṭāvāpter manaḥ-prasādo 'śru-gadgadādi-karaḥ // VisSd_3.165 //</l>
+</lg>
+
+<lg>
+<l>asūyānya-guṇardhīnām auddhatyād asahiṣṇutā /</l>
+<l>doṣodghoṣa-bhrū-vibhedāvajñā-krodheṅgitādi-kṛt // VisSd_3.166 //</l>
+</lg>
+
+<lg>
+<l>upāyābhāva-janmā tu viṣādaḥ sattva-saṅkṣayaḥ /</l>
+<l>niḥśvāsocchvāsa-hṛt-tāpa-sahāyānveṣaṇādi-kṛt // VisSd_3.167 //</l>
+</lg>
+
+<lg>
+<l>jñānābhīṣṭāgamādyais tu saṃpūrṇa-spṛhatā dhṛtiḥ /</l>
+<l>sauhitya-vacanollāsa-sahāsa-pratibhādi-kṛt // VisSd_3.168 //</l>
+</lg>
+
+<lg>
+<l>mātsarya-dveṣa-rāgādeś cāpalyaṃ tv anavasthitiḥ /</l>
+<l>tatra bharsana-pāruṣya-svacchanācaraṇādayaḥ // VisSd_3.169 //</l>
+</lg>
+
+<lg>
+<l>ratyāyāsamanastāpa-kṣut-pipāsādi-saṃbhavā /</l>
+<l>glānir niṣprāṇatā-kampa-kārśyānutsāhatādi-kṛt // VisSd_3.170 //</l>
+</lg>
+
+<lg>
+<l>dhyānaṃ cintā hitānāpteḥ śūnyatāśvāsa-tāpa-kṛt /</l>
+<l>tarko vicāraḥ sandehād bhrūśiro 'ṅguli-nartakaḥ // VisSd_3.171 //</l>
+</lg>
+
+<lg>
+<l>ratyādayo 'py aniyate rase syur vyabhicāriṇaḥ /</l>
+<l>śṛṅgāra-vīrayor hāso vīre krodhas tathā mataḥ // VisSd_3.172 //</l>
+</lg>
+
+<lg>
+<l>śānte jugupsā kathitā vyabhicāritayā punaḥ /</l>
+<l>ity ādy-anyat samunnateyaṃ tathā bhāvita-buddhibhiḥ // VisSd_3.173 //</l>
+</lg>
+
+<lg>
+<l>aviruddhā viruddhā vā yaṃ tirodhātum akṣamāḥ /</l>
+<l>āsvādāṅkura-kando 'sau bhāvaḥ sthāyīti saṃmataḥ // VisSd_3.174 //</l>
+</lg>
+
+<lg>
+<l>ratir hāsaś ca śokaś ca krodhotsāhau bhayaṃ tathā /</l>
+<l>jugupsā vismayaś cettham aṣṭau proktāḥ śamo 'pi ca // VisSd_3.175 //</l>
+</lg>
+
+<lg>
+<l>ratir mano 'nukūle 'rthe manasaḥ pravaṇāyitam /</l>
+<l>vāg-ādi-vaikṛtaiś ceto-vikāso hāsa iṣyate // VisSd_3.176 //</l>
+</lg>
+
+<lg>
+<l>iṣṭa-nāśādibhiś ceto-vaiklavyaṃ śoka-śabda-bhāk /</l>
+<l>pratikūleṣu taikṣṇyasyā-vabodhaḥ krodha iṣyate // VisSd_3.177 //</l>
+</lg>
+
+<lg>
+<l>kāryārambheṣu saṃrambhaḥ stheyānutsāha ucyate /</l>
+<l>raudra-śaktyā tu janitaṃ citta-vaiklavyaṃ bhayam // VisSd_3.178 //</l>
+</lg>
+
+<lg>
+<l>doṣekṣaṇādibhir garhā jugupsā vismayodbhavā /</l>
+<l>vividheṣu padārtheṣu loka-sīmātivartiṣu // VisSd_3.179 //</l>
+</lg>
+
+<lg>
+<l>visphāraś cetaso yas tu sa vismaya udāhṛtaḥ /</l>
+<l>śamo nirīhāvasthāyāṃ svātma-viśrāmajaṃ sukham // VisSd_3.180 //</l>
+</lg>
+
+<lg>
+<l>nānābhinaya-saṃbandhān bhāvayanti rasān yataḥ /</l>
+<l>tasmād bhāvā amī proktāḥ sthāyi-sañcāri-sāttvikāḥ // VisSd_3.181 //</l>
+</lg>
+
+<lg>
+<l>śṛṅgāra-hāsya-karuṇa-raudra-vīra-bhayānakāḥ /</l>
+<l>bībhatso 'dbhuta ity aṣṭau rasāḥ śāntas tathā mataḥ // VisSd_3.182 //</l>
+</lg>
+
+<lg>
+<l>śṛṅgaṃ hi manmathodbhedas tad āgamana-hetukaḥ /</l>
+<l>uttama-prakṛti-prāyo rasaḥ śṛṅgāra iṣyate // VisSd_3.183 //</l>
+</lg>
+
+<lg>
+<l>paroḍhāṃ varjayitvātra veśyāṃ cānanurāgiṇīm /</l>
+<l>ālambanaṃ nāyikāḥ syur dakṣiṇādyāś ca nāyakam // VisSd_3.184 //</l>
+</lg>
+
+<lg>
+<l>candra-candana-rolamba-rutādy-uddīpanaṃ matam /</l>
+<l>bhrū-vikṣepa-kaṭākṣādir anubhāvaḥ prakīrtitaḥ // VisSd_3.185 //</l>
+</lg>
+
+<lg>
+<l>tyaktvaugrya-maraṇālasya-jugupsā-vyabhicāriṇaḥ /</l>
+<l>sthāyi-bhāvo ratiḥ śyāma-varṇo 'yaṃ viṣṇu-daivataḥ /</l>
+<l>vipralambho 'tha saṃbhoga ity eṣa dvividho mataḥ // VisSd_3.186 //</l>
+</lg>
+
+<lg>
+<l>yatra tu ratiḥ prakṛṣṭā nābhīṣṭam upaitai vipralambho 'sau /</l>
+<l>sa ca pūrva-rāga-māna-pravāsa-karuṇātmakaś caturdhā syāt // VisSd_3.187 //</l>
+</lg>
+
+<lg>
+<l>śravaṇād darśanād vāpi mithaḥ saṃrūḍha-rāgayoḥ /</l>
+<l>daśā-viśeṣo yo 'prāptau pūrvarāgaḥ sa ucyate // VisSd_3.188 //</l>
+</lg>
+
+<lg>
+<l>śravaṇaṃ tu bhavet tatra dūta-vandī-sakhī-mukhāt /</l>
+<l>indrajāle ca citre ca sākṣāt svapne ca darśanam // VisSd_3.189 //</l>
+</lg>
+
+<lg>
+<l>abhilāṣaś cintā-smṛti-guṇa-kathanodvega-saṃpralāpāś ca /</l>
+<l>unmādo 'tha vyādhir jaḍatā mṛtir iti daśātra kāma-daśāḥ // VisSd_3.190 //</l>
+</lg>
+
+<lg>
+<l>abhilāṣaḥ spṛhā cintā prāpty-upāyādi-cintanam /</l>
+<l>unmādaś cāparicchedaś cetanācetaneṣv api // VisSd_3.191 //</l>
+</lg>
+
+<lg>
+<l>alakṣya-vāk-pralāpaḥ syāc cetaso bhramaṇād bhṛśam /</l>
+<l>vyādhis tu dīrgha-niḥśvāsa-pāṇḍutā-kṛśatādayaḥ // VisSd_3.192 //</l>
+</lg>
+
+<lg>
+<l>jaḍatā hīna-ceṣṭatvam aṅgānāṃ manasas tathā /</l>
+<l>rasa-viccheda-hetutvān maraṇaṃ naiva varṇyate // VisSd_3.193 //</l>
+</lg>
+
+<lg>
+<l>jāta-prāyaṃ tu tad vācyaṃ cetasākāṅkṣitaṃ tathā /</l>
+<l>varṇyate 'pi yadi pratyuj-jīvanaṃ syād adūrataḥ // VisSd_3.194 //</l>
+</lg>
+
+<lg>
+<l>ādau vācyaḥ striyā rāgaḥ puṃsaḥ paścāt tad-iṅgitaiḥ /</l>
+<l>nīlī kusumbhaṃ mañjiṣṭhā pūrvarāgo 'pi ca tridhā // VisSd_3.195 //</l>
+</lg>
+
+<lg>
+<l>na cātiśobhate yan nāpaiti prema manogatam /</l>
+<l>tan nīlī-rāgam ākhyātaṃ yathā śrī-rāma-sītayoḥ // VisSd_3.196 //</l>
+</lg>
+
+<lg>
+<l>kusumbha-rāgaṃ tat prāhur yad apaiti ca śobhate /</l>
+<l>mañjiṣṭhā-rāgam āhus tad yan nāpaity atiśobhate // VisSd_3.197 //</l>
+</lg>
+
+<lg>
+<l>mānaḥ kopaḥ sa tu dvedhā praṇayerṣyā-samudbhavaḥ /</l>
+<l>dvayoḥ praṇayamānaḥ syāt pramode sumahaty api // VisSd_3.198 //</l>
+</lg>
+
+<lg>
+<l>premṇaḥ kuṭila-gāmitvāt kopo yaḥ kāraṇaṃ vinā /</l>
+<l>patyur anya-priyā-saṅge dṛṣṭe 'thānumite śrute // VisSd_3.199 //</l>
+</lg>
+
+<lg>
+<l>īrṣyāmāno bhavet strīṇāṃ tatratv anumitis tridhā /</l>
+<l>utsvapnāyita-bhogāṅka-gotra-skhalana-saṃbhavā // VisSd_3.200 //</l>
+</lg>
+
+<lg>
+<l>sāma bhedo 'tha dānaṃ ca naty-upekṣe rasāntaram /</l>
+<l>tad-bhaṅgāya patiḥ kuryāt ṣaḍ-upāyān iti kramāt // VisSd_3.201 //</l>
+</lg>
+
+<lg>
+<l>tatra priya-vacaḥ sāma bhedas tat-sakhy-upārjanam /</l>
+<l>dānaṃ vyājena bhūṣādeḥ pādayoḥ patanaṃ natiḥ // VisSd_3.202 //</l>
+</lg>
+
+<lg>
+<l>sāmādau tu parikṣīṇe syād upekṣāvadhīraṇam /</l>
+<l>rabhasa-trāsa-harṣādeḥ kopa-bhraṃśo rasāntaram // VisSd_3.203 //</l>
+</lg>
+
+<lg>
+<l>pravāso bhinna-deśitvaṃ kāryāc chāpāc ca saṃbhramāt /</l>
+<l>tatrāṅga-cela-mālinyam eka-veṇī-dharaṃ śiraḥ // VisSd_3.204 //</l>
+</lg>
+
+<lg>
+<l>niḥśvāsocchvāsa-rudita-bhūmi-pātādi jāyate /</l>
+<l>aṅgeṣv asauṣṭhavaṃ tāpaḥ pāṇḍutā kṛśatāruciḥ // VisSd_3.205 //</l>
+</lg>
+
+<lg>
+<l>adhṛtiḥ syād anālambas tan-mayonmāda-mūrcchanāḥ /</l>
+<l>mṛtiś ceti kramāj jñeyā daśa smara-daśā iha // VisSd_3.206 //</l>
+</lg>
+
+<lg>
+<l>asauṣṭhavaṃ malāpattis tāpas tu viraha-jvaraḥ /</l>
+<l>arucir vastu-vairāgyaṃ sarvatrārāgitā dhṛtiḥ // VisSd_3.207 //</l>
+</lg>
+
+<lg>
+<l>anālambanatā cāpi śūnyatā manasaḥ smṛtā /</l>
+<l>tan-mayaṃ tat-prakāśo hi bāhyābhyantaratas tathā /</l>
+<l>bhāvī bhavan bhūta iti tridhā syāt tatra kāryajaḥ // VisSd_3.208 //</l>
+</lg>
+
+<lg>
+<l>yūnor ekatarasmin gatavati lokāntaraṃ punar alabhye /</l>
+<l>vimanāyate yadaikas tato bhavet karuṇa-vipralambhākhyaḥ // VisSd_3.209 //</l>
+</lg>
+
+<lg>
+<l>darśana-sparśanādīni niṣevete vilāsinau /</l>
+<l>yatrānuraktāv anyonyaṃ saṃbhogo 'yam udāhṛtaḥ // VisSd_3.210 //</l>
+</lg>
+
+<lg>
+<l>saṅkhyātum aśakyatayā cumbana-parirambhaṇādi-bahu-bhedāt /</l>
+<l>ayam eka eva dhīraiḥ kathitaḥ saṃbhoga-śṛṅgāraḥ // VisSd_3.211 //</l>
+</lg>
+
+<lg>
+<l>tatra syād ṛtu-ṣaṭkaṃ candrādityau tathodayāsta-mayaḥ /</l>
+<l>jala-keli-vana-vihāra-prabhāta-madhu-pāna-yāminī-prabhṛtiḥ // VisSd_3.212 //</l>
+</lg>
+
+<lg>
+<l>anulepana-bhūṣāḍyā vācyaṃ śuci medhyam anyac ca /</l>
+<l>kathitaś caturvidho 'sāv ānantaryāt tu pūrva-rāgādeḥ // VisSd_3.213 //</l>
+</lg>
+
+<lg>
+<l>vikṛtākāra-vāg-veṣā-ceṣṭādeḥ kuhukād bhavet /</l>
+<l>hāsyo hāsa-sthāyi-bhāvaḥ śvetaḥ pramatha-daivataḥ // VisSd_3.214 //</l>
+</lg>
+
+<lg>
+<l>vikṛtākāra-vāk-ceṣṭaṃ yam ālokya hasej janaḥ /</l>
+<l>tam atrālambanaṃ prāhus tac-ceṣṭoddīpanaṃ matam // VisSd_3.215 //</l>
+</lg>
+
+<lg>
+<l>anubhāvo 'kṣi-saṅkoca-vadana-smeratādayaḥ /</l>
+<l>nidrālasyāvahitthādyā atra syur vyabhicāriṇaḥ // VisSd_3.216 //</l>
+</lg>
+
+<lg>
+<l>jyeṣṭhānāṃ smita-hasite madhyānāṃ vihasitāvahasite ca /</l>
+<l>nīcānām apahasitaṃ tathātihasitaṃ tad eṣa ṣaḍ-bhedaḥ // VisSd_3.217 //</l>
+</lg>
+
+<lg>
+<l>īṣad-vikāsi-nayanaṃ smitaṃ syād spanditādharam /</l>
+<l>kiñcil lakṣa-dvijaṃ tatra hasitaṃ kathitaṃ budhaiḥ // VisSd_3.218 //</l>
+</lg>
+
+<lg>
+<l>madhura-svaraṃ vihasitaṃ sāṃsa-śiraḥ-kampam avahasitam /</l>
+<l>apahasitaṃ sāsrākṣaṃ vikṣiptāṅgaṃ ca bhavaty atihasitam // VisSd_3.219 //</l>
+</lg>
+
+<lg>
+<l>yasya hāsaḥ sa cet kvāpi sākṣān naiva nibadhyate /</l>
+<l>tathāpy eṣa vibhāvādi-sāmarthyād upalabhyate // VisSd_3.220 //</l>
+</lg>
+
+<lg>
+<l>abhedena vibhāvādi-sādhāraṇyāt pratīyate /</l>
+<l>sāmājikais tato hāsya-raso 'yam anubhūyate // VisSd_3.221 //</l>
+</lg>
+
+<lg>
+<l>iṣṭa-nāśād aniṣṭāpteḥ karuṇākhyo raso bhavet /</l>
+<l>dhīraiḥ kapota-varṇo 'yaṃ kathito yama-daivataḥ // VisSd_3.222 //</l>
+</lg>
+
+<lg>
+<l>śoko 'tra sthāyi-bhāvaḥ syāc chocyam ālambanaṃ matam /</l>
+<l>tasya dāhādikāvasthā bhaved uddīpanaṃ punaḥ // VisSd_3.223 //</l>
+</lg>
+
+<lg>
+<l>anubhāvā daiva-nindā-bhūpāta-kranditādayaḥ /</l>
+<l>vaivarṇyocchvāsa-niḥśvāsa-stambha-pralapanāni ca // VisSd_3.224 //</l>
+</lg>
+
+<lg>
+<l>nirveda-mohāpasmāra-vyādhi-glāni-smṛti-śramāḥ /</l>
+<l>viṣāda-jaḍatonmāda-cintādyā vyabhicāriṇaḥ // VisSd_3.225 //</l>
+</lg>
+
+<lg>
+<l>śoka-sthāyitayā bhinno vipralambhād ayaṃ rasaḥ /</l>
+<l>vipralambhe ratiḥ sthāyī punaḥ-saṃbhoga-hetukaḥ // VisSd_3.226 //</l>
+</lg>
+
+<lg>
+<l>raudraḥ krodha-sthāyi-bhāvo rakto rudrādhidaivataḥ /</l>
+<l>ālambanam aris tasya tac ceṣṭoddīpanaṃ matam // VisSd_3.227 //</l>
+</lg>
+
+<lg>
+<l>muṣṭi-prahāra-pātana-vikṛta-cchedāvadāraṇaiś caiva /</l>
+<l>saṅgrāma-saṃbhramādyair asyoddīptir bhavet prauḍhā // VisSd_3.228 //</l>
+</lg>
+
+<lg>
+<l>bhrū-vibhaṅgauṣṭha-nirveśa-bāhu-sphoṭana-tarjanāḥ /</l>
+<l>ātmāvadāna-kathanam āyudhotkṣepaṇāni ca // VisSd_3.229 //</l>
+</lg>
+
+<lg>
+<l>anubhāvās tathākṣepa-krūra-sandarśanādayaḥ /</l>
+<l>ugratā-vega-romāñca-sveda-vepathavo madaḥ // VisSd_3.230 //</l>
+</lg>
+
+<lg>
+<l>mohāmarṣādayas tatra bhāvāḥ syur vyabhicāriṇaḥ /</l>
+<l>raktāsya-netratā cātra bhedinī yuddha-vīrataḥ // VisSd_3.231 //</l>
+</lg>
+
+<lg>
+<l>uttama-prakṛtir vīra utsāha-sthāyi-bhāvakaḥ /</l>
+<l>mahendra-daivato hema-varṇo 'yaṃ samudāhṛtaḥ // VisSd_3.232 //</l>
+</lg>
+
+<lg>
+<l>ālambana-vibhāvās tu vijetavyādayo matāḥ /</l>
+<l>vijetavyādi-ceṣṭādyās tasyoddīpana-rūpiṇaḥ /</l>
+<l>anubhāvās tu tatra syuḥ sahāyānveṣaṇādayaḥ // VisSd_3.233 //</l>
+</lg>
+
+<lg>
+<l>sañcāriṇas tu dhṛti-mati-garva-smṛti-tarka-romāñcāḥ /</l>
+<l>sa ca dāna-dharma-yuddhair dayayā ca samanvitaś caturdhā syāt // VisSd_3.234 //</l>
+</lg>
+
+<lg>
+<l>bhayānakau bhaya-sthāyi-bhāvo bhūtādhidaivataḥ /</l>
+<l>strī-nīca-prakṛtiḥ kṛṣṇo matas tattva-viśāradaiḥ // VisSd_3.235 //</l>
+</lg>
+
+<lg>
+<l>yasmād utpadyate bhītis tad atrālambanaṃ matam /</l>
+<l>ceṣṭā ghoratarās tasya bhaved uddīpanaṃ punaḥ // VisSd_3.236 //</l>
+</lg>
+
+<lg>
+<l>anubhāvo 'tra vaivarṇya-gadgada-svara-bhāṣaṇam /</l>
+<l>pralaya-sveda-romāñca-kampa-dik-prekṣaṇādayaḥ // VisSd_3.237 //</l>
+</lg>
+
+<lg>
+<l>jugupsāvega-saṃmoha-santrāsa-mlāni-dīnatāḥ /</l>
+<l>śaṅkāpasmāra-saṃbhrānti-mṛtyvādyā vyabhicāriṇaḥ // VisSd_3.238 //</l>
+</lg>
+
+<lg>
+<l>jugupsā-sthāyi-bhāvas tu bībhatsaḥ kathyate rasaḥ /</l>
+<l>nīla-varṇo mahā-kāla-daivato 'yam udāhṛtaḥ // VisSd_3.239 //</l>
+</lg>
+
+<lg>
+<l>durgandha-māṃsa-rudhira-medāṃsyālambanaṃ matam /</l>
+<l>tatraiva kṛmi-pātādyam uddīpanam udāhṛtam // VisSd_3.240 //</l>
+</lg>
+
+<lg>
+<l>niṣṭhīvanāsya-valana-netra-saṅkocanādayaḥ /</l>
+<l>anubhāvās tatra matās tathā syur vyabhicāriṇaḥ // VisSd_3.241 //</l>
+</lg>
+
+<lg>
+<l>moho 'pasmāra āvego vyādhiś ca maraṇādayaḥ /</l>
+<l>adbhuto vismaya-sthāyi-bhāvo gandharva-daivataḥ // VisSd_3.242 //</l>
+</lg>
+
+<lg>
+<l>pīta-varṇo vastu lokā-tigam ālambanaṃ matam /</l>
+<l>guṇānāṃ tasya mahimā bhaved uddīpanaṃ punaḥ // VisSd_3.243 //</l>
+</lg>
+
+<lg>
+<l>stambhaḥ svedo 'tha romāñca-gadgada-svara-saṃbhramāḥ /</l>
+<l>tathā netra-vikāsādyā anubhāvāḥ prakīrtitāḥ // VisSd_3.244 //</l>
+</lg>
+
+<lg>
+<l>vitarkāvega-saṃbhrānti-harṣādyā vyabhicāriṇaḥ /</l>
+<l>śāntaḥ śama-sthāyi-bhāva uttama-prakṛtir mataḥ // VisSd_3.245 //</l>
+</lg>
+
+<lg>
+<l>kundendu-sundara-cchāyaḥ śrī-nārāyaṇa-daivataḥ /</l>
+<l>anityatvādināśeṣa-vastu-niḥsāratā tu yā // VisSd_3.246 //</l>
+</lg>
+
+<lg>
+<l>paramātma-svarūpaṃ vā tasyālambanam iṣyate /</l>
+<l>puṇyāśramaharikṣetra-tīrtha-ramya-vanādayaḥ // VisSd_3.247 //</l>
+</lg>
+
+<lg>
+<l>mahā-puruṣa-saṅgādyās tasyoddīpana-rūpiṇaḥ /</l>
+<l>romāñcādyāś cānubhāvās tathā syur vyabhicāriṇaḥ // VisSd_3.248 //</l>
+</lg>
+
+<lg>
+<l>nirveda-harṣa-smaraṇam atibhūta-dayādayaḥ /</l>
+<l>nirahaṅkāra-rūpatvād dayā-vīrādir eṣa no // VisSd_3.249 //</l>
+</lg>
+
+<lg>
+<l>yukta-viyukta-daśāyām avasthito yaḥ śamaḥ sa eva yataḥ /</l>
+<l>rasatām eti tad asmin sañcāryādeḥ sthitiś ca na viśuddhā // VisSd_3.250 //</l>
+</lg>
+
+<lg>
+<l>sphuṭaṃ camatkāritayā vatsalaṃ ca rasaṃ viduḥ /</l>
+<l>sthāyī vatsalatā snehaḥ putrādy-ālambanaṃ matam // VisSd_3.251 //</l>
+</lg>
+
+<lg>
+<l>uddīpanāni tac ceṣṭā vidyā-śaurya-dayādayaḥ /</l>
+<l>āliṅganāṅga-saṃsparśa-śiraś cumbanam īkṣaṇam // VisSd_3.252 //</l>
+</lg>
+
+<lg>
+<l>pulakānanda-bāṣpādyā anubhāvāḥ prakīrtitāḥ /</l>
+<l>sañcāriṇo 'niṣṭa-śaṅkā-harṣa-garvādayo matāḥ // VisSd_3.253 //</l>
+</lg>
+
+<lg>
+<l>padma-garbha-cchavir varṇo daivataṃ loka-mātaraḥ /</l>
+<l>ādyaḥ karuṇa-bībhatsa-raudra-vīra-bhayānakaiḥ // VisSd_3.254 //</l>
+</lg>
+
+<lg>
+<l>bhayānakena karuṇenāpi hāsyo virodha-bhāk /</l>
+<l>karuṇo hāsya-śṛṅgāra-rasābhyām api tādṛśaḥ // VisSd_3.255 //</l>
+</lg>
+
+<lg>
+<l>raudras tu hāsya-śṛṅgāra-bhayānaka-rasair api /</l>
+<l>bhayānakena śāntena tathā vīra-rasaḥ smṛtaḥ // VisSd_3.256 //</l>
+</lg>
+
+<lg>
+<l>śṛṅgāra-vīra-raudrākhya-hāsya-śāntair bhayānakaḥ /</l>
+<l>śāntas tu vīra-śṛṅgāra-raudra-hāsya-bhayānakaiḥ // VisSd_3.257 //</l>
+</lg>
+
+<lg>
+<l>śṛṅgāreṇa tu bībhatsa ity ākhyātā virodhitā /</l>
+<l>kuto 'pi kāraṇāt kvāpi sthiratām upayann api // VisSd_3.258 //</l>
+</lg>
+
+<lg>
+<l>unmādādir na tu sthāyī na pātre sthairyam eti yat /</l>
+<l>rasa-bhāvau tad-ābhāsau bhāvasya praśamodayau // VisSd_3.259 //</l>
+</lg>
+
+<lg>
+<l>sandhiḥ śabalatā ceti sarve 'pi rasanād rasāḥ /</l>
+<l>sañcāriṇaḥ pradhānāni devādi-viṣayā ratiḥ // VisSd_3.260 //</l>
+</lg>
+
+<lg>
+<l>udbuddha-mātraḥ sthāyī ca bhāva ity abhidhīyate /</l>
+<l>yathā marica-khaṇḍāder ekībhāve prapāṇake // VisSd_3.261 //</l>
+</lg>
+
+<lg>
+<l>udrekaḥ kasyacit kvāpi tathā sañcāriṇo rase /</l>
+<l>anaucitya-pravṛttatva ābhāso rasa-bhāvayoḥ // VisSd_3.262 //</l>
+</lg>
+
+<lg>
+<l>upanāyaka-saṃsthāyāṃ muni-guru-patnī-gatāyāṃ ca /</l>
+<l>nāyaka-viṣayāyāṃ ratau tathānubhaya-niṣṭhāyām // VisSd_3.263 //</l>
+</lg>
+
+<lg>
+<l>pratināyaka-niṣṭhatve tadvad adhama-pātra-tiryag-ādi-gate /</l>
+<l>śṛṅgāre 'anucityaṃ raudre gurv-ādi-gata-kope // VisSd_3.264 //</l>
+</lg>
+
+<lg>
+<l>śānte ca hīna-niṣṭhe gurv-ādy ālambane hāsye /</l>
+<l>brahma-vadhādy-utsāhe 'dhama-pātra-gate tathā vīre // VisSd_3.265 //</l>
+</lg>
+
+<lg>
+<l>uttama-pātra-gatatve bhayānake jñeyam evam anyatra /</l>
+<l>bhāvābhāso lajjādike tu veśyādi-viṣaye syāt // VisSd_3.266 //</l>
+</lg>
+
+<lg>
+<l>bhāvasya śāntāv udaye sandhi-miśritayoḥ kramāt /</l>
+<l>bhāvasya śāntir udayaḥ sandhiḥ śabalatā matā // VisSd_3.267 //</l>
+</lg>
+
+<p>iti sāhitya-darpaṇe rasādi-nirūpaṇo nāma
+tṛtīyaḥ paricchedaḥ</p>
+
+</div>
+<div>
+
+<p>(4)
+caturthaḥ paricchedaḥ
+dhvani-nirṇayaḥ</p>
+
+<lg>
+<l>kāvyaṃ dhvanir guṇībhūta-vyaṅgaṃ ceti dvidhā matā /</l>
+<l>vācyātiśayini vyaṅgyo dhvanis tat kāvyam uttamam // VisSd_4.1 //</l>
+</lg>
+
+<lg>
+<l>bhedau dhvaner api dvāv udīritau lakṣaṇābhidhā-mūlau /</l>
+<l>avivakṣita-vācyo 'nyo vivakṣitānya-para-vācyaś ca // VisSd_4.2 //</l>
+</lg>
+
+<lg>
+<l>arthāntaraṃ saṅkramite vācye 'tyantaṃ tiraskṛte /</l>
+<l>avivakṣita-vācyo 'pi dhvanir dvaividhyam ṛcchati // VisSd_4.3 //</l>
+</lg>
+
+<lg>
+<l>vivakṣitābhidheyo 'pi[*1] dvibhedaḥ prathamaṃ mataḥ /</l>
+<l>asaṃlakṣya-kramo yatra vyaṅgyo lakṣya-kramas tathā // VisSd_4.4 //</l>
+</lg>
+
+<p>[*1] abhidhā-mūla-rūpaḥ</p>
+
+<lg>
+<l>tatrādyo rasa-bhāvādir eka evātra gaṇyate /</l>
+<l>eko 'pi bhedo 'nantatvāt saṅkhyeyas tasya naiva yat // VisSd_4.5 //</l>
+</lg>
+
+<lg>
+<l>śabdārthobhaya-śakty-utthe vyaṅgyo 'nusvāna-sannibhe /</l>
+<l>dhvanir lakṣya-krama-vyaṅgyas trividhaḥ kathito budhaiḥ // VisSd_4.6 //</l>
+</lg>
+
+<lg>
+<l>vastv alaṅkāra-rūpatvāc chabda-śakty-udbhavo dvidhā /</l>
+<l>vastu vālaṅkṛtir veti dvidhārthaḥ saṃbhavī svataḥ // VisSd_4.7 //</l>
+</lg>
+
+<lg>
+<l>kaveḥ prauḍhokti-sikto vā tan nibaddhasya veti ṣaṭ /</l>
+<l>ṣaḍbhis tair vyajyamānas tu vastv alaṅkāra-rūpakaḥ // VisSd_4.8 //</l>
+</lg>
+
+<lg>
+<l>artha-śakty-udbhavo vyaṅgyo yāti dvādaśa-bhedataḥ /</l>
+<l>ekaḥ śabdārtha-śakty-utthe tad aṣṭadaśadhā dhvaniḥ // VisSd_4.9 //</l>
+</lg>
+
+<lg>
+<l>vākye śabdārtha-śakty-utthas tad anye pada-vākyayoḥ /</l>
+<l>prabandhe 'pi mato dhīrair artha-śakty-udbhavo dhvaniḥ // VisSd_4.10 //</l>
+</lg>
+
+<lg>
+<l>padāṃśa-varṇa-racanā-prabandheṣv asphuṭa-kramaḥ /</l>
+<l>tad evam eka-pañcāśad bhedās tasya dhvaner matāḥ // VisSd_4.11 //</l>
+</lg>
+
+<lg>
+<l>saṅkareṇa tri-rūpeṇa saṃsṛṣṭyā vāpy anekadhā /</l>
+<l>vedakhābdhi-śarāḥ śuddhair iṣu-bāṇāgni-śāyakāḥ // VisSd_4.12 //</l>
+</lg>
+
+<lg>
+<l>aparaṃ tu guṇī-bhūta-vyaṅgyaṃ vācyād anuttame vyaṅgye /</l>
+<l>tatra syād itarāṅgaṃ kākvākṣiptaṃ ca vācya-siddha-vyaṅgyam // VisSd_4.13 //</l>
+</lg>
+
+<lg>
+<l>sandigdha-prādhānyaṃ tulya-prādhānyam asphuṭam agūḍham /</l>
+<l>vyaṅgyam asundaram evaṃ bhedās tasyoditā aṣṭau // VisSd_4.14 //</l>
+</lg>
+
+<p>iti sāhitya-darpaṇe
+dhvani-guṇībhūta-vyaṅgyākhya-kāvya-bheda-nirūpaṇo nāma
+caturthaḥ paricchedaḥ</p>
+
+</div>
+<div>
+
+<p>(5)
+pañcamaḥ paricchedaḥ</p>
+
+<lg>
+<l>vṛttīnāṃ viśrānter abhidhātāt paryalakṣaṇākhyānām /</l>
+<l>aṅgīkāryā turyā vṛttir bodhe rasādīnām // VisSd_5.1 //</l>
+</lg>
+
+<lg>
+<l>boddhṛ-svarūpa-saṅkhyā-nimitta-kārya-pratīti-kālānām /</l>
+<l>āśraya-viṣayādīnāṃ bhedād bhinno 'bhidheyato vyaṅgyaḥ // VisSd_5.2 //</l>
+</lg>
+
+<lg>
+<l>prāg asattvād rasāder no bodhike lakṣaṇābhidhe /</l>
+<l>kiṃ ca mukhyārtha-bādhasya virahād api lakṣaṇā // VisSd_5.3 //</l>
+</lg>
+
+<lg>
+<l>nānumānaṃ rasādīnāṃ vyaṅgyānāṃ bodhana-kṣamam /</l>
+<l>ābhāsatvena hetūnāṃ smṛtir na ca rasādi-dhīḥ // VisSd_5.4 //</l>
+</lg>
+
+<lg>
+<l>sā ceyaṃ vyañjanā-nāma vṛttir ity ucyate budhaiḥ /</l>
+<l>rasa-vyaktau punar vṛttiṃ rasanākhyāṃ pare viduḥ // VisSd_5.5 //</l>
+</lg>
+
+<p>iti sāhitya-darpaṇe
+vyañjanā-vyapāra-nirūpaṇo nāma
+pañcamaḥ paricchedaḥ</p>
+
+</div>
+<div>
+
+<p>(6)
+ṣaṣṭhaḥ paricchedaḥ</p>
+
+<lg>
+<l>dṛśya-śravyatva-bhedena punaḥ kāvyaṃ dvidhā matam /</l>
+<l>dṛśyaṃ tatrābhineyaṃ tad-rūpāropāt tu rūpakam // VisSd_6.1 //</l>
+</lg>
+
+<lg>
+<l>bhaved abhinayo 'vasthānukāraḥ sa caturvidhaḥ /</l>
+<l>āṅgiko vācikaś caivam āhāryaḥ sāttvikas tathā // VisSd_6.2 //</l>
+</lg>
+
+<lg>
+<l>nāṭakam atha prakaraṇaṃ bhāṇa-vyāyoga-samavakāra-ḍimāḥ /</l>
+<l>īhāmṛgāṅka-vīthyaḥ prahasanam iti rūpakāṇi daśa // VisSd_6.3 //</l>
+</lg>
+
+<lg>
+<l>nāṭikā troṭakaṃ goṣṭhī saṭṭakaṃ nāṭya-rāsakam /</l>
+<l>prasthānollāpya-kāvyāni preṅkhaṇaṃ rāsakaṃ tathā // VisSd_6.4 //</l>
+</lg>
+
+<lg>
+<l>saṃlāpakaṃ śrī-gaditaṃ śilpakaṃ ca vilāsikā /</l>
+<l>durmallikā prakaraṇī hallīśako bhāṇiketi ca // VisSd_6.5 //</l>
+</lg>
+
+<lg>
+<l>aṣṭādaśa prāhur uparūpakāṇi manīṣiṇaḥ /</l>
+<l>vinā viśeṣaṃ sarveṣāṃ lakṣma nāṭakavan matam // VisSd_6.6 //</l>
+</lg>
+
+<lg>
+<l>nāṭakaṃ khyāta-vṛttaṃ syāt pañca-sandhi-samanvitam /</l>
+<l>vilāsa-rddhyādi-guṇavad yuktaṃ nānā-vibhūtibhiḥ // VisSd_6.7 //</l>
+</lg>
+
+<lg>
+<l>sukha-duḥkha-samudbhūti nānā-rasa-nirantaram /</l>
+<l>pañcādikā daśa-parās tatrāṅkāḥ parikīrtitāḥ // VisSd_6.8 //</l>
+</lg>
+
+<lg>
+<l>prakhyāta-vaṃśo rājarṣi-dhīrodāttaḥ pratāpavān /</l>
+<l>divyo 'tha divyādivyo vā guṇavān nāyako mataḥ // VisSd_6.9 //</l>
+</lg>
+
+<lg>
+<l>eka eva bhaved aṅgī śṛṅgāro vīra eva vā /</l>
+<l>aṅgam anye rasāḥ sarve kāryo nirvahaṇe 'dbhutaḥ // VisSd_6.10 //</l>
+</lg>
+
+<lg>
+<l>catvāraḥ pañca vā mukhyāḥ kārya-vyāpṛta-pūruṣāḥ /</l>
+<l>gopucchāgra-samāgraṃ tu bandhanaṃ tasya kīrtitam // VisSd_6.11 //</l>
+</lg>
+
+<lg>
+<l>pratyakṣa-netṛ-carito rasa-bhāva-samujjvalaḥ /</l>
+<l>bhaved agūḍha-śabdāthaḥ kṣudra-cūrṇaka-saṃyutaḥ // VisSd_6.12 //</l>
+</lg>
+
+<lg>
+<l>vicchinnāvāntaraikārthaḥ kiñcit saṃlagna-bindukaḥ /</l>
+<l>yukto na bahubhiḥ kāryair bīja-saṃhṛtimān na ca // VisSd_6.13 //</l>
+</lg>
+
+<lg>
+<l>nānā-vidhāna-saṃyukto nātipracura-padyavān /</l>
+<l>āvaśyakānāṃ kāryāṇām avordhād vinirmitaḥ // VisSd_6.14 //</l>
+</lg>
+
+<lg>
+<l>nāneka-dina-nirvartya-kathayā saṃprayojitaḥ /</l>
+<l>āsanna-nāyakaḥ pātrair yuktas tri-caturais tathā // VisSd_6.15 //</l>
+</lg>
+
+<lg>
+<l>dūrāhvānaṃ vadho yuddhaṃ rājyadeśādi-viplavaḥ /</l>
+<l>vivāho bhojanaṃ śāpotsargau mṛtyū rataṃ tathā // VisSd_6.16 //</l>
+</lg>
+
+<lg>
+<l>danta-cchedyaṃ nakha-cchedyam anyad vrīḍākaraṃ ca yat /</l>
+<l>śayanādhara-pānādi nagarādy-avarodhanam // VisSd_6.17 //</l>
+</lg>
+
+<lg>
+<l>snānānulepane caibhir varjito nātivistaraḥ /</l>
+<l>devī-parijanādīnām amātya-vaṇijām api // VisSd_6.18 //</l>
+</lg>
+
+<lg>
+<l>pratyakṣa-citra-caritair yukto bhāva-rasodbhavaiḥ /</l>
+<l>anta-niṣkrānta-nikhila-pātro 'ṅka iti kīrtitaḥ // VisSd_6.19 //</l>
+</lg>
+
+<lg>
+<l>aṅkodara-praviṣṭo yo raṅga-dārā-mukhādimān /</l>
+<l>aṅko 'paraḥ sa garbhāṅkaḥ sa-bījaḥ phalavān api // VisSd_6.20 //</l>
+</lg>
+
+<lg>
+<l>tatra pūrvaṃ pūrva-raṅgaḥ sabhā-pūjā tataḥ param /</l>
+<l>kathanaṃ kavi-saṃjñāder nāṭakasyāpy athāmukham // VisSd_6.21 //</l>
+</lg>
+
+<lg>
+<l>yan nāṭya-vastunaḥ pūrvaṃ raṅga-vighnopaśāntaye /</l>
+<l>kuśīlavāḥ prakurvanti pūrva-raṅgaḥ sa ucyate // VisSd_6.22 //</l>
+</lg>
+
+<lg>
+<l>pratyāhārādikāny aṅgāny asya bhūyāṃsi yadyapi /</l>
+<l>tathāpy avaśyaṃ kartavyā nāndī vighnopaśāntaye // VisSd_6.23 //</l>
+</lg>
+
+<lg>
+<l>āśīr-vacana-saṃyuktā stutir yasmāt prayujyate /</l>
+<l>deva-dvija-nṛpādīnāṃ tasmān nāndīti saṃjñitā // VisSd_6.24 //</l>
+</lg>
+
+<lg>
+<l>māṅgalya-śaṅkha-candrābja-koka-kairava-śaṃsinī /</l>
+<l>padair yuktā dvādaśabhir aṣṭābhir vā padair uta // VisSd_6.25 //</l>
+</lg>
+
+<lg>
+<l>pūrva-raṅgaṃ vidhāyaiva sūtradhāro nivartate /</l>
+<l>praviśya sthāpakas tadvat kāvyam āsthāpayet tataḥ // VisSd_6.26 //</l>
+</lg>
+
+<lg>
+<l>divya-martye sa tad-rūpo miśram anyataras tayoḥ /</l>
+<l>sūcayed vastu bījaṃ vā mukhaṃ pātram athāpi vā // VisSd_6.27 //</l>
+</lg>
+
+<lg>
+<l>raṅgaṃ prasādya madhuraiḥ ślokaiḥ kāvyārtha-sūcakaiḥ /</l>
+<l>rūpakasya kaver ākhyāṃ gotrādyāpi sa kīrtayet // VisSd_6.28 //</l>
+</lg>
+
+<lg>
+<l>ṛtuṃ ca kañcit prāyeṇa bhāratīṃ vṛttim āśritaḥ /</l>
+<l>bhāratī saṃskṛta-prāyo vāg-vyāpāro naṭāśrayaḥ // VisSd_6.29 //</l>
+</lg>
+
+<lg>
+<l>tasyāḥ prarocanā vīthī tathā prahasanāmukhe /</l>
+<l>aṅgāny atronmukhīkāraḥ praśaṃsātaḥ prarocanā // VisSd_6.30 //</l>
+</lg>
+
+<lg>
+<l>naṭī vidūṣāko vāpi pāripārśvika eva vā /</l>
+<l>sūtradhāreṇa sahitāḥ saṃlāpaṃ yatra kurvate // VisSd_6.31 //</l>
+</lg>
+
+<lg>
+<l>citarir vākyaiḥ svakāryotthaiḥ prastutākṣepibhir mithaḥ /</l>
+<l>āmukhaṃ tat tu vijñeyaṃ nāmnā prastāvanāpi sā // VisSd_6.32 //</l>
+</lg>
+
+<lg>
+<l>uddhātyakaḥ kathoddhātaḥ prayogātiśayas tathā /</l>
+<l>pravartakā-lagite pañca prastāvanābhidāḥ // VisSd_6.33 //</l>
+</lg>
+
+<lg>
+<l>padāni tv agatārthāni tad-artha-gataye narāḥ /</l>
+<l>yojayanti padair anyaiḥ sa uddhātyaka ucyate // VisSd_6.34 //</l>
+</lg>
+
+<lg>
+<l>sūtradhārasya vākyaṃ vā samādāyārtham asya vā /</l>
+<l>bhavet pātra-praveśaś cet kathodghātaḥ sa ucyate // VisSd_6.35 //</l>
+</lg>
+
+<lg>
+<l>yadi prayoga ekasmin prayogo 'nyaḥ prayujyate /</l>
+<l>tena pātra-praveśaś cet prayogātiśayas tadā // VisSd_6.36 //</l>
+</lg>
+
+<lg>
+<l>kālaṃ pravṛttam āśritya sūtra-dhṛg yatra varṇayet /</l>
+<l>tad-āśrayaś ca pātrasya praveśas tat-pravartakam // VisSd_6.37 //</l>
+</lg>
+
+<lg>
+<l>yatraikatra samāveśāt kāryam anyat prasādhyate /</l>
+<l>prayoge khalu taj jñeyaṃ nāmnāvalagitaṃ budhaiḥ // VisSd_6.38 //</l>
+</lg>
+
+<lg>
+<l>yojyāny atra yathā-lābhaṃ vīthy-aṅgānītarāṇy api /</l>
+<l>nepathoktaṃ śrutaṃ yatra tv ākāśa-vacanaṃ tathā // VisSd_6.39 //</l>
+</lg>
+
+<lg>
+<l>samāśrityāpi kartavyam āmukhaṃ nāṭakādiṣu /</l>
+<l>eṣām āmukha-bhedānām ekaṃ kañcit prayojayet // VisSd_6.40 //</l>
+</lg>
+
+<lg>
+<l>tenārtham atha pātraṃ vā samākṣipyaiva sūtra-dhṛk /</l>
+<l>prastāvanānte nirgacchet tato vastu prayojayet // VisSd_6.41 //</l>
+</lg>
+
+<lg>
+<l>idaṃ punar vastu budhair dvividhaṃ parikalpyate /</l>
+<l>ādhikārikam ekaṃ syāt prāsaṅgikam athāparam // VisSd_6.42 //</l>
+</lg>
+
+<lg>
+<l>adhikāraḥ phale svāmyam adhikārī ca tat-prabhuḥ /</l>
+<l>tasyetivṛttaṃ kavibhir ādhikārikam ucyate // VisSd_6.43 //</l>
+</lg>
+
+<lg>
+<l>asyopakaraṇarthaṃ tu prāsaṅgikam itīṣyate /</l>
+<l>patākā-sthānakaṃ yojyaṃ suvicāryeha vastuni // VisSd_6.44 //</l>
+</lg>
+
+<lg>
+<l>yatrārthe cintite 'nyasmiṃs tal-liṅgo 'nyaḥ prayujyate /</l>
+<l>āgantukena bhāvena patākā-sthānakaṃ tu tat // VisSd_6.45 //</l>
+</lg>
+
+<lg>
+<l>sahasaivārtha-saṃpattir guṇavaty upacārataḥ /</l>
+<l>patākā-sthānakam idaṃ prathamaṃ parikīrtitam // VisSd_6.46 //</l>
+</lg>
+
+<lg>
+<l>vacaḥ sātiśayaṃ śliṣṭaṃ nānā-bandha-samāśrayam /</l>
+<l>patākā-sthānakam idaṃ dvitīyaṃ parikīrtitam // VisSd_6.47 //</l>
+</lg>
+
+<lg>
+<l>arthopakṣepakaṃ yat tu līnaṃ sa-vinayaṃ bhavet /</l>
+<l>śliṣṭa-pratyuttaropetaṃ tṛtīyam idam ucyate // VisSd_6.48 //</l>
+</lg>
+
+<lg>
+<l>dvy-artho vacana-vinyāsaḥ suśliṣṭaḥ kāvya-yojitaḥ /</l>
+<l>pradhānārthāntarākṣepī patākā-sthānakaṃ param // VisSd_6.49 //</l>
+</lg>
+
+<lg>
+<l>yat syād anucitaṃ vastu nāyakasya rasasya vā /</l>
+<l>viruddhaṃ tat parityājyam anyathā vā prakalpayet // VisSd_6.50 //</l>
+</lg>
+
+<lg>
+<l>aṅkeṣv adarśanīyā yā vaktavyaiva ca saṃmatā /</l>
+<l>yā ca syād varṣa-paryantaṃ kathā dina-dvayādijā // VisSd_6.51 //</l>
+</lg>
+
+<lg>
+<l>anyā ca vistarā sūcyā sārthopakṣepair budhaiḥ /</l>
+<l>varṣād ūrdhvaṃ tu yad vastu tat syād varṣād adhobhavam // VisSd_6.52 //</l>
+</lg>
+
+<lg>
+<l>dināvasāne kāryaṃ yad dine naivopapadyate /</l>
+<l>arthopakṣepakair vācyam aṅka-cchedaṃ vidhāya tat // VisSd_6.53 //</l>
+</lg>
+
+<lg>
+<l>arthopakṣepakāḥ pañca viṣkambhaka-praveśakau /</l>
+<l>cūlikāṅkāvatāro 'tha syād aṅka-mukham ity api // VisSd_6.54 //</l>
+</lg>
+
+<lg>
+<l>vṛtta-vartiṣyamāṇānāṃ kathāṃśānāṃ nidarśakaḥ /</l>
+<l>saṅkṣiptārthas tu viṣkambha ādāv aṅkasya darśitaḥ // VisSd_6.55 //</l>
+</lg>
+
+<lg>
+<l>madhyena madhyamābhyāṃ vā pātrābhyāṃ saṃprayojitaḥ /</l>
+<l>śuddhaḥ syāt sa tu saṅkīrṇo nīca-madhyama-kalpitaḥ // VisSd_6.56 //</l>
+</lg>
+
+<lg>
+<l>praveśako 'nudāttoktyā nīca-pātra-prayojitaḥ /</l>
+<l>aṅka-dvayāntar vijñeyaḥ śeṣaṃ viṣkambhake yathā // VisSd_6.57 //</l>
+</lg>
+
+<lg>
+<l>antar-javanikā-saṃsthaiḥ sūcanārthasya cūlikā /</l>
+<l>aṅkānte sūcitaḥ pātrais tad-aṅkasyāvibhāgataḥ // VisSd_6.58 //</l>
+</lg>
+
+<lg>
+<l>yatrāṅko 'vataraty eṣo 'ṅkāvatāra iti smṛtaḥ /</l>
+<l>yatra syād aṅka ekasminn aṅkānāṃ sūcanākhilā // VisSd_6.59 //</l>
+</lg>
+
+<lg>
+<l>tad-aṅka-mukham ity āhur bījārtha-khyāpakaṃ ca tat /</l>
+<l>aṅkānta-pātrair vāṅkāsyaṃ chinnāṅkasyārtha-sūcanāt // VisSd_6.60 //</l>
+</lg>
+
+<lg>
+<l>apekṣitaṃ parityājyaṃ nīrasaṃ vastu vistaram /</l>
+<l>yadā sandarśayec cheṣam āmukhānantaraṃ tadā // VisSd_6.61 //</l>
+</lg>
+
+<lg>
+<l>kāryo viṣkambhako nāṭya āmukhākṣipta-pātrakaḥ /</l>
+<l>yadā tu sarasaṃ vastu mūlād eva pravartate // VisSd_6.62 //</l>
+</lg>
+
+<lg>
+<l>ādāv eva tadāṅke syād āmukhākṣepa-saṃśrayaḥ /</l>
+<l>viṣkambhakādyair api no vadho vācyo 'dhikāriṇaḥ // VisSd_6.63 //</l>
+</lg>
+
+<lg>
+<l>anyo 'nyena tirodhānaṃ na kuryād rasa-vastunoḥ /</l>
+<l>bījaṃ binduḥ patākā ca prakarī kāryam eva ca // VisSd_6.64 //</l>
+</lg>
+
+<lg>
+<l>artha-prakṛtayaḥ pañca jñātvā yojyā yathā-vidhi /</l>
+<l>alpa-mātraṃ samuddiṣṭaṃ bahudhā yad visarpati // VisSd_6.65 //</l>
+</lg>
+
+<lg>
+<l>phalasya prathamo hetur bījaṃ tad abhidhīyate /</l>
+<l>avāntarārtha-vicchede bindur accheda-kāraṇam // VisSd_6.66 //</l>
+</lg>
+
+<lg>
+<l>vyāpi prāsāṅgikaṃ vṛttaṃ patākety abhidhīyate /</l>
+<l>patākā-nāyakasya syān na svakīyaṃ phalāntaram // VisSd_6.67 //</l>
+</lg>
+
+<lg>
+<l>garbhe sandhau vimarśe vā virvāhas tasya jāyate /</l>
+<l>prāsaṅgikaṃ pradeśasthaṃ caritaṃ prakarī matā // VisSd_6.68 //</l>
+</lg>
+
+<lg>
+<l>prakarī nāyakasya syān na svakīyaṃ phalāntaram /</l>
+<l>apekṣitaṃ tu yat sādhyam ārambho yan nibandhanaḥ // VisSd_6.69 //</l>
+</lg>
+
+<lg>
+<l>samāpanaṃ tu yat-siddhyai tat kāryam iti saṃmatam /</l>
+<l>avasthāḥ pañca kāryasya prārabdhasya phalārthibhiḥ // VisSd_6.70 //</l>
+</lg>
+
+<lg>
+<l>ārambha-yatna-prāpty-āśā-niyatāpti-phalāgamāḥ /</l>
+<l>bhaved ārabhya autsukyaṃ yan mukhya-phala-siddhaye // VisSd_6.71 //</l>
+</lg>
+
+<lg>
+<l>prayatnas tu phalāvāptau vyāpāro 'titvarānvitaḥ /</l>
+<l>upāyāpāya-śaṅkābhyāṃ prāpty-āśā prāpti-saṃbhavaḥ // VisSd_6.72 //</l>
+</lg>
+
+<lg>
+<l>apāyābhāvataḥ prāptir niyatāptis tu niścitā /</l>
+<l>sāvasthā phala-yogaḥ syād yaḥ samagra-phalodayaḥ // VisSd_6.73 //</l>
+</lg>
+
+<lg>
+<l>yathā-saṅkhyam avasthābhir ābhir yogāt tu pañcabhiḥ /</l>
+<l>pañcadhaivetivṛttasya bhāgāḥ syuḥ pañca sandhayaḥ // VisSd_6.74 //</l>
+</lg>
+
+<lg>
+<l>antaraikārtha-saṃbandhaḥ sandhir ekāntaye sati /</l>
+<l>mukhaṃ pratimukhaṃ garbho vimarśa upasaṃhṛtiḥ // VisSd_6.75 //</l>
+</lg>
+
+<lg>
+<l>iti pañcāsya bhedāḥ syuḥ kramāl lākṣaṇam ucyate /</l>
+<l>yatra bīja-samutpattir nānārtha-rasa-saṃbhavā // VisSd_6.76 //</l>
+</lg>
+
+<lg>
+<l>prārambheṇa samāyuktā tan mukhaṃ parikīrtitam /</l>
+<l>phala-pradhānopāyasya mukha-sandhi-niveśinaḥ // VisSd_6.77 //</l>
+</lg>
+
+<lg>
+<l>lakṣyālakṣya ivodbhedo yatra pratimukhaṃ ca tat /</l>
+<l>phala-pradhānopāyasya prāg-udbhinnasya kiñcana // VisSd_6.78 //</l>
+</lg>
+
+<lg>
+<l>garbho yatra samudbhedo hāsānveṣaṇavān muhuḥ /</l>
+<l>yatra mukhya-phalopāya udbhinno garbhato 'dhikaḥ // VisSd_6.79 //</l>
+</lg>
+
+<lg>
+<l>śāpādyaiḥ sāntarāyaś ca sa vimarśa iti smṛtaḥ /</l>
+<l>bījavanto mukhādy-arthā viprakīrṇā yathāyatham // VisSd_6.80 //</l>
+</lg>
+
+<lg>
+<l>ekārtham upanīyante yatra nirvahaṇaṃ hi tat /</l>
+<l>upakṣepaḥ parikaraḥ parinyāso vilobhanam // VisSd_6.81 //</l>
+</lg>
+
+<lg>
+<l>yuktiḥ prāptiḥ samādhānaṃ vidhānaṃ paribhāvanā /</l>
+<l>udbhedaḥ karaṇaṃ bheda etāny aṅgāni vai mukhe // VisSd_6.82 //</l>
+</lg>
+
+<lg>
+<l>kāvyārthasya samutpattir upakṣepa iti smṛtaḥ /</l>
+<l>samutpannārtha-bāhulyaṃ jñeyaḥ parikaraḥ punaḥ // VisSd_6.83 //</l>
+</lg>
+
+<lg>
+<l>tan-niṣpattiḥ parinyāsaḥ guṇākhyānaṃ vilobhanam /</l>
+<l>saṃpradhāraṇam arthānāṃ yuktiḥ prāptiḥ sukhāgamaḥ // VisSd_6.84 //</l>
+</lg>
+
+<lg>
+<l>bījasyāgamanaṃ yat tu tat samādhānam ucyate /</l>
+<l>sukha-duḥkha-kṛto yo 'rthas tad vidhānam iti smṛtam // VisSd_6.85 //</l>
+</lg>
+
+<lg>
+<l>kutūhalottarā vācaḥ proktā tu paribhāvanā /</l>
+<l>bījārthasya prarohaḥ syād udbhedaḥ karaṇaṃ punaḥ // VisSd_6.86 //</l>
+</lg>
+
+<lg>
+<l>prakṛtārtha-samārambhaḥ bhedaḥ saṃhata-bhedanam /</l>
+<l>vilāsaḥ parisarpaś ca vidhutaṃ tāpanaṃ tathā // VisSd_6.87 //</l>
+</lg>
+
+<lg>
+<l>narma narma-dyutiś caiva tathā pragamanaṃ punaḥ /</l>
+<l>virodhaś ca pratimukhe tathā syāt paryupāsanam // VisSd_6.88 //</l>
+</lg>
+
+<lg>
+<l>puṣpaṃ vajram upanyāso varṇa-saṃhāra ity api /</l>
+<l>samīhā rati-bhogārthā vilāsa iti kathyate // VisSd_6.89 //</l>
+</lg>
+
+<lg>
+<l>iṣṭa-naṣṭānusaraṇaṃ parisarpaś ca kathyate /</l>
+<l>kṛtasyānunayasyādau vidhutaṃ tv aparigrahaḥ // VisSd_6.90 //</l>
+</lg>
+
+<lg>
+<l>upāyādarśanaṃ yat tu tāpanaṃ nāma tad bhavet /</l>
+<l>parihāsa-vaco narma dhṛtis tu parihāsa-jā // VisSd_6.91 //</l>
+</lg>
+
+<lg>
+<l>narma-dyutiḥ pragamanaṃ vākyaṃ syād uttarottaram /</l>
+<l>virodho vyasana-prāptiḥ kruddhasyānunayaḥ // VisSd_6.92 //</l>
+</lg>
+
+<lg>
+<l>syāt paryupāsanaṃ puṣpaṃ viśeṣa-vacanaṃ matam /</l>
+<l>pratyakṣa-niṣṭhuraṃ vajram upanyāsaḥ prasādanam // VisSd_6.93 //</l>
+</lg>
+
+<lg>
+<l>cāturvarṇyopagamanaṃ varṇa-saṃhāra iṣyate /</l>
+<l>abhūtāharaṇaṃ mārgo rūpodāharaṇe kramaḥ // VisSd_6.94 //</l>
+</lg>
+
+<lg>
+<l>saṅgrahaś cānumānaṃ ca prārthanā kṣiptir eva ca /</l>
+<l>troṭakādhibalodvegā garbhe syur vidravas tathā // VisSd_6.95 //</l>
+</lg>
+
+<lg>
+<l>tatra vyājāśrayaṃ vākyam abhūtāharaṇaṃ matam /</l>
+<l>tattvārtha-kathanaṃ mārgo rūpaṃ vākyaṃ vitarkavat // VisSd_6.96 //</l>
+</lg>
+
+<lg>
+<l>udāharaṇam utkarṣa-yuktaṃ vacanam ucyate /</l>
+<l>bhāva-tattvopalabdhis tu kramaḥ syāt saṅgrahaḥ punaḥ // VisSd_6.97 //</l>
+</lg>
+
+<lg>
+<l>sāma-dānārtha-saṃpanno liṅgād ūho 'numānatā /</l>
+<l>rati-harṣotsavānāṃ tu prārthanaṃ prārthanā bhavet // VisSd_6.98 //</l>
+</lg>
+
+<lg>
+<l>rahasyārthasya tad-bhedaḥ kṣiptiḥ syāt toṭakaṃ punaḥ /</l>
+<l>saṃrabdha-vāk adhibalam abhisandhi-cchalena yaḥ // VisSd_6.99 //</l>
+</lg>
+
+<lg>
+<l>nṛpādi-janitā bhītir udvegaḥ parikīrtitaḥ /</l>
+<l>śaṅkā-bhaya-trāsa-kṛtaḥ saṃbhramo vidravo mataḥ // VisSd_6.100 //</l>
+</lg>
+
+<lg>
+<l>apavādo 'tha saṃpheṭo vyavasāyo dravo dyutiḥ /</l>
+<l>śaktiḥ prasaṅgaḥ khedaś ca pratiṣedho virodhanam // VisSd_6.101 //</l>
+</lg>
+
+<lg>
+<l>prarocanā vimarśe syād ādānaṃ chādanaṃ tathā /</l>
+<l>doṣa-prakhyāpavādaḥ syāt saṃpheṭo roṣa-bhāṣaṇam // VisSd_6.102 //</l>
+</lg>
+
+<lg>
+<l>vyavasāyas tu vijñeyaḥ pratijñā-hetu-saṃbhavaḥ /</l>
+<l>dravā guru-vyatikrāntiḥ śokāvegādi-saṃbhavā // VisSd_6.103 //</l>
+</lg>
+
+<lg>
+<l>tarjanodvejane proktā dyutih śaktiḥ punar bhavet /</l>
+<l>virodhasya praśamanaṃ prasaṅgo guru-kīrtanam // VisSd_6.104 //</l>
+</lg>
+
+<lg>
+<l>manaś ceṣṭā-samutpannaḥ śramaḥ kheda iti smṛtaḥ /</l>
+<l>īpsitārtha-pratīghātaḥ pratiṣedha itīṣyate // VisSd_6.105 //</l>
+</lg>
+
+<lg>
+<l>kāryātyayopagamanaṃ virodhanam iti smṛtam /</l>
+<l>prarocanā tu vijñeyā saṃhārārtha-pradarśinī // VisSd_6.106 //</l>
+</lg>
+
+<lg>
+<l>kārya-saṅgraha ādānaṃ tad āhuś chādanaṃ punaḥ /</l>
+<l>kāryārtham apamānādeḥ sahanaṃ khalu yad bhavet // VisSd_6.107 //</l>
+</lg>
+
+<lg>
+<l>sandhir vibodho grathanaṃ nirṇayaḥ paribhāṣaṇam /</l>
+<l>kṛtiḥ prasāda ānandaḥ samayo 'py upagūhanam // VisSd_6.108 //</l>
+</lg>
+
+<lg>
+<l>bhāṣaṇaṃ pūrva-vākyaṃ ca kāvya-saṃhāra eva ca /</l>
+<l>praśastir iti saṃhāre jñeyāny aṅgāni nāmataḥ // VisSd_6.109 //</l>
+</lg>
+
+<lg>
+<l>bījopagamanaṃ sandhiḥ vibodhaḥ kārya-mārgaṇam /</l>
+<l>upanāyasas tu kāryāṇāṃ grathanaṃ nirṇayaḥ punaḥ // VisSd_6.110 //</l>
+</lg>
+
+<lg>
+<l>anubhūtārtha-kathanaṃ vadanti paribhāṣaṇam /</l>
+<l>parivāda-kṛtaṃ vākyaṃ labdhārtha-śamanaṃ kṛtiḥ // VisSd_6.111 //</l>
+</lg>
+
+<lg>
+<l>śuśrūṣādiḥ prasādaḥ syād ānando vāñchitāgamaḥ /</l>
+<l>samayo duḥkha-niryāṇaṃ tad bhaved upagūhanam // VisSd_6.112 //</l>
+</lg>
+
+<lg>
+<l>yat syād adbhuta-saṃprāptiḥ sāma-dānādi bhāṣaṇam /</l>
+<l>pūrva-vākyaṃ tu vijñeyaṃ yathoktārthopadarśanam // VisSd_6.113 //</l>
+</lg>
+
+<lg>
+<l>vara-pradāna-saṃprāptiḥ kāvya-saṃhāra iṣyate /</l>
+<l>nṛpa-deśādi-śāntis tu praśastir abhidhīyate // VisSd_6.114 //</l>
+</lg>
+
+<lg>
+<l>catuḥ-ṣaṣṭi-vidhaṃ hy etad aṅgaṃ proktaṃ manīṣibhiḥ /</l>
+<l>kuryād aniyate tasya sandhāv api niveśanam // VisSd_6.115 //</l>
+</lg>
+
+<lg>
+<l>rasānuguṇatāṃ vīkṣya rasasyaiva hi mukhyatā /</l>
+<l>iṣṭārtha-racanāścarya-lābho vṛttānta-vistaraḥ // VisSd_6.116 //</l>
+</lg>
+
+<lg>
+<l>rāga-prāptiḥ prayogasya gopyānāṃ gopanaṃ tathā /</l>
+<l>prakāśanaṃ prakāśyānām aṅgānāṃ ṣaḍ-vidhaṃ phalam // VisSd_6.117 //</l>
+</lg>
+
+<lg>
+<l>aṅga-hīno naro yadvan naivārambha-kṣamo bhavet /</l>
+<l>aṅga-hīnaṃ tathā kāvyaṃ na prayogāya yujyate // VisSd_6.118 //</l>
+</lg>
+
+<lg>
+<l>saṃpādayetāṃ sandhy-aṅgaṃ nāyaka-pratināyakau /</l>
+<l>tad-abhāve patākādyās tad-abhāve tathetarat // VisSd_6.119 //</l>
+</lg>
+
+<lg>
+<l>rasa-vyaktim apekṣyaiṣām aṅgānāṃ saṃniveśanam /</l>
+<l>na tu kevalayā śāstra-sthiti-saṃpādanecchayā // VisSd_6.120 //</l>
+</lg>
+
+<lg>
+<l>aviruddhaṃ tu yad vṛttaṃ rasādi-vyaktaye 'dhikam /</l>
+<l>tad apy anyathayed dhīmān vaded vā kadācana // VisSd_6.121 //</l>
+</lg>
+
+<lg>
+<l>śṛṅgāre kauśikī vīre sāttvaty ārabhaṭī punaḥ /</l>
+<l>rase raudre ca bībhatse vṛttiḥ sarvatra bhāratī // VisSd_6.122 //</l>
+</lg>
+
+<lg>
+<l>catasro vṛttayo hy etāḥ sarva-nāṭyasya mātṛkāḥ /</l>
+<l>syur nāyikādi-vyāpāra-viśeṣā nāṭakādiṣu // VisSd_6.123 //</l>
+</lg>
+
+<lg>
+<l>yā ślakṣṇa-nepathya-viśeṣa-citrā strī-saṅkulā puṣkala-nṛtya-gītā |</l>
+<l>kāmopabhoga-prabhavopacārā sā kaiśikī cāru-vilāsa-yuktā // VisSd_6.124 //</l>
+</lg>
+
+<lg>
+<l>narma ca narma-sphūrjo narma-sphoṭo 'tha narma-garbhaś ca /</l>
+<l>catvāry aṅgāny asyā vaidagdhya-krīḍitaṃ narma // VisSd_6.125 //</l>
+</lg>
+
+<lg>
+<l>iṣṭa-janāvarjana-kṛt tac cāpi trividhaṃ matam /</l>
+<l>vihitaṃ śuddha-hāsyena sa-śṛṅgāra-mayena ca // VisSd_6.126 //</l>
+</lg>
+
+<lg>
+<l>narma-sphūrjaḥ sukhārambho bhayānto nava-saṅgamaḥ /</l>
+<l>narma-sphoṭo bhāva-leśaiḥ sūcitālpa-raso mataḥ // VisSd_6.127 //</l>
+</lg>
+
+<lg>
+<l>narma-garbho vyavahṛtir netuḥ pracchanna-vartinaḥ /</l>
+<l>sāttvatī bahulā sattva-śaurya-tyāga-dayārjavaiḥ // VisSd_6.128 //</l>
+</lg>
+
+<lg>
+<l>saharṣā kṣudra-śṛṅgārā viśokā sādbhutā tathā /</l>
+<l>utthāpako 'tha sāṅghātyaḥ saṃlāpaḥ parivartakaḥ // VisSd_6.129 //</l>
+</lg>
+
+<lg>
+<l>viśeṣā iti catvāraḥ sāttvatyāḥ parikīrtitāḥ /</l>
+<l>uttejana-karo śatror vāg-utthāpaka ucyate // VisSd_6.130 //</l>
+</lg>
+
+<lg>
+<l>mantrārtha-daiva-śaktyādeḥ sāṅghātyaḥ saṅgha-bhedanam /</l>
+<l>saṃlāpaḥ syād gabhīroktir nānā-bhāva-samāśrayaḥ // VisSd_6.131 //</l>
+</lg>
+
+<lg>
+<l>prārabdhād anya-kāryāṇāṃ karaṇaṃ parivartakaḥ /</l>
+<l>māyendrajāla-saṅgrāma-krodhodbhrāntādi-ceṣṭitaiḥ // VisSd_6.132 //</l>
+</lg>
+
+<lg>
+<l>saṃyuktā vadha-bandhādyair uddhatārabhaṭī matā /</l>
+<l>vastūtthāpana-saṃpheṭo saṃkṣipir avapātanam // VisSd_6.133 //</l>
+</lg>
+
+<lg>
+<l>iti bhedās tu catvāra ārabhaṭyāḥ prakīrtitāḥ /</l>
+<l>māyādy-utthāpitaṃ vastu vastūtthāpanam ucyate // VisSd_6.134 //</l>
+</lg>
+
+<lg>
+<l>saṃpheṭas tu samāghātaḥ kruddha-satvarayor dvayoḥ /</l>
+<l>saṅkṣiptā vastu-racanā śilpair itarathāpi vā // VisSd_6.135 //</l>
+</lg>
+
+<lg>
+<l>saṅkṣiptiḥ sthān nivṛttau ca netur netrantara-grahaḥ /</l>
+<l>praveśa-trāsa-niṣkrānti-harṣa-vidrava-saṃbhavam // VisSd_6.136 //</l>
+</lg>
+
+<lg>
+<l>avapātanam ity uktaṃ pūrvam uktaiva bhāratī /</l>
+<l>aśrāvyaṃ khalu yad vastu tad iha svagataṃ matam // VisSd_6.137 //</l>
+</lg>
+
+<lg>
+<l>sarva-śrāvyaṃ prakāśaṃ syāt tad bhaved apavāritam /</l>
+<l>rahasyaṃ tu yad anyasya parāvṛtya prakāśyate // VisSd_6.138 //</l>
+</lg>
+
+<lg>
+<l>tripatāka-kareṇānyān apavāryāntarā kathām /</l>
+<l>anyonyāmantraṇaṃ yat syāt taj-janānte janāntikam // VisSd_6.139 //</l>
+</lg>
+
+<lg>
+<l>kiṃ bravīṣīti yan-nāṭye vinā pātraṃ prayujyate /</l>
+<l>śrutvevānuktam apy arthaṃ tat syād ākāśa-bhāṣitam // VisSd_6.140 //</l>
+</lg>
+
+<lg>
+<l>dattāṃ siddhāṃ ca senāṃ ca veśyānāṃ nāma darśayet /</l>
+<l>datta-prāyāṇi vaṇijāṃ ceṭa-ceṭyos tathā punaḥ // VisSd_6.141 //</l>
+</lg>
+
+<lg>
+<l>vasantādiṣu varṇyasya vastuno nāma yad bhavet /</l>
+<l>nāma kāryaṃ nāṭakasya garbhitārtha-prakāśakam // VisSd_6.142 //</l>
+</lg>
+
+<lg>
+<l>nāyikānāyakākhyānāt saṃjñā prakaraṇādiṣu /</l>
+<l>nāṭikā-saṭṭakādīnāṃ nāyikābhir viśeṣaṇam // VisSd_6.143 //</l>
+</lg>
+
+<lg>
+<l>prāyeṇa ṇy-antakaḥ sādhir gameḥ sthāne prayujyate /</l>
+<l>rājā svāmīti deveti bhṛtyair bhaṭṭeti cādhamaiḥ // VisSd_6.144 //</l>
+</lg>
+
+<lg>
+<l>rājarṣibhir vayasyeti tathā vidūṣakeṇa ca /</l>
+<l>rājann ity ṛṣibhir vācyaḥ so 'patya-pratyayena ca // VisSd_6.145 //</l>
+</lg>
+
+<lg>
+<l>svecchayā nāmabhir viprair vipra āryeti cetaraiḥ /</l>
+<l>vayasyety athavā nāmnā vācyo rājñā vidūṣakaḥ // VisSd_6.146 //</l>
+</lg>
+
+<lg>
+<l>vācyau naṭī-sūtradhārāvārya-nāmnā parasparam /</l>
+<l>sūtradhāraṃ vaded bhāva iti vai pāripārśvikaḥ // VisSd_6.147 //</l>
+</lg>
+
+<lg>
+<l>sūtradhāro māriṣeti haṇḍe ity adhamaiḥ samāḥ /</l>
+<l>vayasyety uttamair haṃho madhyair āryeti cāgrajaḥ // VisSd_6.148 //</l>
+</lg>
+
+<lg>
+<l>bhagavann iti vaktavyāḥ sarvair devarṣi-liṅginaḥ /</l>
+<l>vaded rājñīṃ ca ceṭīṃ ca bhavatīti vidūṣakaḥ // VisSd_6.149 //</l>
+</lg>
+
+<lg>
+<l>āyuṣman rathinaṃ sūto vṛddhaṃ tāteti cetaraḥ /</l>
+<l>vatsa-putraka-tāteti nāmnā gotreṇa vā sutaḥ // VisSd_6.150 //</l>
+</lg>
+
+<lg>
+<l>śiṣyo 'nujaś ca vaktavyo 'mātya āryeti cādhamaiḥ /</l>
+<l>viprair ayam amātyeti saciveti ca bhaṇyate // VisSd_6.151 //</l>
+</lg>
+
+<lg>
+<l>sādho iti tapasvī ca praśāntaś cocyate budhaiḥ /</l>
+<l>sva-gṛhītābhidhaḥ pūjyaḥ śiṣyādyair vinigadyate // VisSd_6.152 //</l>
+</lg>
+
+<lg>
+<l>upādhyāyeti cācāryo mahārājeti bhūpatiḥ /</l>
+<l>svāmīti yuvarājas tu kumāro bhartṛ-dārakaḥ // VisSd_6.153 //</l>
+</lg>
+
+<lg>
+<l>bhadra-saumya-mukhety evam adhamais tu kumārakaḥ /</l>
+<l>vācyā prakṛtibhī rājñaḥ kumārī bhartṛ-dārikā // VisSd_6.154 //</l>
+</lg>
+
+<lg>
+<l>patir yathā tathā vācyā jyeṣṭha-madhyādhamaiḥ striyaḥ /</l>
+<l>haleti sadṛśī preṣyā hajje veśyājjukā tathā // VisSd_6.155 //</l>
+</lg>
+
+<lg>
+<l>kuṭṭiny ambety anugatiḥ pūjyā ca jaratī janaiḥ /</l>
+<l>āmantraṇaiś ca pāṣāṇḍā vācyāḥ svasamayāgataiḥ // VisSd_6.156 //</l>
+</lg>
+
+<lg>
+<l>śakyādayaś ca saṃbhāṣyā bhadra-dattādi-nāmabhiḥ /</l>
+<l>yasya yat karma śilpaṃ vā vidyā vā jātir eva vā // VisSd_6.157 //</l>
+</lg>
+
+<lg>
+<l>tenaiva nāmnā vācyo 'sau jñeyāś cānye yathocitam /</l>
+<l>puruṣāṇām anīcānāṃ saṃskṛtaṃ syāt kṛtātmanām // VisSd_6.158 //</l>
+</lg>
+
+<lg>
+<l>saurasenī prayoktavyā tādṛśīnāṃ ca yoṣitām /</l>
+<l>āsām eva tu gāthāsu mahārāṣṭrīṃ prayojayet // VisSd_6.159 //</l>
+</lg>
+
+<lg>
+<l>atroktā māgadhī bhāṣā rājāntaḥpura-cāriṇām /</l>
+<l>ceṭānāṃ rāja-putrāṇāṃ śreṣṭhānāṃ cārdha-māgadhī // VisSd_6.160 //</l>
+</lg>
+
+<lg>
+<l>prācyāṃ vidūṣakādīnāṃ dhūrtānāṃ syād avantijā /</l>
+<l>yodhanāgarikādīnāṃ dākṣiṇātyā hi dīvyatām // VisSd_6.161 //</l>
+</lg>
+
+<lg>
+<l>śabarāṇāṃ śakādīnāṃ śābarīṃ saṃprayojayet /</l>
+<l>vāhlīkamāṣodīcyānāṃ drāviḍī drāviḍādiṣu // VisSd_6.162 //</l>
+</lg>
+
+<lg>
+<l>ābhīreṣu tathābhīrī cāṇḍālī pukkasādiṣu /</l>
+<l>ābhīrī śābarī cāpi kāṣṭha-pātropajīviṣu // VisSd_6.163 //</l>
+</lg>
+
+<lg>
+<l>tathaivāṅgāra-kārādau paiśācī syāt piśāca-vāk /</l>
+<l>ceṭānām apy anīcānām api syāt saurasenikā // VisSd_6.164 //</l>
+</lg>
+
+<lg>
+<l>bālānāṃ ṣaṇḍakānāṃ ca nīca-graha-vicāriṇām /</l>
+<l>unmattānām āturāṇāṃ saiva syāt saṃskṛtaṃ kvacit // VisSd_6.165 //</l>
+</lg>
+
+<lg>
+<l>aiśvaryeṇa pramattasya dāridryopadrutasya ca /</l>
+<l>bhikṣu-valka-dharādīnāṃ prākṛtaṃ saṃprayojayet // VisSd_6.166 //</l>
+</lg>
+
+<lg>
+<l>saṃskṛtaṃ saṃprayoktavyaṃ liṅginīṣūttamāsu ca /</l>
+<l>devī-mantri-sutā-veśyāsv api kaiścit tathoditam // VisSd_6.167 //</l>
+</lg>
+
+<l>kāryataś cottamādīnāṃ kāryo bhāṣā-viparyayaḥ // VisSd_6.168 //</l>
+
+<lg>
+<l>yoṣit-sakhī-bāla-veśyā-kitavāpsarasāṃ tathā /</l>
+<l>vaidagdhyārthaṃ pradātavyaṃ saṃskṛtaṃ cāntarāntarā // VisSd_6.169 //</l>
+</lg>
+
+<lg>
+<l>ṣaṭtriṃśal-lakṣaṇāny atra nāṭyālaṅkṛtayas tathā /</l>
+<l>trayastriṃśat-prayojyāni vīthy-aṅgāni trayodaśa // VisSd_6.170 //</l>
+</lg>
+
+<lg>
+<l>lāsyāṅgāni daśa yathā-lābhaṃ rasa-vyapekṣayā /</l>
+<l>bhūṣaṇākṣara-saṅghātau śobhodāharaṇaṃ tathā // VisSd_6.171 //</l>
+</lg>
+
+<lg>
+<l>hetu-saṃśaya-dṛṣṭāntās tulya-tarkaḥ padoccayaḥ /</l>
+<l>nidarśanābhiprāyo ca prāptir vicāra eva ca // VisSd_6.172 //</l>
+</lg>
+
+<lg>
+<l>diṣṭopadiṣṭe ca guṇātipātātiśayau tathā /</l>
+<l>viśeṣaṇa-niruktī ca siddhi-bhraṃśa-viparyayau // VisSd_6.173 //</l>
+</lg>
+
+<lg>
+<l>dākṣiṇyānunayau mālārthāpattir garhaṇaṃ tathā /</l>
+<l>pṛcchā prasiddhiḥ sārūpyaṃ saṃkṣepo guṇa-kīrtanam // VisSd_6.174 //</l>
+</lg>
+
+<lg>
+<l>leśo manoratho 'nukta-siddhiḥ priya-vacas tathā /</l>
+<l>lakṣaṇāni guṇaiḥ sālaṅkārair yogas tu bhūṣaṇam // VisSd_6.175 //</l>
+</lg>
+
+<lg>
+<l>varṇanākṣara-saṅghātaś citrārthair akṣarair mitaiḥ /</l>
+<l>siddhair arthaiḥ samaṃ yatrāprasiddho 'rthaḥ prakāśate // VisSd_6.176 //</l>
+</lg>
+
+<lg>
+<l>śliṣṭa-lakṣaṇa-citrārthā sā śobhety abhidhīyate /</l>
+<l>yatra tulyārtha-yuktena vākyenābhipradarśanāt // VisSd_6.177 //</l>
+</lg>
+
+<lg>
+<l>sādhyate 'bhimataś cārthas tad-udāharaṇaṃ matam /</l>
+<l>hetur vākyaṃ samāsoktam iṣṭakṛd dhetu-darśanāt // VisSd_6.178 //</l>
+</lg>
+
+<lg>
+<l>saṃśayo 'jñāta-tattvasya vākye syād yad aniścayaḥ /</l>
+<l>dṛṣṭānto yas tu pakṣe 'rtha-sādhanāya nidarśanam // VisSd_6.179 //</l>
+</lg>
+
+<lg>
+<l>tulya-tarko yad-arthena tarkaḥ prakṛti-gāminā /</l>
+<l>sañcayo 'rthānurūpo yaḥ padānāṃ sa padoccayaḥ // VisSd_6.180 //</l>
+</lg>
+
+<lg>
+<l>yatrārthānāṃ prasiddhānāṃ kriyate parikīrtanam /</l>
+<l>para-pakṣa-vyudāsārthaṃ tan nidarśanam ucyate // VisSd_6.181 //</l>
+</lg>
+
+<lg>
+<l>abhiprāyas tu sādṛśyād abhūtārthasya kalpanā /</l>
+<l>prāptiḥ kenacid aṃśena kiñcid yatrānumīyate // VisSd_6.182 //</l>
+</lg>
+
+<lg>
+<l>vicāro yukti-vākyair yad apratyakṣārtha-darśanam /</l>
+<l>deśa-kāla-svarūpeṇa varṇanā diṣṭam ucyate // VisSd_6.183 //</l>
+</lg>
+
+<lg>
+<l>upadiṣṭaṃ manohāri vākyaṃ śāstrānusārataḥ /</l>
+<l>guṇātipātaḥ kāryaṃ vad viparītaṃ guṇān prati // VisSd_6.184 //</l>
+</lg>
+
+<lg>
+<l>yaḥ sāmān guṇodrekaḥ sa guṇātiśayo mataḥ /</l>
+<l>siddhān arthān bahūn uktvā viśeṣoktir viśeṣaṇam // VisSd_6.185 //</l>
+</lg>
+
+<lg>
+<l>pūrva-siddhārtha-kathanaṃ niruktir iti kīrtyate /</l>
+<l>bahūnāṃ kīrtanaṃ siddhir abhipretārtha-siddhaye // VisSd_6.186 //</l>
+</lg>
+
+<lg>
+<l>dṛptādīnāṃ bhavad bhraṃśo vācyād anyatarad vacaḥ /</l>
+<l>vicārasyānyathābhāvaḥ sandehāt tu viparyayaḥ // VisSd_6.187 //</l>
+</lg>
+
+<lg>
+<l>dākṣiṇyaṃ ceṣṭayā vācā para-cittānuvartanam /</l>
+<l>vākyaiḥ snigdhair anunayo bhaved arthasya sādhanam // VisSd_6.188 //</l>
+</lg>
+
+<lg>
+<l>mālā syād yad abhīṣṭārthaṃ naikārtha-pratipādanam /</l>
+<l>arthāpattir yad anyārtho 'rthāntarokteḥ pratīyate // VisSd_6.189 //</l>
+</lg>
+
+<lg>
+<l>dūṣaṇodghoṣaṇāyāṃ tu bhartsanā garhaṇaṃ tu tat /</l>
+<l>abhyarthanāparair vākyaiḥ pṛcchārthānveṣaṇaṃ matā // VisSd_6.190 //</l>
+</lg>
+
+<lg>
+<l>prasiddhir loka-siddhārthair utkṛṣṭair artha-sādhanam /</l>
+<l>sārūpyam anurūpasya sārūpyāt kṣobha-vardhanam // VisSd_6.191 //</l>
+</lg>
+
+<lg>
+<l>saṅkṣepo yat tu saṅkṣepād ātmāny arthe prayujyate /</l>
+<l>guṇānāṃ kīrtanaṃ yat tu tad eva guṇa-kīrtanam // VisSd_6.192 //</l>
+</lg>
+
+<lg>
+<l>sa leśo bhaṇyate vākyaṃ yat sādṛśya-puraḥsaram /</l>
+<l>manorathas tv abhiprāyasyoktir bhaṅgyantareṇa yat // VisSd_6.193 //</l>
+</lg>
+
+<lg>
+<l>viśeṣārthoha-vistāro 'nukta-siddhir udīryate /</l>
+<l>syāt prayāṇayituṃ pūjyaṃ priyoktir harṣa-bhāṣaṇam // VisSd_6.194 //</l>
+</lg>
+
+<lg>
+<l>āśīr ākranda-kapaṭākṣamā-garvodyamāśrayāḥ /</l>
+<l>utprāsana-spṛhā-kṣobha-paścāt-tāpopapattayaḥ // VisSd_6.195 //</l>
+</lg>
+
+<lg>
+<l>āśaṃsādhyavasāyau ca visarpollekha-saṃjñitau /</l>
+<l>uttejanaṃ parīvādo nītir artha-viśeṣaṇam // VisSd_6.196 //</l>
+</lg>
+
+<lg>
+<l>protsāhanaṃ ca sāhāyyam abhimāno 'nuvartanam /</l>
+<l>utkīrtanaṃ yathā yācñā parihāro nivedanam // VisSd_6.197 //</l>
+</lg>
+
+<lg>
+<l>pravartanākhyāna-yukti-praharṣāś copadeśanam /</l>
+<l>iti nāṭyālaṅkṛtayo nāṭya-bhūṣaṇa-hetavaḥ // VisSd_6.198 //</l>
+</lg>
+
+<lg>
+<l>āśīr iṣṭa-janāśaṃsā ākrandaḥ pralapitaṃ śucau /</l>
+<l>kapaṭaṃ māyayā yatra rūpam anyad vibhāvyate // VisSd_6.199 //</l>
+</lg>
+
+<lg>
+<l>akṣamā sā paribhavaḥ svalpo 'pi na viṣahyate /</l>
+<l>garvāvalepajaṃ vākyaṃ kāryasyārambha udyamaḥ // VisSd_6.200 //</l>
+</lg>
+
+<lg>
+<l>grahaṇaṃ guṇavat kārya-hetor āśraya ucyate /</l>
+<l>utprāsanaṃ tūpahāso yo 'sādhau sādhu-mānini // VisSd_6.201 //</l>
+</lg>
+
+<lg>
+<l>ākāṅkṣā ramaṇīyatvāḍ vastuno yā spṛhā tu sā /</l>
+<l>adhikṣepa-vacaḥ-kārī kṣobhaḥ proktaḥ sa eva tu // VisSd_6.202 //</l>
+</lg>
+
+<lg>
+<l>mohāvadhīritārthasya paścāttāpaḥ sa eva tu /</l>
+<l>upapattir matā hetor upanyāso 'rtha-siddhaye // VisSd_6.203 //</l>
+</lg>
+
+<lg>
+<l>āśaṃsanaṃ syād āśaṃsā pratijñādhyavasāyakaḥ /</l>
+<l>visarpo yat samārabdhaṃ karmāniṣṭa-phala-pradam // VisSd_6.204 //</l>
+</lg>
+
+<lg>
+<l>kārya-grahaṇam ullekha uttejanam itīṣyate /</l>
+<l>sva-kārya-siddhaye 'nyasya preraṇāya kaṭhora-vāk // VisSd_6.205 //</l>
+</lg>
+
+<lg>
+<l>bhartsanā tu parīvādo nītiḥ śāstreṇa vartanam /</l>
+<l>uktasyārthasya yat tu syād utkīrtanam anekadhā // VisSd_6.206 //</l>
+</lg>
+
+<lg>
+<l>upālambha-viśeṣeṇa tat syād artha-viśeṣaṇam /</l>
+<l>protsāhnaṃ syād utsāha-girā kasyāpi yojanam // VisSd_6.207 //</l>
+</lg>
+
+<lg>
+<l>sāhāyyaṃ saṅkaṭe yat syāt sānukūlyaṃ parasya ca /</l>
+<l>abhimānaḥ sa eva syāt praśrayād anuvartanam // VisSd_6.208 //</l>
+</lg>
+
+<lg>
+<l>anuvṛttir bhūta-kāryākhyānam utkīrtanaṃ matam /</l>
+<l>yācñā tu kvāpi yācñā yā svayaṃ dūta-mukhena vā // VisSd_6.209 //</l>
+</lg>
+
+<lg>
+<l>parihāra iti proktaḥ kṛtānucita-mārjanam /</l>
+<l>avadhīrita-kartavya-kathanaṃ tu nivedanam // VisSd_6.210 //</l>
+</lg>
+
+<lg>
+<l>pravartanaṃ tu kāryasya yat syāt sādhu-pravartanam /</l>
+<l>ākhyānaṃ pūrva-vṛttoktiḥ yuktir arthāvadhāraṇam // VisSd_6.211 //</l>
+</lg>
+
+<lg>
+<l>praharṣaḥ pramadādhikyaṃ śikṣā syād upadeśanam /</l>
+<l>geya-padaṃ sthita-pāṭhyam āsīnaṃ puṣpa-gaṇḍikā // VisSd_6.212 //</l>
+</lg>
+
+<lg>
+<l>pracchedakas trigūḍhaṃ ca saindhavākhyaṃ dvigūḍham /</l>
+<l>uttamottamakaṃ cānyad-ukta-pratyuktam eva ca // VisSd_6.213 //</l>
+</lg>
+
+<lg>
+<l>lāsye daśavidhaṃ hy etad-aṅgam uktaṃ manīṣibhiḥ /</l>
+<l>tantrī-bhāṇḍaṃ puraskṛtyopaviṣṭasyāsane puraḥ // VisSd_6.214 //</l>
+</lg>
+
+<lg>
+<l>śuddhaṃ gānaṃ geya-padaṃ sthita-pāṭhyaṃ tad ucyate /</l>
+<l>madanottāpitā yatra paṭhati prākṛtaṃ sthitā // VisSd_6.215 //</l>
+</lg>
+
+<lg>
+<l>nikhilātodya-rahitaṃ śoka-cintānvitābalā /</l>
+<l>aprasādhita-gātraṃ yad āsīnāsīnam eva tat // VisSd_6.216 //</l>
+</lg>
+
+<lg>
+<l>ātodya-miśritaṃ geyaṃ chandāṃsi vividhāni ca /</l>
+<l>strī-puṃsayor viparyāsa-ceṣṭitaṃ puṣpa-gaṇḍikā // VisSd_6.217 //</l>
+</lg>
+
+<lg>
+<l>anyāsaktaṃ patiṃ matvā prema-viccheda-manyunā /</l>
+<l>vīṇā-puraḥ-saraṃ gānaṃ striyāḥ pracchedako mataḥ // VisSd_6.218 //</l>
+</lg>
+
+<lg>
+<l>strī-veṣa-dhāriṇāṃ puṃsāṃ nāṭyaṃ ślakṣṇaṃ trigūḍhakam /</l>
+<l>kaścana bhraṣṭa-saṅketaḥ suvyakta-karaṇānvitaḥ // VisSd_6.219 //</l>
+</lg>
+
+<lg>
+<l>prākṛtaṃ vacanaṃ vakti yatra tat saindhavaṃ matam /</l>
+<l>caturasra-padaṃ gītaṃ mukha-pratimukhānvitam // VisSd_6.220 //</l>
+</lg>
+
+<lg>
+<l>dvigūḍhaṃ rasa-bhāvāḍhyam uttamottamakaṃ punaḥ /</l>
+<l>kopa-prasādajan adhikṣepa-yuktaṃ rasottaram // VisSd_6.221 //</l>
+</lg>
+
+<lg>
+<l>hāva-helānvitaṃ citra-śloka-bandha-manoharam /</l>
+<l>ukti-pratyukti-saṃyuktaṃ sopālambham alīkavat // VisSd_6.222 //</l>
+</lg>
+
+<lg>
+<l>vilāsānvita-gītārtham ukta-pratyuktam ucyate /</l>
+<l>etad eva yadā sarvaiḥ patākā-sthānakair yutam // VisSd_6.223 //</l>
+</lg>
+
+<lg>
+<l>aṅkaiś ca daśabhir dhīrā mahānāṭakam ūcire /</l>
+<l>bhavet prakaraṇe vṛttaṃ laukikaṃ kavi-kalpitam // VisSd_6.224 //</l>
+</lg>
+
+<lg>
+<l>śṛṅgāro 'ṅgī nāyakas tu vipro 'mātyo 'thavā vaṇik /</l>
+<l>sāpāya-dharma-kāmārtha-paro dhīra-praśāntakaḥ // VisSd_6.225 //</l>
+</lg>
+
+<lg>
+<l>nāyikā kulajā kvāpi veśyā kvāpi dvayaṃ kvacit /</l>
+<l>tena bhedās trayas tasya tatra bhedas tṛtīyakaḥ // VisSd_6.226 //</l>
+</lg>
+
+<lg>
+<l>kitava-dyūta-kārādi-viṭa-ceṭaka-saṅkulaḥ /</l>
+<l>bhāṇaḥ syād dhūrta-carito nānāvasthāntarātmakaḥ // VisSd_6.227 //</l>
+</lg>
+
+<lg>
+<l>ekāṅka eka evātra nipuṇaḥ paṇḍito viṭaḥ /</l>
+<l>raṅge prakāśayet svenānubhūtam itareṇa vā // VisSd_6.228 //</l>
+</lg>
+
+<lg>
+<l>saṃbodhanokti-pratyuktī kuryād ākāśa-bhāṣitaiḥ /</l>
+<l>sūcayed vīra-śṛṅgārau śaurya-saubhāgya-varṇanaiḥ // VisSd_6.229 //</l>
+</lg>
+
+<lg>
+<l>tatretivṛttam utpādyaṃ vṛttiḥ prāyeṇa bhāratī /</l>
+<l>mukha-nirvahaṇe sandhī lāsyāṅgāni daśāpi ca // VisSd_6.230 //</l>
+</lg>
+
+<lg>
+<l>khyātetivṛtto vyāyogaḥ svalpa-strī-jana-saṃyutaḥ /</l>
+<l>hīno garbha-vimarśābhyāṃ narair bahubhir āśritaḥ // VisSd_6.231 //</l>
+</lg>
+
+<lg>
+<l>ekāṅkaś ca bhaved astrī-nimittam amarodayaḥ /</l>
+<l>kaiśikī-vṛtti-rahitaḥ prakhyātas tatra nāyakaḥ // VisSd_6.232 //</l>
+</lg>
+
+<lg>
+<l>rājarṣir atha divyo vā bhaved dhīroddhataś ca saḥ /</l>
+<l>hāsya-śṛṅgāra-śāntebhya itare 'trāṅgino rasāḥ // VisSd_6.233 //</l>
+</lg>
+
+<lg>
+<l>vṛttaṃ samavakāre tu khyātaṃ devāsurāśrayam /</l>
+<l>sandhayo nirvimarśās tu trayo 'ṅkās tatra cādime // VisSd_6.234 //</l>
+</lg>
+
+<lg>
+<l>sandhī dvāv antyayos tadvad eka eko bhavet punaḥ /</l>
+<l>nāyakā dvādaśodāttāḥ prakhyātā deva-mānavāḥ // VisSd_6.235 //</l>
+</lg>
+
+<lg>
+<l>phalaṃ pṛthak pṛthak teṣāṃ vīra-mukhyo 'khilo rasaḥ /</l>
+<l>vṛttayo manda-kaiśikyo nātra bindu-praveśakau // VisSd_6.236 //</l>
+</lg>
+
+<lg>
+<l>vīthy-aṅgāni ca tatra syur yathālābhaṃ trayodaśa /</l>
+<l>gāyatry-uṣṇiṅ-mukhāny atra cchandāṃsi vividhāni ca // VisSd_6.237 //</l>
+</lg>
+
+<lg>
+<l>tri-śṛṅgāras tri-kapaṭaḥ kāryaś cāyaṃ trivid-ravaḥ /</l>
+<l>vastu dvādaśa-nālībhir niṣpādyaṃ prathamāṅkagam // VisSd_6.238 //</l>
+</lg>
+
+<lg>
+<l>dvitīye 'ṅke catasṛbhir dvābhyām aṅke tṛtīyaake /</l>
+<l>dharmārtha-kāmais trividhaḥ śṛṅgāraḥ kapaṭaḥ punaḥ // VisSd_6.239 //</l>
+</lg>
+
+<lg>
+<l>svābhāvikaḥ kṛtrimaś ca daivajo vidravaḥ punaḥ /</l>
+<l>acetanaiś cetanaiś ca cetanācetanaiḥ kṛtaḥ // VisSd_6.240 //</l>
+</lg>
+
+<lg>
+<l>māyendra-jāla-saṅgrāma-krodhodbhrāntādi-ceṣṭitaiḥ /</l>
+<l>aparāgaiś ca bhūyiṣṭho ḍimaḥ khyātetivṛttakaḥ // VisSd_6.241 //</l>
+</lg>
+
+<lg>
+<l>aṅgī raudra-rasas tatra sarve 'ṅgāni rasāḥ punaḥ /</l>
+<l>catvāro 'ṅkā matā neha viṣkambhaka-praveśakau // VisSd_6.242 //</l>
+</lg>
+
+<lg>
+<l>nāyakā deva-gandharva-yakṣa-rakṣo-mahoragāḥ /</l>
+<l>bhūta-preta-piśācādyāḥ ṣoḍaśātyantam uddhatāḥ // VisSd_6.243 //</l>
+</lg>
+
+<lg>
+<l>vṛttayaḥ kaiśikī-hīnā nirvimarśāś ca sandhayaḥ /</l>
+<l>dīptāḥ syuḥ ṣaḍ-rasāḥ śānta-hāsya-śṛṅgāra-varjitāḥ // VisSd_6.244 //</l>
+</lg>
+
+<lg>
+<l>īhāmṛgo miśra-vṛttaś caturaṅgaḥ prakīrtitaḥ /</l>
+<l>mukha-pratimukhe sandhī tatra nirvahaṇaṃ tathā // VisSd_6.245 //</l>
+</lg>
+
+<lg>
+<l>nara-divyāvani-yamau nāyaka-pratināyakau /</l>
+<l>khyātau dhīroddhatāv anyo gūḍha-bhāvād ayukta-kṛt // VisSd_6.246 //</l>
+</lg>
+
+<lg>
+<l>divyas triyama-nicchantīm apahārādinecchataḥ /</l>
+<l>śṛṅgārābhāsam apy asya kiñcit kiñcit pradarśayet // VisSd_6.247 //</l>
+</lg>
+
+<lg>
+<l>patākā-nāyakā divyā martyā vāpi daśoddhatāḥ /</l>
+<l>yuddham ānīya saṃrambhaṃ paraṃ vyājān nivartate // VisSd_6.248 //</l>
+</lg>
+
+<lg>
+<l>mahātmāno vadha-prāptā api vadhyāḥ syur atra no /</l>
+<l>ekāṅko deva evātra netety āhuḥ pare punaḥ // VisSd_6.249 //</l>
+</lg>
+
+<lg>
+<l>divya-strī-hetukaṃ yuddhaṃ nāyakāḥ ṣaḍ itītare /</l>
+<l>utsṛṣṭikāṅka ekāṅko netāraḥ prākṛtā narāḥ // VisSd_6.250 //</l>
+</lg>
+
+<lg>
+<l>raso 'tra karuṇaḥ sthāyī bahu-strī-paridevitam /</l>
+<l>prakhyātam itivṛttaṃ ca kavir buddhyā prapañcayet // VisSd_6.251 //</l>
+</lg>
+
+<lg>
+<l>bhāṇavat sandhi-vṛtty-aṅgāny asmin jaya-parājayau /</l>
+<l>yuddhaṃ ca vācā kartavyaṃ nirveda-vacanaṃ bahu // VisSd_6.252 //</l>
+</lg>
+
+<lg>
+<l>vīthyām eko bhaved aṅkaḥ kaścid eko 'tra kalpyate /</l>
+<l>ākāśa-bhāṣitair uktaiś citrāṃ pratyuktim āśritaḥ // VisSd_6.253 //</l>
+</lg>
+
+<lg>
+<l>sūcayed bhūri śṛṅgāraṃ kiñcid anyān rasān prati /</l>
+<l>mukha-nirvahaṇe sandhī artha-prakṛtayo 'khilāḥ // VisSd_6.254 //</l>
+</lg>
+
+<lg>
+<l>asyās trayodaśāṅgāni nirdiśanti manīṣiṇaḥ /</l>
+<l>uddhātyakāvalagite prapañccas trigataṃ chalam // VisSd_6.255 //</l>
+</lg>
+
+<lg>
+<l>vāk-kely-adhibale gaṇḍam avasyandita-nālike /</l>
+<l>asat-pralāpa-vyāhāra-mārdavāni ca tāni tu // VisSd_6.256 //</l>
+</lg>
+
+<lg>
+<l>mitho vākyam asadbhūtaṃ prapañco hāsya-kṛn mataḥ /</l>
+<l>trigataṃ syād anekārtha-yojanaṃ śruti-sābhyataḥ // VisSd_6.257 //</l>
+</lg>
+
+<lg>
+<l>priyābhair apriyair vākyair vilobhya-cchalanācchalam /</l>
+<l>anye tvāhuś chalaṃ kiñcit kāryam uddiśya kasyacit // VisSd_6.258 //</l>
+</lg>
+
+<lg>
+<l>udīryate yad vacanaṃ vañccanāhāsya-roṣa-kṛt /</l>
+<l>vāk-kelir hāsya-saṃbandho dvitri-pratyuktito bhavet // VisSd_6.259 //</l>
+</lg>
+
+<lg>
+<l>anyonya-vākyādhikyoktiḥ spardhayādhibalaṃ matam /</l>
+<l>gaṇḍaṃ prastuta-saṃbandhi bhinnārthaṃ satvaraṃ vacaḥ // VisSd_6.260 //</l>
+</lg>
+
+<lg>
+<l>vyākhyānaṃ svarasoktasyānyathāvasyanditaṃ bhavet /</l>
+<l>prahelikaiva hāsyena yuktā bhavati nālikā // VisSd_6.261 //</l>
+</lg>
+
+<lg>
+<l>asat-pralāpo yad-vākyam asaṃbaddhaṃ tathottaram /</l>
+<l>agṛhṇato 'pi mūrkhasya puro yac ca hitaṃ vacaḥ // VisSd_6.262 //</l>
+</lg>
+
+<lg>
+<l>vyāhāro yat parasyārthe hāsya-kṣobha-karaṃ vacaḥ /</l>
+<l>doṣā guṇā guṇā doṣā yatra syur mṛdavaṃ hi tat // VisSd_6.263 //</l>
+</lg>
+
+<lg>
+<l>bhāṇavat sandhi-sandhy-aṅga-lāsyāṅkāṅkair vinirmitam /</l>
+<l>bhavet prahasanaṃ vṛttaṃ nindyānāṃ kavi-kalpitam // VisSd_6.264 //</l>
+</lg>
+
+<lg>
+<l>atra nārabhaṭī nāpi viṣkambhaka-praveśakau /</l>
+<l>aṅgī hāsya-rasas tatra vīthy-aṅgānāṃ sthitir na vā // VisSd_6.265 //</l>
+</lg>
+
+<lg>
+<l>tapasvi-bhagavad-vipra-prabhṛtiṣv atra nāyakaḥ /</l>
+<l>eko yatra bhaved dhṛṣṭo hāsyaṃ tac chuddham ucyate /</l>
+<l>āśritya kañcana janaṃ saṅkīrṇam iti tad viduḥ // VisSd_6.266 //</l>
+</lg>
+
+<lg>
+<l>vṛttaṃ bahūnāṃ dhṛṣṭānāṃ saṅkīrṇaṃ kecid ūcire /</l>
+<l>tat punar bhavati dvy-aṅgkam athavaikāṅka-nirmitam // VisSd_6.267 //</l>
+</lg>
+
+<lg>
+<l>vikṛtaṃ tu vidur yatra ṣaṇḍha-kañcuki-tāpasāḥ /</l>
+<l>bhujaṅga-cāraṇa-bhaṭa-prabhṛter veṣa-vāg-yutāḥ // VisSd_6.268 //</l>
+</lg>
+
+<lg>
+<l>nāṭikā kpta-vṛttā syāt strī-prāyā caturaṅkikā /</l>
+<l>prakhyāto dhīra-lalitas tatra syān nāyako nṛpaḥ // VisSd_6.269 //</l>
+</lg>
+
+<lg>
+<l>syād antaḥpura-saṃbaddhā saṅgīta-vyāpṛtāthavā /</l>
+<l>navānurāgā kanyātra nāyikā nṛpa-vaṃśajā // VisSd_6.270 //</l>
+</lg>
+
+<lg>
+<l>saṃpravarteta netāsyāṃ devyās trasena śaṅkitaḥ /</l>
+<l>devī bhavet punar jyeṣṭhā pragalbhā nṛpa-vaṃśajā // VisSd_6.271 //</l>
+</lg>
+
+<lg>
+<l>pade pade mānavatī tad-vaśaḥ saṅgamo dvayoḥ /</l>
+<l>vṛttiḥ syāt kaiśikī svalpa-vimarśāḥ sandhayaḥ punaḥ // VisSd_6.272 //</l>
+</lg>
+
+<lg>
+<l>saptāṣṭa-nava-pañcāṅkaṃ divyayānuṣa-saṃśrayam /</l>
+<l>troṭakaṃ nāma tat prāhuḥ pratyaṅkaṃ saṃvidūṣaṇam // VisSd_6.273 //</l>
+</lg>
+
+<lg>
+<l>prākṛtair navabhiḥ pumbhir daśabhir vāpy alaṅkṛtā /</l>
+<l>nodātta-vacanā goṣṭhī kaiśikī-vṛtti-śālinī // VisSd_6.274 //</l>
+</lg>
+
+<lg>
+<l>hīnā garbha-vimarśābhyāṃ pañca-ṣaḍ-yoṣid-anvitā /</l>
+<l>kāma-śṛṅgāra-saṃyuktā syād ekāṅka-vinirmitā // VisSd_6.275 //</l>
+</lg>
+
+<lg>
+<l>saṭṭakaṃ prākṛtāśeṣa-pāṭhyaṃ syād apraveśakam /</l>
+<l>na ca viṣkambhako 'py atra pracuraś cādbhuto rasaḥ // VisSd_6.276 //</l>
+</lg>
+
+<lg>
+<l>aṅkā javanikākhyāḥ syuḥ syād anyan nāṭikāsamam /</l>
+<l>nāṭya-rāsakam ekāṅkaṃ bahu-tāla-laya-sthiti // VisSd_6.277 //</l>
+</lg>
+
+<lg>
+<l>udātta-nāyakaṃ tadvat pīṭhamardopanāyakam /</l>
+<l>hāsyo 'ṅgy atra sa-śṛṅgāro nārī vāsaka-sajjikā // VisSd_6.278 //</l>
+</lg>
+
+<lg>
+<l>mukha-nirvahaṇe sandhī lāsyāṅgāni daśāpi ca /</l>
+<l>kecit pratimukhaṃ sandhim iha necchanti kevalam // VisSd_6.279 //</l>
+</lg>
+
+<lg>
+<l>prasthāne nāyako dāso hīnaḥ syād upanāyakaḥ /</l>
+<l>dāsī ca nāyikā vṛttiḥ kaiśikī bhāratī tathā // VisSd_6.280 //</l>
+</lg>
+
+<lg>
+<l>surāpāna-samāyogād uddiṣṭārthasya saṃhṛtiḥ /</l>
+<l>aṅkau dvau laya-tālādir vilāso bahulas tathā // VisSd_6.281 //</l>
+</lg>
+
+<lg>
+<l>udātta-nāyakaṃ divya-vṛttam ekāṅka-bhūṣitam /</l>
+<l>śilpakāṅgair yutaṃ hāsya-śṛṅgāra-karuṇai rasaiḥ // VisSd_6.282 //</l>
+</lg>
+
+<lg>
+<l>ullāpyaṃ bahu-saṅgrāmam astra-gīta-manoharam /</l>
+<l>catasro nāyikās tatra trayo 'ṅkā iti kecana // VisSd_6.283 //</l>
+</lg>
+
+<lg>
+<l>kāvyam ārabhaṭī-hīnam ekāṅkaṃ hāsya-saṅkulam /</l>
+<l>khaṇḍa-mātrād vipadikābhagnatālair alaṅkṛtam // VisSd_6.284 //</l>
+</lg>
+
+<lg>
+<l>varṇa-mātrāchaḍḍaṇikā-yutaṃ śṛṅgāra-bhāṣitam /</l>
+<l>netā strī cāpy udāttātra sandhī ādyau tathāntimaḥ // VisSd_6.285 //</l>
+</lg>
+
+<lg>
+<l>garbhāvamarśa-rahitaṃ preṅkhaṇaṃ hīna-nāyakam /</l>
+<l>asūtradhāram ekāṅkam aviṣkambha-praveśakam // VisSd_6.286 //</l>
+</lg>
+
+<lg>
+<l>niyuddha-saṃpheṭa-yutaṃ sarva-vṛtti-samāśritam /</l>
+<l>nepathye gīyate nāndī tathā tatra prarocanā // VisSd_6.287 //</l>
+</lg>
+
+<lg>
+<l>rāsakaṃ pañca-pātraṃ syān mukha-nirvahaṇānvitam /</l>
+<l>bhāṣā-vibhāṣā-bhūyiṣṭhaṃ bhāratī-kaiśikī-yutam // VisSd_6.288 //</l>
+</lg>
+
+<lg>
+<l>asūtradhāram ekāṅkaṃ sa-vīthy-aṅgaṃ kalānvitam /</l>
+<l>śliṣṭa-nāndī-yutaṃ khyāta-nāyikaṃ mūrkha-nāyikam // VisSd_6.289 //</l>
+</lg>
+
+<lg>
+<l>udātta-bhāva-vinyāsa-saṃśritaṃ cottarottaram /</l>
+<l>iha pratimukhaṃ sandhim api kecit pracakṣate // VisSd_6.290 //</l>
+</lg>
+
+<lg>
+<l>saṃlāpike 'ṅkāś catvāras trayo vā nāyakaḥ punaḥ /</l>
+<l>pāṣaṇḍaḥ syād rasas tatra śṛṅgāra-karuṇottaraḥ // VisSd_6.291 //</l>
+</lg>
+
+<lg>
+<l>bhaveyuḥ pura-saṃrodha-cchala-saṅgrāma-vidravāḥ /</l>
+<l>na tatra vṛttir bhavati bhāratī na ca kaiśikī // VisSd_6.292 //</l>
+</lg>
+
+<lg>
+<l>prakhyāta-vṛttam ekāṅkaṃ prakhyātodātta-nāyakam /</l>
+<l>prasiddha-nāyikaṃ garbha-vimarśābhyāṃ vivarjitam // VisSd_6.293 //</l>
+</lg>
+
+<lg>
+<l>bhāratī-vṛtti-bahulaṃ śrīti-śabdena saṅkulam /</l>
+<l>mataṃ śrī-gaditaṃ nāma vidvadbhir uparūpakam // VisSd_6.294 //</l>
+</lg>
+
+<lg>
+<l>śrīr āsīnā śrī-gadite gāyet kiṃcit paṭhed api /</l>
+<l>ekāṅko bhāratī-prāya iti kecit pracakṣate // VisSd_6.295 //</l>
+</lg>
+
+<lg>
+<l>catvāraḥ śilpake 'ṅkāḥ syuś catasro vṛttayas tathā /</l>
+<l>aśānta-hāsyāś ca rasā nāyako brāhmaṇo mataḥ // VisSd_6.296 //</l>
+</lg>
+
+<lg>
+<l>varṇanātra śmaśānāder hīnaḥ syād upanāyakaḥ /</l>
+<l>saptaviṃśatir aṅgāni bhavanty etasya tāni tu // VisSd_6.297 //</l>
+</lg>
+
+<lg>
+<l>āśaṃsā-tarka-sandeha-tāpodvega-prasaktayaḥ /</l>
+<l>prayatna-grathanotkaṇṭhāvahitthā-pratipattayaḥ // VisSd_6.298 //</l>
+</lg>
+
+<lg>
+<l>vilāsālasya-bāṣpāṇi praharṣāśvāsa-mūḍhatāḥ /</l>
+<l>sādhanānugamocchvāsa-vismaya-prāptayas tathā // VisSd_6.299 //</l>
+</lg>
+
+<lg>
+<l>lābha-vismṛti-saṃpheṭā vaiśāradyaṃ prabodhanam /</l>
+<l>camatkṛtiś cety amīṣāṃ spaṣṭatvāl lakṣma nocyate // VisSd_6.300 //</l>
+</lg>
+
+<lg>
+<l>śṛṅgāra-bahulaikāṅkā daśa-lāsyāṅga-saṃyutā /</l>
+<l>vidūṣaka-viṭābhyāṃ ca pīṭhamardena bhūṣitā // VisSd_6.301 //</l>
+</lg>
+
+<lg>
+<l>hīnā garbha-vimarśābhyāṃ sandhibhyāṃ hīna-nāyakā /</l>
+<l>svalpavattā sunepathyā vikhyātā sā vilāsikā // VisSd_6.302 //</l>
+</lg>
+
+<lg>
+<l>durmallī caturaṅkā syāt kaiśikī-bhāratī-yutā /</l>
+<l>agarbhā nāgaranarā nyūna-nāyaka-bhūṣitā // VisSd_6.303 //</l>
+</lg>
+
+<lg>
+<l>trināliḥ prathamo 'ṅkāsyāṃ viṭa-krīḍā-mayo bhavet /</l>
+<l>pañcanālir dvitīyo 'ṅko vidūṣaka-vilāsavān // VisSd_6.304 //</l>
+</lg>
+
+<lg>
+<l>ṣaṇṇālikas tṛtīyas tu pīṭhamarda-vilāsavān /</l>
+<l>caturtho daśanāliḥ syād aṅkaḥ krīḍita-nāgaraḥ // VisSd_6.305 //</l>
+</lg>
+
+<lg>
+<l>nāṭikaiva prakaraṇī sārthavāhādi-nāyakā /</l>
+<l>samāna-vaṃśajā netur bhaved yatra ca nāyikā // VisSd_6.306 //</l>
+</lg>
+
+<lg>
+<l>hallīśa eka evāṅkaḥ saptāṣṭau daśa vā striyaḥ /</l>
+<l>vāg-udāttaika-puruṣaḥ kaiśikī-vṛttir ujjvalā /</l>
+<l>mukhāntimau tathā sandhī bahutālalaya-sthitiḥ // VisSd_6.307 //</l>
+</lg>
+
+<lg>
+<l>bhāṇikā ślakṣṇa-nepathyā mukha-nirvahaṇānvitā /</l>
+<l>kaiśikī-bhāratī-vṛtti-yuktaikāṅka-vinirmitā // VisSd_6.308 //</l>
+</lg>
+
+<lg>
+<l>udātta-nāyikā manda-nāyakātrāṅga-saptakam /</l>
+<l>upanyāso 'tha vinyāso virodhaḥ sādhvasaṃ tathā // VisSd_6.309 //</l>
+</lg>
+
+<lg>
+<l>samarpaṇaṃ nivṛttiś ca saṃhāra iti saptamaḥ /</l>
+<l>upanyāsaḥ prasaṅgena bhavet kāryasya kīrtanam // VisSd_6.310 //</l>
+</lg>
+
+<lg>
+<l>nirveda-vākya-vyutpattir vinyāsa iti sa smṛtaḥ /</l>
+<l>bhrānti-nāśo vibodhaḥ syān mithyākhyānaṃ tu sādhvasam // VisSd_6.311 //</l>
+</lg>
+
+<lg>
+<l>sopalambha-vacaḥ kopa-pīḍayeha samarpaṇam /</l>
+<l>nidarśanasyopanyāso nivṛttir iti kathyate // VisSd_6.312 //</l>
+</lg>
+
+<lg>
+<l>saṃhāra iti ca prāhur yat-kāryasya samāpanam /</l>
+<l>śravyaṃ śrotavya-mātraṃ tat-padya-gadya-mayaṃ dvidhā // VisSd_6.313 //</l>
+</lg>
+
+<lg>
+<l>chando-baddha-padaṃ padyaṃ tena muktena muktakam /</l>
+<l>dvābhyāṃ tu yugmakaṃ sāndānitakaṃ tribhir iṣyate // VisSd_6.314 //</l>
+</lg>
+
+<lg>
+<l>kalāpakaṃ caturbhiś ca pañcabhiḥ kulakaṃ matam /</l>
+<l>sarga-bandho mahā-kāvyaṃ tatraiko nāyakaḥ suraḥ // VisSd_6.315 //</l>
+</lg>
+
+<lg>
+<l>sad-vaṃśaḥ kṣatriyā vāpi dhīrodātta-guṇānvitaḥ /</l>
+<l>eka-vaṃśa-bhavā bhūpāḥ kulajā bahavo 'pi vā // VisSd_6.316 //</l>
+</lg>
+
+<lg>
+<l>śṛṅgāra-vīra-śāntānām eko 'ṅgī rasa iṣyate /</l>
+<l>aṅgāni sarve 'pi rasāḥ sarve nāṭaka-sandhayaḥ // VisSd_6.317 //</l>
+</lg>
+
+<lg>
+<l>itihāsodbhavaṃ vṛttam anyad vā sajjanāśrayam /</l>
+<l>catvāras tasya vargāḥ syus teṣv ekaṃ ca phalaṃ bhavet // VisSd_6.318 //</l>
+</lg>
+
+<lg>
+<l>ādau namaskriyāśīr vā vastu-nirdeśa eva vā /</l>
+<l>kvacin nindā khalādīnāṃ satāṃ ca guṇa-kīrtanam // VisSd_6.319 //</l>
+</lg>
+
+<lg>
+<l>eka-vṛtta-mayaiḥ padyair avasāne 'nya-vṛttakaiḥ /</l>
+<l>nātisvalpā nātidīrghāḥ sargā aṣṭādhikā iha // VisSd_6.320 //</l>
+</lg>
+
+<lg>
+<l>nānā-vṛtta-mayaḥ kvāpi sargaḥ kaścana dṛśyate /</l>
+<l>sargānte bhāvi-sargasya kathāyāḥ sūcanaṃ bhavet // VisSd_6.321 //</l>
+</lg>
+
+<lg>
+<l>sandhyā-sūryendu-rajanī-pradoṣa-dhvānta-vāsarāḥ /</l>
+<l>prātar madhyāhna-mṛgayā-śaila-rtu-vana-sāgarāḥ // VisSd_6.322 //</l>
+</lg>
+
+<lg>
+<l>saṃbhoga-vipralambhau ca muni-svarga-purādhvarāḥ /</l>
+<l>raṇa-prayāṇopayama-mantra-putrodayādayaḥ // VisSd_6.323 //</l>
+</lg>
+
+<lg>
+<l>varṇanīyā yathā-yogaṃ sāṅgopāṅgā amī iha /</l>
+<l>kaver vṛttasya vā nāmnā nāyakasyetarasya vā // VisSd_6.324 //</l>
+</lg>
+
+<lg>
+<l>nāmāsya sargopādeya-kathayā sarga-nāma tu /</l>
+<l>asminn ārṣe punaḥ sargā bhavanty ākhyāna-saṃjñakāḥ // VisSd_6.325 //</l>
+</lg>
+
+<lg>
+<l>prākṛtair nirmite tasmin sargā āśvāsa-saṃjñakāḥ /</l>
+<l>chandasā skandhakenaitat kvacid galitakair api // VisSd_6.326 //</l>
+</lg>
+
+<lg>
+<l>apabhraṃśa-nibaddhe 'smin sargāḥ kuḍavakābhidhāḥ /</l>
+<l>tathāpabhraṃśa-yogyāni cchandāṃsi vividhāny api // VisSd_6.327 //</l>
+</lg>
+
+<lg>
+<l>bhāṣāvibhāṣāniyamāt kāvyaṃ sarga-samujjhitam /</l>
+<l>ekārtha-pravaṇaiḥ padyaiḥ sandhi-sāmagrya-varjitam // VisSd_6.328 //</l>
+</lg>
+
+<lg>
+<l>khaṇḍa-kāvyaṃ bhavet kāvyasyaika-deśānusāri ca /</l>
+<l>koṣaḥ śloka-samūhas tu syād anyonyānapekṣakaḥ // VisSd_6.329 //</l>
+</lg>
+
+<lg>
+<l>vrajyā-krameṇa racitaḥ sa evātimanoramaḥ /</l>
+<l>vṛtta-gandhojjhitaṃ gadyaṃ muktakaṃ vṛtta-gandhi ca // VisSd_6.330 //</l>
+</lg>
+
+<lg>
+<l>bhaved utkalikā-prāyaṃ cūrṇakaṃ ca caturvidham /</l>
+<l>ādyaṃ samāsa-rahitaṃ vṛtta-bhāg ayutaṃ param // VisSd_6.331 //</l>
+</lg>
+
+<lg>
+<l>anyad-dīrgha-samāsāḍhyaṃ turyaṃ cālpa-samāsakam /</l>
+<l>kathāyāṃ sarasaṃ vastu gadyair eva vinirmitam // VisSd_6.332 //</l>
+</lg>
+
+<lg>
+<l>kvacid atra bhaved āryā kvacid vaktrāpavaktrake /</l>
+<l>ādau padyair namaskāraḥ khalāder vṛtta-kīrtanam // VisSd_6.333 //</l>
+</lg>
+
+<lg>
+<l>ākhyāyikā kathāvat syāt kaver vaṃśānukīrtanam /</l>
+<l>asyām anya-kavīnāṃ ca vṛttaṃ padyaṃ kvacit kvacit // VisSd_6.334 //</l>
+</lg>
+
+<lg>
+<l>kathāṃśānāṃ vyavaccheda āśvāsa iti badhyate /</l>
+<l>āryā-vaktrāpavaktrāṇāṃ chandasā yena kenacit // VisSd_6.335 //</l>
+</lg>
+
+<lg>
+<l>anyāpadeśenāśvāsa-mukhe bhāvy-artha-sūcanam /</l>
+<l>gadya-padya-mayaṃ kāvyaṃ campūr ity abhidhīyate // VisSd_6.336 //</l>
+</lg>
+
+<lg>
+<l>gadya-padya-mayī rāja-stutir virudam ucyate /</l>
+<l>karambhakaṃ tu bhāṣābhir vividhābhir vinirmitam // VisSd_6.337 //</l>
+</lg>
+
+<p>iti sāhitya-darpaṇe
+dṛśya-śravya-kāvya-nirūpaṇo nāma
+ṣaṣṭhaḥ paricchedaḥ</p>
+
+</div>
+<div>
+
+<p>(7)
+saptamaḥ paricchedaḥ
+(doṣa-nirṇayaḥ)</p>
+
+<lg>
+<l>rasāpakarṣakā doṣās te punaḥ pañcadhā matāḥ /</l>
+<l>pade tad-aṃśe vākye 'rthe saṃbhavanti rase 'pi yat // VisSd_7.1 //</l>
+</lg>
+
+<lg>
+<l>duḥśrava trividhāślīlānucitārthāprayuktatāḥ /</l>
+<l>grāmyo 'pratīta-sandigdha-neyārtha-nihatārthatāḥ // VisSd_7.2 //</l>
+</lg>
+
+<lg>
+<l>avācakatvaṃ kliṣṭatvaṃ viruddham atikāritā /</l>
+<l>avimṛṣṭa-vidheyāṃśa-bhāvaś ca pada-vākyayoḥ // VisSd_7.3 //</l>
+</lg>
+
+<lg>
+<l>kecid doṣā bhavanty eṣu padāṃśe 'pi pade 'paraṃ /</l>
+<l>nirarthakāsamarthatve cyuta-saṃskāratā tathā // VisSd_7.4 //</l>
+</lg>
+
+<lg>
+<l>varṇānāṃ pratikūlatvaṃ luptāhata-visargatāḥ /</l>
+<l>adhika-nyūna-kathita-padatā hata-vṛttatāḥ // VisSd_7.5 //</l>
+</lg>
+
+<lg>
+<l>patat-prakarṣatā sandhau viśleṣāślīla-kaṣṭatāḥ /</l>
+<l>ardhāntaraika-padatā samāpta-punar-āttatā // VisSd_7.6 //</l>
+</lg>
+
+<lg>
+<l>abhavan mata-saṃbandhākramāmata-parārthatāḥ /</l>
+<l>vācyasyānabhidhānaṃ ca bhagna-prakramatā tathā // VisSd_7.7 //</l>
+</lg>
+
+<lg>
+<l>tyāgaḥ prasiddher asthāne nyāsaḥ pada-samāsayoḥ /</l>
+<l>saṅkīrṇatā garbhitatā doṣāḥ syur vākya-mātragāḥ // VisSd_7.8 //</l>
+</lg>
+
+<lg>
+<l>apuṣṭa-duṣkrama-grāmya-vyāhatāślīla-kaṣṭatāḥ /</l>
+<l>anavīkṛta-nirhetu-prakāśita-viruddhatāḥ // VisSd_7.9 //</l>
+</lg>
+
+<lg>
+<l>sandigdha-punaruktatve khyāti-vidyā-viruddhate /</l>
+<l>sākāṅkṣatā-sahacara-bhinnatā-sthāna-yuktatā // VisSd_7.10 //</l>
+</lg>
+
+<lg>
+<l>aviśeṣe viśeṣaś cāniyame niyamas tathā /</l>
+<l>tayor viparyayo vidhy-anuvāda-yuktate tathā // VisSd_7.11 //</l>
+</lg>
+
+<lg>
+<l>nirmukta-punaruktatvaṃ mahā-doṣāḥ prakīrtitāḥ /</l>
+<l>rasasyoktiḥ sva-śabdena sthāyi-sañcāriṇor api // VisSd_7.12 //</l>
+</lg>
+
+<lg>
+<l>vyaktatā kalpitā kṛcchrād anubhāva-vibhāvayoḥ[*2] /</l>
+<l>akāṇḍe prathana-cchedau tathā dīptiḥ punaḥ punaḥ // VisSd_7.13 //</l>
+</lg>
+
+<p>{[*2] The following line from VisSd is missing here: paripanthir asāṅgasya vibhāvādeḥ parigrahaḥ}</p>
+
+<lg>
+<l>aṅgino 'nanusandhānam anaṅgasya ca kīrtanam /</l>
+<l>ativistṛtir aṅgasya prakṛtīnāṃ viparyayaḥ // VisSd_7.14 //</l>
+</lg>
+
+<lg>
+<l>arthānaucityam anye ca doṣā rasa-gatā matāḥ /</l>
+<l>ebhyaḥ pṛthag-alaṅkāra-doṣāṇāṃ naiva saṃbhavaḥ // VisSd_7.15 //</l>
+</lg>
+
+<lg>
+<l>vaktari krodha-saṃyukte tathā vācye samuddhate /</l>
+<l>raudrādau ca rase 'tyantaṃ duḥśravatvaṃ guṇo bhavet // VisSd_7.16 //</l>
+</lg>
+
+<lg>
+<l>suratārambha-goṣṭhyādāv aślīlatvaṃ tathā punaḥ /</l>
+<l>syātām adoṣau śleṣādau nihatārthāprayuktate // VisSd_7.17 //</l>
+</lg>
+
+<lg>
+<l>guṇaḥ syād apratītatvaṃ jñatvaṃ ced vaktṛ-vācyayoḥ /</l>
+<l>svayaṃ vāpi parāmṛśe kathitaṃ ca padaṃ punaḥ // VisSd_7.18 //</l>
+</lg>
+
+<lg>
+<l>vihitasyānuvādyatve viṣāde vismaye krudhi /</l>
+<l>dainye 'tha lāṭānuprāse 'nukampāyāṃ prasādane // VisSd_7.19 //</l>
+</lg>
+
+<lg>
+<l>arthāntara-saṅkramita-vācye harṣe 'vadhāraṇe /</l>
+<l>sandigdhatvaṃ tathā vyāja-stuti-paryavasāyi cet // VisSd_7.20 //</l>
+</lg>
+
+<lg>
+<l>vaiyākaraṇa-mukhye tu pratipādye 'tha vaktari /</l>
+<l>kaṣṭatvaṃ duḥśravatvaṃ vā grāmyatvam adhamoktiṣu // VisSd_7.21 //</l>
+</lg>
+
+<lg>
+<l>nirhetutā tu khyāte 'rthe doṣatāṃ naiva gacchati /</l>
+<l>kavīnāṃ samaye khyāte guṇaḥ khyāta-viruddhatā // VisSd_7.22 //</l>
+</lg>
+
+<lg>
+<l>mālinyaṃ vyomni pāpe yaśasi dhavalatā varṇyate hāsa-kīrtyoḥ raktau ca krodha-rāgau sarid udadhi-gataṃ paṅkajendīvarādi /</l>
+<l>toyādhāre 'khile 'pi prasarati ca marālādikaḥ pakṣi-saṅgho jyotsnā preyā cakorair jaladhara-samaye mānasaṃ yānti haṃsāḥ // VisSd_7.23 //</l>
+</lg>
+
+<lg>
+<l>pādāghātād aśokā vikasati bakulo yoṣitām āsyam adyair yūnām aṅgeṣu hārāḥ sphuṭati ca hṛdayaṃ viprayogasya tāpaiḥ /</l>
+<l>maurvī-rolamba-mālā dhanur atha viśikhāḥ kausumāḥ puṣpa-ketor bhinnaṃ syād asya vāṇair yuvajana-hṛdayaṃ strī-kaṭākṣeṇa tadvat // VisSd_7.24 //</l>
+</lg>
+
+<lg>
+<l>ahny-ambhojaṃ niśāyāṃ vikasati kumudaṃ candrikā śukla-pakṣe megha-dhvāneṣu nṛtyaṃ bhavati ca śikhināṃ nāpy aśoke phalaṃ syāt /</l>
+<l>na syāj jātī vasante na ca kusuma-phale gandha-sāra-drumāṇām ity ādy unneyam anyat kavi-samaya-gataṃ sat-kavīnāṃ prabandhe // VisSd_7.25 //</l>
+</lg>
+
+<lg>
+<l>dhanur jyādiṣu śabdeṣu śabdās tu dhanur-ādayaḥ /</l>
+<l>ārūḍhatvādi-bodhāya prayoktavyāḥ sthitā ime // VisSd_7.26 //</l>
+</lg>
+
+<lg>
+<l>uktāv ānanda-magnādeḥ syān nyūna-padatā guṇaḥ /</l>
+<l>kvacin na doṣo na guṇo guṇaḥ kvāpy adhikaṃ padam // VisSd_7.27 //</l>
+</lg>
+
+<lg>
+<l>samāpta-punar-āttatvaṃ na doṣo na guṇaḥ kvacit /</l>
+<l>garbhitatvaṃ guṇaḥ kvāpi patat-prakarṣatā tathā // VisSd_7.28 //</l>
+</lg>
+
+<lg>
+<l>kvacid uktau sva-śabdena na doṣo vyabhicāriṇaḥ /</l>
+<l>anubhāva-vibhāvābhyāṃ racanaṃ yatra nocitam // VisSd_7.29 //</l>
+</lg>
+
+<lg>
+<l>sañcāryāder viruddhasya bādhyatvena vaco guṇaḥ /</l>
+<l>virodhino 'pi smaraṇe sāmyena vacane tathā // VisSd_7.30 //</l>
+</lg>
+
+<lg>
+<l>bhaved virodho nānyonyam aṅginy aṅgatvam āptayoḥ /</l>
+<l>anukāre ca sarveṣāṃ doṣāṇāṃ naiva doṣatā // VisSd_7.31 //</l>
+</lg>
+
+<lg>
+<l>anyeṣām api doṣāṇām ity aucityān manīṣibhiḥ /</l>
+<l>adoṣatā ca guṇatā jñeyā cānubhayātmatā // VisSd_7.32 //</l>
+</lg>
+
+<p>iti sāhitya-darpaṇe doṣa-prakāśaḥ
+saptamaḥ paricchedaḥ</p>
+
+</div>
+<div>
+
+<p>(8)
+aṣṭamaḥ paricchedaḥ
+guṇa-nirṇayaḥ</p>
+
+<lg>
+<l>rasasyāṅgitvam āptasya dharmāḥ śauryādayo yathā /</l>
+<l>guṇāḥ mādhuryam ojo 'tha prasāda iti te tridhā // VisSd_8.1 //</l>
+</lg>
+
+<lg>
+<l>citta-dravībhāva-mayo hlādo mādhuryam ucyate /</l>
+<l>saṃbhoge karuṇe vipralambhe śānte 'dhikaṃ kramāt // VisSd_8.2 //</l>
+</lg>
+
+<lg>
+<l>mūrdhni vargāsty avarṇena yuktāṣ ṭa-ṭha-da-ḍhān vinā /</l>
+<l>raṇau laghū ca tad-vyaktau varṇāḥ kāraṇatāṃ gatāḥ // VisSd_8.3 //</l>
+</lg>
+
+<lg>
+<l>avṛttir alpa-vṛttir vā madhurā racanā tathā /</l>
+<l>ojaś cittasya vistāra-rūpaṃ dīptatvam ucyate // VisSd_8.4 //</l>
+</lg>
+
+<lg>
+<l>vīra-bībhatsa-raudreṣu krameṇādhikyam asya tu /</l>
+<l>vargasyādya-tṛtīyābhyāṃ yuktau varṇau tad-antimau // VisSd_8.5 //</l>
+</lg>
+
+<lg>
+<l>upary adho dvayor vā sarephau ṭa-ṭha-ḍa-ḍhaiḥ saha /</l>
+<l>śa-kāraś ca ṣa-kāraś ca tasya vyañjakatāṃ gatāḥ // VisSd_8.6 //</l>
+</lg>
+
+<lg>
+<l>tathā samāsa-bahulā ghaṭanauddhatya-śālinī /</l>
+<l>śleṣaḥ samādhir audāryaṃ prasāda iti ye punaḥ // VisSd_8.7 //</l>
+</lg>
+
+<lg>
+<l>guṇāś cirantanair uktā ojasy antarbhavanti te /</l>
+<l>grāmya-duḥśravatā-tyāgāt kāntiś ca sukumāratā // VisSd_8.8 //</l>
+</lg>
+
+<lg>
+<l>kvacid doṣas tu samatā mārgābheda-svarūpiṇī /</l>
+<l>anyathokta-guṇeṣv asyā antaḥpāto yathāyatham // VisSd_8.9 //</l>
+</lg>
+
+<lg>
+<l>ojaḥ prasādo mādhuryaṃ saukumāryam udāratā /</l>
+<l>tad-abhāvasya doṣatvāt svīkṛtā anugā guṇāḥ // VisSd_8.10 //</l>
+</lg>
+
+<lg>
+<l>artha-vyaktiḥ svabhāvokty-alaṅkāreṇa tathā punaḥ /</l>
+<l>rasa-dhvani-guṇībhūta-vyaṅgyānāṃ kānti-nāmakaḥ // VisSd_8.11 //</l>
+</lg>
+
+<lg>
+<l>śleṣo vicitratā-mātram adoṣaḥ samatā-param /</l>
+<l>na guṇatvaṃ samādheś ca tena nārtha-guṇāḥ pṛthak // VisSd_8.12 //</l>
+</lg>
+
+<p>iti sāhitya-darpaṇe guṇa-vivecano nāma
+aṣṭamaḥ paricchedaḥ</p>
+
+<p>-o)0(o-</p>
+
+<p>(9)
+navamaḥ paricchedaḥ
+rīti-nirṇayaḥ</p>
+
+<lg>
+<l>pada-saṅghaṭanā rītir aṅga-saṃsthā-viśeṣavat /</l>
+<l>upakartrī rasādīnāṃ sā punaḥ syāc caturvidhā // VisSd_9.1 //</l>
+</lg>
+
+<lg>
+<l>vaidarbhī cātha gauḍī ca pāñcālī lāṭikā tathā /</l>
+<l>mādhurya-vyañjakair varṇai racanā lalitātmikā // VisSd_9.2 //</l>
+</lg>
+
+<lg>
+<l>avṛttir alpa-vṛttir vā vaidarbhī rītir iṣyate /</l>
+<l>ojaḥ prakāśakair varṇair bandha āḍambaraḥ punaḥ // VisSd_9.3 //</l>
+</lg>
+
+<lg>
+<l>samāsa-bahulā gauḍī varṇaiḥ śeṣaiḥ punar dvayoḥ /</l>
+<l>samasta-pañcaṣa-pado bandhaḥ pāñcālikā matā // VisSd_9.4 //</l>
+</lg>
+
+<lg>
+<l>lāṭī tu rītir vaidarbhī-pāñcālyor antare sthitā /</l>
+<l>kvacit tu vaktrādyaucityād anyathā racanādayaḥ // VisSd_9.5 //</l>
+</lg>
+
+<p>iti sāhitya-darpaṇe rīti-vivecano nāma
+navamaḥ paricchedaḥ</p>
+
+</div>
+<div>
+
+<p>(10)
+daśama-paricchedaḥ
+alaṅkāra-tattvam</p>
+
+<lg>
+<l>śabdārthayor asthirā ye dharmāḥ śobhātiśāyinaḥ /</l>
+<l>rasādīn upakurvanto 'laṅkārās te 'ṅgadādivat // VisSd_10.1 //</l>
+</lg>
+
+<p>[śabdālaṅkārāḥ]</p>
+
+<lg>
+<l>āpātato yad arthasya paunaruktyena bhāṣaṇam /</l>
+<l>punar uktavad ābhāsaḥ sa bhinnākāra-śabdagaḥ // VisSd_10.2 //</l>
+</lg>
+
+<lg>
+<l>anuprāsaḥ śabda-sāmyaṃ vaiṣamye 'pi svarasya yat /</l>
+<l>cheko vyañjana-saṅghasya sakṛt sāmyam anekadhā // VisSd_10.3 //</l>
+</lg>
+
+<lg>
+<l>anekasyaikadhā sāmyam asakṛd vāpy anekadhā /</l>
+<l>ekasya sakṛd apy eṣa vṛtty-anuprāsa iṣyate // VisSd_10.4 //</l>
+</lg>
+
+<lg>
+<l>uccāryatvād yad ekatra sthāne tālūradādike /</l>
+<l>sādṛśyaṃ vyañjanasyaitac chruty-anuprāsa iṣyate // VisSd_10.5 //</l>
+</lg>
+
+<lg>
+<l>vyañjanaṃ ced yathāvasthaṃ sahāyena svareṇa tu /</l>
+<l>āvartyate 'ntya-yojyatvād antyānuprāsa eva tat // VisSd_10.6 //</l>
+</lg>
+
+<lg>
+<l>śabdārthayoḥ paunaruktyaṃ bhavet tātparya-mātrataḥ /</l>
+<l>lāṭānuprāsa ity ukto 'nuprāsaḥ pañcadhā mataḥ // VisSd_10.7 //</l>
+</lg>
+
+<lg>
+<l>saty arthe pṛthag-arthāyāḥ svara-vyañjana-santateḥ /</l>
+<l>krameṇa tenaivāvṛttir yamakaṃ vinigadyate // VisSd_10.8 //</l>
+</lg>
+
+<lg>
+<l>anyasyānyārthakaṃ vākyam anyathā yojayed yadi /</l>
+<l>anyaḥ śleṣeṇa kākvā vā sā vakroktis tato dvidhā // VisSd_10.9 //</l>
+</lg>
+
+<lg>
+<l>śabdair eka-vidhair eva bhāṣāsu vividhāsv api /</l>
+<l>vākyaṃ yatra bhavet so 'yaṃ bhāṣā-sama itīṣyate // VisSd_10.10 //</l>
+</lg>
+
+<lg>
+<l>śliṣṭaiḥ padair anekārthābhidhāne śleṣa ucyate /</l>
+<l>varṇa-pratyaya-liṅgānāṃ prakṛtyoḥ padayor api // VisSd_10.11 //</l>
+</lg>
+
+<lg>
+<l>śleṣād vibhakti-vacana-bhāṣāṇām aṣṭadhā ca saḥ /</l>
+<l>punas tridhā sabhaṅgo 'bhaṅgas tad ubhayātmakaḥ // VisSd_10.12 //</l>
+</lg>
+
+<lg>
+<l>padyādyākāra-hetutve varṇanāṃ citram ucyate /</l>
+<l>rasasya paripanthitvān nālaṅkāraū prahelikā // VisSd_10.13 //</l>
+</lg>
+
+<lg>
+<l>ukti-vaicitrya-mātraṃ sā cyuta-dattākṣarādikā /</l>
+<l>sāmyaṃ vācyam avaidharmye vākyaikye upamā dvayoḥ // VisSd_10.14 //</l>
+</lg>
+
+<lg>
+<l>sā pūrṇā yadi sāmānya-dharma aupamya-vāci ca /</l>
+<l>upamānaṃ copameyaṃ bhaved vācyam iyaṃ punaḥ // VisSd_10.15 //</l>
+</lg>
+
+<lg>
+<l>śrautī yathevāvā-śabdā ivārtho vā vatir yadi /</l>
+<l>ārthī tulya-samānādyās tulyārtho yatra vā vatiḥ // VisSd_10.16 //</l>
+</lg>
+
+<lg>
+<l>dve tad-dhite samāse 'pi vākye pūrṇā ṣaḍ eva tat /</l>
+<l>luptā sāmānya-dharmāder ekasya yadi vā dvayoḥ // VisSd_10.17 //</l>
+</lg>
+
+<lg>
+<l>trayāṇāṃ vānupādāne śrauty ārthī sāpi pūrvavat /</l>
+<l>pūrṇāvad dharma-lope sā vinā śrautīṃ tu tad-dhite // VisSd_10.18 //</l>
+</lg>
+
+<lg>
+<l>ādhāra-karma-vihite dvividhe ca kyaci kyaṅi /</l>
+<l>karma-kartror ṇamuli casyād evaṃ pañcadhā punaḥ // VisSd_10.19 //</l>
+</lg>
+
+<lg>
+<l>upamānānupādāne dvidhā vākya-samāsayoḥ /</l>
+<l>aupamya-vācino lope samāse kvipi ca dvidhā // VisSd_10.20 //</l>
+</lg>
+
+<lg>
+<l>dvidhā samāse vākye ca lope dharmopamānayoḥ /</l>
+<l>kvip-samāsa-gatā dvedhā dharmevādivi-lopane // VisSd_10.21 //</l>
+</lg>
+
+<lg>
+<l>upameyasya lope tu syād eka pratyaye kyaci /</l>
+<l>dharmopameya-lope 'nyā trilope ca samāsa-gā // VisSd_10.22 //</l>
+</lg>
+
+<lg>
+<l>tenopamāyā bhedāḥ syuḥ saptaviṃśati-saṅkhyakāḥ /</l>
+<l>eka-rūpaḥ kvacit kvāpi bhinnaḥ sādhāraṇo guṇaḥ // VisSd_10.23 //</l>
+</lg>
+
+<lg>
+<l>bhinne bimbānubimbatvaṃ śabda-mātreṇa vā bhidā /</l>
+<l>eka-deśa-vivartiny upamā vācyatva-gamyate // VisSd_10.24 //</l>
+</lg>
+
+<lg>
+<l>bhavetāṃ yatra sāmyasya kathitā rasanopamā /</l>
+<l>yathordhvam upameyasya yadi syād upamānatā // VisSd_10.25 //</l>
+</lg>
+
+<lg>
+<l>mālopamā yad ekasyopamānaṃ bahu dṛśyate /</l>
+<l>upamānopameyatvam ekasyaiva tv ananvayaḥ // VisSd_10.26 //</l>
+</lg>
+
+<lg>
+<l>paryāyeṇa dvayor etad upameyopamā matā /</l>
+<l>sadṛśānubhavād vastu-smṛtiḥ smaraṇam ucyate // VisSd_10.27 //</l>
+</lg>
+
+<lg>
+<l>rūpakaṃ rūpitāropād viṣaye nirapahnave /</l>
+<l>tat paraṃparitaṃ sāṅgaṃ niraṅgam iti ca tridhā // VisSd_10.28 //</l>
+</lg>
+
+<lg>
+<l>yatra kasyacid āropaḥ parāropaṇa-kāraṇam /</l>
+<l>tat paraṃparitaṃ prāhuḥ śliṣṭāśliṣṭa-nibandhanam // VisSd_10.29 //</l>
+</lg>
+
+<lg>
+<l>pratyekaṃ kevalaṃ mālā-rūpakaṃ ceti caturvidham /</l>
+<l>aṅgino yadi sāṅgasya rūpaṇaṃ sāṅgam eva tat // VisSd_10.30 //</l>
+</lg>
+
+<lg>
+<l>samasta-vastu-viṣayam eka-deśa-vivarti ca /</l>
+<l>āropyāṇām aśeṣāṇāṃ śābdatve prathamaṃ matam // VisSd_10.31 //</l>
+</lg>
+
+<lg>
+<l>yatra kasyacid ārthatvam eka-deśa-vivarti tat /</l>
+<l>niraṅgaṃ kevalasyaiva rūpaṇaṃ tad api dvidhā // VisSd_10.32 //</l>
+</lg>
+
+<lg>
+<l>mālā-kevala-rūpatvāt tenāṣṭau rūpaka-bhedāḥ /</l>
+<l>dṛśyante kvacid āropyāḥ śliṣṭāḥ saṅge 'pi rūpake // VisSd_10.33 //</l>
+</lg>
+
+<lg>
+<l>adhikārūḍha-vaiśiṣṭyaṃ rūpakaṃ yat tad eva tat /</l>
+<l>viṣayārthatayāropye prakṛtārthopayogini // VisSd_10.34 //</l>
+</lg>
+
+<lg>
+<l>pariṇāmo bhavet tulyā tulyādhikaraṇo dvidhā /</l>
+<l>sandehaḥ prakṛte 'nyasya saṃśayaḥ pratibhotthitaḥ // VisSd_10.35 //</l>
+</lg>
+
+<lg>
+<l>śuddho niścaya-garbhāsau niścayānta iti tridhā /</l>
+<l>sāmyād atasmiṃs tad-buddhir bhrāntimān pratibhotthitā // VisSd_10.36 //</l>
+</lg>
+
+<lg>
+<l>kvacid bhedād gṛhītṛṇāṃ viṣayāṇāṃ tathā kvacit /</l>
+<l>ekasyānekadhollekho yaḥ sa ullekha ucyate // VisSd_10.37 //</l>
+</lg>
+
+<lg>
+<l>prakṛtaṃ pratiṣidhyānyasthāpanaṃ syād apahnutiḥ /</l>
+<l>gopanīyaṃ kam apy arthaṃ dyotayitvā kathañcana // VisSd_10.38 //</l>
+</lg>
+
+<lg>
+<l>yadi śleṣeṇānyathā vānyathayet sāpy apahnutiḥ /</l>
+<l>anyan niṣidhya prakṛta-sthāpanaṃ niścayaḥ punaḥ // VisSd_10.39 //</l>
+</lg>
+
+<lg>
+<l>bhavet saṃbhāvanotprekṣā prakṛtasya parātmanā /</l>
+<l>vācyā pratīyamānā sā prathamaṃ dvividhā matā // VisSd_10.40 //</l>
+</lg>
+
+<lg>
+<l>vācye vādeḥ prayoge syād aprayoge parā punaḥ /</l>
+<l>jātir guṇaḥ kriyā dravyaṃ yad utprekṣyaṃ dvayor api // VisSd_10.41 //</l>
+</lg>
+
+<lg>
+<l>tad aṣṭadhāpi pratyekaṃ bhāvābhāvābhimānataḥ /</l>
+<l>guṇa-kriyā-svarūpatvān nimittasya punaś ca tāḥ // VisSd_10.42 //</l>
+</lg>
+
+<lg>
+<l>dvātriṃśad-vidhatāṃ yānti tatra vācyābhidhāḥ punaḥ /</l>
+<l>vinā dravyaṃ tridhā sarvāḥ svarūpa-phala-hetugāḥ // VisSd_10.43 //</l>
+</lg>
+
+<lg>
+<l>ukty-anuktyor nimittasya dvidhā tatra svarūpagāḥ /</l>
+<l>pratīyamānā bhedāś ca pratyekaṃ phala-hetugāḥ // VisSd_10.44 //</l>
+</lg>
+
+<lg>
+<l>ukty-anuktyoḥ prastutasya pratyekaṃ tā api dvidhā /</l>
+<l>alaṅkārāntarotthā sā vaicitryam adhikaṃ bhajet // VisSd_10.45 //</l>
+</lg>
+
+<lg>
+<l>siddhatve 'dhyavasāyasyātiśayoktir nigadyate /</l>
+<l>bhede 'py abhedaḥ saṃbandhe 'saṃbandhas tad-viparyayau // VisSd_10.46 //</l>
+</lg>
+
+<lg>
+<l>paurvāparyātmakaṃ kārya-hetvoḥ sā pañcadhā mataḥ /</l>
+<l>padārthānāṃ prastutānām anyeṣāṃ vā yadā bhavet // VisSd_10.47 //</l>
+</lg>
+
+<lg>
+<l>eka-dharmābhisaṃbandhaḥ syāt tadā tulyayogitā /</l>
+<l>aprastuta-prastutayor dīpakaṃ tu nigadyate // VisSd_10.48 //</l>
+</lg>
+
+<lg>
+<l>atha kārakam ekaṃ syād anekāsu kriyāsu cet /</l>
+<l>prativastūpamā sā syād vākyayor gamya-sāmyayoḥ // VisSd_10.49 //</l>
+</lg>
+
+<lg>
+<l>eko 'pi dharmaḥ sāmānyo yatra nirdiśyate pṛthak /</l>
+<l>dṛṣṭāntas tu sadharmasyāpi vastunaḥ pratibimbanaḥ // VisSd_10.50 //</l>
+</lg>
+
+<lg>
+<l>saṃbhavan vastusaṃbandho 'saṃbhavan vāpi kutracit /</l>
+<l>yatra bimbānubimbatvaṃ bodhayets sā nidarśanā // VisSd_10.51 //</l>
+</lg>
+
+<lg>
+<l>ādhikyam upameyasyopamānān nyūnatāthavā /</l>
+<l>vyatireka eka ukte 'nukte hetau punas tridhā // VisSd_10.52 //</l>
+</lg>
+
+<lg>
+<l>caturvidho 'pi sāmyasya bodhanāc chabdato 'rthataḥ /</l>
+<l>ākṣepāc ca dvādaśadhā śleṣe 'pīti triraṣṭadhā // VisSd_10.53 //</l>
+</lg>
+
+<lg>
+<l>pratyekaṃ syān militāṣṭa-catvāriṃśad-vidhaḥ punaḥ /</l>
+<l>sahārthasya balād ekaṃ yatra syād vācakaṃ dvayoḥ // VisSd_10.54 //</l>
+</lg>
+
+<lg>
+<l>sā sahoktir mūla-bhūtātiśayoktir yadā bhavet /</l>
+<l>vinoktir yad vinānyena nāsādhv anyad asādhu vā // VisSd_10.55 //</l>
+</lg>
+
+<lg>
+<l>samāsoktiḥ samair yatra kārya-liṅga-viśeṣaṇaiḥ /</l>
+<l>vyavahāra-samāropaḥ prakṛtenāsya vastunaḥ // VisSd_10.56 //</l>
+</lg>
+
+<lg>
+<l>uktair viśeṣaṇaiḥ sābhiprāyaiḥ parikaro mataḥ /</l>
+<l>śabdaiḥ svabhāvād ekārthe śleṣo 'nekārtha-vācanam // VisSd_10.57 //</l>
+</lg>
+
+<lg>
+<l>kvacid viśeṣaḥ sāmānyāt sāmānyaṃ vā viśeṣataḥ /</l>
+<l>kāryān nimittaṃ kāryaṃ ca hetor atha samāt samam // VisSd_10.58 //</l>
+</lg>
+
+<lg>
+<l>aprastutāt prastutaṃ ced gamyate pañcadhā tataḥ /</l>
+<l>aprastuta-praśaṃsā syād uktā vyāja-stutiḥ punaḥ // VisSd_10.59 //</l>
+</lg>
+
+<lg>
+<l>nindā-stutibhyāṃ vācyābhyāṃ gamyatve stuti-nindayoḥ /</l>
+<l>paryāyoktaṃ yadā bhaṅgyā gamyam evābhidhīyate // VisSd_10.60 //</l>
+</lg>
+
+<lg>
+<l>sāmānyaṃ vā viśeṣeṇa viśeṣas tena vā yadi /</l>
+<l>kāryaṃ ca kāraṇenedaṃ kāryeṇa ca samarthyate // VisSd_10.61 //</l>
+</lg>
+
+<lg>
+<l>sādharmyenetareṇārthāntara-nyāso 'ṣṭadhā tataḥ /</l>
+<l>hetor vākya-padārthatve kāvya-liṅgo nigadyate // VisSd_10.62 //</l>
+</lg>
+
+<lg>
+<l>anumānaṃ tu vicchityā jñānaṃ sādhyasya sādhanāt /</l>
+<l>abhedenābhidhā-hetur hetor hetumatā saha // VisSd_10.63 //</l>
+</lg>
+
+<lg>
+<l>anukūlaṃ prātikūlyam anukūla-vidhāyi cet /</l>
+<l>vastuno vaktum iṣṭasya viśeṣa-pratipattaye // VisSd_10.64 //</l>
+</lg>
+
+<lg>
+<l>niṣedhābhāsa ākṣepo vakṣyamāṇoktago dvidhā /</l>
+<l>aniṣṭasya tathārthasya vidhyābhāsaḥ paro mataḥ // VisSd_10.65 //</l>
+</lg>
+
+<lg>
+<l>vibhāvanā vinā hetuṃ kāryotpattir yad ucyate /</l>
+<l>uktānukta-nimittatvād dvidhā sā parikīrtitā // VisSd_10.66 //</l>
+</lg>
+
+<lg>
+<l>sati hetau phalābhāve viśeṣoktis tathā dvidhā /</l>
+<l>jātiś caturbhir jātādyair guṇo guṇādibhis tribhiḥ // VisSd_10.67 //</l>
+</lg>
+
+<lg>
+<l>kriyā ca kriyādravyābhyāṃ dravyaṃ dravyeṇa vā mithaḥ /</l>
+<l>viruddham iva bhāseta virodho 'sau daśākṛtiḥ // VisSd_10.68 //</l>
+</lg>
+
+<lg>
+<l>kārya-kāraṇayor bhinna-deśatāyām asaṅgatiḥ /</l>
+<l>guṇau kriye vā yat syātāṃ viruddhe hetu-kāryayoḥ // VisSd_10.69 //</l>
+</lg>
+
+<lg>
+<l>yad vārabdhasya vaiphalyam anarthasya ca saṃbhavaḥ /</l>
+<l>virūpayoḥ saṃghaṭanā yā ca tad viṣamaṃ matam // VisSd_10.70 //</l>
+</lg>
+
+<lg>
+<l>samaṃ syād ānurūpyeṇa ślāghā yogyasya vastunaḥ /</l>
+<l>vicitraṃ yad viruddhasya kṛtir iṣṭa-phalāptaye // VisSd_10.71 //</l>
+</lg>
+
+<lg>
+<l>āśrayāśrayinor ekasyādhikye 'dhikam ucyate /</l>
+<l>anyonyam ubhayor eka-kriyāyāḥ kāraṇaṃ mithaḥ // VisSd_10.72 //</l>
+</lg>
+
+<lg>
+<l>yad ādheyam anādhāram ekaṃ cāneka-gocaram /</l>
+<l>kiñcit prakurvataḥ kāryam aśakyasyetarasya vā // VisSd_10.73 //</l>
+</lg>
+
+<lg>
+<l>kāryasya karaṇaṃ daivād viśeṣas trividhas tataḥ /</l>
+<l>vyāghātaḥ sa tu kenāpi vastu yena yathākṛtam // VisSd_10.74 //</l>
+</lg>
+
+<lg>
+<l>tenaiva ced upāyena kurute 'nyas tad anyathā /</l>
+<l>saukāryeṇa ca kāryasya viruddhaṃ kriyate yadi // VisSd_10.75 //</l>
+</lg>
+
+<lg>
+<l>paraṃ paraṃ prati yadi pūrva-pūrvasya hetutā /</l>
+<l>tadā kāraṇa-māla syāt tan mālā-dīpakaṃ punaḥ // VisSd_10.76 //</l>
+</lg>
+
+<lg>
+<l>dharmiṇām ekadharmeṇa saṃbaddho yady athottaram /</l>
+<l>pūrvaṃ pūrvaṃ prati viśeṣaṇatvena paraṃ param // VisSd_10.77 //</l>
+</lg>
+
+<lg>
+<l>sthāpyate 'pohate vā cet syāt tadaikāvalī dvidhā /</l>
+<l>uttarottaram utkarṣo vastunaḥ sāra ucyate // VisSd_10.78 //</l>
+</lg>
+
+<lg>
+<l>yathāsāṅkhyam anuddeśa uddiṣṭānāṃ krameṇa yat /</l>
+<l>kvacid ekam anekasmin ekaṃ caikaśaḥ kramāt // VisSd_10.79 //</l>
+</lg>
+
+<lg>
+<l>bhavati kriyate vā cet tadā paryāya iṣyate /</l>
+<l>parivṛttir vinimayaḥ sama-nyūnādhikair bhavet // VisSd_10.80 //</l>
+</lg>
+
+<lg>
+<l>praśnād apraśnato vāpi kathitād vastuno bhavet /</l>
+<l>tādṛg anya-vyāpohaś cec chābda ārtho 'thavā tadā // VisSd_10.81 //</l>
+</lg>
+
+<lg>
+<l>parisaṅkhyottaraṃ praśnasyottarād unnayo yadi /</l>
+<l>yac cāsakṛd asaṃbhāvyaṃ saty api praśna uttaram // VisSd_10.82 //</l>
+</lg>
+
+<lg>
+<l>daṇḍāpūpikayānyārthāgamo 'rthāpattir iṣyate /</l>
+<l>vikalpas tulya-balayor virodhaś cāntarāyataḥ // VisSd_10.83 //</l>
+</lg>
+
+<lg>
+<l>samuccayo 'yam ekasmin sati kāryasya sādhake /</l>
+<l>khalekapotikā-nyāyāt tat-karas tat-paro 'pi cet // VisSd_10.84 //</l>
+</lg>
+
+<lg>
+<l>guṇau kriye vā yugapat syātāṃ yad vā guṇa-kriye /</l>
+<l>samādhiḥ sukare kārye daivād vastv antarāgamāt // VisSd_10.85 //</l>
+</lg>
+
+<lg>
+<l>pratyanīkam aśaktena pratīkāre ripor yadi /</l>
+<l>tadīyasya tiraskāras tasyotkarṣasya sādhakaḥ // VisSd_10.86 //</l>
+</lg>
+
+<lg>
+<l>prasiddhasyopamānasyopameyatva-prakalpanam /</l>
+<l>niṣphalatvābhidhānaṃ vā pratīpam iti kathyate // VisSd_10.87 //</l>
+</lg>
+
+<lg>
+<l>uktvā cātyantam utkarṣam atyutkṛṣṭasya vastunaḥ /</l>
+<l>kalpite 'py upamānatve pratīpaṃ kecid ūcire // VisSd_10.88 //</l>
+</lg>
+
+<lg>
+<l>mīlitaṃ vastuno guptiḥ kenacit tulya-lakṣmaṇā /</l>
+<l>sāmānyaṃ prakṛtasyānya-tādātmyaṃ sadṛśair guṇaiḥ // VisSd_10.89 //</l>
+</lg>
+
+<lg>
+<l>tadguṇaḥ sva-guṇa-tyāgād atyutkṛṣṭa-guṇa-grahaḥ /</l>
+<l>tad-rūpānahāras tu hetau saty apy atadguṇaḥ // VisSd_10.90 //</l>
+</lg>
+
+<lg>
+<l>saṃlakṣitas tu sūkṣmo 'rtha ākāreṇeṅgitena vā /</l>
+<l>kayāpi sūcyate bhaṅgyā yatra sūkṣmaṃ tad ucyate // VisSd_10.91 //</l>
+</lg>
+
+<lg>
+<l>vyājoktir gopanaṃ vyājād udbhinnasya tu vastunaḥ /</l>
+<l>svabhāvoktir durūhārthaḥ svakriyā-rūpa-varṇanam // VisSd_10.92 //</l>
+</lg>
+
+<lg>
+<l>adbhutasya padārthasya bhūtasyārthe bhaviṣyataḥ /</l>
+<l>yat pratyakṣāyamānatvaṃ tad bhāvikam udāhṛtam // VisSd_10.93 //</l>
+</lg>
+
+<lg>
+<l>lokātiśayasaṃpattir vastunodāttam ucyate /</l>
+<l>yad vāpi prastutasyāṅgaṃ mahatāṃ caritaṃ bhavet // VisSd_10.94 //</l>
+</lg>
+
+<lg>
+<l>rasa-bhāvau tad-ābhāsau bhāvasya praśamas tathā /</l>
+<l>guṇī-bhūtatvam āyānti yadālaṅkṛtayas tadā // VisSd_10.95 //</l>
+</lg>
+
+<lg>
+<l>rasavat preya ūrjasvi samāhitam iti kramāt /</l>
+<l>bhāvasya codaye sandhau miśratve ca tad-ākhyakāḥ // VisSd_10.96 //</l>
+</lg>
+
+<lg>
+<l>yady eta evālaṅkārāḥ paraspara-vimiśritāḥ /</l>
+<l>tadā pṛthag-alaṅkārau saṃsṛṣṭiḥ saṅkaras tathā // VisSd_10.97 //</l>
+</lg>
+
+<lg>
+<l>aṅgāṅgitve 'laṃkṛtīnāṃ tadvad ekāśrayasthitau /</l>
+<l>sandigdhatve ca bhavati saṅkaras trividhaḥ punaḥ // VisSd_10.98 //</l>
+</lg>
+
+<lg>
+<l>śrī-candra-śekhara-mahā-kavi-candra-sūnu-śrī-viśvanātha-kavirāja-kṛtaṃ prabandham /</l>
+<l>sāhitya-darpaṇam amuṃ sudhiyo vilokya sāhitya-tattvam akhilaṃ sukham eva vitta // VisSd_10.99 //</l>
+</lg>
+
+<lg>
+<l>yāvat prasannendu-nibhānanā śrī-nārāyaṇasyāṅkam alaṅkaroti /</l>
+<l>tāvan manaḥ saṃmadayan kavīnām eṣa prabandhaḥ prathito 'stu loke // VisSd_10.100 //</l>
+</lg>
+
+<p>ity ālaṅkārika-cakravarti-sāndhi-vigrahika-mah āpātra-śrī-viśvanātha-kavirāja-kṛte
+sāhitya-darpaṇe daśamaḥ paricchedaḥ</p>
+
+  </div>
+</body>
+</text>
+</TEI>

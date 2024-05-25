@@ -1,0 +1,2670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_kedArabhaTTa-vRttaratnAkara-comm">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Vṛttaratnākara with Sulhaṇa's commentary Sukavihṛdayānandinī</title>
+	<author>Kedārabhaṭṭa</author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>Dhaval Patel</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Dhaval Patel</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/5_poetry/1_chandas/kvrtrsuu.htm">kvrtrsuu.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Kedarabhatta: Vrttaratnakara, with Sulhana's Sukavihrdayanandini (comm.)
+<lb/>Based on a manuscript from Patan.
+<lb/>
+<lb/>Input by Dhaval Patel
+<lb/>
+<lb/>BOLD for mula text and catch-words in comm.
+<lb/>
+<lb/>METRICS:
+<lb/>^ = short
+<lb/>_ = long
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>a manuscript from Patan.</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Vṛttaratnākara+comm = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Poetry -- Chandas</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+
+
+
+
+
+
+
+<p>Kedārabhaṭṭa: Vṛttaratnākara, with Sulhaṇa's Sukavihṛdayānandinī</p>
+
+
+<p>prathamo 'dhyāyaḥ</p>
+
+<p>namaḥ sarasvatyai /
+<lg>
+<l>saśrīkaṃ prabhayā yutaṃ rucirayā prodbhāsitaṃ gaṅgayā</l>
+<l>nānāvaktravirājitaṃ śaśikalāpīḍocchrayā 'laṅkṛtam /</l>
+<l>āryopetamupasthitākhilagaṇasrakpūjitaṃ sarvadā</l>
+<l>chaṃdaḥśāstramiveśvarasya jayati trailokyavaṃdyaṃ vapuḥ // 1</l>
+</lg>
+<lg>
+<l>kṛṣṇātreyasya gotre samajani purā dākṣiṇātyāgraṇīryo</l>
+<l>velādityābhidhānaḥ sukavirabhavadbhāsvarastasya sūnuḥ /</l>
+<l>tatputraḥ sulhaṇākhyaḥ sulalitapadāṃ vṛttaratnākarākhya-</l>
+<l>chaṃdovṛttiṃ sa cakre sukavihṛdayānaṃdanīnāmadheyām // 2</l>
+</lg></p>
+
+<p>śāstrāraṃbhe śāstrakāra iṣṭādhikṛtadevatānamaskārapūrvakaśāstrasaṃbaṃdhaprayojanaṃ ślokatrayeṇāha /
+<l rend="bold">sukhasaṃtānasiddhyarthaṃ natvā brahmācyutārcitam /</l>
+<l rend="bold">gaurīvināyakopetaṃ śaṃkaraṃ lokaśaṃkaram // KVrk_1.1 //</l>
+<l rend="bold">vedārthaśaivaśāstrajñaḥ pavyeko 'bhūddvijottamaḥ /</l>
+<l rend="bold">tasya putro 'sti kedāraḥ śivapādārcane rataḥ // KVrk_1.2 //</l>
+<l rend="bold">tenedaṃ kriyate chando lakṣalakṣaṇasaṃyutam /</l>
+<l rend="bold">vṛttaratnākaraṃ nāma bālānāṃ sukhabuddhaye // KVrk_1.3 //</l></p>
+
+<p>vedānāmarthā vedārthāḥ / śivo devatā yeṣāṃ tāni śaivāni śāstrāṇi / vedārthāśca śaivaśāstrāṇi ca tāni jānātīti sa tathoktaḥ ya <hi rend="bold">pavyeko</hi> nāma <hi rend="bold">dvijottamo 'bhūttasya</hi> pavyekasya <hi rend="bold">kedāra</hi>nāmā śivacaraṇārādhanaparaḥ putro 'sti / <hi rend="bold">tena</hi> kedāreṇedaṃ vakṣyamāṇalakṣaṇaṃ <hi rend="bold">chandaḥ</hi> <hi rend="bold">kriyate</hi> / <hi rend="bold">lakṣya</hi>mudāharaṇaṃ <hi rend="bold">lakṣaṇaṃ</hi> niyatākṣaramātrāgaṇaracanā tābhyāṃ <hi rend="bold">saṃyutaṃ</hi> <hi rend="bold">lakṣalakṣaṇasaṃyutam </hi>/ kiṃ nāma / <hi rend="bold">vṛttaratnākaraṃ</hi> <hi rend="bold">nāma</hi> / vṛttāni śrīprabhṛtīni tānyeva ratnāni teṣāmākara utpattisthānam / kimarthaṃ / <hi rend="bold">sukhasiddhaye</hi> / sukhena siddhiḥ sukhasiddhistasyai sukhasiddhaye / keṣām / <hi rend="bold">bālānāṃ</hi> mandabuddhīnām / kiṃkṛtvā / <hi rend="bold">natvā</hi> / kam / <hi rend="bold">śaṃkaraṃ</hi> mahādevam / kathaṃbhūtam / <hi rend="bold">lokaśaṃkaraṃ</hi> lokānāṃ śaṃ sukhaṃ karotīti lokaśaṃkarastam / punaḥ kathaṃbhūtam / <hi rend="bold">brahmācyutārcitaṃ</hi> viraṃcinārāyaṇapūjitam / punaḥ kathaṃbhūtaṃ / <hi rend="bold">gaurīvināyakopetaṃ</hi> gaurī ca vināyakaśca gaurīvināyakau tābhyāṃ upetaṃ saṃyutam / kimartham / <hi rend="bold">sukhasaṃtānasiddhyartham </hi>/ sukhaṃ paraṃ brahmānandātmakaṃ saṃtānaḥ putrapautrādi tayoḥ siddhiḥ prāptistadarthaṃ sukhasaṃtānasiddhyartham / <hi rend="bold">natvā</hi> praṇamyeti saṃbaṃdhaḥ / tribhirviśeṣakam || 1-3 ||</p>
+
+<p>chandaḥśabdena kimucyate ityāha /
+<l rend="bold">piṅgalādibhirācāryairyaduktaṃ laukikaṃ dvidhā /</l>
+<l rend="bold">mātrāvarṇavibhedena chandastadiha kathyate // KVrk_1.4 //</l></p>
+
+<p><hi rend="bold">tadi</hi>daṃ śāstre <hi rend="bold">chandaḥ</hi> <hi rend="bold">kathyate</hi> / <hi rend="bold">yatpiṃgalādibhirācāryaiḥ</hi> chandaḥśāstraprayoktṛbhi<hi rend="bold">rukta</hi>mabhihitam / <hi rend="bold">laukikaṃ</hi> loke bhavaṃ na vaidikaṃ / kāvyādiṣu tasyānupayogāt / <hi rend="bold">dvidhā</hi> dviprakāram / kathamityāśaṃkāyāṃ <hi rend="bold">mātrāvarṇavibhedene</hi>tyāha / mātrābhedena āryādi varṇabhedena śrīprabhṛti vṛttabhedeneti || 4 ||</p>
+
+<p>atha granthasaṃkhyāmāha /
+<l rend="bold">ṣaḍadhyāyanibaddhasya chandaso 'sya parisphuṭam /</l>
+<l rend="bold">pramāṇamapi vijñeyaṃ ṣaṭtriṃśadadhikaṃ śatam // KVrk_1.5 //</l></p>
+
+<p>adhīyanta i<hi rend="bold">tyadhyāyā</hi>ste ca vakṣyamāṇalakṣaṇāḥ saṃjñābhidhānamātrāvṛttasamavṛttārdhasamavṛttaviṣamavṛttaṣaṭpratyayalakṣaṇāḥ <hi rend="bold">ṣaḍe</hi>va ṣaḍbhi<hi rend="bold">rnibaddhasya</hi> chandaḥśāstrasya <hi rend="bold">pramāṇaṃ</hi> saṃkhyā <hi rend="bold">ṣaṭtriṃśadadhikaṃ śataṃ vijñeyam </hi>|| 5 ||</p>
+
+<p>atha gaṇanāmāha /
+<l rend="bold">myarastajabhnagairlāntairebhirdaśabhirakṣaraiḥ /</l>
+<l rend="bold">samastaṃ vāṅmayaṃ vyāptaṃ trailokyamiva viṣṇunā // KVrk_1.6 //</l></p>
+
+<p>&amp;#8216;<hi rend="bold">&#8216;gala'; iti prathamākṣaragrahaṇamātreṇa gurulaghuśabdayorgrahaṇami</hi>'tyāmnāyaḥ / <hi rend="bold">ebhi</hi>rmayarasatajabhanalagai<hi rend="bold">rdaśabhirakṣaraiḥ</hi> / <hi rend="bold">samasta</hi>mapi śabdabrahma <hi rend="bold">vyāptam </hi>/ kimiva / <hi rend="bold">trailokyamiva</hi> / kena / bhavagatā nārāyaṇena || 6 ||</p>
+
+<p>eteṣāṃ pratyekaṃ lakṣaṇamāha /
+<l rend="bold">sarvagurmo mukhāntarlau yarāvaṃtagalau satau /</l>
+<l rend="bold">gmadhyādyau jbhau trilo no 'ṣṭau bhavantyatra gaṇāstrikāḥ // KVrk_1.7 //</l></p>
+
+<p>asmin chandaḥśāstre sarve guravo yasyāsau <hi rend="bold">sarvagurmo</hi> magaṇo yathā ( _ _ _ ) / <hi rend="bold">mukhāntarlau yarau</hi> mukhamādi aṃtarmadhyaṃ ādau madhye laghū yayostau mukhāntarlau yagaṇaragaṇau ( ^ _ _, _ ^ _) / <hi rend="bold">aṃtagalau satau</hi> / aṃte avasāne gurulaghū yayostau sagaṇatagaṇau yathā ( ^ ^ _, _ _ ^) / <hi rend="bold">gmadhyādyau jbhau</hi> / guru madhye ādau yayostau jagaṇabhagaṇau yathā ( ^ _ ^, _ ^ ^) / <hi rend="bold">trilo naḥ</hi> / trilaghurnagaṇo yathā ( ^ ^ ^ ) / ete mayarasatajabhanā<hi rend="bold"> 'ṣṭau gaṇā bhavanti</hi> varṇavṛttagaṇā bhavantītyarthaḥ / mātrāgaṇānāṃ vakṣyamāṇasūtre vidhānāt / caturgurvādīnāmapi gaṇādisaṃjñā mā bhūdityāśaṃkya niyamannāha / <hi rend="bold">trikā</hi> iti trayaḥ parimāṇaṃ yeṣāṃ te trikā iti || 7 ||</p>
+
+<p>atha mātrāgaṇānāha /
+<l rend="bold">jñeyāḥ sarvāntamadhyādiguravo 'tra catuḥkalāḥ /</l>
+<l rend="bold">gaṇāścaturlaghūpetāḥ paṃcāryādiṣu saṃsthitāḥ // KVrk_1.8 //</l></p>
+
+<p><hi rend="bold">āryā</hi>prabhṛtiṣu mātrāvṛtteṣu <hi rend="bold">catuḥkalā</hi> <hi rend="bold">pañca gaṇā</hi> jñātavyāḥ / katham / <hi rend="bold">sarvādimadhyāṃtaguravaḥ</hi> sarve ca te ādiśca madhyaṃ ca antaśca sarvādimadhyāṃtāsteṣu guravo yeṣāṃ te sarvādimadhyāntaguravaḥ / <hi rend="bold">caturbhirlaghubhirupetāḥ</hi> sahitā veditavyāḥ || 8 ||</p>
+
+<p>gurulaghuparijñānārthamāha /
+<l rend="bold">sānusvāro visargānto dīrgho yuktaparaśca yaḥ /</l>
+<hi rend="bold">vā pādāntastvasau gvakro jñeyo 'nyo mātṛko lṛjuḥ // KVrk_1.9 // iti /
+</hi>
+sahānusvāreṇa vartata iti <hi rend="bold">sānusvāraḥ</hi> / <hi rend="bold">visargāntaḥ</hi> savisargaḥ / <hi rend="bold">dīrgho</hi> dvimātraḥ / <hi rend="bold">yuktaparaḥ</hi> saṃyogaparo <hi rend="bold">yo</hi> bhavati / <hi rend="bold">cakārādvyaṃjanāṃto 'pi gṛhyate</hi> / parimitākṣaramātro gaṇāracito vakṣyamāṇalakṣaṇo vṛttasya caturthāṃśaḥ <hi rend="bold">pāda</hi>stasyā<hi rend="bold">nte</hi> vartamāno laghurapi vibhāṣayā guruḥ syāt / sa ca kavisamayavyavahārāt dvitīyacaturthayoreva pādayorante veditavyaḥ / yathā /</p>
+
+<p>prāyaḥ samāsannaparābhavānāṃ dhiyo viparyastatamā bhavanti /
+asaṃbhave hemamayasya jantostathā 'pi rāmo lulubhe mṛgāya // iti /</p>
+
+<p>tathā ca /
+&amp;#8216;śriyaḥ patiḥ śrīmati śāsituṃ jagajjagannivāso vasudevasadmani'; ityādi dṛṣṭavyam /
+sa ca prastāre <hi rend="bold">vakraḥ</hi> sthāpya laghulakṣaṇamāha / <hi rend="bold">jñeyo 'nyo mātṛko lṛjuḥ</hi> / anusvarādirahito anyo mātṛko ekamātro varṇo laghurbhavati / sa ca prastāre ṛjuḥ saralaḥ || 9 ||</p>
+
+<p>yuktaparāśca ya ityanena prāpte gurutve apavādamāha /
+<l rend="bold">padādāviha varṇasya saṃyogaḥ kramasaṃjñikaḥ /</l>
+<l rend="bold">puraḥsthitena tena syāllaghutā 'pi kvacidguroḥ // KVrk_1.10 //</l></p>
+
+<p>vibhaktyaṃtaṃ <hi rend="bold">padaṃ</hi> tasya padasyādau vartamāno yo <hi rend="bold">varṇa</hi>stasya <hi rend="bold">saṃyogaḥ</hi> / sa iha śāstre <hi rend="bold">kramasaṃjño</hi> jñeyaḥ / <hi rend="bold">tena</hi> krameṇa purovartinā prākpadāṃte vartamānasya prāpta<hi rend="bold">guru</hi>bhāva<hi rend="bold">syāpi</hi> <hi rend="bold">laghutā</hi> syāt / <hi rend="bold">kvacilla</hi>kṣānurodhena / nanu ka eṣaḥ <hi rend="bold">kramo</hi> nāma <hi rend="bold">saṃyoga</hi> ucyate / pūrvācāryāṇāṃ piṃgalanāgaprabhṛtīnāṃ kālidāsādīnāṃ ca kavīnāṃ samayaḥ parigṛhītaḥ / saṃyogaḥ kramasaṃyogaḥ || 10 ||</p>
+
+<p>tatra <hi rend="bold">grasaṃyogena yathā</hi> / idamasyodāharaṇam /
+<l rend="bold">taruṇaṃ sarṣapaśākaṃ navaudanaṃ picchalāni ca dadhīni /</l>
+<l rend="bold">alpavyayena suṃdari grāmyajano miṣṭamaśnāti // KVrk_1.11 //</l></p>
+
+<p><hi rend="bold">hrasaṃyogena yathā /
+</hi></p>
+
+<lg>
+<l>tava hriyāpahriyā mama hrīrabhūt śaśigṛhe 'pi hṛtaṃ na dhṛtā tataḥ /</l>
+<l>vahalabhrāmarameṣakatāmasam mama priye kva sa yeṣyati tatpunaḥ //</l>
+</lg>
+
+<p>iti</p>
+
+<lg>
+<l>nidravyo hriyameti hrīparigataḥ prabhraśyate tejasaḥ</l>
+<l>nistejaḥ paribhūyate paribhavānnirvedamāgacchati /</l>
+<l>nirviṇṇaḥ śucameti śokavivaśo buddhyāḥ paribhraśyate</l>
+<l>nirbuddhiḥ kṣayametyaho nidhanatā sarvāpadāmāspadam //</l>
+</lg>
+
+<p>mamaiva te hṛte / yathā /
+snehādgehādbhujagatanayālokakautūhalena sthūlottuṃgastanabharalasanmadhyabhaṃgānapekṣāḥ /
+paurā nāryastaralanayanānandamutpādayantyo dhāvanti sma drutamapahriyaḥ sraṃsamānottarīyāḥ // iti /
+bodhapradīpe 'pi yathā /
+<lg>
+<l>yajñairyeṣāṃ pratipadamiyaṃ maṇḍitā bhūtadhātrī</l>
+<l>nirjityaitadbhuvanavalayaṃ yaiḥ pradattaṃ dvijebhyaḥ /</l>
+<l>te 'pyetasmin gurubhavahṛde budbudastambhalīlaṃ</l>
+<l>dhṛtvā dhṛtvā sapadi vilayaṃ bhūbhujaḥ saṃprayātāḥ //</l>
+</lg></p>
+
+<p>śiśupālavadhe yathā /
+prāptanābhihṛdamajjanamāśu prasthitaṃ nivasanagrahaṇāya / iti /</p>
+
+<l rend="bold">bhrasaṃyogena yathā /</l>
+<lg>
+<l>śaśimukhi bhramaro 'yaṃ padmabuddhyā '; 'nanaṃ te /</l>
+<l>samabhilaṣati pātuṃ tyaktavallīprasūnaḥ //</l>
+</lg>
+
+<p>tathā ca /
+bhramati bhramaramārīkānane vipramukte / ityādi /
+<lg>
+<l>varatarukusumeṣu vyomagaṃgāmbujeṣu tridaśakarikaṭeṣu svarvadhūkuṃtaleṣu /</l>
+<l>sthitaśayitavibuddhaprītikaste bhramo 'yaṃ bhramasi bhramara yena tvaṃ mudhā ketakeṣu //</l>
+</lg></p>
+
+<p><hi rend="bold">padādāviti kim / anyatra mā bhūt /
+</hi>
+<hi rend="bold">grasaṃyogena yathā /
+</hi>asamagravilokanena kiṃ te dayitaṃ paśya varoru nirviśaṃkā /
+na hi jātu kuśāgrapītamambhaḥ sucireṇāpi karotyapetatṛṣṇam // iti</p>
+
+<l rend="bold">hrasaṃyogena yathā /</l>
+<p>&amp;#8216;ājahratustaccaraṇau pṛthivyāmi'ti /
+tathā ca /
+pradyotasya priyaduhitaraṃ vatsarājo 'tra jahre /</p>
+
+<l rend="bold">bhrasaṃyogena yathā /</l>
+<p>kundāvadātairbhavato yaśobhiḥ śubhrīkṛtaṃ kiṃ paramāravīra /
+adyāpi yadbibhrati kālimānamarātinārīvadanotpalāni // ityādi /</p>
+
+<p><hi rend="bold">kvaciditi kim / sarvatra mā bhūt /
+</hi></p>
+
+<l rend="bold">grasaṃyogena yathā /</l>
+<lg>
+<l>&amp;#8216;mahī pādaghātādvrajati sahasā saṃśayapadam /</l>
+<l>padaṃ viṣṇorbhrāmyadbhujaparigharugṇagrahaṇami'ti //</l>
+</lg>
+
+<l rend="bold">bhrasaṃyogena yathā /</l>
+<p>&amp;#8216;tatra bhramatyeva mudhā ṣaḍaṃdhriri'ti /</p>
+
+<p><hi rend="bold">kecitpādādāviti manyante / tadasaṃgatam /</hi> <hi rend="bold">sūtrodāharaṇayorghaṭanābhāvāt </hi>/
+tathāpi /
+taruṇaṃ sarṣapaśākaṃ navodanaṃ picchalāni dadhīni /
+alpavyayena suṃdari grāmyajano miṣṭamaśnāti / ityudāharaṇamāryayā pradarśitam / āryāyāṃ pādavyavasthā nāsti / pūrvārdhottarārdhagrahaṇāt pūrvārdhottarārdhamityāryālakṣaṇaṃ kurvāṇo granthakāra evaṃ jñāpayati / tāvadāryāyāṃ pādavyavasthā nāsti paiṃgalīyasūtrapāṭhācca / svarā 'rdhañcāryārdhamiti / <hi rend="bold">tasmātpadādāviti pāṭhaḥ</hi> / śreyānityalamiti prasaṃgena || 11 ||</p>
+
+<p>atha saṃjñāmāha /
+<l rend="bold">abdhibhūtarasādīnāṃ jñeyāḥ saṃjñāstu lokataḥ /</l>
+<l rend="bold">jñeyaḥ pādaḥ caturthāṃśo yatirvicchedasaṃjñitā // KVrk_1.12 //</l></p>
+
+<p>tadyathā / catvāro 'bdhivedāḥ / pañca śarendriyāṇi / ṣaṭcartavaḥ / sapta svararṣayaḥ / aṣṭau vasavaḥ / nava naṃdarandhrāṇi / daśa diśāḥ / ekādaśa rudrāḥ / dvādaśādityāḥ / trayodaśa viśvedevāḥ / caturdaśa bhuvanāni / pañcadaśa tithaya ityādi /</p>
+
+<p>pādalakṣaṇamāha /
+<hi rend="bold">jñeyo pādaḥ caturthāṃśo</hi> / vakṣyamāṇalakṣaṇasya vṛttasya caturthāṃśo bhāgaḥ pādasaṃjño bhavet /</p>
+
+<p>atha yatimāha /
+<hi rend="bold">yatirvicchedasaṃjñitā</hi> / yatirvirāmādirācāryapāraṃparyāgatā saṃjñeyamadhyātpadacchinnākṣareṣu kartavyā / abdhyādi śabdāddhi sāṃkāḥ kṛtvā yatirityanena saha saṃbadhyante / ityayamarthaḥ śiṣyanti /
+tatrāhurācāryāḥ /
+<lg rend="bold">
+<l>"yatiḥ sarvatra pādānte ślokārdhe tu viśeṣataḥ /</l>
+<l>samudrādipadānte ca vyaktāvyaktavibhaktike //</l>
+</lg>
+<lg>
+<l><hi rend="bold">kvacittu padamadhye 'pi samudrādau yatirbhavet /</hi></l>
+<l><hi rend="bold">yadi pūrvāparau bhāgau na syātāmekavarṇakau //</hi></l>
+</lg></p>
+
+<lg>
+<l><hi rend="bold">pūrvāṃtavatsvaraḥ saṃdhau kvacideva parādivat /</hi></l>
+<l><hi rend="bold">dṛṣṭavyo yaticintāyāṃ yadyādeśaḥ parādivat //</hi></l>
+</lg>
+
+<p><hi rend="bold">[nityaṃ prākpadasaṃbaddhāścādayaḥ prākpadāntavat</hi> /
+<l rend="bold">pareṇa nityasaṃbaddhāḥ prādayaśca parādivat"] //</l></p>
+
+<p><hi rend="bold">yatiḥ sarvatra pādānte /
+</hi>yathā /
+śriyaḥ śreyakapolau tu sampūrṇendusamaprabhau
+pratibimbaṃ hareryatra kastūrī maṇḍanāyate / ityādinetvevaṃ yathā /
+namastasmai mahādevāya śaśikhaṇḍadhāriṇe / iti /</p>
+
+<l rend="bold">ślokārdhe tu viśeṣataḥ /</l>
+<lg>
+<l>yathā /</l>
+<l>rājasevāṃ vinā 'smākaṃ guṇo niṣphalatāmagāt /</l>
+<l>aṃtaḥpurapurandhrīṇāṃ anarghyāmiva maṇḍanam // iti //</l>
+</lg>
+
+<p>agādityaṃtyavyañjanasyāṃtaḥpureṇetyakāreṇa saha saṃdhirna bhavati /
+samāse 'pi na tvevaṃ yathā /
+surāsuraśiroratnasphuraccaraṇamañjarī-
+piṃjarīkṛtapādābjadvandvaṃ vandāmahe śivamiti /</p>
+
+<p><hi rend="bold">samudrādipadānte ca vyaktāvyaktavibhaktike</hi> /
+vyaktavibhaktike prakaṭavibhaktike / avyaktavibhaktike samāsāntavibhaktike / tayorudāharaṇaṃ yathā /
+&amp;#8216;yakṣaścakre janakatanayāsnānapuṇyodakeṣu'; iti /
+vyaktāvyaktavibhaktika iti yatiḥ sarvatra pādānta ityanena saha saṃbadhyate / vastrīkṛtajagatkālaṃ kaṇṭhekālaṃ namāmyaham /
+mahākālaṃ kalāśeṣaṃ śaśilekhāśikhāmaṇim //</p>
+
+<lg>
+<l>api ca /</l>
+<l>namastuṃgaśiraścumbicandracāmaracārave /</l>
+<l>trailokyanagarīraṃbhamūlastambhāya śambhave //</l>
+</lg>
+
+<l rend="bold">kvacittu padamadhye 'pi samudrādau yatirbhavet /</l>
+<l rend="bold">yadi pūrvāparau bhāgau na syātāmekavarṇakau //</l>
+<p>yathā /
+&amp;#8216;paryāptaṃ taptacāmīkarakaṭakataṭe śliṣṭaśītetarāśā'viti /
+<hi rend="bold">samudrādāviti kim /</hi> padamadhyayatirpadānte mā bhūt / yathā /
+&amp;#8216;praṇamata bhavabaṃdhakleśanāśāya nārāyaṇacaraṇasarojadvandvamānaṃ dahetu'riti //</p>
+
+<p><hi rend="bold">pūrvottarabhāgayorekākṣaratve tu padamadhye yatirduṣyati /</hi> yathā /
+&amp;#8216;etasyāṃ gaṇḍatalamamalaṃ gāhave candrakakṣāmiti /
+&amp;#8216;etāsāṃ rājati sumanasāṃ dāmakaṇṭhāvalambī'ti /
+&amp;#8216;saṃtāpaṃ me janayati nitambo 'yamindīvarākṣyā'; iti /</p>
+
+<l rend="bold">pūrvāntavatsvaraḥ saṃdhau kvacideva parādivat /</l>
+<p>asyārthaḥ / yo yaṃ pūrvaparayorekadeśaḥ svarasaṃdhau vidhīyate sa kvacitpūrvāntavadbhavati kvacitparasyādivat /
+pūrvāntavadyathā /
+syādasthāne 'pagatayamunāsaṃgame vā 'bhirāmā / tathā /
+jambhārātībhakumbhodbhavamiva dadhataḥ sāndrasindūrareṇum iti /
+parādivadbhāvo yathā / mamaiva vyāyoge /
+ye svārātividāritāsyasahasaivābhūdvibhinnaṃ raṇe
+vāmāṃgaṃ kalakiṃkaṇīphalakavannistṛṃśavaddakṣiṇam /
+ekaṃ ghātanipātadattamitaradghātapratīkārakṛd-
+dhanyaḥ paśyati yudhyamānamiti sasvāṃgaṃ vimānasthitaḥ // ityādi /</p>
+
+<p><hi rend="bold">yadyādeśaḥ parādivad /
+</hi>yathā /
+&amp;#8216;saptarṣihastāvacitāvaśeṣaṇye 'dho
+ vivasvāni'ti /
+ādiśabdāt &amp;#8216;vitataghanatuṣāraḥ kṣodaśubhrāṃśuvartma svavirale'tyādi /</p>
+
+<p><hi rend="bold">nityaṃ prākpadasaṃbaddhāścādayaḥ prākpadāntavat</hi> /
+tebhyaḥ pūrvā yatirna kartavyetyarthaḥ / yathā /
+&amp;#8216;svāduḥsvacchaṃdasalilamidaṃ prītaye kasya na syādi'ti /</p>
+
+<p><hi rend="bold">pareṇa nityasaṃbaddhāḥ prādayaśca parādivat /
+</hi>tebhyaḥ parā yatirna kartavyetyarthaḥ / yathā /
+&amp;#8216;duḥkhaṃ me prakṣipati hṛdaye duḥsahastadviyogaḥ'; ityādi sarvamūhyam || 12 ||</p>
+
+
+<l rend="bold">yuksamaṃ viṣamaṃ cāyuksthānaṃ sadbhirnigadyate // KVrk_1.13(1) //</l>
+
+<p>prathamatṛtīyādikaṃ sthānaṃ <hi rend="bold">ayuk viṣamaṃ</hi> dvitīyacaturthādikaṃ sthānaṃ <hi rend="bold">yuksamami</hi>ti /</p>
+
+<p>atha vṛttabhedānāha /
+<l rend="bold">samamardhasamaṃ vṛttaṃ viṣamaṃ ca tathā param // KVrk_1.13(2) //</l></p>
+
+<p>chandasi vartata iti / <hi rend="bold">vṛttaṃ</hi> vakṣyamāṇalakṣaṇaṃ tridhā bhavati / <hi rend="bold">samamardhasamaṃ viṣamaṃ</hi> <hi rend="bold">ce</hi>ti / tatra samaṃ sarvāvayavatvātsamam śrīprabhṛti ardhasamamupacitrādi viṣamaṃ padacaturūrdhādi /</p>
+
+<p>eteṣāṃ pratyekaṃ lakṣaṇamāha /
+<l rend="bold">aṅdhrayo yasya catvārastulyalakṣaṇalakṣitāḥ /</l>
+<l rend="bold">tacchaṃdaśāstratattvajñāḥ samaṃ vṛttaṃ pracakṣyate // KVrk_1.14 //</l></p>
+
+<p><hi rend="bold">yasya</hi> vṛttasya <hi rend="bold">catvāro</hi> 'pi pādāḥ samalakṣaṇabhājo bhavanti / ta<hi rend="bold">dvṛttaṃ</hi> <hi rend="bold">samaṃ</hi> chandovidbhirācakṣyate /</p>
+
+<p>athārdhasamamāha /
+<lg rend="bold">
+<l>prathamāṅdhrisamo yasya tṛtīyaścaraṇo bhavet /</l>
+<l>dvitīyasturyavadvṛttaṃ tadardhasamamucyate // KVrk_1.15 //</l>
+</lg></p>
+
+<p><hi rend="bold">yasya</hi> vṛttasya prathamatṛtīyapādau tulyalakṣaṇau bhavataḥ / dvitīyacaturthau ca / ta<hi rend="bold">dvṛttaṃ</hi> <hi rend="bold">ardhasama</hi>mucyate /</p>
+
+<p>viṣamalakṣaṇamāha /
+<l rend="bold">yasya pādacatuṣke 'pi lakṣma bhinnaṃ parasparam /</l>
+<l rend="bold">tadāhurviṣamaṃ vṛttaṃ chandaḥśāstraviśāradāḥ // KVrk_1.16 //</l></p>
+
+<p>yasya vṛttasya caturṣvapi pādeṣu bhinnamanyādṛśaṃ parasparaṃ lakṣaṇaṃ bhavati <hi rend="bold">tadviṣama</hi>mityāhurācāryāḥ /</p>
+
+<p>atha vṛttānāṃ pādaṃ niyamannāha /
+<l rend="bold">ārabhyaikākṣarāt pādād ekaikākṣaravardhitaiḥ /</l>
+<l rend="bold">pṛthak chando bhavet pādair yāvat ṣaḍviṃśatiṃ gatam // KVrk_1.17 //</l></p>
+
+<p><hi rend="bold">ekākṣarātpādādekaikākṣaravṛddhyā</hi> pādaiḥ <hi rend="bold">chandaḥ</hi> syāt / kiṃ <hi rend="bold">yāvadgataṃ</hi> <hi rend="bold">ṣaṭviṃśatya</hi>kṣaramutkṛtiṃ yāvat /</p>
+
+<l rend="bold">tadūrdhvaṃ caṇḍavṛṣṭyādidaṇḍakāḥ parikīrtitāḥ // KVrk_1.18(1) //</l>
+
+<p>ṣaḍviṃśatyākṣarotkṛtijāterūrdhvaṃ <hi rend="bold">caṇḍavṛṣṭi</hi>prabhṛtayo <hi rend="bold">daṇḍakāḥ</hi> bhavanti / śeṣamiti prakaraṇam / tacca śāstrāntarebhyo 'vagantavyam / granthagauravabhayātkedāreṇātra noktam /</p>
+
+<l rend="bold">śeṣaṃ gāthāstribhiḥ ṣaḍbhiścaraṇaiścopalakṣitāḥ // KVrk_1.18(2) //</l>
+
+<p>śeṣaṃ jātiprakaraṇānantaraṃ tripadyaḥ ṣaṭpadyo <hi rend="bold">gāthāḥ</hi> syuḥ /</p>
+
+<p>atha chandasāṃ jātīrāha /
+<l rend="bold">uktātyuktā tathā madhyā pratiṣṭhā 'nyā supūrvikā /</l>
+<l rend="bold">gāyatryuṣṇiganuṣṭup ca bṛhatī paṃktireva ca // KVrk_1.19 //</l>
+<l rend="bold">triṣṭup ca jagatī caiva tathā 'tijagatī matā /</l>
+<l rend="bold">śarkarī sātipūrvā syādaṣṭyatyaṣṭī tataḥ smṛteḥ // KVrk_1.20 //</l>
+<l rend="bold">dhṛtiścātidhṛtiścaiva kṛtiḥ prakṛtirākṛtiḥ /</l>
+<l rend="bold">vikṛtiḥ saṅkṛtiścaiva tathābhikṛtirutkṛtiḥ // KVrk_1.21 //</l>
+<l rend="bold">ityuktā chaṃdasāṃ saṃjñāḥ kramaśo vacmi sāmpratam /</l>
+<l rend="bold">lakṣaṇaṃ sarvavṛttānāṃ mātrāvṛttānupūrvakam // KVrk_1.22 //</l></p>
+
+<p>ekākṣarā <hi rend="bold">uktā</hi> / dvyakṣarā <hi rend="bold">atyuktā</hi> / tryakṣarā <hi rend="bold">madhyā</hi> / caturakṣarā <hi rend="bold">pratiṣṭhā</hi> / paṃcākṣarā <hi rend="bold">supratiṣṭhā</hi> / ṣaḍakṣarā <hi rend="bold">gāyatrī</hi> / saptākṣarā <hi rend="bold">uṣṇik </hi>/ aṣṭākṣarā <hi rend="bold">anuṣṭup </hi>/ navākṣarā <hi rend="bold">bṛhatī</hi> / daśākṣarā <hi rend="bold">paṃktiḥ</hi> / ekādaśākṣarā <hi rend="bold">triṣṭup </hi>/ dvādaśākṣarā <hi rend="bold">jagatī</hi> / trayodaśākṣarā<hi rend="bold"> 'tijagatī</hi> / caturdaśākṣarā <hi rend="bold">śarkarī</hi> / paṃcadaśākṣarā <hi rend="bold">atiśarkarī</hi> / ṣoḍaśākṣarā <hi rend="bold">aṣṭiḥ</hi> / saptadaśākṣarā <hi rend="bold">atyaṣṭiḥ</hi> / aṣṭādaśākṣarā <hi rend="bold">dhṛtiḥ</hi> / ekonaviṃśatyakṣarā <hi rend="bold">atidhṛtiḥ</hi> / viṃśatyakṣarā <hi rend="bold">kṛtiḥ</hi> / ekaviṃśatyakṣarā <hi rend="bold">prakṛtiḥ</hi> / dvāviṃśatyakṣarā <hi rend="bold">ākṛtiḥ</hi> / trayoviṃśatyakṣarā <hi rend="bold">vikṛtiḥ</hi> / caturviṃśatyakṣarā <hi rend="bold">saṃkṛtiḥ</hi> / paṃcaviṃśatyakṣarā <hi rend="bold">abhikṛtiḥ</hi> / ṣaḍviṃśatyakṣarā <hi rend="bold">utkṛtiḥ</hi> / iti chaṃdasāṃ saṃjñā uktāḥ /
+adhunā sarveṣāṃ vṛttānāṃ lakṣaṇamabhidhāsyāmi / lakṣyate jñāyate aneneti <hi rend="bold">lakṣaṇam </hi>/ paraṃ <hi rend="bold">mātrāvṛttānupūrvakam </hi>/ mātrāvṛttānyāryāprabhṛtīni prathamamuktvetyarthaḥ || 19-22 ||</p>
+
+<p><hi rend="bold">iti sulhaṇaviracitāyāṃ sukavihṛdayānaṃdinyāṃ vṛttaratnākarachaṃdovṛttau prathamo 'dhyāyaḥ</hi> //</p>
+
+
+<p>dvitiyo 'dhyāyaḥ
+mātrāvṛttādhyāyaḥ</p>
+
+<p>[āryā-prakaraṇam (2.1-7)]</p>
+
+<p>mātrāvṛttādhyāyo dvitīyaḥ prārabhyate /
+mātrāvṛttānupūrvakamityuktatvāt /
+<l rend="bold">lakṣmaitatsapta gaṇā gopetā bhavati neha viṣame jaḥ /</l>
+<l rend="bold">ṣaṣṭho 'yaṃ ca nalaghu vā prathame 'rdhe niyatamāryāyāḥ // KVrk_2.1 //</l>
+<lg rend="bold">
+<l>ṣaṣṭhe dvitīyalātparake nle mukhalācca sayatipadaniyamaḥ /</l>
+<l>carame 'rdhe paṃcamake tasmādiha bhavati ṣaṣṭho laḥ // KVrk_2.2 //</l>
+</lg></p>
+
+<p>[2.1] <hi rend="bold">āryāyā</hi> <hi rend="bold">etallakṣma</hi> lakṣaṇam / <hi rend="bold">sapta</hi> catuṣkalā <hi rend="bold">gaṇā</hi> guruṇā <hi rend="bold">upetā</hi> yuktā bhavanti / sāmānyenābhidhāya viśeṣamāha / <hi rend="bold">bhavati neha viṣame jaḥ</hi> iti / iha āryālakṣaṇe viṣame sthāne prathamatṛtīyādau jo jagaṇo na bhavati / <hi rend="bold">ṣaṣṭhaścāyaṃ</hi> jagaṇo bhavati / <hi rend="bold">nalaghu</hi> <hi rend="bold">vā</hi> / nagaṇayukto laghu vā bhavati / <hi rend="bold">niyataṃ</hi> niścita<hi rend="bold">māryāyāḥ</hi> / <hi rend="bold">prathame 'rdhe</hi> ādye dale iti / <hi rend="bold">carame 'rdhe</hi> dvitīye 'rdhe <hi rend="bold">ṣaṣṭho la</hi>ghureveti niyamaḥ /</p>
+
+<p>[2.2] evamubhayorapyardhayorlakṣaṇamabhidhāya padaniyamamāha / <hi rend="bold">ṣaṣṭhe dvitīyalādi</hi>ti / ṣaṣṭhe gaṇe sarvalaghau dvitīyāllaghvakṣarādārabhya padaṃ bhavati / saptamaścetsarvalaghugaṇo bhavati tadā prathamākṣarādārabhya padaṃ <hi rend="bold">carame 'rdhe</hi> <hi rend="bold">paṃcamake</hi> dvitīye 'rdhe paṃcame sarvalaghau gaṇe tasmātpūrvoktāt / prathamākṣarāllaghvakṣarādārabhya padaniyamo bhavati / iti / atrārdhagrahaṇātpādavyavasthā nāstīti etacca prathamādhyāya eva padādāviti sūtre prapaṃcitamasti /
+<lg>
+<l>krameṇodāharaṇaṃ yathā /</l>
+<l>vaṃdārudevavṛndairahamahamikayā sadaiva yā vaṃdyā /</l>
+<l>svargāpavargadātrīṃ tāmāryāṃ saṃtataṃ naumi //</l>
+</lg></p>
+
+<lg>
+<l>ityudāharaṇaṃ yathā /</l>
+<l>yasyāṃganāmuvedyā kokilanādaśca malayagiripavanaḥ /</l>
+<l>ekaikamastrakṛtyaṃ karoti sa jayati manojanmā || 1-2 ||</l>
+</lg>
+
+<l rend="bold">triṣvaṃśakeṣu pādo dalayorādyeṣu dṛśyate yasyāḥ /</l>
+<l rend="bold">pathyeti nāma tasyāśchandovidbhiḥ samākhyātam // KVrk_2.3 //</l>
+
+<p><hi rend="bold">yasyā</hi> āryāyā <hi rend="bold">ādyeṣu</hi> <hi rend="bold">triṣu</hi> gaṇeṣu <hi rend="bold">pādo</hi> virāmo bhavati / sā <hi rend="bold">pathyā nāma</hi> / yathā /
+<lg>
+<l>ujjhitanepathyālakamujjhitatilakāṃjanaṃ yadeṇākṣyāḥ /</l>
+<l>tasyāḥ smarāmi virahaprārambhe vadanamapi ramyam || 3 ||</l>
+</lg></p>
+
+<l rend="bold">saṃlaṃghya gaṇatrayamādimaṃ sakalayordvayorbhavati pādaḥ /</l>
+<l rend="bold">yasyāstaṃ piṃgalanāgo vipulāmiti samākhyāti // KVrk_2.4 //</l>
+
+<p><hi rend="bold">yasyā</hi> āryāyā ādya<hi rend="bold">gaṇatraya</hi>mabhilaṃghya <hi rend="bold">dvayo</hi>rapyardhayoḥ <hi rend="bold">pādo</hi> virāmo yatirbhavati / sā <hi rend="bold">vipulā</hi> nāma yathā /
+<lg>
+<l>mama khalu na yāti nayanayugamacalanirmeṣapiśyatastṛptim /</l>
+<l>trastamṛgaśiśudṛśastanvaṃgyā jaghanasthalīṃ vipulām //</l>
+</lg></p>
+
+<l rend="bold">sāmānyena vidhānametadādyaṃtobhayabhedapūrvakatvāttridhā bhavati /</l>
+<p><hi rend="bold">tatrādivipulā</hi> yathā /
+<lg>
+<l>pramadānāṃ jayati kaṭākṣo 'yaṃ niśi sphuratsmaraśarābhaḥ /</l>
+<l>hṛdayasthitānurāgaprakaṭanapaṭutāṃ dadhātsvairaṃ //</l>
+</lg></p>
+
+<p><hi rend="bold">antyavipulā</hi> yathā /
+<lg>
+<l>prītiṃ kasya na janayati prakurvatī keśabaṃdhanaṃ nārī /</l>
+<l>darśitabhujamūlālaṃkārasubhūtārdranakhapaṃktiḥ //</l>
+</lg></p>
+
+<p><hi rend="bold">ubhayavipulo</hi>dāharaṇaṃ pūrvamevodāhṛtamiti || 4 ||</p>
+
+<l rend="bold">ubhayārdhayorjakārau dvitīyaturyau gamadhyagau yasyāḥ /</l>
+<l rend="bold">capaleti nāma tasyāḥ prakīrtitā nāgarājena // KVrk_2.5 //</l>
+
+<p><hi rend="bold">yasyā</hi> āryāyā <hi rend="bold">ubhayorardhayordvitīyaturyau</hi> dvitīyacaturthau gurvormadhyagau gamadhyagau gamadhyagāviti / vadatā sūtrakṛtā gaṇaniyama uktaḥ / tathā hi <hi rend="bold">prathamo gaṇo 'ntagurureva tṛtīyo gaṇo dvigurureva paṃcamaścādigurureveti niścayaḥ</hi> / śeṣaṃ yathā proktam / sā āryā <hi rend="bold">capalā nāma</hi> yathā /
+<lg>
+<l>capalākṣi maunamudrāṃ tyajeti saṃbhāṣitā mayā sutanuḥ /</l>
+<l>saṃjātaromaharṣā babhūvātyutsukā tanvī || 5 ||</l>
+</lg></p>
+
+<l rend="bold">ādyaṃ dalaṃ samastaṃ bhajellakṣma capalāgataṃ yasyāḥ /</l>
+<l rend="bold">śeṣe pūrvajalakṣmā mukhacapalā soditā muninā // KVrk_2.6 //</l>
+
+<p><hi rend="bold">yasyā</hi> āryāyā <hi rend="bold">ādyaṃ</hi> <hi rend="bold">dala</hi>mardhaṃ <hi rend="bold">samasta</hi>mapi <hi rend="bold">capalā</hi>yā lakṣaṇaṃ <hi rend="bold">bhajet </hi>/ <hi rend="bold">śeṣe</hi> uttarārdhe pūrvoktalakṣaṇā <hi rend="bold">sā mukhacapalā</hi> nāma / yathā /
+<lg>
+<l>yasyātsirācitāṃgī (?) laghustanī piṃgalākṣiyugalā ca /</l>
+<l>mukhacapalā puruṣākṛtiratidīrghakṛśā parityājyā || 6 ||</l>
+</lg></p>
+
+<l rend="bold">prākpratipāditamardhe prathame prathametare tu capalāyāḥ /</l>
+<l><hi rend="bold">lakṣmāśrayeta soktā viśuddhadhībhirjaghanacapalā // KVrk_2.7 //</hi></l>
+
+
+<p>yā āryā <hi rend="bold">prathame 'rdhe</hi> <hi rend="bold">prākpratipāditaṃ</hi> pūrvamuktaṃ <hi rend="bold">lakṣaṇamāśrayet prathametare</hi> tu uttarārdhe tu <hi rend="bold">capalāyā</hi> lakṣaṇaṃ <hi rend="bold">sā</hi> <hi rend="bold">jaghanacapalā</hi> <hi rend="bold">uktā</hi> <hi rend="bold">viśuddhadhībhi</hi>rnirmalabuddhibhiḥ / yathā /</p>
+
+<lg>
+<l>kuṃcitalocanayugalaṃ samadanamadamodasuṃdarālam /</l>
+<l>surataṃ smarāmi tasyā mṛgīdṛśoḥ jaghanacapalāyāḥ || 7 ||</l>
+</lg>
+
+<p>// āryāprakaraṇam //</p>
+
+
+
+<p>[gīti-prakaraṇam (2.8-11)]</p>
+
+<l rend="bold">āryāprathamadaloktaṃ yadi kathamapi lakṣaṇaṃ bhavedubhayoḥ /</l>
+<l rend="bold">dalayoḥ kṛtayatiśobhāṃ tāṃ gītiṃ gītivānbhujaṅgeśaḥ // KVrk_2.8 //</l>
+
+<p><hi rend="bold">āryā</hi>yāḥ prathame 'rdhe yaduktaṃ lakṣaṇaṃ tadyadi dvayorapyardhayorbhavati tāṃ <hi rend="bold">gīti</hi>miti <hi rend="bold">gītavān </hi>uktavān <hi rend="bold">bhujaṃgeśaḥ</hi> piṃgalanāgaḥ / yathā /
+<lg>
+<l>romāṃcaṃ janayaṃtī sukhayaṃtī netrayoryugaṃ yūnām /</l>
+<l>sadyo manāṃsi madayati gītiḥ strīṇāṃ madena mattānām || 8 ||</l>
+</lg></p>
+
+
+<lg>
+<l><hi rend="bold">āryādvitīyake 'ṃśe yadgaditaṃ lakṣaṇaṃ tatsyāt /</hi></l>
+<l><hi rend="bold">yadyubhayorapi dalayorupagītiṃ tāṃ munirbrūte // KVrk_2.9 //</hi></l>
+</lg>
+
+<p><hi rend="bold">āryādvitīye</hi> 'rdhe <hi rend="bold">yallakṣaṇa</hi>muktaṃ <hi rend="bold">tadyadi</hi> dvayorapyardhayorbhavati <hi rend="bold">tāmupagīti</hi>miti piṃgalanāgo <hi rend="bold">munirbrūte</hi> / yathā /
+<lg>
+<l>śāradacaṃdrodyote pāyaṃpāyaṃ madhu svairam /</l>
+<l>paurastrībhirabhīṣṭā kriyate sotkaṇṭhamupagītiḥ || 9 ||</l>
+</lg></p>
+
+<l rend="bold">āryāśakaladvitayaṃ vyatyayaracitaṃ bhavedyasyāḥ /</l>
+<l rend="bold">sodgītiḥ kila gaditā tadvadyatyaṃśabhedasaṃyuktā // KVrk_2.10 //</l>
+
+<p><hi rend="bold">yasyā</hi> āryāyā uttarārdhalakṣaṇaṃ pūrvārdhe bhavati pūrvārdhalakṣaṇamuttarārdhe sā <hi rend="bold">udgītiḥ</hi> /
+<lg>
+<l>yathā /</l>
+<l>maṇḍapanagaravadhūnāmudgītiṃ vatsamallāram /</l>
+<l>ākarṇayati sa nūnaṃ dūrādābhyeti candrahariṇo 'pi || 10 ||</l>
+</lg></p>
+
+<l rend="bold">āryāpūrvārdhaṃ yadi guruṇaikenādhikena nidhane yuktam /</l>
+<l rend="bold">itarattadvannikhilaṃ yaddīyamuditaivamāryāgītiḥ // KVrk_2.11 //</l>
+
+<p><hi rend="bold">yadyāryāyāḥ</hi> <hi rend="bold">pūrvārdha</hi>muttarārdhaṃ ca <hi rend="bold">nidhane</hi> 'vasāne <hi rend="bold">ekena guruṇādhikena yuktaṃ</hi> bhavati tadā '; '<hi rend="bold">ryāgīti</hi>ryathā /
+<lg>
+<l>strīṇāṃ harṣavatīnāṃ saśiraḥkampastuvanti (?) vigatavikalpāḥ /</l>
+<l>apyāryāgītimimāmanekalayasundarāmākarṇya //</l>
+</lg></p>
+
+<p><hi rend="bold">skandhakamityike</hi> || 11 ||</p>
+
+<p>  // gītiprakaraṇam //</p>
+
+
+<p>[vaitālīya-prakaraṇam (2.12-20)]</p>
+
+<l rend="bold">ṣaḍviṣame 'ṣṭau same kalāstāśca same syurno nirantarāḥ /</l>
+<l rend="bold">na samā 'tra parāśritā kalā vaitālīye 'nte ralau guruḥ // KVrk_2.12 //</l>
+
+<p>siṃhāvalokitanyāyena &amp;#8216;tṛtīyayugdakṣiṇāntike'tyādisūtrapaṭhitaḥ pādaśabdo 'tra dṛṣṭavyaḥ / paiṃgalīyasūtrapādaśabdopādānāt / yathā &#8216;vaitālīyaṃ dviḥsvarā 'yukpādeṣu sarvo 'ntalā'; iti / yatra <hi rend="bold">viṣame</hi> pāde prathame tṛtīye <hi rend="bold">ṣaṭkalā</hi> mātrā bhavanti <hi rend="bold">same</hi> pāde dvitīye caturthe <hi rend="bold">aṣṭau</hi> kalā bhavanti / <hi rend="bold">ante</hi> 'vasāne ragaṇalaghū guruḥ ca bhavatastadvṛttaṃ <hi rend="bold">vaitālīyaṃ</hi> nāma / utsargeṇa yathā / kvacitprāye gurulaghubhāve 'pavādamāha / <hi rend="bold">na samā 'tra parāśritā kale</hi>ti / <hi rend="bold">samā</hi> dvitīyacaturthādikā <hi rend="bold">parāśritā</hi> tṛtīyapaṃcamādyāśritā na bhavati / same pāde dvitīye caturthe nirgatamaṃtaraṃ vyavadhānaṃ yāsāṃ tā nirantarā aṃtararahitā laghavo na bhaveyurityarthaḥ / yathā /</p>
+
+<lg>
+<l>praviśatyaniśaṃ nirargalā suparityaktavibhūṣaṇāṃśukā /</l>
+<l>virahe tava sā varāṃganā vaitālīyamuvāha vibhramam || 12 ||</l>
+</lg>
+
+<l><hi rend="bold">paryante ryau tathaiva śeṣaṃ aupacchaṃdasikaṃ sudhībhiruktam // KVrk_2.13 //</hi></l>
+
+
+<p>ṣaṇṇāmaṣṭānāṃ ca kalānāṃ <hi rend="bold">paryante</hi> 'vasāne <hi rend="bold">ryau</hi> ragaṇayagaṇau bhavataḥ / <hi rend="bold">śeṣaṃ</hi> pūrvavattadā vaitālīyameva <hi rend="bold">aupacchaṃdasikaṃ</hi> nāma / yathā /
+<lg>
+<l>bahuvipriyakārakaṃ parokṣe pratyakṣe priyacāṭukāradakṣam /</l>
+<l>śaṭhavṛttamimaṃ drutaṃ vayasye aupacchaṃdasikaṃ vimuñca kāntam || 13 ||</l>
+</lg></p>
+
+<l rend="bold">āpātalikā kathiteyaṃ bhādgurukāvatha pūrvavadanyat // KVrk_2.14 //</l>
+
+<p>&amp;#8216;yadā ṣaḍviṣame 'ṣṭau same kalā'; ityādi sarvaṃ <hi rend="bold">pūrvavadbha</hi>vati / viśeṣoktau bhagaṇātparau gau gurū bhavataḥ tadā vaitālīyame<hi rend="bold">vāpātalikā</hi> nāma / yathā /
+<lg>
+<l>naranātha bhavaṃtamarīṇāṃ nāśakaraṃ prasamīkṣya purastāt /</l>
+<l>ripavo jahati sma bhayārtā āpātalikāṃ saṃgarabhūmim //</l>
+</lg></p>
+
+<p>āpātalikāṃ asthirāmityarthaḥ /
+uktaṃ ca piṃgalavṛttau bhaṭṭaśrīhalāyudhena / yathā /
+<lg>
+<l>piṃgalakeśā kapilākṣī vācāṭā vikaṭonnatadantī /</l>
+<l>āpātalikā punareṣā nṛpatikule 'pi na bhāgyamupaiti || 14 ||</l>
+</lg></p>
+
+<l rend="bold">tṛtīyayugdakṣiṇāṃtikā samastapādeṣu dvitīyalaḥ // KVrk_2.15 //</l>
+
+<p>vaitālīyameva sarveṣvapi <hi rend="bold">pādeṣu</hi> <hi rend="bold">dvitīyo</hi> <hi rend="bold">laghu</hi> <hi rend="bold">tṛtīye</hi>na saha yukto bhavati &amp;#8216;na samā 'tra parāśritā kale'ti bādhitvā tadā dakṣiṇāntikā nāma / yathā /
+<lg>
+<l>vavau maruddakṣiṇāntiko viyoginīnāṃ prāṇahārakaḥ /</l>
+<l>prakaṃpitāśokacampake vasanta eṣo 'naṃgabodhakaḥ || 15 ||</l>
+</lg></p>
+
+<l><hi rend="bold">udīcyavṛttirdvitīyalaḥ sakto 'gryeṇa bhavedayugmayoḥ // KVrk_2.16 //</hi></l>
+
+
+<p><hi rend="bold">ayugmayoḥ</hi> prathamatṛtīyayoḥ pādayoḥ <hi rend="bold">dvitīyo la</hi>ghuragrimena tṛtīyena laghunā saha yujyate tadā vaitālīyame<hi rend="bold">vodīcyavṛtti</hi>rnāma yathā /
+<lg>
+<l>giraṃ manojñāṃ pikāṃganā muditāścikyatsvayamudgiratyasau /</l>
+<l>udīcyavṛttau divākare sahakāro 'pi tanoti mañjarī || 16 ||</l>
+</lg></p>
+
+<l rend="bold">pūrveṇa yuto 'tha paṃcamaḥ prācyavṛttiruditeti yugmayoḥ // KVrk_2.17 //</l>
+
+<p><hi rend="bold">laghurityanuvartate</hi> / samapādayordvitīyacaturthayoḥ <hi rend="bold">paṃcamo</hi> laghuḥ pūrveṇa caturthena laghunā saha yukto yadā syāttadā <hi rend="bold">prācyavṛtti</hi>rnāma vaitālīyaṃ bhavati / yathā /
+<lg>
+<l>svaguṇairanuraṃjitaprajaḥ prācyavṛttaparipālane rataḥ /</l>
+<l>raṇabhūmiṣu bhīmavikramo viṃdhyavarmanṛpatirjayatyasau || 17 ||</l>
+</lg></p>
+
+<l><hi rend="bold">yadā samāvojayugmakau pūrvayorbhavati tatpravṛttakam // KVrk_2.18 //</hi></l>
+
+
+<p><hi rend="bold">pūrvo</hi>ktayorudīcyaprācyavṛttyoḥ <hi rend="bold">samau</hi> sadṛśau <hi rend="bold">aujayugmakau</hi> viṣamasamau pādau <hi rend="bold">yadā</hi> bhavataḥ tadā vaitālīyameva <hi rend="bold">pravṛttakaṃ</hi> syāt / yathā /
+<lg>
+<l>pravṛttakānte duḥraśmibhirvyāptamaṃbaramidaṃ vilokyatām /</l>
+<l>gṛhāṇa tāmbūlamuttamaṃ kopamāśu vijahīhi kopane || 18 ||</l>
+</lg></p>
+
+<l rend="bold">asya yugmaracitā 'parāntikā // KVrk_2.19 //</l>
+
+<p><hi rend="bold">asya</hi> pravṛttakasya samapādakṛtā samapādalakṣaṇayuktaiścaturbhiḥ pādai <hi rend="bold">racitā</hi> <hi rend="bold">aparāntikā</hi> nāma / yathā /
+<lg>
+<l>tuṃgapīvaraghanastanālasā cārukuṇḍalavatī mṛgekṣaṇā /</l>
+<l>pūrvacandravadanā 'parāntikā cittamunmadayatīyamaṃganā || 19 ||</l>
+</lg></p>
+
+<l rend="bold">ayugbhavā cāruhāsinī // KVrk_2.20 //</l>
+
+<p>pravṛttakasyaiva viṣamapādalakṣaṇayuktaiścaturbhiḥ pādaiḥ racitā <hi rend="bold">cāruhāsinī</hi> nāma yathā /
+<lg>
+<l>na kasya cetaḥ samanmathaṃ karoti sā suṃdarākṛtiḥ /</l>
+<l>vicitravākyoktipaṇḍitā vilāsinī cāruhāsinī || 20 ||</l>
+</lg></p>
+
+<p>  // vaitālīyaprakaraṇam //</p>
+
+
+<p>[vaktra-prakaraṇam (2.21-30)]</p>
+
+<l><hi rend="bold">vaktraṃ nādyānnasau syātāmabdheryo anuṣṭubhi khyātam // KVrk_2.21 //</hi></l>
+
+
+<p><hi rend="bold">&amp;#8216;pāda'; ityanuvartate</hi> / <hi rend="bold">anuṣṭubhya</hi>ṣṭākṣarāyāṃ jātau pādasya caturthādakṣarā<hi rend="bold">dyo</hi> yagaṇo yadā bhavati tadā <hi rend="bold">vaktraṃ</hi> nāma vṛttaṃ <hi rend="bold">khyātaṃ</hi> kathitam / <hi rend="bold">abdhe</hi>riti nirviśeṣaṇatvenādyādakṣarānnagaṇasagaṇau na bhavataḥ / yathā /
+<lg>
+<l>apāṇḍugaṇḍamākarṇaviśālanayanaṃ subhru /</l>
+<l>virahe cārusarvāṃgyāstasyāḥ smarāmyahaṃ vaktram || 21 ||</l>
+</lg></p>
+
+<l><hi rend="bold">yujorjena saridbhartuḥ pathyāvaktraṃ prakīrtitam // KVrk_2.22 //</hi></l>
+
+<p><hi rend="bold">yujoḥ</hi> samapādayorcaturthādakṣarā<hi rend="bold">jjena</hi> jagaṇena pareṇa vaktrameva <hi rend="bold">pathye</hi>ti kīrtitam / yathā /
+<lg>
+<l>tvaddantidantalagnoruśākhāḥ pathyāyatāḥ drumāḥ /</l>
+<l>kathayantīva bhagnānāṃ digjayaṃ tava bhūpate || 22 ||</l>
+</lg></p>
+
+<l rend="bold">aujayorjena vāridhestadeva viparītādi // KVrk_2.23 //</l>
+
+<p><hi rend="bold">viparitapathye</hi>tyarthaḥ / <hi rend="bold">yukpāde yagaṇa eva kartavyaḥ</hi> / yathā /
+<lg>
+<l>viparītānyapi priyaḥ kurvāṇo mudamādhatte /</l>
+<l>anukūlastvasau sadā tena prāṇādhiko nūnam || 23 ||</l>
+</lg></p>
+
+<l rend="bold">capalāvaktramayujornakāraścetpayorāśeḥ // KVrk_2.24 //</l>
+
+<p>ya<hi rend="bold">dyayujo</hi>rviṣamayoḥ pādayoścaturthādakṣarānnagaṇo bhavet tadā <hi rend="bold">vaktra</hi>meva <hi rend="bold">capalā</hi> bhavati / <hi rend="bold">yukpādayoryagaṇa eva</hi> / yathā /
+<lg>
+<l>capalāpāṃganayane pakvabimboṣṭhi candrāsye /</l>
+<l>svādhīnatvaṃ bhaja dayitaṃ tāruṇyamasthiraṃ yasmāt || 24 ||</l>
+</lg></p>
+
+<l rend="bold">yasyāṃ laḥ saptamo yugme sā yugmavipulā matā // KVrk_2.25 //</l>
+<p><hi rend="bold">yukpāde</hi> dvitīyacaturthe laghuḥ <hi rend="bold">saptamo</hi> yasyāḥ <hi rend="bold">sā yugmavipulā</hi> nāma / nanu pathyālakṣaṇasāmyātpunaruktametat / naivam / vipulādhikārasyedānīmārabhyamānatvāt vinā 'nutpattiḥ pathyālakṣaṇaṃ tvayukpāde avaśyameva yagaṇena bhavitavyam / atra tu na niyamaḥ / yathā /
+<lg>
+<l>aho kasyāpi dhanyasya mahākulaprasūtayā /</l>
+<l>prītiḥ svakāntayā sārdhaṃ vipulā jāyate gṛhe || 25 ||</l>
+</lg></p>
+
+<l rend="bold">saitavasyākhileṣvapi // KVrk_2.26 //</l>
+
+<p><hi rend="bold">saitavasyā</hi>cāryasya matena caturṣvapi pādeṣu saptamo laghuḥ kartavyaḥ / yathā /
+<lg>
+<l>aho dhanyasya kasyacitsukaverjāyate matiḥ /</l>
+<l>nūnaṃ yayādhikriyate saitavaṃ kāvyamuttamam || 26 ||</l>
+</lg></p>
+
+<l rend="bold">bhenābdhito bhādvipulā // KVrk_2.27 //</l>
+
+<p><hi rend="bold">saitavasyeti nivṛttam </hi>/ &amp;#8216;<hi rend="bold">capalāvaktramayujornakāraścetpayorāśe'rityanuvartate</hi> / &#8216;<hi rend="bold">yasyāṃ laḥ saptamo yugme sā yugmavipulā mate'ti sarvamanuvartanīyam /</hi> ayukpādayoḥ prathamatṛtīyayoścaturthyādakṣarātparayo yagaṇaṃ bādhitvā bhagaṇaścedbhavati tadā bhenopalakṣitā vipulā syāt <hi rend="bold">bhavipule</hi>tyarthaḥ / yathā /
+<lg>
+<l>viśālākṣī kāmagajakumbhāmbhavipulastanī /</l>
+<l>madhyakṣāmā haṃsagatiḥ kasya na syādgatipradā //</l>
+</lg></p>
+
+<p>ayujoriti jātipakṣe dvayorapi pādayorgrahaṇam vyaktipakṣe punarekasya / ekapakṣe punaḥ prathamasya tṛtīyasya vā tathā cāhurmahākavayaḥ /
+<lg>
+<l>&amp;#8216;vaṭe vaṭe vaiśravaṇaścatvare catvare śiva'; iti /</l>
+<l>&amp;#8216;yasya prabhādbhuvanaṃ śāśvate pathi tiṣṭhatī'ti /</l>
+<l>&amp;#8216;upasthitaṃ prāñjalinā vinītena garutmatā'; iti mahākaviprayogāḥ || 27 ||</l>
+</lg></p>
+
+<l rend="bold">itthamanyā raścaturthāt // KVrk_2.28 //</l>
+
+<p><hi rend="bold">itthaṃ</hi> pūrvoktaprakāreṇāyukpādayo<hi rend="bold">ścaturthāda</hi>kṣarātparato ragaṇo bhavati tadā <hi rend="bold">ravipulā</hi> syāt / yathā /
+<lg>
+<l>tathā jitaḥ śatruvargo rājan bāhubalena te /</l>
+<l>sahāntaḥpuro yathā 'sau tatāra vipulā nadī //</l>
+</lg></p>
+
+<p>vyaktipakṣe prathamapāde yathā /
+[mahākavikālidāsavasvāgdevatāgurum /
+yajñāne viṣayābhyānti darpaṇe pratibimbavat /]
+tṛtīyapāde yathā /
+kāminībhiḥ saha prītiḥ kasya nāma na rocate /
+yadi na syādvārivīcicaṃcalaṃ hata jīvitam // iti || 28 ||</p>
+
+<l><hi rend="bold">no 'mbudheścennavipulā // KVrk_2.29 //</hi></l>
+
+
+
+<lg>
+<l>ayukpādayoścaturthādakṣarāccennagaṇo bhavatīti tadā navipulā syāt /</l>
+<l>līlayā yena vipulā daṃṣṭrāgreṇoddhṛtā mahī /</l>
+<l>bibhratā saukaramapi vapurvandāmi taṃ harim //</l>
+</lg>
+
+<lg>
+<l>atraiva bhāravikaviryathā /</l>
+<l>yuyutsuneva kavacaṃ kimāmuktamidaṃ tvayā /</l>
+<l>tapasvino hi vasate kevalājinavalkale //</l>
+</lg>
+
+<p>vyaktipakṣe prathamapāde yathā /
+tava maṃtrakṛto maṃtrairdūrātsaṃśamitāribhiḥ /
+pratyādiśyanta iva me dṛṣṭalakṣyabhidaḥ śarāḥ // ityādi || 29 ||</p>
+
+<l><hi rend="bold">to 'mbudhestatpūrvā bhavet // KVrk_2.30 //</hi></l>
+
+
+<p>ayukpādayoḥ caturthādakṣarācce<hi rend="bold">ttagaṇo</hi> bhavati tadā tatpūrvaṃ <hi rend="bold">tavipule</hi>tyarthaḥ / yathā /
+tṛṣṇeyaṃ re tāta śriyaṃ saṃcitāṃ vipulāṃ hare -
+dvihāya tasmāttāṃ bhava sukhī vairāgyasampadā //</p>
+
+<lg>
+<l>vyaktipakṣe prathamapāde yathā /</l>
+<l>lokavatpratipattavyo laukiko 'rthaḥ parīkṣakaiḥ /</l>
+<l>lokavyavahāraṃ prati sadṛśau bālapaṇḍitau //</l>
+</lg>
+
+<p><hi rend="bold">anyeti grahaṇāt magaṇasagaṇavipulā 'pi boddhavyā /</hi> yathā mamaiva chandasi /
+&amp;#8216;ambudhau natabharamasā auje tadyutavipulā bhavet'; / yathā /
+<lg>
+<l>sarvātiriktaṃ saubhāgyaṃ bibhratī cārulocanā /</l>
+<l>strīlokasṛṣṭiḥ saumyeva niḥ sāmyamasya vedhasā // (?)</l>
+</lg>
+vyaktipakṣe prathamapāde yathā /
+manobhirāmāḥ śṛṇvantau rathanemisvanonmukhaiḥ /
+atha pradoṣe doṣajñaḥ saṃveśāya viśāṃpatim // iti /
+<lg>
+<l>tṛtīyapāde yathā /</l>
+<l>adūravartinīṃ siddhiṃ rājanvigaṇayātmanaḥ /</l>
+<l>upasthiteyaṃ kalyāṇī nāmni kīrtita eva yaditi //</l>
+</lg></p>
+
+<l rend="bold">savipulā yathā /</l>
+<p>kṣaṇavidhvaṃsini kāye kā cintā maraṇe raṇe / iti /
+<hi rend="bold">sarveṣāṃ vipulābhedānāṃ caturtho varṇaḥ prāyeṇa gururbhavati / ityāmnāyaḥ || || </hi>30
+  // iti vaktraprakaraṇam //</p>
+
+
+
+<p>[mātrāsamaka-prakaraṇam (2.31-38)]</p>
+
+<l rend="bold">dvikaguṇitavasulaghuracaladhṛtiriti // KVrk_2.31 //</l>
+
+<p><hi rend="bold">dvābhyāṃ</hi> <hi rend="bold">guṇitā</hi> <hi rend="bold">vasavo</hi> aṣṭau <hi rend="bold">laghava</hi> ityarthaḥ / ṣoḍaśabhirlaghubhi<hi rend="bold">racaladhṛti</hi>rnāma / yathā /
+<lg>
+<l>itarajanahitamitaramṛtaramatimanavaratamavanitilakamiva sapadi /</l>
+<l>svayamapi jalanidhijananiratilaṣati puruṣavaramacaladhṛtivibhavinamiha //</l>
+</lg></p>
+
+<p><hi rend="bold">gītyārye</hi>ti piṃgalaḥ || 31 ||</p>
+
+<l rend="bold">mātrāsamakaṃ navamo lgantaṃ // KVrk_2.32 //</l>
+
+<p>&amp;#8216;dvikaguṇitavasulaghu'rityanuvartate / yadā acaladhṛtireva gurvanto bhavati navamośca laghureva tadā mātrāsamakaṃ nāma /
+prāksūtrāllaghurityanuvartamāne 'pi &amp;#8216;navamo li'ti vadatā sūtrakāreṇānyeṣāṃ laghu vo 'nujñātastasmā'<hi rend="bold">nna samā 'tra parāśritā kale</hi>'tyapyanuvartanīyam / atraiva sūtre lakṣyalakṣaṇatvāt / yathā /
+<lg>
+<l>dhūlīdhūsaṃskṛtatanaśobhaḥ prakaṭitanūtanavadanadvaṃdvaḥ /</l>
+<l>pramuditavadano jaṭilaśiraskaḥ khelati mātrāsamakaṃ bālaḥ || 32 ||</l>
+</lg></p>
+
+<l><hi rend="bold">jo nlāvathāmbudherviślokaḥ // KVrk_2.33 //</hi></l>
+
+
+<p><hi rend="bold">ambudhe</hi>rlaghucatuṣṭayātparayo<hi rend="bold">rjagaṇo nlau</hi> nagaṇalaghū yadā bhavatastadā mātrāsamakameva <hi rend="bold">viśloko</hi> nāma / yathā /
+<lg>
+<l>muñcati tṛṇamiva gatavikalpaḥ putraṃ priyamaviślokaṃ yataḥ /</l>
+<l>saṃgrāmabhuvi vijitārisamūhaḥ kṣoṇīmimāṃ sa sākṣadavyāt (?) || 33 ||</l>
+</lg></p>
+
+<l rend="bold">tadyugalādvānavāsikā syāt // KVrk_2.34 //</l>
+
+<p><hi rend="bold">tadyugalāda</hi>mbudhiyugalāllaghvaṣṭakātparayo jagaṇo nagaṇalaghū yadā bhavatastadā <hi rend="bold">vānavāsikā</hi> bhavet / yathā /
+<lg>
+<l>kuṃkumapaṃkānuliptagātrā madhyakṣāmā vipulanitambā /</l>
+<l>asmākaṃ vānavāsikā strī cetaḥprītiṃ sapadi vidhatte || 34 ||</l>
+</lg></p>
+
+
+<l rend="bold">bāṇāṣṭanavasu yadi laścitrā // KVrk_2.35 //</l>
+
+<p><hi rend="bold">paṃcamo 'ṣṭamo navamo</hi> yadi ce<hi rend="bold">llaghu</hi>rbhavati tadā <hi rend="bold">citrā</hi> nāma yathā /
+<lg>
+<l>dṛṣṭvā tava ripunagare śūnye citrāni dhavalagṛhabhittīnām /</l>
+<l>yānti drutataramibhayūthātitrāsam naravarajanatā buddhyā || 35 ||</l>
+</lg></p>
+
+<l rend="bold">aṣṭābhyo 'tha galāvupacitrā // KVrk_2.36 //</l>
+
+<p>laghvaṣṭakādyadā gurulaghū bhavatastadā <hi rend="bold">upacitrā</hi> nāma / yathā /
+<lg>
+<l>mānaṃ mānini muñca bhaja tvaṃ kāntaṃ yāvaditīritamālyā /</l>
+<l>tāvadvyoma babhūva purastānnakṣatrairupacitritametat || 36 ||</l>
+</lg></p>
+
+<l rend="bold">yadatītakṛtavividhalakṣmayutairmātrāsamakādipādaiḥ kalitam /</l>
+<l rend="bold">aniyatavṛttaparimāṇasahitaṃ prathitaṃ jagatsu pādākulakam // KVrk_2.37 //</l>
+
+<p><hi rend="bold">atītaṃ</hi> prāguktaṃ <hi rend="bold">kṛtaṃ</hi> <hi rend="bold">lakṣma</hi> lakṣaṇaṃ yena tena <hi rend="bold">yutaiḥ</hi> sahitaiḥ <hi rend="bold">mātrāsamaka</hi>viślokavānavāsikācitropacitrāṇāṃ <hi rend="bold">pādai</hi>ścaraṇaiḥ <hi rend="bold">kalitaṃ</hi> yuktaṃ <hi rend="bold">aniyatavṛttaparimāṇasahitaṃ</hi> aniyatamamaryādaṃ vṛttānāṃ parimāṇaṃ tena sahitam / ko 'rthaḥ / mātrāsamakādīnāṃ pañcānāmapi pādairyaiḥ kaiścidapi caturbhiḥ <hi rend="bold">pādākulaka</hi>miti kathitam /
+atra mātrāsamakaviślokavānavāsikācitropacitrāṇāmudāharaṇam / yathā /
+<lg>
+<l>dakṣiṇamārutacalitāśoke kokilakalaravamuditāloke /</l>
+<l>mugdhe manmathasuhṛdavasante pādākulakaṃ yāti patiste //</l>
+</lg></p>
+
+<lg>
+<l>tathā viślokopacitrādipādairyathā /</l>
+<l>vātāhatadalapaṅkajanetre asitadukūlācchāditagātre /</l>
+<l>kathaya sakhi tvaṃ kva nu me vyaktaṃ pādākulakaṃ gacchasi naktam //</l>
+</lg>
+
+<lg>
+<l>evamanye 'pi mahākaviprayogā yathā /</l>
+<l>catvaramaṇḍapatarumūlāni saṃcitasalilānyavakūlāni /</l>
+<l>kvacidapi na bhavati bhikṣāhāniḥ tatkiṃ kriyate mānamlāniḥ //</l>
+</lg>
+
+<p><hi rend="bold">ante yamaka ityāmnāyaḥ</hi> || 37 ||</p>
+
+
+<p>adhunā gurulaghupramāṇamāha /
+<l rend="bold">vṛttasya lo vinā varṇairgā varṇā gurubhistathā /</l>
+<l rend="bold">guravo lairdale nityaṃ pramāṇamiti niścitam // KVrk_2.38 //</l></p>
+
+
+<p>yasya kasyaci<hi rend="bold">dvṛttasya laḥ </hi>kalā mātrā <hi rend="bold">varṇai</hi>rakṣarai<hi rend="bold">rvinā</hi> guravo bhavanti / <hi rend="bold">varṇā</hi> <hi rend="bold">gurubhistathā</hi> tāḥ kalā gurubhirvinā varṇā na bhavanti / <hi rend="bold">guravo rlairdalai nityaṃ</hi> tā eva kalā lairlaghubhirvinā <hi rend="bold">dale</hi> 'rdhe kṛte sati guravo bhavanti / yathā / asminneva vṛtte ekapaṃcāśatkalāvarṇaiḥ dvātriṃśadbhirvinā ekonaviṃśatiguravoḥ bhavanti / punastā eva mātrā ekonaviṃśatyā gurubhirvinā dvātriṃśadbhavanti / punastā kalā ekapaṃcāśattrayodaśabhirlaghubhirvinā aṣṭatriṃśadbhavanti / tato <hi rend="bold">dale</hi> 'rdhe kṛte sati ekonaviṃśatirguravo bhavantīti <hi rend="bold">pramāṇaṃ</hi> niyataṃ vṛttasyeti || 38 ||</p>
+
+<l rend="bold">śikhiguṇitadaśalaghuracitamapagatalaghuyugalamaparamidamakhilam /</l>
+<l><hi rend="bold">saguruśakalayugalakamapi suparighaṭitalalitapadaniciti bhavati śikhā // KVrk_2.39 //</hi></l>
+
+
+<p><hi rend="bold">śikhi</hi>bhistribhi<hi rend="bold">rguṇitairdaśa</hi>bhi<hi rend="bold">rlaghu</hi>bhī <hi rend="bold">racitaṃ</hi> kṛtaṃ tacca <hi rend="bold">tadapagatalaghuyugalaṃ</hi> ca tathoktaṃ aṣṭāviṃśallaghukamityarthaḥ / <hi rend="bold">aparaṃ</hi> dvitīya<hi rend="bold">midamardhamakhilaṃ</hi> saṃpūrṇaṃ triṃśallaghukamityarthaḥ / <hi rend="bold">śakalayugalakamapi</hi> ardhadvayamamapi <hi rend="bold">saguru</hi> saha guruṇā vartateti saguru yadā bhavati tadā <hi rend="bold">śikhā</hi> nāma bhavati / <hi rend="bold">suparighaṭitāni</hi> <hi rend="bold">lalitapadāni</hi> teṣāṃ <hi rend="bold">nicitī</hi> racanāviśeṣā yatra kriyāviśeṣaṇe tattathoktam / yathā /
+<lg>
+<l>malayapavanacalitasuvikacavicikalamaliradhivasati muditamanāḥ /</l>
+<l>śubhitasamayamuditapikayuvatirapi parimalabahulabakulataruśikhā //</l>
+</lg></p>
+
+<p><hi rend="bold">cūliketi vaktavye</hi> / chaṃdobhaṃgabhayācchikhetyuktamekārthatvānna doṣaḥ || || 39</p>
+
+<l rend="bold">vinimayavihitaśakalayugalalaghulalitapadavitatiracitagaṇanicayā /</l>
+<l rend="bold">śrutisukhakṛdiyamapi jagati jaśira upagatavati ñi sati bhavati khajā // KVrk_2.40 //</l>
+
+<p>saiva śikhā <hi rend="bold">vinimaye</hi>na vyatyāsena <hi rend="bold">vihitaṃ</hi> <hi rend="bold">śakalayugala</hi>mardhadvayaṃ <hi rend="bold">lalitapadavitatyā</hi> <hi rend="bold">racitagaṇanicayā</hi> yadā bhavati tadā <hi rend="bold">khajā</hi> nāma / kva <hi rend="bold">sati</hi> / <hi rend="bold">ñi</hi> sati / ñi cavargīyapaṃcamasya cavargīyatṛtīyasya <hi rend="bold">śira</hi> urdhvavibhāgastasmi<hi rend="bold">nnupagatavati</hi> / ko 'rthaḥ / <hi rend="bold">khañjetyarthaḥ</hi> / yathā /
+<lg>
+<l>sasalilasaliladharavasumuditaśikhikulaviracitakalakalanikare /</l>
+<l>suparihṛtanijayuvatigṛhanabhasi hata pathika kathamasi gamā //</l>
+</lg></p>
+
+<l>ekagurūṇi chaṃdasi khañjāśabdasya praveśayitumaśakyatvānnāma noktam || 40 ||</l>
+
+<lg>
+<l><hi rend="bold">aṣṭāvardhe gā dvyabhyastā yasyāḥ sā 'naṅgakrīḍoktā /</hi></l>
+<l><hi rend="bold">dalamapaparamapi vasuguṇitasalilanidhilaghukaviracitapadavitati bhavati // KVrk_2.41 //</hi></l>
+</lg>
+
+
+
+<lg>
+<l>dvābhyāṃ guṇitā 'ṣṭau guravo yasyāḥ sā ṣoḍaśaguruḥ prathame 'rdhe tvaparamapyardhaṃ vasubhiraṣṭabhirguṇitāḥ salilanidhilaghava iti dvātriṃśatsaṃkhyā laiḥ racitapadavitatiḥ anaṃgakrīḍā nāma /</l>
+<l>tyaktānaṅgakrīḍāṃ muktavrīḍāṃ śatrukṣauṇīpālāḥ /</l>
+<l>suviṣamavanabhuvi vidadhati bhayamiva naravaratilakasuvijitaripunivahā 'sau //</l>
+</lg>
+
+<p><hi rend="bold">saumyetyeke</hi> || 41 ||</p>
+
+<l rend="bold">triguṇanavalaghuravasitigururiti dalayugalakṛtatanuratirucirā // KVrk_2.42 //</l>
+
+<p>tribhirguṇitārnava laghavo yasyāṃ sā tathoktā saptāviṃśallaghurityarthaḥ / <hi rend="bold">avasiti</hi>ravasānaṃ tasmin <hi rend="bold">guru</hi>ryasyāḥ sā tathoktā iti pūrvoktaprakāreṇa saptaviṃśallaghavo 'nte guruḥ evaṃ <hi rend="bold">dalayugalakṛtatanuḥ</hi> viracitaśarīrā <hi rend="bold">atirucirā</hi> nāma / yathā /
+<lg>
+<l>samadagajagatirurukucayugakṛtanatatanuramalavadanakamalā /</l>
+<l>anavaratamapaharati mama hṛdayamiha hi yuvatiriyamatirucirā || 42 ||</l>
+</lg></p>
+
+<p>  // iti mātrāsamakaprakaraṇam //</p>
+
+<p>iti sulhaṇaviracitāyāṃ sukavihadayānandinyābhidhānāyāṃ vṛttaratnākaracchaṃdovṛttau mātrāvṛttādhyāyo dvitīyaḥ samāptaḥ //</p>
+
+<p>tṛtīyo 'dhyāyaḥ
+samavṛttādhyāyaḥ</p>
+
+
+<p><hi rend="bold">uktāyām
+</hi></p>
+
+<l rend="bold">g śrīḥ // KVrk_3.1 //</l>
+
+<p>ekākṣarāyāṃ jātau eko gururyasya vṛttasya pāde tadvṛttaṃ <hi rend="bold">śrī</hi>rnāma / yathā /
+<l>śrīstattailam || 1 ||</l></p>
+
+<p><hi rend="bold">atyuktāyām
+</hi></p>
+
+<l rend="bold">gau strī // KVrk_3.2 //</l>
+
+<p>gurudvayaṃ yatra tadvṛttaṃ <hi rend="bold">strī</hi> nāma / yathā /
+<l>ādyā sā strī gaurī pāyāt || 2 ||</l></p>
+
+<p><hi rend="bold">madhyāyām
+</hi></p>
+
+<l rend="bold">mo nārī // KVrk_3.3 //</l>
+
+<p>yatra <hi rend="bold">ma</hi>gaṇastadvṛttaṃ <hi rend="bold">nārī</hi> nāma /
+<l>śrīnārīgoviṃdau bhūyāstavodbuddhyai || 3 ||</l></p>
+
+<p><hi rend="bold">ro mṛgī // KVrk_3.4 // </hi></p>
+
+<p>yatra <hi rend="bold">ra</hi>gaṇastadvṛttaṃ <hi rend="bold">mṛgī</hi> nāma / yathā /
+kathyatāṃ yātyasau
+<l>gītagā hā mṛgī || 4 ||</l></p>
+
+<p><hi rend="bold">pratiṣṭhāyām
+</hi></p>
+
+<l rend="bold">mgau cetkanyā // KVrk_3.5 //</l>
+
+<p><hi rend="bold">cedya</hi>di pāde magaṇagurū bhavataḥ tadvṛttaṃ <hi rend="bold">kanyā</hi> nāma / yathā /
+<lg>
+<l>kāmakrīḍārūḍhāyāsā /</l>
+<l>etāḥ kanyā kīdṛśyāstāḥ //</l>
+</lg></p>
+
+<lg>
+<l>tathā ca /</l>
+<l>sarveṣāṃ yaḥ sāmānyarddhiḥ /</l>
+<l>tasyeśasstādbhūyo vṛddhyai || 5 ||</l>
+</lg>
+
+<p><hi rend="bold">supratiṣṭhāyām
+</hi></p>
+
+<l rend="bold">bhgau giti paṃktiḥ // KVrk_3.6 //</l>
+
+<p>yatra bhagaṇo dvau gurū bhavataḥ tadvṛttaṃ <hi rend="bold">paṃkti</hi>rnāma bhavati / yathā /
+<lg>
+<l>vyomani nīlāṃ nīradapaṃktim /</l>
+<l>vīkṣya vipannāḥ proṣitavadhvaḥ || 6 ||</l>
+</lg></p>
+
+<p><hi rend="bold">gāyatryām
+</hi></p>
+
+<l rend="bold">tyau stastanumadhyā // KVrk_3.7 //</l>
+
+<p>yatra tagaṇayagaṇau bhavataḥ tadvṛttaṃ <hi rend="bold">tanumadhyā</hi> nāma / yathā /
+<lg>
+<l>kasyāpi mahadbhiḥ puṇyairanukūlā /</l>
+<l>śyāmā tanumadhyā gehe bhavati strī || 7 ||</l>
+</lg></p>
+
+<l rend="bold">śaśivadanā nyau // KVrk_3.8 //</l>
+
+<p>yatra nagaṇayagaṇau bhavatastadvṛttaṃ <hi rend="bold">śaśivadanā</hi> nāma / yathā /
+<lg>
+<l>malayajalepaḥ kuvalayaśayyā /</l>
+<l>dahati viyoge śaśivadanāyāḥ || 8 ||</l>
+</lg></p>
+
+<l rend="bold">tsau cedvasumatī // KVrk_3.9 //</l>
+
+<p><hi rend="bold">cetta</hi>gaṇasagaṇau pāde bhavataḥ tadvṛttaṃ <hi rend="bold">vasumatī</hi> nāma / yathā /
+<lg>
+<l>pṛthvī dhṛtavatī rājñā nayavatā /</l>
+<l>mudyajjanapadā ślāghyā vasumatī || 9 ||</l>
+</lg></p>
+
+<p><hi rend="bold">uṣṇihi</hi></p>
+
+<l rend="bold">madhumatinanagāḥ // KVrk_3.10 //</l>
+<p>nagaṇanagaṇaguravo yatra tadvṛttaṃ madhumatī nāma / yathā || 10 ||</p>
+
+<l rend="bold">msau gaḥ syānmadalekhā // KVrk_3.11 //</l>
+
+<p>magaṇasagaṇau guruśca yatra tadvṛttaṃ <hi rend="bold">madanalekhā</hi> nāma / yathā /
+<lg>
+<l>lāvaṇyāmbhasi magne tasyāḥ kāmamahebhe /</l>
+<l>bhraṣṭeyaṃ stanakumbhādromalīmadalekhā || 11 ||</l>
+</lg></p>
+
+<l rend="bold">kumāralalitā jsau g // KVrk_3.12 //</l>
+
+<p>jagaṇasagaṇau guruśca yatra tadvṛttaṃ <hi rend="bold">kumāralalitā</hi> nāma / yathā /
+<lg>
+<l>kumāralalitāni pramodajananāni /</l>
+<l>nayābhimudamagryāṃ vilokya namanīkā || (?) 12 ||</l>
+</lg></p>
+
+<l rend="bold">saragā haṃsamālā // KVrk_3.13 //</l>
+
+<p>yatra sagaṇaragaṇaguravastadvṛttaṃ <hi rend="bold">haṃsamālā</hi> nāma / yathā /
+<lg>
+<l>śaradi prekṣya yāntīṃ muditāṃ haṃsamālām /</l>
+<l>tyajati preyasīṃ kaḥ sukhalipsuḥ svatantraḥ || 13 ||</l>
+</lg></p>
+
+<p><hi rend="bold">anuṣṭubhi</hi></p>
+
+<l rend="bold">mo mo go go vidyunmālā // KVrk_3.14 //</l>
+
+<p>dvau magaṇau dvau gurū ca yatra tadvṛttaṃ <hi rend="bold">vidyunmālā</hi> nāma / yathā /
+<hi rend="bold">caturbhiryatiḥ</hi> / yathā mamaiva chaṃdasi /
+<hi rend="bold">mau gau vedairvidyunmālā</hi> /
+<l>vyomni vyāpte taptarekhānākurvantī vaṃgyāṃmānamrāṃ tvāṃ bhartuḥ strīṇāṃ jāgaryakā vidyunmālā || (??) 14 ||</l></p>
+
+<l rend="bold">bhau giti citrapadā gaḥ // KVrk_3.15 //</l>
+
+<p>bhagaṇadvayaṃ gurū ca yatra tadvṛttaṃ <hi rend="bold">citrapadā</hi> nāma / yathā /</p>
+
+<lg>
+<l>nūpuraśabdamanojñaṃ tālalayānvitagītam /</l>
+<l>pīnapayodharayugmā nṛtyati vicitrapadeyam || 15 ||</l>
+</lg>
+
+<l rend="bold">māṇavakaṃ bhāttalagāḥ // KVrk_3.16 //</l>
+
+<p>bhagaṇatagaṇalaghuguravo yatra tadvṛttaṃ <hi rend="bold">māṇavakaṃ</hi> nāma / yathā /
+vāñchasi śaṃ cedvipulaṃ tarhi sakhe muñca śaṭha -
+medhā kiṃ jñāsya ruciṃ mitramapi tvacapalam // (?)
+<hi rend="bold">caturbhiryatirityāmnāyaḥ</hi> / <hi rend="bold">māṇavakākrīḍitamiti piṃgalaḥ</hi> || 16 ||</p>
+
+<l rend="bold">mnau gau haṃsarutametat // KVrk_3.17 //</l>
+
+<p>yatra magaṇanagaṇau dvau gurū tadvṛttaṃ <hi rend="bold">haṃsarutaṃ</hi> nāma / yathā /
+<lg>
+<l>dṛṣṭvā kāsakusumāni śrutvā haṃsarutametat /</l>
+<l>kāmārtaḥ śaradi pāntha kaṣṭaṃ jīvati nikṛṣṭaḥ || 17 ||</l>
+</lg></p>
+
+<l rend="bold">rjau samānikā galau ca // KVrk_3.18 //</l>
+
+<p>ragaṇajagaṇau gurulaghū ca yatra tadvṛttaṃ <hi rend="bold">samānikā</hi> nāma / yathā /
+<lg>
+<l>te samānikā ca yānti śatravo bhayena dhīra /</l>
+<l>rājasaṃpadaṃ vihāya yadyajeyabāhavo 'pi || 18 ||</l>
+</lg></p>
+
+<l rend="bold">pramāṇikā jarau lagau // KVrk_3.19 //</l>
+
+<p>jagaṇaragaṇau laghugurū yatra tadvṛttaṃ <hi rend="bold">pramāṇikā</hi> nāma / yathā /
+<lg>
+<l>pravāti dakṣiṇānilaḥ supuṣpitāmrakiṃśukaḥ /</l>
+<l>vasaṃta eṣa sāṃprataṃ pramāṇikā 'tra kokilā || 19 ||</l>
+</lg></p>
+
+<l rend="bold">[campakamālā cedbhamasā gaḥ // KVrk_3.20 //</l>
+
+<p>bhagaṇamagaṇasagaṇāḥ guruśca yatra tadvṛttaṃ <hi rend="bold">caṃpakamālā</hi> nāma<hi rend="bold">]</hi> || 20 ||</p>
+
+<l rend="bold">[nārācakaṃ tarau lagau // KVrk_3.21 //</l>
+
+<p>tagaṇaragaṇau laghugurū ca yatra tadvṛttaṃ nārācakaṃ nāma / yathā<hi rend="bold">]</hi> || 21 ||</p>
+
+<l rend="bold">vitānamābhyāṃ yadanyat // KVrk_3.22 //</l>
+
+<p><hi rend="bold">ābhyāṃ</hi> samānikāpramāṇikābhyāṃ <hi rend="bold">yadanyada</hi>ṣṭākṣaraṃ chandasta<hi rend="bold">dvitānaṃ</hi> nāma / <hi rend="bold">ābhyāṃ yadanyadi</hi>ti bruvan sūtrakāro vitānasyānekaprakāratvaṃ darśayati / anyathā gaṇaniyamaṃ brūyāt / yathā /
+<lg>
+<l>jyotsnāvitānamaindavaṃ paśya priye manoramam /</l>
+<l>kopaṃ tyaja priyaṃ bhaja strīṇāṃ priyaṃ hi yauvanam //</l>
+</lg></p>
+
+<lg>
+<l>anyacca /</l>
+<l>tasyāḥ smarāmi suṃdaraṃ candropamānamānanam /</l>
+<l>kaṃdarpacāpabhaṃguraṃ śrutibhramopaśobhitamiti //</l>
+</lg>
+
+<lg>
+<l>api ca /</l>
+<l>kaṃkālamāladhāraṇaṃ kaṃdarpadarpahāriṇam /</l>
+<l>saṃsārabandhamocanaṃ vaṃdāmahe trilocanam //</l>
+</lg>
+
+<lg>
+<l>&amp;#8216;anyadato hi vitānami'ti śvetapaṭajayadevena yaduktam /</l>
+<l>ityanena gatārthatvāt || 22 ||</l>
+</lg>
+
+<p><hi rend="bold">bṛhatyām
+</hi></p>
+
+<l><hi rend="bold">rānnasāviha halamukhī // KVrk_3.23 //</hi></l>
+
+
+<p>yatra ragaṇanagaṇasagaṇāstadvṛttaṃ <hi rend="bold">halamukhī</hi> nāma / yathā /
+<lg>
+<l>niṃditāṃ vapuṣi puruṣadveṣiṇīṃ viradaśanām /</l>
+<l>tāṃ sakhe pariṇayavidhau dūratastyaja halamukhīm || 23 ||</l>
+</lg></p>
+
+<l rend="bold">bhujagaśiśubhṛtā nau maḥ // KVrk_3.24 //</l>
+
+<p>dvau nagaṇau magaṇaśca yatra tadvṛttaṃ <hi rend="bold">bhujagaśiśubhṛtā</hi> nāma / <hi rend="bold">saptabhiryatirityāmnāyaḥ</hi> / yathā /
+<lg>
+<l>varatarulavalīvallīkisalayagahanachinnāḥ /</l>
+<l>bhujagaśiśubhṛtā ramyā malayagirivanoddeśāḥ || 24 ||</l>
+</lg></p>
+
+
+
+<p><hi rend="bold">paṃktau</hi></p>
+
+<l rend="bold">msau jgau śuddhavirāḍidaṃ matam // KVrk_3.25 //</l>
+
+<p>magaṇasagaṇajagaṇā guruśca yatra tadvṛttaṃ <hi rend="bold">śuddhavirāṭ </hi>nāma / yathā /
+<lg>
+<l>kurvan rājyamapīha saṃtataṃ kāmakrodhavivarjitaḥ sadā /</l>
+<l>mitro me na samobhayānataḥ(?) satyaṃ śuddhavirāḍasi prabho || 25 ||</l>
+</lg></p>
+
+<l rend="bold">mnau ygau ceti paṇava nāmedam // KVrk_3.26 //</l>
+
+<p>yatra magaṇanagaṇayagaṇā guruśca yatra tadvṛttaṃ <hi rend="bold">paṇava</hi> nāma / <hi rend="bold">pañcabhiryatiḥ</hi> / yathā /
+<lg>
+<l>yāsāṃ vakṣyasi ghanavakṣoje hāraḥ saṃprati śuśubhe tāraḥ /</l>
+<l>pādau nūpuraravavācālau bhrātastāḥ paṇavanitāḥ paśya || 26 ||</l>
+</lg></p>
+
+<l rend="bold">rjau ragau mayūrasāriṇī syāt // KVrk_3.27 //</l>
+
+<p>ragaṇajagaṇaragaṇā guruśca yatra tadvṛttaṃ <hi rend="bold">mayūrasāriṇī</hi> nāma / yathā /
+<lg>
+<l>vistāreṇa barhibhāraramyā barhiṇī mayūrasāraṇīyam /</l>
+<l>garjitaṃ niśamya vāridānāṃ nṛtyati pramodanirbharāṅgī || 27 ||</l>
+</lg></p>
+
+<l rend="bold">bhmau sagayuktau rukmavatīyam // KVrk_3.28 //</l>
+
+<p>bhagaṇamagaṇasagaṇā guruśca yatra tadvṛttaṃ <hi rend="bold">rukmavatī</hi> nāma / yathā /
+<lg>
+<l>cetasi yasyā jīvitanāthastatpriyakāryāsaktamanaskā /</l>
+<l>devaguruśvaśrūdvijabhaktā rukmavatī syātkīrtimatī vā || 28 ||</l>
+</lg></p>
+
+<l><hi rend="bold">jñeyā mattā mabhasagayuktā // KVrk_3.29 //</hi></l>
+
+
+<p>magaṇabhagaṇasagaṇaguravo yatra tadvṛttaṃ <hi rend="bold">mattā</hi> nāma / <hi rend="bold">caturbhiryatirityāmnāyaḥ</hi> / yathā /
+<lg>
+<l>yaccūtāgre smaraśarabaṃdhau baddhāvāsā pikasahavayaḥ /</l>
+<l>gāyantyetāḥ kalamiti mattāstanmadhye 'haṃ sakhi madhureṣaḥ || 29 ||</l>
+</lg></p>
+
+<l rend="bold">narajagairbhavenmanoramā // KVrk_3.30 //</l>
+
+<p>yatra nagaṇaragaṇajagaṇaguravo tadvṛttaṃ <hi rend="bold">manoramā</hi> nāma / yathā /
+<lg>
+<l>yuvatiriṃdusuṃdarānanā pṛthughanastanī kṛśodarī /</l>
+<l>gurunitambabhāramaṃtharā harati me mano manoramā || 30 ||</l>
+</lg></p>
+
+<l rend="bold">tjau jo guruṇeyamupasthitā // KVrk_3.31 //</l>
+
+<p>tagaṇajagaṇau jagaṇo guruśca tadvṛttaṃ <hi rend="bold">upasthitā</hi> nāma / <hi rend="bold">atra dvābhyāmaṣṭabhiśca yatirityeke</hi> / yathā /
+<lg>
+<l>tyaktvā nijaśastramupasthitā ye prāṃjalayastava śatravaḥ /</l>
+<l>teṣāmavanīśvara jīvitaṃ dattaṃ bhavatā samarājire || 31 ||</l>
+</lg></p>
+
+
+<p><hi rend="bold">triṣṭubhi</hi></p>
+
+<l rend="bold">syādindravajrā yadi tau jagau gaḥ // KVrk_3.32 //</l>
+
+<p>yatra tagaṇau dvau jagaṇo gurū ca tadvṛttaṃ <hi rend="bold">indravajrā</hi> nāma / yathā /
+<lg>
+<l>syādindravajrādi karkaśaṃ me</l>
+<l>ceto yadīye virahāgame 'smin /</l>
+<l>nūnaṃ tadānīṃ yadi tadviyoga-</l>
+<l>saṃtāpasaṃyatsahanakṣamaḥ syām || 32 ||</l>
+</lg></p>
+
+<l rend="bold">upendravajrā jatajāstato gau // KVrk_3.33 //</l>
+
+<p>yatra jagaṇatagaṇajagaṇā dvau gurū ca tadvṛttaṃ <hi rend="bold">upendravajrā</hi> nāma / yathā /
+<lg>
+<l>upendravajrādi mahābhighātā</l>
+<l>prayānti nāśaṃ smarato narasya /</l>
+<l>aharniśaṃ tvāṃ vijitāmareśa</l>
+<l>śrīkṛṣṇa viṣṇorguru me prasādam || 33 ||</l>
+</lg></p>
+
+<lg>
+<l><hi rend="bold">anaṃtarodīritalakṣmabhājau pādau yadīyāvupajātayastāḥ /</hi></l>
+<l><hi rend="bold">itthaṃ kilānyāsvapi miśritāsu smaranti jātiṣvidameva nāma // KVrk_3.34 //</hi></l>
+</lg>
+
+
+<p>na vidyante 'ntaraṃ vyavadhānaṃ yasya ta<hi rend="bold">danaṃtaraṃ</hi> <hi rend="bold">udīrita</hi>muktaṃ <hi rend="bold">lakṣma</hi> lakṣaṇam / bhajata iti yasyāḥ pādau tā<hi rend="bold">vanaṃtarodīritabhājau</hi> indravajropendravajrayorityarthaḥ /</p>
+
+<p><hi rend="bold">itthama</hi>munā prakāre<hi rend="bold">ṇānyāsvapi </hi>uktāprabhṛtiṣu jātiṣu <hi rend="bold">miśritāsvidamevo</hi>pajātiṃ <hi rend="bold">nāma smaranti</hi> vadanti chaṃdovidaḥ<hi rend="bold"> /</hi> yathā /
+<lg>
+<l>vihāya paṃkeruhakānanāni sphārasphuratketakamabhyupāsya /</l>
+<l>meghāgame 'sminnupajātisarve bhramantyamī ṣaṭcaraṇā raṇaṃtaḥ //</l>
+</lg></p>
+
+<p>evamanyānyapyudāharaṇāni kumārasambhavādimahākāvyeṣu dṛṣṭavyāni /</p>
+
+<p>samavṛttādhyāye 'pi prasaṃgādupajātīnāṃ pāṭhā lāghavārthaḥ / eṣāṃ prastāravaśāccaturdaśaprakārā bhavanti / te ca lekhakena pūrvapatre racitāḥ / atra prathamagaṇakṛta eva viśeṣaḥ / jata eva prastāryanto / yathā /</p>
+
+<p>^_^ __^ ^_^ __^ ^_^ __^ ^_^ __^ ^_^ __^ ^_^ __^ ^_^ __^
+__^ ^_^ ^_^ __^ __^ ^_^ ^_^ __^ __^ ^_^ ^_^ __^ __^ ^_^
+__^ __^ __^ __^ ^_^ ^_^ ^_^ __^ __^ __^ ^_^ ^_^ ^_^ ^_^
+__^ __^ __^ __^ __^ __^ __^ ^_^ ^_^ ^_^ ^_^ ^_^ ^_^ ^_^
+|| 34 ||</p>
+
+<l rend="bold">sāndrapadaṃ bhtau nagagurubhiśca // KVrk_3.35 //</l>
+<p>bhagaṇatagaṇanagaṇā dvau gurū tatra tadvṛttaṃ <hi rend="bold">sāndrapadaṃ</hi> nāma / yathā || 35 ||</p>
+
+<l rend="bold">najajalagairgaditā sumukhī // KVrk_3.36 //</l>
+<p>nagaṇajagaṇajagaṇā laghugurū ca yatra tadvṛttaṃ <hi rend="bold">sumukhī</hi> nāma / <hi rend="bold">paṃcabhiryatirityāmnāyaḥ</hi> / yathā /
+<lg>
+<l>sutajananī sukulaprabhavā</l>
+<l>mṛduvacanā surate caturā /</l>
+<l>bhavati gṛhe vipulaiḥ sukṛtaiḥ</l>
+<l>mṛganayanā yuvatiḥ sumukhī || 36 ||</l>
+</lg></p>
+
+<l rend="bold">dodhakavṛttamidaṃ bhabhabhādgau // KVrk_3.37 //</l>
+
+<p>yatra bhagaṇatrayaṃ dvau gurū ca tadvṛttaṃ <hi rend="bold">dodhakaṃ</hi> nāma / yathā /
+<lg>
+<l>yasya narasya bhavediha sākṣādvṛttamadodhakayorapi tulyam /</l>
+<l>tena samaṃ kathamarthavatāpi premakathāṃ kathayāmi vayasye || 37 ||</l>
+</lg></p>
+
+<l rend="bold">śālinyuktā mtau tagau go 'bdhilokaiḥ // KVrk_3.38 //</l>
+
+<p>yatra magaṇatagaṇatagaṇā dvau gurū ca tadvṛttaṃ <hi rend="bold">śālinī</hi> nāma / <hi rend="bold">caturbhiḥ saptabhiryatirityāmnāyaḥ</hi> / yathā /
+<lg>
+<l>no jānīte śālinī vārāyāryaprāyeṇeha stādabhedaṃ manuṣyaḥ /</l>
+<l>so 'pi prema prāpya devīpriyāyāḥ dhuryātmānaṃ vetti vaidagdhabhājām || 38 ||</l>
+</lg></p>
+
+<l rend="bold">vātormīyaṃ gaditā mbhau tagau gaḥ // KVrk_3.39 //</l>
+
+<p>magaṇabhagaṇatagaṇā gurudvayaṃ yatra tadvṛttaṃ <hi rend="bold">vātormī</hi> nāma / atra vakṣyāmaṇasūtre ca viśeṣānabhidhānā<hi rend="bold">tprāguktaiva yati</hi>ryathā /
+<lg>
+<l>balādvātormaya ete sanakrāḥ sāmudrāṇāṃ salilānāṃ samūhāḥ /</l>
+<l>ābrahmādīnapi saṃhṛtya lokān yeṣāmantaḥ sukhaśāyī murāriḥ || 39 ||</l>
+</lg></p>
+
+<l rend="bold">mbhau nlau gaḥ syādbhramaravilasitam // KVrk_3.40 //</l>
+
+<p>magaṇabhagaṇanagaṇā laghugurū ca yatra tadvṛttaṃ <hi rend="bold">bhramaravilasitaṃ</hi> nāma /
+<lg>
+<l>prācyeva yatiryathā /</l>
+<l>tyaktvā mānaṃ caraṇavipatitastanmanye 'haṃ priya sakhi niyatam /</l>
+<l>tvadvaktrābjabhramaravilasitaṃ kartuṃ vāṃchatyayamiha dayitaḥ || 40 ||</l>
+</lg></p>
+
+<l rend="bold">pañcarasairśrīrbhatanagagaiḥ syāt // KVrk_3.41 //</l>
+
+<p>bhagaṇatagaṇanagaṇā dvau gurū ca yatra tadvṛttaṃ <hi rend="bold">śrīḥ</hi> nāma / <hi rend="bold">paṃcabhiḥ ṣaḍbhiryati</hi>ryathā /
+<lg>
+<l>dravyavimohājjalanidhiyānaṃ saṃgarabhūmau tyajati ca deham /</l>
+<l>kṛtyamakṛtyaṃ gaṇayati naiva śrīrasalubdho dhruvamiha jantuḥ || 41 ||</l>
+</lg></p>
+
+<p><hi rend="bold">kuḍmaladaṃtītyeke</hi> /</p>
+
+<l rend="bold">ro narāviha rathoddhatā lagau // KVrk_3.42 //</l>
+
+<p>yatra ragaṇanagaṇaragaṇā laghugurū ca tadvṛttaṃ <hi rend="bold">rathoddhatā</hi> nāma / yathā /
+<lg>
+<l>lagna eva padayorathoddhatānyāyatākṣivacanāni saṃvṛṇu /</l>
+<l>satravābhiriti yā prabodhitā tāṃ smarāmi nijajīvitauṣadhim || 42 ||</l>
+</lg></p>
+
+<l rend="bold">svāgateti ranabhādguruyugmam // KVrk_3.43 //</l>
+
+<p>yasya pāde ragaṇanagaṇabhagaṇā gurū ca tadvṛttaṃ <hi rend="bold">svāgatā</hi> nāma / yathā /
+<lg>
+<l>sarvalokasukhadāsvapi varṣāsvāgatāsu na sukhī ripuvargaḥ /</l>
+<l>vindhyavarmanṛpate tava khaḍgabhrāntibhājamacirāmabhivīkṣya || 43 ||</l>
+</lg></p>
+
+<l rend="bold">nanasagagururacitā vṛntā // KVrk_3.44 //</l>
+
+<p>dvau nagaṇau sagaṇo gurudvayaṃ yasya pāde tadvṛttaṃ <hi rend="bold">vṛntā</hi> nāma / atra maṇḍūkaplutanyāyena śālinyukteti sūtrā<hi rend="bold">dabdhilokairiti padamanuvartate </hi>/ tena hi caturbhiryatiḥ / yathā /
+<lg>
+<l>madhukaracaraṇabharākrāntaṃ patha tadiha kusumamidaṃ vṛntāt /</l>
+<l>kathayati viṣayaviyuktānāṃ vidhipariṇatimiva lokānām || 44 ||</l>
+</lg></p>
+
+<l rend="bold">nanaralagurubhiśca bhadrikā // KVrk_3.45 //</l>
+
+<p>dvau nagaṇau ragaṇo laghugurū ca yatra tadvṛttaṃ <hi rend="bold">bhadrikā</hi> nāma / yathā /
+<lg>
+<l>vividhaparakathāpragalbhavāgativiralavisaṃsthuladvijā /</l>
+<l>kapilacikurasaṃcayā kṛśā na bhavati vanitā prabhadrikā || 45 ||</l>
+</lg></p>
+
+<l rend="bold">śyenikā rajau ralau gururyadā // KVrk_3.46 //</l>
+
+<p>raganajagaṇaragaṇā laghugurū ca yatra tadvṛttaṃ <hi rend="bold">śyenikā</hi> nāma / yathā /
+<lg>
+<l>śyenikāśṛgālasaṃkule raṇe viṃdhyavarmadeva ye tvayā hatāḥ /</l>
+<l>śatravasta eva tārakāśrayaṃ tanvate vimānagāḥ surāvṛtāḥ || 46 ||</l>
+</lg></p>
+
+<l rend="bold">upasthitamidaṃ jsau tādgakārau // KVrk_3.47 //</l>
+
+<p>jagaṇasagaṇatagaṇā dvau gurū ca yatra tadvṛttaṃ <hi rend="bold">upasthitaṃ</hi> nāma / yathā /
+<lg>
+<l>upasthitamanekāścetakī culukyanṛpateḥ sainyaṃ viśālam /</l>
+<l>avantipriya nihitvā na ko 'pi dhruvaṃ kṣititale jetuṃ samarthaḥ || 47 ||</l>
+</lg></p>
+
+<l rend="bold">śikhaṇḍitamidaṃ jsau tgau guruścet // KVrk_3.48 //</l>
+
+<p>jagaṇasagaṇau tagaṇagurū <hi rend="bold">guruścetta</hi>dvṛttaṃ <hi rend="bold">śikhaṇḍitaṃ</hi> nāma / yathā / 48</p>
+
+<l rend="bold">mauktikamālā bhavedbhabhtalagāḥ // KVrk_3.49 //</l>
+<p>bhagaṇabhagaṇatagaṇalaghuguravo yatra bhavettadvṛttaṃ <hi rend="bold">mauktikamālā</hi> nāma / yathā || 49 ||</p>
+
+<l rend="bold">jagatyām /</l>
+
+<l rend="bold">candravartma gaditaṃ tu ranabhasaiḥ // KVrk_3.50 //</l>
+
+<p>yatra ragaṇanagaṇabhagaṇasagaṇā bhavanti tadvṛttaṃ <hi rend="bold">candravartma</hi> gaditam / yathā /
+<lg>
+<l>cakṣuṣī parivimṛśya karayugāt krāntaharyapariśobhitavadanā /</l>
+<l>candravartma kathayetyativivaśā kāṃtamevamavadanniśi vanitā || 50 ||</l>
+</lg></p>
+
+<l rend="bold">jatau tu vaṃśasthamudīritaṃ jarau // KVrk_3.51 //</l>
+
+<p>yatra jagaṇatagaṇajagaṇaragaṇāstadvṛttaṃ <hi rend="bold">vaṃśasthaṃ</hi> nāma / yathā /
+<lg>
+<l>svaveśmavaṃśasthamudīkṣya vāyasaṃ priyāgamāsaṃśinamuttameṃgitaiḥ /</l>
+<l>jagāda kācinmuditā samāgate priye pradāsyāmi tavepsitaṃ khaga || 51 ||</l>
+</lg></p>
+
+<l rend="bold">syādindravaṃśā tatajaiḥ rasaṃyutaiḥ // KVrk_3.52 //</l>
+
+<p>yatra dvau tagaṇau jagaṇaragaṇau tadvṛttaṃ <hi rend="bold">indravaṃśā</hi> nāma yathā /
+<lg>
+<l>ādīndravaṃśāddivamastabhūruhapracchāditānekaguhā gṛho 'pi san /</l>
+<l>dhārādhināthasya bhayena vidrutān bhūgopturiṣṭānna bhavāmi neśvaraḥ || 52 ||</l>
+</lg></p>
+
+<l rend="bold">iha toṭakamambudhisaiḥ prathitam // KVrk_3.53 //</l>
+
+<p>yatra catvāri sagaṇāstadvṛttaṃ <hi rend="bold">toṭakaṃ</hi> nāma / yathā /
+<lg>
+<l>tyaja mānamamānamanaṃtaguṇaṃ kuru vākyamidaṃ pariṇāmahitam /</l>
+<l>tvayi toṭakajāyatanetrayuge tvaritaṃ dayitāṃtikamindumukhi || 53 ||</l>
+</lg></p>
+
+<l rend="bold">drutavilambitamāha nabhau bharau // KVrk_3.54 //</l>
+
+<p>nagaṇabhagaṇau bhagaṇaragaṇau yatra tadvṛttaṃ <hi rend="bold">drutavilambitaṃ</hi> nāma / yathā /
+<lg>
+<l>drutavilambitagena tavāriṇā kvacidapi sthirabhāvamavindatā /</l>
+<l>gurunitambabharālasagāminī pratipadaṃ svavadhūrnṛpa nindyate || 54 ||</l>
+</lg></p>
+
+<l rend="bold">vasuyugaviratirnau myau puṭo 'yam // KVrk_3.55 //</l>
+
+<p>dvau nagaṇau magaṇayagaṇau yatra tadvṛttaṃ <hi rend="bold">puṭo</hi> nāma / <hi rend="bold">vasu</hi>bhiraṣṭabhi<hi rend="bold">ryugai</hi>ścaturbhiryatiḥ /
+<lg>
+<l>api caraṇanato 'haṃ tatprasīda tyaja sarasijanetre maunamudrām /</l>
+<l>vacanamamṛtakalpaṃ śrotukāmā śravaṇapuṭanipeyaṃ sarvadā te || 55 ||</l>
+</lg></p>
+
+<l rend="bold">pramuditavadanā bhavennau rarau // KVrk_3.56 //</l>
+
+<p>dvau nagaṇau dvau ragaṇau yatra tadvṛttaṃ <hi rend="bold">pramuditavadanā</hi> nāma / yathā /
+<lg>
+<l>gurukucayugalāṃ viśaṃlakṣaṇāṃ vikaṭakaṭitaṭāṃ manojñāṃ sadā /</l>
+<l>vividhasuratikelidakṣāmahaṃ pramuditavadanāṃ smarāmi priyām || 56 ||</l>
+</lg></p>
+
+<l rend="bold">caturjagaṇaṃ vada mauktikadāma // KVrk_3.57 //</l>
+
+<l rend="bold">nayasahitau nyau kusumavicitrā // KVrk_3.58 //</l>
+
+<p>nagaṇayagaṇau punarnagaṇayagaṇau yatra tadvṛttaṃ <hi rend="bold">kusumavicitrā</hi> nāma / <hi rend="bold">ṣaḍbhiryatirityupadeśaḥ</hi> /
+<lg>
+<l>yathā /</l>
+<l>parihṛtaroṣā kṛtabahuveṣā saha nijabhartā taruṇi vasaṃte /</l>
+<l>pramuditapuṃskokila iva ramyāṃ vraja vanarājiṃ kusumavicitrām || 58 ||</l>
+</lg></p>
+
+<l rend="bold">rasairjasajasā jaloddhatagatiḥ // KVrk_3.59 //</l>
+
+<p>yatra jagaṇasagaṇajagaṇā sagaṇaśca tadvṛttaṃ <hi rend="bold">jaloddhatagati</hi>rnāma / yathā /
+<lg>
+<l>atītya sarito jaloddhatagatīranekagahanā kulānapi girīn /</l>
+<l>samudrataramāśritā ripunṛpāḥ sukhaṃ na niśi śerate tava bhayāt || 59 ||</l>
+</lg></p>
+
+<l rend="bold">bhujaṃgaprayātaṃ bhavedyaiścaturbhiḥ // KVrk_3.60 //</l>
+
+<p>catvāro yagaṇā yatra tadvṛttaṃ <hi rend="bold">bhujaṃgaprayātaṃ</hi> nāma / yathā /
+<lg>
+<l>vidagdhāṃganālocanānandakārī sakhi svecchayā vīkṣituṃ prāṇanāthaḥ /</l>
+<l>mayā naiva labdho hata grāmamārge bhujaṃgaprayātānukāriṇyamuṣṇig (?) || 60 ||</l>
+</lg></p>
+
+<l rend="bold">raiścaturbhiryutā sragviṇī saṃmatā // KVrk_3.61 //</l>
+
+<p>catvāro ragaṇā yasya pāde tadvṛttaṃ <hi rend="bold">sragviṇī</hi> nāma / yathā /
+<lg>
+<l>padmapatrāyatākṣī śaśāṃkānanā kuṃkumodvartitāṃgī ghanoccastanī /</l>
+<l>aṃgahārairanekaprakārairyutā nṛtyati strī sakhe sragviṇī suṃdarā || 61 ||</l>
+</lg></p>
+
+<l rend="bold">bhuvi bhavennabhajaraiḥ priyaṃvadā // KVrk_3.62 //</l>
+
+<p>nagaṇabhagaṇajagaṇaragaṇā yatra tadvṛttaṃ <hi rend="bold">priyaṃvadā</hi> nāma / yathā /
+<lg>
+<l>gurupayodharavatī sumadhyamā vipulapuṇyanicayaiḥ svaveśmani /</l>
+<l>bhavati pārvaṇaśaśāṃkasuṃdarānanavatī priyatamā priyaṃvadā || 62 ||</l>
+</lg></p>
+
+<l rend="bold">tyau tyau maṇimālā chinnā guhavaktraiḥ // KVrk_3.63 //</l>
+
+<p>tagaṇayagaṇatagaṇayagaṇā yatra tadvṛttaṃ <hi rend="bold">maṇimālā</hi> nāma / ṣaḍbhiryatiḥ / yathā /
+<lg>
+<l>mātaḥ surasindho trailokyapavitre paśyāmi kadā te pāpāpahamambhaḥ /</l>
+<l>caṃcanmaṇimālālaṃkāramaṇīnāṃ tyaktvā vanitānāṃ saṃgaṃ viṣatulyam || 63 ||</l>
+</lg></p>
+
+<l rend="bold">dhīrairabhāṇi lalitā tabhau jarau // KVrk_3.64 //</l>
+
+<p>yatra tagaṇabhagaṇajagaṇaragaṇāstadvṛttaṃ <hi rend="bold">lalitā</hi> nāma / yathā /
+<lg>
+<l>pīnonnatastanabharoparisphuraddhārāvalīsubhagamāyatekṣaṇā /</l>
+<l>nṛtyatyasau sulalitaṃ hi nūpurādhvānaprabodhitamanobhavā vadhūḥ || 64 ||</l>
+</lg></p>
+
+<l rend="bold">pramitākṣarā sajasasairuditā // KVrk_3.65 //</l>
+
+<p>sagaṇajagaṇau sagaṇau yatra tadvṛttaṃ <hi rend="bold">pramitākṣarā</hi> nāma / yathā /
+<lg>
+<l>caraṇānatiṃ gatavati prasabhaṃ dayite nitāṃtasubhage subhage /</l>
+<l>paruṣāṇi saṃtyaja vacāṃsi sakhi pramitākṣarā bhava śaśāṃkamukhi || 65 ||</l>
+</lg></p>
+
+<l rend="bold">nanabharasahitā 'bhihitojjvalā // KVrk_3.66 //</l>
+
+<p>dvau nagaṇau bhagaṇaragaṇau ca yatra tadvṛttaṃ <hi rend="bold">ujjvalā</hi> nāma / yathā /
+<lg>
+<l>iha śaradi bhavantyukāśayā (?) vimalataraśaśāṃkakarojjvalā /</l>
+<l>vidadhati gamanaṃ vijayārthinaḥ pratidivasamavanīpatayaḥ svayam || 66 ||</l>
+</lg></p>
+
+<l rend="bold">pañcāśvaiśchinnā vaiśvadevī mamau yau // KVrk_3.67 //</l>
+
+<p>dvau magaṇau dvau yagaṇau ca yatra tadvṛttaṃ <hi rend="bold">vaiśvadevī</hi> nāma / pañcabhiḥ saptabhiryatiḥ / yathā /
+<lg>
+<l>vaśyātmā nityasnānaśīlo mahātmā mitre śatrau vā tulyacittapravṛttiḥ /</l>
+<l>śraddhāsaṃpanno vaiśvadevī ca loke sa svargastrīṇāṃ vallabhaḥ syātsadaiva || 67 ||</l>
+</lg></p>
+
+<l rend="bold">abdhyaṃgaiḥ syājjaladharamālā mbhau smau // KVrk_3.68 //</l>
+<p>magaṇabhagaṇasagaṇamagaṇā yatra tadvṛttaṃ <hi rend="bold">jaladharamālā</hi> nāma / caturbhiraṣṭabhiśca yatiḥ / yathā /
+<lg>
+<l>satyākāśe jaladharamālāvyāpte nīpāmode prasarati jhaṃjhāvāte /</l>
+<l>varṣākāle muditamayūravrāte tyaktvā kāntāṃ vrajasi kathaṃ pātha tvam || 68 ||</l>
+</lg></p>
+
+<l rend="bold">iha navamālinī najaparau bhyau // KVrk_3.69 //</l>
+
+<p>nagaṇajagaṇabhagaṇayagaṇā yatra tadvṛttaṃ <hi rend="bold">navamālinī</hi> nāma / ihetyavagrahaṇādabdhyaṃgairiti padavirītatayā vipariṇamati tenāṣṭabhiḥ caturbhiryathā /
+<lg>
+<l>tava niśitāsighātadalitā riddhipadakumbhamauktikasamūhaiḥ /</l>
+<l>kṛtanavamālinīva bhajati tvāṃ prati smaraṃ narendra jayalakṣmīḥ || 69 ||</l>
+</lg></p>
+
+<l rend="bold">svaraśaraviratirnau rau prabhā nāma // KVrk_3.70 //</l>
+
+<l rend="bold">bhavati najāvatha mālatī jarau // KVrk_3.71 //</l>
+
+<p>nagaṇajagaṇau jagaṇaragaṇau yatra tadvṛttaṃ <hi rend="bold">mālatī</hi> nāma / yathā /
+<lg>
+<l>bhramarayuvā bhramatīha mālatītarutalamapyapahāya ketakīm /</l>
+<l>yuvatijanena gṛhīta nāma kaḥ kathamapi na pratibodhametyasau || 71 ||</l>
+</lg></p>
+
+<p><hi rend="bold">varatanurityeke</hi> /</p>
+
+<l rend="bold">jarau jarau vadanti pañcacāmaram // KVrk_3.72 //</l>
+
+<l rend="bold">iti vada tāmarasaṃ najajādyaḥ // KVrk_3.73 //</l>
+
+<p>nagaṇajagaṇau jagaṇayagaṇau yatra tadvṛttaṃ <hi rend="bold">tāmarasa</hi>miti vada śikṣamiti śeṣaḥ / yathā /
+<lg>
+<l>mṛdutaratāmarasāruṇapādavraṇatitivisravadasrajalaughāḥ /</l>
+<l>vidadhati parva tirodhasi yānaṃ karapihitoccakru vā ripuvadhaḥ || 73 ||</l>
+</lg></p>
+
+<p>atijagatyām /</p>
+
+<l rend="bold">turagarasayatirnau tatau gaḥ kṣamā // KVrk_3.74 //</l>
+
+<p>yatra dvau nagaṇau dvau tagaṇau guruśca tadvṛttaṃ <hi rend="bold">kṣamā</hi> nāma / yathā /
+saptabhiḥ ṣaḍbhiśca yatiḥ / yathā /
+<lg>
+<l>cakitamṛgadṛśā nekṣito līlayā trivalitavadanaśrīcayāhaṃ muhuḥ /</l>
+<l>na ca surataṭinī na kṣamā cāśritā gatamidamadhunā jīvitaṃ me vṛthā || 74 ||</l>
+</lg></p>
+
+<l rend="bold">mnau jrau gastridaśayatiḥ praharṣiṇīyam // KVrk_3.75 //</l>
+
+<p>magaṇanagaṇajagaṇaragaṇaguravo yatra tadvṛttaṃ <hi rend="bold">praharṣiṇī</hi> nāma / tribhirdaśabhiryatiḥ / yathā /
+<lg>
+<l>lolākṣī vipulanitambabaddhakāñcī pīnoccastanayugalā suromarājiḥ /</l>
+<l>nṛtyantī sulalitamaṃgahāraramyaṃ vārastrī gamanalasatpraharṣiṇīyam || 75 ||</l>
+</lg></p>
+
+<p>[pāṭhāntaram:
+<hi rend="bold">caturgrahairiha rucirā jabhau syau gaḥ // KVrk_3.76* //</hi>]</p>
+
+<l rend="bold">caturgrahairiha rucirā jabhau sjagāḥ // KVrk_3.76 //</l>
+
+<p>jagaṇabhagaṇasagaṇajagaṇā guruśca yatra tadvṛttaṃ <hi rend="bold">rucirā</hi> nāma / yathā /
+<lg>
+<l>samīhate ya iha parāpadāpadaṃ viyaccharittaṭaruciroṭajālayaḥ /</l>
+<l>mṛgīdṛśo vadanasarojadarśanaṃ na tasya tatpramadakaraṃ kavat || 76 ||</l>
+</lg></p>
+
+<l rend="bold">vedai randhrairmtau yasagā mattamayūram // KVrk_3.77 //</l>
+
+<p>yatra magaṇatagaṇayagaṇasagaṇaguravastadvṛttaṃ <hi rend="bold">mattamayūram </hi>/ caturbhirnavabhiryatiḥ / yathā /
+<lg>
+<l>cañcaṃ cūtaṃ puṣpitakaṃ kellitarūbhiḥ krīḍatkroḍaṃ saṃcaradunmattamṛgodham /</l>
+<l>snigdhacchāyaṃ vāritatāpaṃ tarukhaṇḍaiḥ mādyadbhṛṃgaṃ mattamayūraṃ vanametat || 77 ||</l>
+</lg></p>
+
+<p>[pāṭhāntaram:
+<hi rend="bold">najasajagairbhavati mañjubhāṣiṇī // KVrk_3.78* //</hi>]</p>
+
+<l rend="bold">sajasā jagau bhavati mañjubhāṣiṇī // KVrk_3.78 //</l>
+
+<p>yasya pāde sagaṇajagaṇasagaṇajagaṇā guruśca tadvṛttaṃ mañjubhāṣiṇī nāma / yathā /
+<lg>
+<l>smara suṃdarākṛtimanekavallabhaṃ caraṇapraṇāmanatamīpsitaṃ patim /</l>
+<l>paruṣoktibhiḥ kimiti khedayasyamu sakhi vallabhā bhavati mañjubhāṣiṇī || 78 ||</l>
+</lg></p>
+
+<l rend="bold">iha naṃdinī sajasasairguruyuktaiḥ // KVrk_3.79 //</l>
+
+<l>saśca jaśca saśca saśca taiḥ sagurubhirnandinī || 79 ||</l>
+
+<l rend="bold">nanataragurubhiścandrikā caturbhiḥ // KVrk_3.80 //</l>
+
+<p>dvau nagaṇau tagaṇaragaṇau guruśca yatra tadvṛttaṃ <hi rend="bold">candrikā</hi> nāma / caturbhiryatiryathā /
+<lg>
+<l>vitarati kumudānāṃ śriyaṃ samagrāṃ tama iva vanitānāṃ bhinatti mānam /</l>
+<l>tatamapi bhuvanaṃ candrikā bhuvasthādhavalitamiva cakre śaranniśāsu //</l>
+</lg></p>
+
+<l>aṣṭabhiryatirityeke || 80 ||</l>
+
+
+<p><hi rend="bold">śakvaryām
+</hi></p>
+
+<l rend="bold">mtau nsau gāvakṣagrahaviratirasaṃbādhā // KVrk_3.81 //</l>
+
+<p>magaṇatagaṇanagaṇasagaṇā dvau gurū ca yatra tadvṛttaṃ <hi rend="bold">asaṃbādhā</hi> nāma / <hi rend="bold">akṣai</hi>rindriyaiḥ pañcabhi<hi rend="bold">rgrahai</hi>rnavabhiśca yatiḥ / yathā /
+<lg>
+<l>yāvadgaccheyaṃdayitavihitasaṃketasthānasyābhyāṃ saṅkṛtanivṛtatulākoṭiḥ /</l>
+<l>tāvaccakre 'gre drutamudayamayaṃ vairī bhitvā saṃbaṃdhānyapi sakhi timirāṇīnduḥ || 81 ||</l>
+</lg></p>
+
+<l rend="bold">nanarasalaghugaiḥ svarairaparājitā // KVrk_3.82 //</l>
+
+<p>dvau nagaṇau ragaṇasagaṇalaghuguravo yatra tadvṛttaṃ <hi rend="bold">aparājitā</hi> nāma /
+saptabhiryatiḥ / yathā /
+<lg>
+<l>turagarajavatīṃ tulārkamahīpateritaranṛpaśataiścamūmaparājitām /</l>
+<l>jayati vijayidoryugaikasahāyavānavanipatirasau pramārakulodbhavaḥ || 82 ||</l>
+</lg></p>
+
+<l rend="bold">nanabhanalagiti praharaṇakalikā // KVrk_3.83 //</l>
+
+<p>nagaṇau bhagaṇanagaṇalaghuguravaśca yatra tadvṛttaṃ <hi rend="bold">praharaṇakalikā</hi> nāma / <hi rend="bold">iti śabdasyāvyayasya grahaṇātsaiva yatiḥ</hi> / yathā /
+<lg>
+<l>raṇabhuvi bhavatā praharaṇakalitā parahṛtavanitāstava nṛpa ripavaḥ /</l>
+<l>vidadhati śayanaṃ kṛtatṛṇaśayanā vanabhuvi satataṃ bhayacakitahṛdaḥ || 83 ||</l>
+</lg></p>
+
+<l rend="bold">uktā vasaṃtatilakā tabhajā jagau gaḥ // KVrk_3.84(1) //</l>
+
+<p>tagaṇabhagaṇau dvau jagaṇau dvau gurū ca yasya pāde tadvṛttaṃ <hi rend="bold">vasaṃtatilakā</hi> nāma / yathā /
+<lg>
+<l>bhrātarvasaṃtatilakānatimuktakaṃ ca saṃdaśyate 'tra kimu matparamastvametat /</l>
+<l>nā 'haṃ sa yo 'bhavadanekavidhotsavaśrīḥ saṃpratyasatyavirahaikagṛhaṃ priyāyāḥ //</l>
+</lg></p>
+
+<l rend="bold">siṃhoddhateyamuditā munikāśyapena // KVrk_3.84(2) //</l>
+<p>iyameva vasaṃtatilakā <hi rend="bold">kaśyapa</hi>syācāryasya matena <hi rend="bold">siṃhoddhatā</hi> nāma / yathā /
+<lg>
+<l>unnidrapadmavadanaḥ subhago 'ṅganānāmāraktapādatalapāṇīradīnasattvaḥ /</l>
+<l>siṃhoddhatā samagalaḥ suviśālavakṣāḥ syādīdṛśo narapatiḥ puruṣaḥ pṛthivyāḥ //</l>
+</lg></p>
+
+<l rend="bold">uddharṣiṇī nigaditā munisaitavena // KVrk_3.84(3) //</l>
+
+<p>saiva vasaṃtatilakā <hi rend="bold">saitava</hi>muninā <hi rend="bold">uddharṣiṇī</hi> <hi rend="bold">nigaditā</hi> uktā / yathā /
+<lg>
+<l>saṃvatsare rasapayonidhisūryasaṃkhyaiḥ śrīvikramānnarapate racitā mameyam /</l>
+<l>uktā sanāmabhirudāharaṇyairudārairuddharṣiṇī bhavatu cetasi satkavīnām //</l>
+</lg></p>
+
+<l rend="bold">gomena saivamuditā madhumādhavīti // KVrk_3.84(4) //</l>
+
+<l>vasaṃtatilakāmityeke || 84 ||</l>
+
+<l><hi rend="bold">induvadanā bhajasanaiḥ saguruyugmaiḥ // KVrk_3.85 //</hi></l>
+
+
+<p>bhagaṇajagaṇasagaṇanagaṇā dvau gurū ca yasya pāde tadvṛtta<hi rend="bold">minduvadanā</hi> nāma / yathā /
+<lg>
+<l>mārutavaśapracalitotpaladalākṣaṃ śobhanalalāṭataṭamadhyakṛtapuṇḍram /</l>
+<l>re pathika saṃprati madhau madanabandhau saṃsmarasi tadvadanaminduvadanāyāḥ || 85 ||</l>
+</lg></p>
+
+<l rend="bold">dviḥ saptacchidalolā msau mbhau gau caraṇe cet // KVrk_3.86 //</l>
+
+<p>yasya caraṇe pāde magaṇasagaṇamagaṇabhagaṇā dvau gurū tadvṛttaṃ <hi rend="bold">alolā</hi> nāma / <hi rend="bold">sapta</hi>bhiryatiḥ / yathā /
+<lg>
+<l>yo deva dvijabhaktaḥ saṃsāreṣu viraktaḥ śrautasmārtavidhīnāṃ kartā tyaktavikalpaḥ /</l>
+<l>maitraḥ kāruṇikātmā krodhāmarṣavimuktastasya śrībhuvane syāllolā nūnamalolā || 86 ||</l>
+</lg></p>
+
+<l rend="bold">atiśakvaryām /</l>
+
+<l rend="bold">dvihatahayalaghuratha giti śaśikalā // KVrk_3.87 //</l>
+
+<p><hi rend="bold">dvihatahayalaghu</hi>rityarthaḥ guruśca bhavati yasya caraṇe tadvṛttaṃ <hi rend="bold">śaśikalā</hi> nāma / saptabhiraṣṭabhiryatiḥ / pāriśeṣyādyathā /
+<lg>
+<l>kusumaśaratanudahanaśirasi jaṭāmukuṭataṭamaṇiramalakiraṇā /</l>
+<l>tava bhavatu sukhakṛdayamiha satataṃ pravipadi sunabhasi vasati śaśikalā || 87 ||</l>
+</lg></p>
+
+<l rend="bold">sragiti bhavati rasanavakayatiriyam // KVrk_3.88 //</l>
+
+<p>ṣaḍbhirnavabhiśca yadā <hi rend="bold">yati</hi>rbhavati tadā <hi rend="bold">sragi</hi>ti nāma / <hi rend="bold">māle</hi>ti vaktavye chaṃdobhaṃgabhayāt sragityuktam / ekārthatvānna doṣaḥ / yathā /
+<lg>
+<l>ghanaparimalamilitamadhupanicayā sragiyamurasi tava śaśimukhi śuśubhe /</l>
+<l>kaṭakayugalamapi kalaravasubhagaṃ śriyamidamiha janayati sucaraṇayā || 88 ||</l>
+</lg></p>
+
+<l rend="bold">vasuhayayatiriti maṇiguṇanikaraḥ // KVrk_3.89 //</l>
+
+<p>iyameva śaśikalā <hi rend="bold">vasva</hi>ṣṭabhi<hi rend="bold">rhayaiḥ</hi> saptabhiryadā <hi rend="bold">maṇiguṇanikaraḥ</hi> nāma / yathā /
+parajanahitakaravaradhanakalitaḥ suvacanakṛtavarajanasukhanivahaḥ /
+<l>bhavabhuvi bhavakṛtavarataramahimā sa bhavati naravara maṇiguṇanikaraḥ || || 89</l></p>
+
+<l rend="bold">nanamayayayuteyaṃ mālinī bhogilokaiḥ // KVrk_3.90 //</l>
+
+<p>dvau nagaṇau magaṇo dvau yagaṇau yasya tadvṛttaṃ <hi rend="bold">mālinī</hi> nāma / yathā / aṣṭabhiḥ saptabhiryatiḥ /
+<lg>
+<l>navajaladharamālāmālinīṃ tāṃ vilokya</l>
+<l>nijadayitaviyogaprāntabhāvaṃ nibodham /</l>
+<l>na na khalu jaladharāṇāṃ nādamākarṇya kaści-</l>
+<l>dbhavati śithilabuddhirveśma gantuṃ pravāsī || 90 ||</l>
+</lg></p>
+
+<l rend="bold">bhavati najau bhajau rasahitau prabhadrakam // KVrk_3.91 //</l>
+
+<p>yasya pāde nagaṇajagaṇabhagaṇajagaṇaragaṇāstadvṛttaṃ <hi rend="bold">prabhadrakaṃ</hi> nāma / yathā /
+<lg>
+<l>alabhata duścareṇa tapasā himādrijā</l>
+<l>yamiha patiṃ patiṃ trijagatāṃ maheśvaram /</l>
+<l>pavanasamuddhutāmaliśikhāhutasmaro</l>
+<l>diśatu satāṃ sadaiva savi suprabhadrakam || 91 ||</l>
+</lg></p>
+
+<l rend="bold">sajanā nayau śaradaśakaviratirelā // KVrk_3.92 //</l>
+
+<p>sagaṇajagaṇanagaṇanagaṇayagaṇā yatra tadvṛtta<hi rend="bold">melā</hi> nāma / paṃcabhirdaśabhiryatiḥ / yathā /
+<lg>
+<l>varacaṃdanadrumakiśalayamaricailā-</l>
+<l>lavalīlatāprabhṛtivanamiha dhunvan /</l>
+<l>malayānilaḥ sapadi vidalitaprayukta-</l>
+<l>pramadājanaḥ prasaritapatibandhuḥ || 92 ||</l>
+</lg></p>
+
+<l rend="bold">mrau myau yāntau bhavetāṃ saptāṣṭabhiścandralekhā // KVrk_3.93 //</l>
+
+<p>yasya pāde magaṇaragaṇamagaṇā dvau yagaṇau tadvṛttaṃ <hi rend="bold">candralekhā</hi> nāma / saptabhiraṣṭabhiryatiḥ / yathā /
+<lg>
+<l>vibhrāntiścandralekhāṃ cūḍāmaṇisthānabhṛttāṃ</l>
+<l>yastārtīyaṃ ca netraṃ jājvalyamānaṃ lalāṭe /</l>
+<l>kaṇṭhe yasyāsthimālā bhasmāṃgarāgaḥ śarīre</l>
+<l>kalpāṃtāṃ vaḥ sa daśyāttrailokyanātho girīśaḥ || 93 ||</l>
+</lg></p>
+
+
+<p><hi rend="bold">aṣṭau</hi></p>
+
+<l rend="bold">bhratrinagaiḥ rasāt khamṛṣabhajagavilasitam // KVrk_3.94 //</l>
+
+<p>bhagaṇaragaṇau trayo nagaṇā guruśca yatra tadvṛttaṃ <hi rend="bold">ṛṣabhagajavilasitaṃ</hi> nāma / ṣaṭdaśabhiryatiḥ /
+<lg>
+<l>yatra catuṣpatheṣu vividhayuvatijanatā</l>
+<l>sāmamanorameṣu tava ripuvaranagare /</l>
+<l>tvadbhujavikrameṇa nṛpativara vijayati</l>
+<l>saṃprati tatra vanyamṛṣabhagajavilasitam || 94 ||</l>
+</lg></p>
+
+<l rend="bold">najabhajaraiḥ sadā bhavati vāṇinī gayuktaiḥ // KVrk_3.95 //</l>
+
+<p>nagaṇajagaṇabhagaṇajagaṇaragaṇā guravo yatra tadvṛttaṃ <hi rend="bold">vāṇinī</hi> nāma / yathā /
+<lg>
+<l>cakitamṛgekṣaṇā gurunitambabaddhakāñcī</l>
+<l>guṇakalakiṃkiṇīravavibodhāsameṣuḥ /</l>
+<l>janayati vāṇinī caturavākyapaṇḍiteyaṃ</l>
+<l>mudamadhikāṃ sakhe manasi karoti dṛṣṭā || 95 ||</l>
+</lg></p>
+
+
+
+<p><hi rend="bold">atyaṣṭau</hi></p>
+
+<l rend="bold">rasaiḥ rudraiśchinnā yamanasabhalā gaḥ śikhariṇī // KVrk_3.96 //</l>
+
+<p>yagaṇamagaṇanagaṇasagaṇabhagaṇā laghugurū ca yatra tadvṛttaṃ <hi rend="bold">śikhariṇī</hi> nāma / ṣaḍbhirekādaśabhiryatiḥ /
+<lg>
+<l>śaśāṃkāsyā caṃcatkuvalayadalaspardhinayanā</l>
+<l>salīlaṃ gacchaṃtī gurujaghanabhārālasagatiḥ /</l>
+<l>iyaṃ pīnottuṃgastanaśikhariṇī vāravanitā</l>
+<l>kaṭākṣairvikṣobhaṃ janayati munīnāmapi hṛdi || 96 ||</l>
+</lg></p>
+
+<l rend="bold">jasau jasayalā vasugrahayatiśca pṛthvī guruḥ // KVrk_3.97 //</l>
+
+<p>jagaṇasagaṇajagaṇasagaṇayagaṇalaghuguravo yatra tadvṛttaṃ <hi rend="bold">pṛthvī</hi> nāma / yathā /
+<lg>
+<l>kimityayamasaṃskṛtastava sukeśi keśoccayaḥ</l>
+<l>kimityuta sumekhalāvirahitā ca pṛthvī kaṭiḥ /</l>
+<l>tadehi kuru maṇḍanaṃ tyaja ruṣaṃ vasaṃtotsave</l>
+<l>yataḥ sutanu pañcaṣairapi dinairvayo yāsyati || 97 ||</l>
+</lg></p>
+
+<l rend="bold">diṅmuni vaṃśapatrapatitaṃ bharanabhanalagaiḥ // KVrk_3.98 //</l>
+
+<p>bhagaṇaragaṇanagaṇabhagaṇanagaṇalaghuguravo yatra tadvṛttaṃ <hi rend="bold">vaṃśapatrapatitaṃ</hi> nāma / daśabhiḥ saptabhiryatiḥ / yathā /
+<lg>
+<l>naiva vidustṛṣāturadhiyastava ripunagare</l>
+<l>maṃdiradīrghikāsu salilaṃ savidhamapi mṛgāḥ /</l>
+<l>ambujavaṃśapatrapatitadrumadalanikaraiḥ</l>
+<l>chāditamātape tu mahati kṣitipati talakā (?) || 98 ||</l>
+</lg></p>
+
+<l rend="bold">rasayugahayairnsau mrau slau go yadā hariṇī tadā // KVrk_3.99 //</l>
+
+<p>nagaṇasagaṇau magaṇaragaṇau sagaṇalaghuguravo yatra tadvṛttaṃ <hi rend="bold">hariṇī</hi> nāma / ṣaḍbhiḥ caturbhiryatiḥ / yathā /
+<lg>
+<l>vadanamamalaṃ dhatte śobhāṃ śaśāṃkasamāśritāṃ</l>
+<l>śravaṇayugalaṃ dolālīlāṃ tanoti manobhuvaḥ /</l>
+<l>stanaparisare hāraḥ sphāraḥ sphuratyatinirmalaḥ</l>
+<l>kimiha na cettasyāhāri dhruvaṃ hariṇīdṛśaḥ //</l>
+</lg></p>
+
+<p><hi rend="bold">ṛṣabhacaritamityeke</hi> || 99 ||</p>
+
+<l rend="bold">mandākrāntā jaladhiṣaḍagaiḥ mbhau natau tādgurū cet // KVrk_3.100 //</l>
+
+<p>magaṇabhagaṇanagaṇā dvau tagaṇau dvau gurū ca yasya pāde tadvṛttaṃ <hi rend="bold">mandākrāntā</hi> nāma / caturbhiḥ ṣaḍbhiścedyatirbhavati / yathā /
+<lg>
+<l>mandākrāntādharakisalayā pāṇipadmaṃ dhunānā</l>
+<l>gāḍhāśleṣapraṇayiśithilā vepamānāṃgayaṣṭiḥ /</l>
+<l>svidyadvaktrā pulakitatanuḥ kiṃcidāmīlitākṣī</l>
+<l>cetaḥprītiṃ janayati bhṛśaṃ nūtanoḍhā vivoḍhā || 100 ||</l>
+</lg></p>
+
+<l rend="bold">yadi bhavato najau bhajajalā gururnarkuṭakam // KVrk_3.101 //</l>
+
+<p>naganajagaṇabhagaṇā dvau jagaṇau laghugurū aha tadvṛttaṃ <hi rend="bold">narkuṭakaṃ</hi> nāma / <hi rend="bold">avitathami</hi>ti anye / yathā /
+<lg>
+<l>surabhisamāgame virahiṇījanaśokakare</l>
+<l>kṛtabahumaṇḍanā tvamatibhāmani madvacanaiḥ /</l>
+<l>nijadayitāṃtikaṃ yadi na yāsi gataṃ tadaho</l>
+<l>avitathavākyakauśalamidaṃ mama niṣphalatām || 101 ||</l>
+</lg></p>
+
+<l rend="bold">muniguhakārṇavaiḥ kṛtayatiṃ vada kokilakam // KVrk_3.102 //</l>
+
+<p>narkuṭakameva saptabhiḥ <hi rend="bold">guhakaiḥ</hi> kārtikeyaśirobhiḥ ṣaḍbhiścaturbhiḥ kṛtayatiṃ tadvṛttaṃ <hi rend="bold">vada</hi> <hi rend="bold">kokilakaṃ</hi> he śiṣyeti viśeṣaḥ / yathā /
+<lg>
+<l>madanamahotsave muditakokilakāntarave</l>
+<l>na bhajati yā priyaṃ praṇayasundaramindumukhi /</l>
+<l>dhruvamiha sābalā svayamaharniśameva bhṛśaṃ</l>
+<l>sakhi paritapyate gurumanobhavatāpavatī || 102 ||</l>
+</lg></p>
+
+<p><hi rend="bold">dhṛtau</hi></p>
+
+<l rend="bold">syādbāṇartvaśvaiḥ kusumitalatāvellitā mtau nayau yau // KVrk_3.103 //</l>
+
+<p>magaṇatagaṇau nagaṇastrayo yagaṇā yatra tadvṛttaṃ <hi rend="bold">kusumitalatāvellitā</hi> nāma / paṃcabhiḥ ṣaḍbhiḥ saptabhiryatiḥ / yathā /
+<lg>
+<l>udyānābjānāṃ prakaradhunanāvāsasaurabhyasaṃpat</l>
+<l>kaṃkolailānāṃ kusumitalatāvellitānyaḥ punānaḥ /</l>
+<l>āgastyo vāyurdivi suratāyāsayātāṃganānāṃ</l>
+<l>svedāmbhobindūnharati punarapyādiśansaṃgamecchām || 103 ||</l>
+</lg></p>
+
+<p><hi rend="bold">atidhṛtyām
+</hi></p>
+
+<l rend="bold">rasartvaśvairymau nsau raraguruyutā meghavisphūrjitaṃ syāt // KVrk_3.104 //</l>
+
+<p>yagaṇamagaṇanagaṇasagaṇā dvau ragaṇau guruśca yasya pāde tadvṛttaṃ <hi rend="bold">meghavisphūrjitaṃ</hi> nāma / ṣaḍbhiḥ ṣaḍbhiḥ saptabhiryatiḥ / yathā /
+<lg>
+<l>samāyātaḥ svairaṃ kuṭajakusumāmodavāhī samīraḥ</l>
+<l>śrutaṃ dhairyaṃ dhvaṃsi prasabhamadhunā meghavisphūrjitaṃ ca /</l>
+<l>viyoge sadbhartuḥ nijalavaṇimā 'dhaḥkṛtasvaṃtijasya</l>
+<l>prayāntī me prāṇā kuliśakaṭhinā meghanāśaṃ tathāpi || 104 ||</l>
+</lg></p>
+
+<l rend="bold">sūryāśvairmasajastatāḥ saguravaḥ śārdūlavikrīḍitam // KVrk_3.105 //</l>
+
+<p>magaṇasagaṇajagaṇasagaṇā dvau tagaṇau gururyasya pāde tadvṛttaṃ <hi rend="bold">śārdūlavikrīḍitaṃ</hi> nāma / dvādaśabhiḥ saptabhiryatiḥ / yathā /
+<lg>
+<l>śrīkhaṇḍācalakaṃdarātsarabhasaṃ nirgatya sāṃdraṃ drumāṃ-</l>
+<l>ścaṃcaccampakacārukesarabharaṃ dhanvanmuhurlīlayā /</l>
+<l>itthaṃ vibhradayaṃ vasantapavanaḥ śārdūlavikrīḍitam</l>
+<l>strīṇāṃ mānagajaṃ haniṣyati haṭhāt mānotkaṭānāmapi || 105 ||</l>
+</lg></p>
+
+<p><hi rend="bold">[kṛtau]</hi></p>
+
+<l rend="bold">jñeyā saptāśvaṣaḍbhirmarabhanayayuto bhlau gaḥ suvadanā // KVrk_3.106 //</l>
+
+<p>yasya vṛttasya pāde magaṇaragaṇabhagaṇanagaṇayagaṇabhagaṇalaghugurustadvṛttaṃ <hi rend="bold">suvadanā</hi> nāma / saptabhiḥ saptabhiḥ ṣaṣṭhaśca yatiḥ /
+<lg>
+<l>rambhāstambhopamoruḥ sugurughanakucā sāraṃganayanā</l>
+<l>madhyakṣāmā suromāvaliramalamadaṃtā candravadanā /</l>
+<l>hṛtsthaṃ bhāvaṃ kaṭākṣairnijamiva kathayatyeṣā suvadanā</l>
+<l>yūnāṃ cetāṃsi sadyo madayati yuvatiśchekoktikuśalā || 106 ||</l>
+</lg></p>
+
+
+<l rend="bold">trī rajau galau bhavedihedṛśena lakṣaṇena vṛttanāma // KVrk_3.107 //</l>
+
+<p>trīnvārānragaṇajagaṇau gurulaghū yasya pāde tadvṛttaṃ <hi rend="bold">vṛttanāma</hi> vṛttābhidhānamityarthaḥ /
+<lg>
+<l>saṃpadāptisambhavo madaḥ kadācideva mānase nagasya</l>
+<l>na pramāṇavidyayā paraprameyajālabhaṃgadakṣayā 'pi /</l>
+<l>nāpyarūparūpayā parāṃganābhimarśano rasaḥ kadāpi</l>
+<l>tasya vṛttamīdṛśaṃ śirobhiruhyate narairato vicāryaḥ || 107 ||</l>
+</lg></p>
+
+<p><hi rend="bold">prakṛtau</hi></p>
+
+<l rend="bold">mrabhnairyānāṃ trayeṇa trimuniyatiyutā sragdharā kīrtiteyam // KVrk_3.108 //</l>
+
+<p>magaṇaragaṇabhagaṇanagaṇā yagaṇatrayaṃ yasya pāde tadvṛttaṃ <hi rend="bold">sragdharā</hi> nāma / vāratrayaṃ saptabhiryatiḥ /
+yāsāmunnidrapadmadyutimukhamamalaṃ sphāravisphāritākṣam
+cañcatkāñcīguṇena sphuradurumaṇinā '; 'vartalakṣmīṃ vitanvat /
+<lg>
+<l>cetaḥprītiṃ narāṇāṃ vidadhati vilasannābhimadhyapradeśā</l>
+<l>gacchantyo</l>
+<l> rājamārge vikacavicakilasragdharā rājavadhvaḥ || 108 ||</l>
+</lg></p>
+
+<p><hi rend="bold">ākṛtau</hi></p>
+
+<l rend="bold">bhrau naranā ranāvatha gururdigarkaviramaṃ hi madrakamidam // KVrk_3.109 //</l>
+
+<p>bhagaṇaragaṇanagaṇā ragaṇanagaṇaragaṇanagaṇaguravo yasya pāde tadvṛttaṃ <hi rend="bold">madrakaṃ</hi> nāma / daśabhirdvādaśabhiryatiḥ / yathā /
+<lg>
+<l>tvatkathitairalīkavacanaiḥ karomi kathamasya kopamasamam</l>
+<l>yasya na vipriyaṃ sakhi mayā śrutaṃ na ca nirīkṣitaṃ kathamapi /</l>
+<l>madrakarairayaṃ priyatamaḥ karoti vacanairmanaḥ samadanam</l>
+<l>pāśyavimuktajālamadhunā mamāṅdhriyugale luṭhatyapi bhṛśam || 109 ||</l>
+</lg></p>
+
+<p><hi rend="bold">vikṛtau</hi></p>
+
+<l rend="bold">yadiha najau bhajau bhjabhalagāstadāśvalalitaṃ harārkayatimat // KVrk_3.110 //</l>
+
+<p>yasya pāde nagaṇajagaṇau bhagaṇajagaṇabhagaṇajagaṇabhagaṇalaghuguravo bhavanti tadvṛttaṃ <hi rend="bold">aśvalalitaṃ</hi> nāma / ekādaśabhirdvādaśabhiryatiḥ / yathā /
+<lg>
+<l>samaravinirjitārinivahakṣitīśvaravicitramaśvalalitam</l>
+<l>hṛdayacamatkṛtipradamidaṃ vilokya bhavato vadanti kavayaḥ /</l>
+<l>dhruvamurarīcakāra nṛpaterdivaspatirimaṃ turaṃgamavaraṃ</l>
+<l>bahutaramanyathā na viyati krathairiha vivelate 'tibahulaiḥ (?) || 110 ||</l>
+</lg></p>
+
+<l rend="bold">mattākrīḍaṃ mau tnau nau nlau giti bhavati vasuśaradaśayatiyutam // KVrk_3.111 //</l>
+
+<p>yasya pāde dvau magaṇau tagaṇanagaṇau dvau nagaṇau nagaṇalaghuguravastadvṛttaṃ <hi rend="bold">mattākrīḍaṃ</hi> nāma / aṣṭabhiḥ pañcabhi daśabhiśca yatiḥ / yathā /</p>
+
+<lg>
+<l>dṛṣṭvā cāndraṃ bimbaṃ rātrau karanikaravinihitatimiranikaram</l>
+<l>gāyanti sma svairaṃ yasminsuvikasitakusumavati madhusamaye /</l>
+<l>paurā baddhāstasmin saṃpratyavanipatitilaka tava nagare</l>
+<l>mattākrīḍātisvacchandaṃ vigatabhayabhavabhamitamṛganivahāḥ || 111 ||</l>
+</lg>
+
+<p><hi rend="bold">saṃkṛtau</hi></p>
+
+<l rend="bold">bhūtamunīnairyatiriha bhatanāḥ sbhau bhanayāśca yadi bhavati tanvī // KVrk_3.112 //</l>
+
+<p>bhagaṇatagaṇanagaṇasagaṇā dvau bhagaṇau nagaṇayagaṇau yasya pāde tadvṛttaṃ <hi rend="bold">tanvī</hi> nāma / paṃcabhiḥ saptabhirādityaiśca yatiḥ / yathā /
+<lg>
+<l>yā mukhapadmaṃ śaśadharasadṛśaṃ sundaralolanayanamatiramyam</l>
+<l>subhru bibharti tribhuvanajayino vāsanivāsamiva makaraketoḥ /</l>
+<l>pīnanitambā gurukucayugalā vṛttasukomalabhujakarayugmā</l>
+<l>sā mama citte janayati yuvatī harṣamanalpamiyamiha sutanvī || 112 ||</l>
+</lg></p>
+
+<p><hi rend="bold">atikṛtau</hi></p>
+
+<l rend="bold">krauñcapadā bhmau sbhau nananā ngī iṣuśaravasumuniviratiriha bhavet // KVrk_3.113 //</l>
+
+<p>bhagaṇamagaṇasagaṇabhagaṇāścatvāro nagaṇā guruśca yasya pāde tadvṛttaṃ <hi rend="bold">krauñcapadā</hi> nāma / pañcabhiraṣṭabhiḥ saptabhiśca yatiḥ / yathā /</p>
+
+<lg>
+<l>krauñcapadā yā romaśagātrī vikaṭadaśanataniratiparuṣatanuḥ</l>
+<l>piṃgaladṛṣṭiḥ sūkṣmanitambā kapilakacanicayaviṣamakucayugā /</l>
+<l>yā ca hasantī locanavāri prakaṭayati rahasi nijapativimukhī</l>
+<l>muñca sakhe tāmiṣṭatamaṃ ceccirataramiha tava cara viṣayasukham || 113 ||</l>
+</lg>
+
+<p><hi rend="bold">utkṛtau</hi></p>
+
+<l rend="bold">vasvīśāśvacchedopetaṃ mamatanayuganarasalagairbhujaṃgavijṛmbhitam // KVrk_3.114 //</l>
+
+<p>dvau magaṇau tagaṇastrayo nagaṇā ragaṇasagaṇau laghugurū ca yasya pāde tadvṛttaṃ <hi rend="bold">bhujaṃgavijṛmbhitaṃ</hi> nāma / aṣṭabhirekādaśabhiḥ saptabhiryatiḥ / yathā /
+<lg>
+<l>prāleyāṃśujyotsnākāṃtadyutiśubhamavimalasadvitānamanohare</l>
+<l>krīḍāgāre cañcacciratra kusumaparimalamiladalivrajeśudhayojjvale /</l>
+<l>premodrekā veśyāvṛttaṃ kulayuvatirapi vitanute yadā suratotsave</l>
+<l>preyānapyānandeneva prakaṭayati rahasi na tadā bhujaṃgavijṛmbhitam || 114 ||</l>
+</lg></p>
+
+<l rend="bold">mo nāḥ ṣaṭ sagagiti yadi navarasarasaśarayatiyutamapavāhākhyam // KVrk_3.115 //</l>
+
+<p>yasya pāde magaṇo nagaṇā ṣaṭ sagaṇo dvau gurū ca yatra tadvṛtta<hi rend="bold">mapavāhaṃ</hi> nāma / navabhiḥ ṣaḍbhiḥ ṣaḍbhiḥ paṃcabhiḥ yatiḥ / yathā /
+<lg>
+<l>ātmānaṃ kalayati tṛṇamiva suragurudharaṇitalasuragavāmartho</l>
+<l>yo nityaṃ vikasitamukhakamalamiha vitarati dhanamamalamarthibhyaḥ /</l>
+<l>saṃpatyā samupahasitadhanadavibhavanivahadaurabhyāt</l>
+<l>lokaḥ paśyati vigalitabahuvidhimatimatikṛśatanumapavāhaṃ tam || 115 ||</l>
+</lg></p>
+
+
+<p>// uktādijātiprakaraṇam //</p>
+
+
+<p>ata evaṃ urdhvaṃ śeṣajātiprakaraṇaṃ bhavati / taccātra noktaṃ granthagauravabhayātkedāreṇa evamuktādijātiṣu utkṛtyavasānāsu śrīprabhṛti apavāhāntāni samavṛttāni padarśa(?) / &amp;#8216;<hi rend="bold">yatkiṃciddṛśyate chandaḥ ṣaḍviṃśatyadhikākṣaram / śeṣajātyādikaṃ muktvā tatsarvaṃ daṇḍakā vidu</hi>'rityādilakṣaṇān daṇḍakānāha /</p>
+
+<l rend="bold">yadiha nayuktagalaṃ tataḥ saptarephāstadā caṇḍavṛṣṭiprayāto bhaveddaṇḍakaḥ // KVrk_3.116 //</l>
+
+<p>iha śāstre <hi rend="bold">caṇḍavṛṣṭiprayāto</hi> nāma <hi rend="bold">daṇḍako</hi> <hi rend="bold">bhavet </hi>/ yadā nagaṇau dvau saptaragaṇāśca bhavanti / <hi rend="bold">śatamāṇḍavābhyāmṛṣibhyāmanekā 'sya saṃjñā kṛtā</hi> / yathā /
+kuvalayadaladīrghanetrā sumadhyā pṛthuśroṇibimbā navaprāgasaṃsaktahṛt
+prathamavirahapīḍitā sā mṛtā preyasī garjitaṃ vāridānāṃ niśamya dhruvam /
+nabhasi kuṭajapuṣpasaṃbhāragaṃdhāsavonmattabhṛṃgāṃganā gīyamānāgame
+hata pathika vṛthā kimāyāsa................................... /
+<hi rend="bold">caṇḍavṛṣṭirityeke</hi> || 116 ||</p>
+
+<l rend="bold">praticaraṇavivṛddharephāḥ syurarṇārṇavavyālajīmūtalīlākaroddāmaśaṃkhādayaḥ // KVrk_3.117 //</l>
+<p>caraṇaṃ caraṇaṃ prati <hi rend="bold">praticaraṇaṃ</hi> ragaṇānāṃ vṛddhyā ihārṇādayo daṇḍakāssyuḥ /</p>
+
+<p><hi rend="bold">aṣṭabhī ragaṇairarṇo yathā /
+</hi>śramasalilamapakaroti drutaṃ kāminīnāṃ rasāyāsajaṃ maruccīkarāmodavān
+<lg>
+<l>janayati madhupasya tīradrumālī lasatpallavālaṃkṛtāṃ kāminīvibhramādeśakam /</l>
+<l>ayamiha dayitaiḥ purorṇānidhiṃ yasya śakyaṃ samasāyuvajraprahārānabhijñabhyusī (?)</l>
+<l>bhujagapuravadhūlasallocanānandakaro sphurantī na līlāṃ tanoti rājātmajaḥ //</l>
+</lg></p>
+
+<l rend="bold">navabhī ragaṇairarṇavo yathā /</l>
+<lg>
+<l>trinayananagatuṃgaśṛṃgaśriyaṃ bibhraduddaṇḍaḍiṃḍīrapiṇḍāvadātaistaraṃgottarairullasan</l>
+<l>makaratimitimiṃgilo vistṛtādhiṣṭhitakroḍasaṃprāptaśobhairnabhaḥprāṃgaṇajñāpakaiḥ /</l>
+<l>bhujagaśayanaśayito devadevasya yo vāsa veśmaśriyo janenārṇavaso 'yamagrīḥ priye</l>
+<l>tava nayanapathaṃ prayātastanotuṃ pramodaṃ vinodāspadaṃ tīrasaṃbhūtapunnāgapūgadrumaiḥ //</l>
+</lg>
+
+<p><hi rend="bold">daśabhī ragaṇaiḥ vyālo yathā /
+</hi>prasayati malayānile viprayuktāṃganādīrghaniḥśvāsasaṃparkasaṃvavardhitaprauhitāvematonandani
+<lg>
+<l>sphuḍitabakulakarṇikārāmradunnāgamākaṃdakaṃkillisaccampakāmodavāhinyamuṣmin vasaṃtāgame /</l>
+<l>bhaja caraṇayugānataṃ saṃnatāṃgipriyaṃ prītisaṃdohakāminī nāma nagāturāṇāṃ mṛgīcakṣuṣām</l>
+<l>taruṇīmani (?) sakhi sphurajjvālajihvāgralole 'ṅganānāṃ sadā saukhyaṃ vidhvaṃsinā 'nena kiṃ dagdhamānena te //</l>
+</lg></p>
+
+<p><hi rend="bold">tairekādaśabhirjīmūtairyathā /
+</hi>
+priyavirahitakāminī jīvitā sā vināśaikadakṣāniloddhūtakādambapuṣpāsavāmūrcchitāśeṣabhṛṃgadhvajo /
+<lg>
+<l>nabhasi nabhamivāṃkṣasaudāminīmālayālaṃkṛtaṃ nīlajīmūtapaṃktiṃ balākāvalīsevitāṃ locanānandadām /</l>
+<l>viracitamadhurasvaraṃ cātakānāṃ ca ramyaṃ samūhaṃ tu sāskāṃtamapyunmadaṃ(?) bhāvinīṃ tṛptimākāṃkṣamāṇam /</l>
+<l>muhukṛtavitatasubarhibhāraḥ</l>
+<l> śikhīsaṃvanmanmathā preyasī prītimutpādayan nṛtyati svāṅdhrivinyāsasauṃdaryavat //</l>
+</lg></p>
+
+<l rend="bold">dvādaśabhirlīlākaro yathā /</l>
+<lg>
+<l>abhinavanavapallavāsvādasaṃśuddhakaṇṭhānyapuṣṭāṃganāsuṃdarāradhvagītadhvaniprāptabodhiryadi cakravāle vane /</l>
+<l>kusumitabahupāṭalā karṇikārāmrasatsiṃduvārottamāśokasatpuṣpabhārā vanaśrīkṛtāśeṣaśākhālasatpallave vane /</l>
+<l>vilapati vanitā ghanasyābhimānagrahaṃ lāsyalīlākaro mādhavī pallavānāmayaṃ kāmadevaikabandhavasantānilo /</l>
+<l>jagati vijayinīṃ smarājñāmivāviṣkarotyaṃganānāṃ ratāyāsajasvedabinduprasaktālakaprāṃtakaṃpaṃ vidhitsurmuhuḥ //</l>
+</lg>
+
+<l rend="bold">trayodaśabhī ragaṇairuddāmo yathā /</l>
+<lg>
+<l>śaśadharasadṛśaṃ mukhāmbhoruhaṃ bibhratī pakvabimbādharoddāmahārāvalīśobhitoccastanī sūkṣmaromāvalīprāptanābhihṛdā /</l>
+<l>śravaṇayuganiveśitasvarṇatāṇḍaṃkasaṃlagnaratnaprabhāsitāpāṃgaraṃgāṃgaṇotsaṃgasaṃnṛtyamānekṣaṇakṣobhitakṣmātalā /</l>
+<l>kalaravavarakiṃkiṇīpakvaṇanmekhalālaṃkṛtaśroṇibimbānuvṛttānupūrvoruyugmā sarojāruṇāṅdhridvayanyastasannūpurā /</l>
+<l>hṛdayamaśaraṇaṃ munīnāmapīyaṃ salīlaṃ vrajaṃtī karoti sphuraccīvaraprāṃjalodbodhitānaṃgalakṣmīkṛtāśeṣalokaṃ bhṛśām //</l>
+</lg>
+
+<l rend="bold">caturdaśabhī raiḥ śaṃkho yathā /</l>
+<lg>
+<l>kvacidupari taraccaṃdavallīvitānaiḥ kvaciddrumāṇāṃ latāsaṃcayaiḥ saṃcarannakracakraiḥ kvacinnīrasaṃbhūtapūgadrumaiḥ śobhitam /</l>
+<l>kvacidapi ghanasāṃmrahiṃtālatālāvalīcārutāmbūlavallīsamūhaiḥ (?) kvacidvyālasallolakolāhalotpāditorvīprakaṃpam /</l>
+<l>kvacidabhinavacampakonnidracaṃcatprastanāsavāmodasaṃparkaḥ saṃprāptasaurabhyasaṃpatsamīrāgamātītatoyakaṇaiḥ sekitaṃ nīrahṛtaṃ vidrutam /</l>
+<l>salilanidhimanekaratnākaraprītisaṃdohadaṃ setusīmaṃtamaṃtaṃ vilokya drutaṃ vilocanānāṃ nipātaṃ ca yasyāśu sāphalyamāpādayaḥ //</l>
+</lg>
+
+<p><hi rend="bold">ādiśabdātpaṃcadaśabhiḥ raiḥ samudraḥ ṣoḍaśairbhujaṃga ityevamādayo yatheṣṭakṛtanāmāno daṇḍakā bhavanti</hi> || 117 ||</p>
+
+
+<l rend="bold">pracitakasamabhidho dhīradhībhiḥ smṛto daṇḍako nadvayāduttaraiḥ saptabhiryaiḥ // KVrk_3.118 //</l>
+
+<p><hi rend="bold">nagaṇadvayā</hi>naṃtaraṃ <hi rend="bold">saptabhiryaiḥ</hi> <hi rend="bold">pracitako</hi> nāma <hi rend="bold">daṇḍakaḥ smṛtaḥ</hi> / pūrvavadatrāpi praticaraṇavivṛddharephakrameṇa yagaṇādisamastagaṇavṛddhyā daṇḍakā bhavanti / yathā /
+pūrvamekaikākṣaravṛddhyā chaṃdasāṃ vṛddhiruktāstathā rephopalakṣitā trayeṇa vṛddhiḥ sā cācāryapāraṃparyopadeśāt tāvadgrāhyā yāvadekonamakṣarasāhasraṃ bhavanti / yadyapi kaiściduktaṃ sahasrākṣaraparyantā daṇḍakā iti tathāpi tṛkāṇāṃ vṛddhyā ekonameva sahasraṃ bhavantīti || 118 ||</p>
+
+<p>// iti daṇḍakaprakaraṇam //</p>
+
+
+<p>iti sulhaṇaviracitāyāṃ sukavihṛdayānaṃdinyabhidhānāyāṃ vṛttaratnākarachandovṛttau samavṛttādhyāyastṛtīyaḥ //</p>
+
+
+
+<p>caturtho 'dhyāyaḥ
+ardhasamavṛtādhyāyaḥ</p>
+
+<p>athārdhasamavṛttādhyāyamāha /</p>
+
+<l rend="bold">viṣame yadi sau salagā dale / bhau yuji bhādgurukāvupacitram // KVrk_4.1 //</l>
+
+<p>atra pāde iti vaktavye ardhasamavṛttādhyāye tvardhāpekṣayā ardha ityuktaṃ sūtrakāreṇeti na doṣaḥ / <hi rend="bold">viṣame</hi> prathame tṛtīye pāde trayaḥ sagaṇā laghurgururyadi <hi rend="bold">yuji</hi> same dvitīye caturthe bhagaṇatrayaṃ dvau gurū tadā <hi rend="bold">upacitrā</hi> nāmārdhasamavṛttaṃ bhavati / yathā /
+<lg>
+<l>tvadarātipure kṣiti yoddhase muktamahoragakaṃcukevaṃti (?) /</l>
+<l>upacitramudīkṣya divā bhayānno viviśurbhavanāni hariṇyaḥ || 1 ||</l>
+</lg></p>
+
+<l rend="bold">bhatrayamojagataṃ guruṇī cedyuji ca najau jyayutau drutamadhyā // KVrk_4.2 //</l>
+
+<p>yasyārdhasamavṛttasya <hi rend="bold">auje</hi> viṣame prathame tṛtīye pāde <hi rend="bold">bhagaṇatrayaṃ</hi> dvau gurū yadi <hi rend="bold">yuji</hi> same dvitīye caturthe nagaṇajagaṇau jagaṇayagaṇau ca tadvṛttaṃ <hi rend="bold">drutamadhyā</hi> nāma / yathā /
+<lg>
+<l>dṛṣṭivilāsaviśeṣamaśeṣaṃ vividhagatīravacoracanāṃ ca /</l>
+<l>yauvanameva vadhū drutamadhyāpayati manobhavadattavivekā || 2 ||</l>
+</lg></p>
+
+<l rend="bold">sayugātsagurū viṣame cet / bhāviha vegavatī yuji bhādgau // KVrk_4.3 //</l>
+
+<p><hi rend="bold">viṣame</hi> pāde trayaḥ sagaṇā guruśca <hi rend="bold">yuji</hi> same bhavaṇatrayaṃ dvau gurū ca tadā <hi rend="bold">vegavatī</hi> nāma / yathā /
+<lg>
+<l>sukṛtaikanidheḥ smarabandhoḥ kasyacidālayamāli salīlam /</l>
+<l>iyamunnatapīnanitambā gacchati vegavatī madanārtā || 3 ||</l>
+</lg></p>
+
+
+<l rend="bold">auje taparau jarau guruścet / msau jgau bhadravirāḍbhavedanoje // KVrk_4.4 //</l>
+
+<p><hi rend="bold">auje</hi> viṣame pāde prathame tṛtīye tagaṇātparau jagaṇaragaṇau <hi rend="bold">guruśce</hi>dyadi bhavati <hi rend="bold">anoje</hi> same dvitīye caturthe pāde magaṇasagaṇajagaṇā gurū ca bhavanti tadvṛttaṃ <hi rend="bold">bhadravirāṭ </hi>nāma / yathā /
+<lg>
+<l>kundendusamujjvalena baddhaṃ brahmāṇḍodaravartināṃ narendra /</l>
+<l>nītā haraśailasaṃdhyamete śuddhabhadravirāḍ payase yaśaste || 4 ||</l>
+</lg></p>
+
+<l rend="bold">asame sajau saguruyuktau ketumatī same bharanagādgaḥ // KVrk_4.5 //</l>
+
+<p><hi rend="bold">asame</hi> viṣame pāde sagaṇajagaṇasagaṇā guruśca <hi rend="bold">same</hi> dvitīye caturthe bhagaṇaragaṇanagaṇā dvau gurū ca tadvṛttaṃ <hi rend="bold">ketumatī</hi> nāma / yathā /
+<lg>
+<l>bhavatā raṇāṃgaṇagatena prasphuritāsimātrasacivena /</l>
+<l>vijitāmarāśvagajayuktā ketumatī narendra ripusenā || 5 ||</l>
+</lg></p>
+
+<l rend="bold">ākhyānikī tau jagurū gamoje jatāvanoje jagurū guruścet // KVrk_4.6 //</l>
+
+<p><hi rend="bold">auje</hi> prathame tṛtīye pāde tagaṇau dvau jagaṇo gurū ca <hi rend="bold">anoje</hi> dvitīye caturthe jagaṇatagaṇau jagaṇo dvau <hi rend="bold">gurū</hi> ca tadvṛttaṃ <hi rend="bold">ākhyānikī</hi> nāma / yathā /
+<lg>
+<l>ye ye tvayā saṃjati śatrubhūpā hatā hatāśeṣavipakṣavarga /</l>
+<l>ākhyānikī kīrtiravantinātha babhūva te saṃcaritāṃtarikṣe || 6 ||</l>
+</lg></p>
+
+<l rend="bold">jatau jagau go viṣame same syāttau jgau gameṣā viparītapūrvā // KVrk_4.7 //</l>
+
+<p>yasya prathame tṛtīye pāde jagaṇatagaṇajagaṇā dvau gurū ca <hi rend="bold">same</hi> pāde dvau tagaṇau jagaṇo dvau gurū ca tadvṛttaṃ <hi rend="bold">viparītākhyānikī</hi> nāma / yathā /
+<lg>
+<l>dhruvaṃ samāgacchati jīviteśa śrutvādikāruṇyaparaṃ vaco me /</l>
+<l>bhavenna ceddaivavaśādihānyā ākhyānikī me viparītapūrvā //</l>
+</lg></p>
+
+<p><hi rend="bold">ākhyānikī vārtāhārikocyate</hi> / etayośca pūrvoktopajātyaṃtargatatve viśeṣasaṃjñārdhasamavṛttādhyāye pāṭhaḥ || 7 ||</p>
+
+<l rend="bold">sayugātsalaghū viṣame gururyuji nabhau ca bharau hariṇaplutā // KVrk_4.8 //</l>
+
+<p>yasyā <hi rend="bold">viṣame</hi> pāde sagaṇatrayaṃ laghugurū ca <hi rend="bold">same</hi> pāde nagaṇabhagaṇau bhagaṇaragaṇau ca tadvṛttaṃ <hi rend="bold">hariṇaplutā</hi> nāma / yathā /
+<lg>
+<l>yadi śīghragatirhariṇaplutānsuviṣamāṃstanute pathikaḥ pathi /</l>
+<l>jaladāgamane priyayā tadā bhavati saṃgatirardhaśarīrayā || 8 ||</l>
+</lg></p>
+
+<l rend="bold">ayuji nanaralā guruḥ same njamaparavaktramidaṃ tato jarau // KVrk_4.9 //</l>
+<p>viṣame pāde nagaṇau ragaṇo laghuśca guruśca bhavanti <hi rend="bold">same</hi> pāde nagaṇajagaṇau jagaṇaragaṇau tadvṛttaṃ <hi rend="bold">aparavaktraṃ</hi> nāma / yathā /
+<lg>
+<l>jaladagalapiśaṃgalocanaṃ madanaripoḥ śaśikhaṇḍamaṇḍitam /</l>
+<l>apaharatu bhayāni dakṣiṇaṃ tadaparavaktrabhayaṃkaraṃ satām //</l>
+</lg></p>
+
+<l>asya vaitālīyāntargatatve 'pi viśeṣasaṃjñārtha ihopanyāsaḥ || 9 ||</l>
+
+<l rend="bold">ayuji nayugarephato yakāro yuji ca najau jaragāśca puṣpitāgrā // KVrk_4.10 //</l>
+
+<p>yasya viṣame pāde nagaṇadvayaṃ ragaṇātparo yagaṇaḥ same nagaṇajagaṇau jagaṇaragaṇau guruśca tadvṛttaṃ <hi rend="bold">puṣpitāgrā</hi> nāma /
+<lg>
+<l>calakiśalayavatyaśokaśākhā tava caraṇāhatimātrapuṣpitāgrā /</l>
+<l>śaśimukhi sakhi muñca mānamasyā madanamahotsava eṣa yāti śūnyā //</l>
+</lg></p>
+
+<l>iyamapyaupacchandasikaṃ viśeṣasaṃjñājñāpakārthamatrocyate || 10 ||</l>
+
+<p><hi rend="bold">vadantyaparavaktrākhyaṃ
+ vaitālīyaṃ vipaścitam /</hi></p>
+
+<l rend="bold">puṣpitāgrābhidhaṃ kecidaupacchaṃdasikaṃ tathā // KVrk_4.11 //</l>
+
+<l rend="bold">syādayugmake rajau rajau same tu jarau jarau gururyavātparā matīyam // KVrk_4.12 //</l>
+
+<p>yasya viṣame pāde ragaṇajagaṇau ragaṇajagaṇau same jagaṇaragaṇau jagaṇaragaṇau guruśca tadvṛttaṃ <hi rend="bold">yavātparāmatīyaṃ</hi> bhavatītyarthaḥ / yathā /
+<lg>
+<l>mālavakṣitīśa māsamudgaśāli yavānatāribhūyamedinī samagrā /</l>
+<l>ātmasātkṛtā tvayā ripūn vijitya samagrasainyasaṃyutānapi prasahya || 12 ||</l>
+</lg></p>
+
+<p>iti sulhaṇaviracitāyāṃ sukavihṛdayānandinyabhidhānāyāṃ vṛttaratnākaracchaṃdovṛttau ardhasamavṛttādhyāyaḥ caturthaḥ /</p>
+
+
+
+<p>pañcamo 'dhyāyaḥ
+viṣamavṛttādhyāyaḥ
+viṣamavṛttādhyāya ārabhyate /
+<l rend="bold">mukhapādo 'ṣṭabhirvarṇaiḥ /</l></p>
+
+
+<p>[padacaturūrdhva-prakaraṇam (5.1-5)]</p>
+
+<l rend="bold">pare 'smāt makarālayaiḥ kramādvṛddhāḥ /</l>
+<l rend="bold">satataṃ yasya vicitraiḥ pādaiḥ saṃpannasauṃdaryam /</l>
+<l rend="bold">tadabhihitamamaladhībhiḥ padacaturūrdhvābhidhaṃ vṛttam // KVrk_5.1 //</l>
+
+<p>prathamapādo 'ṣṭākṣaraḥ / <hi rend="bold">pare</hi> ca dvitīyatṛtīyacaturthāḥ / <hi rend="bold">asmātpra</hi>thamapādā<hi rend="bold">tmakarālayai</hi>ścaturbhiścaturbhirakṣaraiḥ <hi rend="bold">kramādvṛddhā</hi> vardhitāḥ / kramāditi ko 'rthaḥ / dvitīyo dvādaśākṣaraḥ / tṛtīyo ṣoḍaśākṣaraḥ / caturtho viṃśatyakṣara iti kramādvṛddhiṃ prāptāḥ / <hi rend="bold">satata</hi>manavarataṃ iti vividhaiścaturviṃśatiprakāraprastāreṇa <hi rend="bold">vicitraiḥ pādaiḥ</hi> prāptasauṃdaryaṃ ta<hi rend="bold">dvṛttaṃ</hi> ācāryaiḥ <hi rend="bold">padacaturūrdhvaṃ</hi> nāmoktam / yathā /
+<lg>
+<l>ākramyamākṛṣya dhanu-</l>
+<l>rye tvayā nihitā raṇāṃgaṇe śaraiḥ /</l>
+<l>ripavaḥ sahasā gatāsavaḥ kṣitipate śrutam /</l>
+<l>padacaturūrdhvaṃ na calanti tatraiva nipatanti saśalyāḥ //</l>
+</lg></p>
+
+<p>atra gaṇapādābhāvāt gurulaghū neṣyate / atra ca prastāryamāṇaṃ caturviṃśatidhā bhavati / ṣoḍaśadvādaśaaṣṭau ṣoḍaśaviṃśatidvādaśa aṣṭau ityādi || 1 ||</p>
+
+<l rend="bold">prathamamuditavṛtte /</l>
+<l rend="bold">viracitaviṣamacaraṇabhāji /</l>
+<l rend="bold">gurukayugalanidhana iha kalita āṅā /</l>
+<l rend="bold">vidhṛtarucirapadavitatiyatiriha bhavati pīḍaḥ // KVrk_5.2 //</l>
+
+<p><hi rend="bold">prathamamuditavṛtte</hi> padacaturūrdhve viracitān viṣamān aṣṭaudvādaśaṣoḍaśaviṃśatyakṣarān padān bhajatīti tasmin <hi rend="bold">viṣamacaraṇabhāji</hi> <hi rend="bold">iha</hi> chaṃdasi <hi rend="bold">āṅā</hi> <hi rend="bold">kalito</hi> yuktaḥ <hi rend="bold">pīḍo</hi> bhavati / <hi rend="bold">āpīḍa ityarthaḥ</hi> / kva sati ityāha / <hi rend="bold">gurukayugalanidhane</hi> gurudvayaṃ nidhane 'vasāne yasya tasminsati / kīdṛśaṃ ityāha / <hi rend="bold">vidhṛtarucirāṇāṃ pādānāṃ vitatyā yati</hi>rvirāmo yasya sa tathoktaḥ / ante gurudvayopādanādatra śeṣāṇāṃ laghutvamasyānujñānaṃ kedāreṇeti manyāmahe / yathā /
+<lg>
+<l>dhruvamiha vanitānāṃ</l>
+<l>hṛdi vinihitadayitaguṇānām /</l>
+<l>prasarati malayamaruti virahavatīnāṃ</l>
+<l>smarasuhṛdi vijayini bhavati niyatamasuvināśaḥ //</l>
+</lg></p>
+
+<p>dvigurūṇi chaṃdasi āpīḍeti trayāṇāṃ gurūṇāṃ apraveśā<hi rend="bold">cchargaṇḍa</hi> iti nāma noktam /
+idamapi pūrvavaccaturviṃśatiprastāro bhavati / tebhyaścaturviṃśatibhyastrīnavakṛṣya samānyabhidhātumāha || 2 ||</p>
+
+<p><hi rend="bold">prathamamitaracaraṇasamutthaṃ</hi></p>
+
+<l rend="bold">śrayati jagati lakṣma /</l>
+<p><hi rend="bold">itaraditaracaraṇajanitamapi ca turyaṃ
+caraṇayugakamavikṛtamaparamiha kalikā sā // KVrk_5.3 //</hi></p>
+
+<p>āpīḍasya <hi rend="bold">prathamaṃ turyaṃ</hi> caturthaṃ <hi rend="bold">itaracaraṇasamutthaṃ</hi> dvitīyapādaṃ dvādaśākṣaropalakṣitaṃ <hi rend="bold">lakṣma</hi> śrayati bhajati / ko 'rthaḥ / prathamapade dvādaśākṣaraḥ / dvitīyo 'ṣṭākṣaraḥ / aparamapi <hi rend="bold">caraṇayugalamavikṛtama</hi>pratyayābhāvamityevaṃlakṣaṇā <hi rend="bold">kalikā</hi> nāma / <hi rend="bold">mañjarīti vaktavye</hi> chaṃdobhaṃgabhayāt kaliketyuktamekārthatvānna doṣaḥ / yathā /
+<lg>
+<l>adhamajanasuhṛdi kalikāle</l>
+<l>sujanakṛtavirodhe /</l>
+<l>sakaluṣamuṣi sapadi vidhuvanāyāḥ</l>
+<l>tadanu vimanamanasi mudamiha janayati nivāsā || 3 ||</l>
+</lg></p>
+
+<p><hi rend="bold">dviguruyutasakalacaraṇāṃtā</hi></p>
+
+<l rend="bold">mukhacaraṇaracitamanubhavati tṛtīyaḥ /</l>
+<p><hi rend="bold">caraṇa iha hi lakṣma
+prakṛtamaparamakhilamapi yadi bhavati lavalī sā // KVrk_5.4 //</hi></p>
+
+<p>yasyā<hi rend="bold">stṛtīyaḥ</hi> pādaḥ prathama<hi rend="bold">caraṇaracitaṃ</hi> lakṣaṇa<hi rend="bold">manubhavati</hi> dvābhyāṃ gurubhyāṃ yutā sakalacaraṇānāmanto yasyāḥ sā tathoktā <hi rend="bold">lavalī</hi> nāma / <hi rend="bold">aparaṃ</hi> lavalyāṃ sarvamapi prāktanaṃ prastutaṃ pūrvavaditi bhavati / yathā /
+<lg>
+<l>gaganatalamamalamalimetat</l>
+<l>sapadi śaśabhṛdayaṃ analavitikaraughaiḥ /</l>
+<l>janayati ca lavalyāḥ</l>
+<l>calamiti sarasaṃ bhuvidbhavipariṇati(?) paripīḍaḥ || 4 ||</l>
+</lg></p>
+
+<p><hi rend="bold">prathamamadhivasati yadi turyaṃ
+caramacaraṇapadamavasitiguruyugmā /</hi>
+<hi rend="bold">nikhilaparamuparitanasamamiha lalitapādā
+tadiyamamṛtadhārā // KVrk_5.5 //</hi></p>
+
+<p><hi rend="bold">prathamaṃ</hi> pādamaṣṭākṣaraṃ <hi rend="bold">caramacaraṇapadaṃ</hi> paścimapādasthānaṃ ya<hi rend="bold">dyadhivasati</hi> / <hi rend="bold">apara</hi>mapyanyatsarvaṃ <hi rend="bold">uparitanaṃ</hi> pūrvavat / ante gurudvayayuktā sulalitapadapaṃkti<hi rend="bold">ramṛtadhārā</hi> nāma / yathā /
+<lg>
+<l>śaśadharamukhi sakhi parirambhaṃ</l>
+<l>tava mama vapuṣi malayajarasaniṣekaḥ /</l>
+<l>śravaṇapuṭayugalasukhakṛdaticaturamabhihṛdyā</l>
+<l>vacanamamṛtadhārā //</l>
+</lg></p>
+
+<l>piṃgalanāgastu padacaturūrdhvādiṣu prathamapādaviparyāse sati maṃjaryādi nāmāni vīkṣyati || 5 ||</l>
+
+<p>  // padacaturūrdhvaprakaraṇam //</p>
+
+
+
+<p>[udgatā-prakaraṇam (5.6-8)]</p>
+
+<l rend="bold">sajamādime salaghukau ca nasajagurukeṣvathodgatā /</l>
+<l rend="bold">tryaṅdhrigatabhanajalā gayutā sajasā jagau caraṇamekata paṭhet // KVrk_5.6 //</l>
+
+<p>prathamapāde sagaṇajagaṇasagaṇā laghuśca tathā dvitīyapāde nagaṇasagaṇajagaṇaguravo bhavanti trisaṃkhyopalakṣito 'ṅdhri<hi rend="bold">straṅdhri</hi>stṛtīyaḥ pādastasmin <hi rend="bold">gatā</hi> bhagaṇanagaṇajagaṇalaghuguravastairyutā / caturthe caraṇe sagaṇajagaṇasagaṇā jagaṇo guruśca yatra sā <hi rend="bold">udgatā</hi> nāma / <hi rend="bold">ekata</hi> iti / prathamaṃ dvitīyena sahāvilaṃbitaṃ paṭhedityarthaḥ / yathā /
+<lg>
+<l>jitamatsarā sukṛtino 'pi parihṛtakalaṃkabāṃdhavāḥ /</l>
+<l>vīkṣya sapadi yuvatiṃ vikṛtiṃ niyataṃ prayāti vipulodgatāstanuḥ || 6 ||</l>
+</lg></p>
+
+<l rend="bold">caraṇatrayaṃ bhajati lakṣma yadi sakalamudgatāgatam /</l>
+<l rend="bold">rnau bhagau bhavati saurabhakaṃ caraṇe yadīha bhavatastṛtīyake // KVrk_5.7 //</l>
+
+<p>yadyudgatāyāstṛtīye pāde ragaṇanagaṇabhagaṇaguravo bhavanti tadā <hi rend="bold">saurabhakaṃ</hi> nāma vṛttaṃ bhavet / yathā /
+<lg>
+<l>malayānilaḥ priyaviyuktayuvatijanatāviyatyataḥ /</l>
+<l>maṃdamaṃdamayametitarāṃ ghanasārasaurabhakamudvamanniva || 7 ||</l>
+</lg></p>
+
+<l rend="bold">nayugaṃ sakārayugalaṃ ca bhavati caraṇe tṛtīyake /</l>
+<l rend="bold">taduditamurumatibhirlalitaṃ yadi śeṣamasya khalu pūrvatulyakam // KVrk_5.8 //</l>
+
+<p><hi rend="bold">yadyu</hi>dgatāyā<hi rend="bold">stṛtīye caraṇe </hi>dvau nagaṇau dvau sagaṇau ca bhavataḥ tadā <hi rend="bold">lalitaṃ</hi> nāma / śeṣamudgatāvat / yathā /
+<lg>
+<l>lalitāṃgahāraramaṇīyamabhinavalalitaṃ samāṃsalam /</l>
+<l>iyamatinayati mudā pramattā purato vayasya tava lāsyamuttamam || 8 ||</l>
+</lg></p>
+
+<p>// udgatāprakaraṇam //</p>
+
+
+
+<p>[upasthitapracupita-prakaraṇam (5.9-11)]</p>
+
+<p><hi rend="bold">msau jbhau gau prathamāṅdhrirekataḥ pṛthaganyat</hi></p>
+
+<l rend="bold">tritayaṃ sanajaragāstathā nanau saḥ /</l>
+<p><hi rend="bold">trinaparikalitajayau</hi></p>
+
+<l rend="bold">pracupitamitamuditamupasthitapūrvam // KVrk_5.9 //</l>
+
+<p>yasya prathame pāde magaṇasagaṇajagaṇabhagaṇā dvau gurū <hi rend="bold">ekataḥ</hi> / <hi rend="bold">pṛthak anyattritayaṃ</hi> pādatritayaṃ kathamityarthaḥ / dvitīye pāde sagaṇanagaṇajagaṇaragaṇā guruśca tathā tṛtīye pāde dvau nagaṇau sagaṇaścaturthe nagaṇatrayaṃ jagaṇayagaṇau ca tadvṛttaṃ <hi rend="bold">upasthitapūrvaṃ</hi> <hi rend="bold">upasthitapracupitami</hi>tyarthaḥ / yathā /
+<lg>
+<l>āruhyānyabhṛtapriyā lasatsahakāraṃ prakaṭīkṛtanavamaṃjariṃ sagarvā /</l>
+<l>nijakalaravaninadaiḥ prakaṭayati ratipatimahotsavamāli || 9 ||</l>
+</lg></p>
+
+<l rend="bold">nau pāde 'tha tṛtīyake sanau nasayuktau prathamāṅdhrikṛtayatistu vardhamānam /</l>
+<l rend="bold">tritayamaparamapi pūrvasadṛśamiha bhavati pratatamatibhiriti gaditaṃ khalu vṛttam // KVrk_5.10 //</l>
+
+<p>tadeva padacaturūrdhvaṃ <hi rend="bold">tṛtīye</hi> pāde nagaṇau sagaṇanagaṇau ca bhavataḥ prathamasya caturūrdhvasyāṅdhiḥ prathamāṅdhrivat kṛtā yatiryasya kriyāviśeṣaṇasya ta<hi rend="bold">tprathamāṅdhrikṛtayati</hi>ryathā bhavati / eva<hi rend="bold">mapara</hi>pādatrayaṃ <hi rend="bold">pūrvasadṛśamiha</hi> tantre ta<hi rend="bold">dvṛttaṃ</hi> ācāryai<hi rend="bold">rvardhamānaṃ</hi> nāmoktam / yathā /
+<lg>
+<l>pādena svayamunnatastanībhiraśokaḥ pramadābhirabhihataḥ pravardhamānaḥ /</l>
+<l>vikasitakusumasamṛddhimanubhavati bakulatarurapi varayuvatimukhāsavasiktaḥ || 10 ||</l>
+</lg></p>
+
+<l rend="bold">asminneva tṛtīyake pāde tajarā syuḥ prathame ca viratirārṣabhaṃ bruvanti /</l>
+<l rend="bold">tacchuddhavirāṭpuraḥ sthitaṃ tritayamaparamapi yadi pūrvasamaṃ syāt // KVrk_5.11 //</l>
+
+<p>asminneva padacaturūrdhvavṛtte tṛtīye pāde tagaṇajagaṇaragaṇā bhaveyuḥ, aparaṃ pādatrayamapi pūrvasamaṃ bhavati tadā <hi rend="bold">śuddhavirāṭpuraḥsthitaṃ</hi> <hi rend="bold">ārṣabhaṃ</hi> vadanti <hi rend="bold">śuddhavirāḍārṣabhamityarthaḥ</hi> / yathā /
+<lg>
+<l>bibhrāṇā vadanaṃ śaśāṃkabiṃbasamānaṃ kamalāyatanayanā kṛśāṃgaśobhitā /</l>
+<l>pīnoccapayodharadvayā janayati mudamadhikatarāṃ vaniteyam || 11 ||</l>
+</lg></p>
+
+<p>  // upasthitapracupitaprakaraṇam //</p>
+
+
+
+<l rend="bold">viṣamākṣarapādaṃ vā pādairasamaṃ daśadharmavat /</l>
+<l rend="bold">yacchaṃdo noktamatra gātheti tatsūribhiḥ proktam // KVrk_5.12 //</l>
+
+<p>viṣamākṣarāṇi yeṣu te pādā yasmin <hi rend="bold">viṣamākṣarapādaṃ</hi> yadevameva aṣṭau daśasaptanavākṣaraṃ vā sarvapādairasamaṃ tripādaṃ ṣaṭpādaṃ vā <hi rend="bold">daśadharmavat </hi>/ yathā /
+daśa dharmaṃ na jānanti dhṛtirāṣṭra nibodha tān /
+mattaḥ pramatta unmattaśśrāṃtaḥ kruddho bubhukṣitaḥ /
+tvaramāṇaśa bhīruśca lubdhaḥ kāmī ca te daśaḥ // iti ṣaṭpadī gāthā /
+ityevamādi asmin cchaṃdasyarthe noktaṃ prayogeṣu dṛśyate tadgātheti vidvadbhiruktam / <hi rend="bold">maṃgalagītikāveṣṭakavipadvidhruvakacaccarīpāddhatikādvipathaka</hi>prabhṛti tatsarvaṃ gāthāsaṃjñamavagantavyam / chaṃdasāmānaṃtyātpratipadamabhidhātumaśakyaṃ tatsarvasaṃgrahaṇīyaṃ ekā saṃjñā kṛteti || 12 ||</p>
+
+<p>iti sulhaṇaviracitāyāṃ sukavihṛdayānandinyabhidhānāyāṃ vṛttaratnākaracchaṃdovṛttau viṣamavṛttādhyāyaḥ paṃcamaḥ //</p>
+
+
+
+
+
+<p>ṣaṣṭho 'dhyāyaḥ
+ṣaṭpratyayādhyāyaḥ</p>
+
+
+<p>[prastāraḥ]</p>
+
+<l rend="bold">prastāro naṣṭamuddiṣṭamekadvyādilagukriyā /</l>
+<l rend="bold">saṃkhyā caivādhvayogaśca ṣaḍete pratyayāḥ smṛtāḥ // KVrk_6.1 //</l>
+
+<p>idānīṃ uktānāṃ vṛttānāṃ ṣaṭpratyayānāha /
+<l rend="bold">pāde sarvagurāvādyāllaghuṃ nyasya guroradhaḥ /</l>
+<l rend="bold">yathopari tathā śeṣaṃ bhūyaḥ kuryādamuṃ vidhim // KVrk_6.2 //</l>
+<l rend="bold">ūne dadyādgurūṇyevaṃ yāvatsarvalaghurbhavet /</l>
+<l rend="bold">prastāro 'yaṃ samākhyātaḥ chaṃdovicitivedibhiḥ // KVrk_6.3 //</l></p>
+
+<p><hi rend="bold">pāde sarvagurau</hi> yāvatāṃ varṇānāṃ vṛttasya pādastāvaṃta eva guravo vilikhyante / yathā / caturakṣaracchaṃdasi ādyā<hi rend="bold">dguroradhaḥ</hi> adhovibhāge laghuṃ varṇaṃ nyasya sthāpayitvā tadanaṃtaraṃ nyastalaghoḥ sakāśāt śeṣebhyo varṇebhyo adhaḥ kiṃ sthāpyata ityāha / <hi rend="bold">yathopari tathā śeṣaṃ</hi> / yadyupari gurustadā adhastādapi gururyadyupari laghustadā adhastādapi laghuḥ śeṣam / upari tulyo dīyate ityarthaḥ / tena laghoranaṃtaraṃ trīṇi gurūṇī sthāpyante / <hi rend="bold">bhūyaḥ</hi> punarapi <hi rend="bold">kuryādamuṃ vidhimiti</hi> / laghuṃ nyasya guroradhaḥ yathopari tathā śeṣamiti punarapyamuṃ vidhiṃ kuryāt / yadā upari gururbhavati laghuṃ nyasya guroradha iti vidherabhāvādyaḥ pūrvadeśā<hi rend="bold">dūne dadyādgurūṇi</hi> iti ūnapradeśo gurubhiḥ pūryata ityarthaḥ / <hi rend="bold">evama</hi>nena prakāreṇa tāvannyāsaḥ kartavyo <hi rend="bold">yāvatsarvalaghuḥ</hi> pado bhavati / prastāryate iti <hi rend="bold">prastāraḥ</hi> varṇānāṃ vinyāsaviśeṣaḥ / evaṃ caturakṣarapāde ṣoḍaśavṛttāni bhavanti / chaṃdāṃsi vilīyante asyāmiti <hi rend="bold">chaṃdoviciti</hi>śchaṃdaḥśāstram / <hi rend="bold">prastāro</hi> vyākhyātaḥ || 2-3 ||</p>
+
+
+<p>[naṣṭam]</p>
+
+<p>idānīṃ naṣṭaṃ vyākhyātumāha /
+<l rend="bold">naṣṭasya yo bhavedaṃkaḥ tasyārdhe 'rdhe same ca laḥ /</l>
+<l rend="bold">viṣame caikamādhāya tadardhe 'rdhe gururbhavet // KVrk_6.4 //</l></p>
+
+<p>prastāradarśitānāṃ vṛttānāṃ madhye yadvṛttaṃ naṣṭaṃ luptaṃ bhavati tasya <hi rend="bold">naṣṭasya yo bhavedaṃka</hi> ekādisaṃkhyā <hi rend="bold">tasya ardhe 'rdhe same ca</hi> aṃke sati <hi rend="bold">lo</hi> laghurbhavati / <hi rend="bold">viṣame</hi> <hi rend="bold">ekaṃ</hi> <hi rend="bold">ādhāya</hi> prakṣipya <hi rend="bold">tasyārdhe 'rdhe gururbhavet </hi>/ yathaitasmiṃścaturakṣare chaṃdasi paṃcamaṃ vṛtaṃ naṣṭam / tasya aṃkaḥ paṃca sa ca ardhaṃ na prayacchati / saikaḥ kriyate tadā ṣaḍbhavanti / te ardhaṃ kriyante / ardhitāstrayo bhavanti / tadardhe guruḥ prāpyate punastrayo 'rdhaṃ na prayacchanti / saikāścatvāraḥ / te 'pi ardhastadardhe punarlabdho gurudvayoḥ samatvāt / tadardhe laghuḥ prāpyate punareko 'rdhaṃ na prayacchati / saikordvyaḥ tadardhe punarapi gurureva labhyate / itthaṃ naṣṭasyodāharaṇam / tathā ca / ādyau dvau gurū tābhyāṃ parako laghustato gururiti / '; '; / '; etaccaturakṣare chaṃdasi paṃcamaṃ vṛttaṃ bhavati || 4 ||</p>
+
+<p>[uddiṣṭam]</p>
+
+<p>uddiṣṭaṃ vyākhyātumāha /
+<l rend="bold">uddiṣṭaṃ dviguṇānādyāduparyaṃkānsamālikhet /</l>
+<l rend="bold">laghusthā ye tu tatrāṃkāstaiḥ saikairmiśritairbhavet // KVrk_6.5 //</l></p>
+
+<p>kenacittadvṛttaṃ prastāryakatamat iti saṃkhyāparijñānā uktaṃ taduddiṣṭamucyate / pūrvatra vṛttaṃ na jñāyate / ataḥ saṃkhyayā naṣṭamuddhriyate / atra punarvṛttaṃ jñāyate saṃkhyā na jñāyate ataḥ saṃkhyāparijñānārthaṃ uddiṣṭamidamucyate / tasya uddiṣṭavṛttasya prathamādakṣarādārabhya upari <hi rend="bold">dviguṇā</hi>naṃkān samālikhet / yathā / asminneva caturākṣare chaṃdasi ekaṃ vṛttaṃ uddiṣṭaṃ tasya dvau varṇau gurū tato laghustato 'pi guruḥ / tatra uddiṣṭe vṛtte laghuni tiṣṭhantīti laghusthā ye punaraṃkāścatvāraḥ taiścaturbhiḥ saikaiḥ ekena sahitaiḥ paṃcabhiruddiṣṭaṃ bhavet / uddiṣṭasaṃkhyā bhavet / caturakṣarāyāṃ jātau tatpaṃcamaṃ vṛttaṃ bhavatītyarthaḥ || 5 ||</p>
+
+<p>[ekadvayādilagakriyā]</p>
+
+<p>ekadvyādilagukriyārthamāha /
+<l rend="bold">varṇān vṛttabhavān saikān auttarādharyataḥ sthitān /</l>
+<l rend="bold">ekādikramaśaścaitānuparyupari nikṣipet // KVrk_6.6 //</l>
+<l rend="bold">upāntyato nivarteta tyajannaikaikamūrdhvataḥ /</l>
+<l rend="bold">uparyādyādgurorevamekadvyādilagukriyā // KVrk_6.7 //</l></p>
+
+<p>yāvaṃta eva <hi rend="bold">vṛttabhavā varṇā</hi> tāvata eva <hi rend="bold">saikān </hi>ekasahitānyathā / caturakṣarajātau catvāro ye varṇāstān saikān paṃca / auttarādharyataḥsthitān uparyuparibhāvena sthitān <hi rend="bold">ekādikrameṇai</hi>va <hi rend="bold">etānupari upari nikṣipet </hi>nidadhyāt / <hi rend="bold">upāntyato</hi> antyasamīpā<hi rend="bold">nnivarteta</hi> vyādyudyeta / <hi rend="bold">tyajan </hi>pariharan <hi rend="bold">ekaikaṃ</hi> <hi rend="bold">ūrdhva</hi>bhāgāt / <hi rend="bold">evama</hi>nena prakāreṇa kasmādiyaṃ ekadvyādilagukriyāṃ pravartata ityāha / <hi rend="bold">uparyādyādguro</hi>riti uparisthitān ādyādguroḥ / ko 'rthaḥ / sarvaguruvarṇavṛttasakāśāt ityarthaḥ / ādyaṃ kila sarvagurvakṣaramekaṃ vṛttaṃ parikalpate / etacca prastāre darśitaṃ yathā /</p>
+
+<p><hi rend="bold">&amp;#8216;pāde sarvagurāvādyāllaghuṃ nyasye'</hi>ti tena tasmāt adha iyaṃ <hi rend="bold">ekadvyādilagukriyā</hi> pravartate / tatra paṃcasu varṇeṣu uttarādharabhāvena sthāpiteṣu adhaḥsthita ekastaduparisthe nikṣipyate / sa ca tathaiva tiṣṭhati <hi rend="bold">tyajannekaikamūrdhvata</hi> iti vīpsavaśādekadaiva sthitimaṃtareṇa nikṣiptatvāt punarnikṣepabhāvādekaikatyāgaśca na saṃbhavati tasmātsvarūpeṇa sthita eva upari kṣipyate / tato dvitīye sthāne dvau varṇau bhavataḥ tau tṛtīyena kṣipyeta tatra trayo bhavanti / tacca caturthe nikṣipyante te catvāro bhavanti / &#8216;<hi rend="bold">upāntyato nivartate tyajannekaikamūrdhvataḥ'</hi> uparitanamekaṃ tyajyate tatra na kṣipyate ityarthaḥ / vīpsā ta eva adhobhāgāt punarnikṣepe kriyā pravartate tena adhaḥsthita eva eko dvitīye sthāne nikṣipyate tatra ca trayo bhavanti / tacca tṛtīye nikṣipyante tatra ṣaṭbhavanti upari ekaṃ tyajannivarteta / ādyaṃ ekaṃ vṛttaṃ sarvaguruḥ tasmāddekadvyādilagukriyā pravartete / tata ekaḥ sarvaguruḥ catvāri dvilaghūni ṣaṭtrilaghūni catvāri caturlaghūni ekaṃ sarvalaghuḥ eṣā lagukriyā sarvalaghuprastāreṇa pratīyate asyāstu eṣa eva kramaḥ paṃcākṣarādivṛtteṣvapi || 6-7 ||</p>
+
+<p>[udāharaṇam -
+  1
+  41
+  631
+ 4321
+11111]</p>
+
+<p>[saṅkhyānam]</p>
+
+<p>saṃkhyārthamāha /</p>
+
+<l rend="bold">[lagukriyāṅkasandohaḥ bhavetsaṃkhyāvimiśrite /</l>
+<p><hi rend="bold">uddiṣṭāṅkasamāhāraḥ saiko vā janayedimām // KVrk_6.8 // ]</hi></p>
+
+<p><hi rend="bold">lagukriyāyāṃ</hi> ye <hi rend="bold">aṃkā</hi>steṣāṃ <hi rend="bold">sandoha</hi>stasmi<hi rend="bold">nvimiśrite</hi> pīḍīkṛte <hi rend="bold">saṃkhyā</hi> bhavet / iyaṃ tāvaddhāraṇaṃ syāt / tathā ekaścatvāraḥ ṣaṭcatvāraḥ ekameṣāmekīkṛtā vai ṣoḍaśa bhavanti caturakṣarajātau prastāryamāṇāyāṃ ṣoḍaśa vṛttāni bhavantītyarthaḥ / sa ca prastāraḥ pūrvameva vyākhyātaḥ /</p>
+
+<p>pakṣāntaramāha /
+uddiṣṭasya vṛttasya upari ye <hi rend="bold">aṃkā</hi> dviguṇāsteṣāṃ <hi rend="bold">samāhāraḥ</hi> ekībhāvaḥ <hi rend="bold">saiko</hi> vā athavā <hi rend="bold">janayedu</hi>tpādaye<hi rend="bold">dimāṃ</hi> saṃkhyām / yathā / caturakṣarajātau dviguṇā ye aṃkā uparyāropitāsteṣāṃ samāhāraḥ paṃcadaśa saikaḥ ṣoḍaśeti || 8 ||</p>
+
+<p>[adhvayogaḥ]</p>
+
+<p>adhvārthamāha /
+<l rend="bold">saṃkhyaiva dviguṇaikonā sadbhiradhvā prakīrtitaḥ /</l>
+<l rend="bold">vṛttasyāṃgulikīṃ vyāptimadhaḥ kuryāttathāṃgulam // KVrk_6.9 //</l></p>
+
+<p>caturakṣarajātau yā ṣoḍaśa<hi rend="bold">saṃkhyā</hi> <hi rend="bold">syāddviguṇā</hi> dvātriṃśatiḥ <hi rend="bold">ekonā</hi> ekarahitā ekatriṃśatiḥ <hi rend="bold">sadbhiḥ</hi> paṇḍitai<hi rend="bold">radhvā</hi> mārgaḥ <hi rend="bold">prakīrtitaḥ</hi> / katham / <hi rend="bold">vṛttasya</hi> <hi rend="bold">āṃgulikīṃ</hi> aṃgulapramāṇāṃ <hi rend="bold">vyāptiṃ</hi> kuryāt || 9 ||</p>
+
+<p>adhunā punarapi kaviranvayapūrvakaṃ pitrā saha sātmānaṃ nirddiśati /
+<l rend="bold">vaṃśe 'bhūtkaśyapasya prakaṭaguṇagaṇaḥ śaivasiddhāntavettā /</l>
+<l rend="bold">vipraḥ pavyekanāmā vimalataramatiḥ śaivatatvāvabodhe // KVrk_6.10 //</l>
+<l rend="bold">kedārastasya sūnaḥ śivacaraṇayugārādhanaikāgracittaḥ /</l>
+<l><hi rend="bold">chaṃdastenābhirāmaṃ praviracitamidaṃ vṛttaratnākarākhyām // KVrk_6.11 //</hi></l></p>
+
+
+<p><hi rend="bold">vaṃśe</hi> 'nvaye '<hi rend="bold">bhūjjā</hi>taḥ <hi rend="bold">kaśyapasya</hi> kaśyaṃ somaṃ pibatīti kaśyapaḥ kaśyapaśabdena yadyapi surā evābhidhīyate kathyate / tathāpyatra somamucyate surāpānasya brāhmaṇe dije niṣiddhatvāt anvayārthena vaṃśārthena kranuyāyitvamuktaṃ syāt (?) / śivasya ete <hi rend="bold">śaivā</hi> ye <hi rend="bold">siddhāntā</hi>steṣāṃ <hi rend="bold">vettā</hi> / &amp;#8216;vida-vicāraṇe'; ityetasya rūpaṃ na punaḥ &#8216;vida-jñāne'; / tasyāśakyatvāt / yo hi vicārayati cintayati so avaśyaṃ vetti nahyaviditaṃ vicārayituṃ śaknoti viśeṣeṇa pratipūrayati svargāpavargādikāni sa <hi rend="bold">vipraḥ vimalataramatiḥ</hi> vimalā vistīrṇā taralā manoharā matiryasya atiśayena vimalamatiḥ / kva / <hi rend="bold">śaivaśāstrāvabodhe</hi> / <hi rend="bold">kedāra</hi>nāmā tasya putraḥ śivaḥ śānto devatāviśeṣaḥ tasyārādhanaṃ tatra ekāgraṃ tanniṣṭhaṃ cittaṃ yasya saḥ / tathā <hi rend="bold">tena</hi> kedāreṇā<hi rend="bold">bhirāmaṃ</hi> ramaṇīyaṃ manoharaṃ <hi rend="bold">chaṃdaḥ</hi> <hi rend="bold">pra</hi>karṣeṇa <hi rend="bold">viracitaṃ</hi> <hi rend="bold">vṛttaratnākarākhyām </hi>|| 10-11 ||</p>
+
+<p>iti paṃḍitaśrīsulhaṇaviracitāyāṃ sukavihṛdayānandinyabhidhānāyāṃ chaṃdovṛttau ṣaṭpratyayādhyāyaḥ ṣaṣṭhaḥ samāptaḥ //</p>
+
+<lg>
+<l>śrīḥ /</l>
+<l>śubhaṃ bhūyāllekhakasya /</l>
+<l>vasuyugme ....... śuklaśca paṃcamyāṃ haṃsarājena muninā 'likhaṭṭīkā manoramā //</l>
+</lg>
+
+  </body>
+</text>
+</TEI>

@@ -1,0 +1,5819 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_azvaghoSa-saundarAnanda">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Saundarānanda</title>
+	<author>Aśvaghoṣa</author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>members of the Digital Sanskrit Buddhist Canon Input Project</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>members of the Digital Sanskrit Buddhist Canon Input Project</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/5_poetry/2_kavya/asvsau2u.htm">asvsau2u.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Asvaghosa: Saundarananda
+<lb/>(source unknown)
+<lb/>
+<lb/>Input by members of the Sanskrit Buddhist Input Project.
+<lb/>With kind permission of the Digital Sanskrit Buddhist Canon Project
+<lb/>of Nagarjuna Institute, Nepal
+<lb/>and University of the West, Rosemead, California, USA
+<lb/>(www.uwest.edu/sanskritcanon)
+<lb/>Sastra section, text no. 87
+<lb/>
+<lb/>The transliteration emulates the conventions of Nagari script.
+<lb/>Therefore, many word boundaries are not marked by blanks.
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl></bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Saundarānanda = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Poetry -- Kāvya</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+<div>
+<p>// om namo buddhāya //</p>
+
+<p>Saundaranandaṃ Mahākāvyam</p>
+
+<p>prathamaḥ sargaḥ
+kapilavastu varṇana</p>
+
+<lg>
+<l>gautamaḥ kapilo nāma munirdharmabhṛtāṃ varaḥ /</l>
+<l>babhūva tapasi śrāntaḥ kākṣīvāniva gautamaḥ // Saund_1.1 //</l>
+</lg>
+
+<lg>
+<l>aśiśriyadyaḥ satataṃ dīptaṃ kāśyapavattapaḥ /</l>
+<l>āśiśrāya ca tadvṛddhau siddhiṃ kāśyapavat parām // Saund_1.2 //</l>
+</lg>
+
+<lg>
+<l>haviḥṣu yaśca svātmārthaṃ gāmadhukṣad vasiṣṭhavat /</l>
+<l>tapaḥśiṣṭeṣu ca śiṣyeṣu gāmadhukṣad vasiṣṭhavat // Saund_1.3 //</l>
+</lg>
+
+<lg>
+<l>māhātmyāddīrghatapaso yo dvitīya ivābhavat /</l>
+<l>tṛtīya iva yaścābhūt kāvyāṅgirasayordhiyā // Saund_1.4 //</l>
+</lg>
+
+<lg>
+<l>tasya vistīrṇatapasaḥ pārśve himavataḥ śubhe /</l>
+<l>kṣetraṃ cāyatanaṃ caiva tapasāmāśramo 'bhavat // Saund_1.5 //</l>
+</lg>
+
+<lg>
+<l>cāruvīruttaruvanaḥ prasnigdhamṛduśādvalaḥ /</l>
+<l>havirdhūmavitānena yaḥ sadābhra ivābabhau // Saund_1.6 //</l>
+</lg>
+
+<lg>
+<l>mṛdubhiḥ saikataiḥ snigdhaiḥ kesarāstarapāṇḍubhiḥ /</l>
+<l>bhūmibhāgairasaṃkīrṇaiḥ sāṅgarāga ivābhavat // Saund_1.7 //</l>
+</lg>
+
+<lg>
+<l>śucibhistīrthasaṃkhyātaiḥ pāvanairbhāvanairapi /</l>
+<l>bandhumāniva yastasthau sarobhiḥ sasaroruhaiḥ // Saund_1.8 //</l>
+</lg>
+
+<lg>
+<l>paryāptaphalapuṣpābhiḥ sarvato vanarājibhiḥ /</l>
+<l>śuśubhe vavṛdhe caiva naraḥ sādhanavāniva // Saund_1.9 //</l>
+</lg>
+
+<lg>
+<l>nīvāraphalasantuṣṭaiḥ svasthaiḥ śāntairanutsukaiḥ /</l>
+<l>ākīrṇo 'pi tapobhṛddhiḥ śūnyaśūnya ivābhavat // Saund_1.10 //</l>
+</lg>
+
+<lg>
+<l>agnīnāṃ hūyamānānāṃ śikhināṃ kūjatāmapi /</l>
+<l>tīrthānāṃ cābhiṣekeṣu śuśruve yatra niḥsvanaḥ // Saund_1.11 //</l>
+</lg>
+
+<lg>
+<l>virejurhariṇā yatra suptā medhyāsu vediṣu /</l>
+<l>salājairmādhavīpuṣpairupahārāḥ kṛtā iva // Saund_1.12 //</l>
+</lg>
+
+<lg>
+<l>api kṣudramṛgā yatra śāntāśceruḥ samaṃ mṛgaiḥ /</l>
+<l>śaraṇyebhyastapasvibhyo vinayaṃ śikṣitā iva // Saund_1.13 //</l>
+</lg>
+
+<lg>
+<l>saṃdigdhe 'pyapunarbhāve viruddheṣvāgameṣvapi /</l>
+<l>pratyakṣiṇa ivākurvaṃstapo yatra tapodhanāḥ // Saund_1.14 //</l>
+</lg>
+
+<lg>
+<l>yatra sma mīyate brahma kaiścit kaiścinna mīyate /</l>
+<l>kāle nimīyate somo na cākāle pramīyate // Saund_1.15 //</l>
+</lg>
+
+<lg>
+<l>nirapekṣāḥ śarīreṣu dharme yatra svabuddhayaḥ /</l>
+<l>saṃhṛṣṭā iva yatnena tāpasāstepire tapaḥ // Saund_1.16 //</l>
+</lg>
+
+<lg>
+<l>śrāmyanto munayo yatra svargāyodyuktacetasaḥ /</l>
+<l>taporāgeṇa dharmasya vilopamiva cakrire // Saund_1.17 //</l>
+</lg>
+
+<lg>
+<l>atha tejasvisadanaṃ tapaḥkṣetraṃ tamāśramam /</l>
+<l>kecidikṣvākavo jagmū rājaputrā vivatsavaḥ // Saund_1.18 //</l>
+</lg>
+
+<lg>
+<l>suvarṇastambhavarṣmāṇaḥ siṃhoreskā mahābhujāḥ /</l>
+<l>pātraṃ śabdasya mahataḥ śriyāṃ ca vinayasya ca // Saund_1.19 //</l>
+</lg>
+
+<lg>
+<l>arharūpā hyanarhasya mahātmānaścalātmanaḥ /</l>
+<l>prājñāḥ prajñāvimuktasya bhrātṛvyasya yavīyasaḥ // Saund_1.20 //</l>
+</lg>
+
+<lg>
+<l>mātṛśulkādupagatāṃ te śriyaṃ [ca] viṣehire /</l>
+<l>rarakṣuśca pituḥ satyaṃ yasmācchiśiyire vanam // Saund_1.21 //</l>
+</lg>
+
+<lg>
+<l>teṣāṃ munirupādhyāyo gautamaḥ kapilo 'bhavat /</l>
+<l>gurugotrādataḥ kautsāste bhavanti sma gautamāḥ // Saund_1.22 //</l>
+</lg>
+
+<lg>
+<l>ekapitroryathā bhrātroḥ pṛthagguruparigrahāt /</l>
+<l>rāma evābhavad gārgyo vāsubhadro 'pi gautamaḥ // Saund_1.23 //</l>
+</lg>
+
+<lg>
+<l>śākavṛkṣapraticchannaṃ vāsaṃ yasmācca cakrire /</l>
+<l>tasmādikṣvākuvaṃśyāste bhuvi śākyā iti smṛtāḥ // Saund_1.24 //</l>
+</lg>
+
+<lg>
+<l>sa teṣāṃ gautamaścakre svavaṃśasadṛśīḥ kriyāḥ /</l>
+<l>munirūrdhvaṃ kumārasya sagarasyeva bhārgavaḥ // Saund_1.25 //</l>
+</lg>
+
+<lg>
+<l>kaṇvaḥ śākuntalasyeva bharatasya tarasvinaḥ /</l>
+<l>vālmikiriva dhīmāṃśca dhīmatormaithileyayoḥ // Saund_1.26 //</l>
+</lg>
+
+<lg>
+<l>tadvanaṃ muninā tena taiśca kṣatriyapuṅgavaiḥ /</l>
+<l>śāntāṃ guptāṃ ca yugapad brahmakṣatraśriyaṃ dadhe // Saund_1.27 //</l>
+</lg>
+
+<lg>
+<l>athodakalaśaṃ gṛhya teṣāṃ vṛddhicikīrṣayā /</l>
+<l>muniḥ sa viyadutpatya tānuvāca nṛpātmajān // Saund_1.28 //</l>
+</lg>
+
+<lg>
+<l>yā patet kalaśādasmādakṣayyasalilānmahīm /</l>
+<l>dhārā tāmanatikramya māmanveta yathākramam // Saund_1.29 //</l>
+</lg>
+
+<lg>
+<l>tataḥ paramamityuktvā śirobhiḥ praṇipatya ca /</l>
+<l>rathānāruruhuḥ sarve śīghravāhānalaṃkṛtān // Saund_1.30 //</l>
+</lg>
+
+<lg>
+<l>tataḥ sa tairanugataḥ syandanasthairnabhogataḥ /</l>
+<l>tadāśramamahīprāntaṃ paricikṣepa vāriṇā // Saund_1.31 //</l>
+</lg>
+
+<lg>
+<l>aṣṭāpadamivālikhya nimittaiḥ surabhīkṛtam /</l>
+<l>tānuvāca muniḥ sthitvā bhūmipālasutānidam // Saund_1.32 //</l>
+</lg>
+
+<lg>
+<l>asmin dhārāparikṣipte nemicinhitalakṣaṇe /</l>
+<l>nirmimīdhvaṃ puraṃ yūyaṃ mayi yāte triviṣṭapam // Saund_1.33 //</l>
+</lg>
+
+<lg>
+<l>tataḥ kadācitte vīrāstasmin pratigate munau /</l>
+<l>babhramuyauṃvanoddāmā gajā iva niraṅkuśā // Saund_1.34 //</l>
+</lg>
+
+<lg>
+<l>baddhagodhāṅgulītrāṇā hastaviṣṭhitakārmukāḥ /</l>
+<l>śarādhmātamahātūṇā vyāyatābaddhavāsasaḥ // Saund_1.35 //</l>
+</lg>
+
+<lg>
+<l>jijñāsamānā nāgeṣu kauśalaṃ śvāpadeṣu ca /</l>
+<l>anucakrurvanasthasya dauṣyanterdevakarmaṇaḥ // Saund_1.36 //</l>
+</lg>
+
+<lg>
+<l>tān dṛṣṭvā prakṛtiṃ yātān vṛddhānvyāghraśiśūniva /</l>
+<l>tāpasāstadvanaṃ hitvā himavantaṃ siṣevire // Saund_1.37 //</l>
+</lg>
+
+<lg>
+<l>tatastadāśramasthānaṃ śūnyaṃ taiḥ śūnyacetasaḥ /</l>
+<l>paśyanto manyunā taptā vyālā iva niśaśvasuḥ // Saund_1.38 //</l>
+</lg>
+
+<lg>
+<l>atha te puṇyakarmāṇaḥ pratyupasthitavṛddhayaḥ /</l>
+<l>tatra tajjñairupākhyātānavāpurmahato nidhīn // Saund_1.39 //</l>
+</lg>
+
+<lg>
+<l>alaṃ dharmārthakāmānāṃ nikhilānāmavāptaye /</l>
+<l>nidhayo naikavidhayo bhūrayaste gatārayaḥ // Saund_1.40 //</l>
+</lg>
+
+<lg>
+<l>tatastatpratilambhācca pariṇāmācca karmaṇaḥ /</l>
+<l>tasmin vāstuni vāstujñāḥ puraṃ śrīmannyaveśayan // Saund_1.41 //</l>
+</lg>
+
+<lg>
+<l>saridvistīrṇaparikhaṃ spaṣṭāñcitamahāpatham /</l>
+<l>śailakalpamahāvapraṃ girivrajamivāparam // Saund_1.42 //</l>
+</lg>
+
+<lg>
+<l>pāṇḍurāṭṭālasumukhaṃ suvibhaktāntarāpaṇam /</l>
+<l>harmyamālāparikṣiptaṃ kukṣiṃ himagireriva // Saund_1.43 //</l>
+</lg>
+
+<lg>
+<l>vedavedāṅgaviduṣastasthuṣaḥ ṣaṭsu karmasu /</l>
+<l>śāntaye vṛddhaye caiva yatra viprānajījapan // Saund_1.44 //</l>
+</lg>
+
+<lg>
+<l>tadbhūmerabhiyoktṛṇāṃ prayuktān vinivṛttaye /</l>
+<l>yatra svena prabhāvena bhṛtyadaṇḍānajījapan // Saund_1.45 //</l>
+</lg>
+
+<lg>
+<l>caritradhanasampannān salajjān dīrghadarśinaḥ /</l>
+<l>arhato 'tiṣṭhipan yatra śūrān dakṣān kuṭumbinaḥ // Saund_1.46 //</l>
+</lg>
+
+<lg>
+<l>vyastaistaistairguṇaiyuktān mativāgvikramādibhiḥ /</l>
+<l>karmasu pratirupeṣu sacivāṃstānnyayūyujan // Saund_1.47 //</l>
+</lg>
+
+<lg>
+<l>vasumadbhiravibhrāntairalaṃvidyairavismitaiḥ /</l>
+<l>yad babhāse naraiḥ kīrṇaṃ mandaraḥ kinnarairiva // Saund_1.48 //</l>
+</lg>
+
+<lg>
+<l>yatra te hṛṣṭamanasaḥ pauraprīticikīrṣayā /</l>
+<l>śrīmantyudyānasaṃjñāni yaśodhāmānyacikaran // Saund_1.49 //</l>
+</lg>
+
+<lg>
+<l>śivāḥ puṣkariṇīścaiva paramāgryaguṇāmbhasaḥ /</l>
+<l>nājñayā cetanotkarṣāddikṣu sarvāsvacīkhanan // Saund_1.50 //</l>
+</lg>
+
+<lg>
+<l>manojñāḥ śrīmatīḥ praṣṭhīḥ pathiṣūpavaneṣu ca /</l>
+<l>sabhāḥ kūpavatīścaiva samantāt pratyatiṣṭhipan // Saund_1.51 //</l>
+</lg>
+
+<lg>
+<l>hastyaśvarathasaṃkīrṇamasaṃkīrṇamanākulam /</l>
+<l>anigūḍhārthivibhavaṃ nigūḍhajñānapauruṣam // Saund_1.52 //</l>
+</lg>
+
+<lg>
+<l>sanidhānamivārthānāmādhānamiva tejasām /</l>
+<l>niketamiva vidyānāṃ saṃketamiva saṃpadām // Saund_1.53 //</l>
+</lg>
+
+<lg>
+<l>vāsavṛkṣaṃ guṇavatāmāśrayaṃ śaraṇaiṣiṇām /</l>
+<l>ānartaṃ kṛtaśāstrāṇāmālānaṃ bāhuśālinām // Saund_1.54 //</l>
+</lg>
+
+<lg>
+<l>samājairutsavairdāyaiḥ kriyāvidhibhireva ca /</l>
+<l>alaṃcakruralaṃvīryāste jagaddhāma tatpuram // Saund_1.55 //</l>
+</lg>
+
+<lg>
+<l>yasmādanyāyataste ca kaṃcinnācīkaran karam /</l>
+<l>tasmādalpena kālena tattadāpūpuran puram // Saund_1.56 //</l>
+</lg>
+
+<lg>
+<l>kapilasya ca tasyarṣestasminnāśramavāstuni /</l>
+<l>yasmātte tatpuraṃ cakrustasmāt kapilavāstu tat // Saund_1.57 //</l>
+</lg>
+
+<lg>
+<l>kakandasya makandasya kuśāmbasyeva cāśrame /</l>
+<l>puryo yathā hi śrūyante tathaiva kapilasya tat // Saund_1.58 //</l>
+</lg>
+
+<lg>
+<l>āpuḥ puraṃ tatpuruhūtakalpāste tejasāryeṇa na vismayena /</l>
+<l>āpuryaśogandhamataśca śaśvat sutā yayāteriva kīrtimantaḥ // Saund_1.59 //</l>
+</lg>
+
+<lg>
+<l>tannāthavṛttairapi rājaputrairarājakaṃ naiva rarāja rāṣṭram /</l>
+<l>tārāsahastrairapi dīpyamānairanutthite candra ivāntarīkṣam // Saund_1.60 //</l>
+</lg>
+
+<lg>
+<l>yo jyāyānatha vayasā guṇaiśca teṣāṃ bhātṝṇāṃ vṛṣabha ivaujasā vṛṣāṇām /</l>
+<l>te tatra priyaguravastamabhyaṣicannādityā daśaśatalocanaṃ divīva // Saund_1.61 //</l>
+</lg>
+
+<lg>
+<l>ācāravānvinayavānnayavānkriyāvān dharmāya nendriyasukhāya dhṛtātapatraḥ /</l>
+<l>tadbhrātṛbhiḥ parivṛtaḥ sa jugopa rāṣṭram saṃkrandano divamivānusṛto marudbhiḥ // Saund_1.62 //</l>
+</lg>
+
+<p>saundarananda mahākāvya meṃ "kapilavastu varṇana" nāmaka prathama sarga samāpta /</p>
+
+</div>
+<div>
+
+<p>dvitīyaḥ sargaḥ
+rājā śuddhodana</p>
+
+<lg>
+<l>tataḥ kadācitkālena tadavāpa kulakramāt /</l>
+<l>rājā śuddhodano nāma śuddhakarmā jitendriyaḥ // Saund_2.1 //</l>
+</lg>
+
+<lg>
+<l>yaḥ sasañje na kāmeṣu śrīprāptau na visismiye /</l>
+<l>nāvamene parānṛddhyā parebhyo nāpi vivyathe // Saund_2.2 //</l>
+</lg>
+
+<lg>
+<l>balīyān sattvasaṃpannaḥ śrutavān buddhimānapi /</l>
+<l>vikrānto nayavāṃścaiva dhīraḥ sumukha eva ca // Saund_2.3 //</l>
+</lg>
+
+<lg>
+<l>vapuṣmāṃśca na ca stabdho dakṣiṇo na ca nārjavaḥ /</l>
+<l>tejasvī na ca na kṣāntaḥ kartā ca na ca vismitaḥ // Saund_2.4 //</l>
+</lg>
+
+<lg>
+<l>ākṣiptaḥ śatrubhiḥ saṃkhye suhṛdbhiśca vyapāśritaḥ /</l>
+<l>abhavad yo na vimukhastejasā ditsayaiva ca // Saund_2.5 //</l>
+</lg>
+
+<lg>
+<l>yaḥ pūrvaiḥ rājabhiryātāṃ yiyāsurdharmapaddhatim /</l>
+<l>rājyaṃ dīkṣāmiva vahan vṛttenānvagamat pitṝn // Saund_2.6 //</l>
+</lg>
+
+<lg>
+<l>yasya suvyavahārācca rakṣaṇācca sukhaṃ prajāḥ /</l>
+<l>śiśyire vigatodvegāḥ pituraṅkagatā iva // Saund_2.7 //</l>
+</lg>
+
+<lg>
+<l>kṛtaśāstraḥ kṛtāstro vā jāto vā vipule kule /</l>
+<l>akṛtārtho na dadṛśe yasya darśanameyivān // Saund_2.8 //</l>
+</lg>
+
+<lg>
+<l>hitaṃ vipriyamapyukto yaḥ suśrāva na cukṣubhe /</l>
+<l>duṣkṛtaṃ bahvapi tyaktvā sasmāra kṛtamaṇvapi // Saund_2.9 //</l>
+</lg>
+
+<lg>
+<l>praṇatānanujagrāha vijagrāha kuladviṣaḥ /</l>
+<l>āpannān parijagrāha nijagrāhāsthitān pathi // Saund_2.10 //</l>
+</lg>
+
+<lg>
+<l>prāyeṇa viṣaye yasya tacchīlamanuvartinaḥ /</l>
+<l>arjayanto dadṛśire dhanānīva guṇānapi // Saund_2.11 //</l>
+</lg>
+
+<lg>
+<l>adhyaiṣṭa yaḥ paraṃ brahma na vyaiṣṭa satataṃ dhṛteḥ /</l>
+<l>dānānyadita pātrebhyaḥ pāpaṃ nākṛta kiṃcana // Saund_2.12 //</l>
+</lg>
+
+<lg>
+<l>dhṛtyāvākṣīt pratijñāṃ sa sadvājīvodyatāṃ dhuram /</l>
+<l>na hyavāñchīccyutaḥ satyānmuhūrtamapi jīvitam // Saund_2.13 //</l>
+</lg>
+
+<lg>
+<l>viduṣaḥ paryupāsiṣṭa vyakāśiṣṭātmavattayā /</l>
+<l>vyarociṣṭa ca śiṣṭebhyo māsīṣe candramā iva // Saund_2.14 //</l>
+</lg>
+
+<lg>
+<l>avedīd buddhiśāstrābhyāmiha cāmutra ca kṣamam /</l>
+<l>arakṣīddhairyavīryābhyāmindriyāṇyapi ca prajāḥ // Saund_2.15 //</l>
+</lg>
+
+<lg>
+<l>ahārṣīd duḥkhamārtānāṃ dviṣatāṃ corjitaṃ yaśaḥ /</l>
+<l>acaiṣīcca nayairbhūmiṃ bhūyasā yaśasaiva ca // Saund_2.16 //</l>
+</lg>
+
+<lg>
+<l>apyāsīd duḥkhitān paśyan prakṛtyā karuṇātmakaḥ /</l>
+<l>nādhauṣīcca yaśo lobhādanyāyādhigatairdhanaiḥ // Saund_2.17 //</l>
+</lg>
+
+<lg>
+<l>sauhārdadṛḍhabhaktitvānmaitreṣu viguṇeṣvapi /</l>
+<l>nādidāsīdaditsīttu saumukhyāt svaṃ svamarthavat // Saund_2.18 //</l>
+</lg>
+
+<lg>
+<l>anivedyāgramarhadbhyo nālikṣat kiṃcidaplutaḥ /</l>
+<l>gāmadharmeṇa nādhukṣat kṣīratarṣeṇa gāmiva // Saund_2.19 //</l>
+</lg>
+
+<lg>
+<l>nāsṛkṣad balimaprāptaṃ nārukṣanmānamaiśvaram /</l>
+<l>āgamairbuddhimādhikṣaddharmāya na tu kīrtaye // Saund_2.20 //</l>
+</lg>
+
+<lg>
+<l>kleśārhānapi kāṃścittu nākliṣṭa kliṣṭakarmaṇaḥ /</l>
+<l>āryabhāvācca nādhukṣad dviṣato 'pi sato guṇān // Saund_2.21 //</l>
+</lg>
+
+<lg>
+<l>ākṛkṣad vapuṣā dṛṣṭīḥ prajānāṃ candramā iva /</l>
+<l>parasvaṃ bhuvi nāmṛkṣanmahāviṣamivoragam // Saund_2.22 //</l>
+</lg>
+
+<lg>
+<l>nākrukṣad viṣaye tasya kaścitkaiścit kvacit kṣataḥ /</l>
+<l>ādikṣattasya hastasthamārtebhyo hyabhayaṃ dhanuḥ // Saund_2.23 //</l>
+</lg>
+
+<lg>
+<l>kṛtāgaso 'pi praṇatān prāgeva priyakāriṇaḥ /</l>
+<l>adarśatsnigdhayā dṛṣṭyā ślakṣṇena vacasāsicat // Saund_2.24 //</l>
+</lg>
+
+<lg>
+<l>bavhīradhyagamad vidyā viṣayeṣvakutūhalaḥ /</l>
+<l>sthitaḥ kārtayuge dharme dharmāt kṛcchre 'pi nāsrasat // Saund_2.25 //</l>
+</lg>
+
+<lg>
+<l>avardhiṣṭa guṇaiḥ śaśvadavṛdhanmitrasaṃpadā /</l>
+<l>avartiṣṭa ca vṛddheṣu nāvṛtad garhite pathi // Saund_2.26 //</l>
+</lg>
+
+<lg>
+<l>śarairaśīśamacchatrūn guṇairbandhūnarīramat /</l>
+<l>randhrairnācūcudad bhṛtyān karairnāpīpiḍat prajāḥ // Saund_2.27 //</l>
+</lg>
+
+<lg>
+<l>rakṣaṇāccaiva śauryācca nikhilāṃ gāmavīvapat /</l>
+<l>spaṣṭayā daṇḍanītyā ca rātrisatrānavīvapat // Saund_2.28 //</l>
+</lg>
+
+<lg>
+<l>kulaṃ rājarṣivṛttena yaśogandhamavīvapat /</l>
+<l>dīptyā tama ivādityastejasārīnavīvapat // Saund_2.29 //</l>
+</lg>
+
+<lg>
+<l>apaprathat pitṝṃścaiva satputrasadṛśairguṇaiḥ /</l>
+<l>salileneva cāmbhodo vṛttenājihṇadat prajāḥ // Saund_2.30 //</l>
+</lg>
+
+<lg>
+<l>dānairajasravipulaiḥ somaṃ viprānasūṣavat /</l>
+<l>rājadharmasthitatvācca kāle sasyamasūṣavat // Saund_2.31 //</l>
+</lg>
+
+<lg>
+<l>adharmiṣṭhāmacakathanna kathāmakathaṃkathaḥ /</l>
+<l>cakravartīva ca parān dharmāyābhyudasīṣahat // Saund_2.32 //</l>
+</lg>
+
+<lg>
+<l>rāṣṭramanyatra ca balerna sa kiṃcidadīdapat /</l>
+<l>bhṛtyaireva ca sodyogaṃ dviṣaddarpamadīdapat // Saund_2.33 //</l>
+</lg>
+
+<lg>
+<l>svairevādīdapaccāpi bhūyo bhūyo guṇaiḥ kulam /</l>
+<l>prajā nādīdapaccaiva sarvadharmavyavasthayā // Saund_2.34 //</l>
+</lg>
+
+<lg>
+<l>aśrāntaḥ samaye yajvā yajñabhūmimamīmapat /</l>
+<l>pālanācca dvijān brahma nirudvignānamīmapat // Saund_2.35 //</l>
+</lg>
+
+<lg>
+<l>gurubhirvidhivat kāle saumyaḥ somamamīmapat /</l>
+<l>tapasā tejasā caiṣa dviṣatsainyamamīmapat // Saund_2.36 //</l>
+</lg>
+
+<lg>
+<l>prajāḥ paramadharmajñaḥ sūkṣmaṃ dharmamavīvasat /</l>
+<l>darśanāccaiva dharmasya kāle svargamavīvasat // Saund_2.37 //</l>
+</lg>
+
+<lg>
+<l>vyaktamapyarthakṛcchreṣu nādharmiṣṭhamatiṣṭhipat /</l>
+<l>priya ityeva cāśaktaṃ na saṃrāgādavīvṛdhat // Saund_2.38 //</l>
+</lg>
+
+<lg>
+<l>tejasā ca tviṣā caiva ripūn dṛptānabībhasat /</l>
+<l>yaśodīpena dīptena pṛthivīṃ ca vyabībhasat // Saund_2.39 //</l>
+</lg>
+
+<lg>
+<l>ānuśaṃsyānna yaśase tenādāyi sadārthine /</l>
+<l>dravyaṃ mahadapi tyaktvā na caivākīrti kiñcana // Saund_2.40 //</l>
+</lg>
+
+<lg>
+<l>tenārirapi duḥkhārto nātyāji śaraṇāgataḥ /</l>
+<l>jitvā dṛptānapi ripūnna tenākāri vismayaḥ // Saund_2.41 //</l>
+</lg>
+
+<lg>
+<l>na tenābhedi maryādā kāmādveṣādbhayādapi /</l>
+<l>tena satsvapi bhogeṣu nāsevīndriyavṛttitā // Saund_2.42 //</l>
+</lg>
+
+<lg>
+<l>na tenādarśi viṣamaṃ kāryaṃ kvacana kiṃcana /</l>
+<l>vipriyapriyayoḥ kṛtye na tenāgāmi nikriyāḥ // Saund_2.43 //</l>
+</lg>
+
+<lg>
+<l>tenāpāyi yathākalpaṃ somaśca yaśa eva ca /</l>
+<l>vedaścāmnāyi satataṃ vedokto dharma eva ca // Saund_2.44 //</l>
+</lg>
+
+<lg>
+<l>evamādibhiratyakto babhūvāsulabhairguṇaiḥ /</l>
+<l>aśakyaḥ śakyasāmantaḥ śākyarājaḥ sa śakravat // Saund_2.45 //</l>
+</lg>
+
+<lg>
+<l>atha tasmin tathā kāle dharmakāmā divaukasaḥ /</l>
+<l>vicerurdiśi lokasya dharmacaryāṃ didṛkṣavaḥ // Saund_2.46 //</l>
+</lg>
+
+<lg>
+<l>dharmātmānaścarantaste dharmajijñāsayā jagat /</l>
+<l>dadṛśustaṃ viśeṣeṇa dharmātmānaṃ narādhipam // Saund_2.47 //</l>
+</lg>
+
+<lg>
+<l>devebhyastuṣitebhyo 'tha bodhisattvaḥ kṣitiṃ vrajan /</l>
+<l>upapattiṃ praṇidadhe kule tasya mahīpateḥ // Saund_2.48 //</l>
+</lg>
+
+<lg>
+<l>tasyā devī nṛdevasya māyā nāma tadābhavat /</l>
+<l>vītakrodhatamomāyā māyeva divi devatā // Saund_2.49 //</l>
+</lg>
+
+<lg>
+<l>svapne 'tha samaye garbhamāviśantaṃ dadarśa sā /</l>
+<l>ṣaḍdantaṃ vāraṇaṃ śvetamairāvatamivaujasā // Saund_2.50 //</l>
+</lg>
+
+<lg>
+<l>taṃ vinidiśiśuḥ śrutvā svapnaṃ svapnavido dvijāḥ /</l>
+<l>tasya janma kumārasya lakṣmīdharmayaśobhṛtaḥ // Saund_2.51 //</l>
+</lg>
+
+<lg>
+<l>tasya sattvaviśeṣasya jātau jātikṣayaiṣiṇaḥ /</l>
+<l>sācalā pracacālorvī taraṅgābhihateva nauḥ // Saund_2.52 //</l>
+</lg>
+
+<lg>
+<l>sūryaraśmibhirakliṣṭaṃ puṣpavarṣaṃ papāta khāt /</l>
+<l>digvāraṇakarādhūtād vanāccaitrarathādiva // Saund_2.53 //</l>
+</lg>
+
+<lg>
+<l>divi dundubhayo nedurdīvyatāṃ marutāmiva /</l>
+<l>didīpe 'bhyadhikaṃ sūryaḥ śivaśca pavano vavau // Saund_2.54 //</l>
+</lg>
+
+<lg>
+<l>tutuṣustuṣitāścaiva śuddhāvāsāśca devatāḥ /</l>
+<l>saddharmabahumānena sattvānāṃ cānukampayā // Saund_2.55 //</l>
+</lg>
+
+<lg>
+<l>samāyayau yaśaḥketuṃ śreyaḥketukaraḥ paraḥ /</l>
+<l>babhrāje śāntayā lakṣmyā dharmo vigrahavāniva // Saund_2.56 //</l>
+</lg>
+
+<lg>
+<l>devyāmapi yavīyasyāmaraṇyāmiva pāvakaḥ /</l>
+<l>nando nāma suto jajñe nityānandakaraḥ kule // Saund_2.57 //</l>
+</lg>
+
+<lg>
+<l>dīrghabāhurmahāvakṣāḥ siṃhāṃso vṛṣabhekṣaṇaḥ /</l>
+<l>vapuṣāgryeṇa yo nāma sundaropapadaṃ dadhe // Saund_2.58 //</l>
+</lg>
+
+<lg>
+<l>madhumāsa iva prāptaścandro nava ivoditaḥ /</l>
+<l>aṅgavāniva cānaṅgaḥ sa babhau kāntayā śriyā // Saund_2.59 //</l>
+</lg>
+
+<lg>
+<l>sa tau saṃvardhayāmāsa narendraḥ parayā mudā /</l>
+<l>arthaḥ sajjanahastastho dharmakāmau mahāniva // Saund_2.60 //</l>
+</lg>
+
+<lg>
+<l>tasya kālena satputrau vavṛdhāte bhavāya tau /</l>
+<l>āryasyārambhamahato dharmārthāviva bhūtaye // Saund_2.61 //</l>
+</lg>
+
+<lg>
+<l>tayoḥ satputrayormadhye śākyarājo rarāja saḥ /</l>
+<l>madhyadeśa iva vyakto himavatpāriyātrayoḥ // Saund_2.62 //</l>
+</lg>
+
+<lg>
+<l>tatastayoḥ saṃskṛtayoḥ krameṇa narendrasūnvoḥ kṛtavidyayośca /</l>
+<l>kāmeṣvajasraṃ pramamāda nandaḥ sarvārthasiddhastu na saṃrarañja // Saund_2.63 //</l>
+</lg>
+
+<lg>
+<l>sa prekṣyaiva hi jīrṇamāturaṃ ca mṛtaṃ ca vimṛśan jagadanabhijñamārtacittaḥ /</l>
+<l>hṛdayagataparaghṛṇo na viṣayaratimagamajjananamaraṇabhayamabhito vijighāṃsuḥ // Saund_2.64 //</l>
+</lg>
+
+<lg>
+<l>udvegādapunarbhave manaḥ praṇidhāya sa yayau śayitavarāṅganādanāsthaḥ /</l>
+<l>niśi nṛpatinilayanād vanagamanakṛtamanāḥ sarasa iva mathitanalināt kalahaṃsaḥ // Saund_2.65 //</l>
+</lg>
+
+<p>saundarananda mahākāvye "rājavarṇana" nāma dvitīyaḥ sarga samāpta /</p>
+
+</div>
+<div>
+
+<p>tṛtīyaḥ sargaḥ
+tathāgata varṇana</p>
+
+<lg>
+<l>tapase tataḥ kapilavāstu hayagajarathaughasaṃkulam /</l>
+<l>śrīmadabhayapranuraktajanaṃ sa vihāya niścitamanā vanaṃ yayau // Saund_3.1 //</l>
+</lg>
+
+<lg>
+<l>vividhāgamāṃstapasi tāṃśca vividhaniyamāśrayān munīn /</l>
+<l>prekṣya sa viṣayatṛṣākṛpaṇānanavasthitaṃ tapa iti nyavartata // Saund_3.2 //</l>
+</lg>
+
+<lg>
+<l>atha mokṣavādinamarāḍamupaśamamatiṃ tathodrakam /</l>
+<l>tattvakṛtamatirupāsya jahāvayamapyamārga iti mārgakovidaḥ // Saund_3.3 //</l>
+</lg>
+
+<lg>
+<l>sa vicārayan jagati kiṃ nu paramamiti taṃ tamāgamam /</l>
+<l>niścayamanadhigataḥ parataḥ paramaṃ cacāra tapa eva duṣkaram // Saund_3.4 //</l>
+</lg>
+
+<lg>
+<l>atha naiṣa mārga iti vīkṣya tadapi vipulaṃ jahau tapaḥ /</l>
+<l>dhyānaviṣayamavagamya paraṃ bubhuje varānnamamṛtattvabuddhaye // Saund_3.5 //</l>
+</lg>
+
+<lg>
+<l>sa suvarṇapīnayugabāhurṛṣabhagatirāyatekṣaṇaḥ /</l>
+<l>plakṣamavaniruhamabhyagamat paramasya niścayavidherbubhutsayā // Saund_3.6 //</l>
+</lg>
+
+<lg>
+<l>upaviśya tatra kṛtabuddhiracaladhṛtiradrirājavat /</l>
+<l>mārabalamajayadugramatho bubudhe padaṃ śivamahāryamavyayam // Saund_3.7 //</l>
+</lg>
+
+<lg>
+<l>avagamya taṃ ca kṛtakāryamamṛtamanaso divaukasaḥ /</l>
+<l>harṣatulamagaman muditā vimukhī tu mārapariṣat pracukṣubhe // Saund_3.8 //</l>
+</lg>
+
+<lg>
+<l>sanagā ca bhūḥ pravicacāla hutabahasakhaḥ śivo vavau /</l>
+<l>nedurapi ca suradundubhayaḥ pravavarṣa cāmbudharavarjitaṃ nabhaḥ // Saund_3.9 //</l>
+</lg>
+
+<lg>
+<l>avabudhya caiva paramārthamajaramanukampayā vibhuḥ /</l>
+<l>nityamamṛtamupadarśayituṃ sa varāṇasīparikarāmayāt purīm // Saund_3.10 //</l>
+</lg>
+
+<lg>
+<l>atha dharmacakramṛtanābhi dhṛtimatisamādhinemimat /</l>
+<l>tatra vinayaniyamāramṛṣirjagato hitāya pariṣadyavartayat // Saund_3.11 //</l>
+</lg>
+
+<lg>
+<l>iti duḥkhametadiyamasya samudayalatā pravartikā /</l>
+<l>śāntiriyamayamupāya iti pravibhāgaśaḥ paramidaṃ catuṣṭayam // Saund_3.12 //</l>
+</lg>
+
+<lg>
+<l>abhidhāya ca triparivartamatulamanivartyamuttamam /</l>
+<l>dvādaśaniyatavikalpaṃ ṛṣirvinināya kauṇḍinasagotramāditaḥ // Saund_3.13 //</l>
+</lg>
+
+<lg>
+<l>sa hi doṣasāgaramagādhamupadhijalamādhijantukam /</l>
+<l>krodhamadabhayataraṅgacalaṃ pratatāra lokamapi ca vyatārayat // Saund_3.14 //</l>
+</lg>
+
+<lg>
+<l>sa vinīya kāśiṣu gayeṣu bahujanamatho girivraje /</l>
+<l>pitryamapi paramakāruṇiko nagaraṃ yayāvanujighṛkṣayā tadā // Saund_3.15 //</l>
+</lg>
+
+<lg>
+<l>viṣayātmakasya hi janasya bahuvividhamārgasevinaḥ /</l>
+<l>sūryasadṛśavapurabhyudito vijahāra sūrya iva gautamastamaḥ // Saund_3.16 //</l>
+</lg>
+
+<lg>
+<l>abhitastataḥ kapilavāstu paramaśubhavāstusaṃstutam /</l>
+<l>vastumatiśuci śivopavanaṃ sa dadarśa niḥspṛhatayā yathā vanam // Saund_3.17 //</l>
+</lg>
+
+<lg>
+<l>aparigrahaḥ sa hi babhūva niyatamatirātmanīśvaraḥ /</l>
+<l>naikavidhabhayakareṣu kimu svajanasvadeśajanamitravastuṣu // Saund_3.18 //</l>
+</lg>
+
+<lg>
+<l>pratipūjayā na sa jaharṣa na ca śucamavajñayāgamat /</l>
+<l>niścitamatirasicandanayorna jagāma duḥkhasukhayośca vikriyām // Saund_3.19 //</l>
+</lg>
+
+<lg>
+<l>atha pārthivaḥ samupalabhya sutamupagataṃ tathāgatam /</l>
+<l>tūrṇamabahuturagānugataḥ sutadarśanotsukatayābhiniryayau // Saund_3.20 //</l>
+</lg>
+
+<lg>
+<l>sugatastathāgatamavekṣya narapatimadhīramāśayā /</l>
+<l>śeṣamapi ca janamaśrumukhaṃ vininīṣayā gaganamutpapāta ha // Saund_3.21 //</l>
+</lg>
+
+<lg>
+<l>sa vicakrame divi bhuvīva punarupaviveśa tasthivān /</l>
+<l>niścalamatiraśayiṣṭa punarbahudhābhavat punarabhūttathaikadhā // Saund_3.22 //</l>
+</lg>
+
+<lg>
+<l>salile kṣitāviva cacāra jalamiva viveśa medinīm /</l>
+<l>megha iva divi vavarṣa punaḥ punarajvalannava ivodito raviḥ // Saund_3.23 //</l>
+</lg>
+
+<lg>
+<l>yugapajjvalan jvalanavacca jalamavasṛjaṃśca meghavat /</l>
+<l>taptakanakasadṛśaprabhayā sa babhau pradīpta iva sandhyayā ghanaḥ // Saund_3.24 //</l>
+</lg>
+
+<lg>
+<l>tamudīkṣya hemamaṇijālavalayinamivotthitaṃ dhvajam /</l>
+<l>prītimagamadatulāṃ nṛpatirjanatā natāśca bahumānamabhyayuḥ // Saund_3.25 //</l>
+</lg>
+
+<lg>
+<l>atha bhājanīkṛtamavekṣya manujapatimṛddhisaṃpadā /</l>
+<l>paurajanamapi ca tatpravaṇaṃ nijagāda dharmavinayaṃ vināyakaḥ // Saund_3.26 //</l>
+</lg>
+
+<lg>
+<l>nṛpatistataḥ prathamamāpa phalamamṛtadharmasiddhaye /</l>
+<l>dharmamatulamadhigamya munermuṃnaye nanāma sa yato gurāviva // Saund_3.27 //</l>
+</lg>
+
+<lg>
+<l>bahavaḥ prasannamanaso 'tha jananamaraṇārtibhīravaḥ /</l>
+<l>śākyatanayavṛṣabhāḥ kṛtino vṛṣabhā ivānalabhayāt pravavrajuḥ // Saund_3.28 //</l>
+</lg>
+
+<lg>
+<l>vijahustu ye 'pi na gṛhāṇi tanayapitṛmātrapekṣayā /</l>
+<l>te 'pi niyamavidhimāmaraṇājjagṛhuśca yuktamanasaśca dadhrire // Saund_3.29 //</l>
+</lg>
+
+<lg>
+<l>na jihiṃsa sūkṣmamapi jantumapi paravadhopajīvinaḥ /</l>
+<l>kiṃ bata vipulaguṇaḥ kulajaḥ sadayaḥ sadā kimu munerupāsayā // Saund_3.30 //</l>
+</lg>
+
+<lg>
+<l>akṛśodyamaḥ kṛśadhano 'pi paraparibhavāsaho 'pi san /</l>
+<l>nānyadhanamapahāra tathā bhujagādivānyavibhavāddhi vivyathe // Saund_3.31 //</l>
+</lg>
+
+<lg>
+<l>vibhavānvito 'pi taruṇo 'pi viṣayacapalendriyo 'pi san /</l>
+<l>naiva ca parayuvatīragamat paramaṃ hi tā dahanato 'pyamanyata // Saund_3.32 //</l>
+</lg>
+
+<lg>
+<l>anṛtaṃ jagāda na ca kaścidṛtamapi jajalpa nāpriyam /</l>
+<l>ślakṣṇamapi ca na jagāvahitaṃ hitamapyuvāca na ca paiśunāca yat // Saund_3.33 //</l>
+</lg>
+
+<lg>
+<l>manasā lulobha na ca jātu paravasuṣu gṛddhamānasaḥ /</l>
+<l>kāmasukhamasukhato vimṛśan vijahāra tṛpta iva tatra sajjanaḥ // Saund_3.34 //</l>
+</lg>
+
+<lg>
+<l>na parasya kaścidapaghātamapi ca saghṛṇo vyacintayat /</l>
+<l>mātṛpitṛsutasuhṛtsadṛśaṃ sa dadarśa tatra hi parasparaṃ janaḥ // Saund_3.35 //</l>
+</lg>
+
+<lg>
+<l>niyataṃ bhaviṣyati paratra bhavadapi ca bhūtamapyatho /</l>
+<l>karmaphalamapi ca lokagatirniyateti darśanamavāpa sādhu ca // Saund_3.36 //</l>
+</lg>
+
+<lg>
+<l>iti karmaṇā daśavidhena paramakuśalena bhūriṇā /</l>
+<l>bhraṃśini śithilaguṇo 'pi yuge vijahāra tatra munisaṃśrayājjanaḥ // Saund_3.37 //</l>
+</lg>
+
+<lg>
+<l>na ca tatra kaścidupapattisukhamabhilalāṣa tairguṇaiḥ /</l>
+<l>sarvamaśivamavagamya bhavaṃ bhavasaṃkṣayāya vavṛte na janmane // Saund_3.38 //</l>
+</lg>
+
+<lg>
+<l>akathaṃkathā gṛhiṇa eva paramapariśuddhadṛṣṭayaḥ /</l>
+<l>strotasi hi vavṛtire bahavo rajasaṃstanutvamapi cakrire pare // Saund_3.39 //</l>
+</lg>
+
+<lg>
+<l>vavṛte 'tra yo 'pi viṣayeṣu vibhavasadṛśeṣu kaścana /</l>
+<l>tyāgāvinayaniyamābhirato vijahāra so 'pi na cacāla satpathāt // Saund_3.40 //</l>
+</lg>
+
+<lg>
+<l>api ca svato 'pi parato 'pi na bhayamabhavanna daivataḥ /</l>
+<l>tatra ca susukhasubhikṣaguṇairjahṛṣuḥ prajāḥ kṛtayuge manoriva // Saund_3.41 //</l>
+</lg>
+
+<lg>
+<l>iti muditamanāmayaṃ nirāpat kururaghupūrupuropamaṃ puraṃ tat /</l>
+<l>abhavadabhayadaiśike maharṣau viharati tatra śivāya vītarāge // Saund_3.42 //</l>
+</lg>
+
+<p>saundaranande mahākāvye "tathāgatavarṇana" nāma tṛtīya sarga samāpta /</p>
+
+</div>
+<div>
+
+<p>caturthaḥ sargaḥ
+bhāryāyācitaka</p>
+
+<lg>
+<l>munau bruvāṇe 'pi tu tatra dharmaṃ dharmaṃ prati jñātiṣu cādṛteṣu /</l>
+<l>prāsādasaṃstho madanaikakāryaḥ priyāsahāyo vijahāra nandaḥ // Saund_4.1 //</l>
+</lg>
+
+<lg>
+<l>sa cakravākyeva hi cakravākastayā sametaḥ priyayā priyārhaḥ /</l>
+<l>nācintayad vaiśramaṇaṃ na śakraṃ tatsthānahetoḥ kuta eva dharmam // Saund_4.2 //</l>
+</lg>
+
+<lg>
+<l>lakṣmyā ca rūpeṇa ca sundarīti stambhena garveṇa ca māninīti /</l>
+<l>dīptyā ca mānena ca bhāminīti yāto babhāṣe trividhena nāmnā // Saund_4.3 //</l>
+</lg>
+
+<lg>
+<l>sā hāsahaṃsā nayanadvirephā pīnastanātyunnatapadmakośā /</l>
+<l>bhūyo babhāse svakuloditena strīpadminī nandadivākareṇa // Saund_4.4 //</l>
+</lg>
+
+<lg>
+<l>rūpeṇa cātyantamanohareṇa rūpānurūpeṇa ca ceṣṭitena /</l>
+<l>manuṣyaloke hi tadā babhūva sā sundarī strīṣu nareṣu nandaḥ // Saund_4.5 //</l>
+</lg>
+
+<lg>
+<l>sā devatā nandanacāriṇīva kulasya nandījananaśca nandaḥ /</l>
+<l>atītya martyānanupetya devān sṛṣṭāvabhūtāmiva bhūtadhātrā // Saund_4.6 //</l>
+</lg>
+
+<lg>
+<l>tāṃ sundarī cenna labheta nandaḥ sā vā niṣeveta na taṃ natabhrūḥ /</l>
+<l>dvandvaṃ dhruvaṃ tadvikalaṃ na śobhetānyonyahīnāviva rātricandrau // Saund_4.7 //</l>
+</lg>
+
+<lg>
+<l>kandarparatyoriva lakṣyabhūtaṃ pramodanāndyoriva nīḍabhūtam /</l>
+<l>praharṣatuṣṭyoriva pātrabhūtaṃ dvandvaṃ sahāraṃsta madāndhabhūtam // Saund_4.8 //</l>
+</lg>
+
+<lg>
+<l>parasparodvīkṣaṇatatparākṣaṃ parasparavyāhṛtasaktacittam /</l>
+<l>parasparāśleṣahṛtāṅgarāgaṃ parasparaṃ tanmithunaṃ jahāra // Saund_4.9 //</l>
+</lg>
+
+<lg>
+<l>bhāvānuraktau girinirjharasthau tau kinnarīkiṃpuruṣāvivobhau /</l>
+<l>cikrīḍatuścābhivirejatuśca rūpaśriyānyonyamivākṣipantau // Saund_4.10 //</l>
+</lg>
+
+<lg>
+<l>anyonyasaṃrāgavivardhanena taddvandvamanyonyamarīramacca /</l>
+<l>klamāntare 'nyonyavinodanena salīlamanyonyamamīmadacca // Saund_4.11 //</l>
+</lg>
+
+<lg>
+<l>vibhūṣayāmāsa tataḥ priyāṃ sa siṣeviṣustāṃ na mṛjāvahārtham /</l>
+<l>svenaiva rūpeṇa vibhūṣitā hi vibhūṣaṇānāmapi bhūṣaṇaṃ sā // Saund_4.12 //</l>
+</lg>
+
+<lg>
+<l>dattvātha sā darpaṇamasya haste mamāgrato dhāraya tāvadenam /</l>
+<l>viśeṣakaṃ yāvadahaṃ karomītyuvāca kāntaṃ sa ca taṃ babhāra // Saund_4.13 //</l>
+</lg>
+
+<lg>
+<l>bhartustataḥ śmaśru nirīkṣamāṇā viśeṣakaṃ sāpi cakāra tādṛk /</l>
+<l>niśvāsavātena ca darpaṇasya cikitsayitvā nijaghāna nandaḥ // Saund_4.14 //</l>
+</lg>
+
+<lg>
+<l>sā tena ceṣṭālalitena bhartuḥ śāṭhyena cāntarmanasā jahāsa /</l>
+<l>bhavecca ruṣṭā kila nāma tasmai lalāṭajihmāṃ bhṛkuṭiṃ cakāra // Saund_4.15 //</l>
+</lg>
+
+<lg>
+<l>cikṣepa karṇotpalamasya cāṃse kareṇa savyena madālasena /</l>
+<l>patrāṅguliṃ cārdhanimīlitākṣe vaktre 'sya tāmeva vinirdudhāva // Saund_4.16 //</l>
+</lg>
+
+<lg>
+<l>tataścalannūpurayoktritābhyāṃ nakhaprabhodbhāsitarāṅgulibhyām /</l>
+<l>padbhyāṃ priyāyā nalinopabhābhyāṃ mūrdhnā bhayānnāma nanāma nandaḥ // Saund_4.17 //</l>
+</lg>
+
+<lg>
+<l>sa muktapuṣponmiṣitena mūrdhnā tataḥ priyāyāḥ priyakṛd babhāse /</l>
+<l>suvarṇavedyāmanilāvabhagnaḥ puṣpātibhārādiva nāgavṛkṣaḥ // Saund_4.18 //</l>
+</lg>
+
+<lg>
+<l>sā taṃ stanodvartitahārayaṣṭirutthāpayāmāsa nipīḍya dorbhyām /</l>
+<l>kathaṃ kṛto 'sīti jahāsa coccairmukhena sācīkṛtakuṇḍalena // Saund_4.19 //</l>
+</lg>
+
+<lg>
+<l>patyustato darpaṇasaktapāṇermuhurmuhurvaktramavekṣamāṇā /</l>
+<l>tamālapatrārdratale kapole samāpayāmāsa viśeṣakaṃ tat // Saund_4.20 //</l>
+</lg>
+
+<lg>
+<l>tasyā mukhaṃ tat satamālapatraṃ tāmrādharauṣṭhaṃ cikurāyatākṣam /</l>
+<l>raktādhikāgraṃ patitadvirephaṃ saśaivalaṃ padmamivābabhāse // Saund_4.21 //</l>
+</lg>
+
+<lg>
+<l>nandastato darpaṇamādareṇa bibhrattadāmaṇḍanasākṣibhūtam /</l>
+<l>viśeṣakāvekṣaṇakekarākṣo laḍat priyāyā vadanaṃ dadarśa // Saund_4.22 //</l>
+</lg>
+
+<lg>
+<l>tatkuṇḍalādaṣṭaviśeṣakāntaṃ kāraṇḍavakliṣṭamivāravindam /</l>
+<l>nandaḥ priyāyā mukhamīkṣamāṇo bhūyaḥ priyānandakaro babhūva // Saund_4.23 //</l>
+</lg>
+
+<lg>
+<l>vimānakalpe sa vimānagarbhe tatastathā caiva nananda nandaḥ /</l>
+<l>tathāgataścāgatabhaikṣakālo bhaikṣāya tasya praviveśa veśma // Saund_4.24 //</l>
+</lg>
+
+<lg>
+<l>avāṅamukho niṣpraṇāyaśca tasthau bhrāturgṛhe 'nyasya gṛhe yathaiva /</l>
+<l>tasmādatho preṣyajanapramādād bhikṣāmalabdhvaiva punarjagāma // Saund_4.25 //</l>
+</lg>
+
+<lg>
+<l>kācit pipeṣāṅgavilepanaṃ hi vāso 'ṅganā kācidavāsayacca /</l>
+<l>ayojayat snānavidhiṃ tathānyā jagranthuranyāḥ surabhīḥ srajaśca // Saund_4.26 //</l>
+</lg>
+
+<lg>
+<l>tasmin gṛhe bharturataścarantyaḥ krīḍānurūpaṃ lalitaṃ niyogam /</l>
+<l>kāścinna buddhaṃ dadṛśuryuvatyo buddhasya vaiṣā niyataṃ manīṣā // Saund_4.27 //</l>
+</lg>
+
+<lg>
+<l>kācit sthitā tatra tu harmyapṛṣṭhe gavākṣapakṣe praṇidhāya cakṣuḥ /</l>
+<l>viniṣpatantaṃ sugataṃ dadarśa payodagarbhādiva dīptamarkam // Saund_4.28 //</l>
+</lg>
+
+<lg>
+<l>sā gauravaṃ tatra vicārya bhartuḥ svayā ca bhaktyārhatayārhataśca /</l>
+<l>nandasya tasthau purato vivakṣustadājñayā ceti tadācacakṣe // Saund_4.29 //</l>
+</lg>
+
+<lg>
+<l>anugrahāyāsya janasya śaṅke gururgṛhaṃ no bhagavān praviṣṭaḥ /</l>
+<l>bhikṣāmalabdhvā giramāsanaṃ vā śūnyādaraṇyādiva yāti bhūyaḥ // Saund_4.30 //</l>
+</lg>
+
+<lg>
+<l>śrutvā maharṣeḥ sa gṛhapraveśaṃ satkārahīnaṃ ca punaḥ prayāṇam /</l>
+<l>cacāla citrābharaṇāmbarasrakkalpadrumo dhūta ivānilena // Saund_4.31 //</l>
+</lg>
+
+<lg>
+<l>kṛtvāñjaliṃ mūrdhani padmakalpaṃ tataḥ sa kāntāṃ gamanaṃ yayāce /</l>
+<l>karttu gamiṣyāmi gurau praṇāmaṃ māmabhyanujñātumihārhasīti // Saund_4.32 //</l>
+</lg>
+
+<lg>
+<l>sā vepamānā parisasvaje taṃ śālaṃ latā vātasamīriteva /</l>
+<l>dadarśa cāśruplutalolanetrā dīrghe ca niśvasya vaco 'bhyuvāca // Saund_4.33 //</l>
+</lg>
+
+<lg>
+<l>nāhaṃ yiyāsorgurudarśanārthamarhāmi kartuṃ tava dharmapīḍām /</l>
+<l>gacchāryaputraihi ca śīghrameva viśeṣako yāvadayaṃ na śuṣkaḥ // Saund_4.34 //</l>
+</lg>
+
+<lg>
+<l>sacedbhavestvaṃ khalu dīrghasūtro daṇḍaṃ mahāntaṃ tvayi pātayeyam /</l>
+<l>muhurmuhustvāṃ śayitaṃ kucābhyāṃ vibodhayeyaṃ ca na cālapeyam // Saund_4.35 //</l>
+</lg>
+
+<lg>
+<l>athāpyanāśyānaviśeṣakāyāṃ mayyeṣyasi tvaṃ tvaritaṃ tatastvām /</l>
+<l>nipīḍayiṣyāmi bhujadvayena nirbhūṣaṇenārdravilepanena // Saund_4.36 //</l>
+</lg>
+
+<lg>
+<l>ityevamuktaśca nipīḍitaśca tayāsavarṇasvanayā jagāda /</l>
+<l>evaṃ kariṣyāmi vimuñca caṇḍi yāvad gururdūragato na me saḥ // Saund_4.37 //</l>
+</lg>
+
+<lg>
+<l>tataḥ stanodvartitatacandanābhyāṃ mukto bhujābhyāṃ na tu mānasena /</l>
+<l>vihāya veṣaṃ madanānurūpaṃ satkārayogyaṃ sa vapurbabhāra // Saund_4.38 //</l>
+</lg>
+
+<lg>
+<l>sā taṃ prayāntaṃ ramaṇaṃ pradadhyau pradhyānaśūnyasthitaniścalākṣī /</l>
+<l>sthitoccakarṇā vyapaviddhaśaṣpā bhrāntaṃ mṛgam bhrāntamukhī mṛgīva // Saund_4.39 //</l>
+</lg>
+
+<lg>
+<l>didṛkṣayākṣiptamanā munestu nandaḥ prayāṇaṃ prati tatvare ca /</l>
+<l>vivṛttadṛṣṭiśca śanairyayau tāṃ karīva paśyan sa laḍatkareṇum // Saund_4.40 //</l>
+</lg>
+
+<lg>
+<l>chātodarīṃ pīnapayodharoruṃ sa sundarīṃ rukmadarīmivādreḥ /</l>
+<l>kākṣeṇa paśyan na tatarpa nandaḥ pibannivaikena jalaṃ kareṇa // Saund_4.41 //</l>
+</lg>
+
+<lg>
+<l>taṃ gauravaṃ buddhagataṃ cakarṣa bhāryānurāgaḥ punarācakarṣa /</l>
+<l>so 'niścayānnāpi yayau na tasthau turaṃstaraṃgeṣviva rājahaṃsaḥ // Saund_4.42 //</l>
+</lg>
+
+<lg>
+<l>adarśanaṃ tūpagataśca tasyā harmyāttataścāvatatāra tūrṇam /</l>
+<l>śrutvā tato nūpuranisvanaṃ sa punarlalambe hṛdaye gṛhītaḥ // Saund_4.43 //</l>
+</lg>
+
+<lg>
+<l>sa kāmarāgeṇa nigṛhyamāṇo dharmānurāgeṇa ca kṛṣyamāṇaḥ /</l>
+<l>jagāma duḥkhena vivartyamānaḥ plavaḥ pratistrota ivāpagāyāḥ // Saund_4.44 //</l>
+</lg>
+
+<lg>
+<l>tataḥ kramairdīrghatamaiḥ pracakrame kathaṃ nu yāto na gururbhavediti /</l>
+<l>svajeya tāṃ caiva viśeṣakapriyāṃ kathaṃ priyāmārdraviśeṣakāmiti // Saund_4.45 //</l>
+</lg>
+
+<lg>
+<l>atha sa pathi dadarśa muktamānaṃ pitṛnagare 'pi tathā gatābhimānam /</l>
+<l>daśabalamabhito vilambamānaṃ dhvajamanuyāna ivaindramarcyamānam // Saund_4.46 //</l>
+</lg>
+
+<p>saundarananda mahākāvye "bhāryāyācitaka" nāma caturtha sarga samāpta /</p>
+
+</div>
+<div>
+
+<p>pañcamaḥ sargaḥ
+nandadīkṣā</p>
+
+<lg>
+<l>athāvatīryāśvarathadvipebhyaḥ śākyā yathāsvarddhigṛhītaveṣāḥ /</l>
+<l>mahāpaṇebhyo vyavahāriṇaśca mahāmunau bhaktivaśāt praṇemuḥ // Saund_5.1 //</l>
+</lg>
+
+<lg>
+<l>kecit praṇamyānuyayurmuhūrttaṃ kecit praṇamyārthavaśena jagmuḥ /</l>
+<l>kecit svakeṣvāvasatheṣu tasthuḥ kṛtvāñjalīn vīkṣaṇatatparākṣāḥ // Saund_5.2 //</l>
+</lg>
+
+<lg>
+<l>buddhastatastatra narendramārge sroto mahadbhaktimato janasya /</l>
+<l>jagāma duḥkhena vigāhamāno jalāgame strota ivāpagāyāḥ // Saund_5.3 //</l>
+</lg>
+
+<lg>
+<l>atho mahadbhiḥ pati saṃpatadbhiḥ saṃpūjyamānāya tathāgatāya /</l>
+<l>karttuṃ praṇāmaṃ na śaśāka nandastenābhireme tu gurormahimnā // Saund_5.4 //</l>
+</lg>
+
+<lg>
+<l>svaṃ cāvasaṅgaṃ pathi nirmumukṣurbhaktiṃ janasyānyamateśva rakṣan /</l>
+<l>nandaṃ ca gehābhimukhaṃ jighṛkṣan mārgaṃ tato 'nyaṃ sugataḥ prapede // Saund_5.5 //</l>
+</lg>
+
+<lg>
+<l>tato viviktaṃ ca viviktacetāḥ sanmārgavin mārgamabhipratasthe /</l>
+<l>gatvāgrataścāgryatamāya tasmai nāndīvimuktāya nanāma nandaḥ // Saund_5.6 //</l>
+</lg>
+
+<lg>
+<l>śanairvrajanneva sa gauraveṇa paṭāvṛtāṃso vinatārdhakāyaḥ /</l>
+<l>adhonibaddhāñjalirūrdhvanetraḥ sagadgadaṃ vākyamidaṃ babhāṣe // Saund_5.7 //</l>
+</lg>
+
+<lg>
+<l>prāsādasaṃstho bhagavantamantaḥpraviṣṭamaśrauṣamanugrahāya /</l>
+<l>atastvarāvānahamabhyupeto gṛhasya kakṣyāmahato 'bhyasūyan // Saund_5.8 //</l>
+</lg>
+
+<lg>
+<l>tatsādhu sāhupriya mattpriyārtham tatrāstu bhikṣūttama bhaikṣakālaḥ /</l>
+<l>asau hi madhyaṃ nabhaso yiyāsuḥ kālaṃ pratismārayatīva sūryaḥ // Saund_5.9 //</l>
+</lg>
+
+<lg>
+<l>ityevamuktaḥ praṇatena tena snehābhimānonmukhalocanena /</l>
+<l>tādṛṅ nimittaṃ sugataścakāra nāhārakṛtyaṃ sa yathā viveda // Saund_5.10 //</l>
+</lg>
+
+<lg>
+<l>tataḥ sa kṛtvā munaye praṇāmaṃ gṛhaprayāṇāya matiṃ cakāra /</l>
+<l>anugrahārthaṃ sugatastu tasmai pātraṃ dadau puraṣkarapatranetraḥ // Saund_5.11 //</l>
+</lg>
+
+<lg>
+<l>tataḥ sa loke dadataḥ phalārthaṃ pātrasya tasyāpratimasya pātram /</l>
+<l>jagrāha cāpagrahaṇakṣamābhyāṃ padmopamābhyāṃ prayataḥ karābhyām // Saund_5.12 //</l>
+</lg>
+
+<lg>
+<l>parāṅmukhantvanyamanaskamārād vijñāya nandaḥ sugataṃ gatāstham /</l>
+<l>hastasthapātro 'pi gṛhaṃ yiyāsuḥ sasāra mārgānmunimīkṣamāṇaḥ // Saund_5.13 //</l>
+</lg>
+
+<lg>
+<l>bhāryānurāgeṇa yadā gṛhaṃ sa pātraṃ gṛhītvāpi yiyāsureva /</l>
+<l>vimohayāmāsa munistatastaṃ rathyāmukhasyāvaraṇena tasya // Saund_5.14 //</l>
+</lg>
+
+<lg>
+<l>nirmokṣabījaṃ hi dadarśa tasya jñānaṃ mṛdu kleśarajaśca tīvram /</l>
+<l>kleśānukūlaṃ viṣayātmakaṃ ca nandaṃ yatastaṃ munirācakarṣa // Saund_5.15 //</l>
+</lg>
+
+<lg>
+<l>saṃkleśapakṣo dvividhaśca dṛṣṭastathā dvikalpo vyavadānapakṣaḥ /</l>
+<l>ātmāśrayo hetubalādhikasya bāhyāśrayaḥ pratyayagauravasya // Saund_5.16 //</l>
+</lg>
+
+<lg>
+<l>ayatnato hetubalādhikastu nirmucyate ghaṭṭitamātra eva /</l>
+<l>yatnena tu pratyayaneyabuddhirvimokṣamāpnoti parāśrayeṇa // Saund_5.17 //</l>
+</lg>
+
+<lg>
+<l>nandaḥ sa ca pratyayaneyacetā yaṃ śiśriye tanmayatāmavāpa /</l>
+<l>yasmādimaṃ tatra cakāra yannaṃ taṃ snehapaṅkān munirujjihīrṣan // Saund_5.18 //</l>
+</lg>
+
+<lg>
+<l>nandastu duḥkhena viceṣṭamānaḥ śanairagatyā gurumanvagacchat /</l>
+<l>bhāryāmukhaṃ vīkṣaṇalolanetraṃ vicintayannārdraviśeṣakaṃ tat // Saund_5.19 //</l>
+</lg>
+
+<lg>
+<l>tato munistaṃ priyamālyahāraṃ vasantamāsena kṛtābhihāram /</l>
+<l>nināya bhagnapramadāvihāraṃ vidyāvihārābhimataṃ vihāram // Saund_5.20 //</l>
+</lg>
+
+<lg>
+<l>dīnaṃ mahākāruṇikastatastaṃ dṛṣṭvā muhūrta karuṇāyamānaḥ /</l>
+<l>kareṇa cakrāṅkatalena mūrdhni pasparśa caivedamuvāca cainam // Saund_5.21 //</l>
+</lg>
+
+<lg>
+<l>yāvanna hiṃsraḥ samupaiti kālaḥ śamāya tāvat kuru saumya buddhim /</l>
+<l>sarvāsvavasthāsviha vartamānaṃ sarvābhisāreṇa nihanti mṛtyuḥ // Saund_5.22 //</l>
+</lg>
+
+<lg>
+<l>sādhāraṇāt svapnanibhādasārāllolaṃ manaḥ kāmasukhānniyaccha /</l>
+<l>havyairivāgneḥ pavaneritasya lokasya kāmairna hi tṛptirasti // Saund_5.23 //</l>
+</lg>
+
+<lg>
+<l>śraddhādhanaṃ śreṣṭhatamaṃ dhanebhyaḥ prajñārasasṛptikaro rasebhyaḥ /</l>
+<l>pradhānamadhyātmasukhaṃ sukhebhyo 'vidyāratirduḥkhatamāratibhyaḥ // Saund_5.24 //</l>
+</lg>
+
+<lg>
+<l>hitasya vaktā pravaraḥ suhṛdbhyo dharmāya khedo guṇavān śramebhyaḥ /</l>
+<l>jñānāya kṛtyaṃ paramaṃ kriyābhyaḥ kimindriyāṇāmupagamya dāsyam // Saund_5.25 //</l>
+</lg>
+
+<lg>
+<l>tanniścitaṃ bhīlkamaśugviyuktaṃ pareṣvanāyattamahāryamanyaiḥ /</l>
+<l>nityaṃ śivaṃ śāntisukhaṃ vṛṇīṣva kimindriyārthārthamanarthamūḍhvā // Saund_5.26 //</l>
+</lg>
+
+<lg>
+<l>jarāsamā nāstyamṛjā prajānāṃ vyādheḥ samo nāsti jagatyanarthaḥ /</l>
+<l>mṛtyoḥ samaṃ nāsti bhayaṃ pṛthivyāmetattrayaṃ khalvavaśena sevyam // Saund_5.27 //</l>
+</lg>
+
+<lg>
+<l>snehena kaścinna samo 'sti pāśaḥ sroto na tṛṣṇāsamamasti hāri /</l>
+<l>rāgāgninā nāsti samastathāgnistaccet trayaṃ nāsti sukhaṃ ca te 'sti // Saund_5.28 //</l>
+</lg>
+
+<lg>
+<l>avaśyabhāvī priyaviprayogastasmāñca śoko niyataṃ niṣevyaḥ /</l>
+<l>śokena conmādamupeyivāṃso rājarṣayo 'nye 'pyavaśā vicelu // Saund_5.29 //</l>
+</lg>
+
+<lg>
+<l>prajñāmayaṃ varma badhāna tasmānno kṣāntinighnasya hi śokabāṇāḥ /</l>
+<l>mahacca dagdhuṃ bhavakakṣajālaṃ saṃghukṣayālpāgnimivātmatejaḥ // Saund_5.30 //</l>
+</lg>
+
+<lg>
+<l>yathauṣadhairhastagataiḥ savidyo na daśyate kaścana pannagena /</l>
+<l>tathānapekṣo jitalokamoho na daśyate śokabhujaṃgamena // Saund_5.31 //</l>
+</lg>
+
+<lg>
+<l>āsthāya yogaṃ parigamya tattvaṃ na trāsamāgacchati mṛtyukāle /</l>
+<l>ābaddhavarmā sudhanuḥ kṛtāsro jigīṣayā śūra ivāhavasthaḥ // Saund_5.32 //</l>
+</lg>
+
+<lg>
+<l>ityevamuktaḥ sa tathāgatena sarveṣu bhūteṣvanukampakena /</l>
+<l>dhṛṣṭaṃ girāntarhṛdayena sīdaṃstatheti nandaḥ sugataṃ babhāṣe // Saund_5.33 //</l>
+</lg>
+
+<lg>
+<l>atha pramādācca tamujjihīrṣan matvāgamasyaiva ca pātrabhūtam /</l>
+<l>prabrājayānanda śamāya nandamityabravīnmaitramanā maharṣiḥ // Saund_5.34 //</l>
+</lg>
+
+<lg>
+<l>nandaṃ tato 'ntarmanasā rudantamehīti vaidehamunirjagāda /</l>
+<l>śanaistatastaṃ samupetya nando na pravrajiṣyāmyahamityuvāca // Saund_5.35 //</l>
+</lg>
+
+<lg>
+<l>śrutvātha nandasya manīṣitaṃ tad buddhāya vaidehamuniḥ śaśaṃsa /</l>
+<l>saṃśrutya tasmādapi tasya bhāvaṃ mahāmunirnandamuvāca bhūyaḥ // Saund_5.36 //</l>
+</lg>
+
+<lg>
+<l>mayyagraje pravrajite 'jitātman bhrātṛṣvanupravrajiteṣu cāsmān /</l>
+<l>jñātīṃśca dṛṣṭvā vratino gṛhasthān saṃvinna kiṃ te 'sti na vāsti cetaḥ // Saund_5.37 //</l>
+</lg>
+
+<lg>
+<l>rājarṣayaste viditā na nūnaṃ vanāni ye śiśriyire hasantaḥ /</l>
+<l>niṣṭhīvya kāmānupaśāntikāmāḥ kāmeṣu naivaṃ kṛpaṇeṣu saktāḥ // Saund_5.38 //</l>
+</lg>
+
+<lg>
+<l>bhūyaḥ samālokya gṛheṣu doṣān niśāmya tattyāgakṛtaṃ ca śarma /</l>
+<l>naivāsti moktuṃ matirālayaṃ te deśaṃ mumūrṣoriva sopasargam // Saund_5.39 //</l>
+</lg>
+
+<lg>
+<l>saṃsārakāntāraparāyaṇasya śive kathaṃ te pathi nārurukṣā /</l>
+<l>āropyamāṇasya tameva mārgaṃ bhraṣṭasya sārthādiva sārthikasya // Saund_5.40 //</l>
+</lg>
+
+<lg>
+<l>yaḥ sarvato veśmani dahyamāne śayīta mohānna tato vyapeyāt /</l>
+<l>kālāgninā vyādhijarāśikhena loke pradīpte sa bhavet pramattaḥ // Saund_5.41 //</l>
+</lg>
+
+<lg>
+<l>praṇīyamānaśca yathā vadhāya matto hasecca pralapecca vadhyaḥ /</l>
+<l>mṛtyau tathā tiṣṭhati pāśahaste śocyaḥ pramādyan viparitacetāḥ // Saund_5.42 //</l>
+</lg>
+
+<lg>
+<l>yadā narendrāśca kuṭumbinaśca vihāya bandhūṃśca parigrahāṃśca /</l>
+<l>yayuśca yāsyanti ca yānti caiva priyeṣvanityeṣu kuto 'nurodhaḥ // Saund_5.43 //</l>
+</lg>
+
+<lg>
+<l>kiñcinna paśyāmi ratasya yatra tadanyabhāvena bhavenna duḥkham /</l>
+<l>tasmāt kvacinna kṣamate prasaktiryadi kṣamastadvigamānna śokaḥ // Saund_5.44 //</l>
+</lg>
+
+<lg>
+<l>tatsaumya lolaṃ parigamya lokaṃ māyopamaṃ citramivendrajālam /</l>
+<l>priyābhidhānaṃ tyaja mohajālaṃ chettuṃ matiste yadi duḥkhajālam // Saund_5.45 //</l>
+</lg>
+
+<lg>
+<l>varaṃ hitodarkamāniṣṭamannaṃ na svādu yat syādahitānubaddham /</l>
+<l>yasmādahaṃ tvāṃ viniyojayāmi śive śucau vartmani vipriye 'pi // Saund_5.46 //</l>
+</lg>
+
+<lg>
+<l>bālasya dhātrī vinigṛhya loṣṭhaṃ yathoddharatyāsyapuṭapraviṣṭam /</l>
+<l>tathojjihīrṣuḥ khalu rāgaśalyaṃ tattvāmavocaṃ paruṣaṃ hitāya // Saund_5.47 //</l>
+</lg>
+
+<lg>
+<l>aniṣṭamapyauṣadhamāturāya dadāti vaidyaśca yathā nigṛhya /</l>
+<l>tadvanmayoktaṃ pratikūlametattubhyaṃ hitodarkamanugrahāya // Saund_5.48 //</l>
+</lg>
+
+<lg>
+<l>tadyāvadeva kṣaṇasaṃnipāto na mṛtyurāgacchati yāvadeva /</l>
+<l>yāvadvayo yogavidhau samarthaṃ buddhiṃ kuru śreyasi tāvadeva // Saund_5.49 //</l>
+</lg>
+
+<lg>
+<l>ityevamuktaḥ sa vināyakena hitaiṣiṇā kāruṇikena nandaḥ /</l>
+<l>kartāsmi sarvaṃ bhagavan vacaste tathā yathājñāpayasītyuvāca // Saund_5.50 //</l>
+</lg>
+
+<lg>
+<l>ādāya vaidehamunistatastaṃ nināya saṃśliṣya viceṣṭamānam /</l>
+<l>vyayojayaccāśrupariplutākṣaṃ keśaśriyaṃ chatranibhasya mūrdhnaḥ // Saund_5.51 //</l>
+</lg>
+
+<lg>
+<l>atho nataṃ tasya mukhaṃ sabāṣpaṃ pravāsyamāneṣu śiroruheṣu /</l>
+<l>vakrāgranālaṃ nalinaṃ taḍāge varṣodakaklinnamivābabhāse // Saund_5.52 //</l>
+</lg>
+
+<lg>
+<l>nandastatastarukaṣāyaviraktavāsāścintāvaśo navagṛhīta iva dvipendraḥ /</l>
+<l>pūrṇaḥ śaśī bahulapakṣagataḥ kṣapānte bālātapena pariṣikta ivāvabhāse // Saund_5.53 //</l>
+</lg>
+
+<p>saundarananda kāvye "nandadīkṣā" nāma pañcama sarga samāpta /</p>
+
+</div>
+<div>
+
+<p>ṣaṣṭhaḥ sargaḥ
+bhāryāvilāpa</p>
+
+<lg>
+<l>tato hṛte bharttari gauraveṇa prītau hṛtāyāmaratau kṛtāyām /</l>
+<l>tatraiva harmyopari vartamānā na sundarī saiva tadā babhāse // Saund_6.1 //</l>
+</lg>
+
+<lg>
+<l>sā bharturabhyāgamanapratīkṣā gavākṣamākramya payodharābhyām /</l>
+<l>dvāronmukhī harmyatalāllalambe mukhena tiryaṅnatakuṇḍalena // Saund_6.2 //</l>
+</lg>
+
+<lg>
+<l>vilambahārā calayoktrakā sā tasmād vimānād vinatā cakāśe /</l>
+<l>tapaḥ kṣayādapsarasāṃ vareva cyutaṃ vimānāt priyamīkṣamāṇā // Saund_6.3 //</l>
+</lg>
+
+<lg>
+<l>sā khedasaṃsvinnalalāṭakena niśvāsaniṣpītaviśeṣakeṇa /</l>
+<l>cintācalākṣeṇa mukhena tasthau bharttāramanyatra viśaṅkamānā // Saund_6.4 //</l>
+</lg>
+
+<lg>
+<l>tataścirasthānapariśrameṇa sthitaiva paryaṅkatale papāta /</l>
+<l>tiryakca śiśye pravikīrṇahārā sapādukaikārdhavilambapādā // Saund_6.5 //</l>
+</lg>
+
+<lg>
+<l>athātra kācit pramadā sabāṣpāṃ tāṃ duḥkhitāṃ draṣṭumanīpsamānā /</l>
+<l>prāsādasopānatalapraṇādaṃ cakāra padbhyāṃ sahasā rudantī // Saund_6.6 //</l>
+</lg>
+
+<lg>
+<l>tasyāśca sopānatalapraṇādaṃ śrutvaiva tūrṇaṃ punarutpapāta /</l>
+<l>prītyāṃ prasaktaiva ca saṃjaharṣa priyopayānaṃ pariśaṅkamānā // Saund_6.7 //</l>
+</lg>
+
+<lg>
+<l>sā trāsayantī valabhīpuṭasthān pārāvatān nūpūranisvanena /</l>
+<l>sopānakukṣiṃ prasasāra harṣād bhraṣṭaṃ dukūlāntamacintayantī // Saund_6.8 //</l>
+</lg>
+
+<lg>
+<l>tāmaṅganāṃ prekṣya ca vipralabdhā niśvasya bhūyaḥ śayanaṃ prapede /</l>
+<l>vivarṇavaktrā na rarāja cāśu vivarṇacandreva himāgame dyauḥ // Saund_6.9 //</l>
+</lg>
+
+<lg>
+<l>sā duḥkhitā bhartturadarśanena kāmena kopena ca dahyamānā /</l>
+<l>kṛtvā kare vaktramupopaviṣṭā cintānadīṃ śokajalāṃ tatāra // Saund_6.10 //</l>
+</lg>
+
+<lg>
+<l>tasyāḥ mukhaṃ padmasapatnabhūtaṃ pāṇau sthitaṃ pallavarāgatāmre /</l>
+<l>chāyāmayasyāmbhasi paṅkajasya babhau nataṃ padmamivopariṣṭāt // Saund_6.11 //</l>
+</lg>
+
+<lg>
+<l>sā strīsvabhāvena vicintya tattad dṛṣṭānurāge 'bhimukhe 'pi patyau /</l>
+<l>dharmāśrite tattvamavindamānā saṃkalpya tattadvilalāpa tattat // Saund_6.12 //</l>
+</lg>
+
+<lg>
+<l>eṣyāmyanāśyānaviśeṣakāyāṃ tvayīti kṛtvā mayi taṃ pratijñām /</l>
+<l>kasmānnu hetordayitapratijñaḥ so 'dya priyo me vitathapratijñaḥ // Saund_6.13 //</l>
+</lg>
+
+<lg>
+<l>āryasya sādhoḥ karuṇātmakasya mannityabhīroratidakṣiṇasya /</l>
+<l>kuto vikāro 'yamabhūtapūrvaḥ svenāparāgeṇa mamāpacārāt // Saund_6.14 //</l>
+</lg>
+
+<lg>
+<l>ratipriyasya priyavartino me priyasya nūnaṃ hṛdaya viraktam /</l>
+<l>tathāpi rāgo yadi tasya hi syān maccittarakṣī na sa nāgataḥ syāt // Saund_6.15 //</l>
+</lg>
+
+<lg>
+<l>rūpeṇa bhāvena ca madviśiṣṭā priyeṇa dṛṣṭā niyataṃ tato 'nyā /</l>
+<l>tathā hi kṛtvā mayi moghasāntvaṃ lagnāṃ satiṃ māmāgamad vihāya // Saund_6.16 //</l>
+</lg>
+
+<lg>
+<l>bhaktiṃ sa buddhaṃ prati yāvavocattasya prayātuṃ mayi so 'padeśaḥ /</l>
+<l>munau prasādo yadi tasya hi syānmṛtyorivogrādanṛtād bibhīyāt // Saund_6.17 //</l>
+</lg>
+
+<lg>
+<l>sevārthamādarśanamanyacitto vibhūṣayantyā mama dhārayitvā /</l>
+<l>bibharti so 'nyasya janasya taṃ cennamo 'stu tasmai calasauhṛdāya // Saund_6.18 //</l>
+</lg>
+
+<lg>
+<l>necchanti yāḥ śokamavāptumevaṃ śraddhātumarhanti na tā narāṇām /</l>
+<l>kva cānuvṛttirmayi sāsya pūrvaṃ tyāgaḥ kva cāyaṃ janavat kṣaṇena // Saund_6.19 //</l>
+</lg>
+
+<lg>
+<l>ityevamādi priyaviprayuktā priye 'nyadāśaṅkya ca sā jagāda /</l>
+<l>saṃbhrāntamāruhya ca tadvimānaṃ tāṃ strī sabāṣpā giramityuvāca // Saund_6.20 //</l>
+</lg>
+
+<lg>
+<l>yuvāpi tāvat priyadarśano 'pi saubhāgyabhāgyābhijanānvito 'pi /</l>
+<l>yastvāṃ priyo nābhyacarat kadācittamanyathā yāsyatikātarāsi // Saund_6.21 //</l>
+</lg>
+
+<lg>
+<l>mā svāminaṃ svāmini doṣato gāḥ priyaṃ priyārhaṃ priyakāriṇaṃ tam /</l>
+<l>na sa tvadanyāṃ pramadāmavaiti svacakravākyā iva cakravākaḥ // Saund_6.22 //</l>
+</lg>
+
+<lg>
+<l>sa tu tvadarthaṃ gṛhavāsamīpsan jijīviṣustvatparitoṣahetoḥ /</l>
+<l>bhrātrā kilāryeṇa tathāgatena pravrājito netrajalārdravaktraḥ // Saund_6.23 //</l>
+</lg>
+
+<lg>
+<l>śrutvā tato bhartari tāṃ pravṛttiṃ savepathuḥ sā sahasotpapāt /</l>
+<l>pragṛhya bāhū virurāva coccairhṛdīva digdhābhihata kareṇuḥ // Saund_6.24 //</l>
+</lg>
+
+<lg>
+<l>sā rodanāroṣitaraktadṛṣṭiḥ saṃtāpasaṃkṣobhitagātrayaṣṭiḥ /</l>
+<l>papāta śīrṇākulahārayaṣṭiḥ phalātibhārādiva cūtayaṣṭiḥ // Saund_6.25 //</l>
+</lg>
+
+<lg>
+<l>sā padmarāgaṃ vasanaṃ vasānā padmānanā padmadalāyatākṣī /</l>
+<l>padmā vipadmā patiteva lakṣmīḥ śuśoṣa padmasragivātapena // Saund_6.26 //</l>
+</lg>
+
+<lg>
+<l>saṃcintya sacintya guṇāṃśca bharturdīrghaṃ niśaśvāsa tatāma caiva /</l>
+<l>vibhūṣaṇaśrīnihite prakoṣṭhe tāmre karāgre ca vinirdudhāva // Saund_6.27 //</l>
+</lg>
+
+<lg>
+<l>na bhūṣaṇārtho mama saṃpratīti sā dikṣu cikṣepa vibhūṣaṇāni /</l>
+<l>nirbhūṣaṇā sā patitā cakāśe viśīrṇapuṣpastabakā lateva // Saund_6.28 //</l>
+</lg>
+
+<lg>
+<l>dhṛtaḥ priyeṇāyamabhūnmameti rukmatsaruṃ darpaṇamāliliṅge /</l>
+<l>yatnācca vinyastatamālapatrau ruṣṭeva dhṛṣṭaṃ pramamājaṃ gaṇḍau // Saund_6.29 //</l>
+</lg>
+
+<lg>
+<l>sā cakravākīva bhṛśaṃ cukūja śyenāgrapakṣakṣatacakravākā /</l>
+<l>vispardhamāneva vimānasaṃsthaiḥ pārāvataiḥ kūjanalolakaṇṭhaiḥ // Saund_6.30 //</l>
+</lg>
+
+<lg>
+<l>vicitramṛdvāstaraṇe 'pi suptā vaiḍūryavajrapratimaṇḍite 'pi /</l>
+<l>rukmāṅgapāde śayane mahārhe na śarma lebhe pariceṣṭamānā // Saund_6.31 //</l>
+</lg>
+
+<lg>
+<l>sandṛśya bhartuśca vibhūṣaṇāni vāsāṃsi vīṇāprabhṛtīṃśca līlāḥ /</l>
+<l>tamo viveśābhinanāda coccaiḥ paṅkāvatīrṇeva ca saṃsasāda // Saund_6.32 //</l>
+</lg>
+
+<lg>
+<l>sā sundarī śvāsacalodarī hi vajrāgnisaṃbhinnadarīguheva /</l>
+<l>śokāgnināntarhṛdi dahyamānā vibhrāntacitteva tadā babhūva // Saund_6.33 //</l>
+</lg>
+
+<lg>
+<l>ruroda mamlau virurāva jaglau babhrāma tasthau vilalāpa dadhyau /</l>
+<l>cakāra roṣaṃ vicakāra mālyaṃ cakarta vaktraṃ vicakarṣa vastram // Saund_6.34 //</l>
+</lg>
+
+<lg>
+<l>tāṃ cārudantīṃ prasabhaṃ rudantīṃ saṃśrutya nāryaḥ paramābhitaptāḥ /</l>
+<l>antargṛhādāruruhurvimānaṃ trāsena kinnarya ivādripṛṣṭham // Saund_6.35 //</l>
+</lg>
+
+<lg>
+<l>bāṣpeṇa tāḥ klinnaviṣaṇṇavaktrā varṣeṇa padminya ivārdrapadmāḥ /</l>
+<l>sthānānurūpeṇa yathābhimānaṃ nililyire tāmanudahyamānāḥ // Saund_6.36 //</l>
+</lg>
+
+<lg>
+<l>tābhirvṛtā harmyatale 'ṅganābhiścintātanuḥ sā sutanurbabhāse /</l>
+<l>śatahradābhiḥ pariveṣṭiteva śaśāṅkalekhā śaradabhramadhye // Saund_6.37 //</l>
+</lg>
+
+<lg>
+<l>yā tatra tāsāṃ vacasopapannā mānyā ca tasyā vayasādhikā ca /</l>
+<l>sā pṛṣṭhatastāṃ tu samāliliṅge pramṛjya cāśrūṇi vacāṃsyuvāca // Saund_6.38 //</l>
+</lg>
+
+<lg>
+<l>rājarṣivadhvāstava nānurūpo dharmāśrite bhartari jātu śokaḥ /</l>
+<l>ikṣvākuvaṃśe hyabhikāṅkṣitāni dāyādyabhūtāni tapovanāni // Saund_6.39 //</l>
+</lg>
+
+<lg>
+<l>prāyeṇa mokṣāya viniḥsṛtānāṃ śākyarṣabhāṇāṃ viditāḥ striyaste /</l>
+<l>tapovanānīva gṛhāṇi yāsāṃ sādhvīvrataṃ kāmavadāśritānām // Saund_6.40 //</l>
+</lg>
+
+<lg>
+<l>yadyanyayā rūpaguṇādhikatvād bharttā hṛtaste kuru bāṣpamokṣam /</l>
+<l>manasvinī rūpavatī guṇāḍhyā hṛdi kṣate kātra hi nāśru muñcet // Saund_6.41 //</l>
+</lg>
+
+<lg>
+<l>athāpi kiṃcid vyasanaṃ prapanno mā caiva tad bhūt sadṛśo 'tra bāṣpaḥ /</l>
+<l>ato viśiṣṭaṃ na hi duḥkhamasti kulodgatāyāḥ patidevatāyāḥ // Saund_6.42 //</l>
+</lg>
+
+<lg>
+<l>atha tvidānīṃ laḍitaḥ sukhena svasthaḥ phalastho vyasanānyadṛṣṭvā /</l>
+<l>vītaspṛho dharmamanuprapannaḥ kiṃ viklavā rodiṣi harṣakāle // Saund_6.43 //</l>
+</lg>
+
+<lg>
+<l>ityevamuktāpi bahuprakāraṃ snehāttayā naiva dhṛtiṃ cakāra /</l>
+<l>athāparā tāṃ manaso 'nukūlaṃ kālopapannaṃ praṇayāduvāca // Saund_6.44 //</l>
+</lg>
+
+<lg>
+<l>bravīmi satyaṃ suviniścitaṃ me prāptaṃ priyaṃ drakṣyasi śīghrameva /</l>
+<l>tvayā vinā sthāsyati tatra nāsau sattvāśrayaścetanayeva hīnaḥ // Saund_6.45 //</l>
+</lg>
+
+<lg>
+<l>aṅke 'pi lakṣmyā na sa nirvṛtaḥ syāt tvaṃ tasya pārśve yadi tatra na syāḥ /</l>
+<l>āpatsu kṛcchrāsvapi cāgatāsu tvāṃ paśyatastasya bhavenna duḥkham // Saund_6.46 //</l>
+</lg>
+
+<lg>
+<l>tvaṃ nirvṛtiṃ gaccha niyaccha bāṣpaṃ taptāśrumokṣāt parirakṣa cakṣuḥ /</l>
+<l>yastasya bhāvastvayi yaśca rāgo na raṃsyate tvadvirahāt sa dharme // Saund_6.47 //</l>
+</lg>
+
+<lg>
+<l>syādatra nāsau kulasattvayogāt kāṣāyamādāya vihāsyatīti /</l>
+<l>anātmanādāya gṛhonmukhasya punarvimoktuṃ ka ivāsti doṣaḥ // Saund_6.48 //</l>
+</lg>
+
+<lg>
+<l>iti yuvatijanena sāntvyamānā hṛtahṛdayā ramaṇena sundarī sā /</l>
+<l>dramiḍamabhimukhī pureva rambhā kṣitimagamat parivāritāpsarobhiḥ // Saund_6.49 //</l>
+</lg>
+
+<p>saundarananda mahākāvye "bhāryāvilāpa" nāma ṣaṣṭha sarga samāpta /</p>
+
+</div>
+<div>
+
+<p>saptamaḥ sargaḥ
+nandavilāpa</p>
+
+<lg>
+<l>liṅgaṃ tataḥ śāstṛvidhipradiṣṭaṃ gātreṇa bibhranna tu cetasā tat /</l>
+<l>bhāryāgataireva manovitarkairjehrīyamāṇo na nananda nandaḥ // Saund_7.1 //</l>
+</lg>
+
+<lg>
+<l>sa puṣpamāsasya ca puṣpalakṣmyā sarvābhisāreṇa ca puṣpaketoḥ /</l>
+<l>yānīyabhāvena ca yauvanasya vihārasaṃstho na śamaṃ jagāma // Saund_7.2 //</l>
+</lg>
+
+<lg>
+<l>sthitaḥ saḥ dīnaḥ sahakāravīthyāmālīnasaṃmūrcchitaṣaṭpadāyām /</l>
+<l>bhṛśaṃ jajṛmbhe yugadīrghabāhurdhyātvā priyāṃ cāpamivācakarṣa // Saund_7.3 //</l>
+</lg>
+
+<lg>
+<l>sa pītakakṣodamiva pratīcchan cūtadrumebhyastanupuṣpavarṣam /</l>
+<l>dīrghaṃ niśaśvāsa vicintya bhāryāṃ navagraho nāga ivāvaruddhaḥ // Saund_7.4 //</l>
+</lg>
+
+<lg>
+<l>śokasya hartā śaraṇāgatānāṃ śokasya karttā pratigarvitānām /</l>
+<l>aśokamālambya sa jātaśokaḥ priyāṃ priyāśokakavanāṃ śuśoca // Saund_7.5 //</l>
+</lg>
+
+<lg>
+<l>priyāṃ priyāyāḥ pratanuṃ priyaṅguṃ niśāmya bhītāmiva niṣpatantīm /</l>
+<l>sasmāra tāmaśrumukhīṃ sabāṣpaḥ priyāṃ priyaṅguprasavāvadātām // Saund_7.6 //</l>
+</lg>
+
+<lg>
+<l>puṣpāvanaddhe tilakadrumasya dṛṣṭvānyapuṣṭāṃ śikhare niviṣṭām /</l>
+<l>saṃkalpayāmāsa śikhāṃ priyāyāḥ śuklāṃśuke 'ṭṭālapāśritāyāḥ // Saund_7.7 //</l>
+</lg>
+
+<lg>
+<l>latāṃ praphullāmatimuktakasya cūtasya pārśve parirabhya jātām /</l>
+<l>niśāmya cintāmagamattadaivaṃ śliṣṭā bhavenmāmapi sundarīti // Saund_7.8 //</l>
+</lg>
+
+<lg>
+<l>puṣpotkarālā api nāgavṛkṣā dāntaiḥ samudgairiva hemagarbhaiḥ /</l>
+<l>kāntāravṛkṣā iva duḥkhitasya na cakṣurācikṣipurasya tatra // Saund_7.9 //</l>
+</lg>
+
+<lg>
+<l>gandhaṃ vamanto 'pi ca gandhaparṇā gandharvaveśyā iva gandhapūrṇāḥ /</l>
+<l>tasyānyacittasya śugātmakasya ghrāṇaṃ na janhurhṛdayaṃ pratepuḥ // Saund_7.10 //</l>
+</lg>
+
+<lg>
+<l>saṃraktakaṇṭhaiśca vinīlakaṇṭhaistuṣṭaiḥ prahṛṣṭairapi cānyapuṣṭaiḥ /</l>
+<l>lelihyamānaiśca madhu dvirephaiḥ svanadvanaṃ tasya mano nunoda // Saund_7.11 //</l>
+</lg>
+
+<lg>
+<l>sa tatra bhāryāraṇisaṃbhavena vitarkadhūmena tamaḥśikhena /</l>
+<l>kāmāgnināntarhṛdi dahyamāno vihāya dhairyaṃ vilalāpa tattat // Saund_7.12 //</l>
+</lg>
+
+<lg>
+<l>adyāvagacchāmi suduṣkaraṃ te cakruḥ kariṣyanti ca kurvate ca /</l>
+<l>tyaktvā priyāmaśrumukhīṃ tapo ye cerūścariṣyanti caranti caiva // Saund_7.13 //</l>
+</lg>
+
+<lg>
+<l>tāvad dṛḍhaṃ bandhanamasti loke na dāravaṃ tāntavamāyasaṃ vā /</l>
+<l>yāvad dṛḍhaṃ bandhanametadeva mukhaṃ calākṣaṃ lalitaṃ ca vākyam // Saund_7.14 //</l>
+</lg>
+
+<lg>
+<l>chittvā ca bhittvā ca hi yānti tāni svapauruṣāccaiva suhṛdbalācca /</l>
+<l>jñānācca raukṣyācca vinā vimoktuṃ na śakyate snehamayastu pāśaḥ // Saund_7.15 //</l>
+</lg>
+
+<lg>
+<l>jñānaṃ na me tacca śamāya yat syānna na cāsti raukṣyaṃ karuṇātmako 'smi /</l>
+<l>kāmātmakaścāsmi guruśca buddhaḥ sthito 'ntare cakragaterivāsmi // Saund_7.16 //</l>
+</lg>
+
+<lg>
+<l>ahaṃ gṛhītvāpi hi bhikṣuliṅgaṃ bhrātṝṣiṇā dviguruṇānuśiṣṭaḥ /</l>
+<l>sarvāsvavasthāsu labhe na śāntiṃ priyāviyogādiva cakravākaḥ // Saund_7.17 //</l>
+</lg>
+
+<lg>
+<l>adyāpi tanme hṛdi vartate ca yaddarpaṇe vyākulite mayā sā /</l>
+<l>kṛtānutakrodhakamabravīnmāṃ kathaṃkṛto 'sīti śaṭhaṃ hasantī // Saund_7.18 //</l>
+</lg>
+
+<lg>
+<l>yathaiṣyanāśyānaviśeṣakāyāṃ mayīti yanmāmavadacca sāśru /</l>
+<l>pāriplavākṣeṇa mukhena bālā tanme vaco 'dyāpi mano ruṇaddhi // Saund_7.19 //</l>
+</lg>
+
+<lg>
+<l>buddhvāsanaṃ parvatanirjharasthaḥ svastho yathā dhyāyati bhikṣureṣaḥ /</l>
+<l>saktaḥ kvacinnāhamivaiṣa nūnaṃ śāntastathā tṛpta ivopaviṣṭaḥ // Saund_7.20 //</l>
+</lg>
+
+<lg>
+<l>puṃskokilānāmavicintya ghoṣaṃ vasantalakṣmyāmavicārya cakṣuḥ /</l>
+<l>śāstraṃ yathābhyasyati caiṣa yuktaḥ śaṅke priyākarṣati nāsya cetaḥ // Saund_7.21 //</l>
+</lg>
+
+<lg>
+<l>asmai namo 'stu sthiraniścayāya nivṛttakautūhalavismayāya /</l>
+<l>śāntātmane 'ntargatamānāsāya caṅkramyamāṇāya nirutsukāya // Saund_7.22 //</l>
+</lg>
+
+<lg>
+<l>nirīkṣamāṇasya jalaṃ sapadmaṃ vanaṃ ca phullaṃ parapuṣṭajuṣṭam /</l>
+<l>kasyāsti dhairyaṃ navayauvanasya māse madhau dharmasapatnabhūte // Saund_7.23 //</l>
+</lg>
+
+<lg>
+<l>bhāvena garveṇa gatena lakṣmyā smitena kopena madena vāgbhiḥ /</l>
+<l>jahruḥ striyo devanṛparṣisaṃghān kasmāddhi nāsmadvidhamākṣipeyuḥ // Saund_7.24 //</l>
+</lg>
+
+<lg>
+<l>kāmābhibhūto hi hiraṇyaretāḥ svāhāṃ siṣeve madhavānahalyām /</l>
+<l>sattvena sargeṇa ca tena hīnaḥ strinirjitaḥ kiṃ bata mānuṣo 'ham // Saund_7.25 //</l>
+</lg>
+
+<lg>
+<l>sūryaḥ saraṇyūṃ prati jātarāgastatprītaye taṣṭa iti śrutaṃ naḥ /</l>
+<l>ratamaśvabhūto 'śvavadhūṃ sametya yato 'śvinau tau janayāṃbabhūva // Saund_7.26 //</l>
+</lg>
+
+<lg>
+<l>strīkāraṇaṃ vairaviśaktabuddhyorvaivasvatāgnyoścalitātmadhṛtyoḥ /</l>
+<l>bahūni varṣāṇi babhūva yuddhaṃ kaḥ strīnimittaṃ na caledihānyaḥ // Saund_7.27 //</l>
+</lg>
+
+<lg>
+<l>bheje śvapākīṃ munirakṣamālāṃ kāmādvasiṣṭhaśca sa sadvariṣṭhaḥ /</l>
+<l>yasyāṃ vivaśvāniva bhūjalādaḥ sutaḥ prasūto 'sya kapiñjalādaḥ // Saund_7.28 //</l>
+</lg>
+
+<lg>
+<l>parāśaraḥ śāpaśarastatharṣiḥ kālīṃ siṣeve jhaṣagarbhayonim /</l>
+<l>suto 'sya yasyāṃ suṣuve mahātmā dvaipāyano vedavibhāgakarttā // Saund_7.29 //</l>
+</lg>
+
+<lg>
+<l>dvaipāyano dharmaparāyaṇaśca reme samaṃ kāśiṣu veśyavadhvā /</l>
+<l>yayā hato 'bhūccalanūpureṇa pādena vidyullatayeva meghaḥ // Saund_7.30 //</l>
+</lg>
+
+<lg>
+<l>tathāṅgirā rāgaparītacetāḥ sarasvatīṃ brahmasutaḥ siṣeve /</l>
+<l>sārasvato yatra suto 'sya jajñe naṣṭasya vedasya punaḥpravaktā // Saund_7.31 //</l>
+</lg>
+
+<lg>
+<l>tathā nṛparṣerdilīpasya yajñe svargastriyāṃ kāśyapa āgatāsthaḥ /</l>
+<l>sruvaṃ gṛhītvā sravadātmatejaścikṣepa vahrāvasito yato 'bhūt // Saund_7.32 //</l>
+</lg>
+
+<lg>
+<l>tathāṅgado 'ntaṃ tapaso 'pi gatvā kāmābhibhūto yamunāmagacchat /</l>
+<l>dhīmattaraṃ yatra rathītaraṃ sa sāraṅgajuṣṭaṃ janayāmbabhūva // Saund_7.33 //</l>
+</lg>
+
+<lg>
+<l>niśāmya śāntāṃ naradevakanyāṃ vane 'pi śānte 'pi ca vartamānaḥ /</l>
+<l>cacāla dhairyānmuniṛṣyaśrṛṅgaḥ śailo mahīkampa ivoccaśrṛṅgaḥ // Saund_7.34 //</l>
+</lg>
+
+<lg>
+<l>brahmarṣibhāvārthamapāsya rājyaṃ bheje vanaṃ yo viṣayeṣvanāsthaḥ /</l>
+<l>sa gādhijaścāpahṛto ghṛtācyā samā daśaikaṃ divasaṃ viveda // Saund_7.35 //</l>
+</lg>
+
+<lg>
+<l>tathaiva kandarpaśarābhimṛṣṭo rambhāṃ prati sthūlaśirā mumūrccha /</l>
+<l>yaḥ kāmaroṣātmatayānapekṣaḥ śaśāpa tāmapratigṛhyamāṇaḥ // Saund_7.36 //</l>
+</lg>
+
+<lg>
+<l>pramadvarāyāṃ ca ruruḥ priyāyāṃ bhujaṅgamenāpahṛtendriyāyām /</l>
+<l>saṃdṛśya saṃdṛśya jaghāna sarpān priyaṃ na roṣeṇa tapo rarakṣa // Saund_7.37 //</l>
+</lg>
+
+<lg>
+<l>naptā śaśāṅkasya yaśoguṇāṅko budhasya sūnurvibudhaprabhāvaḥ /</l>
+<l>tathorvaśīmapsarasaṃ vicintya rājarṣirunmādamagacchadaiḍaḥ // Saund_7.38 //</l>
+</lg>
+
+<lg>
+<l>rakto girermūrdhani menakāyāṃ kāmātmakatvācca sa tālajaṅghaḥ /</l>
+<l>pādena viśvāvasunā saroṣaṃ vajreṇa hintāla ivābhijaghne // Saund_7.39 //</l>
+</lg>
+
+<lg>
+<l>nāśaṃ gatāyāṃ paramāṅganāyāṃ gaṃgājale 'naṅgaparītacetāḥ /</l>
+<l>janhuśca gaṅgāṃ nṛpatirbhujābhyāṃ rurodha maināka ivācalendraḥ // Saund_7.40 //</l>
+</lg>
+
+<lg>
+<l>nṛpaśca gaṅgāvirahājjughūrṇa gaṅgāmbhasā sāla ivāttamūlaḥ /</l>
+<l>kulapradīpaḥ pratipasya sūnuḥ śrīmattanuḥ śantanurasvatantraḥ // Saund_7.41 //</l>
+</lg>
+
+<lg>
+<l>hṛtāṃ ca saunandakinānu 'śocan prāptāmivorvīṃ striyamurvaśīṃ tām /</l>
+<l>sadvṛttavarmā kila somavarmā babhrāma citodbhavabhinnavarmā // Saund_7.42 //</l>
+</lg>
+
+<lg>
+<l>bhāryāṃ mṛtāṃ cānumamāra rājā bhīmaprabhāvo bhuvi bhīmakaḥ saḥ /</l>
+<l>balena senāka iti prakāśaḥ senāpatirdeva ivāttasenaḥ // Saund_7.43 //</l>
+</lg>
+
+<lg>
+<l>svargaṃ gate bhartari śantanau ca kālīṃ jihīrṣan janamejayaḥ saḥ /</l>
+<l>avāpa bhīṣmāt samavetya mṛtyuṃ na tadgataṃ manmathamutsasarja // Saund_7.44 //</l>
+</lg>
+
+<lg>
+<l>śaptaśca pāṇḍurmadanena nūnaṃ strīsaṃgame mṛtyumavāpsyasīti /</l>
+<l>jagāma mādrīṃ na maharṣiśāpādasevyasevī vimamarśa mṛtyum // Saund_7.45 //</l>
+</lg>
+
+<lg>
+<l>evaṃvidhā devanṛparṣisaṅghāḥ strīṇāṃ vaśaṃ kāmavaśena jagmuḥ /</l>
+<l>dhiyā ca sāreṇa ca durbalaḥ san priyāmapaśyan kimu viklavo 'ham // Saund_7.46 //</l>
+</lg>
+
+<lg>
+<l>yāsyāmi tasmād gṛhameva bhūyaḥ kāmaṃ kariṣye vidhivat sakāmam /</l>
+<l>na hyanyacittasya calendriyasya liṅgaṃ kṣamaṃ dharmapathāccyutasya // Saund_7.47 //</l>
+</lg>
+
+<lg>
+<l>pāṇau kapālamavadhārya vidhāya mauṇḍyaṃ mānaṃ nidhāya vikṛtaṃ paridhāya vāsaḥ /</l>
+<l>yasyoddhavo na dhṛtirasti na śāntirasti citrapradīpa iva so 'sti ca nāsti caiva // Saund_7.48 //</l>
+</lg>
+
+<lg>
+<l>yo niḥsṛtaśca na ca niḥsṛtakāmarāgaḥ kāṣāyamudvahati yo na ca niṣkaṣāyaḥ /</l>
+<l>pātraṃ bibharti ca guṇairna ca pātrabhūto liṅgaṃ vahannapi sa naiva gṛhī na bhikṣuḥ // Saund_7.49 //</l>
+</lg>
+
+<lg>
+<l>na nyāyyamanvayavataḥ parigṛhya liṅgaṃ bhūyo vimoktumiti yo 'pi hi me vicāraḥ /</l>
+<l>so 'pi praṇaśyati vicintya nṛpapravīrāstānye tapovanamapāsya gṛhāṇyatīyuḥ // Saund_7.50 //</l>
+</lg>
+
+<lg>
+<l>śālbādhipo hi sasuto 'pi tathāmbarīṣo rāmo 'ndha eva sa ca sāṃskṛtirantidevaḥ /</l>
+<l>cīrāṇyapāsya dadhire punaraṃśukāni chittvā jaṭāśca kuṭilā mukuṭāni babhruḥ // Saund_7.51 //</l>
+</lg>
+
+<lg>
+<l>tasmād bhikṣārthaṃ mama gururito yāvadeva prayātas</l>
+<l>tyaktvā kāṣāyaṃ ṛhamahamitastāvadeva prayāsye /</l>
+<l>pūjyaṃ liṅgaṃ hi skhalitamanaso bibhrataḥ kliṣṭabuddher</l>
+<l>nāmutrārthaḥ syādupahatamaternāpyayaṃ jīvalokaḥ // Saund_7.52 //</l>
+</lg>
+
+<p>saundarananda mahākāvye "nandavilāpa" nāma saptama sarga samāpta /</p>
+
+</div>
+<div>
+
+<p>aṣṭamaḥ sargaḥ
+strīvighna</p>
+
+<lg>
+<l>atha nandamadhīralocanaṃ gṛhayānotsukamutsukotsukam /</l>
+<l>abhigamya śivena cakṣuṣā śramaṇaḥ kaściduvāca maitrayā // Saund_8.1 //</l>
+</lg>
+
+<lg>
+<l>kimidaṃ mukhamaśrudurdinaṃ hṛdayasthaṃ vivṛṇoti te tamaḥ /</l>
+<l>dhṛtimehi niyaccha vikriyāṃ na hi bāṣpaśca śamaśca śobhate // Saund_8.2 //</l>
+</lg>
+
+<lg>
+<l>dvividhā samudeti vedanā niyataṃ cetasi deha eva ca /</l>
+<l>śrutavidhyupacārakovidā dvividhā eva tayościkitsakāḥ // Saund_8.3 //</l>
+</lg>
+
+<lg>
+<l>tadiyaṃ yadi kāyikī rujā bhiṣaje tūrṇamanūnamucyatām /</l>
+<l>viniguhya hi rogamāturo nacirāttīvramanarthamṛcchati // Saund_8.4 //</l>
+</lg>
+
+<lg>
+<l>atha duḥkhamidaṃ manomayaṃ vada vakṣyāmi yadatra bheṣajam /</l>
+<l>manaso hi rajastamasvino bhiṣajo 'dhyātmavidaḥ parīkṣakāḥ // Saund_8.5 //</l>
+</lg>
+
+<lg>
+<l>nikhilena ca satyamucyatāṃ yadi vācyaṃ mayi saumya manyase /</l>
+<l>gatayo vividhā hi cetasāṃ bahuguhyāni mahākulāni ca // Saund_8.6 //</l>
+</lg>
+
+<lg>
+<l>iti tena sa coditastadā vyavasāyaṃ pravivakṣurātmanaḥ /</l>
+<l>avalambya kare kareṇa taṃ praviveśānyatarad vanāntaram // Saund_8.7 //</l>
+</lg>
+
+<lg>
+<l>atha tatra śucau latāgṛhe kusumodgāriṇi tau niṣedatuḥ /</l>
+<l>mṛdubhirmṛdumāruteritairupagūḍhāviva bālapallavaiḥ // Saund_8.8 //</l>
+</lg>
+
+<lg>
+<l>sa jagāda tataścikīrṣitaṃ ghananiśvāsagṛhītamantarā /</l>
+<l>śrutavāgviśadāya bhikṣave viduṣā pravrajitena durvacam // Saund_8.9 //</l>
+</lg>
+
+<lg>
+<l>sadṛśaṃ yadi dharmacāriṇaḥ satataṃ prāṇiṣu maitracetasaḥ /</l>
+<l>adhṛtau yadiyaṃ hitaiṣitā mayi te syāt karuṇātmanaḥ sataḥ // Saund_8.10 //</l>
+</lg>
+
+<lg>
+<l>ata eva ca me viśeṣataḥ pravivakṣā kṣamavādini tvayi /</l>
+<l>na hi bhāvamimaṃ calātmane kathayeyaṃ bruvate 'pyasādhave // Saund_8.11 //</l>
+</lg>
+
+<lg>
+<l>tadidaṃ śrṛṇu me samāsato na rame dharmavidhāvṛte priyām /</l>
+<l>girisānuṣu kāminīmṛte kṛtaretā iva kinnaraścaran // Saund_8.12 //</l>
+</lg>
+
+<lg>
+<l>vanavāsasukhāt parāṅmukhaḥ prayiyāsā gṛhameva yena me /</l>
+<l>na hi śarma labhe tayā binā nṛpatirhīna ivottamaśriyā // Saund_8.13 //</l>
+</lg>
+
+<lg>
+<l>atha tasya niśamya tadvacaḥ priyabhāryābhimukhasya śocataḥ /</l>
+<l>śramaṇaḥ sa śiraḥ prakampayannijagādātmagataṃ śanairidam // Saund_8.14 //</l>
+</lg>
+
+<lg>
+<l>kṛpaṇaṃ bata yūthalālaso mahato vyādhabhayād viniḥsṛtaḥ /</l>
+<l>pravivikṣati vāgurāṃ mṛgaścapalo gītaraveṇa vañcitaḥ // Saund_8.15 //</l>
+</lg>
+
+<lg>
+<l>vihagaḥ khalu jālasaṃvṛto hitakāmena janena mokṣitaḥ /</l>
+<l>vicaran phalapuṣpavadvanaṃ pravivikṣuḥ svayameva pañcaram // Saund_8.16 //</l>
+</lg>
+
+<lg>
+<l>kalabhaḥ kariṇā khalūddhṛtoḥ bahupaṅkād viṣamānnadītalāt /</l>
+<l>jalatarṣavaśena tāṃ punaḥ saritaṃ grāhavatīṃ titīrṣati // Saund_8.17 //</l>
+</lg>
+
+<lg>
+<l>śaraṇe sabhujaṅgame svapan pratibuddhena pareṇa bodhitaḥ /</l>
+<l>taruṇaḥ khalu jātavibhramaḥ svayamugraṃ bhujagaṃ jighṛkṣati // Saund_8.18 //</l>
+</lg>
+
+<lg>
+<l>mahatā khalu jātavedasā jvalitādutpatito vanadrumāt /</l>
+<l>punaricchati nīḍatṛṣṇayā patituṃ tatra gatavyatho dvijaḥ // Saund_8.19 //</l>
+</lg>
+
+<lg>
+<l>avaśaḥ khalu kāmamūrcchayā priyayā śyenabhayād vinākṛtaḥ /</l>
+<l>na dhṛtiṃ samupaiti na hriyaṃ karuṇaṃ jīvati jīvajīvakaḥ // Saund_8.20 //</l>
+</lg>
+
+<lg>
+<l>akṛtātmatayā tṛṣānvito ghṛṇayā caiva dhiyā ca varjitaḥ /</l>
+<l>aśanaṃ khalu vāntamātmanā kṛpaṇaḥ śvā punarattumicchati // Saund_8.21 //</l>
+</lg>
+
+<lg>
+<l>iti manmathaśokakarṣitaṃ tamanudhyāya muhurnirīkṣya ca /</l>
+<l>śramaṇaḥ sa hitābhikāṅkṣayā guṇavad vākyamuvāca vipriyam // Saund_8.22 //</l>
+</lg>
+
+<lg>
+<l>avicārayataḥ śubhāśubhaṃ viṣayeṣveva niviṣṭacetasaḥ /</l>
+<l>upapannamalabdhacakṣuṣo na ratiḥ śreyasi ced bhavettava // Saund_8.23 //</l>
+</lg>
+
+<lg>
+<l>śravaṇe grahaṇe 'tha dhāraṇe paramārthāvagame manaḥśame /</l>
+<l>aviṣaktamateścalātmano na hi dharme 'bhiratirvidhīyate // Saund_8.24 //</l>
+</lg>
+
+<lg>
+<l>viṣayeṣu tu doṣadarśinaḥ parituṣṭasya śuceramāninaḥ /</l>
+<l>śamakarmasu yuktacetasaḥ kṛtabuddhena ratirna vidyate // Saund_8.25 //</l>
+</lg>
+
+<lg>
+<l>ramate tṛṣito dhanaśriyā ramate kāmasukhena bāliśaḥ /</l>
+<l>ramate praśamena sajjanaḥ paribhogān paribhūya vidyayā // Saund_8.26 //</l>
+</lg>
+
+<lg>
+<l>api ca prathitasya dhīmataḥ kulajasyārcitaliṅgadhāriṇaḥ /</l>
+<l>sadṛśī na gṛhāya cetanā praṇatirvāyuvaśad gireriva // Saund_8.27 //</l>
+</lg>
+
+<lg>
+<l>spṛhayet parasaṃśritāya yaḥ paribhūyātmavaśāṃ svatantratām /</l>
+<l>upaśāntipathe śive sthitaḥ spṛhayeddoṣavate gṛhāya saḥ // Saund_8.28 //</l>
+</lg>
+
+<lg>
+<l>vyasanābhihato yathā viśet parimuktaḥ punareva bandhanam /</l>
+<l>samupetya vanaṃ tathā punargṛhasaṃjñaṃ mṛgayeta bandhanam // Saund_8.29 //</l>
+</lg>
+
+<lg>
+<l>puruṣaśca vihāya yaḥ kaliṃ punaricchet kalimeva sevitum /</l>
+<l>sa vihāya bhajeta bāliśaḥ kalibhūtāmajitendriyaḥ priyām // Saund_8.30 //</l>
+</lg>
+
+<lg>
+<l>saviṣā iva saṃśritā latāḥ parimṛṣṭā iva soragā guhāḥ /</l>
+<l>vivṛtā iva cāsayo dhṛtā vyasanāntā hi bhavanti yoṣitaḥ // Saund_8.31 //</l>
+</lg>
+
+<lg>
+<l>pramadāḥ samadā madapradāḥ pramadā vitamadā bhayapradāḥ /</l>
+<l>iti doṣabhayāvahāśca tāḥ kathamarhanti niṣevaṇaṃ nu tāḥ // Saund_8.32 //</l>
+</lg>
+
+<lg>
+<l>svajanaḥ svajanena bhidyate suhadaścāpi suhṛjjanena yat /</l>
+<l>paradoṣavicakṣaṇāḥ śaṭhāstadanāryāḥ pracaranti yoṣitaḥ // Saund_8.33 //</l>
+</lg>
+
+<lg>
+<l>kulajāḥ kṛpaṇībhavanti yadyadayuktaṃ pracaranti sāhasam /</l>
+<l>praviśanti ca yaccamūmukhaṃ rabhasāstatra nimittamaṅganāḥ // Saund_8.34 //</l>
+</lg>
+
+<lg>
+<l>vacanena haranti valgunā niśitena praharanti cetasā /</l>
+<l>madhu tiṣṭhati vāci yoṣitāṃ hṛdaye hālahalaṃ mahadviṣaśam // Saund_8.35 //</l>
+</lg>
+
+<lg>
+<l>pradahan dahano 'pi gṛhyate viśarīraḥ pavano 'pi gṛhyate /</l>
+<l>kupito bhujago 'pi gṛhyate pramadānāṃ tu mano na gṛhyate // Saund_8.36 //</l>
+</lg>
+
+<lg>
+<l>na vapurvimṛśanti na śriyaṃ na matiṃ nāpi kulaṃ na vikramam /</l>
+<l>praharantyaviśeṣataḥ striyaḥ sarito grāhakulākulā iva // Saund_8.37 //</l>
+</lg>
+
+<lg>
+<l>na vaco madhuraṃ na lālanaṃ smarati strī na ca sauhṛdaṃ kvacit /</l>
+<l>kalitā vanitaiva cañcalā tadihāriṣviva nāvalambyate // Saund_8.38 //</l>
+</lg>
+
+<lg>
+<l>adadatsu bhavanti narmadāḥ pradadatsu praviśanti vibhramam /</l>
+<l>praṇateṣu bhavanti garvitāḥ pramadāstṛptatarāśca māniṣu // Saund_8.39 //</l>
+</lg>
+
+<lg>
+<l>guṇavatsu caranti bhartṛvad guṇahīneṣu caranti putravat /</l>
+<l>dhanavatsu caranti tṛṣṇayā dhanahīneṣu carantyavajñayā // Saund_8.40 //</l>
+</lg>
+
+<lg>
+<l>viṣayād viṣayāntaraṃ gatā pracaratyeva yathā hṛtāpi gau /</l>
+<l>anavekṣitapūrvasauhṛdā ramate 'nyatra gatā tathāṅganā // Saund_8.41 //</l>
+</lg>
+
+<lg>
+<l>praviśantyapi hi striyaścitāmanubadhnantyapi muktajīvitāḥ /</l>
+<l>api bibhrati caiva yantraṇā na tu bhāvena vahanti sauhṛdam // Saund_8.42 //</l>
+</lg>
+
+<lg>
+<l>ramayanti patīn kathañcana pramadā yāḥ patidevatāḥ kvacit /</l>
+<l>calacittatayā sahastraśo ramayante hṛdayaṃ svameva tāḥ // Saund_8.43 //</l>
+</lg>
+
+<lg>
+<l>śvapacaṃ kila senajitsutā cakame mīnaripuṃ kumudvatī /</l>
+<l>mṛgarājamatho bṛhadrathā pramadānāmagatirna vidyate // Saund_8.44 //</l>
+</lg>
+
+<lg>
+<l>kuruhaihayavṛṣṇivaṃśajā bahumāyākavaco 'tha śambaraḥ /</l>
+<l>munirugratapāśca gautamaḥ samavāpurvanitoddhataṃ rajaḥ // Saund_8.45 //</l>
+</lg>
+
+<lg>
+<l>akṛtajñamanāryamasthiraṃ vanitānāmidamīdṛśaṃ manaḥ /</l>
+<l>kathamarhati tāsu paṇḍito hṛdayaṃ sañjayituṃ calātmasu // Saund_8.46 //</l>
+</lg>
+
+<lg>
+<l>atha sūkṣmamatidvayāśivaṃ laghu tāsāṃ hṛdayaṃ na paśyasi /</l>
+<l>kimu kāyamasadgṛhaṃ sravad vanitānāmaśuciṃ na paśyasi // Saund_8.47 //</l>
+</lg>
+
+<lg>
+<l>yadahanyahani pradhāvanairvasanaiścābharaṇaiśca saṃskṛtam /</l>
+<l>aśubhaṃ tamasāvṛtekṣaṇaḥ śubhato gacchasi nāvagacchasi // Saund_8.48 //</l>
+</lg>
+
+<lg>
+<l>athavā samavaiṣi tattanūmaśubhāṃ tvaṃ na tu saṃvidasti te /</l>
+<l>surabhiṃ vidadhāsi hi kriyāmaśucestatprabhavasya śāntaye // Saund_8.49 //</l>
+</lg>
+
+<lg>
+<l>anulepanamañjanaṃ srajo maṇimuktātapanīyamaṃśukam /</l>
+<l>yadi sādhu kimatra yoṣitāṃ sahajaṃ tāsu vicīyatāṃ śuci // Saund_8.50 //</l>
+</lg>
+
+<lg>
+<l>malapaṅkadharā digambarā prakṛtisthairnakhadantaromabhiḥ /</l>
+<l>yadi sā tava sundarī bhavenniyataṃ te 'dya na sundarī bhavet // Saund_8.51 //</l>
+</lg>
+
+<lg>
+<l>stravatīmaśuciṃ spṛśecca kaḥ saghṛṇo jarjarabhāṇḍavat striyam /</l>
+<l>yadi kevalayā tvacāvṛtā na bhavenmakṣikapatramātrayā // Saund_8.52 //</l>
+</lg>
+
+<lg>
+<l>tvacaveṣṭitamasthipañjaraṃ yadi kāyaṃ samavaiṣi yoṣitām /</l>
+<l>madanena ca kṛṣyase balādaghṛṇaḥ khalvadhṛtiśca manmathaḥ // Saund_8.53 //</l>
+</lg>
+
+<lg>
+<l>śubhatāmaśubheṣu kalpayan nakhadantatvacakeśaromasu /</l>
+<l>avicakṣaṇa kiṃ na paśyasi prakṛtiṃ ca prabhavaṃ ca yoṣitām // Saund_8.54 //</l>
+</lg>
+
+<lg>
+<l>tadavetya manaḥśarirayorvanitā doṣavatīrviśeṣataḥ /</l>
+<l>capalaṃ bhavanotsukaṃ manaḥ pratisaṃkhyānabalena vāryatām // Saund_8.55 //</l>
+</lg>
+
+<lg>
+<l>śrutavān matimān kulodgataḥ paramasya praśamasya bhājanam /</l>
+<l>upagamya yathā tathā punarna hi bhettuṃ niyamaṃ tvamarhasi // Saund_8.56 //</l>
+</lg>
+
+<lg>
+<l>abhijanamahato manasvinaḥ priyayaśaso bahumānamicchataḥ /</l>
+<l>nidhanamapi varaṃ sthirātmanaścyutavinayasya na caiva jīvitam // Saund_8.57 //</l>
+</lg>
+
+<lg>
+<l>baddhvā yathā hi kavacaṃ pragṛhītacāpo, nindyo bhavatyapasṛtaḥ samarād rathasthaḥ /</l>
+<l>bhaikṣākamabhyupagataḥ parigṛhya liṅgaṃ, nindyastathā bhavati kāmahṛtendriyāśvaḥ // Saund_8.58 //</l>
+</lg>
+
+<lg>
+<l>hāsyo yathā ca paramābharaṇāmbarastrag bhaikṣaṃ caran dhṛtadhanuścalacitramauliḥ /</l>
+<l>vairūpyamabhyupagataḥ parapiṇḍabhojī hāsyastathā gṛhasukhābhimukhaḥ satṛṣṇaḥ // Saund_8.59 //</l>
+</lg>
+
+<lg>
+<l>yathā svannaṃ bhuktvā paramaśayanīye 'pi śayito</l>
+<l>varāho nirmuktaḥ punaraśuci dhāvet paricitam /</l>
+<l>tathā śreyaḥ śrṛṇvan praśamasukhamāsvādya guṇavad,</l>
+<l>vanaṃ śāntaṃ hitvā gṛhamabhilaṣet kāmatṛṣitaḥ // Saund_8.60 //</l>
+</lg>
+
+<lg>
+<l>yatholkā hastasthā dahati pavanapreritaśikhā</l>
+<l>yathā pādākrānto daśati bhujagaḥ krodharabhasaḥ /</l>
+<l>yathā hanti vyāghraḥ śiśurapi gṛhīto gṛhagataḥ</l>
+<l>tathā strīsaṃsargo bahuvidhamanarthāya bhavati // Saund_8.61 //</l>
+</lg>
+
+<lg>
+<l>tadvijñāya manaḥśarīraniyatānnārīṣu doṣānimān,</l>
+<l>matvā kāmasukhaṃ nadījalacalaṃ kleśāya śokāya ca /</l>
+<l>dṛṣṭvā durbalamāmapātrasadṛśaṃ mṛtyūpasṛṣṭaṃ jagan -</l>
+<l>nirmokṣāya kuruṣva buddhimatulāmutkaṇṭhituṃ nārhasi // Saund_8.62 //</l>
+</lg>
+
+<p>saundarananda mahākāvye "strīvighna" nāma aṣṭama sarga samāpta /</p>
+
+</div>
+<div>
+
+<p>navamaḥ sargaḥ
+abhimānanindā</p>
+
+<lg>
+<l>athaivamukto 'pi sa tena bhikṣuṇā jagāma naivopaśamaṃ priyāṃ prati /</l>
+<l>tathā hi tāmeva tadā sa cintayan na tasya śuśrāva visaṃjñavad vacaḥ // Saund_9.1 //</l>
+</lg>
+
+<lg>
+<l>yathā hi vaidyasya cikīrṣataḥ śivaṃ vaco na gṛṇhāti mumūrṣurāturaḥ /</l>
+<l>tathaiva matto balarūpayauvanairhitaṃ na jagrāha sa tasya tadvacaḥ // Saund_9.2 //</l>
+</lg>
+
+<lg>
+<l>na cātra citraṃ yadi rāgapāpmanā mano 'bhibhūyeta tamovṛtātmanaḥ /</l>
+<l>narasya pāpmā hi tadā nivartate yadā bhavatyantagataṃ tamastanu // Saund_9.3 //</l>
+</lg>
+
+<lg>
+<l>tatastathākṣiptamavekṣya taṃ tadā balena rūpeṇa ca yauvanena ca /</l>
+<l>gṛhaprayāṇaṃ prati ca vyavasthitaṃ śaśāsa nandaṃ śramaṇaḥ sa śāntaye // Saund_9.4 //</l>
+</lg>
+
+<lg>
+<l>balaṃ ca rūpaṃ ca navaṃ ca yauvanaṃ tathāvagacchāmi yathāvagacchasi /</l>
+<l>ahaṃ tvidaṃ te trayamavyavasthitaṃ yathāvabuddhye na tathāvabudhyase // Saund_9.5 //</l>
+</lg>
+
+<lg>
+<l>idaṃ hi rogāyatanaṃ jarāvaśaṃ nadītaṭānokahavaccalācalam /</l>
+<l>na vetsi dehaṃ jalaphenadurbalaṃ balasthatāmātmani yena manyase // Saund_9.6 //</l>
+</lg>
+
+<lg>
+<l>yadānnapānāsanayānakarmaṇāmasevanādapyatisevanādapi /</l>
+<l>śarīramāsannavipatti dṛśyate bale 'bhimānastava kena hetunā // Saund_9.7 //</l>
+</lg>
+
+<lg>
+<l>himātapavyādhijarākṣudādibhiryadāpyanarthairupamīyate jagat /</l>
+<l>jalaṃ śucau māsa ivārkaraśmibhiḥ kṣayaṃ vrajan kiṃ baladṛpta manyase // Saund_9.8 //</l>
+</lg>
+
+<lg>
+<l>tvagasthimāṃsakṣatajātmakaṃ yadā śarīramāhāravaśena tiṣṭhati /</l>
+<l>ajasramārtaṃ satatapratikriyaṃ balānvito 'smīti kathaṃ vihanyase // Saund_9.9 //</l>
+</lg>
+
+<lg>
+<l>yathā ghaṭaṃ mṛnmayamāmamāśrito narastitīrṣet kṣubhitaṃ mahārṇavam /</l>
+<l>samucchrayaṃ tadvadasāramudvarahan balaṃ vyavasyed viṣayārthamudyataḥ // Saund_9.10 //</l>
+</lg>
+
+<lg>
+<l>śarīramāmādapi mṛnmayād ghaṭādidaṃ tu niḥsāratamaṃ mataṃ mama /</l>
+<l>ciraṃ hi tiṣṭhed vidhivad dhṛto ghaṭaḥ samucchrayo 'yaṃ sudhṛto 'pi bhidyate // Saund_9.11 //</l>
+</lg>
+
+<lg>
+<l>yadāmbubhūvāyvanalāśca dhātavaḥ sadā viruddhā viṣamā ivoragāḥ /</l>
+<l>bhavantyanarthāya śarīramāśritāḥ kathaṃ balaṃ rogavidho vyavasyasi // Saund_9.12 //</l>
+</lg>
+
+<lg>
+<l>prayānti mantraiḥ praśamaṃ bhujaṅgamā na mantrasādhyastu bhavanti dhātavaḥ /</l>
+<l>kvacicca kaṃcicca daśanti pannagāḥ sadā ca sarvaṃ ca tudanti dhātavaḥ // Saund_9.13 //</l>
+</lg>
+
+<lg>
+<l>idaṃ hi śayyāsanapānabhojanairguṇaiḥ śarīraṃ ciramapyavekṣitam /</l>
+<l>na marṣayatyekamapi vyatikramaṃ yato mahāśīviṣavat prakupyati // Saund_9.14 //</l>
+</lg>
+
+<lg>
+<l>yadā himārto jvalanaṃ niṣevate himaṃ nidādhābhihato 'bhikāṅkṣati /</l>
+<l>kṣudhānvito 'nnaṃ salilaṃ tṛṣānvito balaṃ kutaḥ kiṃ ca kathaṃ ca kasya ca // Saund_9.15 //</l>
+</lg>
+
+<lg>
+<l>tadevamājñāya śarīramāturaṃ balānvito 'smīti na mantumarhasi /</l>
+<l>asāramasvantamaniścitaṃ jagajjagatyanitye balamavyavasthitam // Saund_9.16 //</l>
+</lg>
+
+<lg>
+<l>kva kārtavīryasya balābhimāninaḥ sahasrabāhobalamarjunasya tat /</l>
+<l>cakarta bāhūn yudhi yasya bhārgavaḥ mahānti śrṛṅgāṇyaśanirgiretiva // Saund_9.17 //</l>
+</lg>
+
+<lg>
+<l>kva tad valaṃ kaṃsavikarṣiṇo haresturaṅgarājasya puṭāvabhedinaḥ /</l>
+<l>yamekabāṇena nijaghnivān jarāḥ kramāgatā rūpamivottamaṃ jarā // Saund_9.18 //</l>
+</lg>
+
+<lg>
+<l>diteḥ sutasyāmararoṣakāriṇaścamūrucervā namuceḥ kva tad balam /</l>
+<l>yamāhave kruddhamivāntakaṃ sthitaṃ jaghāna phenāvayavena vāsavaḥ // Saund_9.19 //</l>
+</lg>
+
+<lg>
+<l>balaṃ kurūṇāṃ kva ca tattadābhavad yudhi jvalitvā tarasaujasā ca ye /</l>
+<l>samitsamiddhā jvalanā ivādhvare hatāsavo bhasmani paryavasthitāḥ // Saund_9.20 //</l>
+</lg>
+
+<lg>
+<l>ato viditvā balavīryamānināṃ balānvitānāmavamarditaṃ balam /</l>
+<l>jagajjarāmṛtyuvaśaṃ vicārayan bale 'bhimānaṃ na vidhātumarhasi // Saund_9.21 //</l>
+</lg>
+
+<lg>
+<l>balaṃ mahad yadi vā na manyase kuruṣva yuddhaṃ saha tāvadindriyaiḥ /</l>
+<l>jayaśca te 'trāsti mahacca te balaṃ parājayaśced vitathaṃ ca te balam // Saund_9.22 //</l>
+</lg>
+
+<p>tathā hi vīrāḥ puruṣā na te matā jayanti ye sāśvarathadvipānarīn
+<l>yathā matā vīratarā manīṣiṇo jayanti lolāni ṣaḍindriyāṇi ye // Saund_9.23 //</l></p>
+
+<lg>
+<l>ahaṃ vapuṣmāniti yacca manyase vicakṣaṇaṃ naitadidaṃ ca gṛhyatām /</l>
+<l>kva tadvapuḥ sā ca vapuṣmatī tanurgadasya śāmbasya ca sāraṇasya ca // Saund_9.24 //</l>
+</lg>
+
+<lg>
+<l>yathā mayūraścalacitracandrako bibharti rūpaṃ guṇavat svabhāvataḥ /</l>
+<l>śarīrasaṃskāraguṇādṛte tathā bibharti rūpaṃ yadi rūpavānasi // Saund_9.25 //</l>
+</lg>
+
+<lg>
+<l>yadi pratīpaṃ vṛṇuyānna vāsasā na śaucakāle yadi saṃspṛśedapaḥ /</l>
+<l>mṛjāviśeṣaṃ yadi nādadīta vā vapurvapuṣman vada kīdṛśaṃ bhavet // Saund_9.26 //</l>
+</lg>
+
+<lg>
+<l>navaṃ vayaścātmagataṃ niśāmya yadgṛ honmukhaṃ te viṣayāptaye manaḥ /</l>
+<l>niyaccha tacchailanadīrayopamaṃ drutaṃ hi gacchatyanivarti yauvanam // Saund_9.27 //</l>
+</lg>
+
+<lg>
+<l>ṛturvyatītaḥ parivartate punaḥ kṣayaṃ prayātaḥ punareti candramāḥ /</l>
+<l>gataṃ gataṃ naiva tu saṃnivartate jalaṃ nadīnāṃ ca nṛṇāṃ ca yauvanam // Saund_9.28 //</l>
+</lg>
+
+<lg>
+<l>vivarṇitaśmaśru valīvikuñcitaṃ viśīrṇadantaṃ śithilabhru niṣprabham /</l>
+<l>yadā mukhaṃ drakṣyasi jarjaraṃ tadā jarābhibhūto vimado bhaviṣyasi // Saund_9.29 //</l>
+</lg>
+
+<lg>
+<l>niṣevya pānaṃ madanīyamuttamaṃ niśāvivāseṣu cirād vimādyati /</l>
+<l>narastu matto balarūpayouvanairna kaścidaprāpya jarāṃ vimādyati // Saund_9.30 //</l>
+</lg>
+
+<lg>
+<l>yathekṣuratyantarasaprapīḍito bhuvi praviddho dahanāya śuṣyate /</l>
+<l>tathā jarāyantranipīḍitā tanurnipītasārā maraṇāya tiṣṭhati // Saund_9.31 //</l>
+</lg>
+
+<lg>
+<l>yathā hi nṛbhyāṃ karapatramīritaṃ samucchritaṃ dāru bhinattyanekadhā /</l>
+<l>tathocchritāṃ pātayati prajāmimāmaharniśābhyāmupasaṃhitā jarā // Saund_9.32 //</l>
+</lg>
+
+<lg>
+<l>smṛteḥ pramoṣo vapuṣaḥ parābhavo rateḥ kṣayo vācchruticakṣuṣāṃ grahaḥ /</l>
+<l>śramasya yonirbalavīryayorvadho jarāsamo nāsti śarīriṇāṃ ripuḥ // Saund_9.33 //</l>
+</lg>
+
+<lg>
+<l>idaṃ viditvā nidhanasya daiśikaṃ jarābhidhānaṃ jagato mahadbhayam /</l>
+<l>ahaṃ vapuṣmān balavān yuveti vā na mānamāroḍhumanāryamarhasi // Saund_9.34 //</l>
+</lg>
+
+<lg>
+<l>ahaṃ mametyeva ca raktacetasāṃ śarīrasaṃjñā tava yaḥ kalau grahaḥ /</l>
+<l>tamutsṛjaivaṃ yadi śāmyatā bhaved bhayaṃ hyahaṃ ceti mameti cārchati // Saund_9.35 //</l>
+</lg>
+
+<lg>
+<l>yadā śarīre na vaśo 'sti kasyacinnirasyamāne vividhairupaplavaiḥ /</l>
+<l>kathaṃ kṣamaṃ vettumahaṃ mameti vā śarīrasaṃjñaṃ gṛhamāpadāmidam // Saund_9.36 //</l>
+</lg>
+
+<lg>
+<l>sapannage yaḥ kugṛhe sadāśucau rameta nityaṃ pratisaṃskṛte 'bale /</l>
+<l>sa duṣṭadhātāvaśucau calācale rameta kāye viparītadarśanaḥ // Saund_9.37 //</l>
+</lg>
+
+<lg>
+<l>yathā prajābhyaḥ kunṛpo balād balīn haratyaśeṣaṃ ca na cābhirakṣati /</l>
+<l>tathaiva kāyo vasanādisādhanaṃ haratyaśeṣaṃ ca na cānuvartate // Saund_9.38 //</l>
+</lg>
+
+<lg>
+<l>yathā prarohanti tṛṇānyayatnataḥ kṣitau prayatnāt tu bhavanti śālayaḥ /</l>
+<l>tathaiva duḥkhāni bhavantyayatnataḥ sukhāni yatnena bhavanti vā na vā // Saund_9.39 //</l>
+</lg>
+
+<lg>
+<l>śarīramārtaṃ parikarṣataścalaṃ na cāsti kiñcit paramārthataḥ sukham /</l>
+<l>sukhaṃ hi duḥkhapratikārasevayā sthite ca duḥkhe tanuni vyavasyati // Saund_9.40 //</l>
+</lg>
+
+<lg>
+<l>yathānapekṣyāgryamapīpsitaṃ sukhaṃ pravādhate duḥkhamupetamaṇvapi /</l>
+<l>tathānapekṣyātmani duḥkhamāgataṃ na vidyate kiñcana kasyacit sukhaṃ // Saund_9.41 //</l>
+</lg>
+
+<lg>
+<l>śarīramīdṛg bahuduḥkhādhruvaṃ phalānurodhādatha nāvagacchasi /</l>
+<l>dravatphalebhyo dhṛtiraśmibhirmano nigṛhyatāṃ gauriva śasyalālasā // Saund_9.42 //</l>
+</lg>
+
+<lg>
+<l>na kāmabhogā hi bhavanti tṛptaye havīṃṣi dīptasya vibhāvasoriva /</l>
+<l>yathā yathā kāmasukheṣu vartate tathā tathecchā viṣayeṣu varddhate // Saund_9.43 //</l>
+</lg>
+
+<lg>
+<l>yathā ca kuṣṭhavyasanena duḥkhitaḥ pratāpanānnaiva śamaṃ nigacchati /</l>
+<l>tathendriyārtheṣvajitendriyaścaranna kāmabhogairupaśāntimṛcchati // Saund_9.44 //</l>
+</lg>
+
+<lg>
+<l>yathā hi bhaiṣajyasukhābhikāṅkṣayā bhajeta rogānna bhajeta tatkṣamam /</l>
+<l>tathā śarīre bahuduḥkhabhājane rameta mohād viṣayābhikāṅkṣayā // Saund_9.45 //</l>
+</lg>
+
+<lg>
+<l>anarthakāmaḥ puruṣasya yo janaḥ sa tasya śatruḥ kila tena karmaṇā /</l>
+<l>anarthamūlā viṣayāśca kevalā nanu praheyā viṣamā yathārayaḥ // Saund_9.46 //</l>
+</lg>
+
+<lg>
+<l>ihaiva bhūtvā ripavo vadhātmakāḥ prayānti kāle puruṣasya mitratāṃ /</l>
+<l>paratra caiveha ca duḥkhahetavo bhavanti kāmā na tu kasyacicchivāḥ // Saund_9.47 //</l>
+</lg>
+
+<lg>
+<l>yathopayuktaṃ rasavarṇagandhavad vadhāya kimpākaphalaṃ na puṣṭaye /</l>
+<l>niṣevyamāṇā viṣayāścalātmano bhavantyanarthāya tathā na bhūtaye // Saund_9.48 //</l>
+</lg>
+
+<lg>
+<l>tadetadājñāya vipāpmanātmanā vimokṣadharmādyupasahitaṃ hitam /</l>
+<l>juṣasva me sajjanasaṃmataṃ mataṃ pracakṣva vā niścayamud giran giram // Saund_9.49 //</l>
+</lg>
+
+<lg>
+<l>iti hitamapi bahvapīdamuktaḥ śrutamahatā śramaṇena tena nandaḥ /</l>
+<l>na dhṛtimupayayau na śarma lebhe dvirada ivātimado madāndhacetāḥ // Saund_9.50 //</l>
+</lg>
+
+<lg>
+<l>nandasya bhāvamavagamya tataḥ sa bhikṣuḥ pāriplavaṃ gṛhasukhābhimukhaṃ na dharme /</l>
+<l>sattvāśayānuśayabhāvaparīkṣakāya buddhāya tattvaviduṣe kathayāṃcakāra // Saund_9.51 //</l>
+</lg>
+
+<p>saundarananda mahākāvye "abhimānanindā" nāma navama sarga samāpta /</p>
+
+</div>
+<div>
+
+<p>daśamaḥ sargaḥ
+svargadarśana</p>
+
+<lg>
+<l>śrutvā tataḥ sadvratamutsisṛkṣuṃ bhāryāṃ didṛkṣuṃ bhavanaṃ vivikṣum /</l>
+<l>nandaṃ nirānandamapetadhairyamabhyujjihīrṣurmunirājuhāva // Saund_10.1 //</l>
+</lg>
+
+<lg>
+<l>taṃ prāptamaprāptavimokṣamārgaṃ papraccha cittaskhalitaṃ sucittaḥ /</l>
+<l>sa hrīmate hrīvinato jagāda svaṃ niścayaṃ niścayakovidāya // Saund_10.2 //</l>
+</lg>
+
+<lg>
+<l>nandaṃ viditvā sugatastatastaṃ bhāryābhidhāne tamasi bhramantam /</l>
+<l>pāṇau gṛhītvā viyadutpapāta malaṃ jale sādhurivojjihīrṣuḥ // Saund_10.3 //</l>
+</lg>
+
+<lg>
+<l>kāṣāyavastrau kanakāvadātau virejatustau nabhasi prasanne /</l>
+<l>anyonyasaṃśliṣṭavikīrṇapakṣau saraḥprakīrṇāviva cakravākau // Saund_10.4 //</l>
+</lg>
+
+<lg>
+<l>tau devadārūttamagandhavantaṃ nadīsaraḥprasravaṇaughavantam /</l>
+<l>ājagmatuḥ kāñcanadhātumantaṃ devarṣimantaṃ himavantamāśu // Saund_10.5 //</l>
+</lg>
+
+<lg>
+<l>tasmin girau cāraṇāsiddhajuṣṭe śive havirdhūmakṛtottarīye /</l>
+<l>agamyapārasya nirāśrayasya tau tasthaturdvīpa ivāmbarasya // Saund_10.6 //</l>
+</lg>
+
+<lg>
+<l>śāntendriye tatra munau sthite tu savismayaṃ dikṣu dadarśa nandaḥ /</l>
+<l>darīśca kuñjāṃśca vanaukasaśca vibhūṣaṇaṃ rakṣaṇameva cādreḥ // Saund_10.7 //</l>
+</lg>
+
+<lg>
+<l>bahvāyate tatra site hi śṛṅge saṃkṣiptabarhaḥ śayito mayūraḥ /</l>
+<l>bhuje balasyāyatapīnabāhorvaiḍūryakeyūra ivābabhāse // Saund_10.8 //</l>
+</lg>
+
+<lg>
+<l>manaḥśīlādhātuśilāśrayeṇa pītākṛtāṃso virarāja siṃhaḥ /</l>
+<l>saṃtaptacāmīkarabhakticitraṃ rūpyāṅgadaṃ śīrṇamivāmbikasya // Saund_10.9 //</l>
+</lg>
+
+<lg>
+<l>vyāghraḥ klamavyāyatakhelagāmī lāṅgūlacakreṇa kṛtāpasavyaḥ /</l>
+<l>babhau gireḥ prasravaṇa pipāsurditsan pitṛbhyo 'mbha ivāvatīrṇaḥ // Saund_10.10 //</l>
+</lg>
+
+<lg>
+<l>calatkadambe himavannitambe tarau pralambe camaro lalambe /</l>
+<l>chettuṃ vilagnaṃ na śaśāka bālaṃ kulodgatāṃ prītimivāryavṛttaḥ // Saund_10.11 //</l>
+</lg>
+
+<lg>
+<l>suvarṇagaurāśca kirātasaṃghā mayūrapitrojjvalagātralekhāḥ /</l>
+<l>śārdūlapātapratimā guhābhyo niṣpeturudgāra ivācalasya // Saund_10.12 //</l>
+</lg>
+
+<lg>
+<l>darīcarīṇāmatisundarīṇāṃ manoharaśroṇikucodarīṇām /</l>
+<l>vṛndāni rejurdiśi kinnarīṇāṃ puṣpotkacānāmiva vallarīṇām // Saund_10.13 //</l>
+</lg>
+
+<lg>
+<l>nagānnagasyopari devadārūnāyāsayantaḥ kapayo viceruḥ /</l>
+<l>tebhyaḥ phalaṃ nāpurato 'pajagmurmoghaprasādebhya iveśvarebhyaḥ // Saund_10.14 //</l>
+</lg>
+
+<lg>
+<l>tasmāttu yūthādapasāryamāṇāṃ niṣpīḍitālaktakaraktavaktrām /</l>
+<l>śākhāmṛgīmekavipannadṛṣṭiṃ dṛṣṭvā munirnandamidaṃ babhāṣe // Saund_10.15 //</l>
+</lg>
+
+<lg>
+<l>kā nanda rūpeṇa ca ceṣṭayā ca saṃpaśyataścārutarā matā te /</l>
+<l>eṣā mṛgī vaikavipannadṛṣṭiḥ sa vā jano yatra gatā taveṣṭiḥ // Saund_10.16 //</l>
+</lg>
+
+<lg>
+<l>ityevamuktaḥ sugatena nandaḥ kṛtvā smitaṃ kiṃcididaṃ jagāda /</l>
+<l>kva cottamastrī bhagavan vadhūste mṛgī nagakleśakarī kva caiṣā // Saund_10.17 //</l>
+</lg>
+
+<lg>
+<l>tato munistasya niśamya vākyaṃ hetvantaraṃ kiṃcidavekṣamāṇaḥ /</l>
+<l>ālambya nandaṃ prayayau tathaiva krīḍāvanaṃ vajradharasya rājñaḥ // Saund_10.18 //</l>
+</lg>
+
+<lg>
+<l>ṛtāvṛtāvākṛtimeka eke kṣaṇe kṣaṇe bibhrati yatra vṛkṣāḥ /</l>
+<l>citrāṃ samastāmapi kecidanye ṣaṇṇāmṛtūnāṃ śriyamudvahanti // Saund_10.19 //</l>
+</lg>
+
+<lg>
+<l>puṣyanti kecit surabhīrudārā mālāḥ srajaśca granthitā vicitrāḥ /</l>
+<l>karṇānukūlānavataṃsakāṃśca pratyarthibhūtāniva kuṇḍalānām // Saund_10.20 //</l>
+</lg>
+
+<lg>
+<l>raktāni phullāḥ kamalāni yatra pradīpavṛkṣā iva bhānti vṛkṣāḥ /</l>
+<l>praphullanīlotpalarohiṇo 'nye sonmīlitākṣā eva bhānti vṛkṣāḥ // Saund_10.21 //</l>
+</lg>
+
+<lg>
+<l>nānāvirāgāṇyatha pāṇḍarāṇi suvarṇabhaktivyavabhāsitāni /</l>
+<l>atāntavānyekaghanāni yatra sūkṣmāṇi vāsāṃsi phalanti vṛkṣāḥ // Saund_10.22 //</l>
+</lg>
+
+<lg>
+<l>hārān maṇinuttamakuṇḍalāni keyūravaryāṇyatha nūpurāṇi /</l>
+<l>evaṃvidhānyābharaṇāni yatra svargānurūpāṇi phalanti vṛkṣāḥ // Saund_10.23 //</l>
+</lg>
+
+<lg>
+<l>vaiḍūryanālāni ca kāñcanāni padmāni vajrāṅkurakesarāṇi /</l>
+<l>sparśakṣamāṇyuttamagandhavanti rohanti niṣkampatalā nalinyaḥ // Saund_10.24 //</l>
+</lg>
+
+<lg>
+<l>yatrāyatāṃścaiva tatāṃśca tāṃstān vādyasya hetūn suṣirān ghanāṃśca /</l>
+<l>phalanti vṛkṣā maṇihemacitrāḥ krīḍāsahāyāstridaśālayānām // Saund_10.25 //</l>
+</lg>
+
+<lg>
+<l>mandāravṛkṣāṃśca kuśeśayāṃśca puṣpānatān kokanadāṃśca vṛkṣān /</l>
+<l>ākramya māhātmyaguṇairvirājan rājāyate yatra sa pārijātaḥ // Saund_10.26 //</l>
+</lg>
+
+<lg>
+<l>kṛṣṭe tapaḥśīlahalairakhinnaistriviṣṭapakṣetratale prasūtāḥ /</l>
+<l>evaṃvidhā yatra sadānuvṛttā divaukasāṃ bhogavidhānavṛkṣāḥ // Saund_10.27 //</l>
+</lg>
+
+<lg>
+<l>manaḥśilābhairvadanairvihaṃgā yatrākṣibhiḥ sphāṭikasaṃnibhaiśca /</l>
+<l>śāvaiśca pakṣairabhilohitāntairmāñjiṣṭhakairardhasitaiśca pādaiḥ // Saund_10.28 //</l>
+</lg>
+
+<lg>
+<l>citraiḥ suvarṇacchadanaistathānye vaiḍuryanīlairnayanaiḥ prasannaiḥ /</l>
+<l>vihaṃgamāḥ śiñjirikābhidhānā rutairmanaḥśrotraharairbhramanti // Saund_10.29 //</l>
+</lg>
+
+<lg>
+<l>raktābhiragreṣu ca vallarībhirmadhyeṣu cāmīkarapiñjarābhiḥ /</l>
+<l>vaiḍūryavarṇābhirupāntamadhyeṣvalaṃkṛtā yatra khagāścaranti // Saund_10.30 //</l>
+</lg>
+
+<lg>
+<l>rociṣṇavo nāma patatriṇo 'nye diptāgnivarṇā jvalitairivāsyaiḥ /</l>
+<l>bhramanti dṛṣṭīrvapuṣākṣipantaḥ svanaiḥ śubhairapsaraso harantaḥ // Saund_10.31 //</l>
+</lg>
+
+<lg>
+<l>yatreṣṭaceṣṭāḥ satataprahṛṣṭā nirartayo nirjaraso viśokāḥ /</l>
+<l>svaiḥ karmabhirhīnaviśiṣṭamadhyāḥ svayaṃprabhāḥ puṇyakṛto ramante // Saund_10.32 //</l>
+</lg>
+
+<lg>
+<l>pūrvaṃ tapomūlyaparigraheṇa svargakrayārthaṃ kṛtaniścayānām /</l>
+<l>manāṃsi khinnāni tapodhanānāṃ haranti yatrāpsaraso laḍantyaḥ // Saund_10.33 //</l>
+</lg>
+
+<lg>
+<l>nityotsavaṃ taṃ ca niśāmya lokaṃ nistandrinidrāratiśokarogam /</l>
+<l>nando jarāmṛtyuvaśaṃ sadārtaṃ mene śmaśānapratimaṃ nṛlokam // Saund_10.34 //</l>
+</lg>
+
+<lg>
+<l>aindraṃ vanaṃ tacca dadarśa nandaḥ samantato vismayaphulladṛṣṭiḥ /</l>
+<l>harṣānvitāścāpsarasaḥ parīyuḥ sagarvamanyonyamavekṣamāṇāḥ // Saund_10.35 //</l>
+</lg>
+
+<lg>
+<l>sadā yuvatyo madanaikakāryāḥ sādhāraṇāḥ puṇyakṛtāṃ vihārāḥ /</l>
+<l>divyāśca nirdoṣaparigrahāśca tapaḥphalasyāśrayaṇaṃ surāṇām // Saund_10.36 //</l>
+</lg>
+
+<lg>
+<l>tāsāṃ jagurdhīramudāttamanyāḥ padmāni kāścillalitaṃ babhañjuḥ /</l>
+<l>anyonyaharṣān nanṛtustathānyāścitrāṅgahārāḥ stanabhinnahārāḥ // Saund_10.37 //</l>
+</lg>
+
+<lg>
+<l>kāsāṃcidāsāṃ vadanāni rejurvanāntarebhyaścalakuṇḍalāni /</l>
+<l>vyāviddhaparṇebhya ivākarebhyaḥ padmāni kāraṇḍavaghaṭṭitāni // Saund_10.38 //</l>
+</lg>
+
+<lg>
+<l>tāḥ niḥsṛtāḥ prekṣya vanāntarebhyastaḍitpatākā iva toyadebhyaḥ /</l>
+<l>nandasya rāgeṇa tanurvivepe jale cale candramasaḥ prabheva // Saund_10.39 //</l>
+</lg>
+
+<lg>
+<l>vapuśca divyaṃ lalitāśca ceṣṭāstataḥ sa tāsāṃ manasā jahāra /</l>
+<l>kautūhalāvarjitayā ca dṛṣṭyā saṃśleṣatarṣādiva jātarāgaḥ // Saund_10.40 //</l>
+</lg>
+
+<lg>
+<l>sa jātatarṣo 'psarasaḥ pipāsustatprāptaye 'dhiṣṭhitaviklavārtaḥ /</l>
+<l>lolendriyāśvena manorathena jehrīyamāṇo na dhṛtiṃ cakāra // Saund_10.41 //</l>
+</lg>
+
+<lg>
+<l>yathā manuṣyo malinaṃ hi vāsaḥ kṣāreṇa bhūyo malinīkaroti /</l>
+<l>malakṣayārthaṃ na malodbhavārthaṃ rajastathāsmai munirācakarṣa // Saund_10.42 //</l>
+</lg>
+
+<lg>
+<l>doṣāṃśca kāyād bhiṣagujjihīrṣurbhūyo yathā kleśayituṃ yateta /</l>
+<l>rāgaṃ tathā tasya munirjighāṃsurbhūyastaraṃ rāgamupānināya // Saund_10.43 //</l>
+</lg>
+
+<lg>
+<l>dīpaprabhāṃ hanti yathāndhakāre sahasraraśmeruditasya dīptiḥ /</l>
+<l>manuṣyaloke dyutimaṅganānāmantardadhātyapsarasāṃ tathā śrīḥ // Saund_10.44 //</l>
+</lg>
+
+<lg>
+<l>mahacca rūpaṃ svaṇu hanti rūpaṃ śabdo mahān hanti ca śabdamalpam /</l>
+<l>gurvī rujā hanti rujāṃ ca mṛdvīṃ sarvo mahān heturaṇorvadhāya // Saund_10.45 //</l>
+</lg>
+
+<lg>
+<l>muneḥ prabhāvācca śaśāka nandastaddarśanaṃ soḍhumasahyamanyaiḥ /</l>
+<l>avītarāgasya hi durbalasya mano dahedapsarasāṃ vapuḥśrīḥ // Saund_10.46 //</l>
+</lg>
+
+<lg>
+<l>matvā tato nandamudīrṇarāgaṃ bhāryānurodhādapavṛttarāgam /</l>
+<l>rāgeṇa rāgaṃ pratihantukāmo munirvirāgo giramityuvāca // Saund_10.47 //</l>
+</lg>
+
+<lg>
+<l>etāḥ striyaḥ paśya divaukasastvaṃ nirīkṣya ca brūhi yathārthatattvam /</l>
+<l>etāḥ kathaṃ rūpaguṇairmatāste sa vā jano yatra gataṃ manaste // Saund_10.48 //</l>
+</lg>
+
+<lg>
+<l>athāpsaraḥsveva niviṣṭadṛṣṭī rāgāgnināntarhṛdaye pradīptaḥ /</l>
+<l>sagadgadaṃ kāmaviṣaktacetāḥ kṛtāñjalirvākyamuvāca nandaḥ // Saund_10.49 //</l>
+</lg>
+
+<lg>
+<l>haryaṅganāsau muṣitaikadṛṣṭiryadantare syāttava nātha vadhvāḥ /</l>
+<l>tadantare 'sau kṛpaṇā vadhūste vapuṣmatīrapsarasaḥ pratītya // Saund_10.50 //</l>
+</lg>
+
+<lg>
+<l>āsthā yathā pūrvamabhūnna kācidanyāsu me strīṣu niśāmya bhāryām /</l>
+<l>tasyāṃ tataḥsamprati kācidāsthā na me niśāmyaiva hi rūpamāsām // Saund_10.51 //</l>
+</lg>
+
+<lg>
+<l>yathā pratapto mṛdunātapena dahyeta kaścin mahatānalena /</l>
+<l>rāgeṇa pūrvaṃ mṛdunābhitapto rāgāgninānena tathābhidahye // Saund_10.52 //</l>
+</lg>
+
+<lg>
+<l>vāgvāriṇāṃ māṃ pariṣiñca tasmādyāvanna dahye sa ivābjaśatruḥ /</l>
+<l>rāgāgniradyaiva hiṃ māṃ didhakṣuḥ kakṣaṃ savṛkṣāgramivotthito 'gniḥ // Saund_10.53 //</l>
+</lg>
+
+<lg>
+<l>prasīda sīdāmi vimuñca mā mune vasundharādhairya na dhairyamasti me /</l>
+<l>asūn vimokṣyāmi vimuktamānasa prayaccha vā vāgamṛtaṃ mumūrṣave // Saund_10.54 //</l>
+</lg>
+
+<lg>
+<l>anarthabhogena vighātadṛṣṭinā pramādadaṃṣṭreṇa tamoviṣāgninā /</l>
+<l>ahaṃ hi daṣṭo hṛdi manmathāhinā vidhatsva tasmādagadaṃ mahābhiṣak // Saund_10.55 //</l>
+</lg>
+
+<lg>
+<l>anena daṣṭo madanāhināhinā na kaścidātmanyanavasthitaḥ sthitaḥ /</l>
+<l>mumoha bodhyorhyacalātmano mano babhūva dhīmāṃśca sa śantanustanuḥ // Saund_10.56 //</l>
+</lg>
+
+<lg>
+<l>sthite viśiṣṭe tvayi saṃśraye śraye yathā na yāmīha vasan diśaṃ diśam /</l>
+<l>yathā ca labdhvā vyasanakṣayaṃ kṣayaṃ vrajāmi tanme kuru śaṃsataḥ sataḥ // Saund_10.57 //</l>
+</lg>
+
+<lg>
+<l>tato jighāṃsurhṛdi tasya tattamastamonudo naktamivotthitaṃ tamaḥ /</l>
+<l>maharṣicandro jagatastamonudastamaḥprahīṇo nijagāda gautamaḥ // Saund_10.58 //</l>
+</lg>
+
+<lg>
+<l>dhṛtiṃ pariṣvajya vidhūya vikriyāṃ nigṛhya tāvacchrutacetasī śṛṇu /</l>
+<l>imā yadi prārthayase tvamaṅganā vidhatsva śuklārthamihottamaṃ tapaḥ // Saund_10.59 //</l>
+</lg>
+
+<lg>
+<l>imā hi śakyā na balānna sevayā na saṃpradānena na rūpavattayā /</l>
+<l>imā hriyante khalu dharmacaryayā sacet praharṣaścara dharmamādṛtaḥ // Saund_10.60 //</l>
+</lg>
+
+<lg>
+<l>ihādhivāso divi daivataiḥ samaṃ vanāni ramyāṇyajarāśca yoṣitaḥ /</l>
+<l>idaṃ phalaṃ svasya śubhasya karmaṇo na dattamanyena na cāpyahetutaḥ // Saund_10.61 //</l>
+</lg>
+
+<lg>
+<l>kṣitau manuṣyo dhanurādibhiḥ śramaiḥ striyaḥ kadāciddhi labheta vā na vā /</l>
+<l>asaṃśayaṃ yattviha dharmacaryayā bhaveyuretā divi puṇyakarmaṇaḥ // Saund_10.62 //</l>
+</lg>
+
+<lg>
+<l>tadapramatto niyame samudyato ramasva yadyapsaraso 'bhilipsase /</l>
+<l>ahaṃ ca te 'tra pratibhūḥ sthire vrate yathā tvamābhiniyataṃ sameṣyasi // Saund_10.63 //</l>
+</lg>
+
+<lg>
+<l>ataḥparaṃ paramamiti vyavasthitaḥ parāṃ dhṛtiṃ paramamunau cakāra saḥ /</l>
+<l>tato muniḥ pavana ivāmbarāt patan pragṛhya taṃ punaragamanmahītalam // Saund_10.64 //</l>
+</lg>
+
+<p>saundarananda mahākāvye "svargadarśana" nāma daśama sarga samāpta /</p>
+
+</div>
+<div>
+
+<p>ekādaśaḥ sargaḥ
+svarga kī hīnatā</p>
+
+<lg>
+<l>tatastā yoṣito dṛṣṭvā nando nandanacāriṇīḥ /</l>
+<l>babandha niyamastambhe durdamaṃ capalaṃ manaḥ // Saund_11.1 //</l>
+</lg>
+
+<lg>
+<l>so 'niṣṭanaiṣkramyaraso mlānatāmarasopamaḥ /</l>
+<l>cacāra viraso dharmaṃ niveśyāpsaraso hṛdi // Saund_11.2 //</l>
+</lg>
+
+<lg>
+<l>tathā lolendriyo bhūtvā dayitendriyagocaraḥ /</l>
+<l>indriyārthavaśādeva babhūva niyatendriyaḥ // Saund_11.3 //</l>
+</lg>
+
+<lg>
+<l>kāmacaryāsu kuśalo bhikṣucaryāsu viklavaḥ /</l>
+<l>paramācāryaviṣṭabdho brahmacaryeṃ cacāra saḥ // Saund_11.4 //</l>
+</lg>
+
+<lg>
+<l>saṃvṛtena ca śāntena tīvreṇa madanena ca /</l>
+<l>jalāgneriva saṃsargācchaśāma ca śuśoṣa ca // Saund_11.5 //</l>
+</lg>
+
+<lg>
+<l>svabhāvadarśanīyo 'pi vairūpyamagamat param /</l>
+<l>cintayāpsarasāṃ caiva niyamenāyatena ca // Saund_11.6 //</l>
+</lg>
+
+<lg>
+<l>prastāveṣvapi bhāryāyāṃ priyabhāryastathāpi saḥ /</l>
+<l>vītarāga ivātasthau na jaharṣa na cukṣubhe // Saund_11.7 //</l>
+</lg>
+
+<lg>
+<l>taṃ vyavasthitamājñāya bhāryārāgāt parāṅmukham /</l>
+<l>abhigamyābravīnnandamānandaḥ praṇayādidam // Saund_11.8 //</l>
+</lg>
+
+<lg>
+<l>aho sadṛśamārabdhaṃ śrutamasyābhijanasya ca /</l>
+<l>nigṛhītendriyaḥ svastho niyame yadi saṃsthitaḥ // Saund_11.9 //</l>
+</lg>
+
+<lg>
+<l>abhiṣvaktasya kāmeṣu rāgiṇo viṣayātmanaḥ /</l>
+<l>yadiyaṃ saṃvidutpannā neyamalpena hetunā // Saund_11.10 //</l>
+</lg>
+
+<lg>
+<l>vyādhiralpena yatnena mṛduḥ pratinivāryate /</l>
+<l>prabalaḥ prabalaireva yatnairnaśyati vā na vā // Saund_11.11 //</l>
+</lg>
+
+<lg>
+<l>durharo mānaso vyādhirbalavāṃśca tavābhavat /</l>
+<l>vinivṛtto yadi [ca] te sarvathā dhṛtimānasi // Saund_11.12 //</l>
+</lg>
+
+<lg>
+<l>duṣkaraṃ sādhvanāryeṇa māninā caiva mārdavam /</l>
+<l>atisargaśca lubdhena brahmacaryaṃ ca rāgiṇā // Saund_11.13 //</l>
+</lg>
+
+<lg>
+<l>ekastu mama saṃdehastavāsyāṃ niyame dhṛtau /</l>
+<l>atrānunayamicchāmi vaktavyaṃ yadi manyase // Saund_11.14 //</l>
+</lg>
+
+<lg>
+<l>ārjavābhihitaṃ vākyaṃ na ca mantavyamanyathā /</l>
+<l>rūkṣamapyāśaye śuddhe rukṣato naiti sajjanaḥ // Saund_11.15 //</l>
+</lg>
+
+<lg>
+<l>apriyaṃ hi hitaṃ snigdhamasnigdhamahitaṃ priyam /</l>
+<l>durlabhaṃ tu priyahitaṃ svādu pathyamivauṣadham // Saund_11.16 //</l>
+</lg>
+
+<lg>
+<l>viśvāsaścārthacaryā ca sāmānyaṃ sukhaduḥkhayoḥ /</l>
+<l>marṣaṇaṃ praṇayaścaiva mitravṛttiriyaṃ satām // Saund_11.17 //</l>
+</lg>
+
+<lg>
+<l>tadidaṃ tvāṃ vivakṣāmi praṇayānna jighāṃsayā /</l>
+<l>tvacchreyo hi vivakṣā me yato nārhāmyupekṣitum // Saund_11.18 //</l>
+</lg>
+
+<lg>
+<l>apsarobhṛtako dharmaṃ carasītyabhidhīyase /</l>
+<l>kimidaṃ bhūtamāhosvit parihāso 'yamīdṛśaḥ // Saund_11.19 //</l>
+</lg>
+
+<lg>
+<l>yadi tāvadidaṃ satyaṃ vakṣyāmyatra yadauṣadham /</l>
+<l>auddhatyamatha vaktṛṇāmabhidhāsyāmi tadrajaḥ // Saund_11.20 //</l>
+</lg>
+
+<lg>
+<l>ślakṣṇapūrvamatho tena hṛdi so 'bhihatastadā /</l>
+<l>dhyātvā dīrghaṃ niśaśvāsa kiñciccāvāṅmukho 'bhavat // Saund_11.21 //</l>
+</lg>
+
+<lg>
+<l>tatastasyeṅgitaṃ jñātvā manaḥsaṃkalpasūcakam /</l>
+<l>babhāṣe vākyamānando madhurodarkamapriyam // Saund_11.22 //</l>
+</lg>
+
+<lg>
+<l>ākāreṇāvagacchāmi tava dharmaprayojanam /</l>
+<l>yajjñātvā tvayi jātaṃ me hāsyaṃ kāruṇyameva ca // Saund_11.23 //</l>
+</lg>
+
+<lg>
+<l>yathāsanārthaṃ skandhena kaścid gurvīṃ śilāṃ vahet /</l>
+<l>tadvattvamapi kāmārthaṃ niyamaṃ voḍhumudyataḥ // Saund_11.24 //</l>
+</lg>
+
+<lg>
+<l>titāḍayiṣayā dṛpto yathā meṣo 'parsati /</l>
+<l>tadvadabrahmacaryāya brahmacaryamidaṃ tava // Saund_11.25 //</l>
+</lg>
+
+<lg>
+<l>cikrīṣanti yathā paṇyaṃ vaṇijo lābhalipsayā /</l>
+<l>dharmacaryā tava tathā paṇyabhūtā na śāntaye // Saund_11.26 //</l>
+</lg>
+
+<lg>
+<l>yathā phalaviśeṣārtha bījaṃ vapati kārṣakaḥ /</l>
+<l>tadvad viṣayakārpaṇyād viṣayāṃstyaktavānasi // Saund_11.27 //</l>
+</lg>
+
+<lg>
+<l>ākāṅkṣecca yathā rogaṃ pratīkārasukhepsayā /</l>
+<l>duḥkhamanvicchati bhavāṃstathā viṣayatṛṣṇayā // Saund_11.28 //</l>
+</lg>
+
+<lg>
+<l>yathā paśyati madhveva na prapātamavekṣate /</l>
+<l>paśyasyapsarasastadvad bhraṃśamante na paśyasi // Saund_11.29 //</l>
+</lg>
+
+<lg>
+<l>hṛdi kāmāgninā dīpte kāyena vahato vratam /</l>
+<l>kimidaṃ brahmacaryaṃ te manasābrahmacāriṇaḥ // Saund_11.30 //</l>
+</lg>
+
+<lg>
+<l>saṃsāre vartamānena yadā cāpsarasastvayā /</l>
+<l>prāptāstyaktāśca śataśastābhyaḥ kimiti te spṛhā // Saund_11.31 //</l>
+</lg>
+
+<lg>
+<l>tṛptirnāstīndhanairagnernāmbhasā lavaṇāmbhasaḥ /</l>
+<l>nāpi kāmaiḥ satṛṣṇasya tasmāt kāmā na tṛṣtaye // Saund_11.32 //</l>
+</lg>
+
+<lg>
+<l>atṛptau sa kutaḥ śāntiraśāntau ca kutaḥ sukham /</l>
+<l>asukhe ca kutaḥ prītiraprītau ca kuto ratiḥ // Saund_11.33 //</l>
+</lg>
+
+<lg>
+<l>riraṃsā yadi te tasmādadhyātme dhīyatāṃ manaḥ /</l>
+<l>praśāntā cānavadyā ca nāstyadhyātmasamā ratiḥ // Saund_11.34 //</l>
+</lg>
+
+<lg>
+<l>na tatra kāryaṃ tūryaiste na strībhirna vibhūṣaṇaiḥ /</l>
+<l>ekastvaṃ [yatra]tatrasthastayā ratyābhiraṃsyase // Saund_11.35 //</l>
+</lg>
+
+<lg>
+<l>mānasaṃ balavad duḥkhaṃ tarṣe tiṣṭhati tiṣṭhati /</l>
+<l>taṃ tarṣaṃ chindhi duḥkhaṃ hi tṛṣṇā cāsti ca nāsti ca // Saund_11.36 //</l>
+</lg>
+
+<lg>
+<l>saṃpattau vā vipattau vā divā vā naktameva vā /</l>
+<l>kāmeṣu hi satṛṣṇasya na śāntirupapadyate // Saund_11.37 //</l>
+</lg>
+
+<lg>
+<l>kāmānāṃ prārthanā duḥkhā prāptau tṛptirna vidyate /</l>
+<l>viyogānniyataḥ śoko viyogaśca dhruvo divi // Saund_11.38 //</l>
+</lg>
+
+<lg>
+<l>kṛtvāpi duṣkaraṃ karma svarge labdhvāpi durlabham /</l>
+<l>nṛlokaṃ punarevaiti pravāsāt svagṛhaṃ yathā // Saund_11.39 //</l>
+</lg>
+
+<lg>
+<l>yadā bhraṣṭasya kuśalaṃ śiṣṭaṃ kiṃcinna vidyate /</l>
+<l>tiryakṣu pitṛloke vā narake copapadyate // Saund_11.40 //</l>
+</lg>
+
+<lg>
+<l>tasya bhuktavataḥ svarge viṣayānuttamānapi /</l>
+<l>bhraṣṭasyārtasya duḥkhena kimāsvādaḥ karoti saḥ // Saund_11.41 //</l>
+</lg>
+
+<lg>
+<l>śyenāya prāṇivātsalyāt svamāṃsānyapi dattavān /</l>
+<l>śiviḥ svargāt paribhraṣṭastādṛk kṛtvāpi duṣkaram // Saund_11.42 //</l>
+</lg>
+
+<lg>
+<l>śakrasyārdhāsanaṃ gatvā pūrvapārthiva eṃva yaḥ /</l>
+<l>sa devatvaṃ gataḥ kāle māndhātādhaḥ punaryayau // Saund_11.43 //</l>
+</lg>
+
+<lg>
+<l>rājyaṃ kṛtvāpi devānāṃ papāta nahuṣo bhuvi /</l>
+<l>prāptaḥ kila bhujaṃgatvaṃ nādyāpi parimucyate // Saund_11.44 //</l>
+</lg>
+
+<lg>
+<l>tathaivelivilo rājā rājavṛttena saṃskṛtaḥ /</l>
+<l>svargaṃ gatvā punarbhraṣṭaḥ kūrmībhūtaḥ kilārṇave // Saund_11.45 //</l>
+</lg>
+
+<lg>
+<l>bhūridyumno yayātiśca te cānye ca nṛparṣabhāḥ /</l>
+<l>karmabhirdyāmabhikrīya tatkṣayāt punaratyajan // Saund_11.46 //</l>
+</lg>
+
+<lg>
+<l>asurāḥ pūrvadevāstu surairapahṛtaśriyaḥ /</l>
+<l>śriyaṃ samanuśocantaḥ pātālaṃ śaraṇaṃ yayuḥ // Saund_11.47 //</l>
+</lg>
+
+<lg>
+<l>kiṃ ca rājarṣibhistāvadasurairvā surādibhiḥ /</l>
+<l>mahendrāḥ śataśaḥ peturmāhātmyamapi na sthiram // Saund_11.48 //</l>
+</lg>
+
+<lg>
+<l>saṃsadaṃ śobhāyitvaindrīmupendraścendravikramaḥ /</l>
+<l>kṣīṇakarmā papātorvīṃ madhyādapsarasāṃ rasan // Saund_11.49 //</l>
+</lg>
+
+<lg>
+<l>hā caitraratha hā vāpi hā mandākini hā priye /</l>
+<l>ityārtā vilapanto 'pi gāṃ patanti divaukasaḥ // Saund_11.50 //</l>
+</lg>
+
+<lg>
+<l>tīvraṃ hyutpadyate duḥkhamiha tāvanmumūrṣatām /</l>
+<l>kiṃ punaḥ patatāṃ svargādevānte sukhasevinām // Saund_11.51 //</l>
+</lg>
+
+<lg>
+<l>rajo gṛṇhanti vāsāṃsi mlāyanti paramāḥ srajaḥ /</l>
+<l>gātrebhyo jāyate svedo ratirbhavati nāsane // Saund_11.52 //</l>
+</lg>
+
+<lg>
+<l>etānyādau nimittāni cyutau svargād divaukasām /</l>
+<l>aniṣṭānīva martyānāmariṣṭāni mumūrṣatām // Saund_11.53 //</l>
+</lg>
+
+<lg>
+<l>sukhamutpadyate yacca divi kāmānupāśnatām /</l>
+<l>yacca duḥkhaṃ nipatatāṃ duḥkhameva viśiṣyate // Saund_11.54 //</l>
+</lg>
+
+<lg>
+<l>tasmādasvantamatrāṇamaviśvāsyamatarpakam /</l>
+<l>vijñāya kṣayiṇaṃ svargamapavarge matiṃ kuru // Saund_11.55 //</l>
+</lg>
+
+<lg>
+<l>aśarīraṃ bhavāgraṃ hi gatvāpi munirudrakaḥ /</l>
+<l>karmaṇo 'nte cyutastasmāt tiryagyoniṃ prapatsyate // Saund_11.56 //</l>
+</lg>
+
+<lg>
+<l>maitrayā saptavārṣikyā brahmalokamito gataḥ /</l>
+<l>sunetraḥ punarāvṛtto garbhavāsamupeyivān // Saund_11.57 //</l>
+</lg>
+
+<lg>
+<l>yadā caiśvaryavanto 'pi kṣayiṇaḥ svargavāsinaḥ /</l>
+<l>ko nāma svargavāsaya kṣeṣṇave spṛhayed budhaḥ // Saund_11.58 //</l>
+</lg>
+
+<lg>
+<l>sūtreṇa baddho hi yathā vihaṃgo vyāvartate dūragato 'pi bhūyaḥ /</l>
+<l>ajñānasūtreṇa tathāvabaddho gato 'pi dūraṃ punareti lokaḥ // Saund_11.59 //</l>
+</lg>
+
+<lg>
+<l>kṛtvā kālavilakṣaṇaṃ pratibhuvā mukto yathā bandhanād</l>
+<l>bhuktvā veśmasukhānyatītya samayaṃ bhūyo viśed vandhanaṃ /</l>
+<l>tadvad dyāṃ pratibhūvadātmaniyamairdhyānādibhiḥ prāptavān</l>
+<l>kāle karmasu teṣu bhuktaviṣayeṣvākṛṣate gāṃ punaḥ // Saund_11.60 //</l>
+</lg>
+
+<lg>
+<l>antarjālagatāḥ pramattamanaso mīnāstaḍāge yathā</l>
+<l>jānanti vyasanaṃ na rodhajanitaṃ svasthāścarantyambhasi /</l>
+<l>antarlokagatāḥ kṛtārthamatayastadvaddivi dhyāyino</l>
+<l>manyante śivamacyutaṃ dhruvamiti svaṃ sthānamāvartakam // Saund_11.61 //</l>
+</lg>
+
+<lg>
+<l>tajjanmavyādhimṛtyuvyasanaparigataṃ matvā jagadidaṃ</l>
+<l>saṃsāre bhrāmyamāṇaṃ divi nṛṣu narake tiryakpitṛṣu ca /</l>
+<l>yattrāṇaṃ nirbhayaṃ yacchivamamarajaraṃ niḥśokamamṛtaṃ</l>
+<l>taddhetorbrahmacaryaṃ cara jahi hi calaṃ svargaṃ prati rucim // Saund_11.62 //</l>
+</lg>
+
+<p>saundarananda mahākāvye "svarga kī hīnatā" nāma ekādaśa sarga samāpta //</p>
+
+</div>
+<div>
+
+<p>dvādaśaḥ sargaḥ
+viveka</p>
+
+<lg>
+<l>apsarobhṛtako dharmaṃ carasītyatha coditaḥ /</l>
+<l>ānandena tadā nandaḥ paraṃ vrīḍamupāgamat // Saund_12.1 //</l>
+</lg>
+
+<lg>
+<l>tasya vrīḍena mahatā pramodo hṛdi nābhavat /</l>
+<l>aprāmodyena vimukhaṃ nāvatasthe vrate manaḥ // Saund_12.2 //</l>
+</lg>
+
+<lg>
+<l>kāmarāgapradhāno 'pi parihāsasamo 'pi san /</l>
+<l>paripākagate hetau na sa tanmamṛṣe vacaḥ // Saund_12.3 //</l>
+</lg>
+
+<lg>
+<l>aparīkṣakabhāvācca pūrvaṃ matvā divaṃ dhruvam /</l>
+<l>tasmāt kṣeṣṇuṃ pariśrutya bhṛśaṃ saṃvegameyivān // Saund_12.4 //</l>
+</lg>
+
+<lg>
+<l>tasya svargānnivavṛte saṃkalpāśvo manorathaḥ /</l>
+<l>mahāratha ivonmārgādapramattasya sāratheḥ // Saund_12.5 //</l>
+</lg>
+
+<lg>
+<l>svargatarṣānnivṛttaśca sadyaḥ svastha ivābhavat /</l>
+<l>mṛṣṭādapathyād virato jijīviṣurivāturaḥ // Saund_12.6 //</l>
+</lg>
+
+<lg>
+<l>visasmāra priyāṃ bhāryāmapsarodarśanād yathā /</l>
+<l>tathānityatayodvignastatyājāpsaraso 'pi saḥ // Saund_12.7 //</l>
+</lg>
+
+<lg>
+<l>mahatāmapi bhūtānāmāvṛttiriti cintayan /</l>
+<l>saṃvegācca sarāgo 'pi vītarāga ivābhavat // Saund_12.8 //</l>
+</lg>
+
+<lg>
+<l>babhūva sa hi saṃvegaḥ śreyasastasya vṛddhaye /</l>
+<l>dhāturedhirivākhyāte paṭhito 'kṣaracintakaiḥ // Saund_12.9 //</l>
+</lg>
+
+<lg>
+<l>na tu kāmānmanastasya kenacijjagṛhe dhṛtiḥ /</l>
+<l>triṣu kāleṣu sarveṣu nipāto 'stiriva smṛtaḥ // Saund_12.10 //</l>
+</lg>
+
+<lg>
+<l>khelagāmī mahābāhurgajendra iva nirmadaḥ /</l>
+<l>so 'bhyagacchad guruṃ kāle vivakṣurbhāvamātmanaḥ // Saund_12.11 //</l>
+</lg>
+
+<lg>
+<l>praṇamya ca gurau murdhnā bāṣpavyākulalocanaḥ /</l>
+<l>kṛtvāñjalimuvācedaṃ hriyā kiṃcidavāṅmukhaḥ // Saund_12.12 //</l>
+</lg>
+
+<lg>
+<l>apsaraḥ prāptaye yanme bhagavan pratibhūrasi /</l>
+<l>nāpsarobhirmamārtho 'sti pratibhūtvaṃ tyajāmyaham // Saund_12.13 //</l>
+</lg>
+
+<lg>
+<l>śrutvā hyāvartakaṃ svargaṃ saṃsārastha ca citratām /</l>
+<l>na martyeṣu na deveṣu pravṛttirmama rocate // Saund_12.14 //</l>
+</lg>
+
+<lg>
+<l>yadi prāpya divaṃ yatnānniyamena damena ca /</l>
+<l>avitṛptāḥ patantyante svargāya tyāgine namaḥ // Saund_12.15 //</l>
+</lg>
+
+<lg>
+<l>ataśca nikhilaṃ lokaṃ viditvā sacarācaram /</l>
+<l>sarvaduḥkhakṣayakare tvaddharme parame rame // Saund_12.16 //</l>
+</lg>
+
+<lg>
+<l>tasmād vyāsasamāsābhyāṃ tanme vyākhyātumarhasi /</l>
+<l>yacchrutvā śṛṇvatāṃ śreṣṭha paramaṃ prāpnuyāṃ padam // Saund_12.17 //</l>
+</lg>
+
+<lg>
+<l>tatastasyāśayaṃ jñātvā vipakṣāṇindriyāṇi ca /</l>
+<l>śreyaścaivāmukhībhūtaṃ nijagāda tathāgataḥ // Saund_12.18 //</l>
+</lg>
+
+<lg>
+<l>aho pratyavamarśo 'yaṃ śreyasaste purojavaḥ /</l>
+<l>araṇyāṃ mathyamānāyāmagnerdhūma ivotthitaḥ // Saund_12.19 //</l>
+</lg>
+
+<lg>
+<l>ciramunmārgavihṛto lolairindriyavājibhiḥ /</l>
+<l>avatīrṇo 'si panthānaṃ diṣṭyā dṛṣṭyavimūḍhayā // Saund_12.20 //</l>
+</lg>
+
+<lg>
+<l>adya te saphalaṃ janma lābho 'dya sumahāṃstava /</l>
+<l>yasya kāmarasajñasya naiṣkramyāyotsukaṃ manaḥ // Saund_12.21 //</l>
+</lg>
+
+<lg>
+<l>loke 'sminnālayārāme nivṛttau durlabhā ratiḥ /</l>
+<l>vyathante hyapunarbhāvāt prapātādiva bāliśāḥ // Saund_12.22 //</l>
+</lg>
+
+<lg>
+<l>duḥkhaṃ na syāt sukhaṃ me syāditi prayatate janaḥ /</l>
+<l>atyantaduḥkhoparamaṃ sukhaṃ tacca na budhyate // Saund_12.23 //</l>
+</lg>
+
+<lg>
+<l>aribhūteṣvanityeṣu satataṃ duḥkhahetuṣu /</l>
+<l>kāmādiṣu jagat saktaṃ na vetti sukhamavyayam // Saund_12.24 //</l>
+</lg>
+
+<lg>
+<l>sarvaduḥkhāpahaṃ tattu hastasthamamṛtaṃ tava /</l>
+<l>viṣaṃ pītvā yadagadaṃ samaye pātumicchasi // Saund_12.25 //</l>
+</lg>
+
+<lg>
+<l>anarhasaṃsārabhayaṃ mānārhaṃ te cikīrṣitam /</l>
+<l>rāgāgnistādṛśo yasya dharmonmukha parāṅmukhaḥ // Saund_12.26 //</l>
+</lg>
+
+<lg>
+<l>rāgoddāmena manasā sarvathā duṣkarā dhṛtiḥ /</l>
+<l>sadoṣaṃ salilaṃ dṛṣṭvā pathineva pipāsunā // Saund_12.27 //</l>
+</lg>
+
+<lg>
+<l>īdṛśī nāma buddhiste viruddhā rajasābhavat /</l>
+<l>rajasā caṇḍavātena vivasvata iva prabhā // Saund_12.28 //</l>
+</lg>
+
+<lg>
+<l>sā jighāṃsustamo hārdaṃ yā saṃprati vijṛmbhate /</l>
+<l>tamo naiśaṃ prabhā saurī vinirgīrṇeva meruṇā // Saund_12.29 //</l>
+</lg>
+
+<lg>
+<l>yuktarūpamidaṃ caiva śuddhasattvasya cetasaḥ /</l>
+<l>yatte syānnaiṣṭhike sūkṣme śreyasi śraddadhānatā // Saund_12.30 //</l>
+</lg>
+
+<lg>
+<l>dharmacchandamimaṃ tasmādvivardhayitumarhasi /</l>
+<l>sarvadharmā hi dharmajña niyamācchandahetavaḥ // Saund_12.31 //</l>
+</lg>
+
+<lg>
+<l>satyāṃ gamanabuddhau hi gamanāya pravartate /</l>
+<l>śayyābuddhau ca śayanaṃ sthānabuddhau tathā sthitiḥ // Saund_12.32 //</l>
+</lg>
+
+<lg>
+<l>antarbhūmigataṃ hyambhaḥ śraddadhāti naro yadā /</l>
+<l>arthiṃtve sati yatnena tadā khanati gāmimām // Saund_12.33 //</l>
+</lg>
+
+<lg>
+<l>nārthī yadyagninā vā syācchraddadhyāttaṃ na vāraṇau /</l>
+<l>mathnīyānnāraṇiṃ kaścittabhaāve sati mathyate // Saund_12.34 //</l>
+</lg>
+
+<lg>
+<l>sasyotpattiṃ yadi na vā śraddadhyāt kārṣakaḥ kṣitau /</l>
+<l>arthī sasyena vā na syād bījāni na vaped bhuvi // Saund_12.35 //</l>
+</lg>
+
+<lg>
+<l>ataśca hasta ityuktā mayā śraddhā viśeṣataḥ /</l>
+<l>yasmād gṛṇhāti saddharmaṃ dāyaṃ hasta yato yathāḥ // Saund_12.36 //</l>
+</lg>
+
+<lg>
+<l>prādhānyādindriyamiti sthiratvād balamityataḥ /</l>
+<l>guṇadāridrayaśamanād dhanamityabhivarṇitā // Saund_12.37 //</l>
+</lg>
+
+<lg>
+<l>rakṣaṇārthena dharmasya tatheṣīketyudāhṛtā /</l>
+<l>loke 'smin durlabhatvācca ratnamityabhibhāṣitā // Saund_12.38 //</l>
+</lg>
+
+<lg>
+<l>punaśca bījamityuktā nimittaṃ śreyaso yadā /</l>
+<l>pāvanārthena pāpasya nadītyabhihitā punaḥ // Saund_12.39 //</l>
+</lg>
+
+<lg>
+<l>yasmāddharmasya cotpattau śraddhā kāraṇamuttamam /</l>
+<l>mayoktā kāryatastasmāttatra tatra tathā tathā // Saund_12.40 //</l>
+</lg>
+
+<lg>
+<l>śraddhāṅkuramimaṃ tasmāt saṃvardhayitumarhasi /</l>
+<l>tadvṛddhau vardhate dharmo mūlavṛddhau yathā drumaḥ // Saund_12.41 //</l>
+</lg>
+
+<lg>
+<l>vyākulaṃ darśanaṃ yasya durbalo yasya niścayaḥ /</l>
+<l>tasya pāriplavā śraddhā na hiṃ kṛtyāya vartate // Saund_12.42 //</l>
+</lg>
+
+<lg>
+<l>yāvattattvaṃ na bhavati hi dṛṣṭaṃ śrutaṃ vā tāvacchraddhā na bhavati balasthā sthirā vā /</l>
+<l>dṛṣṭe tattve niyamaparibhūtendriyasya śraddhāvṛkṣo bhavati saphalaścāśrayaśca // Saund_12.43 //</l>
+</lg>
+
+<p>saundarananda mahākāvya meṃ "viveka" nāmaka dvādaśa sarga samāpta /</p>
+
+</div>
+<div>
+
+<p>trayodaśaḥ sargaḥ
+śīla evaṃ indriyasaṃyama</p>
+
+<lg>
+<l>atha saṃrādhito nandaḥ śraddhāṃ prati maharṣiṇā /</l>
+<l>pariṣikto 'mṛteneva yuyuje parayā mudā // Saund_13.1 //</l>
+</lg>
+
+<lg>
+<l>kṛtārthamiva taṃ mene saṃbuddhaḥ śraddhayā tayā /</l>
+<l>mene prāptamiva śreyaḥ sa ca buddhena saṃskṛtaḥ // Saund_13.2 //</l>
+</lg>
+
+<lg>
+<l>ślakṣṇena vacasā kāṃścit kāṃścit paruṣayā girā /</l>
+<l>kāṃścidābhyāmupāyābhyāṃ sa vininye vināyakaḥ // Saund_13.3 //</l>
+</lg>
+
+<lg>
+<l>pāṃsubhyaḥ kāñcanaṃ jātaṃ viśuddhaṃ nirmalaṃ śuci /</l>
+<l>sthitaṃ pāṃsuṣvapi yathā pāṃsudoṣairna lipyate // Saund_13.4 //</l>
+</lg>
+
+<lg>
+<l>padmaparṇaṃ yathā caiva jale jātaṃ jale sthitam /</l>
+<l>upariṣṭādadhastādvā na jalenopalipyate // Saund_13.5 //</l>
+</lg>
+
+<lg>
+<l>tadvalloke munirjāto lokasyānugrahaṃ caran /</l>
+<l>kṛtitvānnirmalatvācca lokadharmairna lipyate // Saund_13.6 //</l>
+</lg>
+
+<lg>
+<l>śleṣaṃ tyāgaṃ priyaṃ rūkṣaṃ kathāṃ ca dhyānameva ca /</l>
+<l>mantukāle cikitsārthaṃ cakre nātmānuvṛttaye // Saund_13.7 //</l>
+</lg>
+
+<lg>
+<l>ataśca sandadhe kāyaṃ mahākaruṇayā tayā /</l>
+<l>mocayeyaṃ kathaṃ duḥkhāt sattvānītyanukampakaḥ // Saund_13.8 //</l>
+</lg>
+
+<lg>
+<l>atha saṃharṣaṇānnandaṃ viditvā bhājanīkṛtam /</l>
+<l>abravīd bruvatāṃ śreṣṭhaḥ kramajñaḥ śreyasāṃ kramam // Saund_13.9 //</l>
+</lg>
+
+<lg>
+<l>ataḥ prabhṛti bhūyastvaṃ średdhendriyapuraḥsaraḥ /</l>
+<l>amṛtasyāptaye saumya vṛttaṃ rakṣitumarhasi // Saund_13.10 //</l>
+</lg>
+
+<lg>
+<l>prayogaḥ kāyavacasoḥ śuddho bhavati te yathā /</l>
+<l>uttāno vivṛto gupto 'navacchidrastathā kuru // Saund_13.11 //</l>
+</lg>
+
+<lg>
+<l>uttāno bhāvakaraṇād vivṛtaścāpyagūhanāt /</l>
+<l>gupto rakṣaṇatātparyādacchidraścānavadyataḥ // Saund_13.12 //</l>
+</lg>
+
+<lg>
+<l>śarīravacasoḥ śuddhau saptāṃge cāpi karmaṇi /</l>
+<l>ājīvasamudācāraṃ śaucāt saṃskartumarhasi // Saund_13.13 //</l>
+</lg>
+
+<lg>
+<l>doṣāṇāṃ kuhanādīnāṃ pañcānāmaniṣevaṇāt /</l>
+<l>tyāgācca jyotiṣādīnāṃ caturṇāṃ vṛttighātinām // Saund_13.14 //</l>
+</lg>
+
+<lg>
+<l>prāṇidhānyadhanādīnāṃ varjyānāmapratigrahāt /</l>
+<l>bhaikṣāṅgānāṃ nisṛṣṭānāṃ niyatānāṃ pratigrahāt // Saund_13.15 //</l>
+</lg>
+
+<lg>
+<l>parituṣṭaḥ śucirmañjuścaukṣayā jīvasaṃpadā /</l>
+<l>kuryā duḥkhapratīkāraṃ yāvadeva vimuktaye // Saund_13.16 //</l>
+</lg>
+
+<lg>
+<l>karmaṇo hi yathādṛṣṭāt kāyavākprabhavādapi /</l>
+<l>ājīvaḥ pṛthagevokto duḥśodhatvādayaṃ mayā // Saund_13.17 //</l>
+</lg>
+
+<lg>
+<l>gṛhasthena hi duḥśodhā dṛṣṭirvividhadṛṣṭinā /</l>
+<l>ājīvo bhikṣuṇā caiva pareṣvāyattavṛttinā // Saund_13.18 //</l>
+</lg>
+
+<lg>
+<l>etāvacchīlamityuktamācāro 'yaṃ samāsataḥ /</l>
+<l>asya nāśena naiva syāt pravrajyā na gṛhasthatā // Saund_13.19 //</l>
+</lg>
+
+<lg>
+<l>tasmāccāritrasampanno brahmacaryamidaṃ cara /</l>
+<l>aṇumātreṣvadyeṣu bhayadarśī dṛḍhavrataḥ // Saund_13.20 //</l>
+</lg>
+
+<lg>
+<l>śīlamāsthāya vartante sarvā hi śreyasi kriyāḥ /</l>
+<l>sthānādyānīva kāryāṇi pratiṣṭhāya vasundharām // Saund_13.21 //</l>
+</lg>
+
+<lg>
+<l>mokṣasyopaniṣat saumya vairāgyamiti gṛhyatām /</l>
+<l>vairāgyasyāpi saṃvedaḥ saṃvido jñānadarśanam // Saund_13.22 //</l>
+</lg>
+
+<lg>
+<l>jñānasyopaniṣaccaiva samādhirupadhāryatām /</l>
+<l>samādherapyupaniṣat sukhaṃ śārīramānasam // Saund_13.23 //</l>
+</lg>
+
+<lg>
+<l>praśrabdhiḥ kāyamanasaḥ sukhasyopaniṣat parā /</l>
+<l>praśrabdherapyupaniṣat prītirapyavagamyatām // Saund_13.24 //</l>
+</lg>
+
+<lg>
+<l>tathā prīterupaniṣat prāmodyaṃ paramaṃ matam /</l>
+<l>prāmodyasyāpyahṛllekhaḥ kukṛteṣvakṛteṣu vā // Saund_13.25 //</l>
+</lg>
+
+<lg>
+<l>ahṛllekhasya manasaḥ śīlaṃ tūpaniṣacchuci /</l>
+<l>ataḥ śīlaṃ nayatyagryamiti śīlaṃ viśodhaya // Saund_13.26 //</l>
+</lg>
+
+<lg>
+<l>śīlanācchīlamityuktaṃ śīlanaṃ sevanādapi /</l>
+<l>sevanaṃ tannideśācca nideśaśca tadāśrayāt // Saund_13.27 //</l>
+</lg>
+
+<lg>
+<l>śīlaṃ hi śaraṇaṃ saubhya kāntāra iva daiśikaḥ /</l>
+<l>pitraṃ bandhuśca rakṣā ca dhanaṃ ca balameva ca // Saund_13.28 //</l>
+</lg>
+
+<lg>
+<l>yataḥ śīlamataḥ saumya śīlaṃ saṃskartumarhasi /</l>
+<l>etatsthānamathānye [nanyaṃ] ca mokṣārambheṣu yoginām // Saund_13.29 //</l>
+</lg>
+
+<lg>
+<l>tataḥ smṛtimadhiṣṭhāya capalāni svabhāvataḥ /</l>
+<l>indriyāṇīndriyārthebhyo nivārayitumarhasi // Saund_13.30 //</l>
+</lg>
+
+<lg>
+<l>bhetavyaṃ na tathā śatrornāgnernāherna cāśaneḥ /</l>
+<l>indriyebhyo yathā svebhyastairajasraṃ hi hanyate // Saund_13.31 //</l>
+</lg>
+
+<lg>
+<l>dviṣadbhiḥ śatrubhiḥ kaścit kadācit pīḍyate na vā /</l>
+<l>indriyairbādhyate sarvaḥ sarvatra ca sadaiva ca // Saund_13.32 //</l>
+</lg>
+
+<lg>
+<l>na ca prayāti narakaṃ śatruprabhṛtibhirhataḥ /</l>
+<l>kṛṣyate tatra nighnastu capalairindriyairhataḥ // Saund_13.33 //</l>
+</lg>
+
+<lg>
+<l>hanyamānasya tairduḥkhaṃ hārdaṃ bhavati vā na vā /</l>
+<l>indriyairbādhyamānasya hārdaṃ śārīrameva ca // Saund_13.34 //</l>
+</lg>
+
+<lg>
+<l>saṃkalpaviṣadigdhā hi pañcendriyamayāḥ śarāḥ /</l>
+<l>cintāpuṅkhā ratiphalā viṣayākāśagocarāḥ // Saund_13.35 //</l>
+</lg>
+
+<lg>
+<l>manuṣyahariṇān ghnanti kāmavyādheritā hṛdi /</l>
+<l>vihanyante yadi na te tataḥ patanti taiḥ kṣatāḥ // Saund_13.36 //</l>
+</lg>
+
+<lg>
+<l>niyamājirasaṃsthena dhairyakārmukadhāriṇā /</l>
+<l>nipatanto nivāryāste mahatā smṛtivarmaṇā // Saund_13.37 //</l>
+</lg>
+
+<lg>
+<l>indriyāṇāmupaśamādarīṇāṃ nigrahādiva /</l>
+<l>sukhaṃ svapiti vāste vā yatra tatra gatoddhavaḥ // Saund_13.38 //</l>
+</lg>
+
+<lg>
+<l>teṣāṃ hi satataṃ loke viṣayānabhikāṅkṣatām /</l>
+<l>saṃvinnaivāsti kārpaṇyācchunāmāśāvatāmiva // Saund_13.39 //</l>
+</lg>
+
+<lg>
+<l>viṣayairindriyagrāmo na tṛptimadhigacchati /</l>
+<l>ajasraṃ pūryamāṇo 'pi samudraḥ salilairiva // Saund_13.40 //</l>
+</lg>
+
+<lg>
+<l>avaśyaṃ gocare sve sve vartitavyamihendriyaiḥ /</l>
+<l>nimittaṃ tatra na grāhyamanuvyañjanameva ca // Saund_13.41 //</l>
+</lg>
+
+<lg>
+<l>ālokya cakṣuṣā rūpaṃ dhātumātre vyavasthitaḥ /</l>
+<l>strī veti puruṣo veti na kalpayitumarhasi // Saund_13.42 //</l>
+</lg>
+
+<lg>
+<l>sacet strīpuruṣagrāhaḥ kvacid vidyeta kaścan /</l>
+<l>śubhataḥ keśadantādīnnānuprasthātumarhasi // Saund_13.43 //</l>
+</lg>
+
+<lg>
+<l>nāpaneyaṃ tataḥ kiṃcit prakṣepyaṃ nāpi kiñcana /</l>
+<l>draṣṭavyaṃ bhūtato bhūtaṃ yādṛśaṃ ca yathā ca yat // Saund_13.44 //</l>
+</lg>
+
+<lg>
+<l>evaṃ te paśyatastattvaṃ śaśvadindriyagocaram /</l>
+<l>bhaviṣyati padasthānaṃ nābhidhyādaurmanasyayoḥ // Saund_13.45 //</l>
+</lg>
+
+<lg>
+<l>abhidhyā priyarūpeṇa hanti kāmātmakaṃ jagat /</l>
+<l>arirmitramukheneva priyavākkaluṣāśayaḥ // Saund_13.46 //</l>
+</lg>
+
+<lg>
+<l>daurmanasyābhidhānastu pratigho viṣayāśritaḥ /</l>
+<l>mohādyenānuvṛtena paratreha ca hanyate // Saund_13.47 //</l>
+</lg>
+
+<lg>
+<l>anurodhavirodhābhyāṃ śitoṣṇābhyāmivārditaḥ /</l>
+<l>śarma nāpnoti na śreyaścalendriyamato jagat // Saund_13.48 //</l>
+</lg>
+
+<lg>
+<l>nendriyaṃ viṣaye tāvat pravṛttamapi sajjate /</l>
+<l>yāvanna manasastatra parikalpaḥ pravartate // Saund_13.49 //</l>
+</lg>
+
+<lg>
+<l>indhane sati vāyau ca yathā jvalati pāvakaḥ /</l>
+<l>viṣayāt parikalpācca kleśāgnirjāyate tathā // Saund_13.50 //</l>
+</lg>
+
+<lg>
+<l>abhūtaparikalpena viṣayasya hi vadhyate /</l>
+<l>tameva viṣayaṃ paśyan bhūtataḥ parimucyate // Saund_13.51 //</l>
+</lg>
+
+<lg>
+<l>dṛṣṭvaikaṃ rūpamanyo hi rajyate 'nyaḥ praduṣyati /</l>
+<l>kaścid bhavati madhyasthastatraivānyo ghṛṇāyate // Saund_13.52 //</l>
+</lg>
+
+<lg>
+<l>ato na viṣayo heturbandhāya na vimuktaye /</l>
+<l>parikalpaviśeṣeṇa saṃgo bhavati vā na vā // Saund_13.53 //</l>
+</lg>
+
+<lg>
+<l>kāryaḥ paramayatnena tasmādindriyasaṃvaraḥ /</l>
+<l>indriyāṇi hyagutpāni duḥkhāya ca bhavāya ca // Saund_13.54 //</l>
+</lg>
+
+<lg>
+<l>kāmabhogabhogavadbhirātmadṛṣṭidṛṣṭibhiḥ pramādanaikamūrddhabhiḥ praharṣalolajivhakaiḥ /</l>
+<l>indriyoragairmanobilaśrayaiḥ spṛhāviṣaiḥ śamāgadādṛte na dṛṣṭamasti yaccikitset // Saund_13.55 //</l>
+</lg>
+
+<lg>
+<l>tasmādeṣāmakuśalakarāṇāmarīṇāṃ cakṣurghrāṇaśravaṇarasanasparśanānām /</l>
+<l>sarvāvasthaṃ bhava viniyamādapramatto māsminnarthe kṣaṇamapi kṛthāstvaṃ pramādam // Saund_13.56 //</l>
+</lg>
+
+<p>saundarananda mahākāvye "śīla evaṃ indriyasaṃyama" nāma trayodaśa sarga samāpta /</p>
+
+</div>
+<div>
+
+<p>caturdaśaḥ sargaḥ
+ādiprasthāna</p>
+
+<lg>
+<l>atha smṛtikavāṭena pidhāyendriyasaṃvaram /</l>
+<l>bhojane bhava mātrājño dhyānāyānāmayāya ca // Saund_14.1 //</l>
+</lg>
+
+<lg>
+<l>prāṇāpānau nigṛṇhāti glāninidre prayacchati /</l>
+<l>kṛto hyatyarthamāhāro vihanti ca parākramam // Saund_14.2 //</l>
+</lg>
+
+<lg>
+<l>yathā cātyarthamāhāraḥ kṛto 'narthāya kalpate /</l>
+<l>upayuktastathātyalpo na sāmarthyāya kalpate // Saund_14.3 //</l>
+</lg>
+
+<lg>
+<l>ācayaṃ dyutimutsāhaṃ prayogaṃ balameva ca /</l>
+<l>bhojanaṃ kṛtamatyalpaṃ śarīrasyāpakarṣati // Saund_14.4 //</l>
+</lg>
+
+<lg>
+<l>yathā bhāreṇa namate laghunonnamate tulā /</l>
+<l>samā tiṣṭhati yuktena bhojyeneyaṃ tathā tanuḥ // Saund_14.5 //</l>
+</lg>
+
+<lg>
+<l>tasmādabhyavaharttavyaṃ svaśaktimanupaśyatā /</l>
+<l>nātimātraṃ na cātyalpaṃ meyaṃ mānavaśādapi // Saund_14.6 //</l>
+</lg>
+
+<lg>
+<l>atyākrānto hi kāyāgnirguruṇānnena śāmyati /</l>
+<l>avacchanna ivālpo 'gniḥ sahasā mahatendhasā // Saund_14.7 //</l>
+</lg>
+
+<lg>
+<l>atyantamapi saṃhāro nāhārasya praśasyate /</l>
+<l>anāhāro hi nirvāti nirindhana ivānalaḥ // Saund_14.8 //</l>
+</lg>
+
+<lg>
+<l>yasmānnāsti vināhārāt sarvaprāṇābhṛtāṃ sthitiḥ /</l>
+<l>tasmād duṣyati nāhāro vikalpo 'tra tu vāryate // Saund_14.9 //</l>
+</lg>
+
+<lg>
+<l>na hyekaviṣaye 'nyatra sajyante prāṇinastathā /</l>
+<l>avijñāte yathāhāre boddhavyaṃ tatra kāraṇam // Saund_14.10 //</l>
+</lg>
+
+<lg>
+<l>cikitsārthaṃ yathā dhatte vraṇasyālepanaṃ vraṇī /</l>
+<l>kṣudvighātārthamāhārastadvat sevyo mumukṣuṇā // Saund_14.11 //</l>
+</lg>
+
+<lg>
+<l>bhārasyodvahanārthaṃ ca rathākṣo 'bhyajyate yathā /</l>
+<l>bhojanaṃ prāṇayātrārthaṃ tadvad vidvānniṣevate // Saund_14.12 //</l>
+</lg>
+
+<lg>
+<l>samatikramaṇārthaṃ ca kāntārasya yathādhvagau /</l>
+<l>putramāṃsāni khādetāṃ dampatī bhṛśaduḥkhitau // Saund_14.13 //</l>
+</lg>
+
+<lg>
+<l>evamabhyavaharttavyaṃ bhojanaṃ pratisaṃkhyayā /</l>
+<l>na bhūṣārthaṃ na vapuṣo na madāya na dṛptaye // Saund_14.14 //</l>
+</lg>
+
+<lg>
+<l>dhāraṇārthaṃ śarīrasya bhojanaṃ hi vidhīyate /</l>
+<l>upastambhaḥ pipatiṣordubalasyeva veśmanaḥ // Saund_14.15 //</l>
+</lg>
+
+<lg>
+<l>plavaṃ yatnād yathā kaścid badhnīyād dhārayedapi /</l>
+<l>na tatsnehena yāvattu mahaughasyottitīrṣayā // Saund_14.16 //</l>
+</lg>
+
+<lg>
+<l>tathopakaraṇaiḥ kāyaṃ dhārayanti parīkṣakāḥ /</l>
+<l>na tatsnehena yāvattu duḥkhaughasya titīrṣayā // Saund_14.17 //</l>
+</lg>
+
+<lg>
+<l>śocatā pīḍyamānena dīyate śatrave yathā /</l>
+<l>na bhaktyā nāpi tarṣeṇa kevalaṃ prāṇaguptaye // Saund_14.18 //</l>
+</lg>
+
+<lg>
+<l>yogācārastathāhāraṃ śarīrāya prayacchati /</l>
+<l>kevalaṃ kṣudvighātārthaṃ na rāgeṇa na bhaktaye // Saund_14.19 //</l>
+</lg>
+
+<lg>
+<l>manodhāraṇayā caiva pariṇāmyātmavānahaḥ /</l>
+<l>vidhūya nidrāṃ yogena niśāmapyatināmayet // Saund_14.20 //</l>
+</lg>
+
+<lg>
+<l>hṛdi yatsaṃjñinaścaiva nidrā prādurbhavettava /</l>
+<l>guṇavatsaṃjñitāṃ saṃjñāṃ tadā manasi mā kṛthāḥ // Saund_14.21 //</l>
+</lg>
+
+<lg>
+<l>dhāturārambhadhṛtyośca sthāmavikramayorapi /</l>
+<l>nityaṃ manasi kāryaste bādhyamānena nidrayā // Saund_14.22 //</l>
+</lg>
+
+<lg>
+<l>āmnātavyāśca viśadaṃ te dharmā ye pariśrutāḥ /</l>
+<l>parebhyaścopadeṣṭavyāḥ saṃcintyāḥ svayameva ca // Saund_14.23 //</l>
+</lg>
+
+<lg>
+<l>prakledyamadbhirvadanaṃ vilokyāḥ sarvato diśaḥ /</l>
+<l>cāryā dṛṣṭiśca tārāsu jijāgariṣuṇā sadā // Saund_14.24 //</l>
+</lg>
+
+<lg>
+<l>antargatairacapalairvaśasthāyibhirindriyaiḥ /</l>
+<l>avikṣiptena manasā caṃkramyasvāsva vā niśi // Saund_14.25 //</l>
+</lg>
+
+<lg>
+<l>bhaye prītau ca śoke ca nidrayā nābhibhūyate /</l>
+<l>tasmānnidrābhiyogeṣu sevitavyamidaṃ trayam // Saund_14.26 //</l>
+</lg>
+
+<lg>
+<l>bhayamāgamanānmṛtyoḥ prītiṃ dharmaparigrahāt /</l>
+<l>janmaduḥkhādaparyantācchokamāgantumarhasi // Saund_14.27 //</l>
+</lg>
+
+<lg>
+<l>evamādiḥ kramaḥ saumya kāryo jāgaraṇaṃ prati /</l>
+<l>vandhyaṃ hi śayanādāyuḥ ka prājñaḥ kartumarhasi // Saund_14.28 //</l>
+</lg>
+
+<lg>
+<l>doṣavyālānatikramya vyālān gṛhagatāniva /</l>
+<l>kṣamaṃ prājñasya na svaptuṃ nistitīrṣormahad bhayam // Saund_14.29 //</l>
+</lg>
+
+<lg>
+<l>pradīpte jīvaloke hi mṛtyuvyādhijarāgnibhiḥ /</l>
+<l>kaḥ śayīta nirudvegaḥ pradīpta iva veśmani // Saund_14.30 //</l>
+</lg>
+
+<lg>
+<l>tasmāttama iti jñātvā nidrāṃ nāveṣṭumarhasi /</l>
+<l>apraśānteṣu doṣeṣu saśastreṣviva śatruṣu // Saund_14.31 //</l>
+</lg>
+
+<lg>
+<l>pūrvaṃ yāmaṃ triyāmāyāḥ prayogeṇātināmya tu /</l>
+<l>sevyā śayyā śarīrasya viśrāmārthaṃ svatantriṇā // Saund_14.32 //</l>
+</lg>
+
+<lg>
+<l>dakṣiṇena tu pārśvena sthitayālokasaṃjñayā /</l>
+<l>prabodhaṃ hṛdaye kṛtvā śayīthāḥ śāntamānasaḥ // Saund_14.33 //</l>
+</lg>
+
+<lg>
+<l>yāme tṛtīye cotthāya carannāsīna eva vā /</l>
+<l>bhūyo yogaṃ manaḥśuddhau kurvīthā niyatendriyaḥ // Saund_14.34 //</l>
+</lg>
+
+<lg>
+<l>athāsanagatasthānaprekṣitavyāhṛtādiṣu /</l>
+<l>saṃprajānan kriyāḥ sarvāḥ smṛtimādhātumarhasi // Saund_14.35 //</l>
+</lg>
+
+<lg>
+<l>dvārādhyakṣa iva dvāri yasya praṇihitā smṛtiḥ /</l>
+<l>dharṣayanti na taṃ doṣāḥ puraṃ guptamivārayaḥ // Saund_14.36 //</l>
+</lg>
+
+<lg>
+<l>na tasyotpadyate kleśo yasya kāyagatā smṛtiḥ /</l>
+<l>cittaṃ sarvāsvavasthāsu bālaṃ dhātrīva rakṣati // Saund_14.37 //</l>
+</lg>
+
+<lg>
+<l>śaravyaḥ sa tu doṣāṇāṃ yo hīnaḥ smṛtivarmaṇā /</l>
+<l>raṇasthaḥ pratiśatrūṇāṃ vihīna iva varmaṇā // Saund_14.38 //</l>
+</lg>
+
+<lg>
+<l>anāthaṃ tanmano jñeyaṃ yatsmṛtirnābhirakṣati /</l>
+<l>nirṇetā dṛṣṭirahito viṣameṣu caranniva // Saund_14.39 //</l>
+</lg>
+
+<lg>
+<l>anartheṣu prasaktāśca svārthebhyaśca parāṅmukhā /</l>
+<l>yadbhaye sati nodvignāḥ smṛtināśo 'tra kāraṇam // Saund_14.40 //</l>
+</lg>
+
+<lg>
+<l>svabhūmiṣu guṇāḥ sarve ye ca śīlādayaḥ sthitāḥ /</l>
+<l>vikīrṇā iva gā gopaḥ smṛtistānanugacchati // Saund_14.41 //</l>
+</lg>
+
+<lg>
+<l>pranaṣṭamamṛtaṃ tasya yasya viprasṛtā smṛtiḥ /</l>
+<l>hastasthamamṛtaṃ tasya yasya kāyagatā smṛtiḥ // Saund_14.42 //</l>
+</lg>
+
+<lg>
+<l>āryo nyāyaḥ kutastasya smṛtiryasya na vidyate /</l>
+<l>yasyāryo nāsti ca nyāyaḥ pranaṣṭastasya satpathaḥ // Saund_14.43 //</l>
+</lg>
+
+<lg>
+<l>pranaṣṭo yasya sanmārgo naṣṭaṃ tasyāmṛtaṃ padam /</l>
+<l>pranaṣṭamamṛtaṃ yasya sa duḥkhānna vimucyate // Saund_14.44 //</l>
+</lg>
+
+<lg>
+<l>tasmāccarana caro 'smīti sthito 'smīti cādhiṣṭhitaḥ /</l>
+<l>evamādiṣu kāryeṣu smṛtimādhātumarhasi // Saund_14.45 //</l>
+</lg>
+
+<lg>
+<l>yogānulomaṃ vijanaṃ viśabdaṃ śayyāsanaṃ saumya tathā bhajasva /</l>
+<l>kāyasya kṛtvā hi vivekamādau sukho 'dhigantuṃ manaso vivekaḥ // Saund_14.46 //</l>
+</lg>
+
+<lg>
+<l>alabdhacetaḥpraśamaḥ sarāgo yo na pracāraṃ bhajate viviktam /</l>
+<l>sa kṣaṇyate hyapratilabdhamārgaścarannivorvyāṃ bahukaṇṭakāyām // Saund_14.47 //</l>
+</lg>
+
+<lg>
+<l>adṛṣṭatattvena parīkṣakeṇa sthitena citre viṣayapracāre /</l>
+<l>cittaṃ niṣeddhuṃ na sukhena śakyaṃ kṛṣṭādako gauriva sasyamadhyāt // Saund_14.48 //</l>
+</lg>
+
+<lg>
+<l>anīryamāṇastu yathānilena praśāntimāgacchati citrabhānuḥ /</l>
+<l>alpena yatnena tathā vivikteṣvaghaṭṭitaṃ śāntimupaiti cetaḥ // Saund_14.49 //</l>
+</lg>
+
+<lg>
+<l>kvacidbhuktvā yattad vasanamapi yattatparihito</l>
+<l>vasannātmārāmaḥ kvacana vijane yo 'bhiramate /</l>
+<l>kṛtārthaḥ sa jñeyaḥ śamasukharasajñaḥ kṛtamatiḥ</l>
+<l>pareṣāṃ saṃsargaṃ pariharati yaḥ kaṇṭakamiva // Saund_14.50 //</l>
+</lg>
+
+<lg>
+<l>yadi dvandvārāme jagati viṣayavyagrahṛdaye</l>
+<l>vivikte nirdvando viharati kṛtī śāntahṛdayaḥ /</l>
+<l>tataḥ pītvā prajñārasamamṛtavattṛptahṛdayo</l>
+<l>viviktaḥ saṃsaktaṃ viṣayakṛpaṇaṃ śocati jagat // Saund_14.51 //</l>
+</lg>
+
+<lg>
+<l>vasañśūnyāgāre yadi satatameko 'bhiramate</l>
+<l>yadi kleśotpādaiḥ saha na ramate śatrubhiriva /</l>
+<l>carannātmārāmo yadi ca pibati prītisalilaṃ</l>
+<l>tato bhuṅkte śreṣṭhaṃ tridaśapatirājyādapi sukham // Saund_14.52 //</l>
+</lg>
+
+<p>saundarananda mahākāvye "ādiprasthāna" nāma caturdaśa sarga samāpta //</p>
+
+</div>
+<div>
+
+<p>pañcadaśaḥsargaḥ
+vitarkaprahāṇa</p>
+
+<lg>
+<l>yatra tatra vivikte tu baddhvā paryaṅkamuttamam /</l>
+<l>ṛjuṃ kāyaṃ samādhāya smṛtyābhimukhayānvitaḥ // Saund_15.1 //</l>
+</lg>
+
+<lg>
+<l>nāsāgre vā lalāṭe vā bhruvorantara eva vā /</l>
+<l>kurvīthāścapalaṃ cittamālambanaparāyaṇam // Saund_15.2 //</l>
+</lg>
+
+<lg>
+<l>sacet kāmavitarkastvāṃ dharṣayenmānaso jvaraḥ /</l>
+<l>kṣeptavyo nādhivāsyaḥ sa vastre reṇurivāgataḥ // Saund_15.3 //</l>
+</lg>
+
+<lg>
+<l>yadyapi pratisaṃkhyānāt kāmānutsṛṣṭavānasi /</l>
+<l>tamāṃsīva prakāśena pratipakṣeṇa tāñjahi // Saund_15.4 //</l>
+</lg>
+
+<lg>
+<l>tiṣṭhatyanuśayasteṣāṃ channo 'gniriva bhasmanā /</l>
+<l>sa te bhāvanayā saumya praśāmyo 'gnirivāmbunā // Saund_15.5 //</l>
+</lg>
+
+<lg>
+<l>te hi tasmāt pravartante bhūyo vījādivāṅkurāḥ /</l>
+<l>tasya nāśena te na syurbījanāśādivāṅkurāḥ // Saund_15.6 //</l>
+</lg>
+
+<lg>
+<l>arjanādīni kāmebhyo dṛṣṭvā duḥkhāni kāminām /</l>
+<l>tasmāttānmūlataśchindhi mitrasaṃjñānarīniva // Saund_15.7 //</l>
+</lg>
+
+<lg>
+<l>anityā moṣadharmāṇo riktā vyasanahetavaḥ /</l>
+<l>bahusādhāraṇāḥ kāmā varhyā hyāśīviṣā iva // Saund_15.8 //</l>
+</lg>
+
+<lg>
+<l>ye mṛgyamāṇā duḥkhāya rakṣyamāṇā na śāntaye /</l>
+<l>bhraṣṭāḥ śokāya mahate prāptāśca na vitṛptaye // Saund_15.9 //</l>
+</lg>
+
+<lg>
+<l>tṛptiṃ vittaprakarṣeṇa svargāvāptyā kṛtārthatām /</l>
+<l>kāmebhyaśca sukhotpattiṃ yaḥ paśyati sa naśyati // Saund_15.10 //</l>
+</lg>
+
+<lg>
+<l>calānapariniṣpannānasārānanavasthitān /</l>
+<l>parikalpasukhān kāmānna tānsmartumihārhasi // Saund_15.11 //</l>
+</lg>
+
+<lg>
+<l>vyāpādo vā vihiṃsā vā kṣobhayed yadi te manaḥ /</l>
+<l>prasādyaṃ tadvipakṣeṇa maṇinevākulaṃ jalam // Saund_15.12 //</l>
+</lg>
+
+<lg>
+<l>pratipakṣastayorjñeyo maitrī kāruṇyameva ca /</l>
+<l>virodho hi tayornityaṃ prakāśatamasoriva // Saund_15.13 //</l>
+</lg>
+
+<lg>
+<l>nivṛttaṃ yasya dauḥśīlyaṃ vyāpādaśca pravartate /</l>
+<l>hanti pāṃsubhirātmānaṃ sa snāta iva vāraṇaḥ // Saund_15.14 //</l>
+</lg>
+
+<lg>
+<l>duḥkhitebhyo hi martyebhyo vyādhimṛtyujarādibhiḥ /</l>
+<l>āryaḥ ko duḥkhamaparaṃ saghṛṇo dhātumarhati // Saund_15.15 //</l>
+</lg>
+
+<lg>
+<l>duṣṭena ceha manasā bādhyate vā paro na vā /</l>
+<l>sadyastu dahyate tāvat svaṃ mano duṣṭacetasaḥ // Saund_15.16 //</l>
+</lg>
+
+<lg>
+<l>tasmāt sarveṣu bhūteṣu maitrīṃ kāruṇyameva ca /</l>
+<l>na vyāpādaṃ vihiṃsāṃ vā vikalpayitumarhasi // Saund_15.17 //</l>
+</lg>
+
+<lg>
+<l>yadyadeva prasaktaṃ hi vitarkayati mānavaḥ /</l>
+<l>abhyāsāttena tenāsya natirbhavati cetasaḥ // Saund_15.18 //</l>
+</lg>
+
+<lg>
+<l>tasmādakuśalaṃ tyaktvā kuśalaṃ dhyātumarhasi /</l>
+<l>yatte syādiha cārthāya paramārthasya cāptaye // Saund_15.19 //</l>
+</lg>
+
+<lg>
+<l>saṃvardhante hyakuśalā vitarkāḥ saṃbhṛtā hṛdi /</l>
+<l>anarthajanakāstulyamātmanaśca parasya ca // Saund_15.20 //</l>
+</lg>
+
+<lg>
+<l>śreyaso vighnakaraṇād bhavantyātmavipattaye /</l>
+<l>pātrībhāvopaghātāttu parabhaktivipattaye // Saund_15.21 //</l>
+</lg>
+
+<lg>
+<l>manaḥkarmasvavikṣepamapi cābhyastumarhasi /</l>
+<l>na tvevākuśalaṃ saumya vitarkayitumarhasi // Saund_15.22 //</l>
+</lg>
+
+<lg>
+<l>yā vikāmopabhogāya cintā manasi vartate /</l>
+<l>na ca taṃ guṇamāpnoti bandhanāya ca kalpate // Saund_15.23 //</l>
+</lg>
+
+<lg>
+<l>sattvānāmupaghātāya parikleśāya cātmanaḥ /</l>
+<l>mohaṃ vrajati kāluṣyaṃ narakāya ca vartate // Saund_15.24 //</l>
+</lg>
+
+<lg>
+<l>tad vitarkairakuśalairnātmānaṃ hantumarhasi /</l>
+<l>suśastraṃ ratnavikṛtaṃ mṛddhato gāṃ khananniva // Saund_15.25 //</l>
+</lg>
+
+<lg>
+<l>anabhijño yathā jātyaṃ dahedaguru kāṣṭhavat /</l>
+<l>anyāyena manuṣyatvamupahanyādidaṃ tathā // Saund_15.26 //</l>
+</lg>
+
+<lg>
+<l>tyaktvā ratnaṃ yathā loṣṭaṃ ratnadvīpācca saṃharet /</l>
+<l>tyaktvā naiḥśreyasaṃ dharmaṃ cintayedaśubhaṃ tathā // Saund_15.27 //</l>
+</lg>
+
+<lg>
+<l>himavantaṃ yathā gatvā viṣaṃ bhuñjīta nauṣadham /</l>
+<l>manuṣyatvaṃ tathā prāpya pāpaṃ seveta no śubham // Saund_15.28 //</l>
+</lg>
+
+<lg>
+<l>tad buddhavā pratipakṣeṇa vitarkaṃ kṣeptumarhasi /</l>
+<l>sūkṣmeṇa pratikīlena kīlaṃ dārvantarādiva // Saund_15.29 //</l>
+</lg>
+
+<lg>
+<l>vṛddhyavṛddhyoratha bhaveccintā jñātijanaṃ prati /</l>
+<l>svabhāvo jīvalokasya parīkṣyastannivṛttaye // Saund_15.30 //</l>
+</lg>
+
+<lg>
+<l>saṃsāre kṛṣyamāṇānāṃ sattvānāṃ svena karmaṇā /</l>
+<l>ko janaḥ svajanaḥ ko vā mohāt sakto jane janaḥ // Saund_15.31 //</l>
+</lg>
+
+<lg>
+<l>atīte 'dhvani saṃvṛttaḥ svajano hi janastava /</l>
+<l>aprāpte cādhvani janaḥ svajanaste bhaviṣyati // Saund_15.32 //</l>
+</lg>
+
+<lg>
+<l>vihagānāṃ yathā sāyaṃ tatra tatra samāgamaḥ /</l>
+<l>jātau jātau tathāśleṣo janasya svajanasya ca // Saund_15.33 //</l>
+</lg>
+
+<lg>
+<l>pratiśrayaṃ bahuvidhaṃ saṃśrayanti yathādhvagāḥ /</l>
+<l>pratiyānti punastyaktvā tadvajjñātisamāgamaḥ // Saund_15.34 //</l>
+</lg>
+
+<lg>
+<l>loke prakṛtibhinne 'sminna kaścit kasyacit priyaḥ /</l>
+<l>kāryakāraṇasambaddhaṃ vālukāmuṣṭivajjagat // Saund_15.35 //</l>
+</lg>
+
+<lg>
+<l>bibharti hi sutaṃ mātā dhārayiṣyati māmiti /</l>
+<l>mātaraṃ bhajate putro garbheṇādhatta māmiti // Saund_15.36 //</l>
+</lg>
+
+<lg>
+<l>anukūlaṃ pravartante jñātiṣu jñātayo yadā /</l>
+<l>tadā snehaṃ prakurvanti riputvaṃ tu viparyayāt // Saund_15.37 //</l>
+</lg>
+
+<lg>
+<l>ahito dṛśyate jñātirajñātirdṛśyate hitaḥ /</l>
+<l>snehaṃ kāryāntarāllokāśchinatti ca karoti ca // Saund_15.38 //</l>
+</lg>
+
+<lg>
+<l>svayameva yathālikhya rajyeccitrakaraḥ striyam /</l>
+<l>tathā kṛtvā svayaṃ snehaṃ saṃgameti jane janaḥ // Saund_15.39 //</l>
+</lg>
+
+<lg>
+<l>yo 'bhavad bāndhavajanaḥ paraloke priyastava /</l>
+<l>sa te karmathaṃ kurute tvaṃ vā tasmai karoṣi kam // Saund_15.40 //</l>
+</lg>
+
+<lg>
+<l>tasmājjñātivitarkeṇa mano nāveṣṭumarhasi /</l>
+<l>vyavasthā nāsti saṃsāre svajanasya janasya ca // Saund_15.41 //</l>
+</lg>
+
+<lg>
+<l>asau kṣemo janapadaḥ subhikṣo 'sāvasau śivaḥ /</l>
+<l>ityevamatha jāyeta vitarkastava kaścana // Saund_15.42 //</l>
+</lg>
+
+<lg>
+<l>praheyaḥ sa tvayā saumya nādhivāsyaḥ kathaṃcana /</l>
+<l>viditvā sarvamādīptaṃ taistairdoṣāgnibhirjagat // Saund_15.43 //</l>
+</lg>
+
+<lg>
+<l>ṛtucakranivartācca kṣutpipāsāklamādapi /</l>
+<l>sarvatra niyataṃ duḥkhaṃ na kvacid vidyate śivam // Saund_15.44 //</l>
+</lg>
+
+<lg>
+<l>kvacicchītaṃ kvacid dharmaḥ kvacid rogo bhayaṃ kvacit /</l>
+<l>bādhate 'bhyadhikaṃ lokaṃ tasmādaśaraṇaṃ jagat // Saund_15.45 //</l>
+</lg>
+
+<lg>
+<l>jarā vyādhiśca mṛtyuśca lokasyāsya mahad bhayam /</l>
+<l>nāsti deśaḥ sa yatrāsya tad bhayaṃ nopapadyate // Saund_15.46 //</l>
+</lg>
+
+<lg>
+<l>yatra gacchati kāyo 'yaṃ duḥkhaṃ tatrānugacchati /</l>
+<l>nāsti kācid gatirloke gato yatra na bādhyate // Saund_15.47 //</l>
+</lg>
+
+<lg>
+<l>ramaṇīyo 'pi deśaḥ san subhikṣaḥ kṣema eva ca /</l>
+<l>kudeśa iti vijñeyo yatra kleśairvidahyate // Saund_15.48 //</l>
+</lg>
+
+<lg>
+<l>lokasyābhyāhatasyāsya duḥkhaiḥ śārīramānasaiḥ /</l>
+<l>kṣemaḥ kaścinna deśo 'sti svastho yatra gato bhavet // Saund_15.49 //</l>
+</lg>
+
+<lg>
+<l>duḥkhaṃ sarvatra sarvasya vartate sarvadā yadā /</l>
+<l>chandarāgamataḥ saumya lokacitreṣu mā kṛthāḥ // Saund_15.50 //</l>
+</lg>
+
+<lg>
+<l>yadā tasmānnivṛttaste chandarāgo bhaviṣyati /</l>
+<l>jīvalokaṃ tadā sarvamādīptamiva maṃsyase // Saund_15.51 //</l>
+</lg>
+
+<lg>
+<l>atha kaścid vitarkaste bhavedamaraṇāśrayaḥ /</l>
+<l>yatnena sa vihantavyo vyādhirātmagato yathā // Saund_15.52 //</l>
+</lg>
+
+<lg>
+<l>muhūrtamapi viśrambhaḥ kāryoṃ na khalu jīvite /</l>
+<l>nilīna iva hi vyāghraḥ kālo viśvastaghātakaḥ // Saund_15.53 //</l>
+</lg>
+
+<lg>
+<l>balastho 'haṃ yuvā veti na te bhavitumarhati /</l>
+<l>mṛtyuḥ sarvāsvasthāsu hanti nāvekṣate vayaḥ // Saund_15.54 //</l>
+</lg>
+
+<lg>
+<l>kṣetrabhūtamanarthānāṃ śarīraṃ parikarṣataḥ /</l>
+<l>svāsthyāśā jīvitāśā vā na dṛṣṭārthasya jāyate // Saund_15.55 //</l>
+</lg>
+
+<lg>
+<l>nirvṛttaḥ ko bhavet kāyaṃ mahābhūtāśrayaṃ vahan /</l>
+<l>parasparaviruddhānāmahīnāmiva bhājanam // Saund_15.56 //</l>
+</lg>
+
+<lg>
+<l>praśvasityayamanvakṣaṃ yaducchvasiti mānavaḥ /</l>
+<l>avagaccha tadāścaryamaviśvāsyaṃ hi jīvitam // Saund_15.57 //</l>
+</lg>
+
+<lg>
+<l>idamāścaryamaparaṃ yatsuptaḥ pratibudhyate /</l>
+<l>svapityutthāya vā bhūyo bahvamitrā hi dehinaḥ // Saund_15.58 //</l>
+</lg>
+
+<lg>
+<l>garbhāt prabhṛti yo lokaṃ jighāṃsuranugacchati /</l>
+<l>kastasmin viśvasenmṛtyāvudyatāsāvarāviva // Saund_15.59 //</l>
+</lg>
+
+<lg>
+<l>prasūtaḥ puruṣo loke śrutavān balavānapi /</l>
+<l>na jayatyantakaṃ kaścinnājayannāpi jeṣyati // Saund_15.60 //</l>
+</lg>
+
+<lg>
+<l>sāmnā dānena bhedena daṇḍena niyamena vā /</l>
+<l>prāpto hi rabhaso mṛtyuḥ pratihantuṃ na śakyate // Saund_15.61 //</l>
+</lg>
+
+<lg>
+<l>tasmānnāyuṣi viśvāsaṃ cañcale kartumarhasi /</l>
+<l>nityaṃ harati kālo hi sthāviryaṃ na pratīkṣate // Saund_15.62 //</l>
+</lg>
+
+<lg>
+<l>niḥsāraṃ paśyato lokaṃ toyabudbuddurbalam /</l>
+<l>kasyāmaravitarko hi syādanunmattacetasaḥ // Saund_15.63 //</l>
+</lg>
+
+<lg>
+<l>tasmādeṣāṃ vitarkāṇāṃ prahāṇārthaṃ samāsataḥ /</l>
+<l>ānāpānasmṛtiṃ saumya viṣayīkartumarhasi // Saund_15.64 //</l>
+</lg>
+
+<lg>
+<l>ityanena prayogeṇa kāle sevitumarhasi /</l>
+<l>pratipakṣān vitarkāṇāṃ gadānāmagadāniva // Saund_15.65 //</l>
+</lg>
+
+<lg>
+<l>suvarṇahetorapi pāṃsudhāvakau vihāya pāṃsūn bṛhato yathāditaḥ /</l>
+<l>jahāti sūkṣmānapi tadviśuddhaye viśodhya hemāvayavān niyacchati // Saund_15.66 //</l>
+</lg>
+
+<lg>
+<l>vimokṣahetorapi yuktamānaso vihāya doṣān bṛhatastathāditaḥ /</l>
+<l>jahāti sūkṣmānapi tadviśuddhaye viśodhya dharmāvayavān niyacchati // Saund_15.67 //</l>
+</lg>
+
+<lg>
+<l>krameṇādbhiḥ śuddhaṃ kanakamiha pāṃsuvyavahitaṃ</l>
+<l>yathāgnau karmāraḥ pacati bhṛśamāvartayati ca /</l>
+<l>tathā yogācāro nipuṇamiha doṣavyavahitaṃ</l>
+<l>viśodhya kleśebhyaḥ śamayati manaḥ saṃkṣipati ca // Saund_15.68 //</l>
+</lg>
+
+<lg>
+<l>yathā ca svacchandādupanayati karmāśrayasukhaṃ</l>
+<l>suvarṇaṃ karmāro bahuvidhamalaṅkāravidhiṣu /</l>
+<l>manaḥśuddho bhikṣurvaśagatamabhijñāsvapi tathā</l>
+<l>yathecchaṃ yatrecchaṃ śamayati manaḥ prerayati ca // Saund_15.69 //</l>
+</lg>
+
+<p>saundarananda mahākāvye "vitarkaprahāṇa" nāma pañcadaśa sarga samāpta /</p>
+
+</div>
+<div>
+
+<p>ṣoḍaśaḥ sargaḥ
+āryasatya</p>
+
+<lg>
+<l>evaṃ manodhāraṇayā krameṇa vyapohya kiñcit samupohya kiñcit /</l>
+<l>dhyānāni catvāryadhigamya yogī prāpnotyabhijñā niyamena pañca // Saund_16.1 //</l>
+</lg>
+
+<lg>
+<l>ṛddhipravekaṃ ca bahuprakāraṃ parasya cetaścaritāvabodham /</l>
+<l>atītajanmasmaraṇaṃ ca dīrghaṃ divye viśuddhe śruticakṣuṣī ca // Saund_16.2 //</l>
+</lg>
+
+<lg>
+<l>ataḥ paraṃ tattvaparikṣaṇena mano dadhātyāsravasaṃkṣayāya /</l>
+<l>tato hi duḥkhaprabhṛtīni samyak catvāri satyāni padānyavaiti // Saund_16.3 //</l>
+</lg>
+
+<lg>
+<l>bādhātmakaṃ duḥkhamidaṃ prasaktaṃ duḥkhasya hetuḥ prabhavātmako 'yam /</l>
+<l>duḥkhakṣayo niḥsaraṇātmako 'yaṃ trāṇātmako 'yaṃ praśamāya mārgaḥ // Saund_16.4 //</l>
+</lg>
+
+<lg>
+<l>ityāryasatyānyavabudhya buddhyā catvāri samyak pratividhya caiva /</l>
+<l>sarvāsravān bhāvanayābhibhūya na jāyate śāntimavāpya bhūyaḥ // Saund_16.5 //</l>
+</lg>
+
+<lg>
+<l>abodhato hyaprativedhataśca tattvātmakasyāsya catuṣṭasya /</l>
+<l>bhavād bhavaṃ yāti na śantimeti saṃsāradolāmadhiruhya lokaḥ // Saund_16.6 //</l>
+</lg>
+
+<lg>
+<l>tasmājjarādervyasanasya mūlaṃ samāsato duḥkhamavaihi janma /</l>
+<l>sarvauṣadhīnāmiva bhūrbhavāya sarvāpadāṃ kṣetramidaṃ hi janma // Saund_16.7 //</l>
+</lg>
+
+<lg>
+<l>yajjanmarūpasya hi sendriyasya duḥkhasya tannaikavidhasya janma /</l>
+<l>yaḥ saṃbhavaścāsya samucchrayasya mṛtyośca rogasya ca saṃbhavaḥ saḥ // Saund_16.8 //</l>
+</lg>
+
+<lg>
+<l>sadvāpyasadvā viṣamiśramannaṃ yathā vināśāya na dhāraṇāya /</l>
+<l>loke tathā tiryaguparyadho vā duḥkhāya sarvaṃ na sukhāya janma // Saund_16.9 //</l>
+</lg>
+
+<lg>
+<l>jarādayo naikavidhāḥ prajānāṃ satyāṃ pravṛttau prabhavantyanarthāḥ /</l>
+<l>pravātsu ghoreṣvapi māruteṣu na hyaprasūtāstaravaścalanti // Saund_16.10 //</l>
+</lg>
+
+<lg>
+<l>ākāśayoniḥ pavano yathā hi yathā śamīgarbhaśayo hutāśaḥ /</l>
+<l>āpo yathāntarvasudhāśayāśca duḥkhaṃ tathā cittaśarīrayoniḥ // Saund_16.11 //</l>
+</lg>
+
+<lg>
+<l>apāṃ dravatvaṃ kaṭhinatvamurvyā vāyoścalatvaṃ dhruvamauṣṇyamagneḥ /</l>
+<l>yathā svabhāvo hi tathā svabhāvo duḥkhaṃ śarīrasya ca cetasaśca // Saund_16.12 //</l>
+</lg>
+
+<lg>
+<l>kāye sati vyādhijarādi duḥkhaṃ kṣuttarṣavarṣoṣṇahimādi caiva /</l>
+<l>rūpāśrite cetasi sānubandhe śokāratikrodhabhayādi duḥkham // Saund_16.13 //</l>
+</lg>
+
+<lg>
+<l>pratyakṣamālokya ca janmaduḥkhaṃ duḥkhaṃ tathātītamapīti viddhi /</l>
+<l>yathā ca tadduḥkhamidaṃ ca duḥkhaṃ duḥkhaṃ tathānāgatamapyavehi // Saund_16.14 //</l>
+</lg>
+
+<lg>
+<l>bījasvabhāvo hi yatheha dṛṣṭo bhūto 'pi bhavyo 'pi tathānumeyaḥ /</l>
+<l>pratyakṣataśca jvalano yathoṣṇo bhūto 'pi bhavyo 'pi tathoṣṇa eva // Saund_16.15 //</l>
+</lg>
+
+<lg>
+<l>tannāmarūpasya guṇānurūpaṃ yatraiva nirvṛttirudāravṛtta /</l>
+<l>tatraiva duḥkhaṃ na hi tadvimuktaṃ duḥkhaṃ bhaviṣyatyabhavad bhaved vā // Saund_16.16 //</l>
+</lg>
+
+<lg>
+<l>pravṛttiduḥkhasya ca tasya loke tṛṣṇādayo doṣagaṇā nimittam /</l>
+<l>naiveśvaro na prakṛtirnaṃ kālo nāpo svabhāvo na vidhiryadṛcchā // Saund_16.17 //</l>
+</lg>
+
+<lg>
+<l>jñātavyametena ca kāraṇena lokasya doṣebhya iti pravṛttiḥ /</l>
+<l>yasmānmriyante sarajastamaskā na jāyate vītarajastamaskaḥ // Saund_16.18 //</l>
+</lg>
+
+<lg>
+<l>icchāviśeṣe sati tatra tatra yānāsanāderbhavati prayogaḥ /</l>
+<l>yasmādatastarṣavaśāttathaiva janma prajānāmiti veditavyam // Saund_16.19 //</l>
+</lg>
+
+<lg>
+<l>sattvānyabhiṣvaṅgavaśāni dṛṣṭvā svajātiṣu prītiparāṇyatīva /</l>
+<l>abhyāsayogādupapāditāni taireva doṣairiti tāni viddhi // Saund_16.20 //</l>
+</lg>
+
+<lg>
+<l>krodhapraharṣādibhirāśrayāṇāmutpadyate ceha yathā viśeṣaḥ /</l>
+<l>tathaiva janmasvapi naikarūpo nirvartate kleśakṛto viśeṣaḥ // Saund_16.21 //</l>
+</lg>
+
+<lg>
+<l>doṣādhike janmani tīvradoṣa utpadyate rāgiṇi tīvrarāgaḥ /</l>
+<l>mohādhike mohabalādhikaśca tadalpadoṣe ca tadalpadoṣaḥ // Saund_16.22 //</l>
+</lg>
+
+<lg>
+<l>phalaṃ hi yādṛk samavaiti sākṣāt tadāgamād bījamavaityatītam /</l>
+<l>avetya bījaprakṛtiṃ ca sākṣādanāgataṃ tatphalamabhyupaiti // Saund_16.23 //</l>
+</lg>
+
+<lg>
+<l>doṣakṣayo jātiṣu yāsu yasya vairāgyatastāsu na jāyate saḥ /</l>
+<l>doṣāśayastiṣṭhati yasya yatra tasyopapattirvivaśasya tatra // Saund_16.24 //</l>
+</lg>
+
+<lg>
+<l>tajjanmano naikavidhasya saumya tṛṣṇādayo hetava ityavetya /</l>
+<l>tāṃśchindhi duḥkhād yadi nirmumukṣā kāryakṣayaḥ kāraṇasaṃkṣayāddhi // Saund_16.25 //</l>
+</lg>
+
+<lg>
+<l>duḥkhakṣayo hetuparikṣayācca śāntaṃ śivaṃ sākṣikuruṣva dharmaṃ /</l>
+<l>tṛṣṇāvirāgaṃ layanaṃ nirodhaṃ sanātanaṃ trāṇamahāryamāryam // Saund_16.26 //</l>
+</lg>
+
+<lg>
+<l>yasminna jātirna jarā na mṛtyurna vyādhayo nāpriyasaṃprayogaḥ /</l>
+<l>necchāvipanna priyaviprayogaḥ kṣemaṃ padaṃ naiṣṭhikamacyutaṃ tat // Saund_16.27 //</l>
+</lg>
+
+<lg>
+<l>dīpo yathā nirvṛtimabhyupeto naivāvaniṃ gacchati nāntarikṣam /</l>
+<l>diśaṃ na kāṃcid vidiśaṃ na kāṃcit snehakṣayāt kevalameti śāntim // Saund_16.28 //</l>
+</lg>
+
+<lg>
+<l>evaṃ kṛtī nirvṛtimabhyupeto naivāvaniṃ gacchati nāntarikṣam /</l>
+<l>diśaṃ na kāṃcid vidiśaṃ na kāṃcit kleśakṣayāt kevalameti śāntim // Saund_16.29 //</l>
+</lg>
+
+<lg>
+<l>asyābhyupāyo 'dhigamāya mārgaḥ prajñātrikalpaḥ praśamadvikalpaḥ /</l>
+<l>sa bhāvanīyo vidhivad budhena śīle śucau tripramukhe sthitena // Saund_16.30 //</l>
+</lg>
+
+<lg>
+<l>vākkarma samyak sahākāyakarma yathāvadājīvanayaśca śuddhaḥ /</l>
+<l>idaṃ trayaṃ vṛttavidhau pravṛttaṃ śīlāśrayaṃ karmaparigrahāya // Saund_16.31 //</l>
+</lg>
+
+<lg>
+<l>satyeṣu duḥkhādiṣu dṛṣṭirāryā samyagvitarkaśca parākramaśca /</l>
+<l>idaṃ trayaṃ jñānavidhau pravṛttaṃ prajñāśrayaṃ kleśaparikṣayāya // Saund_16.32 //</l>
+</lg>
+
+<lg>
+<l>nyāyena satyādhigamāya yuktā samyak smṛtiḥ samyagatho samādhiḥ /</l>
+<l>idaṃ dvayaṃ yogavidhau pravṛttaṃ śamāśrayaṃ cittaparigrahāya // Saund_16.33 //</l>
+</lg>
+
+<lg>
+<l>kleśāṃkurānna pratanoti śīlaṃ bījāṅkurān kāla ivātivṛttaḥ /</l>
+<l>śucau hi śīle puruṣasya doṣā manaḥ salajjā iva dharṣayanti // Saund_16.34 //</l>
+</lg>
+
+<lg>
+<l>kleśāṃstu viṣkambhayate samādhirvegānivādrirmahato nadīnām /</l>
+<l>sthite samādhau hi na dharṣayanti doṣā bhujaṃgā iva mantrabaddhāḥ // Saund_16.35 //</l>
+</lg>
+
+<lg>
+<l>prajñā tvaśeṣeṇa nihanti doṣāṃstīradrumān prāvṛṣi nimnageva /</l>
+<l>dagdhā yayā na prabhavanti doṣā vajrāgninevānusṛtena vṛkṣāḥ // Saund_16.36 //</l>
+</lg>
+
+<lg>
+<l>triskandhametaṃ pravigāhya mārgaṃ praspaṣṭamaṣṭāṅgamahāryamāryam /</l>
+<l>duḥkhasya hetūn prajahāti doṣān prāpnoti cātyantaśivaṃ padaṃ tat // Saund_16.37 //</l>
+</lg>
+
+<lg>
+<l>asyopacāre dhṛtirārjavaṃ ca hrīrapramādaḥ praviviktatā ca /</l>
+<l>alpecchatā tuṣṭirasaṃgatā ca lokapravṛttāvaratiḥ kṣamā ca // Saund_16.38 //</l>
+</lg>
+
+<lg>
+<l>yāthātmyato vindati yo hi duḥkhaṃ tasyodbhavaṃ tasya ca yo nirodham /</l>
+<l>āryeṇa mārgeṇa sa śāntimeti kalyāṇamitraiḥ saha vartamānaḥ // Saund_16.39 //</l>
+</lg>
+
+<lg>
+<l>yo vyādhito vyādhimavaiti samyag vyādhernidānaṃ ca tadauṣadhaṃ ca /</l>
+<l>ārogyamāpnoti hi so 'cireṇa mitrairabhijñairupacaryamāṇaḥ // Saund_16.40 //</l>
+</lg>
+
+<lg>
+<l>tadvyādhisaṃjñāṃ kuru duḥkhasatye doṣeṣvapi vyādhinidānasaṃjñām /</l>
+<l>ārogyaṃjñāṃ ca nirodhasatye bhaiṣajyasaṃjñāmapi mārgasatye // Saund_16.41 //</l>
+</lg>
+
+<lg>
+<l>tasmāt pravṛttiṃparigaccha duḥkhaṃ pravartakānapyavagaccha doṣān /</l>
+<l>nivṛttimāgaccha ca tannirodhaṃ nivartakaṃ cāpyavagaccha mārgam // Saund_16.42 //</l>
+</lg>
+
+<lg>
+<l>śirasyatho vāsasi saṃpradīpte satyāvabodhāya mativicāryā /</l>
+<l>dagdhaṃ jagat satyanayaṃ hyadṛṣṭvā pradahyate saṃprati dhakṣyate ca // Saund_16.43 //</l>
+</lg>
+
+<lg>
+<l>yadaiva yaḥ paśyati nāmarūpaṃ kṣayīti taddarśanamasya samyak /</l>
+<l>samyak ca nirvedamupaiti paśyan nandīkṣayācca kṣayameti rāgaḥ // Saund_16.44 //</l>
+</lg>
+
+<lg>
+<l>tayośca nandīrajasoḥ kṣayeṇa samyagvimuktaṃ pravadāmi cetaḥ /</l>
+<l>samyagvimuktirmanasaśca tābhyāṃ na cāsya bhūyaḥ karaṇīyamasti // Saund_16.45 //</l>
+</lg>
+
+<lg>
+<l>yathāsvabhāvena hi nāmarūpaṃ taddhetumevāstagamaṃ ca tasya /</l>
+<l>vijānataḥ pasyata eva cāhaṃ bravīmi samyak kṣayamāsravāṇām // Saund_16.46 //</l>
+</lg>
+
+<lg>
+<l>tasmāt paraṃ saumya vidhāya vīryaṃ śīghraṃ ghaṭasvāstravasaṃkṣayāya /</l>
+<l>duḥkhānanityāṃśca nirātmakāṃśca dhātūn viśeṣeṇa parīkṣamāṇaḥ // Saund_16.47 //</l>
+</lg>
+
+<lg>
+<l>dhātūn hi ṣaḍ bhūsalilānalādīn sāmānyataḥ svena ca lakṣaṇena /</l>
+<l>avaiti yo nānyamavaiti tebhyaḥ so 'tyantikaṃ mokṣamavaiti tebhyaḥ // Saund_16.48 //</l>
+</lg>
+
+<lg>
+<l>kleśaprahāṇāya ca niścitena kālo 'bhyupāyasśca parīkṣitavyaḥ /</l>
+<l>yogo 'pyakāle hyanupāyataśca bhavatyanarthāya na tadguṇāya // Saund_16.49 //</l>
+</lg>
+
+<lg>
+<l>ajātavatsāṃ yadi gāṃ duhīta naivāpnuyāt kṣīramakāladohī /</l>
+<l>kāle 'pi vā syānna payo labheta mohena śṛṅgād yadi gāṃ duhīta // Saund_16.50 //</l>
+</lg>
+
+<lg>
+<l>ārdrācca kāṣṭhājjvalanābhikāmo naiva prayatnādapi vahnimṛcchet /</l>
+<l>kāṣṭhācca śuṣkādapi pātanena naivāgnimāpnotyanupāyapūrvam // Saund_16.51 //</l>
+</lg>
+
+<lg>
+<l>taddeśakālau vidhivat parīkṣya yogasya mātrāmapi cābhyupāyam /</l>
+<l>balābale cātmani saṃpradhārya kāryaḥ prayatno na tu tadviruddhaḥ // Saund_16.52 //</l>
+</lg>
+
+<lg>
+<l>pragrāhakaṃ yattu nimittamuktamuddhanyamāne hṛdi tanna sevyam /</l>
+<l>evaṃ hi cittaṃ praśama na yāti pravāyunā vahniriveryamāṇaḥ // Saund_16.53 //</l>
+</lg>
+
+<lg>
+<l>śamāya yat syānniyataṃ nimittaṃ jātoddhave cetasi tasya kālaḥ /</l>
+<l>evaṃ hi cittaṃ praśamaṃ niyacchet pradīpyamāno 'gnirivodakena // Saund_16.54 //</l>
+</lg>
+
+<lg>
+<l>śamāvahaṃ yanniyataṃ nimittaṃ sevyaṃ na taccetasi līyamāne /</l>
+<l>evaṃ hi bhūyo layameti cittamanīryamāṇo 'gnirivālpasāraḥ // Saund_16.55 //</l>
+</lg>
+
+<lg>
+<l>pragrāhakaṃ yanniyataṃ nimittaṃ layaṃ gate cetasi tasya kālaḥ /</l>
+<l>kriyāsamarthaṃ hi manastathā syānmandāyamāno 'gnirivendhanena // Saund_16.56 //</l>
+</lg>
+
+<lg>
+<l>aupekṣikaṃ nāpi nimittamiṣṭaṃ layaṃ gate cetasi soddhave vā /</l>
+<l>evaṃ hi tīvraṃ janayedanarthamupekṣito vyādhirivāturasya // Saund_16.57 //</l>
+</lg>
+
+<lg>
+<l>yatsyādupekṣāniyataṃ nimittaṃ sāmyaṃ gate cetasi tasya kālaḥ /</l>
+<l>evaṃ hi kṛtyāya bhavetprayogo ratho vidheyāśva iva prayātaḥ // Saund_16.58 //</l>
+</lg>
+
+<lg>
+<l>rāgoddhavavyākulite 'pi citte maitropasaṃhāravidhirna kāryaḥ /</l>
+<l>rāgātmako muhyati maitrayā hi snehaṃ kaphakṣobha ivopayujya // Saund_16.59 //</l>
+</lg>
+
+<lg>
+<l>rāgoddhate cetasi dhairyametya niṣevitavyaṃ tvaśubhaṃ nimittam /</l>
+<l>rāgātmako hyevamupaiti śarma kaphātmako rūkṣamivopayujya // Saund_16.60 //</l>
+</lg>
+
+<lg>
+<l>vyāpādadoṣeṇa manasyudīrṇe na sevitavyaṃ tvaśubhaṃ nimittam /</l>
+<l>dveṣātmakasya hyaśubhā vadhāya pittātmanastīkṣṇa ivopacāraḥ // Saund_16.61 //</l>
+</lg>
+
+<lg>
+<l>vyāpādadoṣakṣubhite tu citte sevyā svapakṣopanayena maitrī /</l>
+<l>dveṣātmano hi praśamāya maitrī pittātmanaḥ śīta ivopacāraḥ // Saund_16.62 //</l>
+</lg>
+
+<lg>
+<l>mohānubaddhe manasaḥ pracāre maitrāśubhā vaiva bhavatyayogaḥ /</l>
+<l>tābhyāṃ hi saṃmohamupaiti bhūyo vāyvātmako rūkṣamivopanīya // Saund_16.63 //</l>
+</lg>
+
+<lg>
+<l>mohātmikāyāṃ manasaḥ pravṛttau sevyastvidampratyayatāvihāraḥ /</l>
+<l>mūḍhe manasyeṣa hi śāntimārgo vāyvātmake snigdha ivopacāraḥ // Saund_16.64 //</l>
+</lg>
+
+<lg>
+<l>ulkāmukhasthaṃ hi yathā suvarṇaṃ suvarṇakāro dhamatīha kāle /</l>
+<l>kāle pariprokṣayate jalena krameṇa kāle samupekṣate ca // Saund_16.65 //</l>
+</lg>
+
+<lg>
+<l>dahet suvarṇaṃ hi dhamannakāle jale kṣipan saṃśameyedakāle /</l>
+<l>na cāpi samyak paripākamenaṃ nayedakāle samupekṣamāṇaḥ // Saund_16.66 //</l>
+</lg>
+
+<lg>
+<l>saṃpragrahasya praśamasya caiva tathaiva kāle samupekṣaṇasya /</l>
+<l>samyaṅ nimittaṃ manasā tvavekṣyaṃ nāśo hi yatno 'pyanupāyapūrvaḥ // Saund_16.67 //</l>
+</lg>
+
+<lg>
+<l>ityevamanyāyanivartanaṃ ca nyāyaṃ ca tasmai sugato babhāṣe /</l>
+<l>bhūyaśca tattaccaritaṃ viditvā vitarkahānāya viodhīnuvāca // Saund_16.68 //</l>
+</lg>
+
+<lg>
+<l>yathā bhiṣak pittakaphānilānāṃ ya eva kopaṃ samupaiti doṣaḥ /</l>
+<l>śamāya tasyaiva vidhiṃ vidhatte vyadhatta doṣeṣu tathaiva buddhaḥ // Saund_16.69 //</l>
+</lg>
+
+<lg>
+<l>ekena kalpena sacenna hanyāt svabhyastabhāvādasubhān vitarkān /</l>
+<l>tato dvitīyaṃ kramāmarabheta na tveva heyo guṇavān prayogaḥ // Saund_16.70 //</l>
+</lg>
+
+<lg>
+<l>anādikālopacitātmakatvād balīyasaḥ kleśagaṇasya caiva /</l>
+<l>samyak prayogasya ca duṣkaratvācchettuṃ na śakyāḥ sahasā hi doṣāḥ // Saund_16.71 //</l>
+</lg>
+
+<lg>
+<l>aṇvyā yathāṇyā vipulāṇiranyā nirvāhyate tadviduṣā nareṇa /</l>
+<l>tadvattadevākuśalaṃ nimittaṃ kṣipennimittāntarasevanena // Saund_16.72 //</l>
+</lg>
+
+<lg>
+<l>tathāpyathādhyātmanavagrahatvānnaivopaśāmyedaśubho vitarkaḥ /</l>
+<l>heyaḥ sa taddoṣaparīkṣaṇena saśvāpado mārga ivādhvagena // Saund_16.73 //</l>
+</lg>
+
+<lg>
+<l>yathā kṣudhārto 'pi viśeṣa pṛktaṃ jijīviṣurnecchati bhoktumannam /</l>
+<l>tathaiva doṣāvahamityavetya jahāti vidvānaśubhaṃ nimittam // Saund_16.74 //</l>
+</lg>
+
+<lg>
+<l>na doṣataḥ paśyati yo hi doṣaṃ kastaṃ tato vārayituṃ samarthaḥ /</l>
+<l>guṇaṃ guṇe paśyati yaśca yatra sa vāryamāṇo 'pi tataḥ prayāti // Saund_16.75 //</l>
+</lg>
+
+<lg>
+<l>vyapatrapante hi kulaprasūtā manaḥpracārairaśubhaiḥ pravṛtaiḥ /</l>
+<l>kaṇṭhe manasvīva yuvā vapuṣmānacākṣuṣairaprayatairviṣaktaiḥ // Saund_16.76 //</l>
+</lg>
+
+<lg>
+<l>nirdhūyamānāstvatha leśato 'pi tiṣṭheyurevākuśalā vitarkāḥ /</l>
+<l>kāryāntarairadhyayanakriyādyaiḥ sevyo vidhirvismaraṇāya teṣām // Saund_16.77 //</l>
+</lg>
+
+<lg>
+<l>svaptavyamapyeva vicakṣaṇena kāyaklamo vāpi niṣevitavyaḥ /</l>
+<l>na tveva saṃcintyamasannimittaṃ yatrāvasaktasya bhavedanarthaḥ // Saund_16.78 //</l>
+</lg>
+
+<lg>
+<l>yathā hi bhīto niśi taskarebhyo dvāraṃ priyebhyo 'pi na dātumicchet /</l>
+<l>prājñastathā saṃharati prayogaṃ samaṃ śubhasyāpyaśubhasya doṣaiḥ // Saund_16.79 //</l>
+</lg>
+
+<lg>
+<l>evaṃ prakārairapi yadyupāyairnivāryamāṇā na parāṅmukhāḥ syuḥ /</l>
+<l>tato yathāśthūlanivarhaṇena suvarṇadoṣā iva te praheyāḥ // Saund_16.80 //</l>
+</lg>
+
+<lg>
+<l>drutaprayāṇaprabhṛtīṃśca tīkṣṇāt kāmaprayogāt parikhidyamānaḥ /</l>
+<l>yathā naraḥ saṃśrayate tathaiva prājñena doṣeṣvapi vartitavyam // Saund_16.81 //</l>
+</lg>
+
+<lg>
+<l>te cedalabdhapratipakṣabhāvā naivopaśāmyeyurasadvitarkāḥ /</l>
+<l>muhūrtamapyaprativadhyamānā gṛhe bhujaṃgā iva nādhivāsyāḥ // Saund_16.82 //</l>
+</lg>
+
+<lg>
+<l>dante 'pi dantaṃ praṇidhāya kāmaṃ tālvagramutpīḍya ca jivhayāpi /</l>
+<l>cittena cittaṃ parigṛhya cāpi kāryaḥ prayatno na tu te 'nuvṛttāḥ // Saund_16.83 //</l>
+</lg>
+
+<lg>
+<l>kimatra citraṃ yadi vītamoho vanaṃ gataḥ svasthamanā na muhyet /</l>
+<l>ākṣipyamāṇo hṛdi tannimittairna kṣobhyate yaḥ sa kṛtī sa dhīraḥ // Saund_16.84 //</l>
+</lg>
+
+<lg>
+<l>tadāryasatyādhigamāya pūrvaṃ viṃśodhayānena nayena mārgam /</l>
+<l>yātrāgataḥ śatruvinigrahārthaṃ rājeva lakṣmīmajitāṃ jigīṣan // Saund_16.85 //</l>
+</lg>
+
+<lg>
+<l>etānyaraṇyānyabhitaḥ śivāni yogānukūlānyajaneritāni /</l>
+<l>kāyasya kṛtvā pravivekamātraṃ kleśaprahāṇāya bhajasva mārgam // Saund_16.86 //</l>
+</lg>
+
+<lg>
+<l>kauṇḍinyanandakṛmilāniruddhāstiṣyopasenau vimalo 'tha rādhaḥ /</l>
+<l>bāṣpottarau dhautakimoharājau kātyāyanadravyapilindavatsāḥ // Saund_16.87 //</l>
+</lg>
+
+<lg>
+<l>bhaddālibhadrāyaṇasarpadāsasubhūtigodattasujātavatsāḥ /</l>
+<l>saṃgrāmajid bhadrajidaśvajicca śroṇaśca śoṇaśca ca koṭikarṇaḥ // Saund_16.88 //</l>
+</lg>
+
+<lg>
+<l>kṣemājito nandakanandamātāvupālivāgīśayaśoyaśodāḥ /</l>
+<l>mahāvhayo valkalirāṣṭrapālau sudarśanasvāgatamedhikāśca // Saund_16.89 //</l>
+</lg>
+
+<lg>
+<l>sa kapphinaḥ kāśyapa auruvilvo mahāmahākāśyapatiṣyanandāḥ /</l>
+<l>pūrṇaśca pūrṇaśca sa pūrṇakaśca śonāparāntaśca sa pūrṇa eva // Saund_16.90 //</l>
+</lg>
+
+<lg>
+<l>śāradvatīputrasubāhucundāḥ kondeyakāpyabhṛgukuṇṭhadhānāḥ /</l>
+<l>saśaivalau revatakauṣṭhilau ca maudgalyagotraśca gavāṃpatiśca // Saund_16.91 //</l>
+</lg>
+
+<lg>
+<l>yaṃ vikramaṃ yogavidhāvakurvaṃstameva śīghraṃ vidhivat kuruṣva /</l>
+<l>tataḥ padaṃ prāpsyasi tairavāptaṃ sukhāvṛtaistvaṃ niyataṃ yaśaśca // Saund_16.92 //</l>
+</lg>
+
+<lg>
+<l>dravyaṃ yathā syat kaṭukaṃ rasena taccopayuktaṃ madhuraṃ vipāke /</l>
+<l>tathaiva vīryaṃ kaṭukaṃ śrameṇa tasyārtha siddhyai madhuro vipākaḥ // Saund_16.93 //</l>
+</lg>
+
+<lg>
+<l>vīryaṃ paraṃ kāryakṛtau hi mūlaṃ vīryādṛte kācana nāsti siddhiḥ /</l>
+<l>udeti vīryādiha sarvasaṃpannirvīryatā cet sakalaśca pāpmā // Saund_16.94 //</l>
+</lg>
+
+<lg>
+<l>alabdhasyālābho niyatamupalabdhasya vigamas</l>
+<l>tathaivātmāvajñā kṛpaṇamadhikebhyaḥ paribhavaḥ /</l>
+<l>tamo nistejastvaṃ śrutiniyamatuṣṭivyuparamo</l>
+<l>nṛṇāṃ nirvīryāṇāṃ bhavati vinipātaśca bhavati // Saund_16.95 //</l>
+</lg>
+
+<lg>
+<l>nayaṃ śrutvā śakto yadayamabhivṛddhiṃ na labhate</l>
+<l>paraṃ dharmaṃ jñātvā yadupari nivāsaṃ na labhate /</l>
+<l>gṛhaṃ tyaktvā muktau yadayamupaśāntiṃ na labhate /</l>
+<l>nimittaṃ kausīdyaṃ bhavati puruṣasyātra na ripuḥ // Saund_16.96 //</l>
+</lg>
+
+<lg>
+<l>anikṣiptotsāho yadi khanati gāṃ vāri labhate /</l>
+<l>prasaktaṃ vyāmathnan jvalanamaraṇibhyāṃ janayati /</l>
+<l>prayuktā yoge tu dhruvamupalabhante śramaphalaṃ</l>
+<l>drutaṃ nityaṃ yāntyo girimapi hi bhindanti saritaḥ // Saund_16.97 //</l>
+</lg>
+
+<lg>
+<l>kṛṣṭvā gāṃ paripālya ca śramaśatairaśnoti sasyaśriyaṃ</l>
+<l>yatnena pravigāhya sāgarajalaṃ ratnaśriyā krīḍati /</l>
+<l>śatrūṇāmavadhūya vīryamiṣubhirbhuṅkte narendraśriyaṃ</l>
+<l>tadvīryaṃ kuru śāntaye viniyataṃ vīrye hi sarvarddhayaḥ // Saund_16.98 //</l>
+</lg>
+
+<p>saundarananda mahākāvye "āryasatya" nāma ṣoḍaśa sarga samāpta /</p>
+
+</div>
+<div>
+
+<p>saptadaśaḥ sargaḥ
+amṛtaprāpti</p>
+
+<lg>
+<l>athaivamādeśitatattvamārgo nandastadā prāptavimokṣamārgaḥ /</l>
+<l>sarveṇa bhāvena gurau praṇamya kleśaprahāṇāya vanaṃ jagāma // Saund_17.1 //</l>
+</lg>
+
+<lg>
+<l>tatrāvakāśaṃ mṛdunīlaśaṣpaṃ dadarśa śāntaṃ taruṣaṇḍavantam /</l>
+<l>niḥśabdayā nimnagayopagūḍhaṃ vaiḍūryanīlodakayā vahantyā // Saund_17.2 //</l>
+</lg>
+
+<lg>
+<l>sa pādayostatra vidhāya śaucaṃ śucau śive śrīmati vṛkṣamūle /</l>
+<l>mokṣāya baddhvā vyavasāyakakṣāṃ paryaṅkamaṅkāvahitaṃ babandha // Saund_17.3 //</l>
+</lg>
+
+<lg>
+<l>ṛjuṃ samagraṃ praṇidhāya kāyaṃ kāye smṛtiṃ cābhimukhīṃ vidhāya /</l>
+<l>sarvendriyāṇyātmani saṃnidhāya sa tatra yogaṃ prayataḥ prapede // Saund_17.4 //</l>
+</lg>
+
+<lg>
+<l>tataḥ sa tattvaṃ nikhilaṃ cikīrṣurmokṣānukūlāṃśca vidhīṃścikīrṣan /</l>
+<l>jñānena śīlena śamena caiva cacāra cetaḥ parikarmabhūmau // Saund_17.5 //</l>
+</lg>
+
+<lg>
+<l>saṃdhāya dhairyaṃ praṇidhāya vīryaṃ vyapohya saktiṃ parigṛhya śaktim /</l>
+<l>praśāntacetā niyamasthacetāḥ svasthastatobhūd viṣayeṣvanāsthaḥ // Saund_17.6 //</l>
+</lg>
+
+<lg>
+<l>ātaptabuddheḥ prahitātmano 'pi svabhyastabhāvādatha kāmasaṃjñā /</l>
+<l>paryākulaṃ tasya manaścakāra prāvṛṭsu vidyujjalamāgateva // Saund_17.7 //</l>
+</lg>
+
+<lg>
+<l>sa paryavasthānamavetya sadyaścikṣepa tāṃ dharmavighātakartrīm /</l>
+<l>priyāmapi krodhaparītacetā nārīmivodvṛttaguṇāṃ manasvī // Saund_17.8 //</l>
+</lg>
+
+<lg>
+<l>ārabdhavīryasya manaḥśamāya bhūyastu tasyākuśalo vitarkaḥ /</l>
+<l>vyādhipraṇāśāya niviṣṭavuddherupadravo ghora ivājagāma // Saund_17.9 //</l>
+</lg>
+
+<lg>
+<l>sa tadvighātāya nimittamanyad yogānukūlaṃ kuśalaṃ prapede /</l>
+<l>ārtāyanaṃ kṣīṇabalo balasthaṃ nirasyamāno balināriṇeva // Saund_17.10 //</l>
+</lg>
+
+<lg>
+<l>puraṃ vidhāyānuvidhāya daṇḍaṃ mitrāṇi saṃgṛhya ripūn vigṛhya /</l>
+<l>rājā yathāpnoti hi gāmapūrvāṃ nītirmumukṣorapi saiva yoge // Saund_17.11 //</l>
+</lg>
+
+<lg>
+<l>vimokṣakāmasya hi yogino 'pi manaḥ puraṃ jñānavidhiśca daṇḍaḥ /</l>
+<l>guṇāśca mitrāṇyarayaśca doṣā bhūmirvimuktiryatate yadartham // Saund_17.12 //</l>
+</lg>
+
+<lg>
+<l>sa duḥkhajālānmahato mumukṣurvimokṣamārgādhigame vivikṣuḥ /</l>
+<l>panthānmāryaṃ paramaṃ didṛkṣuḥ śamaṃ yayau kiṃcidupāttacakṣuḥ // Saund_17.13 //</l>
+</lg>
+
+<lg>
+<l>yaḥ syānniketastamaso 'niketaḥ śrutvāpi tattvaṃ sa bhavet pramattaḥ /</l>
+<l>yasmāttu mokṣāya sa pātrabhūtastasmānmanaḥ svātmani saṃjahāra // Saund_17.14 //</l>
+</lg>
+
+<lg>
+<l>sambhārataḥ pratyayataḥ svabhāvādāsvādato doṣaviśeṣataśca /</l>
+<l>athātmavānniḥsaraṇātmataśca dharmeṣu cakre vidhivat parīkṣām // Saund_17.15 //</l>
+</lg>
+
+<lg>
+<l>sa rūpiṇaṃ kṛtsnamarūpiṇaṃ ca sāraṃ didṛkṣurvicikāya kāyam /</l>
+<l>athāśuciṃ duḥkhamanityamasvaṃ nirātmakaṃ caiva cikāya kāyam // Saund_17.16 //</l>
+</lg>
+
+<lg>
+<l>anityatastatra hi śūnyataśca nirātmato duḥkhata eva cāpi /</l>
+<l>mārgapravekeṇa sa laukikena kleśadrumaṃ saṃcalayāṃcakāra // Saund_17.17 //</l>
+</lg>
+
+<lg>
+<l>yasmādabhūtvā bhavatīha sarvaṃ bhutvā ca bhūyo na bhavatyavaśyam /</l>
+<l>sahetukaṃ ca kṣayi hetumacca tasmādanityaṃ jagadityavindat // Saund_17.18 //</l>
+</lg>
+
+<lg>
+<l>yataḥ prasūtasya ca karmayogaḥ prasajyate bandhavighātahetuḥ /</l>
+<l>duḥkhapratīkāravidhau sukhākhye tato bhavaṃ duḥkhamiti vyapaśyat // Saund_17.19 //</l>
+</lg>
+
+<lg>
+<l>yataśca saṃskāragataṃ viviktaṃ na kārakaḥ kaścana vedako vā /</l>
+<l>samagryataḥ saṃbhavati pravṛttiḥ śūnyaṃ tato lokamimaṃ dadarśa // Saund_17.20 //</l>
+</lg>
+
+<lg>
+<l>yasmānnirīhaṃ jagadasvatantraṃ naiśvaryamekaḥ kurute kriyāsu /</l>
+<l>tattatpratītya prabhavanti bhāvā nirātmakaṃ tena viveda lokam // Saund_17.21 //</l>
+</lg>
+
+<lg>
+<l>tataḥ sa vātaṃ vyajanādivoṣṇe kāṣṭhāśritaṃ nirmathanādivāgnim /</l>
+<l>antaḥkṣitisthaṃ khananādivāmbho lokottaraṃ vartma durāpamāpa // Saund_17.22 //</l>
+</lg>
+
+<lg>
+<l>sajjñānacāpaḥ smṛtivarma baddhvā viśuddhaśīlavratavāhanasthaḥ /</l>
+<l>kleśāribhiścittaraṇājirasthaiḥ sārdhaṃ yuyutsurvijayāya tasthau // Saund_17.23 //</l>
+</lg>
+
+<lg>
+<l>tataḥ sa bodhyaṅgaśitāttaśastraḥ samyakpradhānottamavāhanasthaḥ /</l>
+<l>mārgāṅgamātaṅgavatā balena śanaiḥ śanaiḥ kleśacamūṃ jagāhe // Saund_17.24 //</l>
+</lg>
+
+<lg>
+<l>sa smṛtyupasthānamayaiḥ pṛṣatkaiḥ śatrūn viparyāsamayān kṣaṇena /</l>
+<l>duḥkhasya hetūṃścaturaścaturbhiḥ svaiḥ svaiḥ pracārāyatanairdadāra // Saund_17.25 //</l>
+</lg>
+
+<lg>
+<l>āryairbalaiḥ pañcabhireva pañca cetaḥkhilānyapratimairbabhañja /</l>
+<l>mithyāṅganāgāṃśca tathāṅganāgairvinirdudhāvāṣṭabhireva so 'ṣṭau // Saund_17.26 //</l>
+</lg>
+
+<lg>
+<l>athātmadṛṣṭiṃ sakalāṃ vidhūya caturṣu satyeṣvakathaṃkathaḥ san /</l>
+<l>viśuddhaśīlavratadṛṣṭadharmā dharmasya pūrvāṃ phalabhūmimāpa // Saund_17.27 //</l>
+</lg>
+
+<lg>
+<l>sa darśanādāryacatuṣṭayasya kleśaikadeśasya ca viprayogāt /</l>
+<l>pratyātmikāccāpi viśeṣalābhāt pratyakṣato jñānisukhasya caiva // Saund_17.28 //</l>
+</lg>
+
+<lg>
+<l>dārḍhyāt prasādasya dhṛteḥ sthiratvāt satyeṣvasaṃmūḍhatayā caturṣu /</l>
+<l>śīlasya cācchidratayottamasya niḥsaṃśayo dharmavidhau babhūva // Saund_17.29 //</l>
+</lg>
+
+<lg>
+<l>kudṛṣṭijālena sa viprayukto lokaṃ tathābhūtamavekṣamāṇaḥ /</l>
+<l>jñānāśrayāṃ prītimupājagāma bhūyaḥ prasādaṃ ca gurāviyāya // Saund_17.30 //</l>
+</lg>
+
+<lg>
+<l>yo hi pravṛttiṃ niyatāmavaiti nivānyahetoriha nāpyahetoḥ /</l>
+<l>pratītya tattatsamavaiti tattatsa naiṣṭhikaṃ paśyati dharmamāryam // Saund_17.31 //</l>
+</lg>
+
+<lg>
+<l>śāntaṃ śivaṃ nirjarasaṃ virāgaṃ niḥśreyasaṃ paśyati yaśca dharmam /</l>
+<l>tasyopadeṣṭāramathāryavaryaṃ sa prekṣate buddhamavāptacakṣuḥ // Saund_17.32 //</l>
+</lg>
+
+<lg>
+<l>yathopadeśena śivena mukto rogādarogo bhiṣajaṃ kṛtajñaḥ /</l>
+<l>anusmaran paśyati cittadṛṣṭyā maitryā ca śāstrajñatayā ca tuṣṭaḥ // Saund_17.33 //</l>
+</lg>
+
+<lg>
+<l>āryeṇa mārgeṇa tathaiva muktastathāgataṃ tattvavidāryatattvaḥ /</l>
+<l>anusmaran paśyati kāyasākṣī maitryā ca sarvajñatayā ta tuṣṭaḥ // Saund_17.34 //</l>
+</lg>
+
+<lg>
+<l>sa nāśakairdṛṣṭigatairvimuktaḥ paryantamālokya punarbhavasya /</l>
+<l>bhaktvā ghṛṇāṃ kleśavijṛmbhiteṣu mṛtyorna tatrāsa na durgatibhyaḥ // Saund_17.35 //</l>
+</lg>
+
+<lg>
+<l>tvaksnāyumedorudhirāsthimāṃsakeśādināmedhyagaṇena pūrṇam /</l>
+<l>tataḥ sa kāyaṃ samavekṣamāṇaḥ sāraṃ vicintyāṇvapi nopalebhe // Saund_17.36 //</l>
+</lg>
+
+<lg>
+<l>sa kāmarāgapratighau sthirātmā tenaiva yogena tanū cakāra /</l>
+<l>kṛtvā mahoraskatanustanū tau prāpa dvitīyaṃ phalamāryadharme // Saund_17.37 //</l>
+</lg>
+
+<lg>
+<l>sa lobhacāpaṃ parikalpabāṇaṃ rāgaṃ mahāvairiṇamalpaśeṣam /</l>
+<l>kāyasvabhāvādhigataurbibheda yogāyudhāstrairaśubhāpṛṣatkaiḥ // Saund_17.38 //</l>
+</lg>
+
+<lg>
+<l>dveṣāyudhaṃ krodhavikīrṇabāṇaṃ vyāpādamantaḥprasavaṃ sapatnam /</l>
+<l>maitrīpṛṣatkairdhṛtitūṇasaṃsthaiḥ kṣamādhanurjyāvisṛtairjaghāna // Saund_17.39 //</l>
+</lg>
+
+<lg>
+<l>mūlānyatha trīṇyaśubhasya vīrastribhirvimokṣāyatanaiścakarta /</l>
+<l>camūmukhasthān dhṛtakārmukāṃstrīnarīnivāristribhirāyasāgraiḥ // Saund_17.40 //</l>
+</lg>
+
+<lg>
+<l>sa kāmadhātoḥ samatikramāya pārṣṇigrahāṃstānabhibhūya śatrūn /</l>
+<l>yogādanāgāmiphalaṃ prapadya dvārīva nirvāṇapurasya tasthau // Saund_17.41 //</l>
+</lg>
+
+<lg>
+<l>kāmairviviktaṃ malinaiśca dharmairvitarkavaccāpi vicāravacca /</l>
+<l>vivekajaṃ prītisukhopapannaṃ dhyānaṃ tataḥ sa prathamaṃ prapede // Saund_17.42 //</l>
+</lg>
+
+<lg>
+<l>kāmāgnidāhena sa vipramukto lhādaṃ paraṃ dhyānasukhādavāpa /</l>
+<l>sukhaṃ vigāhyāpsviva dharmakhinnaḥ prāpyeva cārtha vipulaṃ daridraḥ // Saund_17.43 //</l>
+</lg>
+
+<lg>
+<l>tatrāpi taddharmagatān vitarkān guṇāguṇe ca prasṛtān vicārān /</l>
+<l>buddhvā manaḥkṣobhakarānaśāntāṃstadviprayogāya matiṃ cakāra // Saund_17.44 //</l>
+</lg>
+
+<lg>
+<l>kṣobhaṃ prakurvanti yathormayo hi dhīraprasannāmbuvahasya sindhoḥ /</l>
+<l>ekāgrabhūtasya tathormibhūtāścittāmbhasaḥ kṣobhakarā vitarkāḥ // Saund_17.45 //</l>
+</lg>
+
+<lg>
+<l>khinnasya suptasya ca nirvṛtasya bādhaṃ yathā saṃjanayanti śabdāḥ /</l>
+<l>adyātmamaikāgryamupāgatasya bhavanti bādhāya tathā vitarkāḥ // Saund_17.46 //</l>
+</lg>
+
+<lg>
+<l>athāvitarkaṃ kramaśo 'vicāramekāgrabhāvānmanasaḥ prasannam /</l>
+<l>samādhijaṃ prītisukhaṃ dvitīyaṃ dhyānaṃ tadādhyātmaśivaṃ sa dadhyau // Saund_17.47 //</l>
+</lg>
+
+<lg>
+<l>taddhyānamāgamya ca cittamaunaṃ lebhe parāṃ prītimalabdhapūrvām /</l>
+<l>prītau tu tatrāpi sa doṣadarśī yathā vitarkeṣvabhavattathaiva // Saund_17.48 //</l>
+</lg>
+
+<lg>
+<l>prītiḥ parā vastuni yatra yasya viparyayāttasya hi tatra duḥkham /</l>
+<l>prītāvataḥ prekṣya sa tatra doṣān prītikṣaye yogamupāruroha // Saund_17.49 //</l>
+</lg>
+
+<lg>
+<l>prītervirāgāt sukhamāryajuṣṭaṃ kāyena vindannatha saṃprajānan /</l>
+<l>upekṣakaḥ sa smṛtimān vyahārṣid dhyānaṃ tṛtīyaṃ pratilabhya dhīraḥ // Saund_17.50 //</l>
+</lg>
+
+<lg>
+<l>yasmāt paraṃ tatra sukhaṃ sukhebhyastataḥ paraṃ nāsti sukhapravṛttiḥ /</l>
+<l>tasmād babhāṣe śubhakṛtsnabhūmiḥ parāparajñaḥ parameti maitryā // Saund_17.51 //</l>
+</lg>
+
+<lg>
+<l>dhyāne 'pi tatrātha dadarśa doṣaṃ mene paraṃ śāntamaniñjameva /</l>
+<l>ābhogato 'pīñjayati sma tasya cittaṃ pravṛttaṃ sukhamityasram // Saund_17.52 //</l>
+</lg>
+
+<lg>
+<l>yatreñjitaṃ spanditamasti tatra yatrāsti ca spanditamasti duḥkham /</l>
+<l>yasmādatastatsukhamiñjakatvāt praśāntikāmā yatayastyajanti // Saund_17.53 //</l>
+</lg>
+
+<lg>
+<l>atha prahāṇāt sukhaduḥkhayośca manovikārasya ca pūrvameva /</l>
+<l>dadhyāvupekṣāsmṛtimad viśuddhaṃ dhyānaṃ tathāduḥkhasukhaṃ caturtham // Saund_17.54 //</l>
+</lg>
+
+<lg>
+<l>yasmāttu tasminna sukhaṃ na duḥkhaṃ jñānaṃ ca tatrāsti tadarthacāri /</l>
+<l>tasmādupekṣāsmṛtipāriśuddhirnirucyate dhyānavidhau caturthe // Saund_17.55 //</l>
+</lg>
+
+<lg>
+<l>dhyānaṃ sa niśritya tataścaturthamarhattvalābhāya matiṃ cakāra /</l>
+<l>saṃdhāya mitraṃ balavantamāryaṃ rājeva deśānajitān jigīṣuḥ // Saund_17.56 //</l>
+</lg>
+
+<lg>
+<l>ciccheda kārtsnyena tataḥ sa pañca prajñāsinā bhāvanayeritena /</l>
+<l>ūrdhvaṅgamānyuttamabandhanāni saṃyojanānyuttamabandhanāni // Saund_17.57 //</l>
+</lg>
+
+<lg>
+<l>bodhyaṅganāgairapi saptabhiḥ sa saptaiva cittānuśayān mamarda /</l>
+<l>dvipānivopasthitavipraṇāśān kālo grahaiḥ saptabhireva sapta // Saund_17.58 //</l>
+</lg>
+
+<lg>
+<l>agnidrumājyāmbuṣu yā hi vṛttiḥ kabandhavāyvagnidivākarāṇām /</l>
+<l>doṣeṣu tāṃ vṛttimiyāya nando nirvāpaṇotpāṭanadāhaśoṣaiḥ // Saund_17.59 //</l>
+</lg>
+
+<lg>
+<l>iti trivegaṃ trijhaṣaṃ trivicamekāmbhasaṃ pañcarayaṃ dvikūlam /</l>
+<l>dvigrāhamaṣṭāṅgavatā plavena duḥkhārṇavaṃ dustaramuttatāra // Saund_17.60 //</l>
+</lg>
+
+<lg>
+<l>arhattvamāsādya sa satkriyārho nirutsuko niṣpraṇayo nirāśaḥ /</l>
+<l>vibhīrviśugvītamado virāgaḥ sa eva dhṛtyānya ivābabhāse // Saund_17.61 //</l>
+</lg>
+
+<lg>
+<l>bhrātuśca śāstuśca tayānuśiṣṭyā nandastataḥ svena ca vikrameṇa /</l>
+<l>praśāntacetāḥ paripūrṇakāryo vāṇīmimāmātmagatāṃ jagāda // Saund_17.62 //</l>
+</lg>
+
+<lg>
+<l>namo 'stu tasmai sugatāya yena hitaiṣiṇā me karuṇātmakena /</l>
+<l>bahūni duḥkhānyapavartitāni sukhāni bhūyāṃsyupasaṃhṛtāni // Saund_17.63 //</l>
+</lg>
+
+<lg>
+<l>ahaṃ hyanāryeṇa śarīrajena duḥkhātmake vartmani kṛṣyamāṇaḥ /</l>
+<l>nivartitastadvacanāṅkuśena darpānvito nāga ivāṅkuśena // Saund_17.64 //</l>
+</lg>
+
+<lg>
+<l>tasyājñayā kāruṇikasya śāsturhṛdisthamutpāṭya hi rāgaśalyam /</l>
+<l>adyaiva tāvat sumahat sukhaṃ me sarvakṣaye kiṃbata nirvṛtasya // Saund_17.65 //</l>
+</lg>
+
+<lg>
+<l>nirvāpya kāmāgnimahaṃ hi dīptaṃ dhṛtyambunā pāvakamambuneva /</l>
+<l>hlādaṃ paraṃ sāṃpratamāgato 'smi śītaṃ hradaṃ gharma ivāvatīrṇaḥ // Saund_17.66 //</l>
+</lg>
+
+<lg>
+<l>na me priyaṃ kiṃcana nāpriyaṃ me na me 'nurodho 'sti kuto virodhaḥ /</l>
+<l>tayorabhāvāt sukhito 'smi sadyo himātapābhyāmiva vipramuktaḥ // Saund_17.67 //</l>
+</lg>
+
+<lg>
+<l>mahābhayāt kṣemamivopalabhya mahāvarodhādiva vipramokṣam /</l>
+<l>mahārṇavāt pāramivāplavaḥ san bhīmāndhakārādiva ca prakāśam // Saund_17.68 //</l>
+</lg>
+
+<lg>
+<l>rogādivārogyamasahyarūpādṛṇādivānṛṇyamanantasaṃkhyāt /</l>
+<l>dviṣatsakāśādiva cāpayānaṃ durbhikṣayogācca yathā subhikṣam // Saund_17.69 //</l>
+</lg>
+
+<lg>
+<l>tadvatparāṃ śāntimupāgato 'haṃ yasyānubhāvena vināyakasya /</l>
+<l>karomi bhūyaḥ punaruktamasmai namo namo 'rhāya tathāgatāya // Saund_17.70 //</l>
+</lg>
+
+<lg>
+<l>yenāhaṃ girimupanīya rūkmaśṛṅgaṃ svargaṃ ca plavagavadhūnidarśanena /</l>
+<l>kāmātmā tridivacarībhiraṅganābhirniṣkṛṣṭo yuvatimaye kalau nimagnaḥ // Saund_17.71 //</l>
+</lg>
+
+<lg>
+<l>tasmācca vyasanaparādanarthapaṅkādutkṛṣya kramaśithilaḥ karīva paṅkāt /</l>
+<l>śānte 'smin virajasi vijvare viśoke saddharme vitamasi naiṣṭhike vimuktaḥ // Saund_17.72 //</l>
+</lg>
+
+<lg>
+<l>taṃ vande paramanukampakaṃ maharṣi mūrdhnāhaṃ prakṛtiguṇajñamāśayajñam /</l>
+<l>saṃbuddhaṃ daśabalinaṃ bhiṣakpradhānaṃ trātāraṃ punarapi cāsmi saṃnatastam // Saund_17.73 //</l>
+</lg>
+
+<p>saundarananda mahākāvya meṃ "amṛtaprāpti" nāmaka saptadaśa sarga samāpta /</p>
+
+</div>
+<div>
+
+<p>aṣṭādaśaḥ sargaḥ
+ājñāvyākaraṇa</p>
+
+<lg>
+<l>atha dvijo bāla ivāptavedaḥ kṣipraṃ vaṇik prāpta ivāptalābhaḥ /</l>
+<l>jitvā ca rājanya ivārisainyaṃ nandaḥ kṛtārtho gurumabhyagacchat // Saund_18.1 //</l>
+</lg>
+
+<lg>
+<l>draṣṭuṃ sukhaṃ jñānasamāptikāle gururhi śiṣyasya gurośca śiṣyaḥ /</l>
+<l>pariśramaste saphalo mayīti yato didṛkṣāsya munau babhūva // Saund_18.2 //</l>
+</lg>
+
+<lg>
+<l>yato hi yenādhigato viśeṣastasyottamāṃso 'rhati kartumīḍyām /</l>
+<l>āryaḥ sarāgo 'pi kṛtajñabhāvāt prakṣīṇamānaḥ kimu vītarāgaḥ // Saund_18.3 //</l>
+</lg>
+
+<lg>
+<l>yasyārthakāmaprabhavā hi bhaktistato 'sya sā tiṣṭhati rūḍhamūlā /</l>
+<l>dharmānvayo yasya tu bhaktirāgastasya prasādo hṛdayāvagāḍhaḥ // Saund_18.4 //</l>
+</lg>
+
+<lg>
+<l>kāṣāyavāsāḥ kanakāvadātastataḥ sa mūrdhnā gurave praṇeme /</l>
+<l>vāteritaḥ pallavatāmrarāgaḥ puṣpojjvalaśrīriva karṇikāraḥ // Saund_18.5 //</l>
+</lg>
+
+<lg>
+<l>athātmanaḥ śiṣyaguṇasya caiva mahāmuneḥ śāstṛguṇasya caiva /</l>
+<l>saṃdarśanārthaṃ sa na mānahetoḥ svāṃ kāryasiddhiṃ kathayāmbabhūva // Saund_18.6 //</l>
+</lg>
+
+<lg>
+<l>yo dṛṣṭiśalyo hṛdayāvagāḍhaḥ prabho bhṛśaṃ māmatudat sutīkṣṇaḥ /</l>
+<l>tvadvākyasaṃdaṃśamukhena me sa samuddhṛtaḥ śalyahṛteva śalyaḥ // Saund_18.7 //</l>
+</lg>
+
+<lg>
+<l>kathaṃkathābhāvagatosmi yena chinnaḥ sa niḥsaṃśaya saṃśayo me /</l>
+<l>tvacchāsanāt satpathamāgato 'smi sudeśikasyeva pathi pranaṣṭaḥ // Saund_18.8 //</l>
+</lg>
+
+<lg>
+<l>yatpītamāsvādavaśendriyeṇa darpeṇa kandarpaviṣaṃ mayāsīt /</l>
+<l>tanme hataṃ tvadvacanāgadena viṣaṃ vināśīva mahāgadena // Saund_18.9 //</l>
+</lg>
+
+<lg>
+<l>kṣayaṃ gataṃ janma nirastajanman saddharmacaryāmuṣito 'smi samyak /</l>
+<l>kṛtsnaṃ kṛtaṃ me kṛtakārya kāryaṃ lokeṣu bhūto 'smi na lokadharmā // Saund_18.10 //</l>
+</lg>
+
+<lg>
+<l>maitrīstanīṃ vyañjanacārusāsnāṃ saddharmadugdhāṃ pratibhānaśṛṅgām /</l>
+<l>tavāsmi gāṃ sādhu nipīya tṛptastṛṣeva gāmuttama vatsavarṇaḥ // Saund_18.11 //</l>
+</lg>
+
+<lg>
+<l>yatpaśyataścādhigamo mamāyaṃ tanme samāsena mune nibodha /</l>
+<l>sarvajña kāmaṃ viditaṃ tavaitat svaṃ tūpacāraṃ pravivakṣurasmi // Saund_18.12 //</l>
+</lg>
+
+<lg>
+<l>anye 'pi santo vimumukṣavo hi śrutvā vimokṣāya nayaṃ parasya /</l>
+<l>muktasya rogādiva rogavantastenaiva mārgeṇa sukhaṃ ghaṭante // Saund_18.13 //</l>
+</lg>
+
+<lg>
+<l>urvyādikān janmani vedima dhātun nātmānamurvyādiṣu teṣu kiñcit /</l>
+<l>yasmādatasteṣu na me 'sti saktirbahiśca kāyena samā matirme // Saund_18.14 //</l>
+</lg>
+
+<lg>
+<l>skandhāṃśca rūpaprabhṛtīn daśārdhān paśyāmi yasmāccapalānasārān /</l>
+<l>anātmakāṃścaiva vadhātmakāṃśca tasmād vimukto 'smyaśivebhya ebhyaḥ // Saund_18.15 //</l>
+</lg>
+
+<lg>
+<l>yasmācca paśyāmyudayaṃ vyayaṃ ca sarvāsvavasthāsvahamindriyāṇām /</l>
+<l>tasmādanityeṣu nirātmakeṣu duḥkheṣu me teṣvapi nāsti saṃgaḥ // Saund_18.16 //</l>
+</lg>
+
+<lg>
+<l>yataśca lokaṃ samajanmaniṣṭhaṃ paśyāmi niḥsāramasacca sarvam /</l>
+<l>ato dhiyā me manasā vibaddhamasmīti me neñjitamasti yena // Saund_18.17 //</l>
+</lg>
+
+<lg>
+<l>caturvidhe naikavidhaprasaṅge yato 'hamāhāravidhāvasaktaḥ /</l>
+<l>amūrcchitaścāgrathitaśca tatra tribhyo vimukto 'smi tato bhavebhyaḥ // Saund_18.18 //</l>
+</lg>
+
+<lg>
+<l>aniścitaścāpratibaddhacitto dṛṣṭaśrutādau vyavahāradharme /</l>
+<l>yasmāt samātmānugataśca tatra tasmād visaṃyogagato 'smi muktaḥ // Saund_18.19 //</l>
+</lg>
+
+<lg>
+<l>ityevamuktvā gurubāhumānyāt sarveṇa kāyena sa gāṃ nipannaḥ /</l>
+<l>praverito lohitacandanākto haimo mahāstambha ivābabhāse // Saund_18.20 //</l>
+</lg>
+
+<lg>
+<l>tataḥ pramādat prasṛtasya pūrvaṃ śruvā dhṛtiṃ vyākaraṇaṃ ca tasya /</l>
+<l>dharmānvayaṃ cānugataṃ prasādaṃ meghasvarastaṃ munirābabhāṣe // Saund_18.21 //</l>
+</lg>
+
+<lg>
+<l>uttiṣṭha dharme sthita śiṣyajuṣṭe kiṃ pādayorme patito 'si murdhnā /</l>
+<l>abhyarcanaṃ me na tathā praṇāmo dharme yathaiṣā pratipattireva // Saund_18.22 //</l>
+</lg>
+
+<lg>
+<l>adyāsi supravrajito jitātmannaiśvaryamapyātmani yena labdham /</l>
+<l>jitātmanaḥ pravrajanaṃ hi sādhu calātmano na tvajitendriyasya // Saund_18.23 //</l>
+</lg>
+
+<lg>
+<l>adyāsi śaucena pareṇa yukto vākkāyacetāṃsi śucīni yatte /</l>
+<l>ataḥ punaścāprayatāpasaumyāṃ yatsaumya no vekṣyasi garbhaśayyām // Saund_18.24 //</l>
+</lg>
+
+<lg>
+<l>adyārthavatte śrutavacchrutaṃ tacchrutānurūpaṃ pratipadya dharmam /</l>
+<l>kṛtaśruto vipratipadyamāno nindyo hi nirvīrya ivāttaśastraḥ // Saund_18.25 //</l>
+</lg>
+
+<lg>
+<l>aho dhṛtiste 'viṣayātmakasya yattvaṃ matiṃ mokṣavidhāvakārṣīḥ /</l>
+<l>yāsyāmi niṣṭhāmiti bāliśo hi janmakṣayāt trāsamihābhyupaiti // Saund_18.26 //</l>
+</lg>
+
+<lg>
+<l>diṣṭyā durāpaḥ kṣaṇasaṃnipāto nāyaṃ kṛto mohavaśena moghaḥ /</l>
+<l>udeti duḥkhena gato hyadhastāt kūrmo yugacchidra ivārṇavasthaḥ // Saund_18.27 //</l>
+</lg>
+
+<lg>
+<l>nirjitya māraṃ yudhi durnivāramadyāsi loke raṇaśīrṣaśūraḥ /</l>
+<l>śūro 'pyaśūraḥ sa hi veditavyo doṣairamitrairiva hanyate yaḥ // Saund_18.28 //</l>
+</lg>
+
+<lg>
+<l>nirvāpya rāgāgnimudīrṇamadya diṣṭyā sukhaṃ svapsyasi vītadāhaḥ /</l>
+<l>duḥkhaṃ hi śete śayane 'pyudāre kleśāgninā cetasi dahyamānaḥ // Saund_18.29 //</l>
+</lg>
+
+<lg>
+<l>abhyucchrito dravyamadena pūrvamadyāsi tṛṣṇoparamāt samṛddhaḥ /</l>
+<l>yāvat satarṣaḥ puruṣo hi loke tāvat samṛddho 'pi sadā daridraḥ // Saund_18.30 //</l>
+</lg>
+
+<lg>
+<l>adyāpadeṣṭuṃ tava yuktarūpaṃ śuddhodano me nṛpatiḥ piteti /</l>
+<l>bhraṣṭasya dharmāt pitṛbhirnipātādaślāghanīyo hi kulāpadeśaḥ // Saund_18.31 //</l>
+</lg>
+
+<lg>
+<l>diṣṭyāsi śāntiṃ paramāmupeto nistīrṇakāntāra ivāptasāraḥ /</l>
+<l>sarvo hi saṃsāragato bhayārto yathaiva kāntāragatastathaiva // Saund_18.32 //</l>
+</lg>
+
+<lg>
+<l>āraṇyakaṃ bhaikṣacaraṃ vinītaṃ drakṣyāmi nandaṃ nibhṛtaṃ kadeti /</l>
+<l>āsīt purastāttvayi me didṛkṣā tathāsi diṣṭyā mama darśanīyaḥ // Saund_18.33 //</l>
+</lg>
+
+<lg>
+<l>bhavatyarūpo 'pi hi darśanīyaḥ svalaṃkṛtaḥ śreṣṭhatamaigurṇaiḥ svaiḥ /</l>
+<l>doṣaiḥ parīto malinīkaraistu sudarśanīyo 'pi virūpa eva // Saund_18.34 //</l>
+</lg>
+
+<lg>
+<l>adya prakṛṣṭā tava buddhimattā kṛtsnaṃ yayā te kṛtamātmakāryam /</l>
+<l>śrutonnatasyāpi hi nāsti buddhirnotpadyate śreyasi yasya buddhiḥ // Saund_18.35 //</l>
+</lg>
+
+<lg>
+<l>unmīlitasyāpi janasya madhye nimīlitasyāpi tathaiva cakṣuḥ /</l>
+<l>prajñāmayaṃ yasya hi nāsti cakṣuścakṣurna tasyāsti sacakṣuṣo 'pi // Saund_18.36 //</l>
+</lg>
+
+<lg>
+<l>duḥkhapratīkāranimittamārtaḥ kṛṣyādibhiḥ khedamupaiti lokaḥ /</l>
+<l>ajasramāgacchati tacca bhūyo jñānena yasyādya kṛtastvayāntaḥ // Saund_18.37 //</l>
+</lg>
+
+<lg>
+<l>duḥkhaṃ na me syāt sukhameva me syāditi pravṛttaḥ satataṃ hi lokaḥ /</l>
+<l>na vetti taccaiva tathā yathā syāt prāptaṃ tvayādyāsulabhaṃ yathāvat // Saund_18.38 //</l>
+</lg>
+
+<lg>
+<l>ityevamādi sthirabuddhicittastathāgatenābhihito hitāya /</l>
+<l>staveṣu nindāsu ca nirvyapekṣaḥ kṛtāñjalirvākyamuvāca nandaḥ // Saund_18.39 //</l>
+</lg>
+
+<lg>
+<l>aho viśeṣeṇa viśeṣadarśin stvayānukampā mayi darśiteyaṃ /</l>
+<l>yatkāmapaṅke bhagavannimagnastrāto 'smi saṃsārabhayādakāmaḥ // Saund_18.40 //</l>
+</lg>
+
+<lg>
+<l>bhrātrā tvayā śreyasi daiśikena pitrā phalasthena tathaiva mātrā /</l>
+<l>hato 'bhaviṣyaṃ yadi na vyamokṣyaṃ sārthāt paribhraṣṭa ivākṛtārthaḥ // Saund_18.41 //</l>
+</lg>
+
+<lg>
+<l>śāntasya tuṣṭasya sukho viveko vijñātatattvasva parīkṣakasya /</l>
+<l>prahīṇamānasya ca nirmadasya sukhaṃ virāgatvamasaktabuddheḥ // Saund_18.42 //</l>
+</lg>
+
+<lg>
+<l>atho hi tattvaṃ parigamya samyaṅnirdhūya doṣānadhigamya śāntim /</l>
+<l>svaṃ nāśramaṃ samprati cintayāmi na taṃ janaṃ nāpsaraso na devān // Saund_18.43 //</l>
+</lg>
+
+<lg>
+<l>idaṃ hi bhuktvā śuci śāmikaṃ sukhaṃ na me manaḥ kāṃkṣati kāmajaṃ sukham /</l>
+<l>mahārhamapyannamadaivatāhṛtaṃ divaukaso bhuktavataḥ sudhāmiva // Saund_18.44 //</l>
+</lg>
+
+<lg>
+<l>aho 'ndhavijñānanimīlitaṃ jagat paṭāntare paśyati nottamaṃ sukham /</l>
+<l>sudhīramadhyatmasukhaṃ vyapāsya hi śramaṃ tathā kāmasukhārthamṛcchati // Saund_18.45 //</l>
+</lg>
+
+<lg>
+<l>yathā hi ratnākarametya durmatirvihāya ratnānyasato maṇīn haret /</l>
+<l>apāsya saṃbodhisukhaṃ tathottamaṃ śramaṃ vrajet kāmasukhopalabdhaye // Saund_18.46 //</l>
+</lg>
+
+<lg>
+<l>aho hi sattveṣvatimaitracetasastathāgatasyānujighṛkṣutā parā /</l>
+<l>apāsya yaddhyānasukhaṃ mune paraṃ parasya duḥkhoparamāya khidyase // Saund_18.47 //</l>
+</lg>
+
+<lg>
+<l>mayā nu śakyaṃ pratikartumadya kiṃ gurau hitaiṣiṇyanukampake tvayi /</l>
+<l>samuddhṛto yena bhavārṇavādahaṃ mahārṇavāccūrṇitanaurivormibhiḥ // Saund_18.48 //</l>
+</lg>
+
+<lg>
+<l>tato ministasya niśamya hetumat prahīṇasarvāsravasūcakaṃ vacaḥ /</l>
+<l>idaṃ babhāṣe vadatāmanuttamo yadarhati śrīghana eva bhāṣituṃ // Saund_18.49 //</l>
+</lg>
+
+<lg>
+<l>idaṃ kṛtārthaḥ paramārthavit kṛtī tvameva dhīmannabhidhātumarhasi /</l>
+<l>atītya kāntāramavāptasādhanaḥ sudaiśikasyeva kṛtaṃ mahāvaṇik // Saund_18.50 //</l>
+</lg>
+
+<lg>
+<l>avaiti buddhaṃ naradamyasārathiṃ kṛtī yathārhannupaśāntamānasaḥ /</l>
+<l>na dṛṣṭasatyo 'pi tathāvabudhyate pṛthagjanaḥ kiṃbata buddhimānapi // Saund_18.51 //</l>
+</lg>
+
+<lg>
+<l>rajastamobhyāṃ parimuktacetasastavaiva ceyaṃ sadṛśī kṛtajñatā /</l>
+<l>rajaḥprakarṣeṇa jagatyavasthite kṛtajñabhāvo hi kṛtajña durlabhaḥ // Saund_18.52 //</l>
+</lg>
+
+<lg>
+<l>sadharma dharmānvayato yataśca te mayi prasādo 'dhigame ca kauśalam /</l>
+<l>ato 'sti bhūyastvayi me vivakṣitaṃ nato hi bhaktaśca niyogamarhasi // Saund_18.53 //</l>
+</lg>
+
+<lg>
+<l>avāptakāryo 'si parāṃ gatiṃ gato na te 'sti kiñcit karaṇīyamaṇvapi /</l>
+<l>ataḥparaṃ saumya carānukampayā vimokṣayan kṛcchragatān parānapi // Saund_18.54 //</l>
+</lg>
+
+<lg>
+<l>ihārthamevārabhate naro 'dhamo vimadhyamastūbhayalaukikīṃ kriyām /</l>
+<l>kriyāmamutraiva phalāya madhyamo viśiṣṭadharmā punarapravṛttaye // Saund_18.55 //</l>
+</lg>
+
+<lg>
+<l>ihottamebhyo 'pi mataḥ sa tūttamo ya uttamaṃ dharmamavāpya naiṣṭhikam /</l>
+<l>acintayitvātmagataṃ pariśramaṃ śamaṃ parebhyo 'pyupadeṣṭumicchati // Saund_18.56 //</l>
+</lg>
+
+<lg>
+<l>vihāya tasmādiha kāryamātmanaḥ kuru sthirātman parakāryamapyatho /</l>
+<l>bhramatsu sattveṣu tamāvṛtātmasu śrutapradīpo niśi dhāryatāmayam // Saund_18.57 //</l>
+</lg>
+
+<lg>
+<l>bravītu tāvat puri vismito janastvayi sthite kurvati dharmadeśanāḥ /</l>
+<l>aho batāścaryamidaṃ vimuktaye karoti rāgī yadayaṃ kathāmiti // Saund_18.58 //</l>
+</lg>
+
+<lg>
+<l>dhruvaṃ hi saṃśrutya tava sthiraṃ mano nivṛttanānāviṣayairmanorathaiḥ /</l>
+<l>vadhūrgṛhe sāpi tavānukurvatī kariṣyate strīṣu virāgiṇīḥ kathāḥ // Saund_18.59 //</l>
+</lg>
+
+<lg>
+<l>tvayi paramadhṛtau niviṣṭatattve bhavanagatā na hi raṃsyate dhruvaṃ sā /</l>
+<l>manasi śamadamātmake vivikte matiriva kāmasukhaiḥ parīkṣakasya // Saund_18.60 //</l>
+</lg>
+
+<lg>
+<l>ityarhataḥ paramakāruṇikasya śāsturmūrdhnā vacaśca caraṇau ca samaṃ gṛhītvā /</l>
+<l>svasthaḥ praśāntahṛdayo vinivṛttakāryaḥ pārśvānmuneḥ pratiyayau vimadaḥ karīva // Saund_18.61 //</l>
+</lg>
+
+<lg>
+<l>bhikṣārthaṃ samaye viveśa sa puraṃ dṛṣṭīrjanasyākṣipan</l>
+<l>lābhālābhasukhāsukhādiṣu samaḥ svasthendriyo nispṛhaḥ /</l>
+<l>nirmokṣāya cakāra tatra ca kathāṃ kāle janāyārthine</l>
+<l>naivonmārgagatān parān paribhavannātmānamutkarṣayan // Saund_18.62 //</l>
+</lg>
+
+<lg>
+<l>ityeṣā vyupaśāntaye na rataye mokṣārthagarbhā kṛtiḥ</l>
+<l>śrotṛṇāṃ grahaṇārthamanyamanasāṃ kāvyopacārāt kṛtā /</l>
+<l>yanmokṣāt kṛtamanyadatra hi mayā tatkāvyadharmāt</l>
+<l>kṛtaṃ pātuṃ titkamivauṣadhaṃ madhuyutaṃ hṛdyaṃ kathaṃ syāditi // Saund_18.63 //</l>
+</lg>
+
+<lg>
+<l>prāyeṇālokya lokaṃ viṣayaratiparaṃ mokṣāt pratihataṃ</l>
+<l>kāvyavyājena tattvaṃ kathitamiha mayā mokṣaḥ paramiti /</l>
+<l>tadbuddhvā śamikaṃ yattadavahitamito grāhyaṃ na lalitaṃ</l>
+<l>pāṃsubhyo dhātujebhyo niyatamupakaraṃ cāmīkaramiti // Saund_18.64 //</l>
+</lg>
+
+<p>saundarananda mahākāvya meṃ "ājñāvyākaraṇa" nāmaka aṣṭādaśa sarga samāpta /</p>
+
+  </div>
+</body>
+</text>
+</TEI>

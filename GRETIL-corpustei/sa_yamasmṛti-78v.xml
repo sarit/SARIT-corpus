@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_yamasmRti-78v">
+  <teiHeader xml:lang="en">
+    <fileDesc>
+      <titleStmt>
+	<title>Yamasmṛti (78-verse version)</title>
+	<author></author>
+	<respStmt>
+	  <resp>data entry</resp>
+	  <name>Jürgen Neuß</name>
+	</respStmt>
+	<respStmt>
+	  <resp>contribution to GRETIL</resp>
+	  <name>Jürgen Neuß</name>
+	</respStmt>
+	<respStmt>
+	  <resp>proof-reading</resp>
+	  <name>Jürgen Neuß</name>
+	</respStmt>
+	<respStmt>
+	  <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	  <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	  <resp>normalization and conversion to TEI-conformant markup</resp>
+	  <name>Maximilian Mehner</name>
+	</respStmt>
+      </titleStmt>
+
+      <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	  <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	  If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	  The file will be immediately removed pending resolution of the claim.</p>
+
+	  <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-01-21"/>
+      </publicationStmt>
+
+      <notesStmt>
+	<note>This is the shortest version of the Yamasmṛti, containing 78 verses.</note>
+	
+	<note>Based on <ref target="Sastri1952">The Smriti Sandarbha</ref>, pp. 2083-90.</note>
+      </notesStmt>
+
+      <sourceDesc>
+	<biblStruct xml:id="Sastri1952">
+	  <monogr>
+	    <editor>Haridatta Sastri</editor>
+	    <title>The Smriti Sandarbha</title>
+	    <imprint>
+	      <pubPlace>Calcutta</pubPlace>
+	      <publisher>Gurumandal</publisher>
+	      <date when-iso="1952/1957"/>
+	    </imprint>
+	    <biblScope unit="volumes">6</biblScope>
+	  </monogr>
+	  <series>
+	    <title>Gurumandal Series</title>
+	    <biblScope unit="volume">9</biblScope>
+	  </series>
+	</biblStruct>
+      </sourceDesc>
+    </fileDesc>
+
+    <encodingDesc>
+      <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+      </projectDesc>
+
+      <editorialDecl>
+	<correction>
+	  <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	  <p>GRETIL normalizes all texts contributed consistently for each language.
+	  Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	  <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	  Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	  These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	  <p><table>
+	    <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	    <row role="label">
+	      <cell>Character</cell>
+	      <cell>Character Name</cell>
+	      <cell>Unicode Code Point</cell>
+	    </row>
+	    <row>
+	      <cell>a</cell>
+	      <cell>LATIN SMALL LETTER A</cell>
+	      <cell>U+0061</cell>
+	    </row>
+	    <row>
+	      <cell>ā</cell>
+	      <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	      <cell>U+0101</cell>
+	    </row>
+	    <row>
+	      <cell>i</cell>
+	      <cell>LATIN SMALL LETTER I</cell>
+	      <cell>U+0069</cell>
+	    </row>
+	    <row>
+	      <cell>ī</cell>
+	      <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	      <cell>U+012B</cell>
+	    </row>
+	    <row>
+	      <cell>u</cell>
+	      <cell>LATIN SMALL LETTER U</cell>
+	      <cell>U+0075</cell>
+	    </row>
+	    <row>
+	      <cell>ū</cell>
+	      <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	      <cell>U+016B</cell>
+	    </row>
+	    <row>
+	      <cell>ṛ</cell>
+	      <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	      <cell>U+1E5B</cell>
+	    </row>
+	    <row>
+	      <cell>ṝ</cell>
+	      <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	      <cell>U+1E5D</cell>
+	    </row>
+	    <row>
+	      <cell>ḷ</cell>
+	      <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	      <cell>U+1E37</cell>
+	    </row>
+	    <row>
+	      <cell>ḹ</cell>
+	      <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	      <cell>U+1E39</cell>
+	    </row>
+	    <row>
+	      <cell>e</cell>
+	      <cell>LATIN SMALL LETTER E</cell>
+	      <cell>U+0065</cell>
+	    </row>
+	    <row>
+	      <cell>o</cell>
+	      <cell>LATIN SMALL LETTER O</cell>
+	      <cell>U+006F</cell>
+	    </row>
+	    <row>
+	      <cell>ṃ</cell>
+	      <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	      <cell>U+1E43</cell>
+	    </row>
+	    <row>
+	      <cell>ḥ</cell>
+	      <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	      <cell>U+1E25</cell>
+	    </row>
+	    <row>
+	      <cell>'</cell>
+	      <cell>APOSTROPHE</cell>
+	      <cell>U+0027</cell>
+	    </row>
+	    <row>
+	      <cell>k</cell>
+	      <cell>LATIN SMALL LETTER K</cell>
+	      <cell>U+006B</cell>
+	    </row>
+	    <row>
+	      <cell>g</cell>
+	      <cell>LATIN SMALL LETTER G</cell>
+	      <cell>U+0067</cell>
+	    </row>
+	    <row>
+	      <cell>ṅ</cell>
+	      <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	      <cell>U+1E45</cell>
+	    </row>
+	    <row>
+	      <cell>c</cell>
+	      <cell>LATIN SMALL LETTER C</cell>
+	      <cell>U+0063</cell>
+	    </row>
+	    <row>
+	      <cell>j</cell>
+	      <cell>LATIN SMALL LETTER J</cell>
+	      <cell>U+006A</cell>
+	    </row>
+	    <row>
+	      <cell>ñ</cell>
+	      <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	      <cell>U+00F1</cell>
+	    </row>
+	    <row>
+	      <cell>ṭ</cell>
+	      <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	      <cell>U+1E6D</cell>
+	    </row>
+	    <row>
+	      <cell>ḍ</cell>
+	      <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	      <cell>U+1E0D</cell>
+	    </row>
+	    <row>
+	      <cell>ṇ</cell>
+	      <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	      <cell>U+1E47</cell>
+	    </row>
+	    <row>
+	      <cell>t</cell>
+	      <cell>LATIN SMALL LETTER T</cell>
+	      <cell>U+0074</cell>
+	    </row>
+	    <row>
+	      <cell>d</cell>
+	      <cell>LATIN SMALL LETTER D</cell>
+	      <cell>U+0064</cell>
+	    </row>
+	    <row>
+	      <cell>n</cell>
+	      <cell>LATIN SMALL LETTER N</cell>
+	      <cell>U+006E</cell>
+	    </row>
+	    <row>
+	      <cell>p</cell>
+	      <cell>LATIN SMALL LETTER P</cell>
+	      <cell>U+0070</cell>
+	    </row>
+	    <row>
+	      <cell>b</cell>
+	      <cell>LATIN SMALL LETTER B</cell>
+	      <cell>U+0062</cell>
+	    </row>
+	    <row>
+	      <cell>m</cell>
+	      <cell>LATIN SMALL LETTER M</cell>
+	      <cell>U+006D</cell>
+	    </row>
+	    <row>
+	      <cell>y</cell>
+	      <cell>LATIN SMALL LETTER Y</cell>
+	      <cell>U+0079</cell>
+	    </row>
+	    <row>
+	      <cell>r</cell>
+	      <cell>LATIN SMALL LETTER R</cell>
+	      <cell>U+0072</cell>
+	    </row>
+	    <row>
+	      <cell>l</cell>
+	      <cell>LATIN SMALL LETTER L</cell>
+	      <cell>U+006C</cell>
+	    </row>
+	    <row>
+	      <cell>v</cell>
+	      <cell>LATIN SMALL LETTER V</cell>
+	      <cell>U+0076</cell>
+	    </row>
+	    <row>
+	      <cell>ś</cell>
+	      <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	      <cell>U+x015B</cell>
+	    </row>
+	    <row>
+	      <cell>ṣ</cell>
+	      <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	      <cell>U+1E63</cell>
+	    </row>
+	    <row>
+	      <cell>s</cell>
+	      <cell>LATIN SMALL LETTER S</cell>
+	      <cell>U+0073</cell>
+	    </row>
+	    <row>
+	      <cell>h</cell>
+	      <cell>LATIN SMALL LETTER H</cell>
+	      <cell>U+0068</cell>
+	    </row>
+	  </table>
+	</p>
+      </normalization>
+
+      <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+      </quotation>
+
+      <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+      </segmentation>
+
+      <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	  <item>Highlighting in <gi>hi</gi> elements,</item>
+	  <item>Corruptions in <gi>sic</gi> elements,</item>
+	  <item>Remarks in <gi>note</gi> elements with the <att>resp</att> attribute identifying the agency.</item>
+	</list></p>
+      </interpretation>
+    </editorialDecl>
+
+    <refsDecl>
+      <p>A reference is given in the <att>xml:id</att> attributes consisting of
+      <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Yamasmṛti, 78-verse version = YamS-78v,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+      </list>
+      </p>
+    </refsDecl>
+
+  </encodingDesc>
+
+  <profileDesc>
+    <langUsage>
+      <language ident="en">English</language>
+      <language ident="sa-Latn">Sanskrit</language>
+    </langUsage>
+
+    <textClass>
+      <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Śāstra -- Dharma -- Smṛti</term>
+      </keywords>
+    </textClass>
+  </profileDesc></teiHeader>
+
+  <text xml:lang="sa-Latn" xml:id="YamS-78v">
+    <body>
+      <div>
+	<head>atha yamasmṛtiḥ ||</head>
+
+	<p>śrīgaṇeśāya namaḥ ||</p>
+
+	<p>atha prāyaścittavarṇanam</p>
+	
+	<lg xml:id="YamS-78v_1">
+	  <l><seg type="pāda" n="a">athāto hy asya dharmasya</seg> <seg type="pāda" n="b">prāyaścittābhidhāyakam</seg> /</l>
+	  <l><seg type="pāda" n="c">caturṇām api varṇānāṃ</seg> <seg type="pāda" n="d">dharmaśāstraṃ pravartate</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_2">
+	  <l><seg type="pāda" n="a">jalāgnyudvandhanabhraṣṭāḥ</seg> <seg type="pāda" n="b">prabrajyānaśanacyutāḥ</seg> /</l>
+	  <l><seg type="pāda" n="c">viṣaprapatanaprāya</seg><seg type="pāda" n="d">śastraghātacyutāśca ye</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_3">
+	  <l><seg type="pāda" n="a">sarve te pratyavasitāḥ</seg> <seg type="pāda" n="b">sarvalokavahiṣkṛtāḥ</seg> /</l>
+	  <l><seg type="pāda" n="c">cāndrāyaṇena śuddhyanti</seg> <seg type="pāda" n="d">taptakṛcchradvayena vā</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_4">
+	  <l><seg type="pāda" n="a">ubhayāvasitāḥ pāpā</seg> <seg type="pāda" n="b">ye 'grāmya śaraṇacyutāḥ</seg> /</l>
+	  <l><seg type="pāda" n="c">indudvayena śuddhyanti</seg> <seg type="pāda" n="d">dattvā dhenuṃ tathā vṛṣam</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_5">
+	  <l><seg type="pāda" n="a">gobrāhmaṇahanaṃ dagdhā</seg> <seg type="pāda" n="b">mṛtam udvandhanena ca</seg> /</l>
+	  <l><seg type="pāda" n="c">pāśaṃ tasyaiva chittvā tu</seg> <seg type="pāda" n="d">taptakṛcchraṃ samācaret</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_6">
+	  <l><seg type="pāda" n="a">kṛmibhir vraṇasaṃbhūtair</seg> <seg type="pāda" n="b">makṣikāśvopaghātitaḥ</seg> /</l>
+	  <l><seg type="pāda" n="c">kṛcchrārddhaṃ saṃprakurvīta</seg> <seg type="pāda" n="d">śaktyā dadyāt tu dakṣiṇām</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_7">
+	  <l><seg type="pāda" n="a">brāhmaṇasya maladvāre</seg> <seg type="pāda" n="b">pūyaśoṇita sambhave</seg> /</l>
+	  <l><seg type="pāda" n="c">kṛmibhuktabraṇe mauñjī</seg><seg type="pāda" n="d">homena sa viśuddhyati</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_8">
+	  <l><seg type="pāda" n="a">yaḥ kṣatriyas tathā vaiśyaḥ</seg> <seg type="pāda" n="b">śūdraścāpyanulomajaḥ</seg> /</l>
+	  <l><seg type="pāda" n="c">jñātvā bhuṅkte viśeṣeṇa</seg> <seg type="pāda" n="d">carec cāndrāyaṇaṃ vratam</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_9">
+	  <l><seg type="pāda" n="a">kukkuṭāṇḍapramāṇan tu</seg> <seg type="pāda" n="b">grāsañca parikalpayet</seg> /</l>
+	  <l><seg type="pāda" n="c">anyathāhāradoṣeṇa</seg> <seg type="pāda" n="d">na sa tatra viśuddhyati</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_10">
+	  <l><seg type="pāda" n="a">ekaikaṃ varddhayec chukle</seg> <seg type="pāda" n="b">kṛṣṇapakṣe ca hrāsayet</seg> /</l>
+	  <l><seg type="pāda" n="c">amāvāsyāṃ na bhuñjīta</seg> <seg type="pāda" n="d">eṣa cāndrāyaṇo vidhiḥ</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_11">
+	  <l><seg type="pāda" n="a">surānyamadyapānena</seg> <seg type="pāda" n="b">gomāṃsabhakṣaṇe kṛte</seg> /</l>
+	  <l><seg type="pāda" n="c">taptakṛcchrañ cared vipras</seg> <seg type="pāda" n="d">tat pāpas tu praṇaśyati</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_12">
+	  <l><seg type="pāda" n="a">prāyaścitte hy upakrānte</seg> <seg type="pāda" n="b">kartā yadi vipadyate</seg> /</l>
+	  <l><seg type="pāda" n="c">pūtas tad ahar evāpi</seg> <seg type="pāda" n="d">iha loke paratra ca</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_13">
+	  <l><seg type="pāda" n="a">yāvad ekaḥ pṛthak dravyaḥ</seg> <seg type="pāda" n="b">prāyaścittena śuddhyati</seg> /</l>
+	  <l><seg type="pāda" n="c">aparās te na ca spṛśyās</seg> <seg type="pāda" n="d">te 'pi sarve vigarhitāḥ</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_14">
+	  <l><seg type="pāda" n="a">abhojyāś cāpratigrāhyā</seg> <seg type="pāda" n="b">asaṃpāṭhyā vivāhinaḥ</seg> /</l>
+	  <l><seg type="pāda" n="c">pūyante 'nuvrate cīrṇe</seg> <seg type="pāda" n="d">sarve te ṛkthabhāginaḥ</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_15">
+	  <l><seg type="pāda" n="a">ūnaikādaśavarṣasya</seg> <seg type="pāda" n="b">pañcavarṣāt parasya ca</seg> /</l>
+	  <l><seg type="pāda" n="c">prāyaścittaṃ cared bhrātā</seg> <seg type="pāda" n="d">pitā vānyo 'pi bāndhavaḥ</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_16">
+	  <l><seg type="pāda" n="a">ato bālatarasyāpi</seg> <seg type="pāda" n="b">nāparādho na pātakam</seg> /</l>
+	  <l><seg type="pāda" n="c">rājadaṇḍo na tasyāsti</seg> <seg type="pāda" n="d">prāyaścittaṃ na vidyate</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_17">
+	  <l><seg type="pāda" n="a">aśītīryasya varṣāṇi</seg> <seg type="pāda" n="b">bālo vāpy ūnaṣoḍaśaḥ</seg> /</l>
+	  <l><seg type="pāda" n="c">prāyaścittārddham arhanti</seg> <seg type="pāda" n="d">striyo rogiṇa eva ca</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_18">
+	  <l><seg type="pāda" n="a">astaṃ gato yadā sūryaś</seg> <seg type="pāda" n="b">cāṇḍālarajakastriyaḥ</seg> /</l>
+	  <l><seg type="pāda" n="c">saṃspṛṣṭās tu tadā kaiścit</seg> <seg type="pāda" n="d">prāyaścittaṃ kathaṃ bhavet</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_19">
+	  <l><seg type="pāda" n="a">jātarūpaṃ suvarṇañ ca</seg> <seg type="pāda" n="b">divānītaṃ ca yaj jalam</seg> /</l>
+	  <l><seg type="pāda" n="c">tena snātvā ca pītvā ca</seg> <seg type="pāda" n="d">sarve te śucayaḥ smṛtāḥ</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_20">
+	  <l><seg type="pāda" n="a">dāsanāpitagopāla</seg><seg type="pāda" n="b">kulamitrārdhasīriṇaḥ</seg> /</l>
+	  <l><seg type="pāda" n="c">ete śūdreṣu bhojyānnā</seg> <seg type="pāda" n="d">yaś cātmanaṃ nivedayet</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_21">
+	  <l><seg type="pāda" n="a">annaṃ śūdrasya bhojyaṃ vā</seg> <seg type="pāda" n="b">ye bhuñjanty abudhā narāḥ</seg> /</l>
+	  <l><seg type="pāda" n="c">prayaścittaṃ tathā prāptaṃ</seg> <seg type="pāda" n="d">carec cāndrāyaṇaṃ vratam</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_22">
+	  <l><seg type="pāda" n="a">prāpte dvādaśame varṣe</seg> <seg type="pāda" n="b">yaḥ kanyāṃ na prayacchati</seg> /</l>
+	  <l><seg type="pāda" n="c">māsi māsi rajas tasyāḥ</seg> <seg type="pāda" n="d">pitā pibati śoṇitam</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_23">
+	  <l><seg type="pāda" n="a">mātā caiva pitā caiva</seg> <seg type="pāda" n="b">jyeṣṭho bhrātā tathaiva ca</seg> /</l>
+	  <l><seg type="pāda" n="c">trayas te narakaṃ yānti</seg> <seg type="pāda" n="d">dṛṣṭvā kanyāṃ rajasvalām</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_24">
+	  <l><seg type="pāda" n="a">yas tāṃ vivāhayet kanyāṃ</seg> <seg type="pāda" n="b">brāhmaṇo madamohitaḥ</seg> /</l>
+	  <l><seg type="pāda" n="c">asaṃbhāṣyo hy apāṅkteyaḥ</seg> <seg type="pāda" n="d">sa vipro vṛṣalīpatiḥ</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_25">
+	  <l><seg type="pāda" n="a">vandhyā tu vṛṣalī jñeyā</seg> <seg type="pāda" n="b">vṛṣalī tu mṛtaprajāḥ</seg> /</l>
+	  <l><seg type="pāda" n="c">śūdrī tu vṛṣalī jñeyā</seg> <seg type="pāda" n="d">kumārī tu rajasvalā</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_26">
+	  <l><seg type="pāda" n="a">yat karoty ekarātreṇa</seg> <seg type="pāda" n="b">vṛṣalīsevanād dvijaḥ</seg> /</l>
+	  <l><seg type="pāda" n="c">tad bhaikṣabhug japen nityaṃ</seg> <seg type="pāda" n="d">tribhir varṣair vyapohati</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_27">
+	  <l><seg type="pāda" n="a">svavṛṣaṃ yā parityajyāny</seg> <seg type="pāda" n="b">avṛṣeṇa bṛhaspatiḥ</seg> /</l>
+	  <l><seg type="pāda" n="c">vṛṣalī sā tu vijñeyā</seg> <seg type="pāda" n="d">na śūdrī vṛṣalī bhavet</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_28">
+	  <l><seg type="pāda" n="a">vṛṣalīphenapītasya</seg> <seg type="pāda" n="b">niḥśvāsopahatasya ca</seg> /</l>
+	  <l><seg type="pāda" n="c">tasyāñ caiva prasūtasya</seg> <seg type="pāda" n="d">niṣkṛtir naiva vidyate</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_29">
+	  <l><seg type="pāda" n="a">śvitrakuṣṭhī tathā caiva</seg> <seg type="pāda" n="b">kunakhī śyāvadantakaḥ</seg> /</l>
+	  <l><seg type="pāda" n="c">rogī hīnātiriktāṅgaḥ</seg> <seg type="pāda" n="d">piśuno matsaras tathā</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_30">
+	  <l><seg type="pāda" n="a">durbhago hi tathā ṣaṇḍaḥ</seg> <seg type="pāda" n="b">pāṣaṇḍī vedanindakaḥ</seg> /</l>
+	  <l><seg type="pāda" n="c">haitukaḥ śūdrayājī ca</seg> <seg type="pāda" n="d">ayājyānāñ ca yājakaḥ</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_31">
+	  <l><seg type="pāda" n="a">nityaṃ pratigrahe lubdho</seg> <seg type="pāda" n="b">yācako viṣayātmakaḥ</seg> /</l>
+	  <l><seg type="pāda" n="c">śyāvadanto 'tha vaidyaś ca</seg> <seg type="pāda" n="d">asadālāpakas tathā</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_32">
+	  <l><seg type="pāda" n="a">ete śrāddhe ca dāne ca</seg> <seg type="pāda" n="b">varjanīyāḥ prayatnataḥ</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_33">
+	  <l><seg type="pāda" n="a">tato devalakaś caiva</seg> <seg type="pāda" n="b">bhṛtako vedavikrayī</seg> /</l>
+	  <l><seg type="pāda" n="c">ete varjyāḥ prayatnena</seg> <seg type="pāda" n="d">etad bhāsvatir abravīt</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_34">
+	  <l><seg type="pāda" n="a">etān niyojayed yas tu</seg> <seg type="pāda" n="b">havye kavye ca karmaṇi</seg> /</l>
+	  <l><seg type="pāda" n="c">nirāśāḥ pitaras tasya</seg> <seg type="pāda" n="d">yānti devāmaharṣibhiḥ</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_35">
+	  <l><seg type="pāda" n="a">agre māhiṣikaṃ dṛṣṭvā</seg> <seg type="pāda" n="b">madhye tu vṛṣalīpatim</seg> /</l>
+	  <l><seg type="pāda" n="c">ante vārdhuṣikaṃ dṛṣṭvā</seg> <seg type="pāda" n="d">nirāśāḥ pitaro gatāḥ</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_36">
+	  <l><seg type="pāda" n="a">mahiṣīty ucyate bhāryā</seg> <seg type="pāda" n="b">yā caiva vyabhicāriṇī</seg> /</l>
+	  <l><seg type="pāda" n="c">tān doṣān kṣamate yas tu</seg> <seg type="pāda" n="d">sa vai māhiṣikaḥ smṛtaḥ</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_37">
+	  <l><seg type="pāda" n="a">samārghan tu samuddhṛtya</seg> <seg type="pāda" n="b">mahārghaṃ yah prayacchati</seg> /</l>
+	  <l><seg type="pāda" n="c">sa vai vārdhuṣiko nāma</seg> <seg type="pāda" n="d">brahmavādiṣu garhitaḥ</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_38">
+	  <l><seg type="pāda" n="a">yāvad uṣṇaṃ bhavaty annaṃ</seg> <seg type="pāda" n="b">yāvad bhuñjanti vāgyatāḥ</seg> /</l>
+	  <l><seg type="pāda" n="c">aśnanti pitaras tāvad</seg> <seg type="pāda" n="d">yāvan noktā havirguṇāḥ</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_39">
+	  <l><seg type="pāda" n="a">havirguṇā na vaktavyāḥ</seg> <seg type="pāda" n="b">pitaro yatra tarpitāḥ</seg> /</l>
+	  <l><seg type="pāda" n="c">pitṛbhis tarpitaiḥ paścād</seg> <seg type="pāda" n="d">vaktavyaṃ śobhanaṃ haviḥ</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_40">
+	  <l><seg type="pāda" n="a">yāvato grasate grāsān</seg> <seg type="pāda" n="b">havyakavyeṣu mantravit</seg> /</l>
+	  <l><seg type="pāda" n="c">tāvato grasate piṇḍān</seg> <seg type="pāda" n="d">śarīre brahmaṇaḥ pitā</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_41">
+	  <l><seg type="pāda" n="a">ucchiṣṭocchiṣtasaṃspṛṣṭaḥ</seg> <seg type="pāda" n="b">śunā śūdreṇa vā dvijaḥ</seg> /</l>
+	  <l><seg type="pāda" n="c">upoṣya rajamīm ekāṃ</seg> <seg type="pāda" n="d">pañcagavyena śuddhyati</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_42">
+	  <l><seg type="pāda" n="a">anucchiṣṭena saṃspṛṣṭe</seg> <seg type="pāda" n="b">snānamātraṃ vidhīyate</seg> /</l>
+	  <l><seg type="pāda" n="c">tenaivocchiṣṭasaṃspṛṣṭaḥ</seg> <seg type="pāda" n="d">prājāpatyaṃ samācaret</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_43">
+	  <l><seg type="pāda" n="a">yāvad viprā na pūjyante</seg> <seg type="pāda" n="b">sambhojanahiraṇyakaiḥ</seg> /</l>
+	  <l><seg type="pāda" n="c">tāvac cīrṇavratasyāpi</seg> <seg type="pāda" n="d">tat pāpaṃ na praṇaśyati</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_44">
+	  <l><seg type="pāda" n="a">yad veṣṭitaṃ kākabalākacillair</seg> <seg type="pāda" n="b">amedhyaliptaṃ tu bhavec charīram</seg> /</l>
+	  <l><seg type="pāda" n="c">gātre mukhe ca praviśec ca samyak</seg> <seg type="pāda" n="d">snānena lepopahatasya śuddhiḥ</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_45">
+	  <l><seg type="pāda" n="a">ūrdhvaṃ nābheḥ karau muktvā</seg> <seg type="pāda" n="b">yad aṅgam upahanyate</seg> /</l>
+	  <l><seg type="pāda" n="c">ūrdhvaṃ snānam adhaḥ śaucaṃ</seg> <seg type="pāda" n="d">tan mātreṇaiva śuddhyati</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_46">
+	  <l><seg type="pāda" n="a">abhakṣyāṇām apeyānām</seg> <seg type="pāda" n="b">alehyānāñ ca bhakṣaṇe</seg> /</l>
+	  <l><seg type="pāda" n="c">reto mūtrapurīṣāṇāṃ</seg> <seg type="pāda" n="d">prāyaścittaṃ kathaṃ bhavet</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_47">
+	  <l><seg type="pāda" n="a">padmoḍumbaravilvāś ca</seg> <seg type="pāda" n="b">kuśāśvatthapalāśakāḥ</seg> /</l>
+	  <l><seg type="pāda" n="c">eteṣām udakaṃ pītvā</seg> <seg type="pāda" n="d">ṣaḍrātreṇaiva śuddhyati</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_48">
+	  <l><seg type="pāda" n="a">yaḥ pratyavasito vipraḥ</seg> <seg type="pāda" n="b">pravrajyāgnir nirāpadi</seg> /</l>
+	  <l><seg type="pāda" n="c">anāhitāgnir varteta</seg> <seg type="pāda" n="d">gṛhitvañ ca cikīrṣati</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_49">
+	  <l><seg type="pāda" n="a">ācaret trīṇi kṛcchrāṇi</seg> <seg type="pāda" n="b">carec cāndrāyaṇāni ca</seg> /</l>
+	  <l><seg type="pāda" n="c">jātakarmādibhiḥ proktaiḥ</seg> <seg type="pāda" n="d">punaḥ saṃskāram arhati</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_50">
+	  <l><seg type="pāda" n="a">tūlikā upadhānāni</seg> <seg type="pāda" n="b">puṣpaṃ raktāmbarāṇi ca</seg> /</l>
+	  <l><seg type="pāda" n="c">śoṣayitvā pratāpena</seg> <seg type="pāda" n="d">prokṣayitvā śucir bhavet</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_51">
+	  <l><seg type="pāda" n="a">deśaṃ kālaṃ tathātmānaṃ</seg> <seg type="pāda" n="b">dravyaṃ dravyaprayojanam</seg> /</l>
+	  <l><seg type="pāda" n="c">upapattim avasthāñ ca</seg> <seg type="pāda" n="d">jñātvā dharmaṃ samācaret</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_52">
+	  <l><seg type="pāda" n="a">rathy ākardamatoyāni</seg> <seg type="pāda" n="b">nāvāyasa tṛṇāni ca</seg> /</l>
+	  <l><seg type="pāda" n="c">mārutārkeṇa śuddhyanti</seg> <seg type="pāda" n="d">pakveṣṭakacitāni ca</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_53">
+	  <l><seg type="pāda" n="a">āture snānasamprāpte</seg> <seg type="pāda" n="b">daśakṛtvo hy anāturaḥ</seg> /</l>
+	  <l><seg type="pāda" n="c">snātvā snātvā spṛśet tan tu</seg> <seg type="pāda" n="d">tataḥ śuddhyeta āturaḥ</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_54">
+	  <l><seg type="pāda" n="a">rajakaś carmakāraś ca</seg> <seg type="pāda" n="b">naṭo vuruḍa eva ca</seg> /</l>
+	  <l><seg type="pāda" n="c">kaivartamedabhillāś ca</seg> <seg type="pāda" n="d">saptaite cāntyajāḥ smṛtāḥ</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_55">
+	  <l><seg type="pāda" n="a">eṣāṃ gatvā tu yoṣāṃ vai</seg> <seg type="pāda" n="b">taptakṛcchraṃ samācaret</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_56">
+	  <l><seg type="pāda" n="a">strīṇāṃ rajasvalānān tu</seg> <seg type="pāda" n="b">spṛṣṭāspṛṣṭi yadā bhavet</seg> /</l>
+	  <l><seg type="pāda" n="c">prāyaścittaṃ kathaṃ tāsāṃ</seg> <seg type="pāda" n="d">varṇe varṇe vidhīyate</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_57">
+	  <l><seg type="pāda" n="a">spṛṣṭvā rajasvalāṃ yāntu</seg> <seg type="pāda" n="b">sagotrāñ ca sabharttṛkām</seg> /</l>
+	  <l><seg type="pāda" n="c">kāmād akāmato vāpi</seg> <seg type="pāda" n="d">snātvā kālena śuddhyati</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_58">
+	  <l><seg type="pāda" n="a">spṛṣṭvā rajasvalānyonyaṃ</seg> <seg type="pāda" n="b">brāhmaṇī śūdrajā tathā</seg> /</l>
+	  <l><seg type="pāda" n="c">kṛcchreṇa śudhyate pūrvā</seg> <seg type="pāda" n="d">śūdrā pādena śudhyati</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_59">
+	  <l><seg type="pāda" n="a">spṛṣṭvā rajasvalānyonyaṃ</seg> <seg type="pāda" n="b">kṣatriyā śūdrajā tathā</seg> /</l>
+	  <l><seg type="pāda" n="c">pādahīnaṃ caret pūrvā</seg> <seg type="pāda" n="d">pādārddhan tu tathottarā</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_60">
+	  <l><seg type="pāda" n="a">spṛṣṭvā rajasvalānyonyaṃ</seg> <seg type="pāda" n="b">vaiśyajā śūdrajā tathā</seg> /</l>
+	  <l><seg type="pāda" n="c">kṛcchrapādaṃ caret pūrvā</seg> <seg type="pāda" n="d">tadarddhan tu tathottarā</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_61">
+	  <l><seg type="pāda" n="a">spṛṣṭā rajasvalā caiva</seg> <seg type="pāda" n="b">śvājajambūkarāsabhaiḥ</seg> /</l>
+	  <l><seg type="pāda" n="c">tāvat tiṣṭhet nirāhārā</seg> <seg type="pāda" n="d">snātvā kālena śudhyati</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_62">
+	  <l><seg type="pāda" n="a">spṛṣṭvā rajasvalā kaiścit</seg> <seg type="pāda" n="b">cāṇḍālair arajasvalā</seg> /</l>
+	  <l><seg type="pāda" n="c">prājāpatyena kṛcchreṇa</seg> <seg type="pāda" n="d">prāṇāyāmaśatena ca</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_63">
+	  <l><seg type="pāda" n="a">vipraḥ spṛṣṭo niśāyāñ ca</seg> <seg type="pāda" n="b">udakyā patitena ca</seg> /</l>
+	  <l><seg type="pāda" n="c">divānītena toyena</seg> <seg type="pāda" n="d">snāpayec cāgnisannidhau</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_64">
+	  <l><seg type="pāda" n="a">divārka raśmisaṃspṛṣṭaṃ</seg> <seg type="pāda" n="b">rātrau nakṣatraraśmibhiḥ</seg> /</l>
+	  <l><seg type="pāda" n="c">sandhyobhayoś ca sandhyāyāḥ</seg> <seg type="pāda" n="d">pavitraṃ sarvadā jalam</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_65">
+	  <l><seg type="pāda" n="a">apaḥ karanakhaspṛṣṭāḥ</seg> <seg type="pāda" n="b">pibed ācamane dvijaḥ</seg> /</l>
+	  <l><seg type="pāda" n="c">surāṃ pibati suvyaktaṃ</seg> <seg type="pāda" n="d">yamasya vacanaṃ yathā</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_66">
+	  <l><seg type="pāda" n="a">svāta vāpyos tathā kūpe</seg> <seg type="pāda" n="b">pāṣāṇaiḥ śastraghātanaiḥ</seg> /</l>
+	  <l><seg type="pāda" n="c">yaṣṭyā tu ghātane caiva</seg> <seg type="pāda" n="d">mṛtpiṇḍe gokulena ca</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_67">
+	  <l><seg type="pāda" n="a">rodhane bandhane caiva</seg> <seg type="pāda" n="b">sthāpite puṣkale tathā</seg> /</l>
+	  <l><seg type="pāda" n="c">kāṣṭhe vanaspatau rodha</seg><seg type="pāda" n="d">saṅkaṭe rajjuvastrayoḥ</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_68">
+	  <l><seg type="pāda" n="a">etat te kathitaṃ sarvaṃ</seg> <seg type="pāda" n="b">pramādasthānam uttamam</seg> /</l>
+	  <l><seg type="pāda" n="c">yatra yatra mṛtā gāvaḥ</seg> <seg type="pāda" n="d">prāyaścittaṃ samācaret</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_69">
+	  <l><seg type="pāda" n="a">dāruṇā ghātane kṛcchraṃ</seg> <seg type="pāda" n="b">pāṣāṇair dviguṇaṃ bhavet</seg> /</l>
+	  <l><seg type="pāda" n="c">arddhakṛcchran tu khāte syāt</seg> <seg type="pāda" n="d">pādakṛcchran tu pādape</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_70">
+	  <l><seg type="pāda" n="a">śastraghāte trikṛcchrāṇi</seg> <seg type="pāda" n="b">yaṣṭighāte dvayaṃ caret</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_71">
+	  <l><seg type="pāda" n="a">kṛcchreṇa vastraghāte 'pi</seg> <seg type="pāda" n="b">goghnaś ceti viśuddhyati</seg> /</l>
+	  <l><seg type="pāda" n="c">yo varttayati gomadhye</seg> <seg type="pāda" n="d">nadīkāntāramantike</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_72">
+	  <l><seg type="pāda" n="a">romāṇi prathame pāde</seg> <seg type="pāda" n="b">dvitīye śmaśru vāpayet</seg> /</l>
+	  <l><seg type="pāda" n="c">tṛtīye tu śikhā dhāryā</seg> <seg type="pāda" n="d">caturthe saśikhaṃ vapet</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_73">
+	  <l><seg type="pāda" n="a">na strīṇāṃ vapanaṃ kuryāt</seg> <seg type="pāda" n="b">na ca sā gām anuvrajet</seg> /</l>
+	  <l><seg type="pāda" n="c">na ca rātrau vased goṣṭhe</seg> <seg type="pāda" n="d">na kuryād vaidikīṃ śrutim</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_74">
+	  <l><seg type="pāda" n="a">sarvān keśān samuddhṛtya</seg> <seg type="pāda" n="b">chedayed aṅgulidvayam</seg> /</l>
+	  <l><seg type="pāda" n="c">evam eva tu nārīṇāṃ</seg> <seg type="pāda" n="d">śiraso vapanaṃ smṛtam</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_75">
+	  <l><seg type="pāda" n="a">mṛtakena tu jātena</seg> <seg type="pāda" n="b">ubhayoḥ sūtakaṃ bhavet</seg> /</l>
+	  <l><seg type="pāda" n="c">pātakena tu liptena</seg> <seg type="pāda" n="d">nāsya sūtakitā bhavet</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_76">
+	  <l><seg type="pāda" n="a">catvāri khalu karmāṇi</seg> <seg type="pāda" n="b">sandhyākāle vivarjayet</seg> /</l>
+	  <l><seg type="pāda" n="c">āhāraṃ maithunaṃ nidrāṃ</seg> <seg type="pāda" n="d">svādhyāyañ ca caturthakam</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_77">
+	  <l><seg type="pāda" n="a">āhārāj jāyate vyādhiḥ</seg> <seg type="pāda" n="b">krūragarbhaś ca maithune</seg> /</l>
+	  <l><seg type="pāda" n="c">nidrā śriyo nivarttante</seg> <seg type="pāda" n="d">svādhyāye maraṇaṃ dhruvam</seg> //</l>
+	</lg>
+
+	<lg xml:id="YamS-78v_78">
+	  <l><seg type="pāda" n="a">ajñānāt tu dvijaśreṣṭha</seg> <seg type="pāda" n="b">varṇānāṃ hitakāmyayā</seg> /</l>
+	  <l><seg type="pāda" n="c">mayā proktam idaṃ śāstraṃ</seg> <seg type="pāda" n="d">sāvadhāno 'vadhāraya</seg> //</l>
+	</lg>
+
+	<p>iti yamaproktaṃ dharmaśāstraṃ samāptam ||</p>
+      </div>
+    </body>
+  </text>
+</TEI>
