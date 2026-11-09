@@ -53,6 +53,8 @@ and input projects and then contributed to the collection, so their sources
 and quality vary, and each file names its contributor and the edition it was
 taken from. For many years GRETIL offered its texts as plain-text and HTML
 files; the TEI versions searched on this site are in the `GRETIL-corpustei/`
-folder of the repository.
+folder of the repository that was created by Maximilian Mehner and colleagues 
+as part of a major restructuring of the repository from 
+2016 (see [https://doi.org/10.5281/zenodo.17971727](https://doi.org/10.5281/zenodo.17971727)) .
 
 </div>
