@@ -11,7 +11,7 @@ scripts:
   <div class="qrow">
     <label for="q" class="visually-hidden">Search terms</label>
     <input id="q" name="q" type="search" lang="sa" spellcheck="false"
-           placeholder="e.g. dīrghaṃ jīvitam · धर्मक्षेत्रे · vata.*pitta" autofocus>
+           placeholder="e.g. dīrghaṃ jīvitam · धर्मक्षेत्रे · yatra AND tatra · vāt*pitt" autofocus>
     <button type="submit" class="btn-primary" id="go">Search</button>
     <button type="button" class="btn-ghost" id="stop" hidden>Stop</button>
   </div>
@@ -67,6 +67,12 @@ scripts:
             <option value="200" selected>200</option>
             <option value="1000">1000</option>
             <option value="100000">all</option>
+          </select>
+        </label>
+        <label>Order texts
+          <select name="sort" title="Passages within a text are always in the order of the text">
+            <option value="cat" selected>SARIT, then GRETIL, by title</option>
+            <option value="hits">most matching passages first</option>
           </select>
         </label>
         <label>Context

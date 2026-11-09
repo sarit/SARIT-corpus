@@ -19,22 +19,22 @@
   });
 
   // ---------------- state <-> form <-> URL ----------------
-  const FIELDS = ['q', 'mode', 'nd', 'ns', 'na', 'ww', 'notes', 'scheme', 'script', 'max', 'ctx', 'coll'];
-  const DEFAULTS = { mode: 'phrase', nd: false, ns: false, na: false, ww: false, notes: true, scheme: 'auto', script: 'orig', max: '200', ctx: '200', coll: 'all' };
+  const FIELDS = ['q', 'mode', 'nd', 'ns', 'na', 'ww', 'notes', 'scheme', 'script', 'max', 'ctx', 'sort', 'coll'];
+  const DEFAULTS = { mode: 'phrase', nd: false, ns: false, na: false, ww: false, notes: true, scheme: 'auto', script: 'orig', max: '200', ctx: '200', sort: 'cat', coll: 'all' };
   let selected = new Set();
 
   function readForm() {
     const f = form.elements;
     return {
       q: f.q.value, mode: f.mode.value, nd: f.nd.checked, ns: f.ns.checked, na: f.na.checked, ww: f.ww.checked,
-      notes: f.notes.checked, scheme: f.scheme.value, script: f.script.value, max: f.max.value, ctx: f.ctx.value, coll: f.coll.value
+      notes: f.notes.checked, scheme: f.scheme.value, script: f.script.value, max: f.max.value, ctx: f.ctx.value, sort: f.sort.value, coll: f.coll.value
     };
   }
   function writeForm(st) {
     const f = form.elements;
     f.q.value = st.q || '';
     for (const k of ['nd', 'ns', 'na', 'ww', 'notes']) f[k].checked = !!st[k];
-    for (const k of ['mode', 'scheme', 'script', 'max', 'ctx', 'coll']) {
+    for (const k of ['mode', 'scheme', 'script', 'max', 'ctx', 'sort', 'coll']) {
       const el = f[k];
       if (el instanceof RadioNodeList) { for (const r of el) r.checked = (r.value === st[k]); }
       else el.value = st[k];
@@ -44,7 +44,7 @@
     const p = new URLSearchParams(location.search);
     const st = Object.assign({}, DEFAULTS);
     if (p.has('q')) st.q = p.get('q');
-    for (const k of ['mode', 'scheme', 'script', 'max', 'ctx', 'coll']) if (p.has(k)) st[k] = p.get(k);
+    for (const k of ['mode', 'scheme', 'script', 'max', 'ctx', 'sort', 'coll']) if (p.has(k)) st[k] = p.get(k);
     for (const k of ['nd', 'ns', 'na', 'ww', 'notes']) if (p.has(k)) st[k] = p.get(k) === '1';
     if (p.has('texts')) { selected = new Set(p.get('texts').split(',').filter(Boolean)); if (!p.has('coll')) st.coll = 'sel'; }
     return st;
@@ -144,35 +144,88 @@
     return out;
   }
 
+  // Boolean operators: the words AND / OR (in capitals) between search terms.
+  // Returns null when there are none, else {op, groups} where each group is a term (may be a phrase).
+  function splitBool(src, sep) {
+    const parts = src.split(sep === 'regex' ? /\s+(AND|OR)\s+/ : /\s+(AND|OR)\s+|^(?:AND|OR)\s+|\s+(?:AND|OR)$/);
+    if (parts.length === 1) return null;
+    const ops = new Set(parts.filter((p, i) => i % 2 === 1 && p));
+    if (ops.size > 1) throw new Error('Use either AND or OR in one search, not both.');
+    const groups = parts.filter((p, i) => i % 2 === 0).map(s => (s || '').trim()).filter(Boolean);
+    if (!groups.length) throw new Error('AND / OR need search terms on both sides.');
+    return { op: ops.size ? ops.values().next().value : 'AND', groups };
+  }
+
+  // A search term with wildcards: * = any letters within a word, ? = exactly one letter.
+  // Returns {re, lit}: a regex source, and the longest literal piece (used to find candidates fast).
+  const WCH = "[\\p{L}\\p{M}\\p{N}']";
+  function termPattern(term, opts) {
+    let parts = term.split(/([*?])/).filter(p => p !== '');
+    if (opts.noSep) { // words run together: leading/trailing * add nothing and would span the passage
+      while (parts[0] === '*') parts.shift();
+      while (parts[parts.length - 1] === '*') parts.pop();
+    }
+    let re = '', lit = '', wild = false, show = '';
+    parts.forEach((p, i) => {
+      if (p === '*' || p === '?') show += p;
+      if (p === '*') {
+        wild = true;
+        if (i === 0) re += '(?<!' + WCH + ')' + WCH + '*?';   // from the start of the word
+        else if (i === parts.length - 1) re += WCH + '*';      // to the end of the word
+        else re += WCH + '*?';
+      } else if (p === '?') { wild = true; re += WCH; }
+      else { const k = T.fastKey(p, opts); re += reEsc(k); show += k; if (k.length > lit.length) lit = k; }
+    });
+    return { re, lit, wild, show, key: wild ? null : T.fastKey(parts.join(''), opts) };
+  }
+
+  // Leading and trailing .* do not change which passages match, but on very long
+  // passages they make the regex engine backtrack until it runs out of stack.
+  const trimDotStar = s => s.replace(/^(?:\.\*)+/, '').replace(/(?:^|[^\\])(?:\.\*)+$/, m => m.replace(/(?:\.\*)+$/, ''));
+
   function compile(st) {
     const opts = { noDiac: st.nd, noSep: st.ns, nasal: st.na };
-    let src = st.q.trim();
-    if (st.scheme !== 'auto') src = T.fromScheme(src, st.scheme);
+    const conv = s => st.scheme !== 'auto' ? T.fromScheme(s, st.scheme) : s;
+    const src = st.q.trim();
     const whole = st.ww && !st.ns;
     const q = { mode: st.mode, whole, kinds: st.notes ? '.hnv' : '.h' };
+    const test = re => { new RegExp(re, 'gmu'); return re; }; // throws on syntax errors
     if (st.mode === 'regex') {
-      q.regex = normRegex(src, opts);
-      if (whole) q.regex = wrapWhole(q.regex);
-      new RegExp(q.regex, 'gmu'); // throws on syntax errors
-      q.display = q.regex;
+      const b = splitBool(src, 'regex');
+      const res = (b ? b.groups : [src]).map(g => {
+        let r = normRegex(trimDotStar(conv(g)), opts);
+        if (!r) throw new Error('“' + g + '” matches everything; give some letters to look for.');
+        return test(whole ? wrapWhole(r) : r);
+      });
+      if (b && b.op === 'AND') { q.mode = 'all'; q.termRes = res; q.terms = res.map(() => ''); q.display = res.join(' AND '); }
+      else { q.regex = res.length > 1 ? res.map(r => '(?:' + r + ')').join('|') : res[0]; q.display = q.regex; }
     } else {
-      const words = src.split(/\s+/).filter(Boolean);
-      if (st.mode === 'phrase') {
-        const t = T.fastKey(words.join(' '), opts);
-        q.terms = [t];
-        if (whole) { q.mode = 'regex'; q.regex = wrapWhole(reEsc(t)); }
-        q.display = t;
-      } else {
-        let terms = Array.from(new Set(words.map(w => T.fastKey(w, opts)).filter(Boolean)));
-        terms.sort((a, b) => b.length - a.length);
-        q.terms = terms;
-        if (st.mode === 'any') {
-          const alt = terms.map(reEsc).join('|');
-          q.regex = whole ? wrapWhole(alt) : alt;
-        } else if (whole) {
-          q.termRes = terms.map(t => wrapWhole(reEsc(t)));
-        }
-        q.display = terms.join(st.mode === 'any' ? ' | ' : ' & ');
+      const b = splitBool(src);
+      let mode = st.mode, raw;
+      if (b) { mode = b.op === 'AND' ? 'all' : 'any'; raw = b.groups; }
+      else raw = st.mode === 'phrase' ? [src.split(/\s+/).join(' ')] : src.split(/\s+/).filter(Boolean);
+      let terms = raw.map(r => termPattern(conv(r), opts)).filter(t => t.re);
+      const seen = new Set(); terms = terms.filter(t => !seen.has(t.re) && seen.add(t.re));
+      if (terms.some(t => !t.lit)) throw new Error('Each search term needs at least one letter besides * and ?.');
+      const anyWild = terms.some(t => t.wild);
+      const disp = terms.map(t => t.show);
+      q.mode = mode;
+      if (mode === 'phrase') {
+        const t = terms[0];
+        q.terms = [t.key || t.lit];
+        if (whole || anyWild) { q.mode = 'regex'; q.regex = test(whole ? wrapWhole(t.re) : t.re); }
+        q.display = disp[0];
+      } else if (mode === 'any') {
+        const alt = terms.map(t => t.re).join('|');
+        q.terms = terms.map(t => t.lit);
+        q.regex = test(whole ? wrapWhole(alt) : alt);
+        q.display = disp.join(' OR ');
+      } else { // all: the term with the longest literal part is used to find candidate passages
+        const order = terms.map((t, i) => i).sort((a, c) => terms[c].lit.length - terms[a].lit.length);
+        terms = order.map(i => terms[i]);
+        q.terms = terms.map(t => t.lit);
+        if (whole || anyWild) q.termRes = terms.map(t => test(whole ? wrapWhole(t.re) : t.re));
+        q.display = order.map(i => disp[i]).join(' AND ');
       }
     }
     const sig = (opts.noDiac ? 'd' : '') + (opts.noSep ? 's' : '') + (opts.nasal ? 'n' : '');
@@ -211,9 +264,10 @@
   function startSearch(pushHistory) {
     const st = readForm();
     if (!st.q.trim()) { status('Type something to search for.'); return; }
+    if (!CAT) { status('The list of texts is still loading; try again in a moment.'); return; }
     let comp;
-    try { comp = compile(st); } catch (e) { status('Your regular expression is not valid: ' + C.esc(e.message), true); return; }
-    if ((comp.q.terms && !comp.q.terms.join('')) || (comp.q.mode === 'regex' && !comp.q.regex)) { status('Nothing left to search for after normalisation.'); return; }
+    try { comp = compile(st); } catch (e) { status((e instanceof SyntaxError ? 'Your regular expression is not valid: ' : '') + C.esc(e.message), true); return; }
+    if ((comp.q.terms && !comp.q.termRes && !comp.q.regex && !comp.q.terms.join('')) || (comp.q.mode === 'regex' && !comp.q.regex)) { status('Nothing left to search for after normalisation.'); return; }
     const texts = textsInScope(st);
     if (!texts.length) { status('No texts selected. Tick some texts in the list, or choose “all texts”.'); return; }
     if (pushHistory) history.pushState(null, '', urlFromState(st));
@@ -289,7 +343,7 @@
       ' of ' + C.fmtNum(texts) + ' text' + (texts === 1 ? '' : 's');
     s += run.finished ? ' <span class="muted">(' + C.fmtNum(run.textsDone) + ' texts searched in ' + secs + ' s; key: <code>' + C.esc(run.comp.q.display) + '</code>)</span>'
       : ' <span class="muted">so far — ' + C.fmtNum(run.textsDone) + ' of ' + C.fmtNum(run.texts.length) + ' texts searched</span>';
-    if (errs) s += ' <span class="error">' + errs + ' text(s) could not be loaded.</span>';
+    if (errs) s += ' <span class="error">' + errs + ' text(s) could not be searched; see the end of the list.</span>';
     return s;
   }
 
@@ -310,12 +364,19 @@
       '</article>';
   }
 
+  // Texts are listed in catalogue order (SARIT, then GRETIL, each by title) or by number of
+  // matching passages; passages within a text are always in the order of the text.
+  function sortedGroups() {
+    const g = Array.from(run.results.values()).filter(r => !r.error).map(r => ({ r, t: CAT.byId.get(r.text) }));
+    if (run.st.sort === 'hits') return g.sort((a, b) => b.r.segsHit - a.r.segsHit || b.r.total - a.r.total || a.t.order - b.t.order);
+    return g.sort((a, b) => a.t.order - b.t.order);
+  }
+
   function render() {
     if (!run) return;
     status(summary());
     const script = run.st.script;
-    const groups = Array.from(run.results.values()).filter(r => !r.error).map(r => ({ r, t: CAT.byId.get(r.text) }))
-      .sort((a, b) => a.t.order - b.t.order);
+    const groups = sortedGroups();
     const errs = Array.from(run.results.values()).filter(r => r.error);
     const html = groups.map(({ r, t }) => {
       const open = !run.collapsed.has(t.id);
@@ -358,7 +419,7 @@
 
   function allHits() {
     const out = [];
-    const groups = Array.from(run.results.values()).filter(r => !r.error).map(r => ({ r, t: CAT.byId.get(r.text) })).sort((a, b) => a.t.order - b.t.order);
+    const groups = sortedGroups();
     for (const { r, t } of groups) for (const h of r.hits) out.push({ t, h });
     return out;
   }
@@ -385,6 +446,7 @@
   $('#copy-link').addEventListener('click', e => C.copyText(location.origin + urlFromState(run ? run.st : readForm()), e.target));
 
   // re-render (without searching again) when the display script changes
+  form.elements.sort.addEventListener('change', () => { if (run) { run.st.sort = form.elements.sort.value; history.replaceState(null, '', urlFromState(run.st)); render(); } });
   form.elements.script.addEventListener('change', () => { if (run) { run.st.script = form.elements.script.value; history.replaceState(null, '', urlFromState(run.st)); render(); } });
 
   form.addEventListener('submit', e => { e.preventDefault(); startSearch(true); });

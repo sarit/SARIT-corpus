@@ -44,7 +44,42 @@ ITRANS. The row of buttons under the search box inserts IAST letters.
   * `.` is any character; a daṇḍa is `\|`;
   * Devanagari and IAST in the pattern are both converted, e.g. `vāt.*pitt` or
     `(ś|s)arīr`;
-  * `\p{L}` (any letter) and other Unicode classes work.
+  * `\p{L}` (any letter) and other Unicode classes work;
+  * there is no need to put `.*` at the start or end of a pattern: `yatra`
+    already finds every passage that contains *yatra* anywhere. A leading or
+    trailing `.*` is removed before searching, because on very long passages it
+    makes the browser's regular-expression engine run out of memory;
+  * `AND` and `OR` (in capitals, with spaces round them) combine patterns as
+    below, e.g. `yat(ra|o) AND tat(ra|as)`.
+
+### AND, OR and wildcards
+
+In any mode you can combine search terms with `AND` or `OR`, written in
+capitals:
+
+* `yatra AND tatra` — passages that contain both words, in any order (the same
+  as **All words** with `yatra tatra`);
+* `dīrghaṃ jīvitam AND āyus` — each side of `AND` can be a phrase;
+* `vāta OR vāyu` — passages that contain either.
+
+`AND` and `OR` cannot be mixed in one search.
+
+Outside Regex mode, `*` stands for any number of letters inside a word and
+`?` for exactly one letter: `vāt*pitt` finds *vātapitta*, *vātapittakapha* …;
+`?ṛta` finds *amṛta*, *ghṛta* … in the middle of words. Matching is by substring
+anyway, so `yatra` already finds *yatra* inside longer words; `*` and `?` matter
+mainly in the middle of a term, or with **whole words** ticked: then `yatra*`
+finds words that begin with *yatra*, `*yatra` words that end with it, and
+`*yatra*` words that contain it. A `*` never reaches across a space.
+
+## Order of results
+
+Results are not ranked by relevance. Texts are listed SARIT first, then GRETIL,
+each alphabetically by title; under **More options → Order texts** you can
+instead list the texts with the most matching passages first. Within each text
+the passages are always in the order in which they occur in the text. **Passages
+per text** limits how many are shown for each text (200 by default); the count
+in each text's heading is always the full number.
 
 ## Ignoring things
 

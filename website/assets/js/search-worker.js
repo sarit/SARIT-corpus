@@ -109,8 +109,11 @@ function findMatches(K, q, maxSegs) {
       else { const t = terms[i]; let x = str.indexOf(t); while (x >= 0) { out.push([x, x + t.length]); x = str.indexOf(t, x + t.length); } }
       return out;
     };
+    // candidate passages: those containing the literal part of the first term;
+    // regex terms without a literal part (Regex mode with AND) check every passage
     const first = terms[0];
-    let p = key.indexOf(first);
+    const nSeg = starts.length - 1;
+    let p = first ? key.indexOf(first) : (nSeg ? 0 : -1);
     while (p >= 0) {
       const si = segOf(starts, p);
       const slice = key.slice(starts[si], starts[si + 1] - 1);
@@ -126,7 +129,7 @@ function findMatches(K, q, maxSegs) {
         total += ranges.length;
         if (res.size < maxSegs) res.set(si, ranges.sort((a, b) => a[0] - b[0]).slice(0, 50));
       }
-      p = key.indexOf(first, starts[si + 1]);
+      p = first ? key.indexOf(first, starts[si + 1]) : (si + 1 < nSeg ? starts[si + 1] : -1);
     }
     return { res, total, segsHit };
   }
@@ -224,7 +227,10 @@ self.onmessage = async (ev) => {
       }
       self.postMessage({ type: 'result', sid, text: id, total, segsHit, hits, truncated: segsHit > res.size });
     } catch (e) {
-      self.postMessage({ type: 'result', sid, text: id, total: 0, segsHit: 0, hits: [], error: String(e && e.message || e) });
+      let msg = String(e && e.message || e);
+      if (/recursion|call stack|stack overflow|backtrack/i.test(msg))
+        msg = 'the pattern is too complex for a long passage in this text (' + msg + '). Make it more specific, e.g. avoid .* in the middle of the pattern.';
+      self.postMessage({ type: 'result', sid, text: id, total: 0, segsHit: 0, hits: [], error: msg });
     }
   }
   self.postMessage({ type: 'done', sid });
