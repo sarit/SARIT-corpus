@@ -1,0 +1,123 @@
+---
+layout: default
+title: Search
+slug: search
+scripts:
+  - /assets/js/translit.js
+  - /assets/js/common.js
+  - /assets/js/search.js
+---
+<div class="intro-band">
+  <h1>SARIT and GRETIL Corpus Search</h1>
+  <p>{{ site.description | strip }}</p>
+</div>
+
+<form id="search-form" class="search-form" autocomplete="off">
+  <div class="qrow">
+    <label for="q" class="visually-hidden">Search terms</label>
+    <input id="q" name="q" type="search" lang="sa" spellcheck="false"
+           placeholder="e.g. dīrghaṃ jīvitam · धर्मक्षेत्रे · yatra AND tatra · vāt*pitt" autofocus>
+    <button type="submit" class="btn-primary" id="go">Search</button>
+    <button type="button" class="btn-ghost" id="stop" hidden>Stop</button>
+  </div>
+
+  <div class="palette" id="palette" aria-label="Insert IAST character">
+    <!-- filled by script -->
+  </div>
+
+  <div class="opts">
+    <fieldset class="opt-group">
+      <legend>Match</legend>
+      <label title="The words in the order typed, as a continuous string"><input type="radio" name="mode" value="phrase" checked> Phrase</label>
+      <label title="Every word must occur in the same passage (verse, paragraph, note), in any order"><input type="radio" name="mode" value="all"> All words</label>
+      <label title="Any one of the words"><input type="radio" name="mode" value="any"> Any word</label>
+      <label title="JavaScript regular expression, matched against the IAST form of the text"><input type="radio" name="mode" value="regex"> Regex (grep)</label>
+    </fieldset>
+
+    <fieldset class="opt-group">
+      <legend>Ignore</legend>
+      <label title="ā = a, ṣ = ś = s, ṃ = m, ṭ = t …"><input type="checkbox" name="nd"> diacritics</label>
+      <label title="Ignore spaces, hyphens, dots, '+', '_' and avagraha, so that word division and compounding do not matter"><input type="checkbox" name="ns"> word division</label>
+      <label title="Treat a class nasal before a consonant of its class as anusvāra: saṅkalpa = saṃkalpa, santi = saṃti"><input type="checkbox" name="na"> anusvāra / nasal</label>
+    </fieldset>
+
+    <fieldset class="opt-group">
+      <legend>Options</legend>
+      <label title="Match whole words only (not available when word division is ignored)"><input type="checkbox" name="ww"> whole words</label>
+      <label title="Also search editorial notes and variant readings"><input type="checkbox" name="notes" checked> notes &amp; variants</label>
+    </fieldset>
+
+    <details class="more-opts">
+      <summary>More options</summary>
+      <div class="more-grid">
+        <label>Input
+          <select name="scheme" title="How your typing should be read. Devanagari and IAST are always recognised.">
+            <option value="auto">IAST / Devanagari</option>
+            <option value="hk">Harvard-Kyoto</option>
+            <option value="velthuis">Velthuis</option>
+            <option value="slp1">SLP1</option>
+            <option value="itrans">ITRANS</option>
+          </select>
+        </label>
+        <label>Show results in
+          <select name="script">
+            <option value="orig">original script</option>
+            <option value="iast">IAST</option>
+            <option value="deva">Devanagari</option>
+          </select>
+        </label>
+        <label>Passages per text
+          <select name="max">
+            <option value="50">50</option>
+            <option value="200" selected>200</option>
+            <option value="1000">1000</option>
+            <option value="100000">all</option>
+          </select>
+        </label>
+        <label>Order texts
+          <select name="sort" title="Passages within a text are always in the order of the text">
+            <option value="cat" selected>SARIT, then GRETIL, by title</option>
+            <option value="hits">most matching passages first</option>
+          </select>
+        </label>
+        <label>Context
+          <select name="ctx">
+            <option value="80">short</option>
+            <option value="200" selected>medium</option>
+            <option value="500">long</option>
+          </select>
+        </label>
+      </div>
+    </details>
+  </div>
+
+  <div class="scope">
+    <div class="scope-head">
+      <span class="scope-label">Search in</span>
+      <label><input type="radio" name="coll" value="all" checked> all texts</label>
+      <label><input type="radio" name="coll" value="SARIT"> SARIT</label>
+      <label><input type="radio" name="coll" value="GRETIL"> GRETIL</label>
+      <label><input type="radio" name="coll" value="sel"> selected texts <span id="sel-count" class="muted"></span></label>
+    </div>
+    <div id="picker" class="picker" hidden>
+      <div class="picker-tools">
+        <input type="search" id="pick-filter" placeholder="Filter titles, authors, file names…">
+        <button type="button" class="btn-small" id="pick-all">Select shown</button>
+        <button type="button" class="btn-small" id="pick-none">Clear</button>
+      </div>
+      <div id="pick-list" class="pick-list" role="group" aria-label="Texts"></div>
+    </div>
+  </div>
+</form>
+
+<div id="status" class="status" aria-live="polite"></div>
+<div id="progress" class="progress" hidden><div class="bar"></div></div>
+<div id="toolbar" class="toolbar" hidden>
+  <button type="button" class="btn-small" id="copy-all">Copy all citations</button>
+  <button type="button" class="btn-small" id="dl-tsv">Download results (TSV)</button>
+  <button type="button" class="btn-small" id="collapse-all">Collapse all</button>
+  <button type="button" class="btn-small" id="copy-link">Copy link to this search</button>
+</div>
+<div id="results" class="results"></div>
+
+<noscript><p>This search runs in your browser and needs JavaScript.</p></noscript>

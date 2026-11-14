@@ -1,0 +1,2922 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_mAlinIvijayottaratantra">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Mālinīvijayottaratantra</title>
+	<author></author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>Somadeva Vasudeva</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Somadeva Vasudeva</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/saiva/malinivu.htm">malinivu.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Malinivijayottaratantra
+<lb/>Adhikaras 1-4, 7, 11-17 based on the critical edition by Somadeva Vasudeva, Wolfson College, Oxford, July 2000 (critical apparatus not included)
+<lb/>(also publ. Pondichery c2004, Collection indologie, 97)
+<lb/>Adhikaras 5, 6, 8-10, 18-23 based on the ed. by Madhusudan Kaul Shastri, Bombay 1922
+<lb/>(Kashmir series of texts and studies ; 37)
+<lb/>
+<lb/>Input by Somadeva Vasudeva
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>Adhikaras 1-4, 7, 11-17: critical edition by Somadeva Vasudeva, Wolfson College, Oxford, July 2000 (critical apparatus not included) (also publ. Pondichery c2004, Collection indologie, 97); Adhikaras 5, 6, 8-10, 18-23: ed. by Madhusudan Kaul Shastri, Bombay 1922 (Kashmir series of texts and studies ; 37)</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Mālinīvijayottaratantra = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Religious Literature -- Śaiva</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+
+<p>mālinīvijayottaratantram</p>
+
+<p>sṛṣṭyadhikāraḥ prathamaḥ</p>
+
+<p>1.1ab: jayanti jagadānandavipakṣakṣapaṇakṣamāḥ
+1.1cd: parameśamukhodbhūtajñānacandramarīcayaḥ
+1.2ab: jagadarṇavamagnānāṃ tārakaṃ tārakāntakam
+1.2cd: sanatkumārasanakasanātanasanandanāḥ
+1.3ab: nāradāgastyasaṃvartavasiṣṭhādyā maharṣayaḥ
+1.3cd: jijñāsavaḥ paraṃ tattvaṃ śivaśaktyunmukhīkṛtāḥ
+1.4ab: samabhyarcya vidhānena te tam ūcuḥ praharṣitāḥ
+1.4cd: bhagavadyogasaṃsiddhikāṅkṣiṇo vayam āgatāḥ
+1.5ab: sā ca yogaṃ vinā yasmān na bhavet tam ato vada
+1.5cd: ṛṣibhir yogam icchadbhiḥ sa tair evam udāhṛtaḥ
+1.6ab: pratyuvāca prahṛṣṭātmā namaskṛtya maheśvaram
+1.6cd: śṛṇudhvaṃ saṃpravakṣyāmi sarvasiddhiphalapradam
+1.7ab: mālinīvijayaṃ tantraṃ parameśamukhodgatam
+1.7cd: bhuktimuktipradātāram umeśam amarārcitam
+1.8ab: svasthānastham umā devī praṇipatyedam abravīt
+1.8cd: siddhayogeśvarītantraṃ navakoṭipravistaram
+1.9ab: yat tvayā kathitaṃ pūrvaṃ bhedatrayavisarpitam
+1.9cd: mālinīvijaye tantre koṭitritayalakṣite
+1.10ab: yogamārgas tvayā proktaḥ suvistīrṇo maheśvara
+1.10cd: bhūyas tasyopasaṃhāraḥ prokto dvādaśabhis tathā
+1.11ab: sahasraiḥ so 'pi vistīrṇo gṛhyate nālpabuddhibhiḥ
+1.11cd: atas tam upasaṃhṛtya samāsād alpadhīhitam
+1.12ab: sarvasiddhikaraṃ brūhi prasādāt parameśvara
+1.12cd: evam uktas tadā devyā prahasyovāca viśvarāṭ
+1.13ab: śṛṇu devi pravakṣyāmi siddhayogeśvarīmatam
+1.13cd: yan na kasya cid ākhyātaṃ mālinīvijayottaram
+1.14ab: mayāpy etat purā prāptam aghorāt paramātmanaḥ
+1.14cd: upādeyaṃ ca heyaṃ ca vijñeyaṃ paramārthataḥ
+1.15ab: śivaḥ śaktiḥ savidyeśā mantrā mantreśvarāṇavaḥ
+1.15cd: upādeyam iti proktam etat ṣaṭkaṃ phalārthinām
+1.16ab: malaḥ karma ca māyā ca māyīyam akhilaṃ jagat
+1.16cd: sarvaṃ heyam iti proktaṃ vijñeyaṃ vastu niścitam
+1.17ab: etaj jñātvā parityajya sarvasiddhiphalaṃ labhet
+1.17cd: tatreśaḥ sarvakṛc chāntaḥ sarvajñaḥ sarvakṛt prabhuḥ
+1.18ab: sakalo niṣkalo 'nantaḥ śaktir apy asya tadvidhā
+1.18cd: sa sisṛkṣur jagat sṛṣṭer ādāv eva nijecchayā
+1.19ab: vijñānakevalān aṣṭau bodhayām āsa pudgalān
+1.19cd: aghoraḥ paramo ghoro ghorarūpas tadānanaḥ
+1.20ab: bhīmaś ca bhīṣaṇaś caiva vamanaḥ pivanas tathā
+1.20cd: etān aṣṭau sthitidhvaṃsarakṣānugrahakāriṇaḥ
+1.21ab: mantramantreśvare śuddhe saṃniyojya tataḥ punaḥ
+1.21cd: mantrāṇām asṛjat tadvat saptakoṭīḥ samaṇḍalāḥ
+1.22ab: sarve 'py ete mahātmāno mantrāḥ sarvaphalapradāḥ
+1.22cd: ātmā caturvidho jñeyas tatra vijñānakevalaḥ
+1.23ab: malaikayuktas tatkarmayuktaḥ pralayakevalaḥ
+1.23cd: malam ajñānam icchanti saṃsārāṅkurakāraṇam
+1.24ab: dharmādharmātmakaṃ karma sukhaduḥkhādilakṣaṇam
+1.24cd: īśvarecchāvaśād asya bhogecchā saṃprajāyate
+1.25ab: bhogasādhanasaṃsiddhyai bhogecchor asya mantrarāṭ
+1.25cd: jagad utpādayām āsa māyām āviśya śaktibhiḥ
+1.26ab: sā caikā vyāpinī sūkṣmā niṣkalā jagato nidhiḥ
+1.26cd: anādyantāśiveśānī vyayahīnā ca kathyate
+1.27ab: asūta sā kalātattvaṃ yad yogād abhavat pumān
+1.27cd: jātakartṛtvasāmarthyo vidyārāgau tato 'sṛjat
+1.28ab: vidyā vivecayaty asya karma tatkāryakāraṇe
+1.28cd: rāgo 'nurañjayaty enaṃ svabhogeṣv aśuciṣv api
+1.29ab: niyatir yojayaty enaṃ svake karmaṇi pudgalam
+1.29cd: kālo 'pi kalayaty enaṃ tuṭyādibhir avasthitaḥ
+1.30ab: tata eva kalātattvād avyaktam asṛjat tataḥ
+1.30cd: guṇān aṣṭaguṇāṃ tebhyo dhiyaṃ dhīto 'py ahaṅkṛtim
+1.31ab: tat tridhā taijasāt tasmān mano 'kṣeśam ajāyata
+1.31cd: vaikārikāt tato 'kṣāṇi tanmātrāṇi tṛtīyakāt
+1.32ab: śrotraṃ tvakcakṣuṣī jihvā ghrāṇaṃ buddhīndriyāṇi tu
+1.32cd: karmendriyāṇi vākpāṇipāyūpasthāṅghrayaḥ kramāt
+1.33ab: kalādikṣitiparyantam etat saṃsāramaṇḍalam
+1.33cd: samudrādi jagat kṛtsnaṃ parivartayatīcchayā
+1.34ab: bhedaḥ paraḥ kalādīnāṃ bhuvanatvena yaḥ sthitaḥ
+1.34cd: asṛjat tam asāv eva bhogināṃ bhogasiddhaye
+1.35ab: ity anena kalādyena dharāntena samanvitāḥ
+1.35cd: pumāṃsaḥ sakalā jñeyās tadavasthājighāṃsubhiḥ
+1.36ab: avasthātritaye 'py asmiṃs tirobhāvanaśīlayā
+1.36cd: śivaśaktyā samākrāntāḥ prakurvanti viceṣṭitam
+1.37ab: evaṃ jagati sarvatra rudrāṇāṃ yogyatāvaśāt
+1.37cd: aṅguṣṭhamātrapūrvāṇāṃ śatam aṣṭādaśottaram
+1.38ab: anugṛhya śivaḥ sākṣān mantreśatve niyuktavān
+1.38cd: te svagocaram āsādya bhuktimuktiphalārthinām
+1.39ab: brahmādīnāṃ prayacchanti svabalena samaṃ phalam
+1.39cd: ṛṣibhyas te 'pi te cānu manvantebhyo mahādhipāḥ
+1.40ab: heyopādeyavijñānaṃ kathayanti śivoditam
+1.40cd: brahmādistambaparyante jātamātre jagaty alam
+1.41ab: mantrāṇāṃ koṭayas tisraḥ sārdhāḥ śivaniyojitāḥ
+1.41cd: anugṛhyāṇusaṃghātaṃ yātāḥ padam anāmayam
+1.42ab: evam asyātmanaḥ kāle kasmiṃś cid yogyatāvaśāt
+1.42cd: śaivī saṃbadhyate śaktiḥ śāntā muktiphalapradā
+1.43ab: tatsaṃbandhāt tataḥ kaś cit tatkṣaṇād apavṛjyate
+1.43cd: ajñānena sahaikatvaṃ kasya cid vinivartate
+1.44ab: rudraśaktisamāviṣṭaḥ sa yiyāsuḥ śivecchayā
+1.44cd: bhuktimuktiprasiddhyarthaṃ nīyate sadguruṃ prati
+1.45ab: tam ārādhya tatas tuṣṭād dīkṣām āsādya śāṅkarīm
+1.45cd: tatkṣaṇād vopabhogād vā dehapāte śivaṃ vrajet
+1.46ab: yogadīkṣāṃ samāsādya jñātvā yogaṃ samabhyaset
+1.46cd: yogasiddhim avāpnoti tadante śāśvataṃ padam
+1.47ab: anena kramayogena saṃprāptaḥ paramaṃ padam
+1.47cd: na bhūyaḥ paśutām eti śuddhe svātmani tiṣṭhati
+1.48ab: ātmā caturvidho hy eṣa punar eṣa caturvidhaḥ
+1.48cd: ācāryatvādibhedena śuddhātmā paripaṭhyate
+1.49ab: nityāditritayaṃ kuryād guruḥ sādhaka eva ca
+1.49cd: nityam eva dvayaṃ cānyo yāvajjīvaṃ śivājñayā
+1.50ab: upādeyaṃ ca heyaṃ ca tad etat parikīrtitam
+1.50cd: jñātvaitaj jñeyasarvasvaṃ sarvasiddhyaraho bhavet</p>
+
+<p>iti śrīmālinīvijayottare tantre prathamo 'dhikāraḥ samāptaḥ</p>
+
+<p>vyāptyadhikāro dvitīyaḥ</p>
+
+<p>2.1ab: athaiṣām eva tattvānāṃ dharādīnām anukramāt
+2.1cd: prapañcaḥ kathyate leśād yogināṃ yogasiddhaye
+2.2ab: śaktimacchaktibhedena dharātattvaṃ vibhidyate
+2.2cd: svarūpasahitaṃ tac ca vijñeyaṃ daśapañcadhā
+2.3ab: śivādisakalātmāntāḥ śaktimantaḥ prakīrtitāḥ
+2.3cd: tacchaktayaś ca vijñeyās tadvad eva vicakṣaṇaiḥ
+2.4ab: evaṃ jalādimūlāntaṃ tattvavrātam idaṃ mahat
+2.4cd: pṛthag bhedair imair bhinnaṃ vijñeyaṃ tatphalepsubhiḥ
+2.5ab: anenaiva vidhānena puṃstattvāt tu kalāntikam
+2.5cd: trayodaśavidhaṃ jñeyaṃ rudravat pralayākalaḥ
+2.6ab: tadvan māyāpi vijñeyā navadhā jñānakevalaḥ
+2.6cd: mantrāḥ saptavidhās tadvat pañcadhā mantranāyakāḥ
+2.7ab: tridhā mantreśvareśānāḥ śivaḥ sākṣān na bhidyate
+2.7cd: bhedaḥ prakathito leśād ananto vistarād ayam
+2.8ab: evaṃ bhuvanamālāpi bhinnā bhedair imaiḥ sphuṭam
+2.8cd: vijñeyā yogasiddhyarthaṃ yogibhir yogapūjitā
+2.9ab: eteṣām eva tattvānāṃ bhuvanānāṃ ca śāṅkari
+2.9cd: ya ekam api jānāti so 'pi yogaphalaṃ labhet
+2.10ab: yaḥ punaḥ sarvatattvāni vetty etāni yathārthataḥ
+2.10cd: sa gurur matsamaḥ prokto mantravīryaprakāśakaḥ
+2.11ab: dṛṣṭāḥ saṃbhāṣitās tena spṛṣṭāś ca prītacetasā
+2.11cd: narāḥ pāpaiḥ pramucyante saptajanmakṛtair api
+2.12ab: ye punar dīkṣitās tena prāṇinaḥ śivacoditāḥ
+2.12cd: te yatheṣṭaṃ phalaṃ prāpya gacchanti paramaṃ padam
+2.13ab: rudraśaktisamāveśas tatra nityaṃ pratiṣṭhitaḥ
+2.13cd: sati tasmiṃś ca cihnāni tasyaitāni vilakṣayet
+2.14ab: tatraitat prathamaṃ cihnaṃ rudre bhaktiḥ suniścalā
+2.14cd: dvitīyaṃ mantrasiddhiḥ syāt sadyaḥpratyayakārikā
+2.15ab: sarvasattvavaśitvaṃ ca tṛtīyaṃ lakṣaṇaṃ smṛtam
+2.15cd: prārabdhakāryaniṣpattiś cihnam āhuś caturthakam
+2.16ab: kavitvaṃ pañcamaṃ proktaṃ sālaṃkāraṃ manoharam
+2.16cd: sarvaśāstrārthavettṛtvam akasmāc cāsya jāyate
+2.17ab: rudraśaktisamāveśaḥ pañcadhā paripaṭhyate
+2.17cd: bhūtatattvātmamantreśaśaktibhedād varānane
+2.18ab: pañcadhā bhūtasaṃjñas tu tathā triṃśatidhā paraḥ
+2.18cd: ātmākhyas trividhaḥ prokto daśadhā mantrasaṃjñakaḥ
+2.19ab: dvividhaḥ śaktisaṃjño 'pi jñātavyaḥ paramārthataḥ
+2.19cd: pañcāśadbhedabhinno 'yaṃ samāveśaḥ prakīrtitaḥ
+2.20ab: āṇavo 'yaṃ samākhyātaḥ śākto 'py evaṃvidhaḥ smṛtaḥ
+2.20cd: evaṃ śāmbhavam apy ebhir bhedair bhinnaṃ vilakṣayet
+2.21ab: uccārakaraṇadhyānavarṇasthānaprakalpanaiḥ
+2.21cd: yo bhavet sa samāveśaḥ samyag āṇava ucyate
+2.22ab: uccārarahitaṃ vastu cetasaiva vicintayan
+2.22cd: yam āveśam avāpnoti śāktaḥ so 'trābhidhīyate
+2.23ab: akiṃciccintakasyaiva guruṇā pratibodhataḥ
+2.23cd: jāyate yaḥ samāveśaḥ śāmbhavo 'sāv udīritaḥ
+2.24ab: sārdham etac chataṃ proktaṃ bhedānām anupūrvaśaḥ
+2.24cd: saṃkṣepād vistarād asya parisaṃkhyā na vidyate
+2.25ab: saṃvittiphalabhedo 'tra na prakalpyo manīṣibhiḥ
+2.25cd: bhedo 'paro 'pi saṃkṣepāt kathyamāno 'vadhāryatām
+2.26ab: jāgratsvapnādibhedena sarvāveśakramo budhaiḥ
+2.26cd: pañcabhinnaḥ parijñeyaḥ svavyāpārāt pṛthak pṛthak
+2.27ab: tatra svarūpaṃ śaktiś ca sakalaś ceti tattrayam
+2.27cd: iti jāgradavastheyaṃ bhede pañcadaśātmake
+2.28ab: akalau dvau parijñeyau samyak svapnasuṣuptayoḥ
+2.28cd: mantrāditatpatīśānavargas turya iti smṛtaḥ
+2.29ab: śaktiśaṃbhū parijñeyau turyātīte varānane
+2.29cd: trayodaśātmake bhede svarūpam akalāv ubhau
+2.30ab: mantramantreśvareśānāḥ śaktiśaṃbhū ca kīrtitau
+2.30cd: pralayākalabhede 'pi svaṃ vijñānakalāv ubhau
+2.31ab: mantramantreśvareśānāḥ śaktīśāv api pūrvavat
+2.31cd: navadhā kīrtite bhede svaṃ mantrā mantranāyakāḥ
+2.32ab: tadīśāḥ śaktiśaṃbhū ca pañcāvasthāḥ prakīrtitāḥ
+2.32cd: pūrvavat saptabhede 'pi svaṃ mantreśeśaśaktayaḥ
+2.33ab: śivaś ceti parijñeyāḥ pañcaiva varavarṇini
+2.33cd: svaṃ śaktiḥ sanijeśānā śaktiśaṃbhū ca pañcake
+2.34ab: trike svaśaktiśaktīcchāśivapadaṃ vilakṣayet
+2.34cd: svavyāpārādhipatvena taddhīnaprerakatvataḥ
+2.35ab: icchānivṛtteḥ svasthatvād abhinnam api pañcadhā
+2.35cd: iti pañcātmake bhede vijñeyaṃ vastu kīrtitam
+2.36ab: bhūyo 'py āsām avasthānāṃ saṃjñābhedaḥ prakāśyate
+2.36cd: piṇḍasthaḥ sarvatobhadro jāgrannāmadvayaṃ matam
+2.37ab: dvisaṃjñaṃ svapnam icchanti padasthaṃ vyāptir ity api
+2.37cd: rūpasthaṃ tu mahāvyāptiḥ suṣuptasyāpi taddvayam
+2.38ab: pracayaṃ rūpātītaṃ ca samyak turyam udāhṛtam
+2.38cd: mahāpracayam icchanti turyātītaṃ vicakṣaṇāḥ
+2.39ab: pṛthak tattvaprabhedena bhedo 'yaṃ samudāhṛtaḥ
+2.39cd: sarvāṇi eva tattvāni pañcaitāni yathā śṛṇu
+2.40ab: bhūtatattvābhidhānānāṃ yo 'ṃśo 'dhiṣṭheya iṣyate
+2.40cd: piṇḍastham iti taṃ prāhuḥ padastham aparaṃ viduḥ
+2.41ab: mantrās tatpatayaḥ seśā rūpastham iti kīrtyate
+2.41cd: rūpātītaṃ parā śaktiḥ savyāpārāpy anāmayā
+2.42ab: niṣprapañco nirābhāsaḥ śuddhaḥ svātmany avasthitaḥ
+2.42cd: sarvātītaḥ śivo jñeyo yaṃ viditvā vimucyate
+2.43ab: caturvidhaṃ tu piṇḍastham abuddhaṃ buddham eva ca
+2.43cd: prabuddhaṃ suprabuddhaṃ ca padasthaṃ ca caturvidham
+2.44ab: gatāgataṃ suvikṣiptaṃ saṅgataṃ susamāhitam
+2.44cd: caturdhā rūpasaṃsthaṃ tu jñātavyaṃ yogacintakaiḥ
+2.45ab: uditaṃ vipulaṃ śāntaṃ suprasannam athāparam
+2.45cd: manonmanam anantaṃ ca sarvārthaṃ satatoditam
+2.46ab: pracaye tatra saṃjñeyam ekaṃ tanmahati sthitam
+2.46cd: ity evaṃ pañcadhādhvānaṃ tridhedānīṃ nigadyate
+2.47ab: vijñānākalaparyantam ātmatattvam udāhṛtam
+2.47cd: īśvarāntaṃ ca vidyāhvaṃ śeṣaṃ śivapadaṃ viduḥ
+2.48ab: evaṃ bhedair imair bhinnas tatrādhvā parikīrtitaḥ
+2.48cd: yugapat sarvamārgāṇāṃ prabhedaḥ procyate 'dhunā
+2.49ab: pārthivaṃ prākṛtaṃ caiva māyīyaṃ śāktam eva ca
+2.49cd: iti saṅkṣepataḥ proktam etad aṇḍacatuṣṭayam
+2.50ab: pṛthag dvayam asaṅkhyātam ekam ekaṃ pṛthak pṛthak
+2.50cd: ādyaṃ dhārikayā vyāptaṃ tatraikaṃ tattvam iṣyate
+2.51ab: ekam ekaṃ pṛthak kṣārṇaṃ padārṇamanuṣu smaret
+2.51cd: kālāgnibhuvanād yāvad vīrabhadrapurottamam
+2.52ab: puraṣoḍaśakaṃ jñeyaṃ ṣaḍvidho 'dhvā prakīrtitaḥ
+2.52cd: āpyāyinyā dvitīyaṃ ca tatra tattvāni lakṣayet
+2.53ab: trayoviṃśatyabādīni tadvad dhādyakṣarāṇi ca
+2.53cd: padāni pañca mantrāś ca ṣaṭpañcāśatpurāṇi ca
+2.54ab: tattvāni sapta bodhinyā tac caturdhā purāṇi ca
+2.54cd: tṛtīye sapta varṇāḥ syuḥ padamantradvayaṃ dvayam
+2.55ab: utpūyinyā caturthaṃ tu tatra tattvatrayaṃ viduḥ
+2.55cd: varṇatrayaṃ mantram ekaṃ padam ekaṃ ca lakṣayet
+2.56ab: aṣṭādaśa vijānīyād bhuvanāni samāsataḥ
+2.56cd: śivatattvaṃ paraṃ śāntaṃ kalā tatrāvakāśadā
+2.57ab: svaraṣoḍaśakaṃ mantraṃ padaṃ caikaṃ vilakṣayet
+2.57cd: ity evaṃ ṣaḍvidho 'py adhvā samāsāt parikīrtitaḥ
+2.58ab: śuddhāśuddhaṃ jagatsarvaṃ brahmāṇḍaprabhavaṃ yataḥ
+2.58cd: tasmāc chuddham imaiḥ śuddhair brahmāṇḍaiḥ sarvam iṣyate
+2.59ab: brahmā viṣṇuś ca rudraś ca īśvaraś ceti suvrate
+2.59cd: pṛthag eteṣu boddhavyaṃ śāntaṃ paticatuṣṭayam
+2.60ab: yo hi yasmād guṇotkṛṣṭaḥ sa tasmād ūrdhva ucyate
+2.60cd: etat te kathitaṃ sarvaṃ kim anyat paripṛcchasi</p>
+
+<p>iti śrīmālinīvijayottare tantre vyāptyadhikāro dvitīyaḥ samāptaḥ</p>
+
+<p>mantroddhārādhikāras tṛtīyaḥ
+3.1ab: evam uktā mahādevī jagadānandakāriṇā
+3.1cd: praṇipatya punar vākyam idam āha jagatpatim
+3.2ab: evam etan mahādeva nānyathā samudāhṛtam
+3.2cd: yathākhyātaṃ tathā jñātam āditaḥ samanukramāt
+3.3ab: śivādivasturūpāṇāṃ vācakān parameśvara
+3.3cd: sāṃprataṃ śrotum icchāmi prasādād vaktum arhasi
+3.4ab: ity uktaḥ sa maheśānyā jagadārtiharo haraḥ
+3.4cd: vācakān avadan mantrān pāramparyakramāgatān
+3.5ab: yā sā śaktir jagaddhātuḥ kathitā samavāyinī
+3.5cd: icchātvaṃ tasya sā devi sisṛkṣoḥ pratipadyate
+3.6ab: saikāpi saty anekatvaṃ yathā gacchati tac chṛṇu
+3.6cd: evam etad iti jñeyaṃ nānyatheti suniścitam
+3.7ab: jñāpayantī jagaty atra jñānaśaktir nigadyate
+3.7cd: evaṃbhūtam idaṃ vastu bhavatv iti yadā punaḥ
+3.8ab: jātā tadaiva tat tadvat kurvaty atra kriyocyate
+3.8cd: evam eṣā dvirūpāpi punar bhedair anantatām
+3.9ab: arthopādhivaśād yāti cintāmaṇir iveśvarī
+3.9cd: tatra tāvat samāpannā mātṛbhāvaṃ vibhidyate
+3.10ab: dvidhā ca navadhā caiva pañcāśaddhā ca mālinī
+3.10cd: bījayonyātmakād bhedād dvidhā bījaṃ svarā matāḥ
+3.11ab: kādibhiś ca smṛtā yonir navadhā vargabhedataḥ
+3.11cd: pṛthag varṇavibhedena śatārdhakiraṇojjvalā
+3.12ab: bījam atra śivaḥ śaktir yonir ity abhidhīyate
+3.12cd: vācakatvena sarvāpi śaṃbhoḥ śaktiś ca śasyate
+3.13ab: vargāṣṭakam iha jñeyam aghorādyam anukramāt
+3.13cd: tad eva śaktibhedena māheśvaryādi cāṣṭakam
+3.14ab: māheśī brāhmaṇī caiva kaumārī vaiṣṇavī tathā
+3.14cd: aindrī yāmyā ca cāmuṇḍā yogīśī ceti tā matāḥ
+3.15ab: śatārdhabhedabhinnānāṃ tatsaṃkhyānāṃ varānane
+3.15cd: rudrāṇāṃ vācakatvena kalpitāḥ parameṣṭhinā
+3.16ab: tadvad eva ca śaktīnāṃ tatsaṃkhyānām anukramāt
+3.16cd: sarvaṃ ca kathayiṣyāmi tāsāṃ bhedaṃ yathā śṛṇu
+3.17ab: amṛto 'mṛtapūrṇaś ca amṛtābho 'mṛtadravaḥ
+3.17cd: amṛtaugho 'mṛtormiś ca amṛtasyandano 'paraḥ
+3.18ab: amṛtāṅgo 'mṛtavapur amṛtodgāra eva ca
+3.18cd: amṛtāsyo 'mṛtatanus tathā cāmṛtasecanaḥ
+3.19ab: tanmūrtir amṛteśaś ca sarvāmṛtadharo 'paraḥ
+3.19cd: ṣoḍaśaite samākhyātā rudrabījasamudbhavāḥ
+3.20ab: jayaś ca vijayaś caiva jayantaś cāparājitaḥ
+3.20cd: sujayo jayarudraś ca jayakīrtir jayāvahaḥ
+3.21ab: jayamūrtir jayotsāho jayado jayavardhanaḥ
+3.21cd: balaś cātibalaś caiva balabhadro balapradaḥ
+3.22ab: balāvahaś ca balavān baladātā baleśvaraḥ
+3.22cd: nandanaḥ sarvatobhadro bhadramūrtiḥ śivapradaḥ
+3.23ab: sumanāḥ spṛhaṇo durgo bhadrakālo manonugaḥ
+3.23cd: kauśikaḥ kālaviśveśau suśivaḥ kopavardhanaḥ
+3.24ab: ete yonisamudbhūtāś catustriṃśat prakīrtitāḥ
+3.24cd: strīpāṭhavaśam āpannā eta evātra śaktayaḥ
+3.25ab: bījayonisamudbhūtā rudraśaktisamāśrayāḥ
+3.25cd: vācakānām anantatvāt parisaṃkhyā na vidyate
+3.26ab: sarvaśāstrārthagarbhiṇyā ity evaṃvidhayānayā
+3.26cd: aghoraṃ bodhayām āsa svecchayā parameśvaraḥ
+3.27ab: sa tayā saṃprabuddhaḥ san yoniṃ vikṣobhya śaktibhiḥ
+3.27cd: tatsamānaśrutīn varṇāṃs tatsaṃkhyān asṛjat prabhuḥ
+3.28ab: te tair āliṅgitāḥ santaḥ sarvakāmaphalapradāḥ
+3.28cd: bhavanti sādhakendrāṇāṃ nānyathā vīravandite
+3.29ab: tair idaṃ saṃtataṃ viśvaṃ sadevāsuramānuṣam
+3.29cd: tebhyaḥ śāstrāṇi vedāś ca saṃbhavanti punaḥ punaḥ
+3.30ab: anantasyāpi bhedasya śivaśakter mahātmanaḥ
+3.30cd: kāryabhedān mahādevi traividhyaṃ samudāhṛtam
+3.31ab: viṣayeṣv eva saṃlīnān adho 'dhaḥ pātayanty aṇūn
+3.31cd: rudrāṇūnyāḥ samāliṅgya ghorataryo 'parāḥ smṛtāḥ
+3.32ab: miśrakarmaphalāsaktiṃ pūrvavaj janayanti yāḥ
+3.32cd: muktimārganirodhinyās tāḥ syur ghorāḥ parāparāḥ
+3.33ab: pūrvavaj jantujātasya śivadhāmaphalapradāḥ
+3.33cd: parāḥ prakathitās tajjñair aghorāḥ śivaśaktayaḥ
+3.34ab: etāḥ sarvāṇusaṃghātam api niṣṭhā yathā sthitāḥ
+3.34cd: tathā te kathitāḥ śaṃbhoḥ śaktir ekaiva śāṅkarī
+3.35ab: asyā vācakabhedena bhedo 'nyaḥ saṃpracakṣyate
+3.35cd: yatheṣṭaphalasaṃsiddhyai mantratantrānuvartinām
+3.36ab: viśeṣavidhihīneṣu nyāsakarmasu mantravit
+3.36cd: nyasec chāktaśarīrārthaṃ bhinnayoniṃ tu mālinīm
+3.37ab: na śikhā ṛ.Rḷṭ ca śiromālā tha mastakam
+3.37cd: netrāṇi cadha vai nāsā ī samudre ṇuṇū śrutī
+3.38ab: bakavarga iā vaktradantajihvāsu vāci ca
+3.38cd: vabhayāḥ kaṇṭhadakṣādiskandhayor bhujayor ḍaḍhau
+3.39ab: ṭho hastayor jhañau śākhā jraṭau śūlakapālake
+3.39cd: pa hṛc chalau stanau kṣīram ā sa jīvo visargayuk
+3.40ab: tatparaḥ kathitaḥ prāṇaḥ ṣakṣāv udaranābhigau
+3.40cd: maśaṃtāḥ kaṭiguhyoru yugmagā jānunī tathā
+3.41ab: eaikārau tathā jaṅghe tatparau caraṇau daphau
+3.41cd: ato vidyāś ca mantrāś ca samuddhāryā yathā śṛṇu
+3.42ab: sabindukāṃ dakṣajaṅghāṃ tato vācaṃ prakalpayet
+3.42cd: tayaiva jaṅghayā yuktaṃ caturthaṃ daśanaṃ tataḥ
+3.43ab: dakṣajānuyutaṃ daṇḍaṃ prāṇaṃ daṇḍastham īryutam
+3.43cd: pṛthag ghṛddaṇḍakaṭigā dvijadaṇḍau ca pūrvavat
+3.44ab: usthitaṃ binduyukprāṇaṃ pūrvavad daśanaṃ tataḥ
+3.44cd: daṇḍaṃ kevalam uddhṛtya vāmamudrānvitaṃ punaḥ
+3.45ab: dakṣajānuyutaṃ hṛc ca prāṇaṃ jīvātmanā yutam
+3.45cd: daśanaṃ purvavan nyasya daṇḍaṃ kevalam eva ca
+3.46ab: nitambaṃ dakṣamudretaṃ dvitīyaṃ jihvayā dvijam
+3.46cd: sanāsaṃ dakṣaśikharaṃ nitambaṃ kevalaṃ tataḥ
+3.47ab: punas tathaiva śikharaṃ jaṭharaṃ kevalaṃ tataḥ
+3.47cd: dakṣajānuyutaṃ karṇaṃ kaṇṭhaṃ kevalam eva ca
+3.48ab: nitambaṃ kevalaṃ nyasya hṛdayaṃ jihvayā yutam
+3.48cd: vaktraṃ kevalam uddhṛtya prāṇam ādyena jānunā
+3.49ab: śūladaṇḍacatuṣkaṃ ca tatrādyaṃ dvayam usthitam
+3.49cd: vāmapādaṃ ca tasyānte kapālaṃ patitaṃ nyaset
+3.50ab: tataḥ paramaghorāntaṃ pādyakādye ca pūrvavat
+3.50cd: parāparā samākhyātā aparā ca prakathyate
+3.51ab: aghorāntaṃ nyased ādau prāṇaṃ binduyutaṃ punaḥ
+3.51cd: vāmamudrānvitaṃ nyasya pādyaṃ kādyena pūrvavat
+3.52ab: apareyaṃ samākhyātā rudraśaktiṃ parāṃ śṛṇu
+3.52cd: mantrāḥ saṃmukhatāṃ yānti yayoccāritamātrayā
+3.53ab: kampate gātrayaṣṭiś ca drutaṃ cotpatanaṃ bhavet
+3.53cd: mudrābandhaṃ ca geyaṃ ca śivāruditam eva ca
+3.54ab: atītānagatārthasya kuryād vā kathanādikam
+3.54cd: vāmajaṅghānvito jīvaḥ pāramparyakramāgataḥ
+3.55ab: pareyam anayā siddhiḥ sarvakāmaphalapradā
+3.55cd: nāśiṣyāya pradeyeyaṃ nābhaktāya kadā cana
+3.56ab: rudraś ca rudraśaktiś ca guruś ceti trayaṃ samam
+3.56cd: bhaktyā prapaśyate yas tu tasmai deyā varānane
+3.57ab: śiṣyenāpi tadā grāhyā yadā saṃtoṣito guruḥ
+3.57cd: śarīradravyavijñānaśuddhikarmaguṇādibhiḥ
+3.58ab: bodhitā tu yadā tena guruṇā hṛṣṭacetasā
+3.58cd: tadā siddhipradā jñeyā nānyathā vīravandite
+3.59ab: parāparāṅgasaṃbhūtā yoginyo 'ṣṭau mahābalāḥ
+3.59cd: pañca ṣaṭ pañca catvāri dvitridvyarṇāḥ krameṇa tu
+3.60ab: jñeyāḥ saptaikādaśārṇā ekārdhārṇadvayānvitā
+3.60cd: jīvo dīrghasvaraiḥ ṣaḍbhiḥ pṛthag jātivibheditaḥ
+3.61ab: vidyātrayasya gātrāṇi hrasvair vaktrāṇi pañcabhiḥ
+3.61cd: oṃkāraiḥ pañcabhir mantro vidyāṅgahṛdayaṃ bhavet
+3.62ab: oṃ amṛte tejomālini svāhā padāni bhūṣitam
+3.62cd: ekādaśākṣaraṃ proktam etad brahmaśiraḥ priye
+3.63ab: vedavedini hūṃphaṭ ca ca praṇavādisamanvitā
+3.63cd: rudrāṇy aṣṭākṣarā jñeyā śikhā vidyāgaṇasya tu
+3.64ab: vajriṇe vajradharāya svāhāntaṃ praṇavādikam
+3.64cd: ekādaśākṣaraṃ varma puruṣṭutam iti smṛṭam
+3.65ab: ślīpadaṃ paśuśabdaṃ ca hūṃphaḍantaṃ bhavādikam
+3.65cd: etat pāśupataṃ proktam ardhasaptākṣaraṃ param
+3.66ab: laraṭakṣavayair dīrghaiḥ sūmāyuktaiḥ sabindukaiḥ
+3.66cd: indrādīn kalpayed dhrasvais tadastrāṇi vicakṣaṇaḥ
+3.67ab: tadvan nāsāpayobhyāṃ tu kalpyau viṣṇuprajāpatī
+3.67cd: svarāv ādyatṛtīyau tu vācakau padmacakrayoḥ
+3.68ab: iti mantragaṇaḥ proktaḥ sarvakāmaphalapradaḥ
+3.68cd: yogināṃ yogasiddhyarthaṃ kim anyat paripṛcchasi</p>
+
+<p>iti śrīmālinīvijayottare tantre mantroddhārādhikāras tṛtīyaḥ samāptaḥ</p>
+
+<p>yogalakṣaṇadhikāraś caturthaḥ</p>
+
+<p>4.1ab: athaitad upasaṃśrutya munayo muditekṣaṇāḥ
+4.1cd: praṇamya krauñcahantāraṃ punar ūcur idaṃ vacaḥ
+4.2ab: yogamārgavidhiṃ devyā pṛṣṭena parameṣṭhinā
+4.2cd: tatpratijñāvatāpy uktaṃ kimarthaṃ mantralakṣaṇam
+4.3ab: evam uktaḥ sa taiḥ samyak kārtikeyo mahāmatiḥ
+4.3cd: idam āha vacas teṣāṃ saṃdehavinivṛttaye
+4.4ab: yogam ekatvam icchanti vastuno 'nyena vastunā
+4.4cd: yad vastu jñeyam ity uktaṃ heyatvādiprasiddhaye
+4.5ab: dvirūpam api taj jñānaṃ vinā jñātuṃ na śakyate
+4.5cd: tatprasiddhyai śivenoktaṃ jñānaṃ yad upavarṇitam
+4.6ab: sabījayogasaṃsiddhyai mantralakṣaṇam apy alam
+4.6cd: na cādhikāritā dīkṣāṃ vinā yoge 'sti śāṅkare
+4.7ab: kriyājñānavibhedena sā ca dvedhā nigadyate
+4.7cd: dvividhā sā prakartavyā tena caitad udāhṛtam
+4.8ab: na ca yogādhikāritvam ekam evānayā bhavet
+4.8cd: api mantrādhikāritvaṃ muktiś ca śivadīkṣayā
+4.9ab: śrutvā caitat pater vākyaṃ romāñcitaśarīriṇī
+4.9cd: idam āha punar vākyam ambā munivarottamāḥ
+4.10ab: abhinnamālinīkāye tattvāni bhuvanāni ca
+4.10cd: kalāḥ padāni mantrāś ca yathāvad avadhāritāḥ
+4.11ab: bhinnayonis tu yā deva tvayoktā mālinī mama
+4.11cd: tasyā aṅge yathaitāni saṃsthitāni tathā vada
+4.12ab: evam ukto mahādevyā bhairavo bhūribhogadaḥ
+4.12cd: sphuraddhimāṃśusaṃtānaprakāśitadigantaraḥ
+4.13ab: surāsuraśiromaulimālālālitaśāsanaḥ
+4.13cd: uvāca madhurāṃ vācam imām akleśitāśayām
+4.14ab: yā mayā kathitā devi bhinnayonis tu mālinī
+4.14cd: tadaṅge saṃpravakṣyāmi sarvam etad yathā sthitam
+4.15ab: phe dharātattvam uddiṣṭaṃ dādijhānte 'nupūrvaśaḥ
+4.15cd: trayoviṃśatyabādīni pradhānāntāni lakṣayet
+4.16ab: ṭhādau ca saptake sapta puruṣādīni pūrvavat
+4.16cd: iṅagheṣu trayaṃ vidyād vidyātaḥ sakalāvadhi
+4.17ab: śivatattve gakārādināntān ṣoḍaśa lakṣayet
+4.17cd: kalāḥ padāni mantrāś ca bhuvanāni ca sundari
+4.18ab: pūrvavad veditavyāni tat saṅkhyārṇavibhedataḥ
+4.18cd: vidyātrayavibhāgena yathedānīṃ tathā śṛṇu
+4.19ab: niṣkale padam ekārṇaṃ tryarṇaikārṇam atha dvayam
+4.19cd: sakale tu parijñeyaṃ pañcaikārṇadvayaṃ dvaye
+4.20ab: caturekākṣare dve ca māyāditritaye mate
+4.20cd: caturakṣaram ekaṃ ca kālādidvitaye matam
+4.21ab: rañjake dvyarṇam uddiṣṭaṃ pradhāne tryarṇam iṣyate
+4.21cd: buddhau devāṣṭakavyāptyā padaṃ dvyakṣaram iṣyate
+4.22ab: tataḥ pañcāṣṭakavyāptyā dvyekadvidvyakṣarāṇi tu
+4.22cd: vidyāpadāni catvāri sārdhavarṇaṃ tu pañcamam
+4.23ab: ekaikasārdhavarṇāni trīṇi tattve tu pārthive
+4.23cd: parāṅge sarvam anyac ca varṇamantrakalādikam
+4.24ab: sārdhenāṇḍadvayaṃ vyāptam ekaikena pṛthag dvayam
+4.24cd: aparāyāḥ samākhyātā vyāptir eṣā vilomataḥ
+4.25ab: sārṇenāṇḍatrayaṃ vyāptaṃ triśūlena caturthakam
+4.25cd: sarvātītaṃ visargeṇa parāvyāptir udāhṛtā
+4.26ab: etat sarvaṃ parijñeyaṃ yoginā hitam icchatā
+4.26cd: ātmano vā pareṣāṃ vā nānyathā tad avāpyate
+4.27ab: dvāv eva mokṣadau jñeyau jñānī yogī ca śāṅkari
+4.27cd: pṛthaktvāt tatra [3] boddhavyaṃ phalakāṅkṣibhiḥ
+4.28ab: jñānaṃ ca trividhaṃ proktaṃ tatrādyaṃ śrutam iṣyate
+4.28cd: cintāmayam athānyac ca bhāvanāmayam eva ca
+4.29ab: śāstrārthasya parijñānaṃ vikṣiptasya śrutaṃ matam
+4.29cd: idam atredam atreti idam atropayujyate
+4.30ab: sarvam ālocya śāstrārtham ānupūrvyā vyavasthitam
+4.30cd: tadvac cintāmayaṃ jñānaṃ dvirūpam upadiśyate
+4.31ab: mandasvabhyastabhedena tatra svabhyastam ucyate
+4.31cd: suniṣpanne tatas tasmiñ jāyate bhāvanāmayam
+4.32ab: yato yogaṃ samāsādya yogī yogaphalaṃ labhet
+4.32cd: evaṃ vijñānabhedena jñānī proktaś caturvidhaḥ
+4.33ab: saṃprāpto ghaṭamānaś ca siddhaḥ siddhatamo 'nyathā
+4.33cd: yogī caturvidho devi yathāvat pratipadyate
+4.34ab: samāveśoktivad yogas trividhaḥ samudāhṛtaḥ
+4.34cd: tatra prāptopadeśas tu pāramparyakrameṇa yaḥ
+4.35ab: prāptayogaḥ sa vijñeyas trividho 'pi manīṣibhiḥ
+4.35cd: cetaso ghaṭanaṃ tattvāc calitasya punaḥ punaḥ
+4.36ab: yaḥ karoti tam icchanti ghaṭamānaṃ manīṣiṇaḥ
+4.36cd: tad eva cetasā nānyad dvitīyam avalambate
+4.37ab: siddhayogas tadā jñeyo yogī yogaphalārthibhiḥ
+4.37cd: yaḥ punar yatra tatraiva saṃsthito 'pi yathā tathā
+4.38ab: bhuñjānas tatphalaṃ tena hīyate na kathañ cana
+4.38cd: susiddhaḥ sa tu boddhavyaḥ sadāśivasamaḥ priye
+4.39ab: uttarottaravaiśiṣṭyam eteṣāṃ samudāhṛtam
+4.39cd: jñānināṃ yogināṃ caiva dvayor yogavid uttamaḥ
+4.40ab: yato 'sya jñānam apy asti pūrvo yogaphalojjhitaḥ
+4.40cd: yataś ca mokṣadaḥ proktaḥ svabhyastajñānavān budhaiḥ
+4.41ab: ity etat kathitaṃ sarvaṃ vijñeyaṃ yogipūjite
+4.41cd: tantrārtham upasaṃhṛtya samāsād yogināṃ hitam</p>
+
+<p>iti śrīmālinīvijayottare tantre caturtho 'dhikāraḥ samāptaḥ</p>
+
+<p>atha pañcamo 'dhikāraḥ</p>
+
+<p>5.1ab: athātaḥ saṃpravakṣyāmi bhuvanādhvānam īśvari
+5.1cd: ādau kālāgnibhuvanaṃ śodhitavyaṃ prayatnataḥ
+5.2ab: avīciḥ kumbhīpākaś ca rauravaś ca tṛtīyakaḥ
+5.2cd: kūṣmāṇḍabhuvane śuddhe sarve śuddhā na saṃśayaḥ
+5.3ab: pātālāni tataḥ sapta teṣām ādau mahātalam
+5.3cd: rasātalaṃ tataś cānyat talātalam ataḥ param
+5.4ab: sutalaṃ nitalaṃ ceti vitalaṃ talam eva ca
+5.4cd: hāṭakena viśuddhena sarveṣāṃ śuddhir iṣyate
+5.5ab: tadūrdhvaṃ pṛthivī jñeyā saptadvīpārṇavānvitā
+5.5cd: devānām āśrayo merus tanmadhye saṃvyavasthitaḥ
+5.6ab: bhuvolokas tadūrdhve ca svarlokas tasya copari
+5.6cd: maho janas tapaḥ satyam ity etal lokasaptakam
+5.7ab: caturdaśavidho yatra bhūtagrāmaḥ pravartate
+5.7cd: sthāvaraḥ sarpajātiś ca pakṣijātis tathāparā
+5.8ab: mṛgasaṃjñaś ca paśvākhyaḥ pañcamo 'nyaś ca mānuṣaḥ
+5.8cd: paiśāco rākṣaso yākṣo gāndharvaś caindra eva ca
+5.9ab: saumyaś ca prājāpatyaś ca brāhmaś cātra caturdaśa
+5.9cd: sarvasyaivāsya saṃśuddhir brāhme saṃśodhite sati
+5.10ab: bhuvanaṃ vaiṣṇavaṃ tasmān madīyaṃ tadanantaram
+5.10cd: tatra śuddhe bhavec chuddhaṃ sarvam etan na saṃśayaḥ
+5.11ab: kālāgnipūrvakair ebhir bhuvanaiḥ pañcabhiḥ priye
+5.11cd: śuddhaiḥ sarvam idaṃ śuddhaṃ brahmāṇḍāntarvyavasthitam
+5.12ab: tadbahiḥ śatarudrāṇāṃ bhuvanāni pṛthak pṛthak
+5.12cd: daśa saṃśodhayet paścād ekaṃ tannāyakāvṛtam
+5.13ab: anantaḥ prathamas teṣāṃ kapālīśas tathāparaḥ
+5.13cd: agnirudro yamaś caiva nairṛto bala eva ca
+5.14ab: śīghro nidhīśvaraś caiva sarvavidyādhipo 'paraḥ
+5.14cd: śaṃbhuś ca vīrabhadraś ca vidhūmajvalanaprabhaḥ
+5.15ab: ebhir daśaikasaṃkhyātaiḥ śuddhaiḥ śuddhaṃ śataṃ matam
+5.15cd: upariṣṭāt puras teṣām aṣṭakāḥ pañca saṃsthitāḥ
+5.16ab: lakulī bhārabhūtiś ca diṇḍhyāṣāḍhī sapuṣkarau
+5.16cd: naimiṣaṃ ca prabhāsaṃ ca amareśam athāṣṭakam
+5.17ab: etat pratyātmakaṃ proktam ato guhyātiguhyakam
+5.17cd: tatra bhairavakedāramahākālāḥ samadhyamāḥ
+5.18ab: āmrātikeśajalpeśaśrīśailāḥ saharīndavaḥ
+5.18cd: bhīmeśvaramahendrāṭṭahāsāḥ savimaleśvarāḥ
+5.19ab: kanakhalaṃ nākhalaṃ ca kurukṣetraṃ gayā tathā
+5.19cd: guhyam etat tṛtīyaṃ tu pavitram adhunocyate
+5.20ab: sthānusvarṇākṣakāv ādyau bhadragokarṇakau parau
+5.20cd: mahākālāvimukteśarudrakoṭyambarāpadāḥ
+5.21ab: sthūlaḥ sthūleśvaraḥ śaṅkukarṇakālañjarāv api
+5.21cd: maṇḍaleśvaramākoṭadviraṇḍachagalāṇḍakau
+5.22ab: sthāṇvāṣṭakam iti proktam ahaṅkārāvadhi sthitam
+5.22cd: devayonyaṣṭakaṃ buddhau kathyamānaṃ mayā śṛṇu
+5.23ab: paiśācaṃ rākṣasaṃ yākṣaṃ gāndharvaṃ caindram eva ca
+5.23cd: tathā saumyaṃ saprājeśaṃ brāhmam aṣṭamam iṣyate
+5.24ab: yogāṣṭakaṃ pradhāne tu tatrādāv akṛtaṃ bhavet
+5.24cd: kṛtaṃ ca raibhavaṃ brāhmaṃ vaiṣṇavaṃ tadanantaram
+5.25ab: kaumāram aumaṃ śraikaṇṭham iti yogāṣṭakaṃ tathā
+5.25cd: puruṣe vāmabhīmograbhaveśānaikavīrakāḥ
+5.26ab: pracaṇḍomādhavājāś ca anantaikaśivāv atha
+5.26cd: krodheśacaṇḍau vidyāyāṃ saṃvarto jyotir eva ca
+5.27ab: kalātattve parijñeyau surapañcāntakau pare
+5.27cd: ekavīraśikhaṇḍīśaśrīkaṇṭḥāḥ kālam āśritāḥ
+5.28ab: mahātejaḥ prabhṛtayoḥ maṇḍaleśānasaṃjñakāḥ
+5.28cd: māyātattve sthitās tatra vāmadevabhavodbhavau
+5.29ab: ekapiṅgekṣaṇeśānabhuvaneśapuraḥsarāḥ
+5.29cd: aṅguṣṭhamātrasahitāḥ kālānalasamatviṣaḥ
+5.30ab: vidyātattve 'pi pañcāhur bhuvanāni manīṣiṇaḥ
+5.30cd: tatra hālāhalaḥ pūrvo rudraḥ krodhas tathāparaḥ
+5.31ab: ambikā ca aghorā ca vāmadevī ca kīrtyate
+5.31cd: īśvare pivanādyāḥ syur aghorāntā maheśvarāḥ
+5.32ab: raudrī jyeṣṭhā ca vāmā ca tathā śaktisadāśivau
+5.32cd: etāni sakale pañca bhuvanāni vidur budhāḥ
+5.33ab: evaṃ tu sarvatattveṣu śatam aṣṭādaśottaram
+5.33cd: bhuvanānāṃ parijñeyaṃ saṅkṣepān na tu vistarāt
+5.34ab: śuddhenānena śuddhyanti sarvāṇy api na saṃśayaḥ
+5.34cd: sarvamārgaviśuddhau tu kartavyāyāṃ mahāmatiḥ
+5.35ab: sakalāvadhi saṃśodhya śive yogaṃ prakalpayet
+5.35cd: bubhukṣoḥ sakalaṃ dhyātvā yogaṃ kurvīta yogavit
+5.36ab: ity eṣa kīrtito mārgo bhuvanākhyasya me mataḥ</p>
+
+<p>iti śrīmālinīvijayottare tantre pañcamo 'dhikāraḥ samāptaḥ</p>
+
+<p>atha dehamārgādhikāraḥ ṣaṣṭhaḥ</p>
+
+<p>6.1ab: athāsya vastujātasya yathā dehe vyavasthitiḥ
+6.1cd: kriyate jñānadīkṣāsu tathedānīṃ nigadyate
+6.2ab: pādādhaḥ pañcabhūtāni vyāptyā dvyaṅgulayā nyaset
+6.2cd: dharātattvaṃ ca gulphāntam abādīni tataḥ kramāt
+6.3ab: tadvat tundopariṣṭāt tu parvaṣaṭkāvasānakam
+6.3cd: puṃstattvāt kalātattvāntaṃ tattvaṣaṭkaṃ vicintayet
+6.4ab: tato māyāditattvāni catvāri susamāhitaḥ
+6.4cd: caturaṅgulayā vyāptyā sakalāntāni bhāvayet
+6.5ab: śivatattvaṃ tataḥ paścāt tejorūpam anākulam
+6.5cd: sarveṣāṃ vyāpakatvena sabāhyābhyantaraṃ smaret
+6.6ab: ṣaṭtriṃśattattvabhedena nyāso 'yaṃ samudāhṛtaḥ
+6.6cd: adhunā pañca tattvāni yathā dehe tathocyate
+6.7ab: nābher ūrdhvaṃ tu yāvat syāt parvaṣaṭkam anukramāt
+6.7cd: dharātattvena gulphāntaṃ vyāptaṃ śeṣam ihāmbunā
+6.8ab: dvāviṃśatiś ca parvāṇi tadūrdhvaṃ tejasāvṛtam
+6.8cd: tasmād dvādaśa parvāṇi vāyuvyāptir udāhṛtā
+6.9ab: ākāśāntaṃ paraṃ śāntaṃ sarveṣāṃ vyāpakaṃ smaret
+6.9cd: śaktyādipañcakhaṇḍādhvavidhiṣv apy evam iṣyate
+6.10ab: trikhaṇḍe kaṇṭhaparyantam ātmatattvam udāhṛtam
+6.10cd: vidyātattvam atordhvaṃ ca śivatattvaṃ tu pūrvavat
+6.11ab: evaṃ tattvavidhiḥ prokto bhuvanādhvā tathocyate
+6.11cd: kālāgner vīrabhadrāntaṃ puraṣoḍaśakaṃ tataḥ
+6.12ab: gulphāntaṃ vinyased dhyātvā yathāvad anupūrvaśaḥ
+6.12cd: tasmād ekāṅgulavyāptyā lakulīśāditaḥ kramāt
+6.13ab: vinyaset tu dviraṇḍāntaṃ tryaṅgulaṃ chagalāṇḍakam
+6.13cd: tataḥ pādāṅgulavyāptyā devayogāṣṭakaṃ pṛthak
+6.14ab: tato 'py ardhāṅgulavyāptyā puraṣaṭkam anukramāt
+6.14cd: catuṣkaṃ tu dvaye 'nyasminn ekam ekatra cintayet
+6.15ab: uttarādikramād dvyekabhedo vidyādike traye
+6.15cd: kāle pratyekam uddiṣṭam ekaikaṃ tu yathākramaṃ
+6.16ab: maṇḍalādhipatīnāṃ tu vyāptir ardhāṅgulā matā
+6.16cd: tribhāganyūnaparvākhyā tritayasya tathopari
+6.17ab: dvitayasya ca saṃpūrṇā pañcakaṃ samudāhṛtam
+6.17cd: aṣṭakaṃ pañcakaṃ cānyad evam eva vilakṣayet
+6.18ab: bhuvanādhvavidhāv atra pūrvavac cintayec chivam
+6.18cd: padāni dvividhāny atra vargavidyāvibhedataḥ
+6.19ab: teṣāṃ tanmantravad vyāptir yathedānīṃ tathā śṛṇu
+6.19cd: caturaṅgulam ādyaṃ tu dve cānye 'ṣṭāṅgule pṛthak
+6.20ab: daśāṅgulāni trīṇy asmād ekaṃ pañcadaśāṅgulam
+6.20cd: caturbhir adhikaiś cānyad vyāpakaṃ navamaṃ mahat
+6.21ab: ūnaviṃśatike bhede padānāṃ vyāptir ucyate
+6.21cd: ekaikaṃ dvyaṅgulaṃ jñeyaṃ tatra pūrvaṃ padatrayam
+6.22ab: aṣṭāṅgulāni catvāri daśāṅgulam ataḥ param
+6.22cd: dvyaṅgule dve pade cānye ṣaḍaṅgulam ataḥ param
+6.23ab: dvādaśāṅgulam anyac ca dve 'nye pañcāṅgule pṛthak
+6.23cd: padadvayaṃ catuṣparva tathānye dve dviparvaṇī
+6.24ab: vyāpakaṃ padam anyac ca pūrvavat parikīrtitaṃ
+6.24cd: aparo 'yaṃ vidhiḥ proktaḥ parāparam ataḥ śṛṇu
+6.25ab: pūrvavat pṛthivītattvaṃ vijñeyaṃ caturaṅgulam
+6.25cd: sārdhadvyaṅgulamānāni dhiṣaṇāntāni lakṣayet
+6.26ab: pradhānaṃ tryaṅgulaṃ jñeyaṃ śeṣaṃ pūrvavad ādiśet
+6.26cd: pare 'pi pūrvavat pṛthvī tryaṅgulāny aparāṇi ca
+6.27ab: catuṣparva pradhānaṃ ca śeṣaṃ pūrvavad āśrayet
+6.27cd: dvividho 'pi hi varṇānāṃ ṣaḍvidho bheda ucyate
+6.28ab: tattvamārgavidhānena jñātavyaḥ paramārthataḥ
+6.28cd: padamantrakalādīnāṃ pūrvasūtrānusārataḥ
+6.29ab: tritayatvaṃ prakurvīta tattvavarṇoktavartmanā
+6.29cd: itthaṃ bhūtaśarīrasya guruṇā śivamūrtinā
+6.30ab: prakartavyā vidhānena dīkṣā sarvaphalapradā</p>
+
+<p>iti śrīmālinīvijayottare tantre dehamārgādhikāraḥ ṣaṣṭhaḥ samāptaḥ</p>
+
+<p>mudrādhikāraḥ saptamaḥ</p>
+
+<p>7.1ab: athātaḥ saṃpravakṣyāmi mudrākhyāḥ śivaśaktayaḥ
+7.1cd: yābhiḥ saṃrakṣito mantrī mantrasiddhim avāpnuyāt
+7.2ab: triśūlaṃ ca tathā padmaṃ śaktiś cakraṃ savajrakam
+7.2cd: daṇḍadaṃṣṭre mahāpretā mahāmudrā khageśvarī
+7.3ab: mahodayā karālā ca khaṭvāṅgaṃ sakapālakam
+7.3cd: halaṃ pāśāṅkuśā ghaṇṭā mudgaras triśikho 'paraḥ
+7.4ab: āvāhasthāpanīrodhā dravyadā natir eva ca
+7.4cd: amṛtā yogamudreti vijñeyā vīravandite
+7.5ab: tarjanīmadhyamānāmā dakṣiṇasya prasāritāḥ
+7.5cd: kaṇiṣṭhāṅguṣṭhakākrāntās triśūlaṃ parikīrtitam
+7.6ab: padmākārau karau kṛtvā padmamudrāṃ pradarśayet
+7.6cd: saṃmukhau prasṛtau kṛtvā karāv antaritāṅgulī
+7.7ab: prasṛte madhyame lagne kaumāryāḥ śaktir iṣyate
+7.7cd: uttānavāmamuṣṭes tu dakṣa[6]
+7.8ab: [4] kṣipen muṣṭiṃ cakraṃ nārāyaṇīpriyam
+7.8cd: uttānavāmakasyordhvaṃ nyased dakṣam adhomukham
+7.9ab: kaniṣṭhāṅguṣṭhakau śliṣṭau śeṣāḥ syur maṇibandhagā
+7.9cd: vajramudreti vikhyātā aindrīsaṃtoṣakārikā
+7.10ab: ūrdhvaprasārito muṣṭir dakṣiṇo 'ṅguṣṭhagarbhagaḥ
+7.10cd: daṇḍamudreti vikhyātā vaivasvatakulapriyā
+7.11ab: vāmato vaktragāṃ kuryād vāmamuṣṭeḥ kaniṣṭhikām
+7.11cd: daṃṣṭreyaṃ kīrtitā devi cāmuṇḍākulanandinī
+7.12ab: vāmajānugataṃ pādaṃ but hastau pṛṣṭhapralambinau
+7.12cd: vikṛte locane grīvā bhagnā jihvā prasāritā
+7.13ab: sarvayogigaṇasyeṣṭā pretā yogīśvarī matā
+7.13cd: hastāv adhomukhau padbhyāṃ hṛdayāntaṃ nayed budhaḥ
+7.14ab: tiryag mukhāntam upari saṃmukhāv ūrdhvagau nayet
+7.14cd: mahāmudreti vikhyātā dehaśodhanakarmaṇi
+7.15ab: sarvakarmakarī caiṣā yogināṃ yogasiddhaye
+7.15cd: baddhvā padmāsanaṃ yogī nābhāv akṣeśvaraṃ nyaset
+7.16ab: daṇḍākāraṃ tu taṃ tāvan nayed yāvat kakhatrayam
+7.16cd: nigṛhya tatra tat tūrṇaṃ prerayet khatrayeṇa tu
+7.17ab: etāṃ baddhvā mahāvīraḥ khe gatiṃ pratipadyate
+7.17cd: adhomukhasya dakṣasya vāmam uttānam ūrdhvataḥ
+7.18ab: anāmāmadhyame tasya vāmāṅguṣṭhena pīḍayet
+7.18cd: tarjanyā tatkaniṣṭhāṃ ca tarjanīṃ ca kaniṣṭhayā
+7.19ab: madhyamānāmikābhyāṃ ca tadaṅguṣṭhaṃ nipīḍayet
+7.19cd: mudrā mahodayākhyeyaṃ mahodayakarī nṛṇām
+7.20ab: anāmikākaniṣṭhābhyāṃ sṛkviṇyau pravidārayet
+7.20cd: jihvāṃ ca lālayen mantrī hāhākāraṃ ca kārayet
+7.21ab: kruddhadṛṣṭiḥ karāleyaṃ mudrā duṣṭabhayaṅkarī
+7.21cd: vāmaskandhagato vāma muṣṭir ucchritatarjanī
+7.22ab: khaṭvāṅgākhyā smṛtā mudrā kapālam adhunā śṛṇu
+7.22cd: nimnaṃ pāṇitalaṃ dakṣam īṣat saṃkucitāṅguli
+7.23ab: kapālam iti vijñeyam adhunā halam ucyate
+7.23cd: muṣṭibaddhasya dakṣasya tarjanī vāmamuṣṭinā
+7.24ab: vakratarjaninā grastā halamudreti kīrtitā
+7.24cd: muṣṭyā pṛṣṭhagayor dakṣa vāmayos tarjanīdvayam
+7.25ab: vāmāṅguṣṭhāgrasaṃlagnaṃ pāśaḥ prasṛtakuñcitaḥ
+7.25cd: hale muṣṭir yathā vāmo dakṣahīnas tathāṅkuśaḥ
+7.26ab: adhomukhasthite vāme dakṣiṇāṃ tarjanīṃ budhaḥ
+7.26cd: cālayen madhyadeśasthāṃ ghaṇṭāmudrā priyā matā
+7.27ab: karāv ūrdhvamukhau kāryāv anyonyāntaritāṅgulī
+7.27cd: anāme madhyapṛṣṭhasthe tarjanyau mūlaparvage
+7.28ab: madhyame dve yute kārye kaniṣṭhe puruṣāvadhi
+7.28cd: tarjanyau madhyapārśvasthe virale parikalpite
+7.29ab: mudgaras triśikho hy eṣa kṣaṇād āveśakārakaḥ
+7.29cd: karābhyām añjaliṃ kṛtvā anāmāmūlaparvagau
+7.30ab: aṅguṣṭhau kalpayed vidvān mantrāvāhanakarmaṇi
+7.30cd: muṣṭī dvāv unnatāṅguṣṭhau sthāpanī parikīrtitā
+7.31ab: dvāv eva garbhagāṅguṣṭhau vijñeyā saṃnirodhinī
+7.31cd: dravyadā tu samākhyātā [4]tra saṃmukhī
+7.32ab: hṛdaye saṃmukhau hastau saṃlagnau prasṛtāṅgulī
+7.32cd: namaskṛtir iyaṃ mudrā mantravandanakarmaṇi
+7.33ab: anyonyāntaritāḥ sarvāḥ karayor aṅgulīḥ sthitāḥ
+7.33cd: kaniṣṭhāṃ dakṣiṇāṃ vāme 'nāmikāgre niyojayet
+7.34ab: dakṣiṇe ca tathā vāmaṃ tarjanīmadhyame tathā
+7.34cd: aṅguṣṭhau madhyamūlasthau mudreyam amṛtaprabhā
+7.35ab: dakṣiṇaṃ nābhimūle tu vāmasyopari saṃsthitam
+7.35cd: tarjanyaṅguṣṭhakau lagnau ucchritau yogakarmaṇi
+7.36ab: evaṃ mudrāgaṇaṃ mantrī badhnīyad dhṛdaye budhaḥ
+7.36cd: sarvāsāṃ vācakāś cāsāṃ oṃ hrīṃ nāma tato namaḥ</p>
+
+<p>iti śrīmālinīvijayottare tantre mudrādhikāro saptamaḥ samāptaḥ</p>
+
+<p>8.1ab: athātaḥ saṃpravakṣyāmi yajanaṃ sarvakāmadam
+8.1cd: yasya darśanamātreṇa yoginīsaṃmato bhavet
+8.2ab: tatrādau yāgasadanaṃ śubhe kṣetre manoramam
+8.2cd: kārayed agnikuṇḍena vartulena samanvitam
+8.3ab: pañcaviṃśatiparveṇa samantād ardhanābhinā
+8.3cd: turyāṃśamekhalenāpi parvauṣṭhena suśobhinā
+8.4ab: tataḥ snātvā jitadvandvo bhāvasnānena mantravit
+8.4cd: tac ca ṣaḍvidham uddiṣṭaṃ bhasmasnānādyanukramāt
+8.5ab: bhasmasnānaṃ mahāstreṇa bhasma saptābhimantritam
+8.5cd: malasnānāya saṃhārakrameṇoddhūlayet tanum
+8.6ab: vidyāṅgaiḥ pañcabhiḥ paścāc chiraḥ prabhṛti guṇṭhayet
+8.6cd: abhiṣekaṃ tu kurvīta mūlenaiva ṣaḍaṅginā
+8.7ab: tato 'vāsāḥ suvāsā ca hastau pādau ca dhāvayet
+8.7cd: ācamya mārjanaṃ kuryād vidyayā bhūrivarṇayā
+8.8ab: nyāsaṃ kṛtvā tu sāmānyām aghamarṣaṃ dvitīyayā
+8.8cd: upasthānaṃ ca mālinyā japec caikākṣarāṃ parām
+8.9ab: jalasnāne 'pi cāstreṇa mṛdaṃ saptābhimantritam
+8.9cd: pūrvavat tanum ālabhya malasnānaṃ samācaret
+8.10ab: vidhisnānādikaṃ cātra pūrvavat kiṃ tu vāriṇā
+8.10cd: sādhāraṇavidhisnāto vidyātritayamantritam
+8.11ab: toyaṃ vinikṣipen mūrdhni mantrasnānāya mantravit
+8.11cd: rajasā godhutenaiva vāyavyaṃ snānam ācaret
+8.12ab: mahāstram uccaran gacched dhyānayuk padasaptakam
+8.12cd: tad eva punar āgacched anusmṛtya parāparām
+8.13ab: varṣātapasamāyogād divyo .apy evaṃvidho mataḥ
+8.13cd: kiṃ tu tatra parāṃ mantrī sravantīm amṛtaṃ smaret
+8.14ab: astreṇāṅguṣṭhamūlāt tu vahnim utthāpya nirdahet
+8.14cd: svatanuṃ plāvayet paścāt parayaivāmṛtena tu
+8.15ab: sūryādau mantram ādāya gacched astram anusmaran
+8.15cd: yāgaveśmāstrasaṃśuddhaṃ viśec chucir anākulaḥ
+8.16ab: tatra dvārapatīn pūjya mahāstreṇābhimantritam
+8.16cd: puṣpaṃ vinikṣiped dhyātvā jvaladvighnapraśāntaye
+8.17ab: daśasv api tato 'streṇa dikṣu saṃkalpya rakṣaṇaṃ
+8.17cd: praviśed yāgasadanaṃ vahnivad vahnisaṃyutam
+8.18ab: pūrvāsyaḥ saumyavaktro vā viśeṣanyāsam ārabhet
+8.18cd: tatrādāv astramantreṇa kālānalasamatviṣā
+8.19ab: aṅguṣṭhāgrāt tanuṃ dagdhāṃ sabāhyābhyantarāṃ smaret
+8.19cd: vikīryamāṇaṃ tadbhasma dhyātvā kavacavāyunā
+8.20ab: śivabindusamākāram ātmānam anucintayet
+8.20cd: tato 'sya yojayec chaktiṃ so 'ham ity aparājitaḥ
+8.21ab: vidyāmūrtiṃ tato dadhyān mantreṇānena śāṅkari
+8.21cd: daṇḍākrāntaṃ mahāprāṇaṃ daṇḍārūḍhaṃ sanābhikam
+8.22ab: nitambaṃ tadadhastāc ca vāmastanam adhaḥ punaḥ
+8.22cd: kaṇṭhaṃ ca vāmaśikharaṃ vāmamudrāvibhūṣitam
+8.23ab: bindvardhacandrakhaṃ nādaśaktibinduvibhūṣitam
+8.23cd: eṣa piṇḍakaro devi navātmaka iti śrutaḥ
+8.24ab: sarvasiddhikaraś cāyaṃ sarahasyam udāhṛtaḥ
+8.24cd: eṣa tryarṇojjhito .adhastād dīrghaiḥ ṣaḍbhiḥ svarair yutaḥ
+8.25ab: ṣaḍaṅgāni hṛdādīni jātibhedena kalpayet
+8.25cd: kṣayaravalabījaiś ca dīptair binduvibhūṣitaiḥ
+8.26ab: vaktrāṇi kalpayet pūrvam ūrdhvavaktrāditaḥ kramāt
+8.26cd: pratyaṅgavidhisiddhyarthaṃ lalāṭādiṣv atho nyaset
+8.27ab: a lalāṭe dvitīyaṃ ca vaktre saṃparikalpayet
+8.27cd: i ī netradvaye dattvā u ū karṇadvaye nyaset
+8.28ab: ṛ .R nāsāpuṭe tadvad ḷ .L gaṇḍadvaye tathā
+8.28cd: e ai adhordhvadanteṣu o-aukārau tathoṣṭhayoḥ
+8.29ab: aṃ śikhāyāṃ visargeṇa jihvāṃ saṃparikalpayet
+8.29cd: dakṣiṇaskandhadordaṇḍa karāṅgulinakheṣu ca
+8.30ab: kavargaṃ vinyased vāme tadvac cādyam anukramāt
+8.30cd: ṭatādyau pūrvavad vargau nitamborvādiṣu nyaset
+8.31ab: pādyaṃ pārśvadvaye pṛṣṭhe jaṭhare hṛdy anukramāt
+8.31cd: tvagraktamāṃsasūtreṣu yavargaṃ parikalpayet
+8.32ab: śādyam asthivasāśukraprāṇakopeṣu pañcakam
+8.32cd: mūrtyaṅgāni tato dattvā śivam āvāhayed budhaḥ
+8.33ab: prāṇopari nyasen nābhiṃ tadūrdhve dakṣiṇāṅgulim
+8.33cd: vāmakarṇaprameyotaḥ sarvasiddhipradaḥ śivaḥ
+8.34ab: sadbhāvaḥ paramo hy eṣaḥ bhairavasya mahātmanaḥ
+8.34cd: aṅgāny anena kāryāṇi pūrvavat svarabhedataḥ
+8.35ab: mūrtiḥ sṛṣṭis tritattvaṃ ca aṣṭau mūrtyaṅgasaṃyutāḥ
+8.35cd: śivaḥ sāṅgaś ca ṣoḍhaiva nyāsaḥ saṃparikīrtitaḥ
+8.36ab: asyopari tataḥ śāktaṃ kuryān nyāsaṃ yathā śṛṇu
+8.36cd: mūrtau parāparāṃ nyasya tadvaktrāṇi ca mālinīm
+8.37ab: parāditritayaṃ paścāc chikhāhṛtpādagaṃ nyaset
+8.37cd: kavaktrakaṇṭhahṛnnābhiguhyorūpādagaṃ kramāt
+8.38ab: aghoryādyaṣṭakaṃ nyasya vidyāṅgāni tu pūrvavat
+8.38cd: tatas tv āvāhayec chaktiṃ sarvayoginamaskṛtām
+8.39ab: jīvaḥ prāṇapuṭāntasthaḥ kālānalasamadyutiḥ
+8.39cd: atidīptas tu vāmāṅghribhūṣito mūrdhni bindunā
+8.40ab: dakṣajānuyutaś cāyaṃ sarvamātṛgaṇānvitaḥ
+8.40cd: anena prīṇitāḥ sarvā dadate vāñchitaṃ phalam
+8.41ab: sadbhāvaḥ paramo hy eṣa mātṛṇāṃ paripaṭhyate
+8.41cd: tasmād enāṃ japen mantrī ya icchet siddhim uttamām
+8.42ab: rudraśaktisamāveśo nityam atra pratiṣṭhitaḥ
+8.42cd: yasmād eṣā parāśaktir bhedenānena kīrtitā
+8.43ab: yāvatyaḥ siddhayas tantre sarvāḥ syur anayā kṛtāḥ
+8.43cd: aṅgāni kalpayed asyāḥ pūrvavat svarabhedataḥ
+8.44ab: mūrtiḥ savaktrā śaktiś ca vidyātritaya eva ca
+8.44cd: aghoryādyaṣṭakaṃ ceti tathā vidyāṅgapañcakam
+8.45ab: sāṅgāś caiva parā śaktir nyāsaḥ prokto .atha ṣaḍvidhaḥ
+8.45cd: yāmalo 'yam ato nyāsaḥ sarvasiddhiprasiddhaye
+8.46ab: vāmo vāyaṃ vidhiḥ kāryo muktimārgāvalambibhiḥ
+8.46cd: varṇamantravibhedena pṛthag vā tatphalārthibhiḥ
+8.47ab: yāvantaḥ kīrtitā bhedaiḥ śaṃbhuśaktyaṇuvācakāḥ
+8.47cd: tāvatsv apy evam evāyaṃ nyāsaḥ pañcavidho mataḥ
+8.48ab: kiṃ tu bāhyas tu yo yatra sa tatrāṅgasamanvitaḥ
+8.48cd: ṣaṣṭhaḥ syād iti sarvatra ṣoḍhaivāyam udāhṛtaḥ
+8.49ab: svānuṣṭhānāvirodhena bhāvābhāvavikalpanaiḥ
+8.49cd: yāgadravyāṇi sarvāṇi kāryāṇi vidhivad budhaiḥ
+8.50ab: tato 'rghapātram ādāya bhāvābhāvavikalpitam
+8.50cd: tataś cāstrāgnisaṃdagdhaṃ śaktyambuplāvitaṃ śuci
+8.51ab: kartavyā yasya saṃśuddhir anyasyāpy atra vastunaḥ
+8.51cd: tasyānenaiva mārgeṇa prakartavyā vijānatā
+8.52ab: na cāsaṃśodhitaṃ vastu kiñcid apy atra kalpayet
+8.52cd: tena śuddhaṃ tu sarvaṃ yad aśuddham api tac chuci
+8.53ab: tad ambunā samāpūrya ṣaḍbhir aṅgaiḥ samarpya ca
+8.53cd: amṛtīkṛtya sarvāṇi tena dravyāṇi śodhayet
+8.54ab: ātmānaṃ pūjayitvā tu kuryād antaḥkṛtiṃ yathā
+8.54cd: tathā te kathayiṣyāmi sarvayogigaṇārcite
+8.55ab: ādāvauāv ādhāraśaktiṃ tu nābhyadhaś caturaṅgulām
+8.55cd: dharāṃ surodaṃ potaṃ ca kandaś ceti catuṣṭayam
+8.56ab: ekaikāṅgulam etat syāc chūlasyāmalasārakam
+8.56cd: tato nālam anantākhyaṃ daṇḍam asya prakalpayet
+8.57ab: lambikāvadhitaś cātra śūlordhvaṃ granthir iṣyate
+8.57cd: abhittvainaṃ mahādevi pāśajālamahārṇavam
+8.58ab: na sa yogam avāpnoti śivena saha mānavaḥ
+8.58cd: dharmaṃ jñānaṃ ca vairāgyam aiśvaryaṃ ca catuṣṭayam
+8.59ab: koṇeṣu cintayen mantrī āgneyādiṣv anukramāt
+8.59cd: gātrakāṇāṃ catuṣkaṃ ca dikṣu pūrvādiṣu smaret
+8.60ab: granther ūrdhvaṃ triśūlādho bhavitavyā catuṣkikā
+8.60cd: vidyātattvaṃ tad evāhuś chadanatrayasaṃyutam
+8.61ab: kakhalambikayor madhye tat tattvam anucintayet
+8.61cd: padmākṛti kakhatattvam aiśvaraṃ cintayed budhaḥ
+8.62ab: karṇikākesaropetaṃ sabījaṃ vikasat sitam
+8.62cd: pūrvapatrāditaḥ paścād vāmādinavakaṃ nyaset
+8.63ab: vāmā jyeṣṭhā ca raudrī ca kālī ceti tathā parā
+8.63cd: kalavikaraṇī caiva balavikaraṇī tathā
+8.64ab: balapramathanī cānyā sarvabhūtadamany api
+8.64cd: manonmanī ca madhye 'pi bhānumārgeṇa vinyaset
+8.65ab: vibhvādinavakaṃ cānyad vilomāt parikalpayet
+8.65cd: vibhur jñānī kriyā cecchā vāgīśī jvālinī tathā
+8.66ab: vāmā jyeṣṭhā ca raudrī ca sarvāḥ kālānalaprabhāḥ
+8.66cd: brahmaviṣṇuharāḥ pūrvaṃ ye śāktāḥ pratipāditāḥ
+8.67ab: dalakesaramadhyasthā maṇḍalānāṃ ta īśvarāḥ
+8.67cd: dhvani [?] cārkenduvahnīnāṃ saṃjñeyā paribhāvayet
+8.68ab: īśvaraṃ ca mahāpretaṃ prahasantaṃ sacetanam
+8.68cd: kālāgnikoṭivapuṣam ity evaṃ sarvam āsanam
+8.69ab: tasya nābhyutthitaṃ śaktiśūlaśṛṅgatrayaṃ smaret
+8.69cd: kakhatrayeṇa niryātaṃ dvādaśāntāvasānakam
+8.70ab: cintayet tasya śṛṅgeṣu śāktaṃ padmatrayaṃ tataḥ
+8.70cd: sarvādhiṣṭhāyakaṃ śuklamām ity etat paramāsanam
+8.71ab: tatropari tato mūrtiṃ vidyākhyām anucintayet
+8.71cd: ātmākhyāṃ ca tatas tasyāṃ pūrvanyāsaṃ śivātmakam
+8.72ab: tato madhye parāṃ śaktiṃ dakṣiṇottarayor dvayam
+8.72cd: parāparāṃ svarūpeṇa raktavarṇāṃ mahābalām
+8.73ab: icchārūpadharāṃ dhyātvā kiṃ cid ugrāṃ na bhīṣaṇām
+8.73cd: aparāṃ vāmaśṛṅge tu bhīṣaṇāṃ kṛṣṇapiṅgalām
+8.74ab: icchārūpadharāṃ devīṃ praṇatārtivināśinīm
+8.74cd: parāṃ cāpyāyanīṃ devīṃ candrakoṭyayutaprabhām
+8.75ab: ṣaḍvidhe 'pi kṛte śākte mūrtyādāv api cintayet
+8.75cd: vidyāṅgapañcakaṃ paścād āgneyyādiṣu vinyaset
+8.76ab: agnīśarakṣovāyūnāṃ dakṣiṇe ca yathākrama
+8.76cd: śaktyaṅgāni śivāṅgāni tathaiva vidhinā smaret
+8.77ab: kiṃ tu śakrādidikṣv astramantraṃ madhye ca locanam
+8.77cd: aghorādyaṣṭakaṃ dhyāyed aghoryādyaṣṭakānvitam
+8.78ab: sarvāsām āvṛtatvena lokapālāṃś ca bāhyataḥ
+8.78cd: sāstrān svamantraiḥ saṃcintya japaṃ paścāt samārabhet
+8.79ab: svarūpe tallayo bhūtvā ekaikāṃ daśadhā smaret
+8.79cd: jvalatpāvakasaṃkāśāṃ dhyātvā svāhāntam uccaret
+8.80ab: sakṛd ekaikaśo mantrī homakarmaprasiddhaye
+8.80cd: ity eva mānaso yāgaḥ kathitaḥ sāmudāyikaḥ
+8.81ab: etat triśūlam uddiṣṭam ekadaṇḍaṃ triśaktikam
+8.81cd: ittham etad avijñāya śaktiśūlaṃ varānane
+8.82ab: baddhvāpi khecarīṃ mudrāṃ notpatayaty avanītalāt
+8.82cd: ity etac chāmbhavaṃ proktam aṣṭāntaṃ śāktam iṣyate
+8.83ab: turyāntam āṇavaṃ vidyād iti śūlatrayaṃ matam
+8.83cd: pṛthag yāgavidhānena śakticakraṃ vicintayet
+8.84ab: tenāpi khecarīṃ baddhvā tyajaty evaṃ mahītalam
+8.84cd: tato 'bhimantrya dhānyāni mahāstreṇa trisaptadhā
+8.85ab: nikṣiped dikṣu sarvāsu jvalatpāvakavat smaret
+8.85cd: nirvighnaṃ tad gṛhaṃ dhyātvā saṃhṛtyeśadiśaṃ nayet
+8.86ab: pañcagavyaṃ tataḥ kuryād vadanaiḥ pañcabhir budhaḥ
+8.86cd: gomūtraṃ gomayaṃ caiva kṣīraṃ dadhi ghṛtaṃ tathā
+8.87ab: mantrayed ūrdhvaparyantaiḥ ṣaḍaṅgena kuśodakam
+8.87cd: mudre dravyāmṛtaṃ baddhvā tattvaṃ tasya vicintayet
+8.88ab: tena saṃprokṣayed bhūmiṃ svalpenānyannidhāpayet
+8.88cd: vāstuyāgaṃ tataḥ kuryān mālinyuccārayogataḥ
+8.89ab: puṣpair añjalim āpūrya phakārādi samuccaret
+8.89cd: dhyātvā śaktyantam adhvānaṃ nakārānte vinikṣipet
+8.90ab: gandhadhūpādikaṃ dattvā gaṇeśānaṃ prapūjayet
+8.90cd: ṣaḍuttham āsanaṃ nyasya praṇavena tatopari
+8.91ab: gām ity anena vighneśaṃ gandhapuṣpādibhir yajet
+8.91cd: asyāṅgāni gakāreṇa ṣaḍdīrghasvarayogataḥ
+8.92ab: trinetraṃ muditaṃ dhyātvā gajāsyaṃ vāmanākṛtim
+8.92cd: visarjya siddhikāmas tu mahāstram anupūjayet
+8.93ab: dattvānantaṃ tathā dharmaṃ jñānaṃ vairāgyam eva ca
+8.93cd: aiśvaryaṃ karṇikāṃ ceti ṣaḍuttham idam āsanam
+8.94ab: asyopari nyased dhyātvā khaḍgakheṭakadhāriṇam
+8.94cd: vikarālaṃ mahādaṃṣṭraṃ mahograṃ bhrūkuṭīmukham
+8.95ab: svāṅgaṣaṭkasamopetaṃ diṅmātṛparivāritam
+8.95cd: svārṇair evāṅgaṣaṭkaṃ tu phaṭkāraparidīpitam
+8.96ab: tadrūpam eva saṃcintya tato mātraṣṭakaṃ yajet
+8.96cd: indrāṇīṃ pūrvapatre tu savajrāṃ yugapat smaret
+8.97ab: āgneyiṃ śaktihastāṃ tu yāmyāṃ daṇḍakarāṃ tataḥ
+8.97cd: nairṛtīṃ varuṇānīṃ ca vāyavīṃ ca vicakṣaṇaḥ
+8.98ab: khaḍgapāśadhvajair yuktāṃ cintayed yugapat priye
+8.98cd: kauverīṃ mudgarakarām īśānīṃ śūlasaṃyutām
+8.99ab: gandhapuṣpādibhiḥ pūjya svatantre homam ācaret
+8.99cd: ādau ca kalaśaṃ kuryāt sahasrādhikamantritam
+8.100ab: sahasraṃ homayet tatra tato japtvā visarjayet
+8.100cd: śatam aṣṭottaraṃ pūrṇaṃ paścād yajanam ārabhet
+8.101ab: tatrādau kumbham ādāya hemādimayam avraṇam
+8.101cd: sarvamantrauṣadhīgarbhaṃ gandhāmbuparipūritam
+8.102ab: cūtapallavavaktraṃ ca sraksūtrasitakaṇṭhakam
+8.102cd: rakṣoghnatilakākrāntaṃ sitavastrayugāvṛtam
+8.103ab: śatāṣṭottarasaṃjaptaṃ mūlamantraprapūjitam
+8.103cd: vārdhāny api tathābhūtā kiṃ tu sāstreṇa pūjitā
+8.104ab: vikirair āsanaṃ dattvā pūrvoktaṃ tu vicakṣaṇaḥ
+8.104cd: indrādīn pūjayet paścāt svadikṣu proktasasvaraiḥ
+8.105ab: avicchinnāṃ tato dhārāṃ vārdhānyā pratipādayet
+8.105cd: bhrāmayet kalaśaṃ paścād brūyal lokeśvarān idam
+8.106ab: bho bhoḥ śakra tvayā svasyāṃ diśi vighnapraśāntaye
+8.106cd: sāvadhānena karmāntaṃ bhavitavyaṃ śivājñayā
+8.107ab: nītvā tatrāsane pūrvaṃ mūrtibhūtaṃ ghaṭaṃ nyaset
+8.107cd: tasya dakṣiṇadigbhāge vārdhānīṃ viniveśayet
+8.108ab: ātmamūrtyādipūjyāntaṃ kumbhe vinyasya mantravit
+8.108cd: gandhapuṣpādibhiḥ pūjya vārdhānyāṃ pūjayed imam
+8.109ab: gandhair maṇḍalakaṃ kṛtvā brahmasthāne vicakṣanaḥ
+8.109cd: tatra saṃpūjayet ṣaṭkaṃ trikaṃ vāpy ekam eva vā
+8.110ab: kuṇḍasyollekhanaṃ lekhaḥ kuṭṭanaṃ copalepanam
+8.110cd: catuṣpathākṣavāṭaṃ ca vajrasaṃsthāpanaṃ tathā
+8.111ab: kuśāstaraṇaparidhiviṣṭarāṇāṃ ca kalpanam
+8.111cd: sarvam astreṇa kūrvīta vidyām oṃ hrīm iti nyaset
+8.112ab: śivam om iti vinyasya saṃpūjya dvitayaṃ punaḥ
+8.112cd: tāmrapātre śarāve vā ānayej jātavedasam
+8.113ab: śivaśukram iti dhyātvā vidyāyonau vinikṣipet
+8.113cd: tatas tv āhūtayaḥ pañca vidyāṅgair eva homayet
+8.114ab: jananādi tataḥ karma sarvam evaṃkṛte kṛtam
+8.114cd: parāparām anusmṛtya dadyāt pūrṇāhutiṃ punaḥ
+8.115ab: saṃpūjya mātaraṃ vahneḥ pitaraṃ ca visarjayet
+8.115cd: carvādisādhanāyāgniṃ samuddhṛtya tataḥ punaḥ
+8.116ab: jvalitasyāthavā vahneś citiṃ vāmena vāyunā
+8.116cd: ākṛṣya hṛdi saṃkumbhya dakṣiṇena punaḥ kṣipet
+8.117ab: pūrṇāṃ ca pūrvavad dadyāc chivāgner aparo vidhiḥ
+8.117cd: śivarūpaṃ tam ālokya tasyātmāntaḥkṛtiḥ kramāt
+8.118ab: kuryād antaḥkṛtiṃ mantrī tato homaṃ samārabhet
+8.118cd: mūlaṃ śatena saṃtarpya tadaṅgāni ṣaḍaṅgataḥ
+8.119ab: śeṣāṇāṃ mantrajātīnāṃ daśāṃśenaiva tarpaṇam
+8.119cd: tataḥ praveśayec chiṣyāñ śucīn snātānupoṣitān
+8.120ab: praṇamya devadeveśaṃ catuṣṭayagataṃ kramāt
+8.120cd: pañcagavyaṃ caruṃ dadyād dantadhāvanam eva ca
+8.121ab: hṛdayena caroḥ siddhir yājñikaiḥ kṣīrataṇḍulaiḥ
+8.121cd: saṃpātaṃ saptabhir mantrais tataḥ ṣaḍbhāgabhājitam
+8.122ab: śivāgniguruśiṣyāṇāṃ vārdhānīkumbhayoḥ samam
+8.122cd: dantakāṣṭhaṃ tato dadyāt kṣīravṛkṣasamudbhavam
+8.123ab: tasya pātaḥ śubhaḥ prācīsaumyaiśāpy ordhvadiggataḥ
+8.123cd: aśubho 'nyatra tatrāpi homo 'ṣṭaśatiko bhavet
+8.124ab: bahiḥkarma tataḥ kuryād dikṣu sarvāsu daiśikaḥ
+8.124cd: oṃ kṣaḥ kṣaḥ sarvabhūtebhyaḥ svāheti manunāmunā
+8.125ab: samācamya kṛtanyāsaḥ samabhyarcya ca śaṅkaram
+8.125cd: [lacuna] gṛhe śuciḥ
+8.126ab: nyāsaṃ kṛtvā tu śiṣyāṇām ātmanaś ca viśeṣataḥ
+8.126cd: prabhāte nityakarmādi kṛtvā svapnaṃ vicārayet
+8.127ab: śubhaṃ prakāśayet teṣāṃ aśubhe homam ācaret
+8.127cd: tataḥ puṣpaphalādīnāṃ suveśābharaṇāḥ striyaḥ
+8.128ab: āpaduttaraṇaṃ caiva śubhadeśāvarohaṇam
+8.128cd: madyapānaṃ śiraśchedam āmamāṃsasya bhakṣaṇam
+8.129ab: devatādarśanaṃ sākṣāt tathā viṣṭānulepanam
+8.129cd: evaṃvidhaṃ śubhaṃ dṛṣṭvā siddhiṃ prāpnoty abhīpsitām
+8.130ab: etad evānyathābhūtaṃ duḥsvapna iti kīrtyate
+8.130cd: pakvamāṃsāśanābhyaṅgagartādipatanādikam
+8.131ab: tantroktāṃ niṣkṛtiṃ kṛtvā dvijatvāpādanaṃ tataḥ
+8.131cd: devāgnigurudevīnāṃ pūjāṃ kṛtvā sadā budhaḥ
+8.132ab: eteṣām anivedyaiva na kiṃ cid api bhakṣayet
+8.132cd: devadravyaṃ gurudravyaṃ caṇḍīdravyaṃ ca varjayet
+8.133ab: niṣphalaṃ naiva ceṣṭeta muhūrtam api mantravit
+8.133cd: yogābhyāsarato bhūyān mantrābhyāsarato 'pi vā
+8.134ab: ity evam ādisamayāñ śrāvayitvā visarjayet
+8.134cd: devadevaṃ tataḥ snānaṃ śiṣyāṇām ātmano 'pi vā
+8.135ab: kārayec chivakumbhena sarvaduṣkṛtahāriṇā
+8.135cd: ity etat sāmayaṃ karma samāsāt parikīrtitam</p>
+
+<p> iti śrīmālinīvijayottare samayādhikāro 'ṣṭamaḥ sargaḥ</p>
+
+<p> kriyādikṣādhikāro navamaḥ</p>
+
+<p>9.1ab: athaiṣāṃ samayasthānāṃ kuryād dīkṣāṃ yada guruḥ
+9.1cd: tadādhivāsanaṃ kṛtvā [lacuna]
+9.2ab: sa ca pūrvaṃ diśaṃ samyak sūtram āsphālayet tataḥ
+9.2cd: tanmadhyāt pūrvavāruṇyā vaṅkayeta samāntaram
+9.3ab: pūrvāparasamāsena sūtreṇottaradakṣiṇam
+9.3cd: aṅkayed aparād aṅkād pūrvād api tathaiva te
+9.4ab: matsyamadhye kṣipet sūtram āyataṃ dakṣiṇottare
+9.4cd: matakṣetrārdhamānena madhyād dikṣv aṅkayet samam
+9.5ab: tadvad diksthāc ca koṇeṣu anulomavilomataḥ
+9.5cd: pātayet teṣu sūtrāṇi caturaśraprasiddhaye
+9.6ab: vedāśrite hi haste prāk pūrvam ardhaṃ vibhājayet
+9.6cd: hastārdhaṃ sarvatas tyaktvā pūrvodagyāmadiggatam
+9.7ab: guṇāṅgulasamair bhāgaiḥ śeṣam asya vibhājayet
+9.7cd: tryaṅgulaiḥ koṣṭakair ūrdhvais tiryak cāṣṭadvidhātmakaiḥ
+9.8ab: dvau dvau bhāgau parityajya punar dakṣiṇasaumyagau
+9.8cd: brahmaṇaḥ pārśvayor jīvāc caturthāt pūrvatas tathā
+9.9ab: bhāgārdhabhāgamānaṃ tu khaṇḍacandradvayaṃ dvayam
+9.9cd: tayor antas tṛtīye tu dakṣiṇottarapārśvayoḥ
+9.10ab: jīve khaṇḍenduyugalaṃ kuryād antarbhramād budhaḥ
+9.10cd: tayor aparamarmasthaṃ khaṇḍendudvayakoṭigam
+9.11ab: bahir mukhabhramaṃ kuryāt khaṇḍacandradvayaṃ dvayam
+9.11cd: tadvad brahmaṇi kurvīta bhāgabhāgārdhasaṃmitam
+9.12ab: tato dvitīyabhāgānte brahmaṇaḥ pārśvayor dvayoḥ
+9.12cd: dve rekhe pūrvage neye bhāgatryaṃśaśame budhaiḥ
+9.13ab: ekārdhendūrdhvakoṭisthaṃ brahmasūtrāgrasaṃgataṃ
+9.13cd: sūtradvayaṃ prakurvīta madhyaśṛṅgaprasiddhaye
+9.14ab: tadagrapārśvayor jīvāt sūtram ekāntare śritam
+9.14cd: ādidvitīyakhaṇḍendu koṇāt koṇāntam āśrayet
+9.15ab: tayor evāparāj jīvāt prathamārdhendukoṇataḥ
+9.15cd: tadvad eva nayet sūtraṃ śṛṅgadvitayasiddhaye
+9.16ab: kṣetrārdhe cāpare daṇḍo dvikaracchannapañcakaḥ
+9.16cd: dvikaraṃ pañca tadbhāgāḥ pañcapīṭhatirohitāḥ
+9.17ab: śeṣam anyad bhaved dṛśyaṃ pṛthutvād bhāgasaṃmitam
+9.17cd: ṣaḍvistṛtaṃ caturdīrghaṃ tadadho 'malasārakam
+9.18ab: vedāṅgulaṃ ca tadadho mūlaṃ tīkṣṇāgram iṣyate
+9.18cd: ādikṣetrasya kurvīta dikṣu dvāracatuṣṭayam
+9.19ab: hastāyāmaṃ tadardhaṃ tu vistarād api atasamam
+9.19cd: dviguṇaṃ bāhyataḥ kuryāt tataḥ padmaṃ yathā śṛṇu
+9.20ab: ekaikabhāgamānāni kuryād vṛttāni vedavat
+9.20cd: dikṣv aṣṭau punar apy aṣṭau jīvasūtrāṇi ṣoḍaśa
+9.21ab: dvayor dvayoḥ punar madhye tatsaṃkhyātāni pātayet
+9.21cd: eṣāṃ tṛtīyavṛttasthaṃ pārśvajīvasamaṃ bhramam
+9.22ab: etad antaṃ prakurvīta tato jīvāgram ānayet
+9.22cd: yatraiva kutra cit saṅgas tatsaṃbandhe sthirīkṛte
+9.23ab: tatra kṛtvā nayen mantrī patrāgrāṇāṃ prasiddhaye
+9.23cd: ekaikasmin dale kuryāt kesarāṇāṃ trayaṃ trayam
+9.24ab: dviguṇāṣṭāṅgulaṃ kāryaṃ tadvac chṛṅgakajatrayam
+9.24cd: tataḥ prapūjayen mantrī rajobhiḥ sitapūrakaiḥ
+9.25ab: raktaiḥ kṛṣṇais tathāpītair haritaiś ca viśeṣataḥ
+9.25cd: karṇikāḷpītavarṇena mūlamadhyāgradeśataḥ
+9.26ab: sitaṃ raktaṃ tathā pītaṃ kāryaṃ kesarajālakam
+9.26cd: dalāni śuklavarṇāni prativāraṇayā saha
+9.27ab: pītaṃ tadvac catuṣkoṇaṃ karṇikārdhasamaṃ bahiḥ
+9.27cd: sitaraktapītakṛṣṇais tatpādān vahnitaḥ kramāt
+9.28ab: caturbhir api śṛṅgāṇi tribhir maṇḍalam iṣyate
+9.28cd: daṇḍaḥ syān nīlaraktena pītamāmalasārakam
+9.29ab: raktaṃ śūlaṃ prakurvīta yat tat pūrvaṃ prakalpitam
+9.29cd: paścād dvārasya pūrveṇa tyaktvāṅgulacatuṣṭayam
+9.30ab: dvāraṃ vedāśri vṛttaṃ vā saṃkīrṇaṃ vā vicitritam
+9.30cd: ekadvitripuraṃ tulyaṃ sāmudgam atha vobhayam
+9.31ab: kapālakaṇṭhaśobhopa śobhādibahucitritam
+9.31cd: vicitrākārasaṃsthānaṃ vallīsūkṣmagṛhānvitam
+9.32ab: evam atra suniṣpanne gandhavastreṇa mārjanam
+9.32cd: kṛtvā snānaṃ prakurvīta pūrvoktenaiva karmaṇā
+9.33ab: praviśya pūrvavan mantrī upaviśya yathā purā
+9.33cd: nyasya pūrvoditaṃ sarvaṃ pañcadhā bhairavātmakam
+9.34ab: uttare vinyasec chṛṅge devadevaṃ navātmakam
+9.34cd: madhye bhairavasadbhāvaṃ dakṣiṇe ratiśekharam
+9.35ab: raktatvaṅmāṃsasūtrais tu vāmakarṇavibhūṣitam
+9.35cd: binduyuktaṃ prameyotaṃ ratiśekharam ādiśet
+9.36ab: śāktaṃ ca pūrvavat kṛtvā tarpayet pūrvavad budhaḥ
+9.36cd: punar abhyarcya deveśaṃ bhaktyā vijñāpayed idam
+9.37ab: gurutvena tvayaivāham ājñātaḥ parameśvara
+9.37cd: anugrāhyās tvayā śiṣyāḥ śivaśaktipracoditāḥ
+9.38ab: tad ete tadvidhāḥ prāptās tvam eṣāṃ kurv anugraham
+9.38cd: madīyāṃ tanum āviśya yenāhaṃ tvat samo bhavan
+9.39ab: karomy evam iti prokto harṣād utphullalocanaḥ
+9.39cd: tataḥ ṣaḍvidham adhvānam anenādhiṣṭhitaṃ smaret
+9.40ab: sṛṣṭyādipañcakarmāṇi niṣpādyāny asya cintayet
+9.40cd: śaktibhir jīvamūrtiḥ syād dvidhaivāsya parāparā
+9.41ab: mūrtāmūrtatvabhedena mām apy eṣānutiṣṭhati
+9.41cd: karaṇatvaṃ prayānty asya mantrā ye hṛdayādayaḥ
+9.42ab: evaṃbhūtaṃ śivaṃ dhyātvā tadgatenāntarātmanā
+9.42cd: bhāvyaṃ tanmayam ātmānaṃ daśadhāvartayec chivam
+9.43ab: triḥkṛtvā sarvamantrāṃś ca garbhāvaraṇasaṃsthitān
+9.43cd: sitoṣṇīṣaṃ tato buddhvā saptajaptaṃ navātmanā
+9.44ab: śivahastaṃ tataḥ kuryāt pāśaviśleṣakārakam
+9.44cd: prakṣālya gandhatoyena hastaṃ hastena kena cit
+9.45ab: gandhadigdho yajed devaṃ sāṅgam āsanavarjitam
+9.45cd: ātmany ālabhanaṃ kuryād grahaṇaṃ yojanaṃ tathā
+9.46ab: viyogaṃ ca tathoddhāraṃ pāśacchedādikaṃ ca yat
+9.46cd: evaṃ patitvam āsādya prapañcavyāptitaḥ śivam
+9.47ab: bhāvayet pṛthag ātmānaṃ tatsamānaguṇaṃ tataḥ
+9.47cd: maṇḍalastho 'ham evāyaṃ sākṣīvākhilakarmasu
+9.48ab: homādhikaraṇatvena vahnāv aham avasthitaḥ
+9.48cd: ā yāgāntam ahaṃ kumbhe saṃsthito vighnaśāntaye
+9.49ab: śiṣyadehe ca tatpāśa viśleṣatvaprasiddhaye
+9.49cd: sākṣāt svadehasaṃstho 'haṃ kartānugrahakarmaṇaḥ
+9.50ab: ity etat sarvam ālocya śodhyādhvānaṃ vicintayet
+9.50cd: dīkṣāṃ yenādhvanā mantrī śiṣyāṇāṃ kartum icchati
+9.51ab: tatraivālocayet sarvaṃ yāyāt padam anāmayam
+9.51cd: tatra tenāpṛthagbhūtvā punaḥ saṃcintayed idam
+9.52ab: aham eva paraṃ tattvaṃ mayi sarvam idaṃ jagat
+9.52cd: adhiṣṭhātā ca kartā ca sarvasyāham avasthitaḥ
+9.53ab: tatsamatvaṃ gato jantur mukta ity abhidhīyate
+9.53cd: evaṃ saṃcintya bhūyo 'pi śodhyam ādyaṃ samāśrayet
+9.54ab: śiṣyamaṇḍalavahnīnāṃ tatraikaṃ bhāvayet sthitam
+9.54cd: śodhyādhvānaṃ tu śiṣyāṇāṃ nyasya dehe puroktavat
+9.55ab: svena svenaiva mantreṇa svavyāptidhyānam āśrayet
+9.55cd: āgantu sahajaṃ śāktaṃ buddhvādau pāśapañjaraṃ
+9.56ab: bāhukaṇṭhaśikhāgreṣu triṣu (vṛt) triguṇatantunā
+9.56cd: svamantreṇa tatas tattvam āvāhyeṣṭvā pratarpya ca
+9.57ab: tatas tacchodhyayonīnāṃ vyāpinīṃ yoniṃ ānayet
+9.57cd: māyānte 'dhvani tām eva śuddhe vidyāṃ vicakṣaṇaḥ
+9.58ab: tasyāṃ saṃtarpaṇaṃ kṛtvā śiṣyam astreṇa tāḍayet
+9.58cd: ālabhya hṛdaye vidvāñ chivahastena taṃ punaḥ
+9.59ab: grahaṇaṃ tasya kūrvīta raśmimātrāviyogataḥ
+9.59cd: nāḍīmārgeṇa gatvā tu haṃhṛnmantrapuṭīkṛtam
+9.60ab: kṛtvātmasthaṃ tato yonau garbhādhānaṃ vicintayet
+9.60cd: tryarṇārdhākṣarayā mantrī sarvagarbhakriyānvitam
+9.61ab: bhogyabhoktṛtvasāmarthya niṣpattyā jananaṃ budhaḥ
+9.61cd: dakṣaśṛṅgasthayā mantrī prakurvīta sulocane
+9.62ab: pibatīpūrvikābhiś ca astrādyaiḥ parayāpi ca
+9.62cd: samyag āhutayo dadyād daśa pañca vicakṣaṇaḥ
+9.63ab: tato 'syāparayā kāryaṃ pāśavicchedanaṃ budhaiḥ
+9.63cd: bhuvaneśam athāmantrya tattveśvaram athāpi vā
+9.64ab: bhogabhāgā[lacuna] paścāt tam idam ādiśet
+9.64cd: bhuvaneśa tvayā nāsya sādhakasya śivājñayā
+9.65ab: pratibandhaḥ prakartavyo yātuḥ padam anāmayam
+9.65cd: utkṣepaṇaṃ tataḥ kuryāt tayaivādhyuṣṭavarṇayā
+9.66ab: avyāptimantrasaṃyogat pṛthaṅ mārgaviśuddhaye
+9.66cd: dadyād ekaikaśo dhyātvā āhutīnāṃ trayaṃ trayam
+9.67ab: tataḥ pūrṇāhutiṃ dadyāt parayā vauṣaḍantayā
+9.67cd: śiśum utkṣipya cātmasthaṃ taddehasthaṃ ca kārayet
+9.68ab: āhutīnāṃ trayaṃ dadyād dattvā pūrṇāhutiṃ budhaḥ
+9.68cd: mahāpāśupatāstreṇa vilomādiviśuddhaye
+9.69ab: visarjayitvā vāgīśīṃ tattvaṃ tu tadantaraṃ
+9.69cd: vilīnaṃ bhāvayec chuddhaṃ aśuddhe parameśvari
+9.70ab: kālāntavyāptisaṃśuddhau kṛtāyām evam ādarāt
+9.70cd: bāhupāśaṃ tu taṃ chittvā homayed ājyasaṃyutam
+9.71ab: māyātattve viśudhe tu kaṇṭhapāśe tathā budhaḥ
+9.71cd: māyāntamārgasaṃśuddhau dīkṣākarmaṇi sarvataḥ
+9.72ab: kriyāsv anuktamantrāsu yojayed aparām budhaḥ
+9.72cd: vidyādisakalānte ca tadvad eva parāparām
+9.73ab: yoyayen naiśvarād ūrdhvaṃ pibantyādikam aṣṭakam
+9.73cd: na cāpi sakalād ūrdhvam aṅgaṣaṭkaṃ vicakṣaṇaḥ
+9.74ab: niṣkale parayā kāryaṃ yat kiṃ cid vidhicoditam
+9.74cd: viśuddhe sakalānte tu śikhāṃ chittvā vicakṣaṇaḥ
+9.75ab: hutvā cājyaṃ tataḥ śiṣyaṃ snāpayed anupūrvataḥ
+9.75cd: ācamyābhyarcya deveśaṃ sruvam āpūrya sarpiṣā
+9.76ab: kṛtvā śiṣyaṃ tathātmasthaṃ mūlamantram anusmaret
+9.76cd: śivaśaktiṃ tathātmānaṃ śiṣyaṃ sarpis tathānalam
+9.77ab: ekīkurvañ chanair gacched dvādaśāntam ananyadhīḥ
+9.77cd: tatra kumbhakam āsthāya dhyāyan sakalaniṣkalam
+9.78ab: tiṣṭhet tāvad anudvigno yāvad ājyakṣayo bhavet
+9.78cd: evaṃ yukte pare tattve guruṇa śivamūrtinā
+9.79ab: na bhūyaḥ paśutāṃ eti dagdhamāyānibandhanaḥ
+9.79cd: vidhir eṣa samākhyāto dīkṣākarmaṇi bhauvane
+9.80ab: itarādhvavidhiṃ muktvā śivayogavidhiṃ tathā
+9.80cd: vilomakarma saṃtyajya dviguṇas tattvavartmani
+9.81ab: tadvac ca varṇamārge 'pi caturdhā padavartmani
+9.81cd: aṣṭadhā mantramārge 'pi kalākhye 'pi ca tad dvidhā
+9.82ab: trikhaṇḍe viṃśatiguṇaḥ sa eva parikīrtitaḥ
+9.82cd: iti sarvādhvasaṃśuddhiḥ samāsāt parikīrtitā
+9.83ab: sādhakācāryayoḥ karma kathyamānam ataḥ śṛṇu</p>
+
+<p> iti śrīmālinīvijayottare tantre kriyādīkṣādhikāro navamaḥ samāptaḥ</p>
+
+<p> abhiṣekādhikāro daśamaḥ</p>
+
+<p>10.1ab: atha lakṣaṇasaṃpannaṃ siddhisādhanatatparam
+10.1cd: śāstrajñaṃ saṃyataṃ dhīram alubdham aśaṭhaṃ dṛḍham
+10.2ab: aparīkṣya gurus tadvat sādhakatve niyojayet
+10.2cd: samabhyarcya vidhānena pūrvavat parameśvaram
+10.3ab: dvitīye pūrvavat kumbhaṃ hemādimayam avraṇam
+10.3cd: sarvatra madhyapadmasya dakṣiṇaṃ dalam āśritam
+10.4ab: nāyakānāṃ pṛthaṅ mantrān pūjayet kusumādibhiḥ
+10.4cd: taṃ saṃtarpya sahasreṇa prakuryād abhiṣecanam
+10.5ab: bhadrapīṭhe śubhe sthāpya śrīparṇe dārunirmite
+10.5cd: pūrvāmukham udagvaktraṃ snātaṃ puṣpādyalaṅkṛtam
+10.6ab: kṛtamantratanuḥ samyak samyak ca kṛtamaṅgalaḥ
+10.6cd: śaṅkhabheryādinirghoṣair vedamaṅgalanisvanaiḥ
+10.7ab: sarvarājopacāreṇa kṛtvā tasyābhiṣecanam
+10.7cd: sadāśivasamaṃ dhyātvā tatas tam api bhūṣayet
+10.8ab: punaḥ saṃpūjya deveśaṃ mantram asmai daded budhaḥ
+10.8cd: puṣpākṣatatilopetaḥ sajala[lacuna]śvaraṃ nyaset
+10.9ab: so 'pi mūrdhani taṃ tadvan mūrtim āśritya dakṣiṇam
+10.9cd: abhiṣicya tato 'streṇa rudraśaktiṃ prakāśayet
+10.10ab: sa tayāliṅgya tanmantraṃ sahasreṇa pratarpayet
+10.10cd: tadā prabhṛti tanniṣṭhas tatsamānaguṇo bhavet
+10.11ab: ācāryasyābhiṣeko 'yaṃ sa[lacuna]mantravidhiṃ vinā
+10.11cd: kiṃ tu tasya [lacuna] adhivāsapadānvitam
+10.12ab: evam etat padaṃ prāpyaṃ duṣprāpyam akṛtātmanām
+10.12cd: sādhako mantrasiddhyarthaṃ mantravratam upācaret
+10.13ab: evaṃ kṛtvābhiṣekoktaṃ snātvā vidyādhipaṃ japet
+10.13cd: lakṣam ekaṃ daśāṃśena tasya tarpaṇam ācaret
+10.14ab: pūrvavac cābhiṣekaṃ ca kṛtvā brahmaśiro japet
+10.14cd: tallakṣyas tanmayo bhūtvā lakṣadvayam atandritaḥ
+10.15ab: lakṣadvayaṃ ca rudrāṇīṃ catuṣkaṃ tu puruṣṭutam
+10.15cd: lakṣāṇāṃ pañcakaṃ devi mahāpāśupataṃ japet
+10.16ab: sitaraktapītakṛṣṇa vicitrāmbarabhūṣaṇaḥ
+10.16cd: tataḥ saṃrakṣito mantrair ebhir apratimo bhavet
+10.17ab: avācyaḥ sarvaduṣṭānāṃ mantratejopabṛṃhitaḥ
+10.17cd: evaṃ cīrṇavrato bhūtvā yaṃ sādhayitum icchati
+10.18ab: dattvārghaṃ tasya lakṣāṇāṃ japen navakam ādarāt
+10.18cd: uttamadravyahomāc ca taddaśāṃśena tarpaṇam
+10.19ab: mahākṣmāpapalāny āhur uttamādīni tadvidaḥ
+10.19cd: madhyame dviguṇaṃ kṛtvā triguṇaṃ kanyase 'pi ca
+10.20ab: ājyaguggulanṛsnehā mahāmāṃsasamāḥ matāḥ
+10.20cd: dadhibilvapayaḥpadmāḥ kṣmāsamāḥ parikīrtitāḥ
+10.21ab: dhātrīdurvāmṛtāmīnāḥ samyag ājyasamā matāḥ
+10.21cd: tilādyair atha kurvīta navaṣaṭtriguṇaṃ kramāt
+10.22ab: pūrvam evam imaṃ kṛtvā siddher arghaṃ daded budhaḥ
+10.22cd: dattvārghaṃ tu japet tāvad yāvat siddhir abhīpsitā
+10.23ab: lakṣeṇaikena pṛthvīśaḥ sabhṛtyabalavāhanaḥ
+10.23cd: vaśam ānīyate devi dvābhyāṃ rājyam avāpnuyāt
+10.24ab: tribhir nidhānasaṃsiddhiś caturbhir balasiddhayaḥ
+10.24cd: pañcabhir medinī sarvā ṣaḍbhir apsarasāṃ gaṇaḥ
+10.25ab: saptabhiḥ sapta lokāś ca daśabhis tatsamo bhavet
+10.25cd: pañcāśadbhis tato gacched avyaktāntaṃ maheśvari
+10.26ab: māyāntaṃ ṣaṣtibhir lakṣair īśvarāntam aśītibhiḥ
+10.26cd: sakalāvaniparyantaṃ koṭijaptasya siddhyati
+10.27ab: athavā vīracittaḥ syāt kṛtvā sevāṃ yathoditām
+10.27cd: kṛṣṇabhūtadine rātrau vidhim enaṃ samācaret
+10.28ab: kṛtvā pūrvoditaṃ yāgaṃ hutvā dravyam athottaram
+10.28cd: ūrdhvakāyo japen mantrī suniṣkampottarāmukhaḥ
+10.29ab: tāvad yāvat samāyātā yogeśvaryaḥ samantataḥ
+10.29cd: kṛtvā kalakalārāvam atighoraṃ sudāruṇam
+10.30ab: bhūmau nipatya tiṣṭhanti veṣṭyāntaḥ sādhakeśvaram
+10.30cd: tāsāṃ kṛtvā namaskāraṃ bhittvā vāmāṅgam ātmanaḥ
+10.31ab: tadutthena tatas tāsāṃ dattvārghaṃ tatsamo bhavet
+10.31cd: ācāryo 'pi ca ṣaṇmāsaṃ maunī pratidinaṃ caret
+10.32ab: daśa pañca ca ye mantrāḥ pūrvam uktā mayā tava
+10.32cd: pūrvanyāsena saṃnaddhas trikālaṃ vahnikāryakṛt
+10.33ab: dhyāyet pūrvoditaṃ śūlaṃ brahmacaryaṃ samāśritaḥ
+10.33cd: kṛtvā pūrvoditaṃ yāgaṃ triśaktiparimaṇḍalam
+10.34ab: abhiṣiñcet tadātmānam ādāv ante ca daiśikaḥ
+10.34cd: evaṃ cīrṇavrato bhūtvā mantrī mantravid uttamaḥ
+10.35ab: nigrahānugrahaṃ karma kurvan na pratihanyate
+10.35cd: śuddhayor vinyasen mūla madhyāditritaye trayam
+10.36ab: vāmāṅguṣṭhe tule netre tarjanyām astram eva ca
+10.36cd: akṣahrīm iti khaṇḍena śabdarāśiṃ niveśayet
+10.37ab: naphahrīm ityanenāpi śaktimūrtiṃ vicakṣaṇaḥ
+10.37cd: viparītamahāmudrā prayogān mūlam eva ca
+10.38ab: svasthāneṣu tathāṅgāni nyāsaḥ sāmānya ity ayam</p>
+
+<p>iti śrīmālinīvijayottare 'bhiṣekādhikāro daśamaḥ samāptaḥ</p>
+
+<p>dīkṣādhikāra ekādaśaḥ</p>
+
+<p>11.1ab: athātaḥ saṃpravakṣyāmi dīkṣāṃ paramadurlabhām
+11.1cd: bhuktimuktikarīṃ samyak sadyaḥpratyayakārikām
+11.2ab: nāsyāṃ maṇḍalakuṇādi kiṃ cid apy upayujyate
+11.2cd: na ca nyāsādikaṃ pūrvaṃ snānādi ca yathecchayā
+11.3ab: praviśya yāgasadanaṃ sūpaliptaṃ sucarcitam
+11.3cd: prāṅmukhodaṅmukho vāpi supuṣpāmbarabhūṣitaḥ
+11.4ab: dīptāṃ śaktim anusmṛtya pādāgrān mastakāvadhi
+11.4cd: mahāmudrāprayogena nirdagdhāṃ cintayet tanum
+11.5ab: anulomaprayogāc ca mālinīm amṛtaprabhām
+11.5cd: cintayet tanuniṣpattyai taddhyānagatamānasaḥ
+11.6ab: śodhyādhvānaṃ tato dehe pūrvoktam anucintayet
+11.6cd: tataḥ saṃśodhya vastūni śaktyaivāmṛtatāṃ nayet
+11.7ab: parāsaṃpuṭamadhyasthāṃ mālinīṃ sarvakarmasu
+11.7cd: yojayet vidhānajñaḥ parāṃ vā kevalāṃ priye
+11.8ab: gaṇeśaṃ pūjayitvā tu purā vighnapraśāntaye
+11.8cd: tataḥ svagurum ārabhya pūjayed gurupaddhatim
+11.9ab: gaṇeśādhas tataḥ sarvaṃ yajen mantrakadambakam
+11.9cd: tatpatīnāṃ tato 'rghaṃ tatraiva paripūjayet
+11.10ab: antyādhaḥ pūjayed vidyāṃ tadvad vidyāṃ maheśvarīm
+11.10cd: mantravidyāgaṇasyāntaḥ kulaśaktiṃ niveśayet
+11.11ab: pūrvayāmyāparodakṣu māheśyādicatuṣṭayam
+11.11cd: indrāṇīpūrvakaṃ tadvad aiśādidala antagam
+11.12ab: tatropari nyased devaṃ kūṭarūpāṇunāmunā
+11.12cd: jīvaṃ daṇḍasamākrāntaṃ śūlasyopari saṃsthitam
+11.13ab: dakṣāṅguliṃ tato 'dhastāt tato vāmapayodharam
+11.13cd: nābhikaṇṭhau tatodhastād vāmaskandhavibhūṣaṇau
+11.14ab: śivajihvānvitaḥ paścāt tadūrdhvoṣṭhena copari
+11.14cd: sarvayoginicakrāṇām adhipo 'yam udāhṛtaḥ
+11.15ab: asyāpy uccāraṇād eva saṃvittiḥ syāt paroditā
+11.15cd: tato vīrāṣṭakaṃ paścāc chaktyuktavidhinā yajet
+11.16ab: prabhūtair vividhair iṣṭvā gandhadhūpaiḥ sragādibhiḥ
+11.16cd: śrīkārapūrvakaṃ nāma pādāntaṃ parikalpayet
+11.17ab: tataḥ śiṣyaṃ samāhūya bahudhā suparīkṣitam
+11.17cd: rudraśaktyā tu saṃprokṣya devāgre viniveśayet
+11.18ab: bhujau tasya samālokya rudraśaktyā pradīpayet
+11.18cd: tathaivāpy arpayet puṣpaṃ karayor gandhadigdhayoḥ
+11.19ab: nirālambau tu tau dhyātvā śaktyākṛṣṭau vicintayet
+11.19cd: śaktimantritanetreṇa baddhvā netre tu pūrvavat
+11.20ab: tataḥ prakṣepayet puṣpaṃ sā śaktis tatkarasthitā
+11.20cd: yatra tat patate puṣpaṃ tatkulaṃ tasya lakṣayet
+11.21ab: mukham udghāṭya taṃ paścāt pādayoḥ pratipātayet
+11.21cd: tato 'sya mastake cakraṃ hastayoś cārcya yogavit
+11.22ab: taddhastau prerayec chaktyā yāvan mūrdhāntam āgatau
+11.22cd: śivahastavidhiḥ proktaḥ sadyaḥpratyayakārakaḥ
+11.23ab: carukaṃ dāpayet paścāṭ kharjūrādiphalodbhavam
+11.23cd: śaktyālambāṃ tanuṃ kṛtvā sthāpayed agrataḥ śiśoḥ
+11.24ab: puṣpakṣepaprayogena hastam ākṛṣya dakṣiṇam
+11.24cd: carukaṃ grāhayen mantrī taddhyānagatamānasaḥ
+11.25ab: śivahastaprayogena samāropya mukhaṃ nayet
+11.25cd: anenaiva vidhānena kṣīravṛkṣasamudbhavam
+11.26ab: dantakāṣṭhaṃ dadet devi ṣoḍaśāṅgulam āyatam
+11.26cd: eteṣāṃ cālanān mantrī śaktipātaṃ parīkṣayet
+11.27ab: mandatīvrādibhedena mandatīvrādikān budhaḥ
+11.27cd: ity ayaṃ samayī proktaḥ saṃsthitoktena vartmanā
+11.28ab: cikīrṣuś ca yadāḷdīkṣām asyaivārpitamānasaḥ
+11.28cd: tad iṣṭvā pūrvavad yogī kuleśaṃ tam anukramāt
+11.29ab: saṃpūjya pūrvavac chiṣyam ṛjudehe vilokayet
+11.29cd: śaktiṃ saṃcintya pādāgrān mastakāntaṃ vicakṣaṇaḥ
+11.30ab: śodhyādhvānaṃ tato nyasya sarvādhvavyāptibhāṣanām
+11.30cd: śaktitattvādibhedena pūrvoktena ca vartmanā
+11.31ab: upaviśya tatas tasya vidhānam idam ācaret
+11.31cd: mūlaśodhyāt samārabhya śaktiṃ dīptānalaprabhām
+11.32ab: yojayec chodhyasaṃśuddhi bhāvanāgatamānasaḥ
+11.32cd: evaṃ sarvāṇi śodhyāni nirdahantīm anāmayām
+11.33ab: śive saṃcintayel līnāṃ niṣkale sakale 'pi vā
+11.33cd: yoginā yojitā mārge svajātīyasya poṣaṇam
+11.34ab: kurute nirdahaty anyad bhinnajātikadambakam
+11.34cd: anayā śodhyamānasya śiṣyasyāsya mahāmatiḥ
+11.35ab: lakṣayec cihnasaṃghātam ānandādikam ādarāt
+11.35cd: ānanda udbhavaḥ kampo nidrā ghūrṇiś ca pañcamī
+11.36ab: evam āviṣṭayā śaktyā mandatīvrādibhedataḥ
+11.36cd: pāśastobhapaśugrahau prakurvīta yathecchayā
+11.37ab: gṛhītasya punaḥ kuryān niyogaṃ śeṣabhuktaye
+11.37cd: athavā kasya cin nāyam āveśaḥ saṃprajāyate
+11.38ab: tad enaṃ yugapac chaktyā sabāhyābhyantare dahet
+11.38cd: tayā saṃdahyamāno 'sau cchinnamūla iva drumaḥ
+11.39ab: patate kāśyapīpṛṣṭhe ākṣepaṃ vā karoty asau
+11.39cd: yasya tv evam api syān na taṃ caivopalavat tyajet
+11.40ab: pṛthaktattvavidhau dīkṣāṃ yogyatāvaśyavarjinaḥ
+11.40cd: tattvābhyāsavidhānena vakṣyamāṇena kārayet
+11.41ab: iti saṃdīkṣitasyāsya mumukṣoḥ śeṣavartanam
+11.41cd: kulakrameṣṭir ādeśyā pañcāvasthāsamanvitā
+11.42ab: bubhukṣos tu prakurvīta samyagyogābhiṣecanam
+11.42cd: tatreṣṭvā pūrvavad dehaṃ vistīrṇair vibudhair budhaiḥ [?]
+11.43ab: hemādidīpakān aṣṭau ghṛtenāruṇavartikān
+11.43cd: kulāṣṭakena saṃbodhya śivaṃ śaṅkhe prapūjayet
+11.44ab: sarvaratnauṣadhīgarbhe gandhāmbuparipūrite
+11.44cd: tenābhiṣecayet taṃ tu śivahastoktavartmanā
+11.45ab: ācāryasyābhiṣeko 'yam adhikārapadānvitaḥ
+11.45cd: kuryāt piṇḍādibhis tadvac catuḥṣaṣṭiṃ pradīpakān
+11.46ab: abhiṣiktavidhāv eva sarvayogigaṇena tu
+11.46cd: viditau bhavatas tatra gurur mokṣaprado bhavet
+11.47ab: anayoḥ kathayej jñānaṃ trividhaṃ sarvam apy alam
+11.47cd: svakīyājñāṃ daded yogī svakriyākaraṇaṃ prati</p>
+
+<p> iti śrīmālinīvijayottare tantre dīkṣādhikāra ekādaśaḥ samāptaḥ</p>
+
+<p>dhāraṇādhikāro dvādaśaḥ</p>
+
+<p>12.1ab: athaitāṃ devadevasya śrutvā vācam atisphuṭām
+12.1cd: praharṣotphullanayanā jagadānandakāriṇī
+12.2ab: saṃtoṣāmṛtasaṃtṛptā devī devagaṇārcitā
+12.2cd: praṇamyāndhakahantāraṃ punar āheti bhāratīm
+12.3ab: pūrvam eva tvayā proktaṃ yogī yogaṃ samabhyaset
+12.3cd: tasyābhyāsaḥ kathaṃ kāryaḥ kathyatāṃ tripurāntaka
+12.4ab: evam ukto jagaddhātryā bhairavo bhayanāśanaḥ
+12.4cd: prāha prasannagambhīrāṃ giram etām udāradhīḥ
+12.5ab: yogābhyāsavidhiṃ devi kathyamānaṃ mayā śṛṇu
+12.5cd: sthirībhūtena yeneha yogī siddhim avāpsyati
+12.6ab: guhāyāṃ bhūgṛhe vāpi niḥśabde sumanorame
+12.6cd: sarvabādhāvinirmukte yogī yogaṃ samabhyaset
+12.7ab: jitāsano jitamanā jitaprāṇo jitendriyaḥ
+12.7cd: jitanidro jitakrodho jitodvego gatavyathaḥ
+12.8ab: lakṣyabhedena vā sarvam athavā cittabhedataḥ
+12.8cd: dharādiśaktiparyantaṃ yogīśas tu prasādhayet
+12.9ab: vyomavigrahabindvarṇabhuvanadhvanibhedataḥ
+12.9cd: lakṣyabhedaḥ smṛtaḥ ṣoḍhā yathāvad upadiśyate
+12.10ab: bāhyābhyantarabhedena samuccayakṛtena ca
+12.10cd: trividhaṃ kīrtitaṃ vyoma daśadhā bindur iṣyate
+12.11ab: kadambagolakākāraḥ sphurattārakasaprabhaḥ
+12.11cd: śuklādibhedabhedena eko 'pi daśadhā mataḥ
+12.12ab: ciñcinīcīravākādiprabhedād daśadhā dhvaniḥ
+12.12cd: vigrahaḥ svāṇubhedāc ca dvidhā bhinno 'py anekadhā
+12.13ab: bhuvanānāṃ na saṅkhyāsti varṇānāṃ sā śatārdhikā
+12.13cd: ekasminn api sādhye vai lakṣed atrānuṣaṅgataḥ
+12.14ab: anyāny api phalāni syur lakṣyabhedaḥ sa ucyate
+12.14cd: ekam eva phalaṃ yatra cittabhedas tv asau mataḥ
+12.15ab: homadīkṣāviśuddhātmā samāveśopadeśavān
+12.15cd: yaṃ siṣādhayiṣur yogam ādāv eva samācaret
+12.16ab: hastayos tu parābījaṃ nyasya śaktim anusmaret
+12.16cd: mahāmudrāprayogena viparītavidhau budhaḥ
+12.17ab: jvaladvahnipratīkāśāṃ pādāgrān mastakāntikam
+12.17cd: namaskāraṃ tataḥ paścād baddhvā hṛdi dhṛtānilaḥ
+12.18ab: svarūpeṇa parābījam atidīptam anusmaret
+12.18cd: tasya mātrātrayaṃ dhyāyet kakhatrayavinirgatam
+12.19ab: tatas tālaśatād yogī samāveśam avāpnuyāt
+12.19cd: brahmaghno 'pi hi saptāhāt prativāsaram abhyaset
+12.20ab: evam āviṣṭadehas tu yathoktaṃ vidhim ācaret
+12.20cd: yaḥ punar guruṇaivādau kṛtāveśavidhikramaḥ
+12.21ab: sa vāsanānubhāvena bhūmikājayam ārabhet
+12.21cd: gaṇanāthaṃ namaskṛtya saṃsmṛtya trigurukramam
+12.22ab: samyag āviṣṭadehaḥ syād iti dhyāyed ananyadhīḥ
+12.22cd: svadehaṃ hemasaṅkāśaṃ turyāśraṃ vajralāñchitam
+12.23ab: tato gurutvam āyāti saptaviṃśatibhir dinaiḥ
+12.23cd: divasāt saptamād ūrdhvaṃ jaḍatā cāsya jāyate
+12.24ab: ṣaḍbhir māsair jitavyādhir drutahemanibho bhavet
+12.24cd: vajradehas tribhiś cābdair navanāgaparākramaḥ
+12.25ab: eṣā te pārthivī śuddhā dhāraṇā parikīrtitā
+12.25cd: ādyā pūrvodite devi bhede pañcadaśātmake
+12.26ab: savyāpāraṃ smared dehaṃ drutahemasamaprabham
+12.26cd: upaviṣṭaṃ ca turyāśre maṇḍale vajrabhūṣite
+12.27ab: saptāhād gurutām eti māsād vyādhivivarjitaḥ
+12.27cd: ṣaḍbhir māsair dharāntaḥsthaṃ sarvaṃ jānāti tattvataḥ
+12.28ab: tribhir abdair mahīṃ bhuṅkte saptāmbhonidhimekhalām
+12.28cd: dvitīyaḥ kathito bhedas tṛtīyam adhunā śṛṇu
+12.29ab: tadvad eva smared dehaṃ kiṃ tu vyāpāravarjitam
+12.29cd: pūrvoktaṃ phalam āpnoti tadvat pātālasaṃyutam
+12.30ab: caturthe hṛdgataṃ dhyāyed dvādaśāṅgulam āyatam
+12.30cd: pūrvavarṇasvarūpeṇa savyāpāram atandritaḥ
+12.31ab: prāpya pūrvoditaṃ sarvaṃ pātālādhipatir bhavet
+12.31cd: tad eva sthiram āpnoti nirvyāpāre tu pañcame
+12.32ab: sphuratsūryanibhaṃ pītaṃ ṣaṣṭhe kṛṣṇaghanāvṛtam
+12.32cd: nistaraṅgaṃ smaret tadvat saptame 'pi vicakṣaṇaḥ
+12.33ab: dvaye 'py atra sthirībhūte bhūr bhuvaḥ svar iti trayam
+12.33cd: vetti bhuṅkte ca lokānāṃ puroktair eva vatsaraiḥ
+12.34ab: sakalaṃ hṛdayāntaḥstham ātmānaṃ kanakaprabham
+12.34cd: svaprabhādyotitāśeṣa dehāntam anucintayet
+12.35ab: savyāpārādibhedena saptalokīṃ tu pūrvavat
+12.35cd: vetti bhuṅkte sthirībhūte bhede 'smin navame budhaḥ
+12.36ab: ravibimbanibhaṃ pītaṃ pūrvavad dvitayaṃ smaret
+12.36cd: brahmalokam avāpnoti pūrvoktenaiva vartmanā
+12.37ab: adhaḥprakāśakaṃ pītaṃ dvirūpaṃ pūrvavan mahat
+12.37cd: cintayen matsamo bhūtvā mallokam anugacchati
+12.38ab: sabāhyābhyantaraṃ pītaṃ tejaḥ sarvaprakāśakam
+12.38cd: cintayec chatarudrāṇām adhipatvam avāpnuyāt
+12.39ab: ity evaṃ pṛthivītattvam abhyasyaṃ daśapañcadhā
+12.39cd: yogibhir yogasiddhyarthaṃ tatphalāni bubhukṣayā
+12.40ab: yogyatāvaśagā jātā yasya yatraiva vāsanā
+12.40cd: sa tatraiva niyoktavyo dīkṣākāle vicakṣaṇaiḥ
+12.41ab: yo yatra yojitas tattve sa tasmān na nivartate
+12.41cd: tatphalaṃ sarvam āsādya śivayukto 'pavṛjyate
+12.42ab: ayukto 'py adhvasaṃśuddhiṃ saṃprāpya bhuvaneśataḥ
+12.42cd: śuddhaḥ śivatvam āyāti dagdhasaṃsārabandhanaḥ</p>
+
+<p>iti śrīmālinīvijayottare tantre prathamadhāraṇādhikāro dvādaśaḥ
+samāptaḥ</p>
+
+<p>jalādimahābhūtajayādhikāras trayodaśaḥ</p>
+
+<p>13.1ab: athātaḥ sampravakṣyāmi dhāraṇāṃ vāruṇīm imām
+13.1cd: yayā saṃsiddhayogena jalāntādhipatir bhavet
+13.2ab: jalāntaḥsthaṃ smared dehaṃ sitaṃ śītaṃ suvartulam
+13.2cd: sabāhyābhyantaraṃ yogī nānyad astīti cintayet
+13.3ab: evam abhyasyatas tasya saptāhāt klinnatā bhavet
+13.3cd: pittavyādhiparityakto māsena bhavati dhruvam
+13.4ab: snigdhāṅgaḥ snigdhadṛṣṭiś ca nīlakuñcitamūrdhajaḥ
+13.4cd: bhavaty abdena yogīndras tribhir varṣati meghavat
+13.5ab: ity eṣā vāruṇī proktā prathamā śuddhadhāraṇā
+13.5cd: adhunā saṃpravakṣyāmi bhedair bhinnām imāṃ punaḥ
+13.6ab: pūrvavac cintayed dehaṃ savyāpāraṃ sitaṃ svakam
+13.6cd: jalopari sthitaṃ devi tadgatenāntarātmanā
+13.7ab: saptāhān mucyate rogaiḥ sarvaiḥ pittasamudbhavaiḥ
+13.7cd: ṣaṇmāsāj jāyate sthairyaṃ yadi tanmayatāṃ gataḥ
+13.8ab: jalāvaraṇavijñānam abdair asya tribhir bhavet
+13.8cd: nirvyāpāraprabhede 'pi sarvatra varuṇopamaḥ
+13.9ab: sa yāti vāruṇaṃ tattvaṃ bhūmikāḥ kramaśo 'bhyaset
+13.9cd: pūrvavat kaṇṭhamadhyastham ātmānaṃ dvādaśāṅgulam
+13.10ab: saṃsmarañ jalatattveśaṃ prapaśyaty acirād dhruvam
+13.10cd: taddṛṣṭiḥ sthiratām eti svarūpe pañcame sthire
+13.11ab: dvibhede 'pi sthirībhūte candrabimbe ghanāvṛte
+13.11cd: tatsamānatvam abhyeti tataḥ sakalarūpiṇī
+13.12ab: cintyate deham āpūrya sitavarṇena tejasā
+13.12cd: tad eva sthiratām eti tatra susthiratāṃ gate
+13.13ab: ghanamuktendubimbābhaṃ tataḥ samanucintayet
+13.13cd: tatpatitvaṃ samabhyeti dvitīye sthiratāṃ vrajet
+13.14ab: adhaḥprakāśakaṃ śuklaṃ tatas tejo vicintayet
+13.14cd: vidyeśvaratvam āpnoti jalāvaraṇasaṃbhavam
+13.15ab: svadehavyāpini dhyāte tatrasthe śuklatejasi
+13.15cd: sarvādhipatyam āpnoti susthire tatra susthiram
+13.16ab: dhyeyatattvasamānatvam avasthātritaye sthire
+13.16cd: dvitaye ca tadīśāna saṃvittir upajāyate
+13.17ab: dvitaye 'nyatra tattulyaḥ sthiro bhavati yogavit
+13.17cd: ṣaṭke sarveśatām eti dvitaye 'nyatra tu cyutiḥ
+13.18ab: ity ayaṃ sarvatattveṣu bhede pañcadaśātmake
+13.18cd: jñeyo vidhir vidhānajñaiḥ phalapañcakasiddhidaḥ
+13.19ab: tat phalāntaram etasmād uktaṃ yac cāpi vakṣyate
+13.19cd: anuṣaṅgaphalaṃ jñeyaṃ tat sarvam avicārataḥ
+13.20ab: itīyaṃ vāruṇī proktā prabhedair daśapañcabhiḥ
+13.20cd: yogināṃ yogasiddhyartham āgneyīm adhunā śṛṇu
+13.21ab: trikoṇaṃ cintayed dehaṃ raktajvālāvalīdharam
+13.21cd: svaśarīrotthito vahnir jvalan vai sarvadāhakaḥ
+13.22ab: saptabhir divasair devi taikṣṇyam asyopajāyate
+13.22cd: vātaśleṣmabhavaiḥ sarvair māsān mucyati sādhakaḥ
+13.23ab: nidrāhīnaś ca bahvāśī svalpaviṇmūtrakṛd bhavet
+13.23cd: icchayā nirdahed yad yat spṛṣṭaṃ vastu ṛtukṣayāt
+13.24ab: tryabdād agnisamo bhūtvā krīḍaty agnir yathecchayā
+13.24cd: sarvaṃ nirdahati kruddhaḥ saśailavanakānanam
+13.25ab: trikoṇamaṇḍalārūḍham ātmānam anucintayet
+13.25cd: savyāpārādibhedena sarvatrāpi vicakṣaṇaḥ
+13.26ab: saptāhād vyādhibhir hīnaḥ ṣaṇmāsād agnivad bhavet
+13.26cd: tribhir abdaiḥ sa saṃpūrṇaṃ tejastattvaṃ prapaśyati
+13.27ab: yacchaktibhede yad dṛṣṭaṃ tat tadbhede sthirībhavet
+13.27cd: pūrvavat tālumadhyastham ātmānaṃ jvalanaprabham
+13.28ab: dhyāyan prapaśyate tejas tattveśān akhilān kramāt
+13.28cd: dhūmākrāntāgnisaṃkāśaṃ ravibimbasamākṛtim
+13.29ab: dhyāyaṃs tanmadhyatas tejas tattveśasamatāṃ vrajet
+13.29cd: prabhāhatatamojālaṃ vidhūmāgnisamaprabham
+13.30ab: tatraiva sakalaṃ dhyāyet tatpatitvam avāpnuyāt
+13.30cd: divasāgniprabhākāraṃ tatra tejo vicintayet
+13.31ab: tanmantreśvaratām eti tatra susthiratām gataḥ
+13.31cd: maṇipradīpasaṃkāśaṃ tejas tatra prakāśayet
+13.32ab: mantreśeśatvam abhyeti yogī tanmayatāṃ gataḥ
+13.32cd: sabāhyābhyantaraṃ tejo dhyāyan sarvatra tadgataḥ
+13.33ab: tasmān na cyavate sthānād āsaṃhāram akhaṇḍitaḥ
+13.33cd: saṃhāre tu paraṃ śāntaṃ padam abhyeti śāṅkaram
+13.34ab: ity eṣā pañcadaśadhā kathitā vahnidhāraṇā
+13.34cd: svadehaṃ cintayet kṛṣṇaṃ vṛttaṃ ṣaḍbindulāñchitam
+13.35ab: calaṃ sacūcūśabdaṃ ca vāyavīṃ dhāraṇāṃ śritaḥ
+13.35cd: calatvaṃ kaphajavyādhivicchedād vāyuvad bhavet
+13.36ab: ṣaṇmāsam abhyased yogī tadgatenāntarātmanā
+13.36cd: yojanānāṃ śataṃ gatvā muhūrtād ety akhedataḥ
+13.37ab: vatsarais tu tribhiḥ sākṣād vāyurūpadharo bhavet
+13.37cd: cūrṇayaty adrisaṃghātaṃ vṛkṣān unmūlayaty api
+13.38ab: kruddhaś cālayate śakraṃ sabhṛtyabalavāhanam
+13.38cd: nīlāñjananibhaṃ deham ātmīyam anucintayet
+13.39ab: pūrvoktaṃ sarvam āpnoti ṣaṇmāsān nātra saṃśayaḥ
+13.39cd: tryabdāt prapaśyate vāyu tattvaṃ tanmayatāṃ gataḥ
+13.40ab: bhruvor madhye smared rūpam ātmano 'ñjanasaṃnibham
+13.40cd: paśyate vāyutattveśān āśugān akhilān api
+13.41ab: ghanāvṛtendranīlābharavibimbasamākṛtim
+13.41cd: dhyāyaṃs tatsamatām eti tatsaṃlīno yadā bhavet
+13.42ab: bhinnendranīlasaṃkāśaṃ sakalaṃ tatra cintayet
+13.42cd: tanmantreśatvam āpnoti tatas tasyeśatām api
+13.43ab: sarvavyāpini tadvarṇe dhyāte tejasy avāpnuyāt
+13.43cd: tadāpradhṛṣyatām eti tatrādhordhvavisarpiṇi
+13.44ab: itīyaṃ kathitā divyā dhāraṇā vāyusambhavā
+13.44cd: svadehaṃ vāyuvad dhyātvā tadabhāvam anusmaran
+13.45ab: divasaiḥ saptabhir yogī śūnyatāṃ pratipadyate
+13.45cd: māsamātreṇa bhogīndrair api daṣṭo na muhyati
+13.46ab: sarvavyādhiparityakto valīpalitavarjitaḥ
+13.46cd: ṣaṇmāsād gaganākāraḥ sūkṣmarandhrair api vrajet
+13.47ab: vatsaratritayāt sākṣād vyomavac ca bhaviṣyati
+13.47cd: icchayaiva mahākāyaḥ sūkṣmadehas tathecchayā
+13.48ab: acchedyaś cāpy abhedyaś ca cchidrāṃ paśyati medinīm
+13.48cd: śatapuṣparasocchiṣṭam ūṣāgarbhakhavan nijam
+13.49ab: dehaṃ cintayatas tryabdād vyomajñānaṃ prajāyate
+13.49cd: pūrvoktaṃ ca phalaṃ sarvaṃ saptāhādikam āpnuyāt
+13.50ab: lalāṭe cintayet tadvad dvādaśāṅgulam āyatam
+13.50cd: tattattveśān kramāt sarvān prapaśyaty agrataḥ sthitān
+13.51ab: rāhugrastendubimbābhaṃ dhyāyaṃs tatsamatāṃ vrajet
+13.51cd: sakalaṃ candrabimbābham tatrastham anucintayet
+13.52ab: tanmantreśatvam āpnoti jyotsnayā cendratām api
+13.52cd: tayaivādhovisarpiṇyā sabāhyābhyantaraṃ budhaḥ
+13.53ab: mantreśvareśatām āpya vijñānam atulaṃ labhet
+13.53cd: tayā cordhvavisarpiṇyā jyotsnayāmṛtarūpayā
+13.54ab: svatantratvam anuprāpya na kva cit pratihanyate
+13.54cd: ity evaṃ pañcatattvānāṃ dhāraṇāḥ parikīrtitāḥ
+13.55ab: śuddhādyasthā tu saṃvittir bhūtāveśo 'tra pañcadhā
+13.55cd: tāsv eva saṃdadhac cittaṃ viṣādikṣaya ātmanaḥ
+13.56ab: anyasyām api saṃvittau yasyām eva nijecchayā
+13.56cd: cetaḥ samyak sthirīkuryāt tayā tatphalam aśnute
+13.57ab: ekāpi bhāvyamāneyam avāntaravibhedataḥ
+13.57cd: antarāyatvam abhyeti tatra kuryān na saṃsthitim
+13.58ab: saṃsthitiṃ tatra kurvanto na prāpsyanty uttamaṃ phalam
+13.58cd: dhāraṇāpañcake siddhe piśācādyā guṇāṣṭakāḥ
+13.59ab: aindrāntāḥ pañca siddhyanti yogināṃ bhedato 'pi vā
+13.59cd: iṣṭāḥ pañcadaśāvasthāḥ krameṇaiva samabhyasan
+13.60ab: tryabdād ādyāṃ prasādhyānyāṃ dvābhyām ekena cāparām
+13.60cd: ṣaṇmāsāt pañcabhiś cānyāṃ caturbhis tribhir eva ca
+13.61ab: dvābhyām ekena pakṣeṇa daśabhiḥ pañcabhir dinaiḥ
+13.61cd: tribhir dvābhyām athaikena vyastecchoḥ pūrvavat kramaḥ
+13.62ab: śāśvataṃ padam āpnoti bhuktvā siddhiṃ yathepsitām</p>
+
+<p>iti śrīmālinīvijayottare tantre bhūtajayādhikāras trayodaśaḥ samāptaḥ</p>
+
+<p>tanmātradhāraṇādhikāraś caturdaśaḥ</p>
+
+<p>14.1ab: atha gandhādipūrvāṇāṃ tanmātrāṇām anukramāt
+14.1cd: dhāraṇāḥ saṃpravakṣyāmi tatphalānāṃ prasiddhaye
+14.2ab: pītakaṃ gandhatanmātraṃ turyāśraṃ parvasaṃmitam
+14.2cd: nāsārandhrāgragaṃ dhyāyed vajralāñchanalāñchitam
+14.3ab: daśamād divasād ūrdhvaṃ yogino 'nanyacetasaḥ
+14.3cd: kvāpi gandhaḥ samāyāti dvidhābhūto 'py anekadhā
+14.4ab: tato 'sya ṛtumātreṇa śuddho gandhaḥ sthirībhavet
+14.4cd: ṣaḍbhir māsaiḥ svayaṃ gandha maya eva bhaviṣyati
+14.5ab: yo yatra rocate gandhas taṃ tatra kurute bhṛśam
+14.5cd: tryabdāt siddhim avāpnoti prepsitāṃ pāñcabhautikīm
+14.6ab: tadūrdhvam ātmano rūpaṃ tatra saṃcintayed yadi
+14.6cd: gandhāvaraṇavijñānaṃ tribhir abdair avāpnuyāt
+14.7ab: īṣaddīptiyutaṃ tatra tanmaṇḍalavivarjitam
+14.7cd: dhyāyan prapaśyate sarvān gandhāvaraṇavāsinaḥ
+14.8ab: dharātattvoktabimbābhaṃ tatraivam anucintayan
+14.8cd: tatsamānatvam abhyeti pūrvavad dvitaye sthire
+14.9ab: svarūpaṃ tatra saṃcintya bhāsayantam adhaḥsthitam
+14.9cd: tadīśatvam avāpnoti pūrvoktenaiva vartmanā
+14.10ab: dharātattvoktavat sarvam ata ūrdhvam anusmaran
+14.10cd: tadrūpaṃ phalam āpnoti gandhāvaraṇasaṃsthitam
+14.11ab: rasarūpām ato vakṣye dhāraṇāṃ yogisevitām
+14.11cd: yayā sarvarasāvāptir yoginaḥ saṃprajāyate
+14.12ab: jalabudbudasaṃkāśaṃ rājanāḍyagrasaṃsthitaṃ
+14.12cd: cintayed rasatanmātraṃ jihvāgrādhāram ātmanaḥ
+14.13ab: suśītaṃ ṣaḍrasaṃ snigdhaṃ tadgatenāntarātmanā
+14.13cd: tato 'sya māsamātreṇa rasāsvādaḥ pravartate
+14.14ab: lavaṇādīn parityajya yadā madhuratāṃ gataḥ
+14.14cd: tadā tan nigiran yogī ṣaṇmāsān mṛtyujid bhavet
+14.15ab: jarāvyādhivinirmuktaḥ kṛṣṇakeśo 'cyutadyutiḥ
+14.15cd: jīved ācandratārārkam abhyasyaṃś ca kva cit kva cit
+14.16ab: pūrvoktabudbudākāraṃ svarūpam anucintayan
+14.16cd: nīrāvaraṇavijñānam āpnotīti kim adbhutam
+14.17ab: tam eva dyutisaṃyuktaṃ dhyāyann ādhāravarjitam
+14.17cd: paśyate vatsaraiḥ sarvaṃ rasāvaraṇam āśritam
+14.18ab: jalatattvoktabimbādi tadūrdhvam anucintayan
+14.18cd: pūrvoktaṃ sarvam āpnoti rasāvaraṇajaṃ sphuṭam
+14.19ab: ato rūpavatīṃ vakṣye divyadṛṣṭipradāṃ śubhām
+14.19cd: dhāraṇāṃ sarvasiddhyarthaṃ rūpatanmātram āśritām
+14.20ab: ekāntastho yadā yogī bahirmīlitalocanaḥ
+14.20cd: śaratsaṃdhyābhrasaṃkāśaṃ yat tat kiṃ cit prapaśyati
+14.21ab: tatra cetaḥ samādhāya yāvad āste daśāhnikam
+14.21cd: tāvat sa paśyate tatra bindūn sūkṣmatamān api
+14.22ab: ke cit tatra sitā raktāḥ pītā nīlās tathāpare
+14.22cd: tān dṛṣṭvā teṣu saṃdadhyān mano 'tyantam ananyadhīḥ
+14.23ab: ṣaṇmāsāt paśyate teṣu rūpāṇi subahūni ca
+14.23cd: tryabdāt tāny eva tejobhiḥ pradīptāni sthirāṇi ca
+14.24ab: tāny abhyasyaṃs tato dvyabdād bimbākārāṇi paśyati
+14.24cd: tato 'bdāt paśyate tejaḥ ṣaṇmāsāt puruṣākṛti
+14.25ab: trimāsād vyāpakaṃ tejo māsāt sarvaṃ visarpitam
+14.25cd: kālakramāc ca pūrvoktaṃ rūpāvaraṇam āśritam
+14.26ab: sarvaṃ phalam avāpnoti divyadṛṣṭiś ca jāyate
+14.26cd: itīyaṃ kalpanāśūnyā dhāraṇākṛtakoditā
+14.27ab: daśapañcavidho bhedaḥ svayam evātra jāyate
+14.27cd: ato 'syāṃ niścayaṃ kuryāt kim anyaiḥ śāstraḍambaraiḥ
+14.28ab: ataḥ sparśavatīm anyāṃ kathayāmi tavādhunā
+14.28cd: dhāraṇāṃ tu yayā yogī vajradehaḥ prajāyate
+14.29ab: ṣaṭkoṇamaṇḍalāntaḥstham ātmānaṃ paribhāvayet
+14.29cd: rūkṣam añjanasaṃkāśaṃ pratyaṅgasphuritākulam
+14.30ab: tato 'sya daśabhir devi divasais tvaci sarvataḥ
+14.30cd: bhavet pipīlikāsparśas tatas tam anucintayan
+14.31ab: vajradehatvam āsādya pūrvoktaṃ pūrvaval labhet
+14.31cd: pūrvoktamaṇḍalākāraṃ pūrvarūpaṃ vicintayan
+14.32ab: sparśatattvāvṛtijñānaṃ labhan kena nivāryate
+14.32cd: hīnamaṇḍalam ātmānaṃ dhyāyet tatpatisiddhaye
+14.33ab: yayā saṃsiddhayā sarva sparśavedī bhaviṣyati
+14.33cd: karṇau pidhāya yatnena nimīlitavilocanaḥ
+14.34ab: saṃśṛṇoti mahāghoṣaṃ cetas tatrānusaṃdadhet
+14.34cd: dīpyate jāṭharo vahnis tato 'sya daśabhir dinaiḥ
+14.35ab: dūrāc chravaṇavijñānaṃ ṣaṇmāsād upajāyate
+14.35cd: yas tasyānte dhvanir mandaḥ kiṃ cit kiṃ cid vibhāvyate
+14.36ab: sakalātmā sa vijñeyas tadabhyāsād ananyadhīḥ
+14.36cd: śabdāvaraṇavijñānam āpnoti sthiratāṃ gatam
+14.37ab: yaḥ punaḥ śrūyate śabdas tadante śaṅkhanādavat
+14.37cd: pralayākalarūpaṃ tad abhyasyaṃ tatphalepsubhiḥ
+14.38ab: sa evātitarām anyaśabdapracchādako yadā
+14.38cd: vijñānākala ity uktas tadāsāv aparājite
+14.39ab: manohlādakaro yo 'nyas tadante saṃvibhāvyate
+14.39cd: sa mantra iti vijñeyo yogibhir yogakāṅkṣibhiḥ
+14.40ab: tatas tu śrūyate yo 'nyaḥ śāntaghaṇṭāninādavat
+14.40cd: sa mantreśa iti proktaḥ sarvasiddhiphalapradaḥ
+14.41ab: ghaṇṭānādavirāmānte yaḥ śabdaḥ saṃprajāyate
+14.41cd: mantreśeśapadaṃ tad dhi siddhīnāṃ kāraṇaṃ mahat
+14.42ab: anilenāhatā vīṇā yādṛṅ nādaṃ vimuñcati
+14.42cd: tādṛśo yo dhvanis tatra taṃ vidyāc chāmbhavaṃ padaṃ
+14.43ab: pṛthag vā kramaśo vāpi sarvān etān samabhyaset
+14.43cd: prāpnoti sarvavit siddhīḥ śabdāvaraṇam āśritāḥ
+14.44ab: ity etāḥ kathitāḥ pañca tanmātrāṇāṃ tu dhāraṇāḥ</p>
+
+<p>iti śrīmālinīvijayottare tantre tanmātradhāraṇādhikāraś caturdaśaḥ
+samāptaḥ</p>
+
+<p>akṣadhāraṇādhikāraḥ pañcadaśaḥ</p>
+
+<p>15.1ab: atha vāgindriyādīnāṃ manontānām anukramāt
+15.1cd: dhāraṇāḥ saṃpravakṣyāmi daśaikāñ ca samāsataḥ
+15.2ab: vadanāntar namaḥśabdam ātmanaś cintayed budhaḥ
+15.2cd: gṛhītavāktvam abhyeti maunena madhusūdani
+15.3ab: sarvatrāskhalitā vāṇī ṣaḍbhir māsaiḥ pravartate
+15.3cd: sarvaśāstrārthavettṛtvaṃ vatsarād upajāyate
+15.4ab: vāg evāsya pravarteta kāvyālaṅkārabhūṣitā
+15.4cd: tribhir abdaiḥ svayaṃ kartā śāstrāṇāṃ saṃprajāyate
+15.5ab: tatraiva cintayed dehaṃ svakīyam anurūpataḥ
+15.5cd: bhūyas tam eva dhavalam īṣattejovabhāsitam
+15.6ab: rasāntaḥsomabimbāditejontaṃ tam anusmaret
+15.6cd: sarvaṃ phalam avāpnoti vāgāvaraṇajaṃ kramāt
+15.7ab: pāṇau cittaṃ samādāya ṣaṇmāsād dūrasaṃsthitam
+15.7cd: vastu gṛhṇāty asaṃdehāt tryabdāt pāre 'pi vāridheḥ
+15.8ab: tatrātmadehapūrvaṃ tu padmābham anucintayan
+15.8cd: savyāpārādibhedena caturdaśakam ādarāt
+15.9ab: puroktakālaniyamāt pūrvoktenaiva vartmanā
+15.9cd: sarvaṃ phalam avāpnoti hastāvṛtisamāśritam
+15.10ab: pādāv evaṃvidhau dhyāyan vatsaratrayam ādarāt
+15.10cd: muhūrtena samudrāntām aśrānto bhramati kṣitim
+15.11ab: caturdaśa samabhyarcya svadehādikam abhyasan
+15.11cd: prāpnoti pūrvavat sarvaṃ phalaṃ pādāvṛtisthitam
+15.12ab: pāyāv api manastattvaṃ sthirīkurvann avāpsyati
+15.12cd: māsena tadbhavavyādhi vimuktim avilambataḥ
+15.13ab: puṇyaślokatvam āpnoti tribhir abdair anādarāt
+15.13cd: caturdaśavidhaṃ cātra pūrvavat phalam āpsyati
+15.14ab: svarūpataḥ smarel liṅgaṃ māsamātrāj jitendriyaḥ
+15.14cd: ṣaḍbhir māsair anāyāsād icchākāmitvam āpnuyāt
+15.15ab: caturdaśavidhe bhede tatrābhyaste mahāmatiḥ
+15.15cd: liṅgāvaraṇajaṃ sarvaṃ pūrvaval labhate phalam
+15.16ab: svajihvām induvarṇābhāṃ cintayed daśabhir dinaiḥ
+15.16cd: prāpnoty anubhavaṃ yogī jihvābhāvam ivātmanaḥ
+15.17ab: āsvādayati dūrasthaṃ ṣaṇmāsād ekamānasaḥ
+15.17cd: vatsarais tu tribhiḥ sākṣāl leḍhy asau paramāmṛtam
+15.18ab: yenāsau bhavate yogī jarāmaraṇavarjitaḥ
+15.18cd: apeyādiprasakto 'pi na pāpaiḥ paribhūyate
+15.19ab: pūrvavat sarvam anyac ca svadehādy anucintayan
+15.19cd: phalam āpnoty asaṃdehād rasanāvṛtisaṃbhavam
+15.20ab: kanakābhaṃ svakaṃ ghrāṇam anucintayataḥ śanaih
+15.20cd: divasair daśabhir ghrāṇaśunyatānubhavo bhavet
+15.21ab: ṣaṇmāsād gandham āghrāti dūrasthasyāpi vastunaḥ
+15.21cd: ghātayed gandham āghrāya yasya ruṣṭo bhaviṣyati
+15.22ab: vatsarais tu tribhir divyaṃ gandham āsādya yogavit
+15.22cd: jarāmaraṇanairguṇyayukto divyatvam arhati
+15.23ab: sarvam anyad yathoddiṣṭaṃ tathaiva ca vicintayet
+15.23cd: kramikaṃ phalam āpnoti ghrāṇāvaraṇam āsthitam
+15.24ab: udayādityasaṃkāśe cintayaṃś cakṣuṣī nije
+15.24cd: daśāhāc cakṣuṣo raktasrāvānubhavam āpsyati
+15.25ab: vedanā mahatī cāsya lalāṭe saṃprajāyate
+15.25cd: na bhetavyaṃ mahādevi na cābhyāsaṃ parityajet
+15.26ab: saṃtyajann andhatām eti tena yatnāt samabhyaset
+15.26cd: ṣaḍbhir māsair mahāyogī divyadṛṣṭiḥ prajāyate
+15.27ab: chidrāṃ prapaśyate bhūmiṃ kaṭāhāntām atandritaḥ
+15.27cd: ādhruvāntam athordhvaṃ ca karāmalakavad budhaḥ
+15.28ab: vatsarais tu tribhir yogī brahmāṇḍāntaṃ prapaśyati
+15.28cd: tadantar yoginījñānaṃ śarīrasthaṃ prajāyate
+15.29ab: svadehādikam anyac ca pūrvoktaṃ pūrvavat smaran
+15.29cd: nayanāvṛtijaṃ sarvam āpnotīti kim adbhutam
+15.30ab: sarvatrāñjanapatrābhāṃ nistaraṅgāṃ tvacaṃ smaran
+15.30cd: śastrair api na māsena chettuṃ śakyo bhaviṣyati
+15.31ab: ṣaṇmāsād atitīvreṇa nāgnināpy eṣa dahyate
+15.31cd: vatsaratritayād yogī vajropalaviṣāhibhiḥ
+15.32ab: pīḍyate na kadā cit syād ajarāmaratāṃ gataḥ
+15.32cd: sparśāvṛtijavijñāna gītavac ca caturdaśa
+15.33ab: bhedāḥ saha phalair jñeyāḥ pūrvakālānusārataḥ
+15.33cd: kiṃ tv atra cintayed dehaṃ svadehādibhir āvṛtam
+15.34ab: saṃdadhānaḥ svakaṃ cetaḥ śrotrākāśe vicakṣaṇaḥ
+15.34cd: dūrāc chravaṇavijñānaṃ ṣaṇmāsād upajāyate
+15.35ab: tribhiḥ saṃvatsarair devi brahmāṇḍāntar udīritam
+15.35cd: śṛṇoti sa sphuṭaṃ sarvaṃ jarāmaraṇavarjitaḥ
+15.36ab: tatrākāśoktavat sarvaṃ svadehādy anucintayet
+15.36cd: śrotrāvaraṇajaṃ sarvaṃ phalam āpnoti pūrvavat
+15.37ab: manovatīm ato vakṣye dhāraṇāṃ sarvasiddhidām
+15.37cd: yayā saṃsiddhayā devi sarvasiddhiphalaṃ labhet
+15.38ab: mana eva manuṣyāṇāṃ kāraṇaṃ bandhamokṣayoḥ
+15.38cd: tasmāt tad abhyasen mantrī yadīcchen mokṣam akṣayam
+15.39ab: tad ardhacandrasaṃkāśam adhovaktraṃ hṛdi sthitam
+15.39cd: cintayan māsamātreṇa pratibhāṃ pratipatsyate
+15.40ab: akasmāt paśyate kiṃ cid akasmāc chṛṇute tathā
+15.40cd: sarvendriyātmakaṃ jñānaṃ akasmāc ca kva cit kva cit
+15.41ab: svasvakendriyavijñānaṃ saṃpaśyed vatsaratrayāt
+15.41cd: bhavate yogayuktasya yoginaḥ suparisphuṭam
+15.42ab: svadehādikam apy atra pūrvoktavad anusmaran
+15.42cd: cittāvaraṇavijñānaṃ prāpya somaguṇaṃ labhet
+15.43ab: ity ekādaśa gītāni samabhyasyāni te tathā
+15.43cd: indriyāṇi yataḥ sarvaṃ phalam eṣu pratiṣṭhitam
+15.44ab: bandhamokṣāv ubhāv etāv indriyāṇi jagur budhāḥ
+15.44cd: vigṛhītāni bandhāya vimuktāni vimuktaye
+15.45ab: etāni vyāpake bhāve yadā syur manasā saha
+15.45cd: vimuktānīti vidvadbhir jñātavyāni tadā priye
+15.46ab: yadā tu viṣaye kvāpi pradeśāntaravartini
+15.46cd: saṃsthitāni tadā tāni baddhānīti pracakṣate
+15.47ab: ity ayaṃ dvividho bhāvaḥ śuddhāśuddhaprabhedataḥ
+15.47cd: indriyāṇāṃ samākhyātaḥ siddhayogīśvarīmate</p>
+
+<p>iti śrīmālinīvijayottare tantre 'kṣadhāraṇādhikāraḥ pañcadaśaḥ
+samāptaḥ</p>
+
+<p>dhāraṇādhikāraḥ ṣoḍaśaḥ</p>
+
+<p>16.1ab: atha garvamayīṃ divyāṃ dhāraṇāṃ dhāraṇottamām
+16.1cd: mahāgarvakarīṃ vakṣye yogināṃ yogavandite
+16.2ab: ṣoḍaśāraṃ smarec cakram ātmadeham ananyadhīḥ
+16.2cd: eṣo 'ham iti saṃcintya svakāryaparivāritam
+16.3ab: apradhṛṣyo bhaved yogī vatsaratritayena tu
+16.3cd: mamatvam acyutaṃ tasya bhavet sarvatra kutra cit
+16.4ab: tādṛgrūpasya cakrasya nābhiṃ mūrtiṃ svakāṃ smaran
+16.4cd: cintayet sarvam evāhaṃ mayi sarvam avasthitam
+16.5ab: tato 'haṅkāravijñānaṃ prāpnotīti kim adbhutam
+16.5cd: hṛccakre samanudhyāyan matsvarūpam atandritaḥ
+16.6ab: avilambam avāpnoti garvāvaraṇajaṃ phalam
+16.6cd: bimbādikaṃ kramāt sarvaṃ cintayan nīlalohitam
+16.7ab: tadbhavaṃ sarvam āpnoti daśāvasthāpracoditam
+16.7cd: iti garvamayī proktā prajāpatiguṇapradā
+16.8ab: udyadādityabimbābhaṃ hṛdi padmam anusmaran
+16.8cd: dharmādibhāvasaṃyuktam aṣṭapatraṃ sakarṇikam
+16.9ab: māsena sthirabuddhiḥ syāt ṣaḍbhiḥ śrutidharo bhavet
+16.9cd: tribhir abdaiḥ svayaṃ kartā śāstrāṇāṃ saṃprajāyate
+16.10ab: svāṃ tatra cintayen mūrtiṃ buddhitattvaṃ prapaśyati
+16.10cd: tadīśajñānam āpnoti brahmāṇam anucintayan
+16.11ab: vedān udgirate suptaḥ samādhistho 'thavā muniḥ
+16.11cd: susthirās te sadābhyāsād anadhītā api sphuṭam
+16.12ab: bimbādikaṃ kramāt sarvaṃ pūrvoktam anucintayan
+16.12cd: prāpnoti brāhmam aiśvaryaṃ buddhyāvaraṇam āśritam
+16.13ab: hṛdi bimbaṃ raver dhyāyet tadantaḥ somamaṇḍalam
+16.13cd: evam abhyasatas tasya ṣaṇmāsād upajāyate
+16.14ab: divyacakṣur anāyāsāt siddhiḥ syād vatsaratrayāt
+16.14cd: svadehaṃ cintayaṃs tatra guṇajñānam avāpsyati
+16.15ab: liṅgākāraṃ smaran dīptaṃ tadīśatvam avāpnuyāt
+16.15cd: bimbādi pūrvavad dhyāyan daśakaṃ daśakātmakam
+16.16ab: phalam āpnoty asaṃdehād guṇāvaraṇasaṃsthitam
+16.16cd: caturviṃśaty amī proktāḥ pratyekaṃ daśapañcadhā
+16.17ab: dhāraṇāḥ kṣmāditattvānāṃ samāsād yogināṃ hitāḥ
+16.17cd: trayodaśātmake bhede ṣaḍ anyāḥ saṃsthitā yathā
+16.18ab: yoginām anuvarṇyante tathā yogaprasiddhaye
+16.18cd: dehaṃ muktvā svarūpeṇa nānyat kiṃ cid iti smaret
+16.19ab: sitapadmāsanāsīnaṃ maṇḍalatritayopari
+16.19cd: evam atra sthirībhūte māsamātreṇa yogavit
+16.20ab: sarvavyādhivinirmukto bhavatīti kim adbhutam
+16.20cd: ṣaṇmāsād asya vijñānaṃ jāyate pṛthivītale
+16.21ab: abdāj jarādinirmuktas tribhiḥ puṃstattvadṛg bhavet
+16.21cd: hṛdadhaḥ paṅkaje 'traiva dvādaśārdhāṅgulāṃ tanum
+16.22ab: hṛdantāṃ bhāvayet svākyāṃ ṣaṇmāsān mṛtyujid bhavet
+16.22cd: tribhir abdaiḥ samāpnoti puṃstattveśvaratulyatām
+16.23ab: bimbādau pūrvavat sarvaṃ tatra saṃcintite sati
+16.23cd: phalam āpnoty asaṃdehāt puruṣāvaraṇasthitam
+16.24ab: etad vedāntavijñānaṃ samāsād upavarṇitam
+16.24cd: kapilasya purā proktam etad vistaraśo mayā
+16.25ab: śaratsaṃdhyābhrasaṃghābhaṃ svadeham anucintayan
+16.25cd: vītarāgatvam abhyeti ṣaḍbhir māsair na saṃśayaḥ
+16.26ab: jarāmaraṇanirmukto varṣeṇaivopajāyate
+16.26cd: tryabdāj jñānam avāpnoti rāgāvaraṇajaṃ mahat
+16.27ab: raktaṃ saṃcintayed dehaṃ saṃpūrṇābhroparisthitam
+16.27cd: māsaṣaṭkam anudvigno vītarāgatvasiddhaye
+16.28ab: smaran saṃvatsare samyaṅ mṛtyunā na prapīḍyate
+16.28cd: tribhir abdair jitadvandvo rāge ca samatāṃ vrajet
+16.29ab: raktapadmasthitaṃ raktaṃ pañcaparvaṃ hṛdāvadhi
+16.29cd: dhyāyan phalam avāpnoti pūrvoktam akhilaṃ kramāt
+16.30ab: bimbādi cātra pūrvoktam anucintayato muhuḥ
+16.30cd: phalaṃ bhavati niḥśeṣaṃ rañjakāvṛtisaṃbhavam
+16.31ab: hṛdi padmaṃ sitaṃ dhyāyed dvyaṣṭapatraṃ sakesaram
+16.31cd: sarvāmṛtamayaṃ divyaṃ candrakalpitakarṇikam
+16.32ab: niścalaṃ tatra saṃyamya ceto nidrāntam ātmanaḥ
+16.32cd: tato yat paśyate svapne tathyaṃ tat tasya jāyate
+16.33ab: evam abhyasatas tasya buddhipadmoditaṃ phalam
+16.33cd: sarvaṃ prajāyate tasya tatkālakramayogataḥ
+16.34ab: caturaṅguladehādi sarvaṃ tatra vicintayan
+16.34cd: pūrvavat sarvam āpnoti vidyātattvasamudbhavam
+16.35ab: hṛdayād ekam ekaṃ tu vyatikramyārdham aṅgulam
+16.35cd: pṛthak cakratrayaṃ dhyāyed raktanīlāsitaṃ kramāt
+16.36ab: tatratyadvyekaparvaṃ tu puruṣaṃ tatsamadyutim
+16.36cd: bimbādikaṃ ca yat proktaṃ tattvatrayam idaṃ mahat
+16.37ab: trayodaśātmakaṃ bhedam etadantaṃ vidur budhāḥ
+16.37cd: ekādaśaprabhedena tattvadvayam athocyate
+16.38ab: kaṇṭhakūpāvadhau cakre pañcāre nābhisaṃsthitam
+16.38cd: dhyāyet svarūpam ātmīyaṃ dīptanetropalabdhavat
+16.39ab: kṣityādikālatattvānte yad vastu sthitam adhvani
+16.39cd: sarvaṃ prasādhya yogīndro na kālenābhibhūyate
+16.40ab: bimbādike 'pi tatrasthe yoginām anucintite
+16.40cd: bhavatīti kilāścaryam anāyāsena tatphalam
+16.41ab: kaṇṭhākāśe sthiraṃ cetaḥ kurvan yogī dine dine
+16.41cd: māyotthaṃ phalam āpnoti bimbādāv api tatrage
+16.42ab: kaṇṭhakūpavidhānābhaṃ rāhugrastendubimbavat
+16.42cd: cintayan na punar yāti māyāder vaśavartitām
+16.43ab: tad eva tatra svarbhānumuktavat paricintayan
+16.43cd: tejodehādikaṃ cāpi prāpnoti parameśatām
+16.44ab: madhyandinakarākāraṃ lambakasthaṃ vicintayet
+16.44cd: samastamantracakrasya rūpaṃ yat sāmudāyikam
+16.45ab: tataḥ kālakramād yogī mantratvam adhigacchati
+16.45cd: anuṣaṅgaphalaṃ cātra pūrvoktaṃ sarvam iṣyate
+16.46ab: mūrtiṃ tatraiva saṃcintya mantreśatvam avāpnuyāt
+16.46cd: tadadhodīpakaṃ tejo dhyātvā tatpatitāṃ vrajet
+16.47ab: sabāhyābhyantaraṃ tasmād adhordhvaṃ vyāpi ca smaran
+16.47cd: tejo mantreśvareśānapadān na cyavate naraḥ
+16.48ab: baddhvā padmāsanaṃ yogī parābījam anusmaran
+16.48cd: bhruvor madhye nyasec cittaṃ tadbahiḥ kiṃ cid agrataḥ
+16.49ab: nimīlitākṣo hṛṣṭātmā śabdālokavivarjite
+16.49cd: paśyate puruṣaṃ tatra dvādaśāṅgulam āyatam
+16.50ab: tatra cetaḥ sthiraṃ kuryāt tato māsatrayopari
+16.50cd: sarvāvayavasaṃpūrṇaṃ tejorūpam acañcalam
+16.51ab: prasannam indusaṃkāśaṃ paśyati divyacakṣuṣā
+16.51cd: taṃ dṛṣṭvā puruṣam divyaṃ kālajñānaṃ pravartate
+16.52ab: aśiraske bhaven mṛtyuḥ ṣaṇmāsābhyantareṇa tu
+16.52cd: vañcanaṃ tatra kurvīta yatnāt kālasya yogavit
+16.53ab: brahmarandhropari dhyāyec candrabimbam akalmaṣam
+16.53cd: sravantam amṛtaṃ divyaṃ svadehāpūrakaṃ bahu
+16.54ab: tenāpūritam ātmānaṃ cetonālānusarpiṇā
+16.54cd: sabāhyābhyantaraṃ dhyāyan daśāhān mṛtyujid bhavet
+16.55ab: mahāvyādhivināśe 'pi yogam enaṃ samabhyaset
+16.55cd: pratyaṅgavyādhināśāya pratyaṅgagam anusmaran
+16.56ab: dhūmravarṇaṃ yadā paśyen mahāvyādhis tadā bhavet
+16.56cd: kṛṣṇe kuṣṭham avāpnoti nīle śītalikābhayam
+16.57ab: hīnacakṣuṣi tadrogaṃ nāsāhīne tadātmakam
+16.57cd: yad yad aṅgaṃ na paśyeta tatra tadvyādhim ādiśet
+16.58ab: ātmano vā pareṣāṃ vā yogī yogapathe sthitaḥ
+16.58cd: varṣais tu pañcabhiḥ sarvam vidyātattvāntam īśvari
+16.59ab: vetti bhuṅkte ca satataṃ na ca tasmāt prahīyate
+16.59cd: tatrasthe tejasi dhyāte sarvadehavisarpiṇi
+16.60ab: pūrvoktaṃ sarvam āpnoti tatkālakramayogataḥ
+16.60cd: athordhvavyāpini dhyāne tatra tasmād akhaṇḍitaḥ
+16.61ab: sarvamantreśvareśatvān na bhūyo 'pi nivartate
+16.61cd: evaṃ lalāṭadeśe 'pi mahādīptam anusmaran
+16.62ab: prapaśyaty acirād eva varṇāṣṭakayutaṃ kramāt
+16.62cd: indranīlapratīkāśaṃ śikhikaṇṭhasamadyuti
+16.63ab: rājāvartanibhaṃ cānyat tathā vaiḍūryasaṃnibham
+16.63cd: puṣparāganibhaṃ cānyat pravālakasamadyuti
+16.64ab: padmarāgapratīkāśam anyac candrasamadyuti
+16.64cd: tāṃ dṛṣṭvā paramāṃ jyotsnāṃ divyajñānaṃ pravartate
+16.65ab: vihārapādacārādi tataḥ sarvaṃ pravartate
+16.65cd: adhordhvaṃ vyāpini dhyāte na tasmāc cyavate padāt
+16.66ab: ity etat sarvam ākhyātaṃ lakṣyabhedavyavasthitam
+16.66cd: adhunā cittabhedo 'pi samāsād upadiśyate
+16.67ab: piśācānantaparyantaguṇāṣṭakasamīhayā
+16.67cd: tattadrūpaguṇaṃ kuryāt samyag īśe sthiraṃ manaḥ
+16.68ab: itīśvarapadāntasya mārgasyāsya pṛthak pṛthak
+16.68cd: yathopāsā tathākhyātā yogināṃ yogasiddhaye</p>
+
+<p>iti śrīmālinīvijayottare tantre dhāraṇādhikāraḥ ṣoḍaśaḥ samāptaḥ</p>
+
+<p>saptadaśaḥ ṣaḍaṅgayogādhikāraḥ</p>
+
+<p>17.1ab: athaitat sarvam uddiṣṭaṃ yadi na sphuṭatāṃ vrajet
+17.1cd: sphuṭīkṛte 'sthire tatra na manas tiṣṭhate sphuṭam
+17.2ab: gatibhaṅgaṃ tatas tasya prāṇāyāmena kārayet
+17.2cd: sa ca pañcavidhaḥ proktaḥ pūrakādiprabhedataḥ
+17.3ab: pūrakaḥ kumbhakaś caiva recako hy apakarṣakaḥ
+17.3cd: utkarṣaḥ pañcamo jñeyas tadabhyāsāya yogibhiḥ
+17.4ab: pūrakaḥ pūraṇād vāyor dvedhā ṣoḍhā ca gīyate
+17.4cd: svabhāvapūraṇād eko virecyānyaḥ prapūritaḥ
+17.5ab: nāsāmukhordhvatālūnāṃ randhrabhedād vibhidyate
+17.5cd: bhinnaḥ ṣoḍhātvam abhyeti punar bhedair anantatām
+17.6ab: kumbhaḥ pañcavidho jñeyas tatraikaḥ pūritād anu
+17.6cd: vidhṛto recakāt paścād dvitīyaḥ parikīrtitaḥ
+17.7ab: dvayor ante dvayaṃ cānyat svabhāvasthaś ca pañcamaḥ
+17.7cd: sthānāntaraprabhedena gacchaty eṣo 'py anantatām
+17.8ab: recakaḥ pūrvavaj jñeyo dvidhābhūtaḥ ṣaḍātmakaḥ
+17.8cd: sthānasaṃstambhito vāyus tasmād utkṛṣya nīyate
+17.9ab: yo 'nyapradeśasaṃprāptyai sa utkarṣaka iṣyate
+17.9cd: tasmād api punaḥ sthānaṃ yato nītas tadāhṛtaḥ
+17.10ab: apakarṣaka ity ukto dvāv apy etāv anekadhā
+17.10cd: eṣām abhyasanaṃ kuryāt padmakādyāsanasthitaḥ
+17.11ab: adhamaḥ sakṛdudghāto madhyamo dviguṇo mataḥ
+17.11cd: jyeṣṭhaḥ syād yas trirudghātaḥ sa ca dvādaśamātrakaḥ
+17.12ab: trirjānuveṣṭanān mātrā triguṇāc choṭikātrayāt
+17.12cd: ajitāṃ nākramen mātrāṃ vāyudoṣanivṛttaye
+17.13ab: pratyaṅgadhāraṇād vāyuṃ na ca cakṣuṣi dhārayet
+17.13cd: nābhihṛttālukāntasthe vidhṛte maruti kramāt
+17.14ab: catasro dhāraṇā jñeyāḥ śikhyambvīśāmṛtātmikāḥ
+17.14cd: yad yatra cintayed dravyaṃ tat tat sarvagataṃ smaret
+17.15ab: bindunādātmakaṃ rūpam īśānī dhāraṇā śritā
+17.15cd: amṛtāyāṃ smared induṃ kālatyāgoktavartmanā
+17.16ab: dhāraṇābhir ihaitābhir yogī yogapathe sthitaḥ
+17.16cd: heyaṃ vastu parityajya yāyāt padam anāmayam
+17.17ab: trivedadvīndusaṅkhyātasamudghātās tv imā matāḥ
+17.17cd: etābhir apy adho 'py uktaṃ phalaṃ prāpnoty anuttamam
+17.18ab: yogāṅgatve samāne 'pi tarko yogāṅgam uttamam
+17.18cd: heyādyālocanāt tasmāt tatra yatnaḥ praśasyate
+17.19ab: mārge cetaḥ sthirībhūtaṃ heye 'pi viṣayecchayā
+17.19cd: prerya tenānayet tāvad yāvat padam anāmayam
+17.20ab: tadarthabhāvanāyuktaṃ mano dhyānam udāhṛtam
+17.20cd: tad eva paramaṃ jñānaṃ bhāvanāmayam iṣyate
+17.21ab: muhūrtād eva tatrasthaḥ samādhiṃ pratipadyate
+17.21cd: tatrāpi ca suniṣpanne phalaṃ prāpnoty abhīpsitam
+17.22ab: yat kiṃ cic cintayed vastu nānyatvaṃ pratipadyate
+17.22cd: tena tanmayatām āpya bhavet paścād abhāvavat
+17.23ab: pañcatām iva saṃprāptas tīvrair api na cālyate
+17.23cd: tataḥ śabdādibhir yogī yoginīkulanandanaḥ
+17.24ab: ity anena vidhānena pratyāhṛtya mano muhuḥ
+17.24cd: prāṇāyāmādikaṃ sarvaṃ kuryād yogaprasiddhaye
+17.25ab: sarvam apy athavā bhogaṃ manyamāno virūpakam
+17.25cd: svaśarīraṃ parityajya śāśvataṃ padam ṛcchati
+17.26ab: tadā pūrvoditaṃ nyāsaṃ kālānalasamaprabham
+17.26cd: viparītavidhānena kuryāt skṛkchindiyuggatam
+17.27ab: āgneyīṃ dhāraṇāṃ kṛtvā sarvamarmapratāpinīm
+17.27cd: pūrayed vāyunā deham aṅguṣṭhān mastakāntikam
+17.28ab: tam utkṛṣya tato 'ṅguṣṭhād brahmarandhrāntam ānayet
+17.28cd: chedayet sarvamarmāṇi mantreṇānena yogavit
+17.29ab: jīvam ādidvijārūḍhaṃ śiromālādisaṃyutam
+17.29cd: kṛtvā tadagre kurvīta dvijam ādyam ajīvakam
+17.30ab: ity eṣā kathitā kāla rātrir marmanikṛntanī
+17.30cd: naināṃ samuccared devi ya icched dīrghajīvitam
+17.31ab: śatārdhoccārayogena jāyate mūrdhni vedanā
+17.31cd: evaṃ pratyayam ālocya mṛtyujiddhyānam āśrayet
+17.32ab: nipīḍya taṃ tatas tatra bindunādādicintakaḥ
+17.32cd: vegād utkṛṣya tatrasthaṃ kālarātryā visarjayet
+17.33ab: anena kramayogena ane yojitaḥ parame pade
+17.33cd: samayy api mahādevi dīkṣoktaṃ phalam aśnute
+17.34ab: [lacuna] siddhayogeśvarīmate
+17.34cd: tatsakāśād bhavet siddhiḥ sarvamantroktalakṣaṇā
+17.35ab: tad eva mantrarūpeṇa manuṣyaiḥ samupāsyate
+17.35cd: eṣa te jñeyasadbhāvaḥ kathitaḥ suravandite
+17.36ab: abhaktasya guhasyāpi nākhyeyo jātucit tvayā
+17.36cd: udaraṃ sarvam āpūrya brahmarandhrāntam āgatam
+17.37ab: vāyuṃ bhramaṇayogena tatas taṃ prerayet tathā
+17.37cd: yāvat prāṇapradeśāntaṃ yogināṃ manasepsitam
+17.38ab: prāpyate punar āvṛtya tathaiva nābhimaṇḍalam
+17.38cd: evaṃ samabhyaset tāvad yāvad vāsarasaptakam
+17.39ab: tadāprabhṛti saṃyuktaḥ karṣayet tridaśān api
+17.39cd: anenākṛṣya vijñānaṃ sarvayoginiṣevitam
+17.40ab: gṛhṇīyād yogayuktātmā kim anyaiḥ kṣudraśāsanaiḥ
+17.40cd: prathamaṃ mahatī ghūrṇir abhyāsāt tasya jāyate
+17.41ab: tataḥ prakampo deveśi jvalatīva tato 'py aṇuḥ</p>
+
+<p>iti śrīmālinīvijayottare tantre saptadaśo yogāṅgādhikāraḥ samāptaḥ</p>
+
+<p>paramavidyādhikāro 'ṣṭādaśaḥ</p>
+
+<p>18.1ab: śṛṇu devi paraṃ guhyam aprāpyam akṛtātmanām
+18.1cd: yan na kasya cid ākhyātaṃ tad adya kathayāmi te
+18.2ab: sarvam anyat parityajya cittam atra niveśayet
+18.2cd: mṛcchailadhāturatnādibhavaṃ liṅgaṃ na pūjayet
+18.3ab: yajed ādhyātmikaṃ liṅgaṃ yatra līnaṃ carācaram
+18.3cd: bahir liṅgasya liṅgatvam anenādhiṣṭhitaṃ yataḥ
+18.4ab: ataḥ prapūjayed etat paramādvaitam āśritaḥ
+18.4cd: anudhyānena deveśi pareṇa paramāṇunā
+18.5ab: yo 'nudhyātaḥ sa evaital liṅgaṃ paśyati nāparaḥ
+18.5cd: yad etat spandanaṃ nāma hṛdaye samavasthitam % 5
+18.6ab: tatra cittaṃ samādhāya kampa udbhava eva ca
+18.6cd: tatra praśāntim āpnoti māsenaikena yogavit
+18.7ab: hṛdayād utthitaṃ liṅgaṃ brahmarandhrāntam īśvari
+18.7cd: svaprabhoddyotitāśeṣadehāntam amaladyuti
+18.8ab: tatraiva paśyate sarvaṃ mantrajālaṃ mahāmatiḥ
+18.8cd: tanmastakaṃ samāruhya māsamātram ananyadhīḥ
+18.9ab: tatas tatra suniṣpanne ṣaṇmāsāt sarvasiddhayaḥ
+18.9cd: etal liṅgam avijñāya yo liṅgī liṅgam āśrayet
+18.10ab: vṛthāḷpariśramas tasya na liṅgaphalam aśnute
+18.10cd: śaivam etan mahāliṅgam ātmaliṅge [na] siddhyati
+18.11ab: siddhe 'tra liṅgaval liṅgī liṅgastho liṅgavarjitaḥ
+18.11cd: bhavatīti kim āśrayam etasmāl liṅgaliṅitaḥ
+18.12ab: anena liṅgaliṅgena yadā yogī bahir vrajet
+18.12cd: tadā liṅgīti vijñeyaḥ purāntaṃ liṅgam iṣyate
+18.13ab: etasmāl liṅgavijñānād yogino liṅgitāḥ smṛtāḥ
+18.13cd: anenādiṣṭhitāḥ mantrāḥ śāntaraudrādibhedataḥ
+18.14ab: bhavantīti kimāścaryaṃ tadbhāvagatacetasaḥ
+18.14cd: raudraṃ bhāvaṃ samśritya yadi yogaṃ samabhyaset
+18.15ab: durnirīkṣyo bhavet sarvaiḥ sadevāsuramānuṣaiḥ
+18.15cd: gamāgamavinirmuktaḥ sarvadṛṣṭir akātaraḥ
+18.16ab: muhūrtaṃ tiṣṭhate yāvat tāvad eveśam āpnuyāt
+18.16cd: āviṣṭaḥ paśyate sarvaṃ sūryakoṭisamadyuti
+18.17ab: yat tad akṣaram avyaktaṃ śaivaṃ bhairavam ity api
+18.17cd: taṃ dṛṣṭvā vatsarārdhena yogī sarvajñatām iyāt
+18.18ab: ya evainaṃ samāsādya yas tṛptim adhigacchati
+18.18cd: na ca kṛtrimayogeṣu sa muktaḥ sarvabandhanaiḥ
+18.19ab: prāṇāyāmādikair liṅgair yogāḥ syuḥ kṛtrimā matāḥ
+18.19cd: tena te 'kṛtakasyāsya kalāṃ nārhanti ṣoḍaśīm
+18.20ab: etat samabhyasan yogī divyacihnāni paśyati
+18.20cd: upaviṣṭa ṛjur yogī na kiñ cid api cintayet
+18.21ab: muhūrtān nirdahet sarvaṃ dehastham akṛtaṃ kṛtam
+18.21cd: dahyamānasya tasyeha prakampānubhavo bhavet
+18.22ab: tatas tatra sthirībhūte jyotir antaḥ prakāśate
+18.22cd: tāṃ dṛṣṭvā paramāṃ dīptiṃ divyajñānaṃ pravartate
+18.23ab: svatantraśivatām eti bhuñjāno viṣayān api
+18.23cd: animīlitadivyākṣo yāvad āste muhūrtakam
+18.24ab: tasmāt sarvagataṃ bhāvam ātmanaḥ pratipadyate
+18.24cd: tam eva bhāvayed yatnāt sarvasiddhiphalepsayā
+18.25ab: tatas taṃ bhāvayed yogī kampamāno 'tyanulbaṇam
+18.25cd: tataḥ prapaśyate tejo lalāṭāgre samantataḥ
+18.26ab: dṛṣṭvā tatparamaṃ tejo divyajñānam avāpnuyāt
+18.26cd: ṣaḍbhir māsair anāyāsād vatsareṇa prasiddhyati
+18.27ab: śivatulyabalo bhūtvā yatreṣṭaṃ tatra gacchati
+18.27cd: cetaḥ sarvagataṃ kṛtvā muhūrtād eva yogavit
+18.28ab: śakyāveśam avāpnoti prakampānubhavātmakam
+18.28cd: tatas tatra sthirībhūte māsamātreṇa yogavit
+18.29ab: śāktaṃ prapaśyate tejaḥ sabāhyābhyantare sthiram
+18.29cd: tatra samyak suniṣpanne sarvendriyajam ādarāt
+18.30ab: tatra sphuṭam avāpnoti vijñānam anivāritam
+18.30cd: sarvagaṃ cātra vijñeyaṃ yad akṣarthena saṃgatam
+18.31ab: evamevedam ākhyātaṃ tattvaṃ paryāyabhedataḥ
+18.31cd: karmendriyāṇi buddhyantaṃ parityajya samastakam
+18.32ab: bhāvayet paramāṃ śaktiṃ sarvatraiva vicakṣaṇaḥ
+18.32cd: niścalaṃ tu manaḥ kṛtvā yāvat tanmayatāṃ gataḥ
+18.33ab: tāvat sarvagata bhāvaṃ kṣaṇamātrāt prapadyate
+18.33cd: nirdahya pāśajālāni yatheṣṭaṃ phalam āpnuyāt
+18.34ab: tasmāt samabhyased enaṃ kṛtvā niścayam ātmanaḥ
+18.34cd: yatrādhāravinirmukto jīvo layam avāpsyati
+18.35ab: tatsthānaṃ sarvamantrāṇām utpattikṣetram iṣyate
+18.35cd: dvividhaṃ tatparijñeyaṃ bāhyābhyantarabhedataḥ
+18.36ab: prayātavādhikāḷmātrā sā jñeyā sarvasiddhidā
+18.36cd: athavā gacchatas tasya svapnavṛttyā vicakṣaṇaḥ
+18.37ab: nirodhaṃ madhyame sthāne kurvīta kṣaṇamātrakam
+18.37cd: paśyate tatra cicchaktiṃ tuṭimātrām akhaṇḍitām
+18.38ab: tad eva paramaṃ tattvaṃ tasmāj jātam idaṃ jagat
+18.38cd: sa eva mantradehas tu sidhhayogīśvarīmate
+18.39ab: tenaivāliṅgitā mantrāḥ sarvasiddhiphalapradāḥ
+18.39cd: īṣadvyāvṛttavarṇas tu heyopādeyavarjitaḥ
+18.40ab: yāṃ saṃvittim avāpnoti śivatattvaṃ tad ucyate
+18.40cd: tatra cittaṃ sthirīkurvan sarvajñatvam avāpnuyāt
+18.41ab: tatraiva divyacihnāni paśyate ca na saṃśayaḥ
+18.41cd: yatraiva kutra cid gātre vikāra upajāyate
+18.42ab: saṃkalpapūrvako devi tat tattvaṃ tattvam uttamam
+18.42cd: tad abhyasen mahāyogī sarvajñatvajigīṣayā
+18.43ab: prāpnoti paramaṃ sthānaṃ bhuktvā siddhiṃ yathepsitām
+18.43cd: gandhapuṣpādibhir yogī nityam ātmānam ādarāt
+18.44ab: brahmarandhrapradeśe tu pūjayed bhāvato 'pi vā
+18.44cd: dravaddravyasamāyogāt snapanaṃ tasya jāyate
+18.45ab: gandhapuṣpādigandhasya grahaṇaṃ yajanaṃ matam
+18.45cd: ṣaḍrasāsvādanaṃ tasya naivedyāya prakalpate
+18.46ab: yam evoccārayed varṇaṃ sa japaḥ parikīrtitaḥ
+18.46cd: tatra cetaḥ samādhāya dahyamānasya vastunaḥ
+18.47ab: jvālanatas tiṣṭhate yāvat tāvad dhomaḥ kṛto bhavet
+18.47cd: yad eva paśyate rūpaṃ tad eva dhyānam iṣyate
+18.48ab: prasaṅgād idam uddiṣṭam advaitayajanaṃ mahat
+18.48cd: udayārkasamābhāsam ūrdhvadvāre manaḥ sthiram
+18.49ab: hṛdi vāḷtat tathā kuryād dvādaśānte 'thavāpnuyāt
+18.49cd: tato māsārdhamātreṇa tadrūpam upalabhyate
+18.50ab: upalabdhaṃ tad abhyasya sarvajñatvāya kalpate
+18.50cd: vastreṇa mukham ācchādya yogī lakṣye niyojayet
+18.51ab: nābhikandād adhastāt tu yāvat tattvaṃ śikhāv adhi
+18.51cd: sūkṣmatārakasaṃkāśaṃ raśmijvālākarālitam
+18.52ab: prāṇaśaktyavasāne tu paśyate rūpam ātmanaḥ
+18.52cd: tad evābhyāsato devi vikāsam upagacchati
+18.53ab: tanmukhaṃ sarvamantrāṇāṃ sarvatantreṣu paṭhyate
+18.53cd: tato 'sya māsamātreṇa kā cit saṃvittir iṣyate
+18.54ab: yataḥ sarvaṃ vijānāti hṛdaye saṃvyavasthitaṃ
+18.54cd: tāṃ jñātvā kasya cid yogī na samyak pratipādayet
+18.55ab: adhyāyāt kathanaṃ kuryān nākāle mṛtyum āpnuyāt
+18.55cd: mṛto 'pi śvabhrasaṃghāte krameṇa paripacyate
+18.56ab: evaṃ jñātvāḷmahādevi svahitaṃ samupārjayet
+18.56cd: śiṣyo 'py anyāyato gṛhṇan narakaṃ pratipadyate
+18.57ab: na ca tatkālam āpnoti vacas tv avitathaṃ mama
+18.57cd: nyāyena jñānam āsādya paścān na pratipadyate
+18.58ab: tadā tasya prakurvīta vijñānāpahṛtiṃ budhaḥ
+18.58cd: dhyātvā tam agrataḥ sthāpya svarūpeṇaiva yogavit
+18.59ab: ṣaḍvidhaṃ vinyasen mārgaṃ tasya dehe puroktavat
+18.59cd: tatas taṃ dīpam ālokya tadaṅguṣṭhāgrataḥ kramāt
+18.60ab: nayet tejaḥ samāhṛtya dvādaśāntam ananyadhīḥ
+18.60cd: tatas taṃ tatra saṃcintya śivenaikatvam āgatam
+18.61ab: tatra dhyāyet tamorūpaṃ tirobhāvanaśīlanam
+18.61cd: patantīṃ tena mārgeṇa hy aṅguṣṭhāgrāntam āgatām
+18.62ab: sabāhyābhyantaraṃ dhyāyen niviḍāñjanasaprabhām
+18.62cd: anena vidhinā tasya mūḍhabuddher durātmanaḥ
+18.63ab: vijñānamantravidyādyā na kurvanty upakāritām
+18.63cd: cittābhisandhimātreṇa hy adṛṣṭasyāpi jāyate
+18.64ab: kathaṃ cid upalabdhasya nityam evāpakāriṇaḥ
+18.64cd: athavā sūryabimbābhaṃ dhyātvā vicchedyam agrataḥ
+18.65ab: svarbhānurūpayā śaktyā grastaṃ tam anucintayet
+18.65cd: aparādhasahasrais tu kopena mahtānvitah
+18.66ab: vidhim enaṃ prakurvīta krīḍārthaṃ na tu jātu cit
+18.66cd: anena vidhinā bhraṣṭo vijñānād apareṇa ca
+18.67ab: na śakyo yojituṃ bhūyo yāvat tenaiva noddhṛtaḥ
+18.67cd: karuṇākṛṣṭacittas tu tasya kṛtvā viśodhanam
+18.68ab: prāṇāyāmādibhis tīvraiḥ prāyaścittaiṛ vidhiśrutaiḥ
+18.68cd: tatas tasya prakurvīta dīkṣāṃ pūrvoktavartmanā
+18.69ab: tataḥ sarvam avāpnoti phalaṃ tasmād ananyadhīḥ
+18.69cd: evaṃ jñātvā prayatnena gurum āsādayet sudhīḥ
+18.70ab: yataḥ saṃtoṣa utpannaḥ śivajñānāmṛtātmakaḥ
+18.70cd: na tasyānveṣayed vṛttaṃ śubhaṃ vā yadi vāśubham
+18.71ab: sa eva tad vijānāti yuktaṃ vāyuktam eva vā
+18.71cd: akāryeṣu yadā saktaḥ prāṇadvayāpahāriṣu
+18.72ab: tadā nivāraṇīyo 'sau praṇatena vipaścitā
+18.72cd: tenātivāryamāṇo 'pi yady asau na nivartate
+18.73ab: tadānyatra kva cid gatvā śivam evānucintayet
+18.73cd: eṣa yogavidhiḥ proktaḥ samāsād yogināṃ hitaḥ
+18.74ab: nātra śuddhir na cāśuddhir na bhakṣyādivicāraṇam
+18.74cd: na dvaitaṃ nāpi cādvaitaṃ liṅgapūjādikaṃ na ca
+18.75ab: na cāpi tatparityāgo niṣparigrahatāpi vā
+18.75cd: saparigrahatā vāpi jaṭābhasmādisaṃgrahaḥ
+18.76ab: tattyāgo na vratādīnāṃ caraṇācaraṇaṃ ca yat
+18.76cd: kṣetrādisaṃpraveśaś ca samayādiprapālanam
+18.77ab: parasvarūpaliṅgādi nāmagotrādikaṃ ca yat
+18.77cd: nāsmin vidhīyate kiṃ cin na cāpi pratiṣidhyate
+18.78ab: vihitaṃ sarvam evātra pratiṣiddham athāpi vā
+18.78cd: kiṃ tv etad atra deveśi niyamena vidhīyate
+18.79ab: tattve cetaḥ sthirīkāryaṃ suprayatnena yoginā
+18.79cd: tac ca yasya yathaiva syāt sa tathaiva samācaret
+18.80ab: tattve niścalacittas tu bhuñjāno viṣayān api
+18.80cd: na saṃspṛśyeta doṣaiḥ sa padmapatram ivāmbhasā
+18.81ab: viṣāpahārimantrādisaṃnaddho bhakṣayann api
+18.81cd: viṣaṃ na muhyate tena tadvad yogī mahāmatiḥ
+18.82ab: ity etat kathitaṃ devi kim anyat paripṛcchasi</p>
+
+<p>iti śrīmālinīvijayottare tantre paramavidyādhikāro 'ṣṭādaśaḥ</p>
+
+<p>kulacakrādhikāra ekonaviṃśaḥ</p>
+
+<p>19.1ab: athainaṃ paramaṃ yogavidhim ākarṇya śāṅkarī
+19.1cd: punar āha prasannāsyā praṇipatya jagadgurum
+19.2ab: sādhyatvena śrutā deva bhinnayonis tu mālinī
+19.2cd: vidyātrayaṃ savidyāṅgaṃ vidhivac cāvadhāritam
+19.3ab: adhunā śrotum icchāmi hy abhinnā sādhyate katham
+19.3cd: hitāya sādhakendrāṇāṃ prasādād vaktum arhasi
+19.4ab: evam ukto maheśānyā jagatāṃ patir ādarāt
+19.4cd: vikasadvadanāmbhojaḥ pratyuvāca vaco 'mṛtam
+19.5ab: ārirādhayiṣuḥ śaṃbhuṃ kuloktavidhinā budhaḥ
+19.5cd: kulacakraṃ yajed ādau budho dīkṣoktavartmanā
+19.6ab: tato japet parām śaktiṃ lakṣam ekam akhaṇḍitam
+19.6cd: parābījapuṭāntaḥsthāṃ na drutāṃ na vilambitām
+19.7ab: tadvat khaṇḍāṣtakaṃ cāsyā lakṣaṃ lakṣam akhaṇḍitam
+19.7cd: japet kuleśvarasyāpi lakṣaṣaṭkam ananyadhīḥ
+19.8ab: homayitvā daśāṃśena dravyaṃ pūrvoditaṃ budhaḥ
+19.8cd: nityānusmṛtiśīlasya vāksiddhiḥ saṃprajāyate
+19.9ab: svakule japayuktasya aśaktasyāpi sādhane
+19.9cd: bhavanti kanyasā devi saṃsāre bhogasaṃpadaḥ
+19.10ab: śaktas tu sādhayet siddhiṃ madhyamām uttamām api
+19.10cd: kṛtasevāvidhiḥ pṛthvīṃ bhramed udbhrāntapantrivat
+19.11ab: nagare pañcarātraṃ tu trirātraṃ pattane tu vai
+19.11cd: grāme 'pi caikarātraṃ tu sthitvainaṃ vidhim ācaret
+19.12ab: yan nāmādyakṣaraṃ yatra varge tat tasya vastunaḥ
+19.12cd: kulam uktaṃ vidhānajñair nagarāder na saṃśayaḥ
+19.13ab: yā yatra devatā varge vācyatve saṃvyavasthitā
+19.13cd: saiva tasya patitvena dhyeyā pūjyā ca sādhakaiḥ
+19.14ab: tasya kiṃ cit samāsādya nagarādikam ādarāt
+19.14cd: svadigvargasthito bhūtvā cakraṃ yojya nijodaye
+19.15ab: avā [lacuna] samekaika udite [lacuna]
+19.15cd: devatā māheśvara [lacuna]
+19.16ab: krameṇaiva yathā rātrau [lacuna] tathāḷdivā
+19.16cd: svadiśi svodaye vargaṃ tam evānusmared budhaḥ
+19.17ab: tiṣṭhed anyodayaṃ yāvat tataḥ svāṃ diśam āśrayet
+19.17cd: svakulaṃ cintayan yāyāt taddeśakulam eva vā
+19.18ab: yāvad anyāṃ diśaṃ mantrī tatas tad anucintayet
+19.18cd: evaṃ yāvat svakaṃ sthānaṃ kulacakroktavartmanā
+19.19ab: bhramitvā punar āyāti pūrvakālakrameṇa ca
+19.19cd: tāvad āgatya deveśi tadeśakulanāyikā
+19.20ab: daded bhakṣyādikaṃ kiṃ cid dāpayed vātha kena cit
+19.20cd: anena vidhinā yukto guptācāro dṛḍhavrataḥ
+19.21ab: yoginīmelakaṃ prāpya ṣaṇmāsenaiva siddhyati
+19.21cd: duṣkaro 'yaṃ vidhir devi sattvahīnair narādhamaiḥ
+19.22ab: sarvasiddhikaro mukhyaḥ kulaśāstreṣu sarvataḥ
+19.22cd: athaikasminn api grāme pattane nagare 'pi vā
+19.23ab: tad digbhāgaṃ samāśritya tad evajapate kulam
+19.23cd: tribhir abdair anāyāsāt sādhayed uttamaṃ phalam
+19.24ab: lokayātrāparityakto grāsamātraparigrahaḥ
+19.24cd: athavā nābhicakre tu dhyānacakraṃ kulātmakam
+19.25ab: cetasā bhramaṇaṃ kuryāt sarvakālakrameṇa tu
+19.25cd: tato 'sya vatsarārdhena dehāntaṃ yoginīkulam
+19.26ab: āvirbhavaty asaṃdehāt svavijñānaprakāśakam
+19.26cd: tenāvirbhūtamātreṇa yogī yogikule kulī
+19.27ab: bhaved api patir devi yogināṃ parameśvari
+19.27cd: athavā cintayed devi yakārādikramāṣṭakam
+19.28ab: svarūpeṇa prabhākārakarālākulavigraham
+19.28cd: tasya madhye kuleśānaṃ svabodhakam anusmaran
+19.29ab: sarvam eva ca tatpaścāc cakraṃ dīpaśikhākṛtim
+19.29cd: saṃbhūtaṃ cintayed yogī yoginīpadakāṅkṣayā
+19.30ab: etasmin vyaktim āpanne piṇḍasthaṃ buddha ucyate
+19.30cd: tato 'syākasmikī devi mahāmudropajāyate
+19.31ab: śṛṅgāravīrakāruṇyaśokakopādayas tathā
+19.31cd: prabuddham etad uddiṣṭaṃ piṇḍastham amarārcite
+19.32ab: divasair abhiyuktasya tato 'sya bahubhir dinaiḥ
+19.32cd: dharāditattvabhāvānāṃ saṃvittir upajāyate
+19.33ab: suprabuddhaṃ tad icchanti piṇḍasthaṃ jñānam uttamam
+19.33cd: cakraṃ ca triguṇāṣṭāram athavā tatra cintayet
+19.34ab: kādihāntākṣarākrāntaṃ pūrvarūpaṃ sabindukam
+19.34cd: tatrāpi pūrvavat sarvaṃ kurvann etad phalaṃ labhet
+19.35ab: ādivarṇānvitaṃ vātha ṣoḍaśāram anusmaran
+19.35cd: madhyakrameṇa vā yogī pañcamaṃ cumbakādibhiḥ
+19.36ab: dvāsaptatisahasrāṇi nāḍīnāṃ nābhicakrake
+19.36cd: yataḥ piṇḍatvam āyānti tenāsau piṇḍa ucyate
+19.37ab: tatra sthitaṃ tu yaj jñeyaṃ piṇḍasthaṃ tad udāhṛtam
+19.37cd: a [lacuna] mala [lacuna] tkeśa [lacuna] kam
+19.38ab: vijvaratvam avāpnoti vatsareṇa yadṛcchayā
+19.38cd: cakrapañcakam etad dhi pūrvavad dhṛdaye sthitam
+19.39ab: padastham iti śaṃsanti caturvhedaṃ vicakṣaṇāḥ
+19.39cd: yatrārthāvagatir devi tat sthānaṃpadam ucyante
+19.40ab: catuṣkam atra vijñeyaṃ bhedaṃ pañcadaśātmakam
+19.40cd: sarvatobhadrasaṃsiddhau sarvatobhadratāṃ vrajet
+19.41ab: jarāmaraṇanairguṇyanirmukto yogacintakaḥ
+19.41cd: vyāptāv api prasiddhāyāṃ māyādhastattvagocaraḥ
+19.42ab: vetti tatpatitulyatvaṃ tadīśatvaṃ ca gacchati
+19.42cd: padasthe kiṃ tu candrābhaṃ pradīpābhaṃ na cintayet
+19.43ab: etad evāmṛtaughena deham āpūrayat svakam
+19.43cd: cintitaṃ mṛtyunāśāya bhavatīti kim adbhutam
+19.44ab: upalakṣaṇam etat te candrabimbādyudīritam
+19.44cd: yena yenaiva rūpeṇa cintyate parameśvarī
+19.45ab: piṇḍasthādiprabhedeṣu tenaiveṣṭaphalapradā
+19.45cd: rūpam aiśvaram icchanti śivasyāśivahāriṇaḥ
+19.46ab: yadbhrūmadhyasthitaṃ yasmāt tena tatravyavasthitam
+19.46cd: pañcakaṃ sūryasaṃkāśaṃ rūpastham abhidhīyate
+19.47ab: tatrāpi pūrvavat siddhir īśvarāntapadodbhavā
+19.47cd: rūpātītaṃ tu deveśi prāg evoktam anekadhā
+19.48ab: ity eṣā kulacakrasya samāsādvyāptir uttamā
+19.48cd: kathitā sarvasiddhyarthaṃ siddhayogīśvarīmate
+19.49ab: sarvadātha vibhedena pṛthagvarṇavibhedataḥ
+19.49cd: vidyādisarvasaṃsiddhyai yogināṃ yogam icchanti
+19.50ab: bhūyo 'pi saṃpradāyena varṇabhedaś ca kīrtyate
+19.50cd: strīrūpāṃ hṛdi saṃcintya sitavastrādibhūṣitām
+19.51ab: nābhicakropaviṣṭām tu candrakoṭisamaprabhām
+19.51cd: bījaṃ yat sarvaśāstrāṇāṃ tat tadā syād anāratam
+19.52ab: svakīyenaiva vaktreṇa nirgacchat pravicintayet
+19.52cd: tārahāralatākāraṃ visphuratkiraṇākulam
+19.53ab: varṇais tārakasaṃkāśair ārabdham amitādyuti
+19.53cd: māsārdhāc chāstrasaṃghātam udgiraty anivāritam
+19.54ab: svapne māsāt samādhisthaḥ ṣaḍbhir māsair yathecchayā
+19.54cd: ucchinnāny api śāstrāṇi granthataś cārthato 'pi vā
+19.55ab: jānāti vatsarād yogī yadi tanmayatāṃ gataḥ
+19.55cd: anuṣaṅgaphalaṃ caitat samāsād upavarṇitam % 19.55
+19.56ab: vidyeśvarasamānatvasiddhir anyāś ca siddhayaḥ
+19.56cd: prativarnavibhedena yathedānīṃ tathocyate
+19.57ab: dhyātavyā yogibhir nityaṃ tattatphalabubhukṣubhiḥ
+19.57cd: vinyāsakramayogena trividhenāpi vartmanā
+19.58ab: yo yatrāṅge sthito varṇaḥ kulaśaktisamudbhavaḥ
+19.58cd: taṃ tatraiva samādhāya svarūpeṇaiva yogavit</p>
+
+<p>iti śrīmālinīvijayottare kulacakrādhikara ekonaviṃśaḥ samāptaḥ</p>
+
+<p>sarvamantranirṇayo viṃśo 'dhikāraḥ</p>
+
+<p>20.1ab: atha piṇḍādibhedena śāktaṃ vijñānam ucyate
+20.1cd: yogināṃ yogasiddhyarthaṃ saṃkṣepān na tu vistarāt
+20.2ab: piṇḍaṃ śarīram ity uktaṃ tadvac chaktiśivātmanoḥ
+20.2cd: brahmānando balaṃ tejo vīryam ojaś ca kīrtyate
+20.3ab: ajñānena niruddhaṃ tad anādyeva sadātmanaḥ
+20.3cd: tadāvirbhūtaye sarvam aniruddhaṃ pravartate
+20.4ab: tenāvirbhāvyamānaṃ tat pūrvāvasthāṃ parityajat
+20.4cd: yāḥ saṃvittīr avāpnoti tā adhastāt prakīrtitāḥ % 4
+20.5ab: tad eva padam icchanti sarvārthāvagatir yataḥ
+20.5cd: tasmāt saṃjāyate nityaṃ nityam eva śivātmanoḥ
+20.6ab: tad eva rūpam ity uktam ātmanaś ca vinaśvaram
+20.6cd: rūpātītaṃ tad evāhur yatokṣāviṣayaṃ param
+20.7ab: bhāvanāṃ tasya kurvīta namaskṛtya guruṃ budhaḥ
+20.7cd: tāvad ālocayed vastu yāvat padam anāmayam
+20.8ab: naivaṃ na caivaṃ nāpy evaṃ nāpi caivam api sphuṭam
+20.8cd: cetasā yogayuktena yāvat tad idam apy alam
+20.9ab: kṛtvā tanmayam ātmānaṃ sarvākṣārthavivarjitam
+20.9cd: muhūrtaṃ tiṣṭhate yāvat tāvat kampaḥ prajāyate
+20.10ab: bhramaṇodbhavanidrāś ca kiṃ cid ānanda ity api
+20.10cd: tatra yatnena saṃdadhyāc cetaḥ paraphalecchayā
+20.11ab: tad etad ātmano rūpaṃ śivena prakaṭīkṛtam
+20.11cd: yatra tu yac ca vijñeyaṃ śivātmakam api sthitam
+20.12ab: tadrūpodbalakatvena sthitim ity avadhārayet
+20.12cd: tatsamabhyasato nityaṃ sthūlapiṇḍādy upāśrayāt
+20.13ab: caturbhedatvam āyāti bhaktyābhinnam api svataḥ
+20.13cd: sthūlapiṇḍe dvidhā proktaṃ bāhyābhyantarabhedataḥ
+20.14ab: bhautikaṃ bāhyam icchanti dvitīyaṃ cātivāhikam
+20.14cd: tatrādyopāśrayād yogī sasaṃvittir api sphuṭān
+20.15ab: bāhyārthān saṃpragṛhṇāti kiṃ cid ādhyātmikān api
+20.15cd: dvitīyopāśrayāt tattvabhāvārthān saṃprapadyate
+20.16ab: īśate ca svadehāntaḥ pīṭhakṣetrādikaṃ sphuṭam
+20.16cd: svarūpālocanād asya yat kiṃ cid upajāyate
+20.17ab: tatra cetaḥ sthirīkurvaṃs tad eva sakalaṃ labhet
+20.17cd: tena tatra na kurvīta caitad uttamavāñchayā
+20.18ab: piṇḍadvayavinirmuktā kiṃ cit tadvāsanānvitā
+20.18cd: vijñānakevalāntasthā padam ity abhidhīyate
+20.19ab: yata etām anuprāpto vijñānakramayogataḥ
+20.19cd: rūpodayātivijñānapadatvaṃ pratipadyate
+20.20ab: etac caturvidhaṃ jñeyaṃ caturdhārthapratiśrayāt
+20.20cd: sa ca tattvādisaṃvittipūrvas tatpatitāvadhiḥ
+20.21ab: padabhāvavinirmuktā kiṃ cit tadanuvarjitā
+20.21cd: avasthā svasvarūpasya prakāśakaraṇī yataḥ
+20.22ab: tena sārūpyam ity uktā rūpasthaṃ yat tadānvitam
+20.22cd: uditādiprabhedena tad apy uktaṃ caturvidhaṃ
+20.23ab: jñānodayā ca deveśi mamatvāt tatphalapradam
+20.23cd: amunā kramayogena antarā yeṣu saṃdadhat
+20.24ab: cetaḥ śuddham avāpnoti rūpātītaṃ paraṃ padam
+20.24cd: caturvidhaṃ tad apy uktaṃ saṃvittiphalabhedataḥ
+20.25ab: trividhaṃ tat samabhyasya sarvasiddhiphalecchayā
+20.25cd: caturthāt tu tanuṃ vyaktvā tatkṣaṇād apavṛjyate
+20.26ab: iti piṇḍādi bhedena śivajñānam udāhṛtam
+20.26cd: yogābhyāsavidhānena mantravidyāgaṇaṃ śṛṇu
+20.27ab: pūrvoktavidhisaṃnaddhaḥ pradeśe pūrvacodite
+20.27cd: nābhyādipañcadeśānāṃ parārṇaṃ kvāpi cintayet
+20.28ab: svarūpeṇa prabhābhāraprakāśitatanūdaram
+20.28cd: dīptibhis tasya tīvrābhir ā brahmabhuvanaṃ tataḥ
+20.29ab: evaṃ saṃsmaratas tasya divasaiḥ saptabhiḥ priye
+20.29cd: rudraśaktisamāveśaḥ sumahān saṃprajāyate
+20.30ab: āviṣṭo bahuvākyāni saṃskṛtādīni jalpati
+20.30cd: mahāhāsyaṃ tathā geyaṃ śivaruditam eva ca
+20.31ab: karoty āviṣṭacittas tu na tu jānāti kiṃ cana
+20.31cd: māsenaivaṃ yadā mukto yatra yatrāvalokayet
+20.32ab: tatra tatra diśaḥ sarvā īkṣate kiraṇākulāḥ
+20.32cd: yāṃ yām eva diśaṃ ṣaḍbhir māsair yuktas tu vīkṣate
+20.33ab: nānākārāṇi rūpāṇi tasyāṃ tasyāṃ prapaśyati
+20.33cd: na teṣu saṃdadhec cetaḥ na cābhyāsaṃ parityajet
+20.34ab: kurvann etadvidhaṃ yogī bhīrur unmattako bhavet
+20.34cd: vīraḥ śaktim punar yāti pramādāt tadgato 'pi san
+20.35ab: vatsarād yogasaṃsiddhiṃ prāpnoti manasepsitām
+20.35cd: parāparām athaitasyā aparāṃ vā yathecchayā
+20.36ab: sadbhāvaṃ mātṛsaṃghasya hṛdayaṃ bhairavasya vā
+20.36cd: navātmānam api dhyāyed ratiśekharam eva vā
+20.37ab: aghoryādyaṣṭakaṃ vāpi māheśyādikam eva vā
+20.37cd: amṛtādiprabhedena rudrān vā śaktayo 'pi vā
+20.38ab: sarve tulyabalāḥ proktā rudraśaktisamudbhavāḥ
+20.38cd: athavāmṛtapūrṇānāṃ prabhedaḥ procyate paraḥ
+20.39ab: prāṇasthaṃ parayākrāntaṃ pratyekam api dīpitam
+20.39cd: vidyāṃ prakalpayen mantraṃ prāṇākrāntaṃ parāsanam
+20.40ab: dvādaśārasya cakrasya ṣoḍaśārasya vā smaret
+20.40cd: aṣṭārasyāthavā devi tasya tredhā śatasya vā
+20.41ab: ṣaḍarasyāthavā mantrī yathā sarvaṃ tathā śṛṇu
+20.41cd: saṃkṣepād idam ākhyātaṃ sārdhaṃ cakraśatadvayam
+20.42ab: etat triguṇātāṃ yāti strīpuṃyāmalabhedataḥ
+20.42cd: śāntyādikarmabhedena pratyekaṃ dvādaśātmatām
+20.43ab: dakṣaś caṇḍo haraḥ śauṇḍī pramatho bhīmamanmathau
+20.43cd: śakuniḥ sumatir nando gopālo 'tha pitāmahaḥ
+20.44ab: nandā bhadrā jayā kālī karālī vikṛtānanā
+20.44cd: kroṣṭakī bhīmamudrā ca vāyuvegā hayānanā
+20.45ab: gambhīrā ghoṣaṇī caiva dvādaśaitāḥ prakīrtitāḥ
+20.45cd: āgneyyādicatuṣkoṇā brahmāṇyādyā api priye
+20.46ab: siddhir ṛddhis tathā lakṣmīr dīptir mālā śikhā śivā
+20.46cd: sumukhī vāmanī nandā harikeśī hayānanā
+20.47ab: viśveśī ca sumākhyā ca etā vā dvādaśa kramāt
+20.47cd: etāsāṃ vācakā jñeyāḥ svarāḥ ṣaṇṭhavivarjitāḥ
+20.48ab: ṣoḍaśāre 'mṛtādyāś ca strīpuṃpāṭhaprabhedataḥ
+20.48cd: śrīkaṇṭho 'nantasūkṣmau ca trimūrtiḥ śarvarīśvaraḥ
+20.49ab: argheśo bhārabhūtiś ca sthitiḥ sthāṇur haras tathā
+20.49cd: jhiṇṭhīśo bhautikaś caiva sadyojātas tathāparaḥ
+20.50ab: anugraheśvaraḥ krūro mahāseno 'tha ṣoḍaśa
+20.50cd: siddhir ṛddhir dyutir lakṣmī meghā kāntiḥ svadhā dhṛtiḥ
+20.51ab: dīptiḥ puṣṭir matiḥ kīrtiḥ saṃsthitiḥ sugatiḥ smṛtiḥ
+20.51cd: suprabhā ṣoḍaśī ceti śrīkaṇṭhādikaśaktayaḥ
+20.52ab: ṣoḍaśāre svarā jñeyā vācakatvena sarvataḥ
+20.52cd: aghorādyās tathāṣṭāre aghoryādyāś ca devatāḥ
+20.53ab: māheśyādyās tathā devi caturviṃśaty ataḥ śṛṇu
+20.53cd: nandādikāḥ kramāt sarvā brahmāṇyādyās tathaiva ca
+20.54ab: saṃvarto lakulīkaś ca bhṛguḥ śveto bakas tathā
+20.54cd: khaḍgī pinākī bhujago navamo balir eva ca
+20.55ab: mahākālo dviraṇḍaś ca cchagalāṇḍaḥ śikhī tathā
+20.55cd: lohito meṣamīnau ca tridaṇḍyāṣāḍhināmakau
+20.56ab: umākānto 'rdhanārīśo dāruko lāṅgalī tathā
+20.56cd: tathā someśaśarmāṇau caturvimśaty amī matāḥ
+20.57ab: kādibhāntāḥ parijñeyā aṣṭāre yādyam aṣṭakam
+20.57cd: makāro bindurūpasthaḥ sarveṣām upari sthitaḥ
+20.58ab: juṃkāro 'tha tathā svāhā ṣaḍare ṣaṭ krameṇa tu
+20.58cd: baliś ca balinandaś ca daśagrīvo haro hayaḥ
+20.59ab: mādhavaś ca mahādevi ṣaṣṭhaḥ saṃparikīrtitaḥ
+20.59cd: viśvā viśveśvarī caiva hārādrī vīranāyikā [hāraudrī?]
+20.60ab: ambā gurveti yoginyo bījais tair eva ṣaṭ smṛtāḥ
+20.60cd: anyonyavalitāḥ sarve svāmyāvaraṇabhedataḥ
+20.61ab: akārādikṣakārāntāḥ sarvasiddhiphalapradāḥ
+20.61cd: dhyānārādhanayuktānāṃ yogināṃ mantriṇām api
+20.62ab: athavā sarvacakrāṇāṃ madhye vidyāṃ yathepsitām
+20.62cd: mantraṃ vā pūrvam uddiṣṭaṃ japan dhyāyan prasiddhyati
+20.63ab: iti saṃkṣepataḥ proktaṃ sarvakāmaphalapradam</p>
+
+<p>iti śrīmālinīvijayottare sarvamantranirṇayo nāma viṃśatitamo 'dhikāraḥ
+samāptaḥ</p>
+
+<p>candrākṛṣṭyadhikāra ekaviṃśatitamaḥ</p>
+
+<p>21.1ab: athātaḥ paramaṃ guhyaṃ śivajñānāmṛtottamam
+21.1cd: vyādhimṛtyuvināśāya yoginām upavarṇyate
+21.2ab: ṣoḍaśāre khage cakre candrakalpitakarṇike
+21.2cd: svarūpeṇa parāṃ tatra sravantīm amṛtaṃ smaret
+21.3ab: pūrvanyāsena saṃnaddhaḥ kṣaṇam ekaṃ vicakṣaṇaḥ
+21.3cd: tatas tu rasanāṃ nītvā lambake viniyojayat
+21.4ab: sravantam amṛtaṃ divyaṃ candrabimbasitaṃ smaret
+21.4cd: mukham āpūryate tasya kiṃ cil lavaṇavāriṇā
+21.5ab: lohagandhena tac cātra na pibet kiṃ tu nikṣipet
+21.5cd: evaṃ samabhyaset tāvad yāvat tat svādu jāyate
+21.6ab: jarāvyādhivinirmukto jāyate tatpibaṃs tataḥ
+21.6cd: ṣaḍbhir māsair anāyāsād vatsarān mṛtyujid bhavet
+21.7ab: tatra svāduni saṃjāte tadāprabhṛti tatragam
+21.7cd: yad eva cintayed dravyaṃ tenāsyāpūryate mukham
+21.8ab: rudhiraṃ madiraṃ vātha vasāṃ vā kṣīram eva vā
+21.8cd: ghṛtatailādikaṃ vātha dravaddravyam ananyadhīḥ
+21.9ab: athānyaṃ saṃpravakṣyāmi saṃkrāntividhim uttamam
+21.9cd: mṛte jīvaccharīre tu praviśed yogavidyayā
+21.10ab: nivātastho jitaprāṇo jitāsanavidhikramaḥ
+21.10cd: kurvīta vāyunāveśam arkatūle śanaiḥ śanaiḥ
+21.11ab: svādākṛṣṭividhiṃ yāvad guḍe nimbe ca kārayet
+21.11cd: śrīkhaṇḍaguḍakarpūrais tataḥ kṛtvākṛtim śubhām
+21.12ab: praguṇām aguṇa[lacuna]nyaṅgeṣu saṃdadhat
+21.12cd: nyāsaṃ kṛtvāpi tatrāpi vedhaṃ kuryāc chanaiḥ śanaiḥ
+21.13ab: nirodhaṃ tatra kurvīta ghaṭṭanaṃ tadanantaram
+21.13cd: ghaṭṭanaṃ nāma vijñeyam aṅgapratyaṅgacālanam
+21.14ab: evam abhyasatas tasya yogayuktasya yoginaḥ
+21.14cd: calate pratimā sā tu dhāvate cāpi saṃmukhī
+21.15ab: punas tāṃ prerayet tāvad yāvat svasthānam āgatam
+21.15cd: patitāṃ cālayed bhūya uttānāṃ pārśvataḥ sthitaḥ
+21.16ab: evaṃ sarvātmanas tāvad yāvat svavaśatāṃ gatām
+21.16cd: tataḥ prabhṛty asau yogī praviśed yatra rocate
+21.17ab: mṛte jīvaccharīre vā saṃkrāntyākrāntibhedataḥ
+21.17cd: prakṣipya jalavac chaktijālam sarvāṅgasaṃdhiṣu
+21.18ab: pratyaṅgam aṅgatas tasya śaktiṃ tenākramed budhaḥ
+21.18cd: svakīyaṃ rakṣayed deham ākrāntāv anyathā tyajet
+21.19ab: bahūny api śarīrāṇi dṛḍhalakṣyo yadāḷbhavet
+21.19cd: tadāḷgṛhṇāty asaṃdehaṃ yugapat saṃtyajann api
+21.20ab: athāparaṃ pravakṣyāmi sadyaḥpratyayakārakam
+21.20cd: samādhānāmṛtaṃ divyaṃ yogināṃ mṛtyunāśanam
+21.21ab: candrākṛṣṭikaraṃ nāma māsād vāḷyogabhogadam
+21.21cd: śuklapakṣe dvitīyāyāṃ meṣasthe tigmarociṣi
+21.22ab: snātaḥ śucir nirāhāraḥ kṛtapūjāvidhir budhaḥ
+21.22cd: nyasec candre kalājālaṃ parayā samadhiṣṭhitam
+21.23ab: sarvabādhāparityakte pradeśe saṃsthito budhaḥ
+21.23cd: ekacittaḥ praśāntātmā śivasadbhāvabhāvitaḥ
+21.24ab: tāvad ālokayec candraṃ yāvad astam upāgatam
+21.24cd: tato bhuñjīta dugdhena candradhyānasamanvitaḥ
+21.25ab: evaṃ dine dine kuryād yāvat pañcadaśī bhavet
+21.25cd: śeṣāṃ rātriṃ svaped dhyāyaṃśḷcandrabimbagatāṃ parām
+21.26ab: paurṇamāsīṃ tathā yogī ardharātra upasthitaḥ
+21.26cd: jane niḥśabdatāṃ yāte prasupte sarvajantubhiḥ
+21.27ab: candrakoṭikaraprakhyāṃ tārahāravibhūṣaṇām
+21.27cd: sitāmbaraparīdhānāṃ sitacandanacarcitām
+21.28ab: mauktikābharaṇopetaṃ surūpāṃ navayauvanām
+21.28cd: āpyāyanakarīṃ devīṃ samantād amṛtasravām
+21.29ab: rājīvāsanasaṃsthāṃ ca yoganidrām avasthitām
+21.29cd: candrabimbe parāṃ devīṃ īkṣate nātra saṃśayaḥ
+21.30ab: tatas tāṃ cetasā vyāpya tāvad ākarṣayet sudhīḥ
+21.30cd: yāvan mukhāgram āyātā tatra kuryāt sthiraṃ manaḥ
+21.31ab: tataḥ prasārya vadanaṃ dhyānāsaktena cetasā
+21.31cd: nigiret tāṃ samākṛṣya bhūyo hṛdi vicintayet
+21.32ab: tayā praviṣṭayā dehaṃ yogī duḥkhavivarjitaḥ
+21.32cd: śaktitulyabalo bhūtvā jīved ācandratārakam
+21.33ab: eko 'py anekadhātmānaṃ saṃvibhajya nijecchayā
+21.33cd: trailokyaṃ yaugapadyena bhunakti vaśatāṃ gatam
+21.34ab: āsādya vipulān bhogān pralaye samupasthite
+21.34cd: param abhyeti nirvāṇaṃ duṣprāpam akṛtātmanām
+21.35ab: athavā tan na śaknoti gagane paricintitum
+21.35cd: pratibimbe tathā dhyāyed udakādiṣu pūrvavat
+21.36ab: tat pītvāḷmanasā śeṣāṃ svaped rātrim anusmaran
+21.36cd: pūrvoktaṃ samavāpnoti ṣaḍbhir māsair akhaṇḍitam</p>
+
+<p>iti śrīmālinīvijayottare tantre candrākṛṣṭyadhikāra ekaviṃśatitamaḥ
+samāptaḥ</p>
+
+<p>sūryākṛṣṭyadhikāro dvāviṃśatitamaḥ</p>
+
+<p>22.1ab: athānyaṃ paramaṃ guhyaṃ kathayāmi tava priye
+22.1cd: yan na kasya cid ākhyātaṃ yogāmṛtam anuttamam
+22.2ab: sūryākṛṣṭikaraṃ nāma yogināṃ yogasiddhidam
+22.2cd: samyaṅ māsacatuṣkeṇa dināṣṭābhyadhikena tu
+22.3ab: praharsyāṣṭamo bhāgo nāḍikety abhidhīyate
+22.3cd: tatpādakramavṛddhyā tu prativāsaram abhyaset
+22.4ab: udayāstamayaṃ yāvad yatra sūryaḥ pradṛśyate
+22.4cd: pradeśe tatra vijane sarvabādhāvivarjite
+22.5ab: ahorātroṣito yogī makarasthe divākare
+22.5cd: śucir bhūtvā kṛtanyāsaḥ kṛtaśītapratikriyaḥ
+22.6ab: bhānubimbe nyasec cakram aṣṭaṣaḍdvādaśārakam
+22.6cd: śivaśaktighanopetaṃ bhairavāṣṭakasaṃyutam
+22.7ab: varṣādiṛtusaṃyuktaṃ māsairṛkṣādibhir yutam
+22.7cd: aṣṭāraṃ cintayed bimbe śeṣaṃ raśmiṣu cintayet
+22.8ab: tatra cittaṃ samādhāya proktakālaṃ vicakṣaṇaḥ
+22.8cd: animīlitanetras tu bhānubimbaṃ nirīkṣayet
+22.9ab: tataḥ kāle vyatikrānte sunimīlitalocanaḥ
+22.9cd: praviśed andhakārāntarbhuvanaṃ nirupadravam
+22.10ab: tatronmīlitanetras tu bimbākāraṃ prapaśyati
+22.10cd: saṃdhāya tatra caitanyaṃ tiṣṭhed yāvan na paśyati
+22.11ab: naṣṭe 'pi cetasā śeṣaṃ tiṣṭhet kālam anusmaran
+22.11cd: evaṃ māsena deveśi sthiraṃ tad upajāyate
+22.12ab: māsadvayena sarvatra prekṣate nātra saṃśayaḥ
+22.12cd: tribhiḥ samīkṣate sarvaṃ ravibimbasamākulam
+22.13ab: proktakālāvasānena vṛṣasthe tigmarociṣi
+22.13cd: prekṣate sūryabimbāntaḥ sacakraṃ parameśvaram
+22.14ab: upalabdhaṃ samākṛṣya mukhāgre sthiratāṃ nayet
+22.14cd: āpīya pūrvavat paścād vṛttiṃ niścalatāṃ nayet
+22.15ab: tatra tena sahātmānam ekīkṛtya muhūrtakam
+22.15cd: yāvat tiṣṭhati deveśi tāvat saṃtyajati kṣitim
+22.16ab: paśyato janavṛndasya yāti sūryena caikataḥ
+22.16cd: anena vidhinā devi siddhayogīśvareśvaraḥ
+22.17ab: śivādyavaniparyantaṃ na kva cit pratihanyate
+22.17cd: bhuktvā tu vipulān bhogān niṣkale līyate pare
+22.18ab: tad etat khecarīcakraṃ yatra khecaratāṃ vrajet
+22.18cd: siddhayogeśvarītantre sarahasyam udāhṛtam
+22.19ab: athavā cakrarūpeṇa sabāhyābhyantaraṃ svakam
+22.19cd: dehaṃ cintayataḥ pūrvaṃ phalaṃ syān niścitātmanaḥ
+22.20ab: uccaran phādināntāṃ vā dhvanijyotirmaruddyutām
+22.20cd: viśrāmya mastake cittaṃ kṣaṇam ekaṃ vicakṣaṇaḥ
+22.21ab: triśūlena prayogena sadyas tyajati medinīm
+22.21cd: evaṃ samabhyasan māsāc cakravad bhramati kṣitau
+22.22ab: muhūrtaṃ spṛśate bhūmiṃ muhūrtāc ca nabhastalam
+22.22cd: śivārāvādi kurute valanāsphoṭanāni ca
+22.23ab: mudrābandhādikaṃ vātha bhāṣā vāḷvakty anekadhā
+22.23cd: ṣaṇmāsān medinīṃ tyaktvā samādhistho dṛḍhendriyaḥ
+22.24ab: tiṣṭhate hastamātreṇa gagane yogacintakaḥ
+22.24cd: paśyate yoginīvṛndam anekākāralakṣaṇam
+22.25ab: saṃvatsareṇa yuktātmā tatsamānaḥ prajāyate
+22.25cd: paśyatām eva lokānāṃ tejobhir bhāsayan diśaḥ
+22.26ab: yāty utkṛṣya mahīpṛṣṭhāt khecarīṇāṃ patir bhavet
+22.26cd: mudrā khageśvarī nāma kathitā yoginīmate
+22.27ab: jāgaritvātha vā yogī tryahorātram atandritaḥ
+22.27cd: caturthe 'hni niśārambhe pūjayitvā maheśvaram
+22.28ab: tato 'ndhakāre bahule kṛtarakṣāvidhir budhaḥ
+22.28cd: bhruvor madhye samādhāya kṣaṇaṃ cetaḥ prapaśyati
+22.29ab: tejo rūpapratīkāśaṃ paryaṅkāsanam āsthitaḥ
+22.29cd: prayogaṃ tv eva satataṃ yogayuktaḥ samabhyaset
+22.30ab: paśyate māsamatreṇa gṛhāntarvastu yat sthitam
+22.30cd: dvābhyāṃ bahiḥ sthitaṃ sarvaṃ tribhiḥ pattanasaṃsthitam
+22.31ab: caturbhir viṣayāntaḥsthaṃ pañcabhir maṇḍalāvadhi
+22.31cd: ṣaḍbhir māsair mahāyogī cchidraṃ paśyati medinīm
+22.32ab: sarvajñatvam avāpnoti vatsarān nātra saṃśayaḥ
+22.32cd: yoginīsiddhasaṅghasya sadbhāvavyāptisaṃsthitam
+22.33ab: paśyate yogayuktātmā tatsamānaś ca jāyate
+22.33cd: anenaiva vidhānena svastikāsanasaṃsthitaḥ
+22.34ab: binduṃ nānāvidhaṃ tyaktvā śuddharūpam anusmaret
+22.34cd: tenāpi sarvaṃ purvoktaṃ vyāpnoti phalam uttamam</p>
+
+<p>iti śrīmālinīvijayottare tantre sūryākṛṣṭyadhikāra dvāviṃśatitamaḥ
+samāptaḥ</p>
+
+<p>trayoviṃśatitamo 'dhikāraḥ</p>
+
+<p>23.1ab: athātaḥ paramaṃ guhyaṃ kathayāmi tavādhunā
+23.1cd: sadyopalabdhijanakaṃ yogināṃ yogasiddhaye
+23.2ab: pūrvanyāsena saṃnaddhaś cittaṃ śrotre niveśayet
+23.2cd: nivāte svalpavāte vā bāhyaśabdavivarjite
+23.3ab: tatas tatra śṛṇoty eṣa yogī dhvanim anāvṛtam
+23.3cd: suviśuddhasya kāṃsyasya hatasyeha muhur muhuḥ
+23.4ab: yam ākrṇya mahādevi puṇyapāpaiḥ pramucyate
+23.4cd: tatra saṃdhāya caitanyaṃ ṣaṇmāsād yogavittamaḥ
+23.5ab: rutaṃ pakṣigaṇasyāpi prasphuṭaṃ vetty ayatnataḥ
+23.5cd: dūrāc chravaṇavijñānaṃ vatsareṇāsya jāyate
+23.6ab: sarvakāmaphalāvāptir vatsaratritayena ca
+23.6cd: siddhyatīti kim āścāryam anāyāsena siddhyati
+23.7ab: athavā grahaṇe māsi kṛtvā sūryaṃ tu pṛṣṭhataḥ
+23.7cd: pūrvanyāsena saṃnaddhaḥ kiṃ cid bhittimadāśritaḥ
+23.8ab: lakṣayed ātmanaś chāyāṃ mastakordhvam anāhatam
+23.8cd: dhūmavartiviniṣkrāntāṃ tadgatenāntarātmanā
+23.9ab: yāti tanmayatāṃ tatra yogayukto yathā yathā
+23.9cd: tathā tathāsya mahatī sāḷvittir upajāyate
+23.10ab: tatas tatra mahātejah sphuratkiraṇasaṃnibham
+23.10cd: paśyate yatra dṛṣṭe 'pi sarvapāpakṣayo bhavet
+23.11ab: tad asyābhyāsato māsāt sarvatra pravisarpati
+23.11cd: jvālāmālākulākārā diśaḥ sarvāḥ prapaśyati
+23.12ab: ṣaṇmāsam abhyasan yogī sarvajñatvam avāpnuyāt
+23.12cd: abdaṃ divyatanur bhūtvā śivavan modate ciram
+23.13ab: atha jātyaḥ pravakṣyante sapūrvāsanaśāśvatāḥ
+23.13cd: hrīṃ kṣlāṃ kṣvīṃ vaṃ tathāḷkṣaṃ ca pañcakasya yathākramam
+23.14ab: haṃ yaṃ raṃ laṃ tathā vaṃ ca pañcakasyāparasya ca
+23.14cd: ṛṃ .Rṃ ḷṃ .Lṃ tathā oṃ auṃ haḥ aṃ ākarṇikāvadhau
+23.15ab: kesareṣu bhakārāntā haṃ hāṃ hiṃ hīṃ ca huṃ tathā
+23.15cd: hūṃ heṃ haiṃ ca daleṣv evaṃ svasaṃjñābhiś ca śaktayaḥ
+23.16ab: maṇḍalatritaye śeṣaṃ sūkṣmaṃ pretasya kalpayet
+23.16cd: jrakāraṃ śūlaśṛṅgāṇām ity etat parikīrtitam
+23.17ab: anuktāsanayogeṣu sarvatraiva prakalpayet
+23.17cd: namaḥ svāhā tathā vauṣaṭ huṃ vaṣaṭ phaṭ ca
+jātayaḥ\testim{\svacchandatantra 1.72}
+23.18ab: prāyaścitteṣu sarveṣu japen mālām akhaṇḍitām
+23.18cd: bhinnāṃ vāpy athavābhinnām atikramabalābalam
+23.19ab: sakṛjjapāt samārabhya yāval lakṣatrayaṃ priye
+23.19cd: prāṇavṛttinirodhena tataḥ parataraṃ kva cit
+23.20ab: sadā bhramaṇaśīlānāṃ pīṭhakṣetrādikaṃ bahiḥ
+23.20cd: prayogaṃ saṃpravakṣyāmi sukhasiddhiphalapradam
+23.21ab: nāsākrāntaṃ mahāprāṇaṃ daṇḍarūpaṃ sabindukam
+23.21cd: tadvad guhyaṃ ca kurvīta vidyeyaṃ dvyakṣarā matā
+23.22ab: asyāḥ pūrvoktavidhinā kṛtasevaḥ prasannadhīḥ
+23.22cd: pīṭhādikaṃ bhramet siddhyai nānyathā vīravandite
+23.23ab: tat pradeśaṃ samāsādya mantrair ātmānam ādarāt
+23.23cd: vidyayā veṣtayet sthānaṃ raktasūtrasamānayā
+23.24ab: bahudhānanyacittas tu sabāhyābhyantaraṃ budhaḥ
+23.24cd: tatas tatra kva cit kṣetre yoginyo bhīmavikramāḥ
+23.25ab: samāgatya prayacchanti saṃpradāyaṃ svakaṃ svakam
+23.25cd: yenāsau labdhamātreṇa saṃpradāyena suvrate
+23.26ab: tatsamānabalo bhūtvā bhuṅkte bhogān yathepsitān
+23.26cd: athavā kṛtasevas tu lakṣam ekaṃ japet sudhīḥ
+23.27ab: tarpayitvā daśāṃśena kṣudrakarmasu yojayet
+23.27cd: tatroccāritamātreyaṃ viṣakṣayakarī bhavet
+23.28ab: cakravabhramamāṇaiṣā yonau raktāṃ vicintayet
+23.28cd: gamāgamakramād vāpi vinda[lacuna]vāritā
+23.29ab: tatrasthaś cāśu saṃghātavighātākuñcanena tu
+23.29cd: kṣaṇād ananyacittas tu kṣobhayed urvaśīm api
+23.30ab: kṛtasevavidhir vātha lakṣatrayajapena tu
+23.30cd: mahatīṃ śriyam ādhatte padmaśrīphalatarpitā
+23.31ab: ṣaḍutthāsanasaṃsthānā sādhitāpy uktavartmanā
+23.31cd: sarvasiddhikarī devī mantriṇām upajāyate
+23.32ab: śūlapadmavidhiṃ muktvā navātmādyaṃ ca saptakam
+23.32cd: ṣaḍuttham āsanaṃ dadyāt sarvacakravidhau budhaḥ
+23.33ab: kudrā ca mahatī yojyā hṛdbījenopacārakam
+23.33cd: athānyat saṃpravakṣyāmi svapnajñānam anuttamam
+23.34ab: hṛccakre tanmayo bhūtvā rātrau rātrāv ananyadhīḥ
+23.34cd: māsād ūrdhvaṃ mahādevi svapne yat kiṃcid īkṣate
+23.35ab: tat tathyaṃ jāyate tasya dhyānayuktasya yoginaḥ
+23.35cd: tatraiva yadi kālasya niyamena rato bhavet
+23.36ab: tadā prathamayāme tu vatsareṇa śubhāśubham
+23.36cd: ṣaṭtrimāsena kramaśo dvitīyādiṣv anukramāt
+23.37ab: aruṇodayavelāyāṃ daśāhena phalaṃ labhet
+23.37cd: saṃkalpapūrvake 'py evaṃ pareṣām ātmano 'pi vā
+23.38ab: kva cit kārye samutpanne suptajñānam upākramet
+23.38cd: ity etat kathitaṃ devi siddhayogīśvarīmatam
+23.39ab: nātaḥ parataraṃ jñānaṃ śivādyavanigocare
+23.39cd: ya evaṃ tattvato veda sa śivo nātra saṃśayaḥ
+23.40ab: tasya pādarajaḥ mūrdhni dhṛtaṃ pāpapraśāntaye
+23.40cd: etac chrutvā mahādevī paraṃ saṃtoṣam āgatā
+23.41ab: evaṃ kṣamāpayām āsa praṇipatya punaḥ punaḥ
+23.41cd: iti vaḥ sarvam ākhyātaṃ mālinīvijayottaram
+23.42ab: mamaitat kathitaṃ devyā yogāmṛtam anuttamam
+23.42cd: bhavadbhir api nākhyeyam aśiṣyāṇām idaṃ mahat
+23.43ab: na cāpi paraśiṣyāṇām aparīkṣya prayatnataḥ
+23.43cd: sarvathaitat samākhyātaṃ yogābhyāsaratātmanām
+23.44ab: prayātānāṃ vinītānāṃ śivaikārpitacetasām
+23.44cd: kārtikeyāt samāsādya jñānāmṛtam idaṃ mahat
+23.45ab: manayo yogam abhyasya parāṃ siddhim upāgatāḥ</p>
+
+<p>iti śrīmālinīvijayottare tantre trayoviṃśatitamo 'dhikāraḥ samāptaḥ</p>
+
+<p>samāptaṃ cedaṃ mālinīvijayottaraṃ nāma mahātantram</p>
+
+  </body>
+</text>
+</TEI>

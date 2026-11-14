@@ -1,0 +1,1840 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_sUryasiddhAnta">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Sūryasiddhānta</title>
+	<author></author>
+	<respStmt>
+	 <resp when-custom="February 13|2002">data entry</resp>
+	 <name>Michio Yano</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Michio Yano</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/8_jyot/surysidu.htm">surysidu.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Suryasiddhanta
+<lb/>
+<lb/>Input by Michio Yano
+<lb/>version 1.00 February 13,2002
+<lb/>
+<lb/>Texts used in this e-version:
+<lb/> B: The Surya-siddhanta with its commentary the Gudhartha-prakasaka,
+<lb/> edited by Fits-Edward Hall, Bibliotheca Indica No.79, Calcutta 1854.
+<lb/> (reprinted as volume 25 of Bibliotehca Indica, Biblio Verlag, Osnabruck 1980).
+<lb/> C: Kasi samskrta granthamala 144, Caukhamba Sanskrit Samsthaana, Fourth edition, 1987.
+<lb/> D: With the Commentary of Sudhakara Dvivedi, ed. by Dr. Sri Krsna Candra Dvivedii,
+<lb/> Sampurnanand Sanskrit University, 1987.
+<lb/>
+<lb/>Varitants for the part beginning with * are supplied in ( ) .
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>B: The Surya-siddhanta with its commentary the Gudhartha-prakasaka, edited by Fits-Edward Hall, Bibliotheca Indica No.79, Calcutta 1854. (reprinted as volume 25 of Bibliotehca Indica, Biblio Verlag, Osnabruck 1980). C: Kasi samskrta granthamala 144, Caukhamba Sanskrit Samsthaana, Fourth edition, 1987. D: With the Commentary of Sudhakara Dvivedi, ed. by Dr. Sri Krsna Candra Dvivedii, Sampurnanand Sanskrit University, 1987.</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Sūryasiddhānta = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Śāstra -- Jyotiḥśāstra</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+
+<p>1.01a: acintyāvyaktarūpāya nirguṇāya guṇātmane/
+1.01b: samastajagadādhāramūrtaye brahmaṇe namaH//</p>
+
+<p>1.02a: alpāvaśiṣṭe tu kṛte *mayo nāma mahāsuraH/(B mayanāma)
+1.02b: rahasyaṃ paramaṃ puṇyaṃ jijñāsur jñānam uttamam//</p>
+
+<p>1.03a: vedāṅgam agryam akhilaṃ jyotiṣāṃ gatikāraṇam/
+1.03b: ārādhayan vivasvantaṃ tapas tepe suduścaram//</p>
+
+<p>1.04a: toṣitas tapasā tena prītas tasmai varārthine/
+1.04b: grahāṇāṃ caritaṃ prādān mayāya savitā svayam//</p>
+
+<p>1.05a: viditas te *mayā bhāvas toṣitas tapasā hy aham/ (ḍ mayābhāvas)
+1.05b: dadyāṃ kālāśrayaṃ jñānaṃ grahāṇāṃ caritaṃ mahat//</p>
+
+<p>1.06a: na me tejaHsahaH kaścid ākhyātuṃ nāsti me kṣaṇaH/
+1.06b: madaṃśaH puruṣo +ayaṃ te niHśeṣaṃ kathayiṣyati//</p>
+
+<p>1.07a: ity uktvāntardadhe devaH samādiśyāṃśam ātmanaH/
+1.07b: sa pumān mayam āhedaṃ praṇataṃ prāñjalisthitam//</p>
+
+<p>1.08a: śṛṇuṣvaikamanāH pūrvaṃ yad uktaṃ jñānam uttamam/
+1.08b: yuge yuge maharṣīṇāṃ svayam eva vivasvatā//</p>
+
+<p>1.09a: śāstram ādyaṃ tad evedaṃ yat pūrvaṃ prāha bhāskaraH/
+1.09b: yugānāṃ parivartena kālabhedo +atra *kevalaH//(B kevalam)</p>
+
+<p>1.10a: lokānām antakṛt kālaH kālo +anyaH kalanātmakaH/
+1.10b: sa dvidhā sthūlasūkṣmatvān mūrtaś cāmūrta ucyate//</p>
+
+<p>1.11a: prāṇādiH kathito mūrtas truṭyādyo +amūrtasaṃjñakaH/
+1.11b: ṣaḍbhiH prāṇair vināḍī syāt tatṣaṣṭyā nāḍikā smṛtā//</p>
+
+<p>1.12a: nāḍīṣaṣṭyā tu nākṣatram ahorātraṃ prakīrtitam/
+1.12b: tattriṃśatā bhaven māsaH sāvano +arkodayais tathā//</p>
+
+<p>1.13a: aindavas tithibhis tadvat saṃkrāntyā saura ucyate/
+1.13b: māsair dvādaśabhir varṣaṃ divyaṃ tad aha ucyate//</p>
+
+<p>1.14a: surāsurāṇām anyonyam ahorātraṃ viparyayāt/
+1.14b: tatṣaṣṭiH ṣaḍguṇā divyaṃ varṣam āsuram eva ca//</p>
+
+<p>1.15a: taddvādaśasahasrāṇi caturyugam udāhṛtam/
+1.15b: sūryābdasaṃkhyayā dvitrisāgarair ayutāhataiH//</p>
+
+<p>1.16a: sandhyāsandhyāṃśasahitaṃ vijñeyaṃ taccaturyugam/
+1.16b: kṛtādīnāṃ vyavastheyaṃ dharmapādavyavasthayā//</p>
+
+<p>1.17a: yugasya daśamo bhāgaś catustridvyekasaṅguṇaH/
+1.17b: kramāt kṛtayugādīnāṃ ṣaṣṭhāṃśaH sandhyayoH svakaH//</p>
+
+<p>1.18a: yugānāṃ saptatiH saikā manvantaram ihocyate/
+1.18b: *kṛtābdasaṃkhyās tasyānte sandhiH prokto jalaplavaH//(B ṛtābdasaṃkhyā)</p>
+
+<p>1.19a: sasandhayas te manavaH kalpe jñeyās caturdaśa/
+1.19b: kṛtapramāṇaH kalpādau sandhiH pañcadaśaH smṛtaH//</p>
+
+<p>1.20a: ittham yugasahasreṇa bhūtasaṃhārakārakaH/
+1.20b: kalpo brāhmam ahaH proktaṃ śarvarī tasya tāvatī//</p>
+
+<p>1.21a: paramāyuH śataṃ tasya tayāhorātrasaṃkhyayā/
+1.21b: āyuṣo +ardhamitaṃ tasya śeṣakalpo +ayam ādimaH//</p>
+
+<p>1.22a: kalpād asmāc ca manavaH ṣaḍ vyatītāH sasandhayaH/
+1.22b: vaivasvatasya ca *manor yugānāṃ trighano gataH//(B manoyugānāṃ)</p>
+
+<p>1.23a: aṣṭāviṃśād yugād asmād yātam etat kṛtaṃ yugam/
+1.23b: ataH kālaṃ prasaṃkhyāya saṃkhyām ekatra piṇḍayet//</p>
+
+<p>1.24a: graharkṣadevadaityādi sṛjato +asya carācaram/
+1.24b: kṛtādrivedā divyābdāH śataghnā vedhaso gatāH//</p>
+
+<p>1.25a: paścād vrajanto +atijavān nakṣatraiH satataṃ grahāH/
+1.25b: jīyamānās tu lambante tulyam eva svamārgagāH//</p>
+
+<p>1.26a: prāggatitvam atas teṣāṃ bhagaṇaiH pratyahaṃ gatiH/
+1.26b: pariṇāhavaśād bhinnā tadvaśād bhāni bhuñjate//</p>
+
+<p>1.27a: śīghragas tāny athālpena kālena mahatālpagaH/
+1.27b: teṣāṃ tu parivartena pauṣṇānte bhagaṇaH smṛtaH//</p>
+
+<p>1.28a: vikalānāṃ kalā ṣaṣṭyā tatṣaṣṭyā bhāga ucyate/
+1.28b: tattriṃśatā bhaved rāśir bhagaṇo dvādaśaiva te//</p>
+
+<p>1.29a: yuge sūryajñaśukrāṇām khacatuṣkaradārṇavāH/
+1.29b: kujārkiguruśīghrāṇāṃ bhagaṇāH pūrvayāyinām//</p>
+
+<p>1.30a: indo rasāgnitritrīṣusaptabhūdharamārgaṇāH/(57753336)
+1.30b: dasratryaṣṭarasāṅkākṣilocanāni kujasya tu//(2296832) checked</p>
+
+<p>1.31a: budhaśīghrasya śūnyartukhādritryaṅkanagendavaH/(17937060)
+1.31b: bṛhaspateH khadasrākṣivedaṣaḍvahnayas tathā//(364220)</p>
+
+<p>1.32a: sitaśīghrasya ṣaṭsaptatriyamāśvikhabhūdharāH/(7022376)
+1.32b: śaner bhujaṅgaṣaṭpañcarasavedaniśākarāH//(146568)</p>
+
+<p>1.33a: candroccasyāgniśūnyāśvivasusarpārṇavā yuge/(488203)
+1.33b: vāmaṃ pātasya vasvagniyamāśviśikhidasrakāH//(232238)</p>
+
+<p>1.34a: bhānām aṣṭākṣivasvadritridvidvyaṣṭaśarendavaH/(1582237828)
+1.34b: bhodayā bhagaṇaiH svaiH svair ūnāH svasvodayā yuge//</p>
+
+<p>1.35a: bhavanti śaśino māsāH sūryendubhagaṇāntaram/
+1.35b: ravimāsonitās te tu śeṣāH syur adhimāsakāH//</p>
+
+<p>1.36a: sāvahāhāni cāndrebhyo dyubhyaH projjhya tithikṣayāH/
+1.36b: udayād udayaṃ bhānor bhūmisāvanavāsaraH//</p>
+
+<p>1.37a: vasudvyaṣṭādrirūpāṅkasaptādritithayo yuge/(1577917828)
+1.37b: cāndrāH khāṣṭakhakhavyomakhāgnikhartuniśākarāH//(1603000080)</p>
+
+<p>1.38a: ṣaḍvahnitrihutāśāṅkatithayaś cādhimāsakāH/(1593336)
+1.38b: tithikṣayā yamārthāśvidvyaṣṭavyomaśarāśvinaH//(25082252)</p>
+
+<p>1.39a: khacatuṣkasamudrāṣṭakupañca ravimāsakāH/(51840000)
+1.39b: bhavanti bhodayā bhānubhagaṇair ūnitāH kvahāH//</p>
+
+<p>1.40a: adhimāsonarātryārkṣacāndrasāvanavāsarāH/
+1.40b: ete sahasraguṇitāH kalpe syur bhagaṇādayaH//</p>
+
+<p>1.41a: prāggateH sūryamandasya kalpe saptāṣṭavahnayaH/(387)
+1.41b: kaujasya vedakhayamā baudhasyāṣṭartuvahnayaH//(204, 368)</p>
+
+<p>1.42a: khakharandhrāṇi jaivasya śaukrasyārthaguṇeṣavaH/(900, 535)
+1.42b: go +agnayaH śanimandasya pātānām atha vāmataH//(39)</p>
+
+<p>1.43a: manudasrās tu kaujasya baudhasyāṣṭāṣṭasāgarāH/ (214, 488)
+1.43b: kṛtādricandrā jaivasya trikhāṅkāś ca tathā bhṛgos //(ḍ bhṛgos tathā)(174, 903)</p>
+
+<p>1.44a: śanipātasya bhagaṇāH kalpe yamarasartavaH/(662)
+1.44b: bhagaṇāH pūrvam evātra proktāś candroccapātayoH//</p>
+
+<p>1.45a: ṣaṇmanūnāṃ tu sampīḍya kālaṃ tatsandhibhiH saha/
+1.45b: kalpādisandhinā sārdhaṃ vaivasvatamanos tathā//</p>
+
+<p>1.46a: yugānām trighanaṃ yātaṃ tathā kṛtayugaṃ tv idam/
+1.46b: projjhya sṛṣṭes tataH kālaṃ pūrvoktaṃ divyasaṃkhyayā//</p>
+
+<p>1.47a: sūryābdasaṃkhyayā jñeyāH kṛtasyānte gatā amī/
+1.47b: khacatuṣkayamādryagniśararandhraniśākarāH//(1953720000)</p>
+
+<p>1.48a: ata ūrdhvam amī yuktā gatakālābdasaṃkhyayā/
+1.48b: māsīkṛtā yutā māsair madhuśuklādibhir gataiH//</p>
+
+<p>1.49a: pṛthakṣthās te +adhimāsaghnāH sūryamāsavibhājitāH/
+1.49b: labdhādhimāsakair yuktā dinīkṛtya dinānvitāH//</p>
+
+<p>1.50a: dviṣṭhās tithikṣayābhyastāś cāndravāsarabhājitāH/
+1.50b: labdhonarātrirahitā laṅkāyām ārdharātrikaH//</p>
+
+<p>1.51a: sāvano dyugaṇaH sūryād dinamāsābdapās tataH/
+1.51b: saptabhiH kṣayitaH śeṣaH sūryādyo vāsareśvaraH//</p>
+
+<p>1.52a: māsābdadinasaṃkhyāptaṃ dvitrighnaṃ rūpasaṃyutam/
+1.52b: saptoddhṛtāvaśeṣau tu vijñeyau māsavarṣau//</p>
+
+<p>1.53a: yathā svabhaganābhyasto dinarāśiH kuvāsaraiH/
+1.53b: vibhājito madhyagatyā bhagaṇādir graho bhavet//</p>
+
+<p>1.54a: evaṃ svaśīghramandoccā ye proktāH pūrvayāyinaH/
+1.54b: vilomagatayaH pātās tadvac cakrād viśodhitāH//</p>
+
+<p>1.55a: dvādaśaghnā guror yātā bhagaṇā vartamānakaiH/
+1.55b: rāśibhiH sahitāH śuddhāH ṣaṣṭyā syur vijayādayaH//</p>
+
+<p>1.56a: vistareṇaitad uditaṃ saṃkṣepād vyāvahārikam/
+1.56b: madhyamānayanaṃ kāryaṃ grahāṇām iṣṭato yugāt//</p>
+
+<p>1.57a: asmin kṛtayugasyānte sarve madhyagatā grahāH/
+1.57b: *vinā tu pātamandoccān meṣādau tulyatām itāH (ḍ vinendu)//</p>
+
+<p>1.58a: makarādau śaśāṅkoccaṃ tatpātas tu tulādigaH/
+1.58b: niraṃśatvam gatāś cānye noktās te mandacāriṇaH//</p>
+
+<p>1.59a: yojanāni śatāny aṣṭau bhūkarṇo dviguṇāni tu/
+1.59b: tadvargato daśaguṇāt padaṃ bhūparidhir bhavet//</p>
+
+<p>1.60a: lambajyāghnas trijīvāptaH sphuṭo bhūparidhiH svakaH/
+1.60b: tena deśāntarābhyastā grahabhuktir vibhājitā//</p>
+
+<p>1.61a: kalādi tat phalaṃ prācyāṃ grahebhyaH pariśodhayet/
+1.61b: rekhāpratīcīsaṃsthāne prakṣipet syuH svadeśajā//</p>
+
+<p>1.62a: rākṣasālayadevaukaHśailayor madhyasūtragāH/
+1.62b: rohītakam avantī ca yathā sannihitaṃ saraH//</p>
+
+<p>1.63a: atītyonmīlanād indoH paścāt tadgaṇitāgatāt/(C atītyonmīlanād indor dṛkṣiddhir gaṇitāgatāt/)
+1.63b: yadā bhavet tadā prācyāṃ svasthānaṃ madhyato bhavet//</p>
+
+<p>1.64a: aprāpya ca bhavet paścād evaṃ vāpi nimīlanāt/
+1.64b: tayor antaranāḍībhir hanyād bhūparidhiṃ sphuṭam//</p>
+
+<p>1.65a: ṣaṣṭyā vibhajya labdhais tu yojanaiH prāg athāparaiH/
+1.65b: svadeśaH paridhau jñeyaH kuryād deśāntaraṃ hi taiH//</p>
+
+<p>1.66a: vārapravṛttiH prāgdeśe kṣapārdhe +abhyadhike bhavet/
+1.66b: taddeśāntaranāḍībhiH paścād ūne vinirdiśet//</p>
+
+<p>1.67a: iṣṭanāḍīguṇā bhuktiH ṣaṣṭyā bhaktā kalādikam/
+1.67b: gate śodhyaṃ yutaṃ gamye kṛtvā tātkāliko bhavet//</p>
+
+<p>1.68a: bhacakraliptāśītyaṃśaṃ paramaṃ dakṣiṇottaram/
+1.68b: vikṣipyate svapātena svakrāntyantād anuṣṇaguH//</p>
+
+<p>1.69a: tannavāṃśaṃ dviguṇitaṃ jīvas triguṇitaṃ kujaH/
+1.69b: budhaśukrārkajāH pātair vikṣipyante caturguṇam//</p>
+
+<p>1.70a: evam trighanarandhrārkarasārkārkā daśāhatāH/
+1.70b: candrādīnāṃ kramād uktā madhyavikeṣepaliptikāH//</p>
+
+<p>[spaṣṭādhikāraH]
+2.01a: adṛśyarūpāH kālasya mūrtayo bhagaṇāśritāH/
+2.01b: śīghramandoccapātākhyā grahāṇāṃ gatihetavaH//</p>
+
+<p>2.02a: tadvātaraśmibhir *baddhās tais savyetarapāṇibhiH/ (C naddhās)
+2.02b: prāk paścād apakṛṣyante yathāsannaṃ svadiṅmukham//</p>
+
+<p>2.03a: pravahākhyo marut tāṃs tu svoccābhimukham īrayet/
+2.03b: pūrvāparākṛṣṭās te *gatiṃ yānti pṛthagvidhāH//(C gatīr, pṛthagvidhām)</p>
+
+<p>2.04a: grahāt prāgbhagaṇārdhasthaH prāṅmukhaṃ karṣati graham/
+2.04b: uccasaṃjño +aparārdhasthas tadvat paścānmukhaṃ graham//</p>
+
+<p>2.05a: svoccāpakṛṣṭā *bhagaṇaiH prāṅmukhaṃ yānti yad grahāH/ (C bhagaṇāt)
+2.05b: tat teṣu dhanam ity uktam ṛṇaṃ paścānmukheṣu *ca// (tu)</p>
+
+<p>2.06a: *dakṣiṇottarato +apy evaṃ pāto *rāhuH svaraṃhasā/(C dakṣiṇottarayor, rāhuś ca raṃhasā)
+2.06b: vikṣipaty eṣa vikṣepaṃ candrādīnām apakramāt//</p>
+
+<p>2.07a: uttarābhimukhaṃ pāto vikṣipaty aparārdhagaH/
+2.07b: grahaṃ prāgbhagaṇārdhastho yāmyāyām apakarṣati//</p>
+
+<p>2.08a: budhabhārgavayoH śīghrāt tadvat pāto *yadā sthitaH/ (C yathāsthitaH)
+2.08b: tacchīghrākarṣaṇāt tau tu vikṣipyete yathoktavat//</p>
+
+<p>2.09a: mahatvān maṇḍalasyārkaH svalpam evāpakṛṣyate/
+2.09b: maṇḍalālpatayā candras tato bahv apakṛṣyate/</p>
+
+<p>2.10a: bhaumādayo +alpamūrtitvāc chīghramandoccasañjñakaiH/ (C saṃjñitaiH)
+2.10b: daivatair apakṛṣyante sudūram ativegitāH//</p>
+
+<p>2.11a: ato dhanarṇaṃ sumahat teṣāṃ gativaśād bhavet/
+2.11b: ākṛṣyamāṇās tair evaṃ vyomni yānty anilāhatāH//</p>
+
+<p>2.12a: *vakrātivakrā vikalā mandā mandatarā samā/ (C vakrānuvakrā)
+2.12b: tathā śīghratarā śīghrā grahāṇām aṣṭadhā gatiH//</p>
+
+<p>2.13a: tatrātiśīghrā śīghrākhyā mandā mandatarā samā/
+2.13b: ṛjvīti pañcadhā jñeyā *yā vakrā sātivakragā//(C +anyā vakrādikā matā)</p>
+
+<p>2.14a: tattadgativaśān nityaṃ yathā dṛktulyatāṃ grahāH/
+2.14b: prayānti tat pravakṣyāmi sphuṭīkaraṇam ādarāt//</p>
+
+<p>2.15a: rāśiliptāṣṭamo bhāgaH prathamaṃ jyārdham ucyate/
+2.15b: tat tadvibhaktalabdhonamiśritaṃ tad dvitīyakam//</p>
+
+<p>2.16a: ādyenaivaṃ kramāt piṇḍān bhaktvā *labdhonasaṃyutāH/(C labdhonitair yutaiH)
+2.16b: *khaṇḍakāH syuś caturviṃśajyārdhapiṇḍāH kramād amī//(C khaṇḍakais)</p>
+
+<p>2.17a: tattvāśvino +aṅkābdhikṛtā rūpabhūmidharartavaH/(224, 449, 691)
+2.17b: khāṅkāṣṭau pañcaśūnyeśā bāṇarūpaguṇendavaH//(890, 1105, 1315)</p>
+
+<p>2.18a: śūnyalocanapañcaikāś chidrarūpamunīndavaH/(1520, 1719)
+2.18b: viyaccandrātidhṛtayo guṇarandhrāmbarāśvinaH//(1910, 2093)</p>
+
+<p>2.19a: muniṣaḍyamanetrāṇi candrāgnikṛtadasrakāH/(2267, 2431)
+2.19b: pañcāṣṭaviṣayākṣīṇi kuñjarāśvinagāśvinaH//(2585, 2728)</p>
+
+<p>2.20a: randhrapañcāṣṭakayamā vasvadryaṅkayamās tathā/(2859, 2978)
+2.20b: kṛtāṣṭaśūnyajvalanā nagādriśaśivahnayaH//(3084, 3179)</p>
+
+<p>2.21a: ṣaṭpañcalocanaguṇāś candranetrāgnivahnayaH/(3256, 3321)
+2.21b: yamādrivahnijvalanā randhraśūnyārnavāgnayaH//(3372), 3401)</p>
+
+<p>2.22a: rūpāgnisāgaraguṇā vasvagnikṛtavahnayaH/(3431, 3438)
+2.22b: projjhyotkrameṇa vyāsārdhād utkramajyārdhapiṇḍikāH//</p>
+
+<p>2.23a: munayo randhrayamalā rasaṣaṭkā munīśvarāH/(7, 29, 66, 117)
+2.23b: dvyaṣṭaikā rūpaṣaḍdasrāH sāgarārthahutāśanāH/(182, 261, 354)</p>
+
+<p>2.24a: khartuvedā navādryarthā diṅnāgās tryarthakuñjarāH/(460, 710, 853)
+2.24b: nagāmbaraviyaccandrā rūpabhūdharaśaṅkarāH//(1007, 1171)</p>
+
+<p>2.25a: śarārṇavahutāśaikā bhujaṅgākṣiśarendavaH/(1345, 1528)
+2.25b: navarūpamahīdhraikā gajaikāṅkaniśākarāH//1719, 1918)</p>
+
+<p>2.26a: guṇāśvirūpanetrāṇi pāvakāgniguṇāśvinaH/(2123, 2333)
+2.26b: vasvarṇavārthayamalās turaṅgartunagāśvinaH//(2548, 2767)</p>
+
+<p>2.27a: navāṣṭanavanetrāṇi pāvakaikayamāgnayaH/(2989, 3293)
+2.27b: gajāgnisāgaraguṇā utkramajyārdhapiṇḍakāH//(3438)</p>
+
+<p>2.28a: paramāpakramajyā tu saptarandhraguṇendavaH/(1397)
+2.28b: tadguṇā jyā trijīvāptā taccāpaṃ krāntir ucyate//(C iṣyate)</p>
+
+<p>2.29a: grahaṃ saṃśodhya mandoccāt tathā śīghrād viśodhya ca/
+2.29b: śeṣaṃ kendrapadaṃ tasmād bhujajyā koṭir eva ca//(C kendraṃ padaṃ)</p>
+
+<p>2.30a: gatād bhujajyā viṣame gamyāt koṭiH pade bhavet/
+2.30b: *yugme tu gamyād bāhujyā koṭijyā tu gatād bhavet//(C same)</p>
+
+<p>2.31a: liptās tattvayamair bhaktā *labdhaṃ jyāpiṇḍikaṃ gatām/(C labdhā jyāpiṇḍikā gatāH)
+2.31b: gatagamyāntarābhyastaṃ vibhajet tattvalocanaiH//(225)</p>
+
+<p>2.32a: tadavāptaphalaṃ yojyaṃ jyāpiṇḍe *gatasaṃjñake/(C gatasaṃjñite)
+2.32b: syāt kramajyāvidhir ayaṃ utkramajyāsv api smṛtaH//</p>
+
+<p>2.33a: jyāṃ *projjhya śeṣaṃ tattvāśvihataṃ tadvivaroddhṛtam/(C projjhyānyattattvayamair hatvā)(225)
+2.33b: saṃkhyātattvāśvisaṃvarge *saṃyojya dhanur ucyate//(C saṃyojyaṃ) (225)</p>
+
+<p>2.34a: raver mandaparidhyaṃśā manavaH śītago radāH/ (14, 32)
+3.34b: yugmānte viṣamānte tu nakhaliptonitās tayoH//</p>
+
+<p>2.35a: yugmānte +arthādrayaH *khāgnisurāH sūryā navārṇavāH/(C khāgniH surās)(75, 30, 33, 12, 49)
+2.35b: oje dvyagā vasuyamā radā rudrā gajābdayaH//</p>
+
+<p>2.36a: kujādīnāṃ *ataH śīghrā yugmānte +arthāgnidasrakāH/(C tataś śaighryā)(235)
+2.36b: guṇāgnicandrāH *khanagā dvirasākṣīṇi go+agnayaH//(C khāgāś ca)(133, 70, 262, 39)</p>
+
+<p>2.37a: ojānte *dvitriyamalā dviviśve yamaparvatāH/(C dvitrikayamāH)(132, 72)
+2.37b: khartudasrā viyadvedāH śīghrakarmaṇi kīrtitāH//(260,40)</p>
+
+<p>2.38a: ojayugmāntaraguṇā bhujajyā trijyayoddhṛtā/
+2.38b: *yugme vṛtte dhanarṇaṃ syād ojād ūnādhike sphuṭam// (C yugmavṛtte)</p>
+
+<p>2.39a: tadguṇe bhujakoṭijye bhagaṇāṃśavibhājite/
+2.39b: tadbhujajyāphaladhanur māndaṃ liptādikaṃ phalam//</p>
+
+<p>2.40a: *śaighryaṃ koṭiphalaṃ kendre makarādau dhanaṃ smṛtam/(C śaighre)
+2.40b: saṃśodhyaṃ tu *trijīvāyāṃ karkyādau koṭijaṃ phalam//(C trijīvātaH)</p>
+
+<p>2.41a: tadbāhuphalavargaikyān mūlaṃ karṇaś calābhidhaH/
+2.41b: trijyābhyastaṃ bhujaphalaṃ calakarṇavibhājitam//</p>
+
+<p>2.42a: labdhasya cāpaṃ liptādiphalaṃ *śaighryam idaṃ smṛtam/ (C śaighram)
+2.42b: etad ādye kujādīnāṃ caturthe caiva karmaṇi//</p>
+
+<p>2.43a: māndaṃ karmaikam arkendor bhaumādīnām athocyate/
+2.43b: *śaighryaṃ māndaṃ punar māndaṃ śaighryaṃ catvāry anukramāt//(C śaighraṃ)</p>
+
+<p>2.44a: madhye śīghraphalasyārdhaṃ māndam ardhaphalaṃ tathā/
+2.44b: madhyagrahe *mandaphalaṃ sakalaṃ śaighryam eva ca//(C punar māndaṃ)</p>
+
+<p>2.45a: ajādikendre sarveṣāṃ *śaighrye mānde ca karmaṇi/(C mānde śaighre)
+2.45b: dhanaṃ grahāṇāṃ liptādi tulādāv rṇam eva ca//</p>
+
+<p>2.46a: arkabāhuphalābhyastā grahabhuktir vibhājitā/
+2.46b: bhacakrakalikābhis tu liptāH karyā grahe +arkavat//</p>
+
+<p>2.47a: svamandabhuktisaṃśuddhā madhyabhuktir niśāpateH/
+2.47b: dorjyāntarādikaṃ kṛtvā bhuktāv ṛṇadhanaṃ bhavet//</p>
+
+<p>2.48a: grahabhukteH phalaṃ kāryaṃ grahavan mandakarmaṇi/
+2.48b: dorjyāntaraguṇā bhuktis tattvanetroddhṛtā punaH// (225)</p>
+
+<p>2.49a: svamandaparidhikṣuṇṇā bhagaṇāṃśoddhṛtā kalāH/]
+2.49b: karkyādau tu dhanaṃ tatra makarādāv ṛṇaṃ smṛtam//</p>
+
+<p>2.50a: mandasphuṭīkṛtāṃ bhuktiṃ projjhya śīghroccabhuktitaH/
+2.50b: taccheśaṃ vivareṇātha hanyāt trijyāntyakarṇayoH//</p>
+
+<p>2.51a: calakarṇahṛtaṃ bhuktau karṇe trijyādhike dhanam/
+2.51b: ṛṇam ūne +adhike projjhya śeṣaṃ vakragatir bhavet//</p>
+
+<p>2.52a: dūrasthitaH svaśīghroccād grahaH śithilaraśmibhiH/
+2.52b: savyetarākṛṣtatanur bhavet vakragatis tadā//</p>
+
+<p>2.53a: kṛtartucandrair vedendraiH śūnyatryekair guṇāṣṭabhiH/(164, 144, 130, 83)
+2.53b: śararudraiś caturtheṣu kendrāṃśair bhūsutādayaH//(115)</p>
+
+<p>2.54a: bhavanti vakriṇas tais tu svaiH svaiś cakrād viśodhitaiH/
+2.54b: avaśiṣṭāṃśatulyaiH svaiH kendrair ujjhanti vakratām//</p>
+
+<p>2.55a: mahattvāc chīghraparidheH saptame bhṛgubhūsutau/
+2.55b: aṣṭame jīvaśaśaijau navame tu śanaiścaraH//</p>
+
+<p>2.56a: kujārkigurupātānāṃ grahavac chīghrajaṃ phalam/
+2.56b: vāmaṃ tṛtīyakaṃ māndaṃ budhabhārgavayoH phalam//</p>
+
+<p>2.57a: svapātonād grahāj jīvā śīghrād bhṛgujasaumyayoH/
+2.57b: vikṣepaghny antyakarṇāptā vikṣepas trijyayā vidhoH//</p>
+
+<p>2.58a: vikṣepāpakramaikatve krāntir vikṣepasaṃyutā/
+2.58b: digbhede viyutā spaṣṭā bhāskarasya yathāgatā//</p>
+
+<p>2.59a: grahodayaprāṇahatā khakhāṣṭaikoddhṛtā gatiH/
+2.59b: cakrāsavo labdhayutā svāhorātrāsavaH smṛtāH//</p>
+
+<p>2.60a: krānteH kramotkrammajye dve kṛtvā tatrotkramajyayā/
+2.60b: hīnā trijyā dinavyāsadalaṃ taddakṣiṇottaram//</p>
+
+<p>2.61a: krāntijyā viṣuvadbhāghnī kṣitijyā dvādaśoddhṛtā/
+2.61b: trijyāguṇāhorātrārdhakarṇāptā carajāsavaH//</p>
+
+<p>2.62a: tatkārmukam udakkrāntau *dhanaśanī pṛthakṣthite/(C dhanahānī)
+2.62b: svāhorātracaturbhāge dinarātridale smṛte//</p>
+
+<p>2.63a: yāmyakrāntau viparyaste dviguṇe tu dinakṣape/
+2.63b: vikṣepayuktonitayā krāntyā bhānām api svake//</p>
+
+<p>2.64a: bhabhogo +aṣṭaśatīliptāH khāśviśailās tathā titheH/
+2.64b: grahaliptābhabhogāptā bhāni bhuktyā dinādikam//</p>
+
+<p>2.65a: ravīnduyogaliptābhyo yogā bhabhogabhājitāH/
+2.65b: gatā gamyāś ca ṣaṣṭighnyo bhuktiyogāptanāḍikāH//</p>
+
+<p>2.66a: arkonacandraliptābhyas tithayo bhogabhājitāH/
+2.66b: gatā gamyāś ca ṣaṣṭighnyo nāḍyo bhuktyantaroddhṛtāH//</p>
+
+<p>2.67a: dhruvāṇi śakunir nāgaṃ tṛtīyaṃ tu catuṣpadam/
+2.67b: kiṃstughnaṃ tu caturdaśyāH kṛṣṇāyāś cāparārdhataH//</p>
+
+<p>2.68a: bavādīni tataH sapta carākhyakaraṇāni ca/
+2.68b: māse +aṣṭakṛtva ekaikaṃ karaṇānāṃ pravartate//</p>
+
+<p>2.69a: tithyardhabhogaṃ sarveṣāṃ karaṇānāṃ prakalpayet/
+2.69b: eṣā sphutagatiH proktā sūryādīnāṃ khacāriṇām//</p>
+
+<p>3.01a: śilātale +ambusaṃśuddhe vajralepe +api vā same/
+3.01b: tatra śaṅkvaṅgulair iṣṭaiH samaṃ maṇḍalam ālikhet//</p>
+
+<p>3.02a: tanmadhye sthāpayec chaṅkuṃ kalpanādvādaśāṅgulam/
+3.02b: tacchāyāgraṃ spṛśed yatra vṛtte pūrvāparārdhayoH//</p>
+
+<p>3.03a: tatra bindū vidhāyobhau vṛtte pūrvāparābhidhau/
+3.03b: tanmadhye timinā rekhā kartavyā dakṣiṇottarā//</p>
+
+<p>3.04a: yāmyottaradiśor madhye timinā pūrvapaścimā/
+3.04b: diṅmadhyamatsyaiH saṃsādhyā vidiśas tadvad eva hi//</p>
+
+<p>3.05a: caturasraṃ bahiH kuryāt sūtrair madhyād vinirgataiH/
+3.05b: bhujasūtrāṅgulais tatra dattair iṣṭaprabhā smṛtā//</p>
+
+<p>3.06a: prākpaścimāśritā rekhā procyate samamaṇḍale/
+3.06b: unaṇḍale ca viṣuvanmaṇḍale parikīrtyate//</p>
+
+<p>3.07a: rekhā prācyaparā sādhyā viṣuvadbhāgragā tathā/
+3.07b: iṣṭacchāyāviṣuvator madhyam agrābhidhīyate//</p>
+
+<p>3.08a: śaṅkucchāyākṛtiyuter mūlaṃ karṇo +asya vargataH/
+3.08b: projjhya śaṅkukṛtiṃ mūlaṃ chāyā śaṅkur viparyayāt//</p>
+
+<p>3.09a: triṃśatkṛtyo yuge bhānāṃ cakraṃ prāk parilambate/
+3.09b: tadguṇād bhūdinair bhaktād dyugaṇād yad avāpyate//</p>
+
+<p>3.10a: taddos trighnā daśāptāṃśā vijñeyā ayanābhidhāH/
+3.10b: tatsaṃskṛtād grahāt krānticchāyācaradalādikam//</p>
+
+<p>3.11a: sphuṭaṃ dṛktulyatāṃ gacched ayane viṣuvadvaye/
+3.11b: prāk cakraṃ calitaṃ hīne chāyārkāt karaṇāgate//</p>
+
+<p>3.12a: antarāṃśair athāvṛtya paścāc cheṣais tathādhike/
+3.12b: evaṃ viṣuvatī chāyā svadeśe yā dinārdhajā//</p>
+
+<p>3.13a: dakṣiṇottararekhāyāṃ sā tatra viṣuvatprabhā//</p>
+
+<p>3.13b: śaṅkucchāyāhate trijye viṣuvatkarṇabhājite/</p>
+
+<p>3.14a: lambākṣajye tayoś cāpe lambākṣau dakṣiṇau sadā/
+3.14b: madhyacchāyā bhujas tena guṇitā tribhamaurvikā//</p>
+
+<p>3.15a: svakarṇāptā dhanurliptā natās tā dakṣiṇe bhuje/
+3.15b: uttarāś cottare yāmyās tāH sūryakrāntiliptikāH//</p>
+
+<p>3.16a: digbhede miśritāH sāmye viśliṣṭāś cākṣaliptikāH/
+3.16b: tābhyo +akṣajyā ca tadvargaṃ projjhya trijyākṛteH padam//</p>
+
+<p>3.17a: lambajyārkaguṇākṣajyā viṣuvadbhātha lambayā/
+3.17b: svākṣārkanatabhāgānāṃ dikṣāmye +antaram anyathā//</p>
+
+<p>3.18a: digbhede +apakramaH śeṣas tasya jyā trijyayā hatā/
+3.18b: paramāpakramajyāptā cāpaṃ meṣādigo raviH//</p>
+
+<p>3.19a: karkyādau projjhya cakrārdhāt tulādau bhārdhasaṃyutāt/
+3.19b: mṛgādau projjhya bhagaṇān madhyāhne +arkaH sphuṭo bhavet//</p>
+
+<p>3.20a: tanmāndam asakṛd vāmaṃ phalaṃ madhyo divākaraH/
+3.20b: svākṣārkāpakramayutir dikṣāmye +antaram anyathā//</p>
+
+<p>3.21a: śeṣaṃ natāṃśāH sūryasya tadbāhujyā ca koṭijyā/
+3.21b: śaṅkumānāṅgulābhyaste bhujatrijye yathākramam//</p>
+
+<p>3.22a: koṭijyayā vibhajyāpte chāyākarṇāv ahardale/
+3.22b: krāntijyā viṣuvatkarṇaguṇāptā śaṅkujīvayā//</p>
+
+<p>3.23a: arkāgrā sveṣṭakarṇaghnī madhyakarṇoddhṛtā svakā/
+3.23b: viṣuvadbhāyutārkāgrā yāmye syād uttaro bhujaH//</p>
+
+<p>3.24a: viṣuvatyām viśodhyodaggole syād bāhur uttaraH/
+3.24b: viparyayād bhujo yāmyo bhavet prācyaparāntare//</p>
+
+<p>3.25a: mādhyāhniko bhujo nityaṃ chāyā mādhyāhnikī smṛtā/
+3.25b: lambākṣajīve viṣuvacchāyādvādaśasaṅguṇe//</p>
+
+<p>3.26a: krāntijyāpte tu tau karṇau samamaṇḍalage ravau/
+3.26b: saumyākṣonā yadā kāntiH syāt tadā dyudalaśravaH//</p>
+
+<p>3.27a: viṣuvacchāyayābhyastaH karṇo madhyāgrayoddhṛtaH/
+3.27b: svakrāntijyā trijīvāghnī lambajyāptāgramaurvikā//</p>
+
+<p>3.28a: sveṣṭakarṇahatā bhaktā trijyayāgrāṅgulādikā/
+3.28b: trijyāvargārdhato +agrajyāvargonād dvādaśāhatāt//</p>
+
+<p>3.29a: punar dvādaśanighnāc ca labhyate yat phalaṃ budhaiH/
+3.29b: śaṅkuvargārdhasaṃyuktaviṣuvadvargabhājitāt//</p>
+
+<p>3.30a: tadeva karaṇī nāma tāṃ pṛthak sthāpayed budhaH/
+3.30b: arkaghnī viṣuvacchāyāgrajyayā guṇitā tathā//</p>
+
+<p>3.31a: bhaktā phalākhyaṃ tadvargasaṃyuktakaraṇīpadam/
+3.31b: phalena hīnasaṃyuktaṃ dakṣiṇottaragolayoH//</p>
+
+<p>3.32a: yāmyayor vidiśoH śaṅkur evaṃ yāmyottare ravau/
+3.32b: paribhramati śaṅkos tu śaṅkur uttarayos tu saH//</p>
+
+<p>3.33a: tattrijyāvargaviśleṣān mūlaṃ dṛgjyābhidhīyate/
+3.33b: svaśaṅkunā vibhajyāpte dṛktrijye dvādaśāhate//</p>
+
+<p>3.34a: chāyākarṇau tu koṇeṣu yathāsvaṃ deśakālayoH/
+3.34b: trijyodakcarajāyuktā yāmyāyāṃ tadvivarjitā//</p>
+
+<p>3.35a: antyā natotkramajyonā svahorātrārdhasaṅguṇā/
+3.35b: trijyābhaktā bhavec chedo lambajyāghno +atha bhājitaH//</p>
+
+<p>3.36a: tribhajyayā bhavec chaṅkus tadvargaṃ pariśodhayet/
+3.36b: trijyāvargāt padaṃ dṛgjyā chāyākarṇau tu pūrvavat//</p>
+
+<p>3.37a: abhīṣṭacchāyayābhyastā trijyā tatkarṇabhājitā/
+3.37b: dṛgjyā tadvargasaṃśuddhāt trijyāvargāc ca yat padam/</p>
+
+<p>3.38a: śaṅkuH sa tribhajīvāghnaH svalambajyāvibhājitaH/
+3.38b: chedaH sa trijyayābhyastaH svāhorātrārdhabhājitaH//</p>
+
+<p>3.39a: unnatajyā tayā hīnā svāntyā śeṣasya kārmukam/
+3.39b: utkramajyābhir evaṃ syuH prākpaścārdhanatāsavaH//</p>
+
+<p>3.40a: iṣṭāgrāghnī tu lambajyā svakarṇāṅgulabhājitā/
+3.40b: krāntijyā sā trijīvāghnī paramāpakramoddhṛtā//</p>
+
+<p>3.41a: taccāpaṃ bhādikaṃ kṣetraṃ padais tatra bhavo raviH/
+3.41b: iṣṭe +ahni madhye prākpaścād dhṛte bāhutrayāntare//</p>
+
+<p>3.42a: matsyadvayāntarayutes trispṛkṣūtreṇa bhābhramaH/
+3.42b: tribhadyukarṇārdhaguṇāH svāhorātrārdhabhājitāH//</p>
+
+<p>3.43a: kramād ekadvitribhajyās taccāpāni pṛthak pṛthak/
+3.43b: svādho +adhaH pariśodhyātha meṣāl laṅkodayāsavaH//</p>
+
+<p>3.44a: khāgāṣṭayo +arthago +agaikāH śaratryaṅkahimāṃśavaH/
+3.44b: svadeśacarakhaṇḍonā bhavantīṣṭodayāsavaH//</p>
+
+<p>3.45a: vyastā vyastair yutāH svaiH svaiH karkaṭādyās tatas trayaH/
+3.45b: utkrameṇa ṣaḍevaite bhavantīṣṭās tulādayaH//</p>
+
+<p>3.46a: gatabhogyāsavaH kāryā bhāskarād iṣṭakālikāt/
+3.46b: svodayāsuhatā bhuktabhogyā bhaktāH khavahnibhiH//</p>
+
+<p>3.47a: abhīṣṭaghaṭikāsubhyo bhogyāsūn praviśodhayet/
+3.47b: tadvat tadeṣyalagnāsūn evaṃ yātāt tathotkramāt//</p>
+
+<p>3.48a: śeṣaṃ cet triṃśatābhyastam aśuddhena vibhājitam/
+3.48b: bhāgair yuktaṃ ca hīnaṃ ca tallagnaṃ kṣitije tadā// (C bhāgahīnaṃ ca yuktaṃ ca)</p>
+
+<p>3.49a: prākpaścān natanāḍībhis tasmāl laṅkodayāsubhiH/
+3.49b: bhānau kṣayadhane kṛtvā madhyalagnaṃ tadā bhavet//</p>
+
+<p>3.50a: bhogyāsūn ūnakasyātha bhuktāsūn adhikasya ca/
+3.50b: sampīṇḍyāntaralagnāsūn evaṃ syāt kālasādhanam//</p>
+
+<p>3.51a: sūryād ūne niśāśeṣe lagne +arkād adhike divā/
+3.51b: bhacakrārdhayutād bhānor adhikke +astamayāt param//</p>
+
+<p>[candragrahaṇa]
+4.01a: sārdhāni ṣaṭsahasrāṇi yojanāni vivasvataH/
+4.01b: viṣkambho maṇḍalasyendoH sahāśītyā catuśśatam//</p>
+
+<p>4.02a: sphuṭasvabhuktyā guṇitau madhyabhuktyoddhṛtau sphuṭau/
+4.02b: raveH svabhagaṇābhyastaH śaśāṅkabhagaṇoddhṛtaH//</p>
+
+<p>4.03a: śaśāṅkakakṣāguṇito bhājito vā +arkakakṣayā/
+4.03b: viṣkambhaś candrakakṣāyāṃ tithyāptā mānaliptikā//</p>
+
+<p>4.04a: sphuṭendubhuktir bhūvyāsaguṇitā madhyayoddhṛtā/
+4.04b: labdhaṃ sūcī mahīvyāsasphuṭārkaśravaṇāntaram//</p>
+
+<p>4.05a: madhyenduvyāsaguṇitaṃ madhyārkavyāsabhājitam/
+4.05b: viśodhya labdhaṃ sūcyāṃ tu tamo liptās tu pūrvavat//</p>
+
+<p>4.06a: bhānor bhārdhe mahīcchāyā tattulye +arkasame +api/
+4.06b: śaśāṅkapāte grahaṇaṃ kiyadbhāgādhikonake//</p>
+
+<p>4.07a: tulyau rāśyādibhiH syātām amāvāsyāntakālikau/
+4.07b: sūryendū paurṇamāsyante bhārdhe bhāgādikau samau//</p>
+
+<p>4.08a: gataiṣyaparvanāḍīnāṃ svaphalenonasaṃyutau/
+4.08b: samaliptau bhavetāṃ tau pātas tātkāliko +anyathā//</p>
+
+<p>4.09a: chādako bhāskarasyendur adhaHstho ghanavad bhavet/
+4.09b: bhūcchāyāṃ prāṅmukhaś candro viśaty asya bhaved asau//</p>
+
+<p>4.10a: tātkālikenduvikṣepaṃ chādyacchādakamānayoH/
+4.10b: yogārdhāt projjhya yaccheṣaṃ tāvac channaṃ tad ucyate//</p>
+
+<p>4.11a: yad grāhyam adhike tasmin sakalaṃ nyūnam anyathā/
+4.11b: yogārdhād adhike na syād vikṣepe grāsasambhavaH//</p>
+
+<p>4.12a: grāhyagrāhakasaṃyogaviyogau dalitau pṛthak/
+4.12b: vikṣepavargahīnābhyāṃ tadvargābhyām ubhe pade//</p>
+
+<p>4.13a: ṣaṣṭhyā saṃguṇya sūryendvor bhuktyantaravibhājite/
+4.13b: syātāṃ sthitivimardārdhe nāḍikādiphale tayoH//</p>
+
+<p>4.14a: sthityardhanāḍikābhyastā gatayaH ṣaṣṭhibhājitāH/
+4.14b: liptādi pragrahe śodhyaṃ mokṣe deyaṃ punaH punaH//</p>
+
+<p>4.15a: tadvikṣepaiH sthitidalaṃ vimardārdhe tathā +asakṛt/
+4.15b: saṃsādhyam anyathā pāte talliptādiphalaṃ svakam//</p>
+
+<p>4.16a: sphuṭatithyavasāne tu madhyagrahaṇam ādiśet/
+4.16b: sthityardhanāḍikāhīne grāso mokṣas tu saṃyute//</p>
+
+<p>4.17a: tadvad eva vimardārdhanāḍikāhīnasaṃyute/
+4.17b: nimīlanonmīlanākhye bhavetāṃ sakalagrahe//</p>
+
+<p>4.18a: iṣṭanāḍīvihīnena sthityardhenārkacandrayoH/
+4.18b: bhuktyantaraṃ samāhanyāt ṣaṣṭyāptāH koṭiliptikāH//</p>
+
+<p>4.19a: bhānor grahe koṭiliptā madhyasthityardhasaṃguṇāH/
+4.19b: sphuṭasthityardhasaṃbhaktāH sphuṭāH koṭikalāH smṛtā//</p>
+
+<p>4.20a: kṣepo bhujas tayor vargayuter mūlaṃ śravas tu tat/
+4.20b: mānayogārdhataH projjhya grāsas tātkāliko bhavet//</p>
+
+<p>4.21a: madhyagrahaṇataś cordhvam iṣṭanāḍīr viśodhayet/
+4.21b: sthityardhān maukṣikāc cheṣaṃ prāgvac ccheṣaṃ tu maukṣike//</p>
+
+<p>4.22a: grāhyagrāhakayogārdhāc chodhyāH svacchannaliptikāH/
+4.22b: tādvargāt projjhya tatkālavikṣepasya kṛtiṃ padam//</p>
+
+<p>4.23a: koṭiliptā raveH spaṣṭasthityardhenāhatā hṛtāH/
+4.23b: madhyena liptās tannāḍyaH sthitivad grāsanāḍikāH//</p>
+
+<p>4.24a: natajyā +akṣajyayābhyastā trijyāptā tasya kārmukam/
+4.24b: valanāṃśā saumyayāmyāH pūrvāparakapālayoH//</p>
+
+<p>4.25a: rāśitrayayutād grāhyāt krāntyaṃśair dikṣamair yutāH/
+4.25b: bhede +antarāj jyā valanā saptatyaṅgulabhājitā//</p>
+
+<p>4.26a: sonnataṃ dinamadhyārdhaṃ dinārdhāptaṃ phalena tu/
+4.26b: chindyād vikṣepamānāni tāny eṣām aṅgulāni tu//</p>
+
+<p>[sūryagrahaṇa]
+5.01a: madhyalagnasame bhānau harijasya na sambhavaH/
+5.01b: akṣodaṅmadhyabhakrāntisāmye nāvanater api//</p>
+
+<p>5.02a: deśakālaviśeṣeṇa yathāvanatisambhavaH/
+5.02b: lambanasyāpi pūrvānyadigvaśāc ca tathocyate//</p>
+
+<p>5.03a: lagnaṃ parvāntanāḍīnāṃ kuryāt svair udayāsubhiH/
+5.03b: tajjyāntyāpakramajyāghnī lambajyāptodayābhidhā//</p>
+
+<p>5.04a: tadā laṅkodayair lagnaṃ madhyasaṃjñaṃ yathoditam/
+5.04b: tatkrāntyakṣāṃśasaṃyogo dikṣāmye +antaram anyathā//</p>
+
+<p>5.05a: śeṣaṃ natāṃśās tanmaurvī madhyajyā sābhidhīyate/
+5.05b: madhyodayajyayābhyastā trijyāptā vargitaṃ phalam//</p>
+
+<p>5.06a: madhyajyāvargaviśliṣṭaṃ dṛkkṣepaH śeṣataH padam/
+5.06b: tattrijyāvargaviśleṣān mūlaṃ śaṅkuH sa dṛggatiH//</p>
+
+<p>5.07a: natāṃśabāhukoṭijye +asphuṭe dṛkkṣepadṛggatī/
+5.07b: ekajyārdhagataś chedo labdhaṃ dṛggatijīvayā//</p>
+
+<p>5.08a: madhyalagnārkaviśleṣajyā chedena vibhājitā/
+5.08b: ravīndvor lambanaṃ jñeyaṃ prākpaścād ghaṭikādikam//</p>
+
+<p>5.09a: madhyalagnādhike bhānau tithyantāt praviśodhayet/
+5.09b: dhanam ūne +asakṛt karma yāvat sarvaṃ sthirībhavet//</p>
+
+<p>5.10a: dṛkkṣepaH śītatigmāṃśvor madhyabhuktyantarāhataH/
+5.10b: tithighnatrijyayā bhakto labdhaṃ sāvanatir bhavet//</p>
+
+<p>5.11a: dṛkkṣepāt saptatihṛtād bhaved vāvanatiH phalam/
+5.11b: athavā trijyayā bhaktāt saptasaptakasaṅguṇāt//</p>
+
+<p>5.12a: madhyajyādigvaśāt sā ca vijñeyā dakṣiṇottarā/
+5.12b: senduvikṣepadikṣāmye yuktā viśleṣitānyathā//</p>
+
+<p>5.13a: tayā sthitivimardārdhagrāsādyaṃ tu yathoditam/
+5.13b: pramāṇaṃ valanābhīṣṭagrāsādi himaraśmivat//</p>
+
+<p>5.14a: sthityardhonādhikāt prāgvat tithyā(?)ntalāl lambanaṃ punaH/
+5.14b: grāsamokṣodbhavaṃ sādhyaṃ tanmadhyaharijāntaram//</p>
+
+<p>5.15a: prākkapāle +adhikaṃ madhyād bhavet prāgrahaṇaṃ yadi/
+5.15b: maukṣikaṃ lambanaṃ hīnaṃ paścārdhe tu viparyayaH//</p>
+
+<p>5.16a: tadā mokṣasthitidale deyaṃ pragrahaṇe tathā/
+5.16b: harijāntarakaṃ śodhyaṃ yatraitat syād viparyayaH//</p>
+
+<p>5.17a: etad uktaṃ kapālaikye tadbhede lambanaikatā/
+5.17b: sve sve sthitidale yojyā vimardārdhe +api coktavat//</p>
+
+<p>[chedyaka]
+6.01a: na chedyakam ṛte yasmād bhedā grahaṇayoH sphuṭāH/
+6.01b: jñāyante tat pravakṣyāmi chedyakajñānam uttamam//</p>
+
+<p>6.02a: susādhitāyām avanau binduṃ kṛtvā tato likhet/
+6.02b: saptavargāṅgulenādau maṇḍalaṃ valanāśritam//</p>
+
+<p>6.03a: grāhyagrāhakayogārdhasammitena dvitīyakam/
+6.03b: maṇḍalaṃ tat samāsākhyaṃ grāhyārdhena tṛtīyakam//</p>
+
+<p>6.04a: yāmyottarāprācyaparāsādhanaṃ pūrvavad diśām/
+6.04b: prāg indor grahaṇaṃ paścān mokṣo +arkasya viparyayāt//</p>
+
+<p>6.05a: yathādiśaṃ prāgrahaṇaṃ valanaṃ himadīdhiteH/
+6.05b: maukṣikaṃ tu viparyastaṃ viparītam idaṃ raveH//</p>
+
+<p>6.06a: valanāgrān nayen madhyaṃ sūtraṃ yady atra saṃspṛśet/
+6.06b: tatsamāse tato deyau vikṣepau grāsamaukṣikau//</p>
+
+<p>6.07a: vikṣepāgrāt punaH sūtraṃ madhyabinduṃ praveśayet/
+6.07b: tadgrāhyabindusaṃsparśād grāsamokṣau vinirdiśet//</p>
+
+<p>6.08a: nityaśo +arkasya vikṣepāH parilekhe yathādiśam/
+6.08b: viparītāH śaśāṅkasya tadvaśād atha madhyamam//</p>
+
+<p>6.09a: valanaṃ prāṅmukhaṃ deyaṃ tadvikṣepaikatā yadi/
+6.09b: bhede paścān mukhaṃ deyam indor bhānor viparyayāt//</p>
+
+<p>6.10a: valanāgrāt punaH sūtraṃ madhyabinduṃ praveśayet/
+6.10b: madhyasūtreṇa vikṣepaṃ valanābhimukhaṃ nayet//</p>
+
+<p>6.11a: vikṣepāgrāl likhed vṛttaṃ grāhakārdhena tena yat/
+6.11b: grāhyavṛttaṃ samākrāntaṃ tadgrastaṃ tamasā bhavet//</p>
+
+<p>6.12a: chedyakaṃ likhatā bhūmau phalake vā vipaścitā/
+6.12b: viparyayo diśāṃ kāryaH pūrvāparakapālayoH//</p>
+
+<p>6.13a: svacchatvād dvādaśāṃśo +api grastaś candrasya dṛśyate/
+6.13b: liptātrayam api grastaṃ tīkṣṇatvān na vivasvataH//</p>
+
+<p>6.14a: svasaṃjñitās trayaH kāryā vikṣepāgreṣu bindavaH/
+6.14b: tatra prāṅmadhyayor madhye tathā maukṣikamadhyayoH//</p>
+
+<p>6.15a: likhen matsyau tayor madhyān mukhapucchaviniHsṛtam/
+6.15b: prasārya sūtradvitayaṃ tayor yatra yutir bhavet//</p>
+
+<p>6.16a: tatra sūtreṇa vilikhec cāpaṃ bindutrayaspṛśā/
+6.16b: sa panthā grāhakasyoktā yenāsau samprayāsyati//</p>
+
+<p>6.17a: grāhyagrāhakayogārdhāt projjhyeṣṭagrāsam āgatam/
+6.17b: avaśiṣṭāṅgulasamāṃ śalākāṃ madhyabindutaH//</p>
+
+<p>6.18a: tayor mārgonmukhīṃ dadyād grāsataH prāggrahāśritām/
+6.18b: vimuñcato mokṣadiśi grāhakādhvānam eva sā//</p>
+
+<p>6.19a: spṛśed yatra tato vṛttaṃ grāhakārdhena saṃlikhet/
+6.19b: tena grāhyaṃ yadākrāntaṃ tat tamograstam ādiśet//</p>
+
+<p>6.20a: mānāntarārdhena mitāṃ śalākāṃ grāsadiṅmukhīm/
+6.20b: nimīlanākhyāṃ dadyāt sā tanmārge yatra saṃspṛśet//</p>
+
+<p>6.21a: tato grāhakakhaṇḍena prāgvan maṇḍalam ālikhet/
+6.21b: tadgrāhyamaṇḍalayutir yatra tatra nimīlanam//</p>
+
+<p>6.22a: evam unmīlane mokṣadiṅmukhīṃ samprasārayet/
+6.22b: vilikhen maṇḍalaṃ prāgvad unmīlanam athoktavat//</p>
+
+<p>6.23a: ardhād ūne sadhūṃraṃ syāt kṛṣṇam ardhādhikaṃ bhavet/
+6.23b: vimuñcataH kṛṣṇatāṃraṃ kapilaṃ sakalagrahe//</p>
+
+<p>6.24a: rahasyam etad devānāṃ na deyaṃ yasya kasyacit/
+6.24b: suparīkṣitaśiṣyāya deyaṃ vatsaravāsine//</p>
+
+<p>[grahayuti]
+7.01a: tārāgrahāṇām anyonyaṃ syātāṃ yuddhasamāgamau/
+7.01b: samāgamaH śaśāṅkena sūryeṇāstamanaṃ saha//</p>
+
+<p>7.02a: śīghre mandādhike +atītaH saṃyogo bhavitānyathā/
+7.02b: dvayoH prāgyāyinor evaṃ vakriṇos tu viparyayāt//</p>
+
+<p>7.03a: prāgyāyiny adhike +atīto vakriṇy eṣyaH samāgamaH/
+7.03b: grahāntarakalāH svasvabhuktiliptāH samāhatāH//</p>
+
+<p>7.04a: bhuktyantareṇa vibhajed anulomavilomayoH/
+7.04b: dvayor vakriṇy athaikasmin bhuktiyogena bhājayet//</p>
+
+<p>7.05a: labdhaṃ liptādikaṃ śodhyaṃ gate deyaṃ bhaviṣyati/
+7.05b: viparyayād vakragatyor ekasmiṃs tu dhanavyayau//</p>
+
+<p>7.06a: samāliptau bhavetāṃ tau grahau bhagaṇasaṃsthitau/
+7.06b: vivaraṃ tadvad uddhṛtya dinādiphalam iṣyate//</p>
+
+<p>7.07a: kṛtvā dinakṣapāmānaṃ tathā vikṣepaliptikāH/
+7.07b: natonnataṃ sādhayitvā svakāl lagnavaśāt tayoH//</p>
+
+<p>7.08a: viṣuvacchāyayāmyas tadvikṣepād dvādaśoddhṛtāt/
+7.08b: phalaṃ svanatanāḍīghnaṃ svadinārdhavibhājitam//</p>
+
+<p>7.09a: labdhaṃ prācyām ṛṇaṃ saumyād vikṣepāt paścime dhanam/
+7.09b: dakṣiṇe prākkapāle svaṃ paścime tu tathā kṣamaH//</p>
+
+<p>7.10a: satribhagrahajakrāntibhāgaghnāH kṣepaliptikāH/
+7.10b: vikalāH svam ṛṇaṃ krāntikṣepayor bhinnatulyayoH//</p>
+
+<p>7.11a: nakṣatragrahayogeṣu grahāstodayasādhane/
+7.11b: śṛṅgonnatau tu candrasya dṛkkarmādāv idaṃ smṛtam//</p>
+
+<p>7.12a: tātkālikau punaH kāryau vikṣepau ca tayos tataH/
+7.12b: diktulye tv antaraṃ bhede yogaH śiṣṭaṃ grahāntaram//</p>
+
+<p>7.13a: kujārkijñāmarejyānāṃ triṃśadardhārdhavardhitāH/
+7.13b: viṣkambhāś candrakakṣāyāṃ bhṛgoH ṣaṣṭir udāhṛtā//</p>
+
+<p>7.14a: tricatuH karṇayutyāptās te dvighnās trijyayā hatāH/
+7.14b: sphuṭāH svakarṇās tithyāptā bhaveyur mānaliptikāH//</p>
+
+<p>7.15a: chāyābhūmau viparyaste svacchāyāgre tu darśayet/
+7.15b: grahaH svadarpaṇāntaHsthaH śaṅkvagre sampradiśyate//</p>
+
+<p>7.16a: pañcahastocchritau śaṅkū yathādig bhramasaṃsthitau/
+7.16b: grahāntreṇa vikṣiptāv adho hastanikhātagau//</p>
+
+<p>7.17a: chāyākarṇau tato dadyāc chāyāgrāc chaṅkumūrdhagau/
+7.17b: chāyākarṇāgrasaṃyoge saṃsthitasya pradarśayet//</p>
+
+<p>7.18a: svaśaṅkumūrdhagau vyomni grahau dṛktulyatām itau/
+7.18b: ullekhaṃ tārakāsparśād bhede bhedaH prakīrtyate//</p>
+
+<p>7.19a: yuddham aṃśuvimardākhyam aṃśuyoge parasparam/
+7.19b: aṃśād ūne +apasavyākhyaṃ yuddham eko +atra ced aṇuh//</p>
+
+<p>7.20a: samāgamo +aṃśād adhike bhavataś ced valānvitau/
+7.20b: apasavye jito yuddhe pihito +aṇur adīptitān//</p>
+
+<p>7.21a: rūkṣo vivarṇo vidhvasto vijito dakṣiṇāśritaH/
+7.21b: udakṣtho dīptimān sthūlo jayī yāmye +api yo balī//</p>
+
+<p>7.22a: āsannāv apy ubhau dīptau bhavataś cet samāgamaH/
+7.22b: svalpau dvāv api vidhvastau bhavetāṃ kūṭavigrahau//</p>
+
+<p>7.23a: udakṣtho dakṣiṇastho vā bhārgavaH prāyaśo jayī/
+7.23b: śaśāṅkenaivam eteṣāṃ kuryāt saṃyogasādhanam//</p>
+
+<p>7.24a: bhāvābhāvāya lokānāṃ kalpaneyaṃ pradarśitā/
+7.24b: svamārgagāH prayānty ete dūram anyonyam āśritāH//</p>
+
+<p>[nakṣatragrahayuti]
+8.01a: procyante liptikā bhānāṃ svabhogo +atha daśāhataH/
+8.01b: bhavanty atītadhiṣṇyānāṃ bhogaliptāyutā dhruvāH//</p>
+
+<p>8.02a: aṣṭārṇavāH śūnyakṛtāH pañcaṣaṣṭir nageṣavaH/
+8.02b: aṣṭārthā abdhayo +aṣṭāgā aṅgāgā manavas tathā//</p>
+
+<p>8.03a: kṛteṣavo yugarasāH śūnyavāṇā viyadrasāH/
+8.03b: khavedāH sāgaranagā gajāgāH sāgarartavaH//</p>
+
+<p>8.04a: manavo +atha rasā vedā vaiśvam āpyārdhabhogagam/
+8.04b: āpyasyaivābhijit prānte vaiśvānte śravaṇasthitiH/</p>
+
+<p>8.05a: tricatuH pādayoH sandhau śraviṣṭhā śravaṇasya tu/
+8.05b: svabhogato viyan nāgāH ṣaṭkṛtir yamalāśvinaH//</p>
+
+<p>8.06a: randhrādrayaH kramād eṣāṃ vikṣepāH svād apakramāt/
+8.06b: diṅmāsaviṣayāH saumye yāmye pañca diśo nava//</p>
+
+<p>8.07a: saumye rasāH khaṃ yāmye +agāH saumye khārkās trayodaśa/
+8.07b: dakṣiṇe rudrayamalāH saptatriṃśad athottare//</p>
+
+<p>8.08a: yāmya +adhyardhatrikakṛtā nava sārdhaśareṣavaH/
+8.08b: uttarasyāṃ tathā ṣaṣṭis triṃśat ṣaṭtriṃśad eva hi//</p>
+
+<p>8.09a: dakṣiṇe tv ardhabhāgas tu caturviṃśatir uttare/
+8.09b: bhāgāH ṣaḍviṃśatiH khaṃ ca dāsrādīnāṃ yathākramam//</p>
+
+<p>8.10a: aśītibhāgair yāmyāyām agastyo mithunāntagaH/
+8.10b: viṃśe ca mithunasyāṃśe mṛgavyādho vyavasthitaH//</p>
+
+<p>8.11a: vikṣepo dakṣiṇe bhāgaiH khārṇavaiH svād apakramāt/
+8.11b: hutabhugbrahmahṛdayau vṛṣe dvāviṃśabhāgagau//</p>
+
+<p>8.12a: aṣṭābhis triṃśatā caiva vikṣiptāv uttareṇa tau/
+8.12b: golaṃ labdhvā parīkṣeta vikṣepaṃ dhruvakaṃ sphuṭam//</p>
+
+<p>8.13a: vṛṣe saptadaśe bhāge yasya yāmyo +aṃśakadvayāt/
+8.13b: vikṣepo +abhyadhiko bhindyād rohiṇyāH śakataṃ tu saH//</p>
+
+<p>8.14a: grahavad dyuniśe bhānāṃ kuryād dṛkkarma pūrvavat/
+8.14b: grahamelakavac cheṣaṃ grahabhuktyā dināni ca//</p>
+
+<p>8.15a: eṣyo hīne gṛhe yogo dhruvakād adhike tataH/
+8.15b: viparyayād vakragate grahe jñeyaH samāgamaH//</p>
+
+<p>8.16a: phālgunyor bhādrapadayos tathaivāṣāḍhayor dvayoH/
+8.16b: viśākhāśvinisaumyānāṃ yogatārottarā smṛtā//</p>
+
+<p>8.17a: paścimottaratārāyā dvitīyā paścime sthitā/
+8.17b: hastasya yogatārā sā śraviṣṭhāyāś ca paścimā//</p>
+
+<p>8.18a: jyeṣṭhāśravaṇamaitrāṇāṃ bārhaspatyasya madhyamā/
+8.18b: bharaṇyāgneyapitryāṇāṃ revatyāś caiva dakṣiṇā//</p>
+
+<p>8.19a: rohiṇyādityamūlānāṃ prācī sārpasya caiva hi/
+8.19b: yathā pratyavaśeṣāṇāṃ sthūlā syād yogatārakā//</p>
+
+<p>8.20a: pūrvasyāṃ brahmahṛdayād aṃśakaiH pañcabhiH sthitaH/
+8.20b: prajāpatir vṛṣānte +asau saumye +aṣṭatriṃśadaṃśakaiH//</p>
+
+<p>8.21a: apāṃvatsas tu citrāyā uttare +aṃśais tu pañcabhiH/
+8.21b: bṛhat kiñcid ato bhāgair āpaH ṣaḍbhis tathottare//</p>
+
+<p>[udayāsta]
+9.01a: athodayastamayayoH parijñānaṃ prakīrtyate/
+9.01b: divākarakarākrāntamūrtinām aplatejasām//</p>
+
+<p>9.02a: sūryād abhyadhikāH paścād astaṃ jīvakujārjajāH/
+9.02b: ūnāH prāgudayaṃ yānti śukrajñau vakriṇau tathā//</p>
+
+<p>9.03a: ūnā vivasvataH prācyām astaṃ candrajñabhārgavāH/
+9.03b: vrajanty abhyadhikāH pascād udayaṃ śīghrayāyinaH//</p>
+
+<p>9.04a: sūryāstakālikau paścāt prācyām udayakālikau/
+9.04b: divā cārkagrahau kuryād dṛkkarmātha grahasya tu//</p>
+
+<p>9.05a: tato lagnāntaraprāṇāḥ kālāṃśāH ṣaṣṭibhājitāH/
+9.05b: pratīcyāṃ ṣaḍbhayutayos tadval lagnāntarāsavaH//</p>
+
+<p>9.06a: ekādaśāmarejyasya tithisaṅkhyārkajasya ca/
+9.06b: astāṃśā bhūmiputrasya daśa saptādhikās tataH//</p>
+
+<p>9.07a: paścād astamayo +aṣṭābhir udayaH prāṅmahattayā/
+9.07b: prāg astam udayaH paścād alpatvād daśabhir bhṛgoH//</p>
+
+<p>9.08a: evaṃ budho dvādaśabhiś caturdaśabhir aṃśakaiH/
+9.08b: vakrī śīghragatiś cārkāt karoty astmayodayau//</p>
+
+<p>9.09a: ebhyo +adhikaiH kālabhāgair dṛśyā nyūnair adarśanāH/
+9.09b: bhavanti loke khacarā bhānubhāgrastamūrtayaH//</p>
+
+<p>9.10a: tatkālāṃśāntarakalā bhuktyantaravibhājitāH/
+9.10b: dinādi tatphalaṃ labdhaṃ bhuktiyogena vakriṇaH//</p>
+
+<p>9.11a: tallagnāsuhate bhuktī aṣṭādaśaśatoddhṛte/
+9.11b: syātāṃ kālagatī tābhyāṃ dinādi gatagamyayoH//</p>
+
+<p>9.12a: svātyagastyamṛgavyādhacitrājyeṣṭhāH punarvasuH/
+9.12b: abhijid brahmahṛdayaṃ trayodaśabhir aṃśakaiH//</p>
+
+<p>9.13a: hastaśravaṇaphālgunyaH śraviṣṭā rohiṇīmaghāH/
+9.13b: caturdaśāṃśakair dṛśyā viśākhāśvinidaivatam//</p>
+
+<p>9.14a: kṛttikāmaitramūlāni sārpaṃ raudrarkṣam eva ca/
+9.14b: dṛśyante pañcadaśabhir āṣāḍhād dvitayaṃ tathā//</p>
+
+<p>9.15a: bharaṇītiṣyasaumyāni saukṣmyāt triHsaptakāṃśakaiH/
+9.15b: śeṣāṇi saptadaśabhir dṛśyādṛśyāni bhāni tu//</p>
+
+<p>9.16a: aṣṭādaśaśatābhyastā dṛśyāṃśāH svodayāsubhiH/
+9.16b: vibhajya labdhāH kṣetrāṃśās tair dṛśyādṛśyatāthavā//</p>
+
+<p>9.17a: prāg eṣām udayaH paścād asto dṛkkarma pūrvavat/
+9.17b: gataiṣyadivasaprāptir bhānubhuktyā sadaiva hi//</p>
+
+<p>9.18a: abhijid brahmahṛdayaṃ svātīvaiṣṇavavāsavāH/
+9.18b: ahirbudhnyam udakṣthatvān na lupyante +arkaraśmibhiH//</p>
+
+<p>[candraśṛṅgonna]
+10.01a: udayāstavidhiH prāgvat kartavyaH śītagor api/
+10.01b: bhāgair dvādaśabhiH paścād dṛśyaH prāg yāty adṛśyatām//</p>
+
+<p>10.02a: ravīndvoH ṣaḍbhayutayoH prāgval lagnāntarāsavaH/
+10.02b: ekarāśau ravīndvoś ca kāryā vivaraliptikāH//</p>
+
+<p>10.03a: tannāḍikāhate bhuktī ravīndvoH ṣaṣṭibhājite/
+10.03b: tatphalānvitayor bhūyaH kartavyā vivarāsavaH//</p>
+
+<p>10.04a: evaṃ yāvat sthirībhūtā ravīndvor antarāsavaH/
+10.04b: taiH prāṇair astametīnduH śukle +arkāstamayāt param//</p>
+
+<p>10.05a: bhagaṇārdhaṃ raver dattvā kāryās tadvivarāsavaH/
+10.05b: taiH prāṇaiH kṛṣṇapakṣe tu śītāṃśur udayaṃ vrajet//</p>
+
+<p>10.06a: arkendvoH krāntiviśleṣo dikṣāmye yutir anyathā/
+10.06b: tajjyendur arkād yatrāsau vijñeyā dakṣiṇottarā//</p>
+
+<p>10.07a: madhyāhnenduprabhākarṇasaṅguṇā yadi sottarā/
+10.07b: tadārkaghnākṣajīvāyāṃ śodhyā yojyā ca dakṣiṇā//</p>
+
+<p>10.08a: śeṣaṃ lambajyayā bhaktaṃ labdho bāhuH svadiṅmukhaH/
+10.08b: koṭiH śaṅkus tayor vargayuter mūlaṃ śrutir bhavet//</p>
+
+<p>10.09a: sūryonaśītagor liptāH śuklaṃ navaśatoddhṛtāH/
+10.09b: candrabimbāṅgulābhyastaṃ hṛtaṃ dvādaśabhiH sphuṭam//</p>
+
+<p>10.10a: dattvārkasaṃjñitaṃ binduṃ tato bāhuṃ svadiṅmukham/
+10.10b: tataH paścān mukhī koṭiṃ karṇaṃ koṭyagramadhyagam//</p>
+
+<p>10.11a: koṭikarṇayutād bindor bimbaṃ tātkālikaṃ likhet/
+10.11b: karṇasūtreṇa dikṣiddhiṃ prathamaṃ parikalpayet//</p>
+
+<p>10.12a: śuklaṃ karṇena tadbimbayogād antarmukhaṃ nayet/
+10.12b: śuklāgrayāmyottarayor madhye matsyau prasādhayet//</p>
+
+<p>10.13a: tanmadkhyasūtrasaṃyogād bindutrispṛg likhed dhanuH//</p>
+
+<p>10.13b: prāgbimbaṃ yādṛg eva syāt tādṛk tatra dine śaśī//</p>
+
+<p>10.14a: koṭyā dik sādhanāt tiryakṣūtrānte śṛṅgam unnatam/
+10.14b: darśayed unnatāṃ koṭiṃ kṛtvā candrasya sākṛtiH//</p>
+
+<p>10.15a: kṛṣṇe ṣaḍbhayutaṃ sūryaṃ viśodhyendos tathāsitam/
+10.15b: dadyād vāmaṃ bhujaṃ tatra paścimaṃ maṇḍalaṃ vidhoH//</p>
+
+<p>[pāta]
+11.01a: ekāyanagatau syātāṃ sūryacandramasau yadā/
+11.01b: tadyutau maṇḍale krāntyos tulyatve vaidhṛtābhidhaH//</p>
+
+<p>11.02a: viparītāyanagatau candrārkau krāntiliptikā/
+11.02b: samās tadā vyatīpāto bhagaṇārdhe tayor yutau//</p>
+
+<p>11.03a: tulyāṃśujālasamparkāt tayos tu pravahāhataH/
+11.03b: taddṛkkrodhabhavo vahnir lokābhāvāya jāyate//</p>
+
+<p>11.04a: vināśayati pāto +asmin lokānām asakṛd yataH/
+11.04b: vyatīpātaH prasiddho +ayaṃ sañjñābhedena vaidhṛtaH//</p>
+
+<p>11.05a: sa kṛṣṇo dāruṇavapur lohitākṣo mahodaraH/
+11.05b: sarvāniṣṭakaro raudro bhūyo bhūyaH prajāyate//</p>
+
+<p>11.06a: bhāskarendvor bhacakrāntaś cakrārdhāvadhisaṃsthayoH/
+11.06b: dṛktulyasādhitāṃśādiyuktayoH svāv apakramau//</p>
+
+<p>11.07a: athaujapadagasyendoH krāntir vikṣepasaṃskṛtā/
+11.07b: yadi syād adhikā bhānoH krānteH pāto gatas tadā//</p>
+
+<p>11.08a: ūnā cet syāt tadā bhāvī vāmaṃ yugmapadasya ca/
+11.08b: padānyatvaṃ vidhoH krāntivikṣepāc ced viśudhyati//</p>
+
+<p>11.09a: krāntyor jye trijyayābhyaste parakrāntijyayoddhṛte/
+11.09b: taccāpāntaram ardhaṃ vā yojyaṃ bhāvini śītagau//</p>
+
+<p>11.10a: śodhyaṃ candrād gate pāte tatsūryagatitāḍitam/
+11.10b: candrabhuktyā hṛtaṃ bhānau liptādi śaśivat phalam//</p>
+
+<p>11.11a: tadvacchaśāṅkapātasya phalaṃ deyaṃ viparyayāt/
+11.11b: karmaitad asakṛt tāvad yāvad krāntī same tayoH//</p>
+
+<p>11.12a: krāntyoH samatve pāto +atha prakṣiptāṃśonite vidhau/
+11.12b: hīne +ardharātrikād yāto bhāvī tātkālike +adhike//</p>
+
+<p>11.13a: sthirīkṛtārdharātrendvor dvayor vivaraliptikāH/
+11.13b: ṣaṣṭighnyaś candrabhuktyāptāH pātakālasya nāḍikāH//</p>
+
+<p>11.14a: ravīndumānayogārdhaṃ ṣaṣṭyā saṅguṇya bhājayet/
+11.14b: tayor bhuktyantareṇāptaṃ sthityardhaṃ nāḍikādi tat//</p>
+
+<p>11.15a: pātakālaH sphuṭo madhyaH so +api sthityardhavarjitaH/
+11.15b: tasya sambhavakālaH syāt tat saṃyukto +antyasāṃjñitaH//</p>
+
+<p>11.16a: ādyantakālayor madhyaH kālo jñeyo +atidāruṇaH/
+11.16b: prajvalaj jvalanākāraH sarvakarmasu garhitaH//</p>
+
+<p>11.17a: ekāyanagataṃ yāvad arkendvor maṇḍalāntaram/
+11.17b: sambhavas tāvad evāsya sarvakarmavināśakṛt//</p>
+
+<p>11.18a: snānadānajapaśrāddhavratahomādikarmabhiH/
+11.18b: prāpyata sumahacchreyas tatkālajñānatas tathā//</p>
+
+<p>11.19a: ravīndvos tulyatā krāntyor viṣuvatsannidhau yadā/
+11.19b: dvir bhaved dhi tadā pātaH syād abhāvo viparyayāt//</p>
+
+<p>11.20a: śasāṅkārkayuter liptā bhabhogena vibhājitāH/
+11.20b: labdhaṃ saptadaśānto +anyo vyatīpātas tṛtīyakaH//</p>
+
+<p>11.21a: sārpendrapauṣṇyadhiṣṇyānām antyāH pādā bhasandhayaH/
+11.21b: tadagrabheṣv ādyapādo gaṇḍāntaṃ nāma kīrtyate//</p>
+
+<p>11.22a: vyatīpātatrayaṃ ghoraṃ gaṇḍāntatritayaṃ tathā/
+11.22b: etad bhasandhitritayaṃ sarvakarmasu varjayet//</p>
+
+<p>11.23a: ity etat paramaṃ puṇyaṃ jyotiṣāṃ caritaṃ hitam/
+11.23b: rhasyaṃ mahad ākhyātaṃ kim anyacchrotum icchasi//</p>
+
+<p>[bhūgola]
+12.01a: athārkāṃśasamudbhūtaṃ praṇipatya kṛtāñjaliH/
+12.01b: bhaktyā paramayābhyarcya papracchedaṃ mayāsuraH//</p>
+
+<p>12.02a: bhagavan kimpramāṇā bhūH kim ākārā kim āśrayā/
+12.02b: kiṃvibhāgā kathaṃ cātra saptapātālabhūmayaH//</p>
+
+<p>12.03a: ahorātravyavasthāṃ ca vidadhāti kathaṃ raviH/
+12.03b: kathaṃ paryeti vasudhāṃ bhuvanāni vibhāvayan//</p>
+
+<p>12.04a: devāsurāṇām anyonyam ahorātraṃ viparyayāt/
+12.04b: kim atha tat kathaṃ vā syād bhānor bhagaṇapūraṇāt//</p>
+
+<p>12.05a: pitryaṃ māsena bhavati nāḍīṣaṣṭyā tu mānuṣam/
+12.05b: tad eva kila sarvatra na bhavet kena hetunā//</p>
+
+<p>12.06a: dinābdamāsahorāṇām adhipā na samāH kutaH/
+12.06b: kathaṃ paryeti bhagaṇaH sagraho +ayaṃ kim āśrayaH//</p>
+
+<p>12.07a: bhūmer uparyuparyūrdhvāH kim utsedhāH kim antarāH/
+12.07b: graharkṣakakṣāH kiṃmātrāH sthitāH kena krameṇa tāH//</p>
+
+<p>12.08a: grīṣme tīvrakaro bhānur na hemante tathāvidhaH/
+12.08b: kiyatī tatkaraprāptir mānāni kati kiṃ ca taiH//</p>
+
+<p>12.09a: evaṃ me saṃśayaṃ chindhi bhagavan bhūtabhāvana/
+12.09b: anyo na tvām ṛte chettā vidyate sarvadarśivān//</p>
+
+<p>12.10a: iti bhaktyoditaṃ śrutvā mayoktaṃ vākyam asya hi/
+12.10b: rahasyaṃ param adhyāyaṃ tataH prāha punaH sa tam//</p>
+
+<p>12.11a: śṛṇuṣvaikamanā bhūtvā guhyam adhyātma saṃjñitam/
+12.11b: pravakṣyāmy atibhaktānāṃ nādeyaṃ vidyate mama//</p>
+
+<p>12.12a: vāsudevaH paraṃ brahma tanmūrtiH puruṣaH paraH/
+12.12b: avyakto nirguṇaH śāntaH pañcaviṃśāt paro +avyayaH//</p>
+
+<p>12.13a: prakṛtyantargato devo bahir antaś ca sarvagaH/
+12.13b: saṅkarṣaṇo +apaH sṛṣṭvādau tāsu vīryam avāsṛjat//</p>
+
+<p>12.14a: tadaṇḍam abhavad dhaimaṃ sarvatra tamasāvṛtam/
+12.14b: tatrāniruddhaH prathamaṃ vyaktībhūtaH sanātanaH//</p>
+
+<p>12.15a: hiraṇyagarbho bhagavān eṣa chandasi paṭhyate/
+12.15b: ādityo hy ādibhūtatvāt prasūtyā sūrya ucyate//</p>
+
+<p>12.16a: paraṃ jyotis tamaH pāre sūryo +ayaṃ saviteti ca/
+12.16b: paryeti bhuvanān eṣa bhāvayan bhūtabhāvanaH//</p>
+
+<p>12.17a: prakāśātmā tamohantā mahān ity eṣa viśrutaH/
+12.17b: ṛco +asya maṇḍalaṃ sāmānyustrāmūrtir yajūṃṣi ca//</p>
+
+<p>12.18a: trayīmaho +ayaṃ bhagavāṇ kālātmā kālakṛd vibhuH/
+12.18b: sarvātmā sarvagaH sūkṣmaH sarvam asmin pratiṣṭhitam//</p>
+
+<p>12.19a: rathe viśvamaye cakraṃ kṛtvā saṃvatsarātmakam/
+12.19b: chandāṃsy aśvāH sapta yuktāH paryaṭaty eṣa sarvadā//</p>
+
+<p>12.20a: tripādam amṛtaṃ guhyaṃ pādo +ayaṃ prakaṭo +abhavat/
+12.20b: so +ahaṅkāraṃ jagatsṛṣṭyai brahmāṇam asṛjat prabhuH//</p>
+
+<p>12.21a: tasmai vedān varān dattvā sarvalokapitāmaham/
+12.21b: pratiṣṭhāpyāṇḍamadhye +atha svayaṃ paryeti bhāvayan//</p>
+
+<p>12.22a: atha sṛṣṭyāṃ manaś cakre brahmāhaṅkāramūrtibhṛt/
+12.22b: manasaś candramā jajñe sūryo +akṣṇos tejasāṃ nidhiH//</p>
+
+<p>12.23a: manasaH khaṃ tato vāyur agnir āpo dharā kramāt/
+12.23b: guṇaikavṛddhyā pañcaiva mahābhūtāni jajñire//</p>
+
+<p>12.24a: agnīṣomau bhānucandrau tatas tv aṅgārakādayaH/
+12.24b: tejobhūkhāmbuvātebhyaH kramaśaH pañca jajñire//</p>
+
+<p>12.25a: punar dvādaśadhātmānaṃ vyabhajad rāśisañjñakam/
+12.25b: nakṣatrarūpiṇaṃ bhūyaH saptaviṃśātmakaṃ vaśī//</p>
+
+<p>12.26a: tataś carācaraṃ viśvaṃ nirmame devapūrvakam/
+12.26b: ūrdhvamadhyādharebhyo +atha srotobhyaH prakṛtīH sṛjan//</p>
+
+<p>12.27a: guṇakarmavibhāgena sṛṣṭvā prāgvad anukramāt/
+12.27b: vibhāgaṃ kalpayāmāsa yathāsvaṃ vedadarśanāt//</p>
+
+<p>12.28a: grahanakṣatratārānāṃ bhūmer viśvasya vā vibhuH/
+12.28b: devāsuramanuṣyāṇāṃ siddhānāṃ ca yathākramam//</p>
+
+<p>12.29a: brahmāṇḍam etat suṣiraṃ tatredaṃ bhūrbhuvādikam/
+12.29b: kaṭāhadvitayasyeva sampuṭaṃ golakākṛti//</p>
+
+<p>12.30a: brahmāṇḍamadhye paridhir vyomakakṣābhidhīyate/
+12.30b: tanmadhye bhramaṇaṃ bhānām adho +adhaH kramaśas tathā//</p>
+
+<p>12.31a: mandāmarejyabhūputrasūryaśukrendujendavaH/
+12.31b: paribhramanty adho+adhaHsthāH siddhhavidyādharā ghanāH//</p>
+
+<p>12.32a: madhye samantād aṇḍasya bhūgolo vyomni tiṣṭhati/
+12.32b: bibhrānaH paramāṃ śaktiṃ brahmaṇo dhāraṇātmakām//</p>
+
+<p>12.33a: tadantarapuṭāH sapta nāgāsurasamāśrayāH/
+12.33b: divyauṣadhirasopetā ramyāH pātālabhūmayaH//</p>
+
+<p>12.34a: anekaratnanicayo jāmbūnadamayo giriH/
+12.34b: bhūgolamadhyago merur ubhayatra vinirgataH//</p>
+
+<p>12.35a: upariṣṭāt sthitās tasya sendrā devā maharṣayaH/
+12.35b: adhastād asurās tadvad dviṣanto +anyonyam āśritāH//</p>
+
+<p>12.36a: tataH samantāt paridhiH krameṇāyaṃ mahārṇavaH/
+12.36b: mekhaleva sthito dhātryā devāsuravibhāgakṛt//</p>
+
+<p>12.37a: samantān merumadhyāt tu tulyabhāgeṣu toyadheH/
+12.37b: dvīpiṣu dikṣu pūrvādinagaryo devanirmitāH//</p>
+
+<p>12.38a: bhūvṛttapāde pūrvasyāṃ yamakoṭīti viśrutā/
+12.38b: bhadrāśvavarṣe nagarī svarṇaprākāratoraṇā//</p>
+
+<p>12.39a: yāmyāyāṃ bhārate varṣe laṅkā tadvan mahāpurī/
+12.39b: paścime ketumālākhye romakākhyā prakīrtitā//</p>
+
+<p>12.40a: udak siddhapurī nāma kuruvarṣe prakīrtitā/
+12.40b: tasyāṃ siddhā mahātmāno nivasanti gatavyathāH//</p>
+
+<p>12.41a: bhūvṛttapādavivarās tāś cānyonyaṃ pratiṣṭhitāH/
+12.41b: tābhyaś cottarago merus tāvān eva surāśrayaH//</p>
+
+<p>12.42a: tāsām uparigo yāti viṣuvastho divākaraH/
+12.42b: na tāsu viṣuvacchāyā nākṣasyonnatir iṣyate//</p>
+
+<p>12.43a: meror ubhayato madhye dhruvatāre nabhaH sthite/
+12.43b: nirakṣadeśasaṃsthānām ubhaye kṣitijāśraye//</p>
+
+<p>12.44a: ato nākṣatrocchrayas tāsu dhruvayoH kṣitijasthayoH/
+12.44b: navatir lambakāṃśās tu merāvakṣāṃśakās tathā/</p>
+
+<p>12.45a: meṣādau devabhāgasthe devānāṃ yāti darśanam/
+12.45b: asurāṇāṃ tulādau tu sūryas tadbhāgasañcaraH//</p>
+
+<p>12.46a: atyāsannatayā tena grīṣme tīvrakarā raveH/
+12.46b: devabhāge surāṇāṃ tu hemante mandatānyathā//</p>
+
+<p>12.47a: devāsurā viṣuvati kṣitijasthaṃ divākaram/
+12.47b: paśyanty anyonyam eteṣāṃ vāmasavye dinakṣape//</p>
+
+<p>12.48a: meṣādāv uditaH sūryas trīn rāśīn udaguttaram/
+12.48b: sañcaran prāgaharmadhyaṃ pūrayen meruvāsinām//</p>
+
+<p>12.49a: *karkyādīn sañcaraṃś tadvad ahnaH paścārdham eva saH/(C karkādīn)
+12.49b: tulādīṃs trīn mṛgādīṃś ca tadvad eva suradviṣām//</p>
+
+<p>12.50a: ato dinakṣape teṣām anyonyaṃ hi viparyayāt/
+12.50b: ahorātrapramāṇaṃ ca bhānor bhagaṇapūraṇāt//</p>
+
+<p>12.51a: dinakṣapārdham eteṣām ayanānte viparyayāt/
+12.51b: uparyātmānam anyonyaṃ kalpayanti surāsurāH//</p>
+
+<p>12.52a: anye +api samasūtrasthā manyante +adhaH parasparam/
+12.52b: bhadrāśvaketumālasthā laṅkāsiddhapurāśritāH//</p>
+
+<p>12.53a: sarvatraiva mahīgole svasthānam upari sthitam/
+12.53b: manyante khe yato golas tasya kvordhavaṃ kva vādhaH//</p>
+
+<p>12.54a: alpakāyatayā lokāH svasthānāt sarvato mukham/
+12.54b: paśyanti vṛttām apy etāṃ cakrākārāṃ vasundharām//</p>
+
+<p>12.55a: savyaṃ bhramati devānām apasavyaṃ suradviṣām/
+12.55b: upariṣṭād bhagolo +ayaṃ vyakṣe paścān mukhaH sadā//</p>
+
+<p>12.56a: atas tatra dinaṃ triṃśannāḍikaṃ śarvadī tathā/
+12.56b: hānivṛddhī sadā vāmaṃ surāsuravibhāgayoH//</p>
+
+<p>12.57a: meṣādau tu sadā vṛddhir udaguttarato +adhikā/
+12.57b: devāṃśe ca kṣapāhānir viparītaṃ tathāsure//</p>
+
+<p>12.58a: tulādau dyuniśor vāmaṃ kṣayavṛddhī tayor ubhe/
+12.58b: deśakrāntivaśān nityaṃ tadvijñānaṃ puroditam//</p>
+
+<p>12.59a: bhūvṛttaṃ krāntibhāgaghnaṃ bhagaṇāṃśavibhājitam/
+12.59b: avāptayojanair arko vyakṣād yāty uparisthitaH//</p>
+
+<p>12.60a: paramāpakramād evaṃ yojanāni viśodhayet/
+12.60b: bhūvṛttapādāc cheṣāṇi yāni syur yojanāni taiH//</p>
+
+<p>12.61a: ayanānte vilomena devāsuravibhāgayoH/
+12.61b: nāḍīṣaṣṭyā sakṛd aharniśāpy asmin sakṛt tathā//</p>
+
+<p>12.62a: tadantare +api ṣaṣṭyante kṣayavṛddhī aharniśoH/
+12.62b: parato viparīto +ayaṃ bhagolaH parivartate//</p>
+
+<p>12.63a: ūne bhūvṛttapāde tu dvijyāpakramayojanaiH/
+12.63b: dhanur mṛgasthaH savitā devabhāge na dṛśyate//</p>
+
+<p>12.64a: tathā cāsurabhāge tu mithune karkaṭe sthitaH/
+12.64b: naṣṭacchāyā mahīvṛttapāde darśanam ādiśet//</p>
+
+<p>12.65a: ekajyāpakramānītair yojanaiH parivarjite/
+12.65b: bhūmikakṣācaturthāṃśe vyakṣāc cheṣais tu yojanaiH//</p>
+
+<p>12.66a: dhanur mṛgālikumbheṣu saṃsthito +arko na dṛśyate/
+12.66b: devabhāge +asurāṇāṃ tu vṛṣādye bhacatuṣṭaye//</p>
+
+<p>12.67a: merau *meṣādicakrārdhe devāH paśyanti bhāskaram/(ḍ -cakārdhe)
+12.67b: sakṛd evoditaṃ tadvad asurāś ca tulādigam//</p>
+
+<p>12.68a: bhūmaṇḍalāt pañcadaśe bhāge deve +atha vāsure/
+12.68b: upariṣṭād vrajaty arkaH saumyayāmyāyanāntagaH//</p>
+
+<p>12.69a: tadantarālayoś cchāyā yāmyodak sambhavaty api/
+12.69b: meror abhimukhaṃ yāti parataH svavibhāgayoH//</p>
+
+<p>12.70a: bhadrāśvoparigaH kuryād bhārate tūdayaṃ raviH/
+12.70b: rātryardhaṃ ketumāle tu kurāv astamayaṃ tadā//</p>
+
+<p>12.71a: bhāratādiṣu varṣeṣu tadvad eva paribhraman/
+12.71b: madhyodayārdharātryastakālān kuryāt pradakṣiṇam//</p>
+
+<p>12.72a: dhruvonnatir bhacakrasya natir meruṃ prayāsyataH/
+12.72b: nirakṣābhimukhaṃ yātur viparīte natonnate//</p>
+
+<p>12.73a: bhacakraṃ dhruvayor baddham ākṣiptaṃ pravahānilaiH/
+12.73b: paryety ajasraṃ tannaddhā grahakakṣā yathākramam//</p>
+
+<p>12.74a: sakṛd udgatam abdārdhaṃ paśyanty arkaṃ surāsurāH/
+12.74b: pitaraH śaśigāH pakṣaṃ svadinaṃ ca narā bhuvi//</p>
+
+<p>12.75a: *upariṣṭasya mahatī kakṣālpādhaHsthitasya ca/(C upariṣṭhasya)
+12.75b: mahatyā kakṣayā bhāgā mahānto +alpās tathālpayā//</p>
+
+<p>12.76a: kālenālpena bhagaṇaṃ bhuṅkte +alpabhramaṇāśritaH/
+12.76b: grahaH kālena mahatā maṇḍale mahati bhraman//</p>
+
+<p>12.77a: svalpayāto bahūn bhuṅkte bhagaṇān śītadīdhitiH/
+12.77b: mahatyā kakṣayā gacchan tataH svalpaṃ śanaiścaraH//</p>
+
+<p>12.78a: mandād adhaH krameṇa syuś caturthā divasādhipāH/
+12.78b: varṣādhipatayas tadvat tṛtīyāś ca prakīrtitāH//</p>
+
+<p>12.79a: ūrdhvakrameṇa śaśino *māsānām adhipāH smṛtāH/(ḍ masānām)
+12.79b: horeśāH sūryatanayād adho+adhaH kramaśas tathā//</p>
+
+<p>12.80a: bhaved bhakakṣā tīkṣṇāṃśor bhramaṇaṃ ṣaṣṭitāḍitam/
+12.80b: sarvopariṣṭād bhramati yojanais tair bhamaṇḍalam//</p>
+
+<p>12.81a: kalpoktacandrabhagaṇā guṇitāH śaśikakṣayā/
+12.81b: ākāśakakṣā sā jñeyā karavyāptis tathā raveH//</p>
+
+<p>12.82a: saiva yatkalpabhagaṇair bhaktā tadbhramaṇaṃ bhavet/
+12.82b: kuvāsarair vibhajyāhnaH sarveṣāṃ prāggatiH smṛtā//</p>
+
+<p>12.83a: bhuktiyojanajā saṅkhyā sendor bhramaṇasaṅguṇā/
+12.83b: svakakṣāptā tu sā tasya tithyāptā gatiliptikā//</p>
+
+<p>12.84a: kakṣā bhūkarṇaguṇitā mahīmaṇḍalabhājitā/
+12.84b: tatkarṇā bhūmikarṇonā grahoccyaṃ svaṃ dalīkṛtāH//</p>
+
+<p>12.85a: khatrayābdhidvidahanāH kakṣā tu himadīdhiteH/(32430
+12.85b: jñaśīghrasyāṅkakhadvitritkṛtaśūnyendavas tathā//(1043209)</p>
+
+<p>12.86a: śukraśīghrasya saptāgnirasābdhirasaṣaḍyamāH/(2664637)
+12.86b: tato +arkabudhaśukrāṇāṃ khakhārthaikasurārṇavāH//(4331500)</p>
+
+<p>12.87a: kujasyāpy aṅkaśūnyāṅkaṣaḍvedaikabhujaṅgamāH/(8146909)
+12.87b: candroccasya kṛtāṣṭābdhivasudvitryaṣṭavahnayaH//(38328484)</p>
+
+<p>12.88a: kṛtartumunipañcādriguṇenduviṣayā guroH/(51375764)
+12.88b: svarbhānor vedatarkāṣṭadviśailārthakhakuñjarāH//(80572864)</p>
+
+<p>12.89a: pañcavāṇākṣināgarturasādryarkāH śanes tataH/(127668255)
+12.89b: bhānāṃ ravikhaśūnyāṅkavasurandhraśarāśvinaH//(25980012)</p>
+
+<p>12.90a: khavyomakhatrayakhasāgraṣaṭkanāgavyomāṣṭaśūnyayamarūpanagāṣṭacandrāH/(18712080864000000)
+12.90b: brahmāṇḍasampuṭaparibhramaṇaṃ samantād abhyantare dinakarasya karaprasāraH//</p>
+
+<p>[jyotiṣopaniṣad]
+13.01a: atha gupte śucau deśe snātaH śucir alaṅkṛtaH/
+13.01b: sampūjya bhāskaraṃ bhaktyā grahān bhāny atha guhyakān//</p>
+
+<p>13.02a: pāramparyopadeśena yathājñānaṃ guror mukhāt/
+13.02b: ācāryaH śiṣyabodhārthaṃ sarvaṃ pratyakṣadarśivān//</p>
+
+<p>13.03a: bhūbhagolasya racanāṃ kuryād āścaryakāriṇīm/
+13.03b: abhīṣṭaṃ pṛthivīgolaṃ kārayitvā tu dāravam//</p>
+
+<p>13.04a: daṇḍaṃ tanmadhyagaṃ meror ubhayatra vinirgatam/
+13.04b: ādhārakakṣādvitayaṃ kakṣā vaiṣuvatī tathā//</p>
+
+<p>13.05a: bhagaṇāṃśāṅgulaiH kāryā dalitais tisra eva tāH/
+13.05b: svāhorātrārdhakarṇaiś ca tatpramāṇānumānataH//</p>
+
+<p>13.06a: krāntivikṣepabhāgaiś ca dalitair dakṣiṇottaraiH/
+13.06b: svaiH svair apakramais tisro meṣādīnām apakramāt//</p>
+
+<p>13.07a: kakṣāH prakalpayet tāś ca karkyādīnāṃ viparyayāt/
+13.07b: tadvat tisras tulādīnāṃ mṛgādīnāṃ vilomataH//</p>
+
+<p>13.08a: yāmyagolāśritāH kāryāH kakṣādhārād dvayor api/
+13.08b: yāmyodaggolasaṃsthānāṃ bhānām abhijitas tathā//</p>
+
+<p>13.09a: saptarṣīṇām agastyasya brahmādīnāṃ ca kalpayet/
+13.09b: madhye vaiṣuvatī kakṣā sarveṣām eva saṃsthitā//</p>
+
+<p>13.10a: tadādhārayuter ūrdhvam ayane viṣuvadvayam/
+13.10b: viṣuvatsthānato bhāgaiH sphuṭair bhagaṇasañcarāt//</p>
+
+<p>13.11a: kṣetrāṇy evam ajādīnāṃ tiryagjyābhiH prakalpayet/
+13.11b: ayanād ayanaṃ caiva kakṣā tiryak tathāparā//</p>
+
+<p>13.12a: krāntisañjñā tayā sūryaH sadā paryeti bhāsayan/
+13.12b: candrādyāś ca svakaiH pātair apamaṇḍalam āśritaiH//</p>
+
+<p>13.13a: tato +apakṛṣṭā dṛśyante vikṣepānteṣv apakramāt/
+13.13b: udayakṣitije lagnam astaṃ gacchac ca tadvaśāt//</p>
+
+<p>13.14a: laṅkodayair yathāsiddhaṃ khamadhyopari madhyamam/
+13.14b: madhyakṣitijayor madhye yā jyā sāntyābhidhīyate//</p>
+
+<p>13.15a: jñeyā caradalajyā ca viṣuvat kṣitijāntaram/
+13.15b: kṛtvopari svakaṃ sthānaṃ madhye kṣitijamaṇḍalam//</p>
+
+<p>13.16a: vastracchannaṃ bahis cāpi lokālokena veṣṭitam/
+13.16b: amṛtasrāvayogena kālabhramaṇasādhanam//</p>
+
+<p>13.17a: tuṅgabījasamāyuktaṃ golayantraṃ prasādhayet/
+13.17b: gopyam etat prakāśoktaṃ sarvagamyaṃ bhaved iha//</p>
+
+<p>13.18a: tasmād gurūpadeśena racayed golam uttamam/
+13.18b: yuge yuge samucchinnā racaneyaṃ vivasvataH//</p>
+
+<p>13.19a: prasādāt kasyacid bhūyaH prādur bhavati kāmataH/
+13.19b: kālasaṃsādhanārthāya tathā yantrāṇi sādhayet//</p>
+
+<p>13.20a: ekākī yojayed bījaṃ yantre vismayakāriṇi/
+13.20b: śaṅkuyaṣṭidhanuścakraiś chāyāyantrair anekadhā//</p>
+
+<p>13.21a: gurūpadeśād vijñeyaṃ kālajñānam atandritaiH/
+13.21b: toyayantrakapālādyair mayūranaravānaraiH//</p>
+
+<p>13.21c: sasūtrareṇugarbhaiś ca samyak kālaṃ prasādhayet//</p>
+
+<p>13.22a: pāradārāmbusūtrāṇi śulvatailajalāni ca/
+13.22b: bījāni pāṃsavas teṣu prayogās te +api durlabhāH//</p>
+
+<p>13.23a: tāṃrapātram adhaśchidraṃ nyastaṃ kuṇḍe +amalāmbhasi/
+13.23b: ṣaṣṭir majjaty ahorātre sphuṭaṃ yantraṃ kapālakam//</p>
+
+<p>13.24a: narayantraṃ tathā sādhu divā ca vimale ravau/
+13.24b: chāyāsaṃsādhanaiH proktaṃ kālasādhanam uttamam//</p>
+
+<p>13.25a: grahanakṣatracaritaṃ jñātvā golaṃ ca tattvataH/
+13.25b: grahalokam avāpnoti paryāyeṇātmavān naraH//</p>
+
+<p>[māna]
+14.01a: brāhmaṃ divyaṃ tathā pitryaṃ prājāpatyaṃ guros tathā/
+14.01b: sauraṃ ca sāvanaṃ cāndram ārkṣaṃ mānāni vai nava//</p>
+
+<p>14.02a: caturbhir vyavahāro +atra sauracāndrārkṣasāvanaiH/
+14.02b: bārhaspatyena ṣaṣṭyabdaṃ jñeyaṃ nānyais tu nityaśaH//</p>
+
+<p>14.03a: saureṇa dyuniśor mānaṃ ṣaḍaśītimukhāni ca/
+14.03b: ayanaṃ viṣuvaccaiva saṃkrānteH puṇyakālatā//</p>
+
+<p>14.04a: tulādi ṣaḍaśītyahnāṃ ṣaḍaśītimukhaṃ kramāt/
+14.04b: taccatuṣṭayam eva syād dvisvabhāveṣu rāśiṣu//</p>
+
+<p>14.05a: ṣaḍviṃśe dhanuṣo bhāge dvāviṃśe nimiṣasya ca/
+14.05b: mithunāṣṭādaśe bhāge kanyāyās tu caturdaśa//</p>
+
+<p>14.06a: tataH śeṣāṇi kanyāyā yāny ahāni tu ṣoḍaśa/
+14.06b: kratubhis tāni tulyāni pitṝṇāṃ dattam akṣayam//</p>
+
+<p>14.07a: bhacakranābhau viṣuvaddvitayaṃ samasūtragam/
+14.07b: ayanadvitayaṃ caiva catasraH prathitās tu tāH//</p>
+
+<p>14.08a: tadantareṣu saṃkrāntidvitayaṃ dvitayaṃ punaH/
+14.08b: nairantaryāt tu saṃkrānter jñeyaṃ viṣṇupadīdvayam//</p>
+
+<p>14.09a: bhānor makarasaṅkrānteH ṣaṇmāsā uttarāyaṇam/
+14.09b: karkyādes tu tathaiva syāt ṣaṇmāsā dakṣiṇāyanam//</p>
+
+<p>14.10a: dvirāśinātha ṛtavas tato +api śiśirādayaH/
+14.10b: meṣādayo dvādaśaite māsās tair eva vatsaraH//</p>
+
+<p>14.11a: arkamānakalāH ṣaṣṭyā guṇitā bhuktibhājitāH/
+14.11b: tadardhanāḍyaH saṅkrānter arvāk puṇyaṃ tathā pare//</p>
+
+<p>14.12a: arkād viniHsṛtaH prācīṃ yad yāty aharahaH śaśī/
+14.12b: tac cāndramānam aṃśais tu jñeyā dvādaśabhis tithiH//</p>
+
+<p>14.13a: tithiH karaṇam udvāhaH kṣauraṃ sarvakriyās tathā/
+14.13b: vratopavāsayātrāṇāṃ kriyā cāndreṇa gṛhyate//</p>
+
+<p>14.14a: triṃśatā tithibhir māsaś cāndraH pitryam ahaH smṛtam/
+14.14b: niśā ca māsapakṣāntau tayor madhye vibhāgataH//</p>
+
+<p>14.15a: bhacakrabhramaṇaṃ nityaṃ nākṣatraṃ dinam ucyate/
+14.15b: nakṣatranāmnā māsās tu jñeyāH parvāntayogataH//</p>
+
+<p>14.16a: kārtikyādiṣu saṃyoge kṛttikādi dvayaṃ dvayam/
+14.16b: antyopāntyau pañcamaś ca tridhā māsatrayaṃ smṛtam//</p>
+
+<p>14.17a: vaiśākhādiṣu kṛṣṇe ca yogaH pañcadaśe tithau/
+14.17b: kārttikādīni varṣāṇi guror astodayāt tathā//</p>
+
+<p>14.18a: udayād udayaṃ bhānoH sāvanaṃ tat prakīrtitam/
+14.18b: sāvanāni syur *etena yajñakālavidhis tu taiH//(ḍ etana)</p>
+
+<p>14.19a: sūtakādiparicchedo dinamāsābdapās tathā/
+14.19b: madhyamā grahabhuktis tu sāvanenaiva gṛhyate//</p>
+
+<p>14.20a: surāsurāṇām anyonyam ahorātraṃ viparyayāt/
+14.20b: yatproktaṃ tad bhaved divyaṃ bhānor bhagaṇapūraṇāt//</p>
+
+<p>14.21a: manvantaravyavasthā ca prājāpatyam udāhṛtam/
+14.21b: na tatra dyuniśor bhedo brāhmaṃ kalpaH prakīrtitam//</p>
+
+<p>14.22a: etat te paramākhyātaṃ rahasyaṃ paramādbhutam/
+14.22b: brahmaitat paramaṃ puṇyaṃ sarvapāpapraṇāśanam//</p>
+
+<p>14.23a: divyaṃ cārkṣaṃ grahāṇāṃ ca darśitaṃ jñānam uttamam/
+14.23b: vijñāyārkādilokeṣu sthānaṃ prāpnoti śāsvatam//</p>
+
+<p>14.24a: ity uktvā mayam āmantrya samyak tenābhipūjitaH/
+14.24b: divam ācakrame +arkāṃśaH praviveśa svamaṇḍalam//</p>
+
+<p>14.25a: mayo +atha divyaṃ tajñānaṃ jñātvā sākṣād vivasvataH/
+14.25b: kṛtakṛtyam ivātmānaṃ mene nirdhūtakalmaṣam//</p>
+
+<p>14.26a: jñātvā tam ṛṣayaś cātha sūryalabdhavaraṃ mayam/
+14.26b: paribabrur upetyātho jñānaṃ papracchur ādarāt//</p>
+
+<p>14.27a: sa tebhyaH pradadau prīto grahāṇāṃ caritaṃ mahat/
+14.27b: atyadbhutatamaṃ loke rahasyaṃ brahmasammitam//</p>
+
+  </body>
+</text>
+</TEI>

@@ -1,0 +1,483 @@
+/* ---------------------------------------------------------------
+   SARIT Corpus Search
+
+   The look follows the Suśruta Project sites
+   (sushrutaproject.github.io, the eTexts collection and the
+   bibliographies): a navy header with saffron accents, a cool
+   paper ground, white cards, Spectral for headings and prose,
+   Gentium Book Plus for romanised Sanskrit, IBM Plex Sans for
+   small English-only labels.
+
+   The palette, the dark-mode values and the fonts are all set in
+   the blocks immediately below.
+   ------------------------------------------------------------- */
+
+:root {
+  /* Palette (the same values as the Suśruta Project sites) */
+  --navy: #1E2A44;
+  --navy-deep: #141D30;
+  --saffron: #E0A43A;
+  --saffron-lt: #F0C77A;
+  --on-navy: #D3D9E4;
+  --on-navy-muted: #C9D2E0;
+  --ink: #16202E;
+  --muted: #435064;
+  --link: #1E4E8C;
+  --link-hover: #133563;
+  --accent: #8F6210;      /* saffron, darkened to be readable as text */
+  --paper: #F6F7F9;
+  --card: #FFFFFF;
+  --rule: #DCE2EA;
+  --tint: #EEF1F5;
+  --shadow: rgba(22, 32, 46, 0.10);
+
+  /* Functional colours kept from the earlier design: yellow highlighter
+     for search hits, a pale yellow for the passage a link jumps to,
+     blue / green for the SARIT / GRETIL badges, red for errors. */
+  --mark: #f6d76b;
+  --mark-ink: #16202E;
+  --target: #f8ecc4;
+  --sarit: #2f5d8a;
+  --gretil: #4f6b27;
+  --error: #b3261e;
+
+  /* Type. Spectral has the IAST letters (it falls back to Gentium for
+     the rare ṝ and ḹ); IBM Plex Sans does not have ṭ ḍ ṇ ṣ ṃ ḥ ṛ, so it
+     is used only for labels that are always plain English. */
+  --serif: "Spectral", "Gentium Book Plus", "Noto Serif Devanagari", Georgia, serif;
+  --text: "Gentium Book Plus", "Spectral", "Noto Serif Devanagari", Georgia, serif;
+  --deva: "Noto Serif Devanagari", "Spectral", "Sanskrit 2003", "Siddhanta", serif;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  /* code samples contain IAST, which IBM Plex Mono lacks: system monospace */
+  --mono: ui-monospace, "DejaVu Sans Mono", SFMono-Regular, Menlo, Consolas, monospace;
+
+  --wide: 1100px;
+  --measure: 760px;
+}
+
+/* Dark mode follows the reader's system setting. Setting
+   data-theme="light" or "dark" on <html> overrides it. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ink: #E4E8EE; --muted: #9AA5B5; --link: #8FB4E8; --link-hover: #B9D0F2;
+    --accent: #F0C77A; --paper: #0F1626; --card: #18213A; --rule: #2E3850;
+    --tint: #222C45; --shadow: rgba(0, 0, 0, 0.35);
+    --target: #3B3420; --sarit: #8fb5dc; --gretil: #a9c77a; --error: #ff8a80;
+  }
+}
+:root[data-theme="dark"] {
+  --ink: #E4E8EE; --muted: #9AA5B5; --link: #8FB4E8; --link-hover: #B9D0F2;
+  --accent: #F0C77A; --paper: #0F1626; --card: #18213A; --rule: #2E3850;
+  --tint: #222C45; --shadow: rgba(0, 0, 0, 0.35);
+  --target: #3B3420; --sarit: #8fb5dc; --gretil: #a9c77a; --error: #ff8a80;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; color-scheme: light dark; }
+html[data-theme="light"] { color-scheme: light; }
+html[data-theme="dark"] { color-scheme: dark; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.6;
+  overflow-x: clip;
+}
+
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.2; }
+[lang="sa"] { font-family: var(--deva); }
+
+a { color: var(--link); }
+a:hover { color: var(--link-hover); }
+code {
+  font-family: var(--mono);
+  font-size: .82em;
+  background: var(--tint);
+  padding: .1em .35em;
+  border-radius: 4px;
+  overflow-wrap: anywhere;
+}
+:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+input[type="checkbox"], input[type="radio"] { accent-color: var(--link); }
+
+.wrap { max-width: var(--wide); margin: 0 auto; padding: 0 24px; }
+.muted { color: var(--muted); }
+.small { font-size: .85em; }
+.error { color: var(--error); }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+
+/* ---------------------------------------------------------------
+   Site header: the Suśruta Project bar, then this site's own bar
+   ------------------------------------------------------------- */
+
+.site-head { background: var(--navy); color: #fff; }
+.site-head :focus-visible { outline-color: var(--saffron); }
+
+.umbrella { background: var(--navy-deep); font-family: var(--sans); font-size: 13.5px; }
+.umbrella-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px 16px;
+  min-height: 36px;
+}
+.umbrella a { color: var(--on-navy-muted); text-decoration: none; }
+.umbrella a:hover, .umbrella a:focus { color: #fff; }
+.umbrella-home { font-weight: 500; }
+.umbrella-home span { color: var(--saffron); margin-right: 4px; }
+.umbrella ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0 18px; }
+.umbrella ul a { display: block; padding: 8px 0; }
+
+.head-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 20px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-right: auto;
+  text-decoration: none;
+  color: #fff;
+}
+.brand-mark {
+  width: 40px;
+  height: 40px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--saffron);
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  padding-bottom: 2px;
+}
+.brand-text { font-family: var(--serif); font-size: 21px; font-weight: 500; line-height: 1.15; }
+.brand:hover { color: #fff; }
+.brand:hover .brand-text { text-decoration: underline; }
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px;
+  font-family: var(--sans);
+  font-size: 15.5px;
+}
+.site-nav a {
+  display: block;
+  padding: 8px 11px;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+}
+.site-nav a:hover, .site-nav a:focus { background: rgba(255, 255, 255, 0.12); color: #fff; }
+.site-nav a[aria-current] { background: var(--saffron); color: var(--navy); }
+
+/* ---------------------------------------------------------------
+   Page body and footer
+   ------------------------------------------------------------- */
+
+main.wrap { padding-top: 40px; padding-bottom: 72px; }
+main h1 { font-size: clamp(30px, 4.5vw, 40px); margin: 0 0 .6em; }
+
+.site-foot {
+  background: var(--card);
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 14px;
+  padding: 32px 0 36px;
+}
+
+/* ---------------------------------------------------------------
+   Home page: title and intro in a navy band across the page, with
+   the search card overlapping its lower edge
+   ------------------------------------------------------------- */
+
+.intro-band {
+  margin: -41px 0 0;        /* up over main's padding (and 1px more: no seam) */
+  padding: 45px 0 104px;
+  background: var(--navy);
+  /* extend the band to both edges of the window */
+  box-shadow: 0 0 0 100vmax var(--navy);
+  clip-path: inset(0 -100vmax);
+  color: var(--on-navy);
+  text-align: center;
+}
+.intro-band > * { max-width: 44rem; margin-left: auto; margin-right: auto; }
+.intro-band h1 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: clamp(34px, 6vw, 52px);
+  line-height: 1.08;
+  color: #fff;
+}
+.intro-band p { margin-top: 0; margin-bottom: 0; }
+.intro-band a { color: var(--saffron-lt); }
+.intro-band a:hover { color: #fff; }
+
+/* ---------------------------------------------------------------
+   Buttons and form controls
+   ------------------------------------------------------------- */
+
+button, select, input { font: inherit; color: inherit; }
+
+.btn-primary, .btn-ghost, .btn-small {
+  font-family: var(--sans);
+  font-weight: 600;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.btn-primary { background: var(--saffron); color: var(--navy); border: 1px solid var(--saffron); padding: 0 26px; font-size: 16px; }
+.btn-primary:hover { background: var(--saffron-lt); border-color: var(--saffron-lt); }
+.btn-ghost, .btn-small { background: var(--card); border: 1px solid var(--rule); color: var(--link); }
+.btn-ghost { padding: 0 18px; font-size: 15px; }
+.btn-small { display: inline-block; padding: .3rem .8rem; font-size: 13.5px; line-height: 1.4; text-decoration: none; }
+.btn-small:hover, .btn-ghost:hover, .btn-small:focus-visible, .btn-ghost:focus-visible {
+  background: var(--tint);
+  border-color: var(--link);
+  color: var(--link-hover);
+}
+.linkish { background: none; border: 0; padding: 0; color: var(--link); cursor: pointer; font-size: inherit; text-decoration: underline; }
+.linkish:hover { color: var(--link-hover); }
+select { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 2px 4px; }
+input::placeholder { color: var(--muted); opacity: .8; }
+
+/* ---------------------------------------------------------------
+   Search form (a white card)
+   ------------------------------------------------------------- */
+
+.search-form {
+  position: relative;
+  margin-top: -68px;        /* up over the lower edge of the navy band */
+  background: var(--card);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px var(--shadow);
+  padding: 22px 24px 24px;
+  font-size: 16.5px;
+}
+.qrow { display: flex; gap: 8px; }
+.qrow input {
+  flex: 1;
+  min-width: 0;
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  padding: 10px 12px;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: var(--paper);
+}
+.qrow input:focus { outline: 2px solid var(--saffron); outline-offset: 1px; border-color: var(--link); }
+.palette { display: flex; flex-wrap: wrap; gap: 4px; margin: 10px 0 4px; }
+.pal {
+  font-family: var(--serif);
+  min-width: 30px;
+  padding: 1px 6px;
+  border: 1px solid var(--rule);
+  background: var(--tint);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.pal:hover { border-color: var(--link); color: var(--link); background: var(--card); }
+.opts { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 12px; align-items: flex-start; }
+.opt-group { border: 0; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: center; }
+.opt-group legend, .scope-label {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--muted);
+}
+.opt-group legend { float: left; margin-right: 4px; padding: 0; line-height: 2.2; }
+.opt-group label, .scope label { white-space: nowrap; cursor: pointer; }
+label.disabled { opacity: .45; }
+.more-opts { flex-basis: 100%; }
+.more-opts summary { cursor: pointer; color: var(--muted); font-family: var(--sans); font-size: 14px; }
+.more-grid { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 8px; font-size: .95em; }
+.more-grid label { display: flex; gap: 6px; align-items: center; }
+.scope { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--rule); }
+.scope-head { display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: center; }
+.picker { margin-top: 8px; }
+.picker-tools { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 6px; }
+.picker-tools input { flex: 1; min-width: 180px; padding: 4px 10px; border: 1px solid var(--rule); border-radius: 6px; background: var(--paper); }
+.pick-list { max-height: 260px; overflow: auto; border: 1px solid var(--rule); border-radius: 6px; padding: 6px 10px; background: var(--paper); font-size: .95em; }
+.pick { display: block; padding: 1px 0; white-space: normal; }
+.pick-title { font-family: var(--serif); }
+
+.badge {
+  font-family: var(--sans);
+  font-size: .68em;
+  font-weight: 600;
+  letter-spacing: .04em;
+  border-radius: 4px;
+  padding: 0 5px;
+  border: 1px solid currentColor;
+  vertical-align: middle;
+}
+.badge-sarit { color: var(--sarit); }
+.badge-gretil { color: var(--gretil); }
+
+/* status, progress, toolbar */
+.status { margin: 20px 0 6px; min-height: 1.5em; font-size: 16.5px; }
+.progress { height: 3px; background: var(--rule); border-radius: 2px; overflow: hidden; }
+.progress .bar { height: 100%; width: 0; background: var(--saffron); transition: width .2s; }
+.toolbar { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0; }
+
+/* ---------------------------------------------------------------
+   Search results: one white card per text
+   ------------------------------------------------------------- */
+
+.tgroup { margin: 16px 0; }
+.tgroup > details { background: var(--card); border-radius: 10px; box-shadow: 0 8px 24px var(--shadow); overflow: hidden; }
+.tgroup summary { cursor: pointer; padding: 12px 18px; list-style-position: inside; }
+.tgroup summary:hover .tg-title { color: var(--link); }
+.tg-title { font-family: var(--serif); font-weight: 600; font-size: 1.12em; }
+.tg-author { color: var(--muted); font-family: var(--serif); }
+.tg-count { color: var(--muted); font-family: var(--sans); font-size: 13.5px; margin-left: 6px; }
+.tg-meta { padding: 0 18px 8px; font-size: .8em; overflow-wrap: anywhere; }
+.hit { border-top: 1px solid var(--rule); padding: 10px 18px 12px; }
+.cite { display: flex; flex-wrap: wrap; gap: 2px 12px; align-items: baseline; font-size: .84em; color: var(--muted); }
+.cite .ref { color: var(--ink); font-weight: 600; }
+.cite .kind { font-family: var(--sans); font-size: .85em; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--accent); }
+.cite .acts { margin-left: auto; display: flex; gap: 10px; }
+.snip { margin-top: 4px; white-space: pre-line; overflow-wrap: anywhere; }
+.snip.latn { font-family: var(--text); font-size: 1.125rem; }
+.snip.deva, .deva .stext { font-family: var(--deva); font-size: 1.15rem; line-height: 1.75; }
+mark { background: var(--mark); color: var(--mark-ink); border-radius: 2px; padding: 0 1px; }
+.more { padding: 10px 18px; margin: 0; border-top: 1px solid var(--rule); font-size: .9em; }
+.nohits { color: var(--muted); }
+
+/* ---------------------------------------------------------------
+   Reader: the text on a white sheet
+   ------------------------------------------------------------- */
+
+.r-title { font-family: var(--serif); margin: 0 0 6px; }
+.r-sub { margin: 0 0 10px; color: var(--muted); font-family: var(--serif); font-size: 1.1em; }
+.r-meta { display: grid; grid-template-columns: max-content 1fr; gap: 2px 14px; font-size: .88em; margin: 10px 0 16px; }
+.r-meta dt { color: var(--muted); font-family: var(--sans); font-size: .9em; padding-top: .12em; }
+.r-meta dd { margin: 0; overflow-wrap: anywhere; }
+.r-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  align-items: center;
+  padding: 10px 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  position: sticky;
+  top: 0;
+  background: var(--paper);
+  z-index: 2;
+  font-size: .9em;
+}
+.goto { display: flex; gap: 6px; align-items: center; }
+.goto input { padding: 3px 8px; border: 1px solid var(--rule); border-radius: 6px; background: var(--card); width: 11em; }
+.r-more { margin: 12px 0; }
+.r-body { background: var(--card); border-radius: 10px; box-shadow: 0 8px 24px var(--shadow); padding: 8px 20px 20px; }
+.r-body:empty { display: none; }
+.ctx-bar { margin: 18px 0 6px; padding: 4px 0; border-bottom: 2px solid var(--saffron); color: var(--accent); font-size: .88em; font-family: var(--serif); }
+.seg { display: grid; grid-template-columns: 11em 1fr; gap: 14px; padding: 6px 4px; border-radius: 4px; scroll-margin-top: 80px; }
+.seg.target { background: var(--target); }
+.seg .gutter { font-size: .75em; color: var(--muted); display: flex; flex-direction: column; gap: 1px; overflow-wrap: anywhere; }
+.g-ref { color: var(--ink); font-weight: 600; }
+.g-acts { display: flex; gap: 8px; }
+.stext { white-space: pre-line; overflow-wrap: anywhere; }
+.latn .stext { font-family: var(--text); font-size: 1.125rem; line-height: 1.7; }
+.seg.k-h .stext { font-weight: 700; }
+.seg.k-n .stext, .seg.k-v .stext { font-size: .9em; color: var(--muted); border-left: 2px solid var(--rule); padding-left: 8px; }
+.mk-ref { font-family: var(--serif); font-size: .62em; color: var(--accent); vertical-align: super; margin: 0 3px; white-space: nowrap; }
+.mk-pg { font-family: var(--serif); font-size: .62em; color: var(--muted); vertical-align: super; margin: 0 2px; white-space: nowrap; }
+
+/* ---------------------------------------------------------------
+   Texts table (on a white card)
+   ------------------------------------------------------------- */
+
+.t-tools { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; margin-bottom: 14px; font-size: 16.5px; }
+.t-tools input[type=search] { flex: 1; min-width: 220px; padding: 7px 12px; border: 1px solid var(--rule); border-radius: 6px; background: var(--card); }
+.t-tools input[type=search]:focus, .picker-tools input:focus, .goto input:focus { outline: 2px solid var(--saffron); outline-offset: 1px; border-color: var(--link); }
+.table-wrap { overflow-x: auto; background: var(--card); border-radius: 10px; box-shadow: 0 8px 24px var(--shadow); padding: 6px 14px 10px; }
+.t-table { width: 100%; border-collapse: collapse; font-size: .9em; }
+.t-table th {
+  text-align: left;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--muted);
+  border-bottom: 2px solid var(--saffron);
+  padding: 8px 6px;
+}
+.t-table td { border-bottom: 1px solid var(--rule); padding: 7px 6px; vertical-align: top; }
+/* long titles, URLs and file names must not force the table wider than
+   the page: the title and source columns may break anywhere, and are given
+   a share of the width so that they are not squeezed */
+.t-table td:nth-child(1), .t-table td:nth-child(3) { overflow-wrap: anywhere; }
+.t-table th:nth-child(1) { width: 34%; }
+.t-table th:nth-child(2) { width: 16%; }
+.t-table th:nth-child(3) { width: 30%; }
+.t-table tr:last-child td { border-bottom: 0; }
+.t-title { font-family: var(--serif); font-weight: 600; }
+.t-table .num { text-align: right; white-space: nowrap; overflow-wrap: normal; }
+.t-acts { white-space: nowrap; overflow-wrap: normal; }
+.t-acts a { margin-right: 6px; }
+
+/* ---------------------------------------------------------------
+   Help and About
+   ------------------------------------------------------------- */
+
+.prose { max-width: var(--measure); }
+.prose h2 { font-size: 25px; margin: 1.8em 0 .5em; padding-bottom: .25em; border-bottom: 2px solid var(--saffron); }
+.prose h3 { font-size: 20px; margin: 1.5em 0 .4em; }
+.prose table { border-collapse: collapse; margin: 12px 0; font-size: .92em; background: var(--card); }
+.prose td, .prose th { border: 1px solid var(--rule); padding: 5px 10px; text-align: left; }
+.prose th { background: var(--tint); font-family: var(--sans); font-size: .85em; font-weight: 600; }
+
+/* ---------------------------------------------------------------
+   Narrow screens
+   ------------------------------------------------------------- */
+
+@media (max-width: 720px) {
+  .wrap { padding-left: 16px; padding-right: 16px; }
+  .umbrella-inner { justify-content: center; }
+  .head-inner { justify-content: center; }
+  .brand { margin-right: 0; width: 100%; justify-content: center; }
+  .site-nav { justify-content: center; }
+  .site-nav a { padding: 7px 9px; font-size: 15px; }
+  .intro-band { padding-top: 33px; font-size: 17px; }
+  .search-form { padding: 18px 16px 20px; }
+  .r-body { padding: 4px 12px 14px; }
+  .table-wrap { padding: 4px 8px 8px; }
+}
+@media (max-width: 640px) {
+  .qrow { flex-wrap: wrap; }
+  .qrow input { flex-basis: 100%; }
+  .qrow button { flex: 1; min-height: 40px; }
+  .opt-group label, .scope label { white-space: normal; }
+  .seg { grid-template-columns: 1fr; gap: 2px; }
+  .seg .gutter { flex-direction: row; flex-wrap: wrap; gap: 8px; }
+  .cite .acts { margin-left: 0; }
+  .t-table th:nth-child(3), .t-table td:nth-child(3) { display: none; }
+  /* on a phone the table scrolls sideways inside its card */
+  .t-table th:nth-child(1) { width: auto; min-width: 13em; }
+  .t-table th:nth-child(2) { width: auto; min-width: 7em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}

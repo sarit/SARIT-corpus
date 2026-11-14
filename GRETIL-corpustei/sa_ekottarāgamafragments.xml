@@ -1,0 +1,968 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_ekottarAgamafragments">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Ekottarāgama, fragments</title>
+	<author></author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>Klaus Wille</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Klaus Wille</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/ekottaru.htm">ekottaru.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Ekottaragama (fragments).
+<lb/>Based on the ed. by Chandra Bhal Tripathi:
+<lb/>Ekottarāgama-Fragmente der Gilgit-Handschrift, Reinbek 1995
+<lb/>(Studien zur Indologie und Iranistik, Monographie 2).
+<lb/>
+<lb/>Input by Klaus Wille
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>Chandra Bhal Tripathi: Ekottarāgama-Fragmente der Gilgit-Handschrift, Reinbek 1995 (Studien zur Indologie und Iranistik, Monographie 2).</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Ekottarāgama, fragments = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Religious Literature -- Buddhist</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+
+<p>(<hi rend="bold">EĀ.Trip 2.1</hi>) <hi rend="it">nāham ekadharmam api samanupaśyāmi yad evam abhāvitam amṛdu bhavati akarmaṇyaṃ yathedaṃ cittam / cittaṃ hi bhikṣavaḥ abhāvitam amṛdu bhavati akarmaṇyam /
+tasmāt tarhy evaṃ śikṣitavyaṃ yan naś cittam abhāvitam amṛdu bhaviṣyati akarmaṇyam evaṃ vo bhikṣavaḥ śikṣitavyam //
+(<hi rend="bold">EĀ.Trip 2.2</hi>) <hi rend="it">nāham ekadharmam api samanupaśyāmi yad evaṃ subhāvitaṃ mṛdu bhavati karmaṇyaṃ yathedaṃ cittaṃ / cittaṃ hi bhikṣa</hi>vaḥ subhāvitaṃ mṛdu bhavati karmaṇyam /
+tasmāt tarhy evaṃ śikṣitavyaṃ yac cittaṃ naḥ subhāvitaṃ mṛdu bhaviṣyati karmaṇyam evaṃ vo bhikṣavaḥ śi<hi rend="it">kṣi</hi>tavyam //</hi></p>
+
+<p>(<hi rend="bold">EĀ.Tri 2.3</hi>) <hi rend="it">nāham ekadharmam api samanu</hi>paśyāmi yad evam subhāvitaṃ mṛdu bhavati karmaṇyaṃ yathedaṃ cittam / cittaṃ hi bhikṣavaḥ subhāvitaṃ mṛdu bhavati karmaṇyaṃ /
+tady<hi rend="it">athā yāni kāni</hi>cid dārujātāni sy<hi rend="it">uḥ candanaṃ teṣām agram ākhyāyate mṛdutāyāṃ karma</hi>ṇyatāyāṃ /
+evam eva nāham ekadharmam api samanupaśyāmi yad evam subhāvitaṃ mṛdu bhavati karmaṇ<hi rend="it">yaṃ yathedaṃ cittam / ci</hi>ttaṃ hi bhikṣavaḥ subhāvitaṃ mṛ<hi rend="it">du bhavati karmaṇyam /
+tasmāt tarhy evaṃ śikṣitavyaṃ</hi> yac cittaṃ naḥ subhāvitaṃ mṛdu bhaviṣyati karmaṇyam evaṃ vo bhikṣavaḥ śikṣitavyam // //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 3.11</hi>) nāham ekadharmam api samanupaśyāmi yad evam adā<hi rend="it">ntam aguptam arakṣitam asaṃvṛtam abhāvita</hi>m āyatyāṃ duḥkhavipākaṃ bhavati yathedaṃ cittam / cittaṃ hi bhikṣavaḥ adāntam aguptam arakṣitam asaṃvṛtam abhāvitam āyatyāṃ duḥkhavipākaṃ <hi rend="it">bhavati /</hi>
+<hi rend="it">tasmāt tarhy evaṃ śikṣitavyaṃ</hi> yan na naś cittam adāntam aguptam arakṣitam asaṃvṛtam abhāvitam āyatyāṃ duḥkhavipākaṃ bhaviṣyati evaṃ vo bhikṣavaḥ śikṣitavyaṃ //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 3.12</hi>) nāham eka<hi rend="it">dharmam api samanupaśyāmi yad evam su</hi>dāntaṃ suguptaṃ surakṣitaṃ susaṃvṛtaṃ subhāvitam āyatyāṃ sukhavipākaṃ bhavati yathedaṃ cittam / cittaṃ hi bhikṣavaḥ sudāntaṃ suguptaṃ surakṣitaṃ susaṃvṛtaṃ subhāvitam āyatyāṃ sukha<hi rend="it">vipākaṃ bhavati /
+tasmāt tarhy evaṃ śikṣitavyaṃ</hi> yac cittaṃ naḥ sudāntaṃ suguptaṃ surakṣitaṃ susaṃvṛtaṃ subhāvitam āyatyāṃ sukhavipākaṃ bhaviṣyaty evaṃ vo bhikṣavaḥ śikṣitavyaṃ //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 3.13</hi>) yathā duḥkhavipākaṃ sukhavi<hi rend="it">pākam eva anarthāya arthāya</hi> ahitāya hitāya duḥkhāya sukhāya vyasanāya saṃpade vipattaye saṃpattaye asamṛddhaye samṛddhaye apāripūraye pāripūraye <hi rend="it">pārihāṇāya apārihāṇāya // //</hi>
+(<hi rend="bold">EĀ.Trip 3.21</hi>) nāham ekadharmam api samanupaśyāmi yad evam adāntam aguptam arakṣitam asaṃvṛtam abhāvitaṃ saṃrāgāya saṃvart<hi rend="it">a</hi>te yathedaṃ cittam / cittaṃ hi bhikṣavaḥ a<hi rend="it">dāntam aguptam arakṣitam asaṃv</hi>ṛt<hi rend="it">a</hi>m <hi rend="it">a</hi>bhāvitaṃ saṃrāgāya saṃvartate /
+tasmāt tarhy evaṃ śikṣitavyaṃ yan na naś cittam adāntam aguptam arakṣitam asaṃvṛta<hi rend="it">m abhāvitaṃ saṃrāgā</hi>ya saṃvartsyati evaṃ vo bhikṣavaḥ <hi rend="it">śikṣitavyaṃ //
+(<hi rend="bold">EĀ.Trip 3.22</hi>) <hi rend="it">nāham e</hi>kadharmam api samanupaśyāmi yad evam sudāntaṃ suguptaṃ surakṣitaṃ susaṃvṛtaṃ subhāvitam asaṃrāgāya saṃvartate yathe<hi rend="it">daṃ cittaṃ / cittaṃ hi bhikṣa</hi>va<hi rend="it">ḥ sudāntaṃ suguptaṃ surakṣitaṃ susaṃvṛtaṃ</hi> subhāvitam asaṃrāgāya saṃvartate /
+tasmāt tarhy evaṃ śikṣitavyaṃ yac cittaṃ naḥ sudāntaṃ suguptaṃ surakṣitaṃ susaṃvṛtaṃ subhā<hi rend="it">vitam asaṃrāgāya saṃvartsyati evaṃ vo bhikṣavaḥ śikṣitavyaṃ //
+(<hi rend="bold">EĀ.Trip 3.23</hi>) <hi rend="it">yathā saṃrā</hi>gāya asaṃrāgāya evaṃ sadveṣāya asadveṣāya saṃmohāya asaṃmohāya saṃyogāya visaṃyogāy<hi rend="it">a sa</hi>ṃ<hi rend="it">kleśāya vyavadānāya ācayāya apacayāya upādānāya anupādānāya ucchedāya anucchedāya saṃśre</hi>ṇanāya viśreṇanāya saṃdhūpanāya vidhūpanāya bāhulyāya saṃlekhāya saṃ<hi rend="it">sargāya asaṃsargāya prapañcāya niṣprapañcāya ālayāya anālayāya avyupaśamāya vyu</hi>paśamāya // //</hi></hi></p>
+
+<p>(<hi rend="bold">EĀ.Trip 4.11</hi>) tadyathā śāliśūko vā yavaśūko vā mithyāduṣpraṇi<hi rend="it">hitaḥ s</hi>y<hi rend="it">āt / taṃ śūkaṃ strī vā puruṣo vā sukumāraḥ sukhaiṣī padbhyām anvākrameta / sa tasya abhavyas tva</hi>caṃ bhitvā rudhiram utpādayituṃ / tat kasya hetor / mithyāduṣpraṇihitatvāc chūkasya /
+(<hi rend="bold">EĀ.Trip 4.12</hi>) evam eva sa bata <hi rend="it">mithyāduṣpraṇihitena cittena ātmārthaṃ vā jñāsyati parārthaṃ vā ubhayārthaṃ vā u</hi>ttaraṃ vā manuṣyadharmam alamāryaviśeṣādhigamaṃ jñānaṃ vā darśanaṃ vā sparśavihāratāṃ vā jñāsya<hi rend="it">t</hi>i <hi rend="it">vā drakṣyati vā nedaṃ sthānaṃ vidyate / tat kasya hetor / mithyāduṣpraṇihitatvāc cittasya /</hi>
+(<hi rend="bold">EĀ.Trip 4.13</hi>) tasmāt tarhy evaṃ śikṣitavyaṃ yan na naḥ citta<hi rend="it">ṃ mith</hi>y<hi rend="it">ādu</hi>ṣpraṇihitaṃ bhaviṣyaty evaṃ vo bhikṣavaḥ śikṣit<hi rend="it">a</hi>vy<hi rend="it">aṃ</hi> //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 4.21</hi>) tadyathā ś<hi rend="it">āliśūko vā yavaśūko vā samyaksupraṇihitaḥ syāt / taṃ śūkaṃ strī vā p</hi>uruṣo vā sukumāraḥ sukhaiṣī padbhyām anvākrameta / sa tasya bhavyas tvacaṃ bhitvā rudhiram utpādayituṃ / tat kasya he<hi rend="it">toḥ / samyaksupraṇihitatvāc chūkasya /</hi>
+(<hi rend="bold">EĀ.Trip 4.22</hi>) <hi rend="it">evam eva sa bata samyaksupra</hi>ṇihitena cittena ātmārthaṃ vā jñāsyati parārthaṃ vā ubhayārthaṃ vā uttaraṃ vā manuṣyadharmam a<hi rend="it">lamāryaviśeṣādhigamaṃ jñānaṃ vā darśanaṃ vā jñāsyati vā drakṣ</hi>y<hi rend="it">a</hi>ti vā sthānam etad vidyate / tat kasya hetor / ṛju samyaksupraṇihitatvāc cittasya /
+(<hi rend="bold">EĀ.Trip 4.23</hi>) tasmā<hi rend="it">t tarhy</hi> e<hi rend="it">va</hi>ṃ <hi rend="it">śikṣ</hi>i<hi rend="it">tavyaṃ yan naś cittaṃ samyaksupraṇihitaṃ bhaviṣyaty evaṃ vo bhikṣavaḥ</hi> ś<hi rend="it">i</hi>kṣitavyaṃ // //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 5.11</hi>) tadyathā udakapātrī haridrayā vā maṣiṇā vā saṃsṛṣṭā syād āvilīkṛtā / tatra cakṣuṣm<hi rend="it">ān</hi> pu<hi rend="it">ruṣaḥ svaṃ mukhanimittaṃ pratyavekṣamāṇo na paśyet / tat kasya hetor / āv</hi>ilatvād udakapātryāḥ /
+(<hi rend="bold">EĀ.Trip 5.12</hi>) evam eva sa bata āvilena cittena ātmārthaṃ vā jñāsyati parārthaṃ vā ubhayā<hi rend="it">r</hi>th<hi rend="it">a</hi>ṃ <hi rend="it">vā uttaraṃ vā manuṣyadharmam alamāryaviśeṣādhigamaṃ jñānaṃ vā</hi> darśanaṃ vā sparśavihāratāṃ vā jñāsyati vā drakṣyati vā nedaṃ sthānaṃ vidyate / tat kasya hetor / āvilatvāc cittasya /
+(<hi rend="bold">EĀ.Trip 5.13</hi>) tasmāt tarhy ev<hi rend="it">a</hi>ṃ <hi rend="it">śikṣitavyaṃ yan na naḥ cittaṃ mithyāduṣpraṇihitaṃ bhaviṣyaty evaṃ vo bhikṣavaḥ śikṣitavyaṃ //
+(<hi rend="bold">EĀ.Trip 5.21</hi>) tadyathā udakapātrī haridrayā vā maṣiṇā vā asaṃsṛṣṭā syād anāvilīkṛtā / tatra cakṣuṣmān puruṣaḥ svaṃ mukhanimittaṃ <hi rend="it">pratyavekṣamā</hi>ṇaḥ paśyet / tat kasya hetor / a<hi rend="it">nāvilatvād udakapātryāḥ /</hi>
+(<hi rend="bold">EĀ.Trip 5.22</hi>) <hi rend="it">evam eva</hi> sa bata anāvilena cittena ātmārthaṃ vā jñāsyati parārthaṃ vā ubhayārthaṃ vā uttaraṃ vā manuṣyadh<hi rend="it">ar</hi>m<hi rend="it">am alamār</hi>y<hi rend="it">a</hi>v<hi rend="it">i</hi>śeṣādhigamaṃ jñānaṃ vā darśanaṃ vā <hi rend="it">sparśavihāratāṃ vā jñāsyati vā drakṣyat</hi>i vā sthānam etad vidyate / tat kasya hetor / anāvilatvāc cittasya /
+(<hi rend="bold">EĀ.Trip 5.23</hi>) tasmāt tarhy evaṃ śikṣitavyaṃ yac cittaṃ no 'nāvilaṃ bhaviṣyaty evaṃ vo bhikṣavaḥ śikṣitavyaṃ // //</hi></p>
+
+<p>(<hi rend="bold">EĀ.Trip 6.11</hi>) <hi rend="it">tadyathā udakapātrī</hi> agninā taptā saṃtaptā kvathitā utsadakajātā syāt / tatra cakṣuṣmān puruṣaḥ svakaṃ mukhanimittaṃ pratyavekṣamāṇo na paśyet / tat kasya hetor / āvilatvād u<hi rend="it">dakapātryāḥ /</hi>
+(<hi rend="bold">EĀ.Trip 6.12</hi>) <hi rend="it">evam eva sa bata</hi> āvilena cittena ātmārthaṃ vā jñāsyati parārthaṃ vā ubhayārthaṃ vā uttaraṃ vā manuṣyadharmam alamāryaviśeṣādhigamaṃ vā jñānaṃ vā darśanaṃ vā sparśavihā<hi rend="it">ratāṃ vā jñāsyati vā drakṣyati vā nedaṃ sthā</hi>naṃ vidyate / tat kasya hetor / āvilatvāc cittasya /
+(<hi rend="bold">EĀ.Trip 6.13</hi>) ta<hi rend="it">s</hi>māt tarhy evaṃ śikṣitavyaṃ yan na naś cittam āvilaṃ bhaviṣyaty evaṃ vo bh<hi rend="it">i</hi>kṣavaḥ śikṣ<hi rend="it">i</hi>tavyaṃ //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 6.21</hi>) tadyathā udakapātrī agninā a<hi rend="it">taptā asaṃtaptā amṛṣitā anutsadaka</hi>jātā syāt / tatra cakṣuṣmān puruṣaḥ svaṃ mukhanimittaṃ pratyavekṣamāṇo na paśyet / tat kasya hetor / anāvilatvād udakapātryāḥ /
+(<hi rend="bold">EĀ.Trip 6.22</hi>) evam eva sa bata anāvilena cittena ātmā<hi rend="it">rthaṃ vā jñāsyati parārthaṃ vā ubhayārthaṃ vā u</hi>ttaraṃ vā manuṣyadharmam alamāryaviśeṣādhigamaṃ jñānaṃ vā darśanaṃ vā sparśavihāratāṃ vā jñāsyati vā drakṣyati vā sthānam etad vidyate / tat kasya hetor / anāvi<hi rend="it">latvāc cittasya /</hi>
+(<hi rend="bold">EĀ.Trip 6.23</hi>) <hi rend="it">tasmāt tarhy evaṃ śikṣita</hi>vyaṃ yac cittaṃ no 'nāvilaṃ bhaviṣyaty evaṃ vo bhikṣavaḥ śikṣitavyaṃ // //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 7.11</hi>) tadyathā udakapātrī śevālapaṇavaparyavanaddhā syāt / tatra cakṣuṣmān puruṣaḥ <hi rend="it">svaṃ mukhanimittaṃ pratyavekṣamā</hi>ṇo na paśyet / tat kasya hetor / āvilatvād udakapātryāḥ /
+(<hi rend="bold">EĀ.Trip 7.12</hi>) evam eva sa bata āvilena cittena ātmārthaṃ vā jñāsyati parārthaṃ <hi rend="it">vā ubhayārthaṃ vā</hi> uttaraṃ vā manuṣyadharmam alamāryavi<hi rend="it">śeṣādhigamaṃ jñānaṃ v</hi>ā darśanaṃ vā sparśavihāratāṃ vā jñāsyati vā drakṣyati vā nedaṃ sthānaṃ vidyate / tat kasya hetor / āvilatvāc cittasya /
+(<hi rend="bold">EĀ.Trip 7.13</hi>) tasmāt ta<hi rend="it">rhy evaṃ śikṣitavyaṃ yan na naś c</hi>ittam āvilaṃ bh<hi rend="it">a</hi>vi<hi rend="it">ṣyaty evaṃ vo bhikṣavaḥ śikṣitavyaṃ //
+(<hi rend="bold">EĀ.Trip 7.21</hi>) tadyathā udakapātrī na śevālapaṇavaparyavanaddhā syāt / tatra cakṣuṣmān puruṣaḥ svaṃ mukhanimittaṃ pratyavekṣamāṇo paśyet / <hi rend="it">tat kasya hetor / anāvilatvād udakapātryāḥ /</hi>
+(<hi rend="bold">EĀ.Trip 7.22</hi>) <hi rend="it">evam eva sa bata āvilena c</hi>ittena ātmārthaṃ vā jñāsyati parārthaṃ vā ubhayārthaṃ vā uttaraṃ vā manuṣyadharmam alamāryaviśeṣādhigamaṃ vā jñānaṃ vā darśanaṃ vā sp<hi rend="it">arśavihāratāṃ vā j</hi>ñ<hi rend="it">ās</hi>y<hi rend="it">ati</hi> vā drakṣyati vā sth<hi rend="it">ānam etad vidyate / tat kasya hetor / anāvi</hi>latvāc cittasya /
+(<hi rend="bold">EĀ.Trip 7.23</hi>) tasmāt tarhy evaṃ śikṣitavyaṃ yac cittaṃ no 'nāvilaṃ bhaviṣyaty evaṃ vo bhikṣavaḥ śikṣitavyaṃ // //</hi></p>
+
+<p>(<hi rend="bold">EĀ.Trip 8.11</hi>) tadyathā udakapātrī vāyunā īritā pre<hi rend="it">ritā bhrāmitā</hi> /// syāt / tatra cakṣuṣmān puruṣaḥ svaṃ mukhanimittaṃ pratyavekṣamāṇo na paśyet / tat kasya hetor / āvilatvād udakapātryāḥ /
+(<hi rend="bold">EĀ.Trip 8.12</hi>) evam eva sa bata āvilena <hi rend="it">cittena ātmārthaṃ vā jñāsyati parārthaṃ vā</hi> ubhayārthaṃ vā uttaraṃ vā manuṣyadharmam alamāryaviśeṣādhigamaṃ vā jñānaṃ vā darśanaṃ vā sparśavihāratāṃ vā jñāsyati vā drakṣyati vā nedaṃ sthānaṃ vidyate / tat kasya <hi rend="it">hetor / āvilatvāc cittasya /</hi>
+(<hi rend="bold">EĀ.Trip 8.13</hi>) <hi rend="it">tasmā</hi>t tarhy evaṃ śikṣitavyaṃ yan na naś cittam āvilaṃ bhaviṣyaty evaṃ vo bhikṣavaḥ śikṣitavyaṃ //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 8.21</hi>) tadyathā udakapātrī vāyunā anīritā syād ap<hi rend="it">r</hi>e<hi rend="it">r</hi>itā abhrāmitā a<hi rend="it">c</hi>ā<hi rend="it">litā</hi> /// <hi rend="it">syāt / tatra cakṣuṣmān</hi> puruṣaḥ sva<hi rend="it">ṃ</hi> mukhanimittaṃ pratyavekṣamāṇ<hi rend="it">aḥ paś</hi>y<hi rend="it">e</hi>t / tat kasya hetor / anāvilatvād udakapātryāḥ /
+(<hi rend="bold">EĀ.Trip 8.22</hi>) evam eva sa bata āvilena cittena ātmārtha<hi rend="it">ṃ</hi> vā jñāsyati par<hi rend="it">ārthaṃ vā ubhayārthaṃ vā uttaraṃ vā manuṣyadharmam alamāryaviśeṣādhigamaṃ vā jñānaṃ vā darśanaṃ vā sparśavihāratāṃ vā jñāsyati vā drakṣyati vā sthānam etad vidyate / tat kasya</hi> <hi rend="it">heto</hi>r / anāvilatvāc cittasya /
+(<hi rend="bold">EĀ.Trip 8.23</hi>) tasmāt tarhy evaṃ śikṣitavyaṃ yac cittaṃ no 'nāvilaṃ bhaviṣyaty evaṃ vo bhikṣavaḥ śikṣitavyaṃ // //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 9.11</hi>) tadyathā udakapātrī andhakāre pradeśe upani<hi rend="it">kṣiptā syāt</hi> /// <hi rend="it">cakṣuṣpa</hi>the / tatra cakṣuṣmān puruṣaḥ svaṃ mukhanimittaṃ pratyavekṣamāṇo na paśyet / tat kasya hetor / andhakāropanikṣiptatvād udakapātryāḥ /
+(<hi rend="bold">EĀ.Trip 9.12</hi>) evam eva sa bata ā<hi rend="it">vilena cittena ātmārthaṃ vā jñāsyati</hi> parārthaṃ vā ubhayārthaṃ vā uttaraṃ vā manuṣyadharmam alamāryaviśeṣādhigamaṃ vā jñānaṃ vā darśanaṃ vā sparśavihāratāṃ vā jñāsyati vā drakṣyati vā nedaṃ <hi rend="it">sthānaṃ vidyate / tat kasya hetor / a</hi>ndhakārāyitatvāc cittasya /
+(<hi rend="bold">EĀ.Trip 9.13</hi>) tasmāt tarhy evaṃ śikṣitavyaṃ yan na naś cittam andhakāraṃ bhaviṣyaty evaṃ vo bhikṣavaḥ śikṣitavyaṃ //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 9.21</hi>) tadyathā udakapātrī anandhakāre pradeśe upa<hi rend="it">nikṣiptā syāt</hi> /// dame sa cakṣuṣpathe / tatra cakṣuṣmān puruṣaḥ svaṃ mukhanimittaṃ pratyavekṣamāṇaḥ paśyet / tat kasya hetor / anandhak<hi rend="it">āropanikṣiptatvād udaka</hi>pāt<hi rend="it">ry</hi>āḥ /
+(<hi rend="bold">EĀ.Trip 9.22</hi>) <hi rend="it">evam eva sa bata anandhakārāyitena cittena ātmārthaṃ vā jñāsyati parā</hi>rthaṃ vā ubhayārthaṃ vā uttaraṃ vā manuṣyadharmam alamāryaviśeṣādhigamaṃ vā jñānaṃ vā darśanaṃ vā sparśa<hi rend="it">v</hi>i<hi rend="it">hāratāṃ vā j</hi>ñ<hi rend="it">ās</hi>y<hi rend="it">ati vā d</hi>r<hi rend="it">ak</hi>ṣy<hi rend="it">a</hi>ti v<hi rend="it">ā sthānam etad vidyate / tat kasya hetor / anandhakārayitatvāc cittasya /</hi>
+(<hi rend="bold">EĀ.Trip 9.23</hi>) tasmāt tarhy evaṃ śikṣitavyaṃ yac cittaṃ no 'nandhakāraṃ bhaviṣyaty evaṃ vo bhikṣavaḥ śikṣitavyaṃ // //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 10.11</hi>) tadyathā ā<hi rend="it">darśa</hi>ḥ apariśuddha<hi rend="it">ḥ</hi> syād aparyavadātaḥ <hi rend="it">aparikarmīkṛtaḥ / tatra cakṣuṣmān puruṣaḥ svaṃ mukhani</hi>mittaṃ pratyavekṣamāṇo na paśyet / tat kasya hetor / apariśuddhatvād ādarśasya /
+(<hi rend="bold">EĀ.Trip 10.12</hi>) evam eva sa bata apariśuddhena cittena aparyavadātena <hi rend="it">aparikarmīkṛtena ātmārthaṃ vā jñāsyati parārthaṃ vā ubhayārthaṃ vā uttaraṃ vā manuṣyadharmam alamāryaviśeṣādhigamaṃ vā jñānaṃ vā darśanaṃ vā sparśavihāratāṃ vā jñāsyati vā drakṣyati vā nedaṃ sthānaṃ vidyate / tat kasya heto</hi>r / apariśuddhatvāc cittasya /
+(<hi rend="bold">EĀ.Trip 10.13</hi>) tasmāt tarhy evaṃ śikṣitavyaṃ yan na naś cittam apariśuddhaṃ bhaviṣyaty evaṃ vo bhikṣavaḥ śikṣitavyaṃ //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 10.21</hi>) tadyathā ā<hi rend="it">darśaḥ pariśuddhaḥ syāt paryavadā</hi>taḥ suparikarmīkṛtaḥ / tatra cakṣuṣmān puruṣaḥ svaṃ mukhanimittaṃ pratyavekṣamāṇaḥ paśyet / tat kasya hetor / supariśuddhatvād ādarśasya /
+(<hi rend="bold">EĀ.Trip 10.22</hi>) evam eva sa bata pariśu<hi rend="it">ddhena cittena paryavadātena suparikarmīkṛtena</hi> ātmārthaṃ vā jñāsyati parārthaṃ vā ubhayārthaṃ vā uttaraṃ vā manuṣyadharmam alamāryaviśeṣādhigamaṃ jñānaṃ vā darśanaṃ vā sparśavihāratāṃ vā jñāsyati vā drakṣyati vā sthānam e<hi rend="it">tad vidyate / tat kasya hetor / supa</hi>riśuddhatvāc cittasya /
+(<hi rend="bold">EĀ.Trip 10.23</hi>) tasmāt tarhy evaṃ śikṣitavya<hi rend="it">ṃ</hi> yac cittaṃ naḥ supariśuddhaṃ bhaviṣyati paryavadātaṃ evaṃ vo bhikṣavaḥ śikṣitavyaṃ // //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 11.11</hi>) tadyathā udakahradaḥ kṣubhito luṭhit<hi rend="it">aḥ kalalībhūtaḥ syāt / tatra cakṣuṣmān pu</hi>r<hi rend="it">u</hi>ṣaḥ svaṃ mukhanimittaṃ pratyavekṣamāṇo na paśyet / tat kasya hetor / āvilatvād udakahradasya /
+(<hi rend="bold">EĀ.Trip 11.12</hi>) evam eva sa bata āvilena cittena ātmārthaṃ vā jñāsyati parārthaṃ vā ubhayārthaṃ <hi rend="it">vā uttaraṃ vā manuṣyadharmam alamā</hi>ryaviśeṣādhigamaṃ jñānaṃ vā darśanaṃ vā sparśavihāratāṃ vā jñāsyati vā drakṣyati vā nedaṃ sthānaṃ vidyate / tat kasya hetor / āvilatvāc cittasya /
+(<hi rend="bold">EĀ.Trip 11.13</hi>) tasmāt tarhy evaṃ śikṣita<hi rend="it">vyaṃ yan na naś cittam āvilaṃ bhaviṣyaty evaṃ vo</hi> bhikṣavaḥ śikṣitavyaṃ //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 11.21</hi>) tadyathā udakahradaḥ accho viprasannaḥ anāvilaḥ syāt / tatra cakṣuṣmān puruṣaḥ svaṃ mukhanimittaṃ pratyavekṣamā<hi rend="it">ṇaḥ paśyet / tat kasya hetor / anāvilatvād uda</hi>k<hi rend="it">a</hi>hradasya /
+(<hi rend="bold">EĀ.Trip 11.22</hi>) evam eva sa bata anāvilena cittena ātmārthaṃ vā jñāsyati parārthaṃ vā ubhayārthaṃ vā uttaraṃ vā manuṣyadharmam alamāryaviśeṣādhiga<hi rend="it">maṃ jñānaṃ vā darśanaṃ vā sparśavihāratāṃ vā jñāsyati vā</hi> d<hi rend="it">ra</hi>kṣyati vā sthānam etad vidyate / tat kasya hetor / anāvilatvāc cittasya /
+(<hi rend="bold">EĀ.Trip 11.23</hi>) tasmāt tarhy evaṃ śikṣi<hi rend="it">tavya</hi>ṃ <hi rend="it">ya</hi>c <hi rend="it">c</hi>ittaṃ no 'nāvilaṃ bhaviṣya<hi rend="it">ty e</hi>v<hi rend="it">a</hi>ṃ <hi rend="it">v</hi>o <hi rend="it">bhikṣavaḥ śikṣitavyaṃ // //</hi></p>
+
+<p>+ + + gap</p>
+
+<p>(<hi rend="bold">EĀ.Trip 13.11</hi>) <hi rend="it">durākhyāte dharmavinaya (a) yaḥ samādāpayati bahuśaḥ pāpaṃ prasavati, evam etad bhavati yathāpi tad durākhyāto dharmavinayaḥ / svākhyāte dharmavinaye (a) yaḥ samādāpayati bahuśaḥ puṇyaṃ prasavati, evam etad bhavati yathāpi tad svākhyāto dharmavinayaḥ //</hi>
+(<hi rend="bold">EĀ.Trip 13.12</hi>) <hi rend="it">durā</hi>khyāte dharmavinaya (b) yaḥ samādāpayati bahuśaḥ pāpaṃ prasavati, evam etad bhavati yathāpi tad durākhyāto dharmavi<hi rend="it">nayaḥ / svākhyāte dharmavinaye (b) yaḥ samādāpayati bahuśaḥ puṇyaṃ prasavati, e</hi>vam etad bhavati yathāpi tad svākhyāto dharmavinayaḥ //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 13.13</hi>) durākhyāte dharmavinaya (a) yaḥ samādāpayati (b) yaś ca sam<hi rend="it">ādāpyate ubhāv api bahuśaḥ pāpaṃ prasavataḥ, evam eta</hi>d bhavati yathāpi tad durākhyāto dharmavinayaḥ / svākhyāte dharmavinaye (a) yaḥ samādāpayati (b) yaś ca samādāpyate ubhāv <hi rend="it">api bahuśaḥ puṇyaṃ prasavataḥ, evam etad bhavati yathāpi</hi> tad svākhyāto dharmavinayaḥ //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 13.14</hi>) durākhyāte dharmavinaya (a) yaś ca samādāpayati (b) yaś ca samādāpyate (c) yaś ca samā<hi rend="it">dāpitas tathatāṃ pratipadyate sarve te bahuśaḥ pāpaṃ pra</hi>savanti, evam etad bhavati yathāpi tad durākhyāto dharmavinayaḥ / svākhyāte dharmavinaye (a) yaś ca samādāpayati (b) yaś ca samādāpyate (c) y<hi rend="it">aś ca samādāpitas tathatāṃ pratipadyate sarve te bahuśaḥ</hi> p<hi rend="it">u</hi>ṇ<hi rend="it">y</hi>aṃ prasavanti, evam etad bhavati yathāpi tad svākhyāto dharmavinayaḥ //
+(<hi rend="bold">EĀ.Trip 13.15</hi>) yathā samādāpanena catvāri sūtrāṇi <hi rend="it">evaṃ pratigrāheṇa catvāri sūtrāṇi // //
+(<hi rend="bold">EĀ.Trip 13.21</hi>) <hi rend="it">durākhyā</hi>t<hi rend="it">e</hi> dharmavinaye yathāyathā ārabdhavīryas tathātathā pāpaṃ / svākhyāte dharmavinaye yathāyathā kusīdas tathā<hi rend="it">ta</hi>thā pāpaṃ / <hi rend="it">durākhyāte dharmavinaye yathāyathā kusīdas tathātathā śreyaḥ / svākhyāte dhar</hi>mavinaye yathāyathā ārabdhavīryas tathātathā śreyaḥ //</hi></p>
+
+<p>(<hi rend="bold">EĀ.Trip 13.22</hi>) yathā pāpaṃ śreya evaṃ duḥkhaṃ sukhaṃ, na sparśaṃ sparśo duḥkha ///</p>
+
+<p>(<hi rend="bold">EĀ.Trip 13.31</hi>) <hi rend="it">durākhyāte dharmavinaye yathāyathā ārabdhavī</hi>ryas tathātathā anarthaḥ / svākhyāte dharmavinaye yathāyathā kusīdas tathātathā anarthaḥ / durākhyāte dharmavinaye yathā<hi rend="it">yathā kusīdas tathātathā arthaḥ / svākhyāte dharmavinaye yathāya</hi>thā ārabdhavīryas tathātathā arthaḥ //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 13.31</hi>) yathā anartho 'rthaḥ evam
+(<hi rend="bold">EĀ.Trip 13.32-38</hi>) ahitaṃ hitaṃ duḥkhaṃ sukhaṃ vyasanaṃ saṃpad vipattiḥ <hi rend="it">saṃpattiḥ asamṛddhiḥ samṛddhiḥ apāripūriḥ pāripūriḥ parihāṇih aparihāṇi</hi>ḥ //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 13.41</hi>) nāham ekadharmam api samanupaśyāmi ya evam anarthāya saṃvartate yathā durākhyāto dharmavinayaḥ / durā<hi rend="it">khyāto dharmavinayaḥ anarthāya saṃvartate / nāham ekadharmam api</hi> samanupaśyāmi ya evam arthāya saṃvartate yathā svākhyāto dharmavinayaḥ / svākhyāto dharmavinayaḥ arthāya <hi rend="it">saṃvartate /</hi>
+(<hi rend="bold">EĀ.Trip 13.42</hi>) yathā anarthāyārthāya pūrvavat //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 13.51</hi>) nāham ekadharmam api samanupaśyāmi yena samanvāgato bālo mūḍha avyakta asatpuruṣo veditavyaḥ yathā durākhyāt<hi rend="it">e</hi>n<hi rend="it">a</hi> dh<hi rend="it">ar</hi>m<hi rend="it">avinayena / durākhyātena</hi> dharmavinayena samanvāgato bālo mūḍha avyakto asatpuruṣo veditavyaḥ //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 13.52</hi>) nāham ekadharmam api samanupaśyāmi yena samanvāgato paṇḍito vyaktaḥ satpuruṣo v<hi rend="it">e</hi>dit<hi rend="it">av</hi>y<hi rend="it">aḥ ya</hi>thā svākhyātena dharmavinayena / svākhyātena dharmavinayena samanvāgato paṇḍito vyaktaḥ satpuruṣo veditavyaḥ / bālaḥ kṣato bhalla upapadyate pūrvavat // // pūrvavat = apāyadurgativinipāteṣu gacchati patati upapadyate dīrgham adhvānaṃ sandhāvati saṃsarati: s.  15.61
+(<hi rend="bold">EĀ.Trip 14.00</hi>) uddān<hi rend="it">aṃ
+  pā</hi>pakā akuśalā aṣṭau aṣṭ<hi rend="it">au</hi> saṃyojanais tathā /
+  satvasaṃśabditā aṣṭau pudgalair api cāṣṭikā //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 14.01</hi>) śrāvastyāṃ nidānaṃ /
+(<hi rend="bold">EĀ.Trip 14.11</hi>) (a) ye kecid anekavidhāḥ pāpakā akuśalā dharmā<hi rend="it">ḥ</hi> sa<hi rend="it">ṃbhavanti</hi> sarve te avidyānivaraṇena / (b) avidyānivaraṇaṃ teṣām agram ākhyātaṃ yaduta saṃgrahāya //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 14.12</hi>) (a) ye kecid anekavidhāḥ pāpakā akuśalā dharmāḥ saṃbhavanti sarve te avidyānivaraṇena / (b) a<hi rend="it">vi</hi>dyānivaraṇaṃ teṣām agram ākhyātaṃ yaduta saṃgrahāya / (c) avidyānivaraṇe samavahate evaṃ teṣāṃ samudghāto bhavati //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 14.21</hi>) (a) ye kecid anekavidhāḥ pāpakā akuśalā dharmāḥ saṃ<hi rend="it">bhavanti</hi> sarve te avidyānivaraṇena / (b) avidyānivaraṇaṃ teṣām agram ākhyātaṃ yaduta saṃgrahāya /
+(<hi rend="bold">EĀ.Trip 14.22</hi>) tadyathā (a) yāḥ kāścit kūṭāgāre sopānasya sarvās tāḥ kūṭaṃgamāḥ kūṭaniśritāḥ kūṭapratibaddhāḥ kūṭāvasaraṇāḥ / (b) kūṭās tāsām agra ākhyāto yaduta saṃgrahāya //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 14.23</hi>) evam eva (a) ye kecid anekavidhāḥ pāpakā akuśalā dharmāḥ saṃbhavanti sarve te avidyānivaraṇena / (b) avidyānivaraṇaṃ <hi rend="it">teṣā</hi>m agram ākhyātaṃ yaduta saṃgrahāya //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 14.31</hi>) (a) ye kecid anekavidhāḥ pāpakā akuśalā dharmāḥ saṃbhavanti sarve te avidyānivaraṇena / (b) avidyānivaraṇaṃ teṣām agram ākhyātaṃ yaduta saṃgrahā<hi rend="it">ya / </hi>(c) <hi rend="it">a</hi>vidyānivaraṇe samavahate evaṃ teṣāṃ samudghāto bhavati //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 14.32</hi>) tadyathā (a) yāḥ kāścit kūṭāgāre sopānasya sarvās tāḥ kūṭaṃgamāḥ kūṭaniśritāḥ kūṭapratibaddhāḥ kūṭāvasaraṇāḥ / (b) kūṭās tāsām agra ākhyāto yaduta saṃgrahāya / (c) kūṭe samavahate evaṃ tāsāṃ samudghāto bhavati //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 14.33</hi>) evam eva (a) ye kecid anekavidhāḥ pāpakā akuśalā dharmāḥ saṃbhavanti sa<hi rend="it">rve te</hi> avidyānivaraṇena / (b) avidyānivaraṇaṃ teṣām agram ākhyātaṃ yaduta saṃgrahāya / (c) avidyānivaraṇe samavahate evaṃ tāsāṃ samudghāto bhavati //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 14.41</hi>) nānyatra ekadharmeṇa <hi rend="it">yeneyaṃ nivṛtā</hi> prajā /
+  sandhāvati ahorātraṃ sadā mohena āvṛtā //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 14.42</hi>) tāṃ tv avidyāṃ prahāyeha tama<hi rend="it">ḥ</hi>ska<hi rend="it">n</hi>dh<hi rend="it">a</hi>ṃ pradālya ca /
+ nāsau punaḥ sa<hi rend="it">ṃ</hi>sa<hi rend="it">rate</hi> h<hi rend="it">e</hi>tur y<hi rend="it">as</hi>y<hi rend="it">a</hi> na vid<hi rend="it">yate //
+(<hi rend="bold">EĀ.Trip 14.51</hi>) <hi rend="it">yathā avidyānivaraṇena catvāri sūtrāṇi evaṃ tṛṣṇā</hi>saṃyojanena catvāri <hi rend="it">sūtrāṇi</hi> // atra tv ime gāthe vaktavye /
+(<hi rend="bold">EĀ.Trip 14.52</hi>) tṛṣṇayā grathitāḥ satvā raktacittā bhavābhave /
+  te yogayuktā mārasya ayogakṣemino janāḥ /
+  jarāmara<hi rend="it">ṇam āyānti vatsaḥ kṣīra</hi>paka iva mātaraṃ //</hi></p>
+
+<p>(<hi rend="bold">EĀ.Trip 14.53</hi>) tāṃ tu tṛṣṇāṃ prahāyeha vītatṛṣṇo bhavābhave /
+  tṛṣṇayābhibhavad bhikṣur anicchuḥ parinirvṛtaḥ //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 14.6</hi>) yathā ye kecid anekavidhāḥ pāpakā akuśalā dharmā iti aṣṭau sūtrāṇ<hi rend="it">i evaṃ</hi> ye kecid anekavidhāḥ saṃyojanīyā dharmā iti aṣṭau sūtrāṇi //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 14.71</hi>) nāham ekadharmam api samanupaśyāmi yena samanvāgatāḥ satvā dīrgham adhvānaṃ sandhāvanti saṃsaranti yaduta <hi rend="it">avi</hi>dyānivaraṇena / avidyānivaraṇena samanvāgatāḥ satvā dīrgham adhvānaṃ sandhāvanti saṃsaranti / etad eva sūtram uktvā gāthā atiriktā /
+(<hi rend="bold">EĀ.Trip 14.72</hi>) nānyatra ekadharmeṇa yeneyaṃ nivṛtā pr<hi rend="it">ajā</hi> /
+  sandhāvati ahorātraṃ sadā mohatamovṛtā //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 14.73</hi>) tāṃ tv avidyāṃ prahāyeha tama<hi rend="it">ḥ</hi>skandhaṃ pradālya ca /
+  nāsau punaḥ saṃsarate hetur yasya na vidyate //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 14.81</hi>) nāham ekadharmam api samanupaśy<hi rend="it">āmi</hi> yena samanvāgatānāṃ satvānāṃ dīrgham adhvānaṃ sandhāvatāṃ saṃsaratāṃ pūrvā koṭir na prajñāyate duḥkhasya yaduta avidyānivaraṇena / avidyānivaraṇena samanvāgatānāṃ satvānāṃ dīrgham adhvānaṃ sa<hi rend="it">ndhāva</hi>tāṃ saṃsaratāṃ pūrvā koṭir na prajñāyate duḥkhasya / etad eva sūtram uktvā punar gāthā vācyā /
+(<hi rend="bold">EĀ.Trip 14.82</hi>) nānyatra ekadharmeṇa yeneyaṃ nivṛtā prajā /
+  sandhāvati ahorātraṃ sadā mohatamovṛ<hi rend="it">tā</hi> //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 14.83</hi>) tāṃ tv avidyāṃ prahāyeha tama<hi rend="it">ḥ</hi>skandhaṃ pradālya ca /
+  nāsau punaḥ saṃsarate hetur yasya na vidyate //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 14.91</hi>) nāham ekadharmam api samanupaśyāmi yena samanvāgatāḥ satvā dīrgham adhvānaṃ <hi rend="it">sandhā</hi>vanti saṃsaranti yaduta tṛṣṇāsaṃyojanena / tṛṣṇāsaṃyojanena samanvāgatāḥ satvā dīrgham adhvānaṃ sandhāvanti saṃsaranti / etad eva sūtram uktvā punar gāthā vācyā /
+(<hi rend="bold">EĀ.Trip 14.92</hi>) tṛṣṇādvitī<hi rend="it">yaḥ</hi> puruṣaḥ sudīrghe 'dhvani saṃsaran /
+<lg>
+<l>  punaḥpunar upādatte garbham eti punaḥpunaḥ /</l>
+<l>  itthaṃbhāvānyathībhāvaṃ satvānām āgatiṃ gatiṃ //</l>
+</lg></p>
+
+<p>(<hi rend="bold">EĀ.Trip 14.93</hi>) tāṃ tu tṛṣṇāṃ prahāyeha cchitvā sroto duratyayaṃ /
+  nāsau punaḥ saṃsara<hi rend="it">t</hi>i <hi rend="it">tṛṣṇā hy a</hi>sya na vidyate //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 14.101</hi>) nāham ekadharmam api samanupaśyāmi yena samanvāgatānāṃ satvānāṃ dīrgham adhvānaṃ sandhāvatāṃ saṃsaratāṃ pūrvā koṭir na <hi rend="it">prajñā</hi>yate duḥkha<hi rend="it">sya / tṛṣṇāsa</hi>manvāgatānāṃ satvānāṃ dīrgham adhvānaṃ sandhāvatāṃ saṃsaratāṃ pūrvā koṭir na prajñāyate duḥkhasya / etad eva sūtram uktvā punar gāthā vācyā /
+(<hi rend="bold">EĀ.Trip 14.102</hi>) tṛṣṇādvitīyaḥ puruṣaḥ sudīrghe 'dhvani saṃsaran /
+  <hi rend="it">pu</hi>naḥpunar upādatte garbham eti punaḥpunaḥ /
+  itthaṃbhāvānyathībhāvaṃ satvānām āgatiṃ gatiṃ //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 14.103</hi>) tāṃ tu tṛṣṇāṃ prahāyeha cchitvā sroto duratyayaṃ /
+  nāsau punaḥ saṃsarati tṛṣṇā hy asya na vidyate //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 14.111</hi>) yath<hi rend="it">ā</hi> satvair aṣṭau sūtrāṇi evaṃ pudgalair aṣṭau sūtrāṇi // //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 15.0</hi>) uddānaṃ /
+<lg>
+<l>  hetuḥ pūrvaṃgamaś caiva mūlaṃ tac ca sagīyakaṃ /</l>
+<l>  dve aṣṭike dve kṣatike kṛṣṇapakṣeṇa yojayet //</l>
+</lg></p>
+
+<p>(<hi rend="bold">EĀ.Trip 15.1</hi>) avidyā bhikṣav<hi rend="it">o</hi> hetuḥ saṃrāgāya hetuḥ sadveṣāya hetuḥ saṃmohāya / vidyā hetur asaṃrāgāya hetur asadveṣāya hetur asaṃmohāya / iti hi bhikṣavaḥ karma hetur upapattes tṛṣṇā he<hi rend="it">tu</hi>r abhinivṛtteḥ iha kṣtsnasya karmaṇaḥ kuśalasya sāsravasya bhāvanāmayasya / tatropapannā<hi rend="it">ḥ</hi> satvā vipākaṃ pratisaṃvedayante / tasmād ahaṃ satvān yathākarmopagān vadāmi //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 15.21</hi>) <hi rend="it">a</hi>vidyā pūrvaṃgamaṃ pūrvanimittam anekavidhānāṃ pāpakānām akuśalānāṃ dharmāṇāṃ samutpattaye anvācayaḥ āhrīkyam anapatrāpyaṃ ca / tat kasya hetor / ahrīmān hi bhikṣ<hi rend="it">u</hi>r <hi rend="it">anapatrāpī</hi> avidyāgato bhavati /
+(<hi rend="bold">EĀ.Trip 15.22</hi>) vidyā pūrvaṃgamaṃ pūrvanimittam anekavidhānāṃ kuśalānāṃ dharmāṇāṃ samutpattaye anvācayaḥ hrīś ca vyapatrāpyaṃ ca / tat kasya hetor / hrīmān hi bhikṣur apatrāp<hi rend="it">ī</hi> vidyāgato bh<hi rend="it">a</hi>v<hi rend="it">ati //
+(<hi rend="bold">EĀ.Trip 15.31</hi>) <hi rend="it">ye</hi> kecid anekavidhāḥ pāpakā akuśalā dharmāḥ saṃbhavanti sarve te avidyāmūlakā avidyāsamudayā avidyājātīyā avidyāprabhavā<hi rend="it">ḥ</hi> / avidyāmūlakā hi bhikṣavo ye kecid anekavidhāḥ pāpakā akuśalā dharmāḥ saṃbhavanti / tat kasya hetor / avidyāgato hi bhikṣur ajānan kuśalākuśalān dharmān yathābhūtaṃ na prajānāti sāvadyānavadyān sevitavyāsevitavyān hīnapraṇītakṛṣṇaśuklasapratibhāgapratītyasamutpannān dharmān yathābhūtaṃ na prajānāti / sa kuśalā<hi rend="it">ku</hi>śalān dharmān yathābhūtaṃ aprajānan sāvadyānavadyān sevitavyāsevitavyān hīnapraṇītakṛṣṇaśuklasapratibhāgapratītyasamutpannān dharmān yathābhūtaṃ aprajānann avi<hi rend="it">dyā</hi>gato bhavati /
+(<hi rend="bold">EĀ.Trip 15.32</hi>) ye kecid anekavidhāḥ kuśalā dharmāḥ saṃbhavanti sarve te vidyāmūlakā vidyāsamudayā vidyājātīyā vidyāprabhavā<hi rend="it">ḥ</hi> / vidyāmūlakā hi bhikṣavo ye kecid a<hi rend="it">ne</hi>kavidhāḥ kuśalā dharmāḥ saṃbhavanti / tat kasya hetor / vidyāgato hi bhikṣur jānan kuśalākuśalān dharmān yathābhūtaṃ prajānāti sāvadyānavadyān sevitavyāsevitavyān hīnapra<hi rend="it">ṇītak</hi>ṛṣṇaśuklasapratibhāgapratītyasamutpannān dharmān yathābhūtaṃ prajānāti / sa kuśalākuśalān dharmān yathābhūtaṃ prajānan sāvadyānavadyān sevitavyāsevitavyān hīnapraṇītakṛṣṇaśuklasapr<hi rend="it">a</hi>tibhāgapratītyasamutpannān dharmān yathābhūtaṃ prajānan vidyāgato bhavati /
+(<hi rend="bold">EĀ.Trip 15.4</hi>) evam eva sūtram uktvā gāthā vācyāḥ /
+(<hi rend="bold">EĀ.Trip 15.41</hi>) yāh kāścana durgatayaḥ asmin loke paratra ca /
+  avidyāmūlakāḥ sa<hi rend="it">rvāḥ</hi> icchālobhasamarpitāḥ //</hi></p>
+
+<p>(<hi rend="bold">EĀ.Trip 15.42</hi>) yataś ca bhavati pāpecchuḥ pāpair ācāragocare /
+  athāsau prasavate pāpaṃ apāyān yena gacchati //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 15.43</hi>) tasmāl lobham atho dveṣam avidyāṃ ca virāgayan /
+  vidyām utpādayan bhikṣur duḥkhakṣayam avāpnuyāt //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 15.51</hi>) nāham ekadharmam api samanupaśyāmi yad evam anarthāya saṃvartate yaduta avidyānivaraṇam / avidyānivaraṇam anarthāya saṃvartate /
+yathā anarthāya evam ahitāya duḥkhāya vyasanāya vipattaye asamṛddhaye aparipūraye parihāṇāya //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 15.51</hi>) yathā avidyānivaraṇena kṛṣṇapakṣa evaṃ tṛṣṇāsaṃyojanena kṣṛṇapakṣaḥ /
+(<hi rend="bold">EĀ.Trip 15.61</hi>) nāham ekadharmam api samanupaśyāmi yena samanvāgato bālo mūḍho 'vyakta asatpuruṣo veditavyaḥ yathā avidyānivaraṇena / avi<hi rend="it">dyānivaraṇena</hi> samanvāgato bālo mūḍha avyakta asatpuruṣo veditavyaḥ / bālaḥ kṣato bhalla upapadyate apāyadurgativinipāteṣu gacchati patati upapadyate dīrgham adhvāna<hi rend="it">ṃ</hi> sandhāvati s<hi rend="it">aṃsara</hi>ti /
+(<hi rend="bold">EĀ.Trip 15.62</hi>) yathā avidyānivaraṇena kṛṣṇapakṣa evaṃ tṛṣṇāsaṃyojanena kṣṛṇapakṣaḥ // //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 16.0</hi>) uddānaṃ /
+<lg>
+<l>  paṃca nivaraṇotpādāḥ puruṣastrīviparyayaḥ /</l>
+<l>  tathobhayena kṛtveha vargo bhavati samudditaḥ //</l>
+</lg></p>
+
+<p>(<hi rend="bold">EĀ.Trip 16.101</hi>) nā<hi rend="it">ha</hi>m ekadharmam api samanupaśyāmi yenānutpannaṃ ca kāmacchandanivaraṇam utpadyate utpannaṃ ca bhūyobhāvavṛddhivipulatāṃ gacchati yathā aśubhayā anāsevitayā abhāvitayā abahulīkṛtayā / aśubhayā anāsevitayā abh<hi rend="it">ā</hi>vitayā abahulīkṛtayā anutpannaṃ ca kāmacchandanivaraṇam utpadyate utpannaṃ ca bhūyobhāvavṛddhivipulatāṃ gacchati /
+(<hi rend="bold">EĀ.Trip 16.102</hi>) nāham ekadharmam api samanupaśyāmi yenānutpannaṃ ca vyāpādanivaraṇam utpadyate utpannaṃ ca bhūyobhāvavṛddhivipulatāṃ gacchati yathā maitryā anāsevitayā abhāvitayā abahulīkṛtayā / maitryā anāsevitayā abhāvitayā abahulīkṛtayā anutpannaṃ ca vāpādanivaraṇam utpadyate utpannaṃ ca bhūyobhāvavṛddhivipulatāṃ gacchati /
+(<hi rend="bold">EĀ.Trip 16.103</hi>) nāham ekadharmam api samanupaśyāmi yenānutpannaṃ ca styānamiddhanivaraṇam utpadyate utpannaṃ ca bhūyobhāvavṛddhi<hi rend="it">v</hi>i<hi rend="it">pu</hi>latāṃ gacchati <hi rend="it">yathā + + + anāsevitayā abhāvitayā abahulīkṛtayā / + + + anāsevitayā abhāvitayā abahulīkṛtayā (SHT 974aV5) anutpannaṃ ca styānamiddhanivaraṇam utpadyate utpannaṃ ca bhūyobhāvavṛddhivipulatāṃ gacchati /</hi>
+(<hi rend="bold">EĀ.Trip 16.104</hi>) <hi rend="it">nāham ekadharmam api (SHT 974aV6) samanupaśyāmi yenānutpannaṃ ca auddhatyakaukṛtyanivaraṇam utpadyate utpannaṃ ca bhūyobhāvavṛddhivipulatāṃ gacchati yathā śamathena / śamathena anāsevitena abhāvitena abahulīkṛtena / anutpannaṃ ca styānamiddhanivaraṇam utpadyate utpannaṃ ca bhūyobhāvavṛddhivipulatāṃ gacchati /</hi>
+(<hi rend="bold">EĀ.Trip 16.105</hi>) <hi rend="it">nāham ekadharmam api samanupaśyāmi yenānutpannaṃ ca vicikitsānivaraṇam utpadyate (SHT 974aR2) utpannaṃ ca bhūyobhāvavṛddhivipulatāṃ gacchati yathā idaṃpratyayatāpratītyasamutpādaparīkṣayā anāsevitayā abhāvitayā abahulīkṛtayā / idaṃpratyayatāpratītyasamutpādaparīkṣayā anāsevitayā abhāvitayā abahulīkṛtayā anutpannaṃ ca vicikitsānivaraṇam utpadyate utpannaṃ ca bhūyobhāvavṛddhivipulatāṃ gacchati /</hi>
+(<hi rend="bold">EĀ.Trip 16.106</hi>) <hi rend="it">nāham ekadharmam api samanupaśyāmi (SHT 974aR5) yenānutpannaṃ ca kāmacchandanivaraṇam notpadyate utpannaṃ ca prahīyate yathā śubhayā āsevitayā bhāvitayā bahulīkṛtayā / śubhayā āsevitayā bhāvitayā bahulīkṛtayā kāmacchandanivaraṇam notpadyate utpannaṃ ca prahīyate /</hi>
+(<hi rend="bold">EĀ.Trip 16.107</hi>) <hi rend="it">nāham ekadharmam api samanupaśyāmi yenānutpannaṃ ca vyāpādanivaraṇam notpadyate utpannaṃ ca prahīyate yathā maitryā āsevitayā bhāvitayā bahulīkṛtayā / maitryā āsevitayā bhāvitayā bahulīkṛtayā vyāpādanivaraṇam notpadyate utpannaṃ ca prahīyate /</hi>
+(<hi rend="bold">EĀ.Trip 16.108</hi>) <hi rend="it">nāham ekadharmam api samanupaśyāmi yenānutpannaṃ ca styānamiddhanivaraṇam notpadyate utpannaṃ ca prahīyate yathā + + + āsevitayā bhāvitayā bahulīkṛtayā / + + + āsevitayā bhāvitayā bahulīkṛtayā styānamiddhanivaraṇam notpadyate utpannaṃ ca prahīyate /</hi>
+(<hi rend="bold">EĀ.Trip 16.109</hi>) <hi rend="it">nāham ekadharmam api samanupaśyāmi yenānutpannaṃ ca auddhatyakaukṛtyanivaraṇam notpadyate utpannaṃ ca prahīyate yathā śamathena āsevitena bhāvitena bahulīkṛtena / śamathena āsevitena bhāvitena bahulīkṛtena auddhatyakaukṛtyanivaraṇam notpadyate utpannaṃ ca prahīyate /</hi>
+(<hi rend="bold">EĀ.Trip 16.110</hi>) <hi rend="it">nāham ekadharmam api samanupaśyāmi yenānutpannaṃ ca vicikitsānivaraṇam notpadyate utpannaṃ ca prahīyate yathā idaṃpratyayatāpratītyasamutpādaparīkṣayā āsevitayā bhāvitayā bahulīkṛtayā / idaṃpratyayatāpratītyasamutpādaparīkṣayā āsevitayā bhāvitayā bahulīkṛtayā vicikitsānivaraṇam notpadyate utpannaṃ ca prahīyate //</hi>
+(<hi rend="bold">EĀ.Trip 16.111</hi>) <hi rend="it">tasmāt tarhy evaṃ śikṣitavyaṃ yan no nvaraṇaṃ notpadyate utpannaṃ cā prahīyate evaṃ vo bhikṣavaḥ śikṣitavyam // //</hi></p>
+
+<p>(<hi rend="bold">EĀ.Trip 16.2-17.3</hi>) nicht erhalten</p>
+
+<p>(<hi rend="bold">EĀ.Trip 17.41</hi>) <hi rend="it">nāham ekadharmam api samanupaśyāmi yena anutpannāś ca kuśalā dharmā notpadyante utpannāś ca prahīyante anutpannā akuśalā dharmā utpadyante utpannāś ca bhūyobhāvavṛddhivipulatāṃ gacchanti yathā pāpamitratayā pāpasahāyatayā pāpasaṃparkatayā / tat kasya hetoḥ / pāpamitrasya hi bhikṣor viharataḥ pāpasahāyasya pāpasaṃparkasya anutpannāś ca kuśalā dharmā notpadyante utpannāś ca prahīyante anutpannāḥ pāpakā akuśalā dharmā utpadyante utpannāś ca bhūyobhāvavṛddhivipulatāṃ gacchanti //</hi>
+(<hi rend="bold">EĀ.Trip 17.42</hi>) <hi rend="it">nāham ekadharmam api samanupaśyāmi yena anutpannāś ca pāpakā akuśalā dharmā notpad</hi>y<hi rend="it">a</hi>nte utpannāś ca prahīyante anutpannāḥ kuśalā dharmā utpadyante utpannāś ca bhūyobhāvavṛddhivipulatāṃ gacchanti yathā kal<hi rend="it">yāṇami</hi>tr<hi rend="it">ata</hi>yā kalyāṇasahāyatayā kalyāṇasaṃparkatayā / tat ka<hi rend="it">sya</hi> hetoḥ / kalyāṇamitrasya hi bhikṣor viharataḥ kalyāṇasahāyasya kalyāṇasaṃparkasya anutpannāś ca pāpakā akuśalā dharmā notpadyante utpannāś ca prahīyante anutpannāḥ kuśalā dharmā utpa<hi rend="it">dyan</hi>te utpannāś ca bhūyobhāvavṛddhivipulatāṃ gacchanti //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 17.43</hi>) yathā <hi rend="it">pāpamitratayā kalyāṇamitratayā evaṃ</hi> ayoniśo manasīkāreṇa yoniśo manasīkāreṇa evaṃ kauśīdyena vīryāraṃbena pramādena apramādena mithyādṛṣṭyā samyagdṛṣṭyā //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 17.511</hi>) mithyādṛṣṭiḥ param avadyānāṃ / tat kasya hetor / mithyādṛṣṭeḥ puruṣapudgalasya yac ca kāyakarma tathādṛṣṭeḥ yad vākkarma yā cetanā yā prārthanā yaḥ praṇidhir ye ca saṃskārās tanmayāḥ sarve 'sya te dharmā aniṣṭatvāya saṃvartante akāntatvāya apriyatvāya amanāpatvāya amanojñatvāya anabhipretatvāya saṃvartante / tat kasya hetor / dṛṣṭir hi pāpikā yaduta mithyādṛṣṭiḥ /
+(<hi rend="bold">EĀ.Trip 17.512</hi>) tadyathā bhikṣavas tiktā<hi rend="it">ny a</hi>lābubījāni vā nimbabījāni vā kāśātakībījāni vā sukṣetre ropitāni syuḥ susnigdhe vā pṛthivīpradeśe upanikṣiptāni tāni yaṃ yam eva pṛthivyāḥ pṛ<hi rend="it">th</hi>i<hi rend="it">v</hi>īrasam ādadate adbhya abrasaṃ teja<hi rend="it">sa</hi>s tejorasaṃ vāyor vāyurasaṃ s<hi rend="it">ar</hi>v<hi rend="it">e 's</hi>y<hi rend="it">a</hi> <hi rend="it">te</hi> rasās tiktatvāya saṃvartante kaṭukatvāya asvādutvāya / tat kasya hetor / bījāni hi tiktāni kaṭūny asvādūni /
+(<hi rend="bold">EĀ.Trip 17.513</hi>) evam ev<hi rend="it">a</hi> mithyādṛṣṭir bhikṣavaḥ param avadyānāṃ / mithyādṛṣṭeḥ puruṣapudgalasya yac ca kāyakarma tathādṛṣṭeḥ yad vākkarma yā cetanā yā prārthanā yaḥ praṇidhir ye ca saṃskārās tanmayāḥ sarve 'sya te dharmā aniṣṭatvāya saṃvartante akāntatvāya apriyatvāya amanāpatvāya amanojñatvāya anabhipretatvāya saṃvartante / tat kasya hetor / dṛṣṭir hi bhikṣavaḥ pāpikā yaduta mithyādṛṣṭiḥ /
+(<hi rend="bold">EĀ.Trip 17.521</hi>) samyagdṛṣṭiḥ bhikṣavaḥ param anavadyā<hi rend="it">nāṃ / ta</hi>t kasya hetoḥ / samyagdṛṣṭe<hi rend="it">ḥ</hi> puruṣapudgalasya yac ca kāyakarma tathādṛṣṭeḥ yad vākkarma yā cetanā yā prārthanā yaḥ praṇidhir ye ca saṃskārās tanmayāḥ sarve 'sya te dharmā iṣṭatvāya saṃvartante kānta<hi rend="it">tvāya</hi> priyatvāya manāpatvāya manojñatvāya abhipretatvāya saṃvartante / tat kasya hetor / dṛṣṭir hi bhi<hi rend="it">k</hi>ṣavo bhadrikā yaduta samyagdṛṣṭiḥ /
+(<hi rend="bold">EĀ.Trip 17.522</hi>) tadyathā ikṣubījāni vā śālibījāni vā mṛdvikābjāni vā sukṣe<hi rend="it">tre ro</hi>pitāni syuḥ susnigdhe vā pṛthivīpradeśe upanikṣiptāni tāni yaṃ yam eva pṛthivyāḥ pṛthivīrasam ādadate adbhyaḥ abrasaṃ teja<hi rend="it">sa</hi>s tejorasaṃ vāyor vāyurasaṃ sarve 'sya te rasā ati<hi rend="it">ktatvāya</hi> saṃvartante akaṭukatvāya svādutvāya / tat kasya hetor / bījāni hi atiktāny akaṭūni svādūni /
+(<hi rend="bold">EĀ.Trip 17.523</hi>) evam eva samyagdṛṣṭiḥ param anavadyānā<hi rend="it">ṃ / tat kasya hetoḥ /</hi> samyagdṛṣṭeḥ puruṣapudgalasya yac ca kāyakarma tathādṛṣṭeḥ yad vā<hi rend="it">kka</hi>rma yā cetanā yā prārthanā yaḥ praṇidhir ye ca saṃskārās tanmayāḥ sarve 'sya te dharmā iṣṭatvāya saṃvartante kāntatvāya priyatvāya manāpatvāya manojñatvāya abhipretatvāya saṃvartante / tat kasya hetor / dṛṣṭir hi bhikṣavo bhadrik<hi rend="it">ā</hi> yaduta samyagdṛṣṭiḥ /
+(<hi rend="bold">EĀ.Trip 17.531</hi>) hīnān dharmān na seveta pramādena na saṃvaset /
+  mithyādṛṣṭin na roceta na bhavel lokavardhanaḥ //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 17.532</hi>) samyagdṛṣṭir adhīmātrā laukikī yasya vidyate / ||adhimātrā
+  api jātisahasrāṇi nāsau gacchati durgatiṃ // //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 18.</hi>) uddānaṃ /
+<lg>
+<l>  ahitaṃ dānadauḥśīlyaṃ śīlaṃ manomayadvayaṃ /</l>
+<l>  puṇyaṃ tathāṣṭikāṃ kṛtvā kṣatikābhiś caturdaśa //</l>
+</lg></p>
+
+<p>(<hi rend="bold">EĀ.Trip 18.11</hi>) eko dharmo loka utpadyate bahujanāhitāya bahujanaduḥkhāya anarthāyāhitāya duḥkhāya devamanuṣyāṇāṃ yaduta mātsaryaṃ / mātsaryaṃ loka utpadyate bahujanāhitāya bahujanaduḥkhāya anarthāyāhitāya duḥkhāya devamanuṣyāṇāṃ /
+(<hi rend="bold">EĀ.Trip 18.12</hi>) eko dharmo loka utpadyate bahujanahitāya bahujanasukhāya lokānukaṃpāyai arthāya hitāya sukhāya devamanuṣyāṇāṃ yaduta vigatamalamātsaryaṃ / vigatamalamātsaryaṃ loka ut<hi rend="it">pa</hi>dyate bahujanahitāya bahujanasukhāya lokānukaṃpāyai arthāya hitāya sukhāya devamanuṣyāṇāṃ /
+(<hi rend="bold">EĀ.Trip 18.2</hi>) dānasūtra
+(<hi rend="bold">EĀ.Trip 18.21</hi>) evaṃ hi satvā jānīyur dānasya phalaṃ dānasaṃvibhāgasya ca phalavipākaṃ yathāh<hi rend="it">aṃ</hi> j<hi rend="it">ā</hi>n<hi rend="it">āmi</hi> dānasya phalaṃ dānasaṃvibhāgasya ca phalavipakām / apīdānīṃ yo 'sau bhavaty apaścimakaḥ kavaṭaś ||kavaḍaś|| carama ālopas tato 'pi nādatvā nāsaṃvibhajya paribhuṃjīran sacel labheran dakṣiṇīyaṃ pratigrāhakaṃ na caiṣām utpanno mātsaryamalaś ca cittaṃ paryādāya tiṣṭhed /
+(<hi rend="bold">EĀ.Trip 18.22</hi>) yasmāt tarhi satvā na jānanti dānasya phalaṃ dānasaṃvibhāgasya ca phalavipākaṃ yathāhaṃ jānāmi dānasya phalaṃ dānasaṃvibhāgasya ca phalavipākaṃ, tasmād adatvā asaṃvibhajya paribhuṃjate āgṛhītena cetasā, utpannaṃ caiṣāṃ mātsaryaṃ cittaṃ paryādāya tiṣṭhati /
+(<hi rend="bold">EĀ.Trip 18.231</hi>) evaṃ hi satvā jānīyur yathā proktaṃ maharṣiṇā /
+  vipākaḥ <hi rend="it">saṃ</hi>vibhāgasya yathā bhavati mahārthikaḥ //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 18.232</hi>) nādatvā paribhuṃjīran na syur matsariṇas tathā /
+  na caiṣām āgrahe cittam utpadyeta kathaṃcana //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 18.233</hi>) yasmāt tv ete na jānanti bālā mohatamovṛtāḥ /
+  adatvā bhuṃjate tasmā<hi rend="it">d ā</hi>gṛhītena cetasā /
+  utpannaṃ caiṣāṃ mātsaryaṃ cittam ādāya tiṣṭhati // //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 18.31</hi>) evaṃ hi satvā jānīyur duḥśīlā pāpadharmāṇa ātmano gatiṃ copapattiṃ cābhisaṃparāyaṃ ca yathāhaṃ jānāmi satvānāṃ <hi rend="it">duḥ</hi>ś<hi rend="it">ī</hi>lā<hi rend="it">nā</hi>ṃ pāpadharmāṇāṃ gatiṃ copapattiṃ cābhisaṃparāyaṃ ca / apīdānīṃ mlāyeyuḥ śuṣyeyur lūtā vā haritā naḍā ām. + + + + + + cchanna /
+(<hi rend="bold">EĀ.Trip 18.32</hi>) yasmāt tarhi satvā na jānanti duḥśīlāḥ pāpa<hi rend="it">dharmāṇa ātmano ga</hi>t<hi rend="it">i</hi>ṃ copapattiṃ cābhisaṃparāyaṃ ca ytasmāt kāyena duścaritaṃ caranti vācā manasā duścaritaṃ caranti / te kāyena duścaritaṃ caritvā vācā manasā duścaritaṃ caritvā taddhetu<hi rend="it">s</hi> tatpratyayaṃ kāyasya bhedāt para<hi rend="it">ṃma</hi>raṇād apāyadurgativinipātaṃ narakeṣūpapadyante //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 18.331</hi>) evaṃ hi satvā jānīyur yathā proktaṃ maharṣiṇā /
+  yā gatiḥ pāpakarmāṇāṃ duḥśīlānām itaś cyute //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 18.332</hi>) mlāyeyur atha śuṣyeyur lūtā vā haritā naḍā<hi rend="it">ḥ</hi> /
+  yasmāt tu na prajānanti bālā mohatamovṛtāḥ //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 18.333</hi>) tasmāt kāyena vācā ca manasā cāpy asaṃvṛtāḥ /
+  kurvanti pāpakaṃ karma yad bhavati kaṭukodayaṃ //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 18.334</hi>) na tat karma kṛtaṃ sādhu kṛtvā yad anutapyate /
+  <hi rend="it">r</hi>udann aśrumukho yasya vipākaṃ pratisevate //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 18.335</hi>) tatra karma kṛtaṃ sādhu kṛtvā yan nānutapyate /
+  yasya pratītaḥ sumanā vipākaṃ pratisevate // //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 18.41</hi>) evaṃ hi satvā jānīyuḥ śīlavanto guṇavantaḥ peśalā<hi rend="it">ḥ</hi> kalyāṇadharmāṇaḥ ātmano gatiṃ copapattiṃ cābhisaṃparāyaṃ ca yathāhaṃ jānāmi satvānāṃ śīlavatāṃ guṇavatāṃ peśalānāṃ kalyāṇadharmāṇāṃ gatiṃ copapattiṃ cābhisaṃparāyaṃ ca /
+(<hi rend="bold">EĀ.Trip 18.42</hi>) apīdānīṃ anena pūtikāyena jātīya<hi rend="it">nt</hi>o jihrīyanto vitaranto vijugupsamānāḥ śastram apy ādhārayeyur viṣam api bhakṣayeyur rajvāvanaddhā mriyeran prapātād vā prapateyu<hi rend="it">ḥ</hi> //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 18.431</hi>) evaṃ hi satvā jānīyur yathā pr<hi rend="it">o</hi>kt<hi rend="it">aṃ mahar</hi>ṣ<hi rend="it">iṇā</hi> /
+  yā gatiḥ śīlayuktānāṃ yā gatir dharmajīvinaḥ //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 18.432</hi>) anena pūtikāyena jātīyantaḥ punaḥpunaḥ /
+  śastram ādhārayeyus te devalokābhinandinaḥ //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 18.51</hi>) yo 'sau bhavati strī vā puruṣo vā duḥśīlaḥ pāpadharmāḥ kāyaduścaritena samanvāgato vāṅmanoduścaritena samanvāgatas tasya kāyasya bhedād ayam evaṃrūpo manomayaḥ kāyo 'bhinirvartate tadyathā kṛṣṇasya kutapasya nirbhāsaḥ <hi rend="it">a</hi>ndhakāratamisrayā vā rātryā yeṣāṃ divyaṃ cakṣuḥ suviśuddhaṃ ta enaṃ paśyanti //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 18.52</hi>) yo 'sau bhavati strī vā puruṣo vā śīlavān kalyāṇaadharmā<hi rend="it">ḥ</hi> kāyaduścaritena samanvāgato vāṅmanah<hi rend="it">su</hi>caritena samanvāgatas tasya kāyasya bhedād ayam evaṃrūpo manomayaḥ kāyo 'bhinirvartate tadyathā śuklasya paṭasya nirbhāsaḥ jyotsnāyā vā rātryā yeṣāṃ divyaṃ cakṣuḥ suviśuddhaṃ ta enaṃ paś<hi rend="it">y</hi>anti //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 18.61</hi>) mā yūyaṃ bhikṣavaḥ puṇyebhyo bhaiṣṭa / tat kasya hetoḥ / sukhasyaitad adhivacanam iṣṭasya kāntasya priyasya manāpasya yaduta puṇyānīti / apuṇyāt tu yūyaṃ bhikṣavaḥ vi<hi rend="it">ramata / ta</hi>t kasya hetor / duḥkhasyaitad adhivacanam aniṣṭasyākāntasyāpriyasyāmanaāpasya yadutāpuṇyānīti //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 18.621</hi>) abhijānāmy aha<hi rend="it">ṃ</hi> bhikṣav<hi rend="it">o</hi> d<hi rend="it">ī</hi>rgarātrakṛtānāṃ puṇyānāṃ dīrgharātram iṣtaṃ priyaṃ manaāpaṃ vipākaṃ pratyanubhavituṃ /
+(<hi rend="bold">EĀ.Trip 18.622</hi>) saptāhaṃ varṣāṇi maitraṃ cittaṃ bhāvayitvā sapta saṃvartavivartakalpān nemaṃ lokam upāgamam /
+(<hi rend="bold">EĀ.Trip 18.623</hi>) saṃvartamāne 'haṃ loke ābhāsvare devanikāye upapadye / vivartamāne loke śūnye brāhme vimāne upapadye / tatrāhaṃ bhavāmi brahmā mahābrahmā abhibhūr anabhibhūto 'nyataradaśaśatavaśavartī mahābrahmā teṣāṃ satvānām agra ākhyātaḥ /
+(<hi rend="bold">EĀ.Trip 18.624</hi>) ṣaḍviṃśatkṛtvaś cāhaṃ śakro 'bhūvan devānām indro
+(<hi rend="bold">EĀ.Trip 18.625</hi>) 'nekaśatakṛtvaś ca rājābhūvaṃ cakravartī caturanto vijetā dhārmiko dharmarājaḥ saptaratnasamanvāgataḥ tasya mama imāny evaṃrūpāṇi sapta ratnāni abhūvaṃs tadyathā cakraratnaṃ hastiratnam aśvaratnaṃ maṇiratnaṃ strīratnaṃ gṛhapatiratnaṃ pariṇāyakaratnam eva saptamaṃ pūrṇaṃ ca me 'bhūt sahasraṃ putrāṇāṃ śūrāṇāṃ vīrāṇāṃ varāṅgarūpiṇāṃ parasainyapramardakānāṃ / so 'ham imām eva samudraparyantāṃ mahāpṛthivīm akhilām akaṇṭakām anutpīḍām adaṇḍenāśastreṇa dharmeṇa samenābhinirjityādhyavasitavān /
+(<hi rend="bold">EĀ.Trip 18.626</hi>) tasya mamaitad a<hi rend="it">bhavat</hi> / kasyaitat karmaṇaḥ phalaṃ kasyaiṣa karmaṇaḥ phalavipāko yenāsmy etarhy evaṃ maharddhika evaṃ mahānubhāva iti /
+(<hi rend="bold">EĀ.Trip 18.627</hi>) tasya mamaitad abhavat / trayāṇām etat karmaṇāṃ phalaṃ trayāṇām eṣa karma<hi rend="it">ṇāṃ</hi> phalavipāko yenāsmy etarhy evaṃmaharddhika evaṃ mahānubhāvaḥ /
+(<hi rend="bold">EĀ.Trip 18.628</hi>) katameṣāṃ trayāṇāṃ / yaduta dānasya damasya saṃyamasya //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 18.631</hi>) vipākaṃ paśya p<hi rend="it">u</hi>ṇyānāṃ kuśalānāṃ sukhaiṣiṇāṃ /
+  maitraṃ cittaṃ bhāvayitvā sapta varṣāṇi bhikṣavaḥ // <hi rend="it">1</hi>
+(<hi rend="bold">EĀ.Trip 18.632</hi>) sapta saṃvartavaivartān nemaṃ lokam upāgamam / ||upagamat
+  saṃvartamāne loke 'smin bhavāmy ābhāsvaropagaḥ // <hi rend="it">2</hi>
+(<hi rend="bold">EĀ.Trip 18.633</hi>) vivartamāne ca bhavāmy eṣa brahmopago hy ahaṃ /
+  saptakṛtvo mahābrahmā vaśavarty abhavat purā // <hi rend="it">3</hi>
+(<hi rend="bold">EĀ.Trip 18.634</hi>) ṣaṭtriṃśadguṇakṛtvaś ca devarājyam akārayat /
+  anekaśatakṛtvaś ca rājābhūvan pratāpavān // <hi rend="it">4</hi>
+(<hi rend="bold">EĀ.Trip 18.635</hi>) mūrdhnābhiṣiktaḥ kṣatriyo jāmbūṣaṇḍeśvaras tadā /
+  a<hi rend="it">da</hi>ṇḍenāśastreṇa vijitya pṛthivīm imāṃ // <hi rend="it">5</hi>
+(<hi rend="bold">EĀ.Trip 18.636</hi>) asāhasena dharmeṇa samyag evānuśiṣṭavān /
+  dharmacakraṃ vartayitvā asmin pṛthivīmaṇḍale // <hi rend="it">6</hi>
+(<hi rend="bold">EĀ.Trip 18.637</hi>) mahādhano mahābhoge jāto 'haṃ tādṛśe <hi rend="it">ku</hi>le /
+  sarvadravyopasaṃpanno ratnaiḥ saptabhir eva ca // <hi rend="it">7</hi>
+(<hi rend="bold">EĀ.Trip 18.638</hi>) prabhūtavittopakaraṇo rājābhūvan pratāpavān /
+  eṣa hetur hi māhātmye prabhūtvaṃ yena jāyate // <hi rend="it">8</hi>
+(<hi rend="bold">EĀ.Trip 18.639</hi>) buddhāḥ saṃgrāhakā loke <hi rend="it">etat teṣāṃ sudeśitam /
+  kaḥ śrutvā na prasīdeta api kṛṣṇābhijātikaḥ // 9</hi>
+(<hi rend="bold">EĀ.Trip 18.640</hi>) <hi rend="it">tasmād ihātmakāmena māhātmyam abhikāṅkṣatā /
+ saddharmo gurukartavyaḥ smaratā buddhaśāsanam // 10 //</hi></p>
+
+<p>+ + + ..... + + + gap</p>
+
+<p>(<hi rend="bold">EĀ.Trip 22.51</hi>) <hi rend="it">rāgāya pratipannā dveṣāya mohāya pratipannā / na rāgāya pratipannā na dveṣāya na mohāya pratipannā //</hi>
+(<hi rend="bold">EĀ.Trip 22.52</hi>) <hi rend="it">na rāgakṣayāya pratipannā na dveṣakṣayāya na mohakṣayāya pratipannā /</hi> <hi rend="it">rāgakṣayāya pratipannā dveṣakṣayāya mohakṣayāya pratipannā //</hi>
+(<hi rend="bold">EĀ.Trip 22.53</hi>) <hi rend="it">na rāgaprahāṇāya pratipannā na dveṣaprahāṇāya na mohaprahāṇāya pratipannā /</hi> <hi rend="it">rāgaprahāṇāya pratipannā dveṣaprahāṇāya mohaprahāṇāya pratipannā //</hi>
+(<hi rend="bold">EĀ.Trip 22.54</hi>) <hi rend="it">na rāgavinayaparyavasānāya pratipannā na dveṣavinayaparyavasānāya na mohavinayaparyavasānā</hi>ya pratipannā / rāgavinayaparyavasānāya pratipannā dveṣavinayaparyavasānāya mohavinayaparyavasānya pratipannā //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 22.55</hi>) na śīlasaṃ<hi rend="it">pannā na samādhisaṃpannā na prajñāsaṃpannā / śīlasaṃ</hi>pannā samādhisaṃpannā prajñāsaṃpannā //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 22.56</hi>) anatroddānaṃ /
+  rāgakṣayaprahāṇena vinayaparyavasānena ca /
+  tathobhayena kṛtveha vargo bhavati <hi rend="it">samudditā // //</hi>
+(<hi rend="bold">EĀ.Trip 23.0</hi>) <hi rend="it">uddānaṃ /</hi>
+  /// cchandaś cāpy anuyuṃjānā /
+  dvau vyavahārau dve mārgāṅge navamā śīlasaṃpadā //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 23.1a</hi>) adhārmikīṃ ca vo bhiṣavaḥ parṣadaṃ deśayiṣyāmi dhā<hi rend="it">rm</hi>i<hi rend="it">kīṃ ca / tac chṛṇuta sādhu ca suṣṭhu ca manasikuruta bhāṣiṣye /</hi>
+(<hi rend="bold">EĀ.Trip 23.1b</hi>) adhārmikī parṣat katamā / yeyaṃ parṣat prāṇātipātikā adattādāyikā kāmamithyācārikā surāmaireyamadya<hi rend="it">pramādasthānikā / iyam ucyate adhārmikī parṣat /</hi>
+(<hi rend="bold">EĀ.Trip 23.1c</hi>) <hi rend="it">dhārmikī parṣat katamā</hi> / yeyaṃ parṣat prāṇātipātāt prativiratā adattādānāt kāmamithyācārāt surāmaireyamadyapramādasthānāt prati<hi rend="it">viratā / iyam ucyate dhārmikī parṣat /</hi>
+(<hi rend="bold">EĀ.Trip 23.1d</hi>) <hi rend="it">adhārmikīṃ ca vaḥ parṣadaṃ de</hi>śayiṣyāmi dhārmikīṃ ceti me yad uktam idaṃ me tat pratyuktam //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 23.2-7</hi>) evaṃ
+(<hi rend="bold">EĀ.Trip 23.2</hi>) mṛṣāvādikā piśunavācikā p<hi rend="it">aruṣyavācikā</hi> saṃbhinnapralāpinī / mṛṣāvādāt prativiratā <hi rend="it">p</hi>ai<hi rend="it">śunyāt paruṣyāt saṃbhinnapralāpāt prativiratā /</hi>
+(<hi rend="bold">EĀ.Trip 23.3</hi>) <hi rend="it">chandād agatiṃ gacchanti dveṣān mohād bhāyād agatiṃ gacchati /</hi> na <hi rend="it">chandād agatiṃ ga</hi>cchanti na dveṣān na mohān na bhāyād gacchati //
+(<hi rend="bold">EĀ.Trip 23.4</hi>) ananuyujya aparyavagāhyāvarṇārhasya varṇaṃ bhāṣate varṇārhasyā<hi rend="it">varṇaṃ bhāṣate aprasādanīye sthāne prasīdati prasādanīye sthāne na prasīdati / anuyujya pa</hi>ryavagāhyāvarṇārhasyāvarṇaṃ bhāṣate varṇārhasya varṇaṃ bhāṣate aprasādanīye sthāne na prasīda<hi rend="it">t</hi>i <hi rend="it">prasādanīye sthāne prasīdati //
+(<hi rend="bold">EĀ.Trip 23.5</hi>) <hi rend="it">adrṣṭe dṛṣṭavādinī aśrute amate avijñāte vi</hi>jñātavādinī / adṛṣṭe adṛṣṭavādinī aśrute amate avijñāte avijñātavādinī //</hi></p>
+
+<p>(<hi rend="bold">EĀ.Trip 23.6</hi>) drṣṭe adṛṣṭavādinī <hi rend="it">śrute mate vijñāte avijñātavādinī / drṣṭe dṛṣṭavādinī śrute mate</hi> vijñāte vijñātavādinī //
+(<hi rend="bold">EĀ.Trip 23.7</hi>) mithyādṛṣṭikā mithyāsaṃkalpā mithyāvāg mithyākarmāntā / samyagdṛṣṭikā samyaksaṃkalpā <hi rend="it">samyagvāk samyakkarmāntā //
+(<hi rend="bold">EĀ.Trip 23.8</hi>) <hi rend="it">mithyājīvā mithyāvyāyāmā mithyās</hi>mṛtiḥ mithyāsamādhiḥ / samyagājīvā samyagvyāyāmā samyagsmṛtā samyaksamāhitā //</hi></p>
+
+<p>(<hi rend="bold">EĀ.Trip 23.9</hi>) na śīlasaṃpannā na samādhisaṃpannā na prajñāsaṃpan<hi rend="it">nā na vimuktisaṃpannā / śīlasaṃpannā samādhisaṃpannā prajñāsaṃ</hi>pannā vimuktisaṃpannā // //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 24.0</hi>) uddānaṃ
+  śikṣāpadaiḥ paṃca tathendriyāṇi
+  balaśraddhāśīlāsaṃpadā //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 24.1a</hi>) adhārmikīṃ ca vaḥ parṣadaṃ deśayiṣyāmi <hi rend="it">dhārmikīṃ ca /</hi> tac chṛṇuta sādhu ca suṣṭhu ca manasikuruta bhāṣiṣye /
+(<hi rend="bold">EĀ.Trip 24.1b</hi>) a<hi rend="it">dhārmikī parṣat katamā / yeyaṃ parṣat prāṇātipātikā adattādāyikā k</hi>āmamithyācārikā mṛṣāvādikā surāmaireyamadyapramādasthānikā / iyam ucyate adhārmikī parṣat /
+(<hi rend="bold">EĀ.Trip 24.1c</hi>) dhārmikī parṣat katamā / yeyaṃ parṣat prāṇātipātāt prati<hi rend="it">viratā adattādānāt kāmamithyācā</hi>rāt surāmaireyamadyapramādasthānāt pratviratā / iyam ucyate dhārmikī parṣat /
+(<hi rend="bold">EĀ.Trip 24.1d</hi>) adhārmikīṃ ca vaḥ parṣadaṃ deśayiṣyāmi dhārmikī<hi rend="it">ṃ</hi> ceti me <hi rend="it">yad uktam idaṃ me tat pratyuktam //
+(<hi rend="bold">EĀ.Trip 24.2-5</hi>) <hi rend="it">evaṃ</hi>
+(<hi rend="bold">EĀ.Trip 24.2</hi>) <hi rend="it">na śraddhe</hi>ndriyeṇa samanvāgatā na vīryendriyeṇa na smṛtīndriyeṇa na samādhīndriyeṇa na prajñendriyeṇa samanvāgatā / śraddhendriyeṇa samanvāgatā <hi rend="it">vīryendriyeṇa smṛtīndriyeṇa samādhīndriye</hi>ṇ<hi rend="it">a pra</hi>jñendriyeṇa samanvāgatā //</hi></p>
+
+<p>(<hi rend="bold">EĀ.Trip 24.3</hi>) na śraddhābalena samanvāgatā na vīrybalena na smṛtibalena na samādhibalena na prajñābalena sa<hi rend="it">manvāgatā / śraddhābalena samanvāgatā vīrybalena smṛtibalena sa</hi>mādhibalena prajñābalena samanvāgatā /
+(<hi rend="bold">EĀ.Trip 24.4</hi>) na śraddhāsaṃpannā na śīlasaṃpannā na śrutasaṃpannā na tyāgasaṃpannā na prajñāsaṃpannā / śra<hi rend="it">ddhāsaṃpannā śīlasaṃpannāna śrutasaṃpannā tyāgasaṃpannā prajñāsaṃpannā //
+(<hi rend="bold">EĀ.Trip 24.5</hi>) <hi rend="it">na śīla</hi>saṃpannā na samādhisaṃpannā na prajñāsaṃpannā na vimuktisaṃpannā na vimuktijñānadarśanasaṃpannā / śīlasaṃpa<hi rend="it">nnā samādhisaṃpannā prajñāsaṃpannā vimuktisaṃpannā vimuktijñānadarśanasaṃpannā // //</hi>
+(<hi rend="bold">EĀ.Trip 25.0</hi>) <hi rend="it">u</hi>ddānaṃ /
+<lg>
+<l>  śīlaṃ dhanaṃ balaṃ śrāddhā dharmabhogyaṅgadṛṣṭikā /</l>
+<l>  śikṣā vyavahārā mārgāṅgā pathāṅgā dharmadīpanā //</l>
+</lg></hi></p>
+
+<p>(<hi rend="bold">EĀ.Trip 25.1a</hi>) adhā<hi rend="it">rmikīṃ ca vaḥ parṣadaṃ deśayiṣyāmi dhārmikīṃ ca / tac chṛṇuta sādhu ca suṣṭhu ca mana</hi>s<hi rend="it">i</hi>kuruta bhāṣiṣye /
+(<hi rend="bold">EĀ.Trip 25.1b</hi>) adhārmikī parṣat katamā / yeyaṃ parṣat prāṇātipātikā adattādāyikā kāmamithyācārikā mṛ<hi rend="it">ṣāvādikā surāmaireyamadyapramādasthānikā / i</hi>yam ucyate adhārmikī parṣat /
+(<hi rend="bold">EĀ.Trip 25.1c</hi>) dhārmikī parṣat katamā / yeyaṃ parṣat prāṇātipātāt prativiratā adattādānāt kāmamithyācārā<hi rend="it">t surāmaireyamadyapramādasthānāt pratviratā / iyam ucyate dhār</hi>m<hi rend="it">i</hi>k<hi rend="it">ī</hi> parṣat /
+(<hi rend="bold">EĀ.Trip 25.1d</hi>) adhārmikīṃ ca vaḥ parṣadaṃ deśayiṣyāmi dhārmikīṃ ceti me yad uktam idaṃ me tat pratyuktam //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 25.2-13</hi>) evaṃ
+(<hi rend="bold">EĀ.Trip 25.2</hi>) na śraddhādhanena sama<hi rend="it">nvāgatā na śīladhanena na hrīdhanena na apatrāpyadhanena na</hi> śrutadhanena na tyāgadhanena na prajñādhanena samanvāgatā / śraddhādhanena samanvāgatā śīladhanena hrīdhanenāpatrāpyadhanena śrutadhane<hi rend="it">na tyāgadhanena prajñādhanena samanvāgatā //</hi>
+(<hi rend="bold">EĀ.Trip 25.3</hi>) <hi rend="it">na</hi> ś<hi rend="it">ra</hi>ddhābalena samanvāgatā na vīrybalena na hrībalena na apatrāpyabalena na smṛtibalena na samādhibalena na prajñābalena samanvāga<hi rend="it">tā / śraddhābalena samanvāgatā vīrybale</hi>na hrībalena apatrāpyabalena smṛtibalena samādhibalena prajñābalena samanvāgatā //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 25.4</hi>) aśraddhā ahrīmatī anapatrāpiṇī kusīdā muṣītasmṛtir asamāhitā duṣprajñā / śraddhā hrīmatī apatrāpiṇī ārabdhavīryā upasthitasmṛtiḥ samāhitā <hi rend="it">prajñāvatī</hi> /
+(<hi rend="bold">EĀ.Trip 25.5</hi>) <hi rend="it">na dharmajñā na arthajñā na kālajñā na mā</hi>trajñā nātmajñā na parṣajjñā na pudgalaparāparajñā / dharmajñā arthajñā kālajñā mātrajñā ātmajñā parṣajjñā pudgalaparāparajñā //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 25.6</hi>) na smṛtisaṃbodhya<hi rend="it">ṅ</hi>ge<hi rend="it">na samanvāgatā na dharmapravicayasaṃbodhyaṅ</hi>gena na vīryasaṃbodhyaṅgena na prītisaṃbodhyaṅgena na praśrabdhisaṃbodhyaṅgena na samādhisaṃbodhyaṅgena na upekṣāsaṃbodhyaṅgena samanvāgatā / smṛtisaṃbodhyaṅ<hi rend="it">gena samanvāgatā dharmapravicayasaṃbodhyaṅge</hi>na vīryasaṃbodhyaṅgena prītisaṃbodhyaṅgena praśrabdhisaṃbodhyaṅgena samādhisaṃbodhyaṅgena upekṣāsaṃbodhyaṅgena samanvāgatā //
+(<hi rend="bold">EĀ.Trip 25.7</hi>) mithyādṛṣṭikā mithyāsaṃ<hi rend="it">kalpā mithyāvāg mithyākarmāntā mithyājī</hi>vā mithyāvyāyāmā mithyāsmṛtā / samyagdṛṣṭikā samyaksaṃkalpā samyagvāk samyakkarmāntā samyagājīvā samyagvyāyāmā <hi rend="it">samyaksmṛtā //
+(<hi rend="bold">EĀ.Trip 25.8</hi>) <hi rend="it">prāṇātipātikā adattādāyikā kāmamithyāc</hi>ārikā surāmaireyamadyapramādasthānikā mṛṣāvādikā piśunavācikā paruṣavācikā saṃbhinnapralā<hi rend="it">p</hi>i<hi rend="it">nī / prāṇātipātāt prativiratā adattādānāt kāmamithyācārāt surāmaireyamadya</hi>p<hi rend="it">ra</hi>mādasthānān mṛṣāvādāt paiśūnyāt pāruṣyāt saṃbhinnapralāpāt prativiratā //</hi></p>
+
+<p>(<hi rend="bold">EĀ.Trip 25.9</hi>) adrṣṭe dṛṣṭavā<hi rend="it">dinī aśrute amate</hi> avijñāte vijñātavādinī / dṛṣṭe adṛṣṭavādi<hi rend="it">n</hi>ī <hi rend="it">śrute mate vijñāte avijñātavādinī / adrṣṭe adṛṣṭavādinī aśrute amate avijñāte avi</hi>jñātavādinī / drṣṭe dṛṣṭavādinī śrute mate vijñāte vijñātavādinī //
+(<hi rend="bold">EĀ.Trip 25.10</hi>) mithyādṛṣṭi<hi rend="it">kā mithyāsaṃkalpā mithyāvāg mithyākarmāntā mithyājīvā mithyāvyāyāmā mithyāsmṛtā mithyāsamāhi</hi>tā / samyagdṛṣṭikā samyaksaṃkalpā samyagvāk samyakkarmāntā samyagājīvā samyagvyāyām<hi rend="it">ā samyaksmṛtā samyaksamāhitā //
+(<hi rend="bold">EĀ.Trip 25.11</hi>) <hi rend="it">prāṇātipātikā adattādāyikā kāmamithyācārikā surāmaireyamad</hi>y<hi rend="it">apramādasthānikā m</hi>ṛṣāvādikā piśunavācikā paruṣavācikā saṃbhinnapralāpikā abhidhyālur vyāpannacittā mi<hi rend="it">th</hi>y<hi rend="it">ādṛṣṭikā / prāṇātipātāt prativiratā adattādānāt kāmamithyācārāt surāmaireyamadyapramādasthānān</hi> mṛṣāvādāt paiśūnyāt pāruṣyāt saṃbhinnapralāpād anabhidhyālukā avyāpannacittā samyagdṛṣṭikā //</hi></p>
+
+<p>(<hi rend="bold">EĀ.Trip 25.12</hi>) mithyādṛ<hi rend="it">ṣṭikā mithyāsaṃkalpā mithyāvāg mithyākarmāntā mithyājīvā</hi> m<hi rend="it">i</hi>thyāvyāyāmā mithyāsmṛtā mithyāsamāhitā mithyāvimuktikā mithyājñānikā / samyagdṛṣṭikā samyaksaṃkalpā samyagv<hi rend="it">āk samyakkarmāntā samyagājīvā samyagvyāyāmā samyaks</hi>mṛtā samyaksamāhitā samyagvimuktikā samyagjñānikā //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 25.13</hi>) adharmaṃ dharmato dīpayati dharmaṃ cādharmataḥ avinayaṃ vinayato vina<hi rend="it">yaṃ cāvinayataḥ āpattim anāpattitaḥ anāpattim</hi> āpattitaḥ gurvīṃ laghutaḥ laghvīṃ gurutaḥ sāvaśeṣāṃ niravaśeṣataḥ niravaśeṣāṃ sāvaśeṣataḥ ācīrṇām anācīrṇataḥ anācīrṇām ācīrṇataḥ <hi rend="it">abhāṣitāṃ bhāṣitataḥ bhāṣitām abhāṣi</hi>tataḥ apraṇihitāṃ praṇihitataḥ praṇihitām apraṇihitataḥ aprajñaptāṃ prajñaptataḥ prajñaptām aprajñaptataḥ asamavahatāṃ samavahatataḥ <hi rend="it">samavahatām asamavahatataḥ adharma</hi>m adharmato dīpayati dharmaṃ ca dharmataḥ avinayam avinayato vinayaṃ ca vinayataḥ āpattim āpattitaḥ anāpattim anāpattitaḥ gurvīṃ gurutaḥ <hi rend="it">laghvīṃ laghutaḥ sāvaseṣāṃ sāvaśeṣataḥ</hi> niravaśeṣāṃ niravaśeṣataḥ ācīrṇām ācīrṇataḥ anācīrṇām anācīrṇataḥ abhāṣitām abhāṣitataḥ bhāṣitāṃ ca bhāṣitataḥ <hi rend="it">apraṇihitām apraṇihitataḥ praṇihi</hi>tāṃ praṇihitataḥ aprajñaptām aprajñaptataḥ prajñaptā<hi rend="it">ṃ</hi> prajñaptataḥ asamavahatām asamavahatataḥ samavahatāṃ ca samava<hi rend="it">ha</hi>tataḥ // //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 26.0</hi>) <hi rend="it">uddānaṃ /</hi>
+  <hi rend="it">kaṣāyo 'gravatī vyagrā ut</hi>tāna āmiṣagurukā ca /
+  viṣamānāryā saptaitā dharmādharmeṇa yojayet //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 26.11</hi>) parṣat kaṣāyaṃ ca vo bhikṣavo deśayiṣyāmi parṣanmaṇḍaṃ ca <hi rend="it">tac chṛṇuta sādhu ca suṣṭhu ca manasikuruta bhāṣi</hi>ṣye /
+(<hi rend="bold">EĀ.Trip 26.12</hi>) parṣatkaṣāyaḥ katamaḥ / yasyāṃ parṣadi adharmo dīpyate dharmaḥ pratyuhyate avinayo dīpyate vinayaḥ pratyuhyate adharme khalu dī<hi rend="it">p</hi>y<hi rend="it">amāne dharme pratyuhyamāne avinaye dīpyamāne vina</hi>y<hi rend="it">e</hi> pratyuhyamāne adharmavādinaḥ avinayavādinaḥ pudgalā balavanto bhavanti dharmavādino vinayavādinaḥ pudgalāḥ durbalā bhavanti a<hi rend="it">dharmavādiṣu avinayavādiṣu pudgaleṣu balava</hi>tsu dharmavādino vinayavādinaḥ pudgalās tūṣṇīṃ vāsaṃ vasanti utthāya vā viprakrāmanti / ayam ucyate parṣat kaṣāyaḥ /
+(<hi rend="bold">EĀ.Trip 26.13</hi>) parṣanmaṇḍaḥ katamaḥ / <hi rend="it">yasyāṃ parṣadi dharmo dīpyate adharmaḥ pra</hi>tyuhyate vinayo dīpyate avinayaḥ pratyuhyate dharme khalu dīpyamāne adharme pratyuhyamāne vinaye dīpyamāne avinaye <hi rend="it">pratyuhyamāne dharmavādino vinayavā</hi>dinaḥ pudgalā balavanto bhavanti adharmavādina avinayavādinaḥ pudgalā durbalā bhavanti dharmavādiṣu vinayavādiṣu pudgaleṣu <hi rend="it">balavatsu adharmavādina avina</hi>yavādinaḥ pudgalāḥ pratyantān vā bhajante sarveṇa vā sarvaṃ na bhavanti / ayam ucyate parṣanmaṇḍaḥ /
+(<hi rend="bold">EĀ.Trip 26.14</hi>) parṣatkaṣāyaṃ ca vo deśayiṣyāmi parṣanmaṇḍaṃ ceti <hi rend="it">me yad uktam idaṃ me tat pratyuktam //
+(<hi rend="bold">EĀ.Trip 26.21</hi>) anagravatīṃ ca vaḥ parṣadaṃ deśayiṣyāmi agravatīṃ ca / tac chṛṇuta sādhu ca suṣṭhu ca manasikuruta bhāṣiṣye /
+(<hi rend="bold">EĀ.Trip 26.22</hi>) anagravatī parṣat katamā / yasyāṃ parṣadi nava<hi rend="it">kā bhikṣavaḥ sthavireṣu bhikṣuṣu agauravā</hi> viharanty apratīśā abhayavaśavartinaḥ sthavirāś ca bhikṣavaḥ śaithilikā bhavanti bāhulikā avakramaṇīye pūrvaṃgamā<hi rend="it">ḥ</hi> praviveke nikṣiptadhurāḥ <hi rend="it">śikṣāyāṃ mandagauravāḥ / iyam ucyate</hi> anagravatī parṣat /
+(<hi rend="bold">EĀ.Trip 26.23</hi>) agravatī parṣat katamā / yasyāṃ parṣadi navakā bhikṣavaḥ sthavireṣu bhikṣuṣu sagauravā viharanti sapratīśāḥ sabhayavaśavartinaḥ <hi rend="it">sthavirāś ca bhikṣavaḥ na śaithilikā bhavan</hi>ti abāhulikāḥ avakramaṇīye nikṣiptadhurāḥ praviveke pūrvaṃgamāḥ śikṣāyāṃ tīvragauravāḥ / iyam ucyate agravatī parṣat /
+(<hi rend="bold">EĀ.Trip 26.24</hi>) <hi rend="it">anagravatīṃ ca vaḥ parṣadaṃ deśayiṣyāṃi agravatīṃ ce</hi>ti me yad uktam idaṃ me tat pratyuktam //</hi></p>
+
+<p>(<hi rend="bold">EĀ.Trip 26.31</hi>) vyagrāṃ ca vaḥ parṣadaṃ deśayiṣyāmi samagrāṃ ca, tac chṛṇuta sādhu ca suṣṭhu ca manasikuruta bhāṣiṣye /
+(<hi rend="bold">EĀ.Trip 26.32</hi>) vya<hi rend="it">grā parṣat katamā / yeyaṃ parṣat kalahajātā viha</hi>rati bhaṇḍanajātā vigṛhitā vivādamāpannā / iyam ucyate vyagrā parṣat /
+(<hi rend="bold">EĀ.Trip 26.33</hi>) samagrā parṣat katamā / yeyaṃ parṣat kalahajātā vi<hi rend="it">harati na bhaṇḍanajātā na vigṛhitā na vi</hi>vādamāpannā / iyam ucyate samagrā parṣat /
+(<hi rend="bold">EĀ.Trip 26.34</hi>) vyagrāṃ ca vaḥ parṣadaṃ deśayiṣyāmi samagrāṃ ceti me yad uktam idaṃ me tat pratyuktam //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 26.41</hi>) <hi rend="it">uttānāṃ ca vaḥ parṣadaṃ deśayiṣyāmi gaṃbhīrāṃ ca, tac ch</hi>ṛṇuta sādhu ca suṣṭhu ca manasikuruta bhāṣiṣye /
+(<hi rend="bold">EĀ.Trip 26.42</hi>) uttānā parṣat katamā / yeyaṃ parṣat uddhatā unnatā capalā mukharā pragalbhā gharṣitasmṛtir a<hi rend="it">samāhitā /// / iyam u</hi>cyate uttānā parṣat /
+(<hi rend="bold">EĀ.Trip 26.43</hi>) gaṃbhīrā parṣat katamā / yeyaṃ parṣad anuddhatā anunnatā acapalā amukharā apragalbhā upasthitasmṛtiḥ samā<hi rend="it">hitā /// / iyam ucyate</hi> gaṃbhīrā parṣat /
+(<hi rend="bold">EĀ.Trip 26.44</hi>) uttānāṃ ca vaḥ parṣadaṃ deśayiṣyāmi gaṃbhīrāṃ ceti me yad uktam idaṃ me tat pratyuktam //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 26.51</hi>) āmiṣagurukāṃ ca vaḥ parṣadaṃ deśayi<hi rend="it">ṣyāmi dharmagurukāṃ ca, tac chṛṇuta sādhu</hi> ca suṣṭhu ca manasikuruta bhāṣiṣye /
+(<hi rend="bold">EĀ.Trip 26.52</hi>) āmiṣagurukā parṣat katamā / yathāpīhaikatyā āmiṣahetor anyonyaṃ satkurvanti gurukurvanti <hi rend="it">mānayanti pūjayanti te āmiṣam e</hi>vāntarākṛtvā anyonyaṃ takṣanti saṃtakṣanti saṃparitakṣanti apīdānīṃ kulāny uddāyādāni kurvanti / iyam ucyate āmiṣagurukā parṣat /
+(<hi rend="bold">EĀ.Trip 26.53</hi>) dharma<hi rend="it">gurukā parṣat katamā / yathāpīhaikatyā</hi> dharmahetor anyonyaṃ satkurvanti gurukurvanti mānayanti pūjayanti te dharmam evāntarākṛtvā nānyonyaṃ takṣanti saṃtakṣanti saṃparitakṣanti na ca <hi rend="it">kulāny uddāyādāni kurvanti / iyam ucyate dharmagurukā parṣat /</hi>
+(<hi rend="bold">EĀ.Trip 26.54</hi>) amiṣagurukāṃ ca vaḥ parṣadaṃ deśayiṣyāmi dharmagurukāṃ ceti me yad uktam idaṃ me tat pratyuktam //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 26.61</hi>) <hi rend="it">viṣamāṃ ca vaḥ parṣadaṃ deśayiṣyāmi</hi> samāṃ ca, tac chṛṇuta sādhu ca suṣṭhu ca manasikuruta bhāṣiṣye /
+(<hi rend="bold">EĀ.Trip 26.62</hi>) viṣamā parṣat katamā / yathāpīhaikatyaḥ adhārmiko bhavaty adharmavādī / tasya parṣad apy a<hi rend="it">dhārmikī adharmavādinī / sa sva</hi>syāḥ parṣadaḥ purastāt svaṃ vādam abhūtenātatvenānarthopasaṃhitenācaṣṭe prajñapayati prasthāpayati vibhajati vivṛṇoty uttanīkaroti de<hi rend="it">śayati saṃprakāśayaty anusandhim api</hi> bhāṣate / paravādānāṃ randhrāṇi cchidrāṇi śavalāni kalmāṣāṇy abhūtenātatvenānarthopasaṃhitenācaṣṭe prajñapayati prasthāpaya<hi rend="it">ti vibhajati vivṛṇoty uttanīkaroti</hi> deśayati saṃprakāśayaty anusandhim api bhāṣate / iyam ucyate viṣamā parṣat /
+(<hi rend="bold">EĀ.Trip 26.63</hi>) samā parṣat katamā / yathāpīhaikatyo dhā<hi rend="it">rmiko bhavati dharmavādī / tasya parṣad api dhārm</hi>ikī dharmavādinī / sa svasyāḥ parṣadaḥ purastāt svaṃ vādam bhūtena tatvenārthopasaṃhitenācaṣṭe prajñapayati pra<hi rend="it">sthāpayati vibhajati vivṛṇoty uttanīkaro</hi>ti deśayati saṃprakāśayaty anusandhim api bhāṣate / paravādānāṃ randhrāṇi cchidrāṇi śavalāni kalmāṣāṇi bhūtena tatvenārthopa<hi rend="it">saṃhitenācaṣṭe prajñapayati prasthāpa</hi>yati vibhajati vivṛṇoty uttanīkaroti deśayati saṃprakāśayaty anusandhim api bhāṣate / iyam ucyate samā parṣat /
+(<hi rend="bold">EĀ.Trip 26.64</hi>) viṣamāṃ <hi rend="it">ca vaḥ parṣadaṃ deśayiṣyāmi samāṃ ceti me yad u</hi>ktam idaṃ me tat pratyuktam //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 26.71</hi>) anāryāṃ ca vaḥ parṣadaṃ deśayiṣyāmi āryāṃ ca, tac chṛṇuta sādhu ca suṣṭhu ca manasikuruta bhāṣiṣye /
+(<hi rend="bold">EĀ.Trip 26.72</hi>) anāryā parṣat katamā / <hi rend="it">yeyaṃ parṣad idaṃ duḥkham āryasatyam iti yathābhū</hi>taṃ na prajānāty ayaṃ duḥkhasamudayo 'yaṃ duḥkhanirodha iyaṃ duḥkhanirodhagāminī pratipad āryasatyam iti yathābhūtaṃ na prajānāti / i<hi rend="it">yam ucyate anāryā parṣat /</hi>
+(<hi rend="bold">EĀ.Trip 26.73</hi>) <hi rend="it">āryā parṣat kata</hi>mā / yeyaṃ parṣad idaṃ duḥkham āryasatyam iti yathābhūtaṃ prajānāty ayaṃ duḥkhasamudayo 'yaṃ duḥkhanirodha iyaṃ duḥkhanirodhagāminī pra<hi rend="it">tipad āryasatyam iti yathābhūtaṃ prajānāti / i</hi>yam ucyate āryā parṣat /
+(<hi rend="bold">EĀ.Trip 26.74</hi>) anāryāṃ ca vaḥ parṣadaṃ deśayiṣyāmi āryāṃ ceti me yad uktam idaṃ me tat pratyuktam //
+(<hi rend="bold">EĀ.Trip 26.8</hi>) etāny eva sapta sūtrā<hi rend="it">ṇi ///
+(<hi rend="bold">EĀ.Trip 26.9</hi>) <hi rend="it">antaro</hi>ddānaṃ
+  dharmo vinaya āpattir
+  gurukā sāvaśeṣā ācīrṇā abhāṣitā apraṇihitā aprajñaptā asamavahatā //</hi></p>
+
+<p>(<hi rend="bold">EĀ.Trip 27.0</hi>) piṇḍoddānaṃ
+  saptāviṃśat* /// yaḥ <hi rend="it">/</hi>
+  śikṣā vyākhyānataḥ kā<hi rend="it">r</hi>yā dharmādharmeṇa paścimaṃ //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 28.0</hi>) uddānaṃ
+  saptaviṃśad dharmebhir nava jñānena kārayet /
+  dṛṣṭiḥ saṃvṛtir ārakṣā kiṃpuruṣaḥ po<hi rend="it">ṣadhena ca //</hi>
+  /// ttraṃ piṇḍapāta āyācanavastunā //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 28.01</hi>) evaṃ mayā śrutam ekasmin samaye bhagavāṃ cchrāvastyāṃ viharati jetavane 'nāthapiṇḍadasyā<hi rend="it">rāme / tatra bhagavān bhikṣūn āmantrayati</hi> sma //
+(<hi rend="bold">EĀ.Trip 28.1A</hi>) dvau dharmau nāma ca rūpaṃ ca / avidyā ca bhavatṛṣṇā ca / bhavadṛṣṭir vibhavadṛṣṭiś ca / āhrīkyam anapatrāpyaṃ ca / hrīś cāpatr<hi rend="it">ā</hi>pa<hi rend="it">ṃ</hi> ca / durvacatva<hi rend="it">ṃ</hi> p<hi rend="it">ā</hi>p<hi rend="it">a</hi>m<hi rend="it">it</hi>r<hi rend="it">atā ca / suvacatvaṃ kalyāṇamitratā ca /</hi> āpattikauśalam āpattivyutthānakauśalaṃ ca / samāpattikauśalam samāpattivyutthānakauśalaṃ ca / dhātukauśalaṃ manasikārakauśalaṃ ca / ārjavatā <hi rend="it">mārdavaṃ ca / kṣāntiḥ sauratyaṃ ca / sā</hi>khilyaṃ ca pratisaṃstaraś ca / smṛtiś ca saṃprajanyaṃ ca / pratisaṃkhyānabalaṃ bhāvanābalaṃ ca / indriyair aguptadvāratā bhojane amātrajñatā ca / indriyai<hi rend="it">r guptadvāratā bhojane mātrajñatā ca / śī</hi>lavipattir dṛṣṭivipattiś ca / śīlavyasanaṃ dṛṣṭivyasanaṃ ca / śīlasaṃpad dṛṣṭisaṃpac ca / śīlaviśuddhir dṛṣṭiviśu<hi rend="it">ddhiś ca / dṛṣṭiviśuddhis tathādṛṣṭasya ca yoniśaḥ pradhānam / saṃvejanī</hi>yeṣu dharmeṣu saṃvegaḥ tathāsaṃvignasya ca yoniśaḥ pradhānaṃ / asaṃtuṣṭiḥ kuśaleṣu dharmeṣu aprativāṇiś ca prahāṇe / śamathaś ca vipaśyanā ca / vidyā <hi rend="it">ca vimuktiṣ ca //
+(<hi rend="bold">EĀ.Trip 28.1B1</hi>) <hi rend="it">antaroddānaṃ /
+  dvau dharmau nāma rūpaṃ ca</hi> avidyā dvitīyaṃ padaṃ /
+  bhavadṛṣṭiś cāhrīkyaṃ hrīś cāpi durvacatvaṃ ca //</hi></p>
+
+<p>(<hi rend="bold">EĀ.Trip 28.1B2</hi>) suvacatvaṃ tathāpattiḥ samāpattiś ca dhātavaḥ /
+ ārjavakṣāntisākhilyaṃ <hi rend="it">smṛtir balendriyaiḥ śīlaṃ //
+(<hi rend="bold">EĀ.Trip 28.1B3</hi>) <hi rend="it">saṃpattir vyasanaṃ saṃpad viśu</hi>ddh<hi rend="it">au</hi> cāparadvayaṃ /
+  saṃvegaś cāpy asaṃtuṣṭiḥ śamatho vidya jānatā //</hi></p>
+
+<p>(<hi rend="bold">EĀ.Trip 28.2</hi>) dv<hi rend="it">e</hi> jñāne
+(<hi rend="bold">EĀ.Trip 28.21</hi>) dharmajñānam anvayajñānaṃ ca / evaṃ
+(<hi rend="bold">EĀ.Trip 28.22</hi>) <hi rend="it">paracittajñānaṃ saṃvṛtijñānaṃ ca /</hi>
+(<hi rend="bold">EĀ.Trip 28.23</hi>) <hi rend="it">duḥkhajñānaṃ samudayajñānaṃ</hi> ca /
+(<hi rend="bold">EĀ.Trip 28.24</hi>) nirodhajñānaṃ mārgajñānaṃ ca /
+(<hi rend="bold">EĀ.Trip 28.25</hi>) duḥkhe dharmajñānaṃ duḥkhe 'nvayajñānaṃ ca /
+(<hi rend="bold">EĀ.Trip 28.26</hi>) samudaye dharmajñānaṃ samudaya 'nvayajñānaṃ ca /
+(<hi rend="bold">EĀ.Trip 28.27</hi>) nirodhe dharmajñānaṃ <hi rend="it">nirodhe 'nvayajñānaṃ ca /</hi>
+(<hi rend="bold">EĀ.Trip 28.28</hi>) <hi rend="it">mārge dharmajñānaṃ mārge 'nva</hi>yajñānaṃ ca /
+(<hi rend="bold">EĀ.Trip 28.29</hi>) kṣayajñānam anutpādajñānaṃ ca //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 28.3</hi>) dve hetū dvau pratyayau samyagdṛṣṭer utpādāya /
+  parataś ca ghoṣa adhyātmaṃ ca yoniśo manasikāraḥ //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 28.4</hi>) <hi rend="it">dve satye / saṃvṛtisatyaṃ paramārthasatyaṃ ca /</hi>
+(<hi rend="bold">EĀ.Trip 28.5</hi>) dvayor dharmayos tīvraś cetasaḥ ārakṣāsmṛtyapramāde yogaḥ karaṇīyaḥ satye cākopye ca //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 28.61</hi>) dvāv arthavaśau saṃpaśyan kiṃpuruṣaḥ kiṃ<hi rend="it">puruṣīṃ vācaṃ na bhāṣate / mā ca mṛṣāvādaṃ ka</hi>riṣyāmi mā ca pareṣām asatāṃ duḥkhadaurmanasyam utpādayiṣyāmi /
+(<hi rend="bold">EĀ.Trip 28.62</hi>) etāv eva dvāv arthavaśau saṃpaśyan satpuruṣaḥ kiṃpuruṣīṃ vācaṃ na bhāṣate / <hi rend="it">mā ca mṛṣāvādaṃ kariṣyāmi mā ca pa</hi>reṣām asatāṃ duḥkhadaurmanasyam utpādayiṣyāmi /
+(<hi rend="bold">EĀ.Trip 28.7</hi>) dvau poṣathau / cāturmāsikaḥ paṃcadaśikaś ca //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 28.8</hi>) dve varṣopanāyike / pūrvikā ca paścimikā ca // //</p>
+
+<p>+ + + 1 Blatt fehlt
+(<hi rend="bold">EĀ.Trip 28.Y</hi>) <hi rend="it">dvau</hi> p<hi rend="it">i</hi>ṇḍakau samasamau vipākato yaṃ ca piṇḍakaṃ paribhujya bodhisatvo 'nuttarāṃ samyaksaṃbodhim abhisaṃbuddho yaṃ ca piṇḍakaṃ paribhujya tathāgato nirupadhiśe<hi rend="it">ṣe nirvāṇadhātau parinirvṛta</hi>ś ca //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 28.Z1</hi>) dve bhikṣor āyācanavastunī / bhikṣur evaṃ samyagāyācamāna āyāced aho batāham evaṃrūpaḥ syāṃ tadyathā śāriputramaudgalyāyanau bhikṣū / tat kasya heto<hi rend="it">r / eṣā hi bhikṣavas tulā etat pramāṇaṃ bhikṣū</hi>ṇāṃ mama śrāvakāṇāṃ yaduta śāriputramaudgalyāyanau bhikṣū /
+(<hi rend="bold">EĀ.Trip 28.Z2</hi>) dve bhikṣuṇyā āyācanavastuni / bhikṣuṇī evaṃ samyagāyācamāna āyāced aho <hi rend="it">batāham evaṃrūpā syāṃ tadyathā mahāprajāpa</hi>tī gautamī utpalavarṇā vā bhikṣuṇī / tat kasya hetor / eṣā hi bhikṣavas tulā etat pramāṇaṃ bhikṣuṇīnāṃ mama śrāvikāṇāṃ yaduta mahāprajāpa<hi rend="it">tī gautamī utpalavarṇā vā bhikṣuṇī /</hi>
+(<hi rend="bold">EĀ.Trip 28.Z3</hi>) <hi rend="it">dve up</hi>ās<hi rend="it">a</hi>kasyāyācanavastunī / upāsaka evaṃ samyagāyācamāna āyāced aho batāham evaṃrūpaḥ syāṃ tadyathā anāthapiṇḍado gṛhapatiḥ śrā<hi rend="it">vastyāṃ hastako vā ālavakaḥ kauśāmbyāṃ / tat kasya he</hi>tor / eṣā hi bhikṣavas tulā etat pramāṇaṃ upāsakānāṃ mama śrāvakāṇāṃ yaduta anāthapiṇḍado gṛhapatiḥ śrāvastyāṃ hastako vā ā<hi rend="it">lavakaḥ kauśāmbyāṃ /</hi>
+(<hi rend="bold">EĀ.Trip 28.Z4</hi>) <hi rend="it">dve upāsikāyā</hi> āyācanavastunī / upāsikā evaṃ samyagāyācamāna āyāced aho batāham evaṃrūpaḥ syāṃ tadyathā viśākā mṛgāramātā śrāvas<hi rend="it">ty</hi>ā<hi rend="it">ṃ kubjottarā vā kauśāmbyāṃ / tat kasya hetor / eṣā hi bhikṣava</hi>s tulā etat pramāṇaṃ upāsikānāṃ mama śrāvikāṇāṃ yaduta viśākā mṛgāramātā śrāvastyāṃ kubjottarā vā kauśāmbyāṃ // //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 29.0</hi>) <hi rend="it">uddānaṃ</hi>
+  /// mukhāni paṃca lābhena /
+  catvāri śamatho lobhaḥ prajñā śaikṣavargo 'yaṃ //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 29.1</hi>) dvau dharmau śaikṣasya bahukarau <hi rend="it">bha</hi>vataḥ /
+(<hi rend="bold">EĀ.Trip 29.101</hi>) hrīr vyapatrāpyaṃ ca / e<hi rend="it">vam suvacatvaṃ kalyāṇamitratā ca / āpattikau</hi>śalyam āpattivyutthānakauśalyaṃ ca / samāpattikauśalyam samāpattivyutthānakauśalyaṃ ca / dhātukauśalyaṃ manasikārakauśalyaṃ ca / ārja<hi rend="it">vatā mārdavaṃ ca / kṣāntiḥ sauratyaṃ ca / sākhi</hi>lya<hi rend="it">ṃ</hi> ca pratisaṃstaraś ca / smṛtiś ca saṃprajanyaṃ ca / pratisaṃkhyānabalaṃ bhāvanābalaṃ ca / indriyair guptadvāratā bhojane mātrajñatā ca / śīla<hi rend="it">saṃpattir dṛṣṭisaṃpattiś ca / śīlaviśuddhi</hi>r dṛṣṭiviśuddhiś ca / dṛṣṭiviśuddhis tathādṛṣṭeś ca yoniśaḥ pradhānam / saṃvejanīyeṣu dharmeṣu saṃvegaḥ tathāsaṃvignasya ca yoniśaḥ pradhānaṃ / asaṃtuṣṭi<hi rend="it">ḥ kuśaleṣu dharmeṣu aprativāṇiś ca pra</hi>hāṇe / śamathaś ca vipaśyanā ca / vidyā ca vimuktiś ca //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 29.2</hi>) dve jñāne śaikṣasya bahukare bhavataḥ / dharmajñānam anvayajñānaṃ ca / evaṃ
+ paracittajñānaṃ saṃvṛtijñānaṃ ca / duḥkhajñānaṃ samudayajñānaṃ ca / nirodhajñānaṃ mārgajñānaṃ ca / duḥkhe dharmajñānaṃ duḥkhe 'nvayajñānaṃ ca / nirodhe dharmajñānaṃ nirodhe 'nvayajñānaṃ ca / mārge dharmajñānaṃ mārge 'nvayajñānaṃ ca //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 29.3</hi>) dvau hetū dvau pratyayau śaikṣasya samyagdṛṣṭer utpādāya /
+  parata<hi rend="it">ś ca ghoṣa adhyātmaṃ ca yoniśo manasikāra</hi>ḥ //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 29.4</hi>) dve satye śaikṣasya bahukare bhavataḥ /
+  saṃvṛtisatyaṃ paramārthasatyaṃ ca //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 29.5</hi>) dvayor dharmayoḥ śaikṣeṇa tīvraś cetasaḥ ārakṣāsmṛtyapra<hi rend="it">māde yogaḥ karaṇīyaḥ / satye cākopye</hi> ca //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 29.6</hi>) dvau dharmau śaikṣasya bahukarau bhavataḥ / upasthitasmṛtitā ca kāye notkṣiptacakṣuṣkatā ca antargṛhe /
+(<hi rend="bold">EĀ.Trip 29.7</hi>) dvau dharmau śaikṣasya bahukarau bhavataḥ /
+  /// <hi rend="it">ana</hi>gāre cābhirati<hi rend="it">ḥ</hi> //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 29.81</hi>) dvau dharmau śaikṣasya parihāṇāya saṃvartate /
+  labhenānunīyate alābhena pratihanyate /
+(<hi rend="bold">EĀ.Trip 29.82</hi>) dvau dharmau śaikṣa<hi rend="it">sya aparihāṇāya saṃvartate /
+  labhena nān</hi>unīyate alābhena na pratihanyate /
+yathā lābha alābha evaṃ yaśa ayaśo nindā praśaṃsā sukhaṃ duḥkhaṃ //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 29.91</hi>) dvau dharmau śaikṣasya <hi rend="it">rāgaparihāṇāya saṃvartate /
+  śamathaś ca vipaśyanā ca /</hi>
+(<hi rend="bold">EĀ.Trip 29.92</hi>) <hi rend="it">dvau</hi> dharmau śaikṣasya lobhaparihāṇāya saṃvartate /
+  śamathaś ca vipaśyanā ca /
+yathā lobha evaṃ dveṣo mohaḥ pūrvavad yathā likhitaṃ /
+(<hi rend="bold">EĀ.Trip 29.101</hi>) <hi rend="it">dvau dharmau śaikṣasya prajñāpratilaṃbhāya saṃvartate /
+  śa</hi>mathaś ca vipaśyanā ca /
+(<hi rend="bold">EĀ.Trip 29.102</hi>) yathā prajñāpratilaṃbhāya evaṃ pūrvavad yathoktaḥ prajñāmārgaḥ // //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 30.0</hi>) uddānaṃ //</p>
+
+<p>  ahitaṃ mūlam anarthāya ///</p>
+
+<p>  <hi rend="it">i</hi>ndr<hi rend="it">i</hi>yabalabodhyaṅgā daśa aṅgikaiś ca kārayet //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 30.11</hi>) dvau dharm<hi rend="it">au</hi> loka utpadyete bahujanāhitāya bahujanaduḥkhāya anarthāyāhitāya duḥkh<hi rend="it">āya devamanuṣyāṇāṃ yaduta adharmacaryā viṣamacaryā ca /</hi> adharmacaryā viṣamacaryā ca loka utpadyete bahujanāhitāya bahujanaduḥkhāya anarthāyāhitāya duḥkhāya devamanuṣyāṇāṃ /
+(<hi rend="bold">EĀ.Trip 30.12</hi>) dvau dharmau loka utpa<hi rend="it">dyete bahujanahitāya bahujanasukhā</hi>ya arthāya hitāya sukhāya devamanuṣyāṇāṃ yaduta dharmacaryā samacaryā ca / dharmacaryā samacaryā ca loka utpadyete bahujanahitā<hi rend="it">ya bahujanasukhāya arthāya hi</hi>tāya sukhāya devamanuṣyāṇāṃ //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 30.21</hi>) ye kecid anekavidhāḥ pāpakā akuśalā dharmāḥ saṃbhavanti sarve te adharmacaryāviṣamacaryā<hi rend="it">mūlakā adharmacaryāviṣamacaryāsamuda</hi>yā adharmacaryāviṣamacaryājātīyā adharmacaryāviṣamacaryāprabhavā<hi rend="it">ḥ</hi> / adharmacaryāviṣamacaryāmūlakā hi ye kecid anekavidhāḥ <hi rend="it">pāpakā akuśalā dharmāḥ saṃbhavanti /</hi>
+(<hi rend="bold">EĀ.Trip 30.22</hi>) y<hi rend="it">e</hi> kecid anekavidhāḥ kuśalā dharmāḥ saṃbhavanti sarve te dharmacaryāsamacaryāmūlakādharmacaryāsamacaryāsamudayādharmacaryāsamacaryājātīy<hi rend="it">ādharmacaryāsamacaryāprabhavāḥ / dharmacaryāsamacaryā</hi>mūlakā hi bhikṣavo ye kecid anekavidhāḥ kuśalā dharmāḥ saṃbhavanti //
+(<hi rend="bold">EĀ.Trip 30.301</hi>) dvau dharmāv anarthāya saṃvartete adharmacaryā viṣamacaryā ca / dvau <hi rend="it">dharmāv arthāya saṃvartete dharmacaryā samacaryā ca //
+yathā anarthāya arthāya evam ahitāya hitāya duḥkhāya sukhāya vyasanāya saṃpade vipattaye saṃpattaye asamṛddhaye samṛddhaye <hi rend="it">apāripūraye pāripūraye pārihāṇāya a</hi>pārihāṇāya ||Hs. parihāṇāya|| dṛṣṭadhārmikasyārthasyānarthāya dṛṣṭadhārmikasyārthasyārthāya sāmparāyikasyārthasyānarthāya sāmparāyikasyārthasyārthā<hi rend="it">ya ///</hi>
+(<hi rend="bold">EĀ.Trip 30.41</hi>) <hi rend="it">dvābhyāṃ dharmābhyām anutpannāḥ </hi>pāpakā akuśalā dharmāḥ utpadyante yaduta adharmacaryayā viṣamacaryayā ca / adharmacaryayā viṣamacaryayā ca <hi rend="it">anutpannāḥ pāpakā akuśalā dharmāḥ utpadyante /</hi>
+(<hi rend="bold">EĀ.Trip 30.42</hi>) <hi rend="it">dv</hi>ābhyāṃ dharmābhyām anutpannāḥ pāpakā akuśalā dharmā notpadyante yaduta dharmacaryayā samacaryayā ca / dharmacaryayā sama<hi rend="it">caryayā ca anutpannāḥ pāpakā akuśalā dharmā notpadyante /</hi>
+(<hi rend="bold">EĀ.Trip 30.43</hi>) dvābhyāṃ dharmābhyām anutpannāḥ kuśalā dharmāḥ notpadyante yaduta adharmacaryayā viṣamacaryayā ca / adharmacaryayā <hi rend="it">viṣamacaryayā ca anutpannāḥ kuśalā dharmāḥ notpadyante /</hi>
+(<hi rend="bold">EĀ.Trip 30.44</hi>) <hi rend="it">dvābhyāṃ dhar</hi>mābhyām anutpannāḥ kuśalā dharmāḥ utpadyante yaduta dharmacaryayā samacaryayā ca / dharmacaryayā samacaryayā ca a<hi rend="it">nutpannāḥ kuśalā dharmāḥ utpadyante /</hi>
+(<hi rend="bold">EĀ.Trip 30.45</hi>) <hi rend="it">dvābhyāṃ dharmābhyām anutpannā</hi>ḥ pāpakā akuśalā dharmā utpadyante utpannāś ca bhūyobhāvavṛddhivipulatāṃ gacchanti yaduta adharmacaryayā viṣama<hi rend="it">caryayā ca / adharmacaryayā viṣamacaryayā ca anutpannāḥ pā</hi>pakā akuśalā dharmā utpadyante utpannāś ca bhūyobhāvavṛddhivipulatāṃ gacchanti
+(<hi rend="bold">EĀ.Trip 30.46</hi>) dvābhyāṃ dharmābhyām anutpannāḥ pāpakā <hi rend="it">akuśalā dharmāḥ notpadyante utpannāś ca prahīyante ya</hi>duta dharmacaryayā samacaryayā ca / dharmacaryayā samacaryayā ca anutpannāḥ pāpakā akuśalā dharmāḥ notpadyante utpa<hi rend="it">nnāś ca prahīyante /</hi>
+(<hi rend="bold">EĀ.Trip 30.47</hi>) <hi rend="it">dvābhyāṃ dharmābhyām anutpannā</hi>ḥ kuśalā dharmā notpadyante utpannāś ca prahīyante yaduta adharmacaryayā viṣamacaryayā ca / adharmacaryayā viṣamacaryayā ca <hi rend="it">anutpannāḥ kuśalā dharmā notpadyante utpannāś</hi> c<hi rend="it">a</hi> prahīyante /
+(<hi rend="bold">EĀ.Trip 30.48</hi>) dvābhyāṃ dharmābhyām anutpannāḥ kuśalā dharmā utpadyante utpannāś ca bhūyobhāvavṛddhivipulatāṃ gacchanti yaduta dharma<hi rend="it">caryayā samacaryayā ca / dharmacaryayā samacaryayā ca anutpannāḥ kuśalā dharmā utpadyante utpannāś ca bhūyobhāvavṛddhivipulatāṃ gacchanti // //</hi></hi></p>
+
+<p>+ + + gap</p>
+
+<p>(<hi rend="bold">EĀ.Trip 32.201</hi>) <hi rend="it">dvau dharmau saṃrāgāya saṃvartete adharmacaryā viṣamacaryā ca / adharmacaryā viṣamacaryā ca saṃrāgāya saṃvartete /</hi> dv<hi rend="it">au</hi> dharmāv asaṃrāgāya saṃvartete dharmacaryā samacaryā ca / dharmacaryā samacaryā ca asaṃrāgāya saṃvartete / <hi rend="it">idam avocat //</hi>
+yathā saṃrāgāya asaṃ<hi rend="it">rāgāya saṃvartete evaṃ sadveṣāya asadveṣāya saṃmohāya asaṃ</hi>mohāya saṃyogāya visaṃyogāya saṃkleśāya vyavadānāya ācayāya apacayāya upādānāya anupādānāya ucche<hi rend="it">dāya anucchedāya saṃśreṇanāya viśreṇanāya saṃdhūpanāya vidhūpanāya</hi> bāhulyāya saṃlekhāya saṃsargāya asaṃsargāya prapañcāya niṣprapañcāya ālayāya anālayāya avyupaśamāya <hi rend="it">vyupaśamāya saṃvartete / idam avocat //</hi>
+(<hi rend="bold">EĀ.Trip 32.301</hi>) <hi rend="it">dvau dharmau virā</hi>gaṇāya saṃvartete ete eva adharmacaryā viṣamacaryā ca / <hi rend="it">adharmacaryā viṣamacaryā ca virāgaṇāya saṃvartete /</hi> dvau dharmāv ārāgaṇāya saṃvartete dharmacaryā samacaryā ca / <hi rend="it">dharmacaryā ca samacaryā ca ārāgaṇāya saṃvartete / idam avocat //</hi>
+yathā virāgaṇāyārāgaṇāya evaṃ saṃtoṣāya asaṃtoṣāya andhakaraṇāya anandhakaraṇāya acakṣuṣkaraṇāya <hi rend="it">cakṣuṣkaraṇāya ajñānakaraṇāya jñānakaraṇāya</hi> prajñādaurbalyāya prajñāvṛddhaye vighātapakṣāya avighātapakṣāya nābhijñāya abhijñāya na saṃbodhaye saṃbodhaye + + + / idam avocat //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 32.401</hi>) <hi rend="it">dvau dharmau duścaritā</hi>y<hi rend="it">a</hi> s<hi rend="it">aṃ</hi>v<hi rend="it">a</hi>rtete adharmacaryā viṣamacaryā ca / adharmacaryā viṣamacaryā ca duścaritāya saṃvartete / dvau dharmau sucaritāya <hi rend="it">saṃvartete dharmacaryā samacaryā ca / dharmacaryā samacaryā ca su</hi>caritāya saṃvartete / idam avocat //</p>
+
+<p>yathā duścaritāya sucaritāya evam akuśalāya kuśalāya sāvadyāya <hi rend="it">niravadyāya</hi> + + ... + + ya sopavādāya anupavādāya sopaghātāya anupaghātāya sānutāpyāya anutāpyāya sānubhāṣikāya ananubhāṣikā<hi rend="it">ya</hi> + + ... + + <hi rend="it">pratilomi</hi>kāya anulomikāya ananucchavikāya anucchavikāya anaupayikāya aupayikāya apratirūpāya pratirūpā<hi rend="it">ya</hi> + + ... + + <hi rend="it">idanm avo</hi>cat //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 32.501</hi>) dvau dharmau hīnāya saṃvartete adharmacaryā viṣamacaryā ca / adharmacaryā viṣamacaryā ca hīnāya saṃvartete / dvau <hi rend="it">dharmau praṇītāya saṃvartete dharmacaryā sama</hi>caryā ca / dharmacaryā samacaryā ca praṇītāya saṃvartete / idam avocat //</p>
+
+<p>yathā hīnāya praṇītāya evaṃ kṛṣṇāya śuklāya + + ... + + ya ūrdhvaṃbhāgagamanīyāya mithyādṛṣṭaye samyagdṛṣṭaye mithyāpratipattaye samyakpraipattaye mithyāpraṇidhānāya samyakpraṇi<hi rend="it">dhānāya</hi> + + ... + + <hi rend="it">vipade saṃ</hi>pade duṣprajñāya prajñāsaṃpade muṣitasmṛtitāyai upasthitasmṛtitāyai asamādhisaṃvartanyai samādhisaṃvartanyai ajñānāya <hi rend="it">jñānāy</hi> + + ... + + <hi rend="it">anabhisamayāya a</hi>bhisamayāya anālokāya ālokāya avipaśyanāya vipaśyanāya // //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 32.601</hi>) dvau dharmāv asatpuruṣasaṃsevāyai saṃvartete <hi rend="it">adharmacaryā viṣamacaryā ca / adharmacaryā viṣa</hi>macaryā ca asatpuruṣasaṃsevāyai saṃvartete / dvau dharmau satpuruṣasaṃsevāyai saṃvartete dharmacaryā samacaryā ca / dharmaca<hi rend="it">ryā samacaryā ca satpuruṣasaṃsevāyai saṃvartete / i</hi>dam avocat //</p>
+
+<p>yathā asatpuruṣasaṃsevāyai satpuruṣasaṃsevāyai evam asaddharmaśravaṇāya saddharmaśravaṇāya / + + ... + + <hi rend="it">pā</hi>pamitratāyai kalyāṇamitratāyai pāpasahāyatāyai kalyāṇasahāyatāyai pāpasaṃparkatāyai kalyāṇsaṃ<hi rend="it">parkatāyai </hi>+ + ... + +<hi rend="it">a</hi>napatrāpitāyai apatrāpitāyai pramādāya apramādāya vivādāya avivādāya saṃghabhedāya saṃghasāmagryai // //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 32.701</hi>) dvau <hi rend="it">dharmau buddhe agauravāya saṃvartete adharmacaryā viṣamacaryā ca /</hi> adharmacaryā viṣamacaryā ca buddhe agauravāya saṃvartete / dvau dharmau buddhe gauravāya saṃvartete dharmacaryā samacaryā ca / dharmacaryā <hi rend="it">samacaryā ca buddhe gauravāya saṃvartete / idam avocat //</hi></p>
+
+<p><hi rend="it">ya</hi>thā agauravāya gauravāya evam apratiśatāyai supratiśatāyai / yathā buddhe evaṃ dharme saṃghe śi<hi rend="it">kṣāyāṃ anuśāsane apramāde pratisaṃ</hi>stare samādhau // //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 32.801</hi>) dvau dharmau na mātṛjñatāyai saṃvartete adharmacaryā viṣamacaryā ca / adharmacaryā viṣamacaryā ca mātṛjña<hi rend="it">tāyai saṃvartete / dvau dharmau mātṛjñatāyai saṃvartete dha</hi>rmacaryā samacaryā ca / dharmacaryā samacaryā ca mātṛjñatāyai saṃvartete / idam avocat //</p>
+
+<p>yathā na mātṛjñatāyai mātṛjñā<hi rend="it">tāyai evam na pitṛjñatāyai pitṛjñatāyai na śrāma</hi>ṇyāya śrāmaṇyāya na brāhmaṇyāya brāhmaṇyāya na kule jyeṣṭhapacāyitāyai kule jyeṣṭhapacāyitāyai mahecchatāyai alpecchatāyai + + ... + + tāyai durbharatāyai subharatāyai lābhī bhavati mahecchatāyai lābhī bhavati alpecchatāyai asaṃtuṣṭo viharati cīvarapiṇḍapāta<hi rend="it">śayanāsanaglānapratyayabhaiṣajyapariṣkāraiḥ / saṃtuṣṭo</hi> viharati cīvarapiṇḍapātaśayanāsanaglānapratyayabhaiṣajyapariṣkāraiḥ / // //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 32.9</hi>) antaroddānaṃ //</p>
+
+<p>  dve caturdaśike jñeye daśa paṃcadaśaiva ca /
+  saptādaśa ///</p>
+
+<p>(<hi rend="bold">EĀ.Trip 33.0</hi>) uddāna nicht erhalten
+(<hi rend="bold">EĀ.Trip 33.101</hi>) <hi rend="it">dve dāne ā</hi>m<hi rend="it">i</hi>ṣadānaṃ dharmadānaṃ ca dvau yogau dvau tyāgau dvau saṃgrahau dvāv anugrahau dvau saṃstarau dvau pratisaṃstarau dvau bhogau dvau saṃbhogau dvau bhāgau <hi rend="it">dvau saṃvibhāgau dvau nicayau</hi> dv<hi rend="it">au</hi> saṃnicayau dvau nidhī dvau saṃnidhī dve bale dvau pugau dvau rāśī dvau puṃjau dvau kośau dvau koṣṭhāgārau dvāv abhiṣekau dvāv abhiṣyandau dve saṃpade dve saṃ<hi rend="it">pattī</hi> /// <hi rend="it">dve bhaktī / āmiṣabhaktir dharma</hi>bh<hi rend="it">a</hi>ktiś ca //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 33.2</hi>) eṣa eva vargaḥ sagīyakaḥ /
+(<hi rend="bold">EĀ.Trip 33.21</hi>) annaṃ pānaṃ khādyaṃ bhojyaṃ vastraṃ śayyāsanāni ca /
+<lg>
+<l>  evaṃrūpāṇi dānāni ye prayacchanti + + + /</l>
+<l>  + + + + + + + + + + + + + + + śim* //</l>
+</lg></p>
+
+<lg>
+<l>  yad dharmadānam adadat tathāgato</l>
+<l>  hy anuttaraḥ sarvabhūtānukaṃpī /</l>
+<l>  taṃ tāyinaṃ devamanuṣyaśāsakaṃ</l>
+<l>  santo namasyanti bhavasya pāragaṃ // //</l>
+</lg>
+<p>(<hi rend="bold">EĀ.Trip 33.31</hi>) <hi rend="it">dve dāne āmiṣadānaṃ dharmadānaṃ ca /
+  etad</hi> + + + daṃ dānānāṃ yadutāmiṣadānam /
+  etad agraṃ dānānāṃ yaduta dharmadānaṃ //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 33.32</hi>) yathā dve dāne evaṃ yāvad dve bhaktī amiṣabhakti<hi rend="it">r</hi> dharmabhaktiś ca //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 33.4</hi>) /// vibhajya sagīyakaṃ // //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 34.</hi>) piṇḍoddānaṃ /
+  atyayaḥ kāyakaukṛtyaṃ saṃghasya ca vyavahārakaḥ /
+  tathāgatasya vinayaḥ e<hi rend="it">ṣa vargaḥ samudditaḥ //</hi>
+(<hi rend="bold">EĀ.Trip 35.0</hi>) <hi rend="it">uddānaṃ</hi>
+  atyayena trayaṃ kuryād /
+  gāḍhā gurukā sāvaśeṣā ca praticchannā ca uttānā āviṣkṛtā deśitā pratikṛtā ca
+  saṃvarakaraṇīyena kṛtvā vargo bhavati sa<hi rend="it">mudditaḥ //</hi>
+(<hi rend="bold">EĀ.Trip 35.11</hi>) <hi rend="it">dvau balau /
+  yaś cātyayam atyayato na jānā</hi>ti
+  yaś cātyayam atyayato jñātvā na yathādharmaṃ pratikaroti //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 35.12</hi>) dvau paṇḍitau /
+  yaś cātyayam atyayato jānāti
+  yaś cātyayam atyaya<hi rend="it">to jñātvā yathādharmaṃ pratikaroti //</hi>
+(<hi rend="bold">EĀ.Trip 35.13</hi>) <hi rend="it">dvau saṃkli</hi>śyete dvayor āśravā vardhante /
+  dvau na saṃkliśyete dvayor āśravā na vardhante //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 35.2</hi>) dve āpattī gāḍhā agāḍhā ca / gurvī laghvī ca / sāvaśeṣā niravaśe<hi rend="it">ṣā ca / praticchannā apraticchannā ca / uttānā gaṃbhīrā ca / āvi</hi>ṣkṛtā anāviṣkṛtā / desitā adeśitā ca / pratikṛtā apratikṛtā ca / saṃvarakaraṇīyā deśanākaraṇīyā ca //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 36.0</hi>) uddāna<hi rend="it">ṃ</hi>
+  kāyi<hi rend="it">kī</hi> + + + + + + + + + + + +
+  + + + + + <hi rend="it">vyut</hi>th<hi rend="it">ā</hi>naṃ //</p>
+
+<lg>
+<l>  kauśalyena dvayaṃ kuryāt pariśuddhyāpi ca dvayaṃ /</l>
+<l>  alajjinā dvayaṃ kṛtvā vargo bhavati samudditaḥ //</l>
+</lg>
+
+<p>(<hi rend="bold">EĀ.Trip 36.11</hi>) dve āpattī kāyikī vācikī <hi rend="it">ca /</hi> /// ca / vinayātisāriṇī durbhāṣitagāminī ca //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 36.2</hi>) dvāv āpattivyatikramau /
+  saṃcintyavyatikramaś cāsaṃcintyavyatikramaś ca //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 36.3</hi>) dve āpattivyu<hi rend="it">tthāne /</hi> ///</p>
+
+<p>(<hi rend="bold">EĀ.Trip 36.41</hi>) <hi rend="it">dve kauśa</hi>lye / āpattikauśalyam āpattivyutthānakauśalyaṃ ca //</p>
+
+<p>(<hi rend="bold">EĀ.Trip 36.42</hi>) dve kauśalye / anāpannasya ca anāpattikauśalyam āpannasya ca āpattivyutthānakauśalyaṃ ca // //</p>
+
+  </body>
+</text>
+</TEI>

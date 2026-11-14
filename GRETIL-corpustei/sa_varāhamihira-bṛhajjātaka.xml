@@ -1,0 +1,2850 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_varAhamihira-bRhajjAtaka">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Bṛhajjātaka</title>
+	<author>Varāhamihira</author>
+	<respStmt>
+	 <resp when-custom="December 12, 1994">data entry</resp>
+	 <name>Mizue Sugita</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Mizue Sugita</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/8_jyot/brhajj_u.htm">brhajj_u.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Varahamihira: Brhajjataka
+<lb/>
+<lb/>Input by Mizue Sugita
+<lb/>December 12, 1994
+<lb/>based on the edition of
+<lb/>Oriental Books Reprint Corporation,
+<lb/>Second Edition, 1979
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>of Oriental Books Reprint Corporation, Second Edition, 1979 </bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Bṛhajjātaka = BJ,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Śāstra -- Jyotiḥśāstra</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn" xml:id="BJ">
+  <front>
+<head>Table of the Contents</head>
+<p><list>
+<item>01.rāśi.prabheda 20</item>
+<item>02.graha.bheda 21</item>
+<item>03.viyoni.janma 8</item>
+<item>04.niṣeka 22</item>
+<item>05.janma.vidhi 26</item>
+<item>06.ariṣṭa 12</item>
+<item>07.āyur.dāya 14</item>
+<item>08.daśā.antardaśā 23</item>
+<item>09.aṣṭaka.varga 8</item>
+<item>10.karma.ājīva 4</item>
+<item>11.rāja.yoga 20</item>
+<item>12.nābhasa.yoga 19</item>
+<item>13.candra.yoga 9</item>
+<item>14.dvi.graha.yoga 5</item>
+<item>15.pravrajyā.yoga 4</item>
+<item>16.nakṣatra.phala 14</item>
+<item>17.candra.rāśi.śīla 13</item>
+<item>18.rāśi.śīla 20</item>
+<item>19.duṣṭi.phala 9</item>
+<item>20.bhāva 11</item>
+<item>21.āśraya.yoga 10</item>
+<item>22.prakīrṇaka 6</item>
+<item>23.aniṣṭa 17</item>
+<item>24.strī.jātaka 16</item>
+<item>25.nairyāṇika 15</item>
+<item>26.naṣṭa.jātaka 17</item>
+<item>27.dreṣkāṇa.sva.rūpa 36</item>
+<item>28.upasaṃhāra 10</item>
+</list></p>
+  </front>
+<body>
+<p xml:id="BJ_01">.rāśi.prabheda</p>
+
+<lg xml:id="BJ_01.01">
+<l xml:id="BJ_01.01a">mūrtitve.parikalpitaḥ.śaśa.bhṛto.vartmā.apunar.janmanām.ātmā.ity.ātma.vidāṃ.kratuś.ca.yajatāṃ.bhartā.amara.jyotiṣām/</l>
+
+<l xml:id="BJ_01.01b">lokānāṃ.pralaya.udbhava.sthiti.vibhuś.ca.anekadhā.yaḥ.śrutau.vācaṃ.naḥ.sa.dadātv.aneka.kiraṇas.trailokya.dīpo.raviḥ//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_01.02">
+<l xml:id="BJ_01.02a">bhūyobhiḥ.paṭu.buddhibhiḥ.paṭu.dhiyāṃ.horā.phala.jñaptaye.śabda.nyāya.samanviteṣu.bahuśaḥ.śāstreṣu.dṛṣṭeṣv.api/</l>
+
+<l xml:id="BJ_01.02b">horā.tantra.mahā.arṇava.prataraṇe.bhagna.udyamānām.ahaṃ.svalpaṃ.vṛtta.vicitram.artha.bahulaṃ.śāstra.plavaṃ.prārabhe//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_01.03">
+<l xml:id="BJ_01.03a">horā.ity.aho.rātra.vikalpam.eke.vāñchanti.pūrva.apara.varṇa.lopāt/</l>
+
+<l xml:id="BJ_01.03b">karma.ājitaṃ.pūrva.bhave.sad.ādi.yat.tasya.paṅktiṃ.samabhivyanakti//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_01.04">
+<l xml:id="BJ_01.04a">kāla.aṅgāni.vara.aṅgam.ānanam.uro.hṛt.kroḍa.vāso.bhṛto.bastir.vyañjanam.ūru.jānu.yugule.jaṅghe.tato.aṅghri.dvayam/</l>
+
+<l xml:id="BJ_01.04b">meṣa.aśvi.prathamā.nava.ṛkṣa.caraṇāś.cakra.sthitā.rāśayo.rāśi.kṣetra.gṛha.ṛkṣa.bhāni.bhavanaṃ.ca.eka.artha.sampratyayāḥ//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_01.05">
+<l xml:id="BJ_01.05a">matsyau.ghaṭī.nṛ.mithunaṃ.sa.gadaṃ.sa.vīṇaṃ.cāpī.naro.aśva.jaghano.makaro.mṛga.āsyaḥ/</l>
+
+<l xml:id="BJ_01.05b">taulī.sa.sasya.dahanā.plavagā.ca.kanyā.śeṣāḥ.sva.nāma.sadṛśāḥ.sva.carāś.ca.sarve//(vasantatilakā)</l>
+</lg>
+
+<lg xml:id="BJ_01.06">
+<l xml:id="BJ_01.06a">kṣitija.sita.jña.candra.ravi.saumya.sita.avanijāḥ/sura.guru.manda.sauri.guravaś.ca.gṛha.aṃśakapaḥ/</l>
+
+<l xml:id="BJ_01.06b">aja.mṛga.tauli.candra.bhavana.ādi.nava.aṃśa.vidhir.bhavana.sama.aṃśaka.adhipatayaḥ.sva.gṛhāt.kramaśaḥ//(troṭaka)</l>
+</lg>
+
+<lg xml:id="BJ_01.07">
+<l xml:id="BJ_01.07a">kuja.ravija.guru.jña.śukra.bhāgāḥ.pavana.samīraṇa.kaurpi.jūka.leyāḥ/</l>
+
+<l xml:id="BJ_01.07b">ayuji.yuji.tu.bhe.viparyayasthaḥ.śasi.bhavana.ali.jhaṣa.antam.ṛkṣa.saṃdhiḥ//(puṣpitāgrā)</l>
+</lg>
+
+<lg xml:id="BJ_01.08">
+<l xml:id="BJ_01.08a">kriya.tāvuri.jituma.kulīra.leya.pāthona.jūka.kaurpyā.ākhyāḥ/</l>
+
+<l xml:id="BJ_01.08b">taukṣika.ākokero.hṛd.rogaś.ca.antya.bhaṃ.ca.ittham//(āryā)</l>
+</lg>
+
+<lg xml:id="BJ_01.09">
+<l xml:id="BJ_01.09a">dreṣkāṇa.horā.nava.bhāga.saṃjñās.triṃśa.aṃśaka.dvādaśa.saṃjñitāś.ca/</l>
+
+<l xml:id="BJ_01.09b">kṣetraṃ.ca.yady.asya.sa.tasya.vargo.horā.iti.lagnaṃ.bhavanasya.ca.ardham//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_01.10">
+<l xml:id="BJ_01.10a">go.aja.aśvi.karki.mithunāḥ.sa.mṛgā.niśā.ākhyāḥ.pṛṣṭha.udayā.vimithunāḥ.kathitās.ta.eva//</l>
+
+<l xml:id="BJ_01.10b">śīrṣa.udayā.dina.balāś.ca.bhavanti.śeṣā.lagnaṃ.samety.ubhayataḥ.pṛthu.roma.yugmam//(vasantatilakā)</l>
+</lg>
+
+<lg xml:id="BJ_01.11">
+<l xml:id="BJ_01.11a">krūraḥ.saumyaḥ.puruṣa.vanite.te.cara.aga.dvi.dehāḥ.prāg.ādi.īśāḥ.kriya.vṛṣa.nṛyuk.karkaṭāḥ.sa.tri.koṇāḥ/</l>
+
+<l xml:id="BJ_01.11b">mārtaṇḍa.indvor.ayuji.sama.bhe.candra.bhānvoś.ca.hore.dreṣkāṇāḥ.syuḥ.sva.bhavana.suta.tri.tri.koṇa.adhipānām//(mandākrāntā)</l>
+</lg>
+
+<lg xml:id="BJ_01.12">
+<l xml:id="BJ_01.12a">ke.cit.tu.horāṃ.prathamāṃ.bhapasya.vāñchanti.lābha.adhipater.dvitīyām/</l>
+
+<l xml:id="BJ_01.12b">dreṣkāṇa.saṃjñām.api.varṇayanti.sva.dvādaśa.ekādaśa.rāśipānām//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_01.13">
+<l xml:id="BJ_01.13a">aja.vṛṣabha.mṛga.aṅganā.kulīrā.jhaṣa.vaṇijā.ca.divākara.ādi.tuṅgāḥ/</l>
+
+<l xml:id="BJ_01.13b">daśa.śikhi.manu.yuk.tithi.indriya.aṃśais.tri.navaka.viṃśatibhiś.ca.te.asta.nīcāḥ//(puṣpitāgrā)</l>
+</lg>
+
+<lg xml:id="BJ_01.14">
+<l xml:id="BJ_01.14a">varga.uttamāś.cara.gṛha.ādiṣu.pūrva.madhya.paryantataḥ.śubha.phalā.nava.bhāga.saṃjñāḥ/</l>
+
+<l xml:id="BJ_01.14b">siṃho.vṛṣa.prathama.ṣaṣṭha.haya.aṅga.tauli.kumbhās.tri.koṇa.bhavanāni.bhavanti.sūryāt//(vasantatilakā)</l>
+</lg>
+
+<lg xml:id="BJ_01.15">
+<l xml:id="BJ_01.15a">horā.ādayas.tanu.kuṭumba.sahottha.bandhu.putra.ari.patnī.maraṇāni.śubha.āspada.āyāḥ/</l>
+
+<l xml:id="BJ_01.15b">riḥphā.ākhyam.ity.upacayāny.ari.karma.lābha.duścikya.saṃjñita.gṛhāṇi.na.nityam.eke//(vasantatilakā)</l>
+</lg>
+
+<lg xml:id="BJ_01.16">
+<l xml:id="BJ_01.16a">kalpa.sva.vikrama.gṛha.pratibhā.kṣatāni.cittottha.randhra.guru.māna.bhava.vyayāni/</l>
+
+<l xml:id="BJ_01.16b">lagnāc.caturtha.nidhane.caturasra.saṃjñe.dyūnaṃ.ca.saptama.gṛhaṃ.daśama.ṛkṣam.ājñā//(vasantatilakā)</l>
+</lg>
+
+<lg xml:id="BJ_01.17">
+<l xml:id="BJ_01.17a">kaṇṭaka.kendra.catuṣṭaya.saṃjñāḥ.saptama.lagna.caturtha.kha.bhānām/</l>
+
+<l xml:id="BJ_01.17b">teṣu.yathā.abhihiteṣu.bala.āḍhyāḥ.kīṭa.nara.aṃbu.carāḥ.paśavaś.ca//(dodhaka)</l>
+</lg>
+
+<lg xml:id="BJ_01.18">
+<l xml:id="BJ_01.18a">kendrāt.paraṃ.paṇapharaṃ.paratas.tu.sarva.bha.āpoklimaṃ.hibukam.ambu.sukhaṃ.ca.veśma/</l>
+
+<l xml:id="BJ_01.18b">jāmitram.asta.bhavanaṃ.tri.koṇaṃ.meṣūraṇaṃ.daśamam.atra.ca.karma.vidyāt//(vasantatilakā)</l>
+</lg>
+
+<lg xml:id="BJ_01.19">
+<l xml:id="BJ_01.19a">horā.svāmi.guru.jña.vīkṣita.yutā.na.anyaiś.ca.vīrya.utkaṭā.kendrasthā.dvi.pada.ādayo.ahni.niśi.ca.prāpte.ca.saṃdhyā.dvaye/</l>
+
+<l xml:id="BJ_01.19b">pūrva.ardhe.viṣaya.ādayaḥ.kṛta.guṇā.mānaṃ.pratīpaṃ.ca.tad.duścikyaṃ.sahajaṃ.tapaś.ca.navamaṃ.try.ādyāṃ.tri.koṇaṃ.ca.tat//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_01.20">
+<l xml:id="BJ_01.20a">raktaḥ.śvetaḥ.śuka.tanu.nibhaḥ.pāṭalo.dhūmra.pāṃḍuś.citraḥ.kṛṣṇaḥ.kanaka.sadṛśaḥ.piṅgalaḥ.karburaś.ca/</l>
+
+<l xml:id="BJ_01.20b">babhruḥ.svacchaḥ.prathama.bhavana.ādyeṣu.varṇāḥ.plavatvaṃ.svāmy.āśā.ākhyaṃ.dina.kara.yutād.bhād.dvitīyaṃ.ca.veśiḥ//(maṃ.krāṃ)E1</l>
+</lg>
+
+<p xml:id="BJ_02">graha.bheda</p>
+
+<lg xml:id="BJ_02.01">
+<l xml:id="BJ_02.01a">kāla.ātmā.dina.kṛn.manas.tuhinaguḥ.satvaṃ.kujo.jño.vaco.jīvo.jñāna.sukhe.sitaś.ca.madano.duḥkhaṃ.dina.īśa.ātmajaḥ/</l>
+
+<l xml:id="BJ_02.01b">rājānau.ravi.śītagū.kṣita.suto.netā.kumāro.budhaḥ.sūrir.dānava.pūjitaś.ca.sacivau.preṣyaḥ.sahasra.aṃśujaḥ//(śa.vi)</l>
+</lg>
+
+<lg xml:id="BJ_02.02">
+<l xml:id="BJ_02.02a">heliḥ.sūryaś.candramāḥ.śīta.raśmir.hemno.vij.jño.bodhanaś.ca.indu.putraḥ/</l>
+
+<l xml:id="BJ_02.02b">āro.vakraḥ.krūra.dṛk.ca.avaneyaḥ.koṇo.mandaḥ.sūrya.putro.asitaś.ca//(śālinī)</l>
+</lg>
+
+<lg xml:id="BJ_02.03">
+<l xml:id="BJ_02.03a">jīvo.aṅgirāḥ.sura.gurur.vacasāṃ.patījyaḥ.śukro.bhṛgur.bhṛgu.sutaḥ.sita.āsphujic.ca/</l>
+
+<l xml:id="BJ_02.03b">rāhus.tamo.agur.asuraś.ca.śikhī.iti.ketuḥ.paryāyam.anyam.upalabhya.vadec.ca.lokāt//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_02.04">
+<l xml:id="BJ_02.04a">rakta.śyāmo.bhās.karo.gaura.indur.na.atyucca.aṅgo.rakta.gauraś.ca.vakraḥ/</l>
+
+<l xml:id="BJ_02.04b">dūrvā.śyāmo.jño.gurur.gaura.gātraḥ.śyāmaḥ.śukro.bhās.kariḥ.kṛṣṇa.dehaḥ//(śalinī)</l>
+</lg>
+
+<lg xml:id="BJ_02.05">
+<l xml:id="BJ_02.05a">varṇās.tāmra.sita.atirakta.harita.vyāpīta.citra.asitā/bahūny.ambv.agnija.keśava.indra.śacikāḥ.sūrya.ādi.nāthāḥ.kramāt/</l>
+
+<l xml:id="BJ_02.05b">prāg.ādyā.ravi.śukra.lohita.tamaḥ.saura.indu.vit.sūrayaḥ.kṣīṇa.indv.arka.mahī.suta.arka.tanayāḥ.pāpā.budhas.tair.yutaḥ//(śā.vi.)</l>
+</lg>
+
+<lg xml:id="BJ_02.06">
+<l xml:id="BJ_02.06a">budha.sūrya.sutau.napuṃsaka.ākhau.śaśi.śukrau.yuvatī.narāś.ca.śeṣāḥ/</l>
+
+<l xml:id="BJ_02.06b">śikhi.bhū.kha.payo.marud.gaṇānāṃ.vaśino.bhūmi.suta.ādayaḥ.krameṇa//(troṭaka)</l>
+</lg>
+
+<lg xml:id="BJ_02.07">
+<l xml:id="BJ_02.07a">vipra.āditaḥ.śukra.gurū.kuja.arkau.śaśī.budhaś.ca.ity.asita.antyajānām/</l>
+
+<l xml:id="BJ_02.07b">candra.arka.jīvā.jña.sitau.kuja.arkī.yathā.kramaṃ.satva.rajas.tamāṃsi//(upajātikā)</l>
+</lg>
+
+<lg xml:id="BJ_02.08">
+<l xml:id="BJ_02.08a">madhu.piṅgala.dṛk.caturasra.tanuḥ.pitta.prakṛtiḥ.savitā.alpa.kacaḥ/</l>
+
+<l xml:id="BJ_02.08b">tanu.vṛtta.tanur.bahu.vāta.kaphaḥ.prājñaś.ca.śaśī.mṛdu.vāk.śubha.dṛk//(troṭaka)</l>
+</lg>
+
+<lg xml:id="BJ_02.09">
+<l xml:id="BJ_02.09a">krūra.dṛk.taruṇa.mūrtir.udāraḥ.paittikaḥ.sucapalaḥ.kṛśa.madhyaḥ/</l>
+
+<l xml:id="BJ_02.09b">śliṣṭa.vāk.satata.hāsya.rucir.jñaḥ.pitta.māruta.kapha.prakṛtiś.ca//(svāgatā)</l>
+</lg>
+
+<lg xml:id="BJ_02.10">
+<l xml:id="BJ_02.10a">bṛhat.tanuḥ.piṅgala.mūrdhaja.īkṣaṇo.bṛhaspatiḥ.śreṣṭha.matiḥ.kapha.ātmakaḥ/</l>
+
+<l xml:id="BJ_02.10b">bhṛguḥ.sukhī.kānta.vapuḥ.sulocanaḥ.kapha.anila.ātma.asita.vakra.mūrdhajaḥ//(vaśastha)</l>
+</lg>
+
+<lg xml:id="BJ_02.11">
+<l xml:id="BJ_02.11a">mando.alasaḥ.kapila.dṛk.kṛśa.dīrgha.gātraḥ.sthūla.dvijaḥ.paruṣa.roma.kaco.anila.ātmā/</l>
+
+<l xml:id="BJ_02.11b">snāyv.asthy.asṛk.tvag.atha.śukra.vase.ca.majjā.manda.arka.candra.budha.śukra.surejya.bhaumāḥ//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_02.12">
+<l xml:id="BJ_02.12a">deva.ambv.agni.vihāra.kośa.śayana.kṣity.utkara.īśāḥ.kramāt/vastraṃ.sthūlam.abhuktam.agnika.hataṃ.madhyaṃ.dṛḍhaṃ.sphāṭitam/</l>
+
+<l xml:id="BJ_02.12b">tāmraṃ.syān.maṇi.hema.yukti.rajatāny.arkāc.ca.mukta.ayasī/.dreṣkāṇaiḥ.śiśira.ādayaḥ.śa.śu.ruca.jña.gv.ādiṣu.udyatsu.vā//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_02.13">
+<l xml:id="BJ_02.13a">tri.daśa.tri.koṇa.caturasra.saptamāny.avalokayanti.caraṇa.abhivṛddhitaḥ/</l>
+
+<l xml:id="BJ_02.13b">ravija.amarejya.rudhirāḥ.pare.ca.ye.kramaśo.bhavanti.kila.vīkṣaṇe.adhikāḥ//(pra.rṣi)</l>
+</lg>
+
+<lg xml:id="BJ_02.14">
+<l xml:id="BJ_02.14a">ayana.kṣaṇa.vāsara.ṛtavo.māso.ardhaṃ.ca.samāś.ca.bhās.karāt/</l>
+
+<l xml:id="BJ_02.14b">kaṭuka.lavaṇa.tikta.miśritā.madhura.āmlau.ca.kaṣāya.ity.api//(vaitāliya)</l>
+</lg>
+
+<lg xml:id="BJ_02.15">
+<l xml:id="BJ_02.15a">jīvo.jīva.budhau.sita.indu.tanayau.vyarkā.vibhaumāḥ.kramād.vīndv.arkā.vikuja.indv.ināś.ca.suhṛdaḥ.keṣāṃ.cid.evaṃ.matam/</l>
+
+<l xml:id="BJ_02.15b">satya.ukte.suhṛdas.tri.koṇa.bhavanāt.svāt.sva.antya.dhī.dharmapāḥ.sva.ucca.āyuḥ.sukhapāḥ.sva.lakṣaṇa.vidher.na.anyair.virodhād.iti//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_02.16">
+<l xml:id="BJ_02.16a">śatrū.manda.sitau.samaś.ca.śaśijo.mitrāṇi.śeṣā.raves.tīkṣṇa.aṃśur.hima.raśmijaś.ca.suhṛdau.śeṣāḥ.samāḥ.śītagoḥ/</l>
+
+<l xml:id="BJ_02.16b">jīva.indu.uṣṇa.karāḥ.kujasya.suhṛdo.jño.ariḥ.sita.arkī.samau.mitre.sūrya.sitau.budhasya.himaguḥ.śatruḥ.samāś.ca.apare//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_02.17">
+<l xml:id="BJ_02.17a">sūraḥ.saumya.sitāvarī.ravi.suto.madhyo.apare.tv.anyathā.saumya.arkī.suhṛdau.samau.kuja.gurū.śukrasya.śeṣāvarī/</l>
+
+<l xml:id="BJ_02.17b">śukrajau.suhṛdau.samaḥ.sura.guruḥ.saurasya.ca.anye.arayo.ye.proktāḥ.sva.tri.koṇa.bha.ādiṣu.punas.te.amī.mayā.kīrtitāḥ//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_02.18">
+<l xml:id="BJ_02.18a">anyonyasya.dhana.vyaya.āya.sahaja.vyāpāra.bandhu.sthitās.tat.kāle.suhṛdaḥ.sva.tuṅga.bhavane.apy.eke.arayas.tv.anyathā/</l>
+
+<l xml:id="BJ_02.18b">dvy.eka.anukta.bhapān.suhṛt.sama.ripūn.saṃcintya.naisargikāṃs.tat.kāle.ca.punas.tu.tān.adhisuhṛn.mitra.ādibhiḥ.kalpayet//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_02.19">
+<l xml:id="BJ_02.19a">sva.ucca.suhṛt.sva.tri.koṇa.nava.aṃśaiḥ.sthāna.balaṃ.sva.gṛha.upagataiś.ca/</l>
+
+<l xml:id="BJ_02.19b">dikṣu.budha.aṅgirasau.ravi.bhaumau.sūrya.sutaḥ.sita.śīta.karau.ca//(dodhaka)</l>
+</lg>
+
+<lg xml:id="BJ_02.20">
+<l xml:id="BJ_02.20a">udag.ayane.ravi.śīta.mayūkhau.vakra.samāgamagāḥ.pariśeṣāḥ/</l>
+
+<l xml:id="BJ_02.20b">vipula.karā.yudhi.ca.uttara.saṃsthāś.ceṣṭita.vīrya.yutā.parikalpyāḥ//(dodhaka)</l>
+</lg>
+
+<lg xml:id="BJ_02.21">
+<l xml:id="BJ_02.21a">niśi.śaśi.kuja.saurāḥ.sarvadā.jño.ahni.ca.anye/bahula.sita.gatāḥ.syuḥ.krūra.saumyāḥ.krameṇa//</l>
+
+<l xml:id="BJ_02.21b">dvy.ayana.divasa.horā.māsapaiḥ.kāla.vīryaṃ.śa.ru.bu.gu.śu.ca.sādyā.vṛddhito.vīryavantaḥ//E2</l>
+</lg>
+
+<p xml:id="BJ_03">viyoni.janma</p>
+
+<lg xml:id="BJ_03.01">
+<l xml:id="BJ_03.01a">krūra.grahaiḥ.subalibhir.vibalaiś.ca.saumyaiḥ.klībe.catuṣṭaya.gate.tad.avekṣaṇād.vā/</l>
+
+<l xml:id="BJ_03.01b">candra.upaga.dvi.rasa.bhāga.sa.māna.rūpaṃ.satvaṃ.vaded.yadi.bhavet.sa.viyoni.saṃjñaḥ//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_03.02">
+<l xml:id="BJ_03.02a">pāpā.balinaḥ.sva.bhāgagāḥ.pārakye.vibalāś.ca.śobhanāḥ/</l>
+
+<l xml:id="BJ_03.02b">lagnaṃ.ca.viyoni.saṃjñakaṃ.dṛṣṭvā.atra.api.viyonim.ādiśet//(vai.lī)</l>
+</lg>
+
+<lg xml:id="BJ_03.03">
+<l xml:id="BJ_03.03a">kriyaḥ.śiro.vakra.gale.vṛṣo.anye.pāda.aṃśakaṃ.pṛṣṭham.uro.atha.pārśve/</l>
+
+<l xml:id="BJ_03.03b">kukṣis.tv.apāna.aṅghryā.atha.meḍhra.muṣkau.sphik.puccham.ity.āha.catuṣpada.aṅge//(u.jā)</l>
+</lg>
+
+<lg xml:id="BJ_03.04">
+<l xml:id="BJ_03.04a">lagna.aṃśakād.graha.yoga.īkṣaṇād.vā.varṇān.vaded.bala.yuktā.dvi.yonau/</l>
+
+<l xml:id="BJ_03.04b">dṛṣṭyā.sa.mānān.pravadet.sva.saṃkhyayā.rekhāṃ.vadet.smara.saṃsthaiś.ca.pṛṣṭhe//(vaiśvadevī)</l>
+</lg>
+<lg xml:id="BJ_03.05">
+<l xml:id="BJ_03.05a">khage.dṛkāṇe.bala.saṃyutena.vā.graheṇa.yukte.cara.bha.aṃśaka.udaye/</l>
+
+<l xml:id="BJ_03.05b">budha.aṃśake.vā.vihagāḥ.sthala.aṃbujāḥ.śanaiścara.indv.īkṣaṇa.yoga.saṃbhavāḥ//(vaṃśastha)</l>
+</lg>
+
+<lg xml:id="BJ_03.06">
+<l xml:id="BJ_03.06a">horā.indu.sūri.ravibhir.vibalais.taruṇāṃ.toye.sthale.taru.bhava.aṃśa.kṛtaḥ.prabhedaḥ/</l>
+
+<l xml:id="BJ_03.06b">lagnād.grahaḥ.sthala.jala.ṛkṣa.patis.tu.yāvāṃs.tāvanta.eva.taravaḥ.sthala.toya.jātāḥ//(va.ti.)</l>
+</lg>
+
+<lg xml:id="BJ_03.07">
+<l xml:id="BJ_03.07a">antaḥ.sārāñ.janayati.ravir.durbhagān.sūrya.sūnuḥ.kṣīra.upetāṃs.tuhina.kiraṇaḥ.kaṇṭaka.āḍhyāṃś.ca.bhaumaḥ/</l>
+
+<l xml:id="BJ_03.07b">vāg.īśa.jñau.sa.phala.viphalān.puṣpa.vṛkṣāṃś.ca.śukraḥ.snigdhān.induḥ.kaṭuka.viṭapān.bhūmi.putraś.ca.bhūyaḥ//(mandāprāṃtā)</l>
+</lg>
+
+<lg xml:id="BJ_03.08">
+<l xml:id="BJ_03.08a">śubho.śubha.ṛkṣe.ruciraṃ.kubhūmijaṃ.karoti.vṛkṣaṃ.viparītam.anyathā//</l>
+
+<l xml:id="BJ_03.08b">para.aṃśake.yāvati.vicyutaḥ.svakād.bhavanti.tulyās.taravas.tathā.vidhāḥ//(vaṃśastha)E3</l>
+</lg>
+
+<p xml:id="BJ_04">niṣekā</p>
+
+<lg xml:id="BJ_04.01">
+<l xml:id="BJ_04.01a">kuja.indu.hetuḥ.pratimāsam.ārtavaṃ.gate.tu.pīḍa.ṛkṣam.anuṣṇa.didhitau/</l>
+
+<l xml:id="BJ_04.01b">ato.anyathāsthe.śubha.puṃ.graha.īkṣite.nareṇa.saṃyogam.upaiti.kāminī//(vaṃśastha)</l>
+</lg>
+
+<lg xml:id="BJ_04.02">
+<l xml:id="BJ_04.02a">yathā.asta.rāśir.mithunaṃ.sameti.tathaiva.vācyo.mithuna.prayogaḥ/</l>
+
+<l xml:id="BJ_04.02b">asad.graha.ālokita.saṃyute.aste.sa.roṣa.iṣṭaiḥ.sa.vilāsa.hāsaḥ//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_04.03">
+<l xml:id="BJ_04.03a">ravi.indu.śukra.avanijaiḥ.sva.bhāgagair.gurau.tri.koṇa.udaya.saṃsthite.api.vā/</l>
+
+<l xml:id="BJ_04.03b">bhavaty.apatyaṃ.hi.vibījinām.ime.karā.hima.aṃśor.vidṛśām.iva.aphalāḥ//(vaṃśastha)</l>
+</lg>
+
+<lg xml:id="BJ_04.04">
+<l xml:id="BJ_04.04a">divākara.indvoḥ.smaragau.kuja.arkajau.gada.pradā.puṅgala.yoṣitos.tadā/</l>
+
+<l xml:id="BJ_04.04b">vyaya.svagau.mṛtyu.karau.yutau.tathā.tad.eka.dṛṣṭyā.maraṇāya.kalpitau//(vaṃśastha)</l>
+</lg>
+
+<lg xml:id="BJ_04.05">
+<l xml:id="BJ_04.05a">divā.arka.śukrau.pitṛ.mātṛ.saṃjñitau.śanaiścara.indū.niśi.tad.viparyayāt/</l>
+
+<l xml:id="BJ_04.05b">pitṛvya.mātṛ.svasṛ.saṃjñitau.ca.tāv.atha.oja.yugma.ṛkṣa.gatau.tayoḥ.śubhau//(vaṃśastha)</l>
+</lg>
+
+<lg xml:id="BJ_04.06">
+<l xml:id="BJ_04.06a">abhilaṣadbir.udaya.ṛkṣam.asadbhir.maraṇam.eti.śubha.dṛṣṭim.ayāte/</l>
+
+<l xml:id="BJ_04.06b">udaya.rāśi.sahite.ca.yame.strī.vigalita.uḍu.pati.bhū.suta.dṛṣṭe//(vaṃśastha)</l>
+</lg>
+
+<lg xml:id="BJ_04.07">
+<l xml:id="BJ_04.07a">pāpa.dvaya.madhya.saṃsthitau.lagna.indū.na.ca.saumya.vīkṣitau/</l>
+
+<l xml:id="BJ_04.07b">yugapat.pṛthag.eva.vā.vaden.nārī.garbha.yutā.vipadyate//(vai.lī)</l>
+</lg>
+
+<lg xml:id="BJ_04.08">
+<l xml:id="BJ_04.08a">krūre.śaśinaś.caturthage.lagnād.vā.nidhana.āśrite.kuje/</l>
+
+<l xml:id="BJ_04.08b">bandhv.antyagayoḥ.kṣīṇa.indau.nidhanāya.pūrvavat//(vaitāliyā)</l>
+</lg>
+
+<lg xml:id="BJ_04.09">
+<l xml:id="BJ_04.09a">udaya.astagayoḥ.kuja.arkayor.nidhanaṃ.śastra.kṛtaṃ.vadet.tathā/</l>
+
+<l xml:id="BJ_04.09b">māsa.adhipatau.nipīḍite.tat.kāle.sravaṇaṃ.samādiśet//(vai.lī)</l>
+</lg>
+
+<lg xml:id="BJ_04.10">
+<l xml:id="BJ_04.10a">śaśa.aṅka.lagna.upagataiḥ.śubha.grahais.tri.koṇa.jāyā.artha.sukha.āspada.sthitaiḥ/</l>
+
+<l xml:id="BJ_04.10b">tṛtīya.lābha.ṛkṣa.gataiś.ca.pāpakaiḥ.sukhī.tu.garbho.raviṇā.nirīkṣitaḥ//(vaṃśastha)</l>
+</lg>
+
+<lg xml:id="BJ_04.11">
+<l xml:id="BJ_04.11a">oja.ṛkṣe.puruṣa.aṃśakeṣu.balibhir.lagna.arka.gurv.indubhiḥ.puṃ.janma.pravadet.sama.aṃśaka.gatair.yugmeṣu.tair.yoṣitaḥ/</l>
+
+<l xml:id="BJ_04.11b">gurv.arkau.viṣame.naraṃ.śaśi.sitau.vakraś.ca.yugme.striyaṃ/dvy.aṅgastha.budha.vīkṣaṇāc.ca.yamalau.kurvanti.pakṣe.svake//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_04.12">
+<l xml:id="BJ_04.12a">vihāya.lagnaṃ.viṣama.ṛkṣa.saṃsthaḥ.sauro.api.puṃ.janma.karo.vilagnāt/</l>
+
+<l xml:id="BJ_04.12b">prokta.grahāṇām.avalokya.vīryaṃ.vācyaḥ.prasūtau.puruṣo.aṅganā.vā//(upendravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_04.13">
+<l xml:id="BJ_04.13a">anyonyaṃ.yadi.paśyataḥ.śaśi.ravī.yady.arki.saumyāv.api.vakro.vā.samagaṃ.dina.īśam.asame.candra.udayau.cet.sthitau/</l>
+
+<l xml:id="BJ_04.13b">yugma.oja.ṛkṣa.gatāv.api.indu.śaśijau.bhūmy.ātmajena.īkṣitau.pumbhāve.sita.lagna.śīta.kiraṇāḥ.ṣaṭ.klība.yogāḥ.smṛtāḥ//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_04.14">
+<l xml:id="BJ_04.14a">yugme.candra.sitau.tathā.oja.bhavane.syur.jña.āra.jīva.udayā.lagna.indū.nṛ.nirīkṣitau.ca.samagau.yugmeṣu.vā.prāṇinaḥ/</l>
+
+<l xml:id="BJ_04.14b">kuryur.te.mithunaṃ.graha.udaya.gatān.dvy.aṅga.aṃśakān.paśyati.sva.aṃśe.jñe.tritayaṃ.jñaga.aṃśaka.vaśād.yugmaṃ.tv.amiśraiḥ.samam//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_04.15">
+<l xml:id="BJ_04.15a">dhanur.dharasya.antya.gate.vilagne.grahais.tad.aṃśa.upagatair.baliṣṭhaiḥ/</l>
+
+<l xml:id="BJ_04.15b">jñena.arkiṇā.vīrya.yutena.dṛṣṭaiḥ.santi.prabhūtā.api.kośa.saṃsthāḥ//(upajātikā)</l>
+</lg>
+
+<lg xml:id="BJ_04.16">
+<l xml:id="BJ_04.16a">kalala.ghana.aṅkura.asthi.carma.aṅgaja.cetanatāḥ.sita.kuja.jīva.sūrya.candra.arki.budhāḥ.parataḥ/</l>
+
+<l xml:id="BJ_04.16b">udayapa.candra.sūrya.nāthāḥ.kramaśo.gaditā.bhavanti.śubha.aśubhaṃ.ca.māsa.adhipateḥ.sadṛśam//(kuṭaka)</l>
+</lg>
+
+<lg xml:id="BJ_04.17">
+<l xml:id="BJ_04.17a">tri.koṇage.jñe.vibalais.tathā.parair.mukha.aṅghri.hastair.dvi.guṇas.tadā.bhavet/</l>
+
+<l xml:id="BJ_04.17b">avāg.gavi.indāv.aśubhair.bha.saṃdhigaiḥ.śubha.īkṣitaś.cet.kurute.giraṃ.cirāt//(vaṃśastha)</l>
+</lg>
+
+<lg xml:id="BJ_04.18">
+<l xml:id="BJ_04.18a">saumya.ṛkṣa.aṃśe.ravija.rudhirau.cet.sa.danto.atra.jātaḥ.kubjaḥ.sva.ṛkṣe.śaśini.tanuge.manda.māheya.dṛṣṭe/</l>
+
+<l xml:id="BJ_04.18b">paṅgur.mīne.yama.śaśi.kujair.vīkṣite.lagna.saṃsthe.saṃdhau.pāpe.śaśini.ca.jaḍaḥ.syān.na.cet.saumya.dṛṣṭaḥ//(manda.ākrāntā)</l>
+</lg>
+
+<lg xml:id="BJ_04.19">
+<l xml:id="BJ_04.19a">saura.śaśa.aṅka.divā.kara.dṛṣṭe.vāmanako.makara.antya.vilagne/</l>
+
+<l xml:id="BJ_04.19b">dhī.navama.udayagaiś.ca.dṛkāṇaiḥ.pāpa.yutair.abhuja.aṅghri.śirāḥ.syāt//(dodhaka)</l>
+</lg>
+<lg xml:id="BJ_04.20">
+<l xml:id="BJ_04.20a">ravi.śaśi.yute.siṃhe.lagne.kuja.arki.nirīkṣite.nayana.rahitaḥ.saumya.asaumyaiḥ.sa.budbuda.locanaḥ/</l>
+
+<l xml:id="BJ_04.20b">vyaya.gṛha.gataś.candro.vāmaṃ.hinasty.aparaṃ.ravir.na.śubha.gaditā.yogā.yāpyā.bhavanti.śubha.īkṣitāḥ//(hariṇī)</l>
+</lg>
+
+<lg xml:id="BJ_04.21">
+<l xml:id="BJ_04.21a">tat.kālam.indu.sahito.dvi.rasa.aṃśako.yas.tat.tulya.rāśi.sahite.purataḥ.śaśa.aṅke/</l>
+
+<l xml:id="BJ_04.21b">yāvān.udeti.dina.rātri.sa.māna.bhāgas.tāvad.gate.dina.niśoḥ.pravadanti.janma//(vasantatilakā)</l>
+</lg>
+
+<lg xml:id="BJ_04.22">
+<l xml:id="BJ_04.22a">udayati.mṛdu.bha.aṃśe.saptamasthe.ca.mande.yadi.bhavati.niṣekaḥ.sūtir.abda.trayeṇa/</l>
+
+<l xml:id="BJ_04.22b">śaśini.tu.vidhir.eṣa.dvādaśe.abde.prakuryān.nigaditam.iha.cintyaṃ.sūti.kāle.api.yuktyā//(mālinī)E4</l>
+</lg>
+
+<p xml:id="BJ_05">janmavidhi</p>
+
+<lg xml:id="BJ_05.01">
+<l xml:id="BJ_05.01a">pitur.jātaḥ.parokṣasya.lagnam.indāv.apaśyati/</l>
+
+<l xml:id="BJ_05.01b">videśasthasya.cara.bhe.madhyād.bhraṣṭe.divā.kare//(anuṣṭubh)</l>
+</lg>
+
+<lg xml:id="BJ_05.02">
+<l xml:id="BJ_05.02a">udayasthe.api.vā.mande.kuje.vā.astaṃ.samāgate.</l>
+
+<l xml:id="BJ_05.02b">sthite.vā.antaḥ.kṣapā.nāthe.śaśa.aṅka.suta.śukrayoḥ//(anuṣṭubh)</l>
+</lg>
+
+<lg xml:id="BJ_05.03">
+<l xml:id="BJ_05.03a">śaśa.aṅke.pāpa.lagne.vā.vṛścika.īśa.tri.bhāgage/</l>
+
+<l xml:id="BJ_05.03b">śubhaiḥ.svāya.sthitair.jātaḥ.sarpas.tad.veṣṭito.api.vā//(no metre name)</l>
+</lg>
+
+<lg xml:id="BJ_05.04">
+<l xml:id="BJ_05.04a">catuṣpāda.gate.bhānau.śeṣair.vīrya.samanvitaiḥ/</l>
+
+<l xml:id="BJ_05.04b">dvi.tanusthaiś.ca.yamalau.bhavataḥ.kośa.veṣṭitau//(anuṣṭubh)</l>
+</lg>
+
+<lg xml:id="BJ_05.05">
+<l xml:id="BJ_05.05a">chāge.siṃhe.vṛṣe.lagne.tatsthe.saure.atha.vā.kuje/</l>
+
+<l xml:id="BJ_05.05b">rāśy.aṃśa.sadṛśe.gātre.jāyate.nāla.veṣṭitaḥ//(no metre name)</l>
+</lg>
+
+<lg xml:id="BJ_05.06">
+<l xml:id="BJ_05.06a">na.lagnam.induṃ.ca.gurur.nirīkṣate.na.vā.śaśa.aṅkaṃ.raviṇā.samāgatam/</l>
+
+<l xml:id="BJ_05.06b">sa.pāpako.arkeṇa.yuto.atha.vā.śaśī.pareṇa.jātaṃ.pravadanti.niścayāt//(vaṃśastha)</l>
+</lg>
+
+<lg xml:id="BJ_05.07">
+<l xml:id="BJ_05.07a">krūra.ṛkṣa.gatāv.aśobhanau.sūryād.dyūna.nava.ātmaja.sthitau/</l>
+
+<l xml:id="BJ_05.07b">baddhas.tu.pitā.videśagaḥ.sve.vā.rāśi.vaśād.atho.pathi//(vaitālīyā)</l>
+</lg>
+
+<lg xml:id="BJ_05.08">
+<l xml:id="BJ_05.08a">pūrṇe.śaśini.sva.rāśige.saumye.lagna.gate.śubhe.sukhe/</l>
+
+<l xml:id="BJ_05.08b">lagne.jalaje.astage.api.vā.candro.pota.gatā.prasūyate//(vaitālīyā)</l>
+</lg>
+
+<lg xml:id="BJ_05.09">
+<l xml:id="BJ_05.09a">āpya.udayam.āpyagaḥ.śaśī.sampūrṇaḥ.samavekṣate.atha.vā/</l>
+
+<l xml:id="BJ_05.09b">meṣu.uraṇa.bandhu.lagnagaḥ.syāt.sūtiḥ.salile.na.saṃśayaḥ//(vaitālīyā)</l>
+</lg>
+
+<lg xml:id="BJ_05.10">
+<l xml:id="BJ_05.10a">udaya.uḍupayor.vyaya.sthite.guptyāṃ.pāpa.nirīkṣite.yame/</l>
+
+<l xml:id="BJ_05.10b">ali.karki.yute.vilagnage.saure.śīta.kara.īkṣite.vaṭe//(vaitālīyā)</l>
+</lg>
+
+<lg xml:id="BJ_05.11">
+<l xml:id="BJ_05.11a">mande.abja.gate.vilagnage.budha.sūrya.indu.nirīkṣite.kramāt/</l>
+
+<l xml:id="BJ_05.11b">krīḍā.bhavane.sura.ālaye.sokhara.bhūmiṣu.ca.prasūyate//(vaitālīyā)</l>
+</lg>
+
+<lg xml:id="BJ_05.12">
+<l xml:id="BJ_05.12a">nṛ.lagnagaṃ.prekṣya.kujaḥ.śmaśāne.ramye.sita.indū.gurur.agni.hotre/</l>
+
+<l xml:id="BJ_05.12b">ravir.nara.indra.amarago.kuleṣu.śilpa.ālaye.jñaḥ.prasavaṃ.karoti//(upajātī)</l>
+</lg>
+
+<lg xml:id="BJ_05.13">
+<l xml:id="BJ_05.13a">rāśy.aṃśa.sa.māna.go.care.mārge.janma.care.sthire.gṛhe/</l>
+
+<l xml:id="BJ_05.13b">sva.ṛkṣa.aṃśa.gate.sva.mandire.bala.yogāt.phalam.aṃśaka.ṛkṣayoḥ//(vaitālīyā)</l>
+</lg>
+
+<lg xml:id="BJ_05.14">
+<l xml:id="BJ_05.14a">āra.arkajayos.tri.koṇage.candre.aste.ca.visṛjyate.aṃbayā/</l>
+
+<l xml:id="BJ_05.14b">dṛṣṭe.amara.rāja.mantriṇā.dīrgha.āyuḥ.sukha.bhāk.ca.sa.smṛtaḥ//(vaitālīyā)</l>
+</lg>
+
+<lg xml:id="BJ_05.15">
+<l xml:id="BJ_05.15a">pāpa.īkṣite.tuhinagāv.udaye.kuje.aste.tyakto.vinaśyati.kuja.arkajayos.tathā.āye/</l>
+
+<l xml:id="BJ_05.15b">saumye.api.paśyati.tathā.vidha.hastam.eti.saumya.itareṣu.para.hasta.gato.apy.anāyuḥ//(vasantatilakā)</l>
+</lg>
+
+<lg xml:id="BJ_05.16">
+<l xml:id="BJ_05.16a">pitṛ.mātṛ.gṛheṣu.tad.balāt.taru.śāla.ādiṣu.nīcagaiḥ.śubhaḥ/</l>
+
+<l xml:id="BJ_05.16b">yadi.na.eka.gatais.tu.vīkṣitau.lagna.indū.vijane.prasūyate//(vaitālīya)</l>
+</lg>
+
+<lg xml:id="BJ_05.17">
+<l xml:id="BJ_05.17a">manda.ṛkṣa.aṃśe.śaśini.hibuke.manda.dṛṣṭe.abjage.vā/tad.yukte.vā.tamasi.śayane.nīca.saṃsthaiś.ca.bhūmau/</l>
+
+<l xml:id="BJ_05.17b">yad.vad.rāśir.vrajati.harijaṃ.garbha.mokṣas.tu.tad.vat.pāpaiś.candrāt.smara.sukha.gataiḥ.kleśam.āhur.jananyāḥ//(manda.ākrāntā)</l>
+</lg>
+
+<lg xml:id="BJ_05.18">
+<l xml:id="BJ_05.18a">snehaḥ.śaśa.aṅkād.udayāc.ca.vartir.dīpo.arka.yukta.ṛkṣa.vaśāc.cara.ādyaḥ/</l>
+
+<l xml:id="BJ_05.18b">dvāraṃ.ca.tad.vāstuni.kendra.saṃsthair.jñeyaṃ.grahaiḥ.vīrya.samanvitair.vā//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_05.19">
+<l xml:id="BJ_05.19a">jīrṇaṃ.saṃskṛtam.arkaje.kṣiti.sute.dagdhaṃ.navaṃ.śītagau.kāṣṭha.āḍhyaṃ.na.dṛḍhaṃ.ravau.śaśi.sute.tan.na.eka.śilpy.udbhavam.ramyaṃ/</l>
+
+<l xml:id="BJ_05.19b">citra.yutaṃ.navaṃ.ca.bhṛguje.jīve.dṛḍhaṃ.mandiraṃ.cakrasthaiś.ca.yathā.upadeśa.racanāṃ.sāmanta.pūrvāṃ.vadet//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_05.20">
+<l xml:id="BJ_05.20a">meṣa.kulīra.tulā.ali.gaṭaiḥ.prāg.uttarato.guru.saumya.gṛheṣu/</l>
+
+<l xml:id="BJ_05.20b">paścimataś.ca.vṛṣeṇa.nivāso.dakṣiṇa.bhāga.karau.mṛga.siṃhau//(dodhaka)</l>
+</lg>
+
+<lg xml:id="BJ_05.21">
+<l xml:id="BJ_05.21a">prācy.ādi.gṛhe.kriyā.ādayo.dvau.dvau.koṇa.gatā.dvi.mūrtayaḥ/</l>
+
+<l xml:id="BJ_05.21b">śayyāsv.api.vāstu.vad.vadet.pādaiḥ.ṣaṭ.tri.nava.antya.saṃsthitaiḥ//(vaitālīya)</l>
+</lg>
+
+<lg xml:id="BJ_05.22">
+<l xml:id="BJ_05.22a">candra.lagna.antara.gatair.grahaiḥ.syur.upasūtikāḥ/</l>
+
+<l xml:id="BJ_05.22b">bahir.antara.cakrād.ardhe.dṛśya.adṛśye.anyathā.paraiḥ//(anuṣṭubh)</l>
+</lg>
+
+<lg xml:id="BJ_05.23">
+<l xml:id="BJ_05.23a">lagna.nava.aṃśapa.tulya.tanuḥ.syād.vīrya.yuta.graha.tulya.vapur.vā/</l>
+
+<l xml:id="BJ_05.23b">candra.sameta.nava.aṃśapa.varṇaḥ.kā.ādi.vilagna.vibhakta.bha.gātraḥ//(dodhaka)</l>
+</lg>
+
+<lg xml:id="BJ_05.24">
+<l xml:id="BJ_05.24a">kaṃ.dṛk.śrotra.nasā.kapola.hanavo.vaktraṃ.ca.horā.ādayas.te.kaṇṭha.aṃsaka.bāhu.pārśva.hṛdaya.kroḍāni.nābhis.tataḥ/</l>
+
+<l xml:id="BJ_05.24b">bastiḥ.śiśna.gude.tataś.ca.vṛṣaṇāv.ūrū.tato.jānunī/jaṅgha.aṅghri.ity.ubhayatra.vāmam.uditair.dreṣkāṇa.bhāgais.tridhā//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_05.25">
+<l xml:id="BJ_05.25a">tasmin.pāpa.yutaṃ.vraṇe.śubha.yute.dṛṣṭe.ca.lakṣma.ādiśet.sva.ṛkṣa.aṃśe.sthira.saṃyuteṣu.sahajaḥ.syād.anyathā.āṅgatukaḥ/</l>
+
+<l xml:id="BJ_05.25b">manda.īśma.anilajo.agni.śāstra.viṣajo.bhaume.budhe.bhū.bhavaḥ.sūrye.kāṣṭha.catuṣ.padena.himagau.śṛṅgy.abjajo.anyaiḥ.śubham//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_05.26">
+<l xml:id="BJ_05.26a">samanupatitā.yasmin.bhāge.trayaḥ.sa.budhā.grahā.bhavati.niyamāt.tasya.avāptiḥ.śubheṣv.aśubheṣu.vā/</l>
+
+<l xml:id="BJ_05.26b">vraṇa.kṛd.aśubhaḥ.ṣaṣṭhe.dehe.tanor.bha.samāśrite.tilakam.aśakṛd.dṛṣṭaḥ.saumyair.yutaś.ca.sa.lakṣmavān//(hariṇī)E5</l>
+</lg>
+
+<p xml:id="BJ_06">ariṣṭa</p>
+
+<lg xml:id="BJ_06.01">
+<l xml:id="BJ_06.01a">saṃdhyāyāṃ.hima.dīdhiti.horā.pāpair.bha.anta.gatair.nidhanāya/</l>
+
+<l xml:id="BJ_06.01b">raty.ekaṃ.śaśi.pāpa.sametaiḥ.kendrair.vā.sa.vināśam.upaite//(Vidyunmālā)</l>
+</lg>
+
+<lg xml:id="BJ_06.02">
+<l xml:id="BJ_06.02a">cakrasya.pūrva.apara.bhāgageṣu.krūreṣu.saumyeṣu.ca.kīṭa.lagne/</l>
+
+<l xml:id="BJ_06.02b">kṣipraṃ.vināśaṃ.samupaiti.jātaḥ.papair.vilagna.astamaya.abhitaś.ca//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_06.03">
+<l xml:id="BJ_06.03a">pāpāv.udaya.asta.gatau.krūreṇa.yutaś.ca.śaśī/</l>
+
+<l xml:id="BJ_06.03b">dṛṣṭaś.ca.śubhair.na.yadā.mṛtyuś.ca.bhaved.acirāt//(anuṣṭubh)</l>
+</lg>
+
+<lg xml:id="BJ_06.04">
+<l xml:id="BJ_06.04a">kṣīṇe.himagau.vyayagau.pāpair.udaya.aṣṭamagaiḥ/</l>
+<l xml:id="BJ_06.04b">kendreṣu.śubhāś.ca.na.cet.kṣipraṃ.nidhanaṃ.pravadet//(anuṣṭubh)</l>
+</lg>
+
+<lg xml:id="BJ_06.05">
+<l xml:id="BJ_06.05a">krūreṇa.saṃyutaḥ.śaśī.smara.antya.mṛtyu.lagnagaḥ/</l>
+
+<l xml:id="BJ_06.05b">kaṇṭakād.bahiḥ.śubhair.avīkṣitaś.ca.mṛtyudaḥ//(anuṣṭubh)</l>
+</lg>
+
+<lg xml:id="BJ_06.06">
+<l xml:id="BJ_06.06a">śaśiny.ari.vināśage.nidhanam.āśu.pāpa.īkṣite.śubhair.atha.sama.aṣṭaka.dalam.ataś.ca.miśraiḥ.sthitiḥ/</l>
+
+<l xml:id="BJ_06.06b">asadbhir.avalokite.balibhir.atra.māsaṃ.śubhe.kalatra.sahite.ca.pāpa.vijite.vilagna.adhipe//(pṛthvī)</l>
+</lg>
+
+<lg xml:id="BJ_06.07">
+<l xml:id="BJ_06.07a">lagne.kṣīṇe.śaśini.nidhanaṃ.randhra.kendreṣu.pāpaiḥ.pāpa.antasthe.nidhana.hibuka.dyūna.saṃsthe.ca.candre//</l>
+
+<l xml:id="BJ_06.07b">evaṃ.lagne.bhavati.madana.cchidra.saṃsthaiś.ca.pāpair.mātrā.sārddhaṃ.yadi.na.ca.śubhair.vīkṣitaḥ.śakti.bhṛdbhiḥ//(maṃ.krā)</l>
+</lg>
+
+<lg xml:id="BJ_06.08">
+<l xml:id="BJ_06.08a">rāśy.antage.sadbhir.avīkṣyamāṇe.candre.tri.koṇa.upagataiś.ca.pāpaiḥ/</l>
+
+<l xml:id="BJ_06.08b">prāṇaiḥ.prayāty.āśu.śiśur.viyogam.aste.ca.pāpais.tuhina.aṃśu.lagne//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_06.09">
+<l xml:id="BJ_06.09a">aśubha.sahite.graste.candre.kuje.nidhana.āśrite.janani.sutayor.mṛtyur.lagne.ravau.tu.sa.śastrajaḥ/</l>
+
+<l xml:id="BJ_06.09b">udayati.ravau.śīta.aṃśau.vā.tri.koṇa.vināśagair.nidhanam.aśubhair.vīrya.upetaiḥ.śubhair.na.yuta.īkṣite//(hariṇī)</l>
+</lg>
+
+<lg xml:id="BJ_06.10">
+<l xml:id="BJ_06.10a">asita.ravi.śaśa.aṅka.bhūmijair.vyaya.navama.udaya.naidhana.āśritaiḥ/</l>
+
+<l xml:id="BJ_06.10b">bhavati.maraṇam.āśu.dehināṃ.yadi.balinā.guruṇā.na.vīkṣitāḥ//(aparavakra)</l>
+</lg>
+
+<lg xml:id="BJ_06.11">
+<l xml:id="BJ_06.11a">suta.madana.nava.antya.lagna.randhreṣv.aśubha.yuto.maraṇāya.śīta.raśmiḥ/</l>
+
+<l xml:id="BJ_06.11b">bhṛgu.suta.śaśi.putra.deva.pūjyair.yadi.balibhir.na.yuto.avalokito.vā//(puṣpita.agrā)</l>
+</lg>
+
+<lg xml:id="BJ_06.12">
+<l xml:id="BJ_06.12a">yoge.sthānaṃ.gatavati.balinaś.candre.svaṃ.vā.tanu.gṛham.atha.vā/</l>
+
+<l xml:id="BJ_06.12b">pāpair.dṛṣṭe.balavati.maraṇaṃ.varṣasya.antaḥ.kila.muni.gaditam//(bhramara.vilasitā)E6</l>
+</lg>
+
+<p xml:id="BJ_07">āyur.dāya</p>
+
+<lg xml:id="BJ_07.01">
+<l xml:id="BJ_07.01a">maya.yavana.maṇittha.śakti.pūrvair.divasa.kara.ādiṣu.vatsarāḥ.pradiṣṭāḥ/</l>
+
+<l xml:id="BJ_07.01b">nava.tithi.viṣaya.aśvi.bhūta.rudra.daśa.sahitā.daśabhiḥ.sva.tuṅga.bheṣu//(puṣpita.agrā)</l>
+</lg>
+
+<lg xml:id="BJ_07.02">
+<l xml:id="BJ_07.02a">nīce.ato.ardhaṃ.hrasati.hi.tataś.ca.antarasthe.anupāto.horā.tv.aṃśa.pratimam.apare.rāśi.tulyaṃ.vadanti/</l>
+
+<l xml:id="BJ_07.02b">hitvā.vakraṃ.ripu.graha.gatair.hīyate.sva.tri.bhāgaḥ.sūrya.ucchinna.dyutiṣu.ca.dalaṃ.projihya.śukra.arka.putrau//(meṃ.krāṃ)</l>
+</lg>
+
+<lg xml:id="BJ_07.03">
+<l xml:id="BJ_07.03a">sarva.ardha.tri.caraṇa.pañca.ṣaṣṭa.bhāgāḥ.kṣīyante.vyaya.bhavanād.asatsu.vāmam/</l>
+
+<l xml:id="BJ_07.03b">satsv.ardhaṃ.hrasati.tathā.eka.rāśigānām.eka.aṃśaṃ.harati.balī.tathā.āha.satyaḥ//(praharṣiṇī)</l>
+</lg>
+
+<lg xml:id="BJ_07.04">
+<l xml:id="BJ_07.04a">sārdha.udita.udita.nava.aṃśa.hatāt.samastād.bhāgo.aṣṭa.yukta.śata.saṃkhyam.upaito.nāśam/</l>
+
+<l xml:id="BJ_07.04b">krūre.vilagna.sahite.vidhinā.tv.anena.saumya.īkṣite.dalam.ataḥ.pralayaṃ.prayāti//(vasantatilakā)</l>
+</lg>
+
+<lg xml:id="BJ_07.05">
+<l xml:id="BJ_07.05a">samā.ṣaṣṭir.dvighnā.manuja.kariṇāṃ.pañca.ca.niśā.hayānāṃ.dvātriṃśat.khara.karabhayoḥ.pañcaka.kṛtiḥ</l>
+
+<l xml:id="BJ_07.05b">virūpā.sā.apy.āyur.vṛṣa.mahiṣayor.dvādaśa.śunāṃ.smṛtaṃ.chāga.ādīnāṃ.daśaka.sahitāḥ.ṣaṭ.ca.parama//(śikhariṇī)</l>
+</lg>
+
+<lg xml:id="BJ_07.06">
+<l xml:id="BJ_07.06a">animiṣa.parama.aṃśake.vilagne.śaśi.tanaye.gavi.pañca.varga.lipte/</l>
+
+<l xml:id="BJ_07.06b">bhavati.hi.parama.āyuṣaḥ.pramāṇaṃ.yadi.sakalaḥ.sahitāḥ.sva.tuṅga.bheṣu//(puṣpitāgrā)</l>
+</lg>
+
+<lg xml:id="BJ_07.07">
+<l xml:id="BJ_07.07a">āyur.dāyaṃ.viṣṇu.gupto.api.ca.evaṃ.deva.svāmī.siddhasenaś.ca.cakre/</l>
+
+<l xml:id="BJ_07.07b">doṣaś.ca.eṣāṃ.jāyate.aṣṭāv.ariṣṭaṃ.hitvā.na.āyur.viṃśateḥ.syād.adhastāt//(śālinī)</l>
+</lg>
+
+<lg xml:id="BJ_07.08">
+<l xml:id="BJ_07.08a">yasmin.yoge.pūrṇam.āyuḥ.pradiṣṭaṃ.tasmin.proktaṃ.cakra.vartitvam.anyaiḥ</l>
+
+<l xml:id="BJ_07.08b">pratyakṣo.ayaṃ.doṣaḥ.paro.api.jīvaty.āyuḥ.pūrṇam.arthair.vinā.api//(śālinī)</l>
+</lg>
+
+<lg xml:id="BJ_07.09">
+<l xml:id="BJ_07.09a">sva.matena.kila.āha.jīva.śarmā.graha.dāyaṃ.parama.āyusaḥ.svara.aṃśam/</l>
+
+<l xml:id="BJ_07.09b">graha.bhukta.nava.aṃśa.rāśi.tulyaṃ.bahu.sāmyaṃ.samupaiti.satya.vākyam//(upacchandasikā)</l>
+</lg>
+
+<lg xml:id="BJ_07.10">
+<l xml:id="BJ_07.10a">satya.ukte.graham.iṣṭaṃ.liptī.kṛtvā.śata.dvayena.āptam/</l>
+
+<l xml:id="BJ_07.10b">maṇḍala.bhāga.viśuddhe.abdāḥ.syuḥ.śeṣāt.tu.māsa.ādyāḥ//(āryā)</l>
+</lg>
+
+<lg xml:id="BJ_07.11">
+<l xml:id="BJ_07.11a">sva.tuṅga.vakra.upagatais.tri.saṃguṇaṃ.dvir.uttama.sva.aṃśaka.bha.tri.bhhāgagaiḥ//</l>
+
+<l xml:id="BJ_07.11b">iyān.viśeṣas.tu.bhadatta.bhāṣite.sa.mānam.anyat.prathame.apy.udīritam//(vaṃśastha)</l>
+</lg>
+
+<lg xml:id="BJ_07.12">
+<l xml:id="BJ_07.12a">kiṃ.tv.atra.bha.aṃśa.pratimaṃ.dadāti.vīrya.anvitā.rāśi.samaṃ.ca.horā/</l>
+
+<l xml:id="BJ_07.12b">krūra.udaye.ca.upacayaḥ.sa.na.atra.kāryaṃ.ca.na.abdaiḥ.prathama.upadiṣṭaiḥ//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_07.13">
+<l xml:id="BJ_07.13a">satya.upadeśo.varam.atra.kintu.kurvanty.ayogyaṃ.bahu.vargaṇābhiḥ/</l>
+
+<l xml:id="BJ_07.13b">ācāryakatvaṃ.ca.bahu.ghnatāyām.ekaṃ.tu.yad.bhūri.tad.eva.kāryam//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_07.14">
+<l xml:id="BJ_07.14a">guru.śaśi.sahite.kulīra.lagne.śaśi.tanaye.bhṛguje.ca.kendra.yāte/</l>
+
+<l xml:id="BJ_07.14b">bhava.ripu.sahaja.upagaiś.ca.śeṣair.amitam.iha.āyur.anukramād.vinā.syāt//(puṣpitāgrā)E7</l>
+</lg>
+
+<p xml:id="BJ_08">daśa.antardaśā</p>
+
+<lg xml:id="BJ_08.01">
+<l xml:id="BJ_08.01a">udaya.ravi.śaśa.aṅka.prāṇi.kendra.ādi.saṃsthāḥ/prathama.vayasi.madhye.antye.ca.dadyuḥ.phalāni/</l>
+
+<l xml:id="BJ_08.01b">na.hi.na.phala.vipākaḥ.kendra.saṃstha.ādya.bhāve.bhavati.hi.phala.paktiḥ.pūrvam.āpoklime.api//(malīnī)</l>
+</lg>
+
+<lg xml:id="BJ_08.02">
+<l xml:id="BJ_08.02a">āyuḥ.kṛtaṃ.yena.hi.yat.tad.eva.kalpyā.daśa.sā.prabalasya.pūrvām/</l>
+
+<l xml:id="BJ_08.02b">sāmye.bahūnāṃ.bahu.varṣadasya.teṣāṃ.ca.sāmye.prathama.uditasya//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_08.03">
+<l xml:id="BJ_08.03a">eka.ṛkṣago.ardham.apahṛtya.dadāti.tu.svaṃ.try.aṃśaṃ.tri.koṇa.gṛhagaḥ.smaragaḥ.svara.aṃśam/</l>
+
+<l xml:id="BJ_08.03b">pādaṃ.phalasya.caturasra.gataḥ.sa.horas.tv.evaṃ.paraspara.gatāḥ.paripācayanti//(vasantatilakā)</l>
+</lg>
+
+<lg xml:id="BJ_08.04">
+<l xml:id="BJ_08.04a">sthāna.anyathā.etāni.sa.varṇayitvā.sarvāṇy.adhaś.cheda.vivarjitāni/</l>
+
+<l xml:id="BJ_08.04b">daśa.abda.piṇḍe.guṇakā.yathā.aṃśaṃ.chedas.tad.aikyena.daśa.aprabhedaḥ//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_08.05">
+<l xml:id="BJ_08.05a">samyag.balinaḥ.sva.tuṅga.bhāge.sampūrṇā.bala.varjitasya.riktā/</l>
+
+<l xml:id="BJ_08.05b">nīca.aṃśa.gatasya.śatru.bhāge.jñeya.aniṣṭa.phalā.daśā.prasūtau//(vaitālīya)</l>
+</lg>
+
+<lg xml:id="BJ_08.06">
+<l xml:id="BJ_08.06a">bhraṣṭasya.tuṅgād.avarohi.saṃjñā.madhyā.bhavet.sā.suhṛd.ucca.bhāge/</l>
+
+<l xml:id="BJ_08.06b">arohiṇī.nimna.paricyutasya.nīca.ari.bha.aṃśeṣv.adhamā.bhave.sā//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_08.07">
+<l xml:id="BJ_08.07a">nīca.ari.bha.aṃśe.samavasthitasya.śaste.gṛhe.gṛhe.miśra.phalā.pradiṣṭā/</l>
+
+<l xml:id="BJ_08.07b">saṃjñā.anurūpāṇi.phalāny.atha.eṣāṃ.daśāsu.vakṣyāmi.yathā.upayogam//(upajātikā)</l>
+</lg>
+
+<lg xml:id="BJ_08.08">
+<l xml:id="BJ_08.08a">ubhaye.adhama.madhya.pūjitā.dreṣkāṇaiś.cara.bheṣu.ca.utkramāt/</l>
+
+<l xml:id="BJ_08.08b">aśubha.iṣṭa.samāḥ.sthire.kramād.dhorāyāḥ.parikalpitā.daśā//(vaitālīya)</l>
+</lg>
+
+<lg xml:id="BJ_08.09">
+<l xml:id="BJ_08.09a">ekaṃ.dvau.nava.viṃśatir.dhṛti.kṛtī.pañcāśad.eṣāṃ.kramāc.candra.āra.induja.śukra.jīva.dinakrid.daivā.kariṇāṃ.samāḥ/</l>
+
+<l xml:id="BJ_08.09b">svaiḥ.svaiḥ.puṣṭa.phalāni.sarga.janitaiḥ.paktir.daśāyāḥ.kramād.ante.lagna.daśā.śubha.iti.yavanā.na.icchanti.ke.cit.tathā//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_08.10">
+<l xml:id="BJ_08.10a">pāka.svāmini.lagnage.suhṛdi.vā.varge.asya.saumye.api.vā.prārabdhā.śubhadā.daśā.tridaśa.ṣaḍ.lābheṣu.vā.pākape/</l>
+
+<l xml:id="BJ_08.10b">mitra.ucca.upacayas.tri.koṇa.madane.pāka.īśvarasya.sthitaś.candraḥ.sat.phala.bodhanāni.kurute.pāpāni.ca.ato.anyathā//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_08.11">
+<l xml:id="BJ_08.11a">prārabdhā.himagau.daśā.sva.gṛhage.māna.artha.saukhya.āvahā.kauje.dūṣayati.striyaṃ.budha.gṛhe.vidyā.suhṛd.vittadā/</l>
+
+<l xml:id="BJ_08.11b">durga.araṇya.patha.ālaye.kṛṣi.karī.siṃhe.sita.ṛkṣe.annadā.kustrīdā.mṛga.kumbhayor.guru.gṛhe.māna.artha.saukhya.āvahā//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_08.12">
+<l xml:id="BJ_08.12a">sauryāṃ.svan.nakha.danta.carma.kanaka.kraurya.adhva.bhūpa.āhavais.takṣṇyaṃ.dairyam.ajasram.udyama.ratiḥ.khyātiḥ.pratāpa.unnatiḥ/</l>
+
+<l xml:id="BJ_08.12b">bhārya.putra.dhana.ari.śastra.hutabhug.bhūpa.udbhavā.vyāpada.styāgī.pāpa.ratiḥ.sva.bhṛtya.kalaho.hṛt.kroḍa.pīḍā.āmayāḥ//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_08.13">
+<l xml:id="BJ_08.13a">indoḥ.prāpya.daśāṃ.phalāni.labhate.mantra.dvijāty.udbhavani.īkṣu.kṣīra.vikāra.vastra.kusuma.krīḍā.tila.anna.śramaiḥ/</l>
+
+<l xml:id="BJ_08.13b">nidrā.alasya.mṛdu.dvija.amara.ratiḥ.strī.janma.medhāvitā.kīrty.artha.upacakṣayau.ca.balibhir.vairaṃ.sva.pakṣeṇa.ca//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_08.14">
+<l xml:id="BJ_08.14a">bhaumasya.ari.vimarda.bhūpa.sahaja.kṣity.āvika.ajair.dhanaṃ.pradveṣaḥ.suta.mitra.dāra.sahajair.vidvad.guru.dveṣṭṛtā/</l>
+
+<l xml:id="BJ_08.14b">tṛṣṇa.asṛg.jvara.pitta.bhaṅga.janitā.rogāḥ.para.strī.kṛtāḥ.prītiḥ.pāpa.ratair.adharma.niratiḥ.pāruṣya.taikṣṇyāni.ca//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_08.15">
+<l xml:id="BJ_08.15a">baudhyāṃ.dautya.suhṛd.guru.dvija.dhanaṃ.vidvat.praśaṃsā.yaśo.yukti.dravya.suvarṇa.vesara.mahī.saubhāgya.saukhya.āptayaḥ/</l>
+
+<l xml:id="BJ_08.15b">hāsya.upāsana.kauśalaṃ.mati.cayo.dharma.kriyā.siddhayaḥ.pāruṣyaṃ.śrama.bandha.mānasa.śucaḥ.pīḍā.ca.dhātu.trayāt//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_08.16">
+<l xml:id="BJ_08.16a">jaivyāṃ.māna.guṇa.udayo.mati.cayaḥ.kāntiḥ.pratāpa.unnatir.māhātmya.udyama.mantra.nīti.nṛ.pati.svādhyāya.mantrair.dhanam/</l>
+
+<l xml:id="BJ_08.16b">hema.aśva.ātmaja.kuñjara.ambara.cayaḥ.prītiś.ca.sad.bhūmipaiḥ/sūkṣmya.ūha.gahana.āśramaḥ.śravaṇa.rug.vairaṃ.vidharma.āśritaiḥ//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_08.17">
+<l xml:id="BJ_08.17a">śaukyāṃ.gīta.ratiḥ.pramoda.surabhi.dravya.anna.pāna.ambara.strī.ratna.dyuti.manmatha.upakaraṇa.jñāna.iṣṭa.mitra.āgamāḥ/</l>
+
+<l xml:id="BJ_08.17b">kauśalyaṃ.kraya.vikraye.kṛṣi.nidhi.prāptir.dhanasya.āgamo/vṛnda.ūrvī.īśa.niṣāda.dharma.rahitair.vairaṃ.śucaḥ.snehataḥ//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_08.18">
+<l xml:id="BJ_08.18a">saurīṃ.prāpya.khara.uṣṭra.pakṣi.mahiṣī.vṛddha.aṅganā.avāptayaḥ/śreṇī.grāma.puradhi.kāra.janitā.pūjā.kudhānya.āgamaḥ/</l>
+
+<l xml:id="BJ_08.18b">śleṣma.īrṣya.anila.kopa.moha.malina.vyāpatti.tandra.āśramān/bhṛtya.apatya.kalatra.bhartsanam.api.prāpnoti.ca.vyaṅgayatām//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_08.19">
+<l xml:id="BJ_08.19a">daśāsu.śastāsu.śubhāni.kurvanty.aniṣṭa.saṃjñā.sva.śubhāni.ca.evam/</l>
+
+<l xml:id="BJ_08.19b">miśrāsu.niśrāṇi.daśā.phalāni.horā.phalaṃ.lagna.pateḥ.sa.mānam//(upajātikā)</l>
+</lg>
+
+<lg xml:id="BJ_08.20">
+<l xml:id="BJ_08.20a">saṃjñā.adhyāye.yasya.yad.ravya.muktaṃ.karma.āajīvo.yaś.ca.yasya.upadiṣṭaḥ/</l>
+
+<l xml:id="BJ_08.20b">bhāva.sthāna.āloka.yoga.udbhavaṃ.ca.tat.tat.sarvaṃ.tasya.yojyaṃ.daśāyām//(śālinī)</l>
+</lg>
+
+<lg xml:id="BJ_08.21">
+<l xml:id="BJ_08.21a">chāyāṃ.mahā.bhūta.kṛtāṃ.ca.sarve.abhivyañjayanti.sva.daśām.avāpya/</l>
+
+<l xml:id="BJ_08.21b">kv.ambv.agni.vāyv.ambarajān.guṇāṃś.ca.nāsā.āsya.dṛk.tvak.chravaṇa.anumeyāt//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_08.22">
+<l xml:id="BJ_08.22a">śubha.phalada.daśāyā.tādṛg.eva.antara.ātmā/bahu.janayati.puṃsāṃ.sakhyam.artha.āgamaṃ.ca</l>
+
+<l xml:id="BJ_08.22b">kathita.phala.vipākais.tarkayed.vartamānāṃ/pariṇamati.phala.āptiḥ.svapna.cintā.sva.vīrjaiḥ//(mālinī)</l>
+</lg>
+
+<lg xml:id="BJ_08.23">
+<l xml:id="BJ_08.23a">eka.grahasya.sadṛśe.phalayor.virodhe/nāśaṃ.vaded.yad.adhikaṃ.paripacyate.tat/</l>
+
+<l xml:id="BJ_08.23b">na.anyo.grahaḥ.sadṛśam.anya.phalaṃ.hinasti/svāṃ.svāṃ.daśām.upagatāḥ.sa.phala.pradā.syuḥ//(vasantatilakā)E8</l>
+</lg>
+
+<p xml:id="BJ_09">aṣṭakavarga</p>
+
+<lg xml:id="BJ_09.01">
+<l xml:id="BJ_09.01a">svād.arkaḥ.prathama.āya.bandhu.nidhana.dvy.ājñā.tapo.dyūnago.vakrāt.svād.iva.tadvad.eva.ravijāc.chukrāt.smara.antya.ariṣu/</l>
+
+<l xml:id="BJ_09.01b">jīvād.dharma.suta.āya.śatruṣu.daśa.try.āya.arigaḥ.śītagor.eṣu.eva.antya.tapaḥ.suteṣu.ca.budhāl.lagnāt.sa.bandhv.antyagaḥ//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_09.02">
+<l xml:id="BJ_09.02a">lagnāt.ṣaṭ.tri.daśa.āyagaḥ.sa.dhana.dhī.dharmeṣu.cārāc.chaśī.svāt.sa.asta.ādiṣu.sa.aṣṭa.saptasu.raveḥ.ṣaṭ.try.āya.dhīstho.yamāt/</l>
+
+<l xml:id="BJ_09.02b">dhī.try.āya.aṣṭama.kaṇṭakeṣu.śaśijāj.jīvād.vyaya.āya.aṣṭagaḥ.kendrasthaś.ca.sitāt.tu.dharma.sukha.dhī.try.āya.āspada.anaṅgagaḥ//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_09.03">
+<l xml:id="BJ_09.03a">vakras.tu.upacayeṣv.ināt.sa.tanayeṣv.ādya.adhikeṣu.udayāc/candrād.dig.viphaleṣu.kendra.nidhana.prāpty.arthagaḥ.svāc.chubhaḥ/</l>
+
+<l xml:id="BJ_09.03b">dharma.āya.aṣṭama.kendrago.arka.tanayāj.jñāt.ṣaṭ.tri.dhī.lābhagaḥ/śukrāt.ṣaḍ.vyaya.lābha.mṛtyuṣu.guroḥ.karmāny.alābha.ariṣu//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_09.04">
+<l xml:id="BJ_09.04a">dvy.ādya.āya.aṣṭa.tapaḥ.sukheṣu.bhṛgujāt.sa.try.ātmajeṣv.indujaḥ.sa.ājñā.asteṣu.yama.arayor.vyaya.ripu.prāpty.aṣṭago.vāk.pateḥ/</l>
+
+<l xml:id="BJ_09.04b">dharma.āya.ari.suta.vyayeṣu.savituḥ.svāt.sa.ādya.karma.trigaḥ.ṣaṭ.sva.āya.aṣṭa.sukha.āspadeṣu.himagoḥ.sa.ādyeṣu.lagnāc.chubhaḥ//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_09.05">
+<l xml:id="BJ_09.05a">dik.sva.ādya.aṣṭama.dāya.bandhuṣu.kujāt.svāt.trikeṣv.aṅgirāḥ.sūryāt.satri.naveṣu.dhī.sva.nava.dig.lābha.arigo.bhārgavāt/</l>
+
+<l xml:id="BJ_09.05b">jāyā.āya.ratha.nava.ātmajeṣu.himagor.mandāt.tri.ṣaḍ.dhī.vyaye.dig.dhī.ṣaṭ.sva.sukha.āya.pūrva.navago.jñāt.sa.smaraś.ca.udayāt//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_09.06">
+<l xml:id="BJ_09.06a">lagnād.ā.suta.lābha.randhra.navagaḥ.sa.antyaḥ.śaśa.aṅkāt.sitaḥ.svāt.sa.ājñeṣu.sukha.tri.dhī.nava.daśa.cchidra.āptigaḥ.sūryajāt/</l>
+
+<l xml:id="BJ_09.06b">randhra.āya.vyago.raver.nava.daśa.prāpty.aṣṭa.dhīstho.guror.jñād.dhī.try.āya.nava.arigas.tri.nava.ṣaṭ.putra.āyasa.antyaḥ.kujāt//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_09.07">
+<l xml:id="BJ_09.07a">manda.svāt.tri.suta.āya.śatruṣu.śubhaḥ.sa.ājñā.antyago.bhūmijāt.kendra.āya.aṣṭa.dhaneṣv.inād.upacayeṣv.ādye.sukhe.ca.udayāt/</l>
+
+<l xml:id="BJ_09.07b">dharma.āya.ari.daśa.antya.mṛtyuṣu.budhāc.candrāt.trī.ṣaḍ.lābhagaḥ.ṣaṣṭha.āya.antya.gataḥ.sitās.sura.guroḥ.prāpty.antya.dhī.śatruṣu//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_09.08">
+<l xml:id="BJ_09.08a">iti.nigaditam.iṣṭaṃ.na.iṣṭam.anyad.viśeṣād.adhika.phala.vipākaṃ.janma.bhāt.tatra.dadyuḥ/</l>
+
+<l xml:id="BJ_09.08b">upacaya.gṛha.mitra.sva.uccagaiḥ.puṣṭam.iṣṭaṃ.av.apacaya.gṛha.nīca.āra.atigair.na.iṣṭa.sampat//(mālinī)E9</l>
+</lg>
+
+<p xml:id="BJ_10">karma.ājīva</p>
+<lg xml:id="BJ_10.01">
+<l xml:id="BJ_10.01a">artha.āptiḥ.pitṛ.pitṛ.patni.śatru.mitra.bhrātṛ.strī.mṛtaka.janād.divā.kara.ādyaiḥ/</l>
+
+<l xml:id="BJ_10.01b">horā.indvor.daśama.gatair.vikalpanīyā.bha.indv.arka.āspada.patiga.aṃśa.nātha.vṛttyā//(praharṣiṇī)</l>
+</lg>
+<lg xml:id="BJ_10.02">
+<l xml:id="BJ_10.02a">arka.aṃśe.tṛṇa.kanaka.arṇa.bheṣaja.ādyaiś.candra.aṃśe.kṛṣi.jalaja.aṅganā.āśrayāc.ca/</l>
+
+<l xml:id="BJ_10.02b">dhātv.agni.praharaṇa.sāhasaiḥ.kuja.aṃśe.saumya.aṃśe.lipi.gaṇitā.ādi.kāvya.śilpaiḥ//(praharṣiṇī)</l>
+</lg>
+
+<lg xml:id="BJ_10.03">
+<l xml:id="BJ_10.03a">jīva.aṃśe.dvija.vibudha.ākara.ādi.dharmaiḥ.kāvya.aṃśe.maṇi.rajata.ādi.go.mahiṣyaiḥ/</l>
+
+<l xml:id="BJ_10.03b">saura.aṃśe.śrama.vadha.bhāra.nīca.śilpaiḥ.karma.īśa.adhyuṣita.nava.aṃśa.karma.siddhiḥ//(praharṣiṇī)</l>
+</lg>
+
+<lg xml:id="BJ_10.04">
+<l xml:id="BJ_10.04a">mitra.ari.sva.gṛha.gatair.grahais.tato.arthaṃ.tuṅgasthe.balini.ca.bhās.kare.sva.vīryāt/</l>
+
+<l xml:id="BJ_10.04b">āyasthair.udaya.dhana.āśritaiś.ca.saumyaiḥ.saṃcintyaṃ.bala.sahitair.anekadhā.svam//(praharṣiṇī)E10</l>
+</lg>
+
+<p xml:id="BJ_11">rāja.yoga</p>
+
+<lg xml:id="BJ_11.01">
+<l xml:id="BJ_11.01a">prāhur.yavanāḥ.sva.tuṅgagaiḥ.krūraiḥ.krūra.matir.mahīpatiḥ/</l>
+
+<l xml:id="BJ_11.01b">krūrais.tu.na.jīva.śarmaṇaḥ.pakṣe.kṣity.adhipaḥ.prajāyate//(vaitālīya)</l>
+</lg>
+
+<lg xml:id="BJ_11.02">
+<l xml:id="BJ_11.02a">vakra.arkaja.arka.gurubhiḥ.sakalais.tribhiś.ca.sva.ucceṣu.ṣoḍaśa.nṛpāḥ.kathita.ekalagne/</l>
+
+<l xml:id="BJ_11.02b">dvy.eka.āśriteṣu.ca.tathā.ekatame.vilagne.sva.kṣetrage.śaśini.ṣoḍaśa.bhūmipāḥ.syuḥ//(vasantatilakā)</l>
+</lg>
+
+<lg xml:id="BJ_11.03">
+<l xml:id="BJ_11.03a">varga.uttama.gate.lagne.candre.vā.candra.varjitaḥ/</l>
+
+<l xml:id="BJ_11.03b">catura.ādyair.grahair.dṛṣṭe.nṛpā.dvāviṃśatiḥ.smṛtāḥ//(anuṣṭubh)</l>
+</lg>
+
+<lg xml:id="BJ_11.04">
+<l xml:id="BJ_11.04a">yame.kumbhe.arke.aje.gavi.śaśini.tair.eva.tanugair.nṛ.yuktiṃ.saha.alisthaiḥ.śaśija.guru.vakrair.nṛ.patayaḥ/</l>
+
+<l xml:id="BJ_11.04b">yama.indū.tuṅge.aṅge.savitṛ.śaśijau.ṣaṣṭha.bhavane.tulā.aja.indu.kṣetraiḥ.sa.sita.kuja.jīvaiś.ca.narapau//(śikhariṇī)</l>
+</lg>
+
+<lg xml:id="BJ_11.05">
+<l xml:id="BJ_11.05a">kuje.tuṅge.arka.indvor.dhanuṣi.yama.lagne.ca.kupatiḥ.patir.bhūmeś.ca.anyaḥ.kṣiti.suta.vilagne.sa.śaśini/</l>
+
+<l xml:id="BJ_11.05b">sa.candre.saure.aste.sura.pati.gurau.cāpa.dharage.sva.tuṅgasthe.bhānāv.udayam.upayāte.kṣiti.patiḥ//(śikhariṇī)</l>
+</lg>
+
+<lg xml:id="BJ_11.06">
+<l xml:id="BJ_11.06a">vṛṣe.sa.indau.lagne.savitṛ.guru.tīkṣṇa.aṃśu.tanayaiḥ.suhṛj.jāyā.khasthair.bhavati.niyamān.mānava.patiḥ/</l>
+
+<l xml:id="BJ_11.06b">mṛge.mande.lagne.sahaja.ripu.dharma.vyaya.gataiḥ.śaśa.aṅka.ādyaiḥ.khyātaḥ.pṛthu.guṇa.yaśāḥ.puṅgala.patiḥ//(śikhariṇī)</l>
+</lg>
+
+<lg xml:id="BJ_11.07">
+<l xml:id="BJ_11.07a">haye.sa.indau.jīve.mṛga.mukha.gate.bhūmi.tanaye.sva.tuṅgasthau.lagne.bhṛguja.śaśijāv.atra.nṛ.patī/</l>
+
+<l xml:id="BJ_11.07b">sutasthau.vakra.arkī.guru.śaśi.sitāś.ca.api.hibuke.budhe.kanyā.lagne.bhavati.hi.nṛpo.anyo.api.guṇavān//(śikhariṇī)</l>
+</lg>
+
+<lg xml:id="BJ_11.08">
+<l xml:id="BJ_11.08a">jhaṣe.sa.indau.lagne.ghaṭa.mṛga.mṛga.indreṣu.sahitair.yama.āra.arkair.yo.abhūt.sa.khalu.manujaḥ.śāsti.vasudhām/</l>
+
+<l xml:id="BJ_11.08b">aje.sāre.mūrtau.śaśi.gṛha.gate.ca.amara.gurau/surejye.vā.lagne.dharaṇi.patir.anyo.api.guṇavān//(śikhariṇī)</l>
+</lg>
+
+<lg xml:id="BJ_11.09">
+<l xml:id="BJ_11.09a">karkiṇi.lagne.tatsthe.jīve.candra.sita.jñair.āya.prāptaiḥ/</l>
+
+<l xml:id="BJ_11.09b">meṣa.gate.arke.jātaṃ.vidyād.vikrama.yuktaṃ.pṛthvī.nātham//(vidyun.mālā)</l>
+</lg>
+
+<lg xml:id="BJ_11.10">
+<l xml:id="BJ_11.10a">mṛga.mukhe.arka.tanayas.tanu.saṃsthaḥ.kriya.kulīra.harayo.adhipa.yuktāḥ/</l>
+
+<l xml:id="BJ_11.10b">mithuna.tauli.sahitau.budha.śukrau.yadi.tadā.pṛthu.yaśāḥ.pṛthivī.īśaḥ//(drutavilambitā)</l>
+</lg>
+
+<lg xml:id="BJ_11.11">
+<l xml:id="BJ_11.11a">sva.ucca.saṃsthe.budhe.lagne.bhṛgau.meṣu.uraṇa.āśrite/</l>
+
+<l xml:id="BJ_11.11b">sa.jīve.aste.niśā.nāthe.rājā.manda.ārayoḥ.sute//(anuṣṭubh)</l>
+</lg>
+
+<lg xml:id="BJ_11.12">
+<l xml:id="BJ_11.12a">api.khala.kula.jātā.mānavā.rājya.bhājaḥ.kim.uta.nṛpa.kula.utthāḥ.prokta.bhū.pāla.yogaiḥ/</l>
+
+<l xml:id="BJ_11.12b">nṛ.pati.kula.samutthāḥ.pārthivā.vakṣyamāṇair.bhavati.nṛ.pati.tulyas.teṣv.abhū.pāla.putraḥ//(mālinī)</l>
+</lg>
+
+<lg xml:id="BJ_11.13">
+<l xml:id="BJ_11.13a">ucca.sva.tri.koṇagair.balasthais.try.ādyair.bhū.pati.vaṃśajā.nara.indrāḥ/</l>
+
+<l xml:id="BJ_11.13b">pañca.ādibhir.anya.vaṃśa.jātā.hīnair.vitta.yutā.na.bhūmi.pālāḥ//(aupacchandasika)</l>
+</lg>
+
+<lg xml:id="BJ_11.14">
+<l xml:id="BJ_11.14a">lekhāsthe.arke.aja.indau.lagne.bhaume.sva.ucce.kumbhe.mande/</l>
+
+<l xml:id="BJ_11.14b">cāpa.prāpte.jīve.rājñaḥ.putraṃ.vindyāt.pṛthvī.nātham//(vidyun.mālā)</l>
+</lg>
+
+<lg xml:id="BJ_11.15">
+<l xml:id="BJ_11.15a">sva.ṛkṣe.śukre.pātālasthe.dharma.sthānaṃ.prāpte.candre/</l>
+
+<l xml:id="BJ_11.15b">duścikya.aṅga.prāpti.prāptaiḥ.śeṣair.jātaḥ.svāmī.bhūmeḥ//(vidyunmala)</l>
+</lg>
+
+<lg xml:id="BJ_11.16">
+<l xml:id="BJ_11.16a">saumye.vīrya.yute.tanu.yukte.vīrya.āḍhye.ca.śubhe.śubha.yāte/</l>
+
+<l xml:id="BJ_11.16b">dharma.artha.upacayeṣv.avaśeṣair.dharma.ātmā.nṛpajaḥ.pṛthivī.īśaḥ//(navamālikā)</l>
+</lg>
+
+<lg xml:id="BJ_11.17">
+<l xml:id="BJ_11.17a">vṛṣa.udaye.mūrti.dhana.ari.lābhagaiḥ.śaśa.aṅka.jīva.arka.suta.aparair.nṛpaḥ/</l>
+
+<l xml:id="BJ_11.17b">sukhe.gurau.khe.śaśi.tīkṣṇa.dīdhitī.yama.udaye.lābha.gatair.nṛpo.aparaiḥ//(vaṃśastha)</l>
+</lg>
+
+<lg xml:id="BJ_11.18">
+<l xml:id="BJ_11.18a">meṣu.uraṇāya.tanugāḥ.śaśi.manda.jīvā.jña.ārau.dhane.sita.ravī.hibuke.nara.indram/</l>
+
+<l xml:id="BJ_11.18b">vakra.asitau.śaśi.surejya.sita.arka.saumyā.horā.sukha.asta.śubha.kha.āpti.gatāḥ.prajā.īśam//(vasnatatilakā)</l>
+</lg>
+
+<lg xml:id="BJ_11.19">
+<l xml:id="BJ_11.19a">karma.lagna.yuta.pāka.daśāyāṃ.rājya.labdhir.atha.vā.prabalasya/</l>
+
+<l xml:id="BJ_11.19b">śatru.nīca.gṛha.yāta.daśāyāṃ.cchidra.saṃśraya.daśā.parikalpyā//(svagatā)</l>
+</lg>
+
+<lg xml:id="BJ_11.20">
+<l xml:id="BJ_11.20a">guru.sita.budha.lagne.saptamasthe.arka.putre.viyati.divasa.nāthe.bhogināṃ.janma.vindyāt/</l>
+
+<l xml:id="BJ_11.20b">śubha.bala.yuta.kendraiḥ.krūra.saṃsthaiś.ca.pāpair.vrajati.śabara.dasyu.svāmitām.artha.bhāk.ca//(mālinī)E11</l>
+</lg>
+
+<p xml:id="BJ_12">nābhasayoga</p>
+
+<lg xml:id="BJ_12.01">
+<l xml:id="BJ_12.01a">nava.dig.vasavas.trika.agni.vedair.guṇitā.dvi.tri.catur.vikalpajāḥ.syuḥ/</l>
+
+<l xml:id="BJ_12.01b">yavanais.tri.guṇā.hi.ṣaṭ.śatī.sā.kathitā.vistarato.agra.tat.samāḥ.syuḥ//(aupacchandasika)</l>
+</lg>
+
+<lg xml:id="BJ_12.02">
+<l xml:id="BJ_12.02a">rajjur.muśalaṃ.nalaś.cara.ādyaiḥ.satyaś.ca.āśrayaja.āñja.gāda.yogān/</l>
+
+<l xml:id="BJ_12.02b">kendraiḥ.sad.asad.yutair.dala.ākhyau.srak.sarpau.kathitau.parāśareṇa//(aupacchandasika)</l>
+</lg>
+
+<lg xml:id="BJ_12.03">
+<l xml:id="BJ_12.03a">yogā.vrajanty.āśrayajāḥ.samatvaṃ.yava.abja.vajra.aṇḍaja.golaka.ādyaiḥ/</l>
+
+<l xml:id="BJ_12.03b">kendra.upagaiḥ.prokta.phalau.dala.ākhyāv.ity.āhur.anye.na.pṛthak.phalau.tau//(upajātikā)</l>
+</lg>
+
+<lg xml:id="BJ_12.04">
+<l xml:id="BJ_12.04a">āsanna.kendra.bhavana.dvayagair.gadā.ākhyas.tanu.astageṣu.śakaṭaṃ.vihagaḥ.kha.bandhvoḥ/</l>
+
+<l xml:id="BJ_12.04b">śṛṅgāṭakaṃ.navama.pañcama.lagna.saṃsthair.lagna.anyagair.halam.iti.pravadanti.taj.jñāḥ//(vasantatilakā)</l>
+</lg>
+
+<lg xml:id="BJ_12.05">
+<l xml:id="BJ_12.05a">śakaṭa.aṇḍaja.vac.chubha.aśubair.vajraṃ.tad.viparītagair.yavaḥ//</l>
+
+<l xml:id="BJ_12.05b">kamalaṃ.tu.vimiśra.saṃsthitair.vā.api.tad.yadi.kendra.bāhyataḥ//(vaitālīyā)</l>
+</lg>
+
+<lg xml:id="BJ_12.06">
+<l xml:id="BJ_12.06a">pūrva.śāstra.anusāreṇa.mayā.vajra.ādayaḥ.kṛtāḥ/</l>
+
+<l xml:id="BJ_12.06b">cauturthe.bhavane.sūryāj.jña.sitau.bhavataḥ.katham//(anuṣṭubh)</l>
+</lg>
+
+<lg xml:id="BJ_12.07">
+<l xml:id="BJ_12.07a">kaṇṭaka.ādi.pravṛttais.tu.catur.gṛha.gatair.grahaiḥ/</l>
+
+<l xml:id="BJ_12.07b">yūpeṣu.śakti.daṇḍa.ākhyā.horā.ādyaiḥ.kaṇṭakaiḥ.kramāt//(anuṣṭubh)</l>
+</lg>
+
+<lg xml:id="BJ_12.08">
+<l xml:id="BJ_12.08a">nau.kūṭa.cchatra.cāpāni.tadvat.sapta.ṛkṣa.saṃsthitaiḥ/</l>
+
+<l xml:id="BJ_12.08b">ardha.candras.tu.nāv.ādyaiḥ.proktas.tv.anya.ṛkṣa.saṃsthitaiḥ//(anuṣṭubh)</l>
+</lg>
+
+<lg xml:id="BJ_12.09">
+<l xml:id="BJ_12.09a">eka.antara.gatair.arthāt.samudraḥ.ṣaḍ.gṛha.āśritaiḥ/</l>
+
+<l xml:id="BJ_12.09b">vilagna.ādi.sthitaiś.cakram.ity.ākṛtija.saṃgrahaḥ//(anuṣṭubh)</l>
+</lg>
+
+<lg xml:id="BJ_12.10">
+<l xml:id="BJ_12.10a">saṃkhyā.yogāḥ.syuḥ.sapta.sapta.ṛkṣa.saṃsthir.eka.apāyād.vallakī.dāminī.ca.</l>
+
+<l xml:id="BJ_12.10b">pāśaḥ.kedāraḥ.śūla.yogo.yugaṃ.ca.golaś.ca.anyān.pūrvam.uktān.vihāya//(śālinī)</l>
+</lg>
+
+<lg xml:id="BJ_12.11">
+<l xml:id="BJ_12.11a">īrṣyur.videśa.nirato.adhva.ruciś.ca.rajjvāṃ.mānī.dhanī.ca.muśale.bahu.kṛtya.saktaḥ/</l>
+
+<l xml:id="BJ_12.11b">vyaṅgaḥ.sthira.āḍhya.nipuṇo.nalajaḥ.srag.uttho.bhogā.anvito.bhuja.gajo.bahu.duḥkha.bhāk.syāt//(vaṃ.ti)</l>
+</lg>
+
+<lg xml:id="BJ_12.12">
+<l xml:id="BJ_12.12a">āśraya.uktās.tu.viphalā.bhavanty.anyair.vimiśritāḥ/</l>
+
+<l xml:id="BJ_12.12b">miśrā.yais.te.phalaṃ.dadyur.amiśrāḥ.sva.phala.pradāḥ//(anuṣṭubh)</l>
+</lg>
+
+<lg xml:id="BJ_12.13">
+<l xml:id="BJ_12.13a">yajv.artha.bhāk.satatam.artha.rucir.gadāyāṃ.tad.vṛtti.bhuk.śakaṭajaḥ.sarujaḥ.kudāraḥ/</l>
+
+<l xml:id="BJ_12.13b">dūto.aṭanaḥ.kalaha.kṛd.vihage.pradiṣṭaḥ.śṛṅgāṭake.cira.sukhī.kṛṣikṛd.dhalākṣye//(va.ti.)</l>
+</lg>
+
+<lg xml:id="BJ_12.14">
+<l xml:id="BJ_12.14a">vajre.antya.pūrva.sukhinaḥ.subhago.atiśūro.vīrya.anvito.apy.atha.yave.sukhito.vayo.antaḥ/</l>
+
+<l xml:id="BJ_12.14b">vikhyāta.kīrty.amita.saukhya.guṇaś.ca.padme.vāpyāṃ.tanu.sthira.sukho.nidhi.kṛn.na.dātā//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_12.15">
+<l xml:id="BJ_12.15a">tyāga.ātmavān.kratu.varair.yajate.ca.yūpe.hiṃsro.atha.gupty.adhikṛtaḥ.śarakṛc.chara.ākhye/</l>
+
+<l xml:id="BJ_12.15b">nīco.alasaḥ.sukha.dhanair.viyutaś.ca.śaktau.daṇḍe.priyair.virahitaḥ.puruṣa.antya.vṛttiḥ//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_12.16">
+<l xml:id="BJ_12.16a">kīrtyā.yutaś.cala.sukhaḥ.kṛpaṇaś.ca.naujaḥ.kūṭe.anṛta.plavana.bandhanapaś.ca.jātaḥ/</l>
+
+<l xml:id="BJ_12.16b">chatra.udbhavaḥ.sva.jana.saukhya.karo.antya.saukhyaḥ.śūraś.ca.kārmuka.bhavaḥ.prathama.antya.saukhyaḥ//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_12.17">
+<l xml:id="BJ_12.17a">ardha.indujaḥ.subhaga.kānta.vapuḥ.pradhānas.toya.ālaye.nara.pati.pratimas.tu.bhogī/</l>
+
+<l xml:id="BJ_12.17b">cakre.nara.indra.mukuṭa.dyuti.rañjita.aṅghrir.vīṇā.udbhavaś.ca.nipuṇaḥ.priya.gīta.nṛtyaḥ//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_12.18">
+<l xml:id="BJ_12.18a">dātā.anya.kārya.nirataḥ.paśupaś.ca.dāmni.pāśe.dhana.arjana.viśīla.sa.bhṛtya.bandhuḥ/</l>
+
+<l xml:id="BJ_12.18b">kedārajaḥ.kṛṣi.karaḥ.subahu.upayoṣyaḥ.śūraḥ.kṣato.dhana.rucir.vidhanaś.ca.śūle//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_12.19">
+<l xml:id="BJ_12.19a">dhana.virahitaḥ.pākhaṇḍī.vā.yuge.tv.atha.golake.vidhana.malino.jñāna.upetaḥ.kuśilpyalaso.aṭanaḥ/</l>
+
+<l xml:id="BJ_12.19b">iti.nigaditā.yogāḥ.sārddhaṃ.phalair.iha.nābhasā.niyata.phaladāś.cintyā.hy.ete.samasta.daśāsv.api//(hariṇī)E12</l>
+</lg>
+
+<p xml:id="BJ_13">candrayoga</p>
+
+<lg xml:id="BJ_13.01">
+<l xml:id="BJ_13.01a">adhama.sama.variṣṭhāny.arka.kendra.ādi.saṃsthe.śaśini.vinaya.vitta.jñāna.dhī.naipuṇāni/</l>
+
+<l xml:id="BJ_13.01b">ahani.niśi.ca.candre.sve.adhimitra.aṃśake.vā.sura.guru.sita.dṛṣṭe.vittavān.syāt.sukhī.ca//(mālinī)</l>
+</lg>
+
+<lg xml:id="BJ_13.02">
+<l xml:id="BJ_13.02a">saumyaiḥ.smara.ari.nidhaneṣv.adhiyoga.indos.tasmiṃś.camūpa.saciva.kṣiti.pāla.janma/</l>
+
+<l xml:id="BJ_13.02b">sampanna.saukhya.vibhavā.hata.śatravaś.ca.dīrgha.āyuṣo.vigata.roga.bhayāś.ca.jātāḥ//(va.ti.)</l>
+</lg>
+
+<lg xml:id="BJ_13.03">
+<l xml:id="BJ_13.03a">hitvā.arkaṃ.sunaphā.anaphā.durudhurāḥ.sva.antya.ubhayasthair.grahaiḥ.śīta.aṃśoḥ.kathito.anyathā.tu.bahubhiḥ.kemadrumo.anyais.tv.asau/</l>
+
+<l xml:id="BJ_13.03b">kendre.śīta.kare.atha.vā.graha.yute.kemadrumo.na.iṣyate.ke.cit.kendra.nava.aṃśakeṣu.ca.vadanty.uktiḥ.prasiddhā.na.te//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_13.04">
+<l xml:id="BJ_13.04a">triṃśat.sa.rūpāḥ.sunaphā.anaphā.ākhyāḥ.ṣaṣṭitrayaṃ.daurudhure.prabhedāḥ/</l>
+
+<l xml:id="BJ_13.04b">icchā.vikalpaiḥ.kramaśo.abhinīya.nīte.nivṛttiḥ.punar.anya.nītiḥ//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_13.05">
+<l xml:id="BJ_13.05a">svayam.adhigata.vittaḥ.pārthivas.tat.samo.vā.bhavati.hi.sunaphāyāṃ.dhī.dhana.khyātimāṃś.ca/</l>
+
+<l xml:id="BJ_13.05b">prabhura.gada.śarīraḥ.śīlavān.khyāta.kīrtir.viṣaya.sukha.suveṣo.nirvṛtaś.ca.anaphāyām//(mālinī)</l>
+</lg>
+
+<lg xml:id="BJ_13.06">
+<l xml:id="BJ_13.06a">utpanna.bhoga.sukha.bhug.dhana.vāhana.āḍhyas.tyāga.anvito.durudhurā.prabhavaḥ.subhṛtyaḥ/</l>
+
+<l xml:id="BJ_13.06b">kemadrume.malina.duḥkhita.nīca.niḥsvāḥ.preṣyāḥ.khalāś.ca.nṛpater.api.vaṃśa.jātāḥ//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_13.07">
+<l xml:id="BJ_13.07a">utsāha.śaurya.dhana.sāhasa.vān.mahījaḥ.saumyaḥ.paṭuḥ.suvacano.nipuṇaḥ.kalāsu/</l>
+
+<l xml:id="BJ_13.07b">jīvo.artha.dharma.sukha.bhāṅ.nṛpa.pūjitaś.ca.kāmī.bhṛgur.bahu.dhano.viṣaya.upabhoktā//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_13.08">
+<l xml:id="BJ_13.08a">para.vibhava.paricchada.upabhoktā.ravi.tanayo.bahu.kāryakṛd.gaṇeśaḥ/</l>
+
+<l xml:id="BJ_13.08b">aśubha.kṛd.uḍupo.ahni.dṛśya.mūrtir.galita.tanuś.ca.śubho.anyathā.anyad.ūhyam//(puṣpitāgrā)</l>
+</lg>
+
+<lg xml:id="BJ_13.09">
+<l xml:id="BJ_13.09a">lagnād.atīva.vasumān.vasumāñ.chaśa.aṅkāt.saumya.grahair.upacaya.upagataiḥ.samastaiḥ/</l>
+
+<l xml:id="BJ_13.09b">dvābhyāṃ.samo.alpa.vasumāṃś.ca.tad.ūnatāyām.anyeṣv.asatsv.api.phaleṣv.idam.utkaṭena//(va.ti)E13</l>
+</lg>
+
+<p xml:id="BJ_14">dvi.grahayoga</p>
+
+<lg xml:id="BJ_14.01">
+<l xml:id="BJ_14.01a">tigma.aṃśur.janayaty.uṣeśa.sahito.yantra.aśma.kāraṃ.naraṃ.bhaumena.agharataṃ.budhena.nipuṇaṃ.dhī.kīrti.saukhya.anvitam/</l>
+
+<l xml:id="BJ_14.01b">krūraṃ.vāk.patinā.anya.kārya.nirataṃ.śukreṇa.raṅga.āyudhair.labdhasvaṃ.ravijena.dhātu.kuśalaṃ.bha.aṇḍa.prakāreṣu.vā//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_14.02">
+<l xml:id="BJ_14.02a">kūṭa.stry.āsava.kumbha.paṇyam.aśivaṃ.mātuḥ.sa.vakraḥ.śaśī/sa.jñaḥ.praśrita.vākyam.artha.nipuṇaṃ.saubhāgya.kīrtyā.anvitam/</l>
+
+<l xml:id="BJ_14.02b">vikrāntaṃ.kula.mukhyam.asthira.matiṃ.vitta.īśvaraṃ.sa.aṅgirā/vastrāṇāṃ.sa.sitaḥ.kriyā.ādi.kuśalaṃ.sa.arkiḥ.punarbhū.sutam//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_14.03">
+<l xml:id="BJ_14.03a">mūla.ādi.sneha.kūṭair.vyavaharati.vaṇig.bāhu.yoddhā.sa.saumye/puryadhyakṣaḥ.sa.jīve.bhavati.nara.patiḥ.prāpta.vitto.dvijo.vā/</l>
+
+<l xml:id="BJ_14.03b">gopo.mallo.atha.dakṣaḥ.para.yuvati.rato.dyūta.kṛt.sāsurejye.duḥkha.ārto.asatya.saṃdhaḥ.sa.savitṛ.tanaye.bhūmije.ninditaś.ca//(śa.vi)</l>
+</lg>
+
+<lg xml:id="BJ_14.04">
+<l xml:id="BJ_14.04a">saumye.raṅga.caro.bṛhaspati.yute.gīta.priyo.nṛtyavid.vāgmī.bhū.gaṇapaḥ.sitena.mṛdunā.māyā.paṭur.laṅghakaḥ/</l>
+
+<l xml:id="BJ_14.04b">sad.vidyo.dhana.dāravān.bahu.guṇaḥ.śukreṇa.yukte.gurau.jñeyaḥ.śmaśru.karo.asitena.ghaṭakṛj.jāto.anna.kāro.api.vā//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_14.05">
+<l xml:id="BJ_14.05a">asita.sita.samāgame.alpa.cakṣur.yuvati.samāśraya.sampravṛddha.vittaḥ/</l>
+
+<l xml:id="BJ_14.05b">bhavati.ca.lipi.pustaka.citra.vettā.kathita.phalaiḥ.parato.vikalpanīyāḥ//(puṣpitāgrā)E14</l>
+</lg>
+
+<p xml:id="BJ_15">pravrajyāyoga</p>
+
+<lg xml:id="BJ_15.01">
+<l xml:id="BJ_15.01a">ekasthaiś.catura.ādibhir.bala.yutair.jātāḥ.pṛthag.vīryagaiḥ/śākyā.jīvika.bhikṣu.vṛddha.carakā.nirgrantha.vanya.āśanāḥ/</l>
+
+<l xml:id="BJ_15.01b">māheya.jña.guru.kṣapā.kara.sita.prābhākarīnaiḥ.kramāt/pravrajyā.balibhiḥ.samā.parajitais.tat.svāmibhiḥ.pracyutiḥ//(no name)</l>
+</lg>
+
+<lg xml:id="BJ_15.02">
+<l xml:id="BJ_15.02a">ravi.kupta.karair.adīkṣitā.balibhis.tad.gata.bhaktayo.narāḥ/</l>
+
+<l xml:id="BJ_15.02b">abhiyācita.mātra.dīkṣitā.nihatair.anya.nirīkṣitair.api//(vaitālīya)</l>
+</lg>
+
+<lg xml:id="BJ_15.03">
+<l xml:id="BJ_15.03a">janma.īśo.anyair.yady.adṛṣṭo.arka.putraṃ.paśyaty.ārkir.janmapaṃ.vā.bala.ūnam/</l>
+
+<l xml:id="BJ_15.03b">dīkṣāṃ.prāpnoty.ārki.dṛk.kāṇa.saṃsthe.bhauma.ārky.aṃśe.saura.dṛṣṭe.ca.candre//(mālinī)</l>
+</lg>
+
+<lg xml:id="BJ_15.04">
+<l xml:id="BJ_15.04a">sura.guru.śaśi.horā.sva.ārke.dṛṣṭāsu.dharme.gurur.atha.nṛpatīnāṃ.yogajas.tīrtha.kṛt.syāt/</l>
+
+<l xml:id="BJ_15.04b">navama.bhavana.saṃsthe.mandage.anyair.dṛṣṭe.bhavati.narapa.yoge.dīkṣitaḥ.pārthiva.indraḥ//(mālinī)E15</l>
+</lg>
+
+<p xml:id="BJ_16">nakṣatraphala</p>
+
+<lg xml:id="BJ_16.01">
+<l xml:id="BJ_16.01a">priya.bhūṣaṇaḥ.surūpaḥ.subhago.dakṣo.aśvinīṣu.matimāṃś.ca/</l>
+
+<l xml:id="BJ_16.01b">kṛta.niścaya.satya.arug.dakṣaḥ.sukhitaś.ca.bharaṇīṣu//(āryā)</l>
+</lg>
+
+<lg xml:id="BJ_16.02">
+<l xml:id="BJ_16.02a">bahu.bhuk.para.dāra.ratas.tejasvī.kṛttikāsu.vikhyātaḥ/</l>
+
+<l xml:id="BJ_16.02b">rohiṇyāṃ.satya.śuciḥ.priyaṃvadaḥ.sthira.matiḥ.surūpaś.ca//(āryā)</l>
+</lg>
+
+<lg xml:id="BJ_16.03">
+<l xml:id="BJ_16.03a">capalaś.caturo.bhīruḥ.paṭur.utsāhī.dhanī.mṛge.bhogī/</l>
+
+<l xml:id="BJ_16.03b">śaṭha.garvitaḥ.kṛtaghno.hiṃsraḥ.pāpaś.ca.raudra.ṛkṣe//(āryā)</l>
+</lg>
+
+<lg xml:id="BJ_16.04">
+<l xml:id="BJ_16.04a">dāntaḥ.sukhī.suśīlo.durmedhā.roga.bhāk.pipāsuś.ca/</l>
+
+<l xml:id="BJ_16.04b">alpena.ca.saṃtuṣṭaḥ.punarvasau.jāyate.manujaḥ/(āryā)</l>
+</lg>
+
+<lg xml:id="BJ_16.05">
+<l xml:id="BJ_16.05a">śānta.ātmā.subhagaḥ.paṇḍito.dhanī.dharma.saṃsṛtaḥ.puṣye/</l>
+
+<l xml:id="BJ_16.05b">śaṭhaḥ.sarva.bhakṣa.pāpaḥ.kṛtaghna.dhūrtaś.ca.bhaujaṅge//(āryā)</l>
+</lg>
+
+<lg xml:id="BJ_16.06">
+<l xml:id="BJ_16.06a">bahu.bhṛtya.dhano.bhogī.sura.pitṛ.bhakto.mahā.udyamaḥ.pitrye/</l>
+
+<l xml:id="BJ_16.06b">priya.vāg.dātā.dyutimān.aṭano.nṛpa.sevako.bhāgye//(āryā)</l>
+</lg>
+
+<lg xml:id="BJ_16.07">
+<l xml:id="BJ_16.07a">subhago.vidyā.āpta.dhano.bhogī.sukhabhāk.dvitīya.phālgunyām/</l>
+
+<l xml:id="BJ_16.07b">utsāhī.dhṛṣṭaḥ.pānapo.ghṛṇī.taskaro.haste//(āryā)</l>
+</lg>
+
+<lg xml:id="BJ_16.08">
+<l xml:id="BJ_16.08a">citra.ambara.mālya.dharaḥ.sulocana.aṅgaś.ca.bhavati.citrāyām/</l>
+
+<l xml:id="BJ_16.08b">dānto.vaṇik.kṛpāluḥ.priya.vāg.dharma.āśritaḥ.svātau//(āryā)</l>
+</lg>
+
+<lg xml:id="BJ_16.09">
+<l xml:id="BJ_16.09a">īrṣyur.lubdho.dyutimān.vacana.paṭuḥ.kalaha.kṛd.viśākhāsu/</l>
+
+<l xml:id="BJ_16.09b">āḍhyo.videśa.vāsī.kṣudhālur.aṭano.anurādhāsu//(āryā)</l>
+</lg>
+
+<lg xml:id="BJ_16.10">
+<l xml:id="BJ_16.10a">jyeṣṭhāsu.na.bahu.mitraḥ.saṃtuṣṭo.dharma.kṛt.pracura.kopaḥ/</l>
+
+<l xml:id="BJ_16.10b">mūle.mānī.dhanavān.sukhī.na.hiṃsraḥ.sthiro.bhogī//(āryā)</l>
+</lg>
+
+<lg xml:id="BJ_16.11">
+<l xml:id="BJ_16.11a">iṣṭa.ānanda.kalatro.mānī.dṛḍha.sauhṛdaś.ca.jala.daive/</l>
+
+<l xml:id="BJ_16.11b">vaiśve.vinīta.dhārmika.bahu.mitra.kṛtajña.subhagaś.ca//(āryā)</l>
+</lg>
+
+<lg xml:id="BJ_16.12">
+<l xml:id="BJ_16.12a">śrīmāñ.chravaṇe.śrutavān.udāra.dāro.dhana.anvitaḥ.khyātaḥ/</l>
+
+<l xml:id="BJ_16.12b">dātā.āḍhyaḥ.śūro.gīta.priyo.dhaniṣṭhāsu.dhana.lubdhaḥ//(āryā)</l>
+</lg>
+
+<lg xml:id="BJ_16.13">
+<l xml:id="BJ_16.13a">sphuṭa.vāg.vyasanī.ripuhā.sāhasikaḥ.śatabhiṣaji.durgrāhyaḥ/</l>
+
+<l xml:id="BJ_16.13b">bhādrapadāsu.dvi.ganaḥ.strī.jita.dhanī.paṭur.adātā.ca//(āryā)</l>
+</lg>
+
+<lg xml:id="BJ_16.14">
+<l xml:id="BJ_16.14a">vaktā.sukhī.prajāvān.jita.śatrur.dhārmiko.dvitīyāsu/</l>
+
+<l xml:id="BJ_16.14b">sampūrṇa.aṅgaḥ.subhagaḥ.śūraḥ.śucir.arthavān.pauṣṇe//(āryā)E16</l>
+</lg>
+
+<p xml:id="BJ_17">candrarāśiśīla</p>
+
+<lg xml:id="BJ_17.01">
+<l xml:id="BJ_17.01a">vṛtta.ātāmra.dṛg.uṣṇa.śāka.laghu.bhuk.kṣipra.prasādo.aṭanaḥ/kāmī.durbala.jānur.asthira.dhanaḥ.śūro.aṅganā.vallabhaḥ/</l>
+
+<l xml:id="BJ_17.01b">sevājñaḥ.kanakhī.vraṇa.aṅkita.śirā.mānī.saha.uttha.agrajaḥ/śaktyā.pāṇi.tale.aṅkito.aticapalas.toye.atibhīruḥ.kriye//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_17.02">
+<l xml:id="BJ_17.02a">kāntaḥ.khela.gatiḥ.pṛthu.ūru.vadanaḥ.pṛṣṭha.āsya.pārśva.aṅkitas.tyāgī.kleśa.sahaḥ.prabhuḥ.kakudavān.kanyā.prajaḥ.śleṣmalaḥ/</l>
+
+<l xml:id="BJ_17.02b">pūrvair.bandhu.dhana.ātmajair.virahitaḥ.saubhāgya.yuktaḥ.kṣamī.dīpta.agniḥ.pramadā.priyaḥ.sthira.suhṛn.madhya.antya.saukhyo.gavi//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_17.03">
+<l xml:id="BJ_17.03a">strī.lolaḥ.suratā.upacāra.kuśalas.tāmra.īkṣaṇaḥ.śāstravid.dūtaḥ.kuñcita.mūrdhajaḥ.paṭu.matir.hāsya.iṅgita.dyūtavit/</l>
+
+<l xml:id="BJ_17.03b">cārv.aṅgaḥ.priya.vāk.prabha.kṣaṇa.rucir.gīta.priyo.nṛtyavit.klībair.yāti.ratiṃ.samunnata.nasaś.candre.tṛtīya.ṛkṣage//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_17.04">
+<l xml:id="BJ_17.04a">āvakra.drutagaḥ.samunnata.kaṭiḥ.strī.nirjjitaḥ.sat.suhṛd.daivajñaḥ.pracura.ālaya.kṣaya.dhanaiḥ.saṃyujyate.candravat//</l>
+
+<l xml:id="BJ_17.04b">hrasvaḥ.pīna.galaḥ.sameti.ca.vaṃśa.sāmnā.suhṛd.vatsalas/toya.udyāna.rataḥ.sva.veśma.sahite.jātaḥ.śaśa.aṅke.naraḥ//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_17.05">
+<l xml:id="BJ_17.05a">tīkṣṇaḥ.sthūla.hanur.viśāla.vadanaḥ.piṅga.īkṣaṇo.alpa.ātmajaḥ/strī.dveṣī.priya.māṃsa.kānana.nagaḥ.kupyaty.akārye.ciram/</l>
+
+<l xml:id="BJ_17.05b">kṣut.tṛṇa.udara.danta.mānasa.rujā.sampīḍitas.tyāgavān/vikrāntaḥ.sthira.dhīḥ.sugarvita.manā.mātur.vidheyo.arka.bhe//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_17.06">
+<l xml:id="BJ_17.06a">vrīḍā.manthara.cāru.vīkṣaṇa.gatiḥ.srasta.aṃsa.bāhuḥ.sukhī/ślakṣṇaḥ.satya.rataḥ.kalāsu.nipuṇaḥ.śāstra.arthavid.dhārmikaḥ/</l>
+
+<l xml:id="BJ_17.06b">medhāvī.surata.priyaḥ.para.gṛhair.vittaiś.ca.saṃyujyate/kanyāyāṃ.para.deśagaḥ.priya.vacāḥ.kanyā.prajo.alpa.ātmajaḥ//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_17.07">
+<l xml:id="BJ_17.07a">deva.brāhmaṇa.sādhu.pūjana.rataḥ.prājñaḥ.śuciḥ.strī.jitaḥ.prāṃśuś.ca.unnata.nāsikaḥ.kṛśa.calad.gātro.aṭano.artha.anvitaḥ/</l>
+
+<l xml:id="BJ_17.07b">hīna.aṅgaḥ.kraya.vikrayeṣu.kuśalo.deva.dvi.nāmā.sa.ruk.bandhūnām.upakāra.kṛd.viruṣitas.tyaktas.tu.taiḥ.saptame//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_17.08">
+<l xml:id="BJ_17.08a">pṛthula.nayana.vakṣā.vṛtta.jaṅgha.ūru.jānur.janaka.guru.viyuktaḥ.śaiśave.vyādhitaś.ca/</l>
+
+<l xml:id="BJ_17.08b">nara.pati.kula.pūjyaḥ.piṅgalaḥ.krūra.ceṣṭo.jhaṣa.kuliśa.khaga.aṅkaś.channa.pāpo.alijātaḥ//(mālinī)</l>
+</lg>
+
+<lg xml:id="BJ_17.09">
+<l xml:id="BJ_17.09a">vyādirgha.āsya.śiro.dharaḥ.pitṛ.dhanas.tyāgī.kavir.vīryavān/vaktā.sthūla.rada.śravo.adhara.nasaḥ.karma.udyataḥ.śilpavit/</l>
+
+<l xml:id="BJ_17.09b">kubja.aṃśaḥ.kunakhī.sama.aṃsala.bhujaḥ.prāgalbhavān.dharmavid/bandhu.dviṭ.na.balāt.samaiti.ca.vaṃśa.sāmna.eka.sādhyo.aśvajaḥ//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_17.10">
+<l xml:id="BJ_17.10a">nityaṃ.lālayati.sva.dāra.tanayān.dharma.dhvajo.adhaḥ.kṛśaḥ/svakṣaḥ.kṣāma.kaṭir.gṛhīta.vacanaḥ.saubhāgya.yukto.alasaḥ/</l>
+
+<l xml:id="BJ_17.10b">śītālur.manujo.aṭanaś.ca.makare.satva.adhikaḥ.kāvya.kṛl.lubdho.agamya.jara.aṅganāsu.nirataḥ.santyakta.lajjo.aghṛṇaḥ//(śā.vi)</l>
+</lg>
+<lg xml:id="BJ_17.11">
+<l xml:id="BJ_17.11a">karabha.galaḥ.śirāluḥ.khara.lomaśa.dīrgha.tanuḥ.pṛthu.caraṇa.ūru.pṛṣṭha.jaghana.āsya.kaṭir.jaraṭhaḥ//</l>
+
+<l xml:id="BJ_17.11b">para.vanitā.artha.pāpa.nirataḥ.kṣaya.vṛddhi.yutaḥ.priya.kusuma.anulepana.suhṛd.ghaṭajo.adhva.sahaḥ//(troṭaka)</l>
+</lg>
+
+<lg xml:id="BJ_17.12">
+<l xml:id="BJ_17.12a">jala.para.dhana.bhoktā.dāra.vāso.anuraktaḥ.sama.rucira.śarīras.tuṅga.nāso.bṛhatkaḥ/</l>
+
+<l xml:id="BJ_17.12b">abhibhavati.sa.patnān.strī.jitaś.cāru.dṛṣṭir.dyuti.nidhi.dhana.bhogī.paṇḍitaś.ca.antya.rāśau//(mālinī)</l>
+</lg>
+
+<lg xml:id="BJ_17.13">
+<l xml:id="BJ_17.13a">balavati.rāśau.tad.adhipatau.ca.sva.bala.yutaḥ.syād.yadi.tuhina.aṃśuḥ/</l>
+
+<l xml:id="BJ_17.13b">kathita.kalānām.avikala.dātā.śaśivad.ato.anye.ity.anuparicintyāḥ//(bhramaravilasita)E17</l>
+</lg>
+
+<p xml:id="BJ_18">rāśiśīla</p>
+
+<lg xml:id="BJ_18.01">
+<l xml:id="BJ_18.01a">prathitaś.caturo.aṭano.alpa.vittaḥ.kriyage.tv.āyudha.bhṛd.vituṅga.bhāge/</l>
+
+<l xml:id="BJ_18.01b">gavi.vastra.sugandha.paṇya.jīvī.vanitād.viṭ.kuśalaś.ca.go.yava.ādye//(aupacchandasika)</l>
+</lg>
+
+<lg xml:id="BJ_18.02">
+<l xml:id="BJ_18.02a">vidyā.jyotiṣa.vittavān.mithunage.bhānau.kulīre.sthite.tīkṣṇo.asvaḥ.para.kārya.kṛc.chrama.patha.kleśaiś.ca.saṃyujyate/</l>
+
+<l xml:id="BJ_18.02b">siṃhasthe.vana.śaila.go.kula.ratir.vīrya.anvito.ajñaḥ.pumān.kanyāsthe.lipi.lekhya.kāvya.gaṇita.jñāna.anvitaḥ.strī.vapuḥ//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_18.03">
+<l xml:id="BJ_18.03a">jātas.taulini.sauṇḍiko.adhvani.rato.hairaṇyako.nīca.kṛt.krūraḥ.sāhasiko.viśa.arjita.dhanaḥ.śastra.antago.ali.sthite/</l>
+
+<l xml:id="BJ_18.03b">sat.pūjyo.dhanavān.dhanur.dhara.gate.tīkṣṇo.bhiṣak.kāruko.nīco.ajñaḥ.kuvaṇiṅ.mṛge.alpa.dhanavāṃl.labdho.anya.bhāgyair.rataḥ//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_18.04">
+<l xml:id="BJ_18.04a">nīco.ghaṭe.tanaya.bhāgya.pariccyuto.asva.stoya.uttha.paṇya.vibhavo.banitād.ṛto.antye/</l>
+
+<l xml:id="BJ_18.04b">nakṣatra.mānava.tanu.pratime.vibhāge.lakṣma.ādiśet.tuhina.raśmi.dina.īśa.yukte//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_18.05">
+<l xml:id="BJ_18.05a">nara.pati.sat.kṛto.aṭanaś.camūpa.vaṇik.sa.dhanaḥ.kṣata.tanuś.caura.bhūri.viṣayāṃś.ca.kujaḥ.sva.gṛhe/</l>
+
+<l xml:id="BJ_18.05b">yuvati.jitān.suhṛtsu.viṣamān.para.dāra.ratān.kuhaka.suveṣa.bhīru.paurṣān.sita.bhe.janayet//(troṭaka)</l>
+</lg>
+
+<lg xml:id="BJ_18.06">
+<l xml:id="BJ_18.06a">baudhe.asahas.tanayavān.visuhṛt.kṛtajño.gāndharva.yuddha.kuśalaḥ.kṛpaṇo.abhayo.arthī/</l>
+
+<l xml:id="BJ_18.06b">cāndre.arthavān.salila.yāna.samarjita.svaḥ.prājñaś.ca.bhūmi.tanaye.vikalaḥ.khalaś.ca//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_18.07">
+<l xml:id="BJ_18.07a">niḥsvaḥ.kleśa.saho.vana.antara.caraḥ.siṃhe.alpa.dārā.ātmajo.jaive.na.eka.ripur.nara.indra.sacivaḥ.khyāto.abhaya.alpa.ātmajaḥ/</l>
+
+<l xml:id="BJ_18.07b">duḥkha.arto.vidhano.aṭano.anṛta.ratas.tīkṣṇaś.ca kumbha.sthite.bhaume.bhūri.dhana.ātmajo.mṛga.gate.bhūpo.atha.vā.tat.samaḥ//(ā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_18.08">
+<l xml:id="BJ_18.08a">dyūta.ṛṇa.pāna.rata.nāstika.caura.niḥsvāḥ.kustrīka.kūṭakṛd.asatya.ratāḥ.kuja.ṛkṣe/</l>
+
+<l xml:id="BJ_18.08b">ācārya.bhūri.suta.dāra.dhana.arjana.iṣṭāḥ.śaukre.vadāny.aguru.bhakti.ratāś.ca.saumye//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_18.09">
+<l xml:id="BJ_18.09a">vikatthanaḥ.śāstra.kalā.vidagdhaḥ.priyaṃvadaḥ.saukhya.ratas.tṛtīye/</l>
+
+<l xml:id="BJ_18.09b">jala.arjita.svaḥ.sva.janasya.śatruḥ.śaśa.aṅkaje.śīta.kara.ṛkṣa.yukte//(upendravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_18.10">
+<l xml:id="BJ_18.10a">strī.dveṣyo.vidhana.sukha.ātmajo.aṭano.ajñaḥ.strī.lolaḥ.sva.paribhavo.arka.rāśige.jñe/</l>
+
+<l xml:id="BJ_18.10b">tyāgī.jñaḥ.pracura.guṇaḥ.sukhī.kṣamāvān.yukti.jño.vigata.bhayaś.ca.ṣaṣṭha.rāśau//(praharṣiṇī)</l>
+</lg>
+
+<lg xml:id="BJ_18.11">
+<l xml:id="BJ_18.11a">para.karma.kṛd.asva.śilpa.buddhī.ṛṇavān.viṣṭi.karo.budhe.arkaja.ṛkṣe/</l>
+
+<l xml:id="BJ_18.11b">nṛpa.satkṛta.paṇḍita.āpta.vākyo.navame.antye.jita.sevaka.antya.śilpaḥ//(aupacchandasika)</l>
+</lg>
+
+<lg xml:id="BJ_18.12">
+<l xml:id="BJ_18.12a">senā.nirbahu.vitta.dāra.tanayo.dātā.subhṛtyaḥ.kṣamī.tejo.dāra.guṇa.anvitaḥ.sura.gurau.khyātaḥ.pumān.kauja.bhe/</l>
+
+<l xml:id="BJ_18.12b">kalpa.aṅgaḥ.sa.dhana.artha.mitra.tanayas.tyāgī.priyaḥ.śaukra.bhe.baudhe.bhūri.paricchada.ātmaja.suhṛt.sācivya.yuktaḥ.sukhī//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_18.13">
+<l xml:id="BJ_18.13a">cāndre.ratna.suta.sva.dāra.vibhava.prajñā.sukhair.anvitaḥ/siṃhe.syād.bala.nāyakaḥ.sura.gurau.proktaṃ.ca.yac.canra.bhe//</l>
+
+<l xml:id="BJ_18.13b">sva.ṛkṣe.māṇḍaliko.nara.indra.sacivaḥ.senāpatir.vā.dhanī/kumbhe.karkaṭavat.phalāni.makare.nīco.alpa.vitto.asukhī//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_18.14">
+<l xml:id="BJ_18.14a">para.yuvati.ratas.tad.artha.vādair.hṛta.vibhavaḥ.kula.pāṃsanaḥ.kuja.ṛkṣe/</l>
+
+<l xml:id="BJ_18.14b">sva.bala.mati.dhano.nara.indra.pūjyaḥ.sva.jana.vibhuḥ.prathito.abhayaḥ.site.sve//(puṣpitāgrā)</l>
+</lg>
+
+<lg xml:id="BJ_18.15">
+<l xml:id="BJ_18.15a">nṛpa.kṛtya.karo.arthavān.kalāvin.mithune.ṣaṣṭha.gate.atinīca.karmā.</l>
+
+<l xml:id="BJ_18.15b">ravija.ṛkṣa.gate.amara.ari.pūjye.subhagaḥ.strī.vijito.rataḥ.kunāryyām//(aupacchandasika)</l>
+</lg>
+
+<lg xml:id="BJ_18.16">
+<l xml:id="BJ_18.16a">dvi.bhāryo.arthī.bhīruḥ.prabala.mada.śokaś.ca.śaśi.bhe.harau.yoṣā.āpta.arthaḥ.pravara.yuvatir.manda.tanayaḥ/</l>
+
+<l xml:id="BJ_18.16b">guṇaiḥ.pūjyaḥ.sa.svas.turaga.sahite.dānava.gurau.jhaṣe.vidvān.āḍhyo.nṛpa.janita.pūjo.atisubhagaḥ//(śikhariṇī)</l>
+</lg>
+
+<lg xml:id="BJ_18.17">
+<l xml:id="BJ_18.17a">mūrkho.aṭanaḥ.kapaṭavān.visuhṛd.yame.aje.kīṭe.tu.bandha.vadha.bhāk.capalo.aghṛṇaś.ca/</l>
+
+<l xml:id="BJ_18.17b">nihrīr.sukha.artha.tanayaḥ.skhalitaś.ca.lekhye.rakṣā.patir.bhavati.mukhya.patiś.ca.baudhe//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_18.18">
+<l xml:id="BJ_18.18a">varjya.strī.iṣṭo.na.bahu.vibhavo.bhūri.bhāryo.vṛṣasthe.khyātaḥ.sva.ucce.gaṇa.pura.bala.grāma.pūjyo.arthavāṃś.ca.karkiṇy.asvo.vikala.daśano.mātṛ.hīno.asuto.ajñaḥ.siṃhe.anāryo.bisukha.tanayo.viṣṭi.kṛt.sūrya.putre//(mandākrāntā)</l>
+</lg>
+
+<lg xml:id="BJ_18.19">
+<l xml:id="BJ_18.19a">svantaḥ.pratyayito.nara.indra.bhavane.sat.putra.jāyā.dhano.jīva.kṣetra.gate.arkaje.pura.bala.grāma.agra.netā.atha.vā/</l>
+
+<l xml:id="BJ_18.19b">anya.strī.dhana.saṃvṛtaḥ.pura.bala.grāma.agraṇīr.manda.dṛk.sva.kṣetre.malinaḥ.sthira.artha.vibhavo.bhoktā.ca.jātaḥ.pumān//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_18.20">
+<l xml:id="BJ_18.20a">śiśira.kara.samāgama.īkṣaṇānāṃ.sadṛśa.phalaṃ.pravadanti.lagna.jātam/</l>
+
+<l xml:id="BJ_18.20b">phalam.adhikam.idaṃ.yad.atra.bhāvād.bhavana.bha.nātha.guṇair.vicintanīyam//(puṣpitāgrā)E18</l>
+</lg>
+
+<p xml:id="BJ_19">duṣṭiphala</p>
+
+<lg xml:id="BJ_19.01">
+<l xml:id="BJ_19.01a">candre.bhūpa.budhau.nṛpa.upama.guṇī.steno.adhanaś.ca.ajage.niḥsvaḥ.stena.nṛ.mānya.bhūpa.dhaninaḥ.preṣyaḥ.kuja.ādyair.gavi/</l>
+
+<l xml:id="BJ_19.01b">nṛsthe.ayo.vyavahāri.pārthiva.budhābhis.tantu.vāyo.adhano.sva.ṛkṣe.yoddhṛ.kavi.jña.bhūmi.patayo.ayo.jīvi.dṛg.rogiṇau//(śā.vi)</l>
+</lg>
+<lg xml:id="BJ_19.02">
+<l xml:id="BJ_19.02a">jyotir.jña.āḍhya.nara.indra.nāpita.nṛ.pakṣma.īśā.budha.ādyair.harau.tad.vad.bhūpa.camūpa.naipuṇa.yutāḥ.ṣaṣṭhe.aśubhaiḥ.stry.āśrayaḥ/</l>
+
+<l xml:id="BJ_19.02b">jūke.bhūpa.suvarṇa.kāra.vaṇijaḥ.śeṣa.īkṣite.naikṛtī.kīṭe.yugma.pitā.nataś.ca.rajako.vyaṅgo.adhano.bhūpatiḥ//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_19.03">
+<l xml:id="BJ_19.03a">jñāty.urvī.īśa.jana.āśrayaś.ca.turage.pāpaiḥ.sad.ambhaḥ.śaṭhaś.ca.atyurvī.īśa.nara.indra.paṇḍita.dhanī.dravya.ūna.bhūpo.mṛge/</l>
+
+<l xml:id="BJ_19.03b">bhūpo.bhūpa.samo.anya.dāra.nirataḥ.śeṣaiś.ca.kumbha.sthite.hāsyajño.nṛpatir.budhaś.ca.jhaṣage.pāpaś.ca.pāpa.īkṣite//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_19.04">
+<l xml:id="BJ_19.04a">horā.īśa.ṛkṣa.dala.āśritaiḥ.śubha.karo.dṛṣṭaḥ.śaśī.tad.gatas.try.aṃśe.tat.patibhiḥ.suhṛd.bhavanagair.vā.vīkṣitaḥ.śasyate/</l>
+
+<l xml:id="BJ_19.04b">yat.proktaṃ.prati.rāśi.vīkṣaṇa.phalaṃ.tad.dvādaśa.aṃśe.smṛtaṃ.sūrya.udyair.avalokite.api.śaśini.jñeyaṃ.nava.aṃśeṣv.ataḥ//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_19.05">
+<l xml:id="BJ_19.05a">ārakṣiko.vadha.ruchiḥ.kuśalo.niyuddhe.bhūpo.arthavān.kalaha.kṛt.kṣitija.aṃśa.saṃsthe/</l>
+
+<l xml:id="BJ_19.05b">mūrkho.anya.dāra.nirataḥ.sukaviḥ.sita.aṃśe.sat.kāvya.kṛt.sukha.paro.anya.kalatragaś.ca//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_19.06">
+<l xml:id="BJ_19.06a">baudhe.hi.raṅga.cara.caura.kavi.indra.mantrī.geya.jña.śilpa.nipuṇaḥ.śaśini.sthite.aṃśe/</l>
+
+<l xml:id="BJ_19.06b">sva.aṃśe.alpa.gātra.dhana.lubdha.tapasvi.mukhyaḥ.strīpo.apy.akṛtya.nirataś.ca.nirīkṣyamāṇaṃ//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_19.07">
+<l xml:id="BJ_19.07a">sa.krodho.nara.pati.saṃmato.nidhi.īśaḥ.siṃha.aṃśe.prabhura.suto.atihiṃsra.karmā/</l>
+
+<l xml:id="BJ_19.07b">jīva.aṃśe.prathita.balo.raṇa.upadeṣṭā.hāsya.jñaḥ.saciva.vikāma.vṛddha.śīlaḥ//(praharṣiṇī)</l>
+</lg>
+
+<lg xml:id="BJ_19.08">
+<l xml:id="BJ_19.08a">alpa.apatyo.duḥkhitaḥ.saty.api.sve.māna.āsaktaḥ.karmaṇi.sve.anuraktaḥ/</l>
+
+<l xml:id="BJ_19.08b">duṣṭa.strī.iṣtaḥ.kṛpaṇaś.ca.arki.bhāge.candre.bhānau.tadvad.indv.ādi.dṛṣṭe//(śālinī)</l>
+</lg>
+
+<lg xml:id="BJ_19.09">
+<l xml:id="BJ_19.09a">varga.uttama.sva.parageṣu.śubhaṃ.yad.uktaṃ.tat.puṣṭa.madhya.laghutā.śubham.utkrameṇa/</l>
+
+<l xml:id="BJ_19.09b">vīrya.anvito.aṃśaka.patir.niruṇaddhi.pūrvaṃ.rāśī.kṣaṇasya.phalam.aṃśa.phalaṃ.dadāti//(va.ti)E19</l>
+</lg>
+
+<p xml:id="BJ_20">bhāva</p>
+
+<lg xml:id="BJ_20.01">
+<l xml:id="BJ_20.01a">śūraḥ.stabdho.vikala.nayano.nirghṛṇo.arke.tanusthe/meṣe.sa.svas.timira.nayanaḥ.siṃha.saṃsthe.niśā.adhaḥ/</l>
+
+<l xml:id="BJ_20.01b">nīce.andho.asvaḥ.śaśi.gṛha.gate.budbuda.akṣaḥ.pataṅge.bhūri.dravyo.nṛpa.hṛta.dhano.vakra.rogī.dvitīye//(mandākrāntā)</l>
+</lg>
+
+<lg xml:id="BJ_20.02">
+<l xml:id="BJ_20.02a">mati.vikramāṃs.tṛtīyage.arke.visukhaḥ.pīḍita.mānaśaś.caturthe/</l>
+
+<l xml:id="BJ_20.02b">asuto.dhana.varjitas.tri.koṇe.balavāñ.chatru.jitaś.ca.śatru.yāte//(aupacchandasika)</l>
+</lg>
+
+<lg xml:id="BJ_20.03">
+<l xml:id="BJ_20.03a">strībhir.gataḥ.paribhavaṃ.madage.pataṅge.svalpa.ātmajo.nidhanage.vikala.īkṣaṇaś.ca/</l>
+
+<l xml:id="BJ_20.03b">dharme.suta.artha.sukha.bhāk.sukha.śaurya.bhāk.khe.lābhe.prabhūta.dhanavān.patitas.tu.riḥphe//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_20.04">
+<l xml:id="BJ_20.04a">mūka.unmatta.jaḍa.andha.hīna.badhira.preṣyāḥ.śaśa.aṅka.udaye/sva.ṛkṣaja.ucca.gate.dhanī.bahu.sutaḥ.sa.svaḥ.kuṭumbī.dhane/</l>
+
+<l xml:id="BJ_20.04b">hiṃsro.bhrātṛ.gate.sukhe.sa.tanaye.tat.prokta.bhāva.anvito.naikārir.mṛdu.kāya.vahni.madanas.tīkṣṇo.alasaś.ca.arige//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_20.05">
+<l xml:id="BJ_20.05a">īrṣus.tīvra.mado.made.bahu.matir.vyādhy.arditaś.ca.aṣṭame/saubhāgya.ātmaja.mitra.bandhu.dhana.bhāg.dharma.sthite.śītagau/</l>
+
+<l xml:id="BJ_20.05b">niṣpattiṃ.samupaiti.dharma.dhana.dhī.śauryair.yutaḥ.karmage.kyāto.bhāva.guṇa.anvito.bhava.gate.kṣudro.aṅga.hīno.vyaye//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_20.06">
+<l xml:id="BJ_20.06a">lagne.kuje.kṣata.tanur.dhanage.kad.anno.dharme.aghavān.dina.kara.pratimo.anya.saṃsthaḥ/</l>
+
+<l xml:id="BJ_20.06b">vidvān.dhanī.prakhala.paṇḍita.mantry.aśatrur.dharmajña.viśruta.guṇaḥ.parato.arkavaj.jñe//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_20.07">
+<l xml:id="BJ_20.07a">vidvān.suvākyaḥ.kṛpaṇaḥ.sukhī.ca.dhī.māna.śatruḥ.pitṛto.adhikaś.ca/</l>
+
+<l xml:id="BJ_20.07b">nīcas.tapasvī.sa.dhanaḥ.sa.lābhaḥ.khalaś.ca.jīve.kramaśo.vilagnāt//(idravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_20.08">
+<l xml:id="BJ_20.08a">smara.nipuṇaḥ.sukhitaś.ca.vilagne.priya.kalaho.asta.gate.surata.īpsuḥ/</l>
+
+<l xml:id="BJ_20.08b">tanaya.gate.sukhito.bhṛgu.putre.guru.vadato.anya.gṛhe.sa.dhano.antye//(citratā)</l>
+</lg>
+
+<lg xml:id="BJ_20.09">
+<l xml:id="BJ_20.09a">adṛṣṭa.artho.rogī.madana.vaśago.atyanta.malinaḥ.śiśutve.pīḍā.ārtaḥ.savitṛ.suta.lagna.ity.alasa.vāk/</l>
+
+<l xml:id="BJ_20.09b">guru.sva.ṛkṣa.uccasthe.nṛ.pati.sadṛśo.grāma.purapaḥ.suvidvāṃś.cārv.aṅgo.dina.kara.samo.anyatra.kathitaḥ//(śikhariṇī)</l>
+</lg>
+
+<lg xml:id="BJ_20.10">
+<l xml:id="BJ_20.10a">suhṛd.ari.parakīya.sva.ṛkṣa.tuṅga.sthitānāṃ.phalam.anuparicintyaṃ.lagna.deha.ādi.bhāvaiḥ/</l>
+
+<l xml:id="BJ_20.10b">samupacaya.vipattī.saumya.pāpeṣu.satyaḥ.kathayati.viparītaṃ.riḥpha.ṣaṣṭha.aṣṭa.bheṣu//(mālinī)</l>
+</lg>
+
+<lg xml:id="BJ_20.11">
+<l xml:id="BJ_20.11a">ucca.tri.koṇa.sva.suhṛc.chatru.nīca.gṛha.arkagaiḥ/</l>
+
+<l xml:id="BJ_20.11b">śubhaṃ.sampūrṇa.pāda.ūna.dala.pāda.alpa.niṣphalam//(anuṣṭubh)E20</l>
+</lg>
+
+<p xml:id="BJ_21">āśrayayoga</p>
+
+<lg xml:id="BJ_21.01">
+<l xml:id="BJ_21.01a">kula.sama.kula.mukhya.bandhu.pūjyā.dhani.sukhi.bhogi.nṛpāḥ.sva.bha.eka.vṛddhyā/</l>
+
+<l xml:id="BJ_21.01b">para.vibhava.suhṛt.sva.bandhu.poṣyā.gaṇapa.bala.īśa.nṛpāś.ca.mitra.bheṣu//(puṣpitāgrā)</l>
+</lg>
+
+<lg xml:id="BJ_21.02">
+<l xml:id="BJ_21.02a">janayati.nṛpam.eko.apy.uccago.nitra.dṛṣṭaḥ.pracura.dhana.sametaṃ.mitra.yogāc.ca.siddham/</l>
+
+<l xml:id="BJ_21.02b">vidhana.visukha.mūḍha.vyādhito.bandha.tapto.vadha.durita.sametaḥ.śatru.nīca.ṛkṣageṣu//(mālinī)</l>
+</lg>
+
+<lg xml:id="BJ_21.03">
+<l xml:id="BJ_21.03a">na.kumbha.lagnaṃ.śubham.āha.satyo.na.bhāga.bhedād.yavanā.vadanti/</l>
+
+<l xml:id="BJ_21.03b">kasya.aṃśa.bhedo.na.tathā.asti.rāśer.atiprasaṅgas.tv.iti.viṣṇu.guptaḥ//(upajātikā)</l>
+</lg>
+
+<lg xml:id="BJ_21.04">
+<l xml:id="BJ_21.04a">yāteṣu.asat.sva.sama.bheṣu.dina.īśa.horāṃ.khyāto.mahā.udyama.bala.artha.yuto.atitejāḥ/</l>
+
+<l xml:id="BJ_21.04b">cāndrīṃ.śubheṣu.yuji.mārdava.kānti.saukhya.saubhāgya.dhī.madhura.vākya.yutaḥ.prajātaḥ//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_21.05">
+<l xml:id="BJ_21.05a">tāsv.eva.horā.sva.para.ṛkṣageṣu.jñeyā.narāḥ.pūrva.gaṇeṣu.madhyāḥ/</l>
+
+<l xml:id="BJ_21.05b">vyatyasta.horā.bhavana.sthiteṣu.martyā.bhavanty.ukta.guṇair.vihīnāḥ//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_21.06">
+<l xml:id="BJ_21.06a">kalyāṇa.rūpa.guṇam.ātma.suhṛd.dṛkoṇe.candro.anyagas.tad.adhinātha.guṇaṃ.karoti/</l>
+
+<l xml:id="BJ_21.06b">vyāla.udyaya.āyudha.catuś.caraṇa.aṇḍajeṣu.tīkṣṇo.atihiṃsra.guru.talpa.rato.aṭanaś.ca//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_21.07">
+<l xml:id="BJ_21.07a">steno.bhoktā.paṇḍita.āḍhyo.narendraḥ.klībaḥ.śūro.viṣṭikṛd.dāsa.vṛttiḥ/</l>
+
+<l xml:id="BJ_21.07b">pāpo.hiṃsro.abhīś.ca.varga.uttama.aṃśeṣv.eṣām.īṣā.rāśivad.dvādaśa.aṃśaiḥ//(śālinī)</l>
+</lg>
+
+<lg xml:id="BJ_21.08">
+<l xml:id="BJ_21.08a">jāyā.anvito.bala.vibhūṣaṇa.satva.yuktos tejo.atisāhasa.yutaś.ca.kuje.sva.bhāge/</l>
+
+<l xml:id="BJ_21.08b">rogī.mṛta.sva.yuvatir.viṣamo.anya.dāro.duḥkhī.paricchada.yuto.malino.arka.putre//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_21.09">
+<l xml:id="BJ_21.09a">sva.aṃśe.gurau.dhana.yaśaḥ.sukha.buddhi.yuktās.tejasvi.pūjya.nirug.udyama.bhogavantaḥ/</l>
+
+<l xml:id="BJ_21.09b">medhā.kalāka.paṭa.kāvya.vivāda.śilpa.śāstra.artha.sāhasa.yutāḥ.śaśije.atimānyāḥ//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_21.10">
+<l xml:id="BJ_21.10a">sve.triṃśa.aṃśe.bahu.suta.sukha.ārogya.bhāgya.artha.rūpaḥ.śukre.tīkṣṇaḥ.sulalita.vapuḥ.suprakīrṇa.indriyaś.ca/</l>
+
+<l xml:id="BJ_21.10b">śūra.stabdhau.viṣama.vadhakau.sad.guṇa.āḍhyau.sukhijau.cārv.aṅge.aṣṭau.ravi.śaśi.yuteṣv.āra.pūrva.aṃśakeṣu//(mandākrāntā)E21</l>
+</lg>
+
+<p xml:id="BJ_22">prakīrṇaka</p>
+
+<lg xml:id="BJ_22.01">
+<l xml:id="BJ_22.01a">sva.ṛkṣa.tuṅga.mūla.tri.koṇagāḥ.kaṇṭakeṣu.yāvanta.āśritāḥ/</l>
+
+<l xml:id="BJ_22.01b">sarva.eva.te.anyonya.kārakāḥ.karmagas.tu.teṣāṃ.viśeṣataḥ//(vaitālīya)</l>
+</lg>
+
+<lg xml:id="BJ_22.02">
+<l xml:id="BJ_22.02a">karkaṭa.udaya.gate.yathā.uḍupe.sva.uccagāḥ.kuja.yama.arka.sūrayaḥ/</l>
+
+<l xml:id="BJ_22.02b">kārakā.nigaditāḥ.parasparaṃ.lagnagasya.sakalo.ambara.ambugaḥ//(rathoddhatā)</l>
+</lg>
+
+<lg xml:id="BJ_22.03">
+<l xml:id="BJ_22.03a">sva.tri.koṇa.uccago.hetur.anyonyaṃ.yadi.carmagaḥ/</l>
+
+<l xml:id="BJ_22.03b">suhṛt.tad.guṇa.sampannaḥ.kārakaś.ca.api.sa.smṛtaḥ//(anuṣṭubh)</l>
+</lg>
+
+<lg xml:id="BJ_22.04">
+<l xml:id="BJ_22.04a">śubhaṃ.varga.uttame.janma.veśi.sthāne.ca.sad.gṛhe/</l>
+
+<l xml:id="BJ_22.04b">aśūnyeṣu.ca.kendreṣu.kārakā.ākhya.graheṣu.ca//(anuṣṭubh)</l>
+</lg>
+
+<lg xml:id="BJ_22.05">
+<l xml:id="BJ_22.05a">madhye.vayasaḥ.sukha.pradāḥ.kendrasthā.guru.janma.lagnapāḥ/</l>
+
+<l xml:id="BJ_22.05b">pṛṣṭha.ubhayaka.udaya.ṛkṣagās.tv.ante.antaḥ.prathameṣu.pākadāḥ//(vaitālīya)</l>
+</lg>
+
+<lg xml:id="BJ_22.06">
+<l xml:id="BJ_22.06a">dina.kara.rudhirau.praveṣa.kāle.guru.bhṛgujau.bhavanasya.madhya.yātau/</l>
+
+<l xml:id="BJ_22.06b">ravi.suta.śaśinau.vinirgamasthau.śaśi.tanayaḥ.phaladas.tu.sarva.kālam//(puṣpitāgrā)E22</l>
+</lg>
+
+<p xml:id="BJ_23">aniṣṭa</p>
+
+<lg xml:id="BJ_23.01">
+<l xml:id="BJ_23.01a">lagnāt.putra.kalatra.bhe.śubha.pati.prāpte.atha.vā.ālokite.candrād.vā.yadi.sampad.asti.hi.tayor.jñeyo.anyathā.saṃbhavaḥ/</l>
+
+<l xml:id="BJ_23.01b">pāthā.ūna.udayage.ravau.ravi.suto.mīna.sthito.dārahā.putra.sthāna.gataś.ca.putra.maraṇaṃ.putro.avaner.yacchati//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_23.02">
+<l xml:id="BJ_23.02a">ugra.grahaiḥ.sita.caturasra.saṃsthitair.madhya.sthite.bhṛgu.tanaye.atha.vā.ugrayoḥ/</l>
+
+<l xml:id="BJ_23.02b">saumya.grahair.asahita.saṃnirīkṣite.jāyā.vadho.dahana.nipāta.pāśajaḥ//(praharṣiṇī)</l>
+</lg>
+
+<lg xml:id="BJ_23.03">
+<l xml:id="BJ_23.03a">lagnād.vyaya.ari.gatayoḥ.śaśi.tigma.raśmyoḥ.patnyā.saha.eka.nayanasya.vadanti.janma/</l>
+
+<l xml:id="BJ_23.03b">dyūnasthayor.navama.pañcama.saṃsthayor.vā.śukra.arkayor.vikala.dāram.uśanti.jātam//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_23.04">
+<l xml:id="BJ_23.04a">koṇa.udaye.bhṛgu.tanaye.asta.cakra.saṃdhau.vandhyā.patir.yadi.na.suta.ṛkṣam.iṣṭa.yuktam/</l>
+
+<l xml:id="BJ_23.04b">pāpa.grahair.vyaya.mada.lagna.rāśi.saṃsthaiḥ.kṣīṇe.śaśiny.asuta.kalatra.janma.dhīsthe//(mālinī)</l>
+</lg>
+
+<lg xml:id="BJ_23.05">
+<l xml:id="BJ_23.05a">asita.kujayor.varge.astasthe.site.tad.avekṣite.para.yuvatigas.tau.cet.sa.indu.striyā.saha.puṃś.calaḥ/</l>
+
+<l xml:id="BJ_23.05b">bhṛguja.śaśinor.aste.abhāryo.naro.visuto.api.vā.pariṇata.tanū.nṛ.stryor.dṛṣṭau.śubhaiḥ.pramadā.patī//(hariṇī)</l>
+</lg>
+
+<lg xml:id="BJ_23.06">
+<l xml:id="BJ_23.06a">vaṃśa.cchettā.kha.mada.sukhagaiś.candra.daityejya.pāpaiḥ/śilpī.try.aṃśe.śaśi.suta.yute.kendra.saṃstha.arki.dṛṣṭe/</l>
+
+<l xml:id="BJ_23.06b">dāsyāṃ.jāto.diti.suta.gurau.riḥphage.saura.bhāge/nīco.arkendrvor.madana.gatayor.dṛṣṭayoḥ.sūryajena//(mandākrāntā)</l>
+</lg>
+
+<lg xml:id="BJ_23.07">
+<l xml:id="BJ_23.07a">pāpa.ālokitayoḥ.sita.avanijayor.astasthayor.vā.adhyaruk.candre.karkaṭa.vṛścika.aṃśaka.gate.pāpair.yute.guhya.ruk/</l>
+
+<l xml:id="BJ_23.07b">śvi.trī.riḥpha.dhanasthayor.aśubhayoś.candra.udaye.aste.ravau.candre.khe.avanije.astage.ca.vikalo.yady.arkajo.veśigaḥ//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_23.08">
+<l xml:id="BJ_23.08a">antaḥ.śaśiny.aśubhayor.mṛgage.pataṅge.śvāsa.kṣaya.plihaka.vidradhi.gulma.bhājaḥ/</l>
+
+<l xml:id="BJ_23.08b">śoṣī.paraspara.gṛha.aṃśa.gayor.ravi.indvoḥ.kṣetre.atha.vā.yugapad.ekagayoḥ.kṛśo.vā//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_23.09">
+<l xml:id="BJ_23.09a">cendre.aśvi.madhya.jhaṣa.karki.mṛga.aja.bhāge.kuṣṭhī.sa.manda.rudhire.tad.avekṣite.vā/</l>
+
+<l xml:id="BJ_23.09b">yātais.tri.koṇam.ali.karki.vṛṣair.mṛge.ca.kuṣṭhī.ca.pāpa.sahitair.avalokitair.vā//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_23.10">
+<l xml:id="BJ_23.10a">nidhana.ari.dhana.vyaya.sthitā.ravi.candra.āra.yamā.yathā.tathā/</l>
+
+<l xml:id="BJ_23.10b">balavad.graha.doṣa.kāraṇair.manujānāṃ.janayanty.anetratām//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_23.11">
+<l xml:id="BJ_23.11a">navama.āya.tṛtīya.dhī.yutā.na.ca.saumyair.aśubhā.nirīkṣitāḥ/</l>
+
+<l xml:id="BJ_23.11b">niyamāc.chravaṇa.upaghātadā.rada.vaikṛtya.karāś.ca.saptame//(vaitālīya)</l>
+</lg>
+
+<lg xml:id="BJ_23.12">
+<l xml:id="BJ_23.12a">udayaty.uḍupe.sura.asyage.sa.piśāco.aśubhayos.tri.koṇayoḥ/</l>
+
+<l xml:id="BJ_23.12b">sa.upaplava.maṇḍale.ravāv.udayasthe.nayana.apavarjitaḥ//(vaitālīya)</l>
+</lg>
+
+<lg xml:id="BJ_23.13">
+<l xml:id="BJ_23.13a">saṃspṛṣṭaḥ.pavanena.mandaga.yute.dyūne.vilagne.gurau.sa.unmādo.avanije.sthite.asta.bhavane.jīve.vilagna.āśrite/</l>
+
+<l xml:id="BJ_23.13b">tadvat.sūrya.suta.udaye.avani.sute.dharma.ātmaja.dyūnage.jāto.vāsa.sahasra.raśmi.tanaye.kṣīṇe.vyaye.śītagau//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_23.14">
+<l xml:id="BJ_23.14a">rāśy.aṃśapa.uṣṇa.kara.śīta.kara.amarejyair.nīca.adhipa.aṃśa.gatair.ari.bhāgagair.vā/</l>
+
+<l xml:id="BJ_23.14b">ebhyo.alpa.madhya.bahubhiḥ.kramaśaḥ.prasūtā.jñeyāḥ.syur.abhyupagama.kraya.garbha.dāsaāḥ//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_23.15">
+<l xml:id="BJ_23.15a">vikṛta.daśanaḥ.pāpair.dṛṣṭe.vṛṣa.aja.haya.udaye.khalatir.aśubha.kṣetre.lagne.haye.vṛṣa.bhe.api.vā/</l>
+
+<l xml:id="BJ_23.15b">navama.sutage.pāpair.dṛṣṭe.ravāv.adṛḍha.īkṣaṇo.dina.kara.sute.na.eka.vyādhiḥ.kuje.vikalaḥ.pumān//(hariṇī)</l>
+</lg>
+
+<lg xml:id="BJ_23.16">
+<l xml:id="BJ_23.16a">vyaya.suta.dhana.dharmagair.asaumyair.bhavana.sa.māna.nibandhanaṃ.vikalpyam/</l>
+
+<l xml:id="BJ_23.16b">bhuja.gani.gaḍa.pāśabhṛd.dṛkāṇair.balavad.asaumya.nirīkṣitaiś.ca.tadvat//(puṣpitāgrā)</l>
+</lg>
+
+<lg xml:id="BJ_23.17">
+<l xml:id="BJ_23.17a">puruṣa.vacano.apasmāra.ārtaḥ.kṣayī.ca.niśā.patau.sa.ravi.tanaye.vakra.ālokaṃ.gate.pariveṣage/</l>
+
+<l xml:id="BJ_23.17b">ravi.yama.kujaiḥ.saumya.adṛṣṭair.nabhaḥ.sthalam.āśritair.bhṛtaka.manujaḥ.pūrva.uddiṣṭair.vara.adhama.madhyamāḥ//(hariṇī)E23</l>
+</lg>
+
+<p xml:id="BJ_24">strījātaka</p>
+
+<lg xml:id="BJ_24.01">
+<l xml:id="BJ_24.01a">yad.yat.phalaṃ.nara.bhave.kṣamam.aṅganānāṃ.tat.tad.vadet.patiṣu.vā.sakalaṃ.vidheyam/</l>
+
+<l xml:id="BJ_24.01b">tāsāṃ.tu.bhartṛ.maraṇaṃ.nidhane.vapus.tu.lagna.indugaṃ.subhagatā.astamaye.patiś.ca//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_24.02">
+<l xml:id="BJ_24.02a">yugmeṣu.lagna.śaśinoḥ.prakṛti.sthitā.strī.sac.chīla.bhūṣaṇa.yutā.śubha.dṛṣṭayoś.ca/</l>
+
+<l xml:id="BJ_24.02b">ojasthayoś.ca.manuja.ākṛti.śīla.yuktā.pāpā.ca.pāpa.yuta.īkṣitayor.guṇa.ūnā//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_24.03">
+<l xml:id="BJ_24.03a">kanyā.eva.duṣṭā.vrajati.iha.dāsyaṃ.sādhvī.sa.māyā.kucaritra.yuktā/</l>
+
+<l xml:id="BJ_24.03b">bhūmy.ātmaja.ṛkṣe.kramaśo.aṃśakeṣu.vakra.arki.jīva.induja.bhārgavānam//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_24.04">
+<l xml:id="BJ_24.04a">duṣṭā.punarbhūḥ.sa.guṇā.kalājñā.khyātā.guṇaiś.ca.asura.pūjita.ṛkṣe/</l>
+
+<l xml:id="BJ_24.04b">syāt.kāpaṭī.klība.samā.satī.ca.baudhe.guṇa.āḍhyā.pravikīrṇakāmā//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_24.05">
+<l xml:id="BJ_24.05a">sva.cchandā.pati.ghātinī.bahu.guṇā.śilpiny.asādhvī.indu.bhe/nrācārā.kulaṭa.arka.bhe.nṛpa.vadhūḥ.puṃś.ceṣṭita.āgamyagā/</l>
+
+<l xml:id="BJ_24.05b">jaivena.ekaguṇa.alpa.raty.atiguṇā.vijñāna.yuktā.satī/dāsī.nīca.rata.arki.bhe.pati.ratā.duṣṭā.prajā.sva.aṃśakaiḥ//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_24.06">
+<l xml:id="BJ_24.06a">śaśi.lagna.samāyuktaiḥ.phalaṃ.triṃśa.aṃśakair.idam/</l>
+
+<l xml:id="BJ_24.06b">bala.abala.vikalpena.tayor.uktaṃ.vicintayet//(anuṣṭubh)</l>
+</lg>
+
+<lg xml:id="BJ_24.07">
+<l xml:id="BJ_24.07a">dṛk.saṃstha.avasita.sitau.paraspara.aṃśe.śaukre.vā.yadi.ghaṭa.rāśi.saṃbhavo.aṃśaḥ/</l>
+
+<l xml:id="BJ_24.07b">strībhiḥ.strī.madana.viṣa.anala.pradīptaṃ.saṃśāntiṃ.nayati.nara.ākṛti.sthitābhiḥ//(praharṣiṇī)</l>
+</lg>
+
+<lg xml:id="BJ_24.08">
+<l xml:id="BJ_24.08a">śūnye.kāpuruṣo.bale.asta.bhavane.saumya.grahāv.īkṣite.klīvo.aste.budha.mandayoś.cara.gṛhe.nityaṃ.pravāsa.anvitaḥ/</l>
+
+<l xml:id="BJ_24.08b">utsṛṣṭā.raviṇā.kujena.vidhavā.vālye.asta.rāśi.sthite.kanyā.eva.aśubha.vīkṣite.arka.tanaye.dyūne.jarāṃ.gacchati//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_24.09">
+<l xml:id="BJ_24.09a">āgneyair.vidhavā.asta.rāśi.sahitair.miśraiḥ.punarbhūr.bhavet/krūre.hīna.bale.astage.sva.patinā.saumya.īkṣite.projjhitā/</l>
+
+<l xml:id="BJ_24.09b">anyonya.aṃśagayoḥ.sita.avanijayor.anya.prasakta.aṅganā/dyūne.vā.yadi.śīta.raśmi.sahitau.bhartus.tadā.anujñayā//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_24.10">
+<l xml:id="BJ_24.10a">saura.āra.ṛkṣe.lagnage.sa.indu.śukre.matrā.sārddhaṃ.bandhakī.pāpa.dṛṣṭe/</l>
+<l xml:id="BJ_24.10b">kauje.asta.aṃśe.sauriṇā.vyādhi.yoniś.cāru.śroṇī.vallabhā.sad.graha.aṃśe//(śālinī)</l>
+</lg>
+
+<lg xml:id="BJ_24.11">
+<l xml:id="BJ_24.11a">vṛddho.mūrkhaḥ.sūryaja.ṛkṣe.aṃśake.vā.strī.lolaḥ.syāt.krodhanaś.ca.avaneye/</l>
+
+<l xml:id="BJ_24.11b">śaukre.kānto.atīva.saubhāgya.yukto.vidvān.bhartā.naipuṇa.jñaś.ca.baudhe//(mālinī)</l>
+</lg>
+
+<lg xml:id="BJ_24.12">
+<l xml:id="BJ_24.12a">madana.vaśa.gato.mṛduś.ca.cāndre.tri.daśa.gurau.guṇavān.jita.indriyaś.ca/</l>
+
+<l xml:id="BJ_24.12b">atimṛdu.rati.karma.kṛc.ca.saurye.bhavati.gṛhe.astamaya.sthite.aṃśake.vā//(puṣpitāgrā)</l>
+</lg>
+
+<lg xml:id="BJ_24.13">
+<l xml:id="BJ_24.13a">īrṣya.anvitā.sukha.parā.śaśi.śukra.lagne.jña.indvoḥ.kalāsu.nipuṇā.sukhitā.guṇa.āḍhyā/</l>
+
+<l xml:id="BJ_24.13b">śukra.jñayos.tu.rucirā.subhagā.kalājñā.triṣv.apy.aneka.vasu.saukhya.guṇā.śubheṣu//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_24.14">
+<l xml:id="BJ_24.14a">krūre.aṣṭame.vidhavatā.nidhana.īśvaro.aṃśe.yasya.sthito.vayasi.tasya.same.pradiṣṭā/</l>
+
+<l xml:id="BJ_24.14b">sat.svarthageṣu.maraṇaṃ.svayam.eva.tasyāḥ.kanyā.aligo.hariṣu.ca.alpa.sutatvam.indau//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_24.15">
+<l xml:id="BJ_24.15a">saure.madhya.bale.balena.rahitaiḥ.śīta.aṃśu.śukra.indujaiḥ/śeṣair.vīrya.samanvitaiḥ.paruṣiṇī.yady.oja.rāśy.udgamaḥ/</l>
+
+<l xml:id="BJ_24.15b">jīva.āra.sphuji.daindaveṣu.baliṣu.prāg.lagna.rāśau.same/vikhyātā.bhuvi.na.eka.śāstra.nipuṇā.strī.brahma.vādiny.api//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_24.16">
+<l xml:id="BJ_24.16a">pāpe.aste.navama.gata.grahasya.tulyāṃ.pravrajyāṃ.yuvatir.upaity.asaṃśayena/</l>
+
+<l xml:id="BJ_24.16b">udvāhe.varaṇa.vidhau.pradāna.kāle.cintāyām.api.sakalaṃ.vidheyam.etat.(praharṣiṇī)E24</l>
+</lg>
+
+<p xml:id="BJ_25">nairyāṇika</p>
+
+<lg xml:id="BJ_25.01">
+<l xml:id="BJ_25.01a">mṛtyur.mṛtyu.gṛha.īkṣaṇena.balibhis.tad.dhātu.kopa.udbhavas.tat.saṃyukta.bha.gātrajo.bahu.bhavo.vīrya.anvitair.bhūribhiḥ/</l>
+
+<l xml:id="BJ_25.01b">agny.aṃbv.āyudhajo.jvara.āmaya.kṛtas.tṛṭ.kṣut.kṛtaś.ca.aṣṭame.sūrya.ādyair.nidhane.cara.ādiṣu.para.sva.adhva.pradeśeṣv.iti//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_25.02">
+<l xml:id="BJ_25.02a">śaila.agra.abhihatasya.sūrya.kujayor.mṛtyuḥ.kha.bandhusthayoḥ.kūpe.manda.śaśa.aṅka.bhūmi.tanayair.bandhv.asta.karma.sthitaiḥ/</l>
+
+<l xml:id="BJ_25.02b">kanyāyāṃ.sva.janād.dhima.uṣṇa.karayoḥ.pāpa.grahair.dṛṣṭayoḥ.syātāṃ.yady.ubhaya.udaye.arka.śaśinau.toye.tadā.majjitaḥ//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_25.03">
+<l xml:id="BJ_25.03a">mande.karkaṭage.jala.udara.kṛto.mṛtyur.mṛga.aṅke.mṛge.śastra.agni.prabhavaḥ.śaśiny.aśubhayor.madhye.kuja.ṛkṣe.sthite/</l>
+
+<l xml:id="BJ_25.03b">kanyāyāṃ.rudhira.uttha.śoṣa.janitas.tadvat.sthite.śītagau.saura.ṛkṣe.yadi.tadvad.eva.himagau.rajjv.agni.pātaiḥ.kṛtaḥ//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_25.04">
+<l xml:id="BJ_25.04a">bandhād.dhī.navamas.tayor.aśubhayoḥ.saumya.grahād.dṛṣṭayor.dreṣkāṇaiś.ca.sa.pāśa.sarpa.nigaḍaiś.chidra.sthitair.bandhataḥ/</l>
+
+<l xml:id="BJ_25.04b">kanyāyām.aśubha.anvite.astamayage.candre.site.meṣage.sūrye.lagna.gate.ca.viddhi.maraṇaṃ.strī.hetukaṃ.mandire//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_25.05">
+<l xml:id="BJ_25.05a">śūla.udbhinna.tanuḥ.sukhe.avani.sute.sūrye.api.vā.khe.yame/sa.prakṣīṇa.hima.aṃśubhiś.ca.yugapat.pāpais.tri.koṇa.ādyagaiḥ//</l>
+
+<l xml:id="BJ_25.05b">bandhusthe.ca.ravau.viyaty.avanije.kṣīṇa.indu.saṃvīkṣite/kāṣṭhena.abhihataḥ.prayāti.maraṇaṃ.sūrya.ātmajena.īkṣite//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_25.06">
+<l xml:id="BJ_25.06a">randhra.āspada.aṅga.hibukair.laguḍa.āhata.aṅgaḥ.prakṣīṇa.candra.rudhira.arki.dina.īśa.yuktaiḥ/</l>
+
+<l xml:id="BJ_25.06b">tair.eva.karma.navama.udaya.putra.saṃsthair.dhūma.agni.bandhana.śarīra.nikuṭṭana.antaḥ//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_25.07">
+<l xml:id="BJ_25.07a">bandhv.asta.karma.sahitaiḥ.kuja.sūrya.mandair.niryāṇam.āyudha.śikhi.kṣiti.pāla.kopāt/</l>
+
+<l xml:id="BJ_25.07b">saura.indu.bhūmi.tanayaiḥ.sva.sukha.āspadasthair.jñeyaḥ.kṣata.kṛmi.kṛtaś.ca.śarīra.ghātaḥ//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_25.08">
+<l xml:id="BJ_25.08a">khasthe.arke.avanije.rasātala.gate.yāna.prapātad.vadho/yantra.utpīḍanajaḥ.kuje.astamayage.saura.indunā.abhyudgame/</l>
+
+<l xml:id="BJ_25.08b">viṇ.madhye.rudhira.arki.śīta.kiraṇair.jūka.aja.saura.ṛkṣagair.yāte.vā.galita.indu.sūrya.rudhirair.vyoma.asta.bandhv.āhvayān//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_25.09">
+<l xml:id="BJ_25.09a">vīrya.anvita.vakra.vīkṣite.kṣīṇa.indau.nidhana.sthite.arkaje/</l>
+
+<l xml:id="BJ_25.09b">guhya.udbhava.roga.pīḍayā.mṛtyuḥ.syāt.kṛmi.śastra.dāhajaḥ//(vaitālīya)</l>
+</lg>
+
+<lg xml:id="BJ_25.10">
+<l xml:id="BJ_25.10a">aste.ravau.sa.rudhire.nidhane.arka.putre.kṣīṇe.rasātala.gate.himagau.khaga.antaḥ/</l>
+
+<l xml:id="BJ_25.10b">lagna.ātmaja.aṣṭama.tapaḥsv.ina.bhauma.manda.candrais.tu.śaila.śikhara.aśani.kuḍya.pātaiḥ//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_25.11">
+<l xml:id="BJ_25.11a">dvāviṃśaḥ.kathitas.tu.kāraṇaṃ.dreṣkāṇo.nidhanasya.sūribhiḥ/</l>
+
+<l xml:id="BJ_25.11b">tasya.adhipatir.bhavo.api.vā.niryāṇaṃ.sva.guṇaiḥ.prayacchati//(vaitālīya)</l>
+</lg>
+
+<lg xml:id="BJ_25.12">
+<l xml:id="BJ_25.12a">horā.nava.aṃśakapa.yukta.sa.māna.bhūmau.yoga.īkṣaṇa.ādibhir.ataḥ.parikalpyam.etat/</l>
+
+<l xml:id="BJ_25.12b">mohas.tu.mṛtyu.samaye.anudita.aṃśa.tulyaḥ.sva.īśa.īkṣite.dvi.guṇitas.triguṇaḥ.śubhaiś.ca//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_25.13">
+<l xml:id="BJ_25.13a">dahana.jala.vimiśrair.bhasma.saṃkleda.śoṣair.nidhana.bhavana.saṃsthair.vyāla.vargair.viḍantaḥ/</l>
+
+<l xml:id="BJ_25.13b">iti.śava.pariṇāmaś.cintanīyo.yathā.uktaḥ.pṛthuvi.racita.śāstrād.gaty.anūka.ādi.cintyam//(mālinī)</l>
+</lg>
+
+<lg xml:id="BJ_25.14">
+<l xml:id="BJ_25.14a">gurur.uḍu.pati.śukrau.sūrya.bhaumau.yama.jñau.vibudha/pitṛ.tiraśco.nārakīyāṃś.ca.kuryuḥ/</l>
+
+<l xml:id="BJ_25.14b">dina.kara.śaśi.vīrya.adhiṣṭhitāt.try.aṃśa.nāthāt.pravara.sama.nikṛṣṭās.tuṅga.hrasād.anūke//(mālinī)</l>
+</lg>
+
+<lg xml:id="BJ_25.15">
+<l xml:id="BJ_25.15a">gatir.api.ripu.randhra.try.aṃśapo.astasthito.vā.gurur.atha.ripu.kendra.cchidragaḥ.sva.ucca.saṃsthaḥ/</l>
+
+<l xml:id="BJ_25.15b">udayati.bhavane.antye.saumya.bhāge.ca.mokṣo.bhavati.yadi.balena.projjhitās.tatra.śeṣāḥ//(mālinī)E25</l>
+</lg>
+
+<p xml:id="BJ_26">naṣṭajātaka</p>
+
+<lg xml:id="BJ_26.01">
+<l xml:id="BJ_26.01a">ādhāna.janma.aparibodha.kāle.sampṛcchato.janma.vaded.vilagnāt/</l>
+
+<l xml:id="BJ_26.01b">pūrva.apara.ardhe.bhavanasya.vindyād.bhānāv.udag.dakṣiṇage.prasūtim//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_26.02">
+<l xml:id="BJ_26.02a">lagna.tri.koṇeṣu.gurus.tri.bhāgair.vikalpya.varṣāṇi.vayo.anumānāt/</l>
+
+<l xml:id="BJ_26.02b">grīṣmo.arka.lagne.kathitās.tu.śeṣair.anyāyanartāvṛtur.arka.cārāt//(upajātikā)</l>
+</lg>
+
+<lg xml:id="BJ_26.03">
+<l xml:id="BJ_26.03a">canra.jña.jīvāḥ.parivartanīyāḥ.śukra.āra.mandair.ayane.vilome/</l>
+
+<l xml:id="BJ_26.03b">dreṣkāṇa.bhāge.prathame.tu.pūrvo.māso.anupātāc.ca.tithir.vikalpyaḥ//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_26.04">
+<l xml:id="BJ_26.04a">atra.api.horā.paṭavo.dvija.indrāḥ.sūrya.aṃśa.tulyāṃ.tithim.uddiśanti/</l>
+
+<l xml:id="BJ_26.04b">rātri.dyu.saṃjñeṣu.viloma.janma.bhāgaiś.ca.velāḥ.kramaśo.vikalpyāḥ//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_26.05">
+<l xml:id="BJ_26.05a">ke.cic.chaśa.aṅka.adhyuṣitān.nava.aṃśac.chuklā.anta.saṃjñaṃ.kathayanti.māsam/</l>
+
+<l xml:id="BJ_26.05b">lagna.tri.koṇa.uttama.vīrya.yuktaṃ.samprocyate.aṅga.āla.bhana.ādibhir.vā//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_26.06">
+<l xml:id="BJ_26.06a">yāvān.gataḥ.śīta.karo.vilagnāc.candrād.vadet.tāvati.janma.rāśiḥ/</l>
+
+<l xml:id="BJ_26.06b">mīna.udaye.mīna.yugaṃ.pradiṣṭaṃ.bhakṣya.āhṛta.ākāra.rutaiś.ca.cintyam//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_26.07">
+<l xml:id="BJ_26.07a">horā.nava.aṃśa.pratimaṃ.vilagnaṃ.lagnād.ravir.yāvati.ca.dṛkāṇe/</l>
+
+<l xml:id="BJ_26.07b">tasmād.vadet.tāvati.vā.vilagnaṃ.praṣṭuḥ.prasūtāv.iti.śāstram.āha//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_26.08">
+<l xml:id="BJ_26.08a">janma.ādiśel.lagnage.vīryage.vā.chāyā.aṅgula.ghner.kahate.avaśiṣṭam/</l>
+
+<l xml:id="BJ_26.08b">āsīna.supta.utthita.tiṣṭhata.ābhaṃ.jāyā.sukha.ājña.udayagaṃ.pradiṣṭam//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_26.09">
+<l xml:id="BJ_26.09a">go.siṃhau.jituma.aṣṭamau.kriya.tule.kanyā.mṛgau.ca.kramāt.saṃvargyo.daśaka.aṣṭa.sapta.viṣayaiḥ.śeṣāḥ.sva.saṃkhyā.guṇāḥ/</l>
+
+<l xml:id="BJ_26.09b">jīva.āra.āsphuji.daindavāḥ.prathamavac.cheṣā.grahāḥ.saumyavad.rāśīnaṃ.niyato.vidhir.graha.yutaiḥ.kāryā.ca.tad.vargaṇā//(śā.vi)</l>
+</lg>
+
+<lg xml:id="BJ_26.10">
+<l xml:id="BJ_26.10a">sapta.āhataṃ.tri.ghana.bhājita.śeṣam.ṛkṣaṃ.dattvā.atha.vā.nava.viśodhya.na.vā.atha.vā.asmāt/</l>
+
+<l xml:id="BJ_26.10b">evaṃ.kalatra.sahaja.ātmaja.śatru.bhebhyaḥ.praṣṭur.vaded.udaya.rāśi.vaśena.teṣām//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_26.11">
+<l xml:id="BJ_26.11a">varṣa.ṛtu.māsa.tithayo.dyu.niśaṃ.hy.ūḍūni.vela.udaye.ṛkṣa.nava.bhāga.vikalpanāḥ.syuḥ/</l>
+
+<l xml:id="BJ_26.11b">bhūyo.daśa.ādi.guṇitāḥ.sva.vikalpa.bhaktā.varṣa.ādayo.navaka.dāna.viśodhanābhyām//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_26.12">
+<l xml:id="BJ_26.12a">vijñeyā.daśakeṣv.abdā.ṛtu.māsās.tathaiva.ca/</l>
+
+<l xml:id="BJ_26.12b">aṣṭakeṣv.api.māsād.ardhās.tithayaś.ca.tathā.smṛtāḥ//(anuṣṭubh)</l>
+</lg>
+
+<lg xml:id="BJ_26.13">
+<l xml:id="BJ_26.13a">divā.rātri.prasūtiṃ.ca.nakṣatra.ānayanaṃ.tathā/</l>
+
+<l xml:id="BJ_26.13b">saptakaṣv.api.vargeṣu.nityam.eva.upalakṣayet//(anuṣṭubh)</l>
+</lg>
+
+<lg xml:id="BJ_26.14">
+<l xml:id="BJ_26.14a">velām.atha.vilagnaṃ.ca.horām.aṃśakam.eva.ca/</l>
+
+<l xml:id="BJ_26.14b">pañcakeṣu.vijānīyān.naṣṭa.jātaka.siddhaye//(anuṣṭubh)</l>
+</lg>
+
+<lg xml:id="BJ_26.15">
+<l xml:id="BJ_26.15a">saṃskāra.nāma.mātrā.dvi.guṇā.chāyā.aṅgulaiḥ.samāyuktāḥ/</l>
+
+<l xml:id="BJ_26.15b">śeṣaṃ.tri.navaka.bhaktān.nakṣatraṃ.tad.dhaniṣṭḥā.ādi//(āryā)</l>
+</lg>
+
+<lg xml:id="BJ_26.16">
+<l xml:id="BJ_26.16a">dvi.tri.catur.daśa.daśa.tithi.sapta.tri.guṇā.nava.aṣṭa.ca.indra.ādyāḥ/</l>
+
+<l xml:id="BJ_26.16b">pañca.daśaghnās.tad.diṅ.mukha.anvitā.bha.dhaniṣṭhā.ādi//(āryā)</l>
+</lg>
+
+<lg xml:id="BJ_26.17">
+<l xml:id="BJ_26.17a">iti.naṣṭa.jātakam.idaṃ.bahu.prakāraṃ.mayā.vinirdiṣṭam/</l>
+
+<l xml:id="BJ_26.17b">grāhyam.ataḥ.sac.chiṣyaiḥ.parīkṣya.yantād.yathā.bhavati//(āryā)E26</l>
+</lg>
+
+<p xml:id="BJ_27">dreṣkāṇa.sva.rūpa</p>
+
+<lg xml:id="BJ_27.01">
+<l xml:id="BJ_27.01a">kaṭyāṃ.sita.vastra.veṣṭitaḥ.kṛṣṇaḥ.śakta.iva.abhirakṣitum/</l>
+
+<l xml:id="BJ_27.01b">raudraḥ.paraśuṃ.samudyataṃ.dhatte.rakta.vilocanaḥ.pumān//(vaitālīyā)</l>
+</lg>
+
+<lg xml:id="BJ_27.02">
+<l xml:id="BJ_27.02a">raktam.ambarā.bhūṣaṇa.bhakṣya.cintā.kumbha.ākṛtir.vāji.mukhī.tṛṣa.ārtā/</l>
+
+<l xml:id="BJ_27.02b">ekena.pādena.ca.meṣa.madhye.dreṣkāṇa.rūpaṃ.yavana.upadiṣṭam//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_27.03">
+<l xml:id="BJ_27.03a">krūraḥ.kalājñaḥ.kapilaḥ.kriyā.arthī.bhagna.vrato.abhyudya.tad.aṇḍa.hastaḥ/</l>
+
+<l xml:id="BJ_27.03b">raktāni.vastrāṇi.bibharti.caṇḍo.meṣe.tṛtīyaḥ.kathitas.tri.bhāgaḥ//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_27.04">
+<l xml:id="BJ_27.04a">kuñcita.lūna.kacā.ghaṭa.dehā.dagdha.paṭā.tṛṣita.āśana.cittā/</l>
+
+<l xml:id="BJ_27.04b">ābharaṇāny.abhivāñchati.nārī.rūpam.idaṃ.vṛṣa.bhe.prathamasya//(dodhaka)</l>
+</lg>
+
+<lg xml:id="BJ_27.05">
+<l xml:id="BJ_27.05a">kṣetra.dhānya.gṛha.dhenu.kalājño.lāṅgale.sa.śakaṭe.kuśalaś.ca/</l>
+
+<l xml:id="BJ_27.05b">skandham.udvahati.go.pati.tulyaṃ.kṣut.paro.aja.vadano.mala.vāsā//(svāgatā)</l>
+</lg>
+
+<lg xml:id="BJ_27.06">
+<l xml:id="BJ_27.06a">dvipa.sama.kāyaḥ.pāṇḍura.daṃṣṭraḥ.śarabha.sama.aṅghriḥ.piṅgala.mūrtiḥ/</l>
+
+<l xml:id="BJ_27.06b">avi.mṛga.lobha.vyākula.citto.vṛṣabha.vanasya.prānta.gato.ayam//(dodhaka)</l>
+</lg>
+
+<lg xml:id="BJ_27.07">
+<l xml:id="BJ_27.07a">sūcya.āśrayaṃ.samabhivāñchati.karma.nārī.rūpa.anvita.ābharaṇa.kārya.kṛta.ādarā.ca/</l>
+
+<l xml:id="BJ_27.07b">hīna.prajā.ucchrita.bhuja.ṛtu.matī.tri.bhāgam.ādyaṃ.tṛtīya.bhavanasya.vadanti.tajjñāḥ//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_27.08">
+<l xml:id="BJ_27.08a">udyāna.saṃsthaḥ.kavacī.dhanuṣmāñ.chūro.astra.dhārī.garuḍa.ānānāś.ca/</l>
+
+<l xml:id="BJ_27.08b">krīḍā.ātmaja.alaṃkaraṇa.artha.cintāṃ.karoti.madhye.mithunasya.rāśeḥ//(upajātikā)</l>
+</lg>
+
+<lg xml:id="BJ_27.09">
+<l xml:id="BJ_27.09a">bhūṣito.varuṇavad.bahu.ratno.baddha.tūṇa.kavacaḥ.sa.dhanuṣkaḥ/</l>
+<l xml:id="BJ_27.09b">nṛtta.vādita.kalāsu.ca.vidvān.kāvya.kṛn.mithuna.rāśy.avasāne//(svāgatā)</l>
+</lg>
+
+<lg xml:id="BJ_27.10">
+<l xml:id="BJ_27.10a">patra.mūla.phala.bhṛd.dvipa.kāyaḥ.kānane.malayagaḥ.śarabha.aṅghriḥ/</l>
+
+<l xml:id="BJ_27.10b">kroḍa.tulya.vadano.haya.kaṇṭhaḥ.karkaṭe.prathama.rūpam.uśanti//(svāgatā)</l>
+</lg>
+
+<lg xml:id="BJ_27.11">
+<l xml:id="BJ_27.11a">padma.arcitā.mūrdhani.bhogi.yuktā.strī.karka.śāraṇya.gatā.virauti/</l>
+
+<l xml:id="BJ_27.11b">śākhāṃ.palāśasya.samāśritā.ca.madhye.sthitā.karkaṭakasya.rāśeḥ//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_27.12">
+<l xml:id="BJ_27.12a">bhāryā.ābharaṇa.artham.arṇavaṃ.naustho.gacchati.sarpa.veṣṭitaḥ/</l>
+
+<l xml:id="BJ_27.12b">haimaiś.ca.yuto.vibhūṣaṇaiś.cipiṭa.āsya.aṅtya.gataś.ca.karkaṭe//(vaitālīya)</l>
+</lg>
+
+<lg xml:id="BJ_27.13">
+<l xml:id="BJ_27.13a">śālmaler.upari.gṛdhra.jambukau.śvā.naraś.ca.malinā.ambara.anvitaḥ/</l>
+
+<l xml:id="BJ_27.13b">rauti.mātṛ.pitr.viparyojitaḥ.siṃha.rūpam.idam.ādyam.ucyate//(rathoddhatā)</l>
+</lg>
+
+<lg xml:id="BJ_27.14">
+<l xml:id="BJ_27.14a">haya.ākṛtiḥ.pāṇḍura.mālya.śekharo.bibharti.kṛṣṇa.ajina.kambalaṃ.naraḥ/</l>
+
+<l xml:id="BJ_27.14b">durāsadaḥ.siṃha.iva.atta.kārmuko.nata.agra.nāso.mṛga.rāja.madhyamaḥ//(vaṃśastha)</l>
+</lg>
+
+<lg xml:id="BJ_27.15">
+<l xml:id="BJ_27.15a">ṛkṣa.ānano.vānara.tulya.ceṣṭo.bibharti.daṇḍaṃ.phalam.āmiṣaṃ.ca/</l>
+
+<l xml:id="BJ_27.15b">kūrcī.manuṣyaḥ.kuṭilaiś.ca.keśair.mṛga.īśvarasya.antya.gatas.tri.bhāgaḥ//(upajātikā)</l>
+</lg>
+
+<lg xml:id="BJ_27.16">
+<l xml:id="BJ_27.16a">puṣpa.prapūrṇena.ghaṭena.kanyā.mala.pradigdha.ambara.saṃvṛta.aṅgī/</l>
+
+<l xml:id="BJ_27.16b">vastra.artha.saṃyogam.abhīṣṭamānā.guroḥ.kulaṃ.vāñchati.kanyāka.ādyaḥ//(upajātikā)</l>
+</lg>
+
+<lg xml:id="BJ_27.17">
+<l xml:id="BJ_27.17a">puruṣaḥ.pragṛhīta.lekhaniḥ.śyāmo.vastra.śirā.vyāyaya.kṛt/</l>
+
+<l xml:id="BJ_27.17b">vipulaṃ.ca.bibharti.kārmukaṃ.roma.vyāpta.tanuś.ca.madhyamaḥ//(vaitālīya)</l>
+</lg>
+
+<lg xml:id="BJ_27.18">
+<l xml:id="BJ_27.18a">gaurī.sudhauta.agra.dukūla.guptā.samucchritā.kumbha.kaṭac.chuhastā/</l>
+
+<l xml:id="BJ_27.18b">deva.ālayaṃ.strī.prayatā.pravṛttā.vadanti.kanyā.antya.gatas.tri.bhāgaḥ//(upajātikā)</l>
+</lg>
+
+<lg xml:id="BJ_27.19">
+<l xml:id="BJ_27.19a">vīthy.antara.apaṇa.gataḥ.puruṣas.tulāvān.unmāna.māna.kuśalaḥ.pratimāna.hastaḥ/</l>
+
+<l xml:id="BJ_27.19b">bha.aṇḍaṃ.vicintayati.tasya.ca.mūlyam.etad.rūpaṃ.vadanti.yavanāḥ.prathamaṃ.tulāyāḥ//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_27.20">
+<l xml:id="BJ_27.20a">kalaśaṃ.parigṛhya.viniṣpatituṃ.samabhīpsati.gṛdhra.mukhaḥ.puruṣaḥ/</l>
+
+<l xml:id="BJ_27.20b">kṣudhitas.tṛṣitaś ca.kalatra.sutān.manasā.iti.tulā.dhara.madhya.gataḥ//(troṭaka)</l>
+</lg>
+
+<lg xml:id="BJ_27.21">
+<l xml:id="BJ_27.21a">vibhīṣayaṃs.tiṣṭhati.ratna.citrito.vane.mṛgān.kāñcana.tūṇa.varma.bhṛt/</l>
+
+<l xml:id="BJ_27.21b">phala.āmiṣaṃ.vānara.rūpabhṛn.naras.tulā.vasāne.yavanair.udāhṛtaḥ//(vaṃśastha)</l>
+</lg>
+
+<lg xml:id="BJ_27.22">
+<l xml:id="BJ_27.22a">vastrair.vihīna.ābharaṇaiś.ca.nārī.mahā.samudrāt.samupaiti.kūlam/</l>
+
+<l xml:id="BJ_27.22b">sthāna.cyutā.sarpa.nibaddha.pādā.manoramā.vṛścika.rāśi.pūrvaḥ//(upajātikā)</l>
+</lg>
+
+<lg xml:id="BJ_27.23">
+<l xml:id="BJ_27.23a">sthāna.sukhāny.abhivāñchati.nārī.bha.ṛtu.kṛte.bhujaga.āvṛta.dehā/</l>
+
+<l xml:id="BJ_27.23b">kacchapa.kumbha.sa.māna.śarīrā.vṛścika.madhyama.rūpam.uśanti//(dodhaka)</l>
+</lg>
+
+<lg xml:id="BJ_27.24">
+<l xml:id="BJ_27.24a">pṛthula.cipiṭa.kūrma.tulya.vakraḥ.śva.mṛga.varāha.sṛgāla.bhīṣakārī/</l>
+
+<l xml:id="BJ_27.24b">avati.ca.malayākara.pradeśaṃ.mṛga.patir.antya.gatasya.vṛścikasya//(puṣpitāgrā)</l>
+</lg>
+
+<lg xml:id="BJ_27.25">
+<l xml:id="BJ_27.25a">manuṣya.vakro.aśva.sa.māna.kāyo.dhanur.vigṛhya.āyatam.āśramasthaḥ/</l>
+
+<l xml:id="BJ_27.25b">kratu.upayojyāni.tapasvinaś.ca.rarakṣa.ādyo.dhanuṣas.tri.bhāgaḥ//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_27.26">
+<l xml:id="BJ_27.26a">manoramā.campaka.hema.varṇā.bhadra.āsane.tiṣṭhati.madhya.rūpā/</l>
+
+<l xml:id="BJ_27.26b">samudra.ratnāni.vighaṭṭayantī.madhya.tri.bhāgo.dhanuṣaḥ.pradiṣṭaḥ//(upajātikā)</l>
+</lg>
+
+<lg xml:id="BJ_27.27">
+<l xml:id="BJ_27.27a">kūrcī.naro.hāṭaka.campaka.ābho.vara.āsane.daṇḍa.dharo.niṣaṇṇaḥ/</l>
+
+<l xml:id="BJ_27.27b">kauśeyakāny.udvahate.ajinaṃ.ca.tṛtīya.rūpaṃ.navamasya.rāśeḥ//(upajātikā)</l>
+</lg>
+
+<lg xml:id="BJ_27.28">
+<l xml:id="BJ_27.28a">roma.cito.makara.upama.daṃṣṭraḥ.sūkaraka.āyasa.māna.śarīraḥ/</l>
+
+<l xml:id="BJ_27.28b">yoktraka.jālaka.bandhana.dhārī.raudra.mukho.makara.prathamas.tu//(dodhaka)</l>
+</lg>
+
+<lg xml:id="BJ_27.29">
+<l xml:id="BJ_27.29a">kalāsv.abhijñā.abja.dala.āyata.akṣī.śyāmā.vicitrāṇi.ca.mārgamāṇā/</l>
+
+<l xml:id="BJ_27.29b">vibhūṣaṇa.alaṃkṛta.loha.karṇā.yoṣā.pradiṣṭā.makarasya.madhhye//(upajātikā)</l>
+</lg>
+
+<lg xml:id="BJ_27.30">
+<l xml:id="BJ_27.30a">kinnara.upama.tanuḥ.sa.kambalas.tūṇa.cāpa.kavacaiḥ.samanvitaḥ/</l>
+
+<l xml:id="BJ_27.30b">kumbham.udvahati.ratna.citritaṃ.skandhagaṃ.makara.rāśi.paścimaḥ//rathoddhatā)</l>
+</lg>
+
+<lg xml:id="BJ_27.31">
+<l xml:id="BJ_27.31a">sneha.madya.jala.bhojana.āgama.vyākulī.kṛta.manāḥ.sa.kambalaḥ/</l>
+
+<l xml:id="BJ_27.31b">kośa.kāra.vasano.ajina.anvito.gṛdhra.tulya.vadano.ghaṭa.ādigaḥ//(dodhaka)</l>
+</lg>
+
+<lg xml:id="BJ_27.32">
+<l xml:id="BJ_27.32a">dagdhe.śakaṭe.sa.śālmale.lohāny.āharate.aṅganā.vane/</l>
+
+<l xml:id="BJ_27.32b">malinena.paṭena.saṃvṛtā.bhāṇḍair.mūrdhni.gataiś.ca.madhyamaḥ//(vaitālīya)</l>
+</lg>
+
+<lg xml:id="BJ_27.33">
+<l xml:id="BJ_27.33a">śyāmaḥ.sa.roma.śravaṇaḥ.kirīṭī.tvak.patra.niryāsa.phalair.bibharti/</l>
+
+<l xml:id="BJ_27.33b">bhāṇḍāni.loha.vyatimiśritāni.sañcārayanty.anta.gato.ghaṭasya//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_27.34">
+<l xml:id="BJ_27.34a">srug.bhāṇḍa.muktāmaṇi.śaṅkha.misrair.vyākṣipta.hastaḥ.sa.vibhūṣaṇaś.ca/</l>
+
+<l xml:id="BJ_27.34b">bhāryā.vibhūṣa.artham.apāṃ.nidhānaṃ.nāvā.plavaty.ādi.gato.jhaṣasya//(indravajrā)</l>
+</lg>
+
+<lg xml:id="BJ_27.35">
+<l xml:id="BJ_27.35a">atyucchrita.dhvaja.patākam.upaiti.potaṃ.kūlaṃ.prayāti.jaladheḥ.parivāra.yuktā/</l>
+
+<l xml:id="BJ_27.35b">varṇena.campaka.mukhī.pramadā.tri.bhāgo.mīnasya.ca.eṣa.kathito.munibhir.dvitīyaḥ//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_27.36">
+<l xml:id="BJ_27.36a">śvabhra.antike.sarpa.niveṣṭita.aṅgā.vastrair.vihīnaḥ.puruṣas.tv.aṭavyām/</l>
+
+<l xml:id="BJ_27.36b">caura.anala.vyākulita.antara.ātmā.vikrośate.antya.upagato.jhaṣasya//(indravajrā)E27</l>
+</lg>
+
+<p xml:id="BJ_28">upasaṃhāra</p>
+
+<lg xml:id="BJ_28.01">
+<l xml:id="BJ_28.01a">rāśi.prabhedo.graha.yoni.bhedo.viyoni.janma.atha.niṣeka.kālaḥ/</l>
+
+<l xml:id="BJ_28.01b">janma.atha.sadyo.maraṇaṃ.tathā.āyur.daśā.vipāko.aṣṭaka.varga.saṃjñaḥ//(upajātikā)</l>
+</lg>
+
+<lg xml:id="BJ_28.02">
+<l xml:id="BJ_28.02a">karma.ājīvo.rāja.yogāḥ.kha.yogāś.cāndrā.yogād.vigraha.ādyāś.ca.yogāḥ/</l>
+
+<l xml:id="BJ_28.02b">pravraja.atho.rāśi.śīlāni.dṛṣṭir.bhāvas.tasmād.āśrayo.atha.prakīrṇaḥ//(śālinī)</l>
+</lg>
+
+<lg xml:id="BJ_28.03">
+<l xml:id="BJ_28.03a">na.iṣṭā.yogā.jātakaṃ.kāminīnāṃ.niryāṇaṃ.syān.na.iṣṭa.janma.dṛkāṇaḥ/</l>
+
+<l xml:id="BJ_28.03b">adhyāyānāṃ.viṃśatiḥ.pañca.yuktā.janmany.etad.yātrikaṃ.ca.abhidhāsye//(śālinī)</l>
+</lg>
+
+<lg xml:id="BJ_28.04">
+<l xml:id="BJ_28.04a">praśnās.tithir.bhaṃ.divasaḥ.kṣaṇaś.ca.candro.vilagnaṃ.tv.atha.lagna.bhedaḥ/</l>
+
+<l xml:id="BJ_28.04b">śuddhir.grahāṇām.atha.cāpa.vādo.vimiśraka.ākhyaṃ.tanu.vepanaṃ.ca//(upajātikā)</l>
+</lg>
+
+<lg xml:id="BJ_28.05">
+<l xml:id="BJ_28.05a">ataḥ.paraṃ.guhyaka.pūjanaṃ.syāt.svapnaṃ.tataḥ.snāna.vidhiḥ.pradiṣṭaḥ/</l>
+
+<l xml:id="BJ_28.05b">yajño.grahāṇām.atha.nirgamaś.ca.kramāc.ca.diṣṭaḥ.śakuna.upadeśaḥ//(upajātikā)</l>
+</lg>
+
+<lg xml:id="BJ_28.06">
+<l xml:id="BJ_28.06a">vivāha.kālaḥ.karaṇaṃ.grahāṇāṃ.proktaṃ.pṛthak.tad.vipulā.atha.śākhā/</l>
+
+<l xml:id="BJ_28.06b">skandhais.tribhir.jyotiṣa.saṃgraho.ayaṃ.mayā.kṛto.daiva.vidāṃ.hitāya//(upajātikā)</l>
+</lg>
+
+<lg xml:id="BJ_28.07">
+<l xml:id="BJ_28.07a">pṛthu.viracitam.anyaiḥ.śāstram.etat.samastaṃ.tad.anu.laghu.mayā.idaṃ.tat.pradeśa.artham.eva/</l>
+
+<l xml:id="BJ_28.07b">kṛtam.iha.hi.samarthaṃ.dhī.viṣāṇāmatve.mama.yadi.ha.yad.uktaṃ.saj.janaiḥ.kṣamyatāṃ.tat//(mālinī)</l>
+</lg>
+
+<lg xml:id="BJ_28.08">
+<l xml:id="BJ_28.08a">granthasya.yā.pracarato.asya.vināśam.eti.kekhvyāt.bahu.śrita.mukha.adhigama.krameṇa/</l>
+
+<l xml:id="BJ_28.08b">yad.vā.mayā.kukṛtam.alpam.iha.ākṛtaṃ.vā.kāryaṃ.tad.atra.viduṣā.parihṛtya.rāgam//(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_28.09">
+<l xml:id="BJ_28.09a">āditya.dāsa.tanayas.tad.avāpta.bodhaḥ.kāpitthake.savitṛ.labdha.vara.prasādaḥ/</l>
+
+<l xml:id="BJ_28.09b">āvantiko.muni.matāny.avalokya.samyag.ghorāṃ.varāhamihiro.rucirāṃ.cakāra.(va.ti)</l>
+</lg>
+
+<lg xml:id="BJ_28.10">
+<l xml:id="BJ_28.10a">dina.kara.muni.guru.caraṇa.praṇipāta.kṛta.prasāda.matinā.idam/</l>
+
+<l xml:id="BJ_28.10b">śāstram.upasaṃgṛhītaṃ.namo.astu.pūrva.pranetṛbhyaḥ//(āryā)E28</l>
+</lg>
+
+<note>End of Bṛhajjātaka</note>
+
+  </body>
+</text>
+</TEI>

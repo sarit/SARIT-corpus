@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_nagaropamasUtra">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Nagaropamasūtra</title>
+	<author></author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>Klaus Wille</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Klaus Wille</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/nagsu_tu.htm">nagsu_tu.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Nagaropamasutra
+<lb/>
+<lb/>Based on the ed. by G. Bongard-Levin, D. Boucher, T. Fukita, K. Wille: "The Nagaropamasūtra: An
+<lb/>Apotropaic Text from the Saṃyuktāgama. A Transliteration, Reconstruction, and Translation of the
+<lb/>Central Asian Sanskrit Manuscripts", Sanskrit-Texte aus dem buddhistischen Kanon: Neuentdeckungen
+<lb/>und Neueditionen III, Göttingen 1996 (Sanskrit-Wörterbuch der buddhistischen Texte aus den
+<lb/>Turfan-Funden, Beiheft 6), pp. 7-131. = NagSū
+<lb/>
+<lb/>Input by Klaus Wille
+<lb/>[GRETIL-Version vom 27.01.2017]
+<lb/>
+<lb/>MARKUP
+<lb/><hi rend="it">restored passages</hi>
+
+<lb/><hi rend="bold">passages from the Petrovsky manuscript</hi>
+
+<lb/><hi rend="red">comments</hi>
+
+<lb/>
+<lb/>ABBREVIATIONS
+<lb/>NidSa = Nidānasaṃyukta
+<lb/>SHT = Sanskrithandschriften aus den Turfanfunden, Teil 1 11, ed. E. Waldschmidt et al.,
+<lb/>Wiesbaden/Stuttgart 1965, 1968, 1971, 1980, 1985, 1989, 1995, 2000, 2004, 2008, 2012
+<lb/>(Verzeichnis der Orientalischen Handschriften in Deutschland, X, 1 11).
+<lb/>
+<lb/>ADDITIONAL SYMBOLS USED IN THE TRANSLITERATION
+<lb/>+ = lost akṣara
+<lb/>(...) = restored akṣara
+<lb/>[...] = damaged akṣara
+<lb/>⟨...⟩ = omitted akṣara
+<lb/>.. = illegible akṣara
+<lb/>. = single element thereof
+<lb/>/// = leaf broken off here
+<lb/>' = avagraha, not written in the MS
+<lb/>* = virāma
+<lb/>─ = punctuation mark
+<lb/>// = double daṇḍa
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>G. Bongard-Levin, D. Boucher, T. Fukita, K. Wille: "The Nagaropamasūtra: An Apotropaic Text from the Saṃyuktāgama. A Transliteration, Reconstruction, and Translation of the Central Asian Sanskrit Manuscripts", Sanskrit-Texte aus dem buddhistischen Kanon: Neuentdeckungen und Neueditionen III, Göttingen 1996 (Sanskrit-Wörterbuch der buddhistischen Texte aus den Turfan-Funden, Beiheft 6), pp. 7-131. = NagSū</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Nagaropamasūtra = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Religious Literature -- Buddhist</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+
+<p>Reconstructed text of the Nagaropamasūtra according to one of the MS traditions, namely the Pelliot/Stein manuscript</p>
+
+<p>I. Canonical Text</p>
+
+<p>NagSū I.1 evaṃ mayā śrutam ek<hi rend="it">asmin samaye bhagavāñ śrāvastyāṃ viharati sma jetavane 'nāthapiṇḍadasyārāme ─</hi>
+<hi rend="red">SHT 154 (beginning of MS) opens here as follows: <hi rend="it">(śrāva)styā(ṃ) nidānaṃ pūrvvaṃ me bhi[kṣavaḥ] sa(ṃ)[b](odhim)</hi>.</hi></p>
+
+<p>NagSū I.2 <hi rend="it">tatra bhagavān bhikṣūn āmantrayati sma ─ pūrvaṃ me bhikṣavo</hi> anuttarāṃ samyaksaṃbodhim anabhisa<hi rend="it">ṃ</hi>buddhasyaikākino rahasiga<hi rend="it">tasya pratisaṃlīnasyaivaṃ cetasi cetaḥ</hi>parivitarka udapādi</p>
+
+<p>NagSū I.3 kṛcchraṃ batāyaṃ loka āpan<hi rend="it">n</hi>o yad uta jāyate 'pi <hi rend="it">jīryate 'pi mriyate 'pi cyavate 'py upapadyate</hi> 'pi atha ca punar ime satvā jarāmaraṇasyottare niḥsaraṇaṃ yathābhūtaṃ <hi rend="it">na p</hi>r<hi rend="it">ajānanti ─</hi></p>
+
+<p>NagSū I.4 <hi rend="it">tasya mamaitad abhavat ─ kasmin nu sati jarāma</hi>raṇaṃ bhavati kiṃpratyayaṃ ca punar jarāmara<hi rend="it">ṇaṃ</hi> tasya mama yoniśo <hi rend="it">manasikurvata evaṃ yathābhūtasyābhisamaya udapādi ─
+jātyāṃ satyāṃ jarāmaraṇaṃ bhavati ─ jātipratyayañ ca punar jarāmaraṇam ─</hi></p>
+
+<p>NagSū I.5 <hi rend="it">tasya mamaitad abhavat ─ kasmiṃ nu sati jātir bhavati ─ kiṃpratyayā ca punar jātiḥ ─ tasya mama yoniśo manasikurvata evaṃ yathābhūtasyābhisamaya udapādi ─</hi> bh<hi rend="it">a</hi>v<hi rend="it">e</hi> sati jātir bhavati bhavapratyayā ca punar jātiḥ
+<hi rend="red">We should note that our reconstructed text here (from end of 119v6 to beginning of 120r1) has many more akṣaras than the gap would allow for. Because our reconstructed text almost certainly must represent something close to the original text, we have supposed that the scribe's eye in all likelihood skipped from the first <hi rend="it">yathābhūtasyābhi-</hi> which would have concluded 119v6 down to <hi rend="it">-samaya udapādi</hi> which would have begun 120r1. The reconstructed text is based upon Hoernle no.149.x.33 [= Or.15009/670] v1 4 and SHT 154.</hi></p>
+
+<p>NagSū I.6 tasya mamaitad abhavat kasmiṃ nu sati bhavo bhava<hi rend="it">ti ─ kiṃpratya</hi>yaś ca punar bhavaḥ tasya mama yoniśo manasikurvataḥ evaṃ yathābhūtasyābhisamaya udapādi ─ upādāne sati bha<hi rend="it">vo bhava</hi>ti upādānapratyayaś ca punar bhavaḥ</p>
+
+<p>NagSū I.7 tasya mamaitad abhavat kasmiṃ nu sati upādānaṃ bhavati kiṃpratyayaṃ ca pu<hi rend="it">nar upā</hi>dānaṃ tasya mama yoniśo manasikurvataḥ evaṃ yathābhūtasyābhisamaya udapādi ─ tṛṣṇāyāṃ satyāṃ up<hi rend="it">ādānaṃ</hi> bhavati tṛṣṇāpratyayañ ca punar upādānaṃ</p>
+
+<p>NagSū I.8 tasya mamaitad abhavat kasmiṃ nu sati tṛṣṇā bhavati kiṃpratyayā ca punas tṛṣṇā tasya <hi rend="it">mama yoniśo mana</hi>sikurvataḥ evaṃ yathābhūtasyābhisamaya udapādi ─ vedanāyāṃ satyāṃ tṛṣṇā bhavati vedanāpratyayā ca punas <hi rend="it">tṛṣṇā ─</hi></p>
+
+<p>NagSū I.9 <hi rend="it">tasya mamai</hi>tad abhavat kasmiṃ nu <hi rend="it">sa</hi>ti <hi rend="it">ve</hi>danā bhavati kiṃpratyayā ca punar vedanā tasya mama yoniśo manasikurvataḥ e<hi rend="it">vaṃ yathābhū</hi>tasy<hi rend="it">ā</hi>bhisamaya udapādi ─ sparśe sati vedanā bhavati ─ sparśapratyayā ca punar vedanā ─</p>
+
+<p>NagSū I.10 tasya mamaitad abhavat kasmi<hi rend="it">ṃ nu sati</hi> sparśo bhavati kiṃpratyayaś ca punaḥ sparśaḥ tasya mama yoniśo manasikurvataḥ evaṃ yathābhūtasyābhisam<hi rend="it">aya u</hi>dapādi ─ ṣaḍāyatane sati sparśo bhavati ṣaḍāyatanapratyayaś ca punaḥ sparśaḥ</p>
+
+<p>NagSū I.11 tasya mamaitad abhavat ka<hi rend="it">smiṃ nu sati</hi> ṣ<hi rend="it">a</hi>ḍāyatanaṃ bhavati kiṃpratyayaṃ ca punaḥ ṣaḍāyatanaṃ tasya mama yoniśo manasikurvataḥ evaṃ yathābhūtasyā<hi rend="it">bhisamaya udapādi ─
+nā</hi>marūpe sati ṣaḍāyatanaṃ bhavati nāmarūpapratyayañ ca punaḥ ṣaḍāyatanaṃ</p>
+
+<p>NagSū I.12 tasya mamaitad abhavat kas<hi rend="it">m</hi>iṃ <hi rend="it">nu sati nāmarūpaṃ</hi> bhavati kiṃpratyayañ ca punar nāmarūpaṃ tasya mama yoniśo manasikurvataḥ evaṃ yathābhūtasyābhisamaya udapādi ─ vijñāne sati nāmarūpaṃ bhavati vijñānapratyayañ ca punar nāmarūpaṃ</p>
+
+<p>tasya mamaitad abhavat kasmiṃ nu sa<hi rend="it">t</hi>i vijñāna<hi rend="it">ṃ</hi> bhavati kiṃpratyayaṃ ca punar vijñānaṃ tasya mama yoniśo manasikurvataḥ evaṃ yathābhūtasyābhisamaya udapādi ─ nāmarūpe sati vijñānaṃ bhavati nāmarūpapratyayaṃ ca punar vijñānaṃ</p>
+
+<p>tasya mama vijñānā<hi rend="it">t pratyu</hi>dāvartate mānasaṃ nātaḥ parato vyativartate</p>
+
+<p>NagSū I.13 14 <hi rend="red">The reason for skipping numbers 13 and 14 is that in following Tripāṭhī's paragraphing, we have not adopted his reconstruction of the pratītyasamutpāda formula here to twelve aṅgas. See Introduction section IV.C for further discussion.</hi></p>
+
+<p>NagSū I.15 yad uta nāmarūpapratyayaṃ vijñānaṃ vijñānapratyayaṃ nāmarūpaṃ nāmarūpapratyayaṃ ṣaḍāyatanaṃ ṣaḍāyatanapratyayaḥ sparśaḥ sparśapratyayā vedanā vedanāpratyayā tṛṣṇā tṛṣṇāpratyayam upādā<hi rend="it">na</hi>m <hi rend="it">u</hi>pādānapratyayo <hi rend="it">bha</hi>va bhavapratyayā jātir jātipratyayaṃ jarāmaraṇaṃ śokaparidevaduḥkhadaurmanasyopāyāsāḥ saṃ<hi rend="it">bha</hi>vaṃty evam asya kevalasya mahato duḥkhaskandhasya samudayo bhavati ─ //</p>
+
+<p>NagSū I.16 tasya mamaitad abhavat kasmi<hi rend="it">n</hi> nv asati jarām<hi rend="it">araṇaṃ na</hi> bhavati ─ kasya nirodhāj jarāmaraṇanirodhaḥ tasya mama yoniśo manasikurvataḥ evaṃ yathābhūtasyābhi<hi rend="it">sama</hi>ya udapādi jātyām asatyāṃ jarāmaraṇaṃ na bhavati jātinirodhāj jarāmaraṇanirodhaḥ</p>
+
+<p>NagSū I.17 tasya mamaitad a<hi rend="it">bhavat ka</hi>smi<hi rend="it">n</hi> nv asati jātir na bhavati ─ kasya nirodhāj jātinirodhaḥ tasya mama yoniśo manasikurvataḥ evaṃ yathābhūtasyābhi<hi rend="it">sa</hi>ma<hi rend="it">ya udapādi ─</hi> bhave asati jātir na bhavati bhavanirodhāj jātinirodhaḥ</p>
+
+<p>NagSū I.18 tasya mamaitad abhavat kasmi<hi rend="it">n</hi> nv asati bhavo na bhavati ─ ka<hi rend="it">sya nirodh</hi>ād bhavanirodhaḥ tasya mama yoniśo manasikurvataḥ evaṃ yathābhūtasyābhisamaya udapādi ─ upādāne asa<hi rend="it">ti bha</hi>vo na bhavati upādānanirodhād bhavanirodhaḥ</p>
+
+<p>NagSū I.19 tasya mamaitad abhavat kasmi<hi rend="it">n</hi> nv asati upādānaṃ na bhavati kasya niro<hi rend="it">dhā</hi>d upādānanirodhaḥ tasya mama yoniśo manasikurvataḥ evaṃ yathābhūtasyābhisamaya udapādi tṛṣṇāyā<hi rend="it">m a</hi>satyām upādānaṃ na bhavati tṛṣṇānirodhād upādānanirodhaḥ</p>
+
+<p>NagSū I.20 tasya mamaitad abhavat kasmi<hi rend="it">n</hi> nv asati tṛṣṇā <hi rend="it">na bhava</hi>ti kasya nirodhāt tṛṣṇānirodhaḥ tasya mama yoniśo manasikurvataḥ evaṃ yathābhūtasyābhisamaya udapādi ─
+vedanāyā<hi rend="it">m asatyāṃ</hi> tṛṣṇā na bhavati vedanānirodhāt tṛṣṇānirodhaḥ</p>
+
+<p>NagSū I.21 tasya mamaitad abhavat kasmi<hi rend="it">n</hi> nv asati vedanā na bhavati kasya nirodhād veda<hi rend="it">nānirodha</hi>ḥ tasya mama yoniśo manasikurvataḥ evaṃ yathābhūtasyābhisamaya udapādi ─
+sparśe asati vedanā na bhavat<hi rend="it">i sparśa</hi>nirodhād vedanānirodhaḥ</p>
+
+<p>NagSū I.22 tasya mamaitad abhavat kasmi<hi rend="it">n</hi> nv asati sparśo na bhavati kasya nirodhāt sparśanirodhaḥ tasya mama <hi rend="it">yoni</hi>śo manasikurvataḥ evaṃ yathābhūtasyābhisamaya udapādi ─
+ṣaḍāyatane asati sparśo na bhavati ṣaḍā<hi rend="it">ya</hi>tananirodhāt sparśanirodhaḥ</p>
+
+<p>NagSū I.23 tasya mamaitad abhavat kasmi<hi rend="it">n</hi> nv asati ṣaḍāyatanaṃ na bhavati kasya nirodhāt <hi rend="it">ṣaḍā</hi>yatananirodhaḥ tasya mama yoniśo manasikurvataḥ evaṃ yathābhūtasyābhisamaya udapādi ─ nāmarūpe asati ṣa<hi rend="it">ḍāyatana</hi>ṃ na bhavati nāmarūpanirodhāt ṣaḍāyatananirodhaḥ</p>
+
+<p>NagSū I.24 tasya mamaitad abhavat kasmi<hi rend="it">n</hi> nv asati nāmarūpaṃ na bhavati kasya <hi rend="it">nirodhān nāma</hi>rūpan<hi rend="it">i</hi>rodhaḥ tasya mama yoniśo manasikurvataḥ evaṃ yathābhūtasyābhisamaya udapādi ─ vijñāne asati <hi rend="it">nāmarūpaṃ na</hi> bhavati vijñānanirodhān nāmarūpanirodhaḥ</p>
+
+<p>NagSū I.25 tasya mamaitad abhavat kasmi<hi rend="it">n</hi> nv asati vijñānaṃ na bhavati kasya niro<hi rend="it">dhād vijñāna</hi>nirodhaḥ tasya mama yoniśo manasikurvataḥ evaṃ yathābhūtasyābhisamaya udapādi ─
+saṃskāreṣv asa<hi rend="it">tsu</hi> vijñānaṃ na bhavati saṃskāranirodhād vijñānanirodhaḥ</p>
+
+<p>NagSū I.26 tasya mamaitad abhavat kasmi<hi rend="it">n</hi> nv asati saṃskārā na bha<hi rend="it">vanti</hi> kasya nirodhāt saṃskāranirodhaḥ tasya mama yoniśo manasikurvataḥ evaṃ yathābhūtasyābhisamaya udapādi ─
+avi<hi rend="it">dyāyā</hi>m a<hi rend="it">sa</hi>tyāṃ saṃskārā na bhavaṃ<hi rend="it">ti</hi> avidyānirodhāt saṃskāranirodhaḥ
+<hi rend="red">P.S. Bleu 67(1)v2 and SHT 420, folio 7r3 (NidSa, transliteration no. 109) have following phrase: <hi rend="it">ity avidyānirodhā(t saṃskāranirodhaḥ)</hi>.</hi></p>
+
+<p>NagSū I.27 saṃskāranirodhād vijñānanirodhaḥ vijñānanirodhān nāma<hi rend="it">rūpani</hi>rodhaḥ nāmarūpanirodhāt ṣaḍāyatananirodhaḥ ṣaḍāyatananirodhāt sparśanirodhaḥ sparśanirodhād vedanānirodha<hi rend="it">ḥ</hi> ve<hi rend="it">danāni</hi>rodhāt tṛṣṇānirodhaḥ tṛṣṇānirodhād upādānanirodhaḥ upādānanirodhād bhavanirodhaḥ bhavanirodhāj jātinirodhaḥ jāti<hi rend="it">nirodhā</hi>j jarāmaraṇanirodhaḥ śokaparidevaduḥkhadaurmanasyopāyāsā nirudhyaṃty evam asya kevalasya mahato <hi rend="it">duḥkha</hi>s<hi rend="it">ka</hi>ndhasya nirodho bhavati //</p>
+
+<p>NagSū I.28 tasya mamaitad abhavad adhigato me paurāṇo mārgaḥ paurāṇo vartma paurāṇī <hi rend="it">puṭā pūrvakairṣi</hi>bhir yātānuyātā
+<hi rend="red">The classical Sanskrit form, which we have used throughout the reconstructed portions of our text, would of course be <hi rend="it">-kair ṛṣi-</hi>. However the MS does not allow space for that many <hi rend="it">akṣaras</hi>, so we have adopted the form used elsewhere in the Pelliot/Stein MS. See note 9 of the translation for further remarks.</hi></p>
+
+<p>NagSū I.29 tadyathā puruṣaḥ araṇye pravaṇe anvāhiṇḍaṃ adhigacchet paurāṇaṃ mārgaṃ paurāṇaṃ vartmaṃ paurāṇīṃ pu<hi rend="it">ṭāṃ pūrvakai</hi>r m<hi rend="it">anu</hi>ṣyair yātānuyātā ─ sa ta(m a)nugacchet sa tam anugacchaṃ sa tatra paśyet paurāṇaṃ mārgaṃ paurāṇaṃ nagaraṃ paurāṇīṃ rājadhā<hi rend="it">nīm ārāmasaṃpa</hi>nnā<hi rend="it">ṃ</hi> vanasaṃpannāṃ puṣkariṇīsaṃpannāṃ śubhāṃ dāpavatīṃ <hi rend="it">ramaṇīyāṃ</hi>
+<hi rend="red">paśyet paurāṇaṃ mārgaṃ: omit <hi rend="it">paurāṇaṃ mārgaṃ</hi>, cf. next paragraph.</hi></p>
+
+<p>NagSū I.30 tasyaivaṃ syād ya<hi rend="it">n</hi> nv ahaṃ gatvā rājñe ārocayeyaṃ atha sa p<hi rend="it">uru</hi>ṣo rājñ<hi rend="it">e</hi> gatvā ārocayed yat khalu deva jānīyāḥ ihāham adrākṣam araṇye pravaṇe anvāhiṇḍaṃ paurāṇaṃ mārgaṃ paurāṇaṃ <hi rend="it">vartma</hi> paurāṇīṃ puṭāṃ pūrvakair manuṣyair yātānuyātāṃ so 'haṃ tam anugatavāṃ so 'haṃ tam anugacchann adrākṣaṃ paurāṇaṃ <hi rend="it">naga</hi>raṃ paurāṇī<hi rend="it">ṃ</hi> rājadhānīm ārāmasaṃpannāṃ vanasaṃpannāṃ puṣkariṇīsaṃpannāṃ śubhāṃ dāpavatīṃ ramaṇīyāṃ tāṃ <hi rend="it">devo</hi> nagarī<hi rend="it">ṃ</hi> māpayatu</p>
+
+<p>NagSū I.31 atha sa rājā tāṃ nagarīṃ māpayet sā ca syād apareṇa samayena rājadhānī ṛddhā ca sphītā ca kṣe<hi rend="it">mā ca su</hi>bhīkṣā cākīrṇabahujanamanuṣyā ca ─</p>
+
+<p>NagSū I.32 evam evā bhikṣava adhigato me paurāṇo mārgaḥ paurāṇaṃ vartma paurāṇī puṭā <hi rend="it">pūrvakai</hi>rṣibhir yātānuyātā
+<hi rend="red">evam evā: read <hi rend="it">evam eva</hi></hi></p>
+
+<p>NagSū I.33 katamo 'sau paurāṇo mārgaḥ paurāṇaṃ vartmaḥ paurāṇī puṭā pūrvakairṣibhir yātānuyātā :</p>
+
+<p>NagSū I.34 yad u<hi rend="it">tāryā</hi>ṣṭāṅgo mārgaḥ tadyathā samyagdṛṣṭiḥ samyaksaṃkalpaḥ samyagvāk samyakkarmānta<hi rend="it">ḥ</hi> samyagājīvaḥ samyagvyāyāmaḥ samyaksmṛti<hi rend="it">ḥ samya</hi>ksamādhir evāṣṭamaḥ</p>
+
+<p>NagSū I.35 <hi rend="red">At least one MS (SHT 787 = NidSa transliteration no. 127.2) inserts the following sentence after <hi rend="it">evāṣṭamaḥ</hi>: <hi rend="it">(ayam a)sau [bhi]kṣavaḥ paurāṇo mārgaḥ paur(āṇaṃ va)[rtma] paurāṇī pūṭā pūrvakai ṛṣibhir yātānuyā(tā)</hi>; cf. also the Mūlasarvāstivāda-vinaya citation [V. Näther, C. Vogel, and K. Wille, "The Final Leaves of the Pravrajyāvastu Portion of the Vinayavastu Manuscript Found Near Gilgit, Part 1, Saṃgharakṣitāvadāna", in: Sanskrit-Texte aus dem buddhistischen Kanon: Neuentdeckungen und Neueditionen III, Göttingen 1996 (Sanskrit-Wörterbuch der buddhistischen Texte aus den Turfan-Funden, Beiheft 6), p. 260]. This sentence constitutes par. 35 in Tripāṭhī's edition, but since it is missing in the Pelliot/Stein MS, we have likewise omitted this paragraph here.</hi></p>
+
+<p>NagSū I.36 so 'haṃ tam anugatavāṃ so 'haṃ tam anugacchaṃ jarāmaraṇam adrākṣaṃ jarāmaraṇasamudayaṃ <hi rend="it">ja</hi>rāmaraṇanirodhaṃ jarāmaraṇanirodhagāminīṃ pra<hi rend="it">tipadam adrākṣam</hi></p>
+
+<p>NagSū I.37 <hi rend="it">evaṃ jātibhavopādānatṛṣṇāvedanāsparśaṣaḍāyatananāmarūpavijñānaṃ saṃskārān adrākṣaṃ saṃskārasamudayaṃ saṃskāra</hi>nirodhaṃ saṃskāranirodhagāminīṃ pratipadam adrākṣaṃ
+<hi rend="red">P.S. Bleu 67(3)r4ff. preserves a fully elaborated text instead of this more truncated passage: <hi rend="it">jātim adrākṣaṃ jātisamu(daya)ṃ jā(t)i(n)i(ro)dhaṃ jātinirodhagāminī⟨ṃ⟩ pratipadam adrākṣa(ṃ) ─
+bhava(m adrākṣaṃ bhavasamuda)</hi>(<hi rend="bold">5</hi>)<hi rend="it">yaṃ bhavanirodhaṃ bhavanirodhagāminī⟨ṃ⟩ pr(atipadam adrākṣaṃ ─ u)pādānam adrākṣaṃ upādānasamudayaṃ u(p)ā(dānanirodham upādāna)</hi>(<hi rend="bold">3v1</hi>)<hi rend="it">(ni)r(odha)gāminī⟨ṃ⟩ pratipadam adrākṣaṃ ─ tṛ(ṣṇām adrākṣaṃ tṛṣṇāsam)ud(a)y(aṃ) tṛṣṇān(i)r(o)dha(ṃ) tṛ(ṣ)ṇ(ā)n(i)rodhagāminī⟨ṃ⟩ prat(ipadam adrākṣaṃ ─ sparśa)</hi>(<hi rend="bold">2</hi>)<hi rend="it">(m a)drākṣaṃ sparśasamudayaṃ spa(r)ś(anirodhaṃ sparśani)rodhagāminīṃ pratipadam adrākṣaṃ ─ ṣaḍāyatanam a(drākṣaṃ ṣaḍāyatana)</hi>(<hi rend="bold">3</hi>)<hi rend="it">(sa)mudayaṃ ṣaḍāyatananirodhaṃ ṣaḍāyatananirodhagāminīṃ pratipadam adrākṣaṃ ─ n(ā)m(a)rūpam a(drākṣaṃ nāmarūpasa)</hi>(<hi rend="bold">4</hi>)<hi rend="it">mudayaṃ nāmarūpanirodhaṃ nāmarūpanirodhagā(mi)nīṃ pratipadam adrākṣaṃ ─ vijñānam adrā(kṣa)ṃ vij(ñ)āna(samudayaṃ vijñānaniro)</hi>(<hi rend="bold">5</hi>)<hi rend="it">(dha)ṃ vij(ñ)ānanirodhagāminī(ṃ) p(r)atipadam adrākṣaṃ ─ saṃ(skāra)m adrakṣaṃ saṃskārasamudayaṃ . . . </hi>; cf. P.S. Bleu 77v3 6, 78v3 5, 276vx z, Petits frags. 693, 1295, and 1297; SHT 157, fragment br1 2 and 787r4 v4.</hi></p>
+
+<p>NagSū I.38 so 'ham imāṃ dh<hi rend="it">a</hi>rmāṃ svayam abhijñāyābhisaṃbuddhyā bhikṣūṇām ārocayāmi bhikṣūṇīnām upāsakānām upāsikānāṃ nānātīrthyaśramaṇabrā<hi rend="it">hmaṇacarakapa</hi>rivrājakānāṃ</p>
+
+<p>NagSū I.39 tatra bhikṣur api samyakpratipadyamānaḥ ārādhako bhavati ārādhayati nyāyaṃ dharmaṃ kuśalaṃ bhikṣ<hi rend="it">uṇy apy upāsako 'py upāsikāpi samyakpratipadyamānā ārādhikā bhavati ─ ārādhayati nyāyaṃ dharmaṃ kuśalam* ─</hi></p>
+
+<p>NagSū I.40 <hi rend="it">evam idaṃ brahmacaryaṃ vaistārikaṃ bhavati bahujanyaṃ pṛthubhūtaṃ yāvad devamanuṣyebhyaḥ samyaksuprakāśitam* //</hi>
+<hi rend="red">Krot. 9(2)r1 2 continues: <hi rend="it">idam avocat* bhagavāṃ āptamanasas te bhikṣavo bhagavato bhāṣitam abhyanandam* // nagaropamasūtraṃ samāpta // //</hi>; line 3 contains a colophon for which see Transliteration, Canonical Text, V. Cf. also SHT 152, fragment ev2 3. The end of the canonical text is missing from the Pelliot/Stein MS. We have reconstructed this section on the basis of Pet 1v5 2r1, SHT 157, fragment br4 5, 167r6 v2, 179r5 v2, and 616v3 4; cf. also the Mūlasarvāstivāda-vinayacitation [V. Näther, C. Vogel, and K. Wille, "The Final Leaves of the Pravrajyāvastu Portion of the Vinayavastu Manuscript Found Near Gilgit, Part 1, Saṃgharakṣitāvadāna", in: Sanskrit-Texte aus dem buddhistischen Kanon: Neuentdeckungen und Neueditionen III, Göttingen 1996 (Sanskrit-Wörterbuch der buddhistischen Texte aus den Turfan-Funden, Beiheft 6), p. 261].</hi></p>
+
+<p>II. Appendix
+<hi rend="red">The first part of the appendix has been adapted from the Petrovsky MS which is the only extant MS that preserves, almost entirely, that part of the appendix not found in the Pelliot/Stein MS. Because our reconstruction of the canonical text and appendix is intended to represent a single MS tradition (as reunited from the London and Paris collections), the section of the Petrovsky MS that has been used to reconstruct the appendix has been given in bold. The paragraphing is more or less arbitrary.</hi></p>
+
+<p>NagSū II.1 <hi rend="bold"><hi rend="it">prat</hi>yupasthitasya punar nagaropamasya vyāka<hi rend="it">ra</hi>ṇasya bra<hi rend="it">h</hi>m<hi rend="it">ā sanatkumāro 'tikrā</hi>ntavarṇaḥ atikrāntāyāṃ rātryāṃ yena bhagavāṃs tenopa<hi rend="it">gāma upetya bhagavatp</hi>ā<hi rend="it">d</hi> au <hi rend="it">śira</hi>sā vanditvā ekānte asthād ekāntasthitaḥ brahmā sa<hi rend="it">natkumāro bhagavataḥ purataḥ gāthāṃ ba</hi>bh<hi rend="it">āṣe</hi> //</hi></p>
+
+<p><hi rend="bold">  aho vidyā mahāvidyā kleśaviṣapraghā<hi rend="it">tanī
+  bhāṣitaṃ te mahāvīra bhūteṣu hy an</hi>ukampakaḥ</hi>
+<hi rend="red"><hi rend="bold"><hi rend="it">prat</hi>yupasthitasya</hi>: This reconstruction is tentative since we have no way to determine the akṣara(s) immediately preceding <hi rend="it">upasthitasya</hi> in Pet. 2r2. In the beginning of this line about seven more akṣaras are missing, but at least the first six almost certainly belong to the end of the canonical text. SHT 179 gives a different transition between the canonical text and the appendix: <hi rend="it">... samyaksuprakāśitam* samanantaraparyāvasitasya vyak(ara)ṇasya ⟨nagaropama⟩m ity adhivacanam* // // atha brahma sanatkumāro ...</hi></hi></p>
+
+<p>NagSū II.2 <hi rend="bold">a<hi rend="it">st</hi>i māriṣa <hi rend="it">pu</hi>rastimāyāṃ diśi <hi rend="it">dve mahārākṣasi prativasataś candraprabhā nā</hi>ma sūryaprabhā c<hi rend="it">a</hi> .. <hi rend="it">saha</hi>srapariv<hi rend="it">āre te mānuṣikāṃ prajāṃ rakṣāṃ guptiṃ balaṃ phāṣaṃ s</hi>ukhas<hi rend="it">pa</hi>rś<hi rend="it">a</hi>vihāratāyai paripālayataḥ pa<hi rend="it">thagatā apy utpa</hi>th<hi rend="it">a</hi>gat<hi rend="it">ā</hi> api ārāmagatā api śunyāgāragatā api catasraḥ <hi rend="it">pariṣado bhikṣur bhikṣu</hi>ṇī upāsakā upāsikās tadanyāṃś ca manuṣyāṃs tatreme ma<hi rend="it">ntrapadā bhavanti yena teṣām ā</hi>k<hi rend="it">a</hi>rṣaṇaṃ bhavati tadyathā
+  vaḍa : saraḍa : cappuṣa : śaraṅg<hi rend="it">ulī</hi></hi>
+<hi rend="red"><hi rend="bold">(phāṣaṃ s)ukhas(pa)rś(a)vihāratāyai</hi>: SHT 176, fol. 20v3 21r2 reads <hi rend="it">phāṣa(sukhaspa)r[śavi]hāratāyāṃ paripālayaṃti pathagate(nāpi u)tpathagatenāpi ārāmagatenāpi śuṇyāgāragatenāpi caturṇā[ṃ] pariṣadāṃ bhikṣu⟨ṇā⟩ṃ bhikṣuṇ[ī]nām upāsakānām upāsikānāṃ tadanyeṣāṃ ca manuṣyāṇāṃ</hi>. <hi rend="bold">cappuṣa</hi>: SHT 176, fol.21r4 reads <hi rend="it">capuṭa</hi>.</hi></p>
+
+<p>NagSū II.3 <hi rend="bold"><hi rend="it">kariṣye māriṣa ima</hi>sya nagaropamasya vy<hi rend="it">ā</hi>karaṇasya siddhiṃ r<hi rend="it">a</hi>k<hi rend="it">ṣa</hi>ṃ bandhaṃ <hi rend="it">parigraham ─ tadyathā
+  purime ─ ka</hi>pph<hi rend="it">e</hi> ─ parumele ─ rimele ─ parāpare ─ purāpure ─ kukumati <hi rend="it">kṣīramati ─
+kururu ─ mururu ─ k</hi>urarā ─ murarā ─ kānti oṣṭrāpāli ─ ghori gandhāri ─ sopa<hi rend="it">kke ─ capaphari</hi> + + + + + purāpuri ─ eṇe ─ meṇe ─ dapphe ─ daḍapphe ─ alasāpati ─ pa<hi rend="it">dumāpati kumudāpa</hi>t<hi rend="it">i</hi> svāha //</hi>
+<hi rend="red"><hi rend="bold"><hi rend="it">capaphari</hi></hi>: It is unclear how many akṣaras are missing at this point. SHT 176, fol. 21v2 5 reads these <hi rend="it">mantrapadas</hi> as follows: <hi rend="it">purime ─ kappe ─ parumele ─ rimele ─ parāpure purāpure ─ kukūmati ─ kṣīramati ─ kururu ─ mururu ─ kururā mururā ─ kānti ─ oṣṭraṣāli ─ ghori gandhāri cori caṇḍāli ─ saupakke ─ capaphari ─</hi> ; P.S. Bleu 129ry adds an interlinear insertion below <hi rend="it">ghori</hi>: <hi rend="it">cori caṇḍali mā de .. ..</hi>; cf. also <hi rend="it">Āṭānāṭikasūtra</hi> (Hoffmann ed., <hi rend="it">Bruchstücke des Āṭānāṭikasūtra aus dem zentralasiatischen Sanskritkanon der Buddhisten</hi>, Leipzig 1939; repr. with supplement by L. Sander, Stuttgart 1987), 33ff. and the <hi rend="it">Bhadrakarātriyasūtra</hi>, frag. 3b5 in S.F. Oldenburg, "Otryvki kashgarskikh sanskritskikh rukopisey iz sobraniya N.F. Petrovskogo, III," <hi rend="it">ZVOIRAO</hi> XV (1902 1903): 0116.</hi></p>
+
+<p>NagSū II.4 <hi rend="bold">āgamiṣyati māriṣa māraḥ pāpīyāṃs tasya pu<hi rend="it">rata ime mantrapadā bhāṣitavyaḥ
+  bu</hi>ddha <hi rend="it">śr</hi>eṣṭho n<hi rend="it">a</hi> śreṣṭhas tvaṃ nāsti śreṣṭhas tathāgatāt*
+  buddho <hi rend="it">hi śreṣṭho lokasya dharmarājo hy anuttaraḥ ─
+  dhar</hi>ma śr<hi rend="it">e</hi>ṣṭho na śreṣṭha<hi rend="it">s t</hi>v<hi rend="it">aṃ nās</hi>t<hi rend="it">i</hi> śr<hi rend="it">e</hi>ṣṭho 'tra dharmataḥ
+  dha<hi rend="it">rmo hi śreṣṭho lokasya virāgopaśamaḥ s</hi>u<hi rend="it">kha</hi>m* ─
+  <hi rend="it">saṃgha śreṣṭho</hi> n<hi rend="it">a śreṣ</hi>ṭh<hi rend="it">a</hi>s tvaṃ nāsti śreṣṭho 'tra saṃgha<hi rend="it">taḥ
+  saṃgho hi śreṣṭho lokasya puṇ</hi>y<hi rend="it">a</hi>kṣ<hi rend="it">e</hi>tr<hi rend="it">o</hi> hy anutt<hi rend="it">araḥ //</hi></hi></p>
+
+<p>NagSū II.5 <hi rend="bold"><hi rend="it">atha pu</hi>nar māriṣa nagaropamaṃ <hi rend="it">vyākaraṇam vipaśyi</hi>naḥ tathāgatasyār<hi rend="it">ha</hi>t<hi rend="it">a</hi>ḥ samyaksaṃbuddhasya dharmadvāro nā<hi rend="it">ma vyākaraṇaṃ babhū</hi>v<hi rend="it">a</hi> ─ kanakamunes tathāga<hi rend="it">ta</hi>syārhataḥ samyaksaṃbuddhasya a<hi rend="it">pi dharmadvāro nāma vyākaraṇaṃ babhūva</hi> ─ kāśyapasya tathāgatasyārhataḥ samyaksaṃbuddhasya <hi rend="it">api dharmadvāro nāma vyā</hi>k<hi rend="it">a</hi>r<hi rend="it">a</hi>ṇaṃ babhūva <hi rend="it">/</hi></hi></p>
+
+<p>NagSū II.6 <hi rend="bold">bhagavataḥ pun<hi rend="it">a</hi>r e<hi rend="it">ta</hi>rhi śākyamunes tathā<hi rend="it">gatasyārhataḥ samyaksaṃbu</hi>ddh<hi rend="it">a</hi>sya j<hi rend="it">a</hi>rāmaraṇajñāne yathābhūtam abhisaṃbodhāt* ja<hi rend="it">rāmaraṇasamudayajñāne ja</hi>rāmaraṇanirodhajñāne jarāmaraṇanirodhagāminī<hi rend="it">pratipajjñāne yathā</hi>bhūtam abhisaṃbodhāt* evaṃ jātir bhavam upādānaṃ tṛṣṇā <hi rend="it">vedanā sparśaḥ ṣaḍāya</hi>tana<hi rend="it">ṃ</hi> nāmarūpaṃ vijñānaṃ saṃskārajñāne yathābhūta<hi rend="it">m abhisaṃbodhāt* saṃskārasamuda</hi>yajñā<hi rend="it">n</hi>e saṃskār<hi rend="it">ani</hi>rodhajñāne saṃskāranirodha<hi rend="it">gāminīpratipajjñāne yathābhūtam a</hi>bhi<hi rend="it">saṃ</hi>bodhāt* .. .. .. .. p. .. rmā .i .. .. .. + + + + + + + + + + + ..[t]* nagaropamaṃ vyākaraṇa<hi rend="it">ṃ</hi></hi>
+<hi rend="red"><hi rend="bold"><hi rend="it">pratipajjñāne</hi></hi>: SHT 154, fragm. ev1 reads <hi rend="it">-pratipadajñāne</hi> (for <hi rend="it">-pratipadājñāne</hi>). <hi rend="bold">evaṃ jātir bhavam</hi>: SHT 154, frags. d and e preserve a fully elaborated version of this passage, repeating the complete formula for each member of the <hi rend="it">pratītyasamutpāda</hi>.</hi></p>
+
+<p>NagSū II.7 <hi rend="bold">tasmād asya vyākara<hi rend="it">ṇasya</hi> + + + + + + + + + + .. dharma<hi rend="it">saṃ</hi>bodho nagaropamam ity adhivacanam*</hi></p>
+
+<p>NagSū II.8 <hi rend="bold">asmiṃ <hi rend="it">khalu nagaropame vyākaraṇe bhā</hi>ṣy<hi rend="it">a</hi>māṇe ayaṃ trisahasramahā</hi><hi rend="it">sahas</hi>r<hi rend="it">o</hi> lokadh<hi rend="it">ātu</hi>s tṛkṛtvā kampitaḥ saṃkampitaḥ saṃprakaṃpitaḥ kṣubhitaḥ saṃkṣubhitaḥ saṃprakṣubhitaḥ vyathitas saṃvyathi<hi rend="it">taḥ saṃ</hi>pravyathitaḥ calitaḥ saṃcalitaḥ saṃpracalitaḥ
+<hi rend="red">Pet. 5v4 5 reads in a somewhat different order: <hi rend="it">saṃkampitaḥ saṃprakampitaḥ calitaḥ saṃcalitaḥ saṃpra(calitaḥ vyathitaḥ saṃvyathitaḥ)</hi> (<hi rend="bold">5v5</hi>) <hi rend="it">saṃpravyathitaḥ kṣubhitaḥ saṃkṣubhitaḥ saṃprakṣubhitaḥ</hi>.</hi></p>
+
+<p>NagSū II.9 tasmāt tarhi māriṣa idaṃ nagaropamaṃ vyākaraṇaṃ bhikṣūṇāṃ śāstāram evānumantavyaṃ satkarttavyaṃ gurukartavyaṃ mānayitavyaṃ pūjayitavyaṃ upaniḥśṛtya vihartavyaṃ <hi rend="it">bhi</hi>kṣ<hi rend="it">ū</hi>ṇāṃ bhikṣuṇīnām upāsakānām upāsikānāṃ devānāṃ nāgānāṃ yakṣāṇāṃ rākṣasānāṃ pretānāṃ kumbhāṇḍā<hi rend="it">nāṃ pi</hi>śācānāṃ idaṃ vyākaraṇaṃ śāstāram evānumantavyaṃ satkartavyaṃ gurukartavyaṃ mānayitavyaṃ pūjayitavyaṃ upaniḥśṛ<hi rend="it">tya vi</hi>ha<hi rend="it">rta</hi>vyam*</p>
+
+<p>NagSū II.10 i<hi rend="it">da</hi>ṃ <hi rend="it">ca</hi> punar māriṣa nagaropamaṃ vyākaraṇaṃ kāmāvacarair devaiḥ koṭinayutaśatasahasrair bhāṣitaṃ c<hi rend="it">ā</hi>bhy<hi rend="it">anu</hi>mo<hi rend="it">ditaṃ cāṣṭāviṃ</hi>śati<hi rend="it">bhi</hi>r yakṣasenāpatibhir bhāṣitaṃ cābhyanumoditaṃ ca caturbhiś ca mahārājābhir bhāṣitaṃ cābhyanumoditaṃ <hi rend="it">ca śa</hi>kreṇa devendreṇa bhāṣitaṃ cābhyanumoditaṃ ca brāhmaṇaḥ-sabhāpatinā bhāṣitaṃ cābhyanumoditaṃ ca śuddhāvasair devaiḥ <hi rend="it">koṭi</hi>nayutaśatasahasrair bhāṣitaṃ cābhyanumoditaṃ ca atītaiś ca nadīgaṅgavālukāprākhyais tathāgatair ar<hi rend="it">a</hi>ha<hi rend="it">d</hi>bhi<hi rend="it">ḥ</hi> samyaksaṃbuddhair bhāṣitaṃ anāgatā api nadīgaṅgavālukāprākhyās tathāgatā arhaṃtaḥ samyaksaṃbuddhā bhāṣi<hi rend="it">ṣyanti</hi> bhagavān apy etarhi pratyutpanne dhvani tathāgato 'rhaṃ samyaksaṃbuddho bhāṣitavān*
+<hi rend="red">brāhmaṇaḥ-sabhāpatinā: SHT 176, fol. 30r3 reads <hi rend="it">brahmā sabhāpatinā</hi>. śuddhāvasair: Pet. 4v3 and SHT 176, fol. 30r4 read <hi rend="it">śuddhāvasaiś ca</hi>. nadīgaṅgavālukāprākhyais: SHT 176, fol. 30v1 reads <hi rend="it">-vālika-</hi>.</hi></p>
+
+<p>NagSū II.11 yaḥ kaścin māriṣa idaṃ vyākaraṇaṃ <hi rend="it">uddekṣyat</hi>i dhārayiṣyati grāhayiṣyati vācayiṣyati svādhyāyiṣyati paryavāpsyati manasikariṣyati saḥ ahinā na daṃkṣya<hi rend="it">ti viṣaṃ kāye</hi> na tariṣyati śastraṃ na kramiṣyati nodakena kālaṃ kariṣyati agninā na daṅkṣyati rājāno 'pi na prasahīṣy<hi rend="it">aṃti co</hi>rā na muṣiṣyaṃti rājakulamadhyagato 'pi svastinottariṣyati gāḍhabandhanabaddho 'pi mokṣyati āsannāsamāgato 'pi abhy<hi rend="it">avakā</hi>śagato bhaviṣyati sarve ca kṛtyakākhordamantravetāḍa prativigamiṣyaṃti sarve ca bhūtagaṇā na vihe<hi rend="it">ṭhayi</hi>ṣyaṃti anyatra pūrvakeṇa karmaṇā idaṃ viditvā brahmā sanatkumāro bhagavatpādau śirasā vanditvā <hi rend="it">bhagava</hi>ntaṃ tṛpradakṣiṇīkṛtvā tatraivāntarhitaḥ //</p>
+
+<p><hi rend="red">daṃkṣya(ti): SHT 1275r5 reads <hi rend="it">daśyiṣyati</hi>; cf. also SHT 906, frag. c (fol. 21)r6: <hi rend="it">daśiṣyati</hi>. daṅkṣyati: Pet. 6r3 reads <hi rend="it">dhaṃkṣya</hi>(<hi rend="it">ti</hi>). viditvā: Pet. 6v1 reads <hi rend="it">vaditvā</hi> which must be the correct reading.</hi></p>
+
+<p>NagSū II.12 atha catvāro mahārājānaḥ atikrāntavarṇā abhikrāntāyāṃ rātryāṃ yena bha<hi rend="it">gavāṃs te</hi>nopa<hi rend="it">ja</hi>gmu<hi rend="it">r up</hi>etya bhagavatpādau <hi rend="it">ś</hi>i<hi rend="it">rasā van</hi>di<hi rend="it">tvā</hi> yathā svakasvakāṃ diśaṃ niḥśṛtya ekānte tasthūr ekāntasthitaḥ
+<hi rend="red">tasthūr: read <hi rend="it">tasthur</hi></hi></p>
+
+<p>NagSū II.13 atha <hi rend="it">purasti</hi>mā<hi rend="it">y</hi>āṃ diśaṃ niḥśṛtya dhṛtirāṣṭro mahārājā yena bhagavāṃs tenāṃjaliṃ praṇamya bhagavantaṃ gāthayā abhyabhāṣat*
+  aho <hi rend="it">vidyā ma</hi>hāvidyā kleśaviṣapraghātanī
+  bhāṣitā te mahāvīra nirjvarā jvaranāśanī ─
+<hi rend="red">diśaṃ: SHT 875r3 reads <hi rend="it">purastimāṃ diśi</hi>. jvaranāśanī: SHT 875v2 3 reads <hi rend="it">jvaraśāminī :</hi>.</hi></p>
+
+<p>NagSū II.14 asti māriṣā purastimāyāṃ <hi rend="it">diśāyāṃ</hi> dve mahā<hi rend="it">rākṣasi</hi> prativasataḥ sugriṇī nāma vasugriṇī ca paṃcasahasraparivāre te mānuṣikāṃ prajāṃ rakṣāṃ guptiṃ b<hi rend="it">alaṃ phāṣaṃ su</hi>khasparśavihāratāyai paripālayataḥ pathagatā api utpathagatā api ārāmagatā api śuṇyāg<hi rend="it">āragatā</hi> api catasraḥ pariṣado bhikṣūṇāṃ bhikṣuṇīnāṃ upāsakānāṃ upāsikānāṃs tadanyaṃś ca manuṣyāṇāṃ tatreme maṃtrapadā <hi rend="it">bhavanti y</hi>e<hi rend="it">na teṣ</hi>ām ākarṣaṇaṃ bhavati tadyathā
+  vijini vijini ─ saṃskṛni ─ vijñini vijñini ─ kṣīramati kulamati // phal<hi rend="it">a</hi> + + .. .. .. .e .. rāpure ─ ene mene ─ dapphe daḍapphe ─ alasāpati ─ padumāpati kumudāpati svāhā ─ //</p>
+
+<p><hi rend="red"><hi rend="it">diśāyāṃ</hi>: Cf. SHT 875v4 and elsewhere in P.S. Bleu 434 (fol. 129r6, 129v4, etc.); P.S. Petits frags. 340+606rw reads <hi rend="it">[di]ś[i]</hi>.</hi></p>
+
+<p>NagSū II.15 āgamiṣyati m<hi rend="it">āriṣa māraḥ</hi> pāpīyā<hi rend="it">ṃ</hi>s tasya purataḥ ime mantrapadā bhāṣitavyaḥ
+  buddha śreṣṭho na śreṣṭhas tvaṃ pūrvavat* vistareṇa trayaḥ ślokaḥ 3</p>
+
+<p>NagSū II.16 ya<hi rend="it">ḥ kaści</hi>n māriṣa idaṃ nagaropamaṃ vyākaraṇaṃ uddekṣyati dhārayiṣyati pūrvavad yāvad anyatra pūrvakena karmaṇā <hi rend="it">//</hi></p>
+
+<p>NagSū II.17 <hi rend="it">atha da</hi>kṣiṇān diśaṃ niḥśṛtya virūḍhako mahārājā yena bhagavāṃs tenāṃjaliṃ praṇamya bhagavaṃtaṃ gāthayā <hi rend="it">abhyabhā</hi>ṣat*
+  aho vidyā mahāvidyā kleśaviṣapraghātanī
+  bhāṣitā te mahāvīra nirjvarā jvaranāśanī ─
+<hi rend="red">virūḍhako: P.S. Petits frag. 1365vb starts here. At 1365vb we find <hi rend="it">[kumbh].[ṇḍ].</hi> cf. <hi rend="it">Ārya-Mahā-Māyūrī Vidyā-Rājñī</hi> (Shūyo Takubo ed.), 16.6: <hi rend="it">dakṣiṇāyām Ānanda diśāyāṃ Virūḍhako nāma kumbhāṇḍamahārājā prativasati sma.</hi></hi></p>
+
+<p>NagSū II.18 asti māriṣā dakṣi<hi rend="it">ṇāyāṃ</hi> diśāyāṃ dve mahārākṣasi prativasataḥ caṇḍinī nāma upacaṇḍinī ca paṃcasahasraparivāre te mānuṣikāṃ prajā<hi rend="it">ṃ pūrvava</hi>d yāvat tatrem<hi rend="it">e ma</hi>ntrapadā bhavanti yena teṣām ākarṣaṇaṃ bhavati tadyathā
+  nāmini ─ nāmini ─ ṣaḍini ṣaḍini ─ sparśini <hi rend="it">sparśi</hi>ni svāhā //</p>
+
+<p><hi rend="red">svāhā //: Mac. 1.5 continues with what was surely part of this formulaic text: <hi rend="it">āgamiṣyati māriṣa māraḥ pāpīyāṃ</hi>(<hi rend="bold">1.6</hi>)<hi rend="it">(s tasya purata ime mantrapadā bhāṣitavyāḥ buddhaḥ śreṣṭho na śreṣṭhas tva)ṃ p(ūr)v(a)vad (y)āvad anyatra (pūrva)</hi>(<hi rend="bold">2.1</hi>)<hi rend="it">(keṇa karmaṇā //)</hi>. SHT 906, frag. c (fol. 21) and SHT 909, frag. b both appear to include not only the text as represented in the Mac. MS, but a fully elaborated version thereof (i.e. without the abbreviation <hi rend="it">pūrvavad yāvad</hi>).</hi></p>
+
+<p>NagSū II.19 atha paścimāyāṃ diśaṃ niḥśṛtya virūpākṣo mahārājā yena bhagavāṃs tenāṃjaliṃ praṇamya bhagavantaṃ gātha<hi rend="it">yā abhya</hi>bhāṣat* //</p>
+
+<p>  aho vidyā mahāvidyā kleśaviṣapraghātanī
+  bhāṣitā te mahāvīra nirjvarā jvaranāśanī <hi rend="it">/</hi></p>
+
+<p>NagSū II.20 <hi rend="it">asti mā</hi>riṣa paścimāyāṃ diśāyāṃ dve mahārākṣasi prativasataḥ dṛśyā nāma mahādṛśyā ca pa<hi rend="it">ṃ</hi>casahasra<hi rend="it">parivāre te mānu</hi>ṣikāṃ prajāṃ rakṣāṃ guptiṃ balaṃ phāṣaṃ sukhasparśavihāratayai pūrvavad yāvat tatreme mantrapadā bhavanti yen<hi rend="it">a teṣām ākarṣaṇaṃ</hi> bhavati tadyathā
+  vedini ─ vedini ─ tṛṣṇini ─ tṛṣṇini ─ upādini ─ svāhā //</p>
+
+<p><hi rend="red">diśāyāṃ: Mac. 2.3 reads <hi rend="it">diśi</hi>. vedini: SHT 905, frag. a (fol. 28)r.1 2 appears to have two more mantrapadas preceding this one: 1 <hi rend="it">[s]v[ā]ha ─ kuśi ─ kuśikesari ///</hi>; 2 <hi rend="it">la mālinī svāha ─ tadya + ///</hi>. upādini: SHT 905, frag. a (fol. 28)r3 reads <hi rend="it">upādānini</hi>.</hi></p>
+
+<p>NagSū II.21 āgamiṣyati māriṣa māraḥ <hi rend="it">pāpīyāṃs tasya</hi> purata ime maṃtrapadā bhāṣitavyaḥ
+  buddha śreṣṭho na śreṣṭhas tvaṃ nāsti śreṣṭhas tathāgataḥ pūrvavad yāvad anyatra pūrvakeṇa karma<hi rend="it">ṇā</hi> //</p>
+
+<p><hi rend="red">pūrvavad yāvad: SHT 905, frag. a (fol. 28)r4ff. preserves a fully elaborated text (i.e. without the abbreviation).</hi></p>
+
+<p>NagSū II.22 athottarāyāṃ diśi niḥśṛtya vaiśravaṇo mahārājā : yena bhagavāṃs tenāṃjaliṃ praṇamya bhagavantaṃ gā<hi rend="it">tha</hi>yā abhyabhāṣat*
+  aho vidyā mahāvidyā kleśaviṣapraghātanī
+  bhāṣitā te mahāvīra nirjvarā jvaranāśanī
+<hi rend="red">athottarāyāṃ: Mac. 3.2 reads <hi rend="it">athottarān</hi>.</hi></p>
+
+<p>NagSū II.23 santi māriṣa <hi rend="it">uttarā</hi>yān diśi bhaumā yakṣāḥ anekayakṣasahasrāḥ parivāra prativasaṃti te mānuṣikāṃ prajāṃ rakṣāṃ guptiṃ balaṃ ph<hi rend="it">āṣaṃ</hi> su<hi rend="it">kha</hi>sparśavihāratāyai paripālayanti ─ pathagatā api utpathagatā api ārāmagatā api śunyāgāragatā api cat<hi rend="it">asraḥ pa</hi>riṣado bhikṣūṇāṃ bhikṣuṇīn<hi rend="it">ā</hi>ṃ upāsakānāṃ upāsikānāṃs tadanyāṃś ca manuṣyāṇāṃ tatreme maṃtrapadā bhavaṃti yena teṣ<hi rend="it">ā</hi>m <hi rend="it">ā</hi>karṣaṇa<hi rend="it">ṃ</hi> bhavati tadyathā
+  bhāvini bhāvini ─ jātini ─ jātini ─ maraṇi ─ maraṇi ─ svāhā //</p>
+
+<p><hi rend="red">anekayakṣasahasrāḥ: Mac. 3.5 reads <hi rend="it">anekasa(hasrāḥ)</hi>. manuṣyāṇāṃ: Mac. 4.2 reads <hi rend="it">(bhi)k(ṣu)ṇī (u)pāsakā upā(s)ik(ā)s tadanyāś ca manuṣyāṃ</hi>. tatreme: SHT 909, frag. a (fol. 61)r1 starts here and reads <hi rend="it">(ra)kṣāṃ bhavatu paritraṃ parigrahaṃ paripālanam* (ta)treme</hi>. bhāvini: SHT 905, frag. b (fol. 30)v1 2 has some <hi rend="it">mantrapadas</hi> preceding: 1 <hi rend="it">tadyathā ha + + + ///</hi>; 2 <hi rend="it">ri ─ riraṃsa[v]. + + ///</hi>.</hi></p>
+
+<p>NagSū II.24 āgamiṣyati māriṣa māra<hi rend="it">ḥ</hi> pāpīyāṃ<hi rend="it">s</hi> tasya purata ime mantrapadā bhāṣitavyaḥ
+  buddha śreṣṭho na śreṣṭhas tvaṃ nāsti śreṣṭhas tathāgatāt*
+  buddho hi śreṣṭho lokasya dharmarājo <hi rend="it">hy anu</hi>ttaraḥ ─
+  dharma śreṣṭho na śreṣṭhas tvaṃ nāsti śreṣṭho 'tra dharmataḥ
+  dharmo hi śreṣṭho lokasya virāgopaśamaḥ sukham*
+  saṃgha śreṣṭho na śreṣṭhas tvaṃ nāsti śreṣṭho 'tra saṃghataḥ
+  saṃgho hi śreṣṭho lokasya puṇyakṣetro hy anuttara 3
+<hi rend="red">ime mantrapadā: SHT 909, frag. a (fol. 61)r3 reads <hi rend="it">mantrā</hi>. tathāgatāt*: Mac. 4.5 reads <hi rend="it">nāsti</hi> <hi rend="it">buddhena (śreṣṭhataḥ)</hi>; SHT 909, frag. a (fol. 61)r3 5 reads <hi rend="it">nāsti buddhe[n].</hi>; cf. SHT 905, frag. a (fol. 28)r5; 906, frag. c (fol. 21)r2. dharmataḥ: SHT 909, frag. a (fol. 61)r4 reads <hi rend="it">nāsti dharmeṇa ś[r]eṣ(ṭh)a[ta ─]</hi>. virāgopaśamaḥ: Mac. 5.1 and SHT 909, frag. a (fol. 61)r5 read <hi rend="it">virāgopaśamaṃ</hi>. saṃghataḥ: SHT 909, frag. a (fol. 61)r5 reads <hi rend="it">nāsti saṅghena śreṣṭhat.</hi>.</hi></p>
+
+<p>NagSū II.25 yaḥ kaścin mā<hi rend="it">riṣa</hi> i<hi rend="it">daṃ na</hi>garopamaṃ vyākaraṇaṃ uddekṣyati dhārayiṣyati grāhayiṣyati vācayiṣyati svādhyāyiṣyati paryavāpsyat<hi rend="it">i</hi> manasika<hi rend="it">r</hi>iṣya<hi rend="it">ti sa ahinā na daṃ</hi>kṣ<hi rend="it">y</hi>ati viṣaṃ kāye na tariṣyati ─ śastraṃ na kramiṣyati ─ nodakena kālaṃ kariṣyati agninā na dhakṣyati rājāno 'pi na <hi rend="it">prasahi</hi>ṣyaṃti corā na muṣiṣyaṃti ─ rājakulamadhyagato 'pi svastinottariṣyati ─ gāḍhabandhanabaddho 'pi mucciṣyati āsannasamāga<hi rend="it">to 'pi ─</hi> abhyavakāśagato bhaviṣyati : sarve ca kṛtyakākhordamantravetāḍa prativigamiṣyaṃti sarve ca bhūta<hi rend="it">ga</hi>ṇā na vihe<hi rend="it">ṭhayi</hi>ṣyaṃti anyatra pūrvakeṇa karmaṇā //</p>
+
+<p><hi rend="red"><hi rend="it">sa ahinā</hi>: SHT 909, frag. a (fol. 61)v2 reads <hi rend="it">tasy(ā)h(inā)</hi>. mucciṣyati: Mac. 6.1 reads <hi rend="it">(m)okṣya(ti)</hi>. kṛtyakākhordamantravetāḍa: Mac. 6.2 reads <hi rend="it">[k].k[kh]or[d]a-</hi>; SHT 909, frag. a (fol. 61)v5 reads <hi rend="it">kakkho[r].</hi>; SHT 1675r3 reads <hi rend="it">[k]ākkhorda-</hi>.</hi></p>
+
+<p>NagSū II.26 atha catvāro mahārājānaḥ yena bhagavāṃs tenāṃjaliṃ praṇamya bha<hi rend="it">gava</hi>nta<hi rend="it">m i</hi>dam avocat*
+  aho subhāṣitā vidyā śākyasiṃhena dhīmatā ─
+  dvādaśāṅgasamāyuktā sarvabhūtanivār<hi rend="it">aṇ</hi>ī
+  <hi rend="it">sa</hi>rve devā nāgā yakṣā pretā kuṃbhāṇḍā kāḍapūtanā
+  yo ime atikramen maṃtrāṃ mahārājñā mukhanirgatām*
+  saptadhāsya sphal<hi rend="it">en m</hi>ū<hi rend="it">rdhā</hi> daśadhā hṛdayaṃ sphalet*
+<hi rend="red">(i)dam avocat*: Although the MS clearly reads <hi rend="it">avocat*</hi>, we would expect an aor.pl. here: <hi rend="it">avocan</hi>. kāḍapūtanā: Mac. 6.6 reads <hi rend="it">kādapūtanā</hi>; SHT 971v2 reads <hi rend="it">kaṭapuṭaḥ</hi>. yo ime: unmetrical! Mac. 6.6 reads: <hi rend="it">me</hi> [dativus ethicus]. mukhanirgatām*: SHT 1675v1 reads <hi rend="it">(mah)ārājamukhanirgat(ām)</hi>. sphalet*: SHT 971v3 reads <hi rend="it">(saptadhā)sya phalen murddhna dāśata hṛtayaṃ ///</hi>; Mac. 7.1 reads <hi rend="it">hṛdayaṃ phalet*</hi> and in SHT 1675v2 is preserved <hi rend="it">yaṃ [phale]</hi>.</hi></p>
+
+<p>NagSū II.27 idaṃ vaditvā catvāro mahārājāno bhagavatpādau śirasā vanditvā bhagavantaṃ tṛpradakṣiṇīkṛ<hi rend="it">t</hi>v<hi rend="it">ā</hi> tatraivāntarhita</p>
+
+<p>NagSū II.28 atha bhagavāṃs tasyā eva rātryā atyayāt purastād bhikṣusaṃghasya prajñapta evāsane nyaṣīdat* niṣadya bhaga<hi rend="it">vā</hi>ṃ bhikṣūn āmantrayati ─ yathādya bhikṣavo brahmā sanatkumāro 'tikrāntavarṇaḥ abhikrāntāyāṃ rātryāṃ yenāhaṃ tenopasaṃkrant<hi rend="it">aḥ upe</hi>tya mama pādau śirasā vanditvā ekānte asthād ekāntasthitaḥ brahmā sanatkumāro mama purato gāthāṃ babhāṣe
+  <hi rend="it">aho vi</hi>dyā mahāvidyā pūrvavad yāvad</p>
+
+<p>NagSū II.29 idaṃ <hi rend="it">vadi</hi>tvā brahmā sanatkumāro mama pādau śirasā vanditvā māṃ tṛḥ pradakṣiṇīṃ kṛtvā <hi rend="it">tatraivāntarhi</hi>taḥ</p>
+
+<p>NagSū II.30 atha catvāro mahārājāno 'tikrāntavarṇā <hi rend="it">a</hi>bhikrāntāyāṃ rātryāṃ yenāhaṃ tenopasaṃkrānta upetya ma<hi rend="it">ma</hi> pādau śirasā <hi rend="it">vandi</hi>tvā <hi rend="it">yathā svakā</hi>ṃ niḥś<hi rend="it">ṛtya</hi> ekānte tasthur ekāntasthita pūrvavad yāvad
+<hi rend="red">tenopasaṃkrānta: read <hi rend="it">-krāntā</hi>. (yathā svakā)ṃ: Mac 8.4 reads <hi rend="it">[s]va[k]asva .. .. [ś]i⟨ṃ⟩</hi>; cf. NagSū II.12: <hi rend="it">yathā svakasvakāṃ diśaṃ niśṛtya</hi>. ekāntasthita: read <hi rend="it">-sthitā</hi>.</hi></p>
+
+<p>NagSū II.31 idaṃ vaditvā catvāro mahārājāno mama pādau śirasā vanditvā māṃ <hi rend="it">tṛḥ prada</hi>kṣ<hi rend="it">i</hi>ṇ<hi rend="it">ī</hi>kṛtvā tatraivāntarhitāḥ udgṛhṇata bhikṣavo nagaropamaṃ vyākaraṇaṃ dhārayata grāhayata vācayata paryavāp<hi rend="it">nuta</hi> manasikuruta tat kasmād dheto arthopasaṃhitaṃ nagaropamaṃ vyākaraṇaṃ dharmopasaṃhitaṃ ādibrahmacaryasyābhijñāyai <hi rend="it">saṃb</hi>odhaye nirvāṇāya saṃvartate ─
+<hi rend="red">vācayata: Mac. 9.1 reads <hi rend="it">svadhyāyata</hi>.</hi></p>
+
+<p>NagSū II.32 atha ca punaḥ kulaputreṇa śraddhāpravrajitena śraddhayā agārād anagārikaṃ <hi rend="it">pravraji</hi>tvā nagaropamaṃ vyākaraṇaṃ sādhu ca suṣṭhu ca udgṛhṇitavyaṃ dhārayitavyaṃ grāhayitavya<hi rend="it">ṃ</hi> vācayitavyaṃ <hi rend="it">svādhyāyi</hi>tavyaṃ paryavāptavyaṃ manasīkartavyaṃ idam avocat* //</p>
+
+<p><hi rend="red">avocat*: The text in the Stein MS ends here but Mac. 9.6 gives the standard closing: <hi rend="it">bhagavāṃ aptamanās</hi> (for <hi rend="it">āptamanasas</hi>) <hi rend="it">te bhi(kṣavo bhagavato bhāṣitam abhyanandan)</hi>.</hi></p>
+
+<p>nagaropamaṃ sūtraṃ samāptaḥ rakṣaṃ bhavatu pṛṣtagautamāya : //</p>
+
+<p><hi rend="red">pṛṣtagautamāya : //: Mac. 10.1 has a colophon in Tocharian B: <hi rend="it">nagaropam* āra po solme paik(ā)m(ai)</hi> [End of <hi rend="it">Nagaropama(sūtra)</hi>. I have written everything completely]. The authors would like to thank Dr. K.T. Schmidt (Saarbrücken) for this restoration and translation.</hi></p>
+  </body>
+</text>
+</TEI>

@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_nAgArjuna-lokAtItastava">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Lokātītastava</title>
+	<author>Nāgārjuna</author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>Richard Mahoney</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Richard Mahoney</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/buddh/naglok_u.htm">naglok_u.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Nagarjuna:
+<lb/>Lokatitastava
+<lb/>
+<lb/>Version: 0.1a
+<lb/>Last updated: Mon May 12 12:16:02 NZST 2003
+<lb/>Text input by Richard Mahoney: r.mahoney@comnet.net.nz
+<lb/>Latest Version:
+<lb/> http://homepages.comnet.co.nz/~r-mahoney/ratna_text/ratna_text.html
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl></bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Lokātītastava = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Śāstra -- Philosophy -- Buddhist</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+
+<lg>
+<l>lokātīta namas tubhyaṃ viviktajñānavedine |</l>
+<l>yas tvaṃ jagaddhitāyaiva khinnaḥ karuṇayā ciram || NagLok_01</l>
+</lg>
+
+<lg>
+<l>skandhamātravinirmukto na sattvo 'stīti te matam |</l>
+<l>sattvārthaṃ ca paraṃ khedam agamas tvaṃ mahāmune || NagLok_02</l>
+</lg>
+
+<lg>
+<l>te 'pi skandhās tvayā dhīman dhīmadbhyaḥ saṃprakāśitāḥ |</l>
+<l>māyāmarīcigandharvanagarasvapnasaṃnibhāḥ || NagLok_03</l>
+</lg>
+
+<lg>
+<l>hetutaḥ saṃbhavo yeṣāṃ tadabhāvān na santi ye |</l>
+<l>kathaṃ nāma na te spaṣṭaṃ pratibimbasamā matāḥ || NagLok_04</l>
+</lg>
+
+<lg>
+<l>bhūtāny acakṣurgrāhyāṇi tanmayaṃ cākṣuṣaṃ katham |</l>
+<l>rūpaṃ tvayaivaṃ bruvatā rūpagrāho nivāritaḥ || NagLok_05</l>
+</lg>
+
+<lg>
+<l>vedanīyaṃ vinā nāsti vedanāto nirātmikā |</l>
+<l>tac ca vedyaṃ svabhāvena nāstīty abhimataṃ tava || NagLok_06</l>
+</lg>
+
+<lg>
+<l>saṃjñārthayor ananyatve mukhaṃ dahyeta vahninā |</l>
+<l>anyatve 'dhigamābhāvas tvayoktaṃ bhūtavādinā || NagLok_07</l>
+</lg>
+
+<lg>
+<l>kartā svatantraḥ karmāpi tvayoktaṃ vyavahārataḥ |</l>
+<l>parasparāpekṣikī tu siddhis te 'bhimatānayoḥ || NagLok_08</l>
+</lg>
+
+<lg>
+<l>na kartāsti na bhoktāsti puṇyāpuṇyaṃ pratītyajam |</l>
+<l>yat pratītya na taj jātaṃ proktaṃ vācaspate tvayā || NagLok_09</l>
+</lg>
+
+<lg>
+<l>ajñāyamānaṃ na jñeyaṃ vijñānaṃ tad vinā na ca |</l>
+<l>tasmāt svabhāvato na sto jñānajñeye tvam ūcivān || NagLok_10</l>
+</lg>
+
+<lg>
+<l>lakṣyāl lakṣaṇam anyac cet syāt tal lakṣyam alakṣaṇam |</l>
+<l>tayor abhāvo 'nanyatve vispaṣṭaṃ kathitaṃ tvayā || NagLok_11</l>
+</lg>
+
+<lg>
+<l>lakṣyalakṣaṇanirmuktaṃ vāgudāhāravarjitam |</l>
+<l>śāntaṃ jagad idaṃ dṛṣṭaṃ bhavatā jñānacakṣuṣā || NagLok_12</l>
+</lg>
+
+<lg>
+<l>na sann utpadyate bhāvo nāpy asan sadasan na ca |</l>
+<l>na svato nāpi parato na dvābhyāṃ jāyate katham || NagLok_13</l>
+</lg>
+
+<lg>
+<l>na sataḥ sthitiyuktasya vināśa upapadyate |</l>
+<l>nāsato 'śvaviṣāṇena samasya śamatā katham || NagLok_14</l>
+</lg>
+
+<lg>
+<l>bhāvān nārthāntaraṃ nāśo nāpy anarthāntaraṃ matam |</l>
+<l>arthāntare bhaven nityo nāpy anarthāntare bhavet || NagLok_15</l>
+</lg>
+
+<lg>
+<l>ekatve na hi bhāvasya vināśa upapadyate |</l>
+<l>pṛthaktve na hi bhāvasya vināśa upapadyate || NagLok_16</l>
+</lg>
+<lg>
+<l>vinaṣṭāt kāraṇāt tāvat kāryotpattir na yujyate |</l>
+<l>na cāvinaṣṭāt svapnena tulyotpattir matā tava || NagLok_17</l>
+</lg>
+
+<lg>
+<l>na niruddhān nāniruddhād bījād aṅkurasaṃbhavaḥ |</l>
+<l>māyotpādavad utpādaḥ sarva eva tvayocyate || NagLok_18</l>
+</lg>
+
+<lg>
+<l>atas tvayā jagad idaṃ parikalpasamudbhavam |</l>
+<l>parijñātam asadbhūtam anutpannam na naśyati || NagLok_19</l>
+</lg>
+
+<lg>
+<l>nityasya saṃsṛtir nāsti naivānityasya saṃsṛtiḥ |</l>
+<l>svapnavat saṃsṛtiḥ proktā tvayā tattvavidāṃ vara || NagLok_20</l>
+</lg>
+
+<lg>
+<l>svayaṃkṛtaṃ parakṛtaṃ dvābhyāṃ kṛtam ahetukam |</l>
+<l>tārkikair iṣyate duḥkhaṃ tvayā tūktaṃ pratītyajam || NagLok_21</l>
+</lg>
+
+<lg>
+<l>yaḥ pratītyasamutpādaḥ śūnyatā saiva te matā |</l>
+<l>bhāvaḥ svatantro nāstīti siṃhanādas tavātulaḥ || NagLok_22</l>
+</lg>
+
+<lg>
+<l>sarvasaṃkalpanāśāya śūnyatāmṛtadeśanā |</l>
+<l>yasya tasyām api grāhas tvayāsāv avasāditaḥ || NagLok_23</l>
+</lg>
+
+<lg>
+<l>nirīhā vaśikāḥ śūnyā māyāvat pratyayodbhavāḥ |</l>
+<l>sarvadharmās tvayā nātha niḥsvabhāvāḥ prakāśitāḥ || NagLok_24</l>
+</lg>
+
+<lg>
+<l>na tvayotpāditaṃ kiṃ cin na ca kiṃ cin nirodhitam |</l>
+<l>yathā pūrvaṃ tathā paścāt tathatāṃ buddhavān asi || NagLok_25</l>
+</lg>
+
+<lg>
+<l>āryair nisevitām enām anāgamya hi bhāvanām |</l>
+<l>nānimittam hi vijñānaṃ bhavatīha kathaṃ cana || NagLok_26</l>
+</lg>
+
+<lg>
+<l>animittam anāgamya mokṣo nāsti tvam uktavān |</l>
+<l>atas tvayā mahāyāne tat sākalyena deśitam || NagLok_27</l>
+</lg>
+
+<lg>
+<l>yad avāptaṃ mayā puṇyaṃ stutvā tvāṃ stutibhājanam |</l>
+<l>nimittabandhanāpetaṃ bhūyāt tenākhilaṃ yagat || NagLok_28</l>
+</lg>
+
+<p>|| iti lokātītastavaḥ samāptaḥ ||</p>
+
+<p>%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</p>
+
+<p>Copyright (C) 2003 by Chr. Lindtner - Denmark</p>
+
+<p>%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%</p>
+
+  </body>
+</text>
+</TEI>

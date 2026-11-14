@@ -1,0 +1,4991 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_patna-dharmapada">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Patna Dharmapada</title>
+	<author></author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>Tatsushi Tamai</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Tatsushi Tamai</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/dhppat_u.htm">dhppat_u.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Patna Dharmapada
+<lb/>Based on the ed. by Margaret Cone: "Patna Dharmapada, Part I: Text",
+<lb/>JPTS 13 (1989), pp. 101-217.
+<lb/>
+<lb/>Input by Tatsushi Tamai
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>Margaret Cone: "Patna Dharmapada, Part I: Text", JPTS 13 (1989), pp. 101-217.</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Patna Dharmapada = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Religious Literature -- Buddhist</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+
+<p>siddhaṃ namaḥ sarvvabuddhadhammāryyasaṃghebhyaḥ</p>
+
+<lg>
+<l>1 Dhp 1</l>
+<l>manopūrvvaṃgamā dhammā manośreṣṭhā manojavā |</l>
+<l>manasā ca praduṣṭena bhāṣate vā karoti vā |</l>
+<l>tato naṃ dukham anneti cakram vā vahato padaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv31:23</l>
+<l>manaḥpūrvaṅgamā dharmā manaḥśreṣṭhā manojavāḥ |</l>
+<l>manasā hi praduṣṭena bhāṣate vā karoti vā |</l>
+<l>tatas taṃ duḥkham anveti cakraṃ vā vahato padam ||</l>
+</lg>
+
+<lg>
+<l>2 Dhp2</l>
+<l>ma[nopūrvvaṃ]gamā dhammā manośreṣṭhā manojavā |</l>
+<l>manasā ca prasannena bhāṣate vā karoti vā |</l>
+<l>tato naṃ sukham anneti cchāyā vā anapāyinī ||</l>
+</lg>
+
+<lg>
+<l>Uv31:24</l>
+<l>manaḥpūrvaṅgamā dhrmā manaḥśreṣṭhā manojavā |</l>
+<l>manasā ca prasannena bhāṣate vā karoti vā |</l>
+<l>tatas taṃ sukham anveti cchāyā vā anugaminī ||</l>
+</lg>
+
+<lg>
+<l>3 Dhp15</l>
+<l>iha śocati precca śocati pāpakam[mo ubhaya]ttha śocati |</l>
+<l>so śocati so vihaṃnyati dṛṣṭā kammakileśam āttano ||</l>
+</lg>
+
+<lg>
+<l>Uv28:34</l>
+<l>iha śocati pretya śocati pāpakammā hi ubhayatra śocati |</l>
+<l>sa hi śocati sa praśocati dṛṣṭvā karma hi kliṣṭam ātmanaḥ ||</l>
+</lg>
+
+<lg>
+<l>4 Dhp16</l>
+<l>iha nandati precca nandati katapuṃño ubhayattha nandati |</l>
+<l>so nandati [ ]dati dṛṣṭā kammaviśuddhim āttano ||</l>
+</lg>
+
+<lg>
+<l>Uv28:35</l>
+<l>iha nandati pretya nandati kṛtapuṇyo hy ubhayatra nandati |</l>
+<l>sa hi nandati sa pramodate dṛṣṭvā karma viśuddham ātmanaḥ ||</l>
+</lg>
+
+<lg>
+<l>5 Dhp3</l>
+<l>ākrośi maṃ avadhi maṃ ajini maṃ ahāsi me |</l>
+<l>ye tāni upanahyanti veraṃ tesaṃ na śāmyati ||</l>
+</lg>
+
+<lg>
+<l>Uv14:9</l>
+<l>ākrośan mām avocan mām ajayan mām ajāpayet |</l>
+<l>atra ye hy upanahyanti vairaṃ teṣāṃ na śāmyati ||</l>
+</lg>
+
+<lg>
+<l>6 Dhp4</l>
+<l>ākro[ṣi maṃ] avadhi maṃ ajini maṃ ahāsi me |</l>
+<l>ye tāni nopanahyanti veraṃ tesaṃ upaśamyati ||</l>
+</lg>
+
+<lg>
+<l>Uv14:10</l>
+<l>ākrośan mām avocan mām ajayan mām ajāpayet |</l>
+<l>atra ye nopanahyanti vairaṃ teṣāṃ praśāmyati ||</l>
+</lg>
+
+<lg>
+<l>7 Dhp7</l>
+<l>śubhā 'nupaśśiṃ viharantaṃ indriyesu asaṃvṛtaṃ |</l>
+<l>[bhojana]mhi amāttaṃñū kuśīdaṃ hīnavīriyaṃ ||</l>
+</lg>
+
+<p>taṃ ve prasahate māro vāto rukkhaṃ va dubbalaṃ |
+Uv29:15
+śubhānudarśinaṃ nityam idriyaiś cāpy asaṃvṛtaṃ |
+bhojane cāpy amātrajñaṃ hīnaṃ jāgarikāsu ca |
+taṃ vai prasahate rāgo vāto vṛkṣam ivābalaṃ |</p>
+
+<p>8 Dhp8
+aśubhānupaśśiṃ viharantaṃ indriyeṣu susaṃvṛtaṃ ||</p>
+
+<lg>
+<l>bhojanamhi ca mā[ ]ddhaṃ āraddhavīriyaṃ |</l>
+<l>taṃ ve na prasahate māro vāto śelaṃ va parvvataṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv29:16</l>
+<l>aśubhānudarśinaṃ nityam indriyaiś ca susaṃvṛtaṃ |</l>
+<l>bhojane cāpi mātrajñaṃ yuktaṃ jāgarikāsu ca |</l>
+<l>taṃ na prasahate rāgo vātaḥ śailam iva sthiraṃ ||</l>
+</lg>
+
+<lg>
+<l>9 Dhp328</l>
+<l>sace labheyā nipakaṃ sapraṃñaṃ sāddhiṃcaraṃ sādhuvihāradhīraṃ |</l>
+<l>adhibhūya sabbāṇi pariśrav[ ] careyā tenāttamano satīmā ||</l>
+</lg>
+
+<lg>
+<l>Uv14:13</l>
+<l>sa cel labhed vai nipakaṃ sahāyaṃ loke caraṃ sādhu hi nityam eva |</l>
+<l>adhibhūya sarvāṇi parisravāṇi careta tenāptamanā smṛtātmā ||</l>
+</lg>
+
+<lg>
+<l>10 Dhp329</l>
+<l>na ce labheyā nipakaṃ sapraṃñaṃ sāddhiṃcaraṃ sādhuvihāradhīraṃ |</l>
+<l>rājā va rāṣṭaṃ vijitaṃ prahāya eko ccare mātaṃgāranne va nāgo ||</l>
+</lg>
+
+<lg>
+<l>Uv14:14</l>
+<l>na cel labhet vai nipakaṃ sahāyaṃ loke ca raṃ sādhu hi nityam eva |</l>
+<l>rājeva rāṣṭraṃ vipulaṃ prahāya ekaś caren na ca pāpāni kuryāt ||</l>
+</lg>
+
+<lg>
+<l>11 Dhp330</l>
+<l>ekassa caritaṃ śreyo nāsti bāle bitīyatā |</l>
+<l>eko ccare na ca pāpāni kayirā appussuko mātaṃgāranne va nāgo ||</l>
+</lg>
+
+<lg>
+<l>Uv14:16</l>
+<l>ekasya caritaṃ śreyo na tu bālaḥ sahāyatā |</l>
+<l>ekaś caren na ca pāpāni kuryād alpotsuko 'raṇyagatai va nāgaḥ ||</l>
+</lg>
+
+<lg>
+<l>12</l>
+<l>chandadoṣabhayā mohā yo dhammaṃ ativattati |</l>
+<l>nīhīrate tassa yaśo kālapakkhe va candramā ||</l>
+</lg>
+
+<lg>
+<l>13</l>
+<l>chandadoṣabhayā mohā yo dhammaṃ nātivattati |</l>
+<l>āpūrate tassa yaśo śuklapakkhe va candaramā ||</l>
+</lg>
+
+<lg>
+<l>14 Dhp21</l>
+<l>apramādo amatapadaṃ pramādo maccuno padaṃ |</l>
+<l>apramattā na mrīyanti ye pramattā yathā matā ||</l>
+</lg>
+
+<lg>
+<l>Uv4:1</l>
+<l>apramādo hy amṛtapadaṃ pramādo matyunaḥ padam |</l>
+<l>apramattā na mriyante ye pramattāḥ sadā mṛtāḥ ||</l>
+</lg>
+
+<lg>
+<l>15 Dhp22</l>
+<l>etaṃ viśeṣataṃ nyāttā apramādamhi paṇḍitā |</l>
+<l>apramāde pramodanti ayirāṇāṃ gocare ratā ||</l>
+</lg>
+
+<lg>
+<l>Uv4:2</l>
+<l>etaṃ viśeṣatāṃ jñātvā hy apramādasya paṇḍitaḥ |</l>
+<l>apramādaṃ pramudyeta nityam āryaḥ svagocaram ||</l>
+</lg>
+
+<lg>
+<l>16 Dhp23</l>
+<l>te jhāyino sātatikā niccaṃ dṛḍhaparākramā |</l>
+<l>phusanti dhīrā nibbāṇaṃ yogacchemaṃ anuttaraṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv4:3</l>
+<l>apramattāḥ sātatikā niccaṃ dṛḍhaparākramāḥ |</l>
+<l>spṛśanti dhīrā nirvāṇaṃ yogakṣemam anuttaram ||</l>
+</lg>
+
+<lg>
+<l>17 Dhp26</l>
+<l>pramādaṃ anuyuñjanti bālā dummedhino janā |</l>
+<l>apramādan tu medhāvī dhanaṃ śreṣṭhaṃ va rakkhati ||</l>
+</lg>
+
+<lg>
+<l>Uv4:10</l>
+<l>pramādam anuvartante bālā durmedhaso janāḥ |</l>
+<l>apramādaṃ tu medhāvī dhanaṃ śreṣṭhīva rakṣati ||</l>
+</lg>
+
+<lg>
+<l>18 Dhp29</l>
+<l>apramatto pramattesu suttesu bahujāgaro |</l>
+<l>abalāṣṣam va śīghrāśśo hettā yāti sumedhaso ||</l>
+</lg>
+
+<lg>
+<l>Uv19:4</l>
+<l>apramattaḥ pramatteṣu supteṣu bahujāgaraḥ |</l>
+<l>abalāśva iva bhadrāśvaṃ hitvā yāti sumedhasam ||</l>
+</lg>
+
+<lg>
+<l>19 Dhp28</l>
+<l>pramādam apramādena yadā nudati paṇḍito |</l>
+<l>praṃñāprāsādam āruhya aśoko śokiniṃ prajāṃ |</l>
+<l>parvvataṭṭho va bhoma 'ṭṭhe dhīro bāle avecchati ||</l>
+</lg>
+
+<lg>
+<l>Uv4:4</l>
+<l>pramādam apramādena yadā nudati paṇḍitaḥ |</l>
+<l>prajñāprāsādam āruhya tv aśokaḥ śokinīṃ prajām |</l>
+<l>parvatasthaiva bhūmisthāṃ dhīro bālān avekṣate ||</l>
+</lg>
+
+<lg>
+<l>20 Dhp172</l>
+<l>pūrvve cāpi pramajjittā yo pacchā na pramajjati |</l>
+<l>so imaṃ lokaṃ prabhāseti abhramutto va candramā ||</l>
+</lg>
+
+<lg>
+<l>Uv16:5</l>
+<l>yas tu pūrvaṃ pramādyeha paścād vai na pramādyate |</l>
+<l>sa imaṃ bhāsate lokam abhramuktaiva candramāḥ ||</l>
+</lg>
+
+<lg>
+<l>21</l>
+<l>pūrvve cāpi pramajjittā yo pacchā na pramajjati |</l>
+<l>so imāṃ visattikāṃ loke sato samativattati ||</l>
+</lg>
+
+<lg>
+<l>Uv16:6</l>
+<l>yas tu pūrvaṃ pramādyeha paścād vai na pramādyate |</l>
+<l>sa imāṃ viṣaktikāṃ loke smṛtaḥ samativartate ||</l>
+</lg>
+
+<lg>
+<l>22 Dhp32</l>
+<l>apramādagaru bhikkhū pramāde bhayadaṃśino |</l>
+<l>abhavvo parihāṇāya nibbāṇasseva santike ||</l>
+</lg>
+
+<lg>
+<l>Uv4:32</l>
+<l>apramādarato bhikṣuḥ pramāde bhayadarśakaḥ |</l>
+<l>abhavyaḥ parihāṇāya nirvāṇasyaiva so 'ntike ||</l>
+</lg>
+
+<p>23 Dhp31
+apramādagaru bhikkhū pramāde bhayadaṃśino
+saṃyojanam aṇutthūlaṃ daham aggīva gacchati |
+Uv4:29
+apramādarato bhikṣuḥ pramāde bhayadarśakaḥ |
+saṃyojanam aṇusthūlaṃ dahann agnir iva gacchati |</p>
+
+<p>24 Dhp327
+apramādaratā hotha saṃ cittam anurakkhatha ||</p>
+
+<p>duggā uddharathāttānaṃ pake sanno va kuñjaro |
+Uv4:36/4:27
+apramādaratā bhavata svacittam anurakṣata ||</p>
+
+<p>durgād uddharate tmānaṃ paṅkasan naiva kuñjaraḥ |</p>
+
+<p>25
+pramāde pramudino nipakā śīlasaṃvṛtā ||</p>
+
+<p>te ve kāle prācchanti yattha prātto na śocati |</p>
+
+<p>26
+pramāde pramodetha na kāmaratisandhave ||</p>
+
+<lg>
+<l>evaṃ viharan ātāpī śāntacitto 'nuddhato |</l>
+<l>cetośamatham anuyutto dukkhassantakaro siyā ||</l>
+</lg>
+
+<lg>
+<l>27 Dhp24</l>
+<l>uṭṭheyā na pramajjeyā dhammaṃ sucaritaṃ care |</l>
+<l>dhammacārī [ ] śeti aśśiṃ loke paramhi ca ||</l>
+</lg>
+
+<lg>
+<l>Uv4:35</l>
+<l>uttiṣṭhen na pramādyeta dharmaṃ sucaritaṃ caret |</l>
+<l>dharmacārī sukhaṃ śete hy asmiṃ loke paratra ca ||</l>
+</lg>
+
+<lg>
+<l>28 Dhp24</l>
+<l>uṭṭhāṇavato satīmato śucikammassa niśāmmakāṇo |</l>
+<l>saṃyyatassa ca dhammajīvino apramattassa yaśo 'ssa vaddhati ||</l>
+</lg>
+
+<lg>
+<l>Uv4:6</l>
+<l>utthānavataḥ smṛtātmanaḥ śubhacittasya niśāmyacāriṇaḥ |</l>
+<l>saṃyatasya hi dharmajīvino hy apramattasya yaśo 'bhivardhate ||</l>
+</lg>
+
+<lg>
+<l>29 Dhp25</l>
+<l>uṭṭhāṇenā 'pramādena saṃyyamena damena ca |</l>
+<l>dīpaṃ kayirātha medhāvī yam ogho nādhipūrati ||</l>
+</lg>
+
+<lg>
+<l>Uv4:5</l>
+<l>utthānenāpramādena saṃyamena damena ca |</l>
+<l>dvīpaṃ karoti medhāvī tam ogho nābhimardati ||</l>
+</lg>
+
+<lg>
+<l>30 Dhp280</l>
+<l>uṭṭhāṇakālamhi anuṭṭhihāno yuvā balī ālasiko upako |</l>
+<l>saṃsannasaṃkappamano kusīdo praṃñāya māggaṃ alaso na yeti ||</l>
+</lg>
+
+<lg>
+<l>Uv31:32</l>
+<l>utthānakāleṣu nihīnavīryo vācā balī tv ālasiko nirāśaḥ |</l>
+<l>sadaiva saṃkalpahataḥ kusīdo jñānasya mārgaṃ satataṃ na vetti ||</l>
+</lg>
+
+<lg>
+<l>31 Dhp167</l>
+<l>hīnaṃ dhammaṃ na seveyā pramādena na samvase |</l>
+<l>micchadṛṣṭiṃ na seveyā na siyā lokavaddhano ||</l>
+</lg>
+
+<lg>
+<l>Uv4:8</l>
+<l>hīnāṃ dharmaṃ na seveta pramādena na saṃvaset |</l>
+<l>mityādṛṣṭiṃ na roceta na bhavel lokavardhanaḥ ||</l>
+</lg>
+
+<lg>
+<l>32 Dhp259</l>
+<l>na tāvatā dhammadharo yāvatā bahu bhāṣati |</l>
+<l>yo tu appam pi sottāna dhammaṃ kāyena phassaye |</l>
+<l>sa ve dhammadharo hoti yo dhamme na pramajjati ||</l>
+</lg>
+
+<lg>
+<l>Uv4:21</l>
+<l>na tāvatā dharmadharo yāvatā bahu bhāṣate |</l>
+<l>yas tv ihālpam api śrutvā dharmaṃ kāyena vai spṛśet |</l>
+<l>sa vai dharmadharo bhavati yo dharme na pramādyate ||</l>
+</lg>
+
+<lg>
+<l>33 Dhp371</l>
+<l>dhammaṃ vicinātha apramattā mā vo kāmaguṇā bhrameṃsu cittaṃ |</l>
+<l>mā lohaguḍe gilaṃ pramatto kraṇḍe dukkham idan ti dahyamāno ||</l>
+</lg>
+
+<lg>
+<l>Uv31:31</l>
+<l>ātāpi vihara tvam apramatto mā te kāmaguṇo matheta cittam |</l>
+<l>mā lohaguḍāṃ gileḥ pramattaḥ krandaṃ vai narakeṣu pacyamānaḥ ||</l>
+</lg>
+
+<p>  apramādavaggaḥ</p>
+
+<p>***** Brāhmaṇa *****</p>
+
+<lg>
+<l>34 Dhp383</l>
+<l>chinna sūtraṃ parākrāmma bhavaṃ praṇuda brāhmaṇa |</l>
+<l>saṃkhārāṇāṃ khayaṃ ñāttā akathaso si brāhmaṇa ||</l>
+</lg>
+
+<lg>
+<l>Uv33:60</l>
+<l>chindhi srotaḥ parākramya kāmāṃ praṇuda brāhmaṇa |</l>
+<l>saṃkārāṇāṃ kṣayaṃ jñātvā hy akṛtajño bhaviṣyasi ||</l>
+</lg>
+
+<lg>
+<l>35</l>
+<l>yamhi dhammaṃ vijāneyā vṛddhamhi daharamhi |</l>
+<l>sakkacca naṃ namasseyā aggihotraṃ va brāhmaṇo ||</l>
+</lg>
+
+<lg>
+<l>Uv33:64</l>
+<l>yasya dharmaṃ vijānīyād vṛddhasya daharasya vā |</l>
+<l>satṛatyanaṃ namasyeta hy agnihotram iva dvijaḥ ||</l>
+</lg>
+
+<lg>
+<l>36 Dhp392</l>
+<l>yamhi dhammaṃ vijāneyā sammasaṃbuddhadeśitaṃ |</l>
+<l>tam eva apacāyeyā aggihotraṃ va brāhmaṇo ||</l>
+</lg>
+
+<lg>
+<l>Uv33:66</l>
+<l>yasya dharmaṃ vijānīyāt samyaksaṃbuddhadeśitam |</l>
+<l>satkṛtyainaṃ namasyeta hy agnihotram iva dvijaḥ ||</l>
+</lg>
+
+<lg>
+<l>37</l>
+<l>na jaṭāhi na gotreṇa na jāccā hoti brāhmaṇo |</l>
+<l>yo tu bāhati pāpāni aṇutthūlāni sabbaśo ||</l>
+</lg>
+
+<p>bāhanā eva pāpānāṃ brāhmaṇo ti pravuccati |
+<lg>
+<l>Uv33:8</l>
+<l>na jaṭābhir na gotreṇa na jātyā brāhmaṇaḥ smṛtaḥ |</l>
+<l>yas tu vāhayate pāpāny aṇusthūlāni sarvaśaḥ |</l>
+<l>vāhitatvāt tu pāpānāṃ brāhmaṇo vai nirucyate ||</l>
+</lg></p>
+
+<p>38 Dhp401
+vārī pukkharapatte vā ārāgre-r-iva sāsavo ||</p>
+
+<p>yo na lippati kāmesu tam ahaṃ brūmi brāhmaṇaṃ |
+<lg>
+<l>Uv33:30</l>
+<l>vārī puṣkarapatreṇev ārāgreṇeva sarṣapaḥ |</l>
+<l>na lipyate yo hi kāmair bravīmi brāhmaṇaṃ hi tam ||</l>
+</lg></p>
+
+<p>39 Dhp387
+udayaṃ tapati ādicco rātrim ābhāti candramā ||</p>
+
+<p>sannaddho khattiyo tapati jhāyiṃ tapati brāhmaṇo ||</p>
+
+<p>atha sabbe ahorātte buddho tapati tejasā ||</p>
+
+<lg>
+<l>Uv33:74</l>
+<l>divā tapati hādityo rātrāv ābhāti candramāḥ |</l>
+<l>saṃnaddhaḥ kṣatriyas tapati dhyāyī tapati brāhmaṇaḥ |</l>
+<l>atha nityam ahorātraṃ buddhas tapati tejasā ||</l>
+</lg>
+
+<lg>
+<l>40 Dhp385</l>
+<l>yassa pāram apāram vā pārāpāraṃ na vijjati |</l>
+<l>vītajjaraṃ visaṃyuttaṃ tam ahaṃ brūmi brāhmaṇaṃ ||</l>
+</lg>
+
+<lg>
+<l>41 Dhp384</l>
+<l>yadā dayesu dhammesu pāragū hoti brāhmaṇo |</l>
+<l>athassa sabbe saṃyogā atthaṃ gacchanti jānato ||</l>
+</lg>
+
+<lg>
+<l>Uv33:72</l>
+<l>yadā hi sveṣu dharmeṣu brāhmaṇaḥ pārago bhavet |</l>
+<l>athāsya sarvasaṃyogā astaṃ gacchanti paśyataḥ ||</l>
+</lg>
+
+<lg>
+<l>42</l>
+<l>sa khu so khiṇasaṃyogo khīṇamānapunabbhavo |</l>
+<l>saṃghāvasevī dhammaṭṭho saṃghaṃ na upeti vedagū ||</l>
+</lg>
+
+<lg>
+<l>Uv6:10</l>
+<l>sa tu vikṣīṇa saṃyogaḥ kṣīṇamāno niraupadhiḥ |</l>
+<l>kāyasya bhedāt saprajñaḥ saṃkhyān nopaiti nirvṛtaḥ ||</l>
+</lg>
+
+<lg>
+<l>43 Dhp408</l>
+<l>akakkaśiṃ vinnapaṇiṃ girāṃ saccam udīraye |</l>
+<l>tāya nābhiṣape kaṃci tam ahaṃ brūmi brāhmaṇaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv33:17</l>
+<l>yo 'karkaśāṃ vijñapanīṃ giraṃ nityaṃ prabhāṣate |</l>
+<l>yayā nābhiṣajet kaś cid bravīmi brāhmaṇaṃ hi tam ||</l>
+</lg>
+
+<lg>
+<l>44 Dhp404</l>
+<l>asaṃsaṭṭhaṃ gṛhaṭṭhehi anagārehi cūbhayaṃ |</l>
+<l>anokasāriṃ appicchaṃ tam ahaṃ brūmi brāhmaṇaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv33:20</l>
+<l>asaṃsṛṣṭaṃ gṛhasthebhir anagārais tathobhayaṃ |</l>
+<l>anokasāriṇaṃ tuṣṭaṃ bravīmi brāhmaṇaṃ hi taṃ ||</l>
+</lg>
+
+<lg>
+<l>45 Dhp391</l>
+<l>yassa kāyena vācāya manasā nāsti dukkataṃ |</l>
+<l>saṃvṛtaṃ trisu ṭṭhāesu tam ahaṃ brūmi brāhmaṇaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv33:16</l>
+<l>yasya kāyena vācā ca manasā ca na duṣkṛtam |</l>
+<l>susaṃvṛtaṃ tṛbhiḥ sthānair bravīmi brāhmaṇaṃ hi tam ||</l>
+</lg>
+
+<lg>
+<l>46 Dhp389</l>
+<l>mā brāhmaṇassa prahare nāssa mucceya brāhmaṇo |</l>
+<l>dhi brāhmaṇassa hantāraṃ ya ssa vā su na muccati ||</l>
+</lg>
+
+<lg>
+<l>Uv33:63</l>
+<l>na brāhmaṇasya praharen na ca muñceta brāhmaṇaḥ |</l>
+<l>dhig brāhmaṇasya hantāraṃ dhik taṃ yaṣ ca pramuñcati ||</l>
+</lg>
+
+<lg>
+<l>47 Dhp294,295</l>
+<l>mātaraṃ paṭhanaṃ hantā rājānaṃ do ca khattiye |</l>
+<l>rāṣṭaṃ sānucaraṃ hantā anigho carati brāhmaṇo ||</l>
+</lg>
+
+<lg>
+<l>Uv33:61,62</l>
+<l>mātaraṃ pitaraṃ hatvā rājānaṃ dvau ca śrotriyau |</l>
+<l>rāṣṭraṃ sānucaraṃ hatvā anigho yāti brāhmaṇaḥ ||</l>
+</lg>
+
+<lg>
+<l>48 Dhp403</l>
+<l>gambhīrapraṃñaṃ medhāviṃ māggā 'māggassa kovidaṃ |</l>
+<l>uttamāttham anuprāttaṃ tam ahaṃ brūmi brāhmaṇaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv33:33</l>
+<l>gambhīrabuddhiṃ medhāḍhyaṃ mārgāmārgeṣu kovidam |</l>
+<l>uttamārtham anuprāptaṃ bravīmi brāhmaṇaṃ hi tam ||</l>
+</lg>
+
+<lg>
+<l>49 Dhp386</l>
+<l>jhāyiṃ virajam āsīnaṃ katakiccaṃ anāsavaṃ |</l>
+<l>uttamāttham anuprāttaṃ tam ahaṃ brūmi brāhmaṇaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv33:32</l>
+<l>dhyāyinaṃ vītarajasaṃ kṛtakṛtyaṃ anāsavam |</l>
+<l>kṣīṇāsravaṃ visaṃyuktaṃ bravīmi brāhmaṇaṃ hi tam ||</l>
+</lg>
+
+<p>  brāhmaṇavarggaḥ</p>
+
+<p>***** Bhikṣu *****</p>
+
+<lg>
+<l>50</l>
+<l>sabbattha saṃvaro sādhu sādhu sabbattha saṃvaro |</l>
+<l>sabbattha saṃvṛto bhikkhū sabbadukkhā pramuccati ||</l>
+</lg>
+
+<lg>
+<l>51 Dhp361</l>
+<l>kāyena samvaro sādhu sādhu vācāya saṃvaro |</l>
+<l>manasā pi saṃvaro sādhu sādhu sabbattha saṃvaro |</l>
+<l>sabbattha saṃvṛto bhikṣū sabbadukkhā pramuccati ||</l>
+</lg>
+
+<lg>
+<l>Uv7:11</l>
+<l>kāyena saṃvaraḥ sādhu sādhu vācā ca saṃvaraḥ |</l>
+<l>manasā saṃvaraḥ sādhu sādhu sarvatra saṃvaraḥ |</l>
+<l>sarvatra saṃvṛto bhikṣuḥ sarvaduḥkhāt pramucyate ||</l>
+</lg>
+
+<p>52 Dhp362
+hastasaṃyyato pādasaṃyyato vācāsaṃyyato saṃvṛtendriyo ||</p>
+
+<p>ajjhattarato samāhito eko saṃtuṣito tam āhu bhikkhuṃ |
+<lg>
+<l>Uv32:7</l>
+<l>hastasaṃyataḥ pādasaṃyato vācāsaṃyataḥ sarvasaṃyataḥ |</l>
+<l>ādhyātmarataḥ samāhito hy ekaḥ saṃtuṣito hi yaḥ sa bhikṣuḥ ||</l>
+</lg></p>
+
+<p>53 Dhp378
+śāntakāyo śāntacitto śāntavā susamāhito ||</p>
+
+<p>vāntalokāmiṣo bhikkhū upaśānto ti vuccati |
+<lg>
+<l>Uv32:24</l>
+<l>śāntakāyaḥ (śāntacittaḥ) śāntavāk susamāhitaḥ |</l>
+<l>vāntalokāmiṣo bhikṣur upaśānto nirucyate ||</l>
+</lg></p>
+
+<p>54 Dhp363
+yo mukhe saṃyyato bhikkhū mantābhāṣī anuddhato ||</p>
+
+<p>atthaṃ dhammañ ca deśeti madhuraṃ tassa bhāṣitaṃ |
+<lg>
+<l>Uv8:10</l>
+<l>mukhena saṃyato bhikṣur mandābhāṣī hy anuddhataḥ |</l>
+<l>arthaṃ dharmaṃ ca deśayati madhuraṃ tasya bhāṣitam ||</l>
+</lg></p>
+
+<p>55 Dhp365
+saṃ lābhaṃ nātimaṃñeyā nā 'ṃñesaṃ prihayaṃ care ||</p>
+
+<p>aṃñesaṃ prihayaṃ bhikkhū samādhin nādhigacchati |
+<lg>
+<l>Uv13:8</l>
+<l>svalābhaṃ nāvamanyeta nānyeṣāṃ spṛhako bhavet |</l>
+<l>anyeṣāṃ spṛhako bhikṣuḥ samādhiṃ nādhigacchati ||</l>
+</lg></p>
+
+<p>56 Dhp366
+appalābho pi ce bhikkhū saṃ lābhaṃ nātimaṃñati ||</p>
+
+<p>taṃ ve devā praśaṃsanti śuddhājīviṃ atandritaṃ ||</p>
+
+<lg>
+<l>Uv13:12</l>
+<l>alpajñāto 'pi ced bhavati śīleṣu susamāhitaḥ |</l>
+<l>vidvāṃsas taṃ praśaṃsanti śuddhājīvim atandritam ||</l>
+</lg>
+
+<lg>
+<l>57 Dhp369</l>
+<l>siñca bhikkhu imaṃ nāvāṃ sittā te laghu hehiti |</l>
+<l>hettā rāgañ ca doṣaṃ ca tato nibbāṇam ehisi ||</l>
+</lg>
+
+<lg>
+<l>Uv26:12</l>
+<l>siñca bhikṣor imāṃ nāvaṃ siktā laghvī bhaviṣyati |</l>
+<l>hitvā rāgaṃ ca doṣaṃ ca tato nirvāṇam eṣyasi ||</l>
+</lg>
+
+<p>58
+udāggracitto sumano adhibhūya priyā 'priyaṃ ||</p>
+
+<lg>
+<l>tato prāmojjabahulo sato bhikkhū parivraje |</l>
+<l>Uv32:23</l>
+<l>udagracittaḥ sumanā hy adhibhūya priyāpriyam ||</l>
+</lg>
+
+<p>prāmodyabahulo bhikṣur duḥkhakṣayam avāpnuyāt |</p>
+
+<p>59 Dhp368
+mettāvihārī bhikkhū prasanno buddhaśāsane ||</p>
+
+<lg>
+<l>paṭivijjhi padaṃ śāntaṃ saṃkhāropaśamaṃ sukhaṃ |</l>
+<l>dṛṣṭe va dhamme nibbāṇaṃ yogacchemaṃ anuttaraṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv32:21</l>
+<l>maitrāvihārī yo bhikṣuḥ prasanno buddhaśāsane |</l>
+<l>adhigacchet padaṃ śāntaṃ saṃskāropaśamaṃ sukham ||</l>
+</lg>
+
+<p>(dṛṣṭe va dhamme nibbāṇaṃ yogacchemaṃ anuttaraṃ ||)</p>
+
+<lg>
+<l>60 Dhp373</l>
+<l>śuṃña 'gāraṃ praviṣṭassa śāntacittassa bhikkhuṇo |</l>
+<l>amānuṣā ratī hoti sammaṃ dhammaṃ vipaśśato ||</l>
+</lg>
+
+<lg>
+<l>Uv32:9</l>
+<l>śunyāgāraṃ praviṣṭasya prahitātmasya bhikṣuṇaḥ |</l>
+<l>amānuṣā ratir bhavati samyag dharmāṃ vipaśyataḥ ||</l>
+</lg>
+
+<lg>
+<l>61 Dhp374</l>
+<l>yathā yathā sammassati khandhānām udayavyayaṃ |</l>
+<l>labhate cittassa prāmojjaṃ amatā hetaṃ vijānato ||</l>
+</lg>
+
+<lg>
+<l>Uv32:10</l>
+<l>yatho yathaḥ saṃapṛśati skandhānām udayavyayam |</l>
+<l>prāmodyaṃ labhate tatra prīyā sukham analpakam |</l>
+<l>tataḥ prāmodyabahulaḥ smṛto bhikṣuḥ parivrajet ||</l>
+</lg>
+
+<lg>
+<l>62 Dhp372</l>
+<l>nāsti jhānam apraṃñassa praṃñā nāsti ajhāyato |</l>
+<l>yamhi jhānaṃ ca praṃñā ca sa ve nibbāṇasantike ||</l>
+</lg>
+
+<lg>
+<l>Uv32:25</l>
+<l>nāsty aprajñasya vai dhyānam prajñā nādhyāyato 'sti ca |</l>
+<l>yasya dhyānaṃ tathā prajñā sa vai nirvāṇasāntike ||</l>
+</lg>
+
+<lg>
+<l>63 Dhp375</l>
+<l>tatthāyam ādī bhavati iha praṃñassa bhikkhuṇo |</l>
+<l>indriyagottī sāntoṣṭī prātimokkhe ca saṃvaro ||</l>
+</lg>
+
+<lg>
+<l>Uv32:26cd,27ab</l>
+<l>tasyāyam ādir bhavati tathā prajñasya bhikṣuṇaḥ |</l>
+<l>saṃtuṣṭir indriyair guptiḥ prātimokṣe ca saṃvaraḥ ||</l>
+</lg>
+
+<lg>
+<l>64 Dhp375ef,376</l>
+<l>mitte bhajetha kallāṇe śuddhājīvī atandrito |</l>
+<l>paṭisandharavaṭṭi ssa ācarakuśalo siyā |</l>
+<l>tato prāmojjabahulo sato bhikkhū parivraje ||</l>
+</lg>
+
+<lg>
+<l>Uv32:6</l>
+<l>mātraṃ bhajeta pratirūpaṃ śuddhājīvo bhavet sadā |</l>
+<l>pratisaṃstāravṛttiḥ syād ācārakuśalo bhavet |</l>
+<l>tataḥ prāmodyabahulaḥ smṛto bhikṣuḥ parivrajet ||</l>
+</lg>
+
+<lg>
+<l>65 Dhp331</l>
+<l>atthesu jātesu sukhā sakhāyā puṃñaṃ sukhaṃ jīvitasaṃkhayamhi |</l>
+<l>toṣṭī sukhā yā itarī[ ] sabbassa pāpassa sukhaṃ prahāṇaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv30:34</l>
+<l>artheṣu jāteṣu sukhaṃ sahāyāḥ puṇyaṃ sukhaṃ jīvitasaṃkṣayeṣu |</l>
+<l>tuṣṭiḥ sukhā yā tv itaretareṇa sarvasya duḥkhasya sukho nirodhaḥ ||</l>
+</lg>
+
+<lg>
+<l>66 Dhp332</l>
+<l>sukhā mātretā loke tato pettetā sukhā |</l>
+<l>śāmannatā sukhā loke tato brāhmannatā sukhā ||</l>
+</lg>
+
+<lg>
+<l>Uv30:21</l>
+<l>sukhaṃ mātṛvyatā loke sukhaṃ caiva pittṛvyatā |</l>
+<l>sukhaṃ śrāmaṇyatā loke tathā brāhmaṇyatā sukham ||</l>
+</lg>
+
+<lg>
+<l>67 Dhp333</l>
+<l>sukhaṃ yāvaj jarā śīlaṃ sukhā śraddhā pratiṣṭhitā |</l>
+<l>sukhā attharasā vācā assiṃ mānakkhayo sukho ||</l>
+</lg>
+
+<lg>
+<l>Uv30:20</l>
+<l>sukhaṃ yāvaj jarā śīlaṃ sukhaṃ śraddhā pratiṣṭhitā |</l>
+<l>sukhaṃ cārtharatā vācā pāpasyākaraṇaṃ sukhaṃ ||</l>
+</lg>
+
+<lg>
+<l>68 Dhp194</l>
+<l>sukho buddhāna uppādo sukhā dhammassa deśanā |</l>
+<l>sukhā saṃghassa sāmaggrī samaggrāṇāṃ tapo sukho ||</l>
+</lg>
+
+<lg>
+<l>Uv30:22</l>
+<l>sukhaṃ buddhasya cotpādaḥ sukhaṃ dharmasya deśanā |</l>
+<l>sukhaṃ saṃghasya sāmagrī samagrāṇāṃ tapaḥ sukhaṃ ||</l>
+</lg>
+
+<lg>
+<l>69 Dhp206</l>
+<l>sukhaṃ daṃśanam ayirāṇāṃ saṃvāso pi satāṃ sukho |</l>
+<l>addaṃśanena bālānāṃ niccam eva sukhī siyā ||</l>
+</lg>
+
+<lg>
+<l>Uv30:25</l>
+<l>sukhaṃ darśanam āryāṇāṃ saṃvāso 'pi sadā sukhaṃ |</l>
+<l>adarśanena bālānāṃ nityam eva sukhī bhavet ||</l>
+</lg>
+
+<lg>
+<l>70 Dhp207</l>
+<l>bālāsaṅgatacārī hi drīgham addhāna śocati |</l>
+<l>dukkho bālehi saṃvāso amittehi-r-iva sabbadā |</l>
+<l>dhīrā tu sukhasaṃvāsā ñātīnaṃ vā samāgamo ||</l>
+</lg>
+
+<lg>
+<l>Uv30:26</l>
+<l>bālāsaṃsargacārī hi dīrghādhvānaṃ praśocati |</l>
+<l>duḥkho bālair hi saṃvāso hy amitrair iva sarvaśāḥ |</l>
+<l>dhīrais tu sukhasaṃvāso jñātīnām ivā saṃgamaḥ ||</l>
+</lg>
+
+<lg>
+<l>71 Dhp208</l>
+<l>tassā hi dhīraṃ ca bahuśśutañ ca dhoreyaśīlavratamantam ayiraṃ |</l>
+<l>taṃ tārisaṃ sappuruṣaṃ sumedhaṃ sevetha nakkhattapathe va candramā ||</l>
+</lg>
+
+<lg>
+<l>Uv25:25</l>
+<l>dhīraṃ prājñaṃ niṣeveta śīlavantaṃ bahuśrutam |</l>
+<l>dhaureyaṃ javasaṃpannaṃ candraṃ tārāgaṇā iva ||</l>
+</lg>
+
+<lg>
+<l>72 Dhp212</l>
+<l>priyāto jāyate dukkhaṃ priyā śokā priyā bhayaṃ |</l>
+<l>priyāto vipramuttassa nāsti śokā kato bhayaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv5:1</l>
+<l>priyebhyo jāyate śokaḥ priyebhyo jāyate bhayam |</l>
+<l>priyebhyo vipramuktānāṃ nāsti śokaḥ kuto bhayam ||</l>
+</lg>
+
+<lg>
+<l>73 Dhp210</l>
+<l>mā priyehi samāgaṃma apriyehi kadācanaṃ |</l>
+<l>priyassa addaṃśanaṃ dukkhaṃ apriyassa ca daṃśanaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv5:5</l>
+<l>mā priyaiḥ saṃgamo jātu mā ca syād apriyaiḥ sadā |</l>
+<l>priyāṇām adarśanaṃ duḥkhaṃ apriyāṇāṃ ca darśanam ||</l>
+</lg>
+
+<lg>
+<l>74 Dhp211</l>
+<l>tassā priyaṃ na kayirātha priyāvādo hi pāpako |</l>
+<l>ggraṃthā tesaṃ na vijjanti yesaṃ nāsti priyāpriyaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv5:8</l>
+<l>tasmāt priyaṃ na karvīta priyabhāvo hi pāpakaḥ |</l>
+<l>granthās teṣāṃ na vidyante yeṣāṃ nāsti priyāpriyam ||</l>
+</lg>
+
+<lg>
+<l>75 Dhp213</l>
+<l>chudhā parama rogāṇaṃ saṃkhāraparamaṃ dukhaṃ |</l>
+<l>etaṃ ñāttā yathābhūtaṃ nibbāṇaparamaṃ sukhaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv26:7</l>
+<l>kṣudhā parama rogāṇāṃ saṃskārā duḥkham eva tu |</l>
+<l>etaj jñātvā yathābhūtaṃ nirvāṇaparamo bhavet ||</l>
+</lg>
+
+<lg>
+<l>76 Dhp204</l>
+<l>āroggaparamā lābhā sāṃtoṣṭīparamaṃ dhanaṃ |</l>
+<l>viśśāsaparamā ñātī nibbāṇaparamaṃ sukhaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv26:6</l>
+<l>ārogyaparamā lābhā sāṃtuṣṭiparamaṃ dhanam |</l>
+<l>viśvāsaparamaṃ mitraṃ nirvāṇaparamaṃ sukham ||</l>
+</lg>
+
+<lg>
+<l>77 Dhp290</l>
+<l>māttāsukhapariccāgā paśśe ce vipulaṃ sukhaṃ |</l>
+<l>caje māttāsukhaṃ dhīro saṃpaśśaṃ vipulaṃ sukham ||</l>
+</lg>
+
+<lg>
+<l>Uv30:30</l>
+<l>mātrāsukhaparityāgād yaḥ paśyed vipulaṃ sukham |</l>
+<l>tyajen mātrāsukhaṃ dhīraḥ saṃpaśyaṃ vipulaṃ sukham ||</l>
+</lg>
+
+<lg>
+<l>78</l>
+<l>manujassa sadā satīmato māttaṃ jāniya laddhibhojane |</l>
+<l>tanukā 'ssa bhavanti vedanā śanikaṃ jīrati āyu pālayaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv29:14</l>
+<l>manujasya sadā smṛtīmato labdhvā bhojanamātrajānataḥ |</l>
+<l>tanukāsya bhavanti vedanāḥ śanakair jīryati āyuḥ pālayam ||</l>
+</lg>
+
+<lg>
+<l>79 Dhp193</l>
+<l>dullabho puruṣājaṃño na so sabbattha jāyati |</l>
+<l>yattha so jāyate vīro taṃ kulaṃ sukham edhati ||</l>
+</lg>
+
+<lg>
+<l>Uv30:27</l>
+<l>durlabhaḥ puruṣo jātyo nāsau sarvatra jāyati |</l>
+<l>yatrāsau jāyate vīras tat kulaṃ sukham edhate ||</l>
+</lg>
+
+<lg>
+<l>80 Dhp83</l>
+<l>sabbattha ve sappuruṣā bhavanti na kāmakāmā lapayanti santo |</l>
+<l>sukhena puṭṭhā uttavā dukhena noccāvacaṃ sappuruṣā karonti ||</l>
+</lg>
+
+<lg>
+<l>Uv30:52</l>
+<l>sāpatrapāḥ satpuruṣā bhavanti na kāmahetor lapayanti santaḥ |</l>
+<l>spṛṣṭā hi dukhena tathā sukhena noccāvacāḥ satpuruṣā bhavanti ||</l>
+</lg>
+
+<lg>
+<l>81 Dhp201</l>
+<l>jayaṃ veraṃ prasavati dukhaṃ śeti parājito |</l>
+<l>upaśānto sukhaṃ śeti hettā jayaparājayaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv30:1</l>
+<l>jayād vairaṃ prasavate duḥkhaṃ śete parājitaḥ |</l>
+<l>upaśāntaḥ sukhaṃ śete hitvā jayaparājayau ||</l>
+</lg>
+
+<lg>
+<l>82 Dhp333cd</l>
+<l>sukhā najjo sūpatitthā sukho dhammajito jano |</l>
+<l>sukho śraddhapaṭīlābho pāpassa akaraṇaṃ sukhaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv30:24a-c,30:20d</l>
+<l>sukhā nadī sūpatīrthā sukhaṃ dharmajino jinaḥ |</l>
+<l>prajñālābhaḥ sukho nityam pāpasyākaraṇaṃ sukham ||</l>
+</lg>
+
+<lg>
+<l>83</l>
+<l>sukhaṃ draṣṭuṃ śīlavanto sukhaṃ draṣṭuṃ bahuśśutā |</l>
+<l>arahanto pi sukhaṃ draṣṭuṃ vipramuttā niropadhī ||</l>
+</lg>
+
+<lg>
+<l>Uv30:23</l>
+<l>śīlavantaḥ sukhaṃ dṛṣṭuṃ sukhaṃ dṛṣṭuṃ bahuśrutāḥ |</l>
+<l>arahantaś ca sukhaṃ dṛṣṭuṃ vipramuktapunarbhavāḥ ||</l>
+</lg>
+
+<lg>
+<l>84</l>
+<l>ye keci śokā paridevitaṃ vā dukkhaṃ va lokamhi anekarūpaṃ |</l>
+<l>priyaṃ paṭicca prabhavati ete priye asante na bhavanti ete ||</l>
+</lg>
+
+<lg>
+<l>Uv5:3</l>
+<l>śokā hi vai paridevitaṃ ca duḥkhaṃ ca lokasya hi naikarūpam |</l>
+<l>priyaṃ pratītyeha tad asti sarvaṃ priye 'sati syān na kathaṃ cid etat ||</l>
+</lg>
+
+<lg>
+<l>85</l>
+<l>tassā hi te sukhi&lt;khi&gt;no vītaśokā yesaṃ priyaṃ nāsti like |</l>
+<l>tassā aśokaṃ virajaṃ prātthayānā priyaṃ na kayirātha kahiṃci loke ||</l>
+</lg>
+
+<lg>
+<l>Uv5:4</l>
+<l>tasmād dhi te sukhitā vītaśokā yeṣāṃ priyaṃ nāsti kathaṃ cid eva |</l>
+<l>tasmād aśokaṃ padam eṣamāṇaḥ priyaṃ na kurvīta hi jīvaloke ||</l>
+</lg>
+
+<lg>
+<l>86 Dhp90</l>
+<l>gataddhuno viśokassa vipramuttassa sabbahiṃ |</l>
+<l>sabbaggrantaprahīṇassa paridāhā na vijjati ||</l>
+</lg>
+
+<lg>
+<l>Uv29:35</l>
+<l>gatādhvano viśokasya vipramuktasya tāyinaḥ |</l>
+<l>sarvagranthaprahīṇasya paridāgho na vidyate ||</l>
+</lg>
+
+<lg>
+<l>87 Dhp90</l>
+<l>yesāṃ sannicayo nāsti ye pariñātabhojanā |</l>
+<l>ākāśe va śakuntānāṃ padaṃ tesāṃ durannayaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv29:25abef</l>
+<l>yeṣāṃ saṃnicayo nāsti ye parijñātabhojanāḥ |</l>
+<l>ākāśaiva śakuntānāṃ padaṃ teṣāṃ duranvayam ||</l>
+</lg>
+
+<lg>
+<l>88 Dhp96</l>
+<l>śānto tassa mano hoti śāntā vācā ca kaṃmu ca |</l>
+<l>saṃmadaṃñāvimuttassa upaśāntassa tāyino ||</l>
+</lg>
+
+<lg>
+<l>Uv31:45</l>
+<l>śāntam asya mano bhavati śāntā vāk kāyakarma ca |</l>
+<l>samyagājñāvimuktasya hy upaśāntasya bhikṣuṇaḥ ||</l>
+</lg>
+
+<lg>
+<l>89 Dhp94</l>
+<l>yassendriyāṇi samataṃ gatāni aśśā yathā sārathinā sudāntā |</l>
+<l>prahīṇamānassa anāsavassa devā pi tassa prihayanti tāyino ||</l>
+</lg>
+
+<lg>
+<l>Uv19:3</l>
+<l>yasyendriyāṇi samatāṃ gatāni aśvo yathā sārathinā sudāntaḥ |</l>
+<l>prahīṇadoṣāya nirāsravāya devāpi tasmai spṛhayanti nityam ||</l>
+</lg>
+
+<lg>
+<l>90 Dhp321</l>
+<l>dāntaṃ nayanti samitiṃ dāntaṃ rājābhirūhati |</l>
+<l>dānto śreṣṭho manuṣyesu yo 'tivāde titikkhati ||</l>
+</lg>
+
+<lg>
+<l>Uv19:6</l>
+<l>dānto vai samitiṃ yāti dāntaṃ rājādhirohati |</l>
+<l>dāntaḥ śreṣṭho manuṣyāṇāṃ yo 'tivākyaṃ titīkṣati ||</l>
+</lg>
+
+<lg>
+<l>91 Dhp322</l>
+<l>varam assatarā dāntā ājāneyā va sendhavā |</l>
+<l>kuñjarā va mahānāgā āttā dānto tato varaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv19:7</l>
+<l>yo hy aśvaṃ damayej jānyam ājāneyaṃ ca saindhavam |</l>
+<l>kuñjaraṃ vā mahānāgam ātmā dāntas tato varam ||</l>
+</lg>
+
+<lg>
+<l>92 Dhp323</l>
+<l>na hi tehi jānajātehi tāṃ bhūmim abhisaṃbhave |</l>
+<l>yathā 'ttanā sudāntena dānto dāntena gacchati ||</l>
+</lg>
+
+<lg>
+<l>Uv19:8</l>
+<l>na hi tena sa yānena tāṃ bhūmim abhisaṃbhavet |</l>
+<l>yām ātmanā sudāntena dānto dāntena gacchati ||</l>
+</lg>
+
+<lg>
+<l>93 Dhp81</l>
+<l>śelo yathā ekaghano vātena na samīrati |</l>
+<l>evaṃ nindāpraśaṃsāsu na samīranti paṇḍitā ||</l>
+</lg>
+
+<lg>
+<l>Uv29:49</l>
+<l>śailo yathāpy ekaghano vāyunā na prakampyate |</l>
+<l>evaṃ nindāpraśaṃsābhir na kampyante paṇḍitāḥ ||</l>
+</lg>
+
+<lg>
+<l>94 Dhp9</l>
+<l>anikkaṣāyo kāṣāyaṃ yo vastaṃ paridhehiti |</l>
+<l>apeto damasaccena na so kāṣāyam arihati ||</l>
+</lg>
+
+<lg>
+<l>Uv29:7</l>
+<l>aniṣkaṣāyaḥ kāṣāyaṃ yo vastaṃ paridhāsyati |</l>
+<l>apetadamasauratyo nāsau kāṣāyam arhati ||</l>
+</lg>
+
+<lg>
+<l>95 Dhp10</l>
+<l>yo tu vāntakaṣāyassa śīlehi susamāhito |</l>
+<l>upeto damasaccena sa ve kāṣāyam arihati ||</l>
+</lg>
+
+<lg>
+<l>Uv29:8</l>
+<l>yas tu vāntakaṣāyaḥ syāc chīleṣu susamāhitaḥ |</l>
+<l>upetadamasauratyaḥ sa vai kāṣāyam arhati ||</l>
+</lg>
+
+<p>  śokavarggaḥ</p>
+
+<p>***** Kalyāṇī *****</p>
+
+<lg>
+<l>96 Dhp116</l>
+<l>abhittaretha kallāṇe pāpā cittaṃ nivāraye |</l>
+<l>dhaṃdhaṃ hi karato puṃñaṃ pāpamhi ramate mano ||</l>
+</lg>
+
+<lg>
+<l>Uv28:23</l>
+<l>abhitvareta kalyāṇe pāpāc cittaṃ nivārayet |</l>
+<l>dhandhaṃ hi kurvataḥ puṇyaṃ pāpeṣu ramate manaḥ ||</l>
+</lg>
+
+<lg>
+<l>97 Dhp117</l>
+<l>kayira ce puruṣo pāpaṃ na naṃ kayirā punappuno |</l>
+<l>na tamhi chanda[ṃ] kayirātha dukkho pāpassa sa[ṃ]cayo ||</l>
+</lg>
+
+<lg>
+<l>Uv28:21</l>
+<l>karyāc cet puruṣaḥ pāpaṃ nainaṃ kuryāt punaḥ punaḥ |</l>
+<l>na tatra cchandaṃ kurvīta duḥkhaṃ pāpasya saṃcayaḥ ||</l>
+</lg>
+
+<lg>
+<l>98 Dhp118</l>
+<l>kayira ce puruṣo pu[ṃ]ña[ṃ] kay[i]ra cena[ṃ] punappuno |</l>
+<l>tamh[i] eva chanda[ṃ] kayirātha sukho puṃñassa saṃcayo ||</l>
+</lg>
+
+<lg>
+<l>Uv28:22</l>
+<l>kuryāt tu puruṣaḥ puṇyaṃ kuryāc cainaṃ punaḥ punaḥ |</l>
+<l>tatra cchandaṃ ca kurvīta sukhaṃ puṇyasya saṃcayaḥ ||</l>
+</lg>
+
+<lg>
+<l>99</l>
+<l>śuddhasseva sadā phaggū śuddasso 'poṣadho sadā |</l>
+<l>śuddhassa śucikammassa sadā saṃpajjate vrataṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv16:15</l>
+<l>śuddhasya hi sadā phalguḥ śuddasya poṣathaḥ sadā |</l>
+<l>śuddhasya śucikarmaṇaḥ sadā saṃpadyate vratam ||</l>
+</lg>
+
+<lg>
+<l>100 Dhp314ab</l>
+<l>akataṃ dukkataṃ śreyo pacchā tapati dukkataṃ |</l>
+<l>dukkataṃ me kataṃ ti śocati bhūyo śocati doggatiṃ gato ||</l>
+</lg>
+
+<lg>
+<l>Uv29:41</l>
+<l>akṛtaṃ kukṛtāc chreyaḥ paścāt tapati duṣkṛtaṃ |</l>
+<l>śocate duṣkṛtaṃ kṛtvā śocate durgatiṃ gataḥ ||</l>
+</lg>
+
+<lg>
+<l>101 Dhp314cd</l>
+<l>katañ ca sukataṃ sādhu yaṃ kattā nānutappati |</l>
+<l>sukataṃ me kataṃ ti nandati bhūyo nandati soggatiṅ gato ||</l>
+</lg>
+
+<lg>
+<l>Uv29:42</l>
+<l>kṛtaṃ tu sukṛtaṃ śreyo yat kṛtvā nānutapyate |</l>
+<l>nandate sukṛtaṃ kṛtvā nandate sogatiṃ gataḥ ||</l>
+</lg>
+
+<lg>
+<l>102 Dhp119</l>
+<l>pāpo pi paśśate bhadraṃ yāva pāpaṃ na paccati |</l>
+<l>yadā tu paccate pāpaṃ atha pāpo pāpāni paśśati ||</l>
+</lg>
+
+<lg>
+<l>Uv28:19</l>
+<l>pāpo 'pi paśyate bhadraṃ yāvat pāpaṃ na pacyate |</l>
+<l>yadā tu pacyate pāpam atha pāpāni paśyati ||</l>
+</lg>
+
+<lg>
+<l>103 Dhp120</l>
+<l>bhadro pi paśśate pāpaṃ yāva bhadraṃ na paccati |</l>
+<l>yadā tu paccate bhadraṃ atha bhadro bhadrāṇi paśśati ||</l>
+</lg>
+
+<lg>
+<l>Uv28:20</l>
+<l>bhadro 'pi paśyate pāpaṃ yāvad bhadraṃ na pacyate |</l>
+<l>yadā tu pacyate bhadram atha bhadrāṇi paśyati ||</l>
+</lg>
+
+<lg>
+<l>104</l>
+<l>pāpaṃ pi karato bhadraṃ yāva pāpaṃ na paccati |</l>
+<l>atha payirāgate kāle pāpo pāpāni paśśati ||</l>
+</lg>
+
+<lg>
+<l>105</l>
+<l>bhadraṃ pi karato pāpaṃ yāva bhadraṃ na paccati |</l>
+<l>atha payirāgate kāle bhadro bhadrāṇi paśśati ||</l>
+</lg>
+
+<lg>
+<l>106 Dhp124</l>
+<l>pāṇimhi ce vraṇo nā 'ssa dhāreyā pāṇinā viṣaṃ |</l>
+<l>nāvraṇe viṣam anneti nāsti pāpam akurvvato ||</l>
+</lg>
+
+<lg>
+<l>Uv28:15</l>
+<l>pāṇau cāsya vraṇo na syād dhārayet pāṇinā viṣam |</l>
+<l>nāvraṇe krāmati viṣam nāsti pāpam akurvataḥ ||</l>
+</lg>
+
+<lg>
+<l>107 Dhp71</l>
+<l>na hi pāpakaṃ kataṃ kammaṃ sajjaṃ chīram va mucchati |</l>
+<l>dahantaṃ bālam anneti bhassachanno va pāpako ||</l>
+</lg>
+
+<lg>
+<l>Uv9:17</l>
+<l>na hi pāpakṛtaṃ karma sadyaḥ kṣīram iva mūrchati |</l>
+<l>dahantad bālam anveti bhasmāchanna ivānalaḥ ||</l>
+</lg>
+
+<lg>
+<l>108</l>
+<l>na hi pāpakaṃ kataṃ kammaṃ sajjaṃ śastam va kantati |</l>
+<l>maraṇo 'peto hi jānāti yā gatī pāpakaṃmuno ||</l>
+</lg>
+
+<lg>
+<l>Uv9:18</l>
+<l>na hi pāpakṛtaṃ karma sadyaṃ śastram iva kṛntati |</l>
+<l>sāmparāye tu jānāti yā gatiḥ pāpakarmaṇām ||</l>
+</lg>
+
+<lg>
+<l>109</l>
+<l>anāgataṃ paṭikayirātha kiccaṃ mā vo kiccaṃ kiccakāle vyadheyā |</l>
+<l>taṃ tārisaṃ paṭikatakiccakāriṃ na naṃ kiccaṃ kiccakāle vyadhehi ||</l>
+</lg>
+
+<lg>
+<l>Uv16:1</l>
+<l>pūrvaṃ hi kṛtyaṃ pratijāgareta mā me kṛtyaṃ kṛtyakāle vihanyāt |</l>
+<l>taṃ nityakāle pratiyatyakāriṇaṃ naiva kṛtyaṃ kṛtyakāle vihanti ||</l>
+</lg>
+
+<lg>
+<l>110</l>
+<l>paṭikacceva taṃ kayirā yaṃ ñāyyā hitam āttano |</l>
+<l>na śākaṭikamanti ssa mantaṃ dhīro parākrame ||</l>
+</lg>
+
+<lg>
+<l>Uv4:16</l>
+<l>pratiyatyeva tat kuryād yaj jānrd dhitam ātmanaḥ |</l>
+<l>na śākaṭikacintābhir mandaṃ dhīraḥ parākramet ||</l>
+</lg>
+
+<lg>
+<l>111</l>
+<l>yathā śākaṭiko māggaṃ samaṃ hettā mahāpathaṃ |</l>
+<l>viṣamaṃ māggam āsājja akkhachinno tha jhāyati ||</l>
+</lg>
+
+<lg>
+<l>Uv4:17</l>
+<l>yathā śākaṭiko mārgaṃ samaṃ hitvā mahāpatham |</l>
+<l>viṣamaṃ mārgam āgamya cchinnākṣaḥ śocate bhṛśam ||</l>
+</lg>
+
+<lg>
+<l>112</l>
+<l>evaṃ dhammā apakrāṃma adhaṃmam anuvattiya |</l>
+<l>bālo maccumukhaṃ prātto akkhachinno va jhāyati ||</l>
+</lg>
+
+<lg>
+<l>Uv4:18</l>
+<l>evaṃ dharmād apakramya hy adharmam anuvartya ca |</l>
+<l>bālo mṛtyuvaśaṃ prātac chinnākṣa iva śocate ||</l>
+</lg>
+
+<lg>
+<l>113 Dhp307</l>
+<l>kāṣāyakaṃṭhā bahavo pāpadhaṃmā asaṃyyatā |</l>
+<l>pāpā pāpehi kaṃmehi nirayaṃ te upapajjatha ||</l>
+</lg>
+
+<lg>
+<l>Uv11:9</l>
+<l>kāṣāyakaṇṭhā bahavaḥ pāpadharmā hy asaṃyatāḥ |</l>
+<l>pāpā hi karmabhiḥ pāpair ito gacchanti durgatim ||</l>
+</lg>
+
+<lg>
+<l>114 Dhp306</l>
+<l>abhūtavādī nirayaṃ upeti yo cāpi kattā na karomī ti āha |</l>
+<l>ubho pi te precca samā bhavanti nihīnakaṃmā manujā paratra ||</l>
+</lg>
+
+<lg>
+<l>Uv8:1</l>
+<l>abhūtavādī narakān upaiti yaś cānyad apy ācaratīha karma |</l>
+<l>ubhau hi tau pretya samau niruktau nihīnadharmau manujau paratra ||</l>
+</lg>
+
+<lg>
+<l>115 Dhp125</l>
+<l>yo apraduṣṭassa naro praduṣyati śuddhassa poṣassa anaṃganassa |</l>
+<l>tam eva bālaṃ pracceti pāpaṃ sukhumo rajo paṭivātaṃ va khito ||</l>
+</lg>
+
+<lg>
+<l>Uv28:9</l>
+<l>yo hy apraduṣṭasya narasya duṣyate śuddhasya nityaṃ vigatāṅgaṇasya |</l>
+<l>tam eva bālaṃ pratyāti pāpaṃ kṣiptaṃ rajaḥ prativātaṃ yathaiva ||</l>
+</lg>
+
+<lg>
+<l>116 Dhp123</l>
+<l>vāṇijo va bhayaṃ va māggaṃ appasāttho mahaddhano |</l>
+<l>viṣaṃ jīvitukāmo va pāpāni parivajjaye ||</l>
+</lg>
+
+<lg>
+<l>Uv28:14</l>
+<l>vaṇig vā sabhayaṃ mārgaṃ alpaśāstro mahādhano |</l>
+<l>viṣaṃ jīvitakāmo vā pāpāni parivarjayet ||</l>
+</lg>
+
+<lg>
+<l>117 Dhp291</l>
+<l>paradukkhopadhānena yo icche sukham āttano |</l>
+<l>verasaṃsaggasaṃsaṭṭho dukkhā na parimuccati ||</l>
+</lg>
+
+<lg>
+<l>Uv30:2</l>
+<l>paraduḥkhopadhānena ya icchet sukham ātmanaḥ |</l>
+<l>vairasaṃsargasaṃsakto duḥkhān na parimucyate ||</l>
+</lg>
+
+<lg>
+<l>118</l>
+<l>kuṇapassa pi gaṃdhucchijjati u 'ddhukitassa (-chitassa) pi rāti accayā |</l>
+<l>puruṣassa adhammacāriṇo annāhaṃ gandho na chijjati ||</l>
+</lg>
+
+<lg>
+<l>119</l>
+<l>yatha ggrahapatayo prabhūtaratanā āḍitte nagaramhi dahyamāne |</l>
+<l>muttāmaṇiphaṭikarajataheto vyāyamanti api nīharema kiṃci ||</l>
+</lg>
+
+<lg>
+<l>120</l>
+<l>tatha-r-iva śamaṇā prabhūtapraṃñā ayirā ayirapathesu sicchamānā |</l>
+<l>jātijarāmaraṇabhayāddittā dukkhāṭṭā vyāyamanti api prāpuṇema śāntiṃ ||</l>
+</lg>
+
+<p>  kalyāṇivaggaḥ</p>
+
+<p>***** Puṣpa *****</p>
+
+<lg>
+<l>121 Dhp54</l>
+<l>na puṣpagandho paṭivātam eti na candanaṃ tagaraṃ vāhlikaṃ vā |</l>
+<l>satān tu gandho paṭivātam eti sabbā diśā sappuruṣo pravāti ||</l>
+</lg>
+
+<lg>
+<l>Uv6:16</l>
+<l>na puṣpagandhaḥ prativātam eti na vāhnijāt tagarāc candanād vā |</l>
+<l>satāṃ tu gandhaḥ prativātam eti sarvā diśaḥ satpuruṣaḥ pravāti ||</l>
+</lg>
+
+<lg>
+<l>122 Dhp55</l>
+<l>candanaṃ tagaraṃ cāpi uppalaṃ atha vāśśikiṃ |</l>
+<l>etesāṃ gandhajātānāṃ śīlagandadho anuttaro ||</l>
+</lg>
+
+<lg>
+<l>Uv6:17</l>
+<l>tagarāc candanāc cāpi vārśikāyās tathotpalāt |</l>
+<l>etebhyo gandhajātebhyaḥ śīlagandas tv anuttaraḥ ||</l>
+</lg>
+
+<lg>
+<l>123 Dhp56</l>
+<l>appāmātro ayaṃ gaṃdho yoyaṃ tagaracandane |</l>
+<l>yo tu śīlavatāṃ gandho vāti devesu uttamo ||</l>
+</lg>
+
+<lg>
+<l>Uv6:18</l>
+<l>alpamātro hy ayaṃ gaṃdho yo 'yaṃ tagaracandanāt |</l>
+<l>yas tu śīlavatāṃ gandho vāti deveṣv apīha saḥ ||</l>
+</lg>
+
+<lg>
+<l>124 Dhp57</l>
+<l>tesāṃ sampannaśīlānāṃ apramādavihāriṇāṃ |</l>
+<l>sammadaṃñāvimuttānāṃ māro māggaṃ na viṇḍati ||</l>
+</lg>
+
+<lg>
+<l>Uv6:19</l>
+<l>teṣāṃ viśuddhaśīlānām apramādavihāriṇām |</l>
+<l>samyagājñāvimuktānāṃ māro mārgaṃ na vindati ||</l>
+</lg>
+
+<lg>
+<l>125 Dhp57</l>
+<l>yathā pi ruciraṃ puṣpaṃ vannavantaṃ agandhakaṃ |</l>
+<l>evaṃ subhāṣitā vācā aphalā hoti akurvvato ||</l>
+</lg>
+
+<lg>
+<l>Uv18:6</l>
+<l>yathāpi ruciraṃ puṣpaṃ varṇavat syād agandhavat |</l>
+<l>evaṃ subhāṣitā vācā niṣphalā sāv akurvataḥ ||</l>
+</lg>
+
+<lg>
+<l>126 Dhp52</l>
+<l>yathā pi ruciraṃ puṣpaṃ vannavantaṃ sagaṃdhakaṃ |</l>
+<l>evaṃ subhāṣitā vācā saphalā hoti kurvvato ||</l>
+</lg>
+
+<lg>
+<l>Uv18:7</l>
+<l>yathāpi ruciraṃ puṣpaṃ varṇavat syāt sugaṃdhavat |</l>
+<l>evaṃ subhāṣitā vācā saphalā bhavati kurvataḥ ||</l>
+</lg>
+
+<lg>
+<l>127 Dhp49</l>
+<l>yathā pi bhramaro puṣpā vannagandham aheḍayaṃ |</l>
+<l>praḍeti rasam ādāya evaṃ ggrāme munī care ||</l>
+</lg>
+
+<lg>
+<l>Uv18:8</l>
+<l>yathāpi bhramaraḥ puṣpād varṇagandhāv aheṭayan |</l>
+<l>paraiti rasam ādāya tathā grāmaṃ muniś caret ||</l>
+</lg>
+
+<lg>
+<l>128 Dhp47</l>
+<l>puṣpāṇi heva pracinantaṃ vyāsattamanasaṃ naraṃ |</l>
+<l>suttaṃ ggrāmaṃ mahogho vā maccu-r-ādāya gacchati ||</l>
+</lg>
+
+<lg>
+<l>Uv18:14</l>
+<l>puṣpāṇy eva pracinvantaṃ vyāsaktamanasaṃ naram |</l>
+<l>suptam grāmaṃ mahaughaiva mṛtyur ādāya gacchati ||</l>
+</lg>
+
+<lg>
+<l>129 Dhp48</l>
+<l>puṣpāṇi heva pracinantaṃ vyāsattamanasaṃ naraṃ |</l>
+<l>asaṃpur̥̄nnesu kāmesu antako kurute vaśe ||</l>
+</lg>
+
+<lg>
+<l>Uv18:15</l>
+<l>puṣpāṇy eva pracinvantaṃ vyāsaktamanasaṃ naram |</l>
+<l>atṛptam eva kāmeṣu tv antakaḥ kurute vaśam ||</l>
+</lg>
+
+<p>130 Dhp53
+yathā pi puṣparāśimhā kayirā mālāguṇe bahū |
+evaṃ jātena māccena kātavvaṃ kuśalaṃ bahuṃ |
+Uv18:10
+yathāpi puṣparāśibhyaḥ kuryān mālāguṇāṃ bahūn |
+evaṃ jātena martyena kartavyaṃ kuśalaṃ bahu |</p>
+
+<lg>
+<l>131 Dhp44</l>
+<l>ko imaṃ paṭhaviṃ vijehiti yamalokaṃ va imaṃ sadevakaṃ |</l>
+<l>ko dhammapade sudeśite kuśalo puṣpam iva prajehiti ||</l>
+</lg>
+
+<lg>
+<l>Uv18:1</l>
+<l>ko imāṃ pṛthivīṃ vijeṣyte yamalokaṃ ca tathā sadevakam |</l>
+<l>ko dharmapadaṃ sudeśitaṃ kuśalaḥ puṣpam iva praceṣyate ||</l>
+</lg>
+
+<lg>
+<l>132 Dhp45</l>
+<l>śer̥̄kho paṭhaviṃ vijehiti yamalokaṃ va imaṃ sadevakaṃ |</l>
+<l>so dhammapade sudeśite kuśalo puṣpam iva prajehiti ||</l>
+</lg>
+
+<lg>
+<l>Uv18:2</l>
+<l>śaikṣaḥ pṛthivīṃ vijeṣyate yamalokaṃ va tathā sadevakam |</l>
+<l>sa hi dharmapadaṃ sudeśitaṃ kuśalo puṣpam iva prajehiti ||</l>
+</lg>
+
+<lg>
+<l>133 Dhp377</l>
+<l>vāśśikī-r-iva puṣpāṇi mañcakāni pramuñcati |</l>
+<l>evaṃ rāgañ ca doṣañ ca vipramuñcatha bhikkhavo ||</l>
+</lg>
+
+<lg>
+<l>Uv18:11</l>
+<l>varṣāsu hi yathā puṣpaṃ vaguro vipramuñcati |</l>
+<l>evaṃ rāgaṃ ca doṣaṃ ca vipramuñcata bhikṣavaḥ ||</l>
+</lg>
+
+<lg>
+<l>134 Dhp46</l>
+<l>phenopamaṃ lokam imaṃ vidittā marīcidhammaṃ abhisaṃbudhānāṃ |</l>
+<l>chettāna mārassa prapuṣpakāni addaṃśanaṃ maccurājassa gacche ||</l>
+</lg>
+
+<lg>
+<l>Uv18:18</l>
+<l>phenopamaṃ kāyam imaṃ viditvā marīcidharmaṃ paribudhya caiva |</l>
+<l>chitveha mārasya tu puṣpakāni tv adarśanaṃ mṛtyurājasya gacchet ||</l>
+</lg>
+
+<lg>
+<l>135 Dhp58</l>
+<l>yathā saṃkārakūṭamhi ujjhitamhi mahāpathe |</l>
+<l>padumaṃ ubbhidaṃ assa śucigandhaṃ manoramaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv18:12</l>
+<l>yathā saṃkārakūṭe vyujjhite hi mahāpathe |</l>
+<l>padmaṃ tatra tu jāyeta śucigandhi manoramam ||</l>
+</lg>
+
+<lg>
+<l>136 Dhp59</l>
+<l>evaṃ saṃkārabhūtesu andhabhūte pṛthujjane |</l>
+<l>atirocanti praṃñāya saṃmasabuddhasāvakā ||</l>
+</lg>
+
+<lg>
+<l>Uv18:13</l>
+<l>evaṃ saṃkārabhūte 'sminn andhabhūte pṛthagjane |</l>
+<l>prajñayā vyatirocante samyaksaṃbuddhaśrāvakāḥ ||</l>
+</lg>
+
+<p>  puṣpavarggaḥ</p>
+
+<p>***** Tahna *****</p>
+
+<lg>
+<l>137 Dhp334</l>
+<l>manujassa pramattacāriṇo tahnā vaddhati mālutā iva |</l>
+<l>sā prāplavate hurāhuraṃ phalameṣī va vanamhi vānnaro ||</l>
+</lg>
+
+<lg>
+<l>Uv3:4</l>
+<l>manujasya pramattacāriṇas tṛṣṇā vardhati māluteva hi |</l>
+<l>sa hi saṃsarate punaḥ punaḥ phalam icchann iva vānaro vane ||</l>
+</lg>
+
+<lg>
+<l>138 Dhp335</l>
+<l>yaṃ cesā sahate jaṃmī tahnā loke duraccayā |</l>
+<l>śokā tassa pravaddhaṃti ovaṭṭhā beruṇā iva ||</l>
+</lg>
+
+<lg>
+<l>Uv3:9</l>
+<l>ya etāṃ sahate grāmyāṃ tṛṣṇāṃ loke sudustyajām |</l>
+<l>śokās tasya pravardhante hy avavṛṣṭā bīraṇā yathā ||</l>
+</lg>
+
+<lg>
+<l>139 Dhp336</l>
+<l>yo cetāṃ sahate jaṃmiṃ tahnāṃ loke duraccayāṃ |</l>
+<l>śokā tassa vivaṭṭanti udabindū va pukkhare ||</l>
+</lg>
+
+<lg>
+<l>Uv3:10</l>
+<l>yas tv etāṃ tyajate grāmyāṃ tṛṣṇāṃ loke sudustyajām |</l>
+<l>śokās tasya nivartante udabindur iva puṣkarāt ||</l>
+</lg>
+
+<lg>
+<l>140 Dhp337</l>
+<l>taṃ vo vademi bhadraṃ vo yāvaṃt-ittha samāgatā |</l>
+<l>tahnāṃ samūlāṃ khaṇatha uṣīrātthī va beruṇiṃ |</l>
+<l>tahnāya khatamūlāya nāsti ṣokā kato bhayaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv3:11</l>
+<l>tad vai vadāmi bhadraṃ vo yāvantaḥ stha samāgatāḥ |</l>
+<l>tṛṣṇāṃ samūlāṃ khanatha uśīrārthīva bīraṇām |</l>
+<l>tṛṣṇāyāḥ khātamūlāya nāsti ṣokaḥ kuto bhayam ||</l>
+</lg>
+
+<lg>
+<l>141</l>
+<l>tahnabitiyo puruṣo drīgham addhāna saṃsari |</l>
+<l>etthabhāvaṃñathābhāvaṃ tattha tattha punappuno ||</l>
+</lg>
+
+<lg>
+<l>Uv3:12</l>
+<l>tṛṣṇādvitīyaḥ puruṣo dīrgham adhvānam āśayā |</l>
+<l>itthaṃbhāvānyathībhāvaḥ saṃsāre tv āgatiṃ gatim ||</l>
+</lg>
+
+<lg>
+<l>142</l>
+<l>etam ādīnavaṃ nyāttā tahnā dukkhassa saṃbhavaṃ |</l>
+<l>vītatahno anādāno sato bhikkhū parivraje ||</l>
+</lg>
+
+<lg>
+<l>Uv3:18</l>
+<l>etad ādīnavaṃ jñātvā tṛṣṇā duḥkhasya saṃbhavaṃ |</l>
+<l>vītatṛṣṇo hy anādānaḥ smṛto bhikṣuḥ parivrajet ||</l>
+</lg>
+
+<lg>
+<l>143 Dhp345</l>
+<l>na taṃ dṛḍhaṃ bandhanam āhu dhīrā yad āyasaṃ dārujaṃ babbajaṃ vā |</l>
+<l>sārttarattā maṇikuṇḍalesu putresu dāresu ca yā apekhā ||</l>
+</lg>
+
+<lg>
+<l>Uv2:5</l>
+<l>na tad dṛḍhaṃ bandhanam āhur āryā yad āyasaṃ dāravaṃ balbajaṃ vā |</l>
+<l>saṃraktacittasya hi mandabuddheḥ putreṣu dāreṣu ca yā apekṣā ||</l>
+</lg>
+
+<lg>
+<l>144 Dhp346</l>
+<l>etaṃ dṛḍhaṃ bandhanam āhu dhīrā ohārinaṃ sukhumaṃ dupramuñcaṃ |</l>
+<l>etappi chettāna vrajanti santo anapekhino sabbadukhaṃ prahāya ||</l>
+</lg>
+
+<lg>
+<l>Uv2:6</l>
+<l>etad dṛḍhaṃ bandhanam āhur āryāḥ samantataḥ susthiraṃ duṣpramokṣam |</l>
+<l>etad api cchitvā tu parivrajanti hy anapekṣinaḥ kāmasukhaṃ prahāya ||</l>
+</lg>
+
+<p>145 Dhp186
+na kāhāpaṇavāsena ttrettī kāmesu vijjati |
+Uv2:17
+na karṣāpaṇavarṣeṇa tṛptiḥ kāmair hi vidyate |</p>
+
+<p>146 Dhp187
+api divvesu kāmesu ratiṃ so nādhigacchati ||</p>
+
+<p>tahnakkhayarato hoti saṃmasaṃbuddhsāvako ||</p>
+
+<p>Uv2:18
+api divyeṣu kāmeṣu sa ratiṃ nādhigacchati ||</p>
+
+<p>tṛṣṇākṣayarato bhavati buddhānāṃ śrāvakaḥ sadā ||</p>
+
+<lg>
+<l>147 Dhp352</l>
+<l>vītatahno anādāno niruttīpadakovido |</l>
+<l>akkharāṇāṃ sannipātena (ñ)ñāyyā pūrvvāparāṇi so |</l>
+<l>sa ve antimaśārīro mahapraṃño ti vuccati ||</l>
+</lg>
+
+<lg>
+<l>148 Dhp341</l>
+<l>saritāni sinehitāni ca somanassāni bhavanti jantuno |</l>
+<l>ye sātasitā sukheṣiṇo te ve jātijaropagā ||</l>
+</lg>
+
+<lg>
+<l>Uv3:5</l>
+<l>saritāni vai snehitāni vai saumanasyāni bhavanti jantunaḥ |</l>
+<l>ye sātasitāḥ sukhaiṣiṇas te vai jātijaropagā narāḥ ||</l>
+</lg>
+
+<lg>
+<l>149 Dhp342</l>
+<l>tahnāya purekkhaṭā prajā parisappanti śaśo va bādhito |</l>
+<l>te saṃjotanasaṅgasaṅgasattā gabbham upenti punappuno ciraṃ pi ||</l>
+</lg>
+
+<lg>
+<l>Uv3:6</l>
+<l>tṛṣṇābhir upaskṛtāḥ prajāḥ paridhāvanti śaśā va vāgurām |</l>
+<l>saṃyojanaiḥ saṅgasaktā duḥkhaṃ yānti punaḥ punaś cirarātram ||</l>
+</lg>
+
+<lg>
+<l>150 Dhp348</l>
+<l>muñca pure muñca pacchato majjhe muñca bhavassa pāragū |</l>
+<l>sabbattha vimuttamānaso na puno jātijarām upehisi ||</l>
+</lg>
+
+<lg>
+<l>Uv29:57</l>
+<l>muñca purato muñca paścato madhye muñca bhavasya pāragaḥ |</l>
+<l>sarvatra vimuktamānaso na punar jātijarām upeṣyasi ||</l>
+</lg>
+
+<lg>
+<l>151 Dhp344</l>
+<l>yo nivvanadho vanā tu mutto vanamutto vanam eva dhāvati |</l>
+<l>taṃ puggalam etha paśśatha mutto bandhanam eva dhāvati ||</l>
+</lg>
+
+<lg>
+<l>Uv27:29</l>
+<l>yo nirvanagair vimokṣitaḥ saṃvanamukto vanam eva dhāvati |</l>
+<l>taṃ paśyatha pudgalaṃ tv imaṃ mukto bandhanam eva dhāvati ||</l>
+</lg>
+
+<lg>
+<l>152 Dhp356</l>
+<l>ttriṇadoṣāṇi khettrāṇi rāgadoṣā ayaṃ prajā |</l>
+<l>tassā hi vītarāgesu dinnaṃ hoti mahapphalaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv16:16</l>
+<l>kṣetrāṇi tṛṇadoṣāṇi rāgadoṣā tv iyaṃ prajā |</l>
+<l>tasmād vigatarāgebhyo dattaṃ bhavati mahāphalam ||</l>
+</lg>
+
+<lg>
+<l>153 Dhp357</l>
+<l>ttriṇadoṣāṇi khettrāṇi doṣadoṣā ayaṃ prajā |</l>
+<l>tassā hi vītadoṣesu dinnaṃ hoti mahapphalaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv16:17</l>
+<l>kṣetrāṇi tṛṇadoṣāṇi dveṣadoṣā tv iyaṃ prajā |</l>
+<l>tasmād hi vigatadveṣebhyo dattaṃ bhavati mahāphalam ||</l>
+</lg>
+
+<lg>
+<l>154 Dhp358</l>
+<l>ttriṇadoṣāṇi khettrāṇi mohadoṣā ayaṃ prajā |</l>
+<l>tassā hi vītamohesu dinnaṃ hoti mahapphalaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv16:18</l>
+<l>kṣetrāṇi tṛṇadoṣāṇi mohadoṣā tv iyaṃ prajā |</l>
+<l>tasmād vigatamohebhyo dattaṃ bhavati mahāphalam ||</l>
+</lg>
+
+<lg>
+<l>155 Dhp99</l>
+<l>ramaṇīyaṃ vatā 'raṇṇaṃ yamhiṃ na ramate jano |</l>
+<l>vītarāgāttha raṃsanti nāṃñe kāmāgaveṣiṇo ||</l>
+</lg>
+
+<lg>
+<l>Uv29:17</l>
+<l>ramaṇīyāny araṇyāni na cātra ramate janaḥ |</l>
+<l>vītarāgātra raṃsyante na tu kāmāgaveṣiṇaḥ ||</l>
+</lg>
+
+<lg>
+<l>156 Dhp99</l>
+<l>yathā pi mūle anupadrute dṛḍhe chinno pi rukkho puna-r-īva jāyati |</l>
+<l>em eva tahnānuśaye anūhate nivvattate dukkham idaṃ punappuno ||</l>
+</lg>
+
+<lg>
+<l>Uv3:16</l>
+<l>yathāpi mūlair anupadrutaiḥ sadā chinno 'pi vṛkṣaḥ punar eva jāyate |</l>
+<l>evaṃ hi tṛṣṇānuśayair anuddhṛtair nirvartate duḥkham idaṃ punaḥ punaḥ ||</l>
+</lg>
+
+<p>  tahnavarggaḥ</p>
+
+<p>***** Mala *****</p>
+
+<lg>
+<l>157 Dhp241</l>
+<l>asajjihāyamalā vedā anuṭṭhāṇamalā gharā |</l>
+<l>malo vaṇṇassa kosajjaṃ pramādo rakkhatāṃ malo ||</l>
+</lg>
+
+<lg>
+<l>158 Dhp242</l>
+<l>malo istiye duccaritaṃ maccheraṃ dadatāṃ malo |</l>
+<l>malo pāpāni kaṃmāṇi assiṃ loke paramhi ca ||</l>
+</lg>
+
+<lg>
+<l>159 Dhp243</l>
+<l>tato malataraṃ brūmi avijjā maraṇaṃ malaṃ |</l>
+<l>ete male prahattāna niṃmalā bhikkhavo ||</l>
+</lg>
+
+<lg>
+<l>160 Dhp240</l>
+<l>ayasā tu malo samuṭṭhito tato uṭṭhāya tam eva khādati |</l>
+<l>em eva vidhūnacāriyaṃ sakāni kaṃmāṇi nayanti doggatiṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv9:19</l>
+<l>ayaso hi malaḥ samutthitaḥ sa tadutthāya tam eva khādati |</l>
+<l>evam hy aniśāmyacāriṇaṃ svāni karmāṇi nayanti durgatim ||</l>
+</lg>
+
+<lg>
+<l>161 Dhp235</l>
+<l>pāṇḍupalāśo ca dāni si yamapuruṣā pi ca te upaṭṭhitā |</l>
+<l>uyyogamukhe ca tiṣṭhasi pātheyaṃ pi ca te na vijjati ||</l>
+</lg>
+
+<p>162 cf. Dhp236
+uyyamassa ghaṭassa āttanā kaṃmāro rajataṃ va niddhame ||</p>
+
+<p>niddhāntamalo anaṅgano bitiyaṃ (vitiyaṃ) ayirabhūmim esi ||</p>
+
+<lg>
+<l>163 Dhp239</l>
+<l>anupūrvveṇa medhāvī thokathokaṃ khaṇe khaṇe |</l>
+<l>kammāro rajatasseva niddhame malam āttano ||</l>
+</lg>
+
+<lg>
+<l>Uv2:10</l>
+<l>anupūrveṇa medhāvī stokaṃ stokaṃ kṣaṇe kṣaṇe |</l>
+<l>karmāro rajatasyaiva nirdhamen malam ātmanaḥ ||</l>
+</lg>
+
+<lg>
+<l>164 Dhp244</l>
+<l>sujīvaṃ ahirīkena saṃkiliṣṭan tu jīvati |</l>
+<l>prakkhaṇḍiṇā pragabbheṇa kākaśūreṇa dhansinā ||</l>
+</lg>
+
+<lg>
+<l>Uv27:3</l>
+<l>ahrīkena sujīvaṃ syāt kākaśūreṇa dhvāṅkṣiṇā |</l>
+<l>praskandiṇā pragalbhena saṃkliṣṭaṃ tv iha jīvate ||</l>
+</lg>
+
+<lg>
+<l>165 Dhp245</l>
+<l>hirīmatā tu dujjīvaṃ niccaṃ śucigaveṣiṇā |</l>
+<l>alīnenāpragabbheṇa śuddhājīvena paśśatā ||</l>
+</lg>
+
+<lg>
+<l>Uv27:4</l>
+<l>hrīmatā tv iha durjīvaṃ nityaṃ śucigaveṣiṇā |</l>
+<l>sulīnenāpragalbhena śuddhājīvena paśyatā ||</l>
+</lg>
+
+<lg>
+<l>166 Dhp252</l>
+<l>supaśśaṃ vajjaṃ aṃñesaṃ āttano puna duddaśaṃ |</l>
+<l>paresām iha vajjāni uppunāti yathā busaṃ |</l>
+<l>āttano puna chādeti kalim va kṛtavāṃ śaṭho ||</l>
+</lg>
+
+<lg>
+<l>Uv27:1</l>
+<l>supaśyaṃ paravadyaṃ syād ātmavadyaṃ tu durdṛśam |</l>
+<l>paraḥ parasya vadyāni tūtpunāti busaṃ yathā |</l>
+<l>ātmanaś chādayaty eṣa kṛtvā yadvat kaliṃ śaṭhaḥ ||</l>
+</lg>
+
+<lg>
+<l>167 Dhp163</l>
+<l>sukarāṇi asādhūni āttano ahitāni ca |</l>
+<l>yaṃ ve hitaṃ ca sādhūni ca taṃ ve paramadukkharaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv28:16</l>
+<l>sukarāṇi hy asādhūni svātmano hy ahitāni ca |</l>
+<l>yad vai hitaṃ ca pathyaṃ ca tad vai paramaduṣkaram ||</l>
+</lg>
+
+<lg>
+<l>168</l>
+<l>sukarāṇi asādhūni āttano ahitāni ca |</l>
+<l>yāni hitāni sādhūni tāni kurvvanti paṇḍitā ||</l>
+</lg>
+
+<lg>
+<l>169 Dhp316,317</l>
+<l>alajjitavve lajjanti lajjitavve na lajjatha |</l>
+<l>abhaye bhayadaṃśāvī bhaye cābhayadaṃśino |</l>
+<l>micchadṛṣṭisamādānā sattā gacchanti doggatiṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv16:4</l>
+<l>alajjitavye lajjante lajjitavye tv alajjanaḥ |</l>
+<l>abhaye bhayadarśīno bhaye cābhayadarśinaḥ |</l>
+<l>mithyādṛṣṭisamādānāt satvā gacchanti durgatim ||</l>
+</lg>
+
+<lg>
+<l>170 Dhp318</l>
+<l>avajje vajjamatino vajje cāvajjasaṃñino |</l>
+<l>micchadṛṣṭisamādānā sattā gacchanti doggatiṃ ||</l>
+</lg>
+
+<lg>
+<l>171 Dhp11</l>
+<l>asāre sāramatino sāre cā 'sārasaṃñino |</l>
+<l>te sāran nādhigacchanti micchasaṃkappagocarā ||</l>
+</lg>
+
+<lg>
+<l>Uv29:3</l>
+<l>asāre sāramatayaḥ sāre cāsārasaṃjñinaḥ |</l>
+<l>te sāraṃ nādhigacchanti mithyāsaṃkalpagocarāḥ ||</l>
+</lg>
+
+<lg>
+<l>172 Dhp12</l>
+<l>sārañ ca sārato ññāttā asārañ ca asārato |</l>
+<l>te sāram adhigacchanti saṃmasaṃkappagocarā ||</l>
+</lg>
+
+<lg>
+<l>Uv29:4</l>
+<l>sāraṃ tu sārato jñātvā hy asāraṃ cāpi asārataḥ |</l>
+<l>te sāram adhigacchanti samyaksaṃkalpagocarāḥ ||</l>
+</lg>
+
+<lg>
+<l>173 Dhp209</l>
+<l>avoge yuñjiyāttānaṃ yogamhi ca ayuṃjiya |</l>
+<l>atthaṃ hettā priyaggrāhī pṛhayantatthānuyogināṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv5:9</l>
+<l>avoge yujya cātmānaṃ yoge cāyujya sarvadā |</l>
+<l>arthaṃ hitvā priyagrāhī spṛhayaty arthayogine ||</l>
+</lg>
+
+<p>  malavaggaḥ</p>
+
+<p>***** Bāla *****</p>
+
+<lg>
+<l>174 Dhp66</l>
+<l>caranti bālā dummedhā amitteṇa-r-iva āttanā |</l>
+<l>karontā pāpakaṃ kammaṃ yaṃ hoti kaṭukapphalaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv9:13</l>
+<l>caranti bālā duṣprajñā hy amitrair iva cātmabhiḥ |</l>
+<l>kurvantaḥ pāpakaṃ karma yad bhavati kaṭukaṃ phalam ||</l>
+</lg>
+
+<lg>
+<l>175 Dhp67</l>
+<l>kathañ ca taṃ kare kaṃmaṃ yaṃ kattā anutappati |</l>
+<l>yassa aṃśumukho rodaṃ vipākaṃ paṭisevati ||</l>
+</lg>
+
+<lg>
+<l>Uv9:14</l>
+<l>na tat karrma kṛtaṃ sādhu yat kṛtvā hy anutapyate |</l>
+<l>rudann aśrumukho yasya vipākaṃ pratiṣevate ||</l>
+</lg>
+
+<lg>
+<l>176 Dhp68</l>
+<l>taṃ ca kaṃmaṃ kataṃ sādhu yaṃ kattā nānutappati |</l>
+<l>yassa pratīto sumano vipākaṃ paṭisevati ||</l>
+</lg>
+
+<lg>
+<l>Uv9:15</l>
+<l>tat tu karma kṛtaṃ sādhu yat kṛtvā nānutapyate |</l>
+<l>yasya pratītaḥ sumanā vipākaṃ pratiṣevate ||</l>
+</lg>
+
+<lg>
+<l>177 Dhp72</l>
+<l>yāvad eva anatthāya ñāttaṃ bālassa jāyati |</l>
+<l>hanti bālassa śukrāṅggaṃ (?) muddham assa nipātaye ||</l>
+</lg>
+
+<lg>
+<l>Uv13:2</l>
+<l>yāvad eva hy anarthāya jñāto bhavati bāliśaḥ |</l>
+<l>hanti bālasya śuklāṃśaṃ mūrdhāṃ cāsya pātayet ||</l>
+</lg>
+
+<lg>
+<l>178 Dhp73</l>
+<l>asatāṃ bhāvanam icchanti purekkhāñ ca bhikkhusu |</l>
+<l>āvāsesu ca essariyaṃ pūjaṃ parakulesu ca ||</l>
+</lg>
+
+<lg>
+<l>Uv13:3</l>
+<l>asanto lābham icchanti satkāraṃ caiva bhikṣuṣu |</l>
+<l>āvāseṣu ca mātsaryaṃ pūjāṃ parakuleṣu ca ||</l>
+</lg>
+
+<lg>
+<l>179 Dhp74</l>
+<l>mameva katamannentu gṛhī pravrajitā ca ye |</l>
+<l>na me pratibalā assa kiccā 'kiccesu kesuci ||</l>
+</lg>
+
+<lg>
+<l>Uv13:4</l>
+<l>mām eva nityaṃ jānīyur gṛhī pravrajitas tathā |</l>
+<l>mama prativaśāś ca syuḥ kṛtyākṛtyeṣu keṣu cit ||</l>
+</lg>
+
+<lg>
+<l>180 Dhp74ef,75ab</l>
+<l>iti bālassa saṃkappo icchāmāno ca vaddhati |</l>
+<l>aṃñā hi lābhopaniśā aṃñā nibbāṇagāminī ||</l>
+</lg>
+
+<lg>
+<l>Uv13:5</l>
+<l>iti bālasya saṃkalpā icchāmānābhivardhakāḥ |</l>
+<l>anyā hi lābhopaniṣad anyā nirvāṇagāminī ||</l>
+</lg>
+
+<lg>
+<l>181 Dhp75c-f</l>
+<l>evam etaṃ yathābhūtaṃ paśśaṃ buddhassa sāvako |</l>
+<l>sakkāraṃ nābhinandeyā vivekaṃ anubrūhaye ||</l>
+</lg>
+
+<lg>
+<l>Uv13:6</l>
+<l>etaj jñātvā yathābhūtaṃ buddhānāṃ śrāvakaḥ sadā |</l>
+<l>satkāraṃ nābhinandeta vivekam anubṛṃhayet ||</l>
+</lg>
+
+<lg>
+<l>182</l>
+<l>jayaṃ ve manyate bālo vācāya paruṣaṃ bhaṇaṃ |</l>
+<l>satāṃ hesa jayo hoti yā titikkhā vijānato ||</l>
+</lg>
+
+<lg>
+<l>Uv20:13</l>
+<l>jayaṃ hi manyate bālo vacobhiḥ paruṣair vadan |</l>
+<l>nityam iva jayas tasya yo 'tivākhaṃ titīkṣati ||</l>
+</lg>
+
+<lg>
+<l>183</l>
+<l>abalaṃ tassa balaṃ hoti yassa bālabalaṃ balaṃ |</l>
+<l>balassa dhammaguttassa paṭivattā na vijjati ||</l>
+</lg>
+
+<lg>
+<l>Uv20:6</l>
+<l>abalaṃ hi balaṃ tasya yasya krodhe balaṃ balam |</l>
+<l>kruddhasya dharmahīnasya pratipattir na vidyate ||</l>
+</lg>
+
+<lg>
+<l>184 Dhp63</l>
+<l>yo bālo bālamānī paṇḍito cāpi tattha so |</l>
+<l>bālo tu paṇḍitamānī sa ve bālo ti vuccati ||</l>
+</lg>
+
+<lg>
+<l>Uv25:22</l>
+<l>yo jānīyād ahaṃ bāla iti bālaḥ sa paṇḍitaḥ |</l>
+<l>bālaḥ paṇḍitamānī tu bāla eva nirucyate ||</l>
+</lg>
+
+<lg>
+<l>185 Dhp60</l>
+<l>drīghā assupato rātrī drīghaṃ śāntassa yojanaṃ |</l>
+<l>drīgho bālāna saṃsāro saddhaṃmaṃ avijānatāṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv1:19</l>
+<l>dīrghā jāgarato rātrir dīrghaṃ śrāntasya yojanam |</l>
+<l>dīrgho bālasya saṃsāraḥ saddharmam avijānataḥ ||</l>
+</lg>
+
+<lg>
+<l>186</l>
+<l>pūtimacche kuśāggreṇa yo naro upanahati |</l>
+<l>kuśā pi pūtiṃ vāyanti evaṃ bālopasevanā ||</l>
+</lg>
+
+<lg>
+<l>Uv25:7</l>
+<l>pūtimatsyāṃ kuśāgreṇa yo naro hy upanahyate |</l>
+<l>kuśāpi pūtikā vānti hy evaṃ pāpopasevanāḥ ||</l>
+</lg>
+
+<lg>
+<l>187</l>
+<l>tagarañ ca palāśamhi yo naro upanahyati |</l>
+<l>pattaṃ pi surabhiṃ vāti evaṃ dhīropasevanā ||</l>
+</lg>
+
+<lg>
+<l>Uv25:8</l>
+<l>tagaraṃ palāśapatreṇa yo naro hy upanahyati |</l>
+<l>patrāṇy api sugandhīni sad evaṃ saṃgamāt satām ||</l>
+</lg>
+
+<lg>
+<l>188</l>
+<l>akaronto pi ce pāpaṃ karonte upasevati |</l>
+<l>śaṅkiyo hoti pāpamhi avaṇṇo cāssa rūhati ||</l>
+</lg>
+
+<lg>
+<l>Uv25:9</l>
+<l>akurvann api pāpāni kurvāṃam upasevate |</l>
+<l>śaṅkito bhavati pāpasya avarṇaś cāsya vardhate ||</l>
+</lg>
+
+<lg>
+<l>189</l>
+<l>sevamāno sevamāne saṃpuṭṭho saṃphusaṃ pare |</l>
+<l>śaro litto kalāpe vā alitte upaliṃpati |</l>
+<l>upalepabhayā dhīro neva pāpasakhā siyā ||</l>
+</lg>
+
+<lg>
+<l>Uv25:10</l>
+<l>saṃsevamānaḥ pāpo hi saṃspṛṣṭaḥ saṃsphṛśet parān |</l>
+<l>śaro liptaḥ kalāpasthān aliptān upaliṃpati |</l>
+<l>upalepabhayād dhīro naiva pāpasakhā bhavet ||</l>
+</lg>
+
+<lg>
+<l>190</l>
+<l>tassā phalapuṭasseva ñāyyā saṃpākam āttano |</l>
+<l>asanto nopaseveyā santo seveya paṇḍīto ||</l>
+</lg>
+
+<lg>
+<l>Uv25:12</l>
+<l>tasmāt phalapuṭasyaiva dṛṣṭvā saṃpākam ātmanaḥ |</l>
+<l>asanto nopaseveta santaḥ seveta paṇḍītaḥ ||</l>
+</lg>
+
+<lg>
+<l>191 Dhp64</l>
+<l>yāvaj jīvaṃ pi ce bālo paṇḍite payirupāsati |</l>
+<l>neva dhammaṃ vijānāti dravvī sūparasān iva ||</l>
+</lg>
+
+<lg>
+<l>Uv25:13</l>
+<l>yāvajjīvaṃ pi ced bālaḥ paṇḍitāṃ paryupāsate |</l>
+<l>na sa dharmaṃ vijānāti darvī sūparasān iva ||</l>
+</lg>
+
+<lg>
+<l>192 Dhp65</l>
+<l>muhuttam api ce praṃño paṇḍite payirupāsati |</l>
+<l>khipraṃ dhammaṃ vijānāti jihvā sūparasān iva ||</l>
+</lg>
+
+<lg>
+<l>Uv25:14</l>
+<l>muhūrtam api saprajñaḥ paṇḍitāṃ paryupāsate |</l>
+<l>sa vai dharmaṃ vijānāti jihvā sūparasān iva ||</l>
+</lg>
+
+<lg>
+<l>193 Dhp121</l>
+<l>nāppaṃ pāpassa maṃñeyā na me taṃ āgamiṣyati |</l>
+<l>udabindunipātena udakuṃbho pi pūrati ||</l>
+</lg>
+
+<p>pūrate bālo pāpassa thokathokaṃ pi ācinaṃ |
+<lg>
+<l>Uv17:5</l>
+<l>nālpaṃ manyeta pāpasya naitaṃ mām āgamiṣyati |</l>
+<l>udabindunipātena mahākumbho 'pi pūryate |</l>
+<l>pūryanti bālaḥ pāpair hi stokastokaṃ kṛtair api ||</l>
+</lg></p>
+
+<p>194 Dhp121
+nāppaṃ pāpassa maṃñeyā na me taṃ āgamiṣyati ||</p>
+
+<lg>
+<l>udabindunipātena udakumbho pi pūrati |</l>
+<l>pūrate praṃño puṃñassa thokathokaṃ pi ācinaṃ ||</l>
+</lg>
+
+<p>Uv17:5
+nālpaṃ manyeta pāpasya naitaṃ mām āgamiṣyati ||</p>
+
+<lg>
+<l>udabindunipātena mahākumbho 'pi pūryate |</l>
+<l>pūryanti bālāḥ pāpair hi stokastokaṃ kṛtair api ||</l>
+</lg>
+
+<p>  bālavarggaḥ</p>
+
+<p>***** Daṇḍa *****</p>
+
+<lg>
+<l>195 Dhp141</l>
+<l>na naggacariyā na jaṭā na paṃko nānāśanaṃ tthaṇḍīlaśāyikā vā |</l>
+<l>rajocelaṃ ukkuṭukapradhānaṃ śodhenti māccaṃ avitiṇṇakaṃchaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv33:1</l>
+<l>na nagacaryā na jaṭā na paṅkā no 'nāśanaṃ sthaṇḍīlaśāyikā vā |</l>
+<l>na rajomalaṃ notkuṭukaprahāṇaṃ śodheta martyaṃ hy avitīrṇakāṅkṣaṃ ||</l>
+</lg>
+
+<lg>
+<l>196 Dhp142</l>
+<l>alaṃkato cāpi samaṃ careyā dānto śānto niyato dhammacārī |</l>
+<l>sabbesu prāṇesu nidhāya daṇḍaṃ so brāhmaṇo so śamaṇo sa bhikkhū ||</l>
+</lg>
+
+<lg>
+<l>Uv33:2</l>
+<l>alaṃkṛtaś cāpi careta dgarmaṃ kṣānto dānto niyato brahmacārī |</l>
+<l>sarveṣu bhūteṣu nidhāya daṇḍaṃ sa brāhmaṇaḥ sa śramaṇaḥ sa bhikṣuḥ ||</l>
+</lg>
+
+<lg>
+<l>197 Dhp133</l>
+<l>mā vade paruṣaṃ kaṃci vuttā paṭivadeyu taṃ |</l>
+<l>dukkhā hi sārambhakathā paṭidaṇḍā phuseyu taṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv26:3</l>
+<l>mā kaṃ cit paruṣaṃ brūthaḥ proktāḥ prativadanti tam |</l>
+<l>duḥkhā hi saṃrambhakathāḥ pratidaṇḍaṃ spṛśanti hi ||</l>
+</lg>
+
+<lg>
+<l>198</l>
+<l>sace iresi āttānaṃ kaṃso upahato-r-iva |</l>
+<l>jātīmaraṇasaṃsāraṃ ciraṃ praccanubhohisi ||</l>
+</lg>
+
+<lg>
+<l>Uv26:4</l>
+<l>yadīrayasi hātmānaṃ kaṃsīvopahatā sadā |</l>
+<l>jātīmaraṇasaṃsāraṃ ciraṃ hy anubhaviṣyasi ||</l>
+</lg>
+
+<lg>
+<l>199 Dhp134</l>
+<l>na ce iresi āttānaṃ kaṃso anupahato-r-iva |</l>
+<l>esa prātto si nibbāṇaṃ sārambhā te na vijjati ||</l>
+</lg>
+
+<lg>
+<l>Uv26:5</l>
+<l>na tv īrayasi hātmānaṃ kaṃsir nopahatā yathā |</l>
+<l>eṣa prāpto 'si nirvāṇaṃ saṃrambhas te na vidyate ||</l>
+</lg>
+
+<lg>
+<l>200 Dhp135</l>
+<l>yathā daṇḍena gopālo gāvo p(r)ājeti gocaraṃ |</l>
+<l>evaṃ jarā ca maccū ca prāṇināṃ adhivattati ||</l>
+</lg>
+
+<lg>
+<l>Uv1:17</l>
+<l>yathā daṇḍena gopālo gāḥ prāpayati gocaram |</l>
+<l>evaṃ rogair jarāmṛtyuḥ āyuḥ prāpayate nṛṇām ||</l>
+</lg>
+
+<lg>
+<l>201 Dhp315c-f</l>
+<l>yathā daṇḍena gopālo gāvo rakṣati sāmināṃ |</l>
+<l>evaṃ rakkhatha āttānaṃ khaṇo vo mā upaccagū |</l>
+<l>khaṇātītā hi śocanti nirayamhi samappitā ||</l>
+</lg>
+
+<p>Uv5:17c-f
+(yathā daṇḍena gopālo gāvo rakṣati sāmināṃ |)
+<lg>
+<l>evaṃ gopayatātmānaṃ kṣaṇo vo mā upatyagāt |</l>
+<l>kṣaṇātītā hi śocante narakeṣu samarpitāḥ ||</l>
+</lg></p>
+
+<lg>
+<l>202 Dhp130</l>
+<l>sabbe trasanti daṇḍānāṃ sabbesaṃ jīvitaṃ priyaṃ |</l>
+<l>āttānaṃ upamaṃ kattā neva haṃyyā na ghātaye ||</l>
+</lg>
+
+<lg>
+<l>Uv5:19</l>
+<l>sarve daṇḍasya bibhyanti sarveṣāṃ jīvitaṃ priyam |</l>
+<l>ātmānam upamāṃ kṛtvā naiva hanyān na ghātayet ||</l>
+</lg>
+
+<lg>
+<l>203 Dhp131</l>
+<l>sukhakāmāni bhūtāni yo daṇḍena vihiṃsati |</l>
+<l>āttano sukham eṣāṇo precca so na labhate sukhaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv30:3</l>
+<l>sukhakāmāni bhūtāni yo daṇḍena vihiṃsati |</l>
+<l>ātmanaḥ sukham eṣāṇaḥ sa vai na labhate sukham ||</l>
+</lg>
+
+<lg>
+<l>204 Dhp132</l>
+<l>sukhakāmāni bhūtāni yo daṇḍena na vihiṃsati |</l>
+<l>āttano sukham eṣāṇo precca so labhate sukhaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv30:4</l>
+<l>sukhakāmāni bhūtāni yo daṇḍena na vihiṃsati |</l>
+<l>ātmanaḥ sukham eṣāṇaḥ sa pretya labhate sukham ||</l>
+</lg>
+
+<lg>
+<l>205 Dhp78a-d,76ef</l>
+<l>na bhajetha pāpake mitre na bhajetha puruṣā 'dhame |</l>
+<l>bhajetha praṃñe (prāṃña-) medhāvī bhajetha puruṣottame |</l>
+<l>tārise bhajemānassa śreyo hoti na pāpiyo ||</l>
+</lg>
+
+<lg>
+<l>Uv25:3a-d,28:7ef</l>
+<l>na bhajet pāpakaṃ mitraṃ na bhajet puruṣādhamam |</l>
+<l>bhajeta mitraṃ kalyāṇaṃ bhajed uttamapūruṣam |</l>
+<l>tādṛśaṃ bhajamānasya śreyo bhavati na pāpakam ||</l>
+</lg>
+
+<lg>
+<l>206 Dhp76</l>
+<l>nidhino va pravattāraṃ yaṃ paśśe vajjadaṃśinaṃ |</l>
+<l>nigṛhyavādiṃ medhāvīṃ tārisaṃ puruṣaṃ bhaje |</l>
+<l>tāriṣaṃ bhajamānassa śreyo hoti na pāpiyo ||</l>
+</lg>
+
+<lg>
+<l>Uv28:7</l>
+<l>niṣeddhāraṃ pravaktāraṃ yaj jāned vadyadarśinam |</l>
+<l>nigṛhyavādinaṃ dhīraṃ tādṛśaṃ satataṃ bhajent |</l>
+<l>tādṛśaṃ bhajamānasya śreyo bhavati na pāpakam ||</l>
+</lg>
+
+<lg>
+<l>207 Dhp77</l>
+<l>ovadeyā anuśāseyā asabbhāto nivāraye |</l>
+<l>satāṃ hetaṃ priyaṃ hoti asatāṃ hoti apriyaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv5:26</l>
+<l>avavadetānuśāsīta cāsabhyāc ca nivārayet |</l>
+<l>asatāṃ na priyo bhavati satāṃ bhavati priyaṃ ||</l>
+</lg>
+
+<lg>
+<l>208</l>
+<l>tassā satāñ ca asantāñ ca nānā hoti gatī |</l>
+<l>asanto nirayaṃ yānti santo saggaparāyaṇā ||</l>
+</lg>
+
+<lg>
+<l>Uv5:27</l>
+<l>asantaś caiva santaś ca nānā yānti tv itaś cyutāḥ |</l>
+<l>asanto narakaṃ yānti santaḥ svargaparāyaṇāḥ ||</l>
+</lg>
+
+<lg>
+<l>209 Dhp152</l>
+<l>appaśśuto ayaṃ puruṣo balivaddo va (j)jīrati |</l>
+<l>māṃsāni tassa vaddhanti praṃñā tassa na vaddhanti ||</l>
+</lg>
+
+<lg>
+<l>210 Dhp309</l>
+<l>cattāri ṭṭhāṇāni naro pramatto āpajjate paradāropasevī |</l>
+<l>apuṃñalābhaṃ anikāmaśeyaṃ nindaṃ tritīyaṃ nirayaṃ catutthaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv4:14</l>
+<l>sthānāni catvāri naraḥ pramatta āpadyate yaḥ paradārasevī |</l>
+<l>apunyalābhaṃ hy anikāmaśayyaṃ nindāṃ tṛtīyaṃ narakaṃ caturtham ||</l>
+</lg>
+
+<lg>
+<l>211 Dhp310</l>
+<l>apuṃñalābho ca gatī ca pāpiko bhītassa bhītāya ratī pi appikā |</l>
+<l>rājā pi daṇḍaṃ garukaṃ praṇeti kāyassa bhedā nirayaṃ upeti ||</l>
+</lg>
+
+<p>Uv4:/15/
+<lg>
+<l>apuṇyalābhaṃ ca gatiṃ ca pāpikāṃ bhītasya bhītābhir athālpikāṃ ratim |</l>
+<l>rājā ca daṇḍaṃ garukaṃ dadāti kāyasya bhedād narakeṣu pacyate ||</l>
+</lg></p>
+
+<lg>
+<l>212</l>
+<l>saṃyyatā sugatiṃ yānti doggatiṃ yānti asaṃyyātā |</l>
+<l>mā ssu viśśāsam āpādi iti vindu samaṃ care ||</l>
+</lg>
+
+<lg>
+<l>213</l>
+<l>mākuñjara nāgam āsida dukkho kuñjara nāgamaṃsado |</l>
+<l>na hi nāgahatassa kuñjara sugatī ito paraaṃ yato ||</l>
+</lg>
+
+<lg>
+<l>214</l>
+<l>giriduggavicāriṇaṃ yathā sīhaṃ parvvatapaṭṭhigocaraṃ |</l>
+<l>naravīram apetabheravaṃ mā hiṃsittha anomanikramaṃ ||</l>
+</lg>
+
+<lg>
+<l>215 Dhp320</l>
+<l>ahaṃ nāgo va saṃggrāme cāpātipatite śare |</l>
+<l>atīvāde titikkhāmi duśśīlo hi bahujano ||</l>
+</lg>
+
+<lg>
+<l>Uv29:21</l>
+<l>ahaṃ nāga iva saṃgrāme cāpād utpatitāṃ śarān |</l>
+<l>atīvākyaṃ titīkṣāmi duḥśīlo hi mahājanaḥ ||</l>
+</lg>
+
+<p>  daṇḍavarggaḥ</p>
+
+<p>***** śaraṇa *****</p>
+
+<lg>
+<l>216 Dhp188</l>
+<l>bahū ve śaraṇaṃ yānti parvvate ca vanāni ca |</l>
+<l>vastūni rukkhacittāṇi manuṣyā bhayatajjitā ||</l>
+</lg>
+
+<lg>
+<l>Uv27:31</l>
+<l>bahavaḥ śaraṇaṃ yānti parvatāṃś ca vanāni ca |</l>
+<l>ārāmāṃ vṛkṣacaityāṃś ca manuṣyā bhayatarjitāḥ ||</l>
+</lg>
+
+<lg>
+<l>217 Dhp189</l>
+<l>na etaṃ śaraṇaṃ khemmaṃ na etaṃ śaraṇaṃ uttamaṃ |</l>
+<l>etaṃ śaraṇam āgaṃma sabbadukkhā pramuccati ||</l>
+</lg>
+
+<lg>
+<l>Uv27:32</l>
+<l>naitad dhi śaraṇaṃ kṣemaṃ naitac charaṇaṃ uttamam |</l>
+<l>naitac charaṇam āgamya sarvaduḥkhāt pramucyate ||</l>
+</lg>
+
+<lg>
+<l>218 Dhp190</l>
+<l>yo tu buddhañ ca dhammañ ca saghaṃ ca śaraṇaṃ gato |</l>
+<l>cattāri ca ayirasaccāni yathābhūtāni paśśati ||</l>
+</lg>
+
+<lg>
+<l>Uv27:33</l>
+<l>yas tu buddhaṃ ca dharmaṃ ca saṃghaṃ ca śaraṇaṃ gataḥ |</l>
+<l>catvāri cāryasatyāni prajñayā paśyati yadā ||</l>
+</lg>
+
+<lg>
+<l>219 Dhp192</l>
+<l>etaṃ ve śaraṇaṃ khemmaṃ etaṃ śaraṇam uttamaṃ |</l>
+<l>etaṃ śaraṇam āgamma sabbadukkhā pramuccati ||</l>
+</lg>
+
+<lg>
+<l>Uv27:35</l>
+<l>etad dhi śaraṇaṃ kṣemam etac charaṇam uttamam |</l>
+<l>etac charaṇam āgamya sarvaduḥkhāt pramucyate ||</l>
+</lg>
+
+<lg>
+<l>220</l>
+<l>gavāṃ ce taramāṇānāṃ jihmaṃ gacchati puṅgavo |</l>
+<l>sabbā tā jihmaṃ gacchaṃti nette jihmagate sati ||</l>
+</lg>
+
+<lg>
+<l>221</l>
+<l>evām eva manuṣyesu yo hoti śreṣṭhasaṃmato |</l>
+<l>sa ce adhaṃmaṃ carati prāg eva itarā prajā ||</l>
+</lg>
+
+<lg>
+<l>222</l>
+<l>gavāṃ ce taramāṇānāṃ ujjuṃ gacchati puṅgavo |</l>
+<l>sabbā tā ujjuṃ gacchaṃti nette ujjugate sati ||</l>
+</lg>
+
+<lg>
+<l>223</l>
+<l>evām eva manuṣyesu yo hoti śreṣṭhasaṃmato |</l>
+<l>sa ce dhaṃmaṃ carati prāg eva itarā prajā ||</l>
+</lg>
+
+<lg>
+<l>224 Dhp169</l>
+<l>dhaṃmaṃ care sucaritaṃ na naṃ duccaritaṃ care |</l>
+<l>dhammacārī sukhaṃ śeti assiṃ loke paramhi ca ||</l>
+</lg>
+
+<lg>
+<l>Uv30:5</l>
+<l>dharmaṃ caret sucaritaṃ nainaṃ duścaritaṃ caret |</l>
+<l>dharmacārī sukhaṃ śete hy asmiṃ loke paratra ca ||</l>
+</lg>
+
+<lg>
+<l>225</l>
+<l>dhaṃmaṃ care sucaritaṃ na naṃ duccaritaṃ care |</l>
+<l>brahmacārī sukhaṃ śeti assiṃ loke paramhi ca ||</l>
+</lg>
+
+<lg>
+<l>226 Dhp364</l>
+<l>dhaṃmārāmo dhaṃmarato dhaṃmaṃ anuvicintayaṃ |</l>
+<l>dhammam anussaraṃ bhikkhū dhammā na parihāyati ||</l>
+</lg>
+
+<lg>
+<l>Uv32:8</l>
+<l>dharmārāmo dharmarato dharmam evānucintayam |</l>
+<l>dharmaṃ cānusmaraṃ bhikṣur dharmān na parihīyate ||</l>
+</lg>
+
+<lg>
+<l>227</l>
+<l>dhammo have rakkhati dhammacārī dhammo sucinno sukhāya dahāti |</l>
+<l>esānuśaṃso dhamme sucinne na doggatiṃ gacchati dhammacārī ||</l>
+</lg>
+
+<lg>
+<l>Uv30:7</l>
+<l>dharmaḥ sadā rakṣati dharmacārinaṃ dharmo sucīrṇaḥ sukham ādadhāti |</l>
+<l>eṣānuśaṃso dharme sucīrne na durgatiṃ gacchati dharmacārī ||</l>
+</lg>
+
+<lg>
+<l>228</l>
+<l>dhammo have rakkhati dhammacārī dhammo sucinno sukhāya dahāti |</l>
+<l>esā 'nuśaṃso dhamme sucinne na doggatiṃ gaccha&lt;ccha&gt;ti brahmacārī ||</l>
+</lg>
+
+<lg>
+<l>229 Dhp155</l>
+<l>acarittā brahmaceraṃ aladdhā yovvane dhanaṃ |</l>
+<l>jinnakroṃcā va jhāyaṃti jhīnamacche va pallare ||</l>
+</lg>
+
+<lg>
+<l>Uv17:3</l>
+<l>acaritvā brahmaceryam alabdhvā yauvane dhanam |</l>
+<l>jīrṇakrauñcaiva dhyāyante 'lpamatsya iva palvale ||</l>
+</lg>
+
+<lg>
+<l>230 Dhp156</l>
+<l>acarittā brahmaceraṃ aladdhā yovvane dhanaṃ |</l>
+<l>śenti cāpādhikinno vā porāṇāni a 'nutthanaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv17:4</l>
+<l>acaritvā brahmacaryam alabdhvā yauvane dhanam |</l>
+<l>śenti cāpātikīrṇā vā paurāṇāny anucintitāḥ ||</l>
+</lg>
+
+<lg>
+<l>231 Dhp91</l>
+<l>ujjujjanti satīmanto na nikete ramaṃti te |</l>
+<l>haṃsā va pallaraṃ hettā okam okaṃ jahaṃti te ||</l>
+</lg>
+
+<lg>
+<l>Uv17:1</l>
+<l>smṛtimantaḥ prayujyante na nikete ramanti te |</l>
+<l>haṃsvat palvalaṃ hitvā hy okam oghaṃ jahanti te ||</l>
+</lg>
+
+<lg>
+<l>232 Dhp175</l>
+<l>haṃsā va ādiccapathe vehāyasaṃ yānti iddhiyā |</l>
+<l>niyyāṃti dhīrā lokamhi mārasenaṃ pramaddiya ||</l>
+</lg>
+
+<lg>
+<l>Uv17:2</l>
+<l>haṃsādityapathe yānti ākāśe jīvitendriyāḥ |</l>
+<l>niryānti dhīrā lokān mārasainyaṃ pramathya te ||</l>
+</lg>
+
+<lg>
+<l>233 Dhp146</l>
+<l>kin nu hāśo kim ānando niccaṃ prajjalite sati |</l>
+<l>andhakāramhi prakkhittā pradīpaṃ na gaveṣatha ||</l>
+</lg>
+
+<lg>
+<l>Uv1:4</l>
+<l>ko nu harṣaḥ ka ānanda evaṃ prajvalite sati |</l>
+<l>andhakāraṃ praviṣṭāḥ stha pradīpaṃ na gaveṣatha ||</l>
+</lg>
+
+<lg>
+<l>234 Dhp315</l>
+<l>praccaṃtimaṃ vā nagaraṃ guttaṃ sāntabāhiraṃ |</l>
+<l>evaṃ rakkhatha āttānaṃ khaṇo vo mā upaccagū |</l>
+<l>khaṇātītā hi śocaṃti nirayamhi samappitā ||</l>
+</lg>
+
+<lg>
+<l>Uv5:16,17</l>
+<l>yathā pratyantanagaraṃ guptam antarbahisthiram |</l>
+<l>evaṃ gopayatātmānaṃ kṣaṇo vo mā hy upatyagāt |</l>
+<l>kṣaṇātītā hi śocante narakeṣu samarpitāḥ ||</l>
+</lg>
+
+<lg>
+<l>235 Dhp264</l>
+<l>na muṇḍabhāvā śamaṇo avrato alikaṃ bhaṇaṃ |</l>
+<l>icchālobhasamāpanno śamaṇo kiṃ bhaviṣyati ||</l>
+</lg>
+
+<lg>
+<l>Uv11:13</l>
+<l>na muṇḍabhāvāc chramaṇo hy avṛtas tv anṛtaṃ vadan |</l>
+<l>icchālobhasamāpannaḥ śramaṇaḥ kiṃ bhaviṣyati ||</l>
+</lg>
+
+<lg>
+<l>236 Dhp265</l>
+<l>yo tu śameti pāpāni aṇutthūlāni sabbaśo |</l>
+<l>śamaṇā eva pāpānāṃ śamaṇo ti pravuccati ||</l>
+</lg>
+
+<lg>
+<l>Uv11:14</l>
+<l>śamitaṃ yena pāpaṃ syād aṇusthūlaṃ hi sarvaśaḥ |</l>
+<l>śamitatvāt tu pāpānāṃ śramaṇo hi nirucyate ||</l>
+</lg>
+
+<lg>
+<l>237 Dhp339</l>
+<l>yassa chattrīśatiṃ sotā mānāphassamayā bhriśā |</l>
+<l>vāhā vahanti dudriṣṭiṃ saṃkappā ggredhaniśśitā ||</l>
+</lg>
+
+<lg>
+<l>Uv31:29</l>
+<l>srotāṃsi yasya ṣaṭtriṃśan manaḥprasravaṇnāni hi |</l>
+<l>vahanti nityaṃ durdṛṣṭeḥ saṃkalpair gredhaniḥśritaiḥ ||</l>
+</lg>
+
+<lg>
+<l>238 Dhp221</l>
+<l>krodhaṃ jahe viprajaheya mānaṃ saṃyojanaṃ sabbam atikrameyā |</l>
+<l>taṃ nāmarūpamhi asajjamānaṃ akiṃcanaṃ nānupatanti dukkhā ||</l>
+</lg>
+
+<lg>
+<l>Uv20:1</l>
+<l>krodhaṃ jahet viprajahec ca mānaṃ saṃyojanaṃ sarvam atikrameta |</l>
+<l>taṃ nāmne rūpe ca asajyamānam akiñcanaṃ nānupatanti saṅgāḥ ||</l>
+</lg>
+
+<p>  śaraṇavarggaḥ
+***** Khānti *****</p>
+
+<lg>
+<l>239 Dhp184</l>
+<l>khāntī paramaṃ tapo titikkhā nibbāṇaṃ paramaṃ vadanti buddhā |</l>
+<l>na hi pravrajito paropaghātī śmaṇo hoti pare vihesayāno ||</l>
+</lg>
+
+<lg>
+<l>Uv26:2</l>
+<l>kṣāntiḥ paramaṃ tapas titīkṣā nirvāṇaṃ paramaṃ vadanti buddhāḥ |</l>
+<l>na hi pravrajitaḥ paropatāpī śramaṇo bhavati paraṃ viheṭhayaṃ vai ||</l>
+</lg>
+
+<lg>
+<l>240 Dhp225</l>
+<l>ahiṃsakā ye munayo niccaṃ kāyena saṃvṛtā |</l>
+<l>te yānti accutaṃ ṭṭhāṇaṃ yattha gantā na śocati ||</l>
+</lg>
+
+<lg>
+<l>Uv7:7</l>
+<l>ahiṃsakā vai munayo nityaṃ kāyena saṃvṛtāḥ |</l>
+<l>te yānti hy acyutaṃ sthāṇaṃ yatra gantā na śocati ||</l>
+</lg>
+
+<lg>
+<l>241 Dhp300</l>
+<l>suprabuddhaṃ prabujjhanti sadā gotamasāvakā |</l>
+<l>yesāṃ divā ca rātto ca ahiṃsāya rato mano ||</l>
+</lg>
+
+<lg>
+<l>Uv15:17</l>
+<l>suprabuddhaṃ prabudhyante ime gautamasśrāvakāḥ |</l>
+<l>yeṣāṃ divā ca rātrau caiv āhiṃsāyāṃ rataṃ manaḥ ||</l>
+</lg>
+
+<lg>
+<l>242 Dhp301</l>
+<l>suprabuddhaṃ prabujjhanti sadā gotamasāvakā |</l>
+<l>yesāṃ divā ca rātto ca bhāvanāya rato mano ||</l>
+</lg>
+
+<lg>
+<l>Uv15:25</l>
+<l>suprabuddhaṃ prabudhyante ime gautamasśrāvakāḥ |</l>
+<l>yeṣāṃ divā ca rātrau ca nirvāṇe 'bhirataṃ manaḥ ||</l>
+</lg>
+
+<lg>
+<l>243 Dhp299</l>
+<l>suprabuddhaṃ prabujjhanti sadā gotamasāvakā |</l>
+<l>yesāṃ divā ca rātto ca niccaṃ kāyagatā satī ||</l>
+</lg>
+
+<lg>
+<l>Uv15:15</l>
+<l>suprabuddhaṃ prabudhyante ime gautamasśrāvakāḥ |</l>
+<l>yeṣāṃ divā ca rātrau ca nityaṃ kāyagatā smṛtiḥ ||</l>
+</lg>
+
+<lg>
+<l>244 Dhp181</l>
+<l>ye jhānaprasutā dhīrā nekkhaṃmo 'paśame ratā |</l>
+<l>devā pi tesaṃ prihayanti saṃbuddhānāṃ satīmatāṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv21:9</l>
+<l>ye dhyānaprasṛtā dhīrā naiṣkramyopaśame ratāḥ |</l>
+<l>devāpi spṛhayanty eṣāṃ buddhānāṃ śrīmatāṃ sadā ||</l>
+</lg>
+
+<lg>
+<l>245 Dhp98</l>
+<l>aranne yadi vā ggrāme ninne vā yadi vā thale |</l>
+<l>yattha arahanto viharaṃti taṃ bhomaṃ rāmaṇīyakaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv29:18</l>
+<l>grāme vā yadi vāraṇya nimne vā yadi vā sthale |</l>
+<l>yatrārhanto viharanti te deśā ramaṇīyakaṃ ||</l>
+</lg>
+
+<lg>
+<l>246</l>
+<l>ekaṃ pi ce prāṇaṃ aduṣṭacitto mettāyate kuśalī tena hoti |</l>
+<l>sabbe ca prāṇe manasā 'nukaṃpī prabhūtam ayiro prakaroti puṃñaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv31:43</l>
+<l>ekam api cet prāṇam aduṣṭacitto maitrāyate kuśalaṃ tena hi syāt |</l>
+<l>sarvāṃs tu satvāṃ manasānukampaṃ prabhūtam aryaḥ prakaroti puṇyam ||</l>
+</lg>
+
+<p>247
+<lg>
+<l>ye sattaśaṇḍāṃ paṭhaviṃ vijettā rājariṣayo yajamānā 'nupariyagu |</l>
+<l>aśśamedhaṃ puruṣamedhaṃ saṃmaprāsa vāyupeyaṃ nirāggadaṃ |</l>
+<l>mettassa cittassa subhāvitassa kalāṃ pi te nānubhavanti ṣoḍaśiṃ |</l>
+<l>candaprabhāṃ tāragaṇā va sabbe ||</l>
+</lg></p>
+
+<lg>
+<l>248</l>
+<l>yo 'tha metteṇa cittena sabbe prāṇe nukaṃpati |</l>
+<l>mettaṃ se sabbabhūtesu veraṃ tassa na kenaci ||</l>
+</lg>
+
+<lg>
+<l>Uv31:42</l>
+<l>avyāpannena cittena yo bhūtāny anukampate |</l>
+<l>maitraḥ sa sarvasatveṣu vairaṃ tasya na kena cit ||</l>
+</lg>
+
+<lg>
+<l>249</l>
+<l>yassa sabbe ahorātte ahiṃsāya rato mano |</l>
+<l>mettaṃ se sabbabhūtesu veraṃ tassa na kenaci ||</l>
+</lg>
+
+<lg>
+<l>250</l>
+<l>yassa sabbe ahorātte ahiṃsāya rato mano |</l>
+<l>mettaṃ se sabbabhūtesu veraṃ tassa na kenaci ||</l>
+</lg>
+
+<lg>
+<l>251</l>
+<l>yassa sabbe ahorātte niccaṃ kāyagatā satai |</l>
+<l>mettaṃ se sabbabhūtesu veraṃ tassa na kenaci ||</l>
+</lg>
+
+<lg>
+<l>252</l>
+<l>yo na hanti na ghāteti na jināti na jāpaye |</l>
+<l>mettaṃ se sabbabhūtesu veraṃ tassa na kenaci ||</l>
+</lg>
+
+<lg>
+<l>253 Dhp5</l>
+<l>na hi vereṇa verāṇi śāmantīha kadācanaṃ |</l>
+<l>avereṇa tu śāmaṃti esa dhaṃmo sanātano ||</l>
+</lg>
+
+<lg>
+<l>Uv14:11</l>
+<l>na hi vaireṇa vairāṇi śāmyantīha kadā cana |</l>
+<l>kṣantyā vairāṇi śāmyanti eṣa dharmaḥ sanātanaḥ ||</l>
+</lg>
+
+<lg>
+<l>254 Dhp6</l>
+<l>pare ca na vijānaṃti veram ettha jayāmatha |</l>
+<l>ye ca tattha vijānaṃti tato śāṃmaṃti medhakā ||</l>
+</lg>
+
+<lg>
+<l>Uv14:8</l>
+<l>pare hi na vijānanti vayam atrodyamāmahe |</l>
+<l>arta ye tu vijānanti teṣāṃ śāmyanti methakāḥ ||</l>
+</lg>
+
+<lg>
+<l>255 Dhp197</l>
+<l>susukhaṃ vata jīvāmo veriṇesu averiṇo |</l>
+<l>veriṇesu manuṣyesu viharāma averiṇo ||</l>
+</lg>
+
+<lg>
+<l>Uv30:47</l>
+<l>susukhaṃ bata jīvāmo vairikeṣu avairikāḥ |</l>
+<l>vairikeṣu manuṣyeṣu viharāmo hy avairikāḥ ||</l>
+</lg>
+
+<lg>
+<l>256 Dhp199</l>
+<l>susukhaṃ vata jīvāmo ussukesu anussukā |</l>
+<l>ussukesu manuṣyesu viharāma anussukā ||</l>
+</lg>
+
+<lg>
+<l>Uv30:43</l>
+<l>susukhaṃ bata jīvāmo hy utsukeṣu tv anutsukāḥ |</l>
+<l>utsukeṣu manuṣyeṣu viharāmo hy anutsukāḥ ||</l>
+</lg>
+
+<lg>
+<l>257 Dhp200ab</l>
+<l>susukhaṃ vata jīvāmo yesaṃ no nāsti kiṃcanaṃ |</l>
+<l>sakiñcanesu manuṣyesu viharāma akiṃcanaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv30:44ab</l>
+<l>susukhaṃ bata jīvāmo yeṣāṃ no nāsti kiñcanaṃ |</l>
+<l>mithilāyāṃ dahyamānāyāṃ na no dahyati kiñcanam ||</l>
+</lg>
+
+<lg>
+<l>258 Dhp170</l>
+<l>yathā bubbudakaṃ paśśe yathā paśśe marīcikaṃ |</l>
+<l>evaṃ lokaṃ avecchānaṃ maccurājā na paśśati ||</l>
+</lg>
+
+<lg>
+<l>Uv27:15</l>
+<l>yathā budbudikāṃ paśyed yathā paśyen marīcikām |</l>
+<l>evaṃ lokaṃ avekṣaṃ vai mṛtyurājaṃ na paśyati ||</l>
+</lg>
+
+<lg>
+<l>259 Dhp148</l>
+<l>parijinnam idaṃ rūpaṃ roganīḍaṃ prabhaṃguraṃ |</l>
+<l>bhijjīhiti&lt;ti&gt; pūtisaṃdeho maraṇāttaṃ hi jīvitaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv1:34</l>
+<l>parijīrṇam idaṃ rūpaṃ roganīḍaṃ prabhaṅguram |</l>
+<l>bhetsyate pūty asaṃdehaṃ maraṇāntaṃ hi jīvitam ||</l>
+</lg>
+
+<lg>
+<l>260</l>
+<l>jihmaṃ ca driṣṭā dukhitaṃ ca vyādhitaṃ pretañ ca driṣṭā na cirassa mānavo |</l>
+<l>saṃvego tīppe (?) vipulo (?) ajāyatha accecchi dhīro gṛhibandhanāni ||</l>
+</lg>
+
+<lg>
+<l>Uv1:27</l>
+<l>jīrṇaṃ ca dṛṣṭveha tathaiva rogiṇaṃ mṛtaṃ ca dṛṣṭvā vyapayātacetasam |</l>
+<l>jahau sa dhīro gṛhabandhanāni kāmā hi lokasya na supraheyāḥ ||</l>
+</lg>
+
+<p>  khāntivarggaḥ</p>
+
+<p>***** āsava *****</p>
+
+<lg>
+<l>261 Dhp85</l>
+<l>appakā te manuṣyesu ye janā pāragāmino |</l>
+<l>athāyam itarā prajā tīram evānudhāvati ||</l>
+</lg>
+
+<lg>
+<l>Uv29:33</l>
+<l>alpakās te manuṣyeṣu ye janāḥ pāragāmina |</l>
+<l>atheyam itarāḥ prajās tīram evānudhāvati ||</l>
+</lg>
+
+<lg>
+<l>262 Dhp86</l>
+<l>ye ca kho saṃmadākkhāte dhamme dhaṃmānuyattino |</l>
+<l>te janā pāram ehiṃti maccudheyaṃ suduttaraṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv29:34</l>
+<l>ye tarhi samyag ākhyāte dharme dharmānudarśinaḥ |</l>
+<l>te janāḥ pāram eṣyanti mṛtyudheyasya sarvaśaḥ ||</l>
+</lg>
+
+<lg>
+<l>263 Dhp87</l>
+<l>kihne dhamme viprahāya śukre bhāvetha paṇḍitā |</l>
+<l>okā anokam āgaṃma viveko yattha dūramaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv16:14a-d</l>
+<l>kṛṣnāṃ dharmāṃ viprahāya śuklāṃ bhāvayatha bhikṣavaḥ |</l>
+<l>okād anokam āgamya vivekaṃ anubṛṃhayet ||</l>
+</lg>
+
+<lg>
+<l>264 Dhp88</l>
+<l>tatthābhiratim eṣāṇā hettā kāme akiṃcanā |</l>
+<l>payirodametha āttānaṃ cittaṃ kileśehi sabbaśo ||</l>
+</lg>
+
+<lg>
+<l>Uv16:14ef</l>
+<l>tatra cābhirametāryo hitvā kāmān akiñcanaḥ |</l>
+<l>(payirodametha āttānaṃ cittaṃ kileśehi sabbaśo ||)</l>
+</lg>
+
+<lg>
+<l>265 Dhp89</l>
+<l>yassa saṃbodhiaṃgehi samaṃ cittaṃ subhāvitaṃ |</l>
+<l>āttānapaṭinissagge anupādāya ye ratā |</l>
+<l>khīṇāsavā jutīmanto te loke parini(v)vṛtā ||</l>
+</lg>
+
+<lg>
+<l>Uv31:39</l>
+<l>saṃbodhyaṅgeṣu yeṣāṃs tu samyak cittaṃ subhāvitam |</l>
+<l>ādānaṃ pratiniḥsṛjya cānupādāyam āśritāḥ |</l>
+<l>kṣīṇāsavā vāntadoṣās te loke parinirvṛtāḥ ||</l>
+</lg>
+
+<lg>
+<l>266 Dhp292</l>
+<l>yad&lt;a&gt;hi kiccaṃ tad apaviddhaṃ akiccaṃ puna kīrati |</l>
+<l>unnaddhānāṃ pramattānāṃ tesaṃ vaddhaṃti āsavā ||</l>
+</lg>
+
+<lg>
+<l>Uv4:19a-d</l>
+<l>yat kṛtyaṃ tad apaviddhaṃ akṛtyaṃ kriyate punaḥ |</l>
+<l>uddhatānāṃ pramattānāṃ teṣaṃ vardhanti āsavāḥ ||</l>
+</lg>
+
+<lg>
+<l>267 Dhp293</l>
+<l>yesaṃ ca susamāraddhā niccaṃ kāyagatā satī |</l>
+<l>akiccaṃ te na sevaṃti kicce sātaccakāriṇo |</l>
+<l>satānāṃ samprajānānāṃ tesaṃ khīyaṃti āsavā ||</l>
+</lg>
+
+<lg>
+<l>Uv4:20ab,ef</l>
+<l>yesaṃ ca susamāraddhā niccaṃ kāyagatā satī |</l>
+<l>akiccaṃ te na sevaṃti kicce sātaccakāriṇo |</l>
+<l>satānāṃ samprajānānāṃ tesaṃ khīyaṃti āsavā ||</l>
+</lg>
+
+<lg>
+<l>268 Dhp253</l>
+<l>paravajjānupaśśīnāṃ niccaṃ ojjhāyasaṃñinā |</l>
+<l>āsavā tesaṃ vaddhanti ārā te āsavakkhayā ||</l>
+</lg>
+
+<lg>
+<l>Uv27:2cd,4:19ef</l>
+<l>paravadyānudarśino nityāvadhyānasaṃjñinaḥ |</l>
+<l>āsavās teṣu vardhante ārāt te hy āsravakṣayāt ||</l>
+</lg>
+
+<lg>
+<l>269 Dhp226</l>
+<l>jāgarikām anuyuttānāṃ ahorāttānuśikkhiṇāṃ |</l>
+<l>nibbāne adhimuttānāṃ atthaṃ gacchaṃti āsavā ||</l>
+</lg>
+
+<lg>
+<l>Uv15:8</l>
+<l>jāgaryam anuyuktānām ahorātrānuśikṣiṇām |</l>
+<l>amṛtaṃ cādhimuktānām astaṃ gacchanti āsravāḥ ||</l>
+</lg>
+
+<p>270 Dhp93
+yesā 'savā parikkhīṇā āhāre ca aniśśitā |
+śuṃñatā ānimitto ca vimogho yesa gocaro |
+ākāśe va śakuntānāṃ padaṃ tesaṃ durannayaṃ |
+Uv29:31
+yeṣāṃ bhavaḥ parikṣīṇo hy aparāntaṃ ca nāśritāḥ |
+śunyatā cānimittaṃ ca samādhiś caiva gocaraḥ |
+ākāśaiva śakuntānāṃ padaṃ teṣaṃ duranvayam |</p>
+
+<lg>
+<l>271 Dhp271</l>
+<l>na hi śīlavrateneva bāhuśoccena vā puna |</l>
+<l>atha vā samādhilābhena vivittaśayanena vā ||</l>
+</lg>
+
+<lg>
+<l>Uv32:31</l>
+<l>na śīlavratamātreṇa bahuśrutyena vā punaḥ |</l>
+<l>tathā samādhilābhena viviktaśayanena vā ||</l>
+</lg>
+
+<lg>
+<l>272 Dhp272</l>
+<l>phusāma nekkhaṃmasukhaṃ apṛthujjanasevitaṃ |</l>
+<l>bhikkhū vi&lt;ssa&gt;śśāsamāpādi aprāpyāsavakkhayaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv32:32</l>
+<l>bhikṣur viśvāsam āpadyet aprāpte hy āsavakṣaye |</l>
+<l>spṛśet tu saṃbodhisukham akāpuruṣasevitam ||</l>
+</lg>
+
+<lg>
+<l>273</l>
+<l>nāyaṃ pramajjituṃ kālo 'prāpyāsvakkhayaṃ |</l>
+<l>pramattaṃ dukham anneti sīhaṃ vā mṛgamātikā ||</l>
+</lg>
+
+<lg>
+<l>Uv4:13</l>
+<l>nāyaṃ pramādakālaḥ syād aprāpte hy āsvakṣaye |</l>
+<l>māraḥ pramattam anveti siṃhaṃ vā mṛgamātṛkā ||</l>
+</lg>
+
+<lg>
+<l>274 Dhp126</l>
+<l>gabbham eke okraṃmanti nirayaṃ pāpakaṃmuṇo |</l>
+<l>saggaṃ sugatino yānti parinivvānti anāsavā ||</l>
+</lg>
+
+<lg>
+<l>275 Dhp82</l>
+<l>yathā hrado 'ssa gaṃbhīro viprasanno anāvilo |</l>
+<l>evaṃ dhaṃmāṇi śotthāna viprasīdaṃti paṇḍitā ||</l>
+</lg>
+
+<lg>
+<l>Uv17:11</l>
+<l>yathā hradaḥ sugambhīro viprasanno hy anāvilaḥ |</l>
+<l>evaṃ śrutvā hi saddharmaṃ viprasīdanti paṇḍitāḥ ||</l>
+</lg>
+
+<lg>
+<l>276 Dhp179</l>
+<l>yassa jitaṃ nā 'ppajjīyati jitaṃ assā na upeti antako |</l>
+<l>taṃ buddham anomanikramaṃ apadaṃ kena padena nehisi ||</l>
+</lg>
+
+<lg>
+<l>Uv29:52</l>
+<l>yasya jitaṃ nopajīyate jitam anveti na kaṃ cid eva loke |</l>
+<l>taṃ buddham anantagocaramaṃ hy apadaṃ kena padena neṣyasi ||</l>
+</lg>
+
+<lg>
+<l>277 Dhp180</l>
+<l>yassa jālinī visattikā tahnā nāsti kahiṃ ci netaye |</l>
+<l>taṃ buddham anantagocaraṃ apadaṃ kena padena nehisi ||</l>
+</lg>
+
+<lg>
+<l>Uv29:53</l>
+<l>yasya jālinī viṣaktikā tṛṣṇā nāsti hi lokanāyinī |</l>
+<l>taṃ buddham anantagocaraṃ hy apadaṃ kena padena neṣyasi ||</l>
+</lg>
+
+<p>  āsavavarggaḥ</p>
+
+<p>***** Vācā *****</p>
+
+<lg>
+<l>278 Dhp281</l>
+<l>vācānurakkhī manasā susaṃvṛto kāyena yo akuśalaṃ na sevati |</l>
+<l>ete tt(r)ayo kaṃmapathe viśodhiya prāppojja so śāntipadaṃ anuttaraṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv7:12</l>
+<l>vācānurakṣī manasā susaṃvṛtaḥ kāyena caivākuśalaṃ na kuryāt |</l>
+<l>etāṃ śubhāṃ karmapathāṃ viśodhayann ārādhayen mārgaṃ ṛṣipraveditam ||</l>
+</lg>
+
+<lg>
+<l>279 Dhp231</l>
+<l>kāyapradoṣaṃ rakkheyā kāyena saṃvṛto siyā |</l>
+<l>kāyaduccaritaṃ hettā kāyena sucaritaṃ care ||</l>
+</lg>
+
+<lg>
+<l>Uv7:1</l>
+<l>kāyapradoṣaṃ rakṣeta syāt kāyena susaṃvṛtaḥ |</l>
+<l>kāyaduścaritaṃ hitvā kāyena sukṛtaṃ caret ||</l>
+</lg>
+
+<lg>
+<l>280 Dhp232</l>
+<l>vācāpradoṣaṃ rakkheyā vācāya saṃvṛto siyā |</l>
+<l>vācāduccaritaṃ hettā vācāya sucaritaṃ care ||</l>
+</lg>
+
+<lg>
+<l>Uv7:2</l>
+<l>vācāḥ pradoṣaṃ rakṣeta vacasā saṃvṛto bhavet |</l>
+<l>vāco duścaritaṃ hitvā vācā sucaritaṃ caret ||</l>
+</lg>
+
+<lg>
+<l>281 Dhp233</l>
+<l>manapradoṣaṃ rakkheyā manasā saṃvṛto siyā |</l>
+<l>manoduccaritaṃ hettā manasā sucaritaṃ care ||</l>
+</lg>
+
+<lg>
+<l>Uv7:3</l>
+<l>manaḥpradoṣaṃ rakṣeta manasā saṃvṛto bhavet |</l>
+<l>manoduścaritaṃ hitvā manaḥsucaritaṃ caret ||</l>
+</lg>
+
+<lg>
+<l>282 Dhp234</l>
+<l>kāyena saṃvṛtā dhīrā vācāya utta cetasā |</l>
+<l>sabbattha saṃvṛtā dhīrā te ve suparisaṃvṛtā ||</l>
+</lg>
+
+<lg>
+<l>Uv7:10a-d</l>
+<l>kāyena saṃvṛtā dhīrā dhīrā vācā susaṃvṛtāḥ |</l>
+<l>manasā saṃvṛtā dhīrā dhīrāḥ sarvatra saṃvṛtāḥ ||</l>
+</lg>
+
+<lg>
+<l>283 Dhp227</l>
+<l>porāṇaṃ etaṃ ādhora na etaṃ ahunā-r-iva |</l>
+<l>nindanti tohnim āsīnaṃ nindanti mitabhāṇikaṃ |</l>
+<l>bahubhāṇikaṃ pi nindanti nāsti loke anindito ||</l>
+</lg>
+
+<p>Uv29:45c-f
+(porāṇaṃ etaṃ ādhora na etaṃ ahunā-r-iva |)
+<lg>
+<l>nindanti tuṣṇim āsīnaṃ nindanti bahubhāṣiṇaṃ |</l>
+<l>alpabhāṇiṃ ca nindanti nāsti lokeṣu aninditaḥ ||</l>
+</lg></p>
+
+<lg>
+<l>284 Dhp228</l>
+<l>na cābhu na bhaviṣyati na cetarahi vijjati |</l>
+<l>ekāntanindito poṣo ekāntaṃ vā praśaṃsito ||</l>
+</lg>
+
+<p>Uv29:46
+ekāntaninditaḥ puruṣaḥ ekāntaṃ vā praśaṃsitaḥ ||</p>
+
+<p>nābhūd bhaviṣyati ca no na cāpi etarahi vidyate |</p>
+
+<lg>
+<l>285</l>
+<l>yañ ca bālā adhaṃmaṭṭhaṃ pūjeyu garaheyu vā |</l>
+<l>aviñūṃ avibhāvāya na taṃ atthāya kāyaci ||</l>
+</lg>
+
+<lg>
+<l>286 Dhp229</l>
+<l>yañ ca viñū praśanti anuvicca suve suve |</l>
+<l>acchidravattiṃ medhāviṃ praṃñāśīlasamāhitaṃ ||</l>
+</lg>
+
+<lg>
+<l>cf. Uv29:47-48</l>
+<l>yaṃ tu vijñāḥ praśaṃsanti hy anuyujya śubhāśubham |</l>
+<l>medhāvinaṃ vṛttayuktaṃ prajñaṃ śīlaṣu saṃvṛtaṃ ||</l>
+</lg>
+
+<lg>
+<l>287 Dhp230</l>
+<l>nikkhaṃ jāṃbūnadasseva ko taṃ ninditum arihati |</l>
+<l>devā pi naṃ praśansanti brahmuṇā pi praśaṃsito ||</l>
+</lg>
+
+<lg>
+<l>288 Dhp262</l>
+<l>na vākkakaraṇamātt(r)eṇa vannapukkhalatāya vā |</l>
+<l>sādhurūpī naro hoti iśśukī maccharī śaṭho ||</l>
+</lg>
+
+<lg>
+<l>Uv29:10</l>
+<l>na nāmarUpamātreṇa varṇapuṣkalayā na ca |</l>
+<l>sādhurūpo naro bhavati māyāvī matsarī śaṭhaḥ ||</l>
+</lg>
+
+<lg>
+<l>289 cf. Dhp261,263</l>
+<l>yamhi saccaṃ ca dhammo ca viratī saṃyyamo damo |</l>
+<l>sa vāntadoṣo medhāvī sādhurūpī ti vuccati ||</l>
+</lg>
+
+<lg>
+<l>Uv10:7</l>
+<l>yasya śraddhā ca śīlaṃ caiv āhiṃsā saṃyamo damaḥ |</l>
+<l>sa vāntadoṣo medhāvī sādhurūpo nirucyate ||</l>
+</lg>
+
+<lg>
+<l>290 Dhp19</l>
+<l>bahuṃ pi ce sahitaṃ bhāṣamāno na takkaro hoti naro pramatto |</l>
+<l>gopo va gāvo gaṇayaṃ paresaṃ na bhāgavā śāmaṇṇassa hoti ||</l>
+</lg>
+
+<lg>
+<l>Uv4:22</l>
+<l>subahv apīha sahitaṃ bhāṣamāno na tatkaro bhavati naraḥ pramattaḥ |</l>
+<l>gopaiva gāḥ saṃgaṇayaṃ pareṣāṃ na bhāgavāṃ cchrāmaṇyārthasya bhavati ||</l>
+</lg>
+
+<lg>
+<l>291 Dhp20a-c,f</l>
+<l>appaṃ pi ce sahitaṃ bhāṣamāno dhammassa hoti anudhammacārī |</l>
+<l>rāgaṃ ca doṣaṃ ca prahāya mohaṃ vimuttacitto akhilo akaṃcho |</l>
+<l>anupādiyāno iha vā hure vā sa bhāgavā śāmannassa hoti ||</l>
+</lg>
+
+<lg>
+<l>Uv4:23abcf</l>
+<l>alpam api cet sahitaṃ bhāṣamāno dharmasya bhavati anudharmacārī |</l>
+<l>rāgaṃ ca doṣaṃ ca tathaiva mohaṃ (vimuttacitto akhilo akaṃcho |</l>
+<l>anupādiyāno iha vā hure vā) prahāya bhāgī śrāmaṇyasya bhavati ||</l>
+</lg>
+
+<lg>
+<l>292 Dhp224</l>
+<l>saccaṃ bhaṇe na k(r)ujjheyā deyā appā pi yācito |</l>
+<l>etehi ttihi ṭṭhāṇehi gacche devāna santike ||</l>
+</lg>
+
+<lg>
+<l>Uv20:16</l>
+<l>satyaṃ vaden na ca krudhyed dadyād alpād api svayam |</l>
+<l>sthānair ebhis tribhir yukto devānām antikaṃ vrajet ||</l>
+</lg>
+
+<lg>
+<l>293 Dhp177</l>
+<l>na ve kadāryyā devalokaṃ vrajanti bālā hi bhe (te) na praśaṃsanti dānaṃ |</l>
+<l>dhīro tu dānaṃ anumodamāno teneva so devalokaṃ pareti ||</l>
+</lg>
+
+<lg>
+<l>Uv10:2</l>
+<l>na vai kadaryā devalokaṃ vrajanti bālā hi te na praśaṃsanti dānam |</l>
+<l>śrāddhas tu dānaṃ hy anumodamāno 'py evaṃ hy asau bhavati sukhī pararta ||</l>
+</lg>
+
+<lg>
+<l>294 Dhp217</l>
+<l>śīlavantaṃ śuciṃ dacchaṃ dhammaṭṭhaṃ saccavādinaṃ |</l>
+<l>āttano kārakaṃ śantaṃ taṃ jano kurute priyaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv5:24</l>
+<l>dharmasthaṃ śīlasaṃpannaṃ hrīmantaṃ satyavādinam |</l>
+<l>ātmanaḥ kārakaṃ śantaṃ taṃ janaḥ kurute priyam ||</l>
+</lg>
+
+<lg>
+<l>295 Dhp308</l>
+<l>śreyo ayoguḍā bhuttā tattā aggiśikhopamā |</l>
+<l>yaṃ ca bhuñjeya duśśīlo rāṣṭapiṇḍaṃ asaṃyyato ||</l>
+</lg>
+
+<lg>
+<l>Uv9:2</l>
+<l>śreyo hy ayoguḍā bhuktās taptā hy agniśikhopamāḥ |</l>
+<l>na tu bhuñjīta duḥśīlo rāṣṭrapiṇḍam asaṃyataḥ ||</l>
+</lg>
+
+<lg>
+<l>296 Dhp311</l>
+<l>kuśo yathā duggṛhīto hastaṃ evānukaṃtati |</l>
+<l>śāmannaṃ dupparāmāṭṭhaṃ nirayāya upakaṭṭati ||</l>
+</lg>
+
+<lg>
+<l>Uv11:4</l>
+<l>śaro yathā durgṛhīto hastam evāpakṛntati |</l>
+<l>śrāmaṇyaṃ duṣparāmṛṣṭaṃ narakān upakarṣati ||</l>
+</lg>
+
+<lg>
+<l>297 Dhp176</l>
+<l>ekadhaṃmam atītassa muṣāvādissa jaṃtuno |</l>
+<l>vitinnaparalokassa nāsti pāpam akāriyaṃ ||</l>
+</lg>
+
+<p>Uv11:4</p>
+
+<lg>
+<l>298</l>
+<l>na hi śastaṃ suniśitaṃ viṣaṃ hālāhaklaṃ tathā |</l>
+<l>evaṃ khipraṃ atipāteti vācā dubbhāṣitā yathā ||</l>
+</lg>
+
+<lg>
+<l>299</l>
+<l>puruṣassa jāyamānassa kuṭhārī jāyate mukhe |</l>
+<l>yāya chindati āttānaṃ vācaṃ dubbhāṣitaṃ bhaṇaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv8:2</l>
+<l>puruṣasya hi jātasya kuṭhārī jāyate mukhe |</l>
+<l>yayā chinatti hātmānaṃ vācā durbhāṣitaṃ vadan ||</l>
+</lg>
+
+<lg>
+<l>300</l>
+<l>yo hi nindiye praśaṃsati uttavā nindati yo praṣaṃsiye |</l>
+<l>vicināti mukhena so kaliṃ kalinā tena sukhaṃ na vindati ||</l>
+</lg>
+
+<lg>
+<l>Uv8:3</l>
+<l>yo nindiyāṃ praśaṃsati tān api nindati ye praśaṃsiyāḥ |</l>
+<l>sa cinoti mukhena taṃ kaliṃ kalinā tena sukhaṃ na vindati ||</l>
+</lg>
+
+<lg>
+<l>301</l>
+<l>appāmātto ayaṃ kalī yo akkhehi dhanaṃ parājaye |</l>
+<l>sabbassaṃ pi sahāpi āttanā yaṃ eva mahat(t)aro kalī ||</l>
+</lg>
+
+<p>yo sugatesu manaṃ pradūṣaye
+<lg>
+<l>Uv8:4</l>
+<l>alpāmātro hy ayaṃ kalir ya ihākṣeṇa dhanaṃ parājayet |</l>
+<l>ayam atra mahattaraḥ kalir yaḥ sugateṣu manaḥ pradūṣayet ||</l>
+</lg></p>
+
+<lg>
+<l>302</l>
+<l>śataṃ sahasrāṇi nirabbudānāṃ chattrīśatiṃ paṃca ca abbudāni |</l>
+<l>yaṃ ayiragarahī nirayaṃ upeti vācaṃ manaṃ ca praṇidhāya pāpikāṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv8:5</l>
+<l>śataṃ sahasrāṇi nirarbudāni ṣaṭtriṃśatiṃ paṃca tathārbudāni |</l>
+<l>yān āryagarhī narakān upaiti vācaṃ manaś ca praṇidhāya pāpakam ||</l>
+</lg>
+
+<lg>
+<l>303</l>
+<l>kallāṇim eva bhāṣeyā nā 'ssa mucceya pāpikā |</l>
+<l>mokkho kallāṇiye śreyo muttā tapati pāpikaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv8:8</l>
+<l>kalyāṇikāṃ vimuñceta naiva muñceta pāpikām |</l>
+<l>muktā kalyāṇikī śreyo muktā tapati pāpikā ||</l>
+</lg>
+
+<lg>
+<l>304</l>
+<l>kallāṇim eva seveyā nā 'ssa mucceya pāpikā |</l>
+<l>mokkho kallāṇiye śreyo muttā tapati pāpikaṃ ||</l>
+</lg>
+
+<lg>
+<l>305</l>
+<l>vācaṃ bhāṣeya kallāṇiṃ nā 'ssa mucceya pāpika(ṃ) |</l>
+<l>jātaṃ krodhaṃ nivāreyā so biṣabbhi nirujjhati ||</l>
+</lg>
+
+<p>Uv20:2c
+(vācaṃ bhāṣeya kallāṇiṃ nā 'ssa mucceya pāpika(ṃ) |)
+avidyāṃ prajahed dhīraḥ (so biṣabbhi nirujjhati ||)</p>
+
+<p>  vācāvarggaḥ
+***** ātta *****</p>
+
+<lg>
+<l>306 Dhp162</l>
+<l>yassa accantadośśillaṃ malutā sālam ivo 'tatā |</l>
+<l>karoti so tathāttānaṃ yathā naṃ biṣam icchati ||</l>
+</lg>
+
+<lg>
+<l>Uv11:10</l>
+<l>yo 'sāv atyantaduḥśilaḥ sālavāṃ mūlutā yathā |</l>
+<l>karoty asau tathātmānaṃ yathainaṃ dviṣ-d icchati ||</l>
+</lg>
+
+<lg>
+<l>307 Dhp161cd</l>
+<l>āttanā hi kataṃ pāpaṃ āttajaṃ āttasaṃbhavaṃ |</l>
+<l>anumaṃdhati dummedhaṃ vayitaṃ vā ahmamayaṃ maṇiṃ ||</l>
+</lg>
+
+<p>Uv28:12cd
+(āttanā hi kataṃ pāpaṃ āttajaṃ āttasaṃbhavaṃ |)
+abhimathnāti taṃ pāpaṃ vajraṃ aśmamaṇiṃ yathā ||</p>
+
+<lg>
+<l>308 Dhp165</l>
+<l>āttanā hi kataṃ pāpaṃ āttanā saṃkiliśśati |</l>
+<l>āttanā akataṃ pāpaṃ āttanā ye viśujjhati |</l>
+<l>śoddhī aśoddhī praccattaṃ nāṃño aṃñaṃ viśodhaye ||</l>
+</lg>
+
+<lg>
+<l>Uv28:11,12ab</l>
+<l>ātmanā hi kṛte pāpe tv ātmanā kliśyate sadā |</l>
+<l>ātmanā tv akṛte pāpe hy ātmanaiva viśudhyate |</l>
+<l>aśuddhabuddhiṃ pratyātmaṃ nānyo hy anyaṃ viśodhayet ||</l>
+</lg>
+
+<lg>
+<l>309 Dhp50</l>
+<l>na paresaṃ vilomāni na paresaṃ katā 'kataṃ |</l>
+<l>āttanā ye aveccheyā katāni akatāni ca ||</l>
+</lg>
+
+<lg>
+<l>Uv18:9</l>
+<l>na pareṣāṃ vilomāni na pareṣāṃ kṛtākṛtam |</l>
+<l>ātmanas tu samīkṣetā samāni viṣatāni ca ||</l>
+</lg>
+
+<lg>
+<l>310</l>
+<l>na paresaṃ vilomāni na paresaṃ samāsamaṃ |</l>
+<l>āttanā ye aveccheyā samāni viṣamāni ca ||</l>
+</lg>
+
+<lg>
+<l>311</l>
+<l>āttānaṃ ce priyaṃ ñāyyā rakkheyā naṃ surakkhitaṃ |</l>
+<l>na etaṃ sulabhaṃ hoti sukhaṃ dukkatakāriṇāṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv5:13</l>
+<l>ātmānaṃ cet priyaṃ vidyān nainaṃ pāpena yojayet |</l>
+<l>na hy etat sulabhaṃ bhavati sukhaṃ duṣkṛtakāriṇā ||</l>
+</lg>
+
+<lg>
+<l>312 Dhp157</l>
+<l>āttānaṃ ce priyaṃ ñāyyā rakkheyā naṃ surakkhitaṃ |</l>
+<l>ttiṇṇaṃ añataraṃ yāmānaṃ paṭijāggreya paṇḍito ||</l>
+</lg>
+
+<lg>
+<l>Uv5:15abef</l>
+<l>ātmānaṃ cet priyaṃ vidyāt rakṣed enaṃ surakṣitam |</l>
+<l>trayāṇām anyatamaṃ yāmāṃ pratijāgreta paṇḍitaḥ ||</l>
+</lg>
+
+<lg>
+<l>313 Dhp305</l>
+<l>ekāsanaṃ ekaśeyaṃ ekacariyām atandrito |</l>
+<l>eko ramayam āttānaṃ vanānte ramitā siyā ||</l>
+</lg>
+
+<lg>
+<l>Uv23:2</l>
+<l>ekāsanaṃ tv ekaśayyām ekacaryām atandritaḥ |</l>
+<l>ramayec caikam ātmānaṃ vaneṣu ekaḥ sadā vaset ||</l>
+</lg>
+
+<lg>
+<l>314</l>
+<l>yo śāsanaṃ arahatāṃ ayirāṇāṃ dhammajīvināṃ |</l>
+<l>paṭikroti dummedho dṛṣṭiṃ niśśāya pāpikāṃ |</l>
+<l>karoti so tathāttānaṃ yathā naṃ biṣam icchati ||</l>
+</lg>
+
+<lg>
+<l>315 Dhp164</l>
+<l>yo śāsanaṃ arahatāṃ ayirāṇāṃ dhammajīvināṃ |</l>
+<l>paṭikrośati dummedho dṛṣṭiṃ niśśaya pāpikāṃ |</l>
+<l>phalaṃ kaṇṭakaveṇur vā āttaghannāya phallati ||</l>
+</lg>
+
+<lg>
+<l>Uv8:7</l>
+<l>yaḥ śāsanaṃ hy arhatāṃ āryāṇāṃ dharmajīvinām |</l>
+<l>pratikrośati durmedhā dṛṣṭiṃ niḥśritya pāpikām |</l>
+<l>phalāni kaṇṭakasseva phalaty ātmavadhāya saḥ ||</l>
+</lg>
+
+<lg>
+<l>316</l>
+<l>āttānam eva paṭhamaṃ atthe dhaṃme niveśaye |</l>
+<l>athāṃñam anuśāseyā evaṃ hoti yathā ahaṃ ||</l>
+</lg>
+
+<lg>
+<l>cf. Uv23:6</l>
+<l>ātmānam eva prathamaṃ pratirūpe niveśayet |</l>
+<l>tato 'nyam anuśāsita (evaṃ hoti) yathā hy aha(ṃ) ||</l>
+</lg>
+
+<lg>
+<l>317 Dhp158</l>
+<l>āttānam eva paṭhamaṃ paṭirūpe niyojaye |</l>
+<l>athāṃñam anuśāsanto na kiliśśati praṃñavā ||</l>
+</lg>
+
+<lg>
+<l>Uv23:7</l>
+<l>ātmānam eva prathamaṃ pratirūpe niveśayet |</l>
+<l>tato 'nyam anuśāsīta na kliśyata hi paṇḍitaḥ ||</l>
+</lg>
+
+<lg>
+<l>318 Dhp159</l>
+<l>āttanā ye tathā kayirā yathāṃñam anuśāsaye |</l>
+<l>adānto vata dameyā āttā hi kira duddamo ||</l>
+</lg>
+
+<lg>
+<l>Uv23:8</l>
+<l>ātmānaṃ hi tathā kuryāc chāsītānyaṃ yathā svayam |</l>
+<l>sudānto bata me nityam ātmā sa hi sudurdamaḥ ||</l>
+</lg>
+
+<lg>
+<l>319 Dhp104</l>
+<l>āttā hi varaṃ dānto yacchāyam itarā prajā |</l>
+<l>āttadāntassa poṣassa sadā saṃyyatacāriṇo ||</l>
+</lg>
+
+<lg>
+<l>Uv23:4</l>
+<l>ātmā hy asya jitaḥ śreyāṃ yac ceyam itarāḥ prajāḥ |</l>
+<l>ātmadāntasya puruṣasya nityaṃ saṃvṛtacāriṇaḥ ||</l>
+</lg>
+
+<p>320 Dhp105
+neva devā na gandhabbā na māro saha brahmuṇā |
+jitaṃ apajitaṃ kayirā tatharūpassa jantuno |
+<lg>
+<l>Uv23:5</l>
+<l>na devā nāpi gandharvā na māro brāhmuṇā saha |</l>
+<l>jitasyāpajitaṃ kuryus tathā prājñasya bhikṣuṇaḥ ||</l>
+</lg></p>
+
+<lg>
+<l>321 Dhp160</l>
+<l>āttā hi āttano nātho ko hi nātho paro siyā |</l>
+<l>āttanā hi sucinnena nāthaṃ labhati dullabhaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv23:11</l>
+<l>ātmā tv ihātmano nāthaḥ ko nu nāthaḥ paro bhavet |</l>
+<l>ātmanā hi sudāntena nāthaṃ labhati paṇḍitaḥ ||</l>
+</lg>
+
+<lg>
+<l>322 Dhp380</l>
+<l>āttā hi āttano nātho āttā hi āttano gatī |</l>
+<l>tassā saṃyyamayā 'ttānaṃ aśśaṃ bhadraṃ va vāṇijo ||</l>
+</lg>
+
+<lg>
+<l>Uv19:14</l>
+<l>ātmaiva hy ātmano nāthaḥ ātmā śaraṇam ātmanaḥ |</l>
+<l>tasmāt saṃyamayātmānaṃ bhadrām iva sārathiḥ ||</l>
+</lg>
+
+<lg>
+<l>323</l>
+<l>āttānam eva damaye aśśasugatiyā sadā |</l>
+<l>daṃma śaṃma ujjuṃ hohi(hoti) tato akuṭilo bhava ||</l>
+</lg>
+
+<p>tato dānto sukhī hohi(hoti) anupādāya nivṛto |
+<lg>
+<l>Uv19:13ab</l>
+<l>ātmānam eva damayed bhadrāśvam iva sārathiḥ |</l>
+<l>(daṃma śaṃma ujjuṃ hohi(hoti) tato akuṭilo bhava ||</l>
+</lg></p>
+
+<p>tato dānto sukhī hohi(hoti) anupādāya nivṛto |)</p>
+
+<p>324 Dhp379
+āttanā codayā 'ttānaṃ parimaśāttānam āttanā |
+so āttagutto satimā sukhaṃ bhikkhū vihāhisi |</p>
+
+<lg>
+<l>325 Dhp166</l>
+<l>āttadātthaṃ parātthena bahunā pi na hāpaye |</l>
+<l>āttadātthaṃ paraṃ ñāttā sadātthaparamo siyā ||</l>
+</lg>
+
+<lg>
+<l>Uv23:10</l>
+<l>ātmano 'rthaṃ parārthena bahunāpi na hāpayet |</l>
+<l>ātmārthaṃ paramaṃ jñātvā svakārthaparamo bhavet ||</l>
+</lg>
+
+<lg>
+<l>326 Dhp84</l>
+<l>nevāttaheto na parassa heto na saggam icche na dhanaṃ na rāṣṭaṃ |</l>
+<l>necche adhammeṇa samṛddhim āttano so śīlavā praṃñavā dhāṃmiko siyā ||</l>
+</lg>
+
+<p>  āttavarggaḥ</p>
+
+<p>***** Dadantī *****</p>
+
+<lg>
+<l>327 Dhp249</l>
+<l>dadanti ve yathāśraddhaṃ yathāprasadanaṃ janā |</l>
+<l>tattha yo duṃmano hoti paresaṃ pānabhojane |</l>
+<l>na so divā ca rātto ca samādhim adhigacchati ||</l>
+</lg>
+
+<lg>
+<l>Uv10:12</l>
+<l>dadanty eke yathā śraddhā yathāvibhavato janāḥ |</l>
+<l>tatra yo durmanā bhavati pareṣāṃ pānabhojane |</l>
+<l>nāsau divā ca rātrau ca samādhim adhigacchati ||</l>
+</lg>
+
+<lg>
+<l>328 Dhp250</l>
+<l>yassa cetaṃ samucchinnaṃ mūlo 'gghaccataṃ |</l>
+<l>sa ve divā ca rātto ca samādhim adhigacchati ||</l>
+</lg>
+
+<lg>
+<l>Uv10:13</l>
+<l>yasya tv ete samucchinnās tālamastakavad dhatāḥ |</l>
+<l>sa vai divā ca rātrau ca samādhim adhigacchati ||</l>
+</lg>
+
+<lg>
+<l>329 Dhp143a-d,144ab</l>
+<l>aśśo va bhadro kaṣāya puṭṭho ātāpino saviṃgaṇo carāṇo |</l>
+<l>śraddhāya śīlena ca vīriyeṇa ca samādhinā dhammavipaśśanāya ca |</l>
+<l>te khāntisoracchasamādhisaṃṭhitā śutassa praṃñāya ca sāram ajjhagū ||</l>
+</lg>
+
+<lg>
+<l>Uv19:1,2(?)</l>
+<l>bhadro yathāśvaḥ kaśayābhispṛṣṭa hy ātāpinaḥ saṃvijitāś careta |</l>
+<l>śrāddhās tathā śīlaguṇair upetaḥ samāhito dharmaviniścayajñaḥ |</l>
+<l>saṃpannavidyācaraṇaḥ pratismṛtas tāyi sa sarvaṃ prajahāti duḥkham ||</l>
+</lg>
+
+<lg>
+<l>330</l>
+<l>yo driṣṭe dhaṃme labhati śraddhāṃ praṃñāṃ anuttarāṃ |</l>
+<l>sa ve mahaddhano loke moham aṃñaṃ bahuṃ dhanaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv10:9</l>
+<l>yo jīvaloke labhate śraddhāṃ prajñāṃ ca paṇḍitaḥ |</l>
+<l>tad dhi tasya dhanaṃ śreṣṭaṃ hīnam asyetarad dhanam ||</l>
+</lg>
+
+<lg>
+<l>331 Dhp303</l>
+<l>śraddho śīlena saṃpanno yaśabhogasamāhito |</l>
+<l>yaṃ yaṃ so bhajate deśaṃ tattha tattheva pūjito ||</l>
+</lg>
+
+<lg>
+<l>Uv10:8</l>
+<l>śrāddhaḥ śīlena saṃpannas tyāgavāṃ vītamatsaraḥ |</l>
+<l>vrajate yatra yatraiva tatra tatraiva pūjyate ||</l>
+</lg>
+
+<lg>
+<l>332</l>
+<l>śraddhabitiyaṃ puruṣaṃ carantaṃ na naṃ labheyā aśraddho va cāro |</l>
+<l>yaśo cakittī ca tato nam eti saggaṃ ca gacche śarīraṃ prahāya ||</l>
+</lg>
+
+<lg>
+<l>333 Dhp97</l>
+<l>aśraddho akataṃñū ca saṃdhicchedo ca yo naro |</l>
+<l>hatāvakāśo vāntāśo sa ve uttimaporuṣo ||</l>
+</lg>
+
+<lg>
+<l>Uv29:23</l>
+<l>aśraddhaś cākṛtajñaś ca saṃdhicchettā ca yo naraḥ |</l>
+<l>hatāvakāśo vāntāśaḥ sa vai tūttamapūruṣaḥ ||</l>
+</lg>
+
+<lg>
+<l>334 Dhp182</l>
+<l>kiccho buddhāna uppādo kicchā dhammassa deśanā |</l>
+<l>kiccho śraddhapaṭīlābho kicchaṃ māccāna jīvitaṃ ||</l>
+</lg>
+
+<lg>
+<l>335 Dhp38</l>
+<l>anavaṭṭhitacittassa saddhaṃmam avijānato |</l>
+<l>pāriplavaprasādassa praṃñā na paripūrati ||</l>
+</lg>
+
+<lg>
+<l>Uv31:28</l>
+<l>anavasthitacittasya saddharmam avijānataḥ |</l>
+<l>pāriplavaprasādasya prajñā na paripūryate ||</l>
+</lg>
+
+<lg>
+<l>336</l>
+<l>nāprasannacittena duṣṭena kupitena vā |</l>
+<l>śakkaṃ ājānituṃ dhammo sāraṃbhabahulena vā ||</l>
+</lg>
+
+<lg>
+<l>Uv31:25</l>
+<l>nāprasannena cittena duṣṭena kṣubhitena vā |</l>
+<l>dharmo hi śakyam ājñātuṃ saṃrambhabahulena vā ||</l>
+</lg>
+
+<lg>
+<l>337</l>
+<l>yo tu vinīya sāraṃbhaṃ aprasādaṃ ca cetaso |</l>
+<l>prasannacitto sumano sa ve nyāyyā subhāṣitaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv31:26</l>
+<l>vinīya yas tu saṃrambham aprasādaṃ ca cetasā |</l>
+<l>āghātaṃ caiva niḥsṛjya prajānīyāt subhāṣitam ||</l>
+</lg>
+
+<lg>
+<l>338 Dhp178</l>
+<l>manuṣyapaṭilābhena saggānāṃ gamanena ca |</l>
+<l>pṛthivyām ekarājjena sotāpattiphalaṃ varaṃ ||</l>
+</lg>
+
+<lg>
+<l>339</l>
+<l>yassa śraddhā tathāgate acālā supratiṣṭhitā |</l>
+<l>śīlañ ca yassa kallāṇaṃ ayirakāntaṃ praśaṃsiyaṃ ||</l>
+</lg>
+
+<lg>
+<l>340</l>
+<l>saṃghe prasādo yassa asti ujjubhūtañ ca daṃśanaṃ |</l>
+<l>adaridro ti tam āhu amoghaṃ tassa jīvitaṃ ||</l>
+</lg>
+
+<lg>
+<l>341</l>
+<l>tassā śraddhañ ca śīlaṃ ca prasādaṃ dhammadaṃśane |</l>
+<l>anuyuñjeya medhāvī saraṃ buddhāna śāsanaṃ ||</l>
+</lg>
+
+<p>  dadantīvarggaḥ</p>
+
+<p>***** Citta *****</p>
+
+<lg>
+<l>342 Dhp33</l>
+<l>phandanaṃ capalaṃ cittaṃ durakkhaṃ dunnivārayaṃ |</l>
+<l>ujjuṃ karoti medhāvī uṣukāro va tejanā ||</l>
+</lg>
+
+<lg>
+<l>Uv31:8</l>
+<l>spandanaṃ capalaṃ cittaṃ durakṣyaṃ dunnivāraṇaṃ |</l>
+<l>ṛjuṃ karoti medhāvī iṣukāro iva tejasā ||</l>
+</lg>
+
+<lg>
+<l>343 Dhp34</l>
+<l>vārijo va thale khitto okamokātu ubbhato |</l>
+<l>pariphandatimaṃ cittaṃ māradheyaṃ prahātaye ||</l>
+</lg>
+
+<lg>
+<l>Uv31:2</l>
+<l>vārijo vā sthale kṣpto okād oghāt samuddhṛtaḥ |</l>
+<l>parispandati vai cittaṃ māradheyaṃ prahātavai ||</l>
+</lg>
+
+<lg>
+<l>344 Dhp37</l>
+<l>dūraṃgamaṃ ekacaraṃ aśarīraṃ guhāśayaṃ |</l>
+<l>ye cittaṃ saṃyyamehinti mokkhaṃte mārabaṃdhanā ||</l>
+</lg>
+
+<lg>
+<l>345 Dhp35</l>
+<l>dunniggrahassa laghuno yatthakāmanipātino |</l>
+<l>cittassa damatho sādhu cittaṃ dāntaṃ sukhāvahaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv31:1</l>
+<l>durnigrahasya laghuno yatrakāmanipātinaḥ |</l>
+<l>cittasya damanaṃ sādhu cittaṃ dāntaṃ sukhāvaham ||</l>
+</lg>
+
+<lg>
+<l>346 Dhp36</l>
+<l>sududdaśaṃ sunipuṇaṃ yathakāmanipātinaṃ |</l>
+<l>cittaṃ rakkheya medhāvī tad&lt;a&gt;hi guttaṃ sukhāvahaṃ ||</l>
+</lg>
+
+<lg>
+<l>347 Dhp39</l>
+<l>anapāśrayamāṇassa ananvāhatacetaso |</l>
+<l>hettā kallāṇapāni nāsti jāgarato bhayaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv28:6</l>
+<l>anapāśrayamāṇassa ananvāhatacetaso |</l>
+<l>hettā kallāṇapāni nāsti jāgarato bhayaṃ ||</l>
+</lg>
+
+<lg>
+<l>348 Dhp79</l>
+<l>dhammaprītirasaṃ pātā viprasannena cetasā |</l>
+<l>ayirapravedite dhamme sadā ramati paṇḍito ||</l>
+</lg>
+
+<lg>
+<l>Uv30:13</l>
+<l>dharmaprītiḥ sukhaṃ śete viprasannena cetasā |</l>
+<l>āryapravedite dharme ramate paṇḍitaḥ smṛtaḥ ||</l>
+</lg>
+
+<lg>
+<l>349 Dhp41</l>
+<l>acirā vata ayaṃ kāyo paṭhaviṃ abhiśehiti |</l>
+<l>chūḍo apetaviṃnyāṇo nirātthaṃ vā kaṭiṃgaraṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv1:35</l>
+<l>aciraṃ bata kāyo 'yaṃ paṭhivīm abhiśeṣyate |</l>
+<l>śunyo vyapetavijñāṇo nirāstaṃ vā kaḍaṅgaram ||</l>
+</lg>
+
+<lg>
+<l>350 Dhp40</l>
+<l>kuṃbhopamaṃ kāyam imaṃ vidittā nagaropamaṃ cittam adhiṣṭhittā |</l>
+<l>yodheya māraṃ praṃñāyudhena jitaṃ ca rakkhe aniveśano siyā ||</l>
+</lg>
+
+<lg>
+<l>Uv31:35</l>
+<l>kumbhopamaṃ kāyam imaṃ viditvā nagaropamaṃ cittam adhiṣṭhitaṃ ca |</l>
+<l>yudhyeta māraṃ prajñāyudhena jitaṃ ca rakṣed aniveśanaḥ syāt ||</l>
+</lg>
+
+<lg>
+<l>351 Dhp13</l>
+<l>yathā agāraṃ ducchannaṃ vaṭṭhī samivijjhati |</l>
+<l>evaṃ abhāvitaṃ cittaṃ rāgo samitivijjhati ||</l>
+</lg>
+
+<lg>
+<l>Uv31:11</l>
+<l>yathā hy agāraṃ ducchannaṃ vṛṣṭiḥ samatibhindhati |</l>
+<l>evaṃ hy abhāvitaṃ cittaṃ rāgaḥ samatibhindati ||</l>
+</lg>
+
+<lg>
+<l>352 Dhp14</l>
+<l>yathā agāraṃ succhannaṃ vaṭṭhī na samitivijjhati |</l>
+<l>evaṃ subhāvitaṃ cittaṃ rāgo na samitivijjhati ||</l>
+</lg>
+
+<lg>
+<l>Uv31:17</l>
+<l>yathā hy agāraṃ succhannaṃ vṛṣṭir na vyatibhindati |</l>
+<l>evaṃ subhāvitaṃ cittaṃ rāgo na vyatibhindati ||</l>
+</lg>
+
+<lg>
+<l>353</l>
+<l>yathā agāraṃ ducchannaṃ vaṭṭhī samitivijjhati |</l>
+<l>evaṃ abhāvitaṃ cittaṃ rāgo samitivijjhati ||</l>
+</lg>
+
+<lg>
+<l>Uv31:12</l>
+<l>yathā hy agāraṃ ducchannaṃ vṛṣṭir samatibhindati |</l>
+<l>evaṃ hy abhāvitaṃ cittaṃ dveṣaḥ samatibhindati ||</l>
+</lg>
+
+<lg>
+<l>354</l>
+<l>yathā agāraṃ succhannaṃ vaṭṭhī na samitivijjhati |</l>
+<l>evaṃ subhāvitaṃ cittaṃ doṣo na samitivijjhati ||</l>
+</lg>
+
+<lg>
+<l>Uv31:18</l>
+<l>yathā hy agāraṃ succhannaṃ vṛṣṭir na vyatibhindati |</l>
+<l>evaṃ subhāvitaṃ cittaṃ dveṣo na vyatibhindati ||</l>
+</lg>
+
+<lg>
+<l>355</l>
+<l>yathā agāraṃ ducchannaṃ vaṭṭhī samitivijjhati |</l>
+<l>evaṃ abhāvitaṃ cittaṃ moho samitivijjhati ||</l>
+</lg>
+
+<lg>
+<l>Uv31:13</l>
+<l>yathā hy agāraṃ ducchannaṃ vṛṣṭir samatibhindati |</l>
+<l>evaṃ hy abhāvitaṃ cittaṃ mohaḥ samatibhindati ||</l>
+</lg>
+
+<lg>
+<l>356</l>
+<l>yathā agāraṃ succhannaṃ vaṭṭhī na samitivijjhati |</l>
+<l>evaṃ subhāvitaṃ cittaṃ moho na samitivijjhati ||</l>
+</lg>
+
+<lg>
+<l>Uv31:19</l>
+<l>yathā hy agāraṃ succhannaṃ vṛṣṭir na samatibhindati |</l>
+<l>evaṃ subhāvitaṃ cittaṃ moho na vyatibhindati ||</l>
+</lg>
+
+<lg>
+<l>357 Dhp183</l>
+<l>sabbapāpassa akaraṇaṃ kuśalassa apasaṃpadā |</l>
+<l>sacittapayirodamanaṃ etaṃ buddhāna śāsanaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv28:1</l>
+<l>sarvapāpasyaākaraṇaṃ kuśalasyopasaṃpadaḥ |</l>
+<l>svacittaparyavadanam etad buddhasya śāsanam ||</l>
+</lg>
+
+<p>  cittavarggaḥ</p>
+
+<p>***** Māgga *****</p>
+
+<lg>
+<l>358 Dhp273</l>
+<l>māggānaṣṭaṃgiko śreṣṭho saccānāṃ caturo padā |</l>
+<l>virāgo śreṣṭho dhammāṇāṃ dupadānāṃ ca cakkhumā ||</l>
+</lg>
+
+<lg>
+<l>Uv12:4</l>
+<l>mārgeṣu aṣṭāṅgikaḥ śreṣṭhaś catvāry āryāṇi satyataḥ |</l>
+<l>śreṣṭho virāgo dharmāṇāṃ cakṣumāṃ dvipadeṣu ca ||</l>
+</lg>
+
+<lg>
+<l>359 Dhp275cd,276</l>
+<l>ākkhāto vo mayā māggo aṃñāye śallasaḥsano |</l>
+<l>tubbhehi kiccam ātappaṃ akkhātāro tathāgatā |</l>
+<l>paṭipannā pramokkhanti jhāyino mārabaṃdhanā ||</l>
+</lg>
+
+<lg>
+<l>Uv12:9a-d,12:11d</l>
+<l>ākhyāto vo mayā mārgas tv ajñāyai śalyakṛntanaḥ |</l>
+<l>yuṣmābhir eva karaṇīyam ākhātāras tathāgatāḥ |</l>
+<l>pratipannakāḥ prahāsyanti dhyāyino mārabandhanam ||</l>
+</lg>
+
+<lg>
+<l>360 Dhp274,275ab</l>
+<l>eseva māggo nāstaṃ 'ño daṃśanassa viśuddhiye |</l>
+<l>taṃ māggaṃ paṭipajjahvo mārasse 'sā pramohanī |</l>
+<l>etāhi tubbhe paṭipannā dukkhassa antaṃ kariṣyatha ||</l>
+</lg>
+
+<lg>
+<l>Uv12:11ab</l>
+<l>eṣo hi mārgo nāsty anyo darśanasya viśuddhaye |</l>
+<l>(taṃ māggaṃ paṭipajjahvo mārasse 'sā pramohanī |</l>
+<l>etāhi tubbhe paṭipannā dukkhassa antaṃ kariṣyatha ||)</l>
+</lg>
+
+<lg>
+<l>361 Dhp283</l>
+<l>vanaṃ chindatha mā rukkhe vano jāyate bhayaṃ |</l>
+<l>chettā vanañ ca vanadhañ ca nibbanena gamiśśatha ||</l>
+</lg>
+
+<lg>
+<l>Uv18:3</l>
+<l>vanaṃ chindata mā rukṣaṃ vanād vai jāyate bhayam |</l>
+<l>chitvā vanaṃ ca samūlaṃ tu nirvaṇā bhavata bhikṣavaḥ ||</l>
+</lg>
+
+<lg>
+<l>362 Dhp284</l>
+<l>yāvatā vanadho na cchijjati aṇumātto pi narassa ñātisu |</l>
+<l>paṭibaddhamano hi tattha so vaccho cchīravako va mātari ||</l>
+</lg>
+
+<lg>
+<l>Uv18:4</l>
+<l>na chidyate yāvatā vanaṃ hy anumātram api narasya bandhuṣu |</l>
+<l>pratibaddhamanāḥ sa tatra vai vatsaḥ kṣīrapaka iva mātaram ||</l>
+</lg>
+
+<lg>
+<l>363 Dhp285</l>
+<l>ucchinna sineham āttano kumudaṃ śāradikaṃ va pāṇinā |</l>
+<l>śāntimāggam eva byūhaya nibbāṇaṃ sugatena deśitaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv18:5</l>
+<l>ucchindhi hi sneham ātmanaḥ padmaṃ śāradakaṃ yathodakāt |</l>
+<l>śāntimārgam eva bṛṃhayen nirvāṇaṃ sugatena deśitam ||</l>
+</lg>
+
+<lg>
+<l>364 Dhp286</l>
+<l>idaṃ vaśśā kariṣyāmi idaṃ hemaṃna gṛhmasu |</l>
+<l>iti bālo viciṃteti antarāyaṃ na bujjhati ||</l>
+</lg>
+
+<lg>
+<l>Uv1:38</l>
+<l>iha varṣaṃ kariṣyāmi hemantaṃ grīṣmam eva ca |</l>
+<l>bālo vicintayaty evam antarāyaṃ na paśyati ||</l>
+</lg>
+
+<lg>
+<l>365 Dhp287</l>
+<l>taṃ puttapaśusaṃmattaṃ vyāsattamanasaṃ naraṃ |</l>
+<l>suttaṃ ggrāmaṃ mahogho vā maccu-r-ādāya gacchati ||</l>
+</lg>
+
+<lg>
+<l>Uv1:39</l>
+<l>taṃ putrapaśusaṃmattaṃ vyāsaktamanasaṃ naram |</l>
+<l>suptaṃ grāmaṃ mahaughaiva mṛtyur ādāya gacchati ||</l>
+</lg>
+
+<lg>
+<l>366 Dhp288</l>
+<l>na santi puttā ttāṇāya na pitā no pi bhātaro |</l>
+<l>antakenā 'dhibhūtassa nāsti ñātīsu ttāṇatā ||</l>
+</lg>
+
+<lg>
+<l>Uv1:40</l>
+<l>na santi putrās trāṇāya na pitā nāpi bāndhavāḥ |</l>
+<l>antakenābhibhūtasya na hi trāṇā bhavanti te ||</l>
+</lg>
+
+<lg>
+<l>367</l>
+<l>krandatām eva ñātīnaṃ vilapatāṃ cevam ekato |</l>
+<l>janā antarahīyaṃti asakāmā jahaṃti naṃ ||</l>
+</lg>
+
+<p>368 Dhp289
+etaṃ vidiya medhāvī praṃñavā vītamaccharī |
+taṃ saggagamanaṃ māggaṃ niccam eva viśodhaye |
+<lg>
+<l>Uv6:15</l>
+<l>etad dhi dṛṣṭvā śikṣeta sadā śīleṣu paṇḍitaḥ |</l>
+<l>nirvāṇagamanaṃ mārgaṃ kṣipram eva viśodhayet ||</l>
+</lg></p>
+
+<lg>
+<l>369</l>
+<l>tassā hi paṇḍito poṣo saṃpaśśaṃ attham āttano |</l>
+<l>taṃ saggagamanaṃ māggaṃ niccam eva viśodhaye ||</l>
+</lg>
+
+<lg>
+<l>370</l>
+<l>śraddho śīlena saṃpanno praṃñavā susamāhito |</l>
+<l>niccaṃ māggaṃ viśodheti sacchayanaṃ sāṃparāyikaṃ ||</l>
+</lg>
+
+<lg>
+<l>371</l>
+<l>śraddho śīlena saṃpanno praṃñavā susamāhito |</l>
+<l>ramate māggam āsevaṃ ajjhattopasame rato ||</l>
+</lg>
+
+<lg>
+<l>372 Dhp31cd</l>
+<l>śraddho śīlena saṃpanno praṃñāvāgarato sadā |</l>
+<l>saṃyojanam aṇutthūlaṃ daham aggī va gacchati |</l>
+<l>mānamakkhe va pāpake ||</l>
+</lg>
+
+<p>Uv4:29cd
+(śraddho śīlena saṃpanno praṃñāvāgarato sadā |)
+<lg>
+<l>saṃyojanam aṇusthūlaṃ dahann agnir iva gacchati |</l>
+<l>(mānamakkhe va pāpake ||)</l>
+</lg></p>
+
+<lg>
+<l>373 Dhp277</l>
+<l>aniccā sabbasaṃkhārā yato praṃñāya paśśati |</l>
+<l>atha nivvaṇḍate dukkhā esa māggo viśuddhiye ||</l>
+</lg>
+
+<lg>
+<l>Uv12:5</l>
+<l>anityāṃ sarvasaṃskārāṃ prajñāya paśyate sadā |</l>
+<l>atha nirvidyate duḥkhād eṣa mārgo viśuddhaye ||</l>
+</lg>
+
+<lg>
+<l>374 Dhp279</l>
+<l>sabbadhaṃmā anāttā ti yato praṃñāya paśśati |</l>
+<l>atha nivviṇḍate dukkhā esa māggo viśuddhiye ||</l>
+</lg>
+
+<lg>
+<l>Uv12:8</l>
+<l>sarvadharmā anātmānaḥ prajñayā paśyate yadā |</l>
+<l>atha nirvidyate duḥkhād eṣa mārgo viśuddhaye ||</l>
+</lg>
+
+<lg>
+<l>375 Dhp282</l>
+<l>yogā hi bhūrī saṃbhavati ayogā bhūrisaṃkhayo |</l>
+<l>etaṃ jethāpathaṃ ñāttā bhavāya vibhavāya ca |</l>
+<l>tathā śiccheya medhāvī yathā bhūrī pravaddhati ||</l>
+</lg>
+
+<lg>
+<l>Uv29:40</l>
+<l>yogād bhavaḥ prabhavati viyogād bhavasaṃṣayaḥ |</l>
+<l>etad dvaidhāpathaṃ jñātvā bhavāya vibhavāya ca |</l>
+<l>tatra śikṣeta medhāvī yatra yogān atikramet ||</l>
+</lg>
+
+<p>  māggavaggaḥ</p>
+
+<p>***** Sahasra *****</p>
+
+<lg>
+<l>376 Dhp100</l>
+<l>sahasram api ce vācā anatthapadasāhitā |</l>
+<l>ekaṃ atthapadaṃ śreyo yaṃ śottā upaśāṃmati ||</l>
+</lg>
+
+<lg>
+<l>377 Dhp102</l>
+<l>yo ca gāthāśataṃ anatthapadasāhitaṃ |</l>
+<l>ekaṃ dhamapadaṃ śreyo yaṃ śottā upaśāmmati ||</l>
+</lg>
+
+<lg>
+<l>Uv24:1,2</l>
+<l>yac ca gāthāśataṃ anarthapadasaṃhitam |</l>
+<l>ekaṃ dharmapadaṃ śreyo yac chrutvā hy upaśāmyati ||</l>
+</lg>
+
+<lg>
+<l>378 Dhp103</l>
+<l>yo sahasraṃ sahasrāṇāṃ saṃggrāme mānuṣe jine |</l>
+<l>ekaṃ ca paṃñam āttānaṃ sa ve saṃggrāmamuttamo ||</l>
+</lg>
+
+<lg>
+<l>Uv23:3</l>
+<l>yaḥ sahasraṃ sahasrāṇāṃ saṃgrāme dviṣatāṃ jayet |</l>
+<l>yaś cātmānaṃ jayet ekaṃ saṃgrāmo durjayaḥ sa vai ||</l>
+</lg>
+
+<lg>
+<l>379 Dhp106c-f</l>
+<l>māse māse sahasreṇa yo yajeya śataṃ samā |</l>
+<l>ekaṃ ca bhāvi&lt;tta&gt;tāttānaṃ muhuttam api pūjaye |</l>
+<l>sā eva paujanā śreyo yac cha vaśśaśataṃ hutaṃ ||</l>
+</lg>
+
+<p>Uv24:16c-f
+(māse māse sahasreṇa yo yajeya śataṃ samā |)
+<lg>
+<l>yac vaikaṃ bhāvitātmānaṃ muhūrtam api pūjayet |</l>
+<l>sā tasya pūjanā śreṣṭatā na tad varṣaśataṃ hutam ||</l>
+</lg></p>
+
+<lg>
+<l>380 Dhp107</l>
+<l>yo ca vaśśaśataṃ jantū aggiṃ paricare vane |</l>
+<l>ekañ ca bhāvitāttānaṃ muhuttam api pūjaye |</l>
+<l>sā eva pūjanā śreyo yac cha vaśśaśataṃ hutaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv24:16</l>
+<l>yac ca varṣaśataṃ pūrṇam agniṃ paricared vane |</l>
+<l>yac caikaṃ bhāvitātmānaṃ muhūrtam api pūjayet |</l>
+<l>sā tasya pūjanā śreṣṭhā na tad varṣaśataṃ hutam ||</l>
+</lg>
+
+<lg>
+<l>381 Dhp108</l>
+<l>yaṃ kiṃci yaṣṭaṃ va hutaṃ va loke saṃvatsaraṃ yajate puṃñapekhī |</l>
+<l>sabbaṃ pi taṃ na catubbāgaṃ eti abhivādanā ujjugatesu śreyo ||</l>
+</lg>
+
+<lg>
+<l>382</l>
+<l>māse māse sahasreṇa yo yajeya śataṃ samā |</l>
+<l>na taṃ buddhe prasādassa kalām agghati ṣoḍaśiṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv24:21</l>
+<l>māse māse sahasreṇa yo yajeta samāśatam |</l>
+<l>na tad buddhe prasādasya kalām arghati ṣoḍaśīm ||</l>
+</lg>
+
+<lg>
+<l>383</l>
+<l>māse māse sahasreṇa yo yajeya śataṃ samā |</l>
+<l>na taṃ dhamme prasādassa kalām agghati ṣoḍaśiṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv24:22</l>
+<l>māse māse sahasreṇa yo yajeta samāśatam |</l>
+<l>na tad dharme prasādasya kalām arghati ṣoḍaśīm ||</l>
+</lg>
+
+<lg>
+<l>384</l>
+<l>māse māse sahasreṇa yo yajeya śataṃ samā |</l>
+<l>na taṃ saṃghe prasādassa kalām agghati ṣoḍaśiṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv24:23</l>
+<l>māse māse sahasreṇa yo yajeta samāśatam |</l>
+<l>na tad saṃghe prasādasya kalām arghati ṣoḍaśīm ||</l>
+</lg>
+
+<lg>
+<l>385</l>
+<l>māse māse sahasreṇa yo yajeya śataṃ samā |</l>
+<l>na taṃ sākhātadhaṃmānāṃ kalām agghati ṣoḍaśiṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv24:21-23</l>
+<l>māse māse sahasreṇa yo yajeta samāśatam |</l>
+<l>na tad buddhe prasādasya kalām arghati ṣoḍaśīm ||</l>
+</lg>
+
+<lg>
+<l>386</l>
+<l>māse māse kuśāggreṇa bālo bhuñjeya bhojanaṃ |</l>
+<l>na taṃ buddhe prasādassa kalām agghati ṣoḍaśiṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv24:17</l>
+<l>māse māse kuśāgreṇa yo hi bhuñjīta bhojanam |</l>
+<l>na tad buddhe prasādasya kalām arghati ṣoḍaśīm ||</l>
+</lg>
+
+<lg>
+<l>387</l>
+<l>māse māse kuśāggreṇa bālo bhuñjeya bhojanaṃ |</l>
+<l>na taṃ dhamme prasādassa kalām agghati ṣoḍaśiṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv24:18</l>
+<l>māse māse kuśāgreṇa yo hi bhuñjīta bhojanam |</l>
+<l>na tad dharme prasādasya kalām arghati ṣoḍaśīm ||</l>
+</lg>
+
+<lg>
+<l>388</l>
+<l>māse māse kuśāggreṇa bālo bhuñjeya bhojanaṃ |</l>
+<l>na taṃ saṃghe prasādassa kalām agghati ṣoḍaśiṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv24:19</l>
+<l>māse māse kuśāgreṇa yo hi bhuñjīta bhojanam |</l>
+<l>na tad saṃghe prasādasya kalām arghati ṣoḍaśīm ||</l>
+</lg>
+
+<lg>
+<l>389 Dhp70</l>
+<l>māse māse kuśāggreṇa bālo bhuñjeya bhojanaṃ |</l>
+<l>na taṃ sākkhātadhaṃmāṇāṃ kalām agghati ṣoḍaśiṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv24:17-19</l>
+<l>māse māse kuśāgreṇa yo hi bhuñjīta bhojanam |</l>
+<l>na tad buddhe prasādasya kalām arghati ṣoḍaśīm ||</l>
+</lg>
+
+<lg>
+<l>390 Dhp110</l>
+<l>yo ca vaśśaśataṃ jīve duśśīlo asamāhito |</l>
+<l>ekāhaṃ jīvitaṃ śreyo śīlavantassa jhāyato ||</l>
+</lg>
+
+<lg>
+<l>Uv24:3</l>
+<l>yac ca varṣaśataṃ jīved duḥśīlo hy asamāhitaḥ |</l>
+<l>ekāhaṃ jīvitaṃ śreyaḥ sadā śīlavataḥ śuceḥ ||</l>
+</lg>
+
+<lg>
+<l>391 Dhp111</l>
+<l>yo ca vaśśaśataṃ jīve duśśīlo asamāhito |</l>
+<l>ekāhaṃ jīvitaṃ śreyo praṃñavantassa jhāyato ||</l>
+</lg>
+
+<lg>
+<l>Uv24:4</l>
+<l>yac ca varṣaśataṃ jīved duṣprajño asamāhitaḥ |</l>
+<l>ekāhaṃ jīvitaṃ śreyaḥ prājñasya dhyāyinaḥ sadā ||</l>
+</lg>
+
+<lg>
+<l>392 Dhp112</l>
+<l>yo ca vaśśaśataṃ jīve kusīdo hīnavīriyo |</l>
+<l>ekāhaṃ jīvitaṃ śreyo vīryyam ārabhato dṛḍaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv24:5</l>
+<l>yac ca varṣaśataṃ jīved kusīdo hīnavīryavān |</l>
+<l>ekāhaṃ jīvitaṃ śreyo vīryam ārabhato dṛḍham ||</l>
+</lg>
+
+<lg>
+<l>393 Dhp113</l>
+<l>yo ca vaśśaśataṃ jīve apaśśaṃ udayavyayaṃ |</l>
+<l>ekāhaṃ jīvitaṃ śreyo paśśato udayavyayaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv24:6</l>
+<l>yac ca varṣaśataṃ jīved apaśyann udayavyayam |</l>
+<l>ekāhaṃ jīvitaṃ śreyaḥ paśyato hy udayavyayam ||</l>
+</lg>
+
+<lg>
+<l>394 Dhp115</l>
+<l>yo ca vaśśaśataṃ jīve apaśśaṃ dhammaṃ uttamaṃ |</l>
+<l>ekā 'haṃ jīvitaṃ śreyo paśśato dhammaṃ uttamaṃ ||</l>
+</lg>
+
+<lg>
+<l>395 Dhp114</l>
+<l>yo ca vaśśaśataṃ jīve apaśśaṃ amataṃ padaṃ |</l>
+<l>ekā 'haṃ jīvitaṃ śreyo paśśato amataṃ padaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv24:15</l>
+<l>yac ca varṣaśataṃ jīved apaśyann amṛtaṃ padam |</l>
+<l>ekāhaṃ jīvitaṃ śreyaḥ paśyato hy amṛtaṃ padam ||</l>
+</lg>
+
+<lg>
+<l>396</l>
+<l>yo ca vaśśaśataṃ jīve saddhaṃme apratiṣṭhito |</l>
+<l>ekā 'haṃ jīvitaṃ śreyo sadhaṃmaṃ iha vijānato ||</l>
+</lg>
+
+<lg>
+<l>397</l>
+<l>yo ca vaśśaśataṃ jīve aprāpya āsavakkhayaṃ |</l>
+<l>ekā 'haṃ jīvitaṃ śreyo prāpyato āsavakkhayaṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv24:8</l>
+<l>yac ca varṣaśataṃ jīved apaśyann āsravakṣayam |</l>
+<l>ekāhaṃ jīvitaṃ śreyaḥ paśyato hy āsavakṣayam ||</l>
+</lg>
+
+<p>  sahasravarggaḥ</p>
+
+<p>***** [Uraga] *****</p>
+
+<lg>
+<l>398</l>
+<l>yo nā 'jjhagamī bhavesu sāraṃ vicinaṃ puṣpaṃ iva udumbaresu |</l>
+<l>so bhikkhu jahāti orapāraṃ urago jinnam iva ttacāṃ purāṇiṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv18:21</l>
+<l>yo nādhyagamad bhaveṣu sāraṃ buddhvā puṣpam udumbaresya yadvat |</l>
+<l>sa tu bhikṣur idasṃ jahāty apāraṃ hy urago jīrṇam iva tvacaṃ purāṇam ||</l>
+</lg>
+
+<lg>
+<l>399</l>
+<l>yo uppatitaṃ vineti rāgaṃ visaṭaṃ sappaviṣam va oṣadhīhi |</l>
+<l>so bhikkhu jahāti orapāraṃ urago jinnam iva ttacāṃ purāṇjṃ ||</l>
+</lg>
+
+<lg>
+<l>400</l>
+<l>yo uppatitaṃ vineti doṣaṃ visaṭaṃ sappaviṣam va oṣadhīhi |</l>
+<l>so bhikkhu jahāti orapāraṃ urago jinnam iva ttacāṃ purāṇjṃ ||</l>
+</lg>
+
+<lg>
+<l>401</l>
+<l>yo uppatitaṃ vineti mohaṃ visaṭaṃ sappaviṣam va oṣadhīhi |</l>
+<l>so bhikkhu jahāti orapāraṃ urago jinnam iva ttacāṃ purāṇjṃ ||</l>
+</lg>
+
+<lg>
+<l>402</l>
+<l>yo uppatitaṃ vineti krodhaṃ visaṭaṃ sappaviṣam va oṣadhīhi |</l>
+<l>so bhikkhu jahāti orapāraṃ urago jinnam iva ttacāṃ purāṇjṃ ||</l>
+</lg>
+
+<lg>
+<l>403</l>
+<l>yo uppatitaṃ vineti mānaṃ visaṭaṃ sappaviṣam va oṣadhīhi |</l>
+<l>so bhikkhu jahāti orapāraṃ urago jinnam iva ttacāṃ purāṇiṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv32:65</l>
+<l>yas tūtpatitaṃ nihanti mānaṃ visṛṭaṃ sarpaviṣaṃ yathauṣadhena |</l>
+<l>so tu bhikṣur idaṃ jahāty apāraṃ hy urago jīrṇam iva tvacaṃ purāṇam ||</l>
+</lg>
+
+<lg>
+<l>404</l>
+<l>yo rāgaṃ udicchiyā aśeṣaṃ bisapuṣpaṃ va sareruhaṃ vigāhya |</l>
+<l>so bhikkhu jahāti orapāraṃ urago jinnam iva ttacāṃ purāṇiṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv18:21A=32:56</l>
+<l>yo rāgam udācchinatty aśeṣaṃ bisapuṣpam iva jaleruhaṃ vigāhya |</l>
+<l>sa tu bhikṣur idaṃ jahāty apāraṃ hy urago jīrṇam iva tvacaṃ purāṇam ||</l>
+</lg>
+
+<lg>
+<l>405</l>
+<l>yo doṣaṃ udicchiyā aśeṣaṃ bisapuṣpaṃ va sareruhaṃ vigāhya |</l>
+<l>so bhikkhu jahāti orapāraṃ urago jinnam iva ttacāṃ purāṇiṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv18:21B=32:57</l>
+<l>yo dveṣam udācchinatty aśeṣaṃ bisapuṣpam iva jaleruhaṃ vigāhya |</l>
+<l>sa tu bhikṣur idaṃ jahāty apāraṃ hy urago jīrṇam iva tvacaṃ purāṇam ||</l>
+</lg>
+
+<lg>
+<l>406</l>
+<l>yo mohaṃ udicchiyā aśeṣaṃ bisapuṣpaṃ va sareruhaṃ vigāhya |</l>
+<l>so bhikkhu jahāti orapāraṃ urago jinnam iva ttacāṃ purāṇiṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv18:24C=32:58</l>
+<l>yo moham udācchinatty aśeṣaṃ bisapuṣpam iva jaleruhaṃ vigāhya |</l>
+<l>sa tu bhikṣur idaṃ jahāty apāraṃ hy urago jīrṇam iva tvacaṃ purāṇam ||</l>
+</lg>
+
+<lg>
+<l>407</l>
+<l>yo krodhaṃ udicchiyā aśeṣaṃ bisapuṣpaṃ va sareruhaṃ vigāhya |</l>
+<l>so bhikkhu jahāti orapāraṃ urago jinnam iva ttacāṃ purāṇiṃ ||</l>
+</lg>
+
+<lg>
+<l>408</l>
+<l>yo mānaṃ udicchiyā aśeṣaṃ bisapuṣpaṃ va sareruhaṃ vigāhya |</l>
+<l>so bhikkhu jahāti orapāraṃ urago jinnam iva ttacāṃ purāṇiṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv18:21D=32:59</l>
+<l>yo mānam udācchinatty aśeṣaṃ bisapuṣpam iva jaleruhaṃ vigāhya |</l>
+<l>sa tu bhikṣur idaṃ jahāty apāraṃ hy urago jīrṇam iva tvacaṃ purāṇam ||</l>
+</lg>
+
+<lg>
+<l>409</l>
+<l>yo rāgam udicchiyā aśeṣaṃ kuśa (krama)-saṃgāni va chetta (chetu) bandhanāni |</l>
+<l>so bhikkhu jahāti orapāraṃ urago jinnam iva ttacāṃ purāṇiṃ ||</l>
+</lg>
+
+<lg>
+<l>410</l>
+<l>yo tahnam udicchiyā aśeṣaṃ saritāṃ śīgharayāṃ viśodhayittā |</l>
+<l>so bhikkhu jahāti orapāraṃ urago jinnam iva ttacāṃ purāṇiṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv32:74</l>
+<l>tṛṣṇāṃ ya udācchinatty aśeṣaṃ saritāṃ śīgharajavām aśoṣayajñaḥ |</l>
+<l>sa tu bhikṣur idaṃ jahāty apāraṃ hy urago jīrṇam iva tvacaṃ purāṇam ||</l>
+</lg>
+
+<lg>
+<l>411</l>
+<l>yo nā 'ccasarī na preccasārī sabbaṃ vītasarī imaṃ prapañcaṃ |</l>
+<l>so bhikkhu jahāti orapāraṃ urago jinnam iva ttacāṃ purāṇiṃ ||</l>
+</lg>
+
+<lg>
+<l>412</l>
+<l>yo nā 'ccasarī na preccasārī sabbaṃ idaṃ vitadhaṃ ti moṣadhaṃmaṃ |</l>
+<l>so bhikkhu jahāti orapāraṃ urago jinnam iva ttacāṃ purāṇiṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv32:55</l>
+<l>yo nātyasaraṃ na cātyalīyaṃ jñātvā vitatham imaṃ hi sarvalokam |</l>
+<l>sa tu bhikṣur idaṃ jahāti apāraṃ hy urago jīrṇam iva tvacaṃ purāṇam ||</l>
+</lg>
+
+<lg>
+<l>413</l>
+<l>yassa vanathā na saṃti keci vinibaṃdhāya bhavāya hetukappā |</l>
+<l>so bhikkhu jahāti orapāraṃ urago jinnam iva ttacāṃ purāṇiṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv32:78</l>
+<l>yasya hi vanasā na santi ke cin mūlaṃ cākuśalasya yasya naṣṭam |</l>
+<l>sa tu bhikṣur idaṃ jahāty apāraṃ hy urago jīrṇam iva tvacaṃ purāṇaṃ ||</l>
+</lg>
+
+<lg>
+<l>414</l>
+<l>yassa vanathā na santi keci mūlā akkuśalā samūhatā 'ssa |</l>
+<l>so bhikkhu jahāti orapāraṃ urago jinnam iva ttacāṃ purāṇiṃ ||</l>
+</lg>
+
+<lg>
+<l>Uv32:79</l>
+<l>yasya jvarathā na santi ke cin mūlaṃ cākuśalasya yasya naṣṭam |</l>
+<l>sa tu bhikṣur idaṃ jahāty apāraṃ hy urago jīrṇam iva tvacaṃ purāṇaṃ ||</l>
+</lg>
+
+<p>samāptā dhammapadā amṛtapadāni gāthāśatāni pañca dve ca gāthe || yathā dṛṣṭaṃ tathā likhitam iti parihāroyam asmadīyaḥ || śubhaṃ astu sarvvasatvānānaṃ ||</p>
+
+  </body>
+</text>
+</TEI>

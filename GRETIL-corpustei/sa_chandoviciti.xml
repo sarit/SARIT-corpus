@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_chandoviciti">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Chandoviciti</title>
+	<author></author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>Klaus Wille</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Klaus Wille</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/5_poetry/1_chandas/chandovu.htm">chandovu.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Chandoviciti
+<lb/>Based on the ed. by Dieter Schlingloff: Chandoviciti, Texte zur Sanskritmetrik, Berlin 1958 (Sanskrittexte aus den Turfanfunden, 5). = ChV
+<lb/>
+<lb/>The manuscript of the text is catalogue number 654 in: Sanskrithandschriften aus den Turfanfunden, Teil 1, unter Mitarbeit von W. Clawiter und L. Holzmann hg. von E. Waldschmidt, Wiesbaden 1965 (Verzeichnis der Orientalischen Handschriften in Deutschland, 10,1).
+<lb/>
+<lb/>This revised version includes the corrections by Chen, Ruixuan:
+<lb/>"Beobachtungen zur Turfan-Chandoviciti", Indo-Iranian Journal, 56 (2013), pp. 41-60, esp. pp. 43ff.
+<lb/>
+<lb/>Input by Klaus Wille
+<lb/>[GRETIL-Version vom 9.3.2015]
+<lb/>
+<lb/>%&lt;...&gt;% = ITALICS for restored passages
+<lb/>#&lt;...&gt;# = BOLD (marks the beginning of a new line in the manuscript)
+<lb/>@ ... @@ = comments
+<lb/>three hard spaces = pāda boundary
+<lb/>
+<lb/>METRICS:
+<lb/>^ = short
+<lb/>_ = long
+<lb/>X = short/long
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>Dieter Schlingloff: Chandoviciti, Texte zur Sanskritmetrik, Berlin 1958 (Sanskrittexte aus den Turfanfunden, 5). = ChV</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Chandoviciti = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Poetry -- Chandas</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+
+<p>I. Regeln zur Metrik
+II. Chandoviciti
+III. Metrik-Lehrtext</p>
+
+<p>I. Regeln zur Metrik, Versgruppe A: A.1 - A.15</p>
+
+<p>kusumāyudhabh_ _ _ _ _ _ _ ^ _ <hi rend="it">na</hi>maskṛtvā /
+miśrīkṛtaṃ abhidhāsye samu _ _ _ ^ _ _ _ / 1 = ChV_I_A_1
+vṛttāny asaṃskṛ _ _ _ _ _ _ ^ d anyasaṃjñābhiḥ /
+daśadaśaṣaṭmacchandaṃ _ _ _ _ ^ _ _ <hi rend="bold">.i</hi> / 2 // = ChV_I_A_2
+_ _ .y. kādi _ ^ tha saṃjñābhiḥ ṣaḍakṣarādīni /
+ś_ _ _ _ _ _ _ _ _ _ ^ _ _ ^ <hi rend="it">/ 3 //</hi> = ChV_I_A_3
+<hi rend="it">gāya</hi>try uṣṇīg_ .ā śakvaryy aṣ<hi rend="it">ṭ</hi>ir dh<hi rend="it">ṛ</hi>tiś <hi rend="it">ca</hi> jagatī _ /
+_ _ _ _ _ _ _ _ _ _ ^ _ _ <hi rend="bold">.i</hi> / <hi rend="it">4 // = ChV_I_A_4
+ChV_I_A_5 nicht erhalten
+_ _ _ _ _ _ _ _ _ _ ^ _ _ _ / 6 // = ChV_I_A_6
+_ _ .ūs_ _ _ _ _ _ _ ^ _ ^ _ _ _ <hi rend="it">/</hi>
+_ _ _ _ _ _ _ _ _ _ <hi rend="it">a</hi>dhastāt tu / 7 // = ChV_I_A_7
+gurulaghumiśraṃ vṛttaṃ sama _ _ _ ^ _ ^ <hi rend="it">v</hi>iṣamañ ca /
+pāde _ _ _ _ _ _ ^ <hi rend="it">yu</hi>jāyujau viṣamau / 8 // = ChV_I_A_8
+samaviṣamā _ _ _ _ _ _ _ <hi rend="bold">da</hi>rūparūpārddaiḥ /
+y. _ _ _ _ _ _ .iñ ga sa syāt padasamāptau / 9 // = ChV_I_A_9
+@b: Chen: darūparūpārddhaiḥ@@
+yukp<hi rend="it">ā</hi>d<hi rend="it">e</hi> _ _ _ _ _ _ _ ^ _ ^ _ _ _ <hi rend="it">/</hi>
+_ _ _ _ _ _ _ _ _ _ ^ _ _ _ <hi rend="it">/ 10 //</hi> = ChV_I_A_10
+_ _ _ _ _ _ _ _ _ _ ^ _ ^ _ _ _ /
+_ sv<hi rend="it">a</hi>r<hi rend="it">a</hi>v<hi rend="it">a</hi>susvasaṃkh<hi rend="it">yā</hi> _ _ _ _ ^ _ _ _ <hi rend="it">/ 11 //</hi> = ChV_I_A_11
+_ _ _ _ _ _ _ _ _ _ khamaddhyanaidha _ <hi rend="it">/</hi>
+_ _ _ _ _ _ _ _ _ _ ^ _ _ _ <hi rend="it">/ 12 //</hi> = ChV_I_A_12
+_ _ _ _ _ _ _ _ _ _ catuṣṭaye prathame /
+śeṣe _ _ _ _ _ _ _ _ ^ _ _ _ <hi rend="it">/ 13 //</hi> = ChV_I_A_13
+_ _ _ _ _ḥ syād guruṇī pānaṃ na bhāsv^ _ _ _ <hi rend="it">/</hi>
+_ _ _ _ _ _ _ _ _ _ ^ _ _ _ <hi rend="it">/ 14 //</hi> = ChV_I_A_14
+_ _ rūpe dve dve sa ^ _ catv<hi rend="it">ā</hi>r<hi rend="it">i</hi> _ ^ _ _ _ <hi rend="it">/</hi>
+_ _ _ _ _ _ _ _ _ _ ^ _ _ yaḥ <hi rend="it">//</hi> = ChV_I_A_15</hi></p>
+
+<p>Versgruppe B: B1 - B31</p>
+
+<p>ekapañca _ _ _ _ _ _ ^ _ ^ _ _ _ <hi rend="it">/</hi>
+_ _ _ _ ^ _ vṛttaḥ 1 // = ChV_I_B_1
+ekena devaya _ _ _ _ _ ^ _ ^ _ _ _ <hi rend="it">/</hi>
+_ _ _ _ _ _ _ _ _ _ ^ _ _ _ 2 // = ChV_I_B_2
+brahmaṛca _ _ _ _ _ _ _ ^ _ ^ _ _ _ <hi rend="it">/</hi>
+_ _ _ _ _ _ _ _ _ _ ^ _ _ _ <hi rend="it">/ 3 //</hi> = ChV_I_B_3</p>
+
+<p>ChV_I_B_4-5 nicht erhalten</p>
+
+<p>... .r. puraḥ pura ... = ChV_I_B_6
+... <hi rend="it">pura</hi>stādbṛhatī jā ... = ChV_I_B_7
+_ _ _ _ _ _ _ _ tasya dvitīyayogād bṛ<hi rend="it">hatī /</hi>
+_ _ _ _ _ _ _ _ _ _ ^ _ _ ttyau 8 // = ChV_I_B_8
+mahataḥ parā ^ _ _ _ _ _ _ ^ _ ^ _ _ _ <hi rend="it">/</hi>
+_ _ _ _ _ _ _ _ _ _ gatāv ante / 9 <hi rend="it">//</hi> = ChV_I_B_9
+.i _ _ _ _ _ _ _ _ _ ^ _ ^ _ _ _ <hi rend="it">/</hi>
+_ _ _ _ _ _ _ _ _ _ ^ _ padbhiḥ 10 // = ChV_I_B_10
+@d: Chen: paṅ[k](t)iḥ@@</p>
+
+<p>ChV_I_B_11-21 nicht erhalten</p>
+
+<p>... t. syā tāv. m. śr. t. pr. ... = ChV_I_B_22</p>
+
+<p>^ _ ^ _ _ ^ _ ^ _ _ _ _ p. r. y. bhilakṣyate /
+udīcya _ _ ^ _ ^ _ _ _ _ _ _ ^ _ ^ _ <hi rend="it">/ 23 //</hi> = ChV_I_B_23
+_ .y. vṛttir yyad ojayoḥ prācyavṛttir atha śe ^ _ ^ _ <hi rend="it">/</hi>
+_ _ _ _ ^ _ ^ _ _ ^ _ ^ _ _ ^ _ ^ _ <hi rend="it">/ 24 //</hi> = ChV_I_B_24
+<hi rend="it">m</hi>ātrā daśaṣaṭsahi ^ _ _ _ _ _ _ ^ _ ^ _ <hi rend="it">/</hi>
+_ _ _ _ _ ^ _ ^ .ā nidhane ca tathā pi ^ _ ^ _ <hi rend="it">/ 25 //</hi> = ChV_I_B_25
+... .y. tath<hi rend="it">ā</hi> v. c. ... = ChV_I_B_26
+_ _ _ b. yāyāḥ yo dvitī<hi rend="it">ya</hi> _ _ ^ _ ^ _ _ _ <hi rend="it">/</hi>
+_ _ _ _ _ _ _ ṅśo 'nte v. l. h. ko vā 27 // = ChV_I_B_27
+mātrāḥ _ _ _ _ _ _ _ _ ^ _ ^ _ _ _ <hi rend="it">/</hi>
+_ _ _ _ _ _ ^ de yujatu pañcadaśalajalo <hi rend="it">/ 28 //</hi> = ChV_I_B_28
+_ _ _ _ _ _ _ _ _ _ ^ _ ^ _ _ _ /
+na ca niyatākṣa<hi rend="bold">ḥ</hi> gatayo l. _ _ _ m imāḥ saṃjñāḥ 29 //</p>
+
+<p>pra-parā-ṇi-nir-ud-duḥ-saṃ vy-av-ānu-<hi rend="it">pa</hi>ryy-abhy-adhiḥ prat<hi rend="it">i</hi>-sv-<hi rend="it">aṃ</hi>t<hi rend="it">a</hi>
+aty-apy- ... .. .. hi tair gītikapūrvair yathāsaṃkhyam / 30 // = ChV_I_B_30
+@d: Chen: yyathāŚ@@
+caturbhir api yat pādaiḥ saṃkhyāgativi _ ^ _ <hi rend="it">/</hi>
+X X X .āptabhi _ .i padekārthair vigadyate / 31 // = ChV_I_B_31</p>
+
+<p>II. Chandoviciti</p>
+
+<p>tṛṣṭub-jagaty-anuṣṭup sā g<hi rend="it">ā</hi>thā _ ^ _ ^ _ _ _ <hi rend="it">/</hi>
+_ _ _ _ _ _ _ yāskapiṅgal<hi rend="it">asūtr</hi>ebhyaḥ /
+mitradhareṇa ^ _ _ _ _ _ _ ^ _ ^ _ _ _ /
+_ _ _ .y. kṛtiḥ cchandovicitiḥ ^ _ _ _ <hi rend="it">//</hi>
+.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. yat /
+tad vṛttaṃ jā<hi rend="it">ti</hi> .. .. .. .. .. .. .. .. .. .. .. <hi rend="it">/ 1 //</hi> = ChV_II_1_1
+_ _ _ _ tubh.ḥ .ū .y. .. .. dve nakhenam aṣṭau ca /
+_ _ _ _ _ _ _ _ tā _ ^ _ _ _m 2 // = ChV_II_1_2
+@ab: Chen: [tu]bhy<hi rend="it">a</hi>ḥ .ū .y. .. .. dve navainam aṣṭau ca@@
+aṅguly<hi rend="it">aḥ</hi> pādgulyas sarvāḥ samyakpratiṣṭhi<hi rend="bold">t</hi><hi rend="it">ā</hi> bhūm<hi rend="it">au</hi> /
+_ <hi rend="it">suvṛ</hi>tt<hi rend="it">a</hi>nābhiḥ kanyā<hi rend="it">nā</hi>m ādir āryyāṇām / 3 // = ChV_II_1_3
+raktamadhupadmanetrā snigdhāsitabahulasūkṣma<hi rend="bold">mṛ</hi>dukeśī /
+_ _ ^ rūrujaghanā tanuvakṣāṃsodarī pathyā <hi rend="it">/</hi> 4 <hi rend="it">// = ChV_II_1_4
+vipulā jaghanorupayodhareṣu tāmrā<hi rend="it">dharoṣṭhakaracaraṇā /</hi>
+<hi rend="it">ā</hi>yatanāsākṣibhrūlalāṭakarṇā śubhā ka<hi rend="it">nyā / 5</hi> // = ChV_II_1_5
+_ _ ^ locanā citralocanā k. ^ _ ^ _ _ <hi rend="bold">ddhyā</hi> /
+kanyā vihāramadyā miṣapriyā sarva<hi rend="it">taś capalā / 6</hi> // = ChV_II_1_6
+abhyunnatauttarauṣṭhī prahāsa _ _ ^ _ ^ _ _ _ /
+rūkṣakapilāgrakeśīṃ mukha<hi rend="it">capa</hi>lā<hi rend="it">ṃ</hi> tādṛśīṃ vindyāt / 7 // = ChV_II_1_7
+@d: Chen: viṃdyāt@@
+śaśamṛgavarā ^ _ _ _ _ _ _ ^ _ ^ _ _ _ /
+_ _ ^ _ ^ gītapriyā sadā jaghanacapalā sā / 8 <hi rend="it">//</hi> = ChV_II_1_8
+... ca gaṇe yadi viśeṣa ... = ChV_II_1_9
+_ _ _ _ _ _ _ _ _ _ ^ _ ^ _ _ _ /
+_ _ _ _ _ _ ^ pavindyāt saptamaṃ ^ _ _ _ <hi rend="it">/ 10 //</hi> = ChV_II_1_10
+_ _ _ _ _ _ _ _ _ _ ^ _ _ _ /
+su .ty. c. .. ñ c<hi rend="it">ai</hi>kagaṇe kanyā laghu _ ^ _ _ _ <hi rend="it">/ 11 //</hi> = ChV_II_1_11
+<hi rend="it">sa</hi>mupac<hi rend="it">i</hi>tavinayajaghanavimaladaśanasamavipulacibukana ^ _ /
+^ ^ ^ ^ raṇaruciramṛdurucitakiraṇavapur ava .i ^ ^ ^ <hi rend="it">ma</hi>hiṣīm / 12 // = ChV_II_1_12
+durvvākisalaya _ _ _ _ _ <hi rend="bold">.āṃ</hi> viśālavedīmadhyām /
+kṛṣṇām avāpya _ _ _ _ _ _ .ṛtā laghubharā pṛthi<hi rend="it">vī / 13</hi> // = ChV_II_1_13
+_ _ _ _ ṣṭatālukai<hi rend="it">r</hi> jaṅghe sthūle sirātate /
+kheṭāḍi<hi rend="it">r</hi> yasya lakṣaṇaṃ kanyānām etaj jugupsi<hi rend="it">tam / 14</hi> // = ChV_II_1_14
+@ab: Chen: <hi rend="it">pādāv utkṛ</hi>ṣṭatāl<hi rend="it">a</hi>k[au] jaṅghe {ca} sthūle 'nirātate@@
+@c: Chen: vaitāḍīyasya lakṣaṇaṃ@@
+_ _ ślakṣṇair ghanāṅgulīkaiḥ susnighdopacitair 'bhigūḍhagulphaiḥ /
+@Read vigūḍhagulphaiḥ?@@
+sūtāmranakhaiḥ samunna _ _ _ _ _ _ _ ^ _<hi rend="bold">ṃ</hi> labhante / 15
+@cd: Chen: ātāmranakhaiḥ samunna<hi rend="it">tāgraiḥ aupacchandasikaṃ vana</hi>ṃ labhante@@
+govṛṣanetro jagatīndraḥ upacitamāṃsahanuḥ su ^ _ _ /
+_ _ _ _ ^ ^ _ _ _ _ _ <hi rend="it">āpā</hi>tali<hi rend="it">k</hi>āyām / 16 // = ChV 16</hi></p>
+
+<p>Hs. im folgenden andere Reihenfolge
+_ _ _ _ ^ _ ^ _ _ ^ kṛṣṭa _ .<hi rend="it">ot</hi>tar<hi rend="it">o</hi> guṇ<hi rend="it">aiḥ</hi> /
+karṇo vaikarttanī vṛṣa<hi rend="it">ḥ</hi> <hi rend="it">prācyavṛttināṃ</hi> _ ^ <hi rend="bold">.<hi rend="it">ā</hi>bha</hi>vat / 19 // = ChV_II_1_19
+viśālajaghanā sahodarā hariṇākṣāḥ kalamandabhāṣi<hi rend="it">ṇaḥ /</hi>
+^ _ ^ _ sannibhānanās sadṛśā strībhir udīcyavṛttibhiḥ / 20 // = ChV_II_1_20
+pralambabahuśaṅkhapiṇḍikaṃ _ ^ _ ^ _ _ <hi rend="bold">lya</hi>nāsikam /
+mukhaṃ viṣamadantalocanaṃ pāpakarmaṇi sadā pravṛttakam / 21 // = ChV_II_1_21
+@a: Chen: pralambahanuśaṅkhapiṇḍikaṃ@@
+^ _ ^ _ _ _ _ _ ^ _ ^ _ _ _ _ _ /
+^ _ ^ _ <hi rend="it">cāruhā</hi>s<hi rend="it">i</hi>nī priyā bhavat<hi rend="it">i</hi> _ ^ _ ^ _ <hi rend="it">/ 18 //</hi> = ChV_II_1_18
+dīrghasūkṣmamṛdubhiḥ śi<hi rend="it">khā</hi> ^ _ _ ^ _ ^ _ _ ^ _ ^ _ /
+_ ^ _ ^ _ _ ^ _ ^ _ _ ^ _ d y<hi rend="it">u</hi>vatim āparāṃ<hi rend="it">t</hi>i<hi rend="it">kām / 17 // = ChV_II_1_17
+@a: Chen: dīrghasūkṣmamṛdubhiś śi(khā)@@
+aś<hi rend="it">maśrumukho viralair da</hi>n<hi rend="bold">taiḥ</hi> gambhīrākṣo valināsāgraḥ
+nirmāṃsahanuḥ kapilaiḥ keśair mātrāsamakaṃ labhate duḥ<hi rend="it">kham / 22 //</hi> = ChV.22
+@b: Chen: gaṃbhīrākṣo valināsāgraḥ@@
+_ _ ^ raskavidāritāsyaṃ pīnaskandhorudīrghabāhum /
+rājānaṃ viddhi govṛrṣākṣam bhartāraṃ vānavā<hi rend="it">sikānāṃ / 23</hi> // = ChV_II_1_23
+@c: Chen: viddhi govṛṣākṣam@@
+<hi rend="it">str</hi>ī piṅgala ^ _ ^ n. y. .e _ _ ntaromaśamahāgrakaṭim /
+tīkṣṇāgranāsam u ^ _ _ _ _ _ ^ _ ^ _ _ _ _ <hi rend="it">/ 24 // = ChV_II_1_24
+@a: Chen: (str)ī piṃgala@@
+_ _ ^ .orujaghanā vipulā pakvapriyaṅgunibhavarṇā _ <hi rend="it">/</hi>
+_ _ ^ _ ^ ^ ^ _ _ _ _ _ ^ _ ^ ^ ^ _ _ _ <hi rend="it">/ 25 //</hi> = ChV_II_1_25
+_ _ _ ^ payodharanetrā ghana _ _ _ _ _ _ _ <hi rend="it">/</hi>
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <hi rend="it">/ 26 //</hi> = ChV_II_1_26</hi></hi></p>
+
+<p>/// gītyāryā ///</p>
+
+<p>^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ pṛthur ap<hi rend="it">i</hi> ca /
+śirasi puruṣa iha kara ^ ^ ^ ^ ^ ^ ^ ^ ^ <hi rend="bold">tu</hi>la ^ ^ ^ ^ ^ ^ ^ .i jagati / 1 = ChV_II_2_1</p>
+
+<p>śikhā /
+siṃhaskandho mūṣābāhu<hi rend="it">ḥ</hi> _ _ _ _ <hi rend="it">ka</hi>mb<hi rend="it">u</hi>grīvaḥ
+gajavṛsabhacaritasadṛśagatir api ca ruciravapur amarasadṛśa iha bha<hi rend="it">vati / 2</hi> // = ChV_II_2_2</p>
+
+<l rend="it">// cūlikā //</l>
+<p>pṛthukaṭhinam urasi samavipulaśirasam asitagha<hi rend="it">narav</hi>inadasamavacasam /
+^ ^ ^ ^ ^ yanam atha bilajaṭharam anuviśati kamalavananina ^ _ / 3 // = ChV_II_2_3
+asthirāṇi loca<hi rend="it">nāni</hi> _ ^ _ ^ <hi rend="bold">ma</hi>ṇḍalāni /
+tat samāni cānanāni dh<hi rend="it">ṛ</hi>ṣ<hi rend="it">ya</hi>lubdhadāruṇāni / 4 // = ChV_II_2_4
+ati pramāṇy adhaḥ kṛśā ^ _ ^ _ ^ _ ^ _ /
+narasya gan<hi rend="it">tu</hi> _ ^ _ sa ś<hi rend="it">a</hi>straghātam āpnuyāt / 5 // = ChV_II_2_5
+@a: Chen: ati prāmāṇy adhaḥ kṛśā@@
+ājyamahi ^ ^ _ _ _ ^ ^ _ ^ ^ _ _ <hi rend="it">/</hi>
+_ ^ ^ _ <hi rend="it">ma</hi>ṇi<hi rend="it">c</hi>i<hi rend="it">tra</hi>ṃ dhāryati m<hi rend="it">ū</hi>rdh<hi rend="it">n</hi>i vitānam / 6 // = ChV_II_2_6
+anudbaddhaka _ _ _ X X X X ^ _ _ _ /
+X X X X ^ _ _ _ X X X X ^ _ _ _ <hi rend="it">/ 7 //</hi> = ChV_II_2_7
+urmimūlaśiro _ _ X X X X ^ _ ^ _ /
+X X X X ^ _ _ _ X X X X ^ _ ^ _ <hi rend="it">/ 8 //</hi> = ChV_II_2_8
+X n. gaṇḍāgradaśan<hi rend="it">ā</hi> X X X X ^ _ _ _ /
+X X X X ^ ^ ^ _ X X X <hi rend="it">dh</hi>ū<hi rend="it">r</hi>tas<hi rend="it">au</hi>bh<hi rend="it">ā</hi>gyam / 9 // = ChV_II_2_9
+pṛthupīnamṛduśroṇir X X X X ^ _ ^ _ /
+sin. X X ^ _ _ .ā kanyā putrārthinī matā / 10 // = ChV_II_2_10
+maṇḍalaṃ śaṭha _ ^ _ _ ^ _ ^ ^ <hi rend="bold">m</hi> āyatam /
+strīmukhe svanapatyatā durbhagaṃ tu mahāmukham / 11 = ChV_II_2_11</p>
+
+<p>bha-Vipulā <hi rend="it">_ ^ ^</hi>
+bahusatyaṃ _ ^ ^ _ <hi rend="bold"><hi rend="it">v</hi>i</hi>ṣamauṣṭhaṃ kālahikam /
+kṛpanāḍhyaṃ hrasvamukhaṃ catu _ _ṃ _ rtamukham / 12 // = ChV_II_2_12</p>
+
+<p>ra-Vipula <hi rend="it">_ ^ _</hi>
+_ _ _ _ _ ^ _ _ _ _ _ _ _ ^ _ _ /
+_ _ _ _ _ ^ _ ṇḍaṃ krūrānāryaṃ _ ^ _ṃ syāt / 13 // = ChV_II_2_13
+@d: Chen: krūrānaryaṃ@@</p>
+
+<p>na-Vipula <hi rend="it">^ ^ ^</hi>
+pāṭi _ _ ^ ^ ^ _ _ ^ _ _ ^ ^ ^ _ /
+_ ^ _ _ ^ ^ ^ ne vāhinīnāṃ pr<hi rend="it">a</hi>ṇayitā / 14 // = ChV_II_2_14</p>
+
+<p>ta-Vipulā <hi rend="it">_ _ ^</hi>
+snigdha ^ _ _ _ ^ _ _ _ ^ _ _ _ ^ _ /
+_ _ dyayaṃ devaiḥ svayaṃ skando vṛtaḥ senāpa<hi rend="it">tiḥ / 15</hi> // = ChV_II_2_15
+@c: Chen: dyayaṃ devais svayaṃ@@</p>
+
+<p><hi rend="it">// āpīḍaḥ //</hi>
+<hi rend="it">samavimalalalāṭaḥ pṛthu</hi>mṛdukaratalasukumāraḥ /
+upacitamṛgapatis<hi rend="it">usadṛśavarajānuḥ sa bhavati narapatir avanataripujanasukhabhogaḥ / 16 // = ChV_II_2_16</hi></p>
+
+<p><hi rend="it">//</hi> mañjarī //</p>
+
+<p>b: pṛthu<hi rend="it">mṛdukaratalasukumāraḥ</hi>
+a: <hi rend="it">samavimalalalāṭaḥ /</hi>
+c: <hi rend="it">upacitamṛgapatisusadṛśavara</hi>jānuḥ
+d: sa bhavati <hi rend="it">narapatir avanataripujanasukhabhogaḥ / 17</hi> // = ChV_II_2_17</p>
+
+<p><hi rend="it">// lava</hi>lī //</p>
+
+<p>c: upacitamṛgapat<hi rend="it">i</hi>susadṛśavarajānuḥ
+b: <hi rend="it">p</hi>ṛ<hi rend="it">thumṛdukaratalasukumāraḥ /</hi>
+a: <hi rend="it">samavimalalalāṭaḥ</hi>
+d: sa bhavati narapatir avanataripujanasu<hi rend="it">khabhogaḥ / 18 //</hi> = ChV_II_2_18</p>
+
+<l rend="it">// amṛtadhārā //</l>
+<p>d: <hi rend="it">sa bhavati narapatir a</hi>vanataripujanasukhabhogaḥ /
+c: upacita<hi rend="it">mṛgapatisusadṛśavarajānuḥ /</hi>
+b: <hi rend="it">pṛthumṛdukaratalasuku</hi>māraḥ
+a: samavi<hi rend="it">mala</hi>lalāṭaḥ / 19 // = ChV_II_2_19</p>
+
+<p>Udgatā
+^ ^ _ ^ _ ^ ^ ^ _ ^ ^ ^ ^ ^ ^ _ ^ _ ^ _ /
+_ ^ ^ ^ ^ ^ ^ _ ^ ^ _ ^ ^ yāti naubhir a ^ _ ^ _ ^ _ <hi rend="it">/ 20 //</hi> = ChV_II_2_20</p>
+
+<p>Saurabhaka
+^ ^ _ ^ _ ^ ^ ^ _ ^ ^ ^ ^ ^ ^ _ ^ nāsikaḥ /
+prasthitaś ca yadi _ ^ ^ _ ^ ^ _ ^ _ ^ ^ ^ _ ^ _ ^ _ <hi rend="it">/</hi> 21 // = ChV_II_2_21</p>
+
+<p>Lalita
+baliśaktipuṣpitalatāgrataruṇara ^ _ ^ _ ^ _ <hi rend="it">/</hi>
+^ ^ ^ ^ ^ ^ ^ ^ _ ^ ^ jāḥ laḍitaṃ prajāsu viniveśayanti te / 22 // = ChV_II_2_22</p>
+
+<p>Upasthitapracupita
+_ _ _ ^ ^ _ ^ _ ^ _ ^ ^ _ _ ^ ^ _ ^ ^ ^ ^ _ ^ _ ^ _ _ /
+<hi rend="it">pra</hi>cupitam acirasukho ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ _ ^ ^ _ _ <hi rend="it">/ 23 //</hi> = ChV_II_2_23</p>
+
+<p>Vardhamāna
+_ _ _ ^ ^ _ ^ _ ^ _ ^ ^ _ .ā puruṣe pravisṛ<hi rend="it">ta</hi> _ ^ _ ^ _ _ <hi rend="it">/</hi>
+
+^ ^ ^ ^ ^ ^ ^ ^ _ ^ ^ ^ ^ ^ ^ ^ ^ t. puruṣakṛtasamayam api jīvati kālam / 24 = ChV_II_2_24</p>
+
+<p>Śuddhavirāḍṛṣabha
+_ _ _ ^ ^ _ ^ _ ^ _ ^ ^ _ _ ^ ^ _ ^ ^ ^ radund<hi rend="it">u</hi>bhisvanaṃ vā
+te satpuruṣāḥ sa _ ^ _ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ _ ^ ^ _ _ <hi rend="it">/ 25 //</hi> = ChV_II_2_25</p>
+
+<p>Upacitraka
+^ ^ _ ^ ^ _ kh. r. jalpitaṃ jarjarako 'sya ra _ ^ ^ _ _ <hi rend="it">/</hi>
+^ ^ _ ^ ^ _ ^ ^ _ ^ _ _ ^ ^ _ ^ ^ _ ^ ^ _ _ <hi rend="it">/ 26 //</hi> = ChV_II_2_26</p>
+
+<p>Drutamadhyā
+<hi rend="it">ya</hi>dy api śīghraga<hi rend="it">tir</hi> ^ ^ _ _ ^ ^ ^ ^ _ ^ ^ _ ^ ^ _ _ <hi rend="it">/</hi>
+_ ^ ^ _ ^ ^ _ ^ ^ _ _ ^ ^ ^ ^ _ ^ ^ _ ^ ^ _ _ <hi rend="it">/ 27 //</hi> = ChV_II_2_27</p>
+
+<p>Vegavatī
+^ ^ _ ^ ^ _ ^ ^ _ _ _ ^ ^ _ ^ .upi<hi rend="it">ṃ</hi>galanetram /
+puru<hi rend="it">ṣ</hi>. ^ ^ sauhṛda _ _ _ ^ ^ _ ^ ^ _ ^ ^ _ _ <hi rend="it">/ 28 // = ChV_II_2_28</hi></p>
+
+<p>Bhadravirāṭ
+_ _ ^ ^ _ kṣavakṣaṇākṣī gambhīrasvara _ ^ _ ^ _ _ <hi rend="it">/</hi>
+_ _ ^ ^ _ ^ _ ^ _ _ _ _ _ ^ ^ _ ^ _ ^ _ gī / 29 // = ChV_II_2_29</p>
+
+<p>Ketumatī
+ati _ ^ _ ^ ^ ^ _ _ _ ^ ^ _ ^ _ ^ ^ ^ _ _ <hi rend="it">/</hi>
+^ ^ _ ^ _ ^ ^ ^ _ _ <hi rend="it">ke</hi>tumatīv. _ ^ ^ ^ _ _ <hi rend="it">/ 30 //</hi> = ChV_II_2_30</p>
+
+<p>Ākhyānakī
+_ _ ^ _ _ ^ ^ _ ^ _ _ ^ _ ^ _ _ ^ ^ _ ^ _ _ <hi rend="it">/</hi>
+_ _s samācā ^ ^ _ ^ _ _ ^ _ ^ _ _ ^ ^ _ ^ _ _ <hi rend="it">/ 31 //</hi> = ChV_II_2_31</p>
+
+<p>Hariṇapluta
+^ ^ _ ^ ^ _ ^ ^ _ ^ _ ^ ^ ^ h<hi rend="it">aṃ</hi>sagatiḥ sukh^ _ ^ _ <hi rend="it">/</hi>
+^ ^ _ ^ ^ _ ^ ^ _ ^ _ ^ ^ ^ _ ^ ^ _ ^ ^ _ ^ _ <hi rend="it">/</hi> 32 // = ChV_II_2_32</p>
+
+<p>Aparavaktra
+stanajaghanana _ ^ _ ^ _ ^ ^ ^ ^ _ ^ ^ _ ^ _ ^ _
+^ ^ ^ ^ ^ ^ _ ^ _ ^ _ <hi rend="it">na</hi> ratiparo 'paravak<hi rend="it">tra</hi>m īkṣat<hi rend="it">e / 33 //</hi> = ChV_II_2_33</p>
+
+<p>ChV_II_2_34-41 nicht erhalten
+34: Puṣpitāgrā
+^ ^ ^ ^ ^ ^ _ ^ _ ^ _ _
+^ ^ ^ ^ _ ^ ^ _ ^ _ ^ _ _ /
+35: Yavamatī
+_ ^ _ ^ _ ^ _ ^ _ ^ _ ^
+^ _ ^ _ ^ _ ^ _ ^ _ ^ _ _ /
+36: Śikhā
+^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ _
+^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ _
+37: Khañja
+^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ _
+^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ _
+40: Tanumadhyā
+_ _ ^ ^ ^ _
+41: Kumāralalitā
+^ _ ^ ^ ^ _ _</p>
+
+<p>Māṇavakrīḍitaka
+_ ^ ^ _ _ ^ _ ^ _ kap<hi rend="it">i</hi>lākṣi ^ _ ^ /
+_ ^ ^ _ _ ^ _ ^ _ ^ ^ _ _ ^ _ ^ <hi rend="it">/ 42 // = ChV_II_2_42</hi></p>
+
+<p>Citrapadā
+_ ^ ^ _ ^ ^ _ _ ś<hi rend="it">r</hi>oṇipayodharagurvī /
+_ ^ ^ _ ^ ^ _ _ _ ^ ^ _ _ ^ _ _ <hi rend="it">/ 43 // = ChV_II_2_43</hi></p>
+
+<p>Bhujagaśiśusṛtā
+^ ^ ^ ^ ^ ^ _ śroṇī nayanakara ^ _ _ _ /
+^ ^ ^ ^ ^ ^ _ _ _ ^ ^ ^ ^ ^ ^ _ _ _ <hi rend="it">/ 44 //</hi> = ChV_II_2_44
+_ tt.ḥ sūkṣmasamais siv_ ^ _ _ _ _ ^ ^ _ ^ _ ^ _ <hi rend="it">/</hi>
+_ _ _ ^ ^ _ ^ _ ^ _ _ _ _ ^ ^ _ <hi rend="it">pr</hi>iyaṃvadā / 45 // = ChV_II_2_45</p>
+
+<p>yast. ...</p>
+
+<p>Mattā
+_ _ ndhārhaḥ sa tu ^ ^ _ _ _ _ _ _ ^ ^ ^ ^ _ _ <hi rend="it">/</hi>
+_ _ _ _ ^ ^ ^ ^ _ _ _ _ _ _ ^ ^ ^ ^ _ _ <hi rend="it">/ 47 //</hi> = ChV_II_2_47</p>
+
+<p>Indravajrā
+_ māgrahastākṣinakhe ^ _ _ _ _ ^ _ _ ^ ^ _ <hi rend="bold">r la</hi>lāṭam /
+nirk_ ^ _ .e ^ ^ _ ^ _ _ _ _ ^ _ _ ^ ^ _ ^ <hi rend="bold">ha</hi>nyāt / 48 // = ChV_II_2_48</p>
+
+<p>Upendravajrā
+u<hi rend="it">p</hi>e<hi rend="it">ndravajrā</hi> ^ ^ _ ^ _ _ ^ _ ^ _ _ ^ ^ _ ^ _ _ <hi rend="it">/</hi>
+^ _ ^ _ _ ^ ^ _ ^ _ _ ^ _ ^ _ _ ^ ^ _ ^ _ _ <hi rend="it">/ 49 //</hi> = ChV_II_2_49</p>
+
+<p>Śālinī
+_ _ _ _ _ ^ _ _ ^ _ _ _ _ _ _ <hi rend="it">da</hi>kṣiṇāvartanābhiḥ /
+_ _ _ _ _ ^ _ _ ^ _ _ _ _ _ _ _ ^ _ _ ^ _ _ <hi rend="it">/ 51 // = ChV_II_2_51</hi></p>
+
+<p>Vātormī
+_ _ _ gī vikaṭākārajan. _ _ _ _ / ^ ^ _ _ ^ _ _ <hi rend="it">/</hi>
+_ _ _ _ / ^ ^ _ _ ^ _ _ _ _ kanyā drutavātormilo<hi rend="it">lā / 52 //</hi> = ChV_II_2_52</p>
+
+<p>Bhramaravilasita
+_ _ _ _ / ^ ^ ^ ^ ^ ^ _ _ _ _ _ / ^ ^ ^ ^ ^ ^ _
+<hi rend="it">ku</hi>ryāt prītiṃ patiyaśa ^ ^ _ _ _ _ _ / ^ ^ ^ ^ ^ ^ _ <hi rend="it">/ 53 //</hi> = ChV_II_2_53</p>
+
+<p>Rathoddhatā
+_ ^ _ ^ ^ ^ _ ^ _ ^ _ _ ^ .<hi rend="it">ī</hi>ps<hi rend="it">i</hi>tam upaiti kanya<hi rend="it">kā /</hi>
+_ ^ _ ^ ^ ^ _ ^ _ ^ _ _ ^ _ ^ ^ ^ _ ^ _ ^ _ <hi rend="it">/ 54 //</hi> = ChV_II_2_54</p>
+
+<p>Svāgatā
+_ ^ _ ^ daśane tanujihve dr<hi rend="it">o</hi>ṇikā vi ^ ^ _ ^ ^ _ _ <hi rend="it">/</hi>
+_ ^ _ ^ ^ ^ _ ^ ^ _ _ _ ^ _ ^ ^ ^ _ ^ ^ _ .mī / 55 // = ChV_II_2_55</p>
+
+<p>Vṛṇtā
+cara ^ ^ ^ ^ ^ ^ _ _ _ ^ ^ ^ ^ ^ ^ ^ ^ _ _ _ <hi rend="it">/</hi>
+^ ^ ^ ^ ^ ^ ^ ^ _ _ _ ^ ^ ^ ^ ^ ^ ^ ^ _ _ _ <hi rend="it">/ 56 //</hi> = ChV_II_2_56</p>
+
+<p>Śyenī
+śyena gṛddhravāyasā ^ _ ^ _ _ ^ _ ^ _ ^ _ ^ _ ^ _ <hi rend="it">/</hi>
+_ ^ _ ^ _ ^ _ ^ _ ^ _ _ ^ _ ^ _ ^ _ ^ _ ^ _ <hi rend="it">/ 57 //</hi> = ChV_II_2_57</p>
+
+<p>cat.no 654 fol. 16v5 ... pe .. .i .i .. pi ca
+cat.no 654 fol. 17r1 ... .. rukha ..
+cat.no 654 fol. 17r2 ... lasūkṣma ..
+cat.no 654 fol. 17r3 ... rasi ga
+cat.no 654 fol. 17r4 -
+cat.no 654 fol. 17r5 -
+cat.no 654 fol. 17v1 -
+cat.no 654 fol. 17v2 -
+cat.no 654 fol. 17v3 ... va bh.
+cat.no 654 fol. 17v4 ... ..m / lā ..
+cat.no 654 fol. 17v5 ... haṃsai .. ..</p>
+
+<p>Vaiśvadevī
+_ _ _ _ _ / _ ^ _ _ ^ _ _ _ _ _ _ _ / _ ^ _ _ ^ _ _ <hi rend="it">/</hi>
+_ _ _ _ _ / _ ^ _ _ ^ _ _ _ _ _ _ _ v<hi rend="it">ai</hi>śvadevī tanus syāt / 65 <hi rend="it">//</hi> = ChV_II_2_65</p>
+
+<p>Navamālinī
+^ ^ ^ ^ _ ^ _ ^ ^ ^ _ _ ^ ^ ^ ^ _ ^ _ ^ ^ ^ _ _ /
+^ ^ ^ ^ tālasasyasadṛśī vā ^ ^ ^ ^ _ ^ _ ^ ^ ^ _ _ <hi rend="it">/ 66 //</hi> = ChV_II_2_66</p>
+
+<p>Praharṣiṇī
+_ _ _ / ^ ^ v<hi rend="it">i</hi>pulonnat. _ ^ _ .ā vyālaṃbopabhitavī _ ^ _ ^ _ _ <hi rend="it">/</hi>
+_ _ _ / ^ ^ ^ ^ _ ^ _ ^ _ _ _ _ _ / ^ ^ ^ ^ _ ^ _ ^ _ _ <hi rend="it">/ 1 //</hi> = ChV_II_3_1</p>
+
+<p>Rucirā
+^ _ ^ vo bhavati tanuḥ ^ .ār.uṇī si _ ^ _ / ^ ^ ^ ^ _ ^ _ ^ _ <hi rend="it">/</hi>
+^ _ ^ _ / ^ ^ ^ ^ _ ^ _ ^ _ ^ _ ^ _ / ^ ^ ^ ^ _ ^ _ ^ _ <hi rend="it">/ 2 //</hi> = ChV_II_3_2</p>
+
+<p>cat.no 654 fol. 18r5 s. .. bhi ..</p>
+
+<p>Asaṃbādhā
+_ _ _ _ _ / ^ ^ ^ ^ ^ ^ _ _ _ mṛṣṭā kambugrīvasaja ^ ^ ^ _ _ _ <hi rend="it">/</hi>
+_ _ _ _ _ / ^ ^ ^ ^ ^ ^ _ _ _ _ _ _ gyānām urasi tanur a<hi rend="it">saṃbādhā / 4 //</hi> = ChV_II_3_4</p>
+
+<p>Aparājitā
+^ ^ ^ ^ ^ ^ _ / ^ _ ^ ^ _ ^ _ ^ ^ ^ ^ ^ ^ _ gajāṅkuśanāsikā /
+^ ^ ^ ^ ^ ^ _ / ^ _ ^ ^ _ ^ _ ^ ^ ^ ^ ^ ^ _ / ^ _ ^ ^ _ ^ _ <hi rend="it">/ 5 //</hi> = ChV_II_3_5</p>
+
+<p>ChV_II_3_6 nicht erhalten
+Vasantatilakā
+_ _ ^ _ ^ ^ ^ _ si lalāṭapātraṃ snigdha ^ _ ^ ^ ^ _ ^ ^ _ ^ _ _ <hi rend="it">/</hi>
+_ _ ^ _ ^ ^ ha vṛttavareva nār<hi rend="it">ī</hi> kṣipraṃ vasantatilak<hi rend="it">ā</hi> ^ ^ _ ^ _ _ <hi rend="it">/ 7 //</hi> = ChV_II_3_7</p>
+
+<p>Candrāvartā
+^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ khe yadi ca bhavati mṛgapatisadṛśā ^ _ <hi rend="it">/</hi>
+^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ _ ^ ^ ^ ^ ^ ca narapatir amarasamaḥ / 8 // = ChV_II_3_8</p>
+
+<p>Mālā
+vipula ^ ^ ^ / ^ ^ ^ ^ ^ ^ ^ ^ _ ^ ^ ^ ^ ^ ^ / ^ ^ ^ ^ <hi rend="bold">ca</hi>raṇapadam /
+akulajam api pati .i ^ ^ ^ ^ ^ _ ^ ^ ^ ^ ^ ^ / ^ ^ ^ ^ .i ^ ^ pa .i <hi rend="it">/ 9</hi> // = ChV_II_3_9</p>
+
+<p>Maṇiguṇanikara
+urubharam aviṣama ^ ^ ^ ^ ^ ^ _ ^ ^ ^ ^ ^ ^ ^ ^ / ^ ^ ^ ^ ^ ^ _ <hi rend="it">/</hi>
+^ ^ ^ ^ ^ ^ ^ ^ / ^ ^ ^ ^ ^ ^ _ ^ ^ ^ ^ ^ ^ ^ ^ / ^ ^ ^ ^ ^ ^ _ <hi rend="it">/ 10 //</hi> = ChV_II_3_10</p>
+
+<p>Mālinī ^ ^ ^ ^ ^ ^ _ _ / _ ^ _ _ ^ _ _
+Ṛṣabhagajavilasita _ ^ ^ _ ^ _ ^ / ^ ^ ^ ^ ^ ^ ^ ^ _
+Śikhariṇī ^ _ _ _ _ _ / ^ ^ ^ ^ ^ _ _ ^ ^ ^ _
+Pṛthivī ^ _ ^ ^ ^ _ ^ _ / ^ ^ ^ _ ^ _ _ ^ _
+Vaṃśapatrapatita _ ^ ^ _ ^ _ ^ ^ ^ _ / ^ ^ ^ ^ ^ ^ _
+Hariṇī ^ ^ ^ ^ ^ _ / _ _ _ _ / ^ _ ^ ^ _ ^ _
+Mandākrāntā _ _ _ _ / ^ ^ ^ ^ ^ _ / _ ^ _ _ ^ _ _
+Kusumitalatāvellitā _ _ _ _ _ / ^ ^ ^ ^ ^ _ / _ ^ _ _ ^ _ _
+Śārdūlavikrīḍita _ _ _ ^ ^ _ ^ _ ^ ^ ^ _ / _ _ ^ _ _ ^ _
+Suvadanā _ _ _ _ ^ _ _ / ^ ^ ^ ^ ^ ^ _ / _ _ ^ ^ ^ _
+Vṛtta _ ^ _ ^ _ ^ _ ^ _ ^ _ ^ _ ^ _ ^ _ ^ _ ^
+Sragdharā _ _ _ _ ^ _ _ / ^ ^ ^ ^ ^ ^ _ / _ ^ _ _ ^ _ _
+Madraka _ ^ ^ _ ^ _ ^ ^ ^ _ / ^ _ ^ ^ ^ _ ^ _ ^ ^ ^ _
+Aśvalalita ^ ^ ^ ^ _ ^ _ ^ ^ ^ _ / ^ ^ _ ^ ^ _ ^ _ ^ ^ ^ _
+Mattākrīḍā _ _ _ _ _ _ _ _ / ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ _
+Tanvī _ ^ ^ _ _ ^ ^ ^ ^ ^ ^ _ / _ ^ ^ _ ^ ^ ^ ^ ^ ^ ^ _
+Krauñcapadā _ ^ ^ _ _ / _ ^ ^ _ _ / ^ ^ ^ ^ ^ ^ ^ ^ / ^ ^ ^ ^ ^ ^ _
+Bhujaṅgavijṛmbhita _ _ _ _ _ _ _ _ / ^ ^ ^ ^ ^ ^ ^ ^ ^ ^ _ / ^ _ ^ ^ _ ^ _
+Apavāhaka _ _ _ ^ ^ ^ ^ ^ ^ / ^ ^ ^ ^ ^ ^ / ^ ^ ^ ^ ^ ^ / ^ ^ _ _ _
+Daṇḍaka ^ ^ ^ ^ ^ ^ _ ^ _ _ ^ _ _ ^ _ _ ^ _ _ ^ _ _ ^ _ _ ^ _</p>
+
+<p>III. Metrik-Lehrtext, 1. Abschnitt</p>
+
+<p>ChV_III_1_1-25 nicht erhalten</p>
+
+<p>Śrīputoṣṭhī
+^ ^ ^ ^ ^ ^ _ _ _ ^ _ _ ^ ^ ^ ^ ^ ^ _ laiḥ śrīputoṣṭh<hi rend="it">ī</hi> /
+^ ^ ^ ^ ^ ^ _ _ _ ^ _ _ ^ ^ ^ ^ ^ ^ _ _ _ ^ _ ram / 26 // ChV_III_1_26</p>
+
+<p>Prabhāvati oder Rucirā
+d<hi rend="it">v</hi>i _ ^ _ ^ ^ ^ ^ _ ^ _ ^ _ ^ _ ^ _ ^ ^ ^ ^ _ ^ _ ^ _ <hi rend="it">/</hi>
+^ _ ^ _ ^ ^ ^ ^ _ ^ _ ^ _ ^ _ ^ _ ^ ^ ^ ^ _ ^ _ ^ _ <hi rend="it">/ 27 //</hi> ChV_III_1_27</p>
+
+<p>Praharṣiṇī
+_ _ _ ^ ^ ^ ^ _ rvimiśrapādaṃ ś. _ _ ^ ^ ^ ^ _ ^ _ ^ _ _ <hi rend="it">/</hi>
+_ _ _ ^ ^ ^ ^ _ ^ madrilī .e _ _ _ ^ ^ ^ ^ _ ^ _ ^ _ _ <hi rend="it">/ 28 //</hi> ChV_III_1_28</p>
+
+<p>ChV_III_1_29-36 nicht erhalten
+cat.no 654 fol. 30r1 ... c. .. .. bj. bd. dve ...</p>
+
+<p>Śikhariṇī
+^ _ n miśraiḥ pādaiḥ turaṅgamahi _ _ ^ ^ ^ _
+^ _ _ bjabdārkair gaganam ṛturudraiḥ śikha<hi rend="it">riṇīm /</hi>
+^ _ _ _ _ _ ^ ^ ^ ^ ^ _ _ ^ ^ ^ _
+^ _ _ _ pādair vidhivicaritaiḥ .au ^ ^ ^ _ <hi rend="it">/ 38 //</hi> ChV_III_1_38</p>
+
+<p>Śārdūlavikrīḍita
+_ _ <hi rend="it">a</hi>ṅśudharānalārkagira _ _ _ ^ _ _ ^ _
+_ _ _ ^ ^ _ ^ _ ^ ^ ^ _ <hi rend="it">śārdūlavik</hi>rīḍitam /
+tatpādaiḥ parimiśra _ ^ ^ ^ _ _ _ ^ _ _ ^ _
+_ _ _ ^ ^ _ ^ _ ^ ^ ^ _ _ _ ^ tiḥ procyate / 40 // ChV_III_1_40</p>
+
+<p>Suvadanā
+catvār<hi rend="it">i</hi> _ ^ _ _ ^ ^ ^ ^ ^ ^ _ _ _ ^ ^ ^ _
+_ _ _ _ ^ _ _ ^ ^ khalu bhavataḥ sā .ā ^ ^ ^ _ <hi rend="it">/</hi>
+_ _ _ _ ^ _ _ ^ ^ ^ ^ ^ ^ _ _ _ ^ ^ ^ _
+_ _ _ _ ^ _ _ ^ ^ ^ ^ ^ ^ _ _ _ ^ ^ ^ _ <hi rend="it">/ 41 //</hi> ChV_III_1_41</p>
+
+<p>ChV_III_1_42-44 nicht erhalten</p>
+
+<p>Meghamālā und Daṇḍaka
+^ ^ ^ ^ ^ ^ _ ^ _ _ ^ _ dṛśyate miśrapāda<hi rend="it">ṃ</hi> v. _ _ ^ _
+^ ^ ^ ^ ^ ^ _ ^ _ _ ^ _ _ ^ _ _ ^ _ _ ^ _ _ ^ _
+niyutam iha tad udadhiśya ^ _ _ ^ _ _ ^ _ _ ^ _ _ ^ _
+^ ^ ^ ^ ^ ^ _ ^ _ _ ^ _ _ ^ _ _ ^ _ meghamālā bhavet /
+atha khalu ^ ^ _ ^ _ _ ^ _ _ ^ _ _ ^ _ _ r budhā daṇḍa<hi rend="it">ka</hi>m /
+api ca da ^ ^ _ ^ _ _ ^ _ _ ^ _ _ ^ _ _ ^ _ _ ^ _
+^ ^ ^ ^ ^ ^ _ ^ _ _ ghatā _ ^ .e te 'rṇava _ ^ _ _ ^ _
+........ yād dh.ā ... ṛ ChV_III_1_45-46<hi rend="it">?</hi></p>
+
+<p>2. Abschnitt
+Vers 1-4 Vaktra
+pr. X X X ^ _ _ _ X X X X ^ _ ^ _ <hi rend="it">/</hi>
+X X X X ^ _ _ _ X X X X p tathā gv. nn. / <hi rend="it">1 //</hi> = ChV_III_2_1</p>
+
+<p>Pathyā
+atha vaktrasya _ _ _ X X X X ^ _ ^ _ <hi rend="it">/</hi>
+X X X X ^ _ _ _ X X X X m athāpare / 2 // = ChV_III_2_2</p>
+
+<p>Viparītā
+athāyuṅoś ca _ ^ _ X X X X ^ _ _ _
+X X X ^ _ ^ _ X X X X ^ _ <hi rend="it">va</hi>ktre / 3 = ChV_III_2_3</p>
+
+<p>Vipulā
+vaktrasya syur yyukcaraṇe y. X X X ^ _ ^ _ <hi rend="it">/</hi>
+X X X X _ ^ ^ _ X X X X ^ _ ^ _ <hi rend="it">/ 4</hi> // = ChV_III_2_4</p>
+
+<p>Padacaturūrdhva
+pratipādaṃ caturv<hi rend="it">ṛ</hi>ddhyā X X X X X X X X X X X X /
+X X X X X X X X X X X X X X X X
+X X X X X X X X X X X X X X X X X X X X <hi rend="it">/ 5 //</hi> = ChV_III_2_5</p>
+
+  </body>
+</text>
+</TEI>

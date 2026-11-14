@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_devIkAlottarAgama">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Devīkālottarāgama</title>
+	<author></author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>Dominic Goodall</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Dominic Goodall</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/saiva/devikaau.htm">devikaau.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Devikalottara-Agama (Devikalottaragama; mula text only!)
+<lb/>Based on the edition by Vrajavallabha Dwivedi:
+<lb/>Devīkālottarāgamaḥ : Commentary in Sanskrit by Nirañjanasiddha,
+<lb/>edited with Hindi Translation.
+<lb/>Varanasi: Shaiva Bharati Shodha Pratishthanam, 2000.
+<lb/>(Research Publication Series, 21)
+<lb/>
+<lb/>Input by Dominic Goodall
+<lb/>
+<lb/>TEXT WITH PADA MARKERS
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>Vrajavallabha Dwivedi: Devīkālottarāgamaḥ : Commentary in Sanskrit by Nirañjanasiddha, edited with Hindi Translation. Varanasi: Shaiva Bharati Shodha Pratishthanam, 2000. (Research Publication Series, 21)</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Devīkālottarāgama = Dka,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Religious Literature -- Śaiva</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn" xml:id="Dka">
+  <body>
+<lg xml:id="Dka_1">
+<l><seg type="pāda" n="a">sarveṣāmapi muktyarthaṃ</seg> <seg type="pāda" n="b">muktimārgasya darśanam</seg> </l>
+<l><seg type="pāda" n="c">deveśa jñānamācāraṃ</seg> <seg type="pāda" n="d">kṛpayā kathayasva me</seg> //</l>
+</lg>
+
+<milestone unit="speaker" n="īśvara uvāca"/>
+<lg xml:id="Dka_2">
+<l><seg type="pāda" n="a">jñānācārau varārohe</seg> <seg type="pāda" n="b">kathayāmi tavādhunā</seg> </l>
+<l><seg type="pāda" n="c">praviśanti yato mokṣaṃ</seg> <seg type="pāda" n="d">jñānino dhvastakalmaṣam</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_3">
+<l><seg type="pāda" n="a">yeṣāṃ bodhena saṃjātaṃ</seg> <seg type="pāda" n="b">kālajñānaṃ varānane</seg> </l>
+<l><seg type="pāda" n="c">na teṣāṃ jāyate bodhaḥ</seg> <seg type="pāda" n="d">śāstrakoṭiśatairapi</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_4">
+<l><seg type="pāda" n="a">ato hi nirbhayo vidvān</seg> <seg type="pāda" n="b">niḥśaṅko vigataspṛhaḥ</seg> </l>
+<l><seg type="pāda" n="c">jñānotsāhaparo bhūyāt</seg> <seg type="pāda" n="d">śraddaddhāno nirākulaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_5">
+<l><seg type="pāda" n="a">nirmamaḥ karuṇopetaḥ</seg> <seg type="pāda" n="b">sarvabhūtābhayapradaḥ</seg> </l>
+<l><seg type="pāda" n="c">bhajet kālottaraṃ devi</seg> <seg type="pāda" n="d">mumukṣuryogatatparaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_6">
+<l><seg type="pāda" n="a">sa brahmā sa śivo viṣṇuḥ</seg> <seg type="pāda" n="b">sa indraḥ sa ṣaḍānanaḥ</seg> </l>
+<l><seg type="pāda" n="c">sa guruḥ sarvadevāśca</seg> <seg type="pāda" n="d">sa yogī sa tapodhanaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_7">
+<l><seg type="pāda" n="a">paṇḍitaḥ sa mahābhāgaḥ</seg> <seg type="pāda" n="b">kṛtārthaḥ paramārthataḥ</seg> </l>
+<l><seg type="pāda" n="c">caladvāyusamaṃ cittaṃ</seg> <seg type="pāda" n="d">dhriyate yena niścalam</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_8">
+<l><seg type="pāda" n="a">sa upāyo mimokṣasya</seg> <seg type="pāda" n="b">sadupāttaguṇastu saḥ</seg> </l>
+<l><seg type="pāda" n="c">sā prajñā tadiha sthairyaṃ</seg> <seg type="pāda" n="d">tatpuṇyaṃ vyavasāyinām</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_9">
+<l><seg type="pāda" n="a">tadeva tīrthaṃ dānaṃ ca</seg> <seg type="pāda" n="b">sa tapaśca na saṃśayaḥ</seg> </l>
+<l><seg type="pāda" n="c">yenopāyena badhyeta</seg> <seg type="pāda" n="d">vāyubhiścalanaṃ manaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_10">
+<l><seg type="pāda" n="a">citte calati saṃsāro</seg> <seg type="pāda" n="b">niścalo mokṣa eva tu</seg> </l>
+<l><seg type="pāda" n="c">tasmāccittaṃ sthiraṃ kuryāt</seg> <seg type="pāda" n="d">prajñayā parayā budhaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_11">
+<l><seg type="pāda" n="a">ekāntikaṃ sukhaṃ yatra</seg> <seg type="pāda" n="b">tathāivātyantikaṃ bhavet</seg> </l>
+<l><seg type="pāda" n="c">niṣkarmaṇi pare tattve</seg> <seg type="pāda" n="d">ko na rajyeta paṇḍitaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_12">
+<l><seg type="pāda" n="a">nivṛtto viṣayajñānāt</seg> <seg type="pāda" n="b">niṣkalajñānatatparaḥ</seg> </l>
+<l><seg type="pāda" n="c">anicchannapi medhāvī</seg> <seg type="pāda" n="d">labhate mokṣamakṣayam</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_13">
+<l><seg type="pāda" n="a">asmitākalayā yuktaṃ</seg> <seg type="pāda" n="b">caitanyaṃ sakalaṃ smṛtam</seg> </l>
+<l><seg type="pāda" n="c">asmitārahitaṃ cetaś</seg> <seg type="pāda" n="d">caitanyaṃ śaktirucyate</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_14">
+<l><seg type="pāda" n="a">tathā prakāśitaṃ viśvaṃ</seg> <seg type="pāda" n="b">śaktidhyānamudāhṛtam</seg> </l>
+<l><seg type="pāda" n="c">sarvālambavinirmuktaṃ</seg> <seg type="pāda" n="d">niṣkalaṃ jñānamucyate</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_15">
+<l><seg type="pāda" n="a">ahamaṃśena yacchūnyaṃ</seg> <seg type="pāda" n="b">cinmātrālokamadvayam</seg> </l>
+<l><seg type="pāda" n="c">muktibījaṃ tadākhyātaṃ</seg> <seg type="pāda" n="d">parayogapravartakam</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_16">
+<l><seg type="pāda" n="a">cakrāṇi nāḍayaḥ padma</seg><seg type="pāda" n="b">devatābījamaṇḍalam</seg> </l>
+<l><seg type="pāda" n="c">rūpamityādikaṃ kiñcid</seg> <seg type="pāda" n="d">dhyeyaṃ naiva kadācana</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_17">
+<l><seg type="pāda" n="a">kuhakaṃ mantrajālaṃ ca</seg> <seg type="pāda" n="b">prāṇāyāmādi dhāraṇam</seg> </l>
+<l><seg type="pāda" n="c">sarvametanna kartavyaṃ</seg> <seg type="pāda" n="d">mokṣamakṣayamicchatā</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_18">
+<l><seg type="pāda" n="a">nātra pūjā namaskāro</seg> <seg type="pāda" n="b">na japo dhyānameva ca</seg> </l>
+<l><seg type="pāda" n="c">kevalaṃ jñānamityuktaṃ</seg> <seg type="pāda" n="d">veditavyaṃ na kiñcana</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_19">
+<l><seg type="pāda" n="a">bahirāhitacittānāṃ</seg> <seg type="pāda" n="b">jāyante bandhahetavaḥ</seg> </l>
+<l><seg type="pāda" n="c">bahiścittaṃ nivāryaiva</seg> <seg type="pāda" n="d">vindan loke na sīdati</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_20">
+<l><seg type="pāda" n="a">nātra kiñcidbahirnāntaṃ</seg> <seg type="pāda" n="b">na madhyaṃ nāpyadhaḥ kvacit</seg> </l>
+<l><seg type="pāda" n="c">sarvākāraṃ nirākāraṃ</seg> <seg type="pāda" n="d">svasaṃvedyaṃ virājate</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_21">
+<l><seg type="pāda" n="a">yadyadālokya yo jantuḥ</seg> <seg type="pāda" n="b">kurute karmasañcayam</seg> </l>
+<l><seg type="pāda" n="c">tadgatirjāyate yasmān</seg> <seg type="pāda" n="d">nirālokaṃ tu cintayet</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_22">
+<l><seg type="pāda" n="a">heturnāsti phalaṃ nāsti</seg> <seg type="pāda" n="b">nāsti karma svabhāvataḥ</seg> </l>
+<l><seg type="pāda" n="c">asadbhūtamidaṃ sarvaṃ</seg> <seg type="pāda" n="d">nāsti loko na laukikaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_23">
+<l><seg type="pāda" n="a">nirālambamidaṃ sarvaṃ</seg> <seg type="pāda" n="b">nirālambaprakāśitam</seg> </l>
+<l><seg type="pāda" n="c">nirālambamidaṃ kṛtvā</seg> <seg type="pāda" n="d">nirālambo bhaviṣyati</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_24">
+<l><seg type="pāda" n="a">vyomākāraṃ mahāśūnyaṃ</seg> <seg type="pāda" n="b">vyāpakaṃ yo na bhāvayet</seg> </l>
+<l><seg type="pāda" n="c">saṃsārī sa bhavelloke</seg> <seg type="pāda" n="d">bījakośakrimiryathā</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_25">
+<l><seg type="pāda" n="a">jñānotpattinimittaṃ tu</seg> <seg type="pāda" n="b">kriyāścaryāḥ prakīrtitāḥ</seg> </l>
+<l><seg type="pāda" n="c">yogaṃ sālambanaṃ tyaktvā</seg> <seg type="pāda" n="d">niṣprapañcaṃ vicintayet</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_26">
+<l><seg type="pāda" n="a">pātālāt śaktiparyantaṃ</seg> <seg type="pāda" n="b">sarvametadabhīpsitam</seg> </l>
+<l><seg type="pāda" n="c">bhagnaṃ yaiḥ śūnyamantreṇa</seg> <seg type="pāda" n="d">te smṛtāḥ śūnyavedinaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_27">
+<l><seg type="pāda" n="a">viṣaye lolupaṃ cittaṃ</seg> <seg type="pāda" n="b">markaṭādapi cañcalam</seg> </l>
+<l><seg type="pāda" n="c">sarvaśūnyapade sthitvā</seg> <seg type="pāda" n="d">tato nirvāṇameṣyati</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_28">
+<l><seg type="pāda" n="a">sarvatattvādyasambhinnaṃ</seg> <seg type="pāda" n="b">dehād bhinnaṃ tathaiva ca</seg> </l>
+<l><seg type="pāda" n="c">ahamasmādyasambhinnaṃ</seg> <seg type="pāda" n="d">caitanyaṃ sarvatomukham</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_29">
+<l><seg type="pāda" n="a">ākāśamiva sarvaṃ tu</seg> <seg type="pāda" n="b">sabāhyābhyantaraṃ priye</seg> </l>
+<l><seg type="pāda" n="c">parānandamarūpaṃ tu</seg> <seg type="pāda" n="d">paśyannānandabhāgbhavet</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_30">
+<l><seg type="pāda" n="a">nirindhano yathā vahniḥ</seg> <seg type="pāda" n="b">svayameva praśāmyati</seg> </l>
+<l><seg type="pāda" n="c">grāhyābhāvānmanastadvat</seg> <seg type="pāda" n="d">svayameva pralīyate</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_31">
+<l><seg type="pāda" n="a">mohikā mūrcchikā māyā</seg> <seg type="pāda" n="b">svapnaśceti caturvidhaḥ</seg> </l>
+<l><seg type="pāda" n="c">suṣuptirjāgṛtiścaiva</seg> <seg type="pāda" n="d">sarvametat parityajet</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_32">
+<l><seg type="pāda" n="a">dehāt sūkṣmagatāt prāṇāc</seg> <seg type="pāda" n="b">cittād buddherahaṅkṛteḥ</seg> </l>
+<l><seg type="pāda" n="c">sarvasmādbhinna evāhaṃ</seg> <seg type="pāda" n="d">cintayan labhate citam</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_33">
+<l><seg type="pāda" n="a">sadābhibhūtaye cittaṃ</seg> <seg type="pāda" n="b">nidrayā smaraṇādinā</seg> </l>
+<l><seg type="pāda" n="c">bodhayitvā prayatnena</seg> <seg type="pāda" n="d">kuryāt svasthaṃ punaḥ punaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_34">
+<l><seg type="pāda" n="a">yadā sthiraṃ bhaveccittaṃ</seg> <seg type="pāda" n="b">cālayanna kathaṃcana</seg> </l>
+<l><seg type="pāda" n="c">na kiñciccintayet tatra</seg> <seg type="pāda" n="d">sthirameva tu kārayet</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_35">
+<l><seg type="pāda" n="a">āśrayālambanaṃ cittaṃ</seg> <seg type="pāda" n="b">tadvat kuryānnirāśrayam</seg> </l>
+<l><seg type="pāda" n="c">cañcalaṃ niścalaṃ kuryāt</seg> <seg type="pāda" n="d">niścalaṃ na tu cālayet</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_36">
+<l><seg type="pāda" n="a">sarvabhūtalaye jāte</seg> <seg type="pāda" n="b">yadyadvyoma sunirmalam</seg> </l>
+<l><seg type="pāda" n="c">tattadrūpaṃ svakaṃ dhyāyed</seg> <seg type="pāda" n="d">vyāptaṃ caiva tu nirmalam</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_37">
+<l><seg type="pāda" n="a">tadeva janmasāphalyaṃ</seg> <seg type="pāda" n="b">pāṇḍityamidameva hi</seg> </l>
+<l><seg type="pāda" n="c">caladvāyusamaṃ cittaṃ</seg> <seg type="pāda" n="d">niścalaṃ dhriyate hi yat</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_38">
+<l><seg type="pāda" n="a">naivordhvaṃ dhārayeccittaṃ</seg> <seg type="pāda" n="b">na madhyaṃ nāpyadhaḥ kvacit</seg> </l>
+<l><seg type="pāda" n="c">antarbhāvavinirmuktaṃ</seg> <seg type="pāda" n="d">sadā kuryānnirāśrayam</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_39">
+<l><seg type="pāda" n="a">nidrāyāṃ bodhayeccittaṃ</seg> <seg type="pāda" n="b">vikṣiptaṃ śamayet punaḥ</seg> </l>
+<l><seg type="pāda" n="c">pakṣadvayaparityāge</seg> <seg type="pāda" n="d">samprāpte naiva cālayet</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_40">
+<l><seg type="pāda" n="a">nirāśrayaṃ sadā cittaṃ</seg> <seg type="pāda" n="b">sarvālambanavarjitam</seg> </l>
+<l><seg type="pāda" n="c">mano 'vasthāvinirmuktaṃ</seg> <seg type="pāda" n="d">vijñeyaṃ muktilakṣaṇam</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_41">
+<l><seg type="pāda" n="a">sarvālambanaśūnyaṃ ca</seg> <seg type="pāda" n="b">dhārayitvā mano hṛdi</seg> </l>
+<l><seg type="pāda" n="c">yajjñānaṃ jāyate spaṣṭaṃ</seg> <seg type="pāda" n="d">tadabhyāsaparo bhavet</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_42">
+<l><seg type="pāda" n="a">ye dhyāyanti paraṃ śūnyaṃ</seg> <seg type="pāda" n="b">niṣkalaṃ niravasthitam</seg> </l>
+<l><seg type="pāda" n="c">te yānti paramaṃ sthānaṃ</seg> <seg type="pāda" n="d">janmamṛtyuvivarjitam</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_43">
+<l><seg type="pāda" n="a">devā devyastathā cānye</seg> <seg type="pāda" n="b">dharmādharmau ca tatphalam</seg> </l>
+<l><seg type="pāda" n="c">āśrayāśrayivijñānaṃ</seg> <seg type="pāda" n="d">saṃsārasya ca bandhanam</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_44">
+<l><seg type="pāda" n="a">āśrayo dvandvamityuktaṃ</seg> <seg type="pāda" n="b">dvandvatyāgāt parodayaḥ</seg> </l>
+<l><seg type="pāda" n="c">jīvanmuktastadā yogī</seg> <seg type="pāda" n="d">dehatyāgād vimucyate</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_45">
+<l><seg type="pāda" n="a">vairāgyeṇa vapustyāgo</seg> <seg type="pāda" n="b">na vai kāryo manīṣiṇā</seg> </l>
+<l><seg type="pāda" n="c">ārambhataḥ kriyānāśe</seg> <seg type="pāda" n="d">svayameva vipatsyate</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_46">
+<l><seg type="pāda" n="a">hṛtsaroje hyahaṃrūpā</seg> <seg type="pāda" n="b">yā citirnirmalācalā</seg> </l>
+<l><seg type="pāda" n="c">ahaṅkāraparityāgāt</seg> <seg type="pāda" n="d">sā citirmokṣadāyinī</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_47">
+<l><seg type="pāda" n="a">sarvopādhivinirmuktaṃ</seg> <seg type="pāda" n="b">cidrūpaṃ yannirantaram</seg> </l>
+<l><seg type="pāda" n="c">tacchivo 'hamiti dhyātvā</seg> <seg type="pāda" n="d">sarvāsaktiṃ visarjayet</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_48">
+<l><seg type="pāda" n="a">deśajātyādisambaddhān</seg> <seg type="pāda" n="b">varṇāśramasamanvitān</seg> </l>
+<l><seg type="pāda" n="c">bhāvānetān parityajya</seg> <seg type="pāda" n="d">svabhāvaṃ bhāvayedbudhaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_49">
+<l><seg type="pāda" n="a">ahameko na me kaścin</seg> <seg type="pāda" n="b">nāhamanyasya kasyacit</seg> </l>
+<l><seg type="pāda" n="c">na taṃ paśyāmi yasyāhaṃ</seg> <seg type="pāda" n="d">taṃ na paśyāmi yo mama</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_50">
+<l><seg type="pāda" n="a">ahameva paraṃ brahma</seg> <seg type="pāda" n="b">jagannātho maheśvaraḥ</seg> </l>
+<l><seg type="pāda" n="c">iti syānniścito mukto</seg> <seg type="pāda" n="d">baddhaḥ syādanyathā pumān</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_51">
+<l><seg type="pāda" n="a">aśarīraṃ yadātmānaṃ</seg> <seg type="pāda" n="b">paśyati jñānacakṣuṣā</seg> </l>
+<l><seg type="pāda" n="c">tadā bhavati śāntātmā</seg> <seg type="pāda" n="d">sarvato vigataspṛhaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_52">
+<l><seg type="pāda" n="a">yo 'sau sarveṣu śāstreṣu</seg> <seg type="pāda" n="b">paṭhyate hyaja īśvaraḥ</seg> </l>
+<l><seg type="pāda" n="c">akāyo nirguṇo hyātmā</seg> <seg type="pāda" n="d">so 'hamasmi na saṃśayaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_53">
+<l><seg type="pāda" n="a">vijñāptimātro hi sadā viśuddhaḥ</seg> <seg type="pāda" n="b">sarvatra yasmātsatataṃ vimuktaḥ</seg> </l>
+<l><seg type="pāda" n="c">nādeyaheyo hyahamapratarkyas</seg> <seg type="pāda" n="d">tasmātsadā brahmamayo viśokaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_54">
+<l><seg type="pāda" n="a">āmastakaṃ pādatalāvasānaṃ</seg> <seg type="pāda" n="b">sāntarbahiścarmapaṭāvanaddham</seg> </l>
+<l><seg type="pāda" n="c">tatkṛtsnamevāmṛtarūpamanyac</seg> <seg type="pāda" n="d">cidrūpamātmānamananyasiddhim</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_55">
+<l><seg type="pāda" n="a">īśo 'hamevāsya carācarasya</seg> <seg type="pāda" n="b">pitā ca mātā ca pitāmahaśca</seg> </l>
+<l><seg type="pāda" n="c">dhyānaṃ samāsthāya padaṃ caturthaṃ</seg> <seg type="pāda" n="d">dhyāyanti māmeva vimuktikāmāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_56">
+<l><seg type="pāda" n="a">brahmādibhirdevamanuṣyanāgair</seg> <seg type="pāda" n="b">gandharvayakṣāpsarasāṃ gaṇaiśca</seg> </l>
+<l><seg type="pāda" n="c">yajñairanekairahameva pūjyo</seg> <seg type="pāda" n="d">māmeva sarve pratipūjayanti</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_57">
+<l><seg type="pāda" n="a">tapobhirugrairvividhaiśca dānair</seg> <seg type="pāda" n="b">māmeva sarve pratipūjayanti</seg> </l>
+<l><seg type="pāda" n="c">bhūtāni cāhaṃ sthirajaṅgamāni</seg> <seg type="pāda" n="d">yāvanti cānyānyahameva tāni</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_58">
+<l><seg type="pāda" n="a">na sthūlasūkṣmo na ca śūnyarūpo</seg> <seg type="pāda" n="b">jñānaikarūpo jagadekabandhuḥ</seg> </l>
+<l><seg type="pāda" n="c">nirantaro nirmala īśvaro 'haṃ</seg> <seg type="pāda" n="d">svapnādyavasthācyutiniṣprapañcaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_59">
+<l><seg type="pāda" n="a">anādivijñānamajaṃ purāṇaṃ</seg> <seg type="pāda" n="b">guhāśayaṃ niṣkalamaprapañcam</seg> </l>
+<l><seg type="pāda" n="c">nirañjanaṃ niṣpratimaṃ nirīśam</seg> <seg type="pāda" n="d">adṛśyamagrāhyamacintyarūpam</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_60">
+<l><seg type="pāda" n="a">sanātanaṃ brahma nirantaraṃ yat</seg> <seg type="pāda" n="b">pade pade so 'hamiti prapaśyet</seg> </l>
+<l><seg type="pāda" n="c">yo bhāvatastiṣṭhati niṣprakampaḥ</seg> <seg type="pāda" n="d">sa brahmabhūto 'mṛtatāmupaiti</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_61">
+<l><seg type="pāda" n="a">jñānamevaṃ varārohe</seg> <seg type="pāda" n="b">kathitaṃ mokṣasiddhaye</seg> </l>
+<l><seg type="pāda" n="c">ācāraṃ kathyamānaṃ tu</seg> <seg type="pāda" n="d">sāmprataṃ śṛṇu taṃ mayā</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_62">
+<l><seg type="pāda" n="a">na snānaṃ na japaḥ pūjā</seg> <seg type="pāda" n="b">homo naiva ca sādhanam</seg> </l>
+<l><seg type="pāda" n="c">agnikāryādikāryaṃ ca</seg> <seg type="pāda" n="d">naitasyāsti maheśvari</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_63">
+<l><seg type="pāda" n="a">niyamo 'pi na tasyāsti</seg> <seg type="pāda" n="b">kṣetrapīṭhe ca sevanam</seg> </l>
+<l><seg type="pāda" n="c">nārcanaṃ pitṛkāryādi</seg> <seg type="pāda" n="d">tīrthayātrā vratāni ca</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_64">
+<l><seg type="pāda" n="a">dharmādharmaphalaṃ nāsti</seg> <seg type="pāda" n="b">na tithirlaukikakriyā</seg> </l>
+<l><seg type="pāda" n="c">santyajetsarvakarmāṇi</seg> <seg type="pāda" n="d">lokācāraṃ ca sarvaśaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_65">
+<l><seg type="pāda" n="a">samayācāraniḥśeṣān</seg> <seg type="pāda" n="b">kṛtyajātaṃ tu bandhanam</seg> </l>
+<l><seg type="pāda" n="c">saṃkalpaṃ ca vikalpaṃ ca</seg> <seg type="pāda" n="d">ye cānye kuladharmikāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_66">
+<l><seg type="pāda" n="a">siddhīśca vividhākārāḥ</seg> <seg type="pāda" n="b">pātālādi rasāyanam</seg> </l>
+<l><seg type="pāda" n="c">pratyakṣeṇāpi labhyeran</seg> <seg type="pāda" n="d">naiva gṛhṇīta sādhakaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_67">
+<l><seg type="pāda" n="a">sarve te paśubandhāḥ syur</seg> <seg type="pāda" n="b">adhomārgapradāyakāḥ</seg> </l>
+<l><seg type="pāda" n="c">etairnāsti parā muktiś</seg> <seg type="pāda" n="d">cidrūpaṃ vyāpakaṃ vinā</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_68">
+<l><seg type="pāda" n="a">yena kena viśeṣeṇa</seg> <seg type="pāda" n="b">sarvāvastho 'pi yogadhṛk</seg> </l>
+<l><seg type="pāda" n="c">kṣetrapīṭhe ca sandehād</seg> <seg type="pāda" n="d">varjayedyadi kautukam</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_69">
+<l><seg type="pāda" n="a">kṛmikīṭapataṅgāśca</seg> <seg type="pāda" n="b">tathā devi vanaspatīn</seg> </l>
+<l><seg type="pāda" n="c">na nāśayed budho jīvān</seg> <seg type="pāda" n="d">paramārthamatiryataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_70">
+<l><seg type="pāda" n="a">na mūlotpāṭanaṃ kuryāt</seg> <seg type="pāda" n="b">pattracchedaṃ vivarjayet</seg> </l>
+<l><seg type="pāda" n="c">bhūtapīḍāṃ na kurvīta</seg> <seg type="pāda" n="d">puṣpāṇāṃ ca nikṛntanam</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_71">
+<l><seg type="pāda" n="a">svayaṃpatitapuṣpaistu</seg> <seg type="pāda" n="b">kartavyaṃ śivapūjanam</seg> </l>
+<l><seg type="pāda" n="c">māraṇoccāṭanādīni</seg> <seg type="pāda" n="d">vidveṣastambhane tathā</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_72">
+<l><seg type="pāda" n="a">jvarabhūtagrahāveśa</seg><seg type="pāda" n="b">vaśyākarṣaṇamohanam</seg> </l>
+<l><seg type="pāda" n="c">na kuryāt kṣudrakarmāṇi</seg> <seg type="pāda" n="d">kāṣṭhapāṣāṇapūjanam</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_73">
+<l><seg type="pāda" n="a">samo 'mitre ca mitre ca</seg> <seg type="pāda" n="b">samo loṣṭe ca kāñcane</seg> </l>
+<l><seg type="pāda" n="c">abhilāṣo na kartavya</seg> <seg type="pāda" n="d">indriyārthe kadācana</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_74">
+<l><seg type="pāda" n="a">ātmārāmo bhavedyogī</seg> <seg type="pāda" n="b">nirbhayo vigataspṛhaḥ</seg> </l>
+<l><seg type="pāda" n="c">samanindāpraśaṃsaśca</seg> <seg type="pāda" n="d">sarvabhūtasamastathā</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_75">
+<l><seg type="pāda" n="a">samadṛṣṭistu kartavyā</seg> <seg type="pāda" n="b">yathātmani tathā pare</seg> </l>
+<l><seg type="pāda" n="c">vivādaṃ lokagoṣṭhīṃ ca</seg> <seg type="pāda" n="d">kalahāśca vivarjayet</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_76">
+<l><seg type="pāda" n="a">śāstragoṣṭhīṃ na kurvīta</seg> <seg type="pāda" n="b">kubhāṣitasubhāṣitān</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_77">
+<l><seg type="pāda" n="a">īrṣyāṃ paiśunyadambhe ca</seg> <seg type="pāda" n="b">rāgaṃ mātsaryameva ca</seg> </l>
+<l><seg type="pāda" n="c">kāmakrodhau bhayaṃ śokaṃ</seg> <seg type="pāda" n="d">tyajetsarvaṃ śanaiḥ śanaiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_78">
+<l><seg type="pāda" n="a">sarvadvandvavinirmuktaḥ</seg> <seg type="pāda" n="b">santataṃ janavarjitaḥ</seg> </l>
+<l><seg type="pāda" n="c">anenaiva śarīreṇa</seg> <seg type="pāda" n="d">sarvajñaḥ san prakāśate</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_79">
+<l><seg type="pāda" n="a">jñānenaiva yathā mokṣas</seg> <seg type="pāda" n="b">tathā siddhirnirarthikā</seg> </l>
+<l><seg type="pāda" n="c">tathāpi bhogamicchantaḥ</seg> <seg type="pāda" n="d">siddhimicchanti sādhakāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_80">
+<l><seg type="pāda" n="a">aṇimādiguṇāvāptir</seg> <seg type="pāda" n="b">jāyatāṃ vā na jāyatām</seg> </l>
+<l><seg type="pāda" n="c">tathāpi mucyate dehī</seg> <seg type="pāda" n="d">patiṃ vijñāya nirmalam</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_81">
+<l><seg type="pāda" n="a">pañcabhūtātmako dehaḥ</seg> <seg type="pāda" n="b">śivastatraiva tiṣṭhati</seg> </l>
+<l><seg type="pāda" n="c">śivādyavaniparyanto</seg> <seg type="pāda" n="d">loko 'yaṃ śaṅkarātmakaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_82">
+<l><seg type="pāda" n="a">īdṛśaṃ jñāninaṃ dṛṣṭvā</seg> <seg type="pāda" n="b">pūjayanti ca ye narāḥ</seg> </l>
+<l><seg type="pāda" n="c">gandhaṃ puṣpaṃ phalaṃ dhūpaṃ</seg> <seg type="pāda" n="d">snānaṃ vastraṃ ca bhojanam</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_83">
+<l><seg type="pāda" n="a">nivedayanti ye kecid</seg> <seg type="pāda" n="b">vāṅmanaḥkāyakarmabhiḥ</seg> </l>
+<l><seg type="pāda" n="c">tathaiva te vimucyante</seg> <seg type="pāda" n="d">muktimārgābhikāṅkṣiṇaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="Dka_84">
+<l><seg type="pāda" n="a">stutinindākarāstasya</seg> <seg type="pāda" n="b">puṇyapāpe samāpnuyuḥ</seg> </l>
+<l><seg type="pāda" n="c">yajjñānācaraṇaṃ pṛṣṭaṃ</seg> <seg type="pāda" n="d">tat sarvaṃ kathitaṃ mayā</seg> </l>
+<l><seg type="pāda" n="e">kālajñānaṃ varārohe</seg> <seg type="pāda" n="f">kimanyat paripṛcchasi</seg> //</l>
+</lg>
+
+<trailer>iti devīkālottarāgamaḥ parisamāptaḥ</trailer>
+  </body>
+</text>
+</TEI>

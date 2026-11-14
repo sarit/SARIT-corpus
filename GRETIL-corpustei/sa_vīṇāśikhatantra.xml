@@ -1,0 +1,2368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_vINAzikhatantra">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Vīṇāśikhatantra</title>
+	<author></author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>Somadeva Vasudeva</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Somadeva Vasudeva</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/saiva/vinst_au.htm">vinst_au.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Vinasikhatantra
+<lb/>Based on the edition by T. Goudriaan, Delhi 1985.
+<lb/>
+<lb/>Input by Somadeva Vasudeva
+<lb/>
+<lb/>TEXT WITH PADA MARKERS:
+<lb/>
+<lb/>For a four-pada verse:
+<lb/>........ $ ........ &amp;
+<lb/>........ % ........ //
+<lb/>
+<lb/>For a six-pada verse:
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>T. Goudriaan, Delhi 1985.</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Vīṇāśikhatantra = VT,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Religious Literature -- Śaiva</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn" xml:id="VT">
+  <body>
+    <div>
+<head>vīṇāśikhatantra</head>
+
+<p>oṃ namo mahābhairavāya</p>
+
+<lg xml:id="VT_1">
+<l><seg type="pāda" n="a">kailāsaśikhare ramye</seg> <seg type="pāda" n="b">nānāratnopaśobhite</seg> </l>
+<l><seg type="pāda" n="c">nānādrumalatākīrṇe</seg> <seg type="pāda" n="d">siddhacāraṇasevite</seg> //</l>
+</lg>
+
+<lg xml:id="VT_2">
+<l><seg type="pāda" n="a">tatra devaḥ suraśreṣṭhaḥ</seg> <seg type="pāda" n="b">krīḍate umayā saha</seg> </l>
+<l><seg type="pāda" n="c">stūyamāno mahāsiddhair</seg> <seg type="pāda" n="d">mahākālādibhir gaṇaiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_3">
+<l><seg type="pāda" n="a">ṛṣibhiś ca mahābhāgair</seg> <seg type="pāda" n="b">bhṛgvādyaiḥ surasattamaiḥ</seg> </l>
+<l><seg type="pāda" n="c">teṣāṃ madhye samutthāya</seg> <seg type="pāda" n="d">devī vacanam abravīt</seg> //</l>
+</lg>
+
+<lg xml:id="VT_4">
+<l><seg type="pāda" n="a">śrutaṃ sammohanaṃ tantraṃ</seg> <seg type="pāda" n="b">tathā nayottaraṃ mahat</seg> </l>
+<l><seg type="pāda" n="c">śiraśchedaṃ ca deveśa</seg> <seg type="pāda" n="d">tvatprasādāt sudurlabham</seg> //</l>
+</lg>
+
+<lg xml:id="VT_5">
+<l><seg type="pāda" n="a">vratasādhyāni caitāni</seg> <seg type="pāda" n="b">yāgasādhyāni vai punaḥ</seg> </l>
+<l><seg type="pāda" n="c">anyasārā yato loke</seg> <seg type="pāda" n="d">prāyo draviṇavarjitāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_6">
+<l><seg type="pāda" n="a">ebhyo 'pi cottaraṃ yasmāt</seg> <seg type="pāda" n="b">kevalaṃ jñānasiddhidam</seg> </l>
+<l><seg type="pāda" n="c">sarvakāmapradaṃ deva</seg> <seg type="pāda" n="d">yathāvad bījapañcakaṃ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_7">
+<l><seg type="pāda" n="a">uttaraṃ hṛdayaṃ hy eṣāṃ</seg> <seg type="pāda" n="b">bhaktāya dātum arhasi</seg> //</l>
+</lg>
+
+<milestone unit="speaker" n="śrī īśvara uvāca"/>
+
+<lg xml:id="VT_8">
+<l><seg type="pāda" n="a">yan na kasyacid ākhyātaṃ</seg> <seg type="pāda" n="b">śukrādīnāṃ ca yoginām</seg> </l>
+<l><seg type="pāda" n="c">subhaktasya vinītasya</seg> <seg type="pāda" n="d">gopitaṃ vai guhasya ca</seg> //</l>
+</lg>
+
+<lg xml:id="VT_9">
+<l><seg type="pāda" n="a">catuḥṣaṣṭiḥ samākhyātāḥ</seg> <seg type="pāda" n="b">śiṣyās tantreṣu ye mayā</seg> </l>
+<l><seg type="pāda" n="c">teṣām api na cākhyātaṃ</seg> <seg type="pāda" n="d">brahmaviṣṇupuraḥsaraiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_10">
+<l><seg type="pāda" n="a">tad ahaṃ sampravakṣyāmi</seg> <seg type="pāda" n="b">cintāratnam ivāparam</seg> </l>
+<l><seg type="pāda" n="c">tantraṃ vīṇāśikhaṃ nāma</seg> <seg type="pāda" n="d">nirvyājenāśusiddhidam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_11">
+<l><seg type="pāda" n="a">devītumburusaṃyuktaṃ</seg> <seg type="pāda" n="b">vīṇādhārasusaṃsthitam</seg> </l>
+<l><seg type="pāda" n="c">śikhāyogena iṣyante</seg> <seg type="pāda" n="d">tena vīṇāśikhā smṛtā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_12">
+<l><seg type="pāda" n="a">yāgam ādau pravakṣyāmi</seg> <seg type="pāda" n="b">tantrasāraṃ sudurlabham</seg> </l>
+<l><seg type="pāda" n="c">tenaiva varadā devyo</seg> <seg type="pāda" n="d">nityaṃ devi bhavanti hi</seg> //</l>
+</lg>
+
+<lg xml:id="VT_13">
+<l><seg type="pāda" n="a">gṛhayāgam idaṃ devi</seg> <seg type="pāda" n="b">yo jānātīha sādhakaḥ</seg> </l>
+<l><seg type="pāda" n="c">vratahomād ṛte cāsmin</seg> <seg type="pāda" n="d">susiddhiṃ labhate param</seg> //</l>
+</lg>
+
+<lg xml:id="VT_14">
+<l><seg type="pāda" n="a">śiṣyāṇām āditaḥ kuryād</seg> <seg type="pāda" n="b">yāgaṃ kṛtvā parigraham</seg> </l>
+<l><seg type="pāda" n="c">nānyathā darśayet tantraṃ</seg> <seg type="pāda" n="d">na cāsau siddhim āpnuyāt</seg> //</l>
+</lg>
+
+<lg xml:id="VT_15">
+<l><seg type="pāda" n="a">caturthyām atha pañcamyāṃ</seg> <seg type="pāda" n="b">navamyām ekādaśīṣu ca</seg> </l>
+<l><seg type="pāda" n="c">grahaṇe vāpi kartavyā</seg> <seg type="pāda" n="d">sarvadā cārkasomayoḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_16">
+<l><seg type="pāda" n="a">caturthyāṃ yajanaṃ śreṣṭhaṃ</seg> <seg type="pāda" n="b">saubhāgyakaraṇaṃ mahat</seg> </l>
+<l><seg type="pāda" n="c">śrīkāmo yajanaṃ kuryāt</seg> <seg type="pāda" n="d">pañcamyāṃ susamāhitaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_17">
+<l><seg type="pāda" n="a">saṃgrāme vijayārthī vā</seg> <seg type="pāda" n="b">pararāṣṭravimardanam</seg> </l>
+<l><seg type="pāda" n="c">navamyāṃ pārthivaṃ yāgaṃ</seg> <seg type="pāda" n="d">kurvīta bhaginīpriyam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_18">
+<l><seg type="pāda" n="a">ekādaśyāṃ yajed yas tu</seg> <seg type="pāda" n="b">śivaloke mahīyate</seg> </l>
+<l><seg type="pāda" n="c">sugupte nirjane deśe</seg> <seg type="pāda" n="d">saridvāpītaṭe 'pi vā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_19">
+<l><seg type="pāda" n="a">kṛtvādau bhūmisaṃśuddhiṃ</seg> <seg type="pāda" n="b">sāvitryā deśikottamaḥ</seg> </l>
+<l><seg type="pāda" n="c">kṛtvā pūjāṃ prakurvīta</seg> <seg type="pāda" n="d">śiṣyāṇām adhivāsanam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_20">
+<l><seg type="pāda" n="a">carukaṃ sādhane paścāt</seg> <seg type="pāda" n="b">sāvitryā dāpayed budhaḥ</seg> </l>
+<l><seg type="pāda" n="c">śiṣyāṇāṃ dantakāṣṭhaṃ ca</seg> <seg type="pāda" n="d">sakṣīraṃdvādaśāṅgulam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_21">
+<l><seg type="pāda" n="a">ācamya śiṣyam āhūya</seg> <seg type="pāda" n="b">pañcatattvapariṣkṛtam</seg> </l>
+<l><seg type="pāda" n="c">sāvitryā prokṣayed bhūyas</seg> <seg type="pāda" n="d">tattvajaptaṃ yathoditam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_22">
+<l><seg type="pāda" n="a">pramārjayetkuśāgreṇa</seg> <seg type="pāda" n="b">tasyāṅgāni samālabhet</seg> </l>
+<l><seg type="pāda" n="c">ālabhyaiva tu sāvitryā</seg> <seg type="pāda" n="d">kṣālayet sakalaṃ kramāt</seg> //</l>
+</lg>
+
+<lg xml:id="VT_23">
+<l><seg type="pāda" n="a">yāgabhūmau svaśiṣyāṃs tu</seg> <seg type="pāda" n="b">svapec ca kuśasaṃstare</seg> </l>
+<l><seg type="pāda" n="c">rakṣāṃ sadā śatair bījaiḥ</seg> <seg type="pāda" n="d">kṛtvā dhyātvā ca tāḥ kramāt</seg> //</l>
+</lg>
+
+<lg xml:id="VT_24">
+<l><seg type="pāda" n="a">tataḥ prabhāte vimale</seg> <seg type="pāda" n="b">mukhaṃ prakṣālya sādhakaḥ</seg> </l>
+<l><seg type="pāda" n="c">iṣṭāniṣṭāṃ gurau ceṣṭāṃ</seg> <seg type="pāda" n="d">praṇipatya nivedayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_25">
+<l><seg type="pāda" n="a">iṣṭāniṣṭān viditvā tu</seg> <seg type="pāda" n="b">deśikaḥ sādhakasya tu</seg> </l>
+<l><seg type="pāda" n="c">ādau deśe same bhūmau</seg> <seg type="pāda" n="d">vivikte śalyavarjite</seg> //</l>
+</lg>
+
+<lg xml:id="VT_26">
+<l><seg type="pāda" n="a">maṇḍalaṃ saṃlikhet prājño</seg> <seg type="pāda" n="b">yathāvad vidhipūrvakam</seg> </l>
+<l><seg type="pāda" n="c">caturhastaṃ caturdvāram</seg> <seg type="pāda" n="d">athavā caikahastakam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_27">
+<l><seg type="pāda" n="a">maṇḍalam saṃlikhed divyam</seg> <seg type="pāda" n="b">śālicūrṇena sūjjvalam</seg> </l>
+<l><seg type="pāda" n="c">tatra madhye likhet padmaṃ</seg> <seg type="pāda" n="d">catuḥpattraṃ sakarṇikam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_28">
+<l><seg type="pāda" n="a">śvetāsṛ kpītakṛ ṣṇāni</seg> <seg type="pāda" n="b">kamalasya dalāni tu</seg> </l>
+<l><seg type="pāda" n="c">prāg ārabhya yathānyāyaṃ</seg> <seg type="pāda" n="d">saumyeśāntāni lekhayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_29">
+<l><seg type="pāda" n="a">karṇikāṃ ca tathā madhye</seg> <seg type="pāda" n="b">śabalāṃ deśikottamaḥ</seg> </l>
+<l><seg type="pāda" n="c">caturmūrtiṃ caturvarṇaṃ</seg> <seg type="pāda" n="d">svena bijena tumburum</seg> //</l>
+</lg>
+
+<lg xml:id="VT_30">
+<l><seg type="pāda" n="a">caturvarṇam īśvaraṃ dhyāyen</seg> <seg type="pāda" n="b">niviṣṭam karṇikodare</seg> </l>
+<l><seg type="pāda" n="c">tataḥ sitāṃ svabījena</seg> <seg type="pāda" n="d">jayāṃ prāgdale vinyaset</seg> //</l>
+</lg>
+
+<lg xml:id="VT_31">
+<l><seg type="pāda" n="a">bandhūkakusumaprakhyāṃ</seg> <seg type="pāda" n="b">vijayāṃ dakṣiṇe dale</seg> </l>
+<l><seg type="pāda" n="c">svacchacāmīkaraprakhyām</seg> <seg type="pāda" n="d">ajitāṃ paścime dale</seg> //</l>
+</lg>
+
+<lg xml:id="VT_32">
+<l><seg type="pāda" n="a">bhinnāñjanacayaprakhyām</seg> <seg type="pāda" n="b">uttare cāparājitām</seg> </l>
+<l><seg type="pāda" n="c">vinyasya pūjāṃ kurvīta</seg> <seg type="pāda" n="d">svaiḥ svair bījair yathākramam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_33">
+<l><seg type="pāda" n="a">puṣpadhūpaiś ca balibhir</seg> <seg type="pāda" n="b">yathākālāntaraiḥ śubhaiḥ</seg> </l>
+<l><seg type="pāda" n="c">sadvitānapatākāḍhyaṃ</seg> <seg type="pāda" n="d">sragmālālaṃkṛtaṃ puram</seg> //</l>
+</lg>
+
+<lg xml:id="VT_34">
+<l><seg type="pāda" n="a">pradīptadīpakair dikṣu</seg> <seg type="pāda" n="b">samantād avabhāsitam</seg> </l>
+<l><seg type="pāda" n="c">nānābhakṣyānnapānaiś ca</seg> <seg type="pāda" n="d">svādubhir vyañjanais tathā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_35">
+<l><seg type="pāda" n="a">phalair nānāvidhaiś caiva</seg> <seg type="pāda" n="b">paritaḥ paryavasthitaiḥ</seg> </l>
+<l><seg type="pāda" n="c">kalaśair vāripūrṇaiś ca</seg> <seg type="pāda" n="d">daśadikṣu vyavasthitaiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_36">
+<l><seg type="pāda" n="a">cūtapallavasaṃvītaiḥ</seg> <seg type="pāda" n="b">sragmālālaṃkṛtaiḥ śubhaiḥ</seg> </l>
+<l><seg type="pāda" n="c">evaṃ yaṣṭvā yathānyāyaṃ</seg> <seg type="pāda" n="d">śiṣyān āprokṣya vāriṇā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_37">
+<l><seg type="pāda" n="a">sāvitryā mukham āsādya</seg> <seg type="pāda" n="b">vāsasā sakalīkṛtān</seg> </l>
+<l><seg type="pāda" n="c">svaiḥ svair bījair nyaset puṣpān</seg> <seg type="pāda" n="d">śiṣyāṇāṃ karayor dvayoḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_38">
+<l><seg type="pāda" n="a">jayāt praveśayen māyāṃ</seg> <seg type="pāda" n="b">maṇḍalaṃ deśikottamaḥ</seg> </l>
+<l><seg type="pāda" n="c">praveśya tatra śiṣyaṃ tu</seg> <seg type="pāda" n="d">dvitricatuḥpañca eva vā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_39">
+<l><seg type="pāda" n="a">tato 'gnikāryaṃ kurvīta</seg> <seg type="pāda" n="b">maṇḍalāt paścime bahiḥ</seg> </l>
+<l><seg type="pāda" n="c">ullikhyoddhṛtya sāvitryā</seg> <seg type="pāda" n="d">kuśān saṃstīrya sarvataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_40">
+<l><seg type="pāda" n="a">astrabījena cābhyukṣya</seg> <seg type="pāda" n="b">gandhatoyena deśikaḥ</seg> </l>
+<l><seg type="pāda" n="c">vahnim ādāya tenaiva</seg> <seg type="pāda" n="d">sāvitryā pūjayet tataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_41">
+<l><seg type="pāda" n="a">tatas tattvatrayaṃ nyasya</seg> <seg type="pāda" n="b">vahner eva yathākramam</seg> </l>
+<l><seg type="pāda" n="c">niruddhamāyātasmāttam</seg> <seg type="pāda" n="d">aṅkuśena nirodhayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_42">
+<l><seg type="pāda" n="a">māyayācchādayet paścād</seg> <seg type="pāda" n="b">astreṇaiva prabodhayet</seg> </l>
+<l><seg type="pāda" n="c">homadravyasya sarvasya</seg> <seg type="pāda" n="d">kuryāt tenaiva śodhanam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_43">
+<l><seg type="pāda" n="a">tataś ca sarpiṣo homaṃ</seg> <seg type="pāda" n="b">vidhivat kārayed budhaḥ</seg> </l>
+<l><seg type="pāda" n="c">svabījair eva tad dhutvā</seg> <seg type="pāda" n="d">dīkṣāṃ śiṣyasya kārayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_44">
+<l><seg type="pāda" n="a">saṃyojya vidhivad bījair</seg> <seg type="pāda" n="b">mahābhūteṣu pañcasu</seg> </l>
+<l><seg type="pāda" n="c">sakale tattvaṃ saṃyojya</seg> <seg type="pāda" n="d">pariṣṭhāpya pare 'dhvani</seg> //</l>
+</lg>
+
+<lg xml:id="VT_45">
+<l><seg type="pāda" n="a">niyoktavyaṃ tatas tatra</seg> <seg type="pāda" n="b">yatrāsavāṃsvaraparam?</seg> </l>
+<l><seg type="pāda" n="c">eṣā dīkṣā ya thānyāyaṃ</seg> <seg type="pāda" n="d">bhuktimuktiphalapradā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_46">
+<l><seg type="pāda" n="a">tair eva pañcabhis tattvaṃ</seg> <seg type="pāda" n="b">sakale sakalātmikā</seg> </l>
+<l><seg type="pāda" n="c">niṣkale niṣkalā proktā</seg> <seg type="pāda" n="d">sādhikārādhvanaḥ purā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_47">
+<l><seg type="pāda" n="a">dīkṣayitvā tataḥ śiṣyān</seg> <seg type="pāda" n="b">sādhikārapare sthitān</seg> </l>
+<l><seg type="pāda" n="c">abhiṣicya svabījais tu</seg> <seg type="pāda" n="d">bījān tebhyaḥ pradāpayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_48">
+<l><seg type="pāda" n="a">nivedya samayān tasya</seg> <seg type="pāda" n="b">hṛnmudrāṅgulidarśanāt</seg> </l>
+<l><seg type="pāda" n="c">anujñāṃ sādhakendrasya</seg> <seg type="pāda" n="d">tasya dadyān mahātmanā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_49">
+<l><seg type="pāda" n="a">tataḥ svavidyānaivedyaṃ</seg> <seg type="pāda" n="b">bhakṣayet sādhakottamaḥ</seg> </l>
+<l><seg type="pāda" n="c">devyaḥ prītā bhavanty eva</seg> <seg type="pāda" n="d">avaśiṣṭaṃ jale kṣipet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_50">
+<l><seg type="pāda" n="a">ācāryaṃ pūjayed bhaktyā</seg> <seg type="pāda" n="b">sarvasvenāpare vidhā?</seg> </l>
+<l><seg type="pāda" n="c">praṇāmaiḥ śaktidānaiś ca</seg> <seg type="pāda" n="d">yena vā tuṣyate guruḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_51">
+<l><seg type="pāda" n="a">sragvī sitoṣṇīṣī caiva</seg> <seg type="pāda" n="b">sarvālaṃkārabhūṣitaḥ</seg> </l>
+<l><seg type="pāda" n="c">uccāsanasthaḥ prāgvaktraḥ</seg> <seg type="pāda" n="d">kalpayet koṣamaṇḍale</seg> //</l>
+</lg>
+
+<lg xml:id="VT_52">
+<l><seg type="pāda" n="a">gośakṛdbhasmaliptas tu</seg> <seg type="pāda" n="b">śucau janavivarjite</seg> </l>
+<l><seg type="pāda" n="c">susame bhūmideśe tu</seg> <seg type="pāda" n="d">prastāraṃ prastarec chuciḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_53">
+<l><seg type="pāda" n="a">caturasram ataḥ kṛtvā</seg> <seg type="pāda" n="b">prastārarekham ujjvalam</seg> </l>
+<l><seg type="pāda" n="c">kuryād ekonapañcāśat</seg> <seg type="pāda" n="d">koṣṭhakān tu samān śubhān</seg> //</l>
+</lg>
+
+<lg xml:id="VT_54">
+<l><seg type="pāda" n="a">śatārdhārdhāsanāsīnaṃ</seg> <seg type="pāda" n="b">pañcavargāntabindukam</seg> </l>
+<l><seg type="pāda" n="c">śikhāsambhinnamūrdhāntaṃ</seg> <seg type="pāda" n="d">kaṣākhyaṃ madhyakoṣṭhake</seg> //</l>
+</lg>
+
+<lg xml:id="VT_55">
+<l><seg type="pāda" n="a">vidigdikṣaṃsthakoṣṭheṣu</seg> <seg type="pāda" n="b">tatpārśve bahir aṣṭasu</seg> </l>
+<l><seg type="pāda" n="c">yaśavargān nyased devi</seg> <seg type="pāda" n="d">aiśānyādiṣu tatkramāt</seg> //</l>
+</lg>
+
+<lg xml:id="VT_56">
+<l><seg type="pāda" n="a">āgneyādiṣu koṣṭheṣu</seg> <seg type="pāda" n="b">napuṃsakacatuṣṭayam</seg> </l>
+<l><seg type="pāda" n="c">aiśānyādikramād devi</seg> <seg type="pāda" n="d">bījadvādaśakaṃ nyaset</seg> //</l>
+</lg>
+
+<lg xml:id="VT_57">
+<l><seg type="pāda" n="a">tṛtīyapaṭktikoṣṭheṣu</seg> <seg type="pāda" n="b">caturthe pañcaviṃśakam</seg> </l>
+<l><seg type="pāda" n="c">aiśānyādiṣu koṣṭheṣu</seg> <seg type="pāda" n="d">bījāni kramaśo nyaset</seg> //</l>
+</lg>
+
+<lg xml:id="VT_58">
+<l><seg type="pāda" n="a">prastāram evaṃ prastārya</seg> <seg type="pāda" n="b">svaravarṇaṃ ca śobhane</seg> </l>
+<l><seg type="pāda" n="c">bījaṣoḍaśakaṃ caiva</seg> <seg type="pāda" n="d">proddharet tu yathākramam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_59">
+<l><seg type="pāda" n="a">kādipaṭktiṃ purākṛtya</seg> <seg type="pāda" n="b">kramād vyastasamastakam</seg> </l>
+<l><seg type="pāda" n="c">koṣṭhaikādaśabījena</seg> <seg type="pāda" n="d">saṃyuktaṃ pañcaviṃśakam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_60">
+<l><seg type="pāda" n="a">ātmatattvam iti khyātaṃ</seg> <seg type="pāda" n="b">vidyākhyaṃ catustriṃśakam</seg> </l>
+<l><seg type="pāda" n="c">śivatattvaṃ tu deveśi</seg> <seg type="pāda" n="d">triṃśakoṣṭheṣu saṃyutam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_61">
+<l><seg type="pāda" n="a">tattvatritayam etad dhi</seg> <seg type="pāda" n="b">nyāsaṃ ca samudāhṛtam</seg> </l>
+<l><seg type="pāda" n="c">binduyuktāny aśesāṇi</seg> <seg type="pāda" n="d">nyastavyāni yathākramam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_62">
+<l><seg type="pāda" n="a">atra-siddhiḥ sthitā devi</seg> <seg type="pāda" n="b">vijñeyā sādhakottamaiḥ</seg> </l>
+<l><seg type="pāda" n="c">pañcaviṃśatikoṣṭhasthaṃ</seg> <seg type="pāda" n="d">prathamaṃ bījam ucyate</seg> //</l>
+</lg>
+
+<lg xml:id="VT_63">
+<l><seg type="pāda" n="a">dvisaptakoṣṭhakaṃ bījaṃ</seg> <seg type="pāda" n="b">dvitīyaṃ samudāhṛtam</seg> </l>
+<l><seg type="pāda" n="c">tṛtīyam aṣṭakoṣṭhasthaṃ</seg> <seg type="pāda" n="d">binduyoniḥ caturthakam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_64">
+<l><seg type="pāda" n="a">caturviṃśatikoṣṭhasthaṃ</seg> <seg type="pāda" n="b">pañcamaṃ bījam ucyate</seg> </l>
+<l><seg type="pāda" n="c">bījāni devadevīnāṃ</seg> <seg type="pāda" n="d">nirṇītāni yathākramam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_65">
+<l><seg type="pāda" n="a">kālabaddhānilair bījaiḥ</seg> <seg type="pāda" n="b">kalāyatheṣṭhayā yutam</seg> </l>
+<note>em. Sanderson: kālavahnyanilair bījaiḥ kalayā ṣaṣṭhayā yutam</note>
+<l><seg type="pāda" n="c">ardhendu binduśikhayā</seg> <seg type="pāda" n="d">saṃnibhāni krameṇa tu</seg> //</l>
+<note>em. Sanderson: ardhendubinduśikhayā saṃbhinnāni yathākramam</note>
+</lg>
+
+<lg xml:id="VT_66">
+<l><seg type="pāda" n="a">bījapañcakam uddhṛtya</seg> <seg type="pāda" n="b">kathitaṃ devi te kramāt</seg> </l>
+<l><seg type="pāda" n="c">kūṭasthās tu smṛtā bījāḥ</seg> <seg type="pāda" n="d">pañca caiva varānane</seg> //</l>
+</lg>
+
+<lg xml:id="VT_67">
+<l><seg type="pāda" n="a">bījapañcakam abhyasya</seg> <seg type="pāda" n="b">sarvakāmaphalapradam</seg> </l>
+<l><seg type="pāda" n="c">yajanaṃ sampravakṣyāmi</seg> <seg type="pāda" n="d">sarvasiddhipradāyakam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_68">
+<l><seg type="pāda" n="a">karasaṃskāram ādau tu</seg> <seg type="pāda" n="b">kṛtvānena krameṇa tu</seg> </l>
+<l><seg type="pāda" n="c">vakṣyamāṇena cānena</seg> <seg type="pāda" n="d">digbandhaśodhyam eva hi</seg> //</l>
+</lg>
+
+<lg xml:id="VT_69">
+<l><seg type="pāda" n="a">saṃhārāstreṇa digbandhaḥ</seg> <seg type="pāda" n="b">prāṇāyāmapuraḥsaraḥ</seg> </l>
+<l><seg type="pāda" n="c">prāṇāyāmais tribhir devi</seg> <seg type="pāda" n="d">ātmānaṃ tu viśodhayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_70">
+<l><seg type="pāda" n="a">niṣkramya recayed vāyuṃ</seg> <seg type="pāda" n="b">navaṃ cākṛṣya pūrayet</seg> </l>
+<l><seg type="pāda" n="c">nirodhe kumbhakaḥ proktaḥ</seg> <seg type="pāda" n="d">prāṇāyāmaṃ prakīrtitam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_71">
+<l><seg type="pāda" n="a">dhyātvā kālāgnibījaṃ tu</seg> <seg type="pāda" n="b">yugāntānalasaprabham</seg> </l>
+<l><seg type="pāda" n="c">nyaset pādatale mantrī</seg> <seg type="pāda" n="d">jvālāmālākulaṃ mahat</seg> //</l>
+</lg>
+
+<lg xml:id="VT_72">
+<l><seg type="pāda" n="a">nirdahec cātmadehaṃ tu</seg> <seg type="pāda" n="b">vāriṇāplāvayet tataḥ</seg> </l>
+<l><seg type="pāda" n="c">dagdhvā tu prākṛtaṃdehaṃ</seg> <seg type="pāda" n="d">bhasmakūṭam iva sthitam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_73">
+<l><seg type="pāda" n="a">tataś cāmṛtadhārābhir</seg> <seg type="pāda" n="b">vidyādehaṃ vicintayet</seg> </l>
+<l><seg type="pāda" n="c">sravantaṃ mūrdhni paramaṃ</seg> <seg type="pāda" n="d">praṇavaṃ ca adhomukham</seg> //</l>
+</lg>
+
+<lg xml:id="VT_74">
+<l><seg type="pāda" n="a">vāruṇāmṛtasaṃyuktaṃ</seg> <seg type="pāda" n="b">śuddhasphaṭikanirmalam</seg> </l>
+<l><seg type="pāda" n="c">kaṣākhyaṃ yat smṛtaṃ bījaṃ</seg> <seg type="pāda" n="d">rephadvayasamāyutam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_75">
+<l><seg type="pāda" n="a">adha oṃkārasaṃyuktaṃ</seg> <seg type="pāda" n="b">ūrdhvaṃ bindukabhūṣitam</seg> </l>
+<l><seg type="pāda" n="c">anenaiva tu bījena</seg> <seg type="pāda" n="d">śikhayā bhinnamastakam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_76">
+<l><seg type="pāda" n="a">dhāraṇāyogamārgeṇa</seg> <seg type="pāda" n="b">nirdahet sādhakottamaḥ</seg> </l>
+<l><seg type="pāda" n="c">dehaṃ saṃśodhayen mantrī</seg> <seg type="pāda" n="d">ghorapāpaṃ tu kalmaṣam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_77">
+<l><seg type="pāda" n="a">nyāsam ālabhanaṃ kuryād</seg> <seg type="pāda" n="b">bhaven mantrātmavigrahaḥ</seg> </l>
+<l><seg type="pāda" n="c">digbandhabhūmiṃ saṃśodhya</seg> <seg type="pāda" n="d">cakraśuddhyartham eva ca</seg> //</l>
+</lg>
+
+<lg xml:id="VT_78">
+<l><seg type="pāda" n="a">saṃhārāstreṇa kurvīta</seg> <seg type="pāda" n="b">vighnoccāṭanam eva ca</seg> </l>
+<l><seg type="pāda" n="c">hastau saṃśodhayet paścād</seg> <seg type="pāda" n="d">vidhir eṣa prakīrtitaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_79">
+<l><seg type="pāda" n="a">kṛtvā tu vidhivan mantrī</seg> <seg type="pāda" n="b">tataḥ karma samārabhet</seg> </l>
+<l><seg type="pāda" n="c">āmaṇibandhanāt pūrvaṃ</seg> <seg type="pāda" n="d">bharamākhāś ? ca vinyaset</seg> //</l>
+</lg>
+
+<lg xml:id="VT_80">
+<l><seg type="pāda" n="a">aṭguṣṭhādikaniṣṭhāntaṃ</seg> <seg type="pāda" n="b">nyased vai bījapañcakam</seg> </l>
+<l><seg type="pāda" n="c">aṭguṣṭhād ye tu ye parvā</seg> <seg type="pāda" n="d">karayor ubhayor api</seg> //</l>
+</lg>
+
+<lg xml:id="VT_81">
+<l><seg type="pāda" n="a">ātmatattvaṃ nyasenmūrdhni</seg> <seg type="pāda" n="b">vidyātattvaṃ dvitīyake</seg> </l>
+<l><seg type="pāda" n="c">śivaṃ dadyāt tṛtīyeṣu</seg> <seg type="pāda" n="d">sarvasiddhiṣu bhāmini</seg> //</l>
+</lg>
+
+<lg xml:id="VT_82">
+<l><seg type="pāda" n="a">adhastād ātmatattvaṃ tu</seg> <seg type="pāda" n="b">vidyātattvaṃ tu madhyataḥ</seg> </l>
+<l><seg type="pāda" n="c">śivatattvaṃ nyasen mūrdhni</seg> <seg type="pāda" n="d">haste dehe punaḥ kramāt</seg> //</l>
+</lg>
+
+<lg xml:id="VT_83">
+<l><seg type="pāda" n="a">evaṃ tattvatrayaṃ nyasya</seg> <seg type="pāda" n="b">tathā kūṭākṣarāṇi tu</seg> </l>
+<l><seg type="pāda" n="c">bhūyaś cottarabījāni</seg> <seg type="pāda" n="d">vinyaset tu varānane</seg> //</l>
+</lg>
+
+<lg xml:id="VT_84">
+<l><seg type="pāda" n="a">astraṃ caiva tu vinyasya</seg> <seg type="pāda" n="b">visphuliṭgasamaprabham</seg> </l>
+<l><seg type="pāda" n="c">māyayācchādayitvā tu</seg> <seg type="pāda" n="d">aṭkuśena nirodhayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_85">
+<l><seg type="pāda" n="a">yonimudrāṃ tato baddhvā</seg> <seg type="pāda" n="b">kuryāt [tu] sakalāṃ tanum</seg> </l>
+<l><seg type="pāda" n="c">etad ālabhanaṃ caiva</seg> <seg type="pāda" n="d">tava devi prakīrtitam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_86">
+<l><seg type="pāda" n="a">aṭguṣṭhau grathitau kṛtvā</seg> <seg type="pāda" n="b">karayor ubhayor api</seg> </l>
+<l><seg type="pāda" n="c">tarjanīṃ vāmahaste tu</seg> <seg type="pāda" n="d">prasāryākuñcayed budhaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_87">
+<l><seg type="pāda" n="a">eṣā nirodhanī proktā</seg> <seg type="pāda" n="b">mudreyam aṭkuśasya tu</seg> </l>
+<l><seg type="pāda" n="c">vaśyākarṣaṇakāryeṣu</seg> <seg type="pāda" n="d">prayojyā sādhakottamaiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_88">
+<l><seg type="pāda" n="a">tarjanī madhyamā caiva</seg> <seg type="pāda" n="b">anāmā dakṣiṇasya tu</seg> </l>
+<l><seg type="pāda" n="c">vāme trīṇi samākramya</seg> <seg type="pāda" n="d">aṭguṣṭhau ca susaṃsthitau</seg> //</l>
+</lg>
+
+<lg xml:id="VT_89">
+<l><seg type="pāda" n="a">adhastāt sarvataḥ proktā</seg> <seg type="pāda" n="b">dakṣiṇā tu kaniṣṭhikā</seg> </l>
+<l><seg type="pāda" n="c">tarjanyaṭguṣṭhayor madhye</seg> <seg type="pāda" n="d">yonimudrā prakīrtitā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_90">
+<l><seg type="pāda" n="a">ādyaṃ mūrdhni tato bījaṃ</seg> <seg type="pāda" n="b">dvitīyaṃ mukhamaṇḍale</seg> </l>
+<l><seg type="pāda" n="c">kaṭyūrdhve ca tataś cānyaṃ</seg> <seg type="pāda" n="d">caturthaṃ jānutaḥ kaṭim</seg> //</l>
+</lg>
+
+<lg xml:id="VT_91">
+<l><seg type="pāda" n="a">āpādajānunī cānyaṃ</seg> <seg type="pāda" n="b">prasṛtaiś ca karaiḥ kramāt</seg> </l>
+<l><seg type="pāda" n="c">evaṃ bījena dehas tu</seg> <seg type="pāda" n="d">mucyate nātra saṃśayaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_92">
+<l><seg type="pāda" n="a">vajropalamahāvarṣaṃ</seg> <seg type="pāda" n="b">coradaṃṣṭrībhayāvaham</seg> </l>
+<l><seg type="pāda" n="c">mucyate ca sadā rogair</seg> <seg type="pāda" n="d">mṛtyurūpair durāsadaiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_93">
+<l><seg type="pāda" n="a">ahigaraviṣaśastra</seg><seg type="pāda" n="b">jvarakuṣṭhakṣayādibhiḥ</seg> </l>
+<l><seg type="pāda" n="c">mucyate nātra saṃdeho</seg> <seg type="pāda" n="d">yo 'pi syāt pātakī naraḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_94">
+<l><seg type="pāda" n="a">upalipya śubhe deśe</seg> <seg type="pāda" n="b">pracchanne janavarjite</seg> </l>
+<l><seg type="pāda" n="c">pūrvavad dhastamātraṃ tu</seg> <seg type="pāda" n="d">likhitvā maṇḍalaṃ śubham</seg> //</l>
+</lg>
+
+<lg xml:id="VT_95">
+<l><seg type="pāda" n="a">catuḥpattraṃ tu tatrābjaṃ</seg> <seg type="pāda" n="b">sarvavarṇitakarṇikām</seg> </l>
+<l><seg type="pāda" n="c">sitaraktapītakṛṣṇāṃ</seg> <seg type="pāda" n="d">pūrvādidalasaṃsthitām</seg> //</l>
+</lg>
+
+<lg xml:id="VT_96">
+<l><seg type="pāda" n="a">jayādyaṃ vinyasen mantrī</seg> <seg type="pāda" n="b">tumburuṃ karṇikopari</seg> </l>
+<l><seg type="pāda" n="c">padmāsanopaviṣṭaṃ tu</seg> <seg type="pāda" n="d">varadānodyatakaram</seg> //</l>
+</lg>
+
+<lg xml:id="VT_97">
+<l><seg type="pāda" n="a">caturvaktramaṣṭabhujaṃ</seg> <seg type="pāda" n="b">catuṣkāyaṃ trilocanam</seg> </l>
+<l><seg type="pāda" n="c">nāgayajñopavītaṃtu</seg> <seg type="pāda" n="d">śūlapāṇiṃ gadādharam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_98">
+<l><seg type="pāda" n="a">mukuṭena vicitreṇa</seg> <seg type="pāda" n="b">śaśāṅkadhṛtaśekharam</seg> </l>
+<l><seg type="pāda" n="c">śaktīnāṃ tu priyaṃ devaṃ</seg> <seg type="pāda" n="d">pāśāṅkuśakaraprabham</seg> //</l>
+</lg>
+
+<lg xml:id="VT_99">
+<l><seg type="pāda" n="a">divyāmbarātapatreṇa</seg> <seg type="pāda" n="b">divyasragbandhalepanam</seg> </l>
+<l><seg type="pāda" n="c">devadevaṃ sadā dhyāyet</seg> <seg type="pāda" n="d">sūryakoṭisamaprabham</seg> //</l>
+</lg>
+
+<lg xml:id="VT_100">
+<l><seg type="pāda" n="a">kṣīrodaphalasaṃkāśāṃ</seg> <seg type="pāda" n="b">vyāghrayajñopavītinīm</seg> </l>
+<l><seg type="pāda" n="c">pretārūḍhāṃ caturvaktrāṃ</seg> <seg type="pāda" n="d">gadākheṭakadhāriṇīm</seg> //</l>
+</lg>
+
+<lg xml:id="VT_101">
+<l><seg type="pāda" n="a">divyāmbarātapatreṇa</seg> <seg type="pāda" n="b">hārakeyūrabhūṣitām</seg> </l>
+<l><seg type="pāda" n="c">devadevīṃ jayāṃ dhyāyed</seg> <seg type="pāda" n="d">dīpyamānāṃ svatejasā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_102">
+<l><seg type="pāda" n="a">devasyābhimukho mantrī</seg> <seg type="pāda" n="b">sasmitotphullalocanām</seg> </l>
+<l><seg type="pāda" n="c">dāḍimīkusumaprakhyāṃ</seg> <seg type="pāda" n="d">suragopakasaprabhām</seg> //</l>
+</lg>
+
+<lg xml:id="VT_103">
+<l><seg type="pāda" n="a">cāpodyatakarāṃ ghorāṃ</seg> <seg type="pāda" n="b">matsyamāṃsasurāpriyām</seg> </l>
+<l><seg type="pāda" n="c">ulūke saṃsthitāṃ devīṃ</seg> <seg type="pāda" n="d">hārakeyūrabhūṣitām</seg> //</l>
+</lg>
+
+<lg xml:id="VT_104">
+<l><seg type="pāda" n="a">raktāmbarātapatreṇa</seg> <seg type="pāda" n="b">vijayāṃ siddhidāṃ smaret</seg> </l>
+<l><seg type="pāda" n="c">dhātucāmīkaraprakhyāṃ</seg> <seg type="pāda" n="d">pītamālyāmbarapriyām</seg> //</l>
+</lg>
+
+<lg xml:id="VT_105">
+<l><seg type="pāda" n="a">ghaṇṭākhaṭvāṅgadharīṃ devīm</seg> <seg type="pāda" n="b">aśvārūḍhāṃ mahābalām</seg> </l>
+<l><seg type="pāda" n="c">sūryāyutapratīkāśīṃ</seg> <seg type="pāda" n="d">sarvābharaṇabhūṣitām</seg> //</l>
+</lg>
+
+<lg xml:id="VT_106">
+<l><seg type="pāda" n="a">jayantīṃ dhyāyati kṣipraṃ</seg> <seg type="pāda" n="b">siddhim āpnoti puṣkalām</seg> </l>
+<l><seg type="pāda" n="c">bhinnāñjanasamaprakhyāṃ</seg> <seg type="pāda" n="d">śarvarītimiraprabhām</seg> //</l>
+</lg>
+
+<lg xml:id="VT_107">
+<l><seg type="pāda" n="a">kṛṣṇakauśeyasaṃvītāṃ</seg> <seg type="pāda" n="b">muktikāmaṇibhūṣitām</seg> </l>
+<l><seg type="pāda" n="c">divyaṃ vimānam ārūḍhāṃ</seg> <seg type="pāda" n="d">gadākheṭakadhāriṇīm</seg> //</l>
+</lg>
+
+<lg xml:id="VT_108">
+<l><seg type="pāda" n="a">mahārāvādinirghoṣaiś</seg> <seg type="pāda" n="b">cintayed aparājitām</seg> </l>
+<l><seg type="pāda" n="c">gāyatrīṃ vā japantīṃ ca</seg> <seg type="pāda" n="d">sphāṭikamaṇibhūṣitām</seg> //</l>
+</lg>
+
+<lg xml:id="VT_109">
+<l><seg type="pāda" n="a">ṛgyajussāmātharvākhyaṃ</seg> <seg type="pāda" n="b">gāyantīṃ vā tathaiva ca</seg> </l>
+<l><seg type="pāda" n="c">sāvitrīṃ divyarūpāṃ</seg> <seg type="pāda" n="d">tūpaniṣadgāyane ratām</seg> //</l>
+</lg>
+
+<lg xml:id="VT_110">
+<l><seg type="pāda" n="a">devīnām agrasaṃsthaṃ kṛtabhṛkuṭimukhaṃ cintayed aṅkuśākhyaṃ</seg> <seg type="pāda" n="b"><lb/>sampṛṣṭhe cāstrarājaṃ prakaṭitasumahāsṛkvaṇīlelihānam</seg> </l>
+<l><seg type="pāda" n="c">saṃkruddhaṃ bhīṣayantaṃ nararudhiravasādigdhadāntākalālaṃ</seg> <seg type="pāda" n="d"><lb/>....... ....... .......</seg> //</l>
+</lg>
+
+<lg xml:id="VT_111">
+<l><seg type="pāda" n="a">evaṃ dhyātvā viśālākṣi</seg> <seg type="pāda" n="b">tataḥ pūjā pravartate</seg> </l>
+<l><seg type="pāda" n="c">bhakṣyabhojyavidhānaiś ca</seg> <seg type="pāda" n="d">gandhapuṣpādibhiḥ kramāt</seg> //</l>
+</lg>
+
+<lg xml:id="VT_112">
+<l><seg type="pāda" n="a">pūjayet kūṭamadhyasthaṃ</seg> <seg type="pāda" n="b">tatra madhye vidhānataḥ</seg> </l>
+<l><seg type="pāda" n="c">bhūr evāyaṃ pādapadmair</seg> <seg type="pāda" n="d">hṛdi vāmakare 'thavā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_113">
+<l><seg type="pāda" n="a">manasā pūjayen nityaṃ</seg> <seg type="pāda" n="b">siddhikāmaḥ samāhitaḥ</seg> </l>
+<l><seg type="pāda" n="c">mahāśaṅkhamayaṃ kuryād</seg> <seg type="pāda" n="d">athavā kacchapasya tu</seg> //</l>
+</lg>
+
+<lg xml:id="VT_114">
+<l><seg type="pāda" n="a">sauvarṇaṃ rajataṃ tāmraṃ</seg> <seg type="pāda" n="b">kulaṃ bhavati siddhidam</seg> </l>
+<l><seg type="pāda" n="c">gandhamaṇḍalake vāpi</seg> <seg type="pāda" n="d">athavā bhasmamaṇḍale</seg> //</l>
+</lg>
+
+<lg xml:id="VT_115">
+<l><seg type="pāda" n="a">siddhārthamaṇḍale vāpi</seg> <seg type="pāda" n="b">athavā hṛdi maṇḍale</seg> </l>
+<l><seg type="pāda" n="c">kusumbhamaṇḍale vāpi</seg> <seg type="pāda" n="d">puṣpamaṇḍalake 'pi vā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_116">
+<l><seg type="pāda" n="a">nāgakeśarajobhir vā</seg> <seg type="pāda" n="b">likhitvā maṇḍalaṃ śubham</seg> </l>
+<l><seg type="pāda" n="c">muktidā siddhidā hy evaṃ</seg> <seg type="pāda" n="d">bhavantīty avicāraṇāt</seg> //</l>
+</lg>
+
+<lg xml:id="VT_117">
+<l><seg type="pāda" n="a">sampūjya ca yathānyāyaṃ</seg> <seg type="pāda" n="b">gandhapuṣpādi yojayet</seg> </l>
+<l><seg type="pāda" n="c">darśayed yonimudrāṃ tu</seg> <seg type="pāda" n="d">kāle karmāṇi kārayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_118">
+<l><seg type="pāda" n="a">samutpanneṣu kāryeṣu</seg> <seg type="pāda" n="b">prāṇadraviṇahāriṣu</seg> </l>
+<l><seg type="pāda" n="c">pūjitāḥ sādhakaṃ devyaḥ</seg> <seg type="pāda" n="d">parirakṣanti putravat</seg> //</l>
+</lg>
+
+<milestone unit="speaker" n="śrīdevy uvāca"/>
+
+<lg xml:id="VT_119">
+<l><seg type="pāda" n="a">atrāpi yāgam evoktaṃ</seg> <seg type="pāda" n="b">viśeṣaḥ ko 'paraḥ prabho</seg> </l>
+<l><seg type="pāda" n="c">yathā tu abhyāsamātreṇa</seg> <seg type="pāda" n="d">siddhir bhavati kāmadā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_120">
+<l><seg type="pāda" n="a">kevalaṃ smaraṇād eva</seg> <seg type="pāda" n="b">tathā tvaṃ vaktum arhasi</seg> </l>
+<l><seg type="pāda" n="c">praṇayasva prasādaś ca</seg> <seg type="pāda" n="d">yadi cāsti maheśvara</seg> //</l>
+</lg>
+
+<milestone unit="speaker" n="śrī īśvara uvāca"/>
+
+<lg xml:id="VT_121">
+<l><seg type="pāda" n="a">śṛṇuṣvaikamanā bhadre</seg> <seg type="pāda" n="b">prākṛtaṃ tapasaḥ phalam</seg> </l>
+<l><seg type="pāda" n="c">praṇayād atulaṃ vāpi</seg> <seg type="pāda" n="d">rahasyaṃ paramaṃ padam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_122">
+<l><seg type="pāda" n="a">uttarottarayogena</seg> <seg type="pāda" n="b">tantraṃ te kathitaṃ mayā</seg> </l>
+<l><seg type="pāda" n="c">atrāntaram idaṃ jñānaṃ</seg> <seg type="pāda" n="d">śrutvā bhavati nirvṛtiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_123">
+<l><seg type="pāda" n="a">prastārya pūrvavad varṇaṃ</seg> <seg type="pāda" n="b">proddhared bījapañcakam</seg> </l>
+<l><seg type="pāda" n="c">pūrvavat kramayogena</seg> <seg type="pāda" n="d">sarvakāmaprasiddhaye</seg> //</l>
+</lg>
+
+<lg xml:id="VT_124">
+<l><seg type="pāda" n="a">ādau dvātriṃśakaṃ bījaṃ</seg> <seg type="pāda" n="b">yuktam ekonaviṃśati</seg> </l>
+<l><seg type="pāda" n="c">catustriṃśaṃ tato 'dhastād</seg> <seg type="pāda" n="d">devadevaṃ prakalpayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_125">
+<l><seg type="pāda" n="a">jayā saptadaśaṃ bījaṃ</seg> <seg type="pāda" n="b">yuktam ekādaśena tu</seg> </l>
+<l><seg type="pāda" n="c">tad eva vijayākhyātā</seg> <seg type="pāda" n="d">kiṃ tu yuktaṃ na kena cit</seg> //</l>
+</lg>
+
+<lg xml:id="VT_126">
+<l><seg type="pāda" n="a">pañcaviṃśac chikhābhāji</seg> <seg type="pāda" n="b">yuktam ekādaśena tu</seg> </l>
+<l><seg type="pāda" n="c">ajitāyāḥ samuddiṣṭaṃ</seg> <seg type="pāda" n="d">caturthyāḥ śṛṇu sāmpratam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_127">
+<l><seg type="pāda" n="a">varṇaikādaśasaṃyuktaṃ</seg> <seg type="pāda" n="b">śambhusthaṃ pañcaviṃśakam</seg> </l>
+<l><seg type="pāda" n="c">guhyam etat samuddiṣṭaṃ</seg> <seg type="pāda" n="d">praṣṭavyaṃ nānyataḥ param</seg> //</l>
+</lg>
+
+<lg xml:id="VT_128">
+<l><seg type="pāda" n="a">sarvakāmapradaṃ devi</seg> <seg type="pāda" n="b">etad vai bījapañcakam</seg> </l>
+<l><seg type="pāda" n="c">uttaraṃ hṛdayaṃ hyetat</seg> <seg type="pāda" n="d">sarvatantreṣu cottaram</seg> //</l>
+</lg>
+
+<lg xml:id="VT_129">
+<l><seg type="pāda" n="a">yāni kāni ca karmāṇi</seg> <seg type="pāda" n="b">sarvāṇy etais tu kārayet</seg> </l>
+<l><seg type="pāda" n="c">pañcaviṃśatikoṣasthaṃ</seg> <seg type="pāda" n="d">yuktaṃ vai ṣoḍaśena tu</seg> //</l>
+</lg>
+
+<lg xml:id="VT_130">
+<l><seg type="pāda" n="a">astram etat samuddiṣṭam</seg> <seg type="pāda" n="b">asmiṃs tantre ca suvrate</seg> </l>
+<l><seg type="pāda" n="c">punar etadbījayuktaṃ</seg> <seg type="pāda" n="d">viṃśakena samanvitam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_131">
+<l><seg type="pāda" n="a">māyā hy eṣā samuddiṣṭā</seg> <seg type="pāda" n="b">śivasyānantarūpiṇī</seg> </l>
+<l><seg type="pāda" n="c">ādikoṣṭhakabījaṃ tu</seg> <seg type="pāda" n="d">adhastāṣṭādaśasaṃyutam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_132">
+<l><seg type="pāda" n="a">aṣṭatriṃśatikoṣasthaṃ</seg> <seg type="pāda" n="b">tasyopari niyojayet</seg> </l>
+<l><seg type="pāda" n="c">aṅkuśoddharaṇaṃ hy etad</seg> <seg type="pāda" n="d">devīnāṃ saṃnirodhane</seg> //</l>
+</lg>
+
+<lg xml:id="VT_133">
+<l><seg type="pāda" n="a">bindupuñjasametā hi</seg> <seg type="pāda" n="b">nyastavyā tu yathākramam</seg> </l>
+<l><seg type="pāda" n="c">pañcaviṃśatikoṣasthaṃ</seg> <seg type="pāda" n="d">tad eva paramākṣaram</seg> //</l>
+</lg>
+
+<lg xml:id="VT_134">
+<l><seg type="pāda" n="a">navatriṃśasamāyuktaṃ</seg> <seg type="pāda" n="b">bījaṃ gāyatrisaṃjñakam</seg> </l>
+<l><seg type="pāda" n="c">etad bījavaraṃ divyaṃ</seg> <seg type="pāda" n="d">yojyam ālabhanādike</seg> //</l>
+</lg>
+
+<lg xml:id="VT_135">
+<l><seg type="pāda" n="a">catustriṃśatikoṣasthaṃ</seg> <seg type="pāda" n="b">pañcaviṃśatiyojitam</seg> </l>
+<l><seg type="pāda" n="c">sarvakarmasamuddiṣṭaṃ</seg> <seg type="pāda" n="d">bījaṃ sāvitrisaṃjñitam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_136">
+<l><seg type="pāda" n="a">ardhenduśikhayā devi</seg> <seg type="pāda" n="b">lāñchitāni tu pūrvavat</seg> </l>
+<l><seg type="pāda" n="c">prayogaṃ cāsya vakṣyāmi</seg> <seg type="pāda" n="d">siddhir yenāśu jāyate</seg> //</l>
+</lg>
+
+<lg xml:id="VT_137">
+<l><seg type="pāda" n="a">prayogaṃ kāraṇaṃ devi</seg> <seg type="pāda" n="b">granthaśāstram akāraṇam</seg> </l>
+<l><seg type="pāda" n="c">sarvatra sulabhaṃ śāstraṃ</seg> <seg type="pāda" n="d">prayogaṃ tu sudurlabham</seg> //</l>
+</lg>
+
+<lg xml:id="VT_138">
+<l><seg type="pāda" n="a">prayogarahitā mantrā</seg> <seg type="pāda" n="b">naiva siddhipradāḥ smṛtāḥ</seg> </l>
+<l><seg type="pāda" n="c">hṛtpadme yogavinyāsaṃ</seg> <seg type="pāda" n="d">dhyātvā vai bījapañcakam</seg> </l>
+<l><seg type="pāda" n="e">gatiṃ devaṃ tu vijñāya</seg> <seg type="pāda" n="f">tataḥ karma samārabhet</seg> //</l>
+</lg>
+
+<milestone unit="speaker" n="śrīdevy uvāca"/>
+
+<lg xml:id="VT_139">
+<l><seg type="pāda" n="a">kīdṛśaḥ sa bhaved devo</seg> <seg type="pāda" n="b">gatis tasya tu kīdṛśī</seg> </l>
+<l><seg type="pāda" n="c">dehasthaṃ tu kathaṃ vidyād</seg> <seg type="pāda" n="d">vaktum arhasi śaṅkara</seg> //</l>
+</lg>
+
+<milestone unit="speaker" n="śrī īśvara uvāca"/>
+
+<lg xml:id="VT_140">
+<l><seg type="pāda" n="a">meḍhranābhyantare devi</seg> <seg type="pāda" n="b">kandamūlākṛtir bhavet</seg> </l>
+<l><seg type="pāda" n="c">dvāsaptatisahasrāṇi</seg> <seg type="pāda" n="d">nāḍīr ādhārasaṃsthitāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_141">
+<l><seg type="pāda" n="a">nābhideśe sthito granthis</seg> <seg type="pāda" n="b">tatra padmaṃ vyavasthitam</seg> </l>
+<l><seg type="pāda" n="c">karṇikā padmamadhyasya</seg> <seg type="pāda" n="d">tatra sādhyaṃ vyavasthitam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_142">
+<l><seg type="pāda" n="a">karṇikāsuṣirānte tu</seg> <seg type="pāda" n="b">yā kalā cordhvagāminī</seg> </l>
+<l><seg type="pāda" n="c">tasyā madhye sthito devaḥ</seg> <seg type="pāda" n="d">sa tu dīpaśikhopamaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_143">
+<l><seg type="pāda" n="a">śuddhasphaṭikasaṃkāśaṃ</seg> <seg type="pāda" n="b">visphuliṅgārkasaṃnibham</seg> </l>
+<l><seg type="pāda" n="c">vārimārutasaṃkīrṇaṃ</seg> <seg type="pāda" n="d">vālāgraśatabhāgakam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_144">
+<l><seg type="pāda" n="a">vāyuvāhanam ārūḍhaṃ</seg> <seg type="pāda" n="b">śabdātītam anāmayam</seg> </l>
+<l><seg type="pāda" n="c">sampratyayaṃ tu gamyo 'sau</seg> <seg type="pāda" n="d">vahate dehamadhyataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_145">
+<l><seg type="pāda" n="a">iḍāmadhyagato vāpi</seg> <seg type="pāda" n="b">piṅgalāntargato 'pi vā</seg> </l>
+<l><seg type="pāda" n="c">suṣumnāntargataś caiva</seg> <seg type="pāda" n="d">viṣuvaṃ samudāhṛtam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_146">
+<l><seg type="pāda" n="a">iḍā tu vāmajā proktā</seg> <seg type="pāda" n="b">dakṣiṇe piṅgalā smṛtā</seg> </l>
+<l><seg type="pāda" n="c">anayor madhye suṣumnā tu</seg> <seg type="pāda" n="d">sṛṣṭisaṃhārakārikā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_147">
+<l><seg type="pāda" n="a">iḍā śāntikapuṣṭyarthe</seg> <seg type="pāda" n="b">mṛtyūccāṭana piṅgalā</seg> </l>
+<l><seg type="pāda" n="c">suṣumnā mokṣadā caiva</seg> <seg type="pāda" n="d">jīvamārgānusāriṇī</seg> //</l>
+</lg>
+
+<lg xml:id="VT_148">
+<l><seg type="pāda" n="a">piṅgalāntargataṃ dhyātvā</seg> <seg type="pāda" n="b">raktavarṇaṃ vicintayet</seg> </l>
+<l><seg type="pāda" n="c">māraṇoccāṭanādīni</seg> <seg type="pāda" n="d">tataḥ karmāṇi kārayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_149">
+<l><seg type="pāda" n="a">amṛtāntargataṃ jñātvā</seg> <seg type="pāda" n="b">dhyāyet tuhinasaṃnibham</seg> </l>
+<l><seg type="pāda" n="c">śāntipuṣṭivaśākarṣaṃ</seg> <seg type="pāda" n="d">tadā karmāṇi kārayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_150">
+<l><seg type="pāda" n="a">vratayogādisaṃsiddhiṃ</seg> <seg type="pāda" n="b">mūlamantreṣu kārayet</seg> </l>
+<l><seg type="pāda" n="c">tad atra japamātreṇa</seg> <seg type="pāda" n="d">mantrī sādhayate kṣaṇāt</seg> //</l>
+</lg>
+
+<lg xml:id="VT_151">
+<l><seg type="pāda" n="a">aprasūtā mṛtā yoṣit</seg> <seg type="pāda" n="b">prāptayauvanam eva ca</seg> </l>
+<l><seg type="pāda" n="c">tasyāḥ pāṃśulikāṃ gṛhya</seg> <seg type="pāda" n="d">vāmabhāge vicakṣaṇaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_152">
+<l><seg type="pāda" n="a">likhen nāmākṣaraṃ tatra</seg> <seg type="pāda" n="b">devīnām kūṭasaṃsthitam</seg> </l>
+<l><seg type="pāda" n="c">vāmāṅgojjvalaraktena</seg> <seg type="pāda" n="d">sādhakaḥ saṃyatavrataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_153">
+<l><seg type="pāda" n="a">striyaṃ caiva likhet tatra</seg> <seg type="pāda" n="b">gavāṃ rocanayā punaḥ</seg> </l>
+<l><seg type="pāda" n="c">anulomair vihanyas tu</seg> <seg type="pāda" n="d">vāmapādena cākramet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_154">
+<l><seg type="pāda" n="a">tatkṣaṇād ānayec chīghraṃ</seg> <seg type="pāda" n="b">yā strī dvādaśayojanāt</seg> </l>
+<l><seg type="pāda" n="c">puruṣasya tathā proktaṃ</seg> <seg type="pāda" n="d">dakṣiṇāṅge tu kārayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_155">
+<l><seg type="pāda" n="a">athābhicārakaṃ kuryāt</seg> <seg type="pāda" n="b">samidhānāṃ tathāsthibhiḥ</seg> </l>
+<l><seg type="pāda" n="c">rājikāviṣaraktāktaṃ</seg> <seg type="pāda" n="d">śmaśāne homam ārabhet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_156">
+<l><seg type="pāda" n="a">nagno muktaśikho bhūtvā</seg> <seg type="pāda" n="b">kapālatrayasaṃsthitaḥ</seg> </l>
+<l><seg type="pāda" n="c">samidhāṣṭaśataṃ homaṃ</seg> <seg type="pāda" n="d">rātrau kuryād vicakṣaṇaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_157">
+<l><seg type="pāda" n="a">homānte tu tataḥ śakraṃ</seg> <seg type="pāda" n="b">kṛṣṇavarṇam vicintayet</seg> </l>
+<l><seg type="pāda" n="c">triśūlena vinirbhinnaṃ</seg> <seg type="pāda" n="d">daṇḍena tāḍitaṃ śiraḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_158">
+<l><seg type="pāda" n="a">sādhako ghorarūpeṇa</seg> <seg type="pāda" n="b">kruddhaḥ saṃraktalocanaḥ</seg> </l>
+<l><seg type="pāda" n="c">saptāhān nāśayed indraṃ</seg> <seg type="pāda" n="d">kiṃ punar mānuṣādikam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_159">
+<l><seg type="pāda" n="a">tyaktena tu kusumbhena</seg> <seg type="pāda" n="b">śatenāṣṭottareṇa tu</seg> </l>
+<l><seg type="pāda" n="c">trisandhyaṃ dhārayed rātrau</seg> <seg type="pāda" n="d">agnikāryaṃ tu kārayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_160">
+<l><seg type="pāda" n="a">sādhyaṃ tu sādhakaś caiva</seg> <seg type="pāda" n="b">raktavarṇaṃ vicintayet</seg> </l>
+<l><seg type="pāda" n="c">homānte tu dhyāyet sādhyaṃ</seg> <seg type="pāda" n="d">vihvalaṃ ca sammūrchitam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_161">
+<l><seg type="pāda" n="a">aṅkuśena hato mūrdhni</seg> <seg type="pāda" n="b">māyāpāśena veṣṭitam</seg> </l>
+<l><seg type="pāda" n="c">rājānaṃ rājapatnīṃ vā</seg> <seg type="pāda" n="d">saptāhād vaśam ānayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_162">
+<l><seg type="pāda" n="a">gṛhītvā tu mahāmāṃsaṃ</seg> <seg type="pāda" n="b">dadhimadhvājyasaṃyutam</seg> </l>
+<l><seg type="pāda" n="c">āhutyaṣṭasahasreṇa</seg> <seg type="pāda" n="d">sadyotkarṣaṇam uttamam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_163">
+<l><seg type="pāda" n="a">ātmanaḥ sādhyabījaṃ ca</seg> <seg type="pāda" n="b">pañcadevyā catuṣṭayam</seg> </l>
+<l><seg type="pāda" n="c">nāḍīmadhyagataṃ dhyātvā</seg> <seg type="pāda" n="d">ekīkṛtya vicakṣaṇaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_164">
+<l><seg type="pāda" n="a">nāḍīmārgānusāreṇa</seg> <seg type="pāda" n="b">praveśya sādhyavigraham</seg> </l>
+<l><seg type="pāda" n="c">anenaiva prayogeṇa</seg> <seg type="pāda" n="d">trailokyaṃ vaśam ānayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_165">
+<l><seg type="pāda" n="a">ata uccāṭanaṃ kuryāc</seg> <seg type="pāda" n="b">chatrūṇāṃ baladarpitām</seg> </l>
+<l><seg type="pāda" n="c">śuṣkāṇi nimbapattrāṇi</seg> <seg type="pāda" n="d">dhvajāgrāṇi tathaiva ca</seg> //</l>
+</lg>
+
+<lg xml:id="VT_166">
+<l><seg type="pāda" n="a">nṛvālaṃ citibhasmaṃ ca</seg> <seg type="pāda" n="b">kākapakṣāgrapicchakam</seg> </l>
+<l><seg type="pāda" n="c">kaṭutailaviṣaṃ raktaṃ</seg> <seg type="pāda" n="d">tenāloḍya tu homayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_167">
+<l><seg type="pāda" n="a">caṇḍālāgniṃ samāhṛtya</seg> <seg type="pāda" n="b">citikāṣṭhaṃ samindhayet</seg> </l>
+<l><seg type="pāda" n="c">uccāṭayet trirātreṇa</seg> <seg type="pāda" n="d">tyaktabandhusuhṛjjanān</seg> //</l>
+</lg>
+
+<lg xml:id="VT_168">
+<l><seg type="pāda" n="a">vāmahastatale candraṃ</seg> <seg type="pāda" n="b">dhyātvā sampūrṇamaṇḍalam</seg> </l>
+<l><seg type="pāda" n="c">bījapañcakasaṃyuktaṃ</seg> <seg type="pāda" n="d">yasya taṃ darśayet karam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_169">
+<l><seg type="pāda" n="a">darśanād vaśam āyānti</seg> <seg type="pāda" n="b">ye 'pi hantuṃ samudyatāḥ</seg> </l>
+<l><seg type="pāda" n="c">yaṃ yaṃ spṛśati hastena</seg> <seg type="pāda" n="d">dāsatvam upagacchati</seg> //</l>
+</lg>
+
+<lg xml:id="VT_170">
+<l><seg type="pāda" n="a">dakṣiṇe 'py eva vai haste</seg> <seg type="pāda" n="b">vinyased ravimaṇḍalam</seg> </l>
+<l><seg type="pāda" n="c">yaṃ spṛśed darśayed yaṃ tu</seg> <seg type="pāda" n="d">vidviṣṭāḥ suhṛdāny api</seg> //</l>
+</lg>
+
+<lg xml:id="VT_171">
+<l><seg type="pāda" n="a">nimbasthavāyasaṃ gṛhya</seg> <seg type="pāda" n="b">śvapākenāvatāritam</seg> </l>
+<l><seg type="pāda" n="c">bījair etair viparyastais</seg> <seg type="pāda" n="d">tailābhyaktaṃ citāhutam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_172">
+<l><seg type="pāda" n="a">tad bhasma viṣaraktāktaṃ</seg> <seg type="pāda" n="b">kṛṣṇānte raktavāsasaḥ</seg> </l>
+<l><seg type="pāda" n="c">parijapya sahasraṃ tu</seg> <seg type="pāda" n="d">vilomair bījapañcakaiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_173">
+<l><seg type="pāda" n="a">yaṃ spṛśed bhasmanā tena</seg> <seg type="pāda" n="b">kākavad bhramate mahīm</seg> </l>
+<l><seg type="pāda" n="c">vidviṣṭaḥ sarvalokānāṃ</seg> <seg type="pāda" n="d">yadi śakrasamo bhavet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_174">
+<l><seg type="pāda" n="a">yathātmani tathā sādhye</seg> <seg type="pāda" n="b">bījaṣoḍaśakaṃ nyaset</seg> </l>
+<l><seg type="pāda" n="c">javāpuṣpasamaprakhyau</seg> <seg type="pāda" n="d">dvāv etau paricintayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_175">
+<l><seg type="pāda" n="a">jātīhiṅgulakapakṣau</seg> <seg type="pāda" n="b">lākṣārasasamaprabhau</seg> </l>
+<l><seg type="pāda" n="c">padmasampuṭamadhyasthau</seg> <seg type="pāda" n="d">ubhau tau sādhyasādhakau</seg> //</l>
+</lg>
+
+<lg xml:id="VT_176">
+<l><seg type="pāda" n="a">aṅkuśaṃ sādhyaguhye tu</seg> <seg type="pāda" n="b">daṇḍaṃ cātmani guhyataḥ</seg> </l>
+<l><seg type="pāda" n="c">kusumbharaktasaṃkāśau</seg> <seg type="pāda" n="d">māyātantvabhiveṣṭitau</seg> //</l>
+</lg>
+
+<lg xml:id="VT_177">
+<l><seg type="pāda" n="a">pañcarātraṃ trirātraṃ vā</seg> <seg type="pāda" n="b">niḥśabdo dhyānapāragaḥ</seg> </l>
+<l><seg type="pāda" n="c">vaśam ānayate kṣipraṃ</seg> <seg type="pāda" n="d">nṛpatiṃ mānagarvitam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_178">
+<l><seg type="pāda" n="a">dvijayoṣin mṛtā yā tu</seg> <seg type="pāda" n="b">tasyā gṛhyaṃ tu karpaṭam</seg> </l>
+<l><seg type="pāda" n="c">kṛṣṇacaturdaśyāṃ gṛhītvā</seg> <seg type="pāda" n="d">cityaṅgārais tadudbhavaiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_179">
+<l><seg type="pāda" n="a">bījair vidarbhitaṃ nāma</seg> <seg type="pāda" n="b">yasya yasya ca veśmani</seg> </l>
+<l><seg type="pāda" n="c">nikhanyate sa vai kṣipraṃ</seg> <seg type="pāda" n="d">prayāti yamasādanam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_180">
+<l><seg type="pāda" n="a">tato vidyāvrataślāghī</seg> <seg type="pāda" n="b">kīrtyādibhir alaṃkṛtaḥ</seg> </l>
+<l><seg type="pāda" n="c">sādhyate 'nena prayogeṇa</seg> <seg type="pāda" n="d">mriyate cāvikalpataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_181">
+<l><seg type="pāda" n="a">gavāṃ rocanayā caiva</seg> <seg type="pāda" n="b">yasya nāma vidarbhitam</seg> </l>
+<l><seg type="pāda" n="c">bījair etaiḥ samāyuktair</seg> <seg type="pāda" n="d">ālikhya prakṣiped budhaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_182">
+<l><seg type="pāda" n="a">pātraṃ madhvājyasampūrṇaṃ</seg> <seg type="pāda" n="b">śatam āvartayed drutam</seg> </l>
+<l><seg type="pāda" n="c">mumukṣor api tasyāstraṃ</seg> <seg type="pāda" n="d">śāntipuṣṭiś ca jāyate</seg> //</l>
+</lg>
+
+<lg xml:id="VT_183">
+<l><seg type="pāda" n="a">śatajapto jalenāpi</seg> <seg type="pāda" n="b">tato vā mucyate sadā</seg> </l>
+<l><seg type="pāda" n="c">vyādhighātasamidbhis tu</seg> <seg type="pāda" n="d">vyādhinātyantapīḍitaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_184">
+<l><seg type="pāda" n="a">aṣṭottaraśatenaiva</seg> <seg type="pāda" n="b">āhutīnāṃ na saṃśayaḥ</seg> </l>
+<l><seg type="pāda" n="c">kṣīrāktena tu deveśi</seg> <seg type="pāda" n="d">rogī rogād vimucyate</seg> //</l>
+</lg>
+
+<lg xml:id="VT_185">
+<l><seg type="pāda" n="a">juhoti yas tu satataṃ</seg> <seg type="pāda" n="b">dravyaṃ tasya gṛhe tu yat</seg> </l>
+<l><seg type="pāda" n="c">kurvanto 'pi vyayaṃ nityam</seg> <seg type="pāda" n="d">akṣayatvaṃ ca gacchati</seg> //</l>
+</lg>
+
+<lg xml:id="VT_186">
+<l><seg type="pāda" n="a">nityaṃ kālajapenāpi</seg> <seg type="pāda" n="b">sarveṣāṃ jāyate priyaḥ</seg> </l>
+<l><seg type="pāda" n="c">tejasvī balasampanno</seg> <seg type="pāda" n="d">nāpy asau pīḍyate bhayaiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_187">
+<l><seg type="pāda" n="a">śrīkāmaḥ śrīphalaṃ juhyāt</seg> <seg type="pāda" n="b">padmaṃ cājyamadhuplutam</seg> </l>
+<l><seg type="pāda" n="c">lakṣaikena mahāvitto</seg> <seg type="pāda" n="d">mantrī lakṣadvayena tu</seg> //</l>
+</lg>
+
+<lg xml:id="VT_188">
+<l><seg type="pāda" n="a">lakṣatrayeṇa pṛthvīśo</seg> <seg type="pāda" n="b">nirjitārir bhaved dhruvam</seg> </l>
+<l><seg type="pāda" n="c">sarvakāmas tilaṃ juhyāt</seg> <seg type="pāda" n="d">prāpnuyāt tu na saṃśayaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_189">
+<l><seg type="pāda" n="a">lakṣeṇaikena deveśi</seg> <seg type="pāda" n="b">sādhakaḥ sa jitendriyaḥ</seg> </l>
+<l><seg type="pāda" n="c">tyaktena naramāṃsena</seg> <seg type="pāda" n="d">chāgasya piśitena vā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_190">
+<l><seg type="pāda" n="a">lakṣamātrahutenāśu</seg> <seg type="pāda" n="b">yad iṣṭaṃ tad avāpnuyāt</seg> </l>
+<l><seg type="pāda" n="c">kṛṣṇāgopayasā sārdhaṃ</seg> <seg type="pāda" n="d">nṛmāṃsaṃ taṇḍulānvitam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_191">
+<l><seg type="pāda" n="a">pāyasaṃ śavavaktre tu</seg> <seg type="pāda" n="b">juhuyāt tāvatandritaḥ</seg> </l>
+<l><seg type="pāda" n="c">yāvad uttiṣthate pretaḥ</seg> <seg type="pāda" n="d">kiṃ karomīti so 'bravīt</seg> //</l>
+</lg>
+
+<lg xml:id="VT_192">
+<l><seg type="pāda" n="a">mārgitavyaṃ yad iṣtaṃ tu</seg> <seg type="pāda" n="b">labhanīyaṃ yaśasvini</seg> </l>
+<l><seg type="pāda" n="c">guḍikāñjanapādukaṃ</seg> <seg type="pāda" n="d">khanyaṃ vā rājyam eva ca</seg> //</l>
+</lg>
+<note>em.: guḍikāñcanapādūṃ ? ca Ed</note>
+
+<lg xml:id="VT_193">
+<l><seg type="pāda" n="a">vidhānaṃ śakranāśaṃ ca</seg> <seg type="pāda" n="b">pādaleparasāyanam</seg> </l>
+<l><seg type="pāda" n="c">eteṣāṃ prārthitaṃ caikaṃ</seg> <seg type="pāda" n="d">dattvāgacchati nānyathā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_194">
+<l><seg type="pāda" n="a">uddhatā yā mṛtā yoṣit</seg> <seg type="pāda" n="b">tasyā gṛhyāṅgulīyakam</seg> </l>
+<l><seg type="pāda" n="c">abhimantrya imair bījair</seg> <seg type="pāda" n="d">anulomaiḥ śatena tu</seg> //</l>
+</lg>
+
+<lg xml:id="VT_195">
+<l><seg type="pāda" n="a">aṣtādhikena mantrajñaḥ</seg> <seg type="pāda" n="b">sādhyanāma vidarbhayet</seg> </l>
+<l><seg type="pāda" n="c">yasyā dadāti tadvad āste</seg> <seg type="pāda" n="d">striyāyāḥ sādhakottamaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_196">
+<l><seg type="pāda" n="a">ākarṣyati tāṃ kṣipraṃ</seg> <seg type="pāda" n="b">yadi syād urvaśīsamā</seg> </l>
+<l><seg type="pāda" n="c">yojanānāṃ śatasyāpi</seg> <seg type="pāda" n="d">dūreṇāpi samarpitam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_197">
+<l><seg type="pāda" n="a">puruṣasya bhaved devi</seg> <seg type="pāda" n="b">uddhatasya yaśasvini</seg> </l>
+<l><seg type="pāda" n="c">kākamāṃsaṃ gṛhītvā tu</seg> <seg type="pāda" n="d">nimbatailasamāyutam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_198">
+<l><seg type="pāda" n="a">śmaśānāgniṃ samādhāya</seg> <seg type="pāda" n="b">śigrukāṣṭhena sādhayet</seg> </l>
+<l><seg type="pāda" n="c">juhuyāt saptarātraṃ tu</seg> <seg type="pāda" n="d">yasya nāmnā tu sādhakaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_199">
+<l><seg type="pāda" n="a">vidviṣto dṛśyate loke</seg> <seg type="pāda" n="b">eṣa vidveṣaṇaṃ param</seg> </l>
+<l><seg type="pāda" n="c">ato 'nyat sampravakṣyāmi</seg> <seg type="pāda" n="d">rahasyam idam adbhutam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_200">
+<l><seg type="pāda" n="a">yad viditvā maheśāni</seg> <seg type="pāda" n="b">siddhim āpnoti puṣkalām</seg> </l>
+<l><seg type="pāda" n="c">svakāle samprayogeṇa</seg> <seg type="pāda" n="d">siddhis tantreṣu kīrtitā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_201">
+<l><seg type="pāda" n="a">tataḥ svakālaṃ kurvīta</seg> <seg type="pāda" n="b">svāni karmāṇi sādhakaḥ</seg> </l>
+<l><seg type="pāda" n="c">sādhyahṛtpadmasaṃsthaṃ tu</seg> <seg type="pāda" n="d">dhyātvādau bījapañcakam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_202">
+<l><seg type="pāda" n="a">kurvīta manasā pūjām</seg> <seg type="pāda" n="b">itāyāpravato ? padā</seg> </l>
+<l><seg type="pāda" n="c">māyayācchādayet paścāt</seg> <seg type="pāda" n="d">sādhyam antobahiryutam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_203">
+<l><seg type="pāda" n="a">māyākamalanālena</seg> <seg type="pāda" n="b">sādhyam āveṣtam ānayet</seg> </l>
+<l><seg type="pāda" n="c">tataḥ svātmīkam ānīya</seg> <seg type="pāda" n="d">māyātattvaślathīkṛtam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_204">
+<l><seg type="pāda" n="a">pun as tat sthāpayitvā tu</seg> <seg type="pāda" n="b">sammukhaḥ sādhakottamaḥ</seg> </l>
+<l><seg type="pāda" n="c">nyastavyaṃ tu yad ādau tu ?</seg> <seg type="pāda" n="d">sādhye vai bījapañcakam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_205">
+<l><seg type="pāda" n="a">māyāveṣtitaṃ tan mantrī</seg> <seg type="pāda" n="b">japed aṣṭaśataṃ tataḥ</seg> </l>
+<l><seg type="pāda" n="c">sādhyanāmākṣaropetaṃ</seg> <seg type="pāda" n="d">tatprabuddhāsane sthitam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_206">
+<l><seg type="pāda" n="a">evaṃ devi tataḥ śīghraṃ</seg> <seg type="pāda" n="b">dhvastajānuśiroruhaḥ</seg> </l>
+<l><seg type="pāda" n="c">ākṛṣto vidhinānena</seg> <seg type="pāda" n="d">sādhyaḥ kiṃkarito mahān</seg> //</l>
+</lg>
+
+<lg xml:id="VT_207">
+<l><seg type="pāda" n="a">ataḥ paraṃ pravakṣyāmi</seg> <seg type="pāda" n="b">baddhe ruddhe 'pi mokṣaṇam</seg> </l>
+<l><seg type="pāda" n="c">yathā saṃharate śakraṃ</seg> <seg type="pāda" n="d">tatprayogam idaṃ śṛṇu</seg> //</l>
+</lg>
+
+<lg xml:id="VT_208">
+<l><seg type="pāda" n="a">sādhyahṛtkamalāntaḥsthaṃ</seg> <seg type="pāda" n="b">dhyātvaivaṃ bījapañcakam</seg> </l>
+<l><seg type="pāda" n="c">kurvīta pūrvavat pūjāṃ</seg> <seg type="pāda" n="d">suṣumnāyāganirgadā ?</seg> //</l>
+</lg>
+
+<lg xml:id="VT_209">
+<l><seg type="pāda" n="a">saṃhārāstraṃ tato mantrī</seg> <seg type="pāda" n="b">tumburuṃ mūrdhni vinyaset</seg> </l>
+<l><seg type="pāda" n="c">devīnāṃ ca tatas tena</seg> <seg type="pāda" n="d">sādhyam āvṛtya yogavit</seg> //</l>
+</lg>
+
+<lg xml:id="VT_210">
+<l><seg type="pāda" n="a">tatra yo mūrdhni tenaiva</seg> <seg type="pāda" n="b">jvalitānalavarcasā</seg> </l>
+<l><seg type="pāda" n="c">dṛṣtvā taṃ manasā bhūyo</seg> <seg type="pāda" n="d">mūrcchitaṃ bhuvi vihvalam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_211">
+<l><seg type="pāda" n="a">hṛdi baddhvāṅkuśenaiva</seg> <seg type="pāda" n="b">ānayed ātmano 'ntikam</seg> </l>
+<l><seg type="pāda" n="c">tatas tvadhomukhaṃ sthāpya</seg> <seg type="pāda" n="d">pīḍitaṃ chardayed asṛk</seg> //</l>
+</lg>
+
+<lg xml:id="VT_212">
+<l><seg type="pāda" n="a">paścāt tu hṛdaye tasya</seg> <seg type="pāda" n="b">nyastavyaṃ bījapañcakam</seg> </l>
+<l><seg type="pāda" n="c">proddhṛtya sādhyanāmaivaṃ</seg> <seg type="pāda" n="d">saṃhārāstravidarbhitam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_213">
+<l><seg type="pāda" n="a">evaṃ vigatarakṣaṃ tu</seg> <seg type="pāda" n="b">syāpyudgataṃ tu ? tataḥ</seg> </l>
+<l><seg type="pāda" n="c">japed aṣṭasahasraṃ tu</seg> <seg type="pāda" n="d">jvālāmālābhir āvṛtam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_214">
+<l><seg type="pāda" n="a">tatas tu karmaṇānena</seg> <seg type="pāda" n="b">tenaiva tu vidhānataḥ</seg> </l>
+<l><seg type="pāda" n="c">sādhyaḥ prayāti nidhanaṃ</seg> <seg type="pāda" n="d">mṛtyur āntima ? kampayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_215">
+<l><seg type="pāda" n="a">ity etat kathitaṃ devi</seg> <seg type="pāda" n="b">samāsādyaṃ tu pūrvaśaḥ</seg> </l>
+<l><seg type="pāda" n="c">yathā saṃharate śakraṃ</seg> <seg type="pāda" n="d">baddhe ruddhe 'tha mokṣaṇāt</seg> //</l>
+</lg>
+
+<lg xml:id="VT_216">
+<l><seg type="pāda" n="a">krodhena mahatā dīptaḥ</seg> <seg type="pāda" n="b">prayogam idam ārabhet</seg> </l>
+<l><seg type="pāda" n="c">suṣumnāyāṃ yadā devaḥ</seg> <seg type="pāda" n="d">svayaṃcāreṇa vartate</seg> //</l>
+</lg>
+
+<lg xml:id="VT_217">
+<l><seg type="pāda" n="a">suṣumnāntargataṃ dhyātvā</seg> <seg type="pāda" n="b">raktavarṇaṃ vicintayet</seg> </l>
+<l><seg type="pāda" n="c">vidveṣoccāṭanādīni</seg> <seg type="pāda" n="d">tataḥ karmāṇi kārayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_218">
+<l><seg type="pāda" n="a">bījapañcakadevasya</seg> <seg type="pāda" n="b">vargāntarayutasya ca</seg> </l>
+<l><seg type="pāda" n="c">varṇāntayāgam ekānte</seg> <seg type="pāda" n="d">sadā gopitaṃ tan mayā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_219">
+<l><seg type="pāda" n="a">tadā tu sarvakāryāṇāṃ</seg> <seg type="pāda" n="b">siddhaye śṛṇu suvrate</seg> </l>
+<l><seg type="pāda" n="c">kusumbharajasāloḍyaṃ</seg> <seg type="pāda" n="d">śālīnāṃ piṣṭakena ca</seg> //</l>
+</lg>
+
+<lg xml:id="VT_220">
+<l><seg type="pāda" n="a">bhasmanā candanenāpi</seg> <seg type="pāda" n="b">nāgakeśarajena vā</seg> </l>
+<l><seg type="pāda" n="c">sugandhaiś ca vicitraiś ca</seg> <seg type="pāda" n="d">likhec ca susamāhitaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_221">
+<l><seg type="pāda" n="a">vargātītasya garbhe tu</seg> <seg type="pāda" n="b">nyaset padmaṃ caturdalam</seg> </l>
+<l><seg type="pāda" n="c">tatra sabhrātṛkā devyaḥ</seg> <seg type="pāda" n="d">pūjayed bījapañcake</seg> //</l>
+</lg>
+
+<lg xml:id="VT_222">
+<l><seg type="pāda" n="a">evaṃ pūjitamātrās tu</seg> <seg type="pāda" n="b">sarvadāsarvakāmadāḥ</seg> </l>
+<l><seg type="pāda" n="c">bhavanti niyataṃ[nityaṃ]</seg> <seg type="pāda" n="d">dharmakāmārthamokṣadāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_223">
+<l><seg type="pāda" n="a">yāgam evaṃ ca kṛtvānte</seg> <seg type="pāda" n="b">tato lakṣatrayaṃ japet</seg> </l>
+<l><seg type="pāda" n="c">tataḥ siddhim avāpnoti</seg> <seg type="pāda" n="d">brahmaghno 'pi hi nānyathā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_224">
+<l><seg type="pāda" n="a">manasā cintitaṃ kāmaṃ</seg> <seg type="pāda" n="b">tadā prabhṛtim āpnuyāt</seg> </l>
+<l><seg type="pāda" n="c">ataḥ paraṃ pravakṣyāmi</seg> <seg type="pāda" n="d">japasya vidhim uttamam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_225">
+<l><seg type="pāda" n="a">ekāsanasthito mantrī</seg> <seg type="pāda" n="b">yāgaṃ kṛtvā vidhānavit</seg> </l>
+<l><seg type="pāda" n="c">ekacittaḥ prasannātmā</seg> <seg type="pāda" n="d">vāmahastākṣasūtradhṛk</seg> //</l>
+</lg>
+
+<lg xml:id="VT_226">
+<l><seg type="pāda" n="a">japakarma sadākuryād</seg> <seg type="pāda" n="b">viśeṣam aparaṃ śṛṇu</seg> </l>
+<l><seg type="pāda" n="c">vaśyakāmo japaṃ kuryād</seg> <seg type="pāda" n="d">anulomair vidarbhitam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_227">
+<l><seg type="pāda" n="a">bījair etair yathānyāyaṃ</seg> <seg type="pāda" n="b">sādhyanāmākṣarānvitaiḥ</seg> </l>
+<l><seg type="pāda" n="c">kālaṃ tatra vijānīyāt</seg> <seg type="pāda" n="d">kālasiddhiḥ pravartate</seg> //</l>
+</lg>
+
+<lg xml:id="VT_228">
+<l><seg type="pāda" n="a">māraṇe pratilomais tu</seg> <seg type="pāda" n="b">sādhyanāma tu pūrvataḥ</seg> </l>
+<l><seg type="pāda" n="c">vidveṣe 'pi vilomais tu</seg> <seg type="pāda" n="d">phaṭkārāntaṃ prayojayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_229">
+<l><seg type="pāda" n="a">māraṇe pratilomais tu</seg> <seg type="pāda" n="b">hūṃphatkārānta dyan ? takaiḥ</seg> </l>
+<l><seg type="pāda" n="c">oṃ svāhā namo 'ntais tu</seg> <seg type="pāda" n="d">vaśyākarṣaṇakarmasu</seg> //</l>
+</lg>
+
+<lg xml:id="VT_230">
+<l><seg type="pāda" n="a">homayed evam evaṃ tu</seg> <seg type="pāda" n="b">sarvaṃ kuryād vicakṣaṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">namaskāro japasyānte</seg> <seg type="pāda" n="d">svāhā home prakīrtitam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_231">
+<l><seg type="pāda" n="a">svaśoṇitāktaṃ laśunaṃ</seg> <seg type="pāda" n="b">māraṇe pratihomayet</seg> </l>
+<l><seg type="pāda" n="c">uccātane kākapakṣaṃ</seg> <seg type="pāda" n="d">vaśye jātiṃ tu homayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_232">
+<l><seg type="pāda" n="a">vidveṣe śleṣa śigruṃ ca</seg> <seg type="pāda" n="b">homayed avicāraṇāt</seg> </l>
+<l><seg type="pāda" n="c">ākarṣaṇe bakulapuṣpaṃ</seg> <seg type="pāda" n="d">homayec ca vicakṣaṇaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_233">
+<l><seg type="pāda" n="a">sarve yāgasamuddiṣtāḥ</seg> <seg type="pāda" n="b">kālajñasya yaśasvini</seg> </l>
+<l><seg type="pāda" n="c">yena kālaṃ ca vai jñātaṃ</seg> <seg type="pāda" n="d">tena jñātaḥ sadāśivaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_234">
+<l><seg type="pāda" n="a">sadāśive parijñāte</seg> <seg type="pāda" n="b">siddhiṃ śāmyanti sādhakāḥ</seg> </l>
+<l><seg type="pāda" n="c">kālatattvaṃ ca vijñeyaṃ</seg> <seg type="pāda" n="d">tattvātsiddhiḥ pravartate</seg> //</l>
+</lg>
+
+<lg xml:id="VT_235">
+<l><seg type="pāda" n="a">tattvahīnā na sidhyanti</seg> <seg type="pāda" n="b">prayatnenāpi sādhakāḥ</seg> </l>
+<l><seg type="pāda" n="c">tasmāt sarvaprayatnena</seg> <seg type="pāda" n="d">kālatattvaṃ vidur budhāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_236">
+<l><seg type="pāda" n="a">kriyākālaṃ ca vai śūnyaṃ</seg> <seg type="pāda" n="b">na sidhyantīha sādhakāḥ</seg> </l>
+<l><seg type="pāda" n="c">tasmāt kriyāṃ ca kālaṃ ca</seg> <seg type="pāda" n="d">asaṃjñeyaṃ prayatnataḥ</seg> //</l>
+</lg>
+
+<milestone unit="speaker" n="śrīdevy uvāca"/>
+
+<lg xml:id="VT_237">
+<l><seg type="pāda" n="a">sa kālaś ca kathaṃ jñeyo</seg> <seg type="pāda" n="b">yo 'sāv uktas tvayā prabho</seg> </l>
+<l><seg type="pāda" n="c">kālahīnānṛtaṃ manye</seg> <seg type="pāda" n="d">sarvam eva ca śaṅkara</seg> //</l>
+</lg>
+
+<milestone unit="speaker" n="śrī īśvara uvāca"/>
+
+<lg xml:id="VT_238">
+<l><seg type="pāda" n="a">śṛṇu devi paraṃ guhyaṃ</seg> <seg type="pāda" n="b">kālatattvātmavigraham</seg> </l>
+<l><seg type="pāda" n="c">yaj jñātvā tu sukhenaiva</seg> <seg type="pāda" n="d">siddhir bhavati mantriṇām</seg> //</l>
+</lg>
+
+<lg xml:id="VT_239">
+<l><seg type="pāda" n="a">ayutaṃ dve ca vijñeyāḥ</seg> <seg type="pāda" n="b">ṣoḍaśaiva śatāni ca</seg> </l>
+<l><seg type="pāda" n="c">caturviṃśatisaṃkrāntyā</seg> <seg type="pāda" n="d">dvādaśāṅgulagatāgate</seg> //</l>
+</lg>
+
+<lg xml:id="VT_240">
+<l><seg type="pāda" n="a">śarīre tu yathā devi</seg> <seg type="pāda" n="b">sthitaṃ sakalaniṣkalam</seg> </l>
+<l><seg type="pāda" n="c">tathā haṃsaṃ pravakṣyāmi</seg> <seg type="pāda" n="d">sādhakānāṃ hitāya vai</seg> //</l>
+</lg>
+
+<lg xml:id="VT_241">
+<l><seg type="pāda" n="a">pādau pāyur upastham ca</seg> <seg type="pāda" n="b">hastau vāgindriyas tathā</seg> </l>
+<l><seg type="pāda" n="c">śrotratvakcakṣuṣā jihvā</seg> <seg type="pāda" n="d">nāsikā ca tathāparā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_242">
+<l><seg type="pāda" n="a">pṛthvy āpas tathā tejo</seg> <seg type="pāda" n="b">vāyur ākāśam eva ca</seg> </l>
+<l><seg type="pāda" n="c">śabdaḥ sparśaś ca rūpaṃ ca</seg> <seg type="pāda" n="d">raso gandhas tathaiva ca</seg> //</l>
+</lg>
+
+<lg xml:id="VT_243">
+<l><seg type="pāda" n="a">mano buddhir ahaṃkāro</seg> <seg type="pāda" n="b">avyaktam puruṣas tathā</seg> </l>
+<l><seg type="pāda" n="c">pañcaviṃśatitattvāni</seg> <seg type="pāda" n="d">śarīre tu vidur budhāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_244">
+<l><seg type="pāda" n="a">ebhir ādhārabhūtais tu</seg> <seg type="pāda" n="b">ādheyo dhyāyate sadā</seg> </l>
+<l><seg type="pāda" n="c">ādhāraṃ puram ity uktaṃ</seg> <seg type="pāda" n="d">puruṣaś cādheya ucyate</seg> //</l>
+</lg>
+
+<lg xml:id="VT_245">
+<l><seg type="pāda" n="a">hṛtpadme karṇikāvastha</seg> <seg type="pāda" n="b">ūrdhvagāmī sadātmakaḥ</seg> </l>
+<l><seg type="pāda" n="c">niṣkalasya tu devasya</seg> <seg type="pāda" n="d">punar ādhārasaṃsthitiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_246">
+<l><seg type="pāda" n="a">tatpuruṣam ādhārādheyaṃ</seg> <seg type="pāda" n="b">niṣkalaṃ paramaṃ śivam</seg> </l>
+<l><seg type="pāda" n="c">ṣatkauśikaśarīraṃ tu</seg> <seg type="pāda" n="d">tattvānāṃ pañcaviṃśatiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_247">
+<l><seg type="pāda" n="a">daśavāyusamāyuktaṃ</seg> <seg type="pāda" n="b">nāḍībhir vyāpitaṃ puram</seg> </l>
+<l><seg type="pāda" n="c">śarīraṃ triguṇaṃ caiva</seg> <seg type="pāda" n="d">sarvadaivatasaṃyutam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_248">
+<l><seg type="pāda" n="a">anenādhiṣthitaṃ devi</seg> <seg type="pāda" n="b">cakravat parivartate</seg> </l>
+<l><seg type="pāda" n="c">yathā tāragaṇaṃ sarvaṃ</seg> <seg type="pāda" n="d">grahanakṣatramaṇḍalam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_249">
+<l><seg type="pāda" n="a">dhruvādhiṣthitaṃ tat sarvam</seg> <seg type="pāda" n="b">acalaṃ parivartate</seg> </l>
+<l><seg type="pāda" n="c">tadvac charīraṃ devasya</seg> <seg type="pāda" n="d">sarvabījagaṇaṃ hi yat</seg> //</l>
+</lg>
+
+<lg xml:id="VT_250">
+<l><seg type="pāda" n="a">śivenādhiṣthitaṃ jñātvā</seg> <seg type="pāda" n="b">tantre siddhim avāpnuyāt</seg> </l>
+<l><seg type="pāda" n="c">trikubjikutilākārā</seg> <seg type="pāda" n="d">ṣaṣṭhasvarasamanvitā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_251">
+<l><seg type="pāda" n="a">śaktir binduvinirbhinnā</seg> <seg type="pāda" n="b">dehasthā sakalātmakā</seg> </l>
+<l><seg type="pāda" n="c">asyās tejaḥśikhā sūkṣmā</seg> <seg type="pāda" n="d">mṛṇālatantusaṃnibhā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_252">
+<l><seg type="pāda" n="a">jyotirūpā ca sā jñeyā</seg> <seg type="pāda" n="b">tasyānte tu punaḥ śivaḥ</seg> </l>
+<l><seg type="pāda" n="c">akārādikṣakārāntam</seg> <seg type="pāda" n="d">ābrahmabhuvanaṃ jagat</seg> //</l>
+</lg>
+
+<lg xml:id="VT_253">
+<l><seg type="pāda" n="a">asmiṃś codpadyate sarvaṃ</seg> <seg type="pāda" n="b">tatraiva pralayaṃ bhavet</seg> </l>
+<l><seg type="pāda" n="c">eṣa devaḥ paraḥ sūkṣma</seg> <seg type="pāda" n="d">ādhārādheyasaṃsthitaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_254">
+<l><seg type="pāda" n="a">ayane viṣuve caiva</seg> <seg type="pāda" n="b">āgneyāmṛtakāraṇam</seg> </l>
+<l><seg type="pāda" n="c">yadā vāruṇamārgastha</seg> <seg type="pāda" n="d">iḍāmadhyagato bhavet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_255">
+<l><seg type="pāda" n="a">himakundendusaṃkāśo</seg> <seg type="pāda" n="b">vijñeyaḥ śucikarmaṇi</seg> </l>
+<l><seg type="pāda" n="c">dvādaśādityasaṃkāśaḥ</seg> <seg type="pāda" n="d">piṅgalāntargato yadā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_256">
+<l><seg type="pāda" n="a">aruṇānalasaṃkāśaṃ</seg> <seg type="pāda" n="b">raudrakarmaṇi yojayet</seg> </l>
+<l><seg type="pāda" n="c">suṣumnāyāṃ yadā deva</seg> <seg type="pāda" n="d">upaśānto vahaty asau</seg> //</l>
+</lg>
+
+<lg xml:id="VT_257">
+<l><seg type="pāda" n="a">mokṣamārgam idaṃ devi</seg> <seg type="pāda" n="b">jyotīrūpaṃ parāparam</seg> </l>
+<l><seg type="pāda" n="c">eṣa devo gatiś caiva</seg> <seg type="pāda" n="d">kālatattvātmavigrahaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_258">
+<l><seg type="pāda" n="a">sādhakasya hitārthāya</seg> <seg type="pāda" n="b">paramārtham udāhṛtam</seg> </l>
+<l><seg type="pāda" n="c">etatsarvaṃ samākhyātaṃ</seg> <seg type="pāda" n="d">kālatattvātmavigraham</seg> //</l>
+</lg>
+
+<lg xml:id="VT_259">
+<l><seg type="pāda" n="a">trisaṃsthe tu samāsena</seg> <seg type="pāda" n="b">sarvatantreṣu siddhidam</seg> </l>
+<l><seg type="pāda" n="c">nāḍīsaṃsthaṃ yathā karma</seg> <seg type="pāda" n="d">kurute mantriṇaḥ sadā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_260">
+<l><seg type="pāda" n="a">tad ahaṃ sampravakṣyāmi</seg> <seg type="pāda" n="b">śṛṇu tvaṃ ca varānane</seg> </l>
+<l><seg type="pāda" n="c">iḍā ca piṅgalā caiva</seg> <seg type="pāda" n="d">nāḍyau dve samudāhṛte</seg> //</l>
+</lg>
+
+<lg xml:id="VT_261">
+<l><seg type="pāda" n="a">yato nityaṃ cared devaḥ</seg> <seg type="pāda" n="b">kramaśaś ca nivartate</seg> </l>
+<l><seg type="pāda" n="c">tāny ātmavatakarmāṇi</seg> <seg type="pāda" n="d">prayuktaṃ kurute prabhuḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_262">
+<l><seg type="pāda" n="a">sa eva kurute karma</seg> <seg type="pāda" n="b">bījanāḍīprayogataḥ</seg> </l>
+<l><seg type="pāda" n="c">ayaṃ kālaḥ samākhyātas</seg> <seg type="pāda" n="d">tṛtvedaya ? samanvitaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_263">
+<l><seg type="pāda" n="a">dehastham kathitaṃ devi</seg> <seg type="pāda" n="b">ṛtuyuktas tu sādhakaḥ</seg> </l>
+<l><seg type="pāda" n="c">jñātvā kālaṃ ca tattvaṃ tu</seg> <seg type="pāda" n="d">tataḥ karma samārabhet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_264">
+<l><seg type="pāda" n="a">śāntikaṃ pauṣtikaṃ cāpi</seg> <seg type="pāda" n="b">vidveṣoccāṭanaṃ tathā</seg> </l>
+<l><seg type="pāda" n="c">vaśyākarṣaṇakaṃ kuryād</seg> <seg type="pāda" n="d">yadi kālaṃ vijānate</seg> //</l>
+</lg>
+
+<lg xml:id="VT_265">
+<l><seg type="pāda" n="a">saumyāni saumyakāle tu</seg> <seg type="pāda" n="b">raudre raudrāṇi kārayet</seg> </l>
+<l><seg type="pāda" n="c">anyakālakṛtaṃ karma</seg> <seg type="pāda" n="d">vṛthā bhavati sādhake</seg> //</l>
+</lg>
+
+<lg xml:id="VT_266">
+<l><seg type="pāda" n="a">tasmāt sarvaprayatnena</seg> <seg type="pāda" n="b">kāle karmāṇi kārayet</seg> </l>
+<l><seg type="pāda" n="c">svaraktaṃ gocanaṃ caiva</seg> <seg type="pāda" n="d">tathā sindūram eva ca</seg> //</l>
+</lg>
+
+<lg xml:id="VT_267">
+<l><seg type="pāda" n="a">kusumbharajaḥsammiśraṃ</seg> <seg type="pāda" n="b">dadhimadhvājyasaṃyutam</seg> </l>
+<l><seg type="pāda" n="c">khadirai raktasamidhair</seg> <seg type="pāda" n="d">athavā raktacandanaiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_268">
+<l><seg type="pāda" n="a">atra digdhvā hunen mantrī</seg> <seg type="pāda" n="b">saptāhād vaśam ānayet</seg> </l>
+<l><seg type="pāda" n="c">pratimāṃ lavaṇamayīṃ kṛtvā</seg> <seg type="pāda" n="d">śatābhimantritāṃ budhaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_269">
+<l><seg type="pāda" n="a">pādau prabhṛti hotavyaṃ</seg> <seg type="pāda" n="b">yāvad aṣṭaśataṃ bhavet</seg> </l>
+<l><seg type="pāda" n="c">trisandhyām ekacittas tu</seg> <seg type="pāda" n="d">amoghavaśyatāṃ nayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_270">
+<l><seg type="pāda" n="a">saikthīṃ tu pratimāṃ kṛtvā</seg> <seg type="pāda" n="b">tryūṣaṇena tu lepayet</seg> </l>
+<l><seg type="pāda" n="c">pratimāsu susampūrṇaṃ</seg> <seg type="pāda" n="d">kaṇṭakair madanodbhavaiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_271">
+<l><seg type="pāda" n="a">vidarbhya pādau guhyaṃ ca</seg> <seg type="pāda" n="b">lalātaṃ ca vicakṣaṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">kucayugme ca devīnām</seg> <seg type="pāda" n="d">agrato nikhaneta tu</seg> //</l>
+</lg>
+
+<lg xml:id="VT_272">
+<l><seg type="pāda" n="a">adhomukhāṃ viliptāṅgāṃ</seg> <seg type="pāda" n="b">rājikālavaṇena tu</seg> </l>
+<l><seg type="pāda" n="c">vāmanāsikaraktena</seg> <seg type="pāda" n="d">nāmamantrair vidarbhitām</seg> //</l>
+</lg>
+
+<lg xml:id="VT_273">
+<l><seg type="pāda" n="a">likhitvā hṛdaye kuryād</seg> <seg type="pāda" n="b">vahniṃ prajvālya copari</seg> </l>
+<l><seg type="pāda" n="c">rājikālavaṇaṃ caiva</seg> <seg type="pāda" n="d">hotavyāṣtaśataṃ budhaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_274">
+<l><seg type="pāda" n="a">trisandhyām eva saptāhāt</seg> <seg type="pāda" n="b">trailokyaṃ vaśam ānayet</seg> </l>
+<l><seg type="pāda" n="c">kulālakaranirmukta</seg><seg type="pāda" n="d">mṛdā pratimayīkṛtā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_275">
+<l><seg type="pāda" n="a">tenaiva kaṇtakair viddhvā</seg> <seg type="pāda" n="b">svasthānasthais tu mantriṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">bhage vā athavā liṅge</seg> <seg type="pāda" n="d">sanmantrāṇy aṣṭaśatāni tu</seg> //</l>
+</lg>
+
+<lg xml:id="VT_276">
+<l><seg type="pāda" n="a">sūtrayed guhyadeśe tu</seg> <seg type="pāda" n="b">gṛṇan mantraṃ tu sarvadā</seg> </l>
+<l><seg type="pāda" n="c">saptāhād ānayed vaśyaṃ</seg> <seg type="pāda" n="d">striyaṃ vā puruṣam api vā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_277">
+<l><seg type="pāda" n="a">mānuṣāsthimayaṃ kīlaṃ</seg> <seg type="pāda" n="b">kṛtvā tu caturaṅgulam</seg> </l>
+<l><seg type="pāda" n="c">kṣīravṛkṣaṃ bhage likhya</seg> <seg type="pāda" n="d">liṅgaṃ vā kīlayet tataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_278">
+<l><seg type="pāda" n="a">ṣaṇḍilas tu bhavet sādhya</seg> <seg type="pāda" n="b">ārdrayogo na saṃśayaḥ</seg> </l>
+<l><seg type="pāda" n="c">uddhṛtena bhaven mokṣaṃ</seg> <seg type="pāda" n="d">nātra kāryā vicāraṇā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_279">
+<l><seg type="pāda" n="a">madhūkā śvetapadmaṃ ca</seg> <seg type="pāda" n="b">rocanā nāgakeśaram</seg> </l>
+<l><seg type="pāda" n="c">tagaraṃ caiva sūkṣmelam</seg> <seg type="pāda" n="d">añjanaṃ samabhāgikam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_280">
+<l><seg type="pāda" n="a">kanyayā piṣitaṃ kṛtvā</seg> <seg type="pāda" n="b">yāgaṃ kṛtvā yathoditam</seg> </l>
+<l><seg type="pāda" n="c">sahasrāṣtādhikaṃ japtvā</seg> <seg type="pāda" n="d">japena yajane tataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_281">
+<l><seg type="pāda" n="a">sarvalokeṣu dṛśyante</seg> <seg type="pāda" n="b">kāmadevasamo 'pi tat</seg> </l>
+<l><seg type="pāda" n="c">vicareta mahīṃ kṛtsnāṃ</seg> <seg type="pāda" n="d">nātra kāryā vicāraṇā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_282">
+<l><seg type="pāda" n="a">mañjiṣthā kunduruś caiva</seg> <seg type="pāda" n="b">haridre dve tu pīṣayet</seg> </l>
+<l><seg type="pāda" n="c">piṣtvā pūrvavidhānena</seg> <seg type="pāda" n="d">tato guhyaṃ pralepayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_283">
+<l><seg type="pāda" n="a">pravṛtte maithune kāle</seg> <seg type="pāda" n="b">patir dāsaṃ kariṣyati</seg> </l>
+<l><seg type="pāda" n="c">meṣalocanamūlaṃ tu</seg> <seg type="pāda" n="d">kambalyā kṣīrasādhitam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_284">
+<l><seg type="pāda" n="a">śmaśāne sādhayen mantrī</seg> <seg type="pāda" n="b">rātrau kāṣṭhais tadudbhavaiḥ</seg> </l>
+<l><seg type="pāda" n="c">kapālair guṇḍayed aṅgaṃ</seg> <seg type="pāda" n="d">raktavāsoparicchadam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_285">
+<l><seg type="pāda" n="a">udvartano 'bhayo hy eṣa</seg> <seg type="pāda" n="b">vajravat syāṅkuśopamaḥ</seg> </l>
+<l><seg type="pāda" n="c">bhakṣayed deśayet kaṃcit</seg> <seg type="pāda" n="d">kāmāṅkuśavinirgataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_286">
+<l><seg type="pāda" n="a">puruṣo vaśam āyāti</seg> <seg type="pāda" n="b">strī vā madanagarvitā</seg> </l>
+<l><seg type="pāda" n="c">vālmīkamṛttikāṃ gṛhya</seg> <seg type="pāda" n="d">balīvardaṃ tu kārayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_287">
+<l><seg type="pāda" n="a">kanyākartitasūtreṇa</seg> <seg type="pāda" n="b">tasya nāsāṃ pravedhayet</seg> </l>
+<l><seg type="pāda" n="c">athavā padmasūtreṇa</seg> <seg type="pāda" n="d">raktacandanalepitam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_288">
+<l><seg type="pāda" n="a">raktapuṣpaiḥ samabhyarcya</seg> <seg type="pāda" n="b">sarvārṇavaṃ samānayet</seg> </l>
+<l><seg type="pāda" n="c">sādhyasya vilikhen nāma</seg> <seg type="pāda" n="d">svaraktena vṛṣodare</seg> //</l>
+</lg>
+
+<lg xml:id="VT_289">
+<l><seg type="pāda" n="a">śrīvṛkṣakotare sthāpya</seg> <seg type="pāda" n="b">sādhyam evaṃ vaśīkuru</seg> </l>
+<l><seg type="pāda" n="c">anenaiva mṛdā meṣaṃ</seg> <seg type="pāda" n="d">kārayen mantravit sadā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_290">
+<l><seg type="pāda" n="a">meṣasūtreṇa vai nāsāṃ</seg> <seg type="pāda" n="b">vedhayet pūrvavac chuciḥ</seg> </l>
+<l><seg type="pāda" n="c">devīnām agrataḥ sthāpya</seg> <seg type="pāda" n="d">tasya nāsāṃ pracālayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_291">
+<l><seg type="pāda" n="a">yaṃ yaṃ vijñāpayet kāmaṃ</seg> <seg type="pāda" n="b">taṃ taṃ prāpnoti sādhakaḥ</seg> </l>
+<l><seg type="pāda" n="c">ete yogavarā devi</seg> <seg type="pāda" n="d">mayā tava udāhṛtāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_292">
+<l><seg type="pāda" n="a">varṇānām udare yāgaṃ</seg> <seg type="pāda" n="b">sarvakāmaprasiddhidam</seg> </l>
+<l><seg type="pāda" n="c">evam eva magarbhasthaṃ</seg> <seg type="pāda" n="d">māraṇe samprayojayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_293">
+<l><seg type="pāda" n="a">gavāṃ rocanayā likhya</seg> <seg type="pāda" n="b">evam eva prayojayet</seg> </l>
+<l><seg type="pāda" n="c">sodaremūkatāṃ kuryād</seg> <seg type="pāda" n="d">vāgīśam api mūkayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_294">
+<l><seg type="pāda" n="a">nit yam ākarṣayet proktam</seg> <seg type="pāda" n="b">ākārodare pūjitā</seg> </l>
+<l><seg type="pāda" n="c">mahāpuruṣavarastrīṇāṃ</seg> <seg type="pāda" n="d">japamānā tu kīrtanāt</seg> //</l>
+</lg>
+
+<lg xml:id="VT_295">
+<l><seg type="pāda" n="a">jñānāṅkuśagatā pūjā</seg> <seg type="pāda" n="b">kṣipraṃ prāyeṣu vastuṣu</seg> </l>
+<l><seg type="pāda" n="c">unmaneṣv atha ghoreṣu</seg> <seg type="pāda" n="d">sākāreṇa tu sādhayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_296">
+<l><seg type="pāda" n="a">ekārodarayāgena</seg> <seg type="pāda" n="b">bhavaty arthapradāyikā</seg> </l>
+<l><seg type="pāda" n="c">vakāramadhyagā caiva</seg> <seg type="pāda" n="d">vaśīkaraṇakarmaṇi</seg> //</l>
+</lg>
+
+<lg xml:id="VT_297">
+<l><seg type="pāda" n="a">dharmārthamokṣadā caiva</seg> <seg type="pāda" n="b">puṣṭitejovivardhanī</seg> </l>
+<l><seg type="pāda" n="c">bhavati niyatā devi</seg> <seg type="pāda" n="d">haṃsamadhyeṣu pūjitam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_298">
+<l><seg type="pāda" n="a">bhañjane yadi sainyānāṃ</seg> <seg type="pāda" n="b">bhakārajathare sthitam</seg> </l>
+<l><seg type="pāda" n="c">bhavati niyatā kṣipraṃ</seg> <seg type="pāda" n="d">kṣemanābhigarīyasī</seg> //</l>
+</lg>
+
+<lg xml:id="VT_299">
+<l><seg type="pāda" n="a">māraṇe tu prayoktavyaṃ</seg> <seg type="pāda" n="b">phatkārānte vyavasthitā</seg> </l>
+<l><seg type="pāda" n="c">vidveṣaṃ tu prayacchanti</seg> <seg type="pāda" n="d">jakārajatharesthitā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_300">
+<l><seg type="pāda" n="a">śatrukulocchādaṃ kuryāt</seg> <seg type="pāda" n="b">hūṃ phatkārānte vyavasthitā</seg> </l>
+<l><seg type="pāda" n="c">svalpaprāyeṣu kāryeṣu</seg> <seg type="pāda" n="d">yakārajatharodare</seg> //</l>
+</lg>
+
+<lg xml:id="VT_301">
+<l><seg type="pāda" n="a">dehanyāsaṃ punar vakṣye</seg> <seg type="pāda" n="b">abhedyaṃ parameśvari</seg> </l>
+<l><seg type="pāda" n="c">vinyasya karaṇān sākṣān</seg> <seg type="pāda" n="d">mahābhūteṣu pañcasu</seg> //</l>
+</lg>
+
+<lg xml:id="VT_302">
+<l><seg type="pāda" n="a">dehe tattvatrayaṃ nyasya</seg> <seg type="pāda" n="b">prāṇāyāmapuraḥsaraḥ</seg> </l>
+<l><seg type="pāda" n="c">śarīre vinyased devi</seg> <seg type="pāda" n="d">pūrvam uktakrameṇa tu</seg> //</l>
+</lg>
+
+<lg xml:id="VT_303">
+<l><seg type="pāda" n="a">māyayācchādayitvā tu</seg> <seg type="pāda" n="b">aṅkuśena nirodhayet</seg> </l>
+<l><seg type="pāda" n="c">yoniṃ baddhvā tataḥ paścāt</seg> <seg type="pāda" n="d">sādhakaḥ susamāhitaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_304">
+<l><seg type="pāda" n="a">svadehe namasā mantrī</seg> <seg type="pāda" n="b">kalpoktena tu karmaṇā</seg> </l>
+<l><seg type="pāda" n="c">kuryāt sarvāṇi kāryāṇi</seg> <seg type="pāda" n="d">tataḥ siddhir na saṃśayaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_305">
+<l><seg type="pāda" n="a">nayottarāditantreṣu</seg> <seg type="pāda" n="b">kalpoktaṃ karma kārayet</seg> </l>
+<l><seg type="pāda" n="c">athavādaśalakṣāṇi</seg> <seg type="pāda" n="d">japed yas tu vidhānataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_306">
+<l><seg type="pāda" n="a">tataḥ sabhrātṛkā devyaḥ</seg> <seg type="pāda" n="b">sādhakasyāgrataḥ sthitāḥ</seg> </l>
+<l><seg type="pāda" n="c">varam iṣtaṃ prayacchanti</seg> <seg type="pāda" n="d">trayātītaṃ padaṃ hi yat</seg> //</l>
+</lg>
+
+<lg xml:id="VT_307">
+<l><seg type="pāda" n="a">bījapañcakam etad dhi</seg> <seg type="pāda" n="b">na deyaṃ yasya kasyacit</seg> </l>
+<l><seg type="pāda" n="c">vargāntanirguṇākrāntaṃ</seg> <seg type="pāda" n="d">samyag vai bījapañcakam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_308">
+<l><seg type="pāda" n="a">evam eva purā kṛtvā</seg> <seg type="pāda" n="b">jñātvaivaṃ hi vidhānataḥ</seg> </l>
+<l><seg type="pāda" n="c">bījāni bījayet prājñaḥ</seg> <seg type="pāda" n="d">tataḥ karma samārabhet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_309">
+<l><seg type="pāda" n="a">evaṃ vidhānavid yas tu</seg> <seg type="pāda" n="b">hīno vā sarvalakṣaṇaiḥ</seg> </l>
+<l><seg type="pāda" n="c">api pātakasaṃyuktaḥ</seg> <seg type="pāda" n="d">sa siddhiphalabhāg bhavet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_310">
+<l><seg type="pāda" n="a">vargāntanirguṇākhyasya</seg> <seg type="pāda" n="b">asyāpi paramaṃ smṛtam</seg> </l>
+<l><seg type="pāda" n="c">hṛdayaṃ devadevīnām</seg> <seg type="pāda" n="d">ekākṣaram ataḥ param</seg> //</l>
+</lg>
+
+<lg xml:id="VT_311">
+<l><seg type="pāda" n="a">yatra sabhrātṛkā devyaḥ</seg> <seg type="pāda" n="b">kūṭadehā vyavasthitāḥ</seg> </l>
+<l><seg type="pāda" n="c">nātaḥ parataro mantras</seg> <seg type="pāda" n="d">triṣu lokeṣu vidyate</seg> //</l>
+</lg>
+
+<lg xml:id="VT_312">
+<l><seg type="pāda" n="a">gopitavyaṃ prayatnena</seg> <seg type="pāda" n="b">tantrasāraṃ sudurlabham</seg> </l>
+<l><seg type="pāda" n="c">mamāpi gopitaṃ devi</seg> <seg type="pāda" n="d">sarvajñenāpi sarvadā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_313">
+<l><seg type="pāda" n="a">niścayaṃ mama baddhvānta ?</seg> <seg type="pāda" n="b">yac ca devena bhāṣitam</seg> </l>
+<l><seg type="pāda" n="c">tvayāpi caivam evaṃ hi</seg> <seg type="pāda" n="d">rakṣaṇīyaṃ prayatnataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_314">
+<l><seg type="pāda" n="a">cintāratnam idaṃ guhyaṃ</seg> <seg type="pāda" n="b">vratasādhanavarjitam</seg> </l>
+<l><seg type="pāda" n="c">anusmaraṇāmātreṇa</seg> <seg type="pāda" n="d">samyagjñāya krameṇa tu</seg> //</l>
+</lg>
+
+<lg xml:id="VT_315">
+<l><seg type="pāda" n="a">varṇayāgakrameṇaiva</seg> <seg type="pāda" n="b">pūrvoktena yathākramam</seg> </l>
+<l><seg type="pāda" n="c">sidhyate nātra saṃdehaḥ</seg> <seg type="pāda" n="d">sarvakāmas tu mantriṇām</seg> //</l>
+</lg>
+
+<lg xml:id="VT_316">
+<l><seg type="pāda" n="a">śāntikaṃ pauṣtikaṃ caiva</seg> <seg type="pāda" n="b">vidveṣoccāṭanaṃ tathā</seg> </l>
+<l><seg type="pāda" n="c">vaśyākarṣas tathā nāśaṃ</seg> <seg type="pāda" n="d">sarvaṃ sidhyati sādhake</seg> //</l>
+</lg>
+
+<lg xml:id="VT_317">
+<l><seg type="pāda" n="a">śukreṇa sarvatobhadre</seg> <seg type="pāda" n="b">mahāsammohane tathā</seg> </l>
+<l><seg type="pāda" n="c">nirmathya kathito devi</seg> <seg type="pāda" n="d">dadhno ghṛtam ivoddhṛtam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_318">
+<l><seg type="pāda" n="a">parīkṣya guruṇā śiṣyaṃ</seg> <seg type="pāda" n="b">gurudevāgnipūjakam</seg> </l>
+<l><seg type="pāda" n="c">tasya deyam idaṃ tantraṃ</seg> <seg type="pāda" n="d">na ca nāstikanindake</seg> //</l>
+</lg>
+
+<lg xml:id="VT_319">
+<l><seg type="pāda" n="a">na dīkṣitā na sidhyanti</seg> <seg type="pāda" n="b">sthitāḥ kalpaśatair api</seg> </l>
+<l><seg type="pāda" n="c">svayaṃgṛhītamantrāś ca</seg> <seg type="pāda" n="d">nāstikā vedanindakāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_320">
+<l><seg type="pāda" n="a">samayebhyaḥ paribhraṣtās</seg> <seg type="pāda" n="b">tathā tantravidūṣakāḥ</seg> </l>
+<l><seg type="pāda" n="c">gurūṇāṃ viheṭhanaparās</seg> <seg type="pāda" n="d">tantrasāravilopakāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_321">
+<l><seg type="pāda" n="a">yoginībhiḥ sadā bhraṣṭāḥ</seg> <seg type="pāda" n="b">kathyante dharmalopakāḥ</seg> </l>
+<l><seg type="pāda" n="c">iti tathyaṃ mahādevi</seg> <seg type="pāda" n="d">surāsuranamaskṛtam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_322">
+<l><seg type="pāda" n="a">sāram etad dhi tantrasya</seg> <seg type="pāda" n="b">tasya tatsthaṃ mahānaye</seg> </l>
+<l><seg type="pāda" n="c">ājñā bhagavataś caiva</seg> <seg type="pāda" n="d">śivasya paramātmanaḥ</seg> //</l>
+</lg>
+
+<milestone unit="speaker" n="śrīdevy uvāca"/>
+
+<lg xml:id="VT_323">
+<l><seg type="pāda" n="a">śrutaṃ mayā mahādeva</seg> <seg type="pāda" n="b">vīṇāsadbhāvam uttamam</seg> </l>
+<l><seg type="pāda" n="c">tantraṃ vīṇāśikhaṃ nāma</seg> <seg type="pāda" n="d">durlabhaṃ tridaśeṣv api</seg> //</l>
+</lg>
+
+<lg xml:id="VT_324">
+<l><seg type="pāda" n="a">vargāntanirguṇākhyasya</seg> <seg type="pāda" n="b">asyāpi paramaṃ ca yat</seg> </l>
+<l><seg type="pāda" n="c">ekākṣaraṃ paraṃ guhyaṃ</seg> <seg type="pāda" n="d">bhuktimuktipradāyakam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_325">
+<l><seg type="pāda" n="a">gopitaṃ tu tvayā deva</seg> <seg type="pāda" n="b">sārabhūtaṃ maheśvara</seg> </l>
+<l><seg type="pāda" n="c">tapasā durdharāllabdhaṃ</seg> <seg type="pāda" n="d">yac ca jñānaṃ śivodbhavam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_326">
+<l><seg type="pāda" n="a">prasādaṃ kuru deveśa</seg> <seg type="pāda" n="b">yatra siddhir dhruvaṃ sthitā</seg> </l>
+<l><seg type="pāda" n="c">prāpte kaliyuge ghore</seg> <seg type="pāda" n="d">saṃkate bahupātake</seg> //</l>
+</lg>
+
+<lg xml:id="VT_327">
+<l><seg type="pāda" n="a">sarvasrotaḥprapannānām</seg> <seg type="pāda" n="b">āśu siddhir yathā nṛṇām</seg> </l>
+<l><seg type="pāda" n="c">prasādaṃ kuru deveśa</seg> <seg type="pāda" n="d">kaḥ parampārate mama</seg> //</l>
+</lg>
+
+<lg xml:id="VT_328">
+<l><seg type="pāda" n="a">alpaprajñāḥ kumatayo</seg> <seg type="pāda" n="b">bahuvyākulacetasā</seg> </l>
+<l><seg type="pāda" n="c">tantraṃ naivādhigacchanti</seg> <seg type="pāda" n="d">na caiva bahudhā śrutam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_329">
+<l><seg type="pāda" n="a">iti deva tvayā pūrvaṃ</seg> <seg type="pāda" n="b">kathitaṃ guruṇātmanā</seg> </l>
+<l><seg type="pāda" n="c">asmākam api saṃkṣepāt</seg> <seg type="pāda" n="d">kathayasva maheśvara</seg> //</l>
+</lg>
+
+<milestone unit="speaker" n="śrī īśvara uvāca"/>
+
+<lg xml:id="VT_330">
+<l><seg type="pāda" n="a">aho svabhāvaprakṛte</seg> <seg type="pāda" n="b">kimpraśnāsi punaḥ 'punaḥ</seg> </l>
+<l><seg type="pāda" n="c">yan mayā kathitaṃ pūrvaṃ</seg> <seg type="pāda" n="d">tad gṛhāṇa subhāṣitam</seg> //</l>
+</lg>
+
+<milestone unit="speaker" n="śrīdevy uvāca"/>
+
+<lg xml:id="VT_331">
+<l><seg type="pāda" n="a">na bhūyaḥ paripṛcchāmi</seg> <seg type="pāda" n="b">praśnam ekā garīyasī</seg> </l>
+<l><seg type="pāda" n="c">vāram ekaṃ kuru vyaktaṃ</seg> <seg type="pāda" n="d">prasādaṃ sūkṣmagocaram</seg> //</l>
+</lg>
+
+<milestone unit="speaker" n="śrī īśvara uvāca"/>
+
+<lg xml:id="VT_332">
+<l><seg type="pāda" n="a">śṛṇu devi prayatnena</seg> <seg type="pāda" n="b">sūkṣmāt sūkṣmataraṃ mahat</seg> </l>
+<l><seg type="pāda" n="c">prayogaṃ sarvatantrāṇām</seg> <seg type="pāda" n="d">uttaraṃ sarvasiddhaye</seg> //</l>
+</lg>
+
+<lg xml:id="VT_333">
+<l><seg type="pāda" n="a">yena saṃsmṛtamātreṇa</seg> <seg type="pāda" n="b">siddhir hastatale sthitā</seg> </l>
+<l><seg type="pāda" n="c">nāyāso na vrataś caiva</seg> <seg type="pāda" n="d">na tapaś ca maheśvari</seg> //</l>
+</lg>
+
+<lg xml:id="VT_334">
+<l><seg type="pāda" n="a">nāgnikarma na caivārcā</seg> <seg type="pāda" n="b">smaraṇāt siddhidaḥ smṛtaḥ</seg> </l>
+<l><seg type="pāda" n="c">śṛṇuṣvaikākṣaraṃ devi</seg> <seg type="pāda" n="d">sadbhāvaparasaṃhitam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_335">
+<l><seg type="pāda" n="a">śarīraṃ tattvarājānaṃ</seg> <seg type="pāda" n="b">jātavedasi saṃsthitam</seg> </l>
+<l><seg type="pāda" n="c">śikhāyāṃ saṃsthito devo</seg> <seg type="pāda" n="d">bindudevī jayā smṛtā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_336">
+<l><seg type="pāda" n="a">yaścātrordhvaṃ bhaved devi</seg> <seg type="pāda" n="b">saukaraḥ parikīrtitaḥ</seg> </l>
+<l><seg type="pāda" n="c">tantudevaṃ vijānīyān</seg> <seg type="pāda" n="d">makāraṃ bindudevatām</seg> //</l>
+</lg>
+
+<lg xml:id="VT_337">
+<l><seg type="pāda" n="a">evaṃ tu pañcadhā devi</seg> <seg type="pāda" n="b">tattvarājaṃ tu kīrtitam</seg> </l>
+<l><seg type="pāda" n="c">caturviṃśatikoṣthe tu</seg> <seg type="pāda" n="d">yo mantranāyakaḥ smṛtaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_338">
+<l><seg type="pāda" n="a">tattvarāja iti khyāta</seg> <seg type="pāda" n="b">ūnaviṃśaty adhaḥ smṛtaḥ</seg> </l>
+<l><seg type="pāda" n="c">viṃśakena svareṇaiva</seg> <seg type="pāda" n="d">bindumūrdhnā tu pīḍitam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_339">
+<l><seg type="pāda" n="a">eṣa ekākṣaraḥ proktas</seg> <seg type="pāda" n="b">tvatpriyārthaṃ varānane</seg> </l>
+<l><seg type="pāda" n="c">suṣiraṃ tattvarājānaṃ</seg> <seg type="pāda" n="d">jātavedasi saṃsthitam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_340">
+<l><seg type="pāda" n="a">viṣṇor upari dīptena</seg> <seg type="pāda" n="b">japel lakṣatrayaṃ budhaḥ</seg> </l>
+<l><seg type="pāda" n="c">ākarṣayed drumāṇy eṣa</seg> <seg type="pāda" n="d">mṛgapakṣisarīsṛpān</seg> //</l>
+</lg>
+
+<lg xml:id="VT_341">
+<l><seg type="pāda" n="a">mānuṣāṇāṃ tu kā cintā</seg> <seg type="pāda" n="b">ākarṣaṇavidhiṃ prati</seg> </l>
+<l><seg type="pāda" n="c">ekādaśamaḥ saṃyuktas</seg> <seg type="pāda" n="d">tattvarājena śobhane</seg> //</l>
+</lg>
+
+<lg xml:id="VT_342">
+<l><seg type="pāda" n="a">śirasā bindubhinnena</seg> <seg type="pāda" n="b">hṛdi caiṣa nigadyate</seg> </l>
+<l><seg type="pāda" n="c">saptaviṃśa śiraḥ proktaṃ</seg> <seg type="pāda" n="d">triṃśamas tu śikhā bhavet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_343">
+<l><seg type="pāda" n="a">ūnacatvāriṃśatir devi</seg> <seg type="pāda" n="b">tattvo 'yaṃ kavacaḥ smṛtaḥ</seg> </l>
+<l><seg type="pāda" n="c">ṣoḍaśasvarasaṃyuktam</seg> <seg type="pāda" n="d">etad astraṃ prakīrtitam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_344">
+<l><seg type="pāda" n="a">netraṃ tu kathitaṃ devi</seg> <seg type="pāda" n="b">viṃśatyakṣarayojitam</seg> </l>
+<l><seg type="pāda" n="c">eṣa ekākṣaro devi</seg> <seg type="pāda" n="d">ṣaḍaṅgaḥ samudāhṛtaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_345">
+<l><seg type="pāda" n="a">haṃso māyāyukto devi</seg> <seg type="pāda" n="b">nārācāstravidarbhitaḥ</seg> </l>
+<l><seg type="pāda" n="c">savisarganayapadaṃ bījāntasthaṃ(?)</seg> <seg type="pāda" n="d">ū ī siddhikarī nṛṇām(?)</seg> //</l>
+</lg>
+
+<lg xml:id="VT_346">
+<l><seg type="pāda" n="a">ha ra tra vṛddhiṃ karoti</seg> <seg type="pāda" n="b">.... ....</seg> </l>
+<l><seg type="pāda" n="c">māyāṅkuśanirodhās te</seg> <seg type="pāda" n="d">sarvamantragaṇādayaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_347">
+<l><seg type="pāda" n="a">kramaśo yojayen mantri</seg> <seg type="pāda" n="b">yadīcched dīrgham ātmani</seg> </l>
+<l><seg type="pāda" n="c">sarvam etat parityajya</seg> <seg type="pāda" n="d">kuryān mantraparigraham</seg> //</l>
+</lg>
+
+<lg xml:id="VT_348">
+<l><seg type="pāda" n="a">ātmātīndriyādhārāṇāṃ</seg> <seg type="pāda" n="b">kṛtvā kartavyaṃ muhur muhuḥ</seg> </l>
+<l><seg type="pāda" n="c">padārthavidhisaṃyuktaṃ</seg> <seg type="pāda" n="d">yan mayā gaditaṃ purā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_349">
+<l><seg type="pāda" n="a">tad anena prayogeṇa</seg> <seg type="pāda" n="b">kartavyaṃ siddhim icchatā</seg> </l>
+<l><seg type="pāda" n="c">dhyāyet sindūrasadṛśaṃ</seg> <seg type="pāda" n="d">vaśyākarṣaṇakarmaṇi</seg> //</l>
+</lg>
+
+<lg xml:id="VT_350">
+<l><seg type="pāda" n="a">māraṇe kṛṣṇavarṇaṃ tu</seg> <seg type="pāda" n="b">vidveṣe vāmarūpakam</seg> </l>
+<l><seg type="pāda" n="c">uccāte dhūmravarṇaṃ tu</seg> <seg type="pāda" n="d">śvetaṃ caiva puṣṭyarthinā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_351">
+<l><seg type="pāda" n="a">mayūragrīvasadṛśaṃ</seg> <seg type="pāda" n="b">stambhane cintayet sadā</seg> </l>
+<l><seg type="pāda" n="c">sarvavarṇadharaṃ caiva</seg> <seg type="pāda" n="d">sarvakāmikam eva ca</seg> //</l>
+</lg>
+
+<lg xml:id="VT_352">
+<l><seg type="pāda" n="a">sarvendriyāṇāṃ kurvīta</seg> <seg type="pāda" n="b">upahāre mahādhipe</seg> </l>
+<l><seg type="pāda" n="c">hṛtpadmakarṇikordhvaṃ tu</seg> <seg type="pāda" n="d">suṣiraṃ tatra cintayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_353">
+<l><seg type="pāda" n="a">sphuliṅgaṃ karṇikārūpaṃ</seg> <seg type="pāda" n="b">nirdhūmatejarūpiṇam</seg> </l>
+<l><seg type="pāda" n="c">dhūmajvālāvinirmuktaṃ</seg> <seg type="pāda" n="d">sūryakoṭisamaprabham</seg> //</l>
+</lg>
+
+<lg xml:id="VT_354">
+<l><seg type="pāda" n="a">tasyordhve tu śikhā sūkṣmā</seg> <seg type="pāda" n="b">nirmalā sphātikopamā</seg> </l>
+<l><seg type="pāda" n="c">nityaṃ sā sevyate yuktair</seg> <seg type="pāda" n="d">yogibhir niṣkalā parā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_355">
+<l><seg type="pāda" n="a">ūrṇātantusamākārā</seg> <seg type="pāda" n="b">ūrdhvasrotā nirupamā</seg> </l>
+<l><seg type="pāda" n="c">tatra madhye gataṃ paśyed</seg> <seg type="pāda" n="d">devyā guhyottarambhavā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_356">
+<l><seg type="pāda" n="a">vālāgraśatabhāgākhyā</seg><seg type="pāda" n="b">vīṇādhārāsusaṃsthitā</seg> </l>
+<l><seg type="pāda" n="c">dhyāyeta nityaṃ yogīndraḥ</seg> <seg type="pāda" n="d">sūkṣmaguhyasamudbhavām</seg> //</l>
+</lg>
+
+<lg xml:id="VT_357">
+<l><seg type="pāda" n="a">kṛtvā pūrvaṃ tu vinyāsaṃ</seg> <seg type="pāda" n="b">sakalābāhyasaṃsthitam</seg> </l>
+<l><seg type="pāda" n="c">evaṃ varṇavibhāgaṃ tu</seg> <seg type="pāda" n="d">jñātvā siddhim avāpnuyāt</seg> //</l>
+</lg>
+
+<lg xml:id="VT_358">
+<l><seg type="pāda" n="a">vaśyākarṣaṇakarmāṇi</seg> <seg type="pāda" n="b">vācayā sa kariṣyati</seg> </l>
+<l><seg type="pāda" n="c">vīṇāśikhāyāḥ sarvasvaṃ</seg> <seg type="pāda" n="d">cintāratnam ivāparam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_359">
+<l><seg type="pāda" n="a">etad bījavaraṃ prāpya</seg> <seg type="pāda" n="b">yathepsasi tathā kuru</seg> </l>
+<l><seg type="pāda" n="c">ājñā bhagavataś caiṣā</seg> <seg type="pāda" n="d">sarvadāvyabhicāriṇī</seg> //</l>
+</lg>
+
+<lg xml:id="VT_360">
+<l><seg type="pāda" n="a">dhyātavyā sā prayatnena</seg> <seg type="pāda" n="b">yadīcchet siddhim ātmanaḥ</seg> </l>
+<l><seg type="pāda" n="c">yajanaṃ yājanaṃ caiva</seg> <seg type="pāda" n="d">saṃyogaṃ ca layaṃ tathā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_361">
+<l><seg type="pāda" n="a">samayākṣarabījaṃ ca</seg> <seg type="pāda" n="b">akṣarākṣarayojitam</seg> </l>
+<l><seg type="pāda" n="c">rakṣaṇīyaṃ tvayā bhadre</seg> <seg type="pāda" n="d">prayatnena suniścalam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_362">
+<l><seg type="pāda" n="a">etad guhyaṃ samākhyātaṃ</seg> <seg type="pāda" n="b">tava snehād vicakṣaṇi</seg> </l>
+<l><seg type="pāda" n="c">etaj jñātvā tu mantrajñaḥ</seg> <seg type="pāda" n="d">śivasāyujyatāṃ vrajet</seg> //</l>
+</lg>
+<note>em: #sāyojyatāṃ Ed</note>
+
+<lg xml:id="VT_363">
+<l><seg type="pāda" n="a">evaṃ vilayatāṃ yāti</seg> <seg type="pāda" n="b">vidhinānena yoṣitām</seg> </l>
+<l><seg type="pāda" n="c">amalīkṛtadehas tu</seg> <seg type="pāda" n="d">vidhinānena sādhakaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_364">
+<l><seg type="pāda" n="a">amalīkṛtaṃ tanmantraṃ</seg> <seg type="pāda" n="b">hṛccakre viniyojayet</seg> </l>
+<l><seg type="pāda" n="c">somamaṇḍalamadhyasthaṃ</seg> <seg type="pāda" n="d">dhyāyet kundendusaprabham</seg> //</l>
+</lg>
+
+<lg xml:id="VT_365">
+<l><seg type="pāda" n="a">amṛtena tu siñcanti</seg> <seg type="pāda" n="b">lāntīsagatilitena ? tu</seg> </l>
+<l><seg type="pāda" n="c">evam āpyāyito mantraḥ</seg> <seg type="pāda" n="d">sarvasiddhiprado bhavet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_366">
+<l><seg type="pāda" n="a">evam āpyāyanaṃ kṛtvā</seg> <seg type="pāda" n="b">bindumadhyevicakṣaṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">aṣṭottarasahasraṃ tu</seg> <seg type="pāda" n="d">mantrāṇāṃ mantravij japet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_367">
+<l><seg type="pāda" n="a">paramīkaraṇaṃ hy etan</seg> <seg type="pāda" n="b">mantrasyāpyāyanaṃ smṛtam</seg> </l>
+<l><seg type="pāda" n="c">śivībhūtas tu mantro vai</seg> <seg type="pāda" n="d">sādhayed akhilaṃ jagat</seg> //</l>
+</lg>
+
+<lg xml:id="VT_368">
+<l><seg type="pāda" n="a">sūryacakraniruddhaṃ tu</seg> <seg type="pāda" n="b">śirasi samavasthitam</seg> </l>
+<l><seg type="pāda" n="c">japet hūṃkārasahitaṃ</seg> <seg type="pāda" n="d">bodhanaṃ parikīrtitam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_369">
+<l><seg type="pāda" n="a">ādityacakramadhyasthaṃ</seg> <seg type="pāda" n="b">vahninā saṃnirodhitam</seg> </l>
+<l><seg type="pāda" n="c">nirdahate mantraṃ devi</seg> <seg type="pāda" n="d">yadā karma na kurvati</seg> //</l>
+</lg>
+
+<lg xml:id="VT_370">
+<l><seg type="pāda" n="a">śikhāmadhyagataṃ dhyātvā</seg> <seg type="pāda" n="b">sahasraṃ parivartayet</seg> </l>
+<l><seg type="pāda" n="c">mantram evaṃ samuddiṣtaṃ</seg> <seg type="pāda" n="d">guhyaśaktipradīpanam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_371">
+<l><seg type="pāda" n="a">dahanaṃ cāgninā kāryaṃ</seg> <seg type="pāda" n="b">hūṃkāreṇa prabodhayet</seg> </l>
+<l><seg type="pāda" n="c">dīpanaṃ tu śikhāmadhye</seg> <seg type="pāda" n="d">mantrāṇāṃ mantravādinām</seg> //</l>
+</lg>
+
+<lg xml:id="VT_372">
+<l><seg type="pāda" n="a">amalīkurutesūryaś</seg> <seg type="pāda" n="b">candreṇāpyāyanaṃ smṛtam</seg> </l>
+<l><seg type="pāda" n="c">śivīkurvīta bindusthaṃ</seg> <seg type="pāda" n="d">mantrī mantraṃ tu yogavit</seg> //</l>
+</lg>
+
+<lg xml:id="VT_373">
+<l><seg type="pāda" n="a">evaṃ mantraviśuddhas tu</seg> <seg type="pāda" n="b">candrasūryasamanvitam</seg> </l>
+<l><seg type="pāda" n="c">dīpanaṃ śaktinā nityaṃ</seg> <seg type="pāda" n="d">japen mantrī samāhitaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_374">
+<l><seg type="pāda" n="a">amṛtodbhavakāle tu</seg> <seg type="pāda" n="b">mantrī yatnena niścayāt</seg> </l>
+<l><seg type="pāda" n="c">vaśam ānayate kṣipraṃ</seg> <seg type="pāda" n="d">viśvaṃ manata ? saṃśayaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_375">
+<l><seg type="pāda" n="a">yāvatī māyā mantrāṇāṃ</seg> <seg type="pāda" n="b">sarveṣāṃ kathitā mayā</seg> </l>
+<l><seg type="pāda" n="c">vidhir atra krame cāyaṃ</seg> <seg type="pāda" n="d">paścād vakṣye jape vidhim</seg> //</l>
+</lg>
+
+<lg xml:id="VT_376">
+<l><seg type="pāda" n="a">yajanakāle samprāpte</seg> <seg type="pāda" n="b">ekacittaḥ samāhitaḥ</seg> </l>
+<l><seg type="pāda" n="c">hṛtpadme karṇikāsīna</seg><seg type="pāda" n="d">devatārpitamānasaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_377">
+<l><seg type="pāda" n="a">śikhābinduṃ vinirdhārya</seg> <seg type="pāda" n="b">tanmantraṃ hṛdi saṃsthitam</seg> </l>
+<l><seg type="pāda" n="c">putavarṇavidhānaṃ syād</seg> <seg type="pāda" n="d">akṛtoccāranisvanam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_378">
+<l><seg type="pāda" n="a">svasthacitto hy asammūḍha</seg> <seg type="pāda" n="b">alākūrdhvasthitātmanaḥ</seg> </l>
+<l><seg type="pāda" n="c">avicchinnaṃ drutaṃ caiva</seg> <seg type="pāda" n="d">avilambitam eva ca</seg> //</l>
+</lg>
+
+<lg xml:id="VT_379">
+<l><seg type="pāda" n="a">tāvan mantrī japen mantraṃ</seg> <seg type="pāda" n="b">yāvac cittaṃ na khidyate</seg> </l>
+<l><seg type="pāda" n="c">alabhya mama mantraṃ syād</seg> <seg type="pāda" n="d">drutaṃ kālasya sidhyati</seg> //</l>
+</lg>
+
+<lg xml:id="VT_380">
+<l><seg type="pāda" n="a">japaṃ kṛtvā tu medhāvī</seg> <seg type="pāda" n="b">nānyam etat samarpayet</seg> </l>
+<l><seg type="pāda" n="c">mantrī kurvīta yatnena</seg> <seg type="pāda" n="d">yathārthatvaṃ nibodhata</seg> //</l>
+</lg>
+
+<lg xml:id="VT_381">
+<l><seg type="pāda" n="a">prathame vāyavī proktā</seg> <seg type="pāda" n="b">dvitīyā tv analā smṛtā</seg> </l>
+<l><seg type="pāda" n="c">tṛtīyā caiva māhendrī</seg> <seg type="pāda" n="d">vāruṇī tu tathāpare</seg> //</l>
+</lg>
+
+<lg xml:id="VT_382">
+<l><seg type="pāda" n="a">oṃkārapūrvato mantraṃ</seg> <seg type="pāda" n="b">namaskārāntayojitam</seg> </l>
+<l><seg type="pāda" n="c">bījapiṇḍaṃ tu madhyasthaṃ</seg> <seg type="pāda" n="d">mudrāyuktaṃ sadā yajet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_383">
+<l><seg type="pāda" n="a">kṣipram arthas tathā karma</seg> <seg type="pāda" n="b">bhuktibhogaṃ sudurlabham</seg> </l>
+<l><seg type="pāda" n="c">sādhayen manasā sarvaṃ</seg> <seg type="pāda" n="d">bījamudrāprayogataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_384">
+<l><seg type="pāda" n="a">hūṃkāram adito nyastam</seg> <seg type="pāda" n="b">namaskārāntavyavasthitam</seg> </l>
+<l><seg type="pāda" n="c">uccātayet sarvaduṣtān</seg> <seg type="pāda" n="d">daityabhūtagrahāṃs tathā</seg> //</l>
+</lg>
+
+<lg xml:id="VT_385">
+<l><seg type="pāda" n="a">oṃkārayojitasyādau</seg> <seg type="pāda" n="b">svāhākārāvasānataḥ</seg> </l>
+<l><seg type="pāda" n="c">agnikāryaprayogo 'yaṃ</seg> <seg type="pāda" n="d">kṣipram arthaṃ prasādhayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_386">
+<l><seg type="pāda" n="a">oṃkārasamputaṃ piṇḍaṃ</seg> <seg type="pāda" n="b">rakāreṇa tu dīpakam</seg> </l>
+<l><seg type="pāda" n="c">sādhayen manasā dhyātvā</seg> <seg type="pāda" n="d">kāmārthaś ca yathepsitam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_387">
+<l><seg type="pāda" n="a">suptaṃ bodhayate mantrī</seg> <seg type="pāda" n="b">śīghraṃ siddhim avāpnuyāt</seg> </l>
+<l><seg type="pāda" n="c">oṃkāraś ca rakāraś ca</seg> <seg type="pāda" n="d">phaṭkāraś caiva madhyataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_388">
+<l><seg type="pāda" n="a">madhye vargāntapiṇḍas tu</seg> <seg type="pāda" n="b">karma kuryād yathepsitam</seg> </l>
+<l><seg type="pāda" n="c">hūṃkāram ādau ante ca</seg> <seg type="pāda" n="d">hakāraś cādimadhyataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_389">
+<l><seg type="pāda" n="a">japan tu bodhayen mantrī</seg> <seg type="pāda" n="b">api suptam acetanam</seg> </l>
+<l><seg type="pāda" n="c">hūṃkāraś ca rakāraś ca</seg> <seg type="pāda" n="d">phaṭkāram ādimadhyataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="VT_390">
+<l><seg type="pāda" n="a">kruddhas tu jāpayen mantrī</seg> <seg type="pāda" n="b">yadākarma na kurvati</seg> </l>
+<l><seg type="pāda" n="c">oṃkārasamputaṃ kṛtvā</seg> <seg type="pāda" n="d">namaskārāntayojitam</seg> //</l>
+</lg>
+
+<lg xml:id="VT_391">
+<l><seg type="pāda" n="a">japet piṇḍākṣaraṃ mantrī</seg> <seg type="pāda" n="b">sarvasiddhikaraṃ param</seg> </l>
+<l><seg type="pāda" n="c">śāntikapauṣtikaṃ karma</seg> <seg type="pāda" n="d">śubheṣu aśubheṣu ca</seg> //</l>
+</lg>
+
+<lg xml:id="VT_392">
+<l><seg type="pāda" n="a">kṣipram āvāhane siddhir</seg> <seg type="pāda" n="b">homabījaprayogataḥ</seg> </l>
+<l><seg type="pāda" n="c">homayet phalabījāni</seg> <seg type="pāda" n="d">dhānyabījatṛṇāni ca</seg> //</l>
+</lg>
+
+<lg xml:id="VT_393">
+<l><seg type="pāda" n="a">payasā vāpi śuddhena</seg> <seg type="pāda" n="b">homakarma hy udāhṛtam</seg> </l>
+<l><seg type="pāda" n="c">madhunā ghṛtasaṃyuktaṃ</seg> <seg type="pāda" n="d">tilaṃ juhyād vicakṣaṇi</seg> //</l>
+</lg>
+
+<lg xml:id="VT_394">
+<l><seg type="pāda" n="a">sādhayet sarvakarmāṇi</seg> <seg type="pāda" n="b">vaṣatkṛtaṃ japiṣyati</seg> </l>
+<l><seg type="pāda" n="c">sarveṣāṃ guhyamantrāṇāṃ</seg> <seg type="pāda" n="d">bījamudrāṃ prayojayet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_395">
+<l><seg type="pāda" n="a">aprakāśyam idaṃ guhyaṃ</seg> <seg type="pāda" n="b">śivavaktrād viniḥsṛtam</seg> </l>
+<l><seg type="pāda" n="c">yas tv idaṃ dhyāyate nityaṃ</seg> <seg type="pāda" n="d">pūjayen manasā japet</seg> //</l>
+</lg>
+
+<lg xml:id="VT_396">
+<l><seg type="pāda" n="a">sa bhuṅkte vipulān bhogān</seg> <seg type="pāda" n="b">īśānāntapadaṃ labhet</seg> //</l>
+</lg>
+
+<trailer>vīṇāśikhā sārdhaśatatrayaṃ yāmalatantraṃ samāptam iti</trailer>
+
+<note>Verse 375 in Ed. has only 2 pādas</note>
+</div>
+<div>
+<head>Appendices :</head>
+
+A:
+hūṃkārādau svāhānte ākarṣaṇe
+oṃkārādau vauṣat ante śāntike
+oṃkārādau su vaṣaḍ ante pauṣtike
+oṃkārādau vaṣaḍante 'mṛtīkaraṇe
+phat phat māraṇe
+oṃ kṣraṃ saṃhārāstra
+
+B:
+kṣa puruṣa/prakṛti buddhi/ahaṅkāra manaḥ
+ja śabdasparśarasarūpagandha tanmātraṃ
+bha pṛthivī āpa teja vāyu ākāśa pañcamahābhūta
+/ma/śrotratvaccakṣurjihvāghrāṇa buddhīndriya
+ha/vākpāṇipādapāyūpastha karmendriya
+
+C:
+jaya brāhmani bhūmi
+vijaya kṣatrāṇi / āpa
+ajita / vaisani / teja
+aparājita sūdrani / vāyu
+tumburu akāśa śūnya nirguṇa
+
+D:
+kṣakāraḥ puruṣaḥ sākṣāt makāraḥ prakṛtiḥ smṛtā
+mahān hakāram ity āhur ahaṃkāras tu ya smṛtaḥ
+oṃkāras tu manaḥ proktaṃ kathitaṃ devi te kramāt
+
+Colophon :
+vīṇāśikhaṃ vāmatantraṃ sampūrṇam śubham astu
+</div>
+  </body>
+</text>
+</TEI>

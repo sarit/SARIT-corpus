@@ -1,0 +1,5376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_AnandabhaTTa-vallAlacarita">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Vallālacarita</title>
+	<author>Ānandabhaṭṭa</author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>Oliver Hellwig</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Oliver Hellwig</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/5_poetry/2_kavya/anvallcu.htm">anvallcu.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Anandabhatta: Vallalacarita
+<lb/>Based on the ed. Haraprasāda Śāstrī: Vallāla Caritam, Calcutta : Asiatic Society 1904
+<lb/>(Bibliotheca Indica, 164)
+<lb/>
+<lb/>Input by Oliver Hellwig
+<lb/>
+<lb/>[[nn]] = pagination of the printed edition
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>Haraprasāda Śāstrī: Vallāla Caritam, Calcutta : Asiatic Society 1904 (Bibliotheca Indica, 164)</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Vallālacarita = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Poetry -- Kāvya</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+<div>
+<lg>
+<l>[[001]]</l>
+<l>oṃ namo vighnavināyakāya |</l>
+<l>praṇamāmi jagatsṛṣṭisthitisaṃhārakāraṇam /</l>
+<l>viśveśvaraṃ viśvadharaṃ viśvaṃ ca viśvahetukam // Valc_1.1 //</l>
+</lg>
+
+<lg>
+<l>jagadvījaṃ satyarūpaṃ sarvasākṣiṇamavyayam /</l>
+<l>sarvvajñaṃ sarvabhūtasthaṃ sarvaśaktidharaṃ vibhum // Valc_1.2 //</l>
+</lg>
+
+<lg>
+<l>brāhmaṇebhyo namaskṛtya navadvīpanṛpājñayā /</l>
+<l>brāhmaṇānāṃ samutpattitadbhedādisamanvitam /</l>
+<l>rāḍhīyānāṃ varendrāṇāṃ gotragāñīsamanvitam /</l>
+<l>vallālacaritākhyaṃ tadrājacaritamucyate // Valc_1.3 //</l>
+</lg>
+
+<lg>
+<l>sisṛkṣorbrahmaṇo jātaḥ pulaho vāmakarṇataḥ /</l>
+<l>aṅgirā nāsikārandhradajāyata mukhādruciḥ // Valc_1.4 //</l>
+</lg>
+
+<lg>
+<l>marīciḥ skandhadeśācca pracetā adharoṣṭhataḥ /</l>
+<l>ekādaśa caiva rudrā lalāṭāt krodhasambhavāḥ // Valc_1.5 //</l>
+</lg>
+
+<lg>
+<l>pulahasya suto vātsyaḥ śāṇḍilyaśca ruceḥ sutaḥ /</l>
+<l>bṛhaspaterāṅgiraso bharadvājaḥ sutaḥ smṛtaḥ // Valc_1.6 //</l>
+</lg>
+
+<lg>
+<l>[[002]]</l>
+<l>marīcermanaso jātaḥ kaśyapaśca prajāpatiḥ /</l>
+<l>pracetasopi manaso gautamo bhagavānṛṣiḥ // Valc_1.7 //</l>
+</lg>
+
+<lg>
+<l>sāvarṇirgautamājjajñe munipravara eva saḥ /</l>
+<l>babhūvuḥ pañcagotrāṇi caiteṣāṃ pravarā bhave // Valc_1.8 //</l>
+</lg>
+
+<lg>
+<l>babhūvurbrahmaṇo vaktrādanyā brāhmaṇajātayaḥ /</l>
+<l>tāḥ sthitāḥ deśabhedena gotraśūnyāśca bhūpate // Valc_1.9 //</l>
+</lg>
+
+<lg>
+<l>adityāṃ dvādaśādityān janayāmāsa kaśyapaḥ /</l>
+<l>atrernetramalāccandraḥ kṣīrode ca babhūva ha // Valc_1.10 //</l>
+</lg>
+
+<lg>
+<l>candrādityamanūnāñca pravarāḥ kṣatriyāḥ smṛtāḥ /</l>
+<l>brahmaṇo vāhudeśāccaivānyāḥ kṣatriyajātayaḥ /</l>
+<l>ūrudeśācca vaiśyāśca pādataḥ śūdrajātayaḥ // Valc_1.11 //</l>
+</lg>
+
+<lg>
+<l>janmanā jāyate śūdraḥ saṃskārairdvija ucyate /</l>
+<l>vedapāṭhādbhavedvipro brāhmaṇo brahmavidyayā // Valc_1.12 //</l>
+</lg>
+
+<lg>
+<l>sārasvatāḥ kānyakubjā gauḍā maithilakolkalāḥ /</l>
+<l>pañcagauḍāḥ samākṣyātāḥ vindhyasyottaravāsinaḥ // Valc_1.13 //</l>
+</lg>
+
+<lg>
+<l>karṇāṭāścaiva tailaṅgāḥ gurjjarā rāṣṭravāsinaḥ /</l>
+<l>andhrāśca draviḍāḥ pañca vindhyadakṣiṇavāsinaḥ // Valc_1.14 //</l>
+</lg>
+
+<p>sarvve dvijāḥ kānyakujāḥ māthuraṃ māgadhaṃ vinā /
+māgadho brahmaṇā parvvūṃ kalpito dvija eva ca /
+<l>varāhasya ca gharmmeṇa māthuro jāyate tathā // Valc_1.15 /</l>
+<lg>
+<l>vedavāṇāṅkaśaki tu gauḍe viprāḥ samāgatāḥ /</l>
+<l>hayayānaṃ samāruhya sarvaśāstraviśāradāḥ // Valc_1.16 //</l>
+</lg></p>
+
+<lg>
+<l>[[003]]</l>
+<l>medhātithiḥ kṣitīśaśca vītarāgasuṣeṇakau /</l>
+<l>saubhariratnagarbhau ca tathā vipraḥ sudhānidhiḥ // Valc_1.17 //</l>
+</lg>
+
+<lg>
+<l>tairūḍhā nṛpatervvākyāt sapta saptaśatātmajāḥ /</l>
+<l>taddevavaśato jātāstāsu sapta sutā varāḥ /</l>
+<l>varandaraṃ gatāḥ pañca kaniṣṭho rāḍhasaṃsthitau // Valc_1.18 //</l>
+</lg>
+
+<lg>
+<l>nṛpendrenādiśūreṇa cānītaṃ viprapañcakam /</l>
+<l>pañcagotrānvitaṃ teṣāṃ nāma gotrañca kathyate // Valc_1.19 //</l>
+</lg>
+
+<lg>
+<l>śrīharṣasya bharadvājo dakṣasya kāśyapaḥ smṛtaḥ /</l>
+<l>vedagarbhasya sāvarṇo vātsyaśca chāndaḍasya ca /</l>
+<l>śāṇḍilyagotraḥ kathito bhaṭṭanārāyaṇasya ca // Valc_1.20 //</l>
+</lg>
+
+<lg>
+<l>bhaṭṭataḥ ṣoḍaśodbhūtā dakṣataścāpi ṣoḍaśa /</l>
+<l>catvāraḥ śrīharṣajātā bharadvājakulodvahāḥ /</l>
+<l>dvādaśa vedagarbhācca tathaikādatha chāndaḍāt // Valc_1.21 //</l>
+</lg>
+
+<lg>
+<l>kecidviprā āgatāśca vaidikā vedapāragāḥ /</l>
+<l>pāścātyā dākṣiṇātyāśca śeṣoktā drāviḍāḥ smṛtāḥ // Valc_1.22 //</l>
+</lg>
+
+<lg>
+<l>ballālaviṣaye nūnaṃ kulīmā devatāḥ svayam /</l>
+<l>śrotriyā meravo jñeyā ghaṭakāḥ stutipāṭhakāḥ // Valc_1.23 //</l>
+</lg>
+
+<lg>
+<l>ācāro vinayo vidyā pratiṣṭhā tīrthadarśanam /</l>
+<l>niṣṭhāvṛttistapodānaṃ navadhā kulalakṣaṇam // Valc_1.24 //</l>
+</lg>
+
+<lg>
+<l>kāmamāmaraṇāt tiṣṭhet gṛhe kanyarttumatyapi /</l>
+<l>na caivaināṃ prayacchettu kulahīnāya karhicit // Valc_1.25 //</l>
+</lg>
+
+<lg>
+<l>[[004]]</l>
+<l>ekāṃ śākhāṃ sakalpāṃ vā ṣaḍbhiraṅgairadhītya ca /</l>
+<l>ṣaṭkarmmanirato vipraḥ śrotriyo nāma dharmmavit // Valc_1.26 //</l>
+</lg>
+
+<lg>
+<l>guṇānusārato'kāri kulīnaścaiva maulikaḥ /</l>
+<l>vaṃśajaśca purā rājñā vallālena suniścitam // Valc_1.27 //</l>
+</lg>
+
+<p>iti vallālacarite varṇānāmutpattikathanam |</p>
+
+<l rend="bold">atha pratigrāhi-saṃjñā-kāraṇa-kathanama |</l>
+<lg>
+<l>dhenuṃ svarṇamayīṃ yajñe viprebhyaḥ pradadau nṛpaḥ /</l>
+<l>dhenostasyāḥ svarṇamayyāśchedane patito'bhavat // Valc_1.28 //</l>
+</lg>
+
+<lg>
+<l>tato nirvvāsito rājñā kaścana svarṇakārakaḥ /</l>
+<l>viprāḥ pratigrahājjātāḥ sarvvadharmmabahiṣkṛtāḥ // Valc_1.29 //</l>
+</lg>
+
+<p>iti pratigrāhikāraṇam |</p>
+
+<l rend="bold">atha pratigrāhi-saṃjñakānāṃ sagrāmi-nāmāni |</l>
+<lg>
+<l>śaṅkare pītamuṇḍī ca gaḍopi ca divākaraḥ /</l>
+<l>guḍo dāḍakanāmā ca dokaḍiścaiva pippalī // Valc_1.30 //</l>
+</lg>
+
+<lg>
+<l>vandyo mārttaṇḍanāmā ca brāhmaṇo nāma nāmataḥ /</l>
+<l>āyāniśca gaṇāyiśca hāḍo gopī ca vandyajāḥ // Valc_1.31 //</l>
+</lg>
+
+<lg>
+<l>[[005]]</l>
+<l>māṣo dokaḍināmā ca rāyo ca madhusūdanaḥ /</l>
+<l>kuśiko yavanāmā ca haḍo nārāyaṇo 'pi ca // Valc_1.32 //</l>
+</lg>
+
+<lg>
+<l>mahintā dividho nāma dāvāriścaiva keśavaḥ /</l>
+<l>caṭṭaḥ śakunināmā ca tailavāṭīrnayārikaḥ // Valc_1.33 //</l>
+</lg>
+
+<lg>
+<l>kundo viśveśvaro nāma vandyajo viṭhusaṃjñakaḥ /</l>
+<l>ghoṣajau bhrātarāvetau madanaviśvarūpakau // Valc_1.34 //</l>
+</lg>
+
+<p>gāṅgulirhāsyanāmā ca pūtirgautamasaṃjñakaḥ /
+<l>parāśarākhyaḥ śimlī ca śaṅkaro ḍiṇḍisaṃjñakaḥ // Valc_1.35 /</l>
+<lg>
+<l>amī viprakulodbhatūā godānaṃ jagṛhurdvijāḥ /</l>
+<l>teṣāṃ sambandhamātreṇa paṅke gauriva sīdati // Valc_1.36 //</l>
+</lg></p>
+
+<lg>
+<l>sambandhe bhojane caiva dāne yajñe tathaiva ca /</l>
+<l>vidvadbhiḥ śrāddhakāle ca varjjyā ete punaḥ punaḥ // Valc_1.37 //</l>
+</lg>
+
+<p>iti pratigrāhiṇāṃ nāmādayaḥ |</p>
+
+<l rend="bold">atha pratigrāhisutānāṃ vivāhakathanam |</l>
+<lg>
+<l>gaṇakanyā vaśiṣṭhena ṭoṭena śakuneḥ sutāḥ /</l>
+<l>hāḍkanyā dāyikena kubero hāsyajāpatiḥ // Valc_1.38 //</l>
+</lg>
+
+<p>cakrapāṇināpi kanyā gṛhītā dhanalobhataḥ /
+<lg>
+<l>[[006]]</l>
+<l>viṭhusutāpatirbhūtvā caṭṭajaḥ kulabhūṣaṇaḥ /</l>
+<l>pratigrāhisutodvāhāt ṣaḍete vaṃśajāḥ smṛtāḥ // Valc_1.39 //</l>
+</lg></p>
+
+<l>śrotriyāya sutāṃ dattvā kulīno vaṃśajaḥ punaḥ // Valc_1.40 //</l>
+
+<lg>
+<l>grāmaṃ labdhvā ca vallālāt kauṇḍilyastatpracāritaḥ /</l>
+<l>yavagrāmī kaḍāro ca kauṇḍilyo vaiduḍīstathā // Valc_1.41 //</l>
+</lg>
+
+<p>iti pratigrāhisutānāṃ vivāhakathanam |</p>
+
+<l rend="bold">atha pañcagotrīyānāṃ sagrāmi-nāmādi-kathanam |</l>
+<lg>
+<l>atha śāṇḍilyagotrasya bhaṭṭanārāyaṇasya vaṃśadharāṇāṃ gāṁināmāni |</l>
+<l>ādau vandyo varāhaḥ syāt rāmo gaḍgaḍistathā /</l>
+<l>nṛpaḥ syāt keśaraścaiva nānaḥ kusumakaulikaḥ // Valc_1.42 //</l>
+</lg>
+
+<lg>
+<l>vāṭuḥ syāt pārihālosau kulabhirguināmakaḥ /</l>
+<l>gaṇo ghoṣalitāṃ prāptaḥ seyuḥ śāṇḍīśvarīstathā // Valc_1.43 //</l>
+</lg>
+
+<lg>
+<l>vuḍomāścarakaścaiva, vaṭavyālo vikarttanaḥ /</l>
+<l>vasurāyistathā nīlaḥ kaḍyālo madhusūdanaḥ // Valc_1.44 //</l>
+</lg>
+
+<lg>
+<l>kuśī ca koyanāmā ca kulisā caiva vāsukaḥ /</l>
+<l>ākāśo mādhavo dīrghagrāmī caiva mahāmatiḥ // Valc_1.45 //</l>
+</lg>
+
+<lg>
+<l>ete ṣoḍaśa śāṇḍilyāḥ kathitā rājapūjitāḥ /</l>
+<l>tataḥ kāśyapa-gotrīya-dakṣa-vaṃśaśca kathyate // Valc_1.46 //</l>
+</lg>
+
+<p>[[007]]
+<l rend="bold">atha kāśyapagotrasya dakṣasya vaṃśadharāṇāṃ gāṁināmāni |</l>
+<lg>
+<l>dhīro 'bhavat guḍīgrāmī nīraḥ syādāmarūlikaḥ /</l>
+<l>bhūriṣṭālaḥ śubhaścaiva śambhuḥ syāttailavāṭikaḥ // Valc_1.47 //</l>
+</lg></p>
+
+<lg>
+<l>kautukaḥ pītamuṇḍī syāt caṭṭagrāmī sulocanaḥ /</l>
+<l>palaśāyī pālunāmā haḍḥkāko matastathā // Valc_1.48 //</l>
+</lg>
+
+<lg>
+<l>poḍāriḥ kṛṣṇasaṃjño 'sau pāladhī rāmanāmakaḥ /</l>
+<l>jananāmā koyāriḥ syāt parkkaṭirvanamālikaḥ // Valc_1.49 //</l>
+</lg>
+
+<lg>
+<l>simalāyī śrīhariḥ syāt jaṭaḥ pūṣalikastathā /</l>
+<l>bhaṭṭagrāmī śaśidharo mūlagrāmī ca keśavaḥ /</l>
+<l>ete ṣoḍaśa bhūdevāḥ jñeyāḥ kāśyapasaṃjñakāḥ // Valc_1.50 //</l>
+</lg>
+
+<l rend="bold">atha bharadvājagotrasya śrīharṣasya vaṃśadharāṇām gāṁināmāni |</l>
+<lg>
+<l>dhāṁdunāmā mukhaiṭiḥ syāt janaḥ syāddīnasāyikaḥ /</l>
+<l>nānaḥ sāhariko jñeyo rāyī ca rāmanāmakaḥ // Valc_1.51 //</l>
+</lg>
+
+<lg>
+<l>śrīharṣasya sutā ete bharadvājakulodbhavāḥ /</l>
+<l>sarvvadeśeṣu viditamagravartacatuṣṭayam // Valc_1.52 //</l>
+</lg>
+
+<p>[[008]]
+<l rend="bold">atha sāvarṇagotrasya vedagarbhasya vaṃśadharāṇāṃ gāṁināmāni |</l>
+<lg>
+<l>gāṅgulī halanāmā ca kundo rājyadharastathā /</l>
+<l>vaśiṣṭhaḥ siddhalo jñeyo dāyī ca madano bhavat // Valc_1.53 //</l>
+</lg></p>
+
+<lg>
+<l>viśvarūpastathā nandī vāligrāmī kumārakaḥ /</l>
+<l>yogī siyāriko jñeyaḥ puṃsiko rāmanāmakaḥ // Valc_1.54 //</l>
+</lg>
+
+<lg>
+<l>dakṣaḥ sākaṭasaṃjño 'sau pārī ca madhusūdanaḥ /</l>
+<l>ghaṇṭāgrāmī mādhavaśca nāyārī ca guṇākaraḥ /</l>
+<l>ete putrā mahāprājñāḥ sāvarṇā dvādaśa smṛtāḥ // Valc_1.55 //</l>
+</lg>
+
+<l rend="bold">atha vātsyagotrasya chāndaḍsya vaṃśadharāṇāṃ gāṁināmāni |</l>
+<lg>
+<l>ravirmahintā surabhiśca ghoṣaḥ kaviḥ pṛthivyāṃ khalu śimbalālaḥ /</l>
+<l>mahāyaśā vāpulikaśca piplī dhīraśca pūtirnanu śaṅkarākhyaḥ // Valc_1.56 //</l>
+</lg>
+
+<p>viśvambharo 'bhūt khalu pūrbbagrāmī vātsyāśca tādarthanivāsadeśāḥ
+<lg>
+<l>[[009]]</l>
+<l>śrīśrīdharobhūt khalu kāñjivillī nārāyaṇo nāma ca kāñjiyārī /</l>
+<l>cautkhaṇḍiko nāma guṇākaraḥ syāt mano dīghālo bhuvi rudratulyaḥ // Valc_1.57 //</l>
+</lg></p>
+
+<l rend="bold">atha gauṇakulīnānāmullekhanam |</l>
+<lg>
+<l>dīrghāṅgī pāriḥ kulabhī poḍārī rāiḥ keśarī /</l>
+<l>ghaṇṭā ḍiṇḍiḥ pītamuṇḍīr mahintā guḍpippalī /</l>
+<l>haḍśca gaḍgaḍiścaiva ime gauṇāḥ prakīrttitāḥ /</l>
+<l>ataḥparaṃ viśeṣaṃ yadatraiva varṇyate mayā // Valc_1.58 //</l>
+</lg>
+
+<lg>
+<l>ekadā rājavallālaḥ kaulinya-sthāpanāya ca /</l>
+<l>āmantrayāmāsa viprān sabhārohaṇa-karmmaṇi // Valc_1.59 //</l>
+</lg>
+
+<lg>
+<l>nityakarmmāṇi niṣpādya tatastanniścite 'hani /</l>
+<l>āyayurbrāhmaṇāḥ sarvve sabhāyāṃ nṛpasannidhau // Valc_1.60 //</l>
+</lg>
+
+<lg>
+<l>kecit praharamadhye ca sārddhapraharamadhyataḥ /</l>
+<l>sārddhadviprahare ke vā yayurnṛpatisannidhim // Valc_1.61 //</l>
+</lg>
+
+<lg>
+<l>[[010]]</l>
+<l>tatastu matimān rājā vivicya dvija-ceṣṭitān /</l>
+<l>kaulīnyādiyathāyogyaṃ tebhyastatra dadau mudā // Valc_1.62 //</l>
+</lg>
+
+<lg>
+<l>sārddhadvipraharātīte sabhāyāmāgatāstu ye /</l>
+<l>te samparṇūdharmma-niṣṭhāḥ kaulīnyaṃ lebhire dvijāḥ // Valc_1.63 //</l>
+</lg>
+
+<lg>
+<l>ye sārddhaprahare prāptāḥ śrotriyāste prakīrttitāḥ /</l>
+<l>babhūrgauṇakulīnāste yāmāntaragatāstu ye // Valc_1.64 //</l>
+</lg>
+
+<lg>
+<l>kālenādiśrotriyeṣu viśuddheṣu niveśitāḥ /</l>
+<l>āsan gauṇāśca vikhyātāḥ kaṣṭaśrotriyasaṃjñayā // Valc_1.65 //</l>
+</lg>
+
+<lg>
+<l>yathā gauṇāstathā kaṣṭā heyā eva samaṃ sadā /</l>
+<l>iti rāḍhīyaviprāṇāṃ kathitaḥ kulaniścayaḥ // Valc_1.66 //</l>
+</lg>
+
+<p>iti rāḍhīyaviprāṇām kaulīnyādiprāptikathanam /</p>
+
+<l rend="bold">atha varendravaṃśakathanam /</l>
+<lg>
+<l>kāśyape 'ṣṭādaśa jñeyāḥ śāṇḍilyeṣu caturdaśa /</l>
+<l>caturvviṃśatirvātsyānām bharadvāje tathāvidhaḥ // Valc_1.67 //</l>
+</lg>
+
+<lg>
+<l>sāvarṇe viṃśatirjñeyāḥ kathitāḥ pañcagotrakāḥ /</l>
+<l>teṣāṃ grāmī savistāraṃ kathyate ca yathākramam // Valc_1.68 //</l>
+</lg>
+
+<p>[[011]]
+<l rend="bold">atha kāśyapagotrasya kṛpānidhervaṃśadharāṇām gāṁināmāni /</l>
+<lg>
+<l>karañjo bhāduḍī maitro bālayaṣṭikakeralau /</l>
+<l>madhugrāmī balīhārī moyālī bījakuñjakaḥ // Valc_1.69 //</l>
+</lg></p>
+
+<lg>
+<l>koṭiḥ sarvvagrāmakoṭiḥ pareśaścaiva dhosakaḥ /</l>
+<l>bhadrayāmī cāśrukoṭiḥ śaragrāmī ca viśrutaḥ /</l>
+<l>velagrāmī camagrāmau vaṃśajāśca kṛpānidheḥ // Valc_1.70 //</l>
+</lg>
+
+<l rend="bold">atha śāṇḍilyagotrasya dāmodarasya vaṃśadharāṇāṃ gāṁināmāni /</l>
+<lg>
+<l>rudravāgcī sādhuvāgcī lāhiḍī campaṭistathā /</l>
+<l>nandanāvāṭī kālindī caṭṭagrāmī ca pūṣaṇaḥ // Valc_1.71 //</l>
+</lg>
+
+<lg>
+<l>śiharirviśī matsyāśī veluḍīścampasaṃjñakaḥ /</l>
+<l>suvarṇatoṭaḥ śāṇḍilyodāmodarasya vaṃśajāḥ // Valc_1.72 //</l>
+</lg>
+
+<l rend="bold">atha vātsyagotrasya dharādharasya vaṃśadharāṇāṃ gāṁināmāni /</l>
+<l>saṃyāminī bhīmakālī bhaṭṭaśālī ca kuḍmuḍiḥ // Valc_1.73 //</l>
+
+<lg>
+<l>[[012]]</l>
+<l>bhāḍiyālaḥ kāmakālī vātsyagrāmī ca lakṣakaḥ /</l>
+<l>voḍgrāmī jāmarūkhī kālīgrāmī kalīharaḥ // Valc_1.74 //</l>
+</lg>
+
+<lg>
+<l>śītalī dhosalī caiva tāluḍī kukkuṭī tathā /</l>
+<l>nidrālī cākṣuṣagrāmī deuli siharī tathā // Valc_1.75 //</l>
+</lg>
+
+<lg>
+<l>prauṇḍrīkākṣiḥ śrutavaṭī caturāndī tathā smṛtaḥ /</l>
+<l>kālindī vātsyagotrasya dharādharasya vaṃśajāḥ // Valc_1.76 //</l>
+</lg>
+
+<l rend="bold">atha bharadvājagotrasya gautamasya vaṃśadharāṇāṃ gāṁināmāni /</l>
+<lg>
+<l>bhādaḍo lāḍḍela-jhāmā jhāmālī jhampaṭī ca vā /</l>
+<l>urttivāhī ugrarekhī ākhu-ratnābalī khaniḥ // Valc_1.70 //</l>
+</lg>
+
+<lg>
+<l>gosvāśirāthaḥ pisvīni ceṅgā cākhuri pippalī /</l>
+<l>viśālā kāñcanagrāmī asṛk śākoṭakastathā // Valc_1.78 //</l>
+</lg>
+
+<lg>
+<l>kṣetragrāmī rājagrāmī nandīgrāmī ca jadhyalaḥ /</l>
+<l>puktirvṛhatī gotreṣu bharadvājeṣu gotamāt // Valc_1.79 //</l>
+</lg>
+
+<l rend="bold">atha sāvarṇagotrasya parāśarasya vaṃśadharāṇāṃ gāṁināmāni /</l>
+<lg>
+<l>siṃhaḍālaka unduḍī śṛṅgī pākaḍī ledhuḍī /</l>
+<l>dhundhuḍī tātoyā setuḥ kapālī lomapeṭarau // Valc_1.80 //</l>
+</lg>
+
+<lg>
+<l>[[013]]</l>
+<l>pañcavaṭī khaṇḍavaṭī nikaḍiśca samudrakaḥ /</l>
+<l>puṇḍariko yaśogrāmī ketugrāmī ca viśrutaḥ // Valc_1.81 //</l>
+</lg>
+
+<lg>
+<l>puṣpapo bhāduṣī caiva varendrā gāṁisaṃjñakāḥ /</l>
+<l>munikalpā amī jātā sāvarṇeṣu parāśarāt // Valc_1.82 //</l>
+</lg>
+
+<l rend="bold">atha vaidikānāṃ kaulinyādivihīnatvakāraṇam |</l>
+<lg>
+<l>vaidikā brāhmaṇā āsan vaṇijāṃ pakṣapātiṇaḥ /</l>
+<l>tatastānsadasi krodhānnājuhāva mahīpatiḥ // Valc_1.83 //</l>
+</lg>
+
+<lg>
+<l>nākāṅkṣannabhihāraṃ te rājadattaṃ tapodhanāḥ /</l>
+<l>brāhmaṇāḥ brahmavidvāṃso vaidikā iti kecana // Valc_1.84 //</l>
+</lg>
+
+<p>iti vaidikānāṃ kaulīnyādirāhityakathanam /</p>
+
+<l rend="bold">atha kānyakubjāgata-kāyasyānāṃ nāmagotrāṇi /</l>
+<lg>
+<l>kāśyape gotre sañjāto dakṣanāmā mahāmatiḥ /</l>
+<l>tasya dāso gautamasya gotre daśaratho vasuḥ // Valc_1.85 //</l>
+</lg>
+
+<lg>
+<l>śāṇḍilyagotre saṃbhūte bhaṭṭanārāyaṇaḥ kvatī /</l>
+<l>tasya saukālino dāso ghoṣajo makarandakaḥ // Valc_1.86 //</l>
+</lg>
+
+<lg>
+<l>bharadvājeṣu vikhyātaḥ śrīharṣo munisattamaḥ /</l>
+<l>dāsastasya virāṭākhyaḥ guhakaḥ kāśyapaḥ smṛtaḥ // Valc_1.87 //</l>
+</lg>
+
+<lg>
+<l>[[014]]</l>
+<l>sāvarṇagotro nirdiṣṭo vedagarbhastapodhanaḥ /</l>
+<l>tasya dāso mitravaṃśo viśvāmitrasya gotrakaḥ /</l>
+<l>kālidāsa iti khyātaḥ śūdravaṃśasamudbhavaḥ // Valc_1.88 //</l>
+</lg>
+
+<lg>
+<l>vātsyagotreṣu sambhūtaḥ chāndaḍ iti saṃjñitaḥ /</l>
+<l>maudgalyagotrakodattaḥ puruṣottamasaṃjñakaḥ /</l>
+<l>eteṣāṃ rakṣaṇārthāya svāgato gauḍhmaṇḍalam // Valc_1.89 //</l>
+</lg>
+
+<lg>
+<l>ye ghoṣavasumitrāstu kulīnāḥ sarvva eva te /</l>
+<l>deva-dattau senasiṃghau pālitaśca karo guhaḥ /</l>
+<l>dāsaśca madhyamā aṣṭau dvisaptatirgharāstataḥ // Valc_1.90 //</l>
+</lg>
+
+<lg>
+<l>aśīti rmaulikā rājavallālasena-sammatāḥ /</l>
+<l>dvisaptatirgharā ye te kāyastheṣvadhamāḥ smṛtāḥ // Valc_1.91 //</l>
+</lg>
+
+<l rend="bold">atha guṇavatkāyasthapraśaṃsā /</l>
+<lg>
+<l>śūdrāstu ye dānaparā bhavanti vratānvitā vipraparāyaṇāśca /</l>
+<l>annaṃ hi teṣāṃ satataṃ subhojyaṃ bhavet dvijair dṛṣṭam idaṃ purātanaiḥ // Valc_1.92 //</l>
+</lg>
+
+<p>ityānandabhaṭṭaprokte vallālacarite pūrvvakhaṇḍaṃ sampūrṇam |</p>
+
+</div>
+<div>
+<p>[[015]]</p>
+
+<p>vallālacaritam
+uttarakhaṇḍam</p>
+
+<lg>
+<l>atha prathamo 'dhyāyaḥ |</l>
+<l>vallālacaritaṃ pūrbbakhaṇḍīyaṃ kathitaṃ mayā /</l>
+<l>śrūyatāmuttare khaṇḍe vistarāt kathyate 'dhunā // Valc_2,1.1 //</l>
+</lg>
+
+<lg>
+<l>senavaṃśadharo rājā vallālo nāma viśrutaḥ /</l>
+<l>puremāmabhunak pṛthvīṃ prabhāvākṣataśāsanaḥ // Valc_2,1.2 //</l>
+</lg>
+
+<lg>
+<l>prabhuśca yauvanastho 'pi tasminnāsīdvivekatā /</l>
+<l>nāhāri brāhmaṇī kanyā kadācidapi bhūbhṛtā // Valc_2,1.3</l>
+</lg>
+<lg>
+<l>kāmācāro 'pi dṛpto 'pi sa priyaṅkarakiṅkaraḥ /</l>
+<l>kadācicca parastrīṇāṃ jāratvaṃ nākaronnṛpaḥ // Valc_2,1.4 //</l>
+</lg>
+
+<lg>
+<l>asevi cāṇḍālakanyā rājñā dvādaśavārṣikī /</l>
+<l>naṭīkanyā ca siddhyarthaṃ pāṣaṇḍamatavarttinā // Valc_2,1.5 //</l>
+</lg>
+
+<lg>
+<l>yāvannāsīt bhaṭṭapādairupadiṣṭo mahīpatiḥ /</l>
+<l>tāvat sa kṛtavān karmma tattat sajjanagarhitam // Valc_2,1.6 //</l>
+</lg>
+
+<lg>
+<l>[[016]]</l>
+<l>bhaṭṭānuvratinā tena tato vimalabuddhinā /</l>
+<l>kiṃ kiṃ nānuṣṭhitaṃ karmma brāhmaṇānāṃ priyaṅkaram // Valc_2,1.7 //</l>
+</lg>
+
+<lg>
+<l>vaṅgavāgadaḍivārendrarāḍhābhūrmithilāpi ca /</l>
+<l>tasyāsīdvipulaṃ rāṣṭrametadviṣayapañcakam // Valc_2,1.8 //</l>
+</lg>
+
+<lg>
+<l>vasatisma nṛpaḥ śrīmān purā gauḍe purottame /</l>
+<l>kadācidvā yathākāmaṃ nagare vikrame pure // Valc_2,1.9 //</l>
+</lg>
+
+<lg>
+<l>svarṇagrāme kadācidvā prāsāde sumanohare /</l>
+<l>ramamānaḥ saha śrībhirdivīva tridiveśvaraḥ // Valc_2,1.10 //</l>
+</lg>
+
+<lg>
+<l>vaihārikāsu vidyāsu vājipṛṣṭhe ca paṇḍitaḥ /</l>
+<l>śastrāsteṣu paraṃ dakṣo dāne karṇa ivāparaḥ // Valc_2,1.11 //</l>
+</lg>
+
+<p>ityānandabhaṭṭaprokte vallālacarite vallālaparicayo nāma prathamo 'dhyāyaḥ |</p>
+
+</div>
+<div>
+
+<p>[[017]]</p>
+
+<lg>
+<l>atha dvitīyo 'dhyāyaḥ |</l>
+<l>purodantapurādhīśaṃ jigīṣuravanīpatiḥ /</l>
+<l>vittāḍhyādvallabhānandāgniṣkakoṭiṃ gṛhītavān // Valc_2,2.1 //</l>
+</lg>
+
+<lg>
+<l>vāraṃ vāraṃ jito rājā yato maṇipurāhave /</l>
+<l>tato 'bhiyānaṃ ghoraṃ sa karttumāsītsamudyataḥ // Valc_2,2.2 //</l>
+</lg>
+
+<lg>
+<l>vallabhe 'dātukāme 'pi dṛṣṭvā saṃvidvyatikramam /</l>
+<l>preṣayāmāsa dūtaṃ sa vaṇijāya mahātmane // Valc_2,2.3 //</l>
+</lg>
+
+<lg>
+<l>sa dūtaḥ saṅkakoṭasthaṃ vallabhaṃ samupāgataḥ /</l>
+<l>vijñāpayāmāsa tadā vallālanṛpaśāsanam // Valc_2,2.4 //</l>
+</lg>
+
+<lg>
+<l>vallāla uvāca:</l>
+<l>yathāsmābhi rhi karttavyaṃ saṃyānaṃ prati kīkaṭam /</l>
+<l>vidhāya sumahodyogaṃ ṣaḍṅgabalasaṃyutaiḥ // Valc_2,2.5 //</l>
+</lg>
+
+<lg>
+<l>tato vallabhacandraḥ sa gṛhṇan prāṇityalekhanam /</l>
+<l>preṣayan tu sārddhakoṭiṃ suvarṇamiti māciram // Valc_2,2.6 //</l>
+</lg>
+
+<lg>
+<l>vallabha uvāca:</l>
+<l>amitavyayinā rājñā kālikā pātitā sakṛt /</l>
+<l>kiṃ brūmo nṛpatiṃ naivaṃ mayā dṛṣṭaḥ satāṃ vidhiḥ // Valc_2,2.7 //</l>
+</lg>
+
+<lg>
+<l>[[018]]</l>
+<l>kasmādvā samarodyogaḥ labdhasya paripālanam /</l>
+<l>rāṣṭrasyaivocitaṃ karttuṃ yuddhametadakāraṇam // Valc_2,2.8 //</l>
+</lg>
+
+<lg>
+<l>tyajyatām grāṁvārabuddhiḥ prajānāṃ hitakāmyayā /</l>
+<l>prajākṣayakaraṃ yuddhamadharmmyaṃ nirayapradam // Valc_2,2.9 //</l>
+</lg>
+
+<lg>
+<l>yadṛcchācāro nṛpatī rājadharmmaṃ na paśyati /</l>
+<l>arakṣaṇe mahaddoṣaḥ kiṃ guṇo rāṣṭravarddhanaiḥ // Valc_2,2.10 //</l>
+</lg>
+
+<lg>
+<l>kṣetriyaṃ bhagavadbhaktamathavā muṣalaṃ dhanuḥ /</l>
+<l>na ko 'pi puruṣaḥ karttuṃ kadācidbhavati prabhuḥ // Valc_2,2.11 //</l>
+</lg>
+
+<lg>
+<l>arakṣitvā prajā rājā kevalaṃ valimādadat /</l>
+<l>ayaśo mahadāpnoti nirayañcaiva gacchati // Valc_2,2.12 //</l>
+</lg>
+
+<lg>
+<l>ityāhuḥ kośātakinaḥ kiṃ rājanayacarccayā /</l>
+<l>rājanīti rhi vijñeyaṃ śatrūṇāṃ parimardanam // Valc_2,2.13 //</l>
+</lg>
+
+<lg>
+<l>athavā vigrahairyasmāt pīḍyante 'smadvidhā janāḥ /</l>
+<l>ulapā iva sāmānyā bravīmi tena hetunā // Valc_2,2.14 //</l>
+</lg>
+
+<lg>
+<l>yadi syānnṛpati rddadyāt karādānasamanvitam /</l>
+<l>ādhitve harikelīyaṃ ṛṇaṃ dātuṃ tadotsahe // Valc_2,2.15 //</l>
+</lg>
+
+<lg>
+<l>tasya tadbhāṣitaṃ sarvvaṃ sa dūtaḥ śrāntavāhanaḥ /</l>
+<l>vikramaṃ puramāgatya vallālāya nyavedayat // Valc_2,2.16 //</l>
+</lg>
+
+<lg>
+<l>etacchrutvātha sandeśaṃ vallālaḥ pṛthivīpatiḥ /</l>
+<l>manyunā sa prajajvāla kuṭaṅko vahninā yathā // Valc_2,2.17 //</l>
+</lg>
+
+<lg>
+<l>tadāsya kopatāmrāsyāt susrāva svedaśambaram /</l>
+<l>agnisaṃyogataḥ svinnadahyamānendhanād yathā // Valc_2,2.18 //</l>
+</lg>
+
+<lg>
+<l>vallabhe jrātasaṃroṣo nirddoṣeṣu vaṇikṣvapi /</l>
+<l>kruddho bhūtvā sa vallālaḥ cakāra kadanaṃ bhṛśam // Valc_2,2.19 //</l>
+</lg>
+
+<lg>
+<l>śulkādānamiṣeṇāpi jahāra vaṇijāṃ balāt /</l>
+<l>vyavahāre dhṛtaṃ vastu keṣāñcit krośatāmapi // Valc_2,2.20 //</l>
+</lg>
+
+<lg>
+<l>asavarṇāvivāhastu niṣiddhopi kalau yuge /</l>
+<l>govindāḍhyasya kanyāṃ sa jahāra vaṇijo balāt // Valc_2,2.21 //</l>
+</lg>
+
+<lg>
+<l>naharddevo 'pi sauvarṇādanudarśaṃ cakāra ha /</l>
+<l>kulavṛddhaiḥ sahāgatya nāpi pratyagrahīcca tam // Valc_2,2.22 //</l>
+</lg>
+
+<lg>
+<l>tataḥ sa mantrayan rājā gūḍhṃ cāṭuviṭaiḥ saha /</l>
+<l>pīḍayāmāsa vaṇijo dūtañcedamuvāca ha // Valc_2,2.22 //</l>
+</lg>
+
+<lg>
+<l>vallāla uvāca:</l>
+<l>suvarṇā vaṇijo rāṣṭre duḥśīlā dhanagarvvitāḥ /</l>
+<l>brāhmaṇān te tūlayanti brahmakṣatrañca māmapi // Valc_2,2.23 //</l>
+</lg>
+
+<lg>
+<l>[[020]]</l>
+<l>vallabhānandanāmā ca vaṇiggaṇamahattaraḥ /</l>
+<l>aśiṣṭaḥ kulajanmanyo dāmbhikaśca viśeṣataḥ // Valc_2,2.24 //</l>
+</lg>
+
+<lg>
+<l>ityādīn suvahūn doṣānāropya paṇyajīviṣu /</l>
+<l>vallabhāya saṅkakoṭe rājā dūtaṃ vyasarjayat // Valc_2,2.25 //</l>
+</lg>
+
+<lg>
+<l>āsedhaṃ vipulaṃ cakre bhayaṃ maitraṃ ca darśayan /</l>
+<l>yena kena prakāreṇa taṃ vaśīkaraṇecchayā // Valc_2,2.26 //</l>
+</lg>
+
+<lg>
+<l>tadādade dviguṇitamanyāyena karaṃ bharam /</l>
+<l>māddādāvāharacchulkamasakṛcchaulkikacchalāt // Valc_2,2.27 //</l>
+</lg>
+
+<p>ityānandabhaṭṭaprokte vallālacarite vaṇigāvarṣaṇaṃ nāma dvitīyo 'dhyāyaḥ /</p>
+
+</div>
+<div>
+
+<lg>
+<l>atha tṛtīyo 'dhyāyaḥ /</l>
+<l>ekadāruhya javanamaśvaṃ rājā yadṛcchayā /</l>
+<l>prayayau dhavaleśvaryyāstīn rucirakānanam // Valc_2,3.1 //</l>
+</lg>
+
+<lg>
+<l>upakūleṣu ramyeṣu vaneṣu saikateṣu ca /</l>
+<l>bhramamāṇo dadarśāsau nadītīravicāriṇīm // Valc_2,3.2 //</l>
+</lg>
+
+<lg>
+<l>varttulau sphuṭakeśorau dṛḍhāvaviralau kucau /</l>
+<l>lajjayā vasanāntena chādayantīṃ sulocanām // Valc_2,3.3 //</l>
+</lg>
+
+<lg>
+<l>sukeśāṃ śuddhadaśanāṃ bālāṃ sarasijānanām /</l>
+<l>tanvaṅgīṃ sukomalāṅgīṃ sunāsāṃ mṛduhāsinīm // Valc_2,3.4 //</l>
+</lg>
+
+<lg>
+<l>vṛhannitambavimbāḍhyāṃ sukapolāṃ manoharām /</l>
+<l>sa hitāmekayā sakhyā sthalajāmiva padminīm // Valc_2,3.5 //</l>
+</lg>
+
+<lg>
+<l>tasyāḥ paramakāminyāḥ lalitādvadanāmbujāt /</l>
+<l>apivallāvaṇyarasaṃ rājño nayanaṣaṭpadaḥ // Valc_2,3.6 //</l>
+</lg>
+
+<lg>
+<l>unmādanakaṭākṣeṇa vividdhāṅgo mahīpatiḥ /</l>
+<l>tāṃ vilokya yayau tūrṇaṃ manmathasya vidheyatām // Valc_2,3.7 //</l>
+</lg>
+
+<lg>
+<l>[[022]]</l>
+<l>upaprayāya suśroṇiṃ sa tāṃ padmanibhekṣaṇām /</l>
+<l>paśyanneva nirnimeṣaṃ tiṣṭhantīṃ vākyamabravīt // Valc_2,3.8 //</l>
+</lg>
+
+<p>rājovāca:
+<lg>
+<l>netreṇa nīlakamalaṃ kamalaṃ mukhena</l>
+<l>kundena dantamadhareṇa supakvavimbam /</l>
+<l>gātreṇa campakadalaṃ paribhūya bhāsi</l>
+<l>kā tvaṃ sarittaṭavane vanadevateva // Valc_2,3.9 //</l>
+</lg></p>
+
+<lg>
+<l>sāmantasaṅghaparisevitapādapadmo</l>
+<l>vaidhavyakāraṇavidhiḥ parasundarīṇām /</l>
+<l>vallālasenanṛpatistava kundadanti</l>
+<l>yāto vidheyaviṣayaḥ kuru netrapātam // Valc_2,3.10 //</l>
+</lg>
+
+<lg>
+<l>tacchrutvā jātarāgā sā bhāvamāvṛṇvatī tadā /</l>
+<l>kiñcidavāṅmukhī prāha nṛpatiṃ mṛdususvanā // Valc_2,3.11 //</l>
+</lg>
+
+<lg>
+<l>kanyovāca:</l>
+<l>ācakṣva maivamavanīśvara māṃ kumārīm /</l>
+<l>vaṃśaḥ kva te vidhubhavaḥ kvaca sambhavo me // Valc_2,3.12 //</l>
+</lg>
+
+<lg>
+<l>carmmārakoritanayā viditāsmi loke /</l>
+<l>nāhaṃ tvayā hyakulajā pariṇetumarhā // Valc_2,3.13 //</l>
+</lg>
+
+<lg>
+<l>rājovāca:</l>
+<l>kiṃ vyāmohayase bāle korikanyetivādinī /</l>
+<l>carmmāryyā īdṛśaṃ rūpaṃ kiṃ syāt bhuvanamohanam // Valc_2,3.14 //</l>
+</lg>
+
+<lg>
+<l>carmmārasya nāsi kanyā pālakaḥ sa tu kevalam /</l>
+<l>rājakanyāsi bhadre tvaṃ dhruvameva na saṃśayaḥ // Valc_2,3.15 //</l>
+</lg>
+
+<lg>
+<l>ko vā kāpuruṣo loke bhavedīdṛk varānane /</l>
+<l>yastvāṃ nidhimiva prāpyāmūlyaṃ karagataṃ tyajet // Valc_2,3.16 //</l>
+</lg>
+
+<lg>
+<l>kulajākulajā vāsi tvameva hṛdayapriyā /</l>
+<l>āyāhi tvaṃ mayā sārddhaṃ tvāṃ nayāmi nijaṃ puram // Valc_2,3.17 //</l>
+</lg>
+
+<lg>
+<l>tacchratvā vacanaṃ tasya rājñaḥ sācīkṛtekṣaṇā /</l>
+<l>sā sakhīṃ nodayāmāsa vaktuṃ tatrocitaṃ tadā // Valc_2,3.18 //</l>
+</lg>
+
+<lg>
+<l>sakhyuvāca:</l>
+<l>yadyasyāḥ pāṇiṃ vidhinā grahītuṃ kṛtaniścayaḥ /</l>
+<l>tadaināṃ naya te sārddhameṣātmānaṃ dadāti te // Valc_2,3.19 //</l>
+</lg>
+
+<lg>
+<l>rājovāca:</l>
+<l>gāndharveṇa vidhānena iyaṃ prāptā svayaṃvarā /</l>
+<l>patitvena bhavāmyasyā iyaṃ me jīviteśvarī // Valc_2,3.20 //</l>
+</lg>
+
+<lg>
+<l>[[024]]</l>
+<l>ityuktvā korikanyāṃ sa punareva jagāda tām /</l>
+<l>sumukhīṃ paramānandasandohavikacānanaḥ // Valc_2,3.21 //</l>
+</lg>
+
+<lg>
+<l>rājovāca:</l>
+<l>cala mama sākaṃ bhava mama bhāryyā svārohedaṃ varayānam /</l>
+<l>avarodhe svāminī ca bhava mama caivāntaḥpurāṇām // Valc_2,3.22 //</l>
+</lg>
+
+<lg>
+<l>ityuktvā smayamānastvāṃ vepamānāṃ samagrahīt /</l>
+<l>sasakhīṃ yāpya yānena nināya vikramaṃ puram // Valc_2,3.23 //</l>
+</lg>
+
+<p>tatastāmanavadyāṅgīṃ svasya gehe nyaveśayan
+<l>bubhuje kāmato rājā rājakṛtye hatādaraḥ // Valc_2,3.24 //</l></p>
+
+<lg>
+<l>atyantaṃ lālitā sātu rājñā carmmāradārikā /</l>
+<l>siṣeve 'varodhamadhye calaccāmaramārutam // Valc_2,3.25 //</l>
+</lg>
+
+<lg>
+<l>śuddhāntagatayā sārddhaṃ viharan sa tayā sukham /</l>
+<l>nṛpatirbubudhe naiva kālātikramaṇaṃ mahat // Valc_2,3.26 //</l>
+</lg>
+
+<p>ityānandabhaṭṭaprokte vallālacarite sundarīsamāgamo nāma tṛtīyo 'dhyāyaḥ /</p>
+
+</div>
+<div>
+
+<lg>
+<l>caturtho 'dhyāyaḥ</l>
+<l>tataḥ kālena kiyatā krīḍāratnasamutsukaḥ /</l>
+<l>ekadāntaḥpuraṃ rājā viveśa rajanīmukhe // Valc_2,4.1 //</l>
+</lg>
+
+<lg>
+<l>praviśya śayanāgāraṃ dayitāṃ bhūmiśāyinīm /</l>
+<l>dadṛśe sukumārāṅgīṃ kṛttamūlalatāmiva // Valc_2,4.2 //</l>
+</lg>
+
+<lg>
+<l>vāsasā mukhamācchādya rudatīṃ kamalekṣaṇām /</l>
+<l>aduḥkhārhāṃ priyatarāmātmano jīvitādapi // Valc_2,4.3 //</l>
+</lg>
+
+<lg>
+<l>tāṃ dṛṣṭvā malinākārāṃ luṭhantīṃ dharaṇītale /</l>
+<l>jughūrṇa mastakaṃ tasya netrābhyāṃ dadṛśe tamaḥ // Valc_2,4.4 //</l>
+</lg>
+
+<lg>
+<l>vismayāno narapatistasyā nayanajaṃ jalaṃ /</l>
+<l>parimṛjyākulībhūtaḥ sabhayaṃ vākyamabravīt // Valc_2,4.5 //</l>
+</lg>
+
+<lg>
+<l>rājovāca:</l>
+<l>kiṃnvidaṃ mṛgaśāvākṣi netrābhyāṃ sravate jalam /</l>
+<l>avāṅmukhī kimarthaṃ tvaṃ bhūmāveva viluṇṭhase // Valc_2,4.6 //</l>
+</lg>
+
+<lg>
+<l>natvahaṃ vipriyaṃ kiñcidakārṣaṃ tava bhāmini /</l>
+<l>krandanena duḥkhayase kathaṃ māṃ tanumadhyame // Valc_2,4.7 //</l>
+</lg>
+
+<lg>
+<l>kathaṃ kausumbhavasanaṃ sauvarṇambā śucismite /</l>
+<l>nānugṛhṇāsi suśroṇi maṇivījapayodhare // Valc_2,4.8 //</l>
+</lg>
+
+<lg>
+<l>[[026]]</l>
+<l>dhammillaracanā subhru mallīdāmnā sugandhinā /</l>
+<l>kucayoścandralekheva patrāṅkā ca na kāritā // Valc_2,4.9 //</l>
+</lg>
+
+<lg>
+<l>purānitambasaṃsargāt yatte sārasanottamam /</l>
+<l>śobhitaṃ nādhunā bhūmau patitaṃ tadvirājate // Valc_2,4.10 //</l>
+</lg>
+
+<lg>
+<l>maktāvalī bhrājate na cyutā tava kucadvayāt /</l>
+<l>graiveyakaṃ cyutaṃ kaṇṭhādanābharaṇatāṃ gatam // Valc_2,4.11 //</l>
+</lg>
+
+<lg>
+<l>pūrṇimākaumudīkāntinirjjitasmitaśobhinā /</l>
+<l>kiṃ no vadasi vaktena kuśeśayasugandhinā // Valc_2,4.12 //</l>
+</lg>
+
+<lg>
+<l>sarvvathāmbujapatrākṣi tavāsmi vacanaṅkaraḥ /</l>
+<l>pratīkṣante tavādeśaṃ majjanāśca sadā priye // Valc_2,4.13 //</l>
+</lg>
+
+<lg>
+<l>kathaṃ nādiśase prāgvat smitapūrvvābhibhāṣiṇi /</l>
+<l>prapannaṃ prapade prāptaṃ dāsaṃ himakarānane // Valc_2,4.14 //</l>
+</lg>
+
+<lg>
+<l>tvattvaḥ priyatarā nānyā varttate mama sundari /</l>
+<l>tvaṃ hi me jīvanaṃ prāṇāḥ tvaṃ hi me paramā gatiḥ // Valc_2,4.15 //</l>
+</lg>
+
+<lg>
+<l>śravaṇāmṛtavākyena māṃ jīvaya suhāsini /</l>
+<l>kāyasthañcāpyakāyasthaṃ sphurantamapi māṃ mṛtam // Valc_2,4.16 //</l>
+</lg>
+
+<lg>
+<l>dāsye pratyayakāriṇyāḥ koṭiṃ pratyayakāriṇi /</l>
+<l>ratnālaṅkārabhāraṃ vā yatte manasi varttate // Valc_2,4.17 //</l>
+</lg>
+
+<lg>
+<l>apyahaṃ lakṣmaṇaṃ jahyām tvatpriyārthaṃ varānane /</l>
+<l>gāṅgeyaṃ sāgaraṃ bāle praviśeyam hutāśanam // Valc_2,4.18 //</l>
+</lg>
+
+<lg>
+<l>[[027]]</l>
+<l>kimābhīlakāraṇaṃ te jīviteśvari kathyatām /</l>
+<l>tatpriyaṃ prākariṣyāmi śape te lalitāṅghriṇā // Valc_2,4.19 //</l>
+</lg>
+
+<lg>
+<l>nirīkṣase kiṃ na subhru preṣya māṃ tava sundari /</l>
+<l>kenāvamānitāsi tvamagnau kaḥ śalabhāyate // Valc_2,4.20 //</l>
+</lg>
+
+<lg>
+<l>anāṭyaḥ ko bhavedāḍhyaḥ āḍhyo yāyādanāṭyatām /</l>
+<l>ko vaddho mucyatāmadya ko 'vadhyo vā nihanyatām // Valc_2,4.21 //</l>
+</lg>
+
+<lg>
+<l>śrutvaivaṃ bhāṣitaṃ tasya kāmasya vaśavarttinaḥ /</l>
+<l>sābhimānavatī rājñaḥ sthitā natamukhī tadā // Valc_2,4.22 //</l>
+</lg>
+
+<lg>
+<l>vyāvṛttavadanaṃ rāmā kiñcit sācīkṛtekṣaraṇā /</l>
+<l>sakṛdvilokya nṛpatiṃ tasthau natamukhī punaḥ // Valc_2,4.23 //</l>
+</lg>
+
+<lg>
+<l>śvāsakampadṛḍhorojā sphuradvimbādharā tataḥ /</l>
+<l>parimṛjyāñcalenāsraṃ babhāṣe gadgadasvanā // Valc_2,4.24 //</l>
+</lg>
+
+<lg>
+<l>padmākṣyuvāca:</l>
+<l>yadi te matpriyaṃ kāryyaṃ māṃ preṣaya piturgṛham /</l>
+<l>duḥkhārhāṃ duḥkhinīṃ nātha kānanāntaracāriṇīm // Valc_2,4.25 //</l>
+</lg>
+
+<lg>
+<l>bhoginīṃ kṛpāṇāṃ māṃ mannāmadheyañca vismara /</l>
+<l>rājyaṃ bhuṅkṣva mahārāja māṃ vihāya sukhaṃ sadā // Valc_2,4.26 //</l>
+</lg>
+
+<lg>
+<l>prāptosi sumahaddukhaṃ nṛpate mama kāraṇāt /</l>
+<l>deśadeśāntare kānta maddhaitostvaṃ kalaṅkabhāk // Valc_2,4.27 //</l>
+</lg>
+
+<lg>
+<l>[[028]]</l>
+<l>rājñāṃ vā rājaputrāṇāṃ prājñānāmabhijanmanām /</l>
+<l>purā nājñāsiṣaṃ nātha prakṛtiṃ vanacāriṇī // Valc_2,4.28 //</l>
+</lg>
+
+<lg>
+<l>adya lokacaritrāṇāṃ jātābhijñāvanīpate /</l>
+<l>jīveyaṃ yadi paśyeyaṃ tadā kiṃ kiṃ na kilbiṣam // Valc_2,4.29 //</l>
+</lg>
+
+<lg>
+<l>dhanādau nahi me kāryyaṃ kimalaṅkaraṇādinā /</l>
+<l>patitvā dhavaleśvaryyāṃ nimajjeyamahaṃ dhruvam // Valc_2,4.30 //</l>
+</lg>
+
+<lg>
+<l>evaṃ vilapamānāṃ tāṃ vallālaḥ kṣauṇipālakaḥ /</l>
+<l>praveśayan vakṣasīva tāṃ punarvākyamabravīt // Valc_2,4.31 //</l>
+</lg>
+
+<lg>
+<l>rājovāca:</l>
+<l>śiro me ghūrṇate jāye vadanañca viśuṣyati /</l>
+<l>kimu tatkāraṇaṃ yasmāt tvamevaṃ bhṛśamākulā // Valc_2,4.32 //</l>
+</lg>
+
+<lg>
+<l>tvaṃ hi me jīvanaṃ patni tvaṃ hi me paramaṃ tapaḥ /</l>
+<l>tvameva me rājadharmmaḥ prāṇānāmīśvarī ca me // Valc_2,4.33 //</l>
+</lg>
+
+<lg>
+<l>tvayā hīnaṃ na kāṅkṣeyaṃ kāñcīśatvamapi priye /</l>
+<l>tvayā saha viśālākṣi vane vāso varaṃ mama // Valc_2,4.34 //</l>
+</lg>
+
+<lg>
+<l>prāṇā api mayā śakyāstyaktuṃ na tvāṃ kadācana /</l>
+<l>śaknuyāmasitāpāṅgi kalaṅkeṣu ca kā kathā // Valc_2,4.35 //</l>
+</lg>
+
+<lg>
+<l>[[029]]</l>
+<l>pādānataṃ mahādevi kiṃ nānukampase patim /</l>
+<l>prāṇairmmama śāpitāsi vada trailokyasundari // Valc_2,4.36 //</l>
+</lg>
+
+<lg>
+<l>tvameva mahiṣī rājñi bharttāhaṃ te mahāguruḥ /</l>
+<l>ācakṣa hṛdgataṃ bhāvameṣohaṃ vihitāñjaliḥ // Valc_2,4.37 //</l>
+</lg>
+
+<lg>
+<l>patāmi tvatpadau mūrddhnā kasmānna dayase patim /</l>
+<l>bhaktamanyāsvanāsaktaṃ prasīdāmbajalocane // Valc_2,4.38 //</l>
+</lg>
+
+<lg>
+<l>evaṃ tadā vyāharantaṃ rājānamutpalekṣaṇā /</l>
+<l>uvāca dāruṇaṃ vākyamucchasantī muhurmuhuḥ // Valc_2,4.39 //</l>
+</lg>
+
+<lg>
+<l>rājñyuvāca:</l>
+<l>avaktavyamapi svāmin tvāṃ vadāmi śṛṇa prabho /</l>
+<l>ākarṇya ca prāṇanātha yatkarttavyaṃ tadācara // Valc_2,4.40 //</l>
+</lg>
+
+<lg>
+<l>bharttā hi rakṣakaḥ strīṇāṃ yuvatīnāṃ viśeṣataḥ /</l>
+<l>bharttāraṃ yadi no vacmi kaṃ vadāmi sayauvanā // Valc_2,4.41 //</l>
+</lg>
+
+<lg>
+<l>bharttā gatirhi nārīnāṃ bharttā paramadevatā /</l>
+<l>brāhmaṇasya mukhāt pitrālaye deva mayā śrutam // Valc_2,4.42 //</l>
+</lg>
+
+<lg>
+<l>pātivratyaṃ paro dharmmaḥ śrayate yoṣitāmiti /</l>
+<l>nāhamatyācarāmi tvāṃ manasāpi kadācana // Valc_2,4.43 //</l>
+</lg>
+
+<lg>
+<l>nāhaṃ prākṛtanārīva patibhaktivivarjjitā /</l>
+<l>hṛtpadmāsanamāsthāpya sadā tvāṃ pūjayāmyaham // Valc_2,4.44 //</l>
+</lg>
+
+<lg>
+<l>yenāhaṃ satataṃ pūjyā praṇipātena bhaktitaḥ /</l>
+<l>tenāhaṃ nīcavṛttena vimārgeṇāvamānitā // Valc_2,4.45 //</l>
+</lg>
+
+<lg>
+<l>[[030]]</l>
+<l>dhik taṃ sa kilviṣācāraḥ kāmāndho vyatthitendriyaḥ /</l>
+<l>mātaraṃ yaḥ kāmayate durātmā māṃ pativratām // Valc_2,4.46 //</l>
+</lg>
+
+<lg>
+<l>adya sāhaṃ gatā nātha pāyukṣālanamandiram /</l>
+<l>ekākinīmasau dṛṣṭvā smayannanusasāra mām // Valc_2,4.47 //</l>
+</lg>
+
+<lg>
+<l>bhītayā yanmayāhūtā sakhī tatra drutaṃ gatā /</l>
+<l>tato duṣṭātmanā nātha na tena malinīkṛtā // Valc_2,4.48 //</l>
+</lg>
+
+<lg>
+<l>dharmeṇa rakṣitā sāhaṃ tvām vadāmi yathāyatham /</l>
+<l>kampante mama gātrāṇi smṛtvā tasya kuceṣṭitam // Valc_2,4.49 //</l>
+</lg>
+
+<lg>
+<l>bhītāsmi kutsitācārāt tasmādahamarakṣitā /</l>
+<l>vipatsye nirṇāyakeva camūrāyodhanaṃ gatā // Valc_2,4.50 //</l>
+</lg>
+
+<lg>
+<l>ityuktvā dāruṇaṃ vākyaṃ krūrā vallālavallabhā /</l>
+<l>virarāmotsṛjantyasraṃ tadā vallabhavakṣasi // Valc_2,4.51 //</l>
+</lg>
+
+<lg>
+<l>tacchrutvā vacanaṃ rājā priyāsyakamalacyutam /</l>
+<l>kopenāsau prajajvāla dāveneva dharādharaḥ // Valc_2,4.52 //</l>
+</lg>
+
+<lg>
+<l>tadā kruddhasya mlecchāsyasadṛśāsyamahīkṣitaḥ /</l>
+<l>sphurat sarvvāṅgasya netrayugalaṃ lohitāyate // Valc_2,4.53 //</l>
+</lg>
+
+<lg>
+<l>tāṃ vāraṇavallabhoru vallālo vallabhāṃ tataḥ /</l>
+<l>putre daṇḍaṃ pratijñāya sāntvayāmāsa viklavām // Valc_2,4.54 //</l>
+</lg>
+
+<lg>
+<l>putraduśceṣṭitaṃ dhyāyan talpe kopākulo nṛpaḥ /</l>
+<l>jāgradeva yāminīṃ tāṃ kathañcidatyavāhayat // Valc_2,4.55 //</l>
+</lg>
+
+<p>ityānandabhaṭṭaprokte vallālacarite dayitāprasādhanaṃ nāma caturtho 'dhyāyaḥ /</p>
+
+</div>
+<div>
+
+<p>[[032]]</p>
+
+<p>atha pañcamo 'dhyāyaḥ</p>
+
+<lg>
+<l>utthāyāharmmukhe rājā krodhamāhārayan bhṛśam /</l>
+<l>ghātukānādiśaddhantumupāṃśu tanayaṃ priyam // Valc_2,5.1 //</l>
+</lg>
+
+<lg>
+<l>śrutvā svasya badhādeśaṃ tapasvī lakṣmaṇamastataḥ /</l>
+<l>vyākulo mantrayāmāsa kāntayā saha nirjjane // Valc_2,5.2 //</l>
+</lg>
+
+<lg>
+<l>rajanyāṃ gāhamānāyāmāmantrya rahasi priyām /</l>
+<l>guptāṃ taraṇimāruhya palāyata mahābhayāt // Valc_2,5.3 //</l>
+</lg>
+
+<lg>
+<l>prabhātāyāṃ vibhāvaryyāṃ jñātvā tasya palāyanam /</l>
+<l>durgāvāḍīṃ yayau rājā cintājṛmbhavilocanaḥ // Valc_2,5.4 //</l>
+</lg>
+
+<lg>
+<l>praviśan mandiraṃ tatra bhittikāyāṃ mahīpatiḥ /</l>
+<l>svasnuṣālikhitaṃ ślokaṃ dṛṣṭvemamapaṭhat svayam // Valc_2,5.5 //</l>
+</lg>
+
+<lg>
+<l>patatyavirataṃ vāri nṛtyanti śikhino mudā /</l>
+<l>adya kāntaḥ kṛtānto vā duḥkhasyāntaṃ kariṣyati // Valc_2,5.6 //</l>
+</lg>
+
+<lg>
+<l>ślokametaṃ vācayitvā vallālo dharaṇīpatiḥ /</l>
+<l>putrasnehacalaccittaḥ kaivarttānājuhāva ha // Valc_2,5.7 //</l>
+</lg>
+
+<lg>
+<l>tān prāptānabravīdrājā haṃho naukarmmajīvinaḥ /</l>
+<l>matpriyaṃ yadi karttavyaṃ śrayatāṃ vacanaṃ mama // Valc_2,5.8 //</l>
+</lg>
+
+<lg>
+<l>ito 'pakrāntastanayo lakṣmaṇaḥ krodhalakṣaṇaḥ /</l>
+<l>yuṣmabhyamīpsitaṃ dadyāmanviṣyānayatāñjasā // Valc_2,5.9 //</l>
+</lg>
+
+<lg>
+<l>nāvikā ūcuḥ:</l>
+<l>bhūdhare kandare durge kāntāre salileśvare /</l>
+<l>pātāle vānayiṣyāmastiṣṭhantamapi mācirāt // Valc_2,5.10 //</l>
+</lg>
+
+<lg>
+<l>ityuktvā cābhivādyātha rājānaṃ nāvikā mudā /</l>
+<l>ānetuṃ lakṣmaṇaṃ jagmuḥ kṛtvā kolāhalaṃ bhṛśam // Valc_2,5.11 //</l>
+</lg>
+
+<lg>
+<l>aritrāṇāṃ dvisaptatyā vāhayantastarīṃ drutam /</l>
+<l>āninyurlakṣmaṇaṃ dvābhyāmahobhyāṃ jālajīvinaḥ // Valc_2,5.12 //</l>
+</lg>
+
+<lg>
+<l>tatastebhyo dadau rājā santoṣavimalānanaḥ /</l>
+<l>dhanaratnavastrabhārān hālikyañcopajīvanam // Valc_2,5.13 //</l>
+</lg>
+
+<p>ityānandabhaṭṭaprokte vallālacarite lakṣmaṇānayanaṃ nāma pañcamo 'dhyāyaḥ /</p>
+
+</div>
+<div>
+
+<p>[[034]]</p>
+
+<p>atha ṣaṣṭhodhyāyaḥ</p>
+
+<lg>
+<l>athāsti śaivaiḥ sakalaiśca śāktaiḥ sauraistathā vaiṣṇavagāṇapatyaiḥ /</l>
+<l>upāsikopāsakadaṇḍibhiśca vandyaḥ sadā bhikṣukabhikṣuṇībhiḥ // Valc_2,6.1 //</l>
+</lg>
+
+<lg>
+<l>vipraiśca kṣetraiḥ varigajaiśca śūdraiḥ sannyāsibhi rmānuṣamānuṣībhiḥ /</l>
+<l>sarvvaiśca pūjyo varadaḥ prasiddha u mādhavograḥ kila devadevaḥ // Valc_2,6.2 //</l>
+</lg>
+
+<p>athānādimahāliṅgaṃ pūrvvasmin gauḍmaṇḍale /
+<l>gatāḥ sma pūjituṃ devaṃ mānavā ugramādhavam // Valc_2,6.3 /</l>
+<lg>
+<l>brāhmaṇāḥ kṣatriyāḥ sarvve vaiśyāśca manujādayaḥ /</l>
+<l>satśūdrādyāśca śūdrāśca mahāsthānamupāgatāḥ // Valc_2,6.4</l>
+</lg>
+<lg>
+<l>kecit puṣpāṇi saṃgṛhya dhūpadīpānathāpare /</l>
+<l>kecit gandhañca naivedyān kecit vyajanacāmarān // Valc_2,6.5 //</l>
+</lg></p>
+
+<lg>
+<l>kecicchatrāṇi ratnāni dāmnaśca vasanāni ca /</l>
+<l>ityādīni samāgṛhya te dravyāṇi samāgatāḥ // Valc_2,6.6 //</l>
+</lg>
+
+<lg>
+<l>ṣaḍārttavaiḥ prasūnaiśca karavīrādibhirjanāḥ /</l>
+<l>svabhuvaṃ pūjayāmāsa rdhūpaiśca candanādibhiḥ // Valc_2,6.7 //</l>
+</lg>
+
+<lg>
+<l>vāribhistīrthajaiḥ svacchaiḥ kuṅkumaiḥ saha rañjitaiḥ /</l>
+<l>śaṅkaraṃ snāpayāmāsuḥ śītalaiśca sugandhibhiḥ // Valc_2,6.8 //</l>
+</lg>
+
+<lg>
+<l>dadu rghṛtapradīpān ca tailadīpānathāpare /</l>
+<l>kṣīrārghañca dadustatra pādyañcāmalavāribhiḥ // Valc_2,6.9 //</l>
+</lg>
+
+<lg>
+<l>gopāyasai rgoghṛtaiśca madhukuṅkumakarpūraiḥ /</l>
+<l>pañcāmṛtaiḥ keśaraiśca guḍaiśca śarkarairapi // Valc_2,6.10 //</l>
+</lg>
+
+<lg>
+<l>candanaśca sugandhaśca pañcagandhai rmudāpare /</l>
+<l>śaṅkaraṃ lepayāmāsu rmānavā bhaktitatparāḥ // Valc_2,6.11 //</l>
+</lg>
+
+<lg>
+<l>śālyannamodanairyuktaṃ paramānnaṃ dadu rmudā /</l>
+<l>laḍḍukāñca piṣṭakāñca naivedyān vividhānapi // Valc_2,6.12 //</l>
+</lg>
+
+<lg>
+<l>patākān sthāpayāmāsuścalaccīnāṃśukān tathā /</l>
+<l>nanṛtuśca jaguḥ kecit kecit ghaṇṭāmavīvadan // Valc_2,6.13 //</l>
+</lg>
+
+<lg>
+<l>suvarṇaṃ rajataṃ tāmraṃ daduḥ kecit svayambhuve /</l>
+<l>daduśca pañcaratnāni saha lājākṣatai rnarāḥ // Valc_2,6.14 //</l>
+</lg>
+
+<lg>
+<l>karoddharttanatāmbalamukhavāsān dadustathā /</l>
+<l>devasyārūrupan mūrddhni durvvāpuṣpākṣatāni ca // Valc_2,6.15 //</l>
+</lg>
+
+<lg>
+<l>evaṃ pañcopacāreṇa mānavā bhūsurādayaḥ /</l>
+<l>śivamīju rjapañcakruḥ pracakruśca pradakṣiṇām // Valc_2,6.16 //</l>
+</lg>
+
+<lg>
+<l>nṛtyai rgītai rmahotsāhaiḥ vādyaiśca madhurasvanaiḥ /</l>
+<l>hāṃ huṅkāraiḥ samullāsairvāhayannugramādhavam // Valc_2,6.17 //</l>
+</lg>
+
+<lg>
+<l>[[036]]</l>
+<l>kecitpañcāṅgayuktena sāṣṭāṅgena tathāpare /</l>
+<l>praṇemuścārpayāmāsuḥ stotrañca madhurasvanaiḥ // Valc_2,6.18 //</l>
+</lg>
+
+<lg>
+<l>bhallakai rjhallarībhiśca mṛdaṅgairmarddalaistathā /</l>
+<l>muralībhiśca tantrībhiḥ kecidījuḥ svayambhuvam // Valc_2,6.19 //</l>
+</lg>
+
+<lg>
+<l>jayamaṅgalagāthābhirdhāraṇībhiśca gītibhiḥ /</l>
+<l>śaṅkaraṃ bhikṣubhikṣuṇyarījurgānaiśca bhāṣajaiḥ // Valc_2,6.20 //</l>
+</lg>
+
+<lg>
+<l>susvarai rvedapāṭhaiśca viprā vedavidāṃ varāḥ /</l>
+<l>kṣatriyā svarṇaratnādichatrakaiśca mahottamaiḥ // Valc_2,6.21 //</l>
+</lg>
+
+<lg>
+<l>vaṇikāścūḍāmaṇibhiḥ sauvarṇai rbilvapatrakaiḥ /</l>
+<l>śūdrāśca pūjayāmāsu rvividhaiśca kriyāphalaiḥ // Valc_2,6.22 //</l>
+</lg>
+
+<lg>
+<l>athānye āgatā ye ca jātayo rajakādayaḥ /</l>
+<l>te sarvve dūrataḥ sthitvā praṇemuśca punaḥ punaḥ // Valc_2,6.23 //</l>
+</lg>
+
+<p>ityānandabhaṭṭaprokte vallālacarite ugramādhavapūjanaṃ nāma ṣaṣṭhodhyāyaḥ /</p>
+
+</div>
+<div>
+
+<p>atha saptamā 'dhyāyaḥ</p>
+
+<lg>
+<l>kasmiṃścit kāle padmākṣī vallāladayitā purā /</l>
+<l>śaṅkaraṃ pūjituṃ tatra mahāsthānamupāgatā // Valc_2,7.1 //</l>
+</lg>
+
+<lg>
+<l>gṛhītvā bahudravyāṇi haimāni rājatāni ca /</l>
+<l>ātapatrañca devasya devyāśca karṇapālikām // Valc_2,7.2 //</l>
+</lg>
+
+<lg>
+<l>prālambikāñca kaṭakaṃ kirīṭaṃ kaṇṭhabhūṣaṇam /</l>
+<l>aṅgadaṃ kaṅkaṇaṃ sāraśanañca nūpurādikam // Valc_2,7.3 //</l>
+</lg>
+
+<lg>
+<l>vastrāṇi ca mahārhāṇi patākāśca dhvajāni ca /</l>
+<l>yajñasūtrāṇi gandhāni nānopakaraṇāni ca // Valc_2,7.4 //</l>
+</lg>
+
+<lg>
+<l>arcayāmāsa devaṃ sā devīṃ ca sa purohitaḥ /</l>
+<l>naivedye stairalaṅkāraicchatreṇa ca paraṃ mudā // Valc_2,7.5 //</l>
+</lg>
+
+<lg>
+<l>pūjayitvā gatā devī sāruhya hayanaṃ varam /</l>
+<l>purohitaḥ sthitastatra dravyāṇāmaṃśakāṅkṣayā // Valc_2,7.6 //</l>
+</lg>
+
+<lg>
+<l>sa mahāntam dharmmagiriṃ valadeva uvāca ha /</l>
+<l>bhadanta dehi me bhāgam matprāpyamacireṇa bhoḥ // Valc_2,7.7 //</l>
+</lg>
+
+<lg>
+<l>tacchratvā tadvacaḥ sthānādhipaḥ sa pratyuvāca tam /</l>
+<l>adadāma na kasmaicit bhāgameva kadācana // Valc_2,7.8 //</l>
+</lg>
+
+<lg>
+<l>[[038]]</l>
+<l>ato na dadyāṃ bhavate gaccha gaccha gṛhaṃ vraja /</l>
+<l>itthaṃ tābhyāmabhūttatra vākpāruṣyaṃ kiyatkṣaṇam // Valc_2,7.9 //</l>
+</lg>
+
+<lg>
+<l>valadevastataḥ kraddho devaleśaṃ śaśāpa ha /</l>
+<l>nipatadhvamare mūḍha na te bhadraṃ bhaviṣyati // Valc_2,7.10 //</l>
+</lg>
+
+<lg>
+<l>śrutvā taddevaleśastvaṃ krodhamlecchānanānanaḥ /</l>
+<l>valadevaṃ gaṇḍadeśe capeṭena vyatītaḍat // Valc_2,7.11 //</l>
+</lg>
+
+<lg>
+<l>ādiśat vyāyatān śiṣyān eṣopasāryyatāmiti /</l>
+<l>tataste puruṣāścakruḥ gurorājñāprapālanam /</l>
+<l>valadevastato 'gacchadrudannṛpatisannidhim // Valc_2,7.12 //</l>
+</lg>
+
+<lg>
+<l>ādyopāntaṃ yathāvṛttaṃ nṛpe sarvvamacīkathat /</l>
+<l>pārṣadyā brāhmaṇāścāpi cakrustasya samarthanam // Valc_2,7.13 //</l>
+</lg>
+
+<lg>
+<l>valadevasya vākyasya procuśca daṇḍyatāṃ gireḥ /</l>
+<l>evaṃ vijñāya rājāsāvapamānaṃ purodhasaḥ /</l>
+<l>manyunā sa prajajvāla vahninā paṭalaṃ yathā // Valc_2,7.14 //</l>
+</lg>
+
+<lg>
+<l>nirvvāsyatāṃ dharmmagirī rāṣṭrānme svagaṇaiḥ saha /</l>
+<l>iti rājā rudranāgamanvaśāt daṇḍanāyakam // Valc_2,7.15 //</l>
+</lg>
+
+<lg>
+<l>nidhirguṇānāṃ svajanaikabandhuḥ satyaṃ vidhāturdvijavaryyavākyam /</l>
+<l>cakāra rāṣṭrāt sa vahiṣkṛtaṃ taṃ gaṇena sārddhaṃ kila rājasiṃhaḥ // Valc_2,7.16 //</l>
+</lg>
+
+<p>ityānandabhaṭṭaprokte vallālacarite devalānāṃ nirvvāsanaṃ nāma saptamo 'dhyāyaḥ /</p>
+
+</div>
+<div>
+
+<p>[[040]]
+atha aṣṭamo 'dhyāyaḥ</p>
+
+<lg>
+<l>oṁ namaḥ śivāya |</l>
+<l>nārāyaṇaṃ namaskṛtya narañcaiva narottamam /</l>
+<l>devīṃ svarasvatīṃ vyāsaṃ tatojayamudīrayet // Valc_2,8.1 //</l>
+</lg>
+
+<lg>
+<l>oṁ namo bhagavate vāsudevāya |</l>
+<l>namo 'stu siṃhagiraye prabhave 'dbhutaśaktaye /</l>
+<l>vallālabhūpati rninye mārge yena sanātane // Valc_2,8.2 //</l>
+</lg>
+
+<lg>
+<l>atha śrīvallālasenaḥ purā gauḍe purottame /</l>
+<l>nānāratnajvalatśobhāsabhāyāṃ sukhamāsata // Valc_2,8.3 //</l>
+</lg>
+
+<lg>
+<l>nīlakuñcitakeśāntavyālolacūrṇakuntalāḥ /</l>
+<l>sabhājanākṣibhramaraiḥ pīyamānamukhāmbujāḥ // Valc_2,8.4 //</l>
+</lg>
+
+<lg>
+<l>kañcukitastanābhogāḥ kvanadvalayakaṅkaṇāḥ /</l>
+<l>suvastrāścārusarvvāṅgyaḥ āraktadaśanacchadāḥ // Valc_2,8.5 //</l>
+</lg>
+
+<lg>
+<l>āviṣkurvvadvāhumūlā nṛtyaddhastā iva striyaḥ /</l>
+<l>sevayanti nṛpaṃ tatra calaccāmaramārutaiḥ // Valc_2,8.6 //</l>
+</lg>
+
+<lg>
+<l>rājanyā rājaputrāśca vāvadūkaviṭādayaḥ /</l>
+<l>upāsate sma vallālaṃ brāhmaṇāśca mahaujasaḥ // Valc_2,8.7 //</l>
+</lg>
+
+<lg>
+<l>gītai rhallīṣai rlāsyaiśca naṭyo hariṇalocanāḥ /</l>
+<l>bhrukuṃśāśca vādyavido vādyaiścaramayanti tam // Valc_2,8.8 //</l>
+</lg>
+
+<lg>
+<l>kadācidvedavedāṅgopaniṣaddharmmaśāstravit /</l>
+<l>itihāsapurāṇānāṃ vettā lokanamaskṛtaḥ // Valc_2,8.9 //</l>
+</lg>
+
+<lg>
+<l>medhāvī nayavān vāgmī mahārājagururmuniḥ /</l>
+<l>yogīśvaro mahāprājñaḥ sarvvaśāstraviśāradaḥ // Valc_2,8.10 //</l>
+</lg>
+
+<lg>
+<l>bhaṭṭaḥ siṃhagiri rnāma śiṣyaiḥ parivṛtastadā /</l>
+<l>udbhāsayan diśaḥ sarvvāḥ śriyā paramayā jvalan // Valc_2,8.11 //</l>
+</lg>
+
+<lg>
+<l>sabhāsthaṃ rājavallālaṃ draṣṭukāmo manojavaḥ /</l>
+<l>vadarikāśramoddeśaṃ bhraman tāmagamat sabhāṃ // Valc_2,8.12 //</l>
+</lg>
+
+<lg>
+<l>jayāśīrbhi rvarddhayantaṃ vilokya nṛpati rmunim /</l>
+<l>pratyutpatyāsanāt tūrṇaṃ babande caraṇau muneḥ // Valc_2,8.13 //</l>
+</lg>
+
+<lg>
+<l>dattvāsanaṃ tatastasmai bhaktyā prītyā ca pārthivaḥ /</l>
+<l>dhanaiḥ ratnai ryathākāmaiḥ pūjayāmāsa yatnataḥ // Valc_2,8.14 //</l>
+</lg>
+
+<lg>
+<l>vallālenārccito rājñā muniḥ prītamanāstadā /</l>
+<l>anāmayañcāvyayañya paryyapṛcchajjaneśvaram // Valc_2,8.15 //</l>
+</lg>
+
+<lg>
+<l>valadevaṃ samāgamya sasmito munisattamaḥ /</l>
+<l>pratipūjya yathānyāyaṃ papraccha kuśalaṃ tadā // Valc_2,8.16 //</l>
+</lg>
+
+<lg>
+<l>sa hṛṣṭamānaso rājā bhaṭṭasiṃhagiriṃ munim /</l>
+<l>uvāca paramaprītastāpasaṃ dyotitaprabham // Valc_2,8.17 //</l>
+</lg>
+
+<lg>
+<l>[[042]]</l>
+<l>adya me saphalaṃ janma mahadgṛñca pavitritam /</l>
+<l>bhavadabhyāgamenaiva suprabhātā vibhāvarī // Valc_2,8.18 //</l>
+</lg>
+
+<lg>
+<l>tato viśrāntamālakṣya taṃ muniṃ saṃśitavratam /</l>
+<l>sukhāsīnamupāsīna uvāca bhuvaneśvaraḥ // Valc_2,8.19 //</l>
+</lg>
+
+<lg>
+<l>rājovāca:</l>
+<l>bhagavan sarvvaśāstrajñaḥ sarvajñaḥ sarvatattvavit /</l>
+<l>bhavato 'viditaṃ kiñcinnāstīti kṛpayā vada // Valc_2,8.20 //</l>
+</lg>
+
+<lg>
+<l>caturvvarṇasamutpattiṃ gotravaṃśādikaṃ śubham /</l>
+<l>varṇānāṃ śaṅkarotpattiṃ kathayasva ca me mune // Valc_2,8.21 //</l>
+</lg>
+
+<lg>
+<l>iti rājño vacaḥ śrutvā santoṣaviśadānanaḥ /</l>
+<l>pratyuvāca mahātejā stato nārāyaṇātmajaḥ // Valc_2,8.22 //</l>
+</lg>
+
+<lg>
+<l>siṃhagiriruvāca:</l>
+<l>śuśrūṣubhyo yathā rājan rājarṣibhyastaponidhiḥ /</l>
+<l>kṛṣṇadvaipāyaragaḥ prāha tathādya kathayāmi te // Valc_2,8.23 //</l>
+</lg>
+
+<lg>
+<l>vadarikāśrame puṇye devadāruvanālaye /</l>
+<l>nānāpakṣimṛgākīrṇe śāntikāntiniketane // Valc_2,8.24 //</l>
+</lg>
+
+<lg>
+<l>hutahavyaṃ trikālajñaṃ maharṣiṃ cirajīvinam /</l>
+<l>vyāsaṃ rājarṣayaḥ susthaṃ praṇipatyopatasthire // Valc_2,8.25 //</l>
+</lg>
+
+<lg>
+<l>rājarṣaya ūcuḥ:</l>
+<l>gatāḥ sma naimiṣāraṇyaṃ purīṃ vārāṇasīmapi /</l>
+<l>bhavān na ca śuko dṛṣṭaḥ sauti vāṃ śaunakādayaḥ // Valc_2,8.26 //</l>
+</lg>
+
+<lg>
+<l>diṣṭyā dṛṣṭo 'si bhagavaṃ ścireṇādya girāviha /</l>
+<l>suciraṃ mārgamāṇānāṃ kṛṣṇo bhaktimatāmiva // Valc_2,8.27 //</l>
+</lg>
+
+<lg>
+<l>vibhājitastvayā vedaḥ purā satyavatīsuta /</l>
+<l>itihāsapurāṇāni kathitānyanukampayā // Valc_2,8.28 //</l>
+</lg>
+
+<lg>
+<l>kathitaṃ dharmmaśāstrañca kaliḥ samprati varttate /</l>
+<l>kṛṣṇo 'pi palitaiḥ keśaiḥ śuklatāṃ gatavānasi // Valc_2,8.29 //</l>
+</lg>
+
+<lg>
+<l>atodya kathaya brahman svayameva mahāmune /</l>
+<l>purāṇaṃ dharmmatatvajña hyanugrāhyā vayaṃ tava // Valc_2,8.30 //</l>
+</lg>
+
+<lg>
+<l>bhavantaṃ nahi tyakṣyāmaḥ purāṇakathanaṃ vinā /</l>
+<l>baddho 'sti padayo rbhaktidāmabhi stvavaśo bhavān // Valc_2,8.31 //</l>
+</lg>
+
+<lg>
+<l>iti teṣāṃ vacaḥ śrutvā sa kiñcit prahasanniva /</l>
+<l>uvāca vāgvidāṃ śreṣṭhaḥ śrūyatāṃ kathayāmi vaḥ // Valc_2,8.32 //</l>
+</lg>
+
+<p>iti vallālacarite vyāsapurāṇe aṣṭamo 'dhyāyaḥ /</p>
+
+</div>
+<div>
+
+<p>[[044]]</p>
+
+<p>atha navamā 'dhyāyaḥ</p>
+
+<lg>
+<l>vyāsa uvāca:</l>
+<l>sahasraśīrṣā puruṣaḥ sahasrākṣaḥ sahasrapāt /</l>
+<l>sa bhūmiṃ viśvato vṛttvā atyatiṣṭhadaśāṅgulam // Valc_2,9.1 //</l>
+</lg>
+
+<lg>
+<l>tasmādvirāḍajāyata virājo 'dhipūruṣaḥ /</l>
+<l>tato 'bhidhyāyato rudro lalāṭācca vyajāyata // Valc_2,9.2 //</l>
+</lg>
+
+<lg>
+<l>candramā manaso jātaścakṣoḥ sūryyo 'jāyata /</l>
+<l>mukhādindraśca agniśca prāṇādvāyurajāyata // Valc_2,9.3 //</l>
+</lg>
+
+<lg>
+<l>marīcimatryaṅgirasaṃ pulastyaṃ pulahaṃ kratum /</l>
+<l>vaśiṣṭhañca mahātejāḥ so 'sṛjatsapta mānasān // Valc_2,9.4 //</l>
+</lg>
+
+<lg>
+<l>lokānāntu vivṛddhyarthaṃ mukhavāhūrupādataḥ /</l>
+<l>brāhmaṇaṃ kṣatriyaṃ vaiśyaṃ śūdrañca niravarttayat // Valc_2,9.5 //</l>
+</lg>
+
+<lg>
+<l>sṛjyamāmāḥ prajā naiva vivarddhante yadā yadā /</l>
+<l>dvidhā kṛtvātmano dehamarddhena puruṣo 'bhavat /</l>
+<l>arddhena nārī tasyāṃ sa sasṛje vividhāḥ prajāḥ // Valc_2,9.6 //</l>
+</lg>
+
+<lg>
+<l>divañca pṛthivīñcaiva mahimnā vyāpya tiṣṭhataḥ /</l>
+<l>pitḥṇāntu gaṇāḥ sapta purāṇe kathitā mayā // Valc_2,9.7 //</l>
+</lg>
+
+<lg>
+<l>vairājā agniṣvāttāśca tathā varhiṣadaḥ smṛtāḥ /</l>
+<l>sukālāśca haviṣmanta susvadhāścava somapāḥ // Valc_2,9.8 //</l>
+</lg>
+
+<lg>
+<l>eṣāmādyāstrayo bhūpāḥ pitaro 'mūrttayaḥ smṛtāḥ /</l>
+<l>sakālādyāśca catvāraḥ saptaivaite gaṇāḥ smṛtāḥ // Valc_2,9.9 //</l>
+</lg>
+
+<lg>
+<l>virāṭsutāḥ somasadaḥ agniṣvāttā marīcijāḥ /</l>
+<l>paulastyāśca barhiṣadaḥ sukālāśca vaśiṣṭhajāḥ /</l>
+<l>susvadhāḥ pulahājjātāḥ somapāstu kaveḥ sutāḥ // Valc_2,9.10 //</l>
+</lg>
+
+<lg>
+<l>sukālāñca haviṣyantān susvadhāñcaiva somapān /</l>
+<l>brahmakṣatriyaviṭśūdrā bhāvayanti phalārthinaḥ // Valc_2,9.11 //</l>
+</lg>
+
+<lg>
+<l>yatra te tu gaṇā mukhyāḥ pitḥṇāṃ parikīrttitāḥ /</l>
+<l>teṣāmapi ha vijñeyaṃ putrapautramanantakam // Valc_2,9.12 //</l>
+</lg>
+
+<lg>
+<l>viśvo viśvabhugārādhyo dharmmo dhanyaḥ śubhānanaḥ /</l>
+<l>bhūtido bhūtikṛdbhatiḥ pitḥṇāñca gaṇā nava // Valc_2,9.13 //</l>
+</lg>
+
+<lg>
+<l>kalyāṇa kalyatākarttā kalyaḥ kalyatarāśrayaḥ /</l>
+<l>kalyatāheturanaghaḥ ṣaḍime ca gaṇāḥ smṛtāḥ // Valc_2,9.14 //</l>
+</lg>
+
+<lg>
+<l>varo vareṇyo varadaḥ puṣṭidastuṣṭidastathā /</l>
+<l>viśvapātā tathā dhātā saptaivaite tathā gaṇāḥ // Valc_2,9.15 //</l>
+</lg>
+
+<lg>
+<l>mahān mahātmā mahito mahimāvān mahābalaḥ /</l>
+<l>gaṇāḥ pañca tathaivaite pitḥṇāṃ pāpanāśanāḥ // Valc_2,9.16 //</l>
+</lg>
+
+<lg>
+<l>sukhado dhanadaścānyo dharmmado nyaśca bhūtidaḥ /</l>
+<l>pitḥṇāṃ kathyate caitat tathā gaṇacatuṣṭayam // Valc_2,9.17 //</l>
+</lg>
+
+<p>iti vallālacarite vyāsapurāṇe sṛṣṭivisṛṣṭikathanaṃ nāma navamo 'dhyāyaḥ /</p>
+
+</div>
+<div>
+
+<p>[[046]]</p>
+
+<p>atha daśamā 'dhyāyaḥ</p>
+
+<lg>
+<l>vyāsa uvāca:</l>
+<l>virājamasṛjatkālaḥ so 'sṛjat puruṣaṃ virāṭ /</l>
+<l>puruṣaṃ taṃ manuṃ viddhi virāja ūrusambhavam // Valc_2,10.1 //</l>
+</lg>
+
+<lg>
+<l>sa sṛṣṭvā tu prajāstveva āpavaḥ sa prajāpatiḥ /</l>
+<l>labdhavān puruṣaḥ patnīm śatarūpāmayonijām // Valc_2,10.2 //</l>
+</lg>
+
+<lg>
+<l>vairājāt puruṣāt vīraṃ śatarūpā vyajāyata /</l>
+<l>priyavratottānapādau vīrāt kāmyā vyajāyata // Valc_2,10.3 //</l>
+</lg>
+
+<lg>
+<l>kāmyā nāma mahābhāgā kardamasya prajāpateḥ /</l>
+<l>kanyā putrāśca catvāraḥ samrāṭ kukṣi rvirāṭ prabhuḥ // Valc_2,10.4 //</l>
+</lg>
+
+<lg>
+<l>priyavrataṃ samāsādya patiṃ sā janayat sutān /</l>
+<l>uttānapādaṃ jagrāha puttramatriḥ prajāpatiḥ // Valc_2,10.5 //</l>
+</lg>
+
+<lg>
+<l>uttānapādāccaturaḥ sunṛtā suṣuve sutān /</l>
+<l>dharmmasya kanyā suśroṇī sunṛtā nāma viśrutā // Valc_2,10.6 //</l>
+</lg>
+
+<lg>
+<l>utpannā vājimedhena dhruvasya jananī śubhā /</l>
+<l>dhruvañca kīrttimantañca āyuṣmantaṃ vasuntathā /</l>
+<l>uttānapādo 'janayat sunṛtāyāṃ prajāpatiḥ // Valc_2,10.7 //</l>
+</lg>
+
+<lg>
+<l>saptarṣīṇāṃ puraḥsthānaṃ dhruvaśca tapasāptavān /</l>
+<l>tasmāt śliṣṭiñca bhavyañca dhruvācchambhurvyajāyata // Valc_2,10.8 //</l>
+</lg>
+
+<lg>
+<l>śliṣṭerādhatta succhāyā pañcaputrānakalmaṣān /</l>
+<l>ripuṃ ripuñjayaṃ ripraṃ vṛkalaṃ vṛkatejasam // Valc_2,10.9 //</l>
+</lg>
+
+<lg>
+<l>riporādhatta vṛhatī cākṣuṣaṃ sarvvatejasam /</l>
+<l>ajījanat puṣkariṇyāṃ vīraṇyāṃ cākṣuṣo manum // Valc_2,10.10 //</l>
+</lg>
+
+<lg>
+<l>prajāpetarātmajāyāmaraṇyasya mahātmanaḥ /</l>
+<l>manorajāyanta daśa naḍvalāyāṃ mahaujasaḥ // Valc_2,10.11 //</l>
+</lg>
+
+<lg>
+<l>kanyāyāṃ mānavaśreṣṭhā vairājasya prajāpateḥ /</l>
+<l>ūruḥ puruḥ śatadyumnastapasvī satyavāk kaviḥ // Valc_2,10.12 //</l>
+</lg>
+
+<lg>
+<l>agniṣṭuratirātraśca sudyumnaścetyamī nava /</l>
+<l>abhimanyuśca daśamo naḍvalāyāṃ mahaujasaḥ // Valc_2,10.13 //</l>
+</lg>
+
+<lg>
+<l>ūrorajanayat putrān ṣaḍāgneyī mahāprabhān /</l>
+<l>aṅgaṃ sumanasaṃ svātiṃ kratumaṅgirasaṃ gayam // Valc_2,10.14 //</l>
+</lg>
+
+<lg>
+<l>aṅgāt sunīthakanyāyāṃ veṇa eko vyajāyata /</l>
+<l>veṇasya mathite pāṇau sambabhūva pṛthurnṛpaḥ // Valc_2,10.15 //</l>
+</lg>
+
+<lg>
+<l>pṛthu rvaiṇyastadā cemāṃ rarakṣa kṣatrapūrvvajaḥ /</l>
+<l>rājasūyābhiṣiktānāmādyaḥ sa pṛthivīpatiḥ // Valc_2,10.16 //</l>
+</lg>
+
+<lg>
+<l>tasmāccaiva samutpannau nipuṇau sutamāgadhau /</l>
+<l>pṛthoḥ putrau tu dharmmajñau jajñāte 'ntarddhipālinau // Valc_2,10.17 //</l>
+</lg>
+
+<lg>
+<l>[[048]]</l>
+<l>śikhaṇḍinī havirdhānamantarddhāmādvyajāyata /</l>
+<l>havirdhānāt ṣaḍāgneyī dhīṣaṇā janayat sutān // Valc_2,10.18 //</l>
+</lg>
+
+<lg>
+<l>prācīnavarhiṣaṃ śukraṃ gayaṃ kṛṣṇaṃ vrajājinau /</l>
+<l>prācīnavarhirbhagavān mahānāsīt prajāpatiḥ // Valc_2,10.19 //</l>
+</lg>
+
+<lg>
+<l>samudratanayāyāntu kṛtadāro 'bhavat prabhuḥ /</l>
+<l>suvarṇādhatta sāmudrī daśa prācīnavarhiṣaḥ // Valc_2,10.20 //</l>
+</lg>
+
+<lg>
+<l>sarvve pracetaso nāma dhanurvedasya pāragāḥ /</l>
+<l>prajāpatitvaṃ samprāpya tuṣṭāḥ prācīnavarhiṣaḥ // Valc_2,10.21 //</l>
+</lg>
+
+<lg>
+<l>bhū khaṃ vyāptaṃ hi tarubhistāṃstarūnadahaṃśca te /</l>
+<l>drumakṣayamatho buddhvā kiñcicchiṣṭeṣu śākhiṣu /</l>
+<l>upagamyābravīdetān rājā somaḥ prajāpatīn // Valc_2,10.22 //</l>
+</lg>
+
+<lg>
+<l>kopaṃ yacchata dāsyanti kanyāṃ vo māriṣāṃ varām /</l>
+<l>tapasvino muneḥ kaṇḍoḥ pramlocāyāṃ mamaiva ca // Valc_2,10.23 //</l>
+</lg>
+
+<lg>
+<l>bhaviṣyaṃ jānatā sṛṣṭā bhāryyā vo 'stu kulaṅkarī /</l>
+<l>asyāmutpatsyate dakṣaḥ prajāḥ saṃvarddhayiṣyati // Valc_2,10.24 //</l>
+</lg>
+
+<lg>
+<l>pracetasastāṃ jagṛha daṃkṣo 'syāñca tato 'bhavat /</l>
+<l>daśabhyastu pracetobhyo māriṣāyāṃ prajāpatiḥ // Valc_2,10.25 //</l>
+</lg>
+
+<lg>
+<l>dakṣo jajñe mahātejāḥ somasyāṃśena bhūmipāḥ putrānutpādayāmāsa śataśo 'tha sahasraśaḥ /</l>
+<l>haryyaśya nāma dakṣasya sahasrāṇi ca pañca ca putrāṇāṃ vedituṃ pṛthvyāḥ pramāṇaṃ hi gatādiśaḥ // Valc_2,10.26 //</l>
+</lg>
+
+<lg>
+<l>tato 'nyaputrasāhasraṃ teṣāmanveṣaṇe gatam /</l>
+<l>adyāpi na nivarttante samudrebhya ivāpagāḥ // Valc_2,10.27 //</l>
+</lg>
+
+<p>iti vallālacarite vyāsapurāṇe svāyambhuvavaṃśakathanaṃ nāma daśamo 'dhyāyaḥ /</p>
+
+</div>
+<div>
+
+<p>[[050]]
+ekādaśo 'dhyāyaḥ</p>
+
+<lg>
+<l>siṃhagiriruvāca:</l>
+<l>brahmaṇo mānasādatriḥ somastatputratāṃ gataḥ /</l>
+<l>tasya vaṃśaṃ pravakṣyāmi yatra jāto 'si pārthiva // Valc_2,11.1 //</l>
+</lg>
+
+<lg>
+<l>vyāsa uvāca:</l>
+<l>kṛtvā somo rājasūyaṃ trailokyaṃ dakṣiṇāṃ dadau /</l>
+<l>sadasyebhyaśca mukhyebhyo brahmarṣiḥ parantapāḥ // Valc_2,11.2 //</l>
+</lg>
+
+<lg>
+<l>samāptevabhṛthe somaṃ tadrūpālokanepsavaḥ /</l>
+<l>kāmavāṇābhitaptāṅgyo navadevyaḥ siṣevire // Valc_2,11.3 //</l>
+</lg>
+
+<lg>
+<l>śinīvālī karddamañca haviṣmantaṃ kratuḥ svayam /</l>
+<l>dyutirvibhāvasuṃ tyaktvā puṣṭirdhātāramavyayam // Valc_2,11.4 //</l>
+</lg>
+
+<lg>
+<l>prabhā prabhākaraṃ tyaktvā vasurmārīcikāśyapam /</l>
+<l>kīrttirjayantaṃ bharttāraṃ nandīṃ tyaktvā patiṃ dhṛtiḥ /</l>
+<l>lakṣmīnārāyaṇaṃ tyaktvā somamevābhajat tadā // Valc_2,11.5 //</l>
+</lg>
+
+<lg>
+<l>somo 'pi kāmayāmāsa svakīyā iva tāstadā /</l>
+<l>vṛhaspateḥ sa vai bhāryyāṃ tārāṃ nāma yaśasvinīm // Valc_2,11.6 //</l>
+</lg>
+
+<lg>
+<l>jahāra tarasā somo hyavamatyāṅgiraḥ sutam /</l>
+<l>sa yācyamāno devaiśca somo devarṣirbhiḥ saha // Valc_2,11.7 //</l>
+</lg>
+
+<lg>
+<l>āṅgirase tadā tasmai tārāṃ naiva vyavasarjjayat /</l>
+<l>sa saṃrabdhastatastasmin devācāryo vṛhaspatiḥ // Valc_2,11.8 //</l>
+</lg>
+
+<lg>
+<l>uśanāstasya jagrāha pārṣṇimāṅgirasastadā /</l>
+<l>sa hi śiṣyo mahātejāḥ pituḥ pūrvvo vṛhaspateḥ // Valc_2,11.9 //</l>
+</lg>
+
+<lg>
+<l>tena snehena bhagavān rudrastasya vṛhaspateḥ /</l>
+<l>pārṣṇigrāho 'bhavaddevaḥ pragṛhmāyagavaṃ dhanuḥ // Valc_2,11.10 //</l>
+</lg>
+
+<p>tena brahmaśiro nāma paramāstraṃ mahātmanā /
+<l>uddiśya daityānutsṛṣṭaṃ yenaiṣāṃ nāśitaṃ yaśaḥ // Valc_2,11.11 /</l>
+<lg>
+<l>tatra yuddhamabhūdghoraṃ prakhyātaṃ tārakāmayam /</l>
+<l>devānāṃ dānavānāñca lokakṣayakaraṃ mahat // Valc_2,11.12 //</l>
+</lg></p>
+
+<lg>
+<l>tatra śiṣṭāstu ye devāḥ tuṣitāścaiva pārthivāḥ /</l>
+<l>brahmāṇaṃ śaraṇaṃ jagmurādidevaṃ sanātanam // Valc_2,11.13 //</l>
+</lg>
+
+<lg>
+<l>brahmā nivāryośanasaṃ tārāmāṅgirase dadau /</l>
+<l>tāmantaḥprasavāṃ dṛṣṭvā garbhaṃ tyajābravīdguruḥ // Valc_2,11.14 //</l>
+</lg>
+
+<lg>
+<l>garbhastyaktaḥ pradīpto 'tha prāhāhaṃ somasambhavaḥ /</l>
+<l>evaṃ somādvudhaḥ putraḥ putrastasya purūravāḥ // Valc_2,11.15 //</l>
+</lg>
+
+<lg>
+<l>urvvaśyāṃ jajñire yasya putrāḥ sapta mahātmanaḥ /</l>
+<l>gandharvyāṃ sumahātmānaḥ āyurdhīmānamāvasuḥ // Valc_2,11.15 //</l>
+</lg>
+
+<lg>
+<l>viśvāyuścaiva dharmmātmā śrutāyuśca tathāparaḥ /</l>
+<l>dṛḍhāyuśca vanāyuśca śatāyuścorvvaśīsutāḥ // Valc_2,11.16 //</l>
+</lg>
+
+<p>svarbhānutanayāyāṃ tu prabhāyāṃ jajñire purā /
+[[052]]</p>
+
+<lg>
+<l>siṃhagiriruvāca:</l>
+<l>teṣāṃ vaṃśeṣu vallāla mahātmāno mahaujasaḥ /</l>
+<l>brāhmaṇāḥ kṣatriyā vaiśyāḥ śūdrā jātāḥ sahasraśaḥ // Valc_2,11.17 //</l>
+</lg>
+
+<lg>
+<l>vyāsa uvāca:</l>
+<l>āyuṣaḥ nahuṣaḥ putro vṛddhaśarmmā tataḥ param /</l>
+<l>rambho rajiranenāśca rajeḥ putraśataṃ hyabhūt // Valc_2,11.18 //</l>
+</lg>
+
+<lg>
+<l>rājeyamiti vikhyātaṃ viṣṇudattavaro rajiḥ /</l>
+<l>yuddhe devāsure daityānabadhīt surayācitaḥ // Valc_2,11.19 //</l>
+</lg>
+
+<lg>
+<l>utpannā pitṛkanyāyāṃ virajāyāṃ mahaujasaḥ /</l>
+<l>nahuṣasya sutāḥ sapta ṣaḍindropamatejasaḥ // Valc_2,11.20 //</l>
+</lg>
+
+<lg>
+<l>yatiryayātiḥ saṃyāti rāyātiḥ pāñciko bhavaḥ /</l>
+<l>suyātiḥ ṣaṣṭasteṣāṃ vai yayātiḥ pārthivo 'bhavat // Valc_2,11.21 //</l>
+</lg>
+
+<lg>
+<l>yatistu mokṣamāsthāya brahmabhūto 'bhavanmuniḥ /</l>
+<l>teṣāṃ yayātiḥ pañcānāṃ vijitya vasudhāmimām /</l>
+<l>devayānīmuśanasaḥ sutāṃ bhāryyāmavāpa saḥ // Valc_2,11.22 //</l>
+</lg>
+
+<lg>
+<l>śarmmiṣṭhāmāsurīṃ caiva tanayāṃ vṛṣaparvvaṇaḥ /</l>
+<l>yaduñca turvvasuñcaiva devayānī vyajāyata /</l>
+<l>duhyuṃ cānuṃ puruñcaiva śarmmiṣṭhā vārṣaparvvaṇī // Valc_2,11.23 //</l>
+</lg>
+
+<lg>
+<l>yaduḥ puruścābhavatāṃ teṣāṃ vaṃśavivarddhanau /</l>
+<l>śṛṇutātha yadostasya vaṃśamadbhutapauruṣam // Valc_2,11.24 //</l>
+</lg>
+
+<lg>
+<l>babhūvustu yadoḥ putrāḥ pañca devasutopamāḥ /</l>
+<l>sahasradaḥ payodaśca kroṣṭā nīlo 'ñjikastathā // Valc_2,11.25 //</l>
+</lg>
+
+<lg>
+<l>sahasradasya dāyādāstrayaḥ paramadhārmmikāḥ /</l>
+<l>haihayaśca hayaścaiva rājā veṇuhayastathā // Valc_2,11.26 //</l>
+</lg>
+
+<lg>
+<l>haihayasyābhavatpatnī dharmmanetra iti śrutaḥ /</l>
+<l>dharmmanetrasya kārttastu sāhañjastasya cātmajaḥ /</l>
+<l>sāhañjanī nāma purī tena rājñā niveśitā // Valc_2,11.27 //</l>
+</lg>
+
+<lg>
+<l>sāhañjasya tu dāyādo mahiṣmānnāma pārthivaḥ /</l>
+<l>māhīṣmatī nāma purī tena rājñā niveśitā // Valc_2,11.28 //</l>
+</lg>
+
+<lg>
+<l>āsīnmahiṣmataḥ putro bhadraśreṇyaḥ pratāpavān /</l>
+<l>vārāṇasyadhipo rājā purāṇe parikīrttitaḥ // Valc_2,11.29 //</l>
+</lg>
+
+<lg>
+<l>bhadraśreṇyasya dāyādo durdamo nāma viśrutaḥ /</l>
+<l>durdamasya suto rājā kaṇako nāma viśrutaḥ // Valc_2,11.30 //</l>
+</lg>
+
+<lg>
+<l>kaṇakāt kṛtavīryyastu kṛtāgniḥ karavīrakaḥ /</l>
+<l>kṛtaujāśca caturtho 'bhūt kṛtavīryyādathārjjunaḥ // Valc_2,11.31 //</l>
+</lg>
+
+<lg>
+<l>yaḥ sa bāhusahasreṇa saptadvīpeśvaro bhavat /</l>
+<l>jigāya pṛthivīmeko rathenādityavarccasā // Valc_2,11.32 //</l>
+</lg>
+
+<lg>
+<l>laṅkeśaṃ mohayitvā tu sabalaṃ rāvaṇaṃ balāt /</l>
+<l>asau baddhvā dhanurjyābhi rutsiktaṃ pañcabhiḥ śaraiḥ // Valc_2,11.33 //</l>
+</lg>
+
+<lg>
+<l>nirjjityaiva samānīya māhiṣmatyāṃ babandha tam /</l>
+<l>tasya bāhusahasrantu yudhyato bhuvaneśvarāḥ /</l>
+<l>yogādyogeśvarasyaiva prādurbhavati māyayā // Valc_2,11.34 //</l>
+</lg>
+
+<lg>
+<l>aho vata mṛdhe vīryyaṃ bhārgavo 'sya yadācchinat /</l>
+<l>rājño bāhusahasrantu haimatālavanaṃ yathā // Valc_2,11.35 //</l>
+</lg>
+
+<lg>
+<l>[[054]]</l>
+<l>jāmadagnāttadā rāmāt bāhujān kṣatriyān ghnataḥ /</l>
+<l>kārttavīryyasya mahiṣī palāyata sudāruṇāt // Valc_2,11.36 //</l>
+</lg>
+
+<lg>
+<l>antarvvatnī tu sā devī suṣuve kauśikāśrame /</l>
+<l>putraṃ subhaumanāmānam bālārkamiva sundaram // Valc_2,11.37 //</l>
+</lg>
+
+<lg>
+<l>sa mātrā varddhitaḥ kāle putraḥ sarasijānanaḥ /</l>
+<l>kauśikāt pratijagrāha dhanurvedaṃ mahābhujaḥ // Valc_2,11.38 //</l>
+</lg>
+
+<lg>
+<l>brāhmaṇaṃ pitṛhantāraṃ śrutvā mātṛmukhādyuvā /</l>
+<l>jagāma brāhmaṇān hantuṃ dikṣu krodhāruṇekṣaṇaḥ // Valc_2,11.39 //</l>
+</lg>
+
+<lg>
+<l>ekaviṃśativārān sa mahīmabrāhmaṇāmimām /</l>
+<l>cakārāto na vidyante brāhmaṇā mukhajāḥ kalau // Valc_2,11.40 //</l>
+</lg>
+
+<lg>
+<l>śavarān kaḍhukaivarttān vilokya bhārgavastataḥ /</l>
+<l>abrāhmaṇye tadā deśe teṣāṃ sūtramakalpayat // Valc_2,11.41 //</l>
+</lg>
+
+<lg>
+<l>tuṣyanti bhūṣaṇairnāryyo gāvaḥ svacchandacārataḥ /</l>
+<l>kuñjarāḥ pāṃśuvarṣeṇa kiṃ tvete paranindayā // Valc_2,11.42 //</l>
+</lg>
+
+<lg>
+<l>jāmadagnyaṃ tato yuddhe jaghānārjjunanandanaḥ /</l>
+<l>evaṃ sa brāhmaṇān jitvā subhīmo 'bhūjjayadhvajaḥ // Valc_2,11.43 //</l>
+</lg>
+
+<lg>
+<l>tato viprāḥ sutārthinyaḥ kṣatriyānupatasthire /</l>
+<l>jātayo jajñire tāsu kadambapallavādayaḥ // Valc_2,11.44 //</l>
+</lg>
+
+<lg>
+<l>brahmahatyā pāpaviddho nirvṛtiṃ so 'labhannṛpaḥ /</l>
+<l>ayaṣṭa vājimedhena yajñaṃ pāpavināśanam // Valc_2,11.45 //</l>
+</lg>
+
+<lg>
+<l>tasya yayoḥ pratikṛtiradyāpyasti śilāmayī /</l>
+<l>māhiṣmatīpure ramye narmmadātaṭinītaṭe // Valc_2,11.46 //</l>
+</lg>
+
+<lg>
+<l>kārttavīryyasya tu śataṃ putrāṇām pañca vai parāḥ /</l>
+<l>śūrasenaśca śūraśca dhṛṣṭoktaḥ kṛṣṇa eva ca /</l>
+<l>jayadhvaja iti khyātaḥ subhaumaśca mahāvalaḥ // Valc_2,11.47 //</l>
+</lg>
+
+<lg>
+<l>jayadhvajāt tālajaṅghaḥ tālajaṅghāt śataṃ sutāḥ /</l>
+<l>tālajaṅghā iti khyātāḥ śūrā uttamapauruṣāḥ // Valc_2,11.48 //</l>
+</lg>
+
+<lg>
+<l>teṣāṃ kule 'tivimale hehayānāṃ mahātmanām /</l>
+<l>vītihotrāḥ svayaṃ jātāḥ bhojāścāvantayaḥ smṛtāḥ // Valc_2,11.59 //</l>
+</lg>
+
+<lg>
+<l>tauṇḍikeyāśca vikhyātāstālajaṅghāstathaiva ca /</l>
+<l>bharatāśca sujātāśca purāṇe kathitā mayā // Valc_2,11.50 //</l>
+</lg>
+
+<lg>
+<l>vṛṣaprabhṛtayo vīrāḥ yādavāḥ puṇyakarmmiṇaḥ /</l>
+<l>vṛṣo vaṃśadharastatra tasya putro 'bhavanmadhuḥ // Valc_2,11.51 //</l>
+</lg>
+
+<lg>
+<l>madhoḥ putraśataṃ tvāsīt vṛṣaṇastasya vaṃśakṛt /</l>
+<l>vṛṣaṇāt vṛṣṇayaḥ sarvve madhostu mādhavāḥ smṛtāḥ // Valc_2,11.52 //</l>
+</lg>
+
+<lg>
+<l>yādavāśca yadorjātā vahutvānnānukīrttyate /</l>
+<l>turvvasoryavanā jātā bhojā druhyoḥ sutāḥ smṛtāḥ /</l>
+<l>anormlecchajātayastu purostu pauravāḥ smṛtāḥ // Valc_2,11.53 //</l>
+</lg>
+
+<p>iti vallālacarite vyāsapurāṇe somavaṃśavarṇanaṃ nāma ekādaśo 'dhyāyaḥ /</p>
+
+</div>
+<div>
+
+<p>[[056]]</p>
+
+<p>atha dvādaśo 'dhyāyaḥ |</p>
+
+<lg>
+<l>siṃhagiriruvāca:</l>
+<l>śṛṇu rājan vyāsaproktaṃ vaṃśamuttamapauruṣam /</l>
+<l>vistareṇānupūrvvyā ca yatra jāto 'si pārthiva // Valc_2,12.1 //</l>
+</lg>
+
+<lg>
+<l>vyāsa uvāca:</l>
+<l>puroḥ putro mahāvīryyo rājāsījjanamejayaḥ /</l>
+<l>pracinvāṃstu sutastasya yaḥ prācīmajayaddiśam // Valc_2,12.2 //</l>
+</lg>
+
+<lg>
+<l>pracinvataḥ pravīro 'bhut manasyustasya cātmajaḥ /</l>
+<l>rājā cābhayado nāma manasyorabhavat sutaḥ // Valc_2,12.3 //</l>
+</lg>
+
+<lg>
+<l>tathaivābhayadasyāsīt sudhanvā nāma pārthivaḥ /</l>
+<l>sudhanvano vahugavaḥ sampātistasya cātmajaḥ // Valc_2,12.4 //</l>
+</lg>
+
+<lg>
+<l>sampātestu rahampātī raudrāśvastasya vai sutaḥ /</l>
+<l>raudrāśvasya ghṛtācyāṃ vai daśāpsarasi sūnavaḥ // Valc_2,12.5 //</l>
+</lg>
+
+<lg>
+<l>ṛceyuḥ prathamasteṣāṃ kṛkaneyu rdvitīyakaḥ /</l>
+<l>kakṣeyuḥ sthaṇḍileyuśca sannateyurmahāmatiḥ // Valc_2,12.6 //</l>
+</lg>
+
+<lg>
+<l>daśārṇeyurjaleyuśca sthaleyuśca mahābalaḥ /</l>
+<l>balanityo baleyuśca rodrāśvasūnavo daśa // Valc_2,12.7 //</l>
+</lg>
+
+<lg>
+<l>kakṣeyostanayāstvāsan traya eva mahāvalāḥ /</l>
+<l>sabhānaraścākṣuṣaśca paramanthustathaiva ca // Valc_2,12.8 //</l>
+</lg>
+
+<lg>
+<l>sabhānarasya puttrastu vidvān kālānalo nṛpaḥ /</l>
+<l>kālānalasya dharmmajñaḥ sṛñjayo nāma vai sutaḥ // Valc_2,12.9 //</l>
+</lg>
+
+<lg>
+<l>sṛñjayasyābhavat putro vīro rājā purañjayaḥ /</l>
+<l>purañjayātmajaḥ śrīmān rājābhūjjanamejayaḥ // Valc_2,12.10 //</l>
+</lg>
+
+<lg>
+<l>mahāśālastu rājarṣirjanamejayadehajaḥ /</l>
+<l>deveṣu sa parijñātaḥ pratiṣṭhitayaśā bhuvi // Valc_2,12.11 //</l>
+</lg>
+
+<lg>
+<l>mahāmanā nāma suto mahāśālasya dhārmmikaḥ /</l>
+<l>jajñe vīraḥ śūragaṇaiḥ pūjitaḥ sa mahāmanāḥ // Valc_2,12.12 //</l>
+</lg>
+
+<lg>
+<l>mahāmanāstu putrau dvau janayāmāsa sattamaḥ /</l>
+<l>uśīnarañca dharmmajñaṃ titikṣuñca mahābalam // Valc_2,12.13 //</l>
+</lg>
+
+<lg>
+<l>uśīnarasya patnyastu pañcarājarṣivaṃśajāḥ /</l>
+<l>mṛgā kṛmirnavā darvvā pañcamī ca dṛṣadvatī // Valc_2,12.14 //</l>
+</lg>
+
+<lg>
+<l>uśīnarasya putrāstu pañca tāsu kulodvahāḥ /</l>
+<l>tapasā caiva mahatā jātā vṛddhasya cātmajāḥ // Valc_2,12.15 //</l>
+</lg>
+
+<lg>
+<l>nṛgāyāntu nṛgaḥ putraḥ kṛmyāṃ kṛmirajāyata /</l>
+<l>navāyāstu navaḥ putro darvvāyāḥ suvrato 'bhavat // Valc_2,12.16 //</l>
+</lg>
+
+<lg>
+<l>dṛṣadvatyāstu saṃjajñe śivirauśīnaro nṛpaḥ /</l>
+<l>śivestu śivayaḥ khyātāḥ yaudheyāstu mṛgasya ha // Valc_2,12.17 //</l>
+</lg>
+
+<lg>
+<l>[[058]]</l>
+<l>navasya navarāṣṭrantu kṛmestu kṛmilā purī /</l>
+<l>suvratasya tathāmbaṣṭhāḥ śiviputrān nibodhata // Valc_2,12.18 //</l>
+</lg>
+
+<lg>
+<l>śivestu śivayaḥ putrāścatvāro lokaviśrutāḥ /</l>
+<l>vṛṣadarbhaḥ suvīraśca kaikeyo madrakastathā // Valc_2,12.19 //</l>
+</lg>
+
+<lg>
+<l>teṣāṃ janapadāḥ sphītāḥ kaikeyā madrakāstathā /</l>
+<l>vṛṣadarbhāḥ suvīrāśca titikṣoḥ śṛṇuta prajāḥ // Valc_2,12.20 //</l>
+</lg>
+
+<lg>
+<l>taitikṣavo bhavadrājā pūrvasyāṃ diśi pārthivāḥ /</l>
+<l>uṣadratho mahāsatvaḥ pheṇastasya suto 'bhavat // Valc_2,12.21 //</l>
+</lg>
+
+<lg>
+<l>pheṇātta sutapā jajñe sutaḥ sutapaso valiḥ /</l>
+<l>jāto mānuṣayaunau sa nṛpatiḥ kāñcaneṣudhiḥ // Valc_2,12.22 //</l>
+</lg>
+
+<lg>
+<l>mahāyogī sa tu balirbabhūva nṛpatiḥ purā /</l>
+<l>putrānutpādayāmāsa pañca vaṃśakarān bhuvi // Valc_2,12.23 //</l>
+</lg>
+
+<lg>
+<l>aṅgaḥ prathamato jajñe vaṅgaḥ suhmastathaiva ca /</l>
+<l>puṇḍraḥ kaliṅgaśca tathā bāleyaṃ kṣatramucyate // Valc_2,12.24 //</l>
+</lg>
+
+<lg>
+<l>bāleyā brāhmaṇāścaiva tasya vaṃśakarā bhuvi /</l>
+<l>balestu brahmaṇā datto varaḥ prītena dhīmatā // Valc_2,12.25 //</l>
+</lg>
+
+<lg>
+<l>mahāyogitvamāyuśca kalpasya parimāṇataḥ /</l>
+<l>saṃgrāme cāpyajeyatvaṃ dharmme caiva pradhānatā /</l>
+<l>trailokyadarśanañcāpi prādhānyaṃ prasave tathā // Valc_2,12.26 //</l>
+</lg>
+
+<lg>
+<l>bale cāpratimatvaṃ vai dharmmatattvābhidarśanam /</l>
+<l>caturo niyatān varṇān tvañca sthāpayiteti ha // Valc_2,12.27 //</l>
+</lg>
+
+<p>ityukte vibhunā rājā baliḥ śāntiṃ parāṃ yayau /
+<l>balistānabhiṣicyeha pañcaputrānakalmaṣān // Valc_2,12.28 /</l>
+<lg>
+<l>kṛtārtho yogayuktātmā yogamāśritya sa prabhuḥ /</l>
+<l>adhṛṣyaḥ sarvvabhūtānām kālāpekṣī carannṛṣiḥ // Valc_2,12.29 //</l>
+</lg></p>
+
+<lg>
+<l>kālena mahatā dhīraḥ svañca sthānamupāgamat /</l>
+<l>teṣāṃ janapadāḥ pañca aṅgā vaṅgā sasuhmakā // Valc_2,12.30 //</l>
+</lg>
+
+<lg>
+<l>kaliṅgāḥ puṇḍrakāścaiva tvaṅgasya śṛṇuta prajāḥ /</l>
+<l>aṅgaputro mahānāsīt rājendro dadhivāhanaḥ // Valc_2,12.31 //</l>
+</lg>
+
+<lg>
+<l>dadhivāhanaputrastu rājā diviratho 'bhavat /</l>
+<l>vidvān dharmmaratho nāma tasya citrarathaḥ sutaḥ // Valc_2,12.32 //</l>
+</lg>
+
+<lg>
+<l>tena dharmmarathenātha tadā viṣṇupade girau /</l>
+<l>yajatā saha śakreṇa somaḥ pīto mahātmanā // Valc_2,12.33 //</l>
+</lg>
+
+<lg>
+<l>atha citrarathasyāpi putro daśaratho 'bhavat /</l>
+<l>lomapāda iti khyāto yasya śāntā sutābhavat // Valc_2,12.34 //</l>
+</lg>
+
+<lg>
+<l>tasya dāśarathirvīraḥ caturaṅgo mahāyaśāḥ /</l>
+<l>ṛṣvaśṛṅgaprasādena jajñe kulavivarddhanaḥ // Valc_2,12.35 //</l>
+</lg>
+
+<lg>
+<l>caturaṅgasya putrastu pṛthulākṣa iti śrutaḥ /</l>
+<l>pṛthulākṣasuto rājā campo nāma mahāyaśāḥ // Valc_2,12.36 //</l>
+</lg>
+
+<lg>
+<l>campasya tu purī campā yā mālinyabhavatpurā /</l>
+<l>pūrṇabhadraprasādena haryyakṣosya suto 'bhavat // Valc_2,12.37 //</l>
+</lg>
+
+<lg>
+<l>tato vaibhāṇḍakistasya vāraṇaṃ śatruvāraṇam /</l>
+<l>bhuvyavatārayāmāsa mantrairvāhanamuttamam // Valc_2,12.38 //</l>
+</lg>
+
+<lg>
+<l>[[060]]</l>
+<l>haryyakṣasya tu dāyādo rājā bhadrarathaḥ smṛtaḥ /</l>
+<l>putro bhadrarathasyāsīt vṛhatkarmmā prajeśvaraḥ // Valc_2,12.39 //</l>
+</lg>
+
+<lg>
+<l>vṛhadarbhaḥ sutastasya yasmāt yajñe vṛhanmanāḥ /</l>
+<l>vṛhanmanāstu rājendro janayāmāsa vai sutam // Valc_2,12.40 //</l>
+</lg>
+
+<lg>
+<l>nāmnā jayadrathaṃ vīraṃ yasmāddṛḍharatho nṛpaḥ /</l>
+<l>āsīt dṛḍharathasyāpi viśvajit kulanandanaḥ // Valc_2,12.41 //</l>
+</lg>
+
+<lg>
+<l>dāyādastasya karṇastu vikarṇastasya cātmajaḥ /</l>
+<l>tasya putraśatantvāsīdaṅgānāṃ kulavardhanam // Valc_2,12.42 //</l>
+</lg>
+
+<lg>
+<l>vṛhadarbhasuto yastu rājā nāmnā vṛhanmanāḥ /</l>
+<l>tasya patnīdvayaṃ cāsīt vainateyasute śubhe // Valc_2,12.43 //</l>
+</lg>
+
+<lg>
+<l>yaśodevī ca satyā ca tābhyāṃ vaṃśastu vidyate /</l>
+<l>jayadrathastu rājendro yaśodevyāṃ vyajāyata // Valc_2,12.44 //</l>
+</lg>
+
+<lg>
+<l>satyāyāṃ vijayo nāma brahmakṣatrottaraḥ smṛtaḥ /</l>
+<l>vijayasya dhṛtiḥ putrastasya putro dhṛtavrataḥ // Valc_2,12.45 //</l>
+</lg>
+
+<lg>
+<l>dhṛtavratasya putrastu satyakarmmā mahāyaśāḥ /</l>
+<l>tasya putrastvadhirathaḥ suta ityaparābhidhaḥ // Valc_2,12.46 //</l>
+</lg>
+
+<lg>
+<l>yaḥ karṇaṃ pratijagrāha tena karṇastu sūtajaḥ /</l>
+<l>karṇasya vṛṣasenastu pṛthusenastadātmajaḥ // Valc_2,12.47 //</l>
+</lg>
+
+<lg>
+<l>pṛthusenānvaye vīro vīraseno bhaviṣyati /</l>
+<l>gauḍabrāhmaṇakanyāṃ yaḥ somaṭāmudvahiṣyati // Valc_2,12.48 //</l>
+</lg>
+
+<lg>
+<l>tadanvavāyajanmāno rājāno 'mitapauruṣāḥ /</l>
+<l>saptadvīpapatīn vīrāḥ kariṣyanti vaśānugān // Valc_2,12.49 //</l>
+</lg>
+
+<lg>
+<l>tadvaṃśe sāmantaseno bhūtvā pālayitā valī /</l>
+<l>āvindhyādāsetubandhāddharitrīṃ sāgarāmbarām // Valc_2,12.50 //</l>
+</lg>
+
+<lg>
+<l>siṃhagiriruvāca:</l>
+<l>tasmāddhemantaseno 'bhūdrājan tava pitāmahaḥ /</l>
+<l>dhāma dhāmnāṃ mahimnāñca dviṣadbalahutāśanaḥ // Valc_2,12.51 //</l>
+</lg>
+
+<lg>
+<l>tasmādvijayaseno 'bhūccoḍagaṅgasakho nṛpaḥ /</l>
+<l>yo 'jayat pṛthivīṃ kṛtsnāṃ catuḥsāgaramekhalām // Valc_2,12.52 //</l>
+</lg>
+
+<lg>
+<l>tasya putro 'si vallāla sārvvabhaumamahīkṣitaḥ /</l>
+<l>pratyarthi-pṛthivīpālā yasya te śaraṇaṃ gatāḥ // Valc_2,12.53 //</l>
+</lg>
+
+<lg>
+<l>brahmakṣatrasya yo yonirvvaṃśaḥ kṣatriyapūrvvajaḥ /</l>
+<l>senavaṃśastatojātaḥ yasmiñjāto 'pi pāṇḍava // Valc_2,12.54 //</l>
+</lg>
+
+<lg>
+<l>dveṣṭi yaḥ pāṇḍavaṃ mūḍho durbuddhiśca vinindati /</l>
+<l>sa viṣṭhāyāṃ kṛmirbhūtvā pacyeta narake ciram // Valc_2,12.55 //</l>
+</lg>
+
+<lg>
+<l>sa vallabhānandacandraścandramāyutavallabhaḥ /</l>
+<l>tasyedānīṃ mahārāja kāryyaṃ bhavati śāsanam // Valc_2,12.56 //</l>
+</lg>
+
+<lg>
+<l>tasyāsti kanyakāratnaṃ rūpeṇānupamaṃ bhuvi /</l>
+<l>suprabhāmiva nābhāgastāṃ kanyāṃ hara paurava // Valc_2,12.57 //</l>
+</lg>
+
+<lg>
+<l>[[062]]</l>
+<l>uccandre sā yāti vālā gaurīṃ snātuṃ yadā yadā /</l>
+<l>tadā tadā tvarayati draṣṭuṃ tāmaruṇo 'ruṇam // Valc_2,12.58 //</l>
+</lg>
+
+<lg>
+<l>daṇḍadvayāvaśeṣāyāṃ rajanyāmaruṇodayam /</l>
+<l>vilokya ghariyāreṣu viśvasanti na naigamāḥ // Valc_2,12.59 //</l>
+</lg>
+
+<p>iti vallālacarite vyāsapurāṇe puruvaṃśakīrttanaṃ nāma dvādaśo 'dhyāyaḥ |</p>
+
+</div>
+<div>
+
+<p>atha trayodaśo 'dhyāyaḥ |</p>
+
+<lg>
+<l>vyāsa uvāca:</l>
+<l>vedaḥ smṛtiḥ sadācāraḥ svasya ca priyamātmanaḥ /</l>
+<l>samyaksaṃkalpajaḥ kāmo dharmmamūlamidaṃ smṛtam // Valc_2,13.1 //</l>
+</lg>
+
+<lg>
+<l>adhyāpanañcādhyayanaṃ yajanaṃ yājanaṃ tathā /</l>
+<l>dānaṃ pratigrahaṃ karmma brāhmaṇānāmudāhṛtam // Valc_2,13.2 //</l>
+</lg>
+
+<lg>
+<l>śrūtismṛtī ca viprāṇāṃ cakṣuṣī devanirmmite /</l>
+<l>kāṇastatraikayā hīnaḥ dvābhyāmandhaḥ prakīrttitaḥ // Valc_2,13.3 //</l>
+</lg>
+
+<lg>
+<l>vaivāhikegnau kurvvīta gṛhyakarmma yathāvidhi /</l>
+<l>pañcayajñavidhānañca paktiñcānvahikīṃ gṛhī // Valc_2,13.4 //</l>
+</lg>
+
+<lg>
+<l>adhyāpanaṃ brahmayajñaḥ pitṛyajñastu tarpaṇam /</l>
+<l>homo daivo balibhoto nṛyajño 'tithipūjanam // Valc_2,13.5 //</l>
+</lg>
+
+<lg>
+<l>devatātithibhṛtyānāṃ pitḥṇāmātmanaśca yaḥ /</l>
+<l>na nirvvapati pañcānāmucchvasanna sa jīvati // Valc_2,13.6 //</l>
+</lg>
+
+<lg>
+<l>ekarātraṃ vasan vipraḥ kṣatriyaścātithiḥ smṛtaḥ /</l>
+<l>anityā hi sthiti ryasmāttasmādatithirucyate // Valc_2,13.7 //</l>
+</lg>
+
+<lg>
+<l>vaiśyaśūdrāvapi prāptau kuṭumbe 'tithidharmmiṇau /</l>
+<l>bhojayet sahabhṛtyai stāvānṛśaṃsyaṃ pradarśayan // Valc_2,13.8 //</l>
+</lg>
+
+<lg>
+<l>[[064]]</l>
+<l>svadāranirato nityaṃ paradāravivarjjitaḥ /</l>
+<l>kṛtahomastu bhuñjīta sāyaṃprātarudāradhīḥ // Valc_2,13.9 //</l>
+</lg>
+
+<lg>
+<l>sarvvataḥ pratigṛhṇīyādavṛttyā karṣito dvijaḥ /</l>
+<l>na bhaveddoṣabhāk tena jvalanārkasamo hi saḥ // Valc_2,13.10 //</l>
+</lg>
+
+<lg>
+<l>bhūtānāṃ rakṣaṇaṃ dānamijyādhyayanameva ca /</l>
+<l>śivārcanaṃ kṣatriyāṇāṃ tathā nārāyaṇārccanam // Valc_2,13.11 //</l>
+</lg>
+
+<lg>
+<l>nityodyukto dasyuvadhe raṇe kuryyāt parākramam /</l>
+<l>nāsya kṛtyatamaṃ kiñcit rājño dasyuvinigrahāt // Valc_2,13.12 //</l>
+</lg>
+
+<lg>
+<l>cāṭabhāṭataskarebhyo mahāsāhasikādibhiḥ /</l>
+<l>pīḍyamānāḥ prajā rakṣet kāyasthaiśca viśeṣataḥ // Valc_2,13.13 //</l>
+</lg>
+
+<lg>
+<l>sammānadānasatkāraiḥ vaidikān vāsayet sadā /</l>
+<l>rājanyo dharmmakṛtyañca kuryyādeva prayatnataḥ // Valc_2,13.14 //</l>
+</lg>
+
+<lg>
+<l>paṇḍitaṃ nītiśāstrajñaṃ nityañca pratipālayet /</l>
+<l>niyojayet sabhāmadhye nityaṃ sadbhiśca saṃyutaḥ // Valc_2,13.15 //</l>
+</lg>
+
+<lg>
+<l>saṃviśet tūryyaghoṣeṇa pratibudhyettathaiva ca /</l>
+<l>śāstrāṇi cintayedbuddhyā sarvvakarttavyatāṃ tathā // Valc_2,13.16 //</l>
+</lg>
+
+<lg>
+<l>dṛṣṭvā jyotirvvido vaidyān dadyāt gāṃ kāñcanaṃ mahīm /</l>
+<l>niveśikāni ca tathā śrotriyāṇāṃ gṛhāni ca // Valc_2,13.17 //</l>
+</lg>
+
+<lg>
+<l>ya eva dharmmo nṛpateḥ svarāṣṭrapratipālane /</l>
+<l>tameva kṛtsnamāpnoti pararāṣṭraṃ vaśaṃ nayan // Valc_2,13.18 //</l>
+</lg>
+
+<lg>
+<l>devabrāhmaṇabhaktaśca pitṛkāryyaparāyaṇaḥ /</l>
+<l>svabhāryyānirato nityaṃ ṣaḍbhāgārhaḥ sadā nṛpaḥ // Valc_2,13.19 //</l>
+</lg>
+
+<lg>
+<l>ekāṃśena balaṃ dhāryyaṃ dānamaṃśadvayena ca /</l>
+<l>ekāṃśena prakṛtaya ekāṃśenādhikāriṇaḥ // Valc_2,13.20 //</l>
+</lg>
+
+<lg>
+<l>ekāṃśenātmabhogaśca kuṭumbādiprapālanam /</l>
+<l>āyasyaivaṃ ṣaḍavibhāgai rvyayaṃ kuryyānmahīpatiḥ // Valc_2,13.21 //</l>
+</lg>
+
+<lg>
+<l>sandhyāmupāsya kurute gītaṃ vādyaṃ manoharam /</l>
+<l>nṛtyagītaiśca jagdhīṃ vā strībhirniśi sukhāvahām // Valc_2,13.22 //</l>
+</lg>
+
+<lg>
+<l>gorakṣāṃ kṛṣivāṇijyaṃ kuryyādvaiśyo yathāvidhi /</l>
+<l>dānaṃ deyaṃ yathāśaktyā brāhmaṇānāñca bhojanam // Valc_2,13.23 //</l>
+</lg>
+
+<lg>
+<l>dambhamohavinirmmuktastathā vāganasūyakaḥ /</l>
+<l>svadāranirato dāntaḥ paradāravivarjjitaḥ // Valc_2,13.24 //</l>
+</lg>
+
+<lg>
+<l>dhanairviprān bhojayitvā yajñakāle tu yājakān /</l>
+<l>aprabhutvañca vartteta dharmmeṣvādehapātanāt // Valc_2,13.25 //</l>
+</lg>
+
+<lg>
+<l>yajñādhyayanadānāni kuryyānnityamatandritaḥ /</l>
+<l>pitṛkāryyaparaścaiva viṣṇuśivārccanāparaḥ // Valc_2,13.26 //</l>
+</lg>
+
+<lg>
+<l>varṇatrayasya śuśrūṣāṃ kuryyācchūdraḥ prayatnataḥ /</l>
+<l>dāsavadbrāhmaṇānāṃ ca viśeṣeṇa samācaret // Valc_2,13.27 //</l>
+</lg>
+
+<lg>
+<l>ayācitapradātā syāt kṛṣiṃ vṛttyarthamāśrayet /</l>
+<l>śuddhā tu vṛttistasyaiva kāru-cāraṇa-karmma ca // Valc_2,13.28 //</l>
+</lg>
+
+<lg>
+<l>pākayajñavidhānena yajeddevānatandritaḥ /</l>
+<l>tasya tu dvijaśuśrūṣā paro dharmmaḥ prakīrttitaḥ // Valc_2,13.29 //</l>
+</lg>
+
+<lg>
+<l>dhāraṇaṃ jīrṇavastrasya viprasyocchiṣṭabhojanam /</l>
+<l>svadāreṣu ratiścaiva paradāravivarjanam // Valc_2,13.30 //</l>
+</lg>
+
+<lg>
+<l>[[066]]</l>
+<l>lavaṇaṃ madhutailaṃ ca dadhi takraṃ ghṛtaṃ payaḥ /</l>
+<l>na duṣyecchūdrajātīnāṃ kuryyāt sarvvasya vikrayam // Valc_2,13.31 //</l>
+</lg>
+
+<lg>
+<l>kriyābhedaistu sarvveṣāṃ bhṛtivṛttiraninditā /</l>
+<l>sīrabhedaiḥ kṛṣiḥ proktā manvādyairbrāhmaṇādiṣu // Valc_2,13.32 //</l>
+</lg>
+
+<lg>
+<l>brāhmaṇaiḥ ṣoḍaśagabaṃ caturūnaṃ tathāparaiḥ /</l>
+<l>dvigavaṃ vāntyajaiḥ sīraṃ dṛṣṭvā bhūmārddavaṃ tathā // Valc_2,13.33 //</l>
+</lg>
+
+<lg>
+<l>bhūmiṃ bhitvauṣadhiṃ chitvā hatvā kīṭapipīlikām /</l>
+<l>punanti khalu yajñena karṣakā devapūjanāt // Valc_2,13.34 //</l>
+</lg>
+
+<lg>
+<l>vaidikaiḥ karmmabhiḥ puṇyairniṣekādirdvijanmanām /</l>
+<l>kāryyaḥ śarīrasaṃskāraḥ pāvanaḥ pretya ceha ca // Valc_2,13.35 //</l>
+</lg>
+
+<lg>
+<l>garbhādhānamṛtau puṃsaḥ savanaṃ spandanāt purā /</l>
+<l>turyye 'ṣṭame vā sīmanto janane jātakarmma ca // Valc_2,13.36 //</l>
+</lg>
+
+<lg>
+<l>niṣkramastṛtīyamāsi nāma vyuṣṭe śatāhani /</l>
+<l>ṣaṣṭhe 'nnaprāśanaṃ cūḍā janyabde vā yathākulam // Valc_2,13.37 //</l>
+</lg>
+
+<lg>
+<l>karṇavedho vratādeśo vedārambhaḥ kriyāvidhiḥ /</l>
+<l>keśāntaḥ snānamudvāho vivāhāgniparigrahaḥ // Valc_2,13.38 //</l>
+</lg>
+
+<lg>
+<l>tretāgnisaṃgrahaśceti saṃskārāḥ ṣoḍaśa smṛtāḥ /</l>
+<l>navaitāḥ karṇavedhāntāḥ mantravarjjaṃ kriyā striyāḥ // Valc_2,13.39 //</l>
+</lg>
+
+<lg>
+<l>vipro garbhāṣṭame varṣe kṣatra ekādaśe tathā /</l>
+<l>dvādaśe vaiśyajātistu vratopanayamarhati // Valc_2,13.40 //</l>
+</lg>
+
+<lg>
+<l>tasya prāptavratasyāyaṃ kālaḥ syādviguṇādhikaḥ /</l>
+<l>vedavratacyuto vrātyaḥ sa vrātyastomamarhati // Valc_2,13.41 //</l>
+</lg>
+
+<lg>
+<l>brāhmo daivastathaivārṣaḥ prājāpatyastathāsuraḥ /</l>
+<l>gāndharbbo rākṣasaścaiva paiśācaścāṣṭamo 'dhamaḥ // Valc_2,13.42 //</l>
+</lg>
+
+<lg>
+<l>ete dharmmāstu catvāraḥ pūrvvaṃ vipre prakīrttitāḥ /</l>
+<l>gāndharbbo rākṣasaścaiva kṣatriyasya praśasyate // Valc_2,13.43 //</l>
+</lg>
+
+<lg>
+<l>aprārthitaḥ prayatnena brāhmastu parikīrttitaḥ /</l>
+<l>prārthitārthapradānena prājāpatyaḥ prakīrttitaḥ // Valc_2,13.44 //</l>
+</lg>
+
+<lg>
+<l>āsuro draviṇādānāt gāndharbbaḥ samayānmithaḥ /</l>
+<l>rākṣaso yuddhaharaṇāt paiśācaḥ kanyakācchalāt // Valc_2,13.45 //</l>
+</lg>
+
+<lg>
+<l>tisrastu bhāryyāḥ kṣatrasya bhāryaikā brāhmaṇasya tu /</l>
+<l>ekaiva bhāryyā vaiśyasya śūdrasya ca vidhīyate // Valc_2,13.46 //</l>
+</lg>
+
+<lg>
+<l>kṣatriyā vaiśyā śūdrā ca kṣatriyasya prakīrttitā /</l>
+<l>ekaiva bhāryyā viprasya brāhmaṇī tu vidhīyate // Valc_2,13.47 //</l>
+</lg>
+
+<lg>
+<l>vaiśyaiva bhāryyā vaiśyasya śūdrā śūdrasya kīrttitā /</l>
+<l>brāhmaṇo nodvahet kanyāmasavarṇāṃ kadācana // Valc_2,13.48 //</l>
+</lg>
+
+<lg>
+<l>brāhmaṇādvaiśyakanyāyāmambaṣṭho yo vyajāyata /</l>
+<l>sa tu śūdratvamāpanno vivahenna tato viśām // Valc_2,13.49 //</l>
+</lg>
+
+<lg>
+<l>śūdrābhāryyasya pātityaṃ rājanyasya yaducyate /</l>
+<l>naitanmama mataṃ jñeyaṃ sā tenonnīyate yataḥ // Valc_2,13.50 //</l>
+</lg>
+
+<lg>
+<l>patet vipraśca vaiśyaśca śūdrāṃ kanyāmudāvahan /</l>
+<l>pātityaṃ nāsti kṣatrasya śadrūdāropasaṃgrahāt // Valc_2,13.51 //</l>
+</lg>
+
+<lg>
+<l>viprakanyāvivāho 'pi kṛto rājarṣibhiḥ purā /</l>
+<l>tejīyasāṃ na doṣāya vahneḥ sarvvabhujo yathā // Valc_2,13.52 //</l>
+</lg>
+
+<lg>
+<l>[[068]]</l>
+<l>rājā no nāvamantavyo nṛbuddhyā manurabravīt /</l>
+<l>mahatī devatā hyeṣā nararūpeṇa tiṣṭhati // Valc_2,13.53 //</l>
+</lg>
+
+<lg>
+<l>anuṣṭhitantu yaddevairmunibhiryadanuṣṭhitam /</l>
+<l>nānuṣṭheyaṃ manuṣyaistaduktaṃ karmma samācaret // Valc_2,13.54 //</l>
+</lg>
+
+<lg>
+<l>ūḍhāyāṃ hi savarṇāyāmaviprāṃ kāmamudvahet /</l>
+<l>tasyāmutpāditaḥ putro na savarṇāt prahīyate // Valc_2,13.55 //</l>
+</lg>
+
+<lg>
+<l>kṣatrājjātaḥ kṣatriyāyāṃ kṣatriyaḥ syāt na saṃśayaḥ /</l>
+<l>vaiśyāyāṃ ca tathaiva syāt śadrāyāmapi caiva hi // Valc_2,13.56 //</l>
+</lg>
+
+<lg>
+<l>yāvanna vindate jāyāṃ tāvadarddho bhavetpumān /</l>
+<l>nārddhaṃ prajāyate sarvvaṃ prajāyete iti śrutiḥ // Valc_2,13.57 //</l>
+</lg>
+
+<lg>
+<l>sakāmāyāntu kanyāyāṃ saṅgame nāstyatikramaḥ /</l>
+<l>kintvalaṃkṛtya satkṛtya sa evaināṃ samudvahet // Valc_2,13.58 //</l>
+</lg>
+
+<lg>
+<l>savarṇāmudvahet bhāryyāṃ prathamaṃ dharmmasiddhaye /</l>
+<l>tatohyapratilomena yathākāmaṃ vahennṛpaḥ // Valc_2,13.59 //</l>
+</lg>
+
+<lg>
+<l>viṣādyathāmṛtaṃ grāhyamamedhyāt kāñcanaṃ yathā /</l>
+<l>nīcādyathottamā vidyā strīratnaṃ duṣkulāttathā // Valc_2,13.60 //</l>
+</lg>
+
+<lg>
+<l>striyoratnānyatho vidyā dharmmaḥ śaucaṃ subhāṣitam /</l>
+<l>vividhāni ca śilpāni samādeyāni sarvvataḥ // Valc_2,13.61 //</l>
+</lg>
+
+<lg>
+<l>yatra nāryyastu pūjyante ramante tatra devatāḥ /</l>
+<l>yatraitāstu na pūjyante sarvvāstatrāphalāḥ kriyāḥ // Valc_2,13.62 //</l>
+</lg>
+
+<lg>
+<l>prajanārthaṃ mahābhāgā pūjārhā gṛhadīptayaḥ /</l>
+<l>striyaḥ śriyaśca geheṣu na viśeṣo 'sti kaścana // Valc_2,13.63 //</l>
+</lg>
+
+<lg>
+<l>utpādanamapatyasya jātasya paripālanam /</l>
+<l>pratyahaṃ lokayātrāyāḥ pratyakṣaṃ strī nibandhanam // Valc_2,13.64 //</l>
+</lg>
+
+<lg>
+<l>apatyaṃ dārakarmmāṇi śuśraṣā ratiruttamā /</l>
+<l>dārādhīnastathā svargaḥ pitḥṇāmātmanaśca vai // Valc_2,13.65 //</l>
+</lg>
+
+<p>iti vallālacarite vyāsapurāṇe varṇadharmmādikīrttanaṃ nāma trayodaśo 'dhyāyaḥ /</p>
+
+</div>
+<div>
+
+<p>[[070]]</p>
+
+<p>atha caturdaśo 'dhyāyaḥ</p>
+
+<lg>
+<l>vyāsa uvāca:</l>
+<l>śastā strī cārusarvvāṅgī mattamātaṅgagāminī /</l>
+<l>gurūrujaghanā yā ca kṛṣṇasāramṛgekṣaṇā // Valc_2,14.1 //</l>
+</lg>
+
+<lg>
+<l>sunīlakeśī tanvaṅgī vilomāṅgī manoharā /</l>
+<l>samabhūmispṛśau pādau saṃhatau ca tathā stanau // Valc_2,14.2 //</l>
+</lg>
+
+<lg>
+<l>nābhiḥ pradakṣiṇāvarttā guhyamaśvatthapatravat /</l>
+<l>gulphau nigūḍhau madhyena nābhiraṅguṣṭhamānikā // Valc_2,14.3</l>
+</lg>
+<lg>
+<l>gaṇḍairmadhūkapuṣpābhairna śirālā na lomaśā /</l>
+<l>na saṃhatabhrūkuṭilā patiprāṇā patipriyā // Valc_2,14.4 //</l>
+</lg>
+
+<p>bālā khelanakaiḥ kāle dattairdivyaphalāśanaiḥ
+<l>modate yuvatī vastrālaṅkārāliṅganādibhiḥ // Valc_2,14.5 //</l></p>
+
+<lg>
+<l>hṛṣyenmadhyavayāḥ prauḍhā ratakrīḍāsu kauśalaiḥ /</l>
+<l>vṛddhā tu madhurālāpai rgauraveṇa ca yujyate // Valc_2,14.6 //</l>
+</lg>
+
+<lg>
+<l>ṣoḍaśābdā bhavedbālā triṃśatādbhūtayauvanā /</l>
+<l>pañca pañcāśatā prauḍhā vṛddhā strī tadanantaram // Valc_2,14.7 //</l>
+</lg>
+
+<p>kāmādhīnā eva nāryyastadarthaṃ ratnasaṃgrahaḥ /
+<l>sevyāstā nātisevyāśca bhūbhujā viṣayaiṣiṇā // Valc_2,14.8 /</l>
+<lg>
+<l>striyāṃ ṣoḍaśavarṣāyāṃ caturvviṃśatihāyanaḥ /</l>
+<l>buddhimānudyamaṃ kuryyādviśiṣṭasukhakāṅkṣayā // Valc_2,14.9 //</l>
+</lg></p>
+
+<lg>
+<l>tathā pūrṇāṅgavīryyau tau puttraṃ janayataḥ param /</l>
+<l>sarvvendriyasamāyuktaṃ balavantaṃ śatāyuṣam // Valc_2,14.10 //</l>
+</lg>
+
+<lg>
+<l>nidāghaśaradorbbalā hitā viṣayiṇī matā /</l>
+<l>taruṇī śītasamaye madhyā varṣāvasantayoḥ // Valc_2,14.11 //</l>
+</lg>
+
+<lg>
+<l>nityaṃ bālā sevyamānā nityaṃ varddhayate balam /</l>
+<l>yuvatī hrāsayecchaktiṃ madhyodbhāvayate jarām // Valc_2,14.12 //</l>
+</lg>
+
+<lg>
+<l>sadyo māṃsaṃ ca śālyannaṃ bālāstrīsevanaṃ ghṛtam /</l>
+<l>kṣīramuṣṇodake snānaṃ sadyaḥ prāṇakarāṇi ṣaṭ // Valc_2,14.13 //</l>
+</lg>
+
+<lg>
+<l>seveta kāmataḥ kāmī balāt vājīkṛto hime /</l>
+<l>prakāmaṃ tu niṣeveta surataṃ śiśirāgame // Valc_2,14.14 //</l>
+</lg>
+
+<lg>
+<l>śīte rātrau dine grīṣme vasante ca divāniśi /</l>
+<l>varṣāyāmambudadhvāne kāle śaradi sasmaraḥ // Valc_2,14.15 //</l>
+</lg>
+
+<lg>
+<l>abhikāmaḥ samullāsya pūrvvamāliṅganādibhiḥ /</l>
+<l>sameyāt pramadāṃ yuktyā vājīkaraṇavṛṃhitaḥ // Valc_2,14.16 //</l>
+</lg>
+
+<lg>
+<l>nityamuṣṇāmbhasā snānaṃ payaḥpānaṃ navā striyaḥ /</l>
+<l>rājānaḥ pathyametadvaḥ susnigdhamalpabhojanam // Valc_2,14.17 //</l>
+</lg>
+
+<lg>
+<l>kapitthacūrṇayogena tathā dadhnā sṛjā tathā /</l>
+<l>ghṛtaṃ sugandhi bhavati dugdhaiḥ kṣiptaistathā yavaiḥ // Valc_2,14.18 //</l>
+</lg>
+
+<lg>
+<l>[[072]]</l>
+<l>bhojyasya kalpanaivaṃ syādgandhamuktiḥ pradarśyate /</l>
+<l>śaucamācamanaṃ samyak tathaiva ca virecanam // Valc_2,14.19 //</l>
+</lg>
+
+<lg>
+<l>bhāvanā caiva pākaśca bodhanaṃ dhūpanaṃ tathā /</l>
+<l>vāsanañcaiva nirddiṣṭaṃ karmmāṣṭakamidaṃ smṛtam // Valc_2,14.20 //</l>
+</lg>
+
+<lg>
+<l>kapitthavilvajambvāmra-karavīraka pallavaiḥ /</l>
+<l>kṛtvodakantu yaddravyaṃ śocitaṃ śaucanantu tat // Valc_2,14.21 //</l>
+</lg>
+
+<lg>
+<l>teṣāmabhāve śaucantu mṛgadarpāmbhasā bhavet /</l>
+<l>nakhaṃ kuṣṭhaṃ ghanaṃ māṃsaṃ spṛkkā śaileyajaṃ jalam // Valc_2,14.22 //</l>
+</lg>
+
+<lg>
+<l>tathaiva kuṅkumaṃ lākṣā candanāgurunīradam /</l>
+<l>saralaṃ devakāṣṭhañca karparaṃ kāntayā saha // Valc_2,14.23 //</l>
+</lg>
+
+<lg>
+<l>bālā kundurakaścaiva gugguluḥ śrīnivāsakaḥ /</l>
+<l>saha sarjjarasenaiva dhūpadravyaikaviṃśatiḥ // Valc_2,14.24 //</l>
+</lg>
+
+<lg>
+<l>dhūpadravyagaṇādasmādekaviṃśādyathecchayā /</l>
+<l>dve dve dravye samādāya sarjjabhāgairniyojayet // Valc_2,14.25 //</l>
+</lg>
+
+<lg>
+<l>nakhapiṇyākamalayaiḥ saṃyojya madhunā tathā /</l>
+<l>dhūpayogā bhavantīha yathāvat svecchayā kṛtāḥ // Valc_2,14.26 //</l>
+</lg>
+
+<lg>
+<l>tvacaṃ nāḍīṃ phalaṃ tailaṃ kuṅkumaṃ granthiparṇakam /</l>
+<l>śaileyaṃ tagaraṃ kāntām colakarpūrameva ca // Valc_2,14.27 //</l>
+</lg>
+
+<lg>
+<l>māsīṃ murāñca kuṣṭhañca snānadravyāṇi nirdiśet /</l>
+<l>etabhyastu samādāya dravyatrayamathecchayā /</l>
+<l>mṛgadarpayutaṃ snānaṃ kāryyaṃ kandarpavarddhanam // Valc_2,14.28 //</l>
+</lg>
+
+<lg>
+<l>tvaṅmurānaladaistulyairvāsakārddhasamāyutaiḥ /</l>
+<l>snānamutpalagandhi syāt satailaṃ kuṅkumāyate // Valc_2,14.29 //</l>
+</lg>
+
+<lg>
+<l>jātipuṣpasugandhi syāt tagarārddhena yojitam /</l>
+<l>sadvāsakaṃ syādvakulaistulyagandhi manoharam // Valc_2,14.30 //</l>
+</lg>
+
+<lg>
+<l>mañjiṣṭhā tagaraṃ colaṃ tvacaṃ vyāghranakhaṃ nakham /</l>
+<l>gandhapatrañca vinyasya gandhatailaṃ bhavecchubham // Valc_2,14.31 //</l>
+</lg>
+
+<lg>
+<l>mallībhirgandhitāt tailaṃ tilāt syāt pramadāpriyam /</l>
+<l>tailaṃ nipīḍitaṃ ghānau tilaiḥ puṣpādhivāsitaiḥ /</l>
+<l>vāsanāt puṣpasadṛśaṃ gandhena tu bhaveddhruvam // Valc_2,14.32 //</l>
+</lg>
+
+<lg>
+<l>elā-lavaṅga-kakkola-jātīphala-niśākarāḥ /</l>
+<l>jātipatrikayā sārddhaṃ svatantrā mukhavāsakāḥ // Valc_2,14.33 //</l>
+</lg>
+
+<lg>
+<l>karpūraṃ kuṅkumaṃ kāntā mṛgadarpaṃ hareṇukam /</l>
+<l>kakkolailālavaṅgañca jātī kośakameva ca // Valc_2,14.34 //</l>
+</lg>
+
+<lg>
+<l>tvakpatraṃ truṭimustau ca latāṃ kasturikaṃ tathā /</l>
+<l>kaṇṭakāni lavaṅgasya phalapatre ca jātitaḥ // Valc_2,14.35 //</l>
+</lg>
+
+<lg>
+<l>kuṭakañca phalaṃ gṛhya kārṣikāṇyupakalpayet /</l>
+<l>taccūrṇe khadiraṃ sāraṃ dadyātturyyantu vāsitam // Valc_2,14.36 //</l>
+</lg>
+
+<lg>
+<l>sahakārarasenāsmāt karttavyā guṭikāḥ śubhāḥ /</l>
+<l>mukhe nyastā sugandhāstā mukharogavināśakāḥ // Valc_2,14.37 //</l>
+</lg>
+
+<lg>
+<l>pūgaṃ prakṣālitaṃ samyak pañcapallavavāriṇā /</l>
+<l>śaktyā tu guṭikā dravyairvāsitaṃ mukhavāsakam // Valc_2,14.38 //</l>
+</lg>
+
+<lg>
+<l>[[074]]</l>
+<l>kaṭukaṃ daṇḍakāṣṭhañca gomūtravāsitaṃ tryaham /</l>
+<l>kṛtañca pūgavat samyak mukhasaugandhikārakam // Valc_2,14.39 //</l>
+</lg>
+
+<lg>
+<l>tvakpathyayoḥ samāvaṃśau śaśibhāgārddhasaṃyutau /</l>
+<l>nāgavallīsamo bhāti mukhavāso manoharaḥ // Valc_2,14.40 //</l>
+</lg>
+
+<lg>
+<l>evaṃ kuryyāt sadā strīṇāṃ rakṣaṇaṃ pṛthivīpatiḥ /</l>
+<l>na cāsāṃ viśvasejjātu putramāturvviśeṣataḥ // Valc_2,14.41 //</l>
+</lg>
+
+<p>iti vallālacarite vyāsapurāṇe strīlakṣaṇādikīrttanaṃ nāma caturdaśo 'dhyāyaḥ /</p>
+
+</div>
+<div>
+
+<p>atha pañcadaśo 'dhyāyaḥ</p>
+
+<lg>
+<l>vyāsa uvāca:</l>
+<l>tapaḥ paraṃ kṛtayuge tretāyāṃ jñānamucyate /</l>
+<l>dvāpare yajñamevāhurdānamekaṃ kalauyuge // Valc_2,15.1 //</l>
+</lg>
+
+<lg>
+<l>dānadharmmāt paro dharmmo bhūtānāṃ neha vidyate /</l>
+<l>svargāyurbhūtikāmena deyaṃ pāpopaśāntaye // Valc_2,15.2 //</l>
+</lg>
+
+<lg>
+<l>na dānādadhikaṃ kiñciddṛśyate bhuvanatraye /</l>
+<l>dānena prāpyate svargaḥ śrī dānenaiva labhyate // Valc_2,15.3 //</l>
+</lg>
+
+<lg>
+<l>dānena śatruñjayati vyādhirdānena naśyati /</l>
+<l>dānena labhyate vidyā dānena yuvatījanaḥ // Valc_2,15.4 //</l>
+</lg>
+
+<lg>
+<l>dānena bhogānāpnoti dānenāyuśca vindati /</l>
+<l>dharmmārthakāmamokṣāṇāṃ sādhanaṃ paramaṃ smṛtam // Valc_2,15.5 //</l>
+</lg>
+
+<lg>
+<l>dadyāt pūrvvamukho dānaṃ ghṇīyāduttarāmukhaḥ /</l>
+<l>āyurvvivarddhate dāturgṛhītuḥ kṣīyate na tat // Valc_2,15.6 //</l>
+</lg>
+
+<lg>
+<l>mātuḥ śataguṇaṃ dānaṃ sahasraṃ piturucyate /</l>
+<l>anantaṃ duhiturdānaṃ sodarye dattamakṣayam // Valc_2,15.7 //</l>
+</lg>
+
+<lg>
+<l>amanuṣye samaṃ dānaṃ pāpe jñeyaṃ mahāphalam /</l>
+<l>varṇasaṅkare dviguṇaṃ śūdre dānaṃ caturguṇam // Valc_2,15.8 //</l>
+</lg>
+
+<lg>
+<l>[[076]]</l>
+<l>vaiśye cāṣṭaguṇaṃ kṣatre ṣoḍaśatvaṃ dvijabruve /</l>
+<l>vedādhyāye śataguṇamanantaṃ vedabodhake // Valc_2,15.9 //</l>
+</lg>
+
+<lg>
+<l>gurau purohitādau ca dānamakṣayamucyate /</l>
+<l>śrīvihīneṣu yaddattantadanantañca yajvani // Valc_2,15.10 //</l>
+</lg>
+
+<p>abhayaṃ sarvadaivatyaṃ bhūmi rvai viṣṇudevatā /
+<l>kanyā dāsāstathā dāsī prājāpatyāḥ prakīrttitāḥ // Valc_2,15.11 /</l>
+<lg>
+<l>prājāpatyo gajaḥ proktasturago yamadaivataḥ /</l>
+<l>tathā caikaśaphāḥ sarvve yāmyaśca mahiṣastathā // Valc_2,15.12 //</l>
+</lg></p>
+
+<lg>
+<l>uṣṭraśca nairṛto dhenū raudrīchāgonalastathā /</l>
+<l>āpyo meṣo hariḥ kroḍaḥ āraṇyāḥ paśavo nilāḥ // Valc_2,15.13 //</l>
+</lg>
+
+<lg>
+<l>jalāśayaṃ vāruṇaṃ syāt vāridhānī ghaṭādayaḥ /</l>
+<l>samudrajāni ratnāni hemalauhāni cānalaḥ // Valc_2,15.14 //</l>
+</lg>
+
+<lg>
+<l>prājāpatyāni śasyāni pakvānnamapi pārthivāḥ /</l>
+<l>gāndharbba gandhamityāhu rvastraṃ vārhaspataṃ smṛtam // Valc_2,15.15 //</l>
+</lg>
+
+<lg>
+<l>vāyavyāḥ pakṣiṇaḥ sarvve vidyā brāhmī tathāṅgakam /</l>
+<l>sārasvataṃ pustakādi viśvakarmmā tu śilpake // Valc_2,15.16 //</l>
+</lg>
+
+<lg>
+<l>vanaspatirdrumādīnāṃ dravyadevā harestanuḥ /</l>
+<l>chatraṃ kṛṣṇājinaṃ śayyā ratha āsanameva ca // Valc_2,15.17 //</l>
+</lg>
+
+<lg>
+<l>upānahau tathā yānamaṣṭāvāṅgira īritam /</l>
+<l>rathopakaraṇaṃ śastraṃ dhvajādyaṃ sarvvadaivatam // Valc_2,15.18 //</l>
+</lg>
+
+<p>gṛhañca sarvvadaivatyaṃ sarvveṣāṃ viṣṇudevatā /
+<l>śivo vā na tato dravyaṃ vyatiriktaṃ yato 'sti hi // Valc_2,15.19 /</l>
+<l>śṛṇatāhaṃ pravakṣyāmi mahādānāni ṣoḍaśa // Valc_2,15.20 //</l></p>
+
+<lg>
+<l>tulāpuruṣa ādyantu hiraṇyagarbhadānakam /</l>
+<l>brahmāṇḍaṃ kalpavṛkṣaśca gosahasrañca pañcamam // Valc_2,15.21 //</l>
+</lg>
+
+<lg>
+<l>hiraṇyakāmadhenuśca hiraṇyāśvaśca saptamam /</l>
+<l>hiraṇyāśvarathastadvaddhemahastirathastathā // Valc_2,15.22 //</l>
+</lg>
+
+<lg>
+<l>pañcalāṅgalakaṃ tadvaddharādānaṃ mahāphalam /</l>
+<l>dvādaśaṃ viṣnucakrañca tataḥ kalpalatātmakam // Valc_2,15.23 //</l>
+</lg>
+
+<lg>
+<l>saptasāgaradānañca ratradhenustathaiva ca /</l>
+<l>mahābhūtaghaṭastadvat dānaṃ śubhadine 'rpayet // Valc_2,15.24 //</l>
+</lg>
+
+<lg>
+<l>maṇḍape maṇḍale dānaṃ devān prācyārpayeddvije /</l>
+<l>dravyasya nāma gṛhṇīyāt dadāni ca tathā vadet // Valc_2,15.25 //</l>
+</lg>
+
+<lg>
+<l>toyaṃ dadyāttato haste dāne vidhirayaṃ smṛtaḥ /</l>
+<l>manasā pātramuddiśya jalaṃ bhūmau vinikṣapet // Valc_2,15.26 //</l>
+</lg>
+
+<l>vidyate sāgarasyānto dānasyānto na vidyate // Valc_2,15.27 //</l>
+
+<lg>
+<l>yathānāma sagotrāya pravarāyāmukāya ca /</l>
+<l>vedavedāṅgayuktāya pātrāya sumahātmane // Valc_2,15.28 //</l>
+</lg>
+
+<lg>
+<l>mātāpitrorātmanaśca puṇyayaśobhivṛddhaye /</l>
+<l>sarvvapāpopaśāntyarthaṃ svargārthaṃ bhuktimuktaye // Valc_2,15.29 //</l>
+</lg>
+
+<lg>
+<l>yathānāma mahādravyaṃ viṣṇurudrādidaivatam /</l>
+<l>etattubhyaṃ sampradade prīyatāṃ me hariḥ śivaḥ // Valc_2,15.30 //</l>
+</lg>
+
+<lg>
+<l>etaddānapratiṣṭhārthaṃ suvarṇaṃ dakṣiṇāṃ dade /</l>
+<l>anena dānavākyena sarvvadānāni vai dadet // Valc_2,15.31 //</l>
+</lg>
+
+<lg>
+<l>[[078]]</l>
+<l>suvarṇe dīyamāne tu rajataṃ dakṣiṇeṣyate /</l>
+<l>anyeṣāmapi dānānāṃ suvarṇaṃ dakṣiṇā smṛtā // Valc_2,15.32 //</l>
+</lg>
+
+<lg>
+<l>suvarṇaṃ rajataṃ tāmraṃ taṇḍulaṃ dhānyameva ca /</l>
+<l>nityaśrāddhaṃ devapūjā sarvvametadadakṣiṇam // Valc_2,15.33 //</l>
+</lg>
+
+<lg>
+<l>rajataṃ dakṣiṇā pitrye dharmmakāmārthasādhanam /</l>
+<l>suvarṇaṃ rajataṃ tāmraṃ maṇimuktāvasūni ca // Valc_2,15.34 //</l>
+</lg>
+
+<lg>
+<l>sarvvametat mahāprājñe dadāti vasudhāṃ dadat /</l>
+<l>pitḥśca pitṛlokasthāndevasthāne ca devatā // Valc_2,15.35 //</l>
+</lg>
+
+<lg>
+<l>santarpayati śāntātmā yo dadāti vasundharām /</l>
+<l>kharvvaṭaṃ kheṭakaṃ vāpi grāmaṃ vā śasyaśālinam // Valc_2,15.36 //</l>
+</lg>
+
+<lg>
+<l>nivarttanaśataṃ vāpi tadarddhaṃ vā gṛhādikam /</l>
+<l>apyāḍhāvāpamātraṃ vā dattvorvvīṃ phalabhāk bhavet // Valc_2,15.37 //</l>
+</lg>
+
+<lg>
+<l>ikṣubhiḥ santatāṃ bhūmiṃ yavagodhamaśālinīm /</l>
+<l>dadāti vedaviduṣe sa na bhūyobhijāyate // Valc_2,15.38 //</l>
+</lg>
+
+<lg>
+<l>phālakṛṣṭāṃ mahīṃ dattvā savṛkṣāṃ śasyaśālinīm /</l>
+<l>yāvat sūryyakarālokāstāvat svarge mahīyate // Valc_2,15.39 //</l>
+</lg>
+
+<lg>
+<l>viprāya dadyācca guṇānvitāya</l>
+<l>tapobhiyuktāya jitendriyāya /</l>
+<l>yāvanmahī tiṣṭhati sāgarāntā</l>
+<l>tāvat phalaṃ tasya bhavedanantam // Valc_2,15.40 //</l>
+</lg>
+
+<lg>
+<l>yathā vījāni rohanti prakīrṇāni mahītale /</l>
+<l>evaṃ kāmāḥ prarohanti bhūmidānasamārjitāḥ // Valc_2,15.41 //</l>
+</lg>
+
+<lg>
+<l>yathāpsu patitaḥ sadyastailavinduḥ prasarpati /</l>
+<l>evaṃ bhūmikṛtaṃ dānaṃ śasye śakṣye prarohati // Valc_2,15.42 //</l>
+</lg>
+
+<lg>
+<l>annadāḥ sukhino nityaṃ vastradaścaiva rūpavān /</l>
+<l>sa naraḥ sarvvado bhūpā yo dadāti vasundharām // Valc_2,15.43 //</l>
+</lg>
+
+<lg>
+<l>yathā gaurbharate vatsaṃ kṣīramutsṛjya kṣīriṇī /</l>
+<l>evaṃ dattā mahīpālā bhūmirbharati bhūmidam // Valc_2,15.44 //</l>
+</lg>
+
+<lg>
+<l>ādityo varuṇo viṣṇurbrahmā somo hutāśanaḥ /</l>
+<l>śūlapāṇiśca bhagavānabhinandati bhūmidam // Valc_2,15.45 //</l>
+</lg>
+
+<lg>
+<l>āsphoṭayanti pitaro varṇayanti pitāmahāḥ /</l>
+<l>bhūmidātā kule jātaḥ sa nastrātā bhaviṣyati // Valc_2,15.46 //</l>
+</lg>
+
+<lg>
+<l>bahubhirvasudhā dattā rājabhiḥ sagarādibhiḥ /</l>
+<l>yasya yasya yadā bhūmistasya tasya tadā phalam // Valc_2,15.47 //</l>
+</lg>
+
+<lg>
+<l>bhūmiṃ yaḥ pratigṛhṇāti yaśca bhūmiṃ prayacchati /</l>
+<l>ubhau tau puṇyakarmmāṇau niyatau svargagāmiṇau // Valc_2,15.48 //</l>
+</lg>
+
+<lg>
+<l>dadyādbhūmiṃ nibandhaṃ vā kṛtvā lekhyañca kārayet /</l>
+<l>āgāmibhadranṛpatiparijñānāya pārthivaḥ // Valc_2,15.49 //</l>
+</lg>
+
+<lg>
+<l>paṭe vā tāmrapaṭṭe vā svamudroparicihnitam /</l>
+<l>abhilekhyātmano vaṃśānātmānañca mahīpatiḥ // Valc_2,15.50 //</l>
+</lg>
+
+<lg>
+<l>pratigrahaparicchedadānācchedopavarṇanam /</l>
+<l>svahastakālasampannaṃ śāsanaṃ kārayet sthiram // Valc_2,15.51 //</l>
+</lg>
+
+<lg>
+<l>suvarṇadānaṃ godānaṃ bhūmidānañca pārthivāḥ /</l>
+<l>etat prayacchamānastu sarvvapāpaiḥ pramucyate // Valc_2,15.52 //</l>
+</lg>
+
+<p>[[080]]
+<lg>
+<l>agnerapatyaṃ prathamaṃ suvarṇam</l>
+<l>bhūrvaiṣṇavī sūryasutāśca gāvaḥ /</l>
+<l>yaḥ kāñcanaṃ gāñca mahīñca dadyāt</l>
+<l>dattāstrayastena bhavanti lokāḥ // Valc_2,15.53 //</l>
+</lg></p>
+
+<lg>
+<l>yastaṭākaṃ navaṃ kuryyāt purāṇaṃ vāpi khānayet /</l>
+<l>sa sarvvaṃ kulamuddhṛtya svarge loke mahīyate // Valc_2,15.54 //</l>
+</lg>
+
+<lg>
+<l>kṛtvāpi pāpakarmmāṇi yo dadyādannamarthine /</l>
+<l>brāhmaṇāya viśeṣeṇa sa pāpena na lipyate // Valc_2,15.55 //</l>
+</lg>
+
+<lg>
+<l>trisaptakulamuddhṛtya kanyādo brahmalokabhāk /</l>
+<l>devālayañca pratimāṃ kārayan sarvamāpnuyāt // Valc_2,15.56 //</l>
+</lg>
+
+<lg>
+<l>dāsīdastu dvijendrebhyo hyapsarolokamāpnuyāt /</l>
+<l>tasya śiśnendriyaṃ bhūpā nāgnirdahati karhicit // Valc_2,15.57 //</l>
+</lg>
+
+<lg>
+<l>siṃhagiriruvāca:</l>
+<l>svālaṅkṛtā vasanabhūṣaṇagandhapuṣpaiḥ kaiśoryyarūpakamanīyavapuḥsubhogyāḥ /</l>
+<l>dāsīḥ pradāya bahuśo dvijasattamebhyaḥ śrīlādiśūranṛpatīramate 'psarobhiḥ // Valc_2,15.58 //</l>
+</lg>
+
+<p>iti vallālacarite vyāsapurāṇe dānamāhātmādikīrttanaṃ nāma pañcadaśo 'dhyāyaḥ /</p>
+
+</div>
+<div>
+
+<p>atha ṣoḍaśo 'dhyāyaḥ</p>
+
+<lg>
+<l>vyāsa uvāca:</l>
+<l>upādhyāyaḥ pitā jyeṣṭhabhrātā caiva mahīpatiḥ /</l>
+<l>mātulaḥ śvaśurastrātā mātāmahapitāmahau // Valc_2,16.1 //</l>
+</lg>
+
+<lg>
+<l>bandhurjyeṣṭhaḥ pitṛvyaśca puṃsyete guravaḥ smṛtāḥ /</l>
+<l>mātā mātāmahī caiva pitṛmātṛṣvasādayaḥ // Valc_2,16.2 //</l>
+</lg>
+
+<lg>
+<l>śvaśrūḥ pitāmahī jyeṣṭhā dhātrī ca guravaḥ striyaḥ /</l>
+<l>ityukto guruvargo 'yaṃ mātṛtaḥ pitṛto nṛpāḥ /</l>
+<l>anuvarttanameteṣāṃ manovākkāyakarmmabhiḥ // Valc_2,16.3 //</l>
+</lg>
+
+<lg>
+<l>guruṃ dṛṣṭvā samuttiṣṭhedabhivādya kṛtāñjaliḥ /</l>
+<l>naitairupaviśet sārddhaṃ vivadet nātmakāraṇāt // Valc_2,16.4 //</l>
+</lg>
+
+<lg>
+<l>jīvitārthamapi dveṣāt gurubhirnaiva bhāṣaṇam /</l>
+<l>udito 'pi guṇairanyai rguruddheṣī patatyadhaḥ // Valc_2,16.5 //</l>
+</lg>
+
+<lg>
+<l>gurūṇāñcaiva sarvveṣāṃ pūjyāḥ pañca prayatnataḥ /</l>
+<l>teṣāmādyāstrayaḥ śreṣṭhāsteṣu mātā garīyasī // Valc_2,16.6 //</l>
+</lg>
+
+<lg>
+<l>yo bhāvayati yā sūte yena vidyopadiśyate /</l>
+<l>jyeṣṭhabhrātā ca bharttā ca pañcaite guravaḥ smṛtāḥ // Valc_2,16.7 //</l>
+</lg>
+
+<p>ātmanaḥ sarvvayatnena prāṇatyāgena vā punaḥ /
+<lg>
+<l>[[082]]</l>
+<l>pūjanīyā viśeṣeṇa pañcaite bhūtimicchatā /</l>
+<l>nāsti pitṛsamo devo nāsti mātṛsamo guruḥ // Valc_2,16.8 //</l>
+</lg></p>
+
+<lg>
+<l>tayornityaṃ priyaṃ kuryyāt karmmaṇā manasā girā /</l>
+<l>na tābhyāmananujñāto dharmmamanyaṃ samāśrayet // Valc_2,16.9 //</l>
+</lg>
+
+<lg>
+<l>gururagnirdvijātīnāṃ varṇānāṃ brāhmaṇo guruḥ /</l>
+<l>patireko guruḥ strīṇāṃ sarvvatrābhyāgato guruḥ // Valc_2,16.10 //</l>
+</lg>
+
+<lg>
+<l>brāhmaṇaṃ praṇamed yastu viṣṇubuddhyā narottamaḥ /</l>
+<l>āyuḥ putraśca kīrttiśca sampattistasya varddhate // Valc_2,16.11 //</l>
+</lg>
+
+<lg>
+<l>duḥśīlo 'pi dvijaḥ pūjyo na śūdro vijetendriyaḥ /</l>
+<l>viprā hi kṣatriyātmāno nāvajñeyāḥ kadācana // Valc_2,16.12 //</l>
+</lg>
+
+<lg>
+<l>dharmmaśāstrarathārūḍhā vedakhaḍgadharā dvijāḥ /</l>
+<l>krīḍārthamapi yadbrūyuḥ sa dharmmaḥ paramaḥ smṛtaḥ // Valc_2,16.13 //</l>
+</lg>
+
+<p>iti vallālacarite vyāsapurāṇe guruvargakīrttanaṃ nāma ṣoḍaśo 'dhyāyaḥ /</p>
+
+</div>
+<div>
+
+<p>atha saptadaśo 'dhyāyaḥ</p>
+
+<lg>
+<l>vyāsa uvāca:</l>
+<l>mānavyaśca kāśyapaśca kāṅkāyana-rahūgaṇau /</l>
+<l>bharadvājo gautamaśca kalviṣaśca sukālinaḥ // Valc_2,17.1 //</l>
+</lg>
+
+<lg>
+<l>ārṣṭiṣeṇo 'gniveśaśca kṛṣṇaciyavaśiṣṭhakau /</l>
+<l>viśvāmitro gālavaśca candrātreyaśca kauśikaḥ // Valc_2,17.2 //</l>
+</lg>
+
+<lg>
+<l>ghṛtakauśika-maudgalyau lābhāyana-parāśarau /</l>
+<l>saupāyanātrikuhalāḥ vāsukī rohitastathā // Valc_2,17.3 //</l>
+</lg>
+
+<lg>
+<l>vārdhyaśvo vaiyāghrapadyo darbhaḥśālāvataḥ kapiḥ /</l>
+<l>jamadagniḥ kāñcanaśca kātyāyana-vṛhaspatī // Valc_2,17.4 //</l>
+</lg>
+
+<lg>
+<l>viśuvṛddhaśca sāṅkṛtyo gargaḥ kauṇḍinya-baṃpulau /</l>
+<l>sāvarṇāṅgirasau maunaḥ kauśyo yaugana-jaiminī // Valc_2,17.5 //</l>
+</lg>
+
+<lg>
+<l>śaktriḥ kātyāyano vātsyo logākṣiḥ śunakastathā /</l>
+<l>agastiḥ somarājaśca sandāno mādhavo bhṛguḥ // Valc_2,17.6 //</l>
+</lg>
+
+<lg>
+<l>maitrāyaṇiśca śāṇḍilya upamanyurdhanañjayaḥ /</l>
+<l>madhukulyo hāritaśca vidalo gobhilastathā // Valc_2,17.7 //</l>
+</lg>
+
+<lg>
+<l>kāskāyanaśca yāskaśca vārṣṇeyo brahmakṣatrakaḥ /</l>
+<l>yuvanāśvaśca vaiṇyaśca jātūkarṇo 'ghamarṣaṇaḥ // Valc_2,17.8 //</l>
+</lg>
+
+<lg>
+<l>[[084]]</l>
+<l>ambarīṣa idhmavāho lauhitya indrakauśikaḥ /</l>
+<l>ajaśca nidhruvo rebha ṛṣayo gotrakārakāḥ // Valc_2,17.9 //</l>
+</lg>
+
+<p>iti vallālacarite vyāsapurāṇe gotrakīrttanaṃ nāma saptadaśo 'dhyāyaḥ /</p>
+
+</div>
+<div>
+
+<p>athāṣṭādaśo 'dhyāyaḥ</p>
+
+<lg>
+<l>rājarṣaya ūcuḥ:</l>
+<l>brāhmaṇānāṃ kṣatriyāṇāṃ vaiśyāmāñcāntyajanmanām /</l>
+<l>bhedān brūhi mahāprājña śrotuṃ kautuhalaṃ param // Valc_2,18.1 //</l>
+</lg>
+
+<lg>
+<l>vyāsa uvāca:</l>
+<l>sārasvatāḥ kānyakubjāḥ gauḍā maithilakotkalāḥ /</l>
+<l>pañca gauḍā iti khyātā vindhyasyottaravāsinaḥ // Valc_2,18.2 //</l>
+</lg>
+
+<lg>
+<l>karṇāṭāścaiva tailaṅgā gurjjarā rāṣṭravāsinaḥ /</l>
+<l>andhrāśca drāviḍāḥ pañca vindhyadakṣiṇavāsinaḥ // Valc_2,18.3 //</l>
+</lg>
+
+<lg>
+<l>magāstu brāhmaṇāḥ pūrvvaṃ niḥsṛtāḥ sūryamaṇḍalāt /</l>
+<l>jvaladarkapratīkāśāḥ śākadvīpamavātaran // Valc_2,18.4 //</l>
+</lg>
+
+<lg>
+<l>iti brahmavargāḥ /</l>
+<l>pāṇḍavāḥ pauravā baudhāḥ sahasrārjjunahaihayāḥ /</l>
+<l>candrātreya-kalacuri-raṭṭa-yādava-tomarāḥ // Valc_2,18.5 //</l>
+</lg>
+
+<lg>
+<l>kauśikāḥ kaukurāḥ kuśyā ete saumyāḥ prakīrttitāḥ /</l>
+<l>aikṣvākavo nikumbhāśca mauryyāśca sāgarāstathā // Valc_2,18.6 //</l>
+</lg>
+
+<lg>
+<l>[[086]]</l>
+<l>tathā kacchapaghātāśca rāghavā gobhilāstathā /</l>
+<l>tathā gāhaḍavālāśca ete saurāḥ prakīrttitāḥ // Valc_2,18.7 //</l>
+</lg>
+
+<lg>
+<l>cāhamānāśca mallāśca chindāścāpotkaṭāstathā /</l>
+<l>caulūkyāśca silārāśca hūnāśca brahmavāhujāḥ // Valc_2,18.8 //</l>
+</lg>
+
+<lg>
+<l>agnikuṇḍasamutpannāḥ paramārā mahābalāḥ /</l>
+<l>śālukikāḥ sendrakāśca kādraveyā iti smṛtāḥ // Valc_2,18.9 //</l>
+</lg>
+
+<lg>
+<l>veṇādvaiṇyaḥ pṛthu rjātaḥ pṛṣvīhārāstato 'bhavan /</l>
+<l>vainateyāstu tārkṣyā vai pālāstu kṣatriyādhamāḥ // Valc_2,18.10 //</l>
+</lg>
+
+<lg>
+<l>iti kṣatriyavargāḥ /</l>
+<l>upakeśāśva prākvāṭā rohitāśca mahotsavāḥ /</l>
+<l>māhiṣmatyāśca vaiśālyāḥ kauśāmbyāḥ śrāvakāstathā // Valc_2,18.11 //</l>
+</lg>
+
+<lg>
+<l>āyodhyikāśca vaṇijo gurjjarā bhuvi viśrutāḥ /</l>
+<l>ujānikāśca dhaninaḥ suvarṇā vaṇijādhamāḥ // Valc_2,18.12 //</l>
+</lg>
+
+<l>jejātutīyā vaṇijaścandraraśmisamudbhavāḥ // Valc_2,18.13 //</l>
+
+<p>iti vaiśvavargāḥ |</p>
+
+<p>iti vallālacarite vyāsapurāṇe traivarṇikavargakīrttanaṃ nāmāṣṭādaśo 'dhyāyaḥ /</p>
+
+</div>
+<div>
+
+<p>athonaviṃśo 'dhyāyaḥ</p>
+
+<lg>
+<l>vyāsa uvāca:</l>
+<l>satśūdraścaiva śūdraśca śūdrastu dvividho mataḥ /</l>
+<l>ādyo vipraviśoḥ śūdryāṃ dvitīyaḥ pādajaḥ smṛtaḥ // Valc_2,19.1 //</l>
+</lg>
+
+<lg>
+<l>brāhmaṇāt kṣattrakanyāyāṃ maulo nāma prajāyate /</l>
+<l>brāhmaṇāt vaiśyakanyāyāmambaṣṭhastanayaḥ smṛtaḥ // Valc_2,19.2 //</l>
+</lg>
+
+<p>ambaṣṭhādvaiśyakanyāyāṃ vaidyo nāma prajāyate /
+<lg>
+<l>śūdrāyāṃ karaṇo vaiśyāt karaṇyāñca tataḥ punaḥ /</l>
+<l>sthitaḥ karaṇakāyeṣu tataḥ kāyasya ucyate /</l>
+<l>pādajāḥ santi kāyasthāstathaivāmbaṣṭhajā api /</l>
+<l>ye tu kirātakāyasthā te sarvve ninditāḥ smṛtā // Valc_2,19.3 //</l>
+</lg></p>
+
+<lg>
+<l>nigamaśca gandhikaśca vaiśyavaṃśasamudbhavau /</l>
+<l>śanaiḥ śūdratvamāpannau kriyālopādihetunā // Valc_2,19.4 //</l>
+</lg>
+
+<lg>
+<l>[[088]]</l>
+<l>ratnakārāḥ svarṇakārā rūpyakāralipīkarau /</l>
+<l>tāmrakārā lohakārāḥ śaṅkhakārāśca tantriṇaḥ // Valc_2,19.5 //</l>
+</lg>
+
+<lg>
+<l>taṇḍulino vyañjaninaḥ satśūdrāśca prakīrttitāḥ /</l>
+<l>vaiśyādrāmakavaidehau brāhmaṇīkṣatriyāsutau // Valc_2,19.6 //</l>
+</lg>
+
+<lg>
+<l>rāmakāt kṣatrakanyāyāmugro nāma prajāyate /</l>
+<l>brāhmaṇādugrakanyāyāmāvṛto nāma jāyate // Valc_2,19.7 //</l>
+</lg>
+
+<lg>
+<l>ābhīraḥ śūdraḥ śūdrāyāṃ brātyakṣatraviśorapi /</l>
+<l>vaiśyādvaidehakanyāyāṃ kāṃsakāraḥ prajāyate // Valc_2,19.8 //</l>
+</lg>
+
+<lg>
+<l>vaiśyādambaṣṭhakanyāyāṃ gopagopālakau sutau /</l>
+<l>jajñe vaidehakanyāyāṃ leṣakārastu rāmakāt // Valc_2,19.9 //</l>
+</lg>
+
+<lg>
+<l>vaiśyāyāṃ jāyate śūdrāt tailakāra iti smṛtaḥ /</l>
+<l>ambaṣṭhāyāṃ svarṇakārāt śauciko nāma jāyate // Valc_2,19.10 //</l>
+</lg>
+
+<lg>
+<l>viśaḥ kuvindakanyāyāṃ kṛṣiko nāma jāyate /</l>
+<l>kṛṣikātgopakanyāyāṃ tāmboliriti naḥśrutam // Valc_2,19.11 //</l>
+</lg>
+
+<lg>
+<l>vaṇijaḥ śūdrakanyāyāṃ kanduko nāma jāyate /</l>
+<l>kandukādviprakanyāyāṃ kalupālo vyajāyata // Valc_2,19.12 //</l>
+</lg>
+
+<lg>
+<l>śūdrādāyogavo vaiṇaścāṇḍālaścādhamo nṛṇām /</l>
+<l>vaiśyarājanyaviprāsu jāyante varṇasaṅkarāḥ // Valc_2,19.13 //</l>
+</lg>
+
+<lg>
+<l>kadācidvījamāhātmāt kṣetramāhātmataḥ kvacit /</l>
+<l>nīcottamatvaṃ bhavati śreṣṭhatvaṃ kṣetravījataḥ // Valc_2,19.14 //</l>
+</lg>
+
+<p>[[089]]
+[[verse number jumps from "14" to "16"]]</p>
+
+<lg>
+<l>kadācidānulomyena jātirmātṛsamā smṛtā /</l>
+<l>karmmaṇottamanīcatvaṃ kālataśca bhavedguṇaiḥ // Valc_2,19.16 //</l>
+</lg>
+
+<lg>
+<l>jāto nāryyāmanāryyāyāmāryyādāryyobhavedguṇaiḥ /</l>
+<l>anāryyājjāta āryyāyāmanāyya iti niścayaḥ // Valc_2,19.17 //</l>
+</lg>
+
+<lg>
+<l>ambaṣṭhāyāntu kṛṣikādvyajāyanta kuṭumbinaḥ /</l>
+<l>kuṭumbinaśca gopālyāṃ kumbhakāro vyajāyata // Valc_2,19.18 //</l>
+</lg>
+
+<lg>
+<l>karaṇyāṃ lohakārāttu varddhaki rnāma jāyate /</l>
+<l>varddhakestāmrakāriṇyāṃ vāraki rnāma jāyate // Valc_2,19.19 //</l>
+</lg>
+
+<lg>
+<l>kumbhakāreṇa śūdrāyāṃ janitaḥ palagaṇḍakaḥ /</l>
+<l>śūdrāt kumbhakāranāryyāṃ mālākāraḥ prajāyate // Valc_2,19.20 //</l>
+</lg>
+
+<lg>
+<l>krayakrītāsu kanyāsu bhavanti dāsajātayaḥ /</l>
+<l>brāhmaṇācchūdrakanyāyāṃ nāpito nāma jāyate // Valc_2,19.21 //</l>
+</lg>
+
+<lg>
+<l>ajāyanta ca kṣetreṣu hatānāṃ mukhajanmanām /</l>
+<l>śūdraviṭ kṣatraiścaṇḍālāḥ kirātābharajātayaḥ // Valc_2,19.22 //</l>
+</lg>
+
+<lg>
+<l>kirātāvellohakāriṇyāṃ karmmāraḥ śastravikrayī /</l>
+<l>tāmrakuṭyāṃ tantuvāyāt paṭṭakāraḥ prajāyate // Valc_2,19.23 //</l>
+</lg>
+
+<lg>
+<l>śūdrādāyogavaṃ vaiśyā janayāmāsa vai sutam /</l>
+<l>kalupālāt kuvindāyāṃ śauṇḍikonāma jāyate // Valc_2,19.24 //</l>
+</lg>
+
+<lg>
+<l>[[090]]</l>
+<l>raṅgājīvastu śauṇḍikyāṃ suto varddhakisambhavaḥ /</l>
+<l>saṅkarāṇāntu sāṅkaryyāsāṅkaryyācca punaḥ punaḥ // Valc_2,19.25 //</l>
+</lg>
+
+<lg>
+<l>jātyānantyantu saṃprāptaṃ sarvvaṃ vaktuṃ na śakyate /</l>
+<l>pauṇḍrāḥ suhmāśca palhāśca pulindāśca kinārayaḥ // Valc_2,19.26 //</l>
+</lg>
+
+<lg>
+<l>kolā bhūṣārā varaṭāsturkānāḥ śavarāḥ śakāḥ /</l>
+<l>pāradā daradā vyādhā niṣādāḥ pukkaśā amī // Valc_2,19.27 //</l>
+</lg>
+
+<l>mlecchavācaścāryyavāco dasyavaḥ ṣoḍaśa smṛtāḥ // Valc_2,19.28 //</l>
+
+<lg>
+<l>rajakaścarmmakāraśca naṭo varuḍ eva ca /</l>
+<l>kaivarttamedabhillāśca saptaite cāntyajāḥ smṛtāḥ // Valc_2,19.29 //</l>
+</lg>
+
+<lg>
+<l>antyajānāṃ gṛhe toyaṃ bhāṇḍe paryyuṣitantu yat /</l>
+<l>prāyaścittaṃ yadā pītaṃ tadaiva hi samācaret // Valc_2,19.30 //</l>
+</lg>
+
+<p>iti vallālacarite śūdravargakathanaṃ nāma ūnaviṃśo 'dhyāyaḥ /</p>
+
+</div>
+<div>
+
+<p>atha viṃśo 'dhyāyaḥ</p>
+
+<lg>
+<l>vyāsa uvāca:</l>
+<l>ataḥparaṃ rudragītā kathyate manujeśvarāḥ /</l>
+<l>śṛṇatāvahitā bhūtvā imāṃ gītāṃ sanātanīm // Valc_2,20.1 //</l>
+</lg>
+
+<lg>
+<l>namaste manyave rudra utota iṣave namaḥ /</l>
+<l>namāmi tava vāhubhyāṃ giriśanta girīśvara // Valc_2,20.2 //</l>
+</lg>
+
+<lg>
+<l>rudraste 'pāpakāśinyā śivayā ghorarūpayā /</l>
+<l>tanvāno 'bhi cākaśīhi sukhaṃ śantamayā śiva // Valc_2,20.3 //</l>
+</lg>
+
+<lg>
+<l>yāmiṣumastave haste giriśanta vibharṣi ca /</l>
+<l>tāṃ giritra kuru śivāṃ mā hiṃsīḥ puruṣaṃ jagat // Valc_2,20.4 //</l>
+</lg>
+
+<lg>
+<l>śivena vacasācchatvā vadāmo giriśa prabho /</l>
+<l>yathā yakṣmaṃ sumanaso jagatsarvvamidaṃ bhavet // Valc_2,20.5 //</l>
+</lg>
+
+<lg>
+<l>adhyavocadadhivaktā prathamo devyako bhiṣak /</l>
+<l>ahīṃśca jambhayan sarvvān yātudhānīḥ parāsuva // Valc_2,20.6 //</l>
+</lg>
+
+<lg>
+<l>asau yastāmra āditya uta vabhrūḥ sumaṅgalaḥ /</l>
+<l>ye cainaṃ rudrā abhito dikṣveṣāṃ heḍaīmahe // Valc_2,20.7 //</l>
+</lg>
+
+<lg>
+<l>asāvavasarpati yo nīlagrīvo vilohitaḥ /</l>
+<l>gopāḥstriyo 'pyadṛśran yaṃ sa dṛṣṭomṛḍayāti naḥ // Valc_2,20.8 //</l>
+</lg>
+
+<lg>
+<l>[[092]]</l>
+<l>namo 'stu nīlagrīvāya sahasrākṣāya mīḍhuṣe /</l>
+<l>santyatho ye 'sya satvā nastebhyo 'hamakaraṃ namaḥ // Valc_2,20.9 //</l>
+</lg>
+
+<lg>
+<l>dhanvanastvaṃ pramuñcārtnyo rubhayorjyāmumādhava /</l>
+<l>yāśca te hasta iṣavo bhagavan tāḥ parā vapa /</l>
+<l>kaparddino dhanurdivyaṃ viśalyo vāṇavānuta /</l>
+<l>aneśanniṣavaścāsya cābhurastu niṣaṅgadhīḥ // Valc_2,20.10 //</l>
+</lg>
+
+<lg>
+<l>yā mīḍhuṣṭama te hetirhaste pravidyate dhanuḥ /</l>
+<l>ayakṣan yā tathāsmān tvaṃ viśvataḥ paripālaya // Valc_2,20.11 //</l>
+</lg>
+
+<lg>
+<l>asmān te dhanvano hetiḥ parivṛṇaktu viśvataḥ /</l>
+<l>atho yaśceṣudhī rudra asmadāre nidhehi tam // Valc_2,20.12 //</l>
+</lg>
+
+<lg>
+<l>avatatya dhanuḥ śalyamukhāni viniśīryya ca /</l>
+<l>śateṣudhe sahasrākṣa śivo naḥ sumanā bhava // Valc_2,20.13 //</l>
+</lg>
+
+<lg>
+<l>āyudhāya namaste 'stu dhṛṣṇave 'nātatāya ca /</l>
+<l>ubhābhyāmuta vāhubhyāṃ namaste 'stu ca dhanvane // Valc_2,20.14 //</l>
+</lg>
+
+<lg>
+<l>mā no mahānta muta mā no arbhakam</l>
+<l>mā na ukṣantamutamā na ukṣitam /</l>
+<l>mā no vadhīḥ pitarammota mātaram</l>
+<l>mā naḥ priyāstanvo rudra rīriṣaḥ // Valc_2,20.15 //</l>
+</lg>
+
+<lg>
+<l>mānastoke ca tanaye gavāśveṣu ca rīriṣaḥ /</l>
+<l>āyūṃṣi bhāmino vīrān māvadhīstvāṃ havāmahe // Valc_2,20.16 //</l>
+</lg>
+
+<lg>
+<l>senānye diśām pataye namo hiraṇyavāhave /</l>
+<l>vṛkṣebhyo harikeśebhyaḥ paśūnāmyataye namaḥ // Valc_2,20.17 //</l>
+</lg>
+
+<lg>
+<l>śaṣyiñjāya tviṣīmate pathīnāmpataye namaḥ /</l>
+<l>sūtriṇe harikeśāya puṣṭānāmpataye namaḥ // Valc_2,20.18 //</l>
+</lg>
+
+<lg>
+<l>vabhluśāya namo vyādhine 'nnānāmpataye namaḥ /</l>
+<l>bhavasya hetyai jagatām pataye ca namo namaḥ // Valc_2,20.19 //</l>
+</lg>
+
+<lg>
+<l>rudrāyātatāyine ca kṣetrāṇāmpataye namaḥ /</l>
+<l>namostvahantre sūtāya vanānāmpataye namaḥ // Valc_2,20.20 //</l>
+</lg>
+
+<lg>
+<l>rohitāya sthapataye vṛkṣāṇampataye namaḥ /</l>
+<l>bhuvantaye namastasmai varivasyakṛtāya ca // Valc_2,20.21 //</l>
+</lg>
+
+<lg>
+<l>mantriṇe vai vāṇijāya kakṣāṇāmpataye namaḥ /</l>
+<l>ghoṣāyoccaiḥ krandayate pattīnāmpataye namaḥ // Valc_2,20.22 //</l>
+</lg>
+
+<lg>
+<l>dhāvate kṛtsnavītāya satvānāmpataye namaḥ /</l>
+<l>namo 'stu sahamānāya namo nivyādhine namaḥ // Valc_2,20.23 //</l>
+</lg>
+
+<lg>
+<l>āvyādhinīnāmpataye kakubhāya niṣaṅgiṇe /</l>
+<l>nicerave namastubhyaṃ stenānāmpataye namaḥ // Valc_2,20.24 //</l>
+</lg>
+
+<lg>
+<l>namo 'raṇyānāmpataye namaḥ paricarāya ca /</l>
+<l>stāyūnāmpataye tubhyaṃ vañcate parivañcate // Valc_2,20.25 //</l>
+</lg>
+
+<lg>
+<l>praṇamāmīṣudhimate namastubhyaṃ niṣaṅgiṇe /</l>
+<l>taskarāṇānte pataye namāmi ca punaḥ punaḥ // Valc_2,20.26 //</l>
+</lg>
+
+<lg>
+<l>sṛkāyibhyo jighāṃsadbhyo muṣṇatāmpataye namaḥ /</l>
+<l>asimadbhyo vikṛntānām pataye te namonamaḥ // Valc_2,20.27 //</l>
+</lg>
+
+<lg>
+<l>naktañcarebhyo rudrebhyo dhāvadbhyaśca namonamaḥ /</l>
+<l>uṣṇīṣiṇe kuluñcānāmpataye te namonamaḥ // Valc_2,20.28 //</l>
+</lg>
+
+<lg>
+<l>[[094]]</l>
+<l>dhanvāyibhya iṣumadbhyo namo giricarāya te /</l>
+<l>ātanvābhyo vaśca pratidadhānebhyo namonamaḥ // Valc_2,20.29 //</l>
+</lg>
+
+<lg>
+<l>āyacchadbhyo namo 'syadbhyo visṛjadbhyo namo namaḥ /</l>
+<l>vidhyadbhyaśca svapadbhyaśca jāgradbhyaśca namonamaḥ // Valc_2,20.30 //</l>
+</lg>
+
+<lg>
+<l>śayānebhya āsīnebhyastiṣṭhadbhyo vo namo namaḥ /</l>
+<l>namaḥ sabhāpatibhyo vaḥ sabhābhyaśca namonamaḥ // Valc_2,20.31 //</l>
+</lg>
+
+<lg>
+<l>aśvebhyo 'śvapatibhyaścāvyādhinībhyo namonamaḥ /</l>
+<l>vividhyantībhyaśca namaḥ ugaṇābhyo namonamaḥ // Valc_2,20.32 //</l>
+</lg>
+
+<lg>
+<l>tṛṃhatībhyo gaṇebhyaśca vrātebhyaśca namonamaḥ /</l>
+<l>namo gaṇapati-vrātapatibhyaśca namonamaḥ // Valc_2,20.33 //</l>
+</lg>
+
+<lg>
+<l>gṛtsapatibhyo gṛtsebhyo virūpebhyo namonamaḥ /</l>
+<l>viśvarūpebhyaśca namaḥ senābhyaśca namonamaḥ // Valc_2,20.34 //</l>
+</lg>
+
+<lg>
+<l>senānībhyo rathibhyo vo arathebhyo namonamaḥ /</l>
+<l>kṣattṛbhyaḥ saṃgrahītṛbhyo mahadbhyaśca namonamaḥ // Valc_2,20.35 //</l>
+</lg>
+
+<lg>
+<l>arbhakebhyastakṣakebhyo rathakṛdbhyo namonamaḥ /</l>
+<l>karmmārebhyaḥ kulālebhyo niṣādebhyo namonamaḥ // Valc_2,20.36 //</l>
+</lg>
+
+<lg>
+<l>puñjiṣṭhebhyaḥ śvanibhyaśca mṛgayubhyaśca vo namaḥ /</l>
+<l>śvabhyaśca śvapatibhyaśca rudrāya ca bhavāya ca // Valc_2,20.37 //</l>
+</lg>
+
+<lg>
+<l>nīlagrīvāya sarvvāya paśūnāmpataye namaḥ /</l>
+<l>namaste śitikaṇṭhāya namastestu kaparddine // Valc_2,20.38 //</l>
+</lg>
+
+<lg>
+<l>sahasrākṣāya ca vyaptakeśāya śatadhanvane /</l>
+<l>giriśāya namastubhyaṃ śipiviṣṭāya te namaḥ // Valc_2,20.39 //</l>
+</lg>
+
+<lg>
+<l>mīḍhuṣṭamāyeṣumate hrasvāya vāmanāya ca /</l>
+<l>vṛhate ca varṣīyase vṛddhāya savṛdhe namaḥ // Valc_2,20.40 //</l>
+</lg>
+
+<lg>
+<l>prathamāya namo 'grāya āśave cājirāya ca /</l>
+<l>namaḥ śīghrāya śībhyāya ūrmmāyāvasvanāya ca // Valc_2,20.41 //</l>
+</lg>
+
+<lg>
+<l>nādeyāya namastubhyaṃ dvīpyāya ca namonamaḥ /</l>
+<l>jyeṣṭhāya ca kaniṣṭhāya pūrvvajāya namonamaḥ // Valc_2,20.42 //</l>
+</lg>
+
+<lg>
+<l>madhyamāyāpagalbhāya vudhnyāyāparajāya ca /</l>
+<l>jaghanyāya ca somyāya pratisaryyāya te namaḥ // Valc_2,20.47 //</l>
+</lg>
+
+<lg>
+<l>namo yāmyāya kṣemyāya ślokyāya ca namonamaḥ /</l>
+<l>urvaryyāyāvasānyāya khalyāya ca namastu te // Valc_2,20.44 //</l>
+</lg>
+
+<lg>
+<l>namo vandyāya kakṣyāya śravāya ca namonamaḥ /</l>
+<l>pratiśravāya ca namaḥ āśuṣeṇāya te namaḥ // Valc_2,20.45 //</l>
+</lg>
+
+<lg>
+<l>āśurathāya ca namaḥ śūrāya cāvabhedine /</l>
+<l>vilmine ca kavacine varmmiṇe ca varūthine // Valc_2,20.46 //</l>
+</lg>
+
+<lg>
+<l>śrutāya śrutasenāya dundubhyāya namonamaḥ /</l>
+<l>ahanyāya dhṛṣṇave ca pramṛṣāya namonamaḥ // Valc_2,20.47 //</l>
+</lg>
+
+<lg>
+<l>tīkṣṇoṣave cāyudhine svāyudhāya sudhanvane /</l>
+<l>namaḥ satyāya pathyāya kāṭyāya ca namonamaḥ // Valc_2,20.48 //</l>
+</lg>
+
+<lg>
+<l>nīpyāya ca namastubhyaṃ kulyāya ca namonamaḥ /</l>
+<l>sarasyāya nādeyāya vaiśantāya namonamaḥ // Valc_2,20.49 //</l>
+</lg>
+
+<lg>
+<l>avaṭyāya ca kupyāya vīghrāya ca namonamaḥ /</l>
+<l>ātapyāya ca medhyāya vidyutyāya namonamaḥ // Valc_2,20.50 //</l>
+</lg>
+
+<lg>
+<l>[[096]]</l>
+<l>avarṣyāya ca varṣāya vātyāya ca namonamaḥ /</l>
+<l>namo brātyāya reṣmāya vāstavyāya namonamaḥ // Valc_2,20.51 //</l>
+</lg>
+
+<lg>
+<l>vāstupāya ca somāya rudrāya ca namonamaḥ /</l>
+<l>aruṇāya ca tāmrāya śaṅgave ca namonamaḥ // Valc_2,20.52 //</l>
+</lg>
+
+<lg>
+<l>nama ugrāya bhīmāyāgrevadhāya namo 'stu te /</l>
+<l>dūrevadhāya hantre ca namo hanīyase namaḥ // Valc_2,20.53 //</l>
+</lg>
+
+<lg>
+<l>sambhavāya śaṅkarāya mayobhavāya te namaḥ /</l>
+<l>mayaskarāya ca śivatarāya ca śivāya ca // Valc_2,20.54 //</l>
+</lg>
+
+<lg>
+<l>avāryyāya ca pāryyāya namaḥ prataraṇāya ca /</l>
+<l>uttaraṇāya tīryyāya kubjāya ca namonamaḥ // Valc_2,20.55 //</l>
+</lg>
+
+<lg>
+<l>namaḥ śaṣyāya pheṇyāya sikatyāya namonamaḥ /</l>
+<l>pravāhyāya kiṃśilāya kṣayaṇāya namonamaḥ // Valc_2,20.56 //</l>
+</lg>
+
+<lg>
+<l>iriṇyāya prapathyāya namastubhyaṃ pulastaye /</l>
+<l>namo vrajyāya goṣṭhāya talpāya ca namonamaḥ // Valc_2,20.57 //</l>
+</lg>
+
+<lg>
+<l>gehyāya ca hṛdayyāya niveṣyāya ca te namaḥ /</l>
+<l>gahvareṣṭhāya śuṣkāya harityāya namonamaḥ // Valc_2,20.58 //</l>
+</lg>
+
+<lg>
+<l>pāṃsavyāya rajasyāya lopyāya ca namo 'stu te /</l>
+<l>ulapyāya ca ūrvvāya sarvvāya ca namonamaḥ // Valc_2,20.59 //</l>
+</lg>
+
+<lg>
+<l>parṇaśadāya parṇāya namaścābhighnate namaḥ /</l>
+<l>nama udguramāṇāya namaḥ ākhidate namaḥ // Valc_2,20.60 //</l>
+</lg>
+
+<lg>
+<l>iṣukṛdbho dhanuṣkṛdbhyo namaḥ prakhidate namaḥ /</l>
+<l>kirikebhyaśca devānāṃ hṛdayebhyo namonamaḥ // Valc_2,20.61 //</l>
+</lg>
+
+<lg>
+<l>vicinvatkebhyo vo vikṣiṇatkebhyaśca namo namaḥ /</l>
+<l>ānirhatebhyo yuṣmabhyaṃ namāmi ca punaḥ punaḥ // Valc_2,20.62 //</l>
+</lg>
+
+<lg>
+<l>bho andhasaspate drāpe daridra nīlalohita /</l>
+<l>prajānāṃ naḥ paśūnāñca mābhermārok kathañcana // Valc_2,20.63 //</l>
+</lg>
+
+<lg>
+<l>imā no rudrāya matīstavase prabharāmahe /</l>
+<l>grāme viśve yathā śaṃsvādvipade ca catuṣpade // Valc_2,20.64 //</l>
+</lg>
+
+<lg>
+<l>yā te rudra śivatanūḥ śivaviśvāhabheṣajī /</l>
+<l>rudrasya bheṣajī rudra tayā no mṛḍ jīvase // Valc_2,20.65 //</l>
+</lg>
+
+<lg>
+<l>rudrasya hetiḥ parito vṛṇakta tveṣasya cāsmāsu na durmmatiśca /</l>
+<l>sthirāṇi rudra avatāraya tvam tokāya pautrāya sukhaṃ yathā syāt // Valc_2,20.66 //</l>
+</lg>
+
+<lg>
+<l>mīḍhuṣṭama śivatama śivo naḥ sumanā bhava /</l>
+<l>nidhāya parame vṛkṣe āyudhaṃ tava śaṅkara // Valc_2,20.67 //</l>
+</lg>
+
+<lg>
+<l>kṛttiṃ vasāna āgaccha pinākaṃ dhārayan śivaḥ /</l>
+<l>namastubhyaṃ bhagavate vikiridravilohita // Valc_2,20.68 //</l>
+</lg>
+
+<lg>
+<l>yā hetayaḥ sahasrante 'smadanyaṃ nivapantu tāḥ /</l>
+<l>yāstava hetayo vāhvoḥ sahasrāṇi sahasraśaḥ // Valc_2,20.69 //</l>
+</lg>
+
+<lg>
+<l>tāsāmīśāno bhagavan parācīnā mukhākṛdhi /</l>
+<l>asaṃkhyātāḥ sahasrāṇi ye rudrā adhi bhūtale // Valc_2,20.70 //</l>
+</lg>
+
+<lg>
+<l>teṣāṃ sahasrayojane dhanvāni hyavatanmasi /</l>
+<l>asminmahatyantarīkṣe 'rṇave santi bhavāstu ye // Valc_2,20.71 //</l>
+</lg>
+
+<lg>
+<l>[[098]]</l>
+<l>teṣāṃ sahasrayojane dhanvāni cāvatanmasi /</l>
+<l>nīlagrīvāḥ śvetakaṇṭhāḥ divaṃ rudrā upaśritāḥ // Valc_2,20.72 //</l>
+</lg>
+
+<lg>
+<l>teṣāṃ sahasrayojane dhanvāni cāvatanmasi /</l>
+<l>nīlagrīvāḥ śvetakaṇṭhāḥ adhaḥ śarvvāḥ kṣamācarāḥ /</l>
+<l>teṣāṃ sahasrayojane dhanvāni cāvatanmasi // Valc_2,20.73 //</l>
+</lg>
+
+<lg>
+<l>śaṣpiñjarā vṛkṣeṣu ye nīlagrīvā vilohitāḥ /</l>
+<l>teṣāṃ sahasrayoje dhanvāni cāvatanmasi // Valc_2,20.74 //</l>
+</lg>
+
+<lg>
+<l>ye ca bhūtānāmadhipā viśikhāsaḥ kapardinaḥ /</l>
+<l>teṣāṃ sahasrayojane dhanvāni cāvatanmasi // Valc_2,20.75 //</l>
+</lg>
+
+<lg>
+<l>ailavṛdā āyuryudho ye pathāmyatirakṣasaḥ /</l>
+<l>teṣāṃ sahasrayojane dhanvāni cāvatanmasi // Valc_2,20.76 //</l>
+</lg>
+
+<lg>
+<l>ye ca caranti tīrthāni sṛkāhastā niṣaṅgiṇaḥ /</l>
+<l>teṣāṃ sahasrayojane dhanvāni cāvatanmasi // Valc_2,20.77 //</l>
+</lg>
+
+<lg>
+<l>ye cānneṣu vividhyanti pātreṣu pivato janān /</l>
+<l>teṣāṃ sahasrayojane dhanvāni cāvatanmasi // Valc_2,20.78 //</l>
+</lg>
+
+<lg>
+<l>etāvantaśca bhūyāṃso diśo rudrā vitasthire /</l>
+<l>teṣāṃ sahasrayojane dhanvāni cāvatanmasi // Valc_2,20.79 //</l>
+</lg>
+
+<lg>
+<l>namo rudrebhyo duḥsthebhyo yeṣāṃ varṣantu sāyakāḥ /</l>
+<l>sarvadik vidikṣu ca teṣāṃ kurvve daśāṅgulīḥ // Valc_2,20.80 //</l>
+</lg>
+
+<lg>
+<l>namo 'stu tebhyo no 'vantu tathāsmān mṛḍayantu te /</l>
+<l>jambhe dadhmastameteṣāṃ yandviṣmo yaśca dveṣṭi naḥ // Valc_2,20.81 //</l>
+</lg>
+
+<lg>
+<l>namastebhyo 'ntarikṣe ye yeṣāṃ vātastu sāyakāḥ /</l>
+<l>sarvvadikṣu vidikṣveva teṣāṃ kurvve daśāṅgulī // Valc_2,20.82 //</l>
+</lg>
+
+<lg>
+<l>namastu tebhyo no 'vantu tathāsmān mṛḍayantu te /</l>
+<l>jambhe dadhmastameteṣāṃ yaṃdviṣmo yaśca dveṣṭi naḥ // Valc_2,20.83 //</l>
+</lg>
+
+<lg>
+<l>namo rudrebhyo ye pṛṣvyāṃ yeṣāmannantu sāyakāḥ /</l>
+<l>sarvvadikṣu vidikṣeva teṣāṃ kurvve daśāṅgulī // Valc_2,20.84 //</l>
+</lg>
+
+<lg>
+<l>namastu tebhyo no 'vantu tathāsmān mṛḍayantu te /</l>
+<l>jambhedadhmastameteṣāṃ yaṃdviṣmo yaśca dveṣṭi naḥ // Valc_2,20.85 //</l>
+</lg>
+
+<lg>
+<l>imāṃ gītāṃ naro raudrīṃ paṭhaṃścāpi śravan smaran /</l>
+<l>prayāti rudrasālokyaṃ na cāsau jāyate punaḥ // Valc_2,20.86 //</l>
+</lg>
+
+<p>iti vallālacarite vyāsapurāṇe rudragītopaniṣatsu viṃśo 'dhyāyaḥ /</p>
+
+</div>
+<div>
+
+<p>[[100]]</p>
+
+<p>ekaviṃśo 'dhyāyaḥ</p>
+
+<lg>
+<l>siṃhagiriruvāca:</l>
+<l>etatte kathitaṃ vyāsa purāṇaṃ manujeśvara /</l>
+<l>rājarṣibhyo yathā prāha purā vyāso mahāmuniḥ // Valc_2,21.1 //</l>
+</lg>
+
+<lg>
+<l>bhuṅkṣa bhogān yathākāmaṃ pitḥn devān ca tarpaya /</l>
+<l>brāhmaṇāṃśca prajānātha dānairvahuvidhaiḥ sadā // Valc_2,21.2 //</l>
+</lg>
+
+<lg>
+<l>kurupitṛpiṇḍayajñaṃ saha rājñyā navīnayā /</l>
+<l>śilādevyā mahīpāla tasyāṃ putro bhaviṣyati // Valc_2,21.3 //</l>
+</lg>
+
+<lg>
+<l>tulāpuruṣadānañca yajñe tatra parantapa /</l>
+<l>vidhatsva niyataḥ kṛcchrañcaritvā dharaṇīpate // Valc_2,21.4 //</l>
+</lg>
+
+<lg>
+<l>svastyastu te gamiṣyāmi jagannāthapurīṃ prati /</l>
+<l>punarevāgamiṣyāmi yadā māṃ saṃsmariṣyasi // Valc_2,21.5 //</l>
+</lg>
+
+<lg>
+<l>śaraṇadatta uvāca:</l>
+<l>ākhyāyaivaṃ pārthivāya muniḥ siṃhagiristataḥ /</l>
+<l>jagāma tairvṛtaḥ śiṣye ryaiḥ sa rājan samāgataḥ // Valc_2,21.6 //</l>
+</lg>
+
+<lg>
+<l>gate siṃhagirau rājā cintayan manasi kṣaṇam /</l>
+<l>piṇḍayajñe ca dāneṣu mano dadhre punaḥ punaḥ // Valc_2,21.7 //</l>
+</lg>
+
+<lg>
+<l>yajñādīnāṃ phalaṃ dhyāyan mantriṇā ca purodhasā /</l>
+<l>valadevena vipraiśca mantrayāmāśca pārthivaḥ // Valc_2,21.8 //</l>
+</lg>
+
+<lg>
+<l>mantrayitvā tato rājā tadānīṃ brāhmaṇaiḥ saha /</l>
+<l>yajñañca dānāni karttuṃ karaṇāṇyupacakrame // Valc_2,21.9 //</l>
+</lg>
+
+<lg>
+<l>ājñāpayat tato bhūpa ādidevaṃ rahasvinam /</l>
+<l>mantriṇaṃ sadguṇairyuktaṃ karttavyāni ca sarvvaśaḥ // Valc_2,21.10 //</l>
+</lg>
+
+<lg>
+<l>rājovāca:</l>
+<l>ānayantu yathā proktaṃ valadevādibhirdvijaiḥ /</l>
+<l>sarvvadravyaṃ yathāyogaṃ yajñe caiva vihāpite // Valc_2,21.11 //</l>
+</lg>
+
+<lg>
+<l>haradāso viṣṇudāso durgāsiṃhaśca satvaram /</l>
+<l>annādīnāñca sambhārān śakaṭaiśca yathākramam // Valc_2,21.12 //</l>
+</lg>
+
+<lg>
+<l>vidhīyatāṃ yajñavāṭaḥ patākādivibhūṣitaḥ /</l>
+<l>kāryyantāmupakāryyāśca rājanyānāṃ mahātmanām // Valc_2,21.13 //</l>
+</lg>
+
+<lg>
+<l>śatañca sūtrakaṇṭānāṃ pāke ca pariveśane /</l>
+<l>vīṇāvādañca gāyantām nṛtyantāṃ naṭanarttakāḥ // Valc_2,21.14 //</l>
+</lg>
+
+<lg>
+<l>prekṣāgṛhāśca kāryyantāṃ sarvvāntaḥpurayoṣitām /</l>
+<l>āmantryantāṃ brahmakṣatraveśyasatśūdrajātayaḥ // Valc_2,21.15 //</l>
+</lg>
+
+<lg>
+<l>annādisusamṛddhāni kāryyantāṃ śaraṇānyuta /</l>
+<l>brāhmaṇā vedavettāro vaseyuryyeṣu pūjitāḥ // Valc_2,21.16 //</l>
+</lg>
+
+<lg>
+<l>[[102]]</l>
+<l>āhūya lakṣmaṇaṃ rājā prāhedaṃ vacanaṃ tataḥ /</l>
+<l>āmantrayasva yajñāya gatvā tvaṃ vikramaṃ puram // Valc_2,21.17 //</l>
+</lg>
+
+<lg>
+<l>śrīsukhasenaṃ pitṛvyaṃ kumārañca dhruvaṃ tathā /</l>
+<l>āgacchantu ca sarvvāṇi tayo rantaḥpurāṇi ca // Valc_2,21.18 //</l>
+</lg>
+
+<lg>
+<l>śaraṇadatta uvāca:</l>
+<l>gatvāsau vikramapuraṃ lakṣmaṇaḥ paravīrahā /</l>
+<l>sukhamāmantrayāñcakre abhivādya kṛtāñjaliḥ // Valc_2,21.19 //</l>
+</lg>
+
+<lg>
+<l>dhruvaśca sukhasenaśca satkṛtyāmantrito mudā /</l>
+<l>yajñāya jagmaturgauḍaṃ gṛhītvāntaḥpurāṇi tau // Valc_2,21.20 //</l>
+</lg>
+
+<lg>
+<l>yajñaṃ vallālasenasya saṃśrutya vaidikā dvijāḥ /</l>
+<l>jagmuḥ prahṛṣṭamanaso yajñaṃ yajñavidastadā // Valc_2,21.21 //</l>
+</lg>
+
+<lg>
+<l>anāhūtā ravāhūtā brāhmaṇāśca dhanāśayā /</l>
+<l>samāpetuḥ sarvvadigbhyaḥ śataśo 'tha sahasraśaḥ // Valc_2,21.22 //</l>
+</lg>
+
+<lg>
+<l>yayuḥ sāmantarājāno gṛhītvopāyanāni ca /</l>
+<l>sānugā vividhairyānairanubhoktuṃ mahotsavam // Valc_2,21.23 //</l>
+</lg>
+
+<lg>
+<l>āvasathān dadusteṣāṃ nṛpateradhikāriṇaḥ /</l>
+<l>suvahūn śobhanākārān bhakṣyabhojyasamanvitān // Valc_2,21.24 //</l>
+</lg>
+
+<lg>
+<l>vallālaṃ te tato dṛṣṭvā tenātha pratipūjitāḥ /</l>
+<l>yathoddiṣṭānāvasathān jagmuste maṇḍaleśvarāḥ // Valc_2,21.25 //</l>
+</lg>
+
+<lg>
+<l>saṃviśramya tataḥ kāmaṃ rājarājanyakādayaḥ /</l>
+<l>dadṛśuste prajānāthaṃ pāṇḍavaṃ taṃ sadogatam // Valc_2,21.26 //</l>
+</lg>
+
+<lg>
+<l>tato viprā yathākāle vedavedāṅgapāragāḥ /</l>
+<l>dīkṣayāmāsurnṛpatiṃ vallālaṃ malhanātmajam // Valc_2,21.27 //</l>
+</lg>
+
+<lg>
+<l>sukhasenaṃ viṣṇumallaṃ pratyudgamya dharāpatiḥ /</l>
+<l>abhivādyābhivādārhau idaṃ vacanamabravīt // Valc_2,21.28 //</l>
+</lg>
+
+<lg>
+<l>dharasenaṃ yajñasenaṃ dharmmasiṃhaṃ dhravaṃ tathā /</l>
+<l>prasīdantu bhavanto māṃ yajñādidānakarmmasu // Valc_2,21.29 //</l>
+</lg>
+
+<lg>
+<l>evamuktvā tatastān sa dhārmmiko dharaṇīpatiḥ /</l>
+<l>yathāyogyādhikāreṣu yuyojādhikṛtān tadā // Valc_2,21.30 //</l>
+</lg>
+
+<lg>
+<l>bhakṣyabhojyādhikāreṣu bhīmasenamayojayat /</l>
+<l>ayujaddānādhikāre dānācāryyaṃ vṛhaspatim // Valc_2,21.31 //</l>
+</lg>
+
+<lg>
+<l>anyeṣvapyadhikāreṣu puruṣān saṃnyayojayat /</l>
+<l>parigrahe brahmakṣatraviśāṃ lakṣmaṇamuktavān // Valc_2,21.32 //</l>
+</lg>
+
+<lg>
+<l>rājño yajñasabhā gauḍe nānāpādapaśobhitā /</l>
+<l>bhrājiṣṇu rviśrāmaveśmavatī ramyā surūpiṇī // Valc_2,21.33 //</l>
+</lg>
+
+<lg>
+<l>nānāratnaiḥ kupyaratnaiḥ kuthaiścitrairvitānakaiḥ /</l>
+<l>paryyaṅkaiśca patākābhirdhvajaiśca paryyaśobhata // Valc_2,21.34 //</l>
+</lg>
+
+<lg>
+<l>sthānānyapakalpitāni sagaṇānāṃ pṛthak pṛthak /</l>
+<l>brāhmaṇānāṃ kṣatriyāṇāṃ vaṇijāñcāntyajanmanām // Valc_2,21.35 //</l>
+</lg>
+
+<lg>
+<l>[[104]]</l>
+<l>brāhmaṇāḥ kṣatriyā vaiśyāstathā satśūdrajātayaḥ /</l>
+<l>nṛpeṇāmantritāḥ sarvve tatra rāse rasaṃ gatāḥ // Valc_2,21.36 //</l>
+</lg>
+
+<lg>
+<l>bhojakā rājaputrāśca rājarājanyakādayaḥ /</l>
+<l>mahāmāṇḍalikāḥ sarvve cāntaraṅgā mahāpadāḥ // Valc_2,21.37 //</l>
+</lg>
+
+<lg>
+<l>yathāyogyeṣvāsaneṣu niṣeduḥ pratipūjitāḥ /</l>
+<l>vallālena sabhāyāṃ te divīva tridivaukasaḥ // Valc_2,21.38 //</l>
+</lg>
+
+<lg>
+<l>bhrājamānaḥ sabhāmadhye sutrāmeva sudharmmaṇi /</l>
+<l>devān pitḥṃśca yajñena pāpaghnenāyajannṛpaḥ // Valc_2,21.39 //</l>
+</lg>
+
+<lg>
+<l>atha sakhaḍgaḥ soṣṇīṣaḥ sarvvābharaṇabhūṣitaḥ /</l>
+<l>puṣṭikāmo 'karodrājā dānaṃ karṇa ivāparaḥ // Valc_2,21.40 //</l>
+</lg>
+
+<lg>
+<l>tatrātmaparimāṇena kāñcanena dharāmarān /</l>
+<l>dānena toṣayāmāsa sahasradakṣiṇāvatā // Valc_2,21.41 //</l>
+</lg>
+
+<lg>
+<l>apavarge 'bhirūpān sa brāhmaṇān nṛpatistataḥ /</l>
+<l>anyāṃśca bhojayāmāsa śataśo 'tha sahasraśaḥ // Valc_2,21.42 //</l>
+</lg>
+
+<lg>
+<l>devā vabhūvuḥ pitaraśca tatra hṛdyaiśca kavyai rnitarāṃ sutṛptāḥ /</l>
+<l>bhūdeva vargāstapanīyadānairbhojyānnapānairvahudakṣiṇābhiḥ // Valc_2,21.43 //</l>
+</lg>
+
+<p>ityānandabhaṭṭaprokte śaraṇadattīye vallālacarive yajñotsavo nāma ekaviṃśo 'dhyāyaḥ /</p>
+
+</div>
+<div>
+
+<p>atha dvāviṃśo 'dhyāyaḥ</p>
+
+<lg>
+<l>jñātayaśca kuṭumbāśca militāśca tato 'nyadā /</l>
+<l>bhojyaśālāṃ praviviśūrāṇakā rājaputrakāḥ // Valc_2,22.1 //</l>
+</lg>
+
+<lg>
+<l>āsaneṣūpaviṣṭeṣu tatasteṣu mahātmasu /</l>
+<l>bhujyamāneṣu sarveṣu vallālena mudā saha // Valc_2,22.2 //</l>
+</lg>
+
+<lg>
+<l>satśūdrāṇāṃ gaṇāstatrāparā bhojanaśālikāḥ /</l>
+<l>sparddhayā viviśurbhoktuṃ viśāṃ na dṛśyate sthalī // Valc_2,22.3 //</l>
+</lg>
+
+<lg>
+<l>tasminnavasare vaiśyā mantrayantaḥ parasparam /</l>
+<l>uttasthu rniryyātukāmāstadānīṃ rājasadmanaḥ // Valc_2,22.4 //</l>
+</lg>
+
+<lg>
+<l>yadā kecidvahiryātāḥ kecidvā gamanodyatāḥ /</l>
+<l>tadā tānanugatyāha bhīmaseno vinītavat // Valc_2,22.5 //</l>
+</lg>
+
+<lg>
+<l>anāhārāḥ kimarthaṃ bho nirgacchatha mahājanāḥ /</l>
+<l>asmāsu vo yadākūtaṃ sarvvathārhatha bhāṣitum // Valc_2,22.6 //</l>
+</lg>
+
+<lg>
+<l>tacchrutvā vaṇijaḥ prāhuḥ śrūyatāṃ bho mahāśaya /</l>
+<l>spṛṣṭāspṛṣṭiḥ samabhavat tadarthaṃ bhoktumakṣamāḥ // Valc_2,22.7 //</l>
+</lg>
+
+<lg>
+<l>anāhatya yatasteṣāṃ bhīmaseno 'tikopanaḥ /</l>
+<l>śūdrāṇāmīdṛśī sparddhā ityuktvā tānavākṣipat // Valc_2,22.8 //</l>
+</lg>
+
+<lg>
+<l>[[106]]</l>
+<l>tato vādātivādāśca babhūvuḥ kupitastadā /</l>
+<l>bhīmaseno 'bravīdvākyaṃ paruṣaṃ rājavallabhaḥ // Valc_2,22.9 //</l>
+</lg>
+
+<lg>
+<l>tataste vaṇijaḥ sarvve niryayūrājasadmanaḥ /</l>
+<l>ākrośanto vikrośanto varṣānte vāridā iva // Valc_2,22.10 //</l>
+</lg>
+
+<p>ityānandabhaṭṭaprokte śaraṇadattīye vallālacarite vaṇijāvamānanaṃ nāma dvāviṃśo 'dhyāyaḥ /</p>
+
+</div>
+<div>
+
+<p>atha trayoviṃśo 'dhyāyaḥ</p>
+
+<lg>
+<l>athānyedyuḥ sabhāsīnamabhyetya pṛthivīśvaraṃ /</l>
+<l>ūce bhūminyastajānurbhīmo nṛpativallabhaḥ // Valc_2,23.1 //</l>
+</lg>
+
+<lg>
+<l>deva sarvve śūdragaṇa bhojanaiḥ paritoṣitāḥ /</l>
+<l>suvarṇā vaṇijo darpādabhuktvaiva vinirgatāḥ // Valc_2,23.2 //</l>
+</lg>
+
+<lg>
+<l>vaṇijo 'tidurātmāno 'vinītāḥ kulagarvvitāḥ /</l>
+<l>brahmakṣatrapaṃktibhojyaṃ te kāṅkṣanti durāśayāḥ // Valc_2,23.3 //</l>
+</lg>
+
+<lg>
+<l>bhojyabhūmiṃ vilokyāpi vihīnaṃ vṛṣalairjanaiḥ /</l>
+<l>śrīmantamavajānanto gatavanto yathāgatam // Valc_2,23.4 //</l>
+</lg>
+
+<lg>
+<l>sarvveṣāṃ vaṇijāṃ netā vallabhaḥ sa durāśayaḥ /</l>
+<l>pālairhṛto mahārāja tvayā saha virudhyate // Valc_2,23.5 //</l>
+</lg>
+
+<lg>
+<l>varṇamāno 'sya bhavati jāmātā magadheśvaraḥ /</l>
+<l>dharāṃ sa manyate tena śarāvamiva garvitaḥ // Valc_2,23.6 //</l>
+</lg>
+
+<lg>
+<l>etadākarṇya nṛpatirbhīmasenavacastadā /</l>
+<l>jvalano havaneneva prajajvāla sa manyunā // Valc_2,23.7 //</l>
+</lg>
+
+<lg>
+<l>dantān kaṭakaṭāyyāsau rājā rājāsanopari /</l>
+<l>cakāśe gagaṇarūḍhastaḍitvāniva ghoṣavān // Valc_2,23.8 //</l>
+</lg>
+
+<lg>
+<l>papāta mastakāttasya kirīṭaṃ hīrakojjvalam /</l>
+<l>kampamānatanoḥ sāyamulkāpiṇḍamivāmbarāt // Valc_2,23.9 //</l>
+</lg>
+
+<lg>
+<l>[[108]]</l>
+<l>tadānīṃ rājavallālaḥ krodhaghūrṇadvilocanaḥ /</l>
+<l>vaṇijāṃ darpacūrṇārthaṃ śapathaṃ kṛtavān bhṛśam // Valc_2,23.10 //</l>
+</lg>
+
+<p>rājovāca:
+yadi dāmbhikhān suvarṇān vaṇijaḥ śūdratve na pātayiṣyāmi, vallabhacandrasaudāgirasya durātmano daṇḍaṃ na vidhāsyāmi, tadā gobrāhmaṇaghātena yāni pātakāni bhavitavyāni tāni me bhaviṣyantīti / dhārttarāṣṭrāṇāṃ vināśāya bhīmasenena yādṛśaḥ śapathaḥ kṛtaḥ eteṣāṃ pātanāya śapatho me tādṛśo jñātavyaḥ, adyāvadhi ete satre śūdravadgrāhyāḥ / vyarthameṣāṃ yajñasūtnadhāraṇamataḥparameteṣāṃ yājanādhyāpane pratigrahañca ye brāhmaṇāḥ kariṣyanti, te jvalanto 'pi patiṣyanti, nānyathā || Valc_2,23.11 ||</p>
+
+<lg>
+<l>acireṇāyamādeśo 'bhavadrāṣṭre pracāritaḥ /</l>
+<l>tacchrutvā mantrayāmāsu rvaṇijo militāstadā // Valc_2,23.12 //</l>
+</lg>
+
+<lg>
+<l>avicārāttato rājñaḥ krodhakampatkalevarāḥ /</l>
+<l>rurudhurnagarādgauḍād dāsānāṃ vyavasāyinaḥ // Valc_2,23.13 //</l>
+</lg>
+
+<lg>
+<l>dviguṇaṃ triguṇaṃ mūlyaṃ dāsānāṃ pradadurviśaḥ /</l>
+<l>dāsābhāvāt mahākaṣṭaṃ babhūva sarvvajātiṣu // Valc_2,23.14 //</l>
+</lg>
+
+<lg>
+<l>evambhūte mahākaṣṭe prajāvargairniveditaḥ /</l>
+<l>karttavyaṃ cintayāmāsa tadānīṃ bhuvaneśvaraḥ // Valc_2,23.15 //</l>
+</lg>
+
+<lg>
+<l>nānyopāyaṃ tadā dṛṣṭvā brāhmaṇānanvaśādidam /</l>
+<l>kāryyā lokahitārthāya kaivarttā dāsyakarmmasu // Valc_2,23.16 //</l>
+</lg>
+
+<lg>
+<l>dāsyakāmāstu kaivarttā śrutvā nṛpatiśāsanam /</l>
+<l>ājagmuste rājakulaṃ śataśo 'tha sahasraśaḥ // Valc_2,23.17 //</l>
+</lg>
+
+<lg>
+<l>tān cābravīttato rājā galavastrakṛtāñjalīn /</l>
+<l>vṛttirvo dīyate sevā gacchadhvaṃ vyavahāratām // Valc_2,23.18 //</l>
+</lg>
+
+<lg>
+<l>mahāmāṇḍalikaṃ kṛtvā tatasteṣāṃ mahattaraṃ /</l>
+<l>maheśaṃ dakṣiṇāghāṭe prerayāmāsa pārthivaḥ // Valc_2,23.19 //</l>
+</lg>
+
+<lg>
+<l>mālākārāḥ kumbhakārāḥ karmmārāśca tato 'nyadā /</l>
+<l>yuktahastā galevastrāḥ purastasthurmahīkṣitaḥ // Valc_2,23.20 //</l>
+</lg>
+
+<lg>
+<l>santuṣṭaḥ sevayā teṣāṃ vyājahāra vaco nṛpaḥ /</l>
+<l>yūyaṃ satśūdravadgrahyā bhaveta vacanānmama // Valc_2,23.21 //</l>
+</lg>
+
+<lg>
+<l>aśucirvacanādyasya śucirbhavati mānavaḥ /</l>
+<l>śuciścaivāśuciḥ samyak kathaṃ rājā na daivatam // Valc_2,23.22 //</l>
+</lg>
+
+<lg>
+<l>kālena gacchatā rājā dāsānāṃ vyavasāyinaḥ /</l>
+<l>brahmatvāccyāvayāmāsa brahmabandhūn sudurmmatīn // Valc_2,23.23 //</l>
+</lg>
+
+<lg>
+<l>svasevāyāṃ niyuktaśca dhāvañcakre mahattaram /</l>
+<l>ṭhakkuraṃ ca cakārāsau prasanno rājanāpitam // Valc_2,23.24 //</l>
+</lg>
+
+<lg>
+<l>[[110]]</l>
+<l>anāhatasvadharmmān sa vilokya vaṇijastataḥ /</l>
+<l>ādiśat tān nṛpaḥ sarvvān yajñasūtrāṇi varjjitum // Valc_2,23.25 //</l>
+</lg>
+
+<lg>
+<l>tyajantu yajñasūtrāṇi vaṇijo rāṣṭravāsinaḥ /</l>
+<l>tyajedyo na sa daṇḍyaḥ syāt sevakānnṛpa ityaśāt // Valc_2,23.26 //</l>
+</lg>
+
+<lg>
+<l>āhatya ḍiṇḍimān bhṛtyā nagare nagare viśām /</l>
+<l>rājājñāṃ ghoṣayāmāsuścatvareṣu ca vīthiṣu // Valc_2,23.27 //</l>
+</lg>
+
+<lg>
+<l>rājājñāmavajānanto dharmmabhītā mahājanāḥ /</l>
+<l>tvaramāṇā diśo jagmuḥ sadārādiparicchadāḥ // Valc_2,23.28 //</l>
+</lg>
+
+<lg>
+<l>ayodhyāṃ prayayuḥ kecit kecinmudgagiriṃ tathā /</l>
+<l>candramāyutaṃ pāṭlīñca tāmraliptīñca kecana // Valc_2,23.29 //</l>
+</lg>
+
+<p>tathodayaṃ puraṃ kecit kecinmānagaḍhaṃ yayuḥ,
+<l>vinītañca puraṃ kecicchriṅkhalāmapi kecana // Valc_2,23.30 //</l></p>
+
+<lg>
+<l>yena yātāstu te sarvve rājadaṇḍabhayārdditāḥ /</l>
+<l>tatyajuryajñasūtrāṇi haimāni tāntavāṇi ca // Valc_2,23.31 //</l>
+</lg>
+
+<lg>
+<l>tatrānehasi vallālo vilokya vyākulaṃ kulam /</l>
+<l>brahmaṇāñca kṣatriyāṇāṃ mantrayāmāsa vaidikaiḥ // Valc_2,23.32 //</l>
+</lg>
+
+<lg>
+<l>vivicya vījamāhātmyaṃ tataḥ saṃskārayaṃśca tān /</l>
+<l>brahmatvaṃ kṣatriyatvañca kalpayāmāsa sa prabhuḥ // Valc_2,23.33 //</l>
+</lg>
+
+<p>ityāndabhaṭṭaprokte śaraṇadattīye vallālacarite jātīnāṃ pātanonnayanādināma trayoviṃśo 'dhyāyaḥ |</p>
+
+</div>
+<div>
+
+<p>[[112]]</p>
+
+<p>atha caturviṃśo 'dhyāyaḥ</p>
+
+<lg>
+<l>purā śrīrājavallālo vasan gauḍe purottame /</l>
+<l>arhatāmanurūpāṇāmupācakre pṛthuprathaḥ // Valc_2,24.1 //</l>
+</lg>
+
+<lg>
+<l>kārayitvā maṭhaṃ saumyaṃ nyastacitraśilātalam /</l>
+<l>pakveṣṭakāmayaṃ divyaṃ śayanāsanasaṃyutam // Valc_2,24.2 //</l>
+</lg>
+
+<lg>
+<l>subhaumaṃ citraśālāḍhyam dṛḍhastambham manoharam /</l>
+<l>nyastagranthādhārabhūtapratyagranāgadantakam // Valc_2,24.3 //</l>
+</lg>
+
+<lg>
+<l>nānāpuṣpaphalālolaramyārāmavibhūṣitam /</l>
+<l>atyacchasvādupānīya-sampannasalilāśayam // Valc_2,24.4 //</l>
+</lg>
+
+<lg>
+<l>dvāravātāyanopetaṃ nānopaskarasaṃyutam /</l>
+<l>sudhopaliptam śvetābham sadannādiprapūritam // Valc_2,24.5 //</l>
+</lg>
+
+<lg>
+<l>vyākhyānadhyānahomādipaṭhanasthalaśobhitam /</l>
+<l>yatīnāṃ pathikānāñca vāsaveśmasamanvitam // Valc_2,24.6 //</l>
+</lg>
+
+<lg>
+<l>guhyāpacarakairyuktaṃ pradyumneśvarasannidhau /</l>
+<l>yoginaḥ śrīsiṃhagirervidhināsau nyavedayat // Valc_2,24.7 //</l>
+</lg>
+
+<lg>
+<l>kaupīnendhanavastrādivastūnāṃ prāptaye tathā /</l>
+<l>pradadau vipulāṃ bhūmiṃ rājā śraddhāsamanvitaḥ // Valc_2,24.8 //</l>
+</lg>
+
+<lg>
+<l>tataḥ sarvvaguṇotkarṣaśuddhabuddhirnṛpottamaḥ /</l>
+<l>tāmrapaṭṭe kārayitvā śāsanaṃ paraśāsanaḥ // Valc_2,24.9 //</l>
+</lg>
+
+<lg>
+<l>suvarṇamuktikasyāntargrāmaṃ kāsārakaṃ dadau /</l>
+<l>varṣavṛddhau mahārājo gautamānantaśarmmaṇe // Valc_2,24.10 //</l>
+</lg>
+
+<lg>
+<l>upakṛptabhakṣyabhojyasarvvadhānyasamanvitam /</l>
+<l>dāsadāsīsamāyuktaṃ sarvvopaskarasaṃyutam // Valc_2,24.11 //</l>
+</lg>
+
+<lg>
+<l>sudhāvaliptaṃ sudṛḍhaṃ kapāṭārgalayantritam /</l>
+<l>śubhapraveśaniṣkāśaṃ jālādipariśobhitam // Valc_2,24.12 //</l>
+</lg>
+
+<lg>
+<l>evaṃvidhaṃ kārayitvā bahuśo bhavanaṃ nṛpaḥ /</l>
+<l>dākṣiṇātyān tatasteṣu vāsayāmāsa bhūsurān // Valc_2,24.13 //</l>
+</lg>
+
+<lg>
+<l>svarṇadānaṃ raupyadānaṃ godānañca dharāpatiḥ /</l>
+<l>dānañca vividhañcakre nityanaimittikādikam // Valc_2,24.14 //</l>
+</lg>
+
+<lg>
+<l>nānopabhogānupabhuñjataḥ satpātreṣu dānaṃ dadataśca nityam /</l>
+<l>jagāma kālaḥ sukhataḥ samāno bhūto na kaścidbhavitāsti cāsya // Valc_2,24.15 //</l>
+</lg>
+
+<lg>
+<l>[[114]]</l>
+<l>na yena bhuktāḥ sukhadāḥ subhogāḥ dānaṃ na dattaṃ dhaninārhatāñca /</l>
+<l>avāpyate tena kaṭhoraghora duḥsahyaduḥkhamadhikaṃ paratra // Valc_2,24.16 //</l>
+</lg>
+
+<p>ityānandabhaṭṭaprokte vallālacarite dānavarmmānuṣṭhānaṃ nāma caturviṃśo 'dhyāyaḥ |</p>
+
+</div>
+<div>
+
+<p>atha pañcaviṃśo 'dhyāyaḥ</p>
+
+<lg>
+<l>oṃnamaḥ śivāya /</l>
+<l>ādityavarṇastamasaḥ parastāt hiraṇyagarbho jagadantarātmā /</l>
+<l>tvatto 'sti jātaḥ puruṣaḥ purāṇaḥ tvatto 'pi vedā jaya deva deva // Valc_2,25.1 //</l>
+</lg>
+
+<lg>
+<l>tvattaḥ prasūtā jagataḥ prasūtiḥ sarvvānubhūstvaṃ paramāṇubhūtaḥ /</l>
+<l>anoraṇīyān mahato mahīyān ānandarupa jaya deva śambho // Valc_2,25.2 //</l>
+</lg>
+
+<lg>
+<l>tvameva viṣṇuścaturānanastvam</l>
+<l>tvameva rudro bhagavān maheśaḥ /</l>
+<l>khaṃ brahma śūnyaṃ saguṇoguṇaśca</l>
+<l>cinmātrarupo jaya deva sarvva // Valc_2,25.3 //</l>
+</lg>
+
+<lg>
+<l>ekorudrastvaṃ karoṣīha viśvam</l>
+<l>tvaṃ pālayasyakhilaṃ viśvarūpam /</l>
+<l>tvāmevānte nilayaṃ vindatīdam</l>
+<l>vandāmahe jayadevādideva // Valc_2,25.4 //</l>
+</lg>
+
+<p>[[116]]
+<lg>
+<l>pramuñcamāna amṛtasya dhārāṃ</l>
+<l>samehi tāpaṃ suramānuṣāṇām /</l>
+<l>anantarupaṃ khalu bodhayanti</l>
+<l>tvāmeva vedā jaya viśvanātha // Valc_2,25.5 //</l>
+</lg></p>
+
+<lg>
+<l>adhimuktivimuktipradaṃ bhavam</l>
+<l>mahāmuniṃ brahmaparaṃ pavitram /</l>
+<l>śirasā vandāmahe jagadgurum</l>
+<l>svayambhavaṃ deva jaya lokanātha // Valc_2,25.6 //</l>
+</lg>
+
+<lg>
+<l>trātāsi dīptosi parāyaṇesi</l>
+<l>nāthosi loke praṇato 'smi tubhyam /</l>
+<l>vaidyottamastvaṃ khalu śalyaharttā</l>
+<l>cikitsakastvaṃ jaya devadeva // Valc_2,25.7 //</l>
+</lg>
+
+<lg>
+<l>amalaṃ vimalaṃ rajatādrinibham</l>
+<l>bhavapārakāraṃ jagadarthakaram /</l>
+<l>pañcadhā vimokṣavara cakṣuḥpradam</l>
+<l>vandāmahe trinayanaṃ jaya deva // Valc_2,25.8 //</l>
+</lg>
+
+<lg>
+<l>sahasrapādākṣiśirobhiyuktam</l>
+<l>sahasravāhuṃ parataḥ parastāt /</l>
+<l>tvāṃ brahmapāraṃ praṇamāmi śambhum</l>
+<l>pinākinaṃ tvāṃ jaya devadeva // Valc_2,25.9 //</l>
+</lg>
+
+<lg>
+<l>umādhavogrāya bhavodbhavāya</l>
+<l>namāmi sarvvāya harāya tubhyam /</l>
+<l>kālāya bhagāya prabhākarāya</l>
+<l>sarvvātmane deva namaḥ śivāya // Valc_2,25.10 //</l>
+</lg>
+
+<p>iti śrīmadānandabhaṭṭaprokte vallālacarite kālidāsanandilikhita-śrījayamaṅgalagāthā-kīrttanaṃ nāma pañcaviṃśo 'dhyāyaḥ |</p>
+
+</div>
+<div>
+
+<p>[[118]]</p>
+
+<p>atha ṣaḍviṃśo 'dhyāyaḥ</p>
+
+<lg>
+<l>atha nirvvāsitaḥ pūrvvaṃ gaṇairdharmmagiriḥ saha |</l>
+<l>vṛttihīno yayau dūraṃ deśāddeśāntaraṃ bhraman // Valc_2,26.1 //</l>
+</lg>
+
+<lg>
+<l>rājājñayā kṛtaṃ dhyāyannavamānaṃ ca pīḍanam /</l>
+<l>svasya bhraṣṭādhikārañca na lebhe nirvṛtiṃ giriḥ // Valc_2,26.2 //</l>
+</lg>
+
+<lg>
+<l>vairasyāntaṃ cintayāna āvarttya vatsarān tataḥ /</l>
+<l>vāyādumbaṃ dadarśāsau mleccheśaṃ svagaṇairvṛtam // Valc_2,26.3 //</l>
+</lg>
+
+<lg>
+<l>vallāladhanaratnānāṃ utthāpya paṇanāt sa tam /</l>
+<l>mleccheśaṃ niśi tat sainyairnyaruṇadvikramaṃ puram // Valc_2,26.4 //</l>
+</lg>
+
+<lg>
+<l>dhūmravarṇo dhanurddhārī dhanuṣmāniva vāridaḥ /</l>
+<l>vāyādumbaḥ sainyamadhye jagarja ca lalampha ca // Valc_2,26.5 //</l>
+</lg>
+
+<lg>
+<l>kuddālaparaśugrāhaṃ kurdanormmimahāsvanam /</l>
+<l>aṭṭahāsavārihāsaṃ tatsainyaṃ sāgarāyate // Valc_2,26.6 //</l>
+</lg>
+
+<lg>
+<l>padghātaiḥ kampayan pṛthvīṃ huṅkāraiśca diśo daśa /</l>
+<l>nādayan pañcasāhasraṃ mlecchasainyaṃ nanartta ha // Valc_2,26.7 //</l>
+</lg>
+
+<lg>
+<l>atha bhogasukhācchanno rājāntaḥpuramadhyagaḥ /</l>
+<l>kāle 'viditavṛttāntaścirāya pratyabudhyata // Valc_2,26.8 //</l>
+</lg>
+
+<lg>
+<l>prabhāte pārthivaḥ śrutvā mahāhalahalāravam /</l>
+<l>kāntābhujalatāṃ hitvā jagrāhāsilatāṃ tadā // Valc_2,26.9 //</l>
+</lg>
+
+<lg>
+<l>aśodhitāmbuparikhāñcāṭṭayantravivarjjitām /</l>
+<l>cintayan puramātmānamamaṃsta nihataṃ nṛpaḥ // Valc_2,26.10 //</l>
+</lg>
+
+<lg>
+<l>tato vilokya rājānaṃ yuddhayātrāsamudyatam /</l>
+<l>sarvvā rājasīmantinyo vāṣpākulavilocanāḥ // Valc_2,26.11 //</l>
+</lg>
+
+<lg>
+<l>śilādevī ca padmākṣī subhagā hemamālikā /</l>
+<l>sonadevā ca caṇḍelī tamupetya vabhāṣire /</l>
+<l>mābhūdabhadraṃ yuddhe 'smin bhadrābhadraṃ bhavedyadi // Valc_2,26.12 //</l>
+</lg>
+
+<lg>
+<l>anāthāḥ kiṃ kariṣyāmo vada nātha tadāvalāḥ /</l>
+<l>tacchratvā vacanaṃ tāsāṃ rājā vāṣpāvilekṣaṇaḥ // Valc_2,26.13 //</l>
+</lg>
+
+<lg>
+<l>pariṣyajya kramāttāśca cumbitvā vadaneṣu ca /</l>
+<l>pratyūce mukhapadmāni tāsāṃ paśyan mahīpatiḥ // Valc_2,26.14 //</l>
+</lg>
+
+<lg>
+<l>pārāvatadvayaṃ yāti preyasyaḥ samarāṅgaṇam /</l>
+<l>yadi tau pratyāgacchetām khagau prāvṛttikāviva // Valc_2,26.15 //</l>
+</lg>
+
+<lg>
+<l>tadānīṃ jñāsyathāsmākaṃ raṇakṣetre parājayam /</l>
+<l>rakṣitaṃ vo satīdharmmaṃ yavanebhyo varānanāḥ /</l>
+<l>vahniṃ prajvālayiṣyanti bhṛtyā dattājñayā mayā // Valc_2,26.16 //</l>
+</lg>
+
+<lg>
+<l>ityuktā punarāliṅgya cumbitvā ca punaḥ punaḥ /</l>
+<l>sannaddho yuddhayātrāṃ sa cakāra svavalairvṛtaḥ // Valc_2,26.17 //</l>
+</lg>
+
+<lg>
+<l>tasyābhiṣeṇanaṃ reje nānāpraharaṇāyutam /</l>
+<l>hastyārohairaśvavārai rathibhiśca padātibhiḥ // Valc_2,26.18 //</l>
+</lg>
+
+<lg>
+<l>[[120]]</l>
+<l>tatobhūttumulaṃ yuddhaṃ mlecchakṣayakaraṃ mahat /</l>
+<l>hatāhatayoddhṛvargaraktaplāvitabhūtalam // Valc_2,26.19 //</l>
+</lg>
+
+<lg>
+<l>jajaṃ naṣṭabalaṃ tatra vāyādumbam mahāvalam /</l>
+<l>rurodha kṣmāpatiryuddhe śrīrāma iva rāvaṇam // Valc_2,26.20 //</l>
+</lg>
+
+<lg>
+<l>tatastarasā vikramya śīghrahasto mahīpatiḥ /</l>
+<l>mastakaṃ tasya ciccheda namūceriva vāsavaḥ // Valc_2,26.21 //</l>
+</lg>
+
+<lg>
+<l>jayaśrīrvarayāmāsa dāmahastā nṛpaṃ yadā /</l>
+<l>dāmahastāstadā dumbamavadhnan yamakiṅkarāḥ // Valc_2,26.22 //</l>
+</lg>
+
+<lg>
+<l>kāle tasmin bhāgyadoṣāt piñjarānniḥsṛtau khagau /</l>
+<l>unmaktau kenacidvā cet rāmapālapuraṃ gatau // Valc_2,26.23 //</l>
+</lg>
+
+<lg>
+<l>tatra pārāvatau dṛṣṭvā yamadūtāvivāgatau /</l>
+<l>sarvvā jvaladvahnikuṇḍe peturnṛpatiyoṣitaḥ // Valc_2,26.24 //</l>
+</lg>
+
+<p>iti vallālacarite śrīmadānandabhaṭṭakṛtaṃ khilavallālacaritaṃ nāma ṣaḍvaviṃśo 'dhyāyaḥ |</p>
+
+</div>
+<div>
+
+<p>atha saptaviṃśo 'dhyāyaḥ</p>
+
+<lg>
+<l>piñjaraṃ śūnyamālakṣya raṇakṣetre mahīpatiḥ /</l>
+<l>atyantamaśubhāśaṅkī tvarayā sa parāvṛtat // Valc_2,27.1 //</l>
+</lg>
+
+<lg>
+<l>vahnidhvajaṃ paśyamāno dūrataḥ paramākulaḥ /</l>
+<l>tataḥ svaṃ prāviśadveśma sarvvanāśaṃ vilokitum // Valc_2,27.2 //</l>
+</lg>
+
+<lg>
+<l>dṛṣṭvārddhadagdhā jvalane svapatnī rummattarūpo nitarāṃ babhūva /</l>
+<l>nivāryyamānopi janaiḥ prayatnāt papāta rājā jvaladagnikuṇḍe // Valc_2,27.3 //</l>
+</lg>
+
+<lg>
+<l>sahasre 'ṣṭaviṃśayute śakābde pṛthivīpatiḥ /</l>
+<l>strībhiḥ sārddhaṃ mahābhāga utpapāta divaṃ prati // Valc_2,27.4 //</l>
+</lg>
+
+<lg>
+<l>śrūyate 'tra pravacanaṃ pāramyaryyakramāgatam /</l>
+<l>vallālo 'nuyayau yuddhe pitaraṃ śauryyaśālinam // Valc_2,27.5 //</l>
+</lg>
+
+<lg>
+<l>mithilāyāṃ sthitastatra kaścidyogī dhṛtavrataḥ /</l>
+<l>vallālo yuddhayātrāyāṃ tarasā tamalaṅghayat // Valc_2,27.6 //</l>
+</lg>
+
+<lg>
+<l>[[122]]</l>
+<l>aśvapādenābhihato vallālamaśapanmuniḥ /</l>
+<l>sakalatro vahnikuṇḍe patitvā tvaṃ mariṣyasi // Valc_2,27.7 //</l>
+</lg>
+
+<lg>
+<l>tat smṛtvā brahmaśāpaṃ sa vijayaṃ labdhavānapi /</l>
+<l>cintayāmāsa manasi mṛtyukāla upasthitaḥ // Valc_2,27.8 //</l>
+</lg>
+
+<lg>
+<l>tenaiva vivaśo rājā dhruvaṃ jvalanamāviśat /</l>
+<l>brahmaśāpādṛte naiva vipattirbhavedīdṛśī // Valc_2,27.9 //</l>
+</lg>
+
+<lg>
+<l>sa brahmadaṇḍena purā hato 'bhūt dāraiśca sārddhamavanīśvaraḥ saḥ /</l>
+<l>kapotapratyāgamanañca mṛtyau rājñaśca śoko na hi mukhyahetuḥ // Valc_2,27.10 //</l>
+</lg>
+
+</div>
+<div>
+
+<lg>
+<l>rājan jānāsi bhadraṃ te iyaṃ śivajalā śubhā /</l>
+<l>kīrttiśeṣaṃ gatavataḥ kīrttiṃ vadati dīrghikā // Valc_2,27*.1 //</l>
+</lg>
+
+<p>[[verse number jumps from "1" to "4"]]</p>
+
+<lg>
+<l>rājño vinaṣṭīkṛtakīrttijāte gavāśanaiḥ kālavaśācca pāpaḥ /</l>
+<l>kīrttyānayāsāviva vidyamānaḥ hāhā gataḥ kvāvanināthavaṃśaḥ // Valc_2,27*.4 //</l>
+</lg>
+
+<lg>
+<l>ānandabhaṭṭakavinā kalitaṃ prayatnairvyāsāsyapaṅkajaviniḥsṛtavāgupetam /</l>
+<l>vallālarājacaritam navacandrarūpaṃ sallokahṛtkumudinīṃ vikasīkarotu // Valc_2,27*.5 //</l>
+</lg>
+
+<lg>
+<l>yadvyāhṛtaṃ bhaṭṭapādairuktaṃ yaccānyasūribhiḥ /</l>
+<l>tattadrājacaritre 'smin vāllāle prakaṭīkṛtam // Valc_2,27*.6 //</l>
+</lg>
+
+<lg>
+<l>nirbrāhmaṇeyaṃ pṛyivī subhaumena kṛteti yat /</l>
+<l>uktaṃ tattu rājabhayāditi manyāmahe vayam // Valc_2,27*.7 //</l>
+</lg>
+
+<lg>
+<l>tattu krīḍārthamathavā bhaṭṭapādairudāhṛtam /</l>
+<l>madhye vyāsapurāṇasya bhavedvā tannirarthakam // Valc_2,27*.8 //</l>
+</lg>
+
+<lg>
+<l>niḥkṣatriyeyaṃ vasudhā bhārgaveṇa kṛtā purā /</l>
+<l>evaṃ hi bhārate prāha svayaṃ vyāso mahāmuniḥ // Valc_2,27*.9 //</l>
+</lg>
+
+<lg>
+<l>kṣatrāyāṃ brāhmaṇācchetrī rājaputro ya ucyate /</l>
+<l>suvarṇā nopanayanādvaṇijo vrātyatāṃ gatāḥ // Valc_2,27*.10 //</l>
+</lg>
+
+<lg>
+<l>gopo mālī ca tāmbalī kāṃsāratantriśaṃkhikāḥ /</l>
+<l>kulālaḥ karmmakāraśca nāpito nava śāyakāḥ // Valc_2,27*.11 //</l>
+</lg>
+
+<lg>
+<l>tailiko gāndhiko vaidyaḥ satśūdrāśca prakīrttitāḥ /</l>
+<l>satśūdrānāntu sarvveṣāṃ kāyastha uttamaḥ smṛtaḥ // Valc_2,27*.12 //</l>
+</lg>
+
+<p>viṣṇupādodbhavā gaṅgā punāti bhuvanatrayaṃ
+<l>śataṃ jīva mahārāja tasyāḥ sahajavaṃśaja // Valc_2,27*.13 //</l></p>
+
+<lg>
+<l>yadyat priyatamaṃ loke yasmiṃśca ramate manaḥ /</l>
+<l>tattadacyutamuddiśya viprebhyaḥ pratipādaya // Valc_2,27*.14 //</l>
+</lg>
+
+<lg>
+<l>navadvīpapateḥ śrīmadbuddhimantasya bhūbhujaḥ /</l>
+<l>sabhāsīnasya sadbuddheragre paṭhanapūrvvakam // Valc_2,27*.15 //</l>
+</lg>
+
+<lg>
+<l>śāke caturddaśaśate manuṣyaradanāyute /</l>
+<l>pauṣaśukladvitīyāyāṃ tajjanmatithivāsare // Valc_2,27*.16 //</l>
+</lg>
+
+<lg>
+<l>[[124]]</l>
+<l>ānandabhaṭṭaviduṣā vidagdhakulavedhasā /</l>
+<l>vallālacaritaṃ tasmai mayā dattaṃ sahāśiṣā // Valc_2,27*.17 //</l>
+</lg>
+
+<lg>
+<l>yasyedaṃ vidyate gehe vallālacaritaṃ śubham /</l>
+<l>iha puṇyaṃ sa labhate paratra ca parāṃ gatim // Valc_2,27*.18 //</l>
+</lg>
+
+<p>iti dākṣiṇātyadrāviḍaśrīmadanantabhaṭṭavaṃśodbhavaśrīmadānandabhaṭṭamahāmahopādhyāyakṛtakhilavallālacaritaṃ samāptamiti /</p>
+
+</div>
+<div>
+
+<p>[colophon in MS ka:]
+gurave namaḥ |
+śubhamastu śakābdāḥ 1629 |
+kāmadevacakravarttiṇaḥ ātmaja
+śrīlakṣmīnārāyaṇadevaśarmaṇaḥ svākṣaram |
+śrīrāmajīvanarāyasya svīyapustakamiti |
+sāhāraṃdevapañcatvābde samāptaścāyaṃ granthaḥ |
+śrīkṛṣṇāya namaḥ śrīrastu mayi lekhake |
+gaurīśo jayati |</p>
+
+<lg>
+<l>[colophon in MS kha:]</l>
+<l>nāmānyathā yadi punaśca kaścin mithyānuvādaṃ harate ca pustim /</l>
+<l>netrasya hāniṃ tanayasya śokaṃ sarvvāṅgakuṣṭhaṃ labhate ca nūnam //</l>
+</lg>
+
+<lg>
+<l>rudraśeṣasamāyāṃ ca śubhamastvekamārganāḥ /</l>
+<l>grahastu vasunā sārddhaṃ prauṣṭhapadyāṃ divā site //</l>
+</lg>
+
+<lg>
+<l>lekhako viṣṇuputraśca tataḥ śāṇḍilyavandyakaḥ /</l>
+<l>nāmnā prakīrttayellokaḥ śrīmān muralīdharaḥ //</l>
+</lg>
+
+<lg>
+<l>bhādre māsi site pakṣe ekādaśyāṃ budhavāsare /</l>
+<l>likhitantu idaṃ yatnāt vallālacaritaṃ śubham //</l>
+</lg>
+
+<p>śrīśrīyugādyāyai namo 'stu satataṃ mama |
+śrīmuralīdharadevaśarmmaṇaḥ pustakamidam |</p>
+
+  </div>
+</body>
+</text>
+</TEI>

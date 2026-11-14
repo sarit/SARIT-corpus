@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_vAmadeva-janmamaraNavicAra">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Janmamaraṇavicāra</title>
+	<author>Vāmadeva</author>
+	<respStmt>
+	 <resp when-custom="2001|02">data entry</resp>
+	 <name>Oliver Hellwig</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Oliver Hellwig</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/3_phil/saiva/vamjanmu.htm">vamjanmu.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Vamadeva: Janmamaranavicara
+<lb/>
+<lb/>Based on the edition by M.R. Shastri,
+<lb/>Bombay: Nirnaya Sagar Press, 1918
+<lb/>
+<lb/>Input by Oliver Hellwig (hellwig7@gmx.de), Berlin, 2001/02
+<lb/>
+<lb/>Der digitalisierte Text kann in jedem Rahmen ohne
+<lb/>Einschraenkungen genutzt werden. Allerdings sollte ein
+<lb/>Hinweis auf den Einleser enthalten sein.
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>M.R. Shastri, Bombay: Nirnaya Sagar Press, 1918</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Janmamaraṇavicāra = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Śāstra -- Philosophy -- Śaiva</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+
+<l>sāndrodrekakṣubhitam abhitaḥ svāntam antar niyamya prāyo dhatte navanavarasollekham ānandakandam // 1</l>
+<l>bhūyo bhūyaḥ pralayavibhavoddāmaduḥkhāntarāyo yo 'sāv antar jayati hṛdaye ko 'pi saṃvidvikāsaḥ // 2</l>
+<l>iha khalu nikhilajagadātmā sarvottīrṇaś ca sarvamayaś ca vikalpāsaṃkucitasaṃvitprakāśarūpaḥ anavacchinnacidānandaviśrāntaḥ prasaradaviralavicitrapañcavāhavāhavāhinīmahodadhiḥ niratiśayasvātantryasīmani pragalbhamānaḥ sarvaśaktikhacita eka eva asti saṃvid ātmā maheśvaraḥ // 3</l>
+<l>tasya prakāśarūpatā cicchaktiḥ svātantryam ānandaśaktiḥ taccamatkāraḥ icchāśaktiḥ āmarśātmakatā jñānaśaktiḥ sarvākārayogitvaṃ kriyāśaktiḥ iti // 4</l>
+<l>itthaṃ sarvaśaktiyoge 'pi ābhir mukhyābhiḥ śaktibhir upacaryate sa ca bhagavān svātantryaśaktimahimnā svātmānaṃ saṃkucitam iva ābhāsayan aṇuḥ iti ucyate // 5</l>
+<l>yathoktam vyāpako hi śivaḥ svecchākḷptasaṃkocamudraṇāt // 6</l>
+<l>vicitraphalakarmaughavaśāt tattaccharīrabhāk // 7</l>
+<l>iti nijasvarūpagopanakelilolam evaṃ māheśaśaktiparispandaṃ pravaraguravaḥ pratipedire // 8</l>
+<l>tathā ca āhuḥ atidurghaṭakāritvāt svācchandyanirmalād asau // 9</l>
+<l>svātmapracchādanakrīḍāpaṇḍitaḥ parameśvaraḥ // 10</l>
+<l>anāvṛte svarūpe 'pi yadātmācchādanaṃ vibhoḥ // 11</l>
+<l>saivāvidyā yato bheda etāvān viśvavṛttikaḥ iti // 12</l>
+<l>na ca etāvatā bhagavato deśakālākāropādhivirahitaniratiśayānandaparisyandātmakasya kācid api kṣatiḥ pratyuta paramamahimnaḥ paripuṣṭir ity uktam // 13</l>
+<l>asthāsyad ekarūpeṇa vapuṣā cen maheśvaraḥ // 14</l>
+<l>maheśvaratvaṃ saṃvittvaṃ tad atyakṣyad ghaṭādivat // 15</l>
+<l>paricchinnaprakāśatvaṃ jaḍasya kila lakṣaṇam // 16</l>
+<l>jaḍād vilakṣaṇo bodho yato na parimīyate // 17</l>
+<l>tena bodhamahāsindhor ullāsinyaḥ svaśaktayaḥ // 18</l>
+<l>āśrayanty ūrmaya iva svātmasaṃghaṭṭacitratām // 19</l>
+<l>ityādi // 20</l>
+<l>tad evam asau bhagavān svamāyāśaktyākhyena avyabhicaritasvātantryaśaktimahimnā svātmanaiva ātmānaṃ saṃkucitam iva avabhāsayan vijñānākalaḥ pralayākalaḥ sakalaś ca sampadyate // 21</l>
+<l>tatra āṇavena ekenaiva malena saṃyukto vijñānākala ucyate dvābhyām āṇavamāyī yābhyām apavedyaḥ pralayākalaḥ tribhir āṇavamāyīyakārmaiḥ saṃvedyaḥ tair eva kalādidharaṇyantatattvamayaḥ sakalaḥ tadartham eva ayam arthasargaḥ // 22</l>
+<l>tatra sṛṣṭyunmukho bhagavān śuddhādhvani vartamānaḥ svaśaktibhiḥ māyāṃ vikṣobhya kalātattvaṃ kiṃcitkartṛtvalakṣaṇaṃ pudgalasya sṛjati tato 'pi kiṃcid avabodhākhyaṃ vidyātattvaṃ kiṃcid abhilāṣarūpaṃ ca rāgatattvaṃ tad etat sarāgaṃ kartṛtattvaṃ bhūtabhaviṣyadvartamānatayā tridhā avacchidyate tat kālatattvaṃ tulyatve 'pi rāge yena kartṛtvasya avacchedaḥ kriyate tat niyatitattvaṃ tad etat kañcukaṣaṭkam antarmalāvṛtasya pudgalasya bahir ācchādakam uktaṃ ca cillācakreśvaramate māyā kalā śuddhavidyā rāgakālau niyantraṇā // 23</l>
+<l>ṣaḍ etāny āvṛtivaśāt kañcukāni mitātmanaḥ // 24</l>
+<l>evaṃ ca pudgalasyāntarmalaḥ kañcukavat sthitaḥ // 25</l>
+<l>tuṣavat kañcukāni syus tasmāj jñānakriyojjhitaḥ // 26</l>
+<l>iti // 27</l>
+<l>sā ca kalā puruṣasya parimitaṃ kartṛtvaṃ prakāśya sukhaduḥkhamoharūpaṃ bhogyam avyaktatvaṃ sṛjati tato 'pi aṣṭaguṇaṃ buddhitattvam utpannaṃ tato 'pi sāttvikarājasatāmasabhedabhinnaṃ triskandham ahaṃkāratattvam tatra pūrvasmāt ahaṃkārāt mano jātam aparasmāt indriyāṇi tṛtīyāt tanmātrāṇi ebhyo bhūtāni ity evam ayam ekasyaiva ādidevasya svātantryamahimnā saṃsāre saṃsarataḥ parimitapramātṛtām avalambamānasya tattvaprasaraḥ uktaṃ ca bhūtāni tanmātragaṇendriyāṇi mūlaṃ pumān kañcukayuk suśuddham // 28</l>
+<l>vidyādiśaktyantam iyān svasaṃvitsindhos taraṃgaprasaraprapañcaḥ // 29</l>
+<l>tathā saala utta puriṣuṇṇa u saallutta uttiṇṇa // 30</l>
+<l>pari āṇaha attāṇa u pari masiveṇa samāṇa u // 31</l>
+<l>iti // 32</l>
+<l>eteṣāṃ ca uktarūpāṇāṃ tattvānāṃ pramātṛbhede vaicitryāt prameyavaicitryaṃ bhavati iti śrīpūrvaśāstre kathitam tathā hi śaktimacchaktibhedena dharātattvaṃ vibhidyate // 33</l>
+<l>svarūpasahitaṃ tac ca vijñeyaṃ daśapañcadhā // 34</l>
+<l>anenaiva vidhānena puṃstattvāt tu kalāntikam // 35</l>
+<l>trayodaśavidhaṃ jñeyaṃ rudravat pralayākalaḥ // 36</l>
+<l>tadvan māyāpi vijñeyā navadhā jñānakevalaḥ // 37</l>
+<l>mantrāḥ saptavidhās tadvat pañcadhā mantranāyakāḥ // 38</l>
+<l>tridhā mantreśvareśānāḥ śivaḥ sākṣān na bhidyate // 39</l>
+<l>yaḥ punaḥ sarvatattvāni vetty etāni yathārthataḥ // 40</l>
+<l>sa gurur matsamaḥ prokto mantravīryaprakāśakaḥ // 41</l>
+<l>dṛṣṭāḥ sambhāṣitās tena spṛṣṭāś ca prīticetasā // 42</l>
+<l>narāḥ pāpaiḥ pramucyante saptajanmakṛtair api // 43</l>
+<l>iti // 44</l>
+<l>tad evam anekāvasāyo 'yaṃ tattvakramaḥ // 45</l>
+<l>eteṣāṃ ca tattvānāṃ vargaśo yad anugāmi rūpam ekarūpam ekarūpakalanāsahiṣṇutvāt sā kalā kathyate // 46</l>
+<l>tathā hi nivartante yatas tattvavargāḥ sā nivṛttir nāma kalā // 47</l>
+<l>sā ca pṛthivyām eva vyavasthitā // 48</l>
+<l>kāraṇatve pūraṇāpyāyakāritvāt pratiṣṭhā nāma kalā ucyate // 49</l>
+<l>sā ca jalādimūlāntaṃ vyāpya vyavasthitā // 50</l>
+<l>vedyavilaye saṃvidādhikyāt vidyā nāma kalā // 51</l>
+<l>sā ca pumādimāyāntam adhvānam adhyāste // 52</l>
+<l>kañcukataraṃgopaśamāt śāntā nāma kalā ucyate // 53</l>
+<l>sā ca śuddhavidyādiśaktyante sthitā iti // 54</l>
+<l>etad eva aṇḍacatuṣṭayaṃ pārthivaprākṛtamāyīyaśāktalakṣaṇam // 55</l>
+<l>sarvātītatvāt śivatattve śāntyatītā // 56</l>
+<l>iti // 57</l>
+<l>paraṃ tu tattvaṃ svatantratvāt kalātītam āsām eva kalānāṃ tattvavad antarbhūtāni bhuvanāny api boddhavyāni evaṃ sthūlasūkṣmaparatvena bhuvanatattvakalārūpaṃ trividharūpaṃ prameyam uktam pramāṇam api tathaiva padamantravarṇatayā trividham eva iti ekasyaiva pūrṇapramātuḥ svātantryāt saṃsarataḥ ṣaḍvidhe adhvani viśrāntir uktā // 58</l>
+<l>bhavanti cātra dīkṣāparighaṭanasaṃgrahaślokāḥ padamantravarṇam ekaṃ puraṣoḍaśakaṃ dhareti ca nivṛttiḥ // 59</l>
+<l>tattvārṇam agninayanaṃ rasaśarapuram astramantrapadam anyā // 60</l>
+<l>munitattvārṇaṃ dvikapadamantraṃ vasvakṣibhuvanam aparakalā // 61</l>
+<l>agnyarṇatattvam ekakapadamantraṃ saikabhuvanam iti turyā // 62</l>
+<l>ṣoḍaśa varṇāḥ padamantratattvam ekaṃ ca śāntyatīteyam // 63</l>
+<l>iti // 64</l>
+<l>tad evam āṇavīṃ vṛttim ālambya bhagavān vicitraiḥ jātyāyurbhogaiḥ jarāyujāṇḍajodbhedajasvedajādijātaṃ prādurbhāvayati // 65</l>
+<l>tatra upabhuktasya annapānasya pākavaśāt rasarūpatayā sthitasya raktamāṃsamedo'sthimajjātmanā śukradhātau viśrāntir bhavati tatra imāḥ prajāḥ prajāyante // 66</l>
+<l>tathā coktaṃ sauśrute iha khalu pāñcabhautikasya caturvidhasya āhārasya ṣaḍrasopetasya dvividharasavīryasya aṣṭavidharasavīryasya anekaprakāropabhuktasya pariṇatasya yas tejorūpaḥ sāraḥ sūkṣmaḥ sa rasa ity ucyate tasya hṛdayaṃ sthānaṃ sa ca hṛdayāt caturviṃśatidhamanīr anupraviśya ūrdhvagā daśa daśa ca adhogāminīḥ catasraḥ tiryaggāḥ sakalaṃ śarīram aharahas tarpayati jīvayati dhārayati vardhayati adṛṣṭanimittena karmaṇā sa khalu āpyo raso yakṛtplīhādiṃ prāpya rāgam upaiti bhavanti vā atra ślokāḥ // 67</l>
+<l>rañjitās tejasā tv āpaḥ śarīrasthena dehinām // 68</l>
+<l>avyāpannāḥ prasannena raktam ity eva tad viduḥ // 69</l>
+<l>rasād eva striyo raktaṃ rajaḥsaṃjñaṃ pravartate // 70</l>
+<l>tadvaśād dvādaśād ūrdhvaṃ yāti pañcāśatiḥ kṣitim // 71</l>
+<l>ārtavaṃ śoṇitam āgneyam agnīṣomīyatvāt garbhasya // 72</l>
+<l>rasād raktaṃ tato māṃsaṃ māṃsamedaś ca jāyate // 73</l>
+<l>medaso 'sthi tato majjā majjātaḥ śukrasambhavaḥ // 74</l>
+<l>evaṃ māṃsena śukratvaṃ raso yāti yathākramam // 75</l>
+<l>strīṇāṃ tathaiva māsena bhaved ārtavasambhavaḥ // 76</l>
+<l>iti // 77</l>
+<l>tad evaṃbhūte mātṛpitṛsambandhasambhūte agnīṣomātmake raktaretasī kusumasamayād anantaraṃ jananījaṭhare retaḥ kalilībhavati tato budbudam tataḥ peśī tato ghanaḥ yāvad aṅgaparigrahaḥ aṅgavyaktiḥ saṃvidullāsaḥ sarvāṅgasampattir ojaḥsaṃcāraḥ sukhaduḥkhasaṃvittir iti yāvat prajāyate // 78</l>
+<l>uktaṃ śrīcillācakreśvaramate somasūryarasollāsaparasparanigharṣaṇāt // 79</l>
+<l>jātavedasi saṃjāte madhyadhāmavikāsini // 80</l>
+<l>vīrāruṇaparīṇāmavaśād aṅkurasambhavaḥ // 81</l>
+<l>ekarātroṣitaṃ retaḥ siktaṃ kalilatāṃ vrajet // 82</l>
+<l>budbudaṃ saptarātreṇa peśī māsena jāyate // 83</l>
+<l>dvitīye māsi ca ghanas tṛtīye 'gniparigrahaḥ // 84</l>
+<l>caturthe vyaṅgatāṅgānāṃ cetanā pañcame bhavet // 85</l>
+<l>ṣaṣṭhe sarvāṅgasambhedaḥ saptame calanodgamaḥ // 86</l>
+<l>tejo 'ṣṭame saṃcarati navame vedanaṃ bhavet // 87</l>
+<l>sampūrṇadeho daśame māsi jantuḥ prajāyate // 88</l>
+<l>jāto 'sau vāyunā spṛṣṭo yoniyantraprapīḍitaḥ // 89</l>
+<l>na smaraty ugrasaṃtāpam anekabhavasambhavam // 90</l>
+<l>krameṇa vṛddhim āyānti tasyaite dehahetavaḥ // 91</l>
+<l>rasaḥ sthitiṃ prakurute raktaṃ saṃjīvayaty alam // 92</l>
+<l>māṃsaṃ bṛṃhayati prāyo medaḥ snehayati sphuṭam // 93</l>
+<l>dhārayanti tathāsthīni majjāntaḥsārasaṃśrayā // 94</l>
+<l>harṣotkarṣakaraṃ śukraṃ mūtraṃ kledavivekakṛt // 95</l>
+<l>vāyvagnisaṃrodhakaraṃ purīṣaṃ parikīrtitam // 96</l>
+<l>svedakledopakaraṇaṃ garbhahetur athārtavam // 97</l>
+<l>evaṃ śarīram āsādya ṣāṭkośaṃ tatparigrahāt // 98</l>
+<l>anapekṣya nijaṃ bhāvaṃ pumān bhāvān apekṣate // 99</l>
+<l>iti // 100</l>
+<l>ayam eva ca artho niruktikṛtāpi uktapārthivān aṣṭau guṇān vidyāt trīn mātṛtaḥ trīn pitṛtaḥ ityādy upakramya uktaḥ // 101</l>
+<l>atraiva idaṃ puṃstrīnapuṃsakalakṣaṇaṃ prakṛtitrayakāraṇam somādhikyena puṃjanma sūryādhikyena yoṣitaḥ // 102</l>
+<l>sāmyāt klības tu vātena bhedāt syād bahvapatyatā // 103</l>
+<l>iti // 104</l>
+<l>avayavabhedo 'pi navame daśame māsi prabalaiḥ sūtimārutaiḥ // 105</l>
+<l>niḥsāryate bāṇa iva yantracchidreṇa sajvaraḥ // 106</l>
+<l>tasya ṣoḍhā śarīraṃ tatṣaṭtvaco dhārayanti ca // 107</l>
+<l>asthnāṃ tathā ṣaṣṭyadhikaṃ vinibaddhaṃ śatatrayam // 108</l>
+<l>sthūlaiḥ saha catuḥṣaṣṭir daśanā viṃśatir nakhāḥ // 109</l>
+<l>pāṇipādaśalākāś ca tāsāṃ sthāne catuṣṭayam // 110</l>
+<l>ṣaṣṭyaṅgulīnāṃ dve pārṣṇī gulpheṣu ca catuṣṭayam // 111</l>
+<l>catvāry aratnikāsthīni jaṅghayos tāvad eva tu // 112</l>
+<l>dve dve jānukapoloruphalakāṃsasamudbhave // 113</l>
+<l>akṣisthalūṣake śroṇīphalake ca vinirdiśet // 114</l>
+<l>bhagāsthy ekaṃ tathā pṛṣṭhe catvāriṃśac ca pañca ca // 115</l>
+<l>grīvā pañcadaśāsthīni jatrv ekaṃ ca tathā hanuḥ // 116</l>
+<l>tanmūle dve lalāṭākṣigaṇḍanāsāghanāsthikā // 117</l>
+<l>parśukās talakaiḥ sārdham arbude ca dvisaptatiḥ // 118</l>
+<l>dvau śaṅkhakau kapālāni catvāry eva śiras tathā // 119</l>
+<l>uraḥ pañcadaśāsthīni puruṣasyāsthisaṃgrahaḥ // 120</l>
+<l>iti // 121</l>
+<l>eteṣv eva kapālabharaṇaturuṇḍaruṇḍarucakanalayaṣṭīlanalakabhedena abhidhānāni śāstrāntareṣu uktāni // 122</l>
+<l>sthānāntarāṇi āha vasāvapāvahananaṃ nābhiklomayakṛtplihā // 123</l>
+<l>kṣudrāntravṛkśako vastiḥ purīṣāpāna eva ca // 124</l>
+<l>āmāśayo 'tha hṛdayaṃ sthūlāntraṃ gudam eva ca // 125</l>
+<l>uttarau ca gudau koṣṭhau vistāro 'yam udāhṛtaḥ // 126</l>
+<l>kanīnike sākṣikūṭe śaṣkulī karṇaputrike // 127</l>
+<l>gaṇḍau śaṅkhau bhruvau kaṣṭaveṣṭāvoṣṭhau kukundare // 128</l>
+<l>vaṅkṣaṇau vṛṣaṇau vṛkkau śleṣmasaṃghātikau stanau // 129</l>
+<l>upajihvāsphijau jihvājaṅghe corū ca piṇḍike // 130</l>
+<l>tālūdaravastiśīrṣe cibuke galaśuṇḍike // 131</l>
+<l>akṣipakṣmacatuṣkaṃ ca paddhastahṛdayāni tu // 132</l>
+<l>avaṭuś caivam ādīni sthānāny atra śarīrake // 133</l>
+<l>navacchidrāṇi tāny eva prāṇasyāyatanāni ca // 134</l>
+<l>dhamanīnāṃ śate dve tu pañcapeśīśatāni ca // 135</l>
+<l>iti // 136</l>
+<l>strīṇāṃ ca stanayor gartād aṣṭātriṃśadadhikāḥ sapeśyo dhamanyo bhavanti iti sauśrutaḥ // 137</l>
+<l>ekānnatriṃśallakṣāṇi nava snāyuśatāni ca // 138</l>
+<l>ṣaṭpañcaśāni tu jñeyā sirā dhamanisaṃtatiḥ // 139</l>
+<l>saptottaraṃ marmaśataṃ dve tu saṃdhiśate tathā // 140</l>
+<l>lomnāṃ koṭyas tu pañcāśaccatasraḥ koṭya eva ca // 141</l>
+<l>rasasya nava vijñeyā jalasyāñjalayo daśa // 142</l>
+<l>sapta vai tu purīṣasya raktasyāṣṭau prakīrtitāḥ // 143</l>
+<l>śleṣmā ṣaṭ pañca pittaṃ ca catvāro mūtram eva ca // 144</l>
+<l>vasātrayaṃ ca dvau medo majjaikārdhaṃ ca mastake // 145</l>
+<l>śleṣmaujasas tāvad eva retasas tāvad eva ca // 146</l>
+<l>ity etad asthiraṃ varṣma yasya mokṣāya kṛty asau // 147</l>
+<l>iti svasthasya saumyadhātor evam // 148</l>
+<l>anyathā tu vailakṣaṇyāc charīrāṇām asvasthatvāt tathaiva ca // 149</l>
+<l>doṣadhātumalānāṃ ca parimāṇaṃ na vidyate // 150</l>
+<l>ity uktam // 151</l>
+<l>tad etat vibhāgena bībhatsadarśanaṃ vairāgyamunibhir agāyi tathā cāhuḥ asthisthūṇaṃ snāyuyutaṃ māṃsaśoṇitalepanam // 152</l>
+<l>carmāvanaddhaṃ durgandhi pūrṇaṃ mūtrapurīṣayoḥ // 153</l>
+<l>jarāśokasamāviṣṭaṃ rogāyatanam āturam // 154</l>
+<l>rajasvalam anityaṃ ca bhūtāvāsam imaṃ tyajet muniḥ pārāśaryo 'pi āha sarvāśucinidhānasya kṛtaghnasya vināśinaḥ // 155</l>
+<l>śarīrakasyāpi kṛte mūḍhāḥ pāpāni kurvate // 156</l>
+<l>āhārair nīyamānāya kramād duḥkhena ramyatām // 157</l>
+<l>ko hi nāma śarīrāya dharmāpetaṃ samācaret // 158</l>
+<l>iti // 159</l>
+<l>evaṃ śarīram uktvā śarīrisvarūpam ucyate dvāsaptatisahasrāṇi hṛdayād abhiniḥsṛtāḥ // 160</l>
+<l>hitā nāmāhitā nāḍyas tāsāṃ madhye śaśiprabham // 161</l>
+<l>maṇḍalaṃ tasya madhyastha ātmā dīpa ivācalaḥ // 162</l>
+<l>sa jñeyas taṃ viditveha punar ājāyate na tu // 163</l>
+<l>idam atra tātparyaṃ taṃ tathābhūtam ātmānaṃ viditvā naro na janmakleśam anubhavati kiṃbhūtaṃ yad dhṛdayoktaṃ dvāsaptatisaṃkhyāvacchinnaṃ nāḍīcakraṃ tad antar yat śaśimaṇḍalaṃ tadantaḥsthaṃ tāś ca nāḍyo 'śitapītarasasaṃcaraṇādhikāratvāt puṇyopacayena hitāḥ tadabhāvena ahitāḥ tāsāṃ saṃcāraka eka eva vyavahārabhedāt pañcabhedo vāyuḥ tāsāṃ ca dve pradhāne dakṣiṇottarasambaddhe agnīṣomātmake taddvāreṇa prāṇasya ūrdhvagamanam ahaḥ adho 'pānasya rātriḥ etena ardhamāsamāsartuvatsarādikālavibhāgo 'pi vyākhyātaḥ samaprāṇacāro viṣuvat tayor madhye tṛtīyā daṇḍākārā brahmanāḍī sthitā tatra niruddhaprāṇo yogī dīpākāram ātmānaṃ paśyati iti ata evoktaṃ samyagdarśanasampannaḥ karmabhir na sa badhyate // 164</l>
+<l>darśanena vihīnas tu saṃsāraṃ pratipadyate // 165</l>
+<l>iti // 166</l>
+<l>saṃsārapravṛttau ca tasya kalāto viṣayavibhedo munibhir uktaḥ tathā hi paradravyāṇy abhidhyāyaṃs tathāniṣṭāni cintayan // 167</l>
+<l>vitathābhiniveśī ca jāyate 'ntyāsu yoniṣu // 168</l>
+<l>puruṣo 'nṛtavādī ca piśunaḥ puruṣas tathā // 169</l>
+<l>anibaddhapralāpī ca mṛgapakṣiṣu jāyate // 170</l>
+<l>adattādānanirataḥ paradāropasevakaḥ // 171</l>
+<l>hiṃsakaś cāvidhānena sthāvareṣūpajāyate // 172</l>
+<l>ityādi ayaṃ tu uktayātanasya niyogaḥ advayarūpasya ātmanaḥ kutastyo 'yaṃ bhedaḥ iti cet māyāmahāmohavikalpakalpita ity āha ākāśam ekaṃ hi yathā ghaṭādiṣu pṛthag bhavet // 173</l>
+<l>tathātmaiko 'py anekaś ca jalādhāreṣv ivāṃśumān // 174</l>
+<l>iti // 175</l>
+<l>na ca apakvakaṣāyasya kadācid api uktarūpam ātmajñānaṃ bhavati tathā ca malino hi yathādarśo rūpālokasya na kṣamaḥ // 176</l>
+<l>tathā hy apakvakaraṇa ātmajñānasya na kṣamaḥ // 177</l>
+<l>ityādy uktam // 178</l>
+<l>ity alaṃ bhūyasā uktena // 179</l>
+<l>evam asau bhagavān svātantryaśaktimahimnā paśudaśām avalambamāno bhogopadānapravaṇaḥ sampūrṇadehaprāṇabalaḥ san uktena ṣaḍadhvajālakrameṇa prabuddhaḥ śarīraparigraham āsādayati krameṇa bhukteṣu karmasu ṣaḍbhir bhāvavikārair jarārogādibhiḥ kāyayantre vighaṭamāne dehastambho vepathur nāḍīcakrasaṃkocaḥ kvacid viparyayeṇa tadvikāso marmabhaṅgaḥ śoṣa ityādi pūrvasaṃsthāpanopamardakaṃ sarvam upapadyate yāvat vinaśyati vināśaś ca kṣaṇiko 'sya yady api tathāpi sthūlayā vṛttyā daśabhir daśabhir abhivyaktaḥ proktaḥ // 180</l>
+<l>tathā hi bālyaṃ vṛddhir balaṃ prajñā tvak cakṣuḥ śrotram indriyam // 181</l>
+<l>āsanaṃ śayanaṃ puṃsāṃ daśabhir daśabhir vrajet // 182</l>
+<l>ity uktam // 183</l>
+<l>tataś ca tasmin śarīrayantre vighaṭite sā saṃvit prāṇanātmatām avalambya ātivāhikena dehena dehāntaraṃ nīyate tataś ca ātivāhikaṃ śarīrakaṃ bhūtabhaviṣyaddehāntarāle yugyasthānīyaṃ sambhavati yadārūḍho 'sau pudgalaḥ śarīrāntarāsaṅgam anubhavati uktaṃ ca kośabhāṣye mṛtyūpapattibhavayor antarā bhavatīha yaḥ // 184</l>
+<l>gamyadeśānuṣaktatvād upapanno 'ntarābhavaḥ // 185</l>
+<l>vrīhisaṃtānasādharmyād avacchinnasamudbhavaḥ // 186</l>
+<l>pratibimbam asiddhitvād asāmyāc ca nidarśanāt // 187</l>
+<l>sa punarmaraṇāt pūrvam upapattikṣaṇāt param // 188</l>
+<l>svajātiśuddhakarmākṣadṛśyakarmavivekavān // 189</l>
+<l>iti // 190</l>
+<l>śrutiś ca dve te cakre sūrye brahmāṇa ṛtuthā viduḥ // 191</l>
+<l>athaikaṃ cakraṃ yad guhā tad addhātaya id viduḥ // 192</l>
+<l>iti ayam arthaḥ he sūrye bhagavati ātmaśakte brahmāṇaḥ brahmavādinaḥ ṛtuthā kāle kāle te tava sambandhinī dve cakre viduḥ cakram iva cakraṃ parivartasādharmyāt śarīram ucyate tayor dvitvaṃ vartamānabhāvibhedāt atas tayor antare kathitayā yuktyā yad ekam ātivāhikākhyaṃ tat guhā guptam anupalakṣyam ity arthaḥ ata eva tad addhātayaḥ it viduḥ yogina eva jānanti iti tātparyam // 193</l>
+<l>tathā ca jāgradavasthāyāṃ dṛḍhakaraṇasya pramātur indriyāṇi śrotrādīni śabdādayaś ca viṣayā bhavanti tathā prameyasamaye pracalitam antaḥkaraṇam indriyaṃ yiyāsutā ca viṣayaḥ tām eva yiyāsutām adhikṛtya pravaramuniḥ pārāśaryaḥ samādhitavān yaṃ yaṃ vāpi smaran bhāvaṃ tyajaty ante kalevaram // 194</l>
+<l>taṃ tam evaiti kaunteya sadā tadbhāvabhāvitaḥ // 195</l>
+<l>iti // 196</l>
+<l>ayam atra saṃkṣepārthaḥ sambhavabhogaḥ janmabhogaḥ sthitibhogaś ca iti tisraḥ śarīrasya prāgavasthā bhavanti hi tathā hi jaṭhare cetanāyāṃ saṃjātāyāṃ garbhabhogaḥ prasavasamaye janmabhogaḥ prasūtasya bālyādivayaḥparāvṛttyā vicitraḥ sthitibhogaḥ // 197</l>
+<l>mṛtibhogaḥ yiyāsutā ca dve caramāvasthe tatra mṛtibhogaḥ vicitrā śarīrapīḍā yiyāsutā ātivāhikaśarīrasambaddhā tām eva ca yiyāsutām uddiśya yaṃ yaṃ vāpi smaran bhāvam // 198</l>
+<l>ityādi pravṛttam ata eva bhūtabhaviṣyadarthahitārthavādinaḥ smarann iti śabdapratyayasya yathārthaḥ prayogaḥ syāt etad eva ca vitatya śrītantrāloke pratipāditam mṛtibhogaḥ samasto 'yaṃ marmacchin mūḍhatākṣagaḥ // 199</l>
+<l>tatrendriyāṇāṃ sammohaḥ śvāsāyāsaparītatā // 200</l>
+<l>yas tv asau kṣaṇa evaikaś caramaḥ prāṇanātmakaḥ // 201</l>
+<l>sā dehatyāgakālāṃśakalā prāṇaviyoginī // 202</l>
+<l>tasyāṃ yad eva smarati prāksaṃskāraprabodhataḥ // 203</l>
+<l>tad eva rūpam abhyeti sukhaduḥkhavimohitam // 204</l>
+<l>iti // 205</l>
+<l>atra ca viṣayanaiyatyena vibhāgo vyāsamuninaiva kṛtaḥ // 206</l>
+<l>yadā sattve vivṛddhe tu pralayaṃ yāti dehabhṛt // 207</l>
+<l>ityādinā granthena // 208</l>
+<l>tā etāḥ śarīrāvasthāḥ pañcāre cakre parivartamāne tasminn ātasthur bhuvanāni viśvā // 209</l>
+<l>ityādiśrutāv uktāḥ // 210</l>
+<l>anyatrāpi sambhavo janma sattā ca mṛtiś cātha yiyāsutā // 211</l>
+<l>etāḥ pañca śarīrasya pariṇāmavipattayaḥ // 212</l>
+<l>ity uktam // 213</l>
+<l>etad evam uktarūpeṇa asau ātivāhikena dehena dehāntaraṃ nīyate so 'pi dehaḥ suptotthitāt prabodham avāpya prāṇiti uktena cakreṇa so 'pi vinaśyati yāvat araghaṭṭaghaṭīyantravat parivartamāno 'ṇuḥ nānākāyanikāyaiḥ saṃsarati saṃsāre // 214</l>
+<l>tathā ca śrutiḥ sasyam iva martyaḥ pacyate sasyam iva jāyate punaḥ // 215</l>
+<l>iti // 216</l>
+<l>vāsāṃsi jīrṇāni yathā vihāya // 217</l>
+<l>ityādinā vyāsamunināpi etad uktam // 218</l>
+<l>atha kadācit parameśvarānugrahaśaktipātapavitritaḥ kenāpi dīkṣādinā upāyena saṃvidānandaviśrāntam advayaṃ nijaṃ rūpaṃ parāmṛśati tataḥ svarūpam ālambate yathoktaṃ śrīmālinīvijaye evam asyātmanaḥ kāle kasmiṃścid yogyatāvaśāt // 219</l>
+<l>ity upakramya tatkṣaṇād vopabhogād vā dehapāte śivaṃ vrajet // 220</l>
+<l>ity evam antena granthena // 221</l>
+<l>yad vā kvāpi parameśvarāyatane śarīram ativāhya pūrve vidhau krameṇa parameśvarībhavati tad uktaṃ śrīsāttvatāyām prāsādadvāradeśāc ca yatra śaṅkhadhvaniś caran // 222</l>
+<l>prayāti sarvato dikṣu tat kṣetraṃ vaiṣṇavaṃ matam // 223</l>
+<l>munipraṇītād dviguṇaṃ tad eva parikīrtitam // 224</l>
+<l>siddhāvatāritād devāt tad eva triguṇaṃ smṛtam // 225</l>
+<l>caturguṇaṃ svayaṃ vyaktād dehānte bhāvitātmanām // 226</l>
+<l>phalaṃ sāyujyatāpūrvaṃ vijñeyaṃ tu kramāt tataḥ // 227</l>
+<l>duṣṭendriyavaśāc cittaṃ nṛṇāṃ yat kalmaṣeritam // 228</l>
+<l>tad antakāle saṃśuddhiṃ yāti nārāyaṇālaye // 229</l>
+<l>iti // 230</l>
+<l>śrīmadamṛteśaśikhāyām api ye tu tattvāvatīrṇānāṃ śaṃkarājñānuvartinām // 231</l>
+<l>svayaṃbhūmunidevarṣimanujādibhuvāṃ gṛhe // 232</l>
+<l>mṛtās te tatpuraṃ prāpya pureśair dīkṣitāḥ kramāt // 233</l>
+<l>martye 'vatīrya vā nāvā prayānti paramaṃ padam // 234</l>
+<l>tatra svayaṃbhuvo dvedhā ke 'py anugrahatatparāḥ // 235</l>
+<l>ke 'pi svakāryeṇāyātāḥ pūrve nirvāṇadāyinaḥ // 236</l>
+<l>iti // 237</l>
+<l>tatrāpi na sarvasya mokṣa ity uktam paśumātrasya sālokyaṃ sāmīpyaṃ dīkṣitasya tu // 238</l>
+<l>tatparasya tu sāyujyam ity ājñā pārameśvarī // 239</l>
+<l>yas tūrdhvaśāstragas tatra tyaktāsthaḥ saṃśayena saḥ // 240</l>
+<l>vrajed āyatanaṃ naiva sa phalaṃ kiṃcid aśnute // 241</l>
+<l>dīkṣāyatanavijñānadveṣiṇo ye tu cetasā // 242</l>
+<l>ācaranti ca tat te vai sarve nirayagāminaḥ // 243</l>
+<l>ye ca svabhyastavijñānamayāḥ śivamayā hi te // 244</l>
+<l>jīvanmuktā na teṣāṃ syān mṛtau kāpi vicāraṇā // 245</l>
+<l>iti // 246</l>
+<l>ata eva uktaṃ śrīniśāṭane godoham iṣupātaṃ vā nayanonmīlanaṃ ca vā // 247</l>
+<l>samyagyuktaḥ pare tattve na bhūyo janmabhāg bhavet // 248</l>
+<l>yasmāt pūrvaṃ pare nyasto yenātmā brahmaṇi svayam // 249</l>
+<l>smaraṇaṃ tu kathaṃ tasya prāṇānte samupasthite // 250</l>
+<l>iti // 251</l>
+<l>śrīrāmabhaṭṭārake 'pi tāvat kṣetraṃ tathā tīrthaṃ yāvad brahmaṇi no viśet // 252</l>
+<l>tad viditvā śvapāko 'pi matsamo nātra saṃśayaḥ // 253</l>
+<l>iti // 254</l>
+<l>bhagavatā bhegipatināpi tīrthe śvapacagṛhe vā naṣṭasmṛtir api parityajan deham // 255</l>
+<l>jñānasamakālamuktaḥ kaivalyaṃ yāti hataśokaḥ // 256</l>
+<l>iti // 257</l>
+<l>śrīmatpauṣkarāyām api uktam kṣityantānāṃ ca tattvānāṃ devatvena vyavasthitaḥ // 258</l>
+<l>mantrajño bhagavadbhaktaḥ śraddadhānaḥ sadāstikaḥ // 259</l>
+<l>yatra yatrāśrame caiva nivaset saṃyatendriyaḥ // 260</l>
+<l>svadehasthaṃ smaren nityaṃ svamantraṃ nyastavigrahaḥ // 261</l>
+<l>dehasaṃnyāsakāle tu viśrānto yatra kutracit // 262</l>
+<l>prayāti padam ādyaṃ vai samutkrāntaḥ svavigraham // 263</l>
+<l>iti // 264</l>
+<l>anyatrāpi śarīram evāyatanaṃ nānyad āyatanaṃ vrajet // 265</l>
+<l>tīrtham ekaṃ śrayen mantram anyatīrthāni varjayet iti // 266</l>
+<l>tathā svasthaceṣṭāś ca ye martyāḥ smaranti mama nārada // 267</l>
+<l>kāṣṭhapāṣāṇatulyāṃs tān antakāle smarāmy aham // 268</l>
+<l>ity uktam // 269</l>
+<l>na ca saṃsthitasya uttamatayā adhikāriṇo lokayātrāprasiddhāsruvimocanādiparidevitaṃ kāryam yathoktaṃ śrīpūrvaśāsane niṣiddhaṃ sarvaśāstrāṇāṃ rodanaṃ kāyaśāsanam // 270</l>
+<l>viśeṣād bhairave tantre śambaraṃ paśukalpitam // 271</l>
+<l>ayuktam imam ācāraṃ tyajed vai naurdhvadaihikam // 272</l>
+<l>iti // 273</l>
+<l>śrīmatarahasyatilake 'pi uttamanayādhikāriṇāṃ saṃvṛtanijasadācārāṇāṃ lokaprasiddhirakṣāyai tadācārāparityāgo 'pi āmnātaḥ tathā hi lokācārasya vicchedo na kartavyaḥ kadācana // 274</l>
+<l>guhyaṃ guhyataraṃ kāryaṃ bāhyaṃ bāhyāntaraṃ tathā iti // 275</l>
+<l>anayoś ca pakṣayor ekatarapakṣāvalambane pravaragurava eva pramāṇam // 276</l>
+<l>pitruddeśena ca yāgajapahomopavāsādi gurum ārādhya avaśyaṃ vidhātavyam ity uktam śrīmahākule āsūtrite bhāgalupte yatheṣṭarajasānvite // 277</l>
+<l>api mantram anāhūya maṇḍale vidhicodite // 278</l>
+<l>saṃnidhānaṃ prakurvanti mantrāṇāṃ saptakoṭayaḥ // 279</l>
+<l>kiṃ punaḥ kaulikāmnāyas tatrāhūya prapūjitaḥ // 280</l>
+<l>samuddiśya pitṝn bhadre tadānantyāya kalpate // 281</l>
+<l>iti // 282</l>
+<l>śrīpracaṇḍabhairave 'pi uktam tanuvittāś ca ye martyā gurumantraparāyaṇāḥ // 283</l>
+<l>viśeṣeṇa mahāyāgapūjanaṃ prati na kṣamāḥ // 284</l>
+<l>siddhaliṅgaṃ tadā teṣāṃ pitrarthaṃ pūjayed budhaḥ // 285</l>
+<l>ucitaṃ pūjanaṃ tatra devānām api durlabham // 286</l>
+<l>kulāny uddharate tatra daśa pūrvāparāṇy api // 287</l>
+<l>iti // 288</l>
+<l>śrībhāgeśamate 'pi viṣasarpāgnyapasmārakṣudhātyaśanabandhanaiḥ // 289</l>
+<l>caṇḍālodakanirghātarājaśāsanataskaraiḥ // 290</l>
+<l>nidāghaśītaśakaṭalūtoṣitamahāvrajaiḥ // 291</l>
+<l>brāhmaṇamlecchapāṣaṇḍinirmūloḍḍāmarakramaiḥ // 292</l>
+<l>ye hatāḥ pāpakarmāṇo mitradroharatāś ca ye // 293</l>
+<l>svāmidrohakṛtāś cānye ye tathātmopaghātakāḥ // 294</l>
+<l>gurviṇyo duścaritrāś ca prasavena hatāś ca yāḥ // 295</l>
+<l>teṣām uddharaṇopāyo nānyo 'sti varavarṇini // 296</l>
+<l>vinā yāgaṃ vinā homaṃ vinā mūrtiparigraham // 297</l>
+<l>vinā mahājālavidhiprayogāhṛtapudgalam // 298</l>
+<l>mṛtoddharaṇasaṃjñāṃ ca dīkṣāṃ sarvādhvavartinīm iti // 299</l>
+<l>tad ayaṃ tāvat ūrdhvaśāsanavartināṃ kramaḥ // 300</l>
+<l>itareṣāṃ tu svaśāstrasamayopanyastānuṣṭhānam eva śreyaḥ tad alam anena // 301</l>
+<l>evaṃ samanantarodīritayā nītyā janmamaraṇaprabandhasambandham avadhārya akṛtrimasvarūpaparāmarśanena jīvanmuktim āsādya kṛtakṛtyatām ālambante santaḥ // 302</l>
+<l>yathoktam viditamatisatattvāḥ saṃvidambhonidhānād acalahṛdayavīryākarṣaniṣpīḍanottham // 303</l>
+<l>amṛtam iti nigīrṇe kālakūṭe 'pi devā yadi pibata tadānīṃ niścitaṃ vaḥ śivatvam // 304</l>
+<l>iti // 305</l>
+<l>śrīmadyogeśvarācāryaprasādāsāditasthitiḥ // 306</l>
+<l>vāmadevaś cakāredaṃ janmamṛtyuvicāraṇam // 307</l>
+<l>abhinavamadamantharā puraṃdhrī madhusamaye madhurāś ca gītibandhāḥ // 308</l>
+<l>bata bata hṛdayaṃ haranti vāco lalitapadāś ca rahasyavastugarbhāḥ // 309</l>
+<l>kṛtis tatrabhavanmahāmāheśvarācāryavaryaśrīmadbhaṭṭavāmadevasya // 310</l>
+<l>sadvidyānāṃ saṃśraye granthavidvadvyūhe hrāsaṃ kālavṛttyopayāte // 311</l>
+<l>tattatsaddharmoddidhīrṣaikatānasatprekṣaujaḥśālinā karmavṛttyai // 312</l>
+<l>śrīmatkaśmīrādhirājena mukhyair dharmodyuktair mantribhiḥ svair vivecya // 313</l>
+<l>pratyaṣṭhāpi jñānavijñānagarbhagranthoddhṛtyai mukhyakāryālayo yaḥ // 314</l>
+<l>tatrājīvaṃ nirviśadbhir mukundarāmādhyakṣatvāśritaiḥ sadbhir eṣaḥ // 315</l>
+<l>pūrtyā śuddhyā vyākhyayā saṃskṛtaḥ stāt pūrṇo granthaḥ śreyase sajjanānām // 316</l>
+<l>tilakam // 317</l>
+<l>śrīsvātmacidamṛtavapuḥśaṃkarārpaṇaṃ bhūyāt // 318</l>
+
+  </body>
+</text>
+</TEI>

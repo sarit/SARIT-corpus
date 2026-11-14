@@ -1,0 +1,2817 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_kalpadrumAvadAnamAlA">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Kalpadrumāvadānamālā</title>
+	<author></author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>Klaus Wille</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Klaus Wille</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/klpdraau.htm">klpdraau.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Kalpadrumavadanamala
+<lb/>
+<lb/>Based on the text appended to P.L. Vaidya's edition of the Avadanasataka
+<lb/>(Darbhanga 1958, Buddhist Sanskrit Texts ; 19)
+<lb/>
+<lb/>Input by Klaus Wille, Göttingen
+<lb/>
+<lb/>TEXT WITH PADA MARKERS
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl xml:id="Vaidya">the text appended to P.L. Vaidya's edition of the Avadanasataka (Darbhanga 1958, Buddhist Sanskrit Texts ; 19)</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Kalpadrumāvadānamālā = KDA,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Religious Literature -- Buddhist</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn" xml:id="KDA">
+  <body>
+<head>Kalpadrumāvadānamālāyāṃ 10 subhūtyavadānam* ||</head>
+
+<lg xml:id="KDA_1">
+<l><seg type="pāda" n="a">athāśoko mahārājaḥ</seg> <seg type="pāda" n="b">sarvaśokavinoditaḥ</seg> </l>
+<l><seg type="pāda" n="c">upaguptaṃ guruṃ natvā</seg> <seg type="pāda" n="d">kṛtāñjalipuṭo 'vadat*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_2">
+<l><seg type="pāda" n="a">bhadanta śrotum icchāmi</seg> <seg type="pāda" n="b">punar anyat subhāṣitam*</seg> </l>
+<l><seg type="pāda" n="c">yad uktaṃ śākyasiṃhena</seg> <seg type="pāda" n="d">tan me gaditum arhasi</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_3">
+<l><seg type="pāda" n="a">iti pṛṣṭo nṛpeṇāsāv</seg> <seg type="pāda" n="b">upagupto yatīśvaraḥ</seg> </l>
+<l><seg type="pāda" n="c">parṣadaṃ ca samālokya</seg> <seg type="pāda" n="d">saṃbabhāṣa subhāṣitam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_4">
+<l><seg type="pāda" n="a">śṛṇu rājan mahābāho</seg> <seg type="pāda" n="b">sarvalokahitārthataḥ</seg> </l>
+<l><seg type="pāda" n="c">subhūter avadānaṃ yat</seg> <seg type="pāda" n="d">tat pravakṣye yathāśrutam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_5">
+<l><seg type="pāda" n="a">purā śrībhagavān buddho</seg> <seg type="pāda" n="b">dharmarājas tathāgataḥ</seg> </l>
+<l><seg type="pāda" n="c">vidyācaraṇasaṃpannaḥ</seg> <seg type="pāda" n="d">sugato lokavijjinaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_6">
+<l><seg type="pāda" n="a">śāstā devamanuṣyāṇāṃ</seg> <seg type="pāda" n="b">samyaksaṃbodhideśakaḥ</seg> </l>
+<l><seg type="pāda" n="c">satkṛto mānitaḥ satvair</seg> <seg type="pāda" n="d">gurukṛtaś ca pūjitaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_7">
+<l><seg type="pāda" n="a">rājabhī rājamātraiś ca</seg> <seg type="pāda" n="b">dhanibhiḥ puravāsibhiḥ</seg> </l>
+<l><seg type="pāda" n="c">śreṣṭhibhiḥ sārthavāhaiś ca</seg> <seg type="pāda" n="d">nānādeśasamāgataiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_8">
+<l><seg type="pāda" n="a">devāsuramahānāgair</seg> <seg type="pāda" n="b">yakṣagandharvakinnaraiḥ</seg> </l>
+<l><seg type="pāda" n="c">guruḍaiś ca mahāsarpais</seg> <seg type="pāda" n="d">tathānyasatvajātikaiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_9">
+<l><seg type="pāda" n="a">susaṃjñāto mahāpuṇyo</seg> <seg type="pāda" n="b">lābhī cīvaravāsasām*</seg> </l>
+<l><seg type="pāda" n="c">piṇḍapātāsanādīnāṃ</seg> <seg type="pāda" n="d">śayyādīnāṃ tathaiva ca</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_10">
+<l><seg type="pāda" n="a">auṣadhādipariṣkāra</seg><seg type="pāda" n="b">vastūnāṃ sarvataḥ sadā</seg> </l>
+<l><seg type="pāda" n="c">sārdhaṃ saśrāvakaiḥ saṃghair</seg> <seg type="pāda" n="d">bhikṣubhiś ca jitendriyaiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_11">
+<l><seg type="pāda" n="a">bhikṣuṇyupāsikābhiś ca</seg> <seg type="pāda" n="b">celakopāsakais tathā</seg> </l>
+<l><seg type="pāda" n="c">bodhisatvamahāsatvaiḥ</seg> <seg type="pāda" n="d">satvārthabodhivāñchibhiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_12">
+<l><seg type="pāda" n="a">śrāvastyāṃ rājadhānyāṃ vai</seg> <seg type="pāda" n="b">jetavane manorame</seg> </l>
+<l><seg type="pāda" n="c">vihāre vyaharad dharmaṃ</seg> <seg type="pāda" n="d">deśayañ chubhayas sadā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_13">
+<l><seg type="pāda" n="a">tadā bhagavatā satva</seg><seg type="pāda" n="b">vinayānugrahārthinā</seg> </l>
+<l><seg type="pāda" n="c">āmantrya bhikṣavaḥ sarve</seg> <seg type="pāda" n="d">samyagājñāpitā iti</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_14">
+<l><seg type="pāda" n="a">gacchata bhikṣavo yūyaṃ</seg> <seg type="pāda" n="b">satvānāṃ vinayārthataḥ</seg> </l>
+<l><seg type="pāda" n="a">deśān pratyabhigacchantaḥ</seg> <seg type="pāda" n="b">prakāśayata saṃvṛtim*</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="266"/>
+
+<lg xml:id="KDA_15">
+<l><seg type="pāda" n="a">tathety eva pratiśrutya</seg> <seg type="pāda" n="b">śāstuḥ pādau praṇamya ca</seg> </l>
+<l><seg type="pāda" n="c">śrāvakā bhikṣavaś caiva</seg> <seg type="pāda" n="d">pratasthus te niyoginaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_16">
+<l><seg type="pāda" n="a">guro ājñāṃ vahantas te</seg> <seg type="pāda" n="b">kecit prācīṃ diśaṃ gatāḥ</seg> </l>
+<l><seg type="pāda" n="c">deśayanti sma saddharmaṃ</seg> <seg type="pāda" n="d">pratideśānupāsthitāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_17">
+<l><seg type="pāda" n="a">dakṣiṇasyāṃ tathā kecit</seg> <seg type="pāda" n="b">kecic ca paścimāṃ diśam*</seg> </l>
+<l><seg type="pāda" n="c">tathottarāṃ diśaṃ gatvā</seg> <seg type="pāda" n="d">vidikṣu cāpi sarvataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_18">
+<l><seg type="pāda" n="a">teṣāṃ dhyānaratā ye vai</seg> <seg type="pāda" n="b">te viviktasukhaiṣiṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">meror upariṣaṇḍāyām</seg> <seg type="pāda" n="d">adhyūṣur dhyānatatparāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_19">
+<l><seg type="pāda" n="a">tadābdher garuḍenaiko</seg> <seg type="pāda" n="b">nāgapotaḥ samuddhṛtaḥ</seg> </l>
+<l><seg type="pāda" n="c">tam āśramam upānīya</seg> <seg type="pāda" n="d">bhakṣitum upacakrame</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_20">
+<l><seg type="pāda" n="a">tatrasthās tena nāgena</seg> <seg type="pāda" n="b">bhikṣavo dhyānasaṃratāḥ</seg> </l>
+<l><seg type="pāda" n="c">dṛṣṭvaiva suprasannena</seg> <seg type="pāda" n="d">manasā praṇidhir dadhe</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_21">
+<l><seg type="pāda" n="a">dhanyās te bhikṣavo hy ete</seg> <seg type="pāda" n="b">saddharmasukhacāriṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">aham api ca bhūyāsaṃ</seg> <seg type="pāda" n="d">tādṛgdharmasamāhitaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_22">
+<l><seg type="pāda" n="a">iti praṇidhiṃ kurvāṇo</seg> <seg type="pāda" n="b">jīvitād vyavaropitaḥ</seg> </l>
+<l><seg type="pāda" n="c">tatraiva garuḍenaivaṃ</seg> <seg type="pāda" n="d">bhakṣito 'bhūt sa nāgakaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_23">
+<l><seg type="pāda" n="a">tataḥ kālagatas tatra</seg> <seg type="pāda" n="b">śrāvastyāṃ puri + + +</seg> </l>
+<l><seg type="pāda" n="c">bhūtināmnā dvijasyāsau</seg> <seg type="pāda" n="d">bhāryāyā garbham āviśat*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_24">
+<l><seg type="pāda" n="a">tataś ca kramatas tasyā</seg> <seg type="pāda" n="b">garbhaḥ samanuvardhitaḥ</seg> </l>
+<l><seg type="pāda" n="c">tatas tatsamaye prāpte</seg> <seg type="pāda" n="d">dārakaḥ samajāyata</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_25">
+<l><seg type="pāda" n="a">tataḥ pitā ca taṃ dṛṣṭā</seg> <seg type="pāda" n="b">dārakaṃ saṃprasādikam*</seg> </l>
+<l><seg type="pāda" n="c">darśanīyaṃ subhadrāṅgaṃ</seg> <seg type="pāda" n="d">muhuḥ paśyann ananda saḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_26">
+<l><seg type="pāda" n="a">tato jātimahaṃ kṛtvā</seg> <seg type="pāda" n="b">jñānīnāhūya cādarāt*</seg> </l>
+<l><seg type="pāda" n="c">bhavanto 'sya nu kiṃ nāma</seg> <seg type="pāda" n="d">kriyatām iti so 'bravīt*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_27">
+<l><seg type="pāda" n="a">jñātayo 'pi tathā śrutvā</seg> <seg type="pāda" n="b">dṛṣṭvā cainaṃ ca bālakam*</seg> </l>
+<l><seg type="pāda" n="c">sarve harṣasamāpannā</seg> <seg type="pāda" n="d">bhūtiṃ tam abruvaṃs tathā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_28">
+<l><seg type="pāda" n="a">yasmād bhūter ayaṃ putraṃ</seg> <seg type="pāda" n="b">sujāto lakṣaṇānvitaḥ</seg> </l>
+<l><seg type="pāda" n="c">tasmāt subhūtir ity eva</seg> <seg type="pāda" n="d">nāmnā bhavatu viśrutaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_29">
+<l><seg type="pāda" n="a">tathā kramād vivṛddho 'sau</seg> <seg type="pāda" n="b">subhūtir bālasundaraḥ</seg> </l>
+<l><seg type="pāda" n="c">kumāratvaṃ kramāt prāpto</seg> <seg type="pāda" n="d">rarāma sa vayonvitaḥ</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="267"/>
+
+<lg xml:id="KDA_30">
+<l><seg type="pāda" n="a">pūrvakarmabalādhānāt</seg> <seg type="pāda" n="b">krodhanaḥ krūrabhāṣaṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">kiṃcin nimittasaṃruṣṭo</seg> <seg type="pāda" n="d">vigrahe nirato 'bhavat</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_31">
+<l><seg type="pāda" n="a">paruṣībhūtacittatvān</seg> <seg type="pāda" n="b">na tasya ko 'py abhūt suhṛt*</seg> </l>
+<l><seg type="pāda" n="c">sarvajñātiviruddhatvāt</seg> <seg type="pāda" n="d">pitṛbhyām apy upekṣitaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_32">
+<l><seg type="pāda" n="a">bandhubhiś ca parityakto</seg> <seg type="pāda" n="b">naiva kasyāpy abhūt priyaḥ</seg> </l>
+<l><seg type="pāda" n="c">viśrambhapraṇayaṃ tasmin</seg> <seg type="pāda" n="d">naiva kaścid abhāṣata</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_33">
+<l><seg type="pāda" n="a">sthātuṃ gantuṃ tathā bhoktuṃ</seg> <seg type="pāda" n="b">śayituṃ vābhilāpitum*</seg> </l>
+<l><seg type="pāda" n="c">tenaiva krodhinā sārdhaṃ</seg> <seg type="pāda" n="d">samutsehur na kecana</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_34">
+<l><seg type="pāda" n="a">tadā pitrā niyukto 'sau</seg> <seg type="pāda" n="b">lipiśālām upāgamat*</seg> </l>
+<l><seg type="pāda" n="c">subhūtiś ca guruṃ natvā</seg> <seg type="pāda" n="d">lipim anvagrahīt kramāt*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_35">
+<l><seg type="pāda" n="a">tato vyākaraṇādīni</seg> <seg type="pāda" n="b">sarvaśāstrāṇy anukramāt*</seg> </l>
+<l><seg type="pāda" n="c">so 'dhītyaiṣāṃ suśīghreṇa</seg> <seg type="pāda" n="d">pāraṃ prāpa subuddhimān*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_36">
+<l><seg type="pāda" n="a">tathā vedān adhītyaivaṃ</seg> <seg type="pāda" n="b">sāṅgopāṅgān yathākramam*</seg> </l>
+<l><seg type="pāda" n="c">atharvam apy adhītuṃ sa</seg> <seg type="pāda" n="d">prārabhat tīkṣṇamānasaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_37">
+<l><seg type="pāda" n="a">tatra pitā dvijo bhūtir</seg> <seg type="pāda" n="b">atharvādhītasaṃratam*</seg> </l>
+<l><seg type="pāda" n="c">subhūtiṃ svātmajaṃ putraṃ</seg> <seg type="pāda" n="d">dṛṣṭvaivaṃ samacintayat*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_38">
+<l><seg type="pāda" n="a">subhūtir mama putro 'yam</seg> <seg type="pāda" n="b">agnikalpaḥ sutīkṣṇadhīḥ</seg> </l>
+<l><seg type="pāda" n="c">kadācit kupito roṣāl</seg> <seg type="pāda" n="d">loke 'narthaṃ kariṣyati</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_39">
+<l><seg type="pāda" n="a">tad anvāharitavyo 'yam</seg> <seg type="pāda" n="b">ātharvaṇāt prayatnataḥ</seg> </l>
+<l><seg type="pāda" n="c">ṛṣiṣu preṣayitvainaṃ</seg> <seg type="pāda" n="d">yojayiṣye ca saṃyame</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_40">
+<l><seg type="pāda" n="a">iti matvā pitā bhūtiḥ</seg> <seg type="pāda" n="b">subhūtiṃ svātmajaṃ tathā</seg> </l>
+<l><seg type="pāda" n="c">ātharvaṇād vinirhṛtya</seg> <seg type="pāda" n="d">prabodhayaṃs tam abravīt*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_41">
+<l><seg type="pāda" n="a">śṛṇu putra mayā proktaṃ</seg> <seg type="pāda" n="b">hitārthaṃ tava saṃmatam*</seg> </l>
+<l><seg type="pāda" n="c">tvaṃ hi vidvān mahāvijñaḥ</seg> <seg type="pāda" n="d">sarvaśāstrāṅgapāragaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_42">
+<l><seg type="pāda" n="a">kiṃ tavātharvavedena</seg> <seg type="pāda" n="b">māyākleśārthasādhinā</seg> </l>
+<l><seg type="pāda" n="c">viramya tadadhiṣṭhānād</seg> <seg type="pāda" n="d">ṛṣicaryāṃ samācara</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_43">
+<l><seg type="pāda" n="a">munīnām upadeśāni</seg> <seg type="pāda" n="b">pratilabhya jitendriyaḥ</seg> </l>
+<l><seg type="pāda" n="c">śāntātmā sukham āsthāya</seg> <seg type="pāda" n="d">carasva vratam uttamam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_44">
+<l><seg type="pāda" n="a">dhanyās te vītarāgā ye</seg> <seg type="pāda" n="b">gurubhaktāś ca nirmadāḥ</seg> </l>
+<l><seg type="pāda" n="c">viviktāraṇyavāseṣu</seg> <seg type="pāda" n="d">vasanti dhyāyinaḥ sadā</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="268"/>
+
+<lg xml:id="KDA_45">
+<l><seg type="pāda" n="a">ye 'pi parigrahāṃs tyaktvā</seg> <seg type="pāda" n="b">bhavanti brahmacāriṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">devānām api te mānyā</seg> <seg type="pāda" n="d">vandanīyāḥ sadā khalu</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_46">
+<l><seg type="pāda" n="a">ye pravrajyāṃ samāgṛhya</seg> <seg type="pāda" n="b">śāntātmāno jitendriyāḥ</seg> </l>
+<l><seg type="pāda" n="c">avasanti puṇyatīrtheṣu</seg> <seg type="pāda" n="d">te 'pi hi paramarṣayaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_47">
+<l><seg type="pāda" n="a">kāmabhogyāni ye hitvā</seg> <seg type="pāda" n="b">sādhayante tapovane</seg> </l>
+<l><seg type="pāda" n="c">phalamūlodakais tuṣṭās</seg> <seg type="pāda" n="d">te 'pi dhanyā dvijottamāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_48">
+<l><seg type="pāda" n="a">ye 'pi kleśān vinirjitya</seg> <seg type="pāda" n="b">caturbrahmavihāriṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">bhikṣāśinaḥ samādhisthās</seg> <seg type="pāda" n="d">te hi brahmavidāṃ varāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_49">
+<l><seg type="pāda" n="a">ye cāparigrahītāro</seg> <seg type="pāda" n="b">nirlobhāḥ satyavādinaḥ</seg> </l>
+<l><seg type="pāda" n="c">nirmadā nirahaṃkārās</seg> <seg type="pāda" n="d">ta eva brāhmaṇottamāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_50">
+<l><seg type="pāda" n="a">yasya dātuṃ mano nāsti</seg> <seg type="pāda" n="b">matsarākrāntacetasaḥ</seg> </l>
+<l><seg type="pāda" n="c">vedaśāstrāgamais tasya</seg> <seg type="pāda" n="d">kim eva svātmapoṣiṇaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_51">
+<l><seg type="pāda" n="a">yasya cittaṃ hy aviśuddhaṃ</seg> <seg type="pāda" n="b">śīlasaṃvaravarjitam*</seg> </l>
+<l><seg type="pāda" n="c">kiṃ bhāti muniveṣeṇa</seg> <seg type="pāda" n="d">sa naṭarṣir ivonmadaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_52">
+<l><seg type="pāda" n="a">yasya loke dayā nāsti</seg> <seg type="pāda" n="b">bālavṛddhādiduḥkhite</seg> </l>
+<l><seg type="pāda" n="c">kiṃ tasya brahmavṛttena</seg> <seg type="pāda" n="d">citte{na} parimohite</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_53">
+<l><seg type="pāda" n="a">yasya na kuśalotsāhaṃ</seg> <seg type="pāda" n="b">citte lokārthaṃ sādhitum*</seg> </l>
+<l><seg type="pāda" n="c">tasya kiṃ tapasā siddhe</seg> <seg type="pāda" n="d">kevalaṃ pāpahetubhiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_54">
+<l><seg type="pāda" n="a">yasya cittaṃ pravikṣiptaṃ</seg> <seg type="pāda" n="b">kleśād yair asamāhitam*</seg> </l>
+<l><seg type="pāda" n="c">sa kiṃ guhāniviṣṭo 'pi</seg> <seg type="pāda" n="d">na sādhur duṣṭajantuvat*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_55">
+<l><seg type="pāda" n="a">yasya prajñā viśuddhā na</seg> <seg type="pāda" n="b">saddharmaguṇasādhane</seg> </l>
+<l><seg type="pāda" n="c">tasya kiṃ brahmacaryeṇa</seg> <seg type="pāda" n="d">kevalaṃ duḥkhahetunā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_56">
+<l><seg type="pāda" n="a">yaś ca dātā viśuddhātmā</seg> <seg type="pāda" n="b">sarvasatvān upālakaḥ</seg> </l>
+<l><seg type="pāda" n="c">nīco 'pi sa dvijakalpo</seg> <seg type="pāda" n="d">yato dātā prajāpatiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_57">
+<l><seg type="pāda" n="a">yena saṃrakṣitaṃ nityaṃ</seg> <seg type="pāda" n="b">śīlaṃ saṃyamasaṃvṛttam*</seg> </l>
+<l><seg type="pāda" n="c">sa eva brāhmaṇaḥ śuddhaḥ</seg> <seg type="pāda" n="d">śrotriyo vedanān yatiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_58">
+<l><seg type="pāda" n="a">yasya cittaṃ dayāśūlaṃ</seg> <seg type="pāda" n="b">sarvasatvahiteṣitam*</seg> </l>
+<l><seg type="pāda" n="c">caṇḍālo 'pi sa vipraḥ syāl</seg> <seg type="pāda" n="d">lokeśo hi kṣamākaraḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_59">
+<l><seg type="pāda" n="a">yenaiva duṣkaraṃ karma</seg> <seg type="pāda" n="b">sādhitaṃ satvahetunā</seg> </l>
+<l><seg type="pāda" n="c">sa eva brāhmaṇo dhīro</seg> <seg type="pāda" n="d">viśvakarmā yato vidhiḥ</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="269"/>
+
+<lg xml:id="KDA_60">
+<l><seg type="pāda" n="a">yasya cittaṃ sadā satva</seg><seg type="pāda" n="b">hitārtheṣu samādhitam*</seg> </l>
+<l><seg type="pāda" n="c">sa hi vipro mahābhijño</seg> <seg type="pāda" n="d">brahmā jñānarato yataḥ <note>Speyer: dhyānarato</note></seg> //</l>
+</lg>
+
+<lg xml:id="KDA_61">
+<l><seg type="pāda" n="a">yasya prajñā jagalloka</seg><seg type="pāda" n="b">hitānuśāsanojjvalā</seg> </l>
+<l><seg type="pāda" n="c">saiva dvijavaro vijño</seg> <seg type="pāda" n="d">vedadharmāsthito dvijaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_62">
+<l><seg type="pāda" n="a">yenaiva nirjitāḥ kleśāś</seg> <seg type="pāda" n="b">caturbrahmavihāriṇā</seg> </l>
+<l><seg type="pāda" n="c">svacitte bhāvitaṃ brahma</seg> <seg type="pāda" n="d">sa eva brāhmaṇottamaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_63">
+<l><seg type="pāda" n="a">tasmāt putra mayā proktaṃ</seg> <seg type="pāda" n="b">śrutvā lokahitotsukaḥ</seg> </l>
+<l><seg type="pāda" n="c">sarvakleśān vinirjitya</seg> <seg type="pāda" n="d">saddharmābhirato bhava</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_64">
+<l><seg type="pāda" n="a">iti pitur vacaḥ śrutvā</seg> <seg type="pāda" n="b">subhūtiḥ so 'numoditaḥ</seg> </l>
+<l><seg type="pāda" n="c">kṛtāñjalis tathā natvā</seg> <seg type="pāda" n="d">pitaram ity abhāṣata</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_65">
+<l><seg type="pāda" n="a">tathā satyaṃ manas tāta</seg> <seg type="pāda" n="b">rocate tapase mama</seg> </l>
+<l><seg type="pāda" n="c">tad ājñāṃ dehi me tāta</seg> <seg type="pāda" n="d">cariṣye brahmasadvratam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_66">
+<l><seg type="pāda" n="a">tenaivaṃ prārthyamāno 'sau</seg> <seg type="pāda" n="b">subhūtinā pitā tataḥ</seg> </l>
+<l><seg type="pāda" n="c">pariṣvajyātmajaṃ putraṃ</seg> <seg type="pāda" n="d">punar apy abravīn mudā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_67">
+<l><seg type="pāda" n="a">evaṃ cet tava vāñchāsti</seg> <seg type="pāda" n="b">putra brahmasusādhanaiḥ</seg> </l>
+<l><seg type="pāda" n="c">cara brahmavrataṃ samyag</seg><seg type="pāda" n="d">dhīracittasamāhitaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_68">
+<l><seg type="pāda" n="a">ādau krodharipuṃ jitvā</seg> <seg type="pāda" n="b">duṣṭabhārān vinirjaya <note>Speyer: duṣṭamārān</note></seg> </l>
+<l><seg type="pāda" n="c">yāvat krodham anirjitya</seg> <seg type="pāda" n="d">duṣṭāñjetuṃ na śaknuyāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_69">
+<l><seg type="pāda" n="a">yāvad duṣṭān anirjitya</seg> <seg type="pāda" n="b">dharme sthātuṃ na śaknuyāḥ</seg> </l>
+<l><seg type="pāda" n="c">asusaṃsthitadharmāṇaṃ</seg> <seg type="pāda" n="d">hanyur mārā hi sarvathā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_70">
+<l><seg type="pāda" n="a">tasmād vāñchati yo brahma</seg> <seg type="pāda" n="b">tenādau cittakoṭarāt*</seg> </l>
+<l><seg type="pāda" n="c">viniḥkṛṣya prayatnena</seg> <seg type="pāda" n="d">hantavyaḥ krodhapannagaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_71">
+<l><seg type="pāda" n="a">krodho hi vasate yasya</seg> <seg type="pāda" n="b">citte mānamadākule</seg> </l>
+<l><seg type="pāda" n="c">tāvat sadguṇayukto 'pi</seg> <seg type="pāda" n="d">sevyate naiva sajjanaiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_72">
+<l><seg type="pāda" n="a">tasmāt sarvaprayatnena</seg> <seg type="pāda" n="b">krodhajiṣṇuḥ samāhitaḥ</seg> </l>
+<l><seg type="pāda" n="c">pravrajyāṃ samupāsiśritya</seg> <seg type="pāda" n="d">cara brāhmaṇyam ādarāt*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_73">
+<l><seg type="pāda" n="a">tathety asau pratiśrutya</seg> <seg type="pāda" n="b">subhūtiḥ saṃpramoditaḥ</seg> </l>
+<l><seg type="pāda" n="c">sahasā pitarau natvā</seg> <seg type="pāda" n="d">munīnām āśramaṃ yayau</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_74">
+<l><seg type="pāda" n="a">tatra prāpto munīn natvā</seg> <seg type="pāda" n="b">kṛtāñjalipuṭo mudā</seg> </l>
+<l><seg type="pāda" n="c">brāhmaṇyasaṃvaraṃ prāptuṃ</seg> <seg type="pāda" n="d">pravrajyāṃ samayācata</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="270"/>
+
+<lg xml:id="KDA_75">
+<l><seg type="pāda" n="a">guro brahmavidāṃ śreṣṭha</seg> <seg type="pāda" n="b">kalyāṇavartmadeśaka</seg> </l>
+<l><seg type="pāda" n="c">pravrajyāṃ dehi me satyaṃ</seg> <seg type="pāda" n="d">careyaṃ bhavamuktaye</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_76">
+<l><seg type="pāda" n="a">iti tasya vacaḥ śrutvā</seg> <seg type="pāda" n="b">gurur brahmavidāṃ varaḥ</seg> </l>
+<l><seg type="pāda" n="c">ehi vatsa cara brahma</seg><seg type="pāda" n="d">caryaṃ jitvā ṣaḍ indriyam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_77">
+<l><seg type="pāda" n="a">ity ukto guruṇā so 'bhūt</seg> <seg type="pāda" n="b">subhūtir muniveṣabhṛt*</seg> </l>
+<l><seg type="pāda" n="c">brahmavihārasaṃpanno</seg> <seg type="pāda" n="d">vinītaḥ śraddhayānvitaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_78">
+<l><seg type="pāda" n="a">tathāpi daivasāmarthyāt</seg> <seg type="pāda" n="b">krodhasaṃraktamānasaḥ</seg> </l>
+<l><seg type="pāda" n="c">kiṃcin nimittamātre 'pi</seg> <seg type="pāda" n="d">vigrahavān asaṃyataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_79">
+<l><seg type="pāda" n="a">vedasiddhāntaśāstreṣu</seg> <seg type="pāda" n="b">vivādī krodhabāhulaḥ</seg> </l>
+<l><seg type="pāda" n="c">atīva roṣasaṃkruṣṭo</seg> <seg type="pāda" n="d">vicikṣepa yatīn api</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_80">
+<l><seg type="pāda" n="a">dharmārthakāmamokṣeṣu</seg> <seg type="pāda" n="b">nirapekṣaḥ sutīkṣṇavāk*</seg> </l>
+<l><seg type="pāda" n="c">sarvatra munibhiś cāpi</seg> <seg type="pāda" n="d">vijagrāhāsamāhitaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_81">
+<l><seg type="pāda" n="a">ity enaṃ krodhasaṃraktaṃ</seg> <seg type="pāda" n="b">vedasiddhāntamāninam*</seg> </l>
+<l><seg type="pāda" n="c">subhūtiṃ brāhmaṇaṃ dṛṣṭvā</seg> <seg type="pāda" n="d">guruś caivam acintayat*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_82">
+<l><seg type="pāda" n="a">aho daivabalādhānāt</seg> <seg type="pāda" n="b">subhūtir brāhmaṇo 'py ayam*</seg> </l>
+<l><seg type="pāda" n="c">svasiddhāntasamāno 'dya</seg> <seg type="pāda" n="d">krūravāgvigrahotsukaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_83">
+<l><seg type="pāda" n="a">agnikalpo mahātīkṣṇaḥ</seg> <seg type="pāda" n="b">sarvaśāstrārthakovidaḥ</seg> </l>
+<l><seg type="pāda" n="c">viśārado mahābhijño</seg> <seg type="pāda" n="d">dharmasaṃyamatatparaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_84">
+<l><seg type="pāda" n="a">tapaś caraṇasaṃraktas</seg> <seg type="pāda" n="b">tīkṣṇabuddhiḥ kṛtodyamaḥ</seg> </l>
+<l><seg type="pāda" n="c">mahotsāho mahāvīraḥ</seg> <seg type="pāda" n="d">siddhavidyo mahotkaṭaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_85">
+<l><seg type="pāda" n="a">sarvaśāstrakalābhijño</seg> <seg type="pāda" n="b">mantrasiddhiprayogavit*</seg> </l>
+<l><seg type="pāda" n="c">vedasiddhāntayogānāṃ</seg> <seg type="pāda" n="d">pāragaś ca mahāsudhīḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_86">
+<l><seg type="pāda" n="a">kiṃ tu krodhāviśuddhātmā</seg> <seg type="pāda" n="b">vigrahī vādasaṃrataḥ</seg> </l>
+<l><seg type="pāda" n="c">kiṃcin nimittamātre 'pi</seg> <seg type="pāda" n="d">vikruṣṭo 'tha ruṣāśayaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_87">
+<l><seg type="pāda" n="a">kadācit kupito ruṣṭeḥ</seg> <seg type="pāda" n="b">saṃkleśādhīracetanaḥ</seg> </l>
+<l><seg type="pāda" n="c">śāpāśaniprahāreṇa</seg> <seg type="pāda" n="d">loke 'narthaṃ kariṣyati</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_88">
+<l><seg type="pāda" n="a">tad ahaṃ saṃprabodhyainaṃ</seg> <seg type="pāda" n="b">subhūtiṃ dvijasattamam*</seg> </l>
+<l><seg type="pāda" n="c">samādhidhyānavaryāsu</seg> <seg type="pāda" n="d">yojayeyaṃ sa sarvathā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_89">
+<l><seg type="pāda" n="a">iti matvā guruś cainaṃ</seg> <seg type="pāda" n="b">subhūtiṃ samabodhayat*</seg> </l>
+<l><seg type="pāda" n="c">śṛṇu vatsa hitaṃ vakṣye</seg> <seg type="pāda" n="d">tatra bhava samāhitaḥ</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="271"/>
+
+<lg xml:id="KDA_90">
+<l><seg type="pāda" n="a">sarvavarṇāgrajo vipraḥ</seg> <seg type="pāda" n="b">sarvajātivarottamaḥ</seg> </l>
+<l><seg type="pāda" n="c">brāhmaṇo 'smīty ahaṃkāro</seg> <seg type="pāda" n="d">na kartavyaḥ kadācana</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_91">
+<l><seg type="pāda" n="a">na jīvo brāhmaṇas tāvad</seg> <seg type="pāda" n="b">yasmāt saṃskārato dvijaḥ</seg> </l>
+<l><seg type="pāda" n="c">jīvaś ced brāhmaṇas tāvad</seg> <seg type="pāda" n="d">vṛthā syād dharmasaṃskṛtaiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_92">
+<l><seg type="pāda" n="a">ādyante paśavo devā</seg> <seg type="pāda" n="b">iti vede 'pi kathyate</seg> </l>
+<l><seg type="pāda" n="c">tato dharmābhisaṃskāraiḥ</seg> <seg type="pāda" n="d">sarve syur mānavā dvijāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_93">
+<l><seg type="pāda" n="a">śvapacā api dharmasthāḥ</seg> <seg type="pāda" n="b">saṃskṛtāḥ syur dvijādhamāḥ</seg> </l>
+<l><seg type="pāda" n="c">guṇadharmānusāraiś ca</seg> <seg type="pāda" n="d">devā daityāś ca mānuṣāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_94">
+<l><seg type="pāda" n="a">satvadharmadharā devā</seg> <seg type="pāda" n="b">rajodharmadharā narāḥ</seg> </l>
+<l><seg type="pāda" n="c">tamodharmadharā daityā</seg> <seg type="pāda" n="d">iti siddhāntasaṃmatam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_95">
+<l><seg type="pāda" n="a">iti dharmaguṇādhānāt</seg> <seg type="pāda" n="b">traidhātukabhavālaye</seg> </l>
+<l><seg type="pāda" n="c">caturyonisamudbhūtāḥ</seg> <seg type="pāda" n="d">ṣaḍgatiṣu bhramanti te</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_96">
+<l><seg type="pāda" n="a">tatrāpi karmabhedena</seg> <seg type="pāda" n="b">jātibhedā hy anekaśaḥ</seg> </l>
+<l><seg type="pāda" n="c">jātiṣv api ca sarvāsu</seg> <seg type="pāda" n="d">svakarmapariṇāmataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_97">
+<l><seg type="pāda" n="a">satvā naikavidhā jātā</seg> <seg type="pāda" n="b">adhamottamam adhyamāḥ</seg> </l>
+<l><seg type="pāda" n="c">ye satvās tāmasā raudrā</seg> <seg type="pāda" n="d">hiṃsākarmānusaṃratāḥ</seg> </l>
+<l><seg type="pāda" n="e">te 'dhobhuvanasaṃjātā</seg> <seg type="pāda" n="f">vasanti kleśabhāginaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_98">
+<l><seg type="pāda" n="a">rajodharmaratā ye hi</seg> <seg type="pāda" n="b">rāgacaryānusāriṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">te satvā bhūmisaṃjātā</seg> <seg type="pāda" n="d">vasanti mānuṣādayaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_99">
+<l><seg type="pāda" n="a">satvadharmaratā ye tu</seg> <seg type="pāda" n="b">sātvikāḥ śāntacāriṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">te devā nirmalānandā</seg> <seg type="pāda" n="d">vasanti svargatiṃ gatāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_100">
+<l><seg type="pāda" n="a">tathaite sarvasatvāś ca</seg> <seg type="pāda" n="b">guṇadharmānusārataḥ</seg> </l>
+<l><seg type="pāda" n="c">svakṛtaṃ karma bhuñjanto</seg> <seg type="pāda" n="d">bhrāmyanti tribhavālaye</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_101">
+<l><seg type="pāda" n="a">vṛddhiṃ prāpya guṇāś cettham</seg> <seg type="pāda" n="b">ekaikaṃ guṇavṛddhitaḥ</seg> </l>
+<l><seg type="pāda" n="c">+ + + + + + + + +</seg> <seg type="pāda" n="d">+ + + + + + + +</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_102">
+<l><seg type="pāda" n="a">ākāśasya guṇaś caikaḥ</seg> <seg type="pāda" n="b">śabda eva na cāparaḥ</seg> </l>
+<l><seg type="pāda" n="c">śabdasparśau ca vāyor vai</seg> <seg type="pāda" n="d">dvau guṇau parikīrtitau</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_103">
+<l><seg type="pāda" n="a">agneḥ śabdaś ca sparśaś ca</seg> <seg type="pāda" n="b">rūpam eva trayo guṇāḥ</seg> </l>
+<l><seg type="pāda" n="c">śabdasparśarūparasāś</seg> <seg type="pāda" n="d">catvāry eva samīraṇe</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_104">
+<l><seg type="pāda" n="a">sparśaḥ śabdo raso rūpaṃ</seg> <seg type="pāda" n="b">gandhaś ca pṛthivīguṇāḥ</seg> </l>
+<l><seg type="pāda" n="c">evaṃ militayogaiś ca</seg> <seg type="pāda" n="d">brahmāṇotpattir ucyate</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="272"/>
+
+<lg xml:id="KDA_105">
+<l><seg type="pāda" n="a">sarve jīvā militvaiva</seg> <seg type="pāda" n="b">brahmāṇāṃś ca samudbhavāḥ <note>Speyer:brahmāṇāṃśasamudbhavāḥ</note></seg> </l>
+<l><seg type="pāda" n="c">caturaśīti lakṣāś ca</seg> <seg type="pāda" n="d">proktā vai jīvajātayaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_106">
+<l><seg type="pāda" n="a">dharmataḥ sukhino bhūtāḥ</seg> <seg type="pāda" n="b">pāpato duḥkhabhāginaḥ</seg> </l>
+<l><seg type="pāda" n="c">miśrato miśrabhuktāra</seg> <seg type="pāda" n="d">ity uktam avadānikaiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_107">
+<l><seg type="pāda" n="a">bhārate 'pi tathā proktam</seg> <seg type="pāda" n="b">ṛṣibhiḥ karmavādibhiḥ</seg> </l>
+<l><seg type="pāda" n="c">sapta vyādhā daśāraṇye</seg> <seg type="pāda" n="d">mṛgāḥ kāliñjare girau</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_108">
+<l><seg type="pāda" n="a">cakravākau śaradvīpe</seg> <seg type="pāda" n="b">haṃsāḥ sarasi mānase</seg> </l>
+<l><seg type="pāda" n="c">te 'pi jātāḥ kurukṣetre</seg> <seg type="pāda" n="d">brāhmaṇā vedapāragāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_109">
+<l><seg type="pāda" n="a">uktaṃ ca mānave dharme</seg> <seg type="pāda" n="b">muninā muninā + +</seg> </l>
+<l><seg type="pāda" n="c">mithyājīvena jīvan yaḥ</seg> <seg type="pāda" n="d">patito brāhmaṇo hy asau</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_110">
+<l><seg type="pāda" n="a">vṛṣalīphenapītasya</seg> <seg type="pāda" n="b">niḥśvāsopahatasya ca</seg> </l>
+<l><seg type="pāda" n="c">tayaiva sahasuptasya</seg> <seg type="pāda" n="d">niṣkṛtir nopalabhyate</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_111">
+<l><seg type="pāda" n="a">śūdrīhastena yo bhuñkte</seg> <seg type="pāda" n="b">māsam ekaṃ nirantaram*</seg> </l>
+<l><seg type="pāda" n="c">jīvamāno bhavec chūdro</seg> <seg type="pāda" n="d">mṛtaś ca sa prajāyate</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_112">
+<l><seg type="pāda" n="a">adhītya caturo vedān</seg> <seg type="pāda" n="b">sāṅgopāṅgāṃś ca tatvataḥ</seg> </l>
+<l><seg type="pāda" n="c">śūdrāt pratigrahagrāhī</seg> <seg type="pāda" n="d">brāhmaṇo jāyate kharaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_113">
+<l><seg type="pāda" n="a">kharo dvādaśa janmāni</seg> <seg type="pāda" n="b">ṣaṣṭi janmāni sūkaraḥ</seg> </l>
+<l><seg type="pāda" n="c">śvānaḥ saptati janmāni</seg> <seg type="pāda" n="d">ity evaṃ manur abravīt*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_114">
+<l><seg type="pāda" n="a">tathoktam avadāne 'pi</seg> <seg type="pāda" n="b">buddhenādvayavādinā</seg> </l>
+<l><seg type="pāda" n="c">brāhmaṇo 'dattam ādāya</seg> <seg type="pāda" n="d">babhūva vānarādhipaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_115">
+<l><seg type="pāda" n="a">tatra sa buddhanāthāya</seg> <seg type="pāda" n="b">dadau ca paṇasaṃ mudā</seg> </l>
+<l><seg type="pāda" n="c">tataś ca mānavo bhūtvā</seg> <seg type="pāda" n="d">pāṃśudātā hy abhūc chiśuḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_116">
+<l><seg type="pāda" n="a">tatkarmaphalato rājā</seg> <seg type="pāda" n="b">sarvānando babhūva saḥ</seg> </l>
+<l><seg type="pāda" n="c">tatrāpi buddhanāthāya</seg> <seg type="pāda" n="d">piṇḍapātaṃ dadau mudā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_117">
+<l><seg type="pāda" n="a">taddīpaṃkaraprasādena</seg> <seg type="pāda" n="b">bodhisatvo 'bhavan nṛpaḥ <note>Speyer: bhaven</note></seg> </l>
+<l><seg type="pāda" n="c">sarvapāramitāḥ pūrya</seg> <seg type="pāda" n="d">buddho 'pi sa bhaviṣyati</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_118">
+<l><seg type="pāda" n="a">ity uktam avadāne 'pi</seg> <seg type="pāda" n="b">jinenādvayavādinā</seg> </l>
+<l><seg type="pāda" n="c">tasmāc caivaṃ vijānīyā</seg> <seg type="pāda" n="d">na jīvo brāhmaṇaḥ khalu</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_119">
+<l><seg type="pāda" n="a">jātyāpi brāhmaṇo naiva</seg> <seg type="pāda" n="b">saṃskṛtas tu dvijo bhavet*</seg> </l>
+<l><seg type="pāda" n="c">jātyā ced brāhmaṇo bhūto</seg> <seg type="pāda" n="d">vṛthā syāt saṃskṛter vidhiḥ</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="273"/>
+
+<lg xml:id="KDA_120">
+<l><seg type="pāda" n="a">smṛtau hi tat tathā proktaṃ</seg> <seg type="pāda" n="b">nā jātyā dharmato dvijaḥ</seg> </l>
+<l><seg type="pāda" n="c">+ + + + + + + +</seg> <seg type="pāda" n="d">+ + + + + + + +</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_121">
+<l><seg type="pāda" n="a">dharmasaṃskṛtivṛttisthaḥ</seg> <seg type="pāda" n="b">śvapaco 'pi dvijo bhavet*</seg> </l>
+<l><seg type="pāda" n="c">tathā hi mānave dharme</seg> <seg type="pāda" n="d">manunābhihitaṃ khalu</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_122">
+<l><seg type="pāda" n="a">araṇīgarbhasaṃbhūtaḥ</seg> <seg type="pāda" n="b">kaṭhinākhyo mahāmuniḥ</seg> </l>
+<l><seg type="pāda" n="c">tapasā brāhmaṇo jātas</seg> <seg type="pāda" n="d">tasmāj jātir akāraṇam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_123">
+<l><seg type="pāda" n="a">kaivartigarbhasaṃbhūto</seg> <seg type="pāda" n="b">vyāso nāma mahāmuniḥ</seg> </l>
+<l><seg type="pāda" n="c">tapasā brāhmaṇo jātas</seg> <seg type="pāda" n="d">tasmāj jātir akāraṇam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_124">
+<l><seg type="pāda" n="a">urvaśīgarbhasaṃbhūto</seg> <seg type="pāda" n="b">vasiṣṭhākhyo mahāmuniḥ</seg> </l>
+<l><seg type="pāda" n="c">tapasā brāhmaṇo jātas</seg> <seg type="pāda" n="d">tasmāj jātir akāraṇam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_125">
+<l><seg type="pāda" n="a">hariṇīgarbhasaṃbhūto</seg> <seg type="pāda" n="b">ṛṣyaśṛṅgo mahāmuniḥ</seg> </l>
+<l><seg type="pāda" n="c">tapasā brāhmaṇo jātas</seg> <seg type="pāda" n="d">tasmāj jātir akāraṇam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_126">
+<l><seg type="pāda" n="a">caṇḍālīgarbhasaṃbhūto</seg> <seg type="pāda" n="b">viśvāmitro mahāmuniḥ</seg> </l>
+<l><seg type="pāda" n="c">tapasā brāhmaṇo jātas</seg> <seg type="pāda" n="d">tasmāj jātir akāraṇam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_127">
+<l><seg type="pāda" n="a">taṇḍulīgarbhasaṃbhūto</seg> <seg type="pāda" n="b">nāradākhyo mahāmuniḥ</seg> </l>
+<l><seg type="pāda" n="c">tapasā brāhmaṇo jātas</seg> <seg type="pāda" n="d">tasmāj jātir akāraṇam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_128">
+<l><seg type="pāda" n="a">evam anye 'pi sarve ca</seg> <seg type="pāda" n="b">ṛṣayo brahmacāriṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">tapasā brāhmaṇā bhūtā</seg> <seg type="pāda" n="d">brāhmaṇīgarbhasaṃbhavāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_129">
+<l><seg type="pāda" n="a">dharmasaṃskārataḥ sarve</seg> <seg type="pāda" n="b">mānavā brāhmaṇāḥ khalu</seg> </l>
+<l><seg type="pāda" n="c">dharmavṛttipramāṇena</seg> <seg type="pāda" n="d">sarve syur brāhmaṇā narāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_130">
+<l><seg type="pāda" n="a">ekavarṇam idaṃ sarvaṃ</seg> <seg type="pāda" n="b">brahmasṛṣṭisamudbhavam*</seg> </l>
+<l><seg type="pāda" n="c">dharmakalpavikalpena</seg> <seg type="pāda" n="d">cāturvarṇyaṃ prakalpitam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_131">
+<l><seg type="pāda" n="a">sarve vai yonijā martyāḥ</seg> <seg type="pāda" n="b">sarve mūtrapurīṣiṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">ekendriyakriyārthāś ca</seg> <seg type="pāda" n="d">tasmāc chīlaguṇair dvijāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_132">
+<l><seg type="pāda" n="a">śūdro 'pi śīlasaṃpanno</seg> <seg type="pāda" n="b">guṇavān brāhmaṇo bhavet*</seg> </l>
+<l><seg type="pāda" n="c">brāhmaṇo 'pi kriyāhīnaḥ</seg> <seg type="pāda" n="d">śūdrāt pratyavaro bhavet*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_133">
+<l><seg type="pāda" n="a">guṇair dharmais tathā śīlair</seg> <seg type="pāda" n="b">varṇā hy anekajātayaḥ</seg> </l>
+<l><seg type="pāda" n="c">brahmajeṣu hi sarveṣu</seg> <seg type="pāda" n="d">nareṣu kiṃ viśeṣatā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_134">
+<l><seg type="pāda" n="a">yathā bhasmani sauvarṇe</seg> <seg type="pāda" n="b">viśeṣa upalabhyate</seg> </l>
+<l><seg type="pāda" n="c">brāhmaṇe cānyajātau vā</seg> <seg type="pāda" n="d">na viśeṣo 'sti vai tathā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_134">
+<l><seg type="pāda" n="a">yathā prakāśatamasor</seg> <seg type="pāda" n="b">viśeṣa upalabhyate</seg> </l>
+<l><seg type="pāda" n="c">brāhmaṇe cānyajātau vā</seg> <seg type="pāda" n="d">viśeṣo naiṣa vidyate</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="274"/>
+
+<lg xml:id="KDA_136">
+<l><seg type="pāda" n="a">na hi brāhmaṇa ākāśān</seg> <seg type="pāda" n="b">maruto vā samudbhavaḥ</seg> </l>
+<l><seg type="pāda" n="c">bhitvā vā pṛthivīṃ jāto</seg> <seg type="pāda" n="d">jātavedā yathāraṇeḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_137">
+<l><seg type="pāda" n="a">brāhmaṇā yonito jātāś</seg> <seg type="pāda" n="b">caṇḍālā api yonitaḥ</seg> </l>
+<l><seg type="pāda" n="c">śreṣṭhatve vṛṣalatve ca</seg> <seg type="pāda" n="d">kiṃ vāsti bhedakāraṇam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_138">
+<l><seg type="pāda" n="a">brāhmaṇo 'pi mṛtotsṛṣṭo</seg> <seg type="pāda" n="b">jugupsyo 'śucir ucyate</seg> </l>
+<l><seg type="pāda" n="c">varṇās sathava cāpy anye</seg> <seg type="pāda" n="d">kā nu tatra viśeṣatā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_139">
+<l><seg type="pāda" n="a">yathā siṃhādijantūnāṃ</seg> <seg type="pāda" n="b">padādibhedalakṣaṇam*</seg> </l>
+<l><seg type="pāda" n="c">dehasaṃsthānaliṅgaiś ca</seg> <seg type="pāda" n="d">narāṇāṃ kiṃ viśeṣatā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_140">
+<l><seg type="pāda" n="a">yathā haṃsamayūrādi</seg><seg type="pāda" n="b">pakṣiṇāṃ ca viśeṣatā</seg> </l>
+<l><seg type="pāda" n="c">mukhādivarṇaśabdaiś ca</seg> <seg type="pāda" n="d">narāṇāṃ nāsti bhedatā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_141">
+<l><seg type="pāda" n="a">yathā ca kṛmikīṭānāṃ</seg> <seg type="pāda" n="b">kāyasaṃsthānabhedatā</seg> </l>
+<l><seg type="pāda" n="c">tathaiva narajātīnāṃ</seg> <seg type="pāda" n="d">naivāsti bhedalakṣaṇam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_142">
+<l><seg type="pāda" n="a">yathā bhūruhavṛkṣāṇāṃ</seg> <seg type="pāda" n="b">patrādyākārabhedatā</seg> </l>
+<l><seg type="pāda" n="c">tathā nāsti manuṣyāṇām</seg> <seg type="pāda" n="d">ākṛter bhedalakṣaṇam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_143">
+<l><seg type="pāda" n="a">tṛṇauṣadhādiśasyānāṃ</seg> <seg type="pāda" n="b">yathākṛtiviśeṣatā</seg> </l>
+<l><seg type="pāda" n="c">mānavānāṃ tathā nāsti</seg> <seg type="pāda" n="d">saṃsthānaṃ bhinnalakṣaṇam* <note>Speyer:saṃsthānabhinnaŚ</note></seg> //</l>
+</lg>
+
+<lg xml:id="KDA_144">
+<l><seg type="pāda" n="a">dhānyādivrīhijātīnāṃ</seg> <seg type="pāda" n="b">varṇākārādilakṣaṇam*</seg> </l>
+<l><seg type="pāda" n="c">tathā nāsti manuṣyāṇāṃ</seg> <seg type="pāda" n="d">varṇākāraviśeṣatā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_145">
+<l><seg type="pāda" n="a">jātikundādipuṣpāṇāṃ</seg> <seg type="pāda" n="b">yathā varṇādibhedatā</seg> </l>
+<l><seg type="pāda" n="c">mānavānāṃ tathā nāsti</seg> <seg type="pāda" n="d">varṇagandhādibhedatā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_146">
+<l><seg type="pāda" n="a">jalajānāṃ ca puṣpāṇāṃ</seg> <seg type="pāda" n="b">padmādīnāṃ viśeṣatā</seg> </l>
+<l><seg type="pāda" n="c">varṇasaṃsthānagandhāś ca</seg> <seg type="pāda" n="d">narāṇāṃ tu tathā na hi</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_147">
+<l><seg type="pāda" n="a">yathāmrādiphalānāṃ ca</seg> <seg type="pāda" n="b">svādādiguṇabhedatā</seg> </l>
+<l><seg type="pāda" n="c">manujānāṃ tathā nāsti</seg> <seg type="pāda" n="d">māṃsāsthiguṇabhedatā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_148">
+<l><seg type="pāda" n="a">yathā ṣaḍrasajātīnāṃ</seg> <seg type="pāda" n="b">guṇāsvādādibhedatā</seg> </l>
+<l><seg type="pāda" n="c">tathā nāsti manuṣyāṇāṃ</seg> <seg type="pāda" n="d">ṣaḍindriyaviśeṣatā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_149">
+<l><seg type="pāda" n="a">yathā hemādidhātūnāṃ</seg> <seg type="pāda" n="b">dravyavarṇādibhedatā</seg> </l>
+<l><seg type="pāda" n="c">tathā nāsti manuṣyāṇāṃ</seg> <seg type="pāda" n="d">saṃsthānavarṇabhedatā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_150">
+<l><seg type="pāda" n="a">yathā vajrādiratnānāṃ</seg> <seg type="pāda" n="b">saṃsthānavarṇabhedatā</seg> </l>
+<l><seg type="pāda" n="c">tathā nāsti manuṣyāṇāṃ</seg> <seg type="pāda" n="d">śarīrākārabhedatā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_151">
+<l><seg type="pāda" n="a">samamāṃsādibhedāś ca</seg> <seg type="pāda" n="b">ṣaḍindriyasamās tathā</seg> </l>
+<l><seg type="pāda" n="c">ekāṃśato viśeṣo na</seg> <seg type="pāda" n="d">kuto deheṣu bhedatā</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="275"/>
+
+<lg xml:id="KDA_152">
+<l><seg type="pāda" n="a">yathā hi bālakā bālā</seg> <seg type="pāda" n="b">krīḍamānā mahāpathe</seg> </l>
+<l><seg type="pāda" n="c">pāṃśupuñjāni saṃpiṇḍya</seg> <seg type="pāda" n="d">svayaṃ nāmāni kurvate</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_153">
+<l><seg type="pāda" n="a">idaṃ kṣīram idaṃ māṃsam</seg> <seg type="pāda" n="b">idaṃ ghṛtam idaṃ dadhi</seg> </l>
+<l><seg type="pāda" n="c">na ca bālasya vacanāt</seg> <seg type="pāda" n="d">pāṃśavo 'nnā bhavanti hi</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_158">
+<l><seg type="pāda" n="a">varṇās tathaiva catvāraḥ</seg> <seg type="pāda" n="b">subhūta iti kalpitāḥ</seg> </l>
+<l><seg type="pāda" n="c">pāṃśupuñjābhidhānena</seg> <seg type="pāda" n="d">yogo 'py eṣa na vidyate</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_155">
+<l><seg type="pāda" n="a">na keśena na kaṛṇena</seg> <seg type="pāda" n="b">na śīrṣeṇa na cakṣuṣā</seg> </l>
+<l><seg type="pāda" n="c">na mukhena na nāsāyā</seg> <seg type="pāda" n="d">na grīvayā na bāhunā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_156">
+<l><seg type="pāda" n="a">norasā na ca pārśvena</seg> <seg type="pāda" n="b">na pṛṣṭhenodareṇa vā</seg> </l>
+<l><seg type="pāda" n="c">norubhyām atha jaṅgābhyāṃ</seg> <seg type="pāda" n="d">pāṇipādanakhair na ca</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_157">
+<l><seg type="pāda" n="a">na svareṇa na varnena</seg> <seg type="pāda" n="b">na sarvāṃśair na maithunaiḥ</seg> </l>
+<l><seg type="pāda" n="c">naikā viśeṣatā vāpi</seg> <seg type="pāda" n="d">manuṣyeṣu na vidyate</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_158">
+<l><seg type="pāda" n="a">tathā nāsti yathānyāsu</seg> <seg type="pāda" n="b">jāter liṅgaṃ pṛthak pṛthak*</seg> </l>
+<l><seg type="pāda" n="c">sāmāny akāraṇaṃ manye</seg> <seg type="pāda" n="d">kiṃcin na bhedalakṣaṇam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_169">
+<l><seg type="pāda" n="a">saṃjñāmātreṇa kalpyante</seg> <seg type="pāda" n="b">brāhmaṇāḥ kṣatriyās tathā</seg> </l>
+<l><seg type="pāda" n="c">vaiśyāḥ śūdrās tathānye 'pi</seg> <seg type="pāda" n="d">saṃjñāmātre hi kīrtitāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_160">
+<l><seg type="pāda" n="a">yathaikavṛkṣajātānāṃ</seg> <seg type="pāda" n="b">phalānāṃ nāsti bhedatā</seg> </l>
+<l><seg type="pāda" n="c">tathaikam anujātānāṃ</seg> <seg type="pāda" n="d">kiṃ viśeṣatvalakṣaṇam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_161">
+<l><seg type="pāda" n="a">guṇadharmānucāreṇa</seg> <seg type="pāda" n="b">jātibhedā bhavanti hi</seg> </l>
+<l><seg type="pāda" n="c">cāturvarṇyam idaṃ loke</seg> <seg type="pāda" n="d">sarvaṃ hi manusaṃbhavam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_162">
+<l><seg type="pāda" n="a">guṇadharmapramāṇena</seg> <seg type="pāda" n="b">jāter naiva pramāṇatā</seg> </l>
+<l><seg type="pāda" n="c">tathā ca procyate bauddhair</seg> <seg type="pāda" n="d">avadānārthakovidaiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_163">
+<l><seg type="pāda" n="a">mānavā ye praśāntāsthā</seg> <seg type="pāda" n="b">satyadharmavratānvitāḥ</seg> </l>
+<l><seg type="pāda" n="c">brāhmaṇās te mahāśuddhāś</seg> <seg type="pāda" n="d">caturbrahmavihāriṇaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_164">
+<l><seg type="pāda" n="a">parigrahān parityajya</seg> <seg type="pāda" n="b">vanaprasthanivāsinaḥ</seg> </l>
+<l><seg type="pāda" n="c">ye bhajanti sadā brahma</seg> <seg type="pāda" n="d">vānaprasthā hi te dvijāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_165">
+<l><seg type="pāda" n="a">ṣaṭkarmaniratā ye tu</seg> <seg type="pāda" n="b">śrotriyā gṛhavāsinaḥ</seg> </l>
+<l><seg type="pāda" n="c">mahāyajñasamācārā</seg> <seg type="pāda" n="d">upādhyāyā hi te dvijāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_166">
+<l><seg type="pāda" n="a">nirapekṣāḥ svadehe 'pi</seg> <seg type="pāda" n="b">tyaktamārābhigocarāḥ</seg> </l>
+<l><seg type="pāda" n="c">bhikṣāśino vratasthās te</seg> <seg type="pāda" n="d">bhikṣavo brahmavādinaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_167">
+<l><seg type="pāda" n="a">ye ca mārān vinirjitya</seg> <seg type="pāda" n="b">niḥsaṅgā dhīramānasāḥ</seg> </l>
+<l><seg type="pāda" n="c">tapanti puṇyakṣetreṣu</seg> <seg type="pāda" n="d">mānavās te tapasvinaḥ</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="276"/>
+
+<lg xml:id="KDA_168">
+<l><seg type="pāda" n="a">daśākuśalanirbhuktā</seg> <seg type="pāda" n="b">daśākuśalasaṃratāḥ</seg> </l>
+<l><seg type="pāda" n="c">satyavāco vratasthā ye</seg> <seg type="pāda" n="d">ṛṣayas te dvijottamāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_169">
+<l><seg type="pāda" n="a">ye ca lokapracāreṣu</seg> <seg type="pāda" n="b">viratā dharmamānasāḥ</seg> </l>
+<l><seg type="pāda" n="c">vācaṃyamāś ca te bhadrā</seg> <seg type="pāda" n="d">munayaḥ satyavādinaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_170">
+<l><seg type="pāda" n="a">ye ca jitendriyagrāmā</seg> <seg type="pāda" n="b">nirmuktabhavacārakāḥ</seg> </l>
+<l><seg type="pāda" n="c">nirmamā nirahaṃkārā</seg> <seg type="pāda" n="d">yatayo yogino 'pi te</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_171">
+<l><seg type="pāda" n="a">ye ca sthaṇḍilam āśritya</seg> <seg type="pāda" n="b">caranti vratam ādarāt*</seg> </l>
+<l><seg type="pāda" n="c">te 'pi ca mānavā dhīrāḥ</seg> <seg type="pāda" n="d">sthaṇḍilā jaṭilās tathā <note>Speyer: sthāṇḍilā</note></seg> //</l>
+</lg>
+
+<lg xml:id="KDA_172">
+<l><seg type="pāda" n="a">ye ca bhasmaviliptāṅgā</seg> <seg type="pāda" n="b">hārābharaṇabhūṣitāḥ</seg> </l>
+<l><seg type="pāda" n="c">kāpālikāś ca te vīrāḥ</seg> <seg type="pāda" n="d">śmaśānavratacāriṇaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_173">
+<l><seg type="pāda" n="a">ye samiddhavyadravyāṇi</seg> <seg type="pāda" n="b">juhvatyagnau samāhitāḥ</seg> </l>
+<l><seg type="pāda" n="c">te hotāraś ca yajvāno</seg> <seg type="pāda" n="d">vedadharmārthasādhakāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_174">
+<l><seg type="pāda" n="a">ye ca kṣatrāṇi rakṣantaḥ</seg> <seg type="pāda" n="b">pālayanti sadā prajāḥ</seg> </l>
+<l><seg type="pāda" n="c">satvarakṣāvratācārāḥ</seg> <seg type="pāda" n="d">kṣatriyās te nṛpā narāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_175">
+<l><seg type="pāda" n="a">ye rañjayanti dharmārthe</seg> <seg type="pāda" n="b">lokān nītiprayojakāḥ</seg> </l>
+<l><seg type="pāda" n="c">rājānas te mahāvīrāḥ</seg> <seg type="pāda" n="d">sarvadharmābhipālakāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_176">
+<l><seg type="pāda" n="a">ye ca satvahitādhāne</seg> <seg type="pāda" n="b">vividhārthānukāriṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">veśayanti prajā dharme</seg> <seg type="pāda" n="d">vaiśyās te hi narottamāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_177">
+<l><seg type="pāda" n="a">vratācāravihīnā ye</seg> <seg type="pāda" n="b">satvarakṣārthacāriṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">manyante sevayā śuddhiṃ</seg> <seg type="pāda" n="d">śūdrās te śreṣṭhinas tathā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_178">
+<l><seg type="pāda" n="a">ye ca kṣetrāṇi karṣanti</seg> <seg type="pāda" n="b">dhānyādivrīhisādhakāḥ</seg> </l>
+<l><seg type="pāda" n="c">kṛṣikās te narā dhānyaiḥ</seg> <seg type="pāda" n="d">satvajīvānupoṣakāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_179">
+<l><seg type="pāda" n="a">sādhayanti mahatkāryaṃ</seg> <seg type="pāda" n="b">dhanādivastusaṃgrahaiḥ</seg> </l>
+<l><seg type="pāda" n="c">vaṇikkarmābhisaṃyuktā</seg> <seg type="pāda" n="d">vaṇijas te mahodyamāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_180">
+<l><seg type="pāda" n="a">ye ca sārthān samāhṛtya</seg> <seg type="pāda" n="b">ratnākarasamāgatāḥ</seg> </l>
+<l><seg type="pāda" n="c">sādhayanti ca ratnāni</seg> <seg type="pāda" n="d">sārthavāhāś ca te narāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_181">
+<l><seg type="pāda" n="a">tathānye śilpavidyādīn</seg> <seg type="pāda" n="b">ye ca kurvanti mānavāḥ</seg> </l>
+<l><seg type="pāda" n="c">śilpinas te tathānye 'pi</seg> <seg type="pāda" n="d">svarṇakārādayo narāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_182">
+<l><seg type="pāda" n="a">jyotir vidyāvido ye ca</seg> <seg type="pāda" n="b">gaṇayanti divāniśam*</seg> </l>
+<l><seg type="pāda" n="c">yugāntakālavijñātā</seg> <seg type="pāda" n="d">gaṇakās te 'pi mānavāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_183">
+<l><seg type="pāda" n="a">dhātudoṣāny abhijñāya</seg> <seg type="pāda" n="b">lokānāṃ paricārakāḥ</seg> </l>
+<l><seg type="pāda" n="c">bhaiṣajyaṃ ye dadanty eva</seg> <seg type="pāda" n="d">bhiṣajas te hi vaidyakāḥ</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="277"/>
+
+<lg xml:id="KDA_184">
+<l><seg type="pāda" n="a">bhūtadoṣāṇy abhijñāya</seg> <seg type="pāda" n="b">balipūjāvidhānataḥ</seg> </l>
+<l><seg type="pāda" n="c">śamayanti ca ye bhūtān</seg> <seg type="pāda" n="d">bhautikās te 'pi mānavāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_185">
+<l><seg type="pāda" n="a">evaṃ cānye 'pi ye satvā</seg> <seg type="pāda" n="b">yad yat karmānucāriṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">tat tat karmānuśīlena</seg> <seg type="pāda" n="d">jātidharmapravṛttikāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_186">
+<l><seg type="pāda" n="a">tato ye mānavāḥ krūrā</seg> <seg type="pāda" n="b">nirdayāḥ satvahiṃsakāḥ</seg> </l>
+<l><seg type="pāda" n="c">caṇḍavṛttipracārāś ca</seg> <seg type="pāda" n="d">caṇḍālā iti te smṛtāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_187">
+<l><seg type="pāda" n="a">ye bhajanti śivaṃ nityaṃ</seg> <seg type="pāda" n="b">śivabhaktiparāyaṇāḥ</seg> </l>
+<l><seg type="pāda" n="c">te śaivā manujā jñeyāḥ</seg> <seg type="pāda" n="d">śivadharmānucārataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_188">
+<l><seg type="pāda" n="a">ye bhajanti viṣṇuṃ nityaṃ</seg> <seg type="pāda" n="b">viṣṇubhaktiparāyaṇāḥ</seg> </l>
+<l><seg type="pāda" n="c">viṣṇudharmasamācārād</seg> <seg type="pāda" n="d">vaiṣṇavās te 'pi mānavāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_189">
+<l><seg type="pāda" n="a">brahmāṇaṃ ye bhajayanty eva</seg> <seg type="pāda" n="b">brahmabhaktiparāyaṇāḥ</seg> </l>
+<l><seg type="pāda" n="c">brahmadharmasamācārād</seg> <seg type="pāda" n="d">brāhmaṇās te 'pi mānavāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_190">
+<l><seg type="pāda" n="a">ye bhajanti mahāraudraṃ</seg> <seg type="pāda" n="b">bhairavabhaktimānasāḥ</seg> </l>
+<l><seg type="pāda" n="c">mahāraudrāś ca te khyātā</seg> <seg type="pāda" n="d">bhairavikāś ca mānavāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_191">
+<l><seg type="pāda" n="a">ye ca māheśvarīṃ devīṃ</seg> <seg type="pāda" n="b">bhajanti kuladharmiṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">māheśvarīvratādhārāḥ</seg> <seg type="pāda" n="d">kālikās te 'pi mānavāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_192">
+<l><seg type="pāda" n="a">yee bhajanti sadā buddhaṃ</seg> <seg type="pāda" n="b">bauddhadharmaparāyaṇāḥ</seg> </l>
+<l><seg type="pāda" n="c">te 'pi ca mānavā bauddhāḥ</seg> <seg type="pāda" n="d">saṃbodhipadasādhinaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_193">
+<l><seg type="pāda" n="a">ye bhajanti jinaṃ caiva</seg> <seg type="pāda" n="b">jainadharmaparāyaṇāḥ</seg> </l>
+<l><seg type="pāda" n="c">te 'pi ca manujā jainā</seg> <seg type="pāda" n="d">jainadharmānucāraṇāt*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_194">
+<l><seg type="pāda" n="a">evaṃ cānye 'pi ye satvā</seg> <seg type="pāda" n="b">vratacaryānuliṅginaḥ</seg> </l>
+<l><seg type="pāda" n="c">te 'pi ca mānavāḥ sarve</seg> <seg type="pāda" n="d">dharmacaryānuvarṇinaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_195">
+<l><seg type="pāda" n="a">yādṛśaṃ sādhyate karma</seg> <seg type="pāda" n="b">tādṛśī jātitā bhavet*</seg> </l>
+<l><seg type="pāda" n="c">prajāpatir hi caikatve</seg> <seg type="pāda" n="d">nirviśeṣo 'bhavad yataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_196">
+<l><seg type="pāda" n="a">na cendriyeṣu nānātvaṃ</seg> <seg type="pāda" n="b">kriyāvādena dṛśyate</seg> </l>
+<l><seg type="pāda" n="c">brāhmaṇe cānyajātau vā</seg> <seg type="pāda" n="d">naiṣāṃ kiṃcid viśiṣyate</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_197">
+<l><seg type="pāda" n="a">na hy ātmanaḥ samutkarṣāc</seg> <seg type="pāda" n="b">chreṣṭhatvam iha yujyate</seg> </l>
+<l><seg type="pāda" n="c">śukraśoṇitasaṃbhūtaṃ</seg> <seg type="pāda" n="d">yonijaṃ sarvam eva hi</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_198">
+<l><seg type="pāda" n="a">cāturvarṇyam idaṃ lokam</seg> <seg type="pāda" n="b">iti tīrthyair vikalpitam*</seg> </l>
+<l><seg type="pāda" n="c">brahmajā brāhmaṇā naivaṃ</seg> <seg type="pāda" n="d">dharmasaṃskārajāḥ khalu</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_199">
+<l><seg type="pāda" n="a">yadi vā brahmajā viprā</seg> <seg type="pāda" n="b">brāhmaṇī kutra saṃbhavā</seg> </l>
+<l><seg type="pāda" n="c">brāhmaṇy api tathā caiva</seg> <seg type="pāda" n="d">brahmajā yadi sāṃpratam*</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="278"/>
+
+<lg xml:id="KDA_200">
+<l><seg type="pāda" n="a">brāhmaṇasya ca sā bhāryā</seg> <seg type="pāda" n="b">syāc caivedaṃ na yuktitaḥ</seg> </l>
+<l><seg type="pāda" n="c">na bhāryā bhaginī yuktā</seg> <seg type="pāda" n="d">brahmaṇāṃ brahmajā yadi</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_201">
+<l><seg type="pāda" n="a">na satvā brahmaṇo jātāḥ</seg> <seg type="pāda" n="b">karmasaṃskārajās tvamī</seg> </l>
+<l><seg type="pāda" n="c">nihīnotkṛṣṭamadhyāś ca</seg> <seg type="pāda" n="d">satvā nānāśrayāḥ pṛthak*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_202">
+<l><seg type="pāda" n="a">teṣāṃ hi jātisāmānyād</seg> <seg type="pāda" n="b">brāhmaṇe kṣatriye tathā</seg> </l>
+<l><seg type="pāda" n="c">vaiśyaśūdre tathānyeṣu</seg> <seg type="pāda" n="d">samaṃ jñānaṃ pravartate</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_203">
+<l><seg type="pāda" n="a">śīlaṃ pradhānaṃ na kulaṃ pradhānaṃ</seg> <seg type="pāda" n="b">kulena kiṃ śīlavivarjitena</seg> </l>
+<l><seg type="pāda" n="c">bahavo narā nīcakulaprasūtāḥ</seg> <seg type="pāda" n="d">svargaṃ gatāḥ śīlam upetya dhīrāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_204">
+<l><seg type="pāda" n="a">na jātir dṛśyate devaiḥ</seg> <seg type="pāda" n="b">śīlaḥ kalyāṇakārakaḥ</seg> </l>
+<l><seg type="pāda" n="c">caṇḍālo 'pi hi śīlasthas</seg> <seg type="pāda" n="d">taṃ devā brāhmaṇaṃ viduḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_205">
+<l><seg type="pāda" n="a">satyaṃ brahma tapo brahma</seg> <seg type="pāda" n="b">śīlaś cendriyasaṃyamaḥ</seg> </l>
+<l><seg type="pāda" n="c">sarvabhūtadayā brahma</seg> <seg type="pāda" n="d">etad brāhmaṇalakṣaṇam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_206">
+<l><seg type="pāda" n="a">satyaṃ nāsti tapo nāsti</seg> <seg type="pāda" n="b">nāsti cendriyasaṃyamaḥ</seg> </l>
+<l><seg type="pāda" n="c">sarvabhūtadayā nāsti</seg> <seg type="pāda" n="d">etac caṇḍālalakṣaṇam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_207">
+<l><seg type="pāda" n="a">devamanuṣyanārīṇāṃ</seg> <seg type="pāda" n="b">tiryagyonigateṣv api</seg> </l>
+<l><seg type="pāda" n="c">maithunaṃ nādhigacchanti</seg> <seg type="pāda" n="d">te narā brāhmaṇāḥ khalu</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_207">
+<l><seg type="pāda" n="a">śūdrīhastena yo bhuṅkte</seg> <seg type="pāda" n="b">māsam ekaṃ nirantaram*</seg> </l>
+<l><seg type="pāda" n="c">jīvamāno bhavec chūdro</seg> <seg type="pāda" n="d">mṛtaḥ sa śvā prajāyate</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_208">
+<l><seg type="pāda" n="a">śūdrīparivṛto vipraḥ</seg> <seg type="pāda" n="b">śūdrī ca gṛhamedhinī</seg> </l>
+<l><seg type="pāda" n="c">varjitaḥ pitṛdevaiś ca</seg> <seg type="pāda" n="d">rauravaṃ so 'dhigacchati</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_210">
+<l><seg type="pāda" n="a">tasmād dharmatapaḥśīla</seg><seg type="pāda" n="b">saṃyamajñānato dvijaḥ</seg> </l>
+<l><seg type="pāda" n="c">na tv etair hi vinā vipraḥ</seg> <seg type="pāda" n="d">kiṃ syāt saṃskāramātrataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_211">
+<l><seg type="pāda" n="a">tan na śarīrasaṃskāra</seg><seg type="pāda" n="b">mātreṇa brāhmaṇo bhavet*</seg> </l>
+<l><seg type="pāda" n="c">saṃskṛtena dvijo vā cec</seg> <seg type="pāda" n="d">chūdro 'pi saṃskṛto dvijaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_212">
+<l><seg type="pāda" n="a">yadi vipraḥ śarīraḥ syāt</seg> <seg type="pāda" n="b">pāvako brahmahā bhavet*</seg> </l>
+<l><seg type="pāda" n="c">brahmahatyā ca bandhūnāṃ</seg> <seg type="pāda" n="d">śarīradahanād bhavet*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_123">
+<l><seg type="pāda" n="a">brāhmaṇabījasaṃbhūtaḥ</seg> <seg type="pāda" n="b">śūdro 'pi na kathaṃ dvijaḥ</seg> </l>
+<l><seg type="pāda" n="c">tasmād dhi brāhmaṇo naiva</seg> <seg type="pāda" n="d">dehasaṃskāramātrataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_214">
+<l><seg type="pāda" n="a">sadyaḥ patati māṃsena</seg> <seg type="pāda" n="b">dhātvannakṣiravikrayī</seg> </l>
+<l><seg type="pāda" n="c">brāhmaṇo 'pi bhavec chūdraḥ</seg> <seg type="pāda" n="d">surayā lavaṇena ca</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_215">
+<l><seg type="pāda" n="a">ākāśagāmino priyāḥ</seg> <seg type="pāda" n="b">patitā māṃsabhakṣaṇāt*</seg> </l>
+<l><seg type="pāda" n="c">viprāṇāṃ patanaṃ dṛṣṭvā</seg> <seg type="pāda" n="d">tato māṃsāni varjayet</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="279"/>
+
+<lg xml:id="KDA_216">
+<l><seg type="pāda" n="a">bhakṣyante yena māṃsāni</seg> <seg type="pāda" n="b">bhakṣyate tena kiṃ na hi</seg> </l>
+<l><seg type="pāda" n="c">abhakṣyabhakṣaṇāc caiva</seg> <seg type="pāda" n="d">brāhmaṇaḥ patito bhavet*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_217">
+<l><seg type="pāda" n="a">patito brāhmaṇaś caivaṃ</seg> <seg type="pāda" n="b">saṃskāraṃ nārhati punaḥ</seg> </l>
+<l><seg type="pāda" n="c">tasmāj jñānaṃ vinā naiva</seg> <seg type="pāda" n="d">śarīro brāhmaṇo bhavet*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_218">
+<l><seg type="pāda" n="a">jñānavān hi bhavet pūjyo</seg> <seg type="pāda" n="b">brāhmaṇā api mānavāḥ</seg> </l>
+<l><seg type="pāda" n="c">samāneṣu ca deheṣu</seg> <seg type="pāda" n="d">kutrāpy asti viśeṣatā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_219">
+<l><seg type="pāda" n="a">tasmāj jñānapramāṇena</seg> <seg type="pāda" n="b">na śarīrapramāṇatā</seg> </l>
+<l><seg type="pāda" n="c">yathā karoti bhāṇdāni</seg> <seg type="pāda" n="d">mṛttikayaiva bhārgavaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_220">
+<l><seg type="pāda" n="a">mṛttikāyā na bhedo 'sti</seg> <seg type="pāda" n="b">tatkṛtabhājaneṣv api</seg> </l>
+<l><seg type="pāda" n="c">kiṃ tu prakṣiptavastūnāṃ</seg> <seg type="pāda" n="d">saṃjñayākhyāyate khalu</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_221">
+<l><seg type="pāda" n="a">prakṣiptaṃ yatra yad dravyaṃ</seg> <seg type="pāda" n="b">tad bhāṇḍaṃ tena lakṣyate</seg> </l>
+<l><seg type="pāda" n="c">jñānadharmaguṇācārair</seg> <seg type="pāda" n="d">lakṣyate mānavas tathā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_222">
+<l><seg type="pāda" n="a">jñānadharmaguṇācārair</seg> <seg type="pāda" n="b">vihīno mānavaḥ paśuḥ</seg> </l>
+<l><seg type="pāda" n="c">jñānavijñānabhedena</seg> <seg type="pāda" n="d">vartate guṇabhedatā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_223">
+<l><seg type="pāda" n="a">guṇabhedād bhaved dharma</seg><seg type="pāda" n="b">bhedā ca saṃprajāyate</seg> </l>
+<l><seg type="pāda" n="c">dharmabhedāt tataḥ karma</seg><seg type="pāda" n="d">bhedatā saṃpravartate</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_224">
+<l><seg type="pāda" n="a">karmabhedāt tathācāra</seg><seg type="pāda" n="b">bhedatā ca pravartate</seg> </l>
+<l><seg type="pāda" n="c">tathācāraviśeṣeṇa</seg> <seg type="pāda" n="d">jātibhedāḥ pravartitāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_225">
+<l><seg type="pāda" n="a">mahābhūtasamudbhūta</seg><seg type="pāda" n="b">skandheṣv āyataneṣu ca</seg> </l>
+<l><seg type="pāda" n="c">sarvajantuśarīreṣu</seg> <seg type="pāda" n="d">sameṣu kā viśeṣatā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_226">
+<l><seg type="pāda" n="a">jñānavijñānamātreṇa</seg> <seg type="pāda" n="b">bhidyante khalu mānavāḥ</seg> </l>
+<l><seg type="pāda" n="c">jñānavijñānapātratvāt</seg> <seg type="pāda" n="d">pūjyante nīcajā api</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_227">
+<l><seg type="pāda" n="a">jñānavijñānahīnatvān</seg> <seg type="pāda" n="b">mānavo 'pi na pūjyate</seg> </l>
+<l><seg type="pāda" n="c">paśuvatsa narākāraḥ</seg> <seg type="pāda" n="d">tataḥ pūjā na cākṛteḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_228">
+<l><seg type="pāda" n="a">jñānenāpi dvijo naiva</seg> <seg type="pāda" n="b">karmācārapramāṇataḥ</seg> </l>
+<l><seg type="pāda" n="c">jñānena yadi vā vipraḥ</seg> <seg type="pāda" n="d">śūdro 'pi brāhmaṇo bhavet*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_229">
+<l><seg type="pāda" n="a">anye 'pi bahavaḥ santi</seg> <seg type="pāda" n="b">sakaivartādinīcajāḥ</seg> </l>
+<l><seg type="pāda" n="c">jñānavantaś ca ye dhīrās</seg> <seg type="pāda" n="d">te 'pi syur brāhmaṇāḥ khalu</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_230">
+<l><seg type="pāda" n="a">tamāc ca jñānamātreṇa</seg> <seg type="pāda" n="b">brāhmaṇo na bhavet khalu</seg> </l>
+<l><seg type="pāda" n="c">karmācārapramāṇena</seg> <seg type="pāda" n="d">na jñānasya pramāṇatā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_231">
+<l><seg type="pāda" n="a">karmaṇāpi dvijo naiva</seg> <seg type="pāda" n="b">śuddhācārapramāṇataḥ</seg> </l>
+<l><seg type="pāda" n="c">karmaṇā vai dvijāś caivaṃ</seg> <seg type="pāda" n="d">sarve syur brāhmaṇāḥ khalu</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="280"/>
+
+<lg xml:id="KDA_232">
+<l><seg type="pāda" n="a">santi hi bahavo loke</seg> <seg type="pāda" n="b">mahāyajñādikarmiṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">kṣatriyavaiśyaśūdrāś ca</seg> <seg type="pāda" n="d">kathaṃ na brāhmaṇā nu te</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_233">
+<l><seg type="pāda" n="a">tasmān na karmamātreṇa</seg> <seg type="pāda" n="b">brāhmaṇāḥ syur narāḥ khalu</seg> </l>
+<l><seg type="pāda" n="c">nāpi svācāramātreṇa</seg> <seg type="pāda" n="d">brāhmaṇāḥ syus tathā narāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_234">
+<l><seg type="pāda" n="a">yadi svācārato vipraḥ</seg> <seg type="pāda" n="b">sarve syur brāhmaṇāḥ khalu</seg> </l>
+<l><seg type="pāda" n="c">ye ye svācāravantaś ca</seg> <seg type="pāda" n="d">te te syur brāhmaṇāḥ kila</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_235">
+<l><seg type="pāda" n="a">santi ca bahavaḥ śūdrāḥ</seg> <seg type="pāda" n="b">śuddhācārasamanvitāḥ</seg> </l>
+<l><seg type="pāda" n="c">vratopavāsadharmiṣṭā</seg> <seg type="pāda" n="d">nīcajā api santi ca</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_236">
+<l><seg type="pāda" n="a">te 'pi syur brāhmaṇāś caivaṃ</seg> <seg type="pāda" n="b">yady ācārapramāṇatā</seg> </l>
+<l><seg type="pāda" n="c">tasmād ācāramātreṇa</seg> <seg type="pāda" n="d">brāhmaṇā naiva mānuṣāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_237">
+<l><seg type="pāda" n="a">vedenāpi tathā naiva</seg> <seg type="pāda" n="b">brāhmaṇāḥ syur narottamāḥ</seg> </l>
+<l><seg type="pāda" n="c">yadi vedair bhaved vipro</seg> <seg type="pāda" n="d">rākṣaso 'pi dvijaḥ khalu</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_238">
+<l><seg type="pāda" n="a">tathābhūd rāvaṇo nāma</seg> <seg type="pāda" n="b">rākṣaso vedapāragaḥ</seg> </l>
+<l><seg type="pāda" n="c">sarve 'pi rākṣasāś caivaṃ</seg> <seg type="pāda" n="d">vedakarmānucārakāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_230">
+<l><seg type="pāda" n="a">kathaṃ te brāhmaṇā naiva</seg> <seg type="pāda" n="b">yadi vedād dvijo bhavet*</seg> </l>
+<l><seg type="pāda" n="c">tasmāc ca vedamātreṇa</seg> <seg type="pāda" n="d">naiva syur brāhmaṇāḥ khalu</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_240">
+<l><seg type="pāda" n="a">satyadharmapramāṇena</seg> <seg type="pāda" n="b">sarvam ekaṃ jagad dhruvam*</seg> </l>
+<l><seg type="pāda" n="c">cāturvarṇyam idaṃ lokaṃ</seg> <seg type="pāda" n="d">tīrthikair iti kalpitam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_241">
+<l><seg type="pāda" n="a">tathā ca kalpyate loka</seg><seg type="pāda" n="b">bodhārtham iti tīrthikaiḥ</seg> </l>
+<l><seg type="pāda" n="c">svayaṃbhūdehasaṃbhūtaṃ</seg> <seg type="pāda" n="d">cāturvarṇyam idaṃ khalu</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_242">
+<l><seg type="pāda" n="a">mukhato brāhmaṇo jāto</seg> <seg type="pāda" n="b">bāhubhyāṃ kṣatriyaḥ smṛtaḥ</seg> </l>
+<l><seg type="pāda" n="c">ūrubhyāṃ saṃbhavo vaiśyaḥ</seg> <seg type="pāda" n="d">padbhyāṃ śūdraḥ samudbhavaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_243">
+<l><seg type="pāda" n="a">tathā ced dhi bhaved doṣo</seg> <seg type="pāda" n="b">dharmeṣu varṇavādinām*</seg> </l>
+<l><seg type="pāda" n="c">agamyagamanāc caivaṃ</seg> <seg type="pāda" n="d">kathaṃ dharmaviśuddhitā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_244">
+<l><seg type="pāda" n="a">yadi vipro mukhāj jāto</seg> <seg type="pāda" n="b">brāhmaṇī kutra saṃbhavā</seg> </l>
+<l><seg type="pāda" n="c">brāhmaṇy api mukhāj jātā</seg> <seg type="pāda" n="d">svasā bhāryā kathaṃ nanu</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_245">
+<l><seg type="pāda" n="a">tathā ca kṣatriyā jātā</seg> <seg type="pāda" n="b">bāhubhyām eva cet tathā</seg> </l>
+<l><seg type="pāda" n="c">kṣatriyasya bhaved bhāryā</seg> <seg type="pāda" n="d">kṣatriyā bhaginī khalu</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_246">
+<l><seg type="pāda" n="a">vaiśyāpi hi tathā caivam</seg> <seg type="pāda" n="b">ūrubhyām eva saṃbhavā</seg> </l>
+<l><seg type="pāda" n="c">vaiśyasyāpi bhaved bhāryā</seg> <seg type="pāda" n="d">vaiśyā tu bhaginī viśaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_247">
+<l><seg type="pāda" n="a">padbhyāṃ jāto yathā śūdraḥ</seg> <seg type="pāda" n="b">śūdrī cāpi tathodbhavā</seg> </l>
+<l><seg type="pāda" n="c">śūdrasyāpi bhaved bhāryā</seg> <seg type="pāda" n="d">śūdrī hi bhaginī khalu</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="281"/>
+
+<lg xml:id="KDA_248">
+<l><seg type="pāda" n="a">na yuktā bhaginī bhāryā</seg> <seg type="pāda" n="b">tathā dharmaḥ kathaṃ bhavet*</seg> </l>
+<l><seg type="pāda" n="c">agamyagamanāc caivam</seg> <seg type="pāda" n="d">adharma eva saṃbhavet*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_249">
+<l><seg type="pāda" n="a">tato 'tyantaviruddhaṃ syād</seg> <seg type="pāda" n="b">brahmajā brāhmaṇā yadi</seg> </l>
+<l><seg type="pāda" n="c">dharmakriyāviśeṣāt tu</seg> <seg type="pāda" n="d">varṇāvasthāḥ pratiṣṭhitāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_250">
+<l><seg type="pāda" n="a">bhārate 'pi tathā caivaṃ</seg> <seg type="pāda" n="b">dharmarājo yudhiṣṭhiraḥ</seg> </l>
+<l><seg type="pāda" n="c">vaiśampāyanam āgamya</seg> <seg type="pāda" n="d">prāñjaliḥ paryapṛcchata</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_251">
+<l><seg type="pāda" n="a">ke te ye brāhmaṇāḥ proktāḥ</seg> <seg type="pāda" n="b">kiṃ vā brāhmaṇalakṣaṇam*</seg> </l>
+<l><seg type="pāda" n="c">etad icchāmi bho jñātuṃ</seg> <seg type="pāda" n="d">tadbhavān vyākarotu me</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_252">
+<l><seg type="pāda" n="a">iti śrutvā mahāvijño</seg> <seg type="pāda" n="b">vaiśampāyana ādarāt*</seg> </l>
+<l><seg type="pāda" n="c">pratyuvāceti kaunteya</seg> <seg type="pāda" n="d">śṛṇu tat kathyate mayā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_253">
+<l><seg type="pāda" n="a">kṣāntyādibhir guṇair yuktas</seg> <seg type="pāda" n="b">tyaktadaṇḍo nirāmiṣaḥ</seg> </l>
+<l><seg type="pāda" n="c">na hanti sarvabhūtāni</seg> <seg type="pāda" n="d">prathamaṃ brāhmalakṣaṇam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_254">
+<l><seg type="pāda" n="a">yadā sarvaparadravyaṃ</seg> <seg type="pāda" n="b">pathi vā yadi vā gṛhe</seg> </l>
+<l><seg type="pāda" n="c">adattaṃ naiva gṛhṇāti</seg> <seg type="pāda" n="d">dvitīyaṃ brāhmalakṣaṇam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_255">
+<l><seg type="pāda" n="a">tyaktakrūrasvabhāvas tu</seg> <seg type="pāda" n="b">nirmamo niḥparigrahaḥ</seg> </l>
+<l><seg type="pāda" n="c">muktaś carati yo nityaṃ</seg> <seg type="pāda" n="d">tṛtīyaṃ brāhmalakṣaṇam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_256">
+<l><seg type="pāda" n="a">devamanuṣyanārīṇāṃ</seg> <seg type="pāda" n="b">tiryagyonigateṣv api</seg> </l>
+<l><seg type="pāda" n="c">maithunaṃ hi sadā tyaktaṃ</seg> <seg type="pāda" n="d">caturthaṃ brāhmalakṣaṇam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_257">
+<l><seg type="pāda" n="a">satyaṃ śaucaṃ dayā śaucaṃ</seg> <seg type="pāda" n="b">śaucam indriyanigrahaḥ</seg> </l>
+<l><seg type="pāda" n="c">sarvabhūtadayā śaucaṃ</seg> <seg type="pāda" n="d">tapaḥ śaucaṃ ca pañcamam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_258">
+<l><seg type="pāda" n="a">pañcalakṣaṇasaṃpanna</seg> <seg type="pāda" n="b">īdṛśo yo bhaved dvijaḥ</seg> </l>
+<l><seg type="pāda" n="c">tam ahaṃ brāhmaṇaṃ brūyāṃ</seg> <seg type="pāda" n="d">śeṣāḥ śudrā yudhiṣṭhira</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_259">
+<l><seg type="pāda" n="a">na kulena na jātyā ca</seg> <seg type="pāda" n="b">kriyābhir brāhmaṇo na ca</seg> </l>
+<l><seg type="pāda" n="c">cāṇḍālo 'pi hi vṛttastho</seg> <seg type="pāda" n="d">brāhmaṇaḥ sa yudhiṣṭhira</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_260">
+<l><seg type="pāda" n="a">ahiṃsā brahmacaryaṃ ca</seg> <seg type="pāda" n="b">viśuddhātmāparigrahaḥ</seg> </l>
+<l><seg type="pāda" n="c">phaleṣv anabhilipsātha</seg> <seg type="pāda" n="d">brāhmaṇaḥ syād yudhiṣṭhira</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_261">
+<l><seg type="pāda" n="a">ekavarṇam idaṃ viśvaṃ</seg> <seg type="pāda" n="b">pūrvam āsīd yudhiṣṭhira</seg> </l>
+<l><seg type="pāda" n="c">karmakriyāviśeṣeṇa</seg> <seg type="pāda" n="d">cāturvarṇyaṃ pratiṣṭhitam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_262">
+<l><seg type="pāda" n="a">sarve vai yonijā martyāḥ</seg> <seg type="pāda" n="b">sarve mūtrapurīṣiṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">ekendriyakriyārthāś ca</seg> <seg type="pāda" n="d">tasmāc chīlaguṇair dvijāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_263">
+<l><seg type="pāda" n="a">śūdro 'pi śīlasaṃpanno</seg> <seg type="pāda" n="b">guṇavān brāhmaṇo bhavet*</seg> </l>
+<l><seg type="pāda" n="c">brāhmaṇo 'pi kriyāhīnaḥ</seg> <seg type="pāda" n="d">śūdrāt pratyavaro bhavet*</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="282"/>
+
+<lg xml:id="KDA_264">
+<l><seg type="pāda" n="a">pañcendriyārṇavaṃ ghoraṃ</seg> <seg type="pāda" n="b">yadi śūdro 'pi tīrṇavān*</seg> </l>
+<l><seg type="pāda" n="c">tasmai dānaṃ pradātavyam</seg> <seg type="pāda" n="d">aprameyaṃ yudhiṣṭhira</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_265">
+<l><seg type="pāda" n="a">na jātir dṛśyate rājan</seg> <seg type="pāda" n="b">guṇāḥ kalyāṇakārakāḥ</seg> </l>
+<l><seg type="pāda" n="c">guṇavidyānidhir vidvān</seg> <seg type="pāda" n="d">brāhmaṇo brahmacārāṇāt*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_266">
+<l><seg type="pāda" n="a">jīvitaṃ yasya lokārthe</seg> <seg type="pāda" n="b">dharmārthe yasya jīvitam*</seg> </l>
+<l><seg type="pāda" n="c">ahorātraṃ caren muktas</seg> <seg type="pāda" n="d">taṃ devā brāhmaṇaṃ viduḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_267">
+<l><seg type="pāda" n="a">parityajya gṛhāvāsaṃ</seg> <seg type="pāda" n="b">ye sthitā mokṣakāṅkṣiṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">kāmeṣv asaktāḥ kaunteya</seg> <seg type="pāda" n="d">brāhmaṇās te yudhiṣṭhira</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_268">
+<l><seg type="pāda" n="a">ahiṃsā nirmamatvaṃ vā</seg> <seg type="pāda" n="b">satkṛtyasya vivarjanam*</seg> </l>
+<l><seg type="pāda" n="c">rāgadveṣanivṛttiś ca</seg> <seg type="pāda" n="d">etad brāhmaṇalakṣaṇam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_269">
+<l><seg type="pāda" n="a">kṣamā dayā damo dānaṃ</seg> <seg type="pāda" n="b">satyaṃ śaucaṃ smṛtir ghṛṇā</seg> </l>
+<l><seg type="pāda" n="c">vidyā vidyānamādhītyam</seg> <seg type="pāda" n="d">etad brāhmaṇalakṣaṇam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_270">
+<l><seg type="pāda" n="a">gāyatrīmātrasāro 'pi</seg> <seg type="pāda" n="b">varaṃ vipraḥ suyantritaḥ</seg> </l>
+<l><seg type="pāda" n="c">nādhitya caturo vedān</seg> <seg type="pāda" n="d">sarvāśī sarvavikrayī</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_271">
+<l><seg type="pāda" n="a">ekarātroṣitasyāpi</seg> <seg type="pāda" n="b">yā gatir brahmacāriṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">na tāṃ kratusahasreṇa</seg> <seg type="pāda" n="d">prāpnuvanti yudhiṣṭhira</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_272">
+<l><seg type="pāda" n="a">pāragaḥ sarvavedānāṃ</seg> <seg type="pāda" n="b">sarvatīrthābhiṣiñcanaiḥ</seg> </l>
+<l><seg type="pāda" n="c">yuktaś carati dharmaṃ yo</seg> <seg type="pāda" n="d">taṃ devā brāhmaṇaṃ viduḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_273">
+<l><seg type="pāda" n="a">yadā na kurute pāpaṃ</seg> <seg type="pāda" n="b">sarvabhūteṣu dāruṇam*</seg> </l>
+<l><seg type="pāda" n="c">kāyena manasā vācā</seg> <seg type="pāda" n="d">brahma saṃpadyate tadā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_274">
+<l><seg type="pāda" n="a">yasya lokahite cittaṃ</seg> <seg type="pāda" n="b">maitrīyuktam ivātmaje</seg> </l>
+<l><seg type="pāda" n="c">tena saṃpadyate brahma</seg> <seg type="pāda" n="d">tasmān maitrīṃ vibhāvaya</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_275">
+<l><seg type="pāda" n="a">yasya lokeṣu kāruṇyaṃ</seg> <seg type="pāda" n="b">svātmaje iva duḥkhite</seg> </l>
+<l><seg type="pāda" n="c">tena saṃpadyate brahma</seg> <seg type="pāda" n="d">tasmāt kāruṇiko bhava</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_276">
+<l><seg type="pāda" n="a">yac cittaṃ muditaṃ loke</seg> <seg type="pāda" n="b">sukhībhūte ivātmaje</seg> </l>
+<l><seg type="pāda" n="c">tasya saṃjāyate brahma</seg> <seg type="pāda" n="d">tal loke modavāṃś cara</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_277">
+<l><seg type="pāda" n="a">yasyopekṣāyutaṃ cittaṃ</seg> <seg type="pāda" n="b">sarvalokeṣv ivātmaje</seg> </l>
+<l><seg type="pāda" n="c">tasya saṃjāyate brahma</seg> <seg type="pāda" n="d">tad upekṣāyutaś cara</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_278">
+<l><seg type="pāda" n="a">etad dhi paramaṃ brahma</seg><seg type="pāda" n="b">vihāraṃ brahmasādhanam*</seg> </l>
+<l><seg type="pāda" n="c">jñātvā lokahitārthena</seg> <seg type="pāda" n="d">cara brahmavihāriṇam* <note>Speyer: brahmavihāraṇam*</note></seg> //</l>
+</lg>
+
+<lg xml:id="KDA_279">
+<l><seg type="pāda" n="a">tataḥ kleśān vinirjitvā</seg> <seg type="pāda" n="b">svātmacittasamāhitaḥ</seg> </l>
+<l><seg type="pāda" n="c">brahmapraṇidhim ālambya</seg> <seg type="pāda" n="d">sthirībhava samādhiṣu</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="283"/>
+
+<lg xml:id="KDA_280">
+<l><seg type="pāda" n="a">tathā brahmaguṇādhānād</seg> <seg type="pāda" n="b">brahmarṣis tvaṃ bhaveḥ kila</seg> </l>
+<l><seg type="pāda" n="c">pañcābhijñapadaprāpto</seg> <seg type="pāda" n="d">brahmalokam avāpnuyāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_281">
+<l><seg type="pāda" n="a">iti śrutvā guror vākya</seg> <seg type="pāda" n="b">sa subhūtir guṇotsukaḥ</seg> </l>
+<l><seg type="pāda" n="c">tatheti pratisaṃśrutya</seg> <seg type="pāda" n="d">dhyānacaryām upāśrayat*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_282">
+<l><seg type="pāda" n="a">tato 'nyad vanam āśritya</seg> <seg type="pāda" n="b">guror ājñāsamādhṛtaḥ</seg> </l>
+<l><seg type="pāda" n="c">sarvendriyavinirgatyā</seg> <seg type="pāda" n="d">vyaharaddhyānatatparaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_283">
+<l><seg type="pāda" n="a">tatrādhivasato 'syāpi</seg> <seg type="pāda" n="b">krodhāgniḥ samudīritaḥ</seg> </l>
+<l><seg type="pāda" n="c">karmādhānabalābhyāsān</seg> <seg type="pāda" n="d">naiva śāntim upāyayau</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_284">
+<l><seg type="pāda" n="a">tatra ca vanaṣaṇḍe yā</seg> <seg type="pāda" n="b">vasantī vanadevatā</seg> </l>
+<l><seg type="pāda" n="c">sā subhūtiṃ mahākrodhaṃ</seg> <seg type="pāda" n="d">dṛṣṭvaivaṃ samacintayat*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_285">
+<l><seg type="pāda" n="a">subhūtir brāhmaṇo hy eṣa</seg> <seg type="pāda" n="b">sarvavedārthapāragaḥ</seg> </l>
+<l><seg type="pāda" n="c">sarvamantravidhānajñaḥ</seg> <seg type="pāda" n="d">sutīkṣṇakrodhabāhulaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_286">
+<l><seg type="pāda" n="a">kadācit kupitaś cāyaṃ</seg> <seg type="pāda" n="b">krodhataḥ śāpavahninā</seg> </l>
+<l><seg type="pāda" n="c">dhakṣyati parvatāṃś cāpi</seg> <seg type="pāda" n="d">sapakṣijantumānavān*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_287">
+<l><seg type="pāda" n="a">samādhidhyānayukto 'pi</seg> <seg type="pāda" n="b">naiva cittasamāhitaḥ</seg> </l>
+<l><seg type="pāda" n="c">jñānavijñānadharmeṣu</seg> <seg type="pāda" n="d">viśeṣaṃ nādhigacchati</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_288">
+<l><seg type="pāda" n="a">yadi bauddheṣu dharmeṣu</seg> <seg type="pāda" n="b">niyukto 'yaṃ dvijottamaḥ</seg> </l>
+<l><seg type="pāda" n="c">kṣipraṃ kleśān vinirjitya</seg> <seg type="pāda" n="d">bodhicittaṃ ca lapsyati</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_289">
+<l><seg type="pāda" n="a">bodhicitte pralabdhe tu</seg> <seg type="pāda" n="b">tadā lokahite caret*</seg> </l>
+<l><seg type="pāda" n="c">bodhisatvo mahāvijño</seg> <seg type="pāda" n="d">bhaviṣyati na saṃśayaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_290">
+<l><seg type="pāda" n="a">iti niścitya sā devī</seg> <seg type="pāda" n="b">kāruṇyahitamānasā</seg> </l>
+<l><seg type="pāda" n="c">taṃ subhūtiṃ samāgamya</seg> <seg type="pāda" n="d">jagādaivaṃ puraḥ sthitā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_291">
+<l><seg type="pāda" n="a">śṛṇu vatsa mahābhāga</seg> <seg type="pāda" n="b">yan mayā hitam ucyate</seg> </l>
+<l><seg type="pāda" n="c">dhanyo 'si tvaṃ mahādhīra</seg> <seg type="pāda" n="d">maharṣir dvijasattama</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_292">
+<l><seg type="pāda" n="a">kimarthaṃ vasase caivam</seg> <seg type="pāda" n="b">ekākī nirjane vane</seg> </l>
+<l><seg type="pāda" n="c">niścittaḥ pratisaṃlīnaḥ</seg> <seg type="pāda" n="d">kāṣṭhapāṣāṇavadvṛthā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_293">
+<l><seg type="pāda" n="a">dharmārthakāmamokṣeṣu</seg> <seg type="pāda" n="b">yadi vāñchāsti te yate</seg> </l>
+<l><seg type="pāda" n="c">buddhasya vacanaṃ śrutvā</seg> <seg type="pāda" n="d">cara saṃbodhisatpathe</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_294">
+<l><seg type="pāda" n="a">buddho hi bhagavān nāthaḥ</seg> <seg type="pāda" n="b">sarvajño lokanāyakaḥ</seg> </l>
+<l><seg type="pāda" n="c">munīndraḥ śrīdhanaḥ śāstā</seg> <seg type="pāda" n="d">sarvadharmānupālakaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_295">
+<l><seg type="pāda" n="a">tasyaiva dharmatā śuddhā</seg> <seg type="pāda" n="b">daśakuśalasaṃmatā</seg> </l>
+<l><seg type="pāda" n="c">ṣaṭ ca pāramitāḥ khyātāḥ</seg> <seg type="pāda" n="d">paratreha śivaṃkarāḥ</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="284"/>
+
+<lg xml:id="KDA_296">
+<l><seg type="pāda" n="a">dhanyās te bhikṣavaś caiva</seg> <seg type="pāda" n="b">buddhasyopāsakāś ca ye</seg> </l>
+<l><seg type="pāda" n="c">sarvasatvahitārthena</seg> <seg type="pāda" n="d">saṃbodhiguṇasādhakāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_297">
+<l><seg type="pāda" n="a">tvaṃ cāpi hi tathā matvā</seg> <seg type="pāda" n="b">svaparātmahitārthataḥ</seg> </l>
+<l><seg type="pāda" n="c">triratnaśaraṇaṃ gatvā</seg> <seg type="pāda" n="d">cara brahman vratottamam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_298">
+<l><seg type="pāda" n="a">tataḥ kleśagaṇān hitvā</seg> <seg type="pāda" n="b">brahmacāriñ jinendravat*</seg> </l>
+<l><seg type="pāda" n="c">sākṣād arhatpadaṃ prāpya</seg> <seg type="pāda" n="d">nirvṛtisukham āpnuyāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_299">
+<l><seg type="pāda" n="a">iti śrutvā subhūtiḥ sa</seg> <seg type="pāda" n="b">triratnaguṇavarṇanām*</seg> </l>
+<l><seg type="pāda" n="c">tathānumoditaḥ prāha</seg> <seg type="pāda" n="d">tāṃ devatāṃ puraḥ sthitām*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_300">
+<l><seg type="pāda" n="a">tathāhaṃ devate yāmi</seg> <seg type="pāda" n="b">saṃbuddhadarśanaṃ prati</seg> </l>
+<l><seg type="pāda" n="c">triratnasamayaṃ prāptum</seg> <seg type="pāda" n="d">iccāmi tvatprasādataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_301">
+<l><seg type="pāda" n="a">yadi te 'sti kṛpā devi</seg> <seg type="pāda" n="b">mayi mokṣārthasādhini</seg> </l>
+<l><seg type="pāda" n="c">saṃbuddhaṃ darśaya kṣipraṃ</seg> <seg type="pāda" n="d">taddharmeṣu niveśaya</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_302">
+<l><seg type="pāda" n="a">triratnaśaraṇaṃ gatvā</seg> <seg type="pāda" n="b">cariṣye tad vratottamam*</seg> </l>
+<l><seg type="pāda" n="c">tathāśu kṛpayā nītvā</seg> <seg type="pāda" n="d">māṃ vihāre praveśaya</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_303">
+<l><seg type="pāda" n="a">iti śrutvā vacas tasya</seg> <seg type="pāda" n="b">subhūter vanadevatā</seg> </l>
+<l><seg type="pāda" n="c">vijñāya bodhimārgeṣu</seg> <seg type="pāda" n="d">cittaṃ tathānumoditam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_304">
+<l><seg type="pāda" n="a">tata eva samāgṛhya</seg> <seg type="pāda" n="b">subhūtiṃ brahmacāriṇam*</seg> </l>
+<l><seg type="pāda" n="c">ṛddhyā sākāśamārgeṇa</seg> <seg type="pāda" n="d">nināya jinamandiram*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_305">
+<l><seg type="pāda" n="a">subhūtis tatra saṃprāpto</seg> <seg type="pāda" n="b">dadarśa jinabhāskaram*</seg> </l>
+<l><seg type="pāda" n="c">bhagavantaṃ mahāsaumyaṃ</seg> <seg type="pāda" n="d">lakṣaṇaiḥ samalaṃkṛtam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_306">
+<l><seg type="pāda" n="a">vyañjanaiś ca virājantaṃ</seg> <seg type="pāda" n="b">vyāmaprabhāmahojjvalam*</seg> </l>
+<l><seg type="pāda" n="c">sahasrakiraṇādhikyaṃ</seg> <seg type="pāda" n="d">ratnāṅgam iva jaṅgamam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_307">
+<l><seg type="pāda" n="a">samantato mahābhadraṃ</seg> <seg type="pāda" n="b">jagannāthaṃ munīśvaram*</seg> </l>
+<l><seg type="pāda" n="c">sarvadevādhipaṃ samyak</seg><seg type="pāda" n="d">saṃbodhiguṇasāgaram*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_308">
+<l><seg type="pāda" n="a">dṛṣṭvaiva sahasā cātha</seg> <seg type="pāda" n="b">subhūtes tasya sarvathā</seg> </l>
+<l><seg type="pāda" n="c">ādhāto yaś ca satveṣu</seg> <seg type="pāda" n="d">sa prativigato 'py abhūt*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_309">
+<l><seg type="pāda" n="a">tataḥ prasādajāto 'sau</seg> <seg type="pāda" n="b">subhūtir dvijasattamaḥ</seg> </l>
+<l><seg type="pāda" n="c">natvā pādau muner dharmaṃ</seg> <seg type="pāda" n="d">śrotuṃ tasthau mudāḥ puraḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_310">
+<l><seg type="pāda" n="a">tato 'sau bhagavāṃs tasya</seg> <seg type="pāda" n="b">subhūteś cittaśuddhatām*</seg> </l>
+<l><seg type="pāda" n="c">jñātvāryasatyadharmāṇi</seg> <seg type="pāda" n="d">dideśaivaṃ savistaram</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_311">
+<l><seg type="pāda" n="a">śṛṇu vipra mahābhāga</seg> <seg type="pāda" n="b">sarvasatvahitārthataḥ</seg> </l>
+<l><seg type="pāda" n="c">yadi te dharmavāñchāsti</seg> <seg type="pāda" n="d">saṃbodhipadasādhane</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="285"/>
+
+<lg xml:id="KDA_312">
+<l><seg type="pāda" n="a">bhāvanīyā sadā maitrī</seg> <seg type="pāda" n="b">satveṣ evaṃ yathātmaje</seg> </l>
+<l><seg type="pāda" n="c">dharmamātā yato maitrī</seg> <seg type="pāda" n="d">tan na tyājyā kadācana</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_313">
+<l><seg type="pāda" n="a">karuṇā ca tathā kāryā</seg> <seg type="pāda" n="b">satveṣ api yathātmaje</seg> </l>
+<l><seg type="pāda" n="c">kāruṇyād vardhate dharmas</seg> <seg type="pāda" n="d">ta kāruṇyaṃ sadā kuru</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_314">
+<l><seg type="pāda" n="a">muditāpi sadā sādhyā</seg> <seg type="pāda" n="b">satveṣu ca yathātmaje</seg> </l>
+<l><seg type="pāda" n="c">muditāṃ hi samālambya</seg> <seg type="pāda" n="d">bodhipadam avāpnuyāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_315">
+<l><seg type="pāda" n="a">upekṣāpi sadā dhāryā</seg> <seg type="pāda" n="b">satveṣv api yathātmaje</seg> </l>
+<l><seg type="pāda" n="c">upekṣāto labhet saukhyaṃ</seg> <seg type="pāda" n="d">tadupekṣāṃ sadā bhaja</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_316">
+<l><seg type="pāda" n="a">ime dharmā hi catvāraś</seg> <seg type="pāda" n="b">caturvargaphalāptaye</seg> </l>
+<l><seg type="pāda" n="c">tatprāptyai sādhyatāṃ yatnāc</seg> <seg type="pāda" n="d">caturbrahmavihāratā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_317">
+<l><seg type="pāda" n="a">iti śrutvāryadharmāṇi</seg> <seg type="pāda" n="b">sa subhūtiḥ pramoditaḥ</seg> </l>
+<l><seg type="pāda" n="c">kleśasaṃghān vinirjitya</seg> <seg type="pāda" n="d">buddhadharmaṃ samaikṣata</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_318">
+<l><seg type="pāda" n="a">satkāyadṛṣṭiśailaṃ ca</seg> <seg type="pāda" n="b">viṃśatiśikharodgatam*</seg> </l>
+<l><seg type="pāda" n="c">vidārya jñānavajreṇa</seg> <seg type="pāda" n="d">saṃsāraratiniḥspṛhaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_319">
+<l><seg type="pāda" n="a">srotāpattiphalaṃ sākṣāt</seg> <seg type="pāda" n="b">kṛtvā śiṣyo 'bhavan muneḥ <note>Speyer: śikṣo</note></seg> </l>
+<l><seg type="pāda" n="c">dṛṣṭasatyo 'tha saṃbuddhaṃ</seg> <seg type="pāda" n="d">natvā caiva kṛtāñjaliḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_320">
+<l><seg type="pāda" n="a">pravrajyāprārthanāṃ cakre</seg> <seg type="pāda" n="b">svākhyātadharmasādhane</seg> </l>
+<l><seg type="pāda" n="c">namas te bhagavan nātha</seg> <seg type="pāda" n="d">sarvasatvānupālaka</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_321">
+<l><seg type="pāda" n="a">adyāgreṇa jagadbandho</seg> <seg type="pāda" n="b">yāmi te śaraṇaṃ sadā</seg> </l>
+<l><seg type="pāda" n="c">tathā dharme ca saṃgheṣu</seg> <seg type="pāda" n="d">saṃbodhiguṇaprāptaye</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_322">
+<l><seg type="pāda" n="a">pravrajyāṃ dehi me nātha</seg> <seg type="pāda" n="b">saddharmeṣu niveśaya</seg> </l>
+<l><seg type="pāda" n="c">brahmacaryaṃ cariṣye 'haṃ</seg> <seg type="pāda" n="d">tvadājñāṃ śirasā vahan*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_323">
+<l><seg type="pāda" n="a">ity ukte bhagavān dṛṣṭvā</seg> <seg type="pāda" n="b">hastena tacchiraḥ spṛśan*</seg> </l>
+<l><seg type="pāda" n="c">ehi bhikṣo carasveti</seg> <seg type="pāda" n="d">pravadaṃs taṃ samagrahīt*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_324">
+<l><seg type="pāda" n="a">ehīti proktaḥ sa jinena muṇḍo</seg> <seg type="pāda" n="b">pātrī susaṃghāṭiparītadehaḥ</seg> </l>
+<l><seg type="pāda" n="c">sadyaḥ praśāntendriya eva tasthau</seg> <seg type="pāda" n="d">bhikṣuḥ subhūtiḥ sugataprabhāvāt*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_325">
+<l><seg type="pāda" n="a">saccittalabdhaḥ sa muneḥ prasādāt</seg> <seg type="pāda" n="b">prayujyamāno vyaharat samādhau</seg> </l>
+<l><seg type="pāda" n="c">vyāyacchamānaḥ khalu bodhimārge</seg> <seg type="pāda" n="d">saṃbuddhadharme ghaṭamāna eva</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_326">
+<l><seg type="pāda" n="a">sarvaṃ ca saṃsāram anityatāhataṃ</seg> <seg type="pāda" n="b">matvā ca saṃsāragatiṃ vibhaṅginīm*</seg> </l>
+<l><seg type="pāda" n="c">kleśāṃś ca sarvān pravihāya saṃyataḥ</seg> <seg type="pāda" n="d">sākṣāc ca so 'rhann abhavan maharddhikaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_327">
+<l><seg type="pāda" n="a">suvītarāgaḥ samaloṣṭahemā</seg> <seg type="pāda" n="b">ākāśacitto dhanasāravāsī</seg> </l>
+<l><seg type="pāda" n="c">bhindann avidyādrim ivāṇḍakośaṃ</seg> <seg type="pāda" n="d">prāpadabhijñāḥ pratisaṃvidaś ca</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="286"/>
+
+<lg xml:id="KDA_328">
+<l><seg type="pāda" n="a">satkāralābheṣu parāṅmukatvāt</seg> <seg type="pāda" n="b">saśakradevāsuramānuṣāṇām*</seg> </l>
+<l><seg type="pāda" n="c">pūjyaś ca mānyo abhivādanīyo</seg> <seg type="pāda" n="d">babhūva sa brahmavihāracārī</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_329">
+<l><seg type="pāda" n="a">atha subhūtir āyuṣmān</seg> <seg type="pāda" n="b">samanvāharad ātmavān*</seg> </l>
+<l><seg type="pāda" n="c">kutaś cyuto 'ham āyātaḥ</seg> <seg type="pāda" n="d">kutra kena ca karmaṇā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_330">
+<l><seg type="pāda" n="a">apaśyat sa tataś ceti</seg> <seg type="pāda" n="b">pañcajanmaśatāni ca</seg> </l>
+<l><seg type="pāda" n="c">nāgayonisamutpannas</seg> <seg type="pāda" n="d">tataś cyutvāham āgataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_331">
+<l><seg type="pāda" n="a">yad dveṣābhyāsataś cāsaṃ</seg> <seg type="pāda" n="b">krūro lokopaghātakaḥ</seg> </l>
+<l><seg type="pāda" n="c">tenaiva hetunā cāhaṃ</seg> <seg type="pāda" n="d">mahadvyasanam āptavān+</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_332">
+<l><seg type="pāda" n="a">idānīṃ tu tathā caitaṃ</seg> <seg type="pāda" n="b">krodhaṃ prahātum ācare</seg> </l>
+<l><seg type="pāda" n="c">yasyaiva hetunā lokā</seg> <seg type="pāda" n="d">bhramanti narakeṣu te</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_333">
+<l><seg type="pāda" n="a">tasmād ahaṃ cariṣyāmi</seg> <seg type="pāda" n="b">niḥsaṅgo nirahaṃkṛtiḥ</seg> </l>
+<l><seg type="pāda" n="c">saṅgād dhi jāyate māyā</seg> <seg type="pāda" n="d">māyāyāṃ jāyate ratiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_334">
+<l><seg type="pāda" n="a">ratau rāgo 'bhijāyeta</seg> <seg type="pāda" n="b">rāge mohaḥ pravardhate</seg> </l>
+<l><seg type="pāda" n="c">mūḍhasya drūyate cittaṃ</seg> <seg type="pāda" n="d">sveṣṭakāryopaghātataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_335">
+<l><seg type="pāda" n="a">upaghātāhate citte</seg> <seg type="pāda" n="b">krodhāgniḥ paridīpyate</seg> </l>
+<l><seg type="pāda" n="c">krodhānalasamuddīpto</seg> <seg type="pāda" n="d">dahate sa parān api <note>Speyer: svaparān api</note></seg> //</l>
+</lg>
+
+<lg xml:id="KDA_336">
+<l><seg type="pāda" n="a">yāvat krodhānaloddīptaṃ</seg> <seg type="pāda" n="b">svacittaṃ kleśavāyubhiḥ</seg> </l>
+<l><seg type="pāda" n="c">tāvat kiṃ tapasāpy etan</seg> <seg type="pāda" n="d">nirarthaṃ duḥkhahetave</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_337">
+<l><seg type="pāda" n="a">dharmaṃ sucaritaṃ puṇyaṃ</seg> <seg type="pāda" n="b">dānaśīlādisādhanam* <note>Speyer: dharmasucaritaṃ</note></seg> </l>
+<l><seg type="pāda" n="c">kṛtaṃ kalpasahasrair yad</seg> <seg type="pāda" n="d">dahet krodhānalaḥ kṣaṇāt*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_338">
+<l><seg type="pāda" n="a">tasmāt krodhāgniśāntyarthaṃ</seg> <seg type="pāda" n="b">kṛtvendriyavinigraham*</seg> </l>
+<l><seg type="pāda" n="c">ekānte hi vaseyaṃ ca</seg> <seg type="pāda" n="d">viviktāraṇyagocare</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_339">
+<l><seg type="pāda" n="a">yadā ca garuḍenāhaṃ</seg> <seg type="pāda" n="b">balād ākṛṣya bhakṣitaḥ</seg> </l>
+<l><seg type="pāda" n="c">yatīn dṛṣṭvānumodaṃ ca</seg> <seg type="pāda" n="d">kurvan mṛtyum avāptavān*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_340">
+<l><seg type="pāda" n="a">tenaiva hetunā cādya</seg> <seg type="pāda" n="b">dvijātikulasaṃbhavaḥ</seg> </l>
+<l><seg type="pāda" n="c">sarvakleśān vinirjitya</seg> <seg type="pāda" n="d">brahmacārī bhavāmy aham*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_341">
+<l><seg type="pāda" n="a">adyāpi cet tathā cātra</seg> <seg type="pāda" n="b">vaseyaṃ janapadāśrame<note>?</note></seg> </l>
+<l><seg type="pāda" n="c">kenacit kleśitaś cāhaṃ</seg> <seg type="pāda" n="d">bhraṣṭim evam avāpnuyām*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_342">
+<l><seg type="pāda" n="a">iti niścitya cittena</seg> <seg type="pāda" n="b">subhūtir nirahaṃkṛtiḥ</seg> </l>
+<l><seg type="pāda" n="c">vivikte 'raṇyavāse sa</seg> <seg type="pāda" n="d">niḥsaṅgo nyavasat sudhīḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_343">
+<l><seg type="pāda" n="a">tathaikākī vasaṃs tatra</seg> <seg type="pāda" n="b">caturthadhyānasaṃyutaḥ</seg> </l>
+<l><seg type="pāda" n="c">phalamūlāmbusaṃtuṣṭo</seg> <seg type="pāda" n="d">brahmacārī mumoda saḥ</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="287"/>
+
+<lg xml:id="KDA_344">
+<l><seg type="pāda" n="a">atha saṅge 'pi grāmeṣu</seg> <seg type="pāda" n="b">deśe janapadeṣu ca</seg> </l>
+<l><seg type="pāda" n="c">bhikṣāhetor vihartuṃ vā</seg> <seg type="pāda" n="d">sa sakāmo 'bhavad yadā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_345">
+<l><seg type="pāda" n="a">tadā pūrvam asau dṛṣṭvā</seg> <seg type="pāda" n="b">gocaram abhyalakṣayat*</seg> </l>
+<l><seg type="pāda" n="c">aho deśeṣu sarvatra</seg> <seg type="pāda" n="d">bhavanti nirguṇā janāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_346">
+<l><seg type="pāda" n="a">mānino madamohāndhā</seg> <seg type="pāda" n="b">duṣṭā matsariṇaḥ śaṭhāḥ</seg> </l>
+<l><seg type="pāda" n="c">tat kathaṃ saṃcariṣye 'tra</seg> <seg type="pāda" n="d">bhikṣāhetoḥ kule kule</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_347">
+<l><seg type="pāda" n="a">dūṣayiṣyanti cittāni</seg> <seg type="pāda" n="b">kecid dṛṣṭvaiva māṃ yatim*</seg> </l>
+<l><seg type="pāda" n="c">yad dhetor janāś caivaṃ<note>?</note></seg> <seg type="pāda" n="d">bhramanti durgatiṣv api</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_348">
+<l><seg type="pāda" n="a">kalpakoṭisahasrāṇi</seg> <seg type="pāda" n="b">naiva muktāś ca durgateḥ</seg> </l>
+<l><seg type="pāda" n="c">tad ahaṃ sarvasatveṣu</seg> <seg type="pāda" n="d">kuntapipīlikādiṣu</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_349">
+<l><seg type="pāda" n="a">dayācittaṃ samālambya</seg> <seg type="pāda" n="b">vaseyaṃ dhyānasaṃrataḥ</seg> </l>
+<l><seg type="pāda" n="c">yenaivaṃ sarvasatānāṃ</seg> <seg type="pāda" n="d">bhavec cittaṃ prasāditam*</seg> </l>
+<l><seg type="pāda" n="e">tam eva dharmam ādhyāya</seg> <seg type="pāda" n="f">yatir mokṣam avāpnuyāt*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_350">
+<l><seg type="pāda" n="a">iti saṃnahya cittena</seg> <seg type="pāda" n="b">sa subhūtiḥ subuddhimān*</seg> </l>
+<l><seg type="pāda" n="c">vivikte 'raṇyadeśe 'pi</seg> <seg type="pāda" n="d">nyavasad dhyānasaṃrataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_351">
+<l><seg type="pāda" n="a">atha so 'rhaṃs trimāsānām</seg> <seg type="pāda" n="b">atyayād bodhimānasaḥ</seg> </l>
+<l><seg type="pāda" n="c">ity evaṃ cintayāmāsa</seg> <seg type="pāda" n="d">lokānugrahakāraṇāt*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_352">
+<l><seg type="pāda" n="a">kim atra dhyānasaṃlīnaḥ</seg> <seg type="pāda" n="b">karomi lokabodhanam*</seg> </l>
+<l><seg type="pāda" n="c">kiyat kālaṃ ca jīveyaṃ</seg> <seg type="pāda" n="d">kāṣṭhapāṣāṇavat sthitaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_353">
+<l><seg type="pāda" n="a">kevalaṃ svamanas tuṣṭyai</seg> <seg type="pāda" n="b">dhyānaṃ saukhyārthasādhanam*</seg> </l>
+<l><seg type="pāda" n="c">sukhaṃ labdhvāpi kiṃ sāraṃ</seg> <seg type="pāda" n="d">satvānugrahaṇaṃ vinā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_354">
+<l><seg type="pāda" n="a">tasmād dhyānāt samutthāya</seg> <seg type="pāda" n="b">satvānugrahakāraṇāt*</seg> </l>
+<l><seg type="pāda" n="c">ṛddhiṃ pradarśya saṃbodhau</seg> <seg type="pāda" n="d">sthāpayiṣye mahajjanān*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_355">
+<l><seg type="pāda" n="a">iti niścitya cittena</seg> <seg type="pāda" n="b">sa subhūtiḥ samṛddhimān*</seg> </l>
+<l><seg type="pāda" n="c">satvānāṃ vinayārthena</seg> <seg type="pāda" n="d">prātihāryam adarśayat*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_356">
+<l><seg type="pāda" n="a">tadṛddhinirmitāny eva</seg> <seg type="pāda" n="b">garuḍānāṃ mahaujasām*</seg> </l>
+<l><seg type="pāda" n="c">pañca kulaśatāny atra</seg> <seg type="pāda" n="d">prasasrire samantataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_357">
+<l><seg type="pāda" n="a">etāṃś ca garudān dṛṣṭvā</seg> <seg type="pāda" n="b">nāgāḥ saṃtrasitās tataḥ</seg> </l>
+<l><seg type="pāda" n="c">itas tataḥ samudbhrāntāḥ</seg> <seg type="pāda" n="d">subhūteḥ śaraṇaṃ yayuḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_358">
+<l><seg type="pāda" n="a">atha svarddhibalenaiva</seg> <seg type="pāda" n="b">samāśvāsya subhūtinā</seg> </l>
+<l><seg type="pāda" n="c">sarve nāgāḥ suparṇebhyaḥ</seg> <seg type="pāda" n="d">paritrātāś ca sarvataḥ</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="288"/>
+
+<lg xml:id="KDA_359">
+<l><seg type="pāda" n="a">punas tena suparṇānāṃ</seg> <seg type="pāda" n="b">vinayārthaṃ subhūtinā</seg> </l>
+<l><seg type="pāda" n="c">svarddhivalaprabhāveṇa</seg> <seg type="pāda" n="d">mahān nāgo vinirmitaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_360">
+<l><seg type="pāda" n="a">tenāpy evaṃ suparṇānāṃ</seg> <seg type="pāda" n="b">pañca kulaśatāni ca</seg> </l>
+<l><seg type="pāda" n="c">abhidrutāni nāgena</seg> <seg type="pāda" n="d">samantata itas tataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_361">
+<l><seg type="pāda" n="a">tenaivābhidrutāḥ sarve</seg> <seg type="pāda" n="b">garuḍās trāsam āgatāḥ</seg> </l>
+<l><seg type="pāda" n="c">itas tataḥ samudbhrāntāḥ</seg> <seg type="pāda" n="d">subhūteḥ śaraṇaṃ yayuḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_362">
+<l><seg type="pāda" n="a">subhūtinā tathā caivaṃ</seg> <seg type="pāda" n="b">sarve te garuḍā api</seg> </l>
+<l><seg type="pāda" n="c">svarddhibalaprabhāveṇa</seg> <seg type="pāda" n="d">samāśvāsya surakṣitāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_363">
+<l><seg type="pāda" n="a">evam ṛddhiprabhāvāṇi</seg> <seg type="pāda" n="b">subhūtes tasya sadyateḥ</seg> </l>
+<l><seg type="pāda" n="c">dṛṣṭvā sarve janaughās te</seg> <seg type="pāda" n="d">saharṣādbhutam āyayuḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_364">
+<l><seg type="pāda" n="a">dhanyo 'yam ṛddhimān bhikṣur</seg> <seg type="pāda" n="b">arhan saṃbuddhasevakaḥ</seg> </l>
+<l><seg type="pāda" n="c">yenaite rakṣitāḥ sarve</seg> <seg type="pāda" n="d">nāgāś ca garuḍā api</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_365">
+<l><seg type="pāda" n="a">iti so 'rhan subhūtis tān</seg> <seg type="pāda" n="b">sarvān dṛṣṭvā prasannitān*</seg> </l>
+<l><seg type="pāda" n="c">saddharme vinayārthena</seg> <seg type="pāda" n="d">maitrīdharmam upādiśat*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_366">
+<l><seg type="pāda" n="a">śṛṇudhvaṃ madvacaḥ sarve</seg> <seg type="pāda" n="b">nāgāś ca garuḍās tathā</seg> </l>
+<l><seg type="pāda" n="c">yadi me śaraṇaṃ yātha</seg> <seg type="pāda" n="d">ramadhvaṃ maitramānasāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_367">
+<l><seg type="pāda" n="a">ye ete sukhino loke</seg> <seg type="pāda" n="b">sarve te maitracāriṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">ye ete duḥkhino loke</seg> <seg type="pāda" n="d">sarve te krodhino narāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_368">
+<l><seg type="pāda" n="a">tasmāt krodhaprahāṇāya</seg> <seg type="pāda" n="b">kriyatāṃ yatnam ādarāt*</seg> </l>
+<l><seg type="pāda" n="c">yāvac citte sthitaṃ krodhaṃ</seg> <seg type="pāda" n="d">tāvan maitrī na bhāvyate</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_369">
+<l><seg type="pāda" n="a">na ca dveṣasamaṃ pāpaṃ</seg> <seg type="pāda" n="b">na ca maitrīsamaṃ tapaḥ</seg> </l>
+<l><seg type="pāda" n="c">tasmān maitrī prayatnena</seg> <seg type="pāda" n="d">bhāvanīyā sadādarāt*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_370">
+<l><seg type="pāda" n="a">manaḥ śamaṃ na gṛhṇāti</seg> <seg type="pāda" n="b">na prītisukham aśnute</seg> </l>
+<l><seg type="pāda" n="c">na nidrāṃ na dhṛtiṃ yāti</seg> <seg type="pāda" n="d">dveṣaśalye hṛdi sthite</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_371">
+<l><seg type="pāda" n="a">na dviṣantaḥ kṣayaṃ yānti</seg> <seg type="pāda" n="b">yāvajjīvam api ghnataḥ</seg> </l>
+<l><seg type="pāda" n="c">krodham ekaṃ tu yo hanyāt</seg> <seg type="pāda" n="d">tena sarve dviṣo hatāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_372">
+<l><seg type="pāda" n="a">vikalpen dhanadīptena</seg> <seg type="pāda" n="b">jantuḥ krodhahavir bhujā</seg> </l>
+<l><seg type="pāda" n="c">dahaty ātmānam evādau</seg> <seg type="pāda" n="d">parān dhakṣyati vā na vā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_373">
+<l><seg type="pāda" n="a">jarā rūpavatāṃ krodhas</seg> <seg type="pāda" n="b">tamaś cakṣuṣmatām api</seg> </l>
+<l><seg type="pāda" n="c">bandho dharmārthakāmānāṃ</seg> <seg type="pāda" n="d">tasmāt krodho nivāryatām*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_374">
+<l><seg type="pāda" n="a">divyabhogānubhoktā ca</seg> <seg type="pāda" n="b">prāsāde maṇimaṇḍite</seg> </l>
+<l><seg type="pāda" n="c">supto 'pi na labhen nidrāṃ</seg> <seg type="pāda" n="d">krodhaparyākulo naraḥ</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="289"/>
+
+<lg xml:id="KDA_375">
+<l><seg type="pāda" n="a">ṛṣibhir yogibhiś cāmbu</seg><seg type="pāda" n="b">phalamūlāditoṣitaiḥ</seg> </l>
+<l><seg type="pāda" n="c">dagdhā janapadāś cāpi</seg> <seg type="pāda" n="d">krodhāc chāpahutāśanaiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_376">
+<l><seg type="pāda" n="a">yac chāṃkaro mahāraudro</seg> <seg type="pāda" n="b">nirghṛṇo dṛkprabhānalaiḥ</seg> </l>
+<l><seg type="pāda" n="c">dadāha brahmajaṃ kāmaṃ</seg> <seg type="pāda" n="d">tac ca krodhaprabhāvataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_377">
+<l><seg type="pāda" n="a">yad rājāno viruddhāś ca</seg> <seg type="pāda" n="b">yuddhaṃ kṛtvā parasparam*</seg> </l>
+<l><seg type="pāda" n="c">mṛtyuṃ yānti janaiḥ sārdhaṃ</seg> <seg type="pāda" n="d">tac cāpi krodhabhāvataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_378">
+<l><seg type="pāda" n="a">suhṛdo yat sahāyāṃś ca</seg> <seg type="pāda" n="b">snehaviśrambhacāriṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">satyadharmāv anādṛtya</seg> <seg type="pāda" n="d">ghnanti krodhād anāryakāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_379">
+<l><seg type="pāda" n="a">sādhavo ye mahātmānaḥ</seg> <seg type="pāda" n="b">saṃvṛttidharmacāriṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">tān api saṃmukhaṃ ghnanti</seg> <seg type="pāda" n="d">durvāgbāṇai ruṣā khalāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_380">
+<l><seg type="pāda" n="a">mātaraṃ janmadātrīṃ ca</seg> <seg type="pāda" n="b">dhātrīr vā snehapālinīḥ</seg> </l>
+<l><seg type="pāda" n="c">svātmajān nirdayā ghnanti</seg> <seg type="pāda" n="d">tac ca krodhaprabhāvataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_381">
+<l><seg type="pāda" n="a">svātmajāḥ pitaraṃ yac ca</seg> <seg type="pāda" n="b">snehasatkārapālakam*</seg> </l>
+<l><seg type="pāda" n="c">avigaṇayya pāpāni</seg> <seg type="pāda" n="d">ghnanti krodhaprabhāvataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_382">
+<l><seg type="pāda" n="a">gurūn saddharmaśāstṝṃś ca</seg> <seg type="pāda" n="b">kalyāṇādhvāvatārakān*</seg> </l>
+<l><seg type="pāda" n="c">anādṛtya bhayaṃ pāpā</seg> <seg type="pāda" n="d">ghnanti krodhoddhatā narāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_383">
+<l><seg type="pāda" n="a">yat pitā svātmajaṃ putraṃ</seg> <seg type="pāda" n="b">putrīṃ vā bālakām api</seg> </l>
+<l><seg type="pāda" n="c">nirdayas tāḍayan hanti</seg> <seg type="pāda" n="d">tasmāt krodho mahāripuḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_384">
+<l><seg type="pāda" n="a">bhrātaraḥ sahajāś cāpi</seg> <seg type="pāda" n="b">roṣitā bheditāśayāḥ</seg> </l>
+<l><seg type="pāda" n="c">vigṛhṇanti mahākruddhās</seg> <seg type="pāda" n="d">tasmāt krodho mahāripuḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_385">
+<l><seg type="pāda" n="a">yat svayaṃ pariṇītāpi</seg> <seg type="pāda" n="b">bhāryā dharmānucāriṇī</seg> </l>
+<l><seg type="pāda" n="c">tāḍitā tyajyate bhartrā</seg> <seg type="pāda" n="d">krodhāt tato mahad bhayaṃ*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_386">
+<l><seg type="pāda" n="a">pramadāpi ca bhartāraṃ</seg> <seg type="pāda" n="b">svāminaṃ snehakāriṇam*</seg> </l>
+<l><seg type="pāda" n="c">kuladharmam anādṛtya</seg> <seg type="pāda" n="d">jahāti krodhatas tathā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_387">
+<l><seg type="pāda" n="a">ye śāntā yatayo dhīrāś</seg> <seg type="pāda" n="b">caturbrahmavihāriṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">tān api saṃmukhaṃ duṣṭās</seg> <seg type="pāda" n="d">tāḍayanti ruṣānvitāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_388">
+<l><seg type="pāda" n="a">śāntātmā hitakṛdyogī</seg> <seg type="pāda" n="b">kṣāntivādī vane vasan*</seg> </l>
+<l><seg type="pāda" n="c">so 'pi śakalito rājñā</seg> <seg type="pāda" n="d">svayam evāsinā ruṣā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_389">
+<l><seg type="pāda" n="a">dānavā ghnanti devāṃś ca</seg> <seg type="pāda" n="b">devāś ca ghnanti dānavān*</seg> </l>
+<l><seg type="pāda" n="c">anyonyaṃ vigrahaṃ kṛtvā</seg> <seg type="pāda" n="d">pramathnanti ruṣākulāḥ</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="290"/>
+
+<lg xml:id="KDA_390">
+<l><seg type="pāda" n="a">ātmānam ātmanā hatvā</seg> <seg type="pāda" n="b">viṣaśastrānalādibhiḥ</seg> </l>
+<l><seg type="pāda" n="c">vasanti narake ghore</seg> <seg type="pāda" n="d">te 'pi sarve ruṣānvitāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_391">
+<l><seg type="pāda" n="a">ye ye duṣṭāśayāḥ krūrāḥ</seg> <seg type="pāda" n="b">svaparārthābhighātakāḥ</seg> </l>
+<l><seg type="pāda" n="c">patanti narake ghore</seg> <seg type="pāda" n="d">te 'pi sarve ruṣāśrayāt*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_392">
+<l><seg type="pāda" n="a">krodhena bhidyate lokaḥ</seg> <seg type="pāda" n="b">krodhena paribhāṣyate</seg> </l>
+<l><seg type="pāda" n="c">krodhena hiṃsyate jantus</seg> <seg type="pāda" n="d">tasmāt krodho mahāripuḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_393">
+<l><seg type="pāda" n="a">krodhenaiva mahārudraś</seg> <seg type="pāda" n="b">cic cheda brahmaṇaḥ śiraḥ</seg> </l>
+<l><seg type="pāda" n="c">tenaiva pātakenaiva</seg> <seg type="pāda" n="d">bhrāntacitto 'bhavac chivaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_394">
+<l><seg type="pāda" n="a">krodhenaiva tathā rudraḥ</seg> <seg type="pāda" n="b">surajyeṣṭhātmajasya ca</seg> </l>
+<l><seg type="pāda" n="c">śvaśurasyāpi dakṣasya</seg> <seg type="pāda" n="d">cchedayāmāsa mastakam*</seg> </l>
+<l><seg type="pāda" n="e">tatpāpakarmaṇā hy eva</seg> <seg type="pāda" n="f">śivo 'py abhūd digambaraḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_395">
+<l><seg type="pāda" n="a">krodhena dhvaṃsyate dharmaḥ</seg> <seg type="pāda" n="b">krodhena vilayaṃ gataḥ</seg> </l>
+<l><seg type="pāda" n="c">krodhena tyajyate satyaṃ</seg> <seg type="pāda" n="d">tasmāt krodho mahāripuḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_396">
+<l><seg type="pāda" n="a">yāni mahānti pāpāni</seg> <seg type="pāda" n="b">mahāduḥkhabhayāni ca</seg> </l>
+<l><seg type="pāda" n="c">tāni sarvāṇi duṣṭāni</seg> <seg type="pāda" n="d">krodhacittodbhavāni ca</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_397">
+<l><seg type="pāda" n="a">tatkrodhād aparo vairaḥ</seg> <seg type="pāda" n="b">pātako 'nyo na vidyate</seg> </l>
+<l><seg type="pāda" n="c">tasmāt krodhavināśāya</seg> <seg type="pāda" n="d">prayatadhvaṃ samāhitāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_398">
+<l><seg type="pāda" n="a">yena krodho jito vairo</seg> <seg type="pāda" n="b">jñānavajreṇa sādhunā</seg> </l>
+<l><seg type="pāda" n="c">tena sarve jitā duṣṭā</seg> <seg type="pāda" n="d">śatravo duḥkhadāyakāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_399">
+<l><seg type="pāda" n="a">yasya citte dayā nāsti</seg> <seg type="pāda" n="b">krodhānalavidāhini</seg> </l>
+<l><seg type="pāda" n="c">sa sādhupuruṣaś cāpi</seg> <seg type="pāda" n="d">naiva viśvasyate janaiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_400">
+<l><seg type="pāda" n="a">krodhakalaṅkito yo hi</seg> <seg type="pāda" n="b">sadguṇālaṃkṛto yadi</seg> </l>
+<l><seg type="pāda" n="c">sa vidvān api nāsevyo</seg> <seg type="pāda" n="d">yathā vṛkṣo 'hiveṣṭitaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_401">
+<l><seg type="pāda" n="a">dānaśīlādisaddharma</seg><seg type="pāda" n="b">vṛttaiś ca yadi bhūṣitaḥ</seg> </l>
+<l><seg type="pāda" n="c">krodhavān na vibhāty eva</seg> <seg type="pāda" n="d">ahipūrṇo yathā hradaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_402">
+<l><seg type="pāda" n="a">sarvavidyākalājño 'pi</seg> <seg type="pāda" n="b">samṛddhaḥ śilpavān api</seg> </l>
+<l><seg type="pāda" n="c">astramantrādyabhijño 'pi</seg> <seg type="pāda" n="d">krodhavān naiva sevyatām*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_403">
+<l><seg type="pāda" n="a">krodhavān hasyate lokaiḥ</seg> <seg type="pāda" n="b">krodhavān vadhyate janaiḥ</seg> </l>
+<l><seg type="pāda" n="c">krodhavān hīyate mitraiḥ</seg> <seg type="pāda" n="d">krodhavān paribhūyate</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_404">
+<l><seg type="pāda" n="a">krodho dharmaviruddhatvāc</seg> <seg type="pāda" n="b">caturvargavināśakṛt*</seg> </l>
+<l><seg type="pāda" n="c">tasmāt krodhavināśāya</seg> <seg type="pāda" n="d">prayatadhvaṃ samāhitāḥ</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="291"/>
+
+<lg xml:id="KDA_405">
+<l><seg type="pāda" n="a">krodhena bhidyate cittaṃ</seg> <seg type="pāda" n="b">bhinnacitto vikīryate</seg> </l>
+<l><seg type="pāda" n="c">vikīrṇaḥ kliśyate māraiḥ</seg> <seg type="pāda" n="d">kleśito 'dhairyatāṃ vrajet</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_406">
+<l><seg type="pāda" n="a">adhairyatvād bhaven mūḍho</seg> <seg type="pāda" n="b">mūḍho duṣṭavaśaṃ vrajet*</seg> </l>
+<l><seg type="pāda" n="c">duṣṭamitropadeśena</seg> <seg type="pāda" n="d">kupathe carate kudhīḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_407">
+<l><seg type="pāda" n="a">asan mārgo samārūḍho</seg> <seg type="pāda" n="b">viparītaṃ samācaret*</seg> </l>
+<l><seg type="pāda" n="c">viparītānubodhena</seg> <seg type="pāda" n="d">bhaved āryāpavādakaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_408">
+<l><seg type="pāda" n="a">saddharmādīn pratikṣipya</seg> <seg type="pāda" n="b">pratimādīn vighātayet*</seg> </l>
+<l><seg type="pāda" n="c">ityādipātakaṃ kṛtvā</seg> <seg type="pāda" n="d">pañcānantaryam āpnuyāt*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_409">
+<l><seg type="pāda" n="a">tataś ca narakān yāyād</seg> <seg type="pāda" n="b">rauravādīn samantataḥ</seg> </l>
+<l><seg type="pāda" n="c">narakān narakaṃ gatvā</seg> <seg type="pāda" n="d">mahāduḥkham avāpnuyāt*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_410">
+<l><seg type="pāda" n="a">itthaṃ duḥkhānuvedī sa</seg> <seg type="pāda" n="b">narakeṣu sadā vaset*</seg> </l>
+<l><seg type="pāda" n="c">narakebhyas tam uddhartuṃ</seg> <seg type="pāda" n="d">jino 'pi naiva śaknuyāt*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_411">
+<l><seg type="pāda" n="a">yāvanti pāpaduḥkhāni</seg> <seg type="pāda" n="b">durvṛttiprabhavāni hi</seg> </l>
+<l><seg type="pāda" n="c">tāni sarvāṇi jānīdhvaṃ</seg> <seg type="pāda" n="d">krodhacittodbhavāni hi</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_412">
+<l><seg type="pāda" n="a">sarveṣāṃ pātakānāṃ tat</seg> <seg type="pāda" n="b">krodhaṃ mūlaṃ jagur jināḥ</seg> </l>
+<l><seg type="pāda" n="c">dharmāṇāṃ tu kṣamā mūlaṃ</seg> <seg type="pāda" n="d">yataḥ saukhyaṃ pravartate</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_413">
+<l><seg type="pāda" n="a">iti krodhaṃ vinirjitya</seg> <seg type="pāda" n="b">kṣamaiva sādhyatāṃ sadā</seg> </l>
+<l><seg type="pāda" n="c">maitrīcittaṃ samālambya</seg> <seg type="pāda" n="d">viharadhvaṃ yathāsukhaṃ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_414">
+<l><seg type="pāda" n="a">ātmanīva dayā syāc cet</seg> <seg type="pāda" n="b">svajane vā yathā jane</seg> </l>
+<l><seg type="pāda" n="c">kasya nāma bhavec cittam</seg> <seg type="pāda" n="d">adharmapraṇayāśivam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_415">
+<l><seg type="pāda" n="a">dayāviyogato lokaḥ</seg> <seg type="pāda" n="b">paramāmeti vikriyām*</seg> </l>
+<l><seg type="pāda" n="c">manovākkāyavispandaiḥ</seg> <seg type="pāda" n="d">svajane 'pi yathā jane</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_416">
+<l><seg type="pāda" n="a">dharmārthī na tyajed asmād</seg> <seg type="pāda" n="b">dayām iṣṭaphalodayām*</seg> </l>
+<l><seg type="pāda" n="c">suvṛṣṭir iva śasyāni</seg> <seg type="pāda" n="d">guṇān sā hi prasūyate</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_417">
+<l><seg type="pāda" n="a">dayākrāntaṃ cittaṃ na bhavati paradroharabhasaṃ</seg> <seg type="pāda" n="b">śucau tasmin vāṇī vrajati vikṛtaṃ naiva ca tanuḥ</seg> </l>
+<l><seg type="pāda" n="c">vivṛddhā tasyaivaṃ parahitarucir maitryanugatā</seg> <seg type="pāda" n="d">pradānakṣāntyādīñ janayati guṇān kīrtyanusṛtān*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_418">
+<l><seg type="pāda" n="a">dayālur nodvegaṃ janayati pareṣām upaśamād</seg> <seg type="pāda" n="b">dayālur viśvāsyo bhavati jagatāṃ bāndhava iva</seg> </l>
+<l><seg type="pāda" n="c">na saṃrambhakṣobhaḥ prabhavati dayādhīr ahṛdaye</seg> <seg type="pāda" n="d">na kopāgniś citte jvalayati hi dayātoyaśiśire</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="292"/>
+
+<lg xml:id="KDA_419">
+<l><seg type="pāda" n="a">saṃkṣepeṇa dayāmataḥ sthiratayā paśyanti dharmaṃ budhāḥ</seg> <seg type="pāda" n="b">ko nāmāsti guṇaḥ sa sādhudayito yo nānuyāto dayām*</seg> </l>
+<l><seg type="pāda" n="c">tasmāt putra ivātmanīva ca dayāṃ nītvā prakarṣaṃ jane</seg> <seg type="pāda" n="d">sanmaitryā viharanta eva muditāṃ prodbhāvayadhvaṃ sadā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_420">
+<l><seg type="pāda" n="a">dayālor hṛdaye jātā</seg> <seg type="pāda" n="b">maitrī saddharmasādhanī</seg> </l>
+<l><seg type="pāda" n="c">tasmād dayāṃ hṛdi sthāpya</seg> <seg type="pāda" n="d">maitrī loke prasāryatām*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_421">
+<l><seg type="pāda" n="a">maitrīmān puruṣaḥ sādhur</seg> <seg type="pāda" n="b">devair api praśasyate</seg> </l>
+<l><seg type="pāda" n="c">viśvasyate sadā sadbhir</seg> <seg type="pāda" n="d">bāndhavaiḥ svajanair janaiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_422">
+<l><seg type="pāda" n="a">maitrīmān sajjano loke</seg> <seg type="pāda" n="b">nirguṇo 'pi praśobhate</seg> </l>
+<l><seg type="pāda" n="c">maitrīmān sanmatir bandhur</seg> <seg type="pāda" n="d">lokānāṃ jagatām api</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_423">
+<l><seg type="pāda" n="a">maitrīmāñ jagatām iṣṭo</seg> <seg type="pāda" n="b">maitrīmāñ jagatāṃ suhṛt*</seg> </l>
+<l><seg type="pāda" n="c">maitrīmāñ jagatāṃ mitro</seg> <seg type="pāda" n="d">maitrīmāñ jagatāṃ sakhā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_424">
+<l><seg type="pāda" n="a">maitrīmān puruṣaḥ śrīmān</seg> <seg type="pāda" n="b">yatra yatra pragacchati</seg> </l>
+<l><seg type="pāda" n="c">tatra tatraiva sarvatra</seg> <seg type="pāda" n="d">pūjyate svajanair yathā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_425">
+<l><seg type="pāda" n="a">buddho hi jagatāṃ bandhus</seg> <seg type="pāda" n="b">trailokyādhipanāyakaḥ</seg> </l>
+<l><seg type="pāda" n="c">so 'pi śāstā vibhāty evaṃ</seg> <seg type="pāda" n="d">maitryā saṃskārayañ jagat*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_426">
+<l><seg type="pāda" n="a">ye ye satvā mahābhijñāḥ</seg> <seg type="pāda" n="b">sarvalokānukampakāḥ</seg> </l>
+<l><seg type="pāda" n="c">pūjyante satvalokaiś ca</seg> <seg type="pāda" n="d">te 'pi maitryāḥ prabhāvataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_427">
+<l><seg type="pāda" n="a">bodhisatvā mahāsatvā</seg> <seg type="pāda" n="b">bodhisaṃbhārasādhakāḥ</seg> </l>
+<l><seg type="pāda" n="c">sarvasatvahitārthasthās</seg> <seg type="pāda" n="d">te 'pi maitrīpracāriṇaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_428">
+<l><seg type="pāda" n="a">yan mātā duḥkhitāpy evam</seg> <seg type="pāda" n="b">ā garbhād bālakaṃ sutam*</seg> </l>
+<l><seg type="pāda" n="c">pāti snehopacāreṇa</seg> <seg type="pāda" n="d">tac ca maitrīprabhāvataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_429">
+<l><seg type="pāda" n="a">yat pitā bālakaṃ putram</seg> <seg type="pāda" n="b">abhuñjānaḥ svayaṃ sukham*</seg> </l>
+<l><seg type="pāda" n="c">pāti snehopacāreṇa</seg> <seg type="pāda" n="d">tac ca maitrīprabhāvataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_430">
+<l><seg type="pāda" n="a">yac ca rājā prajāḥ pāti</seg> <seg type="pāda" n="b">svayaṃ vīravrataṃ dadhat*</seg> </l>
+<l><seg type="pāda" n="c">durjanān mardayan sarvān</seg> <seg type="pāda" n="d">tac ca maitrīprabhāvataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_431">
+<l><seg type="pāda" n="a">yac ca vidvān guruḥ śiṣyān</seg> <seg type="pāda" n="b">saddharmārthopadarśayan*</seg> </l>
+<l><seg type="pāda" n="c">prabodhya bālakāñ chāsti</seg> <seg type="pāda" n="d">tac ca maitrīprabhāvataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_432">
+<l><seg type="pāda" n="a">yac ca vīrā raṇe sthitvā</seg> <seg type="pāda" n="b">sahantyarīn prahāriṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">prarakṣanti svapakṣāṃś ca</seg> <seg type="pāda" n="d">tac ca maitrīprabhāvataḥ</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="293"/>
+
+<lg xml:id="KDA_433">
+<l><seg type="pāda" n="a">sārthavāho 'mbudhiṃ gatvā</seg> <seg type="pāda" n="b">yatnai ratnāni sādhayan*</seg> </l>
+<l><seg type="pāda" n="c">satvān pāti dadad dānaṃ</seg> <seg type="pāda" n="d">tac ca maitrīprabhāvataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_434">
+<l><seg type="pāda" n="a">yac ca bhāryānuyāty eva</seg> <seg type="pāda" n="b">mṛtena svāminā saha</seg> </l>
+<l><seg type="pāda" n="c">anapekṣya svajīve 'pi</seg> <seg type="pāda" n="d">tac ca maitrīprabhāvataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_435">
+<l><seg type="pāda" n="a">pitṛbhyo mṛtakebhyo 'pi</seg> <seg type="pāda" n="b">dadāti piṇḍam ādarāt*</seg> </l>
+<l><seg type="pāda" n="c">anuśocan muhuś cāpi</seg> <seg type="pāda" n="d">tac ca maitrīprabhāvataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_436">
+<l><seg type="pāda" n="a">tiryagyonyudbhavāś cāpi</seg> <seg type="pāda" n="b">paśavaḥ krūramānasāḥ</seg> </l>
+<l><seg type="pāda" n="c">svasutān snehataḥ pānti</seg> <seg type="pāda" n="d">tac ca maitrīprabhāvataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_437">
+<l><seg type="pāda" n="a">kṛmyādhikīṭayaś cāpi</seg> <seg type="pāda" n="b">krūrā gṛdhrādipakṣiṇaḥ</seg> </l>
+<l><seg type="pāda" n="c">svabandhūn snehataḥ pānti</seg> <seg type="pāda" n="d">tad dhi maitrīprabhāvataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_438">
+<l><seg type="pāda" n="a">caṇḍālā nirghṛṇā raudrāḥ</seg> <seg type="pāda" n="b">satvahiṃsāratāḥ khalāḥ</seg> </l>
+<l><seg type="pāda" n="c">bāndhavāṃs te 'pi rakṣanti</seg> <seg type="pāda" n="d">tad dhi maitrīprabhāvataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_439">
+<l><seg type="pāda" n="a">yad dadanti mahāsatvāḥ</seg> <seg type="pāda" n="b">svadehe 'py anapekṣitāḥ</seg> </l>
+<l><seg type="pāda" n="c">arthibhyaḥ prārthitaṃ vastu</seg> <seg type="pāda" n="d">tad dhi maitrīprabhāvataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_440">
+<l><seg type="pāda" n="a">evam anye 'pi ye lokā</seg> <seg type="pāda" n="b">bhojayantaḥ parasparam*</seg> </l>
+<l><seg type="pāda" n="c">pālayanti mahāsnehāt</seg> <seg type="pāda" n="d">tac ca maitrīprabhāvataḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_441">
+<l><seg type="pāda" n="a">maitrī hi jagatāṃ mātā</seg> <seg type="pāda" n="b">pitā śāstā guruḥ prabhuḥ</seg> </l>
+<l><seg type="pāda" n="c">patir mitraḥ suhṛd bandhus</seg> <seg type="pāda" n="d">tasmān maitrī prasādhyatām+</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_442">
+<l><seg type="pāda" n="a">maitrīṃ vinā na jāyeta</seg> <seg type="pāda" n="b">karuṇā svātmaje 'pi ca</seg> </l>
+<l><seg type="pāda" n="c">na muditā na copekṣā</seg> <seg type="pāda" n="d">tasmān maitrī pradhīyatām*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_443">
+<l><seg type="pāda" n="a">etā brahmavihārākhyāḥ</seg> <seg type="pāda" n="b">saṃbodhipadasādhakāḥ</seg> </l>
+<l><seg type="pāda" n="c">trailokyabhartṛkā nāthāḥ</seg> <seg type="pāda" n="d">sarvasatvānupālakāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_444">
+<l><seg type="pāda" n="a">etā vinā na śobhanti</seg> <seg type="pāda" n="b">mahābhijñās tapasvinaḥ</seg> </l>
+<l><seg type="pāda" n="c">kalpakoṭisahasrāṇi</seg> <seg type="pāda" n="d">taptvāpi duṣkaraṃ tapaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_445">
+<l><seg type="pāda" n="a">etā hi paramācāryāḥ</seg> <seg type="pāda" n="b">saddharmaguṇadāyakāḥ</seg> </l>
+<l><seg type="pāda" n="c">etā vinā na sidhyanti</seg> <seg type="pāda" n="d">sarvapāramitāratāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_446">
+<l><seg type="pāda" n="a">yāvanti sukhabhogyāni</seg> <seg type="pāda" n="b">puṇyasiddhāni sarvathā</seg> </l>
+<l><seg type="pāda" n="c">tāni sarvāṇi jānīta</seg> <seg type="pāda" n="d">maitrīmūlodbhavāni hi</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_447">
+<l><seg type="pāda" n="a">tasmāt sarvaprayatnena</seg> <seg type="pāda" n="b">krodhaṃ jitvāṃvarair api</seg> </l>
+<l><seg type="pāda" n="c">maitrīṃ citte samādhāya</seg> <seg type="pāda" n="d">kurudhvaṃ prāṇiṣu kṣamām*</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="294"/>
+
+<lg xml:id="KDA_448">
+<l><seg type="pāda" n="a">tato dharmaprabhāveṇa</seg> <seg type="pāda" n="b">yūyaṃ sarve 'numoditāḥ</seg> </l>
+<l><seg type="pāda" n="c">yāvajjīvaṃ sukhaṃ bhuktvā</seg> <seg type="pāda" n="d">saukhāvatīṃ gamiṣyatha</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_449">
+<l><seg type="pāda" n="a">iti śrutvā vacas tasya</seg> <seg type="pāda" n="b">nāgāś ca garuḍā yateḥ</seg> </l>
+<l><seg type="pāda" n="c">vairānuśayatāṃ tyaktvā</seg> <seg type="pāda" n="d">babhūvur maitricāriṇaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_450">
+<l><seg type="pāda" n="a">iti dṛṣṭvā ca te satvā</seg> <seg type="pāda" n="b">vismayaharṣasaṃyutāḥ</seg> </l>
+<l><seg type="pāda" n="c">dharmānumodanaṃ kṛtvā</seg> <seg type="pāda" n="d">babhūvur maitricāriṇaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_451">
+<l><seg type="pāda" n="a">evaṃ subhūtinā tena</seg> <seg type="pāda" n="b">nāgāś ca garuḍāś ca te</seg> </l>
+<l><seg type="pāda" n="c">maitrīdharmopadeśena</seg> <seg type="pāda" n="d">vinītā dharmasatpathe</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_452">
+<l><seg type="pāda" n="a">atha śrībhagavān buddhaḥ</seg> <seg type="pāda" n="b">sarvadarśī vināyakaḥ</seg> </l>
+<l><seg type="pāda" n="c">bhikṣūn āmantrayāmāsa</seg> <seg type="pāda" n="d">saṃvṛticārakān api</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_453">
+<l><seg type="pāda" n="a">paśyadhvaṃ bhikṣavo yūyaṃ</seg> <seg type="pāda" n="b">subhūtiṃ brahmacāriṇam*</seg> </l>
+<l><seg type="pāda" n="c">yenaite garuḍā nāgā</seg> <seg type="pāda" n="d">vinītā dharmasatpathe</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_454">
+<l><seg type="pāda" n="a">eṣa me śrāvakāṇāṃ ca</seg> <seg type="pāda" n="b">bhikṣūṇāṃ brahmacāriṇām*</seg> </l>
+<l><seg type="pāda" n="c">subhūtiḥ kulaputro 'yam</seg> <seg type="pāda" n="d">agro 'raṇāvihāriṇām*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_455">
+<l><seg type="pāda" n="a">iti tena munīndreṇa</seg> <seg type="pāda" n="b">subhūtir eva sadyatiḥ</seg> </l>
+<l><seg type="pāda" n="c">nirdiṣṭaḥ sarvabhikṣūṇām</seg> <seg type="pāda" n="d">agro 'raṇāvihāriṇām*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_456">
+<l><seg type="pāda" n="a">atha te bhikṣavaḥ sarve</seg> <seg type="pāda" n="b">saṃśayoddhatamānasāḥ</seg> </l>
+<l><seg type="pāda" n="c">cchetāraṃ saṃśayānāṃ taṃ</seg> <seg type="pāda" n="d">papracchur evam īśvaram*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_457">
+<l><seg type="pāda" n="a">kāni bhadanta karmāṇi</seg> <seg type="pāda" n="b">kṛtāny api subhūtinā</seg> </l>
+<l><seg type="pāda" n="c">nirdiṣṭo bhavatā yena</seg> <seg type="pāda" n="d">jyeṣṭho 'raṇāvihāriṇām*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_458">
+<l><seg type="pāda" n="a">iti tair bhikṣubhiḥ pṛṣṭo</seg> <seg type="pāda" n="b">bhagavān ity udāharat*</seg> </l>
+<l><seg type="pāda" n="c">śṛṇudhvaṃ bhikṣavaḥ sarve</seg> <seg type="pāda" n="d">tat kṛtaṃ yat subhūtinā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_459">
+<l><seg type="pāda" n="a">subhūtinā kṛtaṃ karma</seg> <seg type="pāda" n="b">tat ko 'nyaḥ paribhokṣyate</seg> </l>
+<l><seg type="pāda" n="c">yenaiva yat kṛtaṃ karma</seg> <seg type="pāda" n="d">tenaiva tat prabhujyate</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_460">
+<l><seg type="pāda" n="a">bhūtapūrvam atīte 'dhvany</seg> <seg type="pāda" n="b">asmin* kalpe ca bhadrake</seg> </l>
+<l><seg type="pāda" n="c">varṣasahasram āyuṣ ca</seg> <seg type="pāda" n="d">viṃśatiguṇitaṃ yadā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_461">
+<l><seg type="pāda" n="a">tasmiṃś ca samaye buddhaḥ</seg> <seg type="pāda" n="b">kāśyapo nāma nāyakaḥ</seg> </l>
+<l><seg type="pāda" n="c">vidyācaraṇasaṃpannaḥ</seg> <seg type="pāda" n="d">sugato lokavij jinaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_462">
+<l><seg type="pāda" n="a">śāstā devamanuṣyāṇāṃ</seg> <seg type="pāda" n="b">puruṣadamyasārathiḥ</seg> </l>
+<l><seg type="pāda" n="c">sarvajño bhagavān nāthaḥ</seg> <seg type="pāda" n="d">ṣaḍabhijño munīśvaraḥ</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="295"/>
+
+<lg xml:id="KDA_463">
+<l><seg type="pāda" n="a">vārāṇasīm upāśritya</seg> <seg type="pāda" n="b">mṛgadāve jināśrame</seg> </l>
+<l><seg type="pāda" n="c">vyaharat sarvasatvānām</seg> <seg type="pāda" n="d">saddharmaṃ samupādiśan*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_464">
+<l><seg type="pāda" n="a">tasyaiva śāsane śuddhe</seg> <seg type="pāda" n="b">svākhyāte dharmavainaye</seg> </l>
+<l><seg type="pāda" n="c">ayaṃ pravrajito bhūtvā</seg> <seg type="pāda" n="d">mahādātāpy abhūt tadā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_465">
+<l><seg type="pāda" n="a">daśa varṣasahasrāṇi</seg> <seg type="pāda" n="b">brahmacaryam apālayat*</seg> </l>
+<l><seg type="pāda" n="c">praṇidhānaṃ tathā cāyam</seg> <seg type="pāda" n="d">akarod brahmavittamaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_466">
+<l><seg type="pāda" n="a">anena kuśalenāhaṃ</seg> <seg type="pāda" n="b">bhaveyaṃ bauddhasadyatiḥ</seg> </l>
+<l><seg type="pāda" n="c">yo 'sau bhagavatānena</seg> <seg type="pāda" n="d">kāśyapena sutāyinā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_467">
+<l><seg type="pāda" n="a">māṇava uttaro nāma</seg> <seg type="pāda" n="b">vyākṛta iti bodhaye</seg> </l>
+<l><seg type="pāda" n="c">māṇava tvaṃ prajānāṃ tu</seg> <seg type="pāda" n="d">yadā varṣaśatāyuṣi</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_468">
+<l><seg type="pāda" n="a">śākyamunir mahābuddhaḥ</seg> <seg type="pāda" n="b">sarvajño lokanāyakaḥ</seg> </l>
+<l><seg type="pāda" n="c">saṃbuddho bhagāvan nāthas</seg> <seg type="pāda" n="d">tathāgato bhaviṣyasi</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_469">
+<l><seg type="pāda" n="a">asyaiva śasane cāhaṃ</seg> <seg type="pāda" n="b">bhaveyaṃ śrāvakottamaḥ</seg> </l>
+<l><seg type="pāda" n="c">arhatām agrasaṃprāpto</seg> <seg type="pāda" n="d">bhūtvāraṇāvihāriṇām*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_470">
+<l><seg type="pāda" n="a">tenaiva karmaṇā cādya</seg> <seg type="pāda" n="b">praviṣṭo mama śāsane</seg> </l>
+<l><seg type="pāda" n="c">arhatāṃ jyeṣṭhatāṃ prāptas</seg> <seg type="pāda" n="d">tathāraṇāvihāriṇām*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_471">
+<l><seg type="pāda" n="a">kāni punar anenaiva</seg> <seg type="pāda" n="b">karmāṇi prakṛtāny api</seg> </l>
+<l><seg type="pāda" n="c">yenaiva nāgayonau ca</seg> <seg type="pāda" n="d">samutpanno babhūva saḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_472">
+<l><seg type="pāda" n="a">yat taḥ kleśāprahīṇatvād</seg> <seg type="pāda" n="b">udbhrāntendriyacetasā <note>Speyer: yataḥ kleśāŚ</note></seg> </l>
+<l><seg type="pāda" n="c">śaikṣāśaikṣagāṇānāṃ ca</seg> <seg type="pāda" n="d">bhikṣūṇāṃ brahmacāriṇām*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_473">
+<l><seg type="pāda" n="a">anena ruṣṭacittena</seg> <seg type="pāda" n="b">paruṣābaddhacetasā</seg> </l>
+<l><seg type="pāda" n="c">cittāni saṃpradūṣyaiva</seg> <seg type="pāda" n="d">vikalāni kṛtāny api</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_474">
+<l><seg type="pāda" n="a">sadāśīviṣavādena</seg> <seg type="pāda" n="b">vikruśyābhāṇi sāṃghike</seg> </l>
+<l><seg type="pāda" n="c">tenaiva pātakenaivaṃ</seg> <seg type="pāda" n="d">pañca janmaśatāny api</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_475">
+<l><seg type="pāda" n="a">nāgayonisamutpanno</seg> <seg type="pāda" n="b">babhūvāyaṃ mahāviṣaḥ</seg> </l>
+<l><seg type="pāda" n="c">yac cānena punas tatra</seg> <seg type="pāda" n="d">pravrajya buddhaśāsane</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_476">
+<l><seg type="pāda" n="a">sadā dānāni saṃdatvā</seg> <seg type="pāda" n="b">brahmacaryaṃ ca pālitam*</seg> </l>
+<l><seg type="pāda" n="c">tenedānīṃ tathārhatvaṃ</seg> <seg type="pāda" n="d">prāpya sākṣātkṛtaṃ mudā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_477">
+<l><seg type="pāda" n="a">araṇāvihāriṇāṃ cāgro</seg> <seg type="pāda" n="b">nirdiṣṭo 'yaṃ mayā khalu</seg> </l>
+<l><seg type="pāda" n="c">iti hi bhikṣavo yūyaṃ</seg> <seg type="pāda" n="d">jānīdhvaṃ karmatāphalam*</seg> //</l>
+</lg>
+
+<pb edRef="#Vaidya" n="296"/>
+
+<lg xml:id="KDA_478">
+<l><seg type="pāda" n="a">yenaiva yat kṛtaṃ karma</seg> <seg type="pāda" n="b">tasyaiva tat phalaṃ dhruvam*</seg> </l>
+<l><seg type="pāda" n="c">na naśyanti hi karmāṇi</seg> <seg type="pāda" n="d">kalpakoṭiśatair api</seg> </l>
+<l><seg type="pāda" n="e">sāmagrīṃ prāpya kālaṃ ca</seg> <seg type="pāda" n="f">phalanti khalu dehināṃ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_479">
+<l><seg type="pāda" n="a">abhuktaṃ kṣīyate naiva</seg> <seg type="pāda" n="b">karma kvāpi kathaṃcana</seg> </l>
+<l><seg type="pāda" n="c">nāgnibhir dahyate karma</seg> <seg type="pāda" n="d">vāyubhir nāpi śuṣyati</seg> </l>
+<l><seg type="pāda" n="e">udakaiḥ klidyate naiva</seg> <seg type="pāda" n="f">bhūmiṣv api na naśyati</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_480">
+<l><seg type="pāda" n="a">anyathāpi ca no bhūtā</seg> <seg type="pāda" n="b">sarvathā karmaṇāṃ gatiḥ</seg> </l>
+<l><seg type="pāda" n="c">śuklānāṃ śuklatā nityaṃ</seg> <seg type="pāda" n="d">kṛṣṇānāṃ kṛṣṇatā khalu</seg> </l>
+<l><seg type="pāda" n="e">miśrataiva tu miśrāṇāṃ</seg> <seg type="pāda" n="f">ṣaḍgatau bhujyate dhruvam*</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_481">
+<l><seg type="pāda" n="a">tasmād apāsya kṛṣṇāni</seg> <seg type="pāda" n="b">karmāṇi miśritāni ca</seg> </l>
+<l><seg type="pāda" n="c">yatitavyaṃ śubheṣv eva</seg> <seg type="pāda" n="d">karmasu sukhavāñchibhiḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_482">
+<l><seg type="pāda" n="a">tatheti bhikṣavaḥ śrutvā</seg> <seg type="pāda" n="b">te ca lokāḥ prabhāṣitāḥ</seg> </l>
+<l><seg type="pāda" n="c">buddhavacomṛtaṃ pītvā</seg> <seg type="pāda" n="d">nanandur anumoditāḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_483">
+<l><seg type="pāda" n="a">evam etan mahārāja</seg> <seg type="pāda" n="b">śrutaṃ me gurubhāṣitam*</seg> </l>
+<l><seg type="pāda" n="c">iti matvā tvayā rājan</seg> <seg type="pāda" n="d">parātmaśubhavāñchinā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_484">
+<l><seg type="pāda" n="a">krodhāriṃ yatnato jitvā</seg> <seg type="pāda" n="b">kṣamādharmapuraskṛtaḥ</seg> </l>
+<l><seg type="pāda" n="c">maitrīṃ bhāvaya satveṣu</seg> <seg type="pāda" n="d">svātmajeṣu yathā sadā</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_485">
+<l><seg type="pāda" n="a">iti subhāṣitaṃ śrutvā</seg> <seg type="pāda" n="b">upaguptasya sadguroḥ</seg> </l>
+<l><seg type="pāda" n="c">tatheti nṛparājaḥ sa</seg> <seg type="pāda" n="d">nananda sasabhājanaḥ</seg> //</l>
+</lg>
+
+<lg xml:id="KDA_486">
+<l><seg type="pāda" n="a">ye maitrībhāvadharmaṃ kalimatiharaṇaṃ tat subhūteś caritraṃ</seg> <seg type="pāda" n="b">śṛṇvanti śrāvayanti tribhuvanasukhadaṃ saṃnipātya janaughān*</seg> </l>
+<l><seg type="pāda" n="c">te lokā maitracittās tribhuvanasukhadāḥ kṣāntisaurabhyayuktāḥ</seg> <seg type="pāda" n="d">yātāḥ saukhāvatīṃ te 'py amitarucimuner dharmam ārādhayanti</seg> //</l>
+</lg>
+
+  </body>
+</text>
+</TEI>

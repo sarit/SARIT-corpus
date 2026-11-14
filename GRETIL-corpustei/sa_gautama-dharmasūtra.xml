@@ -1,0 +1,2731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_gautama-dharmasUtra">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Dharmasūtra</title>
+	<author>Gautama</author>
+	<respStmt>
+	 <resp>data entry</resp>
+	 <name>Nobuyuki Watase</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Nobuyuki Watase</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/6_sastra/4_dharma/sutra/gautdh_u.htm">gautdh_u.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Gautama-Dharmasutra
+<lb/>Based on the ed. by Ganesa Sastrin Gokhale, Pune 1910,
+<lb/>(Anandasrama Sanskrit Series, 61);
+<lb/>with variants from: The Institutes of Gautama,
+<lb/>ed.by A.F. Stenzler, London 1876.
+<lb/>
+<lb/>Input by Nobuyuki Watase
+<lb/>
+<lb/>The original input format has been modified according to GRETIL conventions.
+<lb/>The text is not proof-read!
+<lb/>
+<lb/>STRUCTURE OF REFERENCES:
+<lb/>GautAA_n,n.n = Anandaśrama ed._praśna,adhyāya.sūtra
+<lb/>GautSt_n.n = Stenzler's ed._chapter.sūtra)
+<lb/>
+<lb/>If only one of these two references is given, the respective sutra is lacking in the other edition!
+<lb/>
+<lb/>{VAR_St: ...} = variant reading in Stenzler's edition
+<lb/>
+<lb/>NOTE:
+<lb/>In this GRETIL version, all variants have been extracted from the running text
+<lb/>and transferred to a separate line below the respective sutra.
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>Ganesa Sastrin Gokhale, Pune 1910, (Anandasrama Sanskrit Series, 61); with variants from: The Institutes of Gautama, ed.by A.F. Stenzler, London 1876.</bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Dharmasūtra = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Śāstra -- Dharmaśāstra -- Sūtra</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+
+
+
+<note>GautAA 1,1 = GautSt I</note>
+
+<p xml:id="GautSt_1.1" corresp="GautAA_1.1.1">vedo dharmamūlam |</p>
+
+<p xml:id="GautSt_1.2" corresp="GautAA_1.1.2">tadvidāṃ ca smṛtiśīle |</p>
+
+<p xml:id="GautSt_1.3" corresp="GautAA_1.1.3">dṛṣṭo dharmavyatikramaḥ sāhasaṃ ca mahatāṃ |</p>
+<note>VAR_St: na tu dṛṣṭārthe</note>
+
+<p xml:id="GautSt_1.3" corresp="GautAA_1.1.4">avaradaurbalyāt |</p>
+
+<p xml:id="GautSt_1.4" corresp="GautAA_1.1.5">tulyabalavirodhe vikalpaḥ |</p>
+
+<p xml:id="GautSt_1.5" corresp="GautAA_1.1.6">upanayanaṃ brāhmaṇasyāṣṭame |</p>
+
+<p xml:id="GautSt_1.6" corresp="GautAA_1.1.7">navame pañcame vā kāmyam |</p>
+
+<p xml:id="GautSt_1.7" corresp="GautAA_1.1.8">garbhādiḥ saṅkhyā varṣāṇām |</p>
+
+<p xml:id="GautSt_1.8" corresp="GautAA_1.1.9">taddvitīyaṃ janma |</p>
+
+<p xml:id="GautSt_1.9" corresp="GautAA_1.1.10">tad yasmāt sa ācāryaḥ |</p>
+
+<p xml:id="GautSt_1.10" corresp="GautAA_1.1.11">vedānuvacanāc ca |</p>
+
+<p xml:id="GautSt_1.11" corresp="GautAA_1.1.12">ekādaśadvādaśayoḥ kṣatriyavaiśyayoḥ |</p>
+
+<p xml:id="GautSt_1.12" corresp="GautAA_1.1.13">ā ṣoḍaśād brāhmaṇasyāpatitā sāvitrī |</p>
+
+<p xml:id="GautSt_1.13" corresp="GautAA_1.1.14a">dvāviṃśate rājanyasya |</p>
+
+<p xml:id="GautSt_1.14" corresp="GautAA_1.1.14b">dvyadhikāyāvaiśyasya |</p>
+
+<p xml:id="GautSt_1.15" corresp="GautAA_1.1.15">mauñjījyāmaurvīsautryo mekhalāḥ krameṇa |</p>
+
+<p xml:id="GautSt_1.16" corresp="GautAA_1.1.16">kṛṣṇarurubastājināni |</p>
+
+<p xml:id="GautSt_1.17" corresp="GautAA_1.1.17">vāsāṃsi śāṇakṣaumacīrakutapāḥ sarveṣām |</p>
+
+<p xml:id="GautSt_1.18" corresp="GautAA_1.1.18">kārpāsaṃ cāvikṛtam |</p>
+
+<p xml:id="GautSt_1.19" corresp="GautAA_1.1.19">kāṣāyam apy eke |</p>
+
+<p xml:id="GautSt_1.20" corresp="GautAA_1.1.20a">vārkṣaṃ brāhmaṇasya |</p>
+
+<p xml:id="GautSt_1.21" corresp="GautAA_1.1.20b">māñjiṣṭhahāridre itarayoḥ |</p>
+
+<p xml:id="GautSt_1.22" corresp="GautAA_1.1.21">bailvapālāśau brāhmaṇadaṇḍau |</p>
+
+<p xml:id="GautSt_1.23" corresp="GautAA_1.1.22">āśvatthapailavau śeṣe |</p>
+
+<p xml:id="GautSt_1.24" corresp="GautAA_1.1.23">yajñiyo vā sarveṣām |</p>
+
+<p xml:id="GautSt_1.25" corresp="GautAA_1.1.24">apīḍitā yūpavakrāḥ saśalkāḥ |</p>
+
+<p xml:id="GautSt_1.26" corresp="GautAA_1.1.25">mūrdhalalāṭanāsāgrapramāṇāḥ |</p>
+
+<p xml:id="GautSt_1.27" corresp="GautAA_1.1.26">muṇḍajaṭilaśikhājaṭāś ca |</p>
+
+<p xml:id="GautSt_1.28" corresp="GautAA_1.1.27">dravyahasta ucchiṣṭo anidhāyācāmet |</p>
+
+<p xml:id="GautSt_1.29" corresp="GautAA_1.1.28">dravyaśuddhiḥ parimārjanapradāhatakṣaṇanirṇejanānitaijasamārktikadāravatāntavānām |</p>
+
+<p xml:id="GautSt_1.30" corresp="GautAA_1.1.29">taijasavadupalamaṇiśaṅkhamuktānām |</p>
+<note>VAR_St: -śuktīnām</note>
+
+<p xml:id="GautSt_1.31" corresp="GautAA_1.1.30">dāruvadasthibhūmyoḥ |</p>
+
+<p xml:id="GautSt_1.32" corresp="GautAA_1.1.31">āvapanaṃ ca bhūmeḥ |</p>
+
+<p xml:id="GautSt_1.33" corresp="GautAA_1.1.32">celavad rajjuvidalacarmaṇām |</p>
+
+<p xml:id="GautSt_1.34" corresp="GautAA_1.1.33">utsargo vātyantopahatānām |</p>
+
+<p xml:id="GautSt_1.35" corresp="GautAA_1.1.34">prāṅmukha udaṅmukho vā śaucam ārabheta |</p>
+
+<p xml:id="GautSt_1.36" corresp="GautAA_1.1.35">śucau deśe āsīno dakṣiṇaṃ bāhuṃ jānvantarākṛtvā yajñopavītyā maṇibandhanāt pāṇī prakṣālya vāgyatohṛdayaspṛśas triś catur vāpa ācāmed |</p>
+
+<p xml:id="GautSt_1.36" corresp="GautAA_1.1.36">dviḥ parimṛjyate |</p>
+<note>VAR_St: parimṛjyāt</note>
+
+<p xml:id="GautSt_1.36" corresp="GautAA_1.1.37">pādau cābhyukṣet |</p>
+
+<p xml:id="GautSt_1.36" corresp="GautAA_1.1.38">khāni copaspṛśec śīrṣaṇyāni |</p>
+
+<p xml:id="GautSt_1.36" corresp="GautAA_1.1.39">mūrdhani ca dadyāt |</p>
+
+<p xml:id="GautSt_1.37" corresp="GautAA_1.1.40">suptvā bhuktvā kṣutvā ca punaḥ |</p>
+
+<p xml:id="GautSt_1.38" corresp="GautAA_1.1.41">dantaśliṣṭeṣu dantavad anyatra jihvābhimarśanāt |</p>
+
+<p xml:id="GautSt_1.39" corresp="GautAA_1.1.42">prākcyuter ity eke |</p>
+
+<p xml:id="GautSt_1.40" corresp="GautAA_1.1.43">cyuteśu āsrāvavad vidyān nigirann eva tac śuciḥ |</p>
+
+<p xml:id="GautSt_1.41" corresp="GautAA_1.1.46">na mukhyā vipruṣa ucchiṣṭaṃ kurvanti na ced aṅgenipatanti |</p>
+
+<p xml:id="GautSt_1.42" corresp="GautAA_1.1.45">lepagandhāpakarṣaṇe śaucam amedhyasya |</p>
+
+<p xml:id="GautSt_1.43" corresp="GautAA_1.1.46">tad adbhiḥ pūrvaṃ mṛdā ca |</p>
+
+<p xml:id="GautSt_1.44" corresp="GautAA_1.1.47">mūtrapurīṣasnehavisraṃsanābhyavahārasaṃyogeṣu ca |</p>
+<note>VAR_St: -snehu-</note>
+
+<p xml:id="GautSt_1.45" corresp="GautAA_1.1.48">yatra cāmnāyo vidadhyāt |</p>
+
+<p xml:id="GautSt_1.46" corresp="GautAA_1.1.49a">pāṇinā savyam upasaṅgṛhya anaṅguṣṭham adhīhi bho ity āmantrayed guruṃ |</p>
+<note>VAR_St: āmantrayeta</note>
+
+<p xml:id="GautSt_1.47" corresp="GautAA_1.1.49b">tatracakṣurmanaḥprāṇopasparśanaṃ darbhaiḥ |</p>
+<note>VAR_St: tatracakṣurmanāḥ</note>
+
+<p xml:id="GautSt_1.48" corresp="GautAA_1.1.49c">prāṇopasparśanaṃ darbhaiḥ |</p>
+
+<p xml:id="GautSt_1.49" corresp="GautAA_1.1.50">prāṇāyāmās trayaḥ pañcadaśamātrāḥ |</p>
+
+<p xml:id="GautSt_1.50" corresp="GautAA_1.1.51">prākkūleṣu āsanaṃ ca |</p>
+<note>VAR_St: -tūleṣu</note>
+
+<p xml:id="GautSt_1.51" corresp="GautAA_1.1.52">oṃ pūrvā vyāhṛtayaḥ pañca satyāntāḥ |</p>
+
+<p xml:id="GautSt_1.52" corresp="GautAA_1.1.53">guroḥ pādopasaṃgrahaṇaṃ prātaḥ |</p>
+
+<p xml:id="GautSt_1.53" corresp="GautAA_1.1.54">brahmānuvacane cādyantayoḥ |</p>
+
+<p xml:id="GautSt_1.54" corresp="GautAA_1.1.55">anujñāta upaviśet prāṅmukho dakṣiṇataḥ śiṣya udaṅmukhovā |</p>
+
+<p xml:id="GautSt_1.55" corresp="GautAA_1.1.56">sāvitrī cānuvacanam |</p>
+
+<p xml:id="GautSt_1.56" corresp="GautAA_1.1.57">ādito brahmaṇa ādāne |</p>
+
+<p xml:id="GautSt_1.57" corresp="GautAA_1.1.58">oṃkāro anyatrāpi |</p>
+
+<p xml:id="GautSt_1.58" corresp="GautAA_1.1.59">antara gamane punar upasadanam |</p>
+<note>VAR_St: antarāgamane</note>
+
+<p xml:id="GautSt_1.59" corresp="GautAA_1.1.60">śvanakulasarpamaṇḍūkamārjārāṇāṃ try aham upavāsovipravāsaś ca |</p>
+
+<p xml:id="GautSt_1.60" corresp="GautAA_1.1.61">prāṇāyāmā ghṛtaprāśanaṃ cetareṣām |</p>
+
+<p xml:id="GautSt_1.61" corresp="GautAA_1.1.62">śmaśānābhyadhyayane caivam |</p>
+<note>VAR_St: śmaśānābhyadhyayanecaivam</note>
+
+
+
+<note>GautAA 1,2 = GautSt II</note>
+
+<p xml:id="GautSt_2.1a" corresp="GautAA_1.2.1">prāg upanayanāt kāmacāraḥ kāmavādaḥ kāmabhakṣaḥ |</p>
+<note>VAR_St: kāmacāravādabhakṣo</note>
+
+<p xml:id="GautSt_2.1b" corresp="GautAA_1.2.2">ahutāt |</p>
+
+<p xml:id="GautSt_2.1c" corresp="GautAA_1.2.3">brahmacārī |</p>
+
+<p xml:id="GautSt_2.1d" corresp="GautAA_1.2.4">yathopapāditamūtrapurīṣo bhavati |</p>
+<note>VAR_St: -upapāda</note>
+
+<p xml:id="GautSt_2.2a" corresp="GautAA_1.2.5">nāsyācamanakalpo vidyate |</p>
+
+<p xml:id="GautSt_2.2b" corresp="GautAA_1.2.6">anyatrāpamārjanapradhāvanāvokṣaṇebhyaḥ |</p>
+
+<p xml:id="GautSt_2.3" corresp="GautAA_1.2.7">na tadupasparśanād āśaucam |</p>
+
+<p xml:id="GautSt_2.4" corresp="GautAA_1.2.8">na tv evainam agnihavanabaliharaṇayor niyuñjyāt |</p>
+
+<p xml:id="GautSt_2.5" corresp="GautAA_1.2.9">na brahmābhivyāhārayed anyatra svadhāninayanāt |</p>
+
+<p xml:id="GautSt_2.6" corresp="GautAA_1.2.10">upanayanādir niyamaḥ |</p>
+
+<p xml:id="GautSt_2.7" corresp="GautAA_1.2.11">uktaṃ brahmacaryam |</p>
+
+<p xml:id="GautSt_2.8a" corresp="GautAA_1.2.12">agnīndhanabhaikṣacaraṇe |</p>
+
+<p xml:id="GautSt_2.8b" corresp="GautAA_1.2.13">satyavacanam |</p>
+
+<p xml:id="GautSt_2.8c" corresp="GautAA_1.2.14">apām upasparśanam |</p>
+
+<p xml:id="GautSt_2.9" corresp="GautAA_1.2.15">eke godānādi |</p>
+
+<p xml:id="GautSt_2.10" corresp="GautAA_1.2.16">bahiḥsaṃdhyatvaṃ ca |</p>
+
+<p xml:id="GautSt_2.11" corresp="GautAA_1.2.17">tiṣṭhet pūrvām āsītottarāṃ sajyotiṣyā jyotiṣodarśanād vāgyataḥ |</p>
+
+<p xml:id="GautSt_2.12" corresp="GautAA_1.2.18">nādityam īkṣeta |</p>
+
+<p xml:id="GautSt_2.13" corresp="GautAA_1.2.19">varjayenmadhumāṃsagandhamālyadivāsvapnābhyañjanayānopānacchatrakāmakrodhalobhamohavādavādanasnānadantadhāvanaharṣanṛtyagītaparivādabhayāni |</p>
+<note>VAR_St: nṛtta</note>
+
+<p xml:id="GautSt_2.14" corresp="GautAA_1.2.20">gurudarśanekaṇṭhaprāvṛtāvasakthikāpāśrayaṇapādaprasāraṇāni |</p>
+
+<p xml:id="GautSt_2.15" corresp="GautAA_1.2.21">niṣṭhīvitahasitaviṣkambhitāvasphotanāni |</p>
+<note>VAR_St: vijṛmbhitā-</note>
+
+<p xml:id="GautSt_2.16" corresp="GautAA_1.2.22">strīprekṣaṇālambhane maithunaśaṅkāyām |</p>
+
+<p xml:id="GautSt_2.17" corresp="GautAA_1.2.23">dyūtaṃ hīnasevām adattādānaṃ hiṃsām |</p>
+
+<p xml:id="GautSt_2.18" corresp="GautAA_1.2.24">ācāryatatputrastrīdīkṣitanāmāni |</p>
+
+<p xml:id="GautSt_2.19" corresp="GautAA_1.2.25a">śuklavāco |</p>
+<note>VAR_St: śuktā vācaḥ</note>
+
+<p xml:id="GautSt_2.20" corresp="GautAA_1.2.25b">madyaṃ nityaṃbrāhmaṇaḥ |</p>
+
+<p xml:id="GautSt_2.21" corresp="GautAA_1.2.26">adhaḥśayyāsanī pūrvotthāyī jaghanyasaṃveśī |</p>
+
+<p xml:id="GautSt_2.22" corresp="GautAA_1.2.27">vāgbāhūdarasaṃyataḥ |</p>
+
+<p xml:id="GautSt_2.23" corresp="GautAA_1.2.28">nāmagotre guroḥ samānato nirdiśet |</p>
+
+<p xml:id="GautSt_2.24" corresp="GautAA_1.2.29">arcite śreyasi caivam |</p>
+
+<p xml:id="GautSt_2.25" corresp="GautAA_1.2.30">śayyāsanasthānāni vihāya pratiśravaṇam |</p>
+
+<p xml:id="GautSt_2.26" corresp="GautAA_1.2.31">abhikramaṇaṃ vacanād adṛṣṭena |</p>
+
+<p xml:id="GautSt_2.27" corresp="GautAA_1.2.32">adhaḥsthānāsanas tiryagvātasevāyāṃ gurudarśanecottiṣṭhet |</p>
+<note>VAR_St: -āsanatiryag-</note>
+
+<p xml:id="GautSt_2.28a" corresp="GautAA_1.2.33">gacchantam anuvrajet |</p>
+
+<p xml:id="GautSt_2.28b" corresp="GautAA_1.2.34">karma vijñāpyākhyāya |</p>
+
+<p xml:id="GautSt_2.29" corresp="GautAA_1.2.35">āhuto 'dhyāyī |</p>
+<note>VAR_St: āhūtādhyāyī</note>
+
+<p xml:id="GautSt_2.30" corresp="GautAA_1.2.36">yuktaḥ priyahitayoḥ |</p>
+
+<p xml:id="GautSt_2.31" corresp="GautAA_1.2.37">tadbhāryāputreṣu caivam |</p>
+
+<p xml:id="GautSt_2.32" corresp="GautAA_1.2.38">nocchiṣṭāśanasnāpanaprasādhanapādaprakṣālanonmardanopasaṅgrahaṇāni |</p>
+
+<p xml:id="GautSt_2.33" corresp="GautAA_1.2.39">viproṣyopasaṅgrahaṇaṃ gurubhāryāṇām |</p>
+
+<p xml:id="GautSt_2.34" corresp="GautAA_1.2.40">naike yuvatīnāṃ vyavahāraprāptena |</p>
+
+<p xml:id="GautSt_2.35" corresp="GautAA_1.2.41">sārvavarṇikabhaikṣyacaraṇam abhiśastapatitavarjam |</p>
+<note>VAR_St: bhaikṣa-</note>
+
+<p xml:id="GautSt_2.36" corresp="GautAA_1.2.42">ādimadhyānteṣu bhavacchabdaḥ prayojyo varṇānukrameṇa |</p>
+
+<p xml:id="GautSt_2.37" corresp="GautAA_1.2.43">ācāryajñātiguruṣv alābhe 'nyatra |</p>
+<note>VAR_St: gurusveṣu</note>
+
+<p xml:id="GautSt_2.38" corresp="GautAA_1.2.44">teṣāṃ pūrvaṃ pūrvaṃ pariharet |</p>
+
+<p xml:id="GautSt_2.39" corresp="GautAA_1.2.45">nivedya gurave 'nujñāto bhuñjīta |</p>
+
+<p xml:id="GautSt_2.40" corresp="GautAA_1.2.46">asaṃnidhautadbhāryāputrasabrahmacāribhyaḥ |</p>
+<note>VAR_St: -brahmacārisadbhaḥ</note>
+
+<p xml:id="GautSt_2.41" corresp="GautAA_1.2.47">vāgyatas tṛpyannalolupyamānaḥ saṃnidhāyodakam |</p>
+
+<p xml:id="GautSt_2.42" corresp="GautAA_1.2.48">śiṣyaśiṣṭir avadhena |</p>
+
+<p xml:id="GautSt_2.43" corresp="GautAA_1.2.49">aśaktau rajjuveṇuvidalābhyāṃ tanubhyām |</p>
+<note>VAR_St: rajjuveṇuvadalā-</note>
+
+<p xml:id="GautSt_2.44" corresp="GautAA_1.2.50">anyena ghnan(han) rājñā śāsyaḥ |</p>
+
+<p xml:id="GautSt_2.45" corresp="GautAA_1.2.51">dvādaśa varṣāṇy ekavede brahmacaryaṃ caret |</p>
+
+<p xml:id="GautSt_2.46" corresp="GautAA_1.2.52">pratidvādaśa vā sarveṣu |</p>
+
+<p xml:id="GautSt_2.47" corresp="GautAA_1.2.53">grahaṇāntaṃ vā |</p>
+
+<p xml:id="GautSt_2.48" corresp="GautAA_1.2.54">vidyānte gurur arthena nimantryaḥ |</p>
+
+<p xml:id="GautSt_2.49" corresp="GautAA_1.2.55">kṛtvānujñātasya vā snānam |</p>
+
+<p xml:id="GautSt_2.50" corresp="GautAA_1.2.56a">ācāryaḥ śreṣṭho gurūṇāṃ |</p>
+
+<p xml:id="GautSt_2.51" corresp="GautAA_1.2.56b">mātety eke |</p>
+<note>VAR_St: matety eke</note>
+
+
+
+<note>GautAA 1,3 = GautSt III</note>
+
+<p xml:id="GautSt_3.1" corresp="GautAA_1.3.1">tasyāśramavikalpam eke bruvate |</p>
+
+<p xml:id="GautSt_3.2" corresp="GautAA_1.3.2">brahmacārī gṛhastho bhikṣur vaikhānasaḥ |</p>
+
+<p xml:id="GautSt_3.3" corresp="GautAA_1.3.3">teṣāṃ gṛhastho yonir aprajanatvād itereṣām |</p>
+
+<p xml:id="GautSt_3.4" corresp="GautAA_1.3.4">tatroktaṃ brahmacāriṇaḥ |</p>
+
+<p xml:id="GautSt_3.5" corresp="GautAA_1.3.5">ācāryādhīnatvam āntam |</p>
+
+<p xml:id="GautSt_3.6" corresp="GautAA_1.3.6">guroḥ karmaśeṣeṇa japet |</p>
+
+<p xml:id="GautSt_3.7" corresp="GautAA_1.3.7a">gurvabhāve tadapatyavṛttis |</p>
+<note>VAR_St: -apatye vṛttiḥ</note>
+
+<p xml:id="GautSt_3.8" corresp="GautAA_1.3.7b">tadabhāve vṛddhe sabrahmacāriṇy agnau vā |</p>
+
+<p xml:id="GautSt_3.9" corresp="GautAA_1.3.8">evaṃvṛtto brahmalokam āpnoti jitendriyaḥ |</p>
+<note>VAR_St: avāpnoti</note>
+
+<p xml:id="GautSt_3.10" corresp="GautAA_1.3.9">uttareṣāṃ caitadavirodhi |</p>
+<note>VAR_St: itareṣāṃ</note>
+
+<p xml:id="GautSt_3.11" corresp="GautAA_1.3.10">anicayo bhikṣuḥ |</p>
+
+<p xml:id="GautSt_3.12" corresp="GautAA_1.3.11">ūrdhvaretāḥ |</p>
+
+<p xml:id="GautSt_3.13" corresp="GautAA_1.3.12">dhruvaśīlo varṣāsu |</p>
+
+<p xml:id="GautSt_3.14" corresp="GautAA_1.3.13">bhikṣārthī grāmam iyāt |</p>
+
+<p xml:id="GautSt_3.15" corresp="GautAA_1.3.14">jaghanyam anivṛttaṃ caret |</p>
+
+<p xml:id="GautSt_3.16" corresp="GautAA_1.3.15">nivṛttāśīḥ |</p>
+
+<p xml:id="GautSt_3.17" corresp="GautAA_1.3.16">vākcakṣuḥkarmasaṃyataḥ |</p>
+
+<p xml:id="GautSt_3.18" corresp="GautAA_1.3.17">kaupīnācchādanārthe vāso bibhṛyāt |</p>
+<note>VAR_St: -arthaṃ</note>
+
+<p xml:id="GautSt_3.19" corresp="GautAA_1.3.18">prahīṇam eke nirṇijya |</p>
+
+<p xml:id="GautSt_3.20" corresp="GautAA_1.3.19">nāviprayuktam oṣadhivanaspatīnām aṅgam upādadīta |</p>
+
+<p xml:id="GautSt_3.21" corresp="GautAA_1.3.20">na dvitīyām apartu rātriṃ grāme vaset |</p>
+
+<p xml:id="GautSt_3.22" corresp="GautAA_1.3.21">muṇḍaḥ śikhī vā |</p>
+
+<p xml:id="GautSt_3.23" corresp="GautAA_1.3.22">varjeyed bījavadham |</p>
+
+<p xml:id="GautSt_3.24" corresp="GautAA_1.3.23">samo bhūteṣu hiṃsānugrahayoḥ |</p>
+
+<p xml:id="GautSt_3.25" corresp="GautAA_1.3.24">anārambhī |</p>
+
+<p xml:id="GautSt_3.26" corresp="GautAA_1.3.25">vaikhānaso vane mūlaphalāśī tapaḥśīlaḥ |</p>
+
+<p xml:id="GautSt_3.27" corresp="GautAA_1.3.26">śrāvaṇakenāgnim ādhāya |</p>
+<note>VAR_St: śrāmaṇakena</note>
+
+<p xml:id="GautSt_3.28" corresp="GautAA_1.3.27">agrāmyabhojī |</p>
+
+<p xml:id="GautSt_3.29" corresp="GautAA_1.3.28">devapitṛmanuṣyabhūtarṣipūjakaḥ |</p>
+
+<p xml:id="GautSt_3.30" corresp="GautAA_1.3.29">sarvātithiḥ pratiṣiddhavarjam |</p>
+
+<p xml:id="GautSt_3.31" corresp="GautAA_1.3.30">vaiṣkam apy upayuñjīta |</p>
+<note>VAR_St: baiṣkam</note>
+
+<p xml:id="GautSt_3.32" corresp="GautAA_1.3.31">na phālakṛṣṭam adhitiṣṭhet |</p>
+
+<p xml:id="GautSt_3.33" corresp="GautAA_1.3.32">grāmaṃ ca na praviśet |</p>
+
+<p xml:id="GautSt_3.34" corresp="GautAA_1.3.33">jaṭilaś cīrājinavāsāḥ |</p>
+
+<p xml:id="GautSt_3.35" corresp="GautAA_1.3.34">nātisaṃvatsaraṃ bhuñjīta |</p>
+<note>VAR_St: atisāṃvatsaraṃ</note>
+
+<p xml:id="GautSt_3.36" corresp="GautAA_1.3.35">ekāśramyaṃ tv ācāryāḥ pratyakṣavidhānādgārhasthasya gārhasthasya |</p>
+<note>VAR_St: gārhasthyasya gārhasthyasya</note>
+
+
+
+<note>GautAA 1,4 = GautSt IV</note>
+
+<p xml:id="GautSt_4.1" corresp="GautAA_1.4.1">gṛhasthaḥ sadṛśīṃ bhāryāṃ vindetānanyapūrvāṃyavīyasīm |</p>
+
+<p xml:id="GautSt_4.2" corresp="GautAA_1.4.2">asamānapravarair vivāhaḥ |</p>
+
+<p xml:id="GautSt_4.3" corresp="GautAA_1.4.3a">ūrdhvaṃ saptamāt pitṛbandhubhyo |</p>
+
+<p xml:id="GautSt_4.4" corresp="GautAA_1.4.3b">bījinaś ca |</p>
+
+<p xml:id="GautSt_4.5" corresp="GautAA_1.4.3c">mātṛbandhubhyaḥ pañcamāt |</p>
+
+<p xml:id="GautSt_4.6" corresp="GautAA_1.4.4">brāhmo vidyācāritrabandhuśīlasaṃpannāya dadyādācchādyālaṃkṛtām |</p>
+
+<p xml:id="GautSt_4.7" corresp="GautAA_1.4.5">saṃyogamantraḥ prājāpatye saha dharmaś caryatām iti |</p>
+
+<p xml:id="GautSt_4.8" corresp="GautAA_1.4.6">ārṣe gomithunaṃ kanyāvate dadyāt |</p>
+
+<p xml:id="GautSt_4.9" corresp="GautAA_1.4.7">antarvedyṛtvije dānaṃ daivo 'laṃkṛtya |</p>
+
+<p xml:id="GautSt_4.10" corresp="GautAA_1.4.8">icchantyāḥ svayaṃ saṃyogo gāndharvaḥ |</p>
+<note>VAR_St: icchantyā</note>
+
+<p xml:id="GautSt_4.11" corresp="GautAA_1.4.9">vittenānatiḥ strīmatām āsuraḥ |</p>
+
+<p xml:id="GautSt_4.12" corresp="GautAA_1.4.10">prasahyādānād rākṣasaḥ |</p>
+
+<p xml:id="GautSt_4.13" corresp="GautAA_1.4.11">asaṃvijñātopasaṃgamāt paiśācaḥ |</p>
+<note>VAR_St: -saṃgamanāt</note>
+
+<p xml:id="GautSt_4.14" corresp="GautAA_1.4.12">catvāro dharmyāḥ prathamāḥ |</p>
+
+<p xml:id="GautSt_4.15" corresp="GautAA_1.4.13">ṣaḍ ity eke |</p>
+
+<p xml:id="GautSt_4.16" corresp="GautAA_1.4.14">anulomānantaraikāntaradvyantarāsu jñātāḥsavarṇāmbaṣṭhograniṣādadauṣmantapāraśavāḥ |</p>
+<note>VAR_St: anulomāananta-;-dauṣyanta-</note>
+
+<p xml:id="GautSt_4.17" corresp="GautAA_1.4.15">pratilomās tu sūtamāgadhāyogavakṛtavaidehakacaṇḍālāḥ |</p>
+<note>VAR_St: pratilomāḥsūta-;āyogavakṣattṛ-</note>
+
+<p xml:id="GautSt_4.18" corresp="GautAA_1.4.16">brāhmaṇy ajījanat putrān varṇebhya ānupūrvyādbrāhmaṇasūtamāgadhacaṇḍālān |</p>
+
+<p xml:id="GautSt_4.19" corresp="GautAA_1.4.17a">tebhya eva kṣatriyāmūrdhāvasikthakṣatriyadhīvarapulkasāṃs |</p>
+
+<p xml:id="GautSt_4.20" corresp="GautAA_1.4.17b">tebhya eva vaiśyābhṛjjakaṇṭhamāhiṣyavaiśyavaidehān |</p>
+
+<p xml:id="GautSt_4.21" corresp="GautAA_1.4.17c">pāraśavayavanakaraṇaśūdrāñ śūdrety eke |</p>
+<note>VAR_St: bhṛjya</note>
+
+<p xml:id="GautSt_4.22" corresp="GautAA_1.4.18a">varṇāntaragamanam utkarṣāpakarṣābhyāṃsaptame</p>
+
+<p xml:id="GautSt_4.23" corresp="GautAA_1.4.18b">pañcame vācāryāḥ |</p>
+<note>VAR_St: saptamena;pañcamenācāryāḥ</note>
+
+<p xml:id="GautSt_4.24" corresp="GautAA_1.4.19">sṛṣṭyantarajātānāṃ ca |</p>
+<note>VAR_St: antarajānāṃ</note>
+
+<p xml:id="GautSt_4.25" corresp="GautAA_1.4.20">pratilomās tu dharmahīnāḥ |</p>
+
+<p xml:id="GautSt_4.26" corresp="GautAA_1.4.21">śūdrāyāṃ ca |</p>
+
+<p xml:id="GautSt_4.27" corresp="GautAA_1.4.22">asamānāyāṃ tu śūdrāt patitavṛttiḥ |</p>
+<note>VAR_St: -yāṃ ca</note>
+
+<p xml:id="GautSt_4.28" corresp="GautAA_1.4.23">antyaḥ pāpiṣṭhaḥ |</p>
+
+<p xml:id="GautSt_4.29" corresp="GautAA_1.4.24">punanti sādhavaḥ putrāḥ |</p>
+
+<p xml:id="GautSt_4.30" corresp="GautAA_1.4.25">tripuruṣam ārṣāt |</p>
+
+<p xml:id="GautSt_4.31" corresp="GautAA_1.4.26a">daśa daivād |</p>
+
+<p xml:id="GautSt_4.32" corresp="GautAA_1.4.26b">daśaiva prājāpatyāt |</p>
+
+<p xml:id="GautSt_4.33" corresp="GautAA_1.4.27">daśa pūrvān daśa parān ātmānaṃ cabrāhmīputro brāhmīputraḥ |</p>
+<note>VAR_St: daśāparān</note>
+
+
+
+<note>GautAA 1,5 = GautSt V</note>
+
+<p xml:id="GautSt_5.1" corresp="GautAA_1.5.1">ṛtāv(ṛtu) upeyāt |</p>
+
+<p xml:id="GautSt_5.2" corresp="GautAA_1.5.2">sarvatra vā pratiṣiddhavarjam |</p>
+
+<p xml:id="GautSt_5.3" corresp="GautAA_1.5.3">devapitṛmanuṣyabhūtarṣipūjakaḥ |</p>
+
+<p xml:id="GautSt_5.4" corresp="GautAA_1.5.4">nityasvādhyāyaḥ |</p>
+
+<p xml:id="GautSt_5.5" corresp="GautAA_1.5.5a">pitṛbhyaś codakadānaṃ |</p>
+
+<p xml:id="GautSt_5.6" corresp="GautAA_1.5.5b">yathotsāham anyat |</p>
+
+<p xml:id="GautSt_5.7" corresp="GautAA_1.5.6">bhāryādir agnir dāyādir vā |</p>
+
+<p xml:id="GautSt_5.8" corresp="GautAA_1.5.7">tasmin gṛhyāṇi karmāṇi |</p>
+<note>VAR_St: omitt: karmāṇi</note>
+
+<p xml:id="GautSt_5.9" corresp="GautAA_1.5.8">devapitṛmanuṣyayajñāḥ svādhyāyaś ca balikarma |</p>
+
+<p xml:id="GautSt_5.10" corresp="GautAA_1.5.9">agnāv agnir dhanvantarir viśve devāḥ prajāpatiḥsviṣṭakṛd iti homaḥ |</p>
+<note>VAR_St: homāḥ</note>
+
+<p xml:id="GautSt_5.11" corresp="GautAA_1.5.10">digdevatābhyaś ca yathāsvam |</p>
+
+<p xml:id="GautSt_5.12" corresp="GautAA_1.5.11">dvārṣu mahadbhyaḥ |</p>
+<note>VAR_St: marudbhyaḥ</note>
+
+<p xml:id="GautSt_5.13" corresp="GautAA_1.5.12">gṛhadevatābhyaḥ praviśya |</p>
+
+<p xml:id="GautSt_5.14" corresp="GautAA_1.5.13">brahmaṇe madhye |</p>
+
+ <p xml:id="GautSt_5.15" corresp="-">adbhya udakumbhe |</p>
+
+<p xml:id="GautSt_5.16" corresp="GautAA_1.5.14a">ākāśāyety antarikṣe</p>
+
+<p xml:id="GautAA_1.5.14b">balir utkṣepyaḥ |</p>
+
+<p xml:id="GautSt_5.17" corresp="GautAA_1.5.15">naktaṃcarebhyaś ca sāyam |</p>
+
+<p xml:id="GautSt_5.18" corresp="GautAA_1.5.16">svastivācya bhikṣādānam appūrvam |</p>
+
+<p xml:id="GautSt_5.19" corresp="GautAA_1.5.17">dadātiṣu caivaṃ dharmyeṣu |</p>
+
+<p xml:id="GautSt_5.20" corresp="GautAA_1.5.18">samadviguṇasāhasrānantyāni phalānyabrāhmaṇabrāhmaṇaśrotriyavedapāragebhyaḥ |</p>
+
+<p xml:id="GautSt_5.21" corresp="GautAA_1.5.19">gurvarthaniveśauṣadhārthavṛttikṣīṇayakṣyamāṇādhyayanādhvasaṃyogavaiśvajiteṣu dravyasaṃvibhāgo bahirvedi |</p>
+<p xml:id="GautSt_5.22" corresp="GautAA_1.5.20">bhikṣamāṇeṣu kṛtānnam itareṣu |</p>
+
+<p xml:id="GautSt_5.23" corresp="GautAA_1.5.21">pratiśrutyāpy adharmasaṃyuktāya na dadyāt |</p>
+<note>VAR_St: -yuktena</note>
+
+<p xml:id="GautSt_5.24" corresp="GautAA_1.5.22">kruddhahṛṣṭabhītārtalubdhabālasthaviramūḍhamattonmattavākyānyanṛtānyapātakāni |</p>
+
+<p xml:id="GautSt_5.25" corresp="GautAA_1.5.23">bhojayet pūrvamatithikumāravyādhitagarbhiṇīsvavāsinīsthavirāñ jaghanyāṃś |</p>
+
+<p xml:id="GautSt_5.26" corresp="GautAA_1.5.24">ācāryapitṛsakhīnāṃ ca nivedya pacanakriyā |</p>
+
+<p xml:id="GautSt_5.27" corresp="GautAA_1.5.25">ṛtvigācāryaśvaśurapitṛvyamātulānām upasthānemadhuparkaḥ |</p>
+
+<p xml:id="GautSt_5.28" corresp="GautAA_1.5.26">samvatsare punaḥ |</p>
+
+<p xml:id="GautSt_5.29" corresp="GautAA_1.5.27">yajñavivāhayor arvāk |</p>
+
+<p xml:id="GautSt_5.30" corresp="GautAA_1.5.28">rājñaś ca śrotriyasya |</p>
+
+<p xml:id="GautSt_5.31" corresp="GautAA_1.5.29">aśrotriyasyāsanodake |</p>
+
+<p xml:id="GautSt_5.32" corresp="GautAA_1.5.30">śrotriyasya tu pādyam arghyam annaviśeṣāṃś caprakārayet |</p>
+
+<p xml:id="GautSt_5.33" corresp="GautAA_1.5.31">nityaṃ vā saṃskāraviśiṣṭam |</p>
+
+<p xml:id="GautSt_5.34" corresp="GautAA_1.5.32">madhyato 'nnadānam avaidye sādhuvṛtte |</p>
+
+<p xml:id="GautSt_5.35" corresp="GautAA_1.5.33a">viparīteṣutṛṇodakabhūmi |</p>
+<note>VAR_St: viparīte tu</note>
+
+<p xml:id="GautSt_5.36" corresp="GautAA_1.5.33b">svāgatam antataḥ |</p>
+
+<p xml:id="GautSt_5.37" corresp="GautAA_1.5.33c">pūjānatyāśaś ca |</p>
+
+<p xml:id="GautSt_5.38" corresp="GautAA_1.5.34">śayyāsanāvasathānuvrajyopāsanāni sadṛkśreyasoḥsamānāni |</p>
+<note>VAR_St: samāni</note>
+
+<p xml:id="GautSt_5.39" corresp="GautAA_1.5.35">alpaśo 'pi hīne |</p>
+
+<p xml:id="GautSt_5.40" corresp="GautAA_1.5.36">asamānagrāmo 'tithiraikarātriko 'dhivṛkṣasūryopasthāyī |</p>
+
+<p xml:id="GautSt_5.41" corresp="GautAA_1.5.37">kuśalānāmayārogyāṇām anupraśnaḥ |</p>
+
+<p xml:id="GautSt_5.42" corresp="GautAA_1.5.38">antyaṃ śūdrasya |</p>
+
+<p xml:id="GautSt_5.43" corresp="GautAA_1.5.39">brāhmaṇasyānatithir abrāhmaṇaḥ |</p>
+
+<p xml:id="GautSt_5.43" corresp="GautAA_1.5.40">yajñe saṃvṛtaś cet |</p>
+<note>VAR_St: ayajñe saṃvṛttaś</note>
+
+<p xml:id="GautSt_5.44" corresp="GautAA_1.5.41">bhojanaṃ tu kṣatriyasyordhvaṃ brāhmanebhyaḥ |</p>
+
+<p xml:id="GautSt_5.45" corresp="GautAA_1.5.42">anyān bhṛtyaiḥ sahānṛśaṃsyārtham ānṛśaṃsyārtham |</p>
+<note>VAR_St: -ānṛśaṃsārtham ānṛśaṃsārtham</note>
+
+
+
+<note>GautAA 1,6 = GautSt VI</note>
+
+<p xml:id="GautSt_6.2" corresp="GautAA_1.6.1">pādopasamgrahaṇaṃ samavāye 'nvaham |</p>
+
+<p xml:id="GautSt_6.2" corresp="GautAA_1.6.2">abhigamya tu viproṣya |</p>
+
+<p xml:id="GautSt_6.3" corresp="GautAA_1.6.3">mātṛpitṛtadbandhūnāṃ pūrvajānāṃ vidyāgurūṇāṃtadgurūṇāṃ ca |</p>
+
+<p xml:id="GautSt_6.4" corresp="GautAA_1.6.4">saṃnipāte parasya |</p>
+
+<p xml:id="GautSt_6.5" corresp="GautAA_1.6.5">svanāma procyāhamayam ity abhivādojñasamavāye |</p>
+<note>VAR_St: ajñasamavāye</note>
+
+<p xml:id="GautSt_6.6" corresp="GautAA_1.6.6">strīpuṃyoge 'bhivādato 'niyamam eke |</p>
+
+<p xml:id="GautSt_6.7" corresp="GautAA_1.6.7">nāviproṣya strīṇām amātṛpitṛvyabhāryābhaginīnām |</p>
+
+<p xml:id="GautSt_6.8" corresp="GautAA_1.6.8">nopasaṃgrahaṇaṃ bhrātṛbhāryāṇāṃ svasṛṛṇām |</p>
+<note>VAR_St: śvaśurāśca?</note>
+
+<p xml:id="GautSt_6.9" corresp="GautAA_1.6.9">ṛtvikchvaśurapitṛvyamātulānāṃ tu yavīyasāṃpratyutthānam abhivādyāḥ |</p>
+<note>VAR_St: na</note>
+
+<p xml:id="GautSt_6.10" corresp="GautAA_1.6.10">tathānyaḥ pūrvaḥ pauro 'śītikāvaraḥśūdro 'py apatyasamena |</p>
+
+<p xml:id="GautSt_6.11" corresp="GautAA_1.6.11">avaro 'py āryaḥ śūdreṇa |</p>
+
+<p xml:id="GautSt_6.12" corresp="GautAA_1.6.12">nāma vāsya varjayet |</p>
+<note>VAR_St: cāsya</note>
+
+<p xml:id="GautSt_6.13" corresp="GautAA_1.6.13">rājñaś cājapaḥ preṣyaḥ |</p>
+
+<p xml:id="GautSt_6.14" corresp="GautAA_1.6.14">bho bhavann iti vayasyaḥ samāne 'hani jātaḥ |</p>
+
+<p xml:id="GautSt_6.15" corresp="GautAA_1.6.15a">daśavarśavṛddhaḥ pauraḥ |</p>
+
+<p xml:id="GautSt_6.16" corresp="GautAA_1.6.15b">pañcabhiḥkalābharaḥ |</p>
+
+<p xml:id="GautSt_6.17" corresp="GautAA_1.6.15c">śrotriyaś cāraṇas tribhiḥ |</p>
+
+<p xml:id="GautSt_6.18" corresp="GautAA_1.6.16">rājanyavaiśyakarmā vidyāhīnāḥ |</p>
+
+<p xml:id="GautSt_6.19" corresp="GautAA_1.6.17">dīkṣitaś ca prāk krayāt |</p>
+
+<p xml:id="GautSt_6.20" corresp="GautAA_1.6.18">vittabandhukarmajātividyāvayāṃsi mānyāniparabalīyāṃsi |</p>
+
+<p xml:id="GautSt_6.21" corresp="GautAA_1.6.19">śrutaṃ tu sarvebhyo garīyaḥ |</p>
+
+<p xml:id="GautSt_6.22" corresp="GautAA_1.6.20a">tanmūlatvād dharmasya</p>
+
+<p xml:id="GautSt_6.23" corresp="GautAA_1.6.20b">śruteś ca |</p>
+
+<p xml:id="GautSt_6.24" corresp="GautAA_1.6.21">cakridaśamīsthānugrāhyavadhūsnātakarājabhyaḥ pathodānam |</p>
+
+<p xml:id="GautSt_6.25" corresp="GautAA_1.6.22">rājñā tu śrotriyāya śrotriyāya |</p>
+
+
+
+<note>GautAA 1,7 = GautSt VII</note>
+
+<p xml:id="GautSt_7.1" corresp="GautAA_1.7.1">āpatkalpo brāhmanasyābrāhmaṇād vidyopayogaḥ |</p>
+
+<p xml:id="GautSt_7.2" corresp="GautAA_1.7.2">anugamanaṃ śuśrūṣā |</p>
+
+<p xml:id="GautSt_7.3" corresp="GautAA_1.7.3">samāpte brāhmaṇo guruḥ |</p>
+
+<p xml:id="GautSt_7.4" corresp="GautAA_1.7.4">yājanādhyāpanapratigrahāḥ sarveṣām |</p>
+
+<p xml:id="GautSt_7.5" corresp="GautAA_1.7.5">pūrvaḥ pūrvo guruḥ |</p>
+
+<p xml:id="GautSt_7.6" corresp="GautAA_1.7.6">tadalābhe kṣatravṛttiḥ |</p>
+<note>VAR_St: kṣatriya-</note>
+
+<p xml:id="GautSt_7.7" corresp="GautAA_1.7.7">tadalābhe vaiśyavṛttiḥ |</p>
+
+<p xml:id="GautSt_7.8" corresp="GautAA_1.7.8">tasyāpaṇyam |</p>
+
+<p xml:id="GautSt_7.9" corresp="GautAA_1.7.9">gandharasakṛtānnatilaśānakṣaumājināni |</p>
+
+<p xml:id="GautAA_1.7.10">raktanirṇikte vāsasī |</p>
+<note>VAR_St: -nikte</note>
+
+<p xml:id="GautSt_7.11" corresp="GautAA_1.7.11">kṣīraṃ savikāram |</p>
+
+<p xml:id="GautSt_7.12" corresp="GautAA_1.7.12">mūlaphalapuṣpauṣadhamadhumāṃsatṛṇodakāpathyāni |</p>
+
+<p xml:id="GautSt_7.13" corresp="GautAA_1.7.13">paśavaś ca hiṃsāsaṃyoge |</p>
+
+<p xml:id="GautSt_7.14" corresp="GautAA_1.7.14">puruśavaśākumārīvehataś ca nityam |</p>
+
+<p xml:id="GautSt_7.15" corresp="GautAA_1.7.15">bhūmivrīhiyavājāvyaśvaṛṣabhadhenvanaḍuhaś caike |</p>
+
+<p xml:id="GautSt_7.16" corresp="GautAA_1.7.16">niyamas tu |</p>
+
+<p xml:id="GautSt_7.17" corresp="GautAA_1.7.17">rasānāṃ rasaiḥ |</p>
+
+<p xml:id="GautSt_7.18" corresp="GautAA_1.7.18">paśūnāṃ ca |</p>
+
+<p xml:id="GautSt_7.19" corresp="GautAA_1.7.19">na lavaṇakṛtānnayoḥ |</p>
+
+<p xml:id="GautSt_7.20" corresp="GautAA_1.7.20">tilānāṃ ca |</p>
+
+<p xml:id="GautSt_7.21" corresp="GautAA_1.7.21">samenāmena tu pakvasya saṃpratyarthe |</p>
+
+<p xml:id="GautSt_7.22" corresp="GautAA_1.7.22">sarvathā vṛttir aśaktāv aśaudreṇa |</p>
+<note>VAR_St: -thā tu</note>
+
+<p xml:id="GautSt_7.23" corresp="GautAA_1.7.23">tad apy eke prāṇasaṃśaye |</p>
+
+<p xml:id="GautSt_7.24" corresp="GautAA_1.7.24">tadvarṇasaṃkarābhakṣyaniyamas tu |</p>
+
+<p xml:id="GautSt_7.25" corresp="GautAA_1.7.25">prāṇasaṃśaye brāhmaṇo 'pi śastram ādadīta |</p>
+
+<p xml:id="GautSt_7.26" corresp="GautAA_1.7.26">rājanyo vaiśyakarma |</p>
+<note>VAR_St: -karma vaiśyakarma</note>
+
+
+
+<note>GautAA 1,8 = GautSt VIII</note>
+
+<p xml:id="GautSt_8.1" corresp="GautAA_1.8.1">dvau loke dhṛtavratau rājā brāhmaṇaś ca bahuśrutaḥ |</p>
+
+<p xml:id="GautSt_8.2" corresp="GautAA_1.8.2">tayoś caturvidhasya manuṣyajātasyāntaḥsaṃjñānāmcalanapatanasarpaṇānām āyattaṃ jīvanam |</p>
+<note>VAR_St: -sarpāṇām</note>
+
+<p xml:id="GautSt_8.3" corresp="GautAA_1.8.3">prasūtirakṣaṇam asaṃkaro dharmaḥ |</p>
+
+<p xml:id="GautSt_8.4" corresp="GautAA_1.8.4">sa eva bahuśruto bhavati |</p>
+<note>VAR_St: eṣa</note>
+
+<p xml:id="GautSt_8.5" corresp="GautAA_1.8.5">lokavedavedāṅgavit |</p>
+
+<p xml:id="GautSt_8.6" corresp="GautAA_1.8.6">vākovākyetihāsapurāṇakuśalaḥ |</p>
+
+<p xml:id="GautSt_8.7" corresp="GautAA_1.8.7">tadapekṣas tadvṛttiḥ |</p>
+
+<p xml:id="GautSt_8.8" corresp="GautAA_1.8.8">catvāriṃśat saṃskāraiḥ saṃskṛtaḥ |</p>
+<note>VAR_St: -riṃśatā</note>
+
+<p xml:id="GautSt_8.9" corresp="GautAA_1.8.9">triṣu karmasv abhirataḥ |</p>
+
+<p xml:id="GautSt_8.10" corresp="GautAA_1.8.10">ṣaṭsu vā |</p>
+
+<p xml:id="GautSt_8.11" corresp="GautAA_1.8.11">sāmayācārikeṣv abhivinītaḥ |</p>
+
+<p xml:id="GautSt_8.12" corresp="GautAA_1.8.12">ṣaḍbhiḥ parihāryo rājñā |</p>
+
+<p xml:id="GautSt_8.13" corresp="GautAA_1.8.13">avadhyaś cābandhyaś cādaṇḍyaś cābahiṣkāryaścāparivādyaś cāparihāryaś ceti |</p>
+
+<p xml:id="GautSt_8.14" corresp="GautAA_1.8.14">garbhādhānapuṃsavanasīmantonnayanajātakarmanāmakaraṇānnaprāśanacaulopanayanam |</p>
+
+<p xml:id="GautSt_8.15" corresp="GautAA_1.8.15">catvāri vedavratāni |</p>
+
+<p xml:id="GautSt_8.16a" corresp="GautAA_1.8.16">snānaṃ sahadharmacāriṇīsaṃyogaḥ |</p>
+
+<p xml:id="GautSt_8.16b" corresp="GautAA_1.8.17">pañcānāṃ yajñānām anuṣṭhānaṃdevapitṛmanuṣyabhūtabrāhmaṇām |</p>
+
+<p xml:id="GautSt_8.17" corresp="GautAA_1.8.18">eteṣāṃ ca |</p>
+
+<p xml:id="GautSt_8.18" corresp="GautAA_1.8.19">aṣṭakā pārvaṇaḥ śrāddham śrāvaṇyāgrahāyaṇīcaitryāśvayujīti sapta pākayajñasamsthāḥ |</p>
+
+<p xml:id="GautSt_8.19" corresp="GautAA_1.8.20">agnyādheyam agnihotraṃ darśapūrṇamāsāvāgrayaṇaṃ cāturmāsyāni nirūḍhapaśubandhaḥ sautrāmaṇīti saptahaviryajñasamsthāḥ |</p>
+<note>VAR_St: -paurṇa-</note>
+
+<p xml:id="GautSt_8.20" corresp="GautAA_1.8.21">agniṣṭomo 'tyagniṣṭoma ukthyaḥ ṣoḍaśīvājapeyo 'tirātro 'ptoryāma iti sapta somasaṃsthāḥ |</p>
+
+<p xml:id="GautSt_8.21" corresp="GautAA_1.8.22">ity ete catvāriṃśatsaṃskārāḥ |</p>
+
+<p xml:id="GautSt_8.22" corresp="GautAA_1.8.23">athāṣṭāv ātmaguṇāḥ |</p>
+
+<p xml:id="GautSt_8.23" corresp="GautAA_1.8.24">dayā sarvabhūteṣu kṣāntir anasūyā śaucam anāyāsomaṅgalam akārpaṇyam aspṛheti |</p>
+
+<p xml:id="GautSt_8.24" corresp="GautAA_1.8.25">yasyaite catvāriṃśatsaṃskārā na cāṣṭāv ātmaguṇāna sa brahmaṇaḥ sāyujyaṃ sālokyaṃ gacchati |</p>
+
+<p xml:id="GautSt_8.25" corresp="GautAA_1.8.26">yasya tu khalu saṃskārāṇām ekadeśo 'py aṣṭāv ātmaguṇā atha sa brahmaṇaḥ sāyujyaṃ sālokyaṃ cagacchati |</p>
+<note>VAR_St: catvāriṃśatsaṃs- ... gacchati gachati</note>
+
+
+
+<note>GautAA 1,9 = GautSt IX</note>
+
+<p xml:id="GautSt_9.1" corresp="GautAA_1.9.1">sa vidhipūrvakaṃ snātvā bhāryām adhigamyayathoktān gṛhasthadharmān prayuñjāna imāni vratāny anukarṣet |</p>
+<note>VAR_St: -pūrvaṃ</note>
+
+<p xml:id="GautAA_1.9.2">snātakaḥ |</p>
+
+<p xml:id="GautSt_9.2" corresp="GautAA_1.9.3">nityaṃ śuciḥ sugandhiḥ snānaśīlaḥ |</p>
+<note>VAR_St: -gandhaḥ</note>
+
+<p xml:id="GautSt_9.3" corresp="GautAA_1.9.4">sati vibhave na jīrṇamalavadvāsāḥ syāt |</p>
+
+<p xml:id="GautSt_9.4" corresp="GautAA_1.9.5">na raktam ulbaṇam anyadhṛtaṃ vāso bibhṛyāt |</p>
+
+<p xml:id="GautSt_9.5" corresp="GautAA_1.9.6">na sragupānahau |</p>
+
+<p xml:id="GautSt_9.6" corresp="GautAA_1.9.7">nirṇiktam aśaktau |</p>
+
+<p xml:id="GautSt_9.7" corresp="GautAA_1.9.8">na rūḍhaśmaśrur akasmāt |</p>
+
+<p xml:id="GautSt_9.8" corresp="GautAA_1.9.9">nāgnim apaś ca yugapad dhārayet |</p>
+
+<p xml:id="GautSt_9.9" corresp="GautAA_1.9.10">nāñjalinā pibet |</p>
+
+<p xml:id="GautSt_9.10" corresp="GautAA_1.9.11">na tiṣṭhann uddhṛtodakenācamet |</p>
+
+<p xml:id="GautSt_9.11" corresp="GautAA_1.9.12">na śūdrāśucyekapāṇyāvarjitena |</p>
+
+<p xml:id="GautSt_9.12" corresp="GautAA_1.9.13">na vāyvagniviprādityāpo devatā gāś ca pratipaśyan vā mūtrapurīṣāmedhyān vyudasyet |</p>
+<note>VAR_St: -āni</note>
+
+<p xml:id="GautSt_9.13" corresp="GautAA_1.9.14">naitā devatāḥ prati pādau prasārayet |</p>
+
+<p xml:id="GautSt_9.14" corresp="GautAA_1.9.15">na parṇaloṣṭāśmabhir mūtrapurīṣāpakarṣaṇaṃ kuryāt |</p>
+
+<p xml:id="GautSt_9.15" corresp="GautAA_1.9.16">na bhasmakeśanakhatuṣakapālamedhyāny adhitiṣṭhet |</p>
+<note>VAR_St: -keśatuṣakapālāmedhyāny</note>
+
+<p xml:id="GautSt_9.16" corresp="GautAA_1.9.17">na mlecchāśucyadhārmikaiḥ saha saṃbhāṣeta |</p>
+
+<p xml:id="GautSt_9.17" corresp="GautAA_1.9.18">saṃbhāṣya puṇyakṛto manasā dhyāyet |</p>
+
+<p xml:id="GautSt_9.18" corresp="GautAA_1.9.19">brāhmaṇena vā saha saṃbhāṣeta |</p>
+
+<p xml:id="GautSt_9.19" corresp="GautAA_1.9.20">adhenuṃ dhenubhavyeti brūyāt |</p>
+
+<p xml:id="GautSt_9.20" corresp="GautAA_1.9.21">abhadraṃ bhadram iti |</p>
+
+<p xml:id="GautSt_9.21" corresp="GautAA_1.9.22">kapālaṃ bhagālam iti |</p>
+
+<p xml:id="GautSt_9.22" corresp="GautAA_1.9.23">maṇidhanur itīndradhanuḥ |</p>
+
+<p xml:id="GautSt_9.23" corresp="GautAA_1.9.24">gāṃ dhayantīṃ parasmai nācakṣīta |</p>
+
+<p xml:id="GautSt_9.24" corresp="GautAA_1.9.25">na cainām vārayet |</p>
+
+<p xml:id="GautSt_9.25" corresp="GautAA_1.9.26">na mithunī bhūtvā śaucaṃ prati vilambeta |</p>
+
+<p xml:id="GautSt_9.26" corresp="GautAA_1.9.27">na ca tasmin śayane svādhyāyam adhīyīta |</p>
+
+<p xml:id="GautSt_9.27" corresp="GautAA_1.9.28">na cāpararātram adhītya punaḥ pratisaṃviśet |</p>
+
+<p xml:id="GautSt_9.28" corresp="GautAA_1.9.29">nākalpāṃ nārīm abhiramayet |</p>
+<note>VAR_St: nākalyāṃ</note>
+
+<p xml:id="GautSt_9.29" corresp="GautAA_1.9.30">na rajasvalām |</p>
+
+<p xml:id="GautSt_9.30" corresp="GautAA_1.9.31a">na caināṃ śliṣyen |</p>
+
+<p xml:id="GautSt_9.31" corresp="GautAA_1.9.31b">na kanyām |</p>
+
+<p xml:id="GautSt_9.32" corresp="GautAA_1.9.32">agnimukhopadhamanavigṛhyavādabahirgandhamālyadhāraṇapāpīyasāvalekhanabhāryāsahabhojanāñjantyavekṣaṇakudvārapraveśanapādapādadhāvanāsandīsthabhojananadībāhutaraṇavṛkṣaviṣamārohaṇāvarohaṇaprāṇavyāyacchanāni varjayet |</p>
+<note>VAR_St: ca</note>
+
+<p xml:id="GautSt_9.33" corresp="GautAA_1.9.33">na sandigdhāṃ nāvam adhirohet |</p>
+
+<p xml:id="GautSt_9.34" corresp="GautAA_1.9.34">sarvata evātmānaṃ gopāyet |</p>
+
+<p xml:id="GautSt_9.35" corresp="GautAA_1.9.35">na prāvṛtya śiro 'hani paryaṭet |</p>
+
+<p xml:id="GautSt_9.36" corresp="GautAA_1.9.36">prāvṛtya rātrau |</p>
+<note>VAR_St: -tya tu</note>
+
+<p xml:id="GautSt_9.37" corresp="GautAA_1.9.37">mūtroccāre ca |</p>
+
+<p xml:id="GautSt_9.38" corresp="GautAA_1.9.38">na bhūmāv anantardhāya |</p>
+
+<p xml:id="GautSt_9.39" corresp="GautAA_1.9.39">nārāc cāvasathāt |</p>
+
+<p xml:id="GautSt_9.40" corresp="GautAA_1.9.40">na bhasmakarīṣakṛṣṭacchāyāpathikāmyeṣu |</p>
+
+<p xml:id="GautSt_9.41" corresp="GautAA_1.9.41">ubhe mūtrapurīṣe tu divā kuryād udaṅmukhaḥ |</p>
+<note>VAR_St: omitt: tu</note>
+
+<p xml:id="GautSt_9.42" corresp="GautAA_1.9.42">saṃdhyayoś ca |</p>
+
+<p xml:id="GautSt_9.43" corresp="GautAA_1.9.43">rātrau dakṣiṇāmukhaḥ |</p>
+<note>VAR_St: -trau tu</note>
+
+<p xml:id="GautSt_9.44" corresp="GautAA_1.9.44">pālāśam āsanaṃ pāduke dantadhāvanam iti ca varjayet |</p>
+
+<p xml:id="GautSt_9.45" corresp="GautAA_1.9.45">sopānatkaraścāsanābhivādananamaskārān varjayet |</p>
+<note>VAR_St: sopānatkaścāśanāsanābhi-</note>
+
+<p xml:id="GautSt_9.46" corresp="GautAA_1.9.46">na pūrvāhṇamadhyaṃdināparāhṇān aphalān kuryādyathāśakti dharmārthakāmebhyaḥ |</p>
+
+<p xml:id="GautSt_9.47" corresp="GautAA_1.9.47">teṣu tu dharmottarah syāt |</p>
+
+<p xml:id="GautSt_9.48" corresp="GautAA_1.9.48">na nagnāṃ parayoṣitam īkṣeta |</p>
+
+<p xml:id="GautSt_9.49" corresp="GautAA_1.9.49">na padāsanam ākarṣet |</p>
+
+<p xml:id="GautSt_9.50" corresp="GautAA_1.9.50">na śiśnodarapāṇipādavākcakṣuścāpalāni kuryāt |</p>
+
+<p xml:id="GautSt_9.51" corresp="GautAA_1.9.51">chedanabhedanavilekhanavimardanāvasphoṭanāninākasmāt kuryāt |</p>
+
+<p xml:id="GautSt_9.52" corresp="GautAA_1.9.52">nopari vatsatantīṃ gacchet |</p>
+
+<p xml:id="GautSt_9.53" corresp="GautAA_1.9.53">na kulaṃkulaḥ syāt |</p>
+
+<p xml:id="GautSt_9.54" corresp="GautAA_1.9.54">na yajñam avṛto gacchet |</p>
+
+<p xml:id="GautSt_9.55" corresp="GautAA_1.9.55">darśanāya tu kāmam |</p>
+
+<p xml:id="GautSt_9.56" corresp="GautAA_1.9.56">na bhakṣān utsaṅge bhakṣayet |</p>
+<note>VAR_St: bhakṣyān</note>
+
+<p xml:id="GautSt_9.57" corresp="GautAA_1.9.57">na rātrau preṣyāhṛtam |</p>
+
+<p xml:id="GautSt_9.58" corresp="GautAA_1.9.58">uddhṛtasnehavilapanapiṇyākamathitaprabhṛtīnicāttavīryāṇi nāśnīyāt |</p>
+<note>VAR_St: -vilayana-</note>
+
+<p xml:id="GautSt_9.59" corresp="GautAA_1.9.59">sāyaṃprātas tv annam abhipūjitam anindan bhuñjīta |</p>
+
+<p xml:id="GautSt_9.60" corresp="GautAA_1.9.60">na kadācid rātrau nagnaḥ svapet |</p>
+
+<p xml:id="GautSt_9.61" corresp="GautAA_1.9.61">snāyād vā |</p>
+
+<p xml:id="GautSt_9.62" corresp="GautAA_1.9.62">yac cātmavanto vṛddhāḥ samyagvinītādambhalobhamohaviyuktā vedavida ācakṣate tat samācaret |</p>
+
+<p xml:id="GautSt_9.63" corresp="GautAA_1.9.63">yogakṣemārtham īśvaram adhigacchet |</p>
+
+<p xml:id="GautSt_9.64" corresp="GautAA_1.9.64">nānyam anyatra devagurudhārmikebhyaḥ |</p>
+
+<p xml:id="GautSt_9.65" corresp="GautAA_1.9.65">prabhūtaidhodakayavasakuśamālyopaniṣkramaṇamāryajana bhūyiṣṭham analasasamṛddhaṃ dhārmikādhiṣṭhitaṃ niketanamāvasituṃ yateta |</p>
+
+<p xml:id="GautSt_9.66" corresp="GautAA_1.9.66">praśastamaṅgalyadevatāyatanacatuṣpadam pradakṣiṇam āvarteta |</p>
+<note>VAR_St: -catuṣpathādīn</note>
+
+<p xml:id="GautSt_9.67" corresp="GautAA_1.9.67">manasā vā tatsamagram ācāram anupālayed āpatkalpaḥ |</p>
+<note>VAR_St: omitt: tat</note>
+
+<p xml:id="GautSt_9.68" corresp="GautAA_1.9.68">satyadharmā |</p>
+
+<p xml:id="GautSt_9.69" corresp="GautAA_1.9.69">āryavṛttiḥ |</p>
+
+<p xml:id="GautSt_9.70" corresp="GautAA_1.9.70">śiṣṭādhyāpakaḥ |</p>
+
+<p xml:id="GautSt_9.71" corresp="GautAA_1.9.71">śaucaśiṣṭaḥ |</p>
+
+<p xml:id="GautSt_9.72" corresp="GautAA_1.9.72">śrutinirataḥ syāt |</p>
+
+<p xml:id="GautSt_9.73" corresp="GautAA_1.9.73">nityam ahiṃsro mṛdur dṛḍhakārī damadānaśīlaḥ |</p>
+
+<p xml:id="GautSt_9.74" corresp="GautAA_1.9.74">evam ācāro mātāpitarau pūrvāparāṃś ca sambandhānduritebhyo mokṣayiṣyan snātakaḥ śaśvadbrahmalokān na cyavate na cyavate |</p>
+<note>VAR_St: pūrvāparān sambandhān</note>
+
+
+
+<note>GautAA 2,1 = GautSt X</note>
+
+<p xml:id="GautSt_10.1" corresp="GautAA_2.1.1">dvijātīnām adhyayanam ijyā dānam |</p>
+
+<p xml:id="GautSt_10.2" corresp="GautAA_2.1.2">brāhmanasyādhikāḥ pravacanayājanapratigrahāḥ |</p>
+
+<p xml:id="GautSt_10.3" corresp="GautAA_2.1.3">pūrveṣu niyamas tu |</p>
+
+<p xml:id="GautSt_10.4" corresp="GautAA_2.1.4">ācāryajñātipriyagurudhanavidyāniyameṣu brahmaṇaḥsaṃpradānam anyatra yathoktāt |</p>
+
+<p xml:id="GautSt_10.5" corresp="GautAA_2.1.5">kṛṣivāṇijye vāsvayaṃkṛte |</p>
+<note>VAR_St: ca-</note>
+
+<p xml:id="GautSt_10.6" corresp="GautAA_2.1.6">kusīdaṃ ca |</p>
+
+<p xml:id="GautSt_10.7" corresp="GautAA_2.1.7">rājño 'dhikaṃ rakṣaṇaṃ sarvabhūtānām |</p>
+
+<p xml:id="GautSt_10.8" corresp="GautAA_2.1.8">nyāyyadaṇḍatvam |</p>
+
+<p xml:id="GautSt_10.9" corresp="GautAA_2.1.9">bibhṛyād brāhmaṇāñ śrotriyān |</p>
+
+<p xml:id="GautSt_10.10" corresp="GautAA_2.1.10">nirutsāhāṃś ca brāhmaṇān |</p>
+<note>VAR_St: cābrāhma-</note>
+
+<p xml:id="GautSt_10.11" corresp="GautAA_2.1.11">akarāṃś ca |</p>
+
+<p xml:id="GautSt_10.12" corresp="GautAA_2.1.12">upakurvāṇāṃś ca |</p>
+
+<p xml:id="GautSt_10.13" corresp="GautAA_2.1.13">yogaś ca vijaye |</p>
+
+<p xml:id="GautSt_10.14" corresp="GautAA_2.1.14">bhaye viśeṣeṇa |</p>
+
+<p xml:id="GautSt_10.15" corresp="GautAA_2.1.15">caryā ca rathadhanurbhyām |</p>
+
+<p xml:id="GautSt_10.16" corresp="GautAA_2.1.16">saṅgrāme saṃsthānam anivṛttiś ca |</p>
+
+<p xml:id="GautSt_10.17" corresp="GautAA_2.1.17">na doṣo hiṃsāyām āhave |</p>
+
+<p xml:id="GautSt_10.18" corresp="GautAA_2.1.18">anyatravyaśvasārathyāyudhakṛtāñjaliprakīrṇakeśaparāṅmukhopaviṣṭasthalavṛkṣādhirūḍhadūtagobrāhmaṇavādibhyaḥ |</p>
+<note>VAR_St: -vṛkṣārūḍha-</note>
+
+<p xml:id="GautSt_10.19" corresp="GautAA_2.1.19">kṣatriyaś ced anyas tam upajīvet tadvṛttyā |</p>
+
+<p xml:id="GautSt_10.20" corresp="GautAA_2.1.20">jetā labheta sāṃgrāmikaṃ vittam |</p>
+
+<p xml:id="GautSt_10.21" corresp="GautAA_2.1.21">vāhanaṃ tu rājñaḥ |</p>
+
+<p xml:id="GautSt_10.22" corresp="GautAA_2.1.22">uddhāraś cāpṛthagjaye |</p>
+<note>VAR_St: ca pṛthagjaye</note>
+
+<p xml:id="GautSt_10.23" corresp="GautAA_2.1.23">anyat tu yathārhaṃ bhājayed rājā |</p>
+
+<p xml:id="GautSt_10.24" corresp="GautAA_2.1.24">rājño balidānaṃ karṣakairdaśamam aṣṭamaṃ ṣaṣṭhaṃ vā |</p>
+<note>VAR_St: rājñe balir dānaṃ</note>
+
+<p xml:id="GautSt_10.25" corresp="GautAA_2.1.25">paśuhiraṇyayor apy eke pañcāśadbhāgaḥ |</p>
+
+<p xml:id="GautSt_10.26" corresp="GautAA_2.1.26">viṃśatibhāgaḥ śulkaḥ paṇye |</p>
+
+<p xml:id="GautSt_10.27" corresp="GautAA_2.1.27">mūlaphalapuṣpauṣadhamadhumāṃsatṛnendhanānāṃṣaṣṭhaḥ |</p>
+<note>VAR_St: ṣaṣṭhyaḥ</note>
+
+<p xml:id="GautSt_10.28" corresp="GautAA_2.1.28">tadrakṣaṇadharmitvāt |</p>
+
+<p xml:id="GautSt_10.29" corresp="GautAA_2.1.29">teṣu tu nityayuktaḥ syāt |</p>
+
+<p xml:id="GautSt_10.30" corresp="GautAA_2.1.30">adhikena vṛttiḥ |</p>
+
+<p xml:id="GautSt_10.31" corresp="GautAA_2.1.31">śilpino māsi māsy ekaikaṃ karma kuryuḥ |</p>
+
+<p xml:id="GautSt_10.32" corresp="GautAA_2.1.32">etenātmanopajīvino vyākhyātāḥ |</p>
+<note>VAR_St: -ātmanopajīvino</note>
+
+<p xml:id="GautSt_10.33" corresp="GautAA_2.1.33">naucakrīvantaś ca |</p>
+
+<p xml:id="GautSt_10.34" corresp="GautAA_2.1.34">bhaktaṃ tebhyo dadyāt |</p>
+
+<p xml:id="GautSt_10.35" corresp="GautAA_2.1.35">paṇyaṃ vaṇigbhir arthāpacayena deyam |</p>
+<note>VAR_St: arghāpa-</note>
+
+<p xml:id="GautSt_10.36" corresp="GautAA_2.1.36">pranaṣṭam asvāmikam adhigamya rājñe prabrūyuḥ |</p>
+
+<p xml:id="GautSt_10.37" corresp="GautAA_2.1.37">vikhyāpya saṃvatsaraṃ rājñā rakṣyam |</p>
+
+<p xml:id="GautSt_10.38" corresp="GautAA_2.1.38">ūrdhvam adhigantuś caturthaṃ rājñaḥ śeṣaḥ |</p>
+
+<p xml:id="GautSt_10.39" corresp="GautAA_2.1.39">svāmī rikthakrayasaṃvibhāgaparigrahādhigameṣu |</p>
+
+<p xml:id="GautSt_10.40" corresp="GautAA_2.1.40">brāhmaṇasyādhikaṃ labdham |</p>
+
+<p xml:id="GautSt_10.41" corresp="GautAA_2.1.41">kṣatriyasya vijitam |</p>
+
+<p xml:id="GautSt_10.42" corresp="GautAA_2.1.42">nirviṣṭaṃ vaiśyaśūdrayoḥ |</p>
+
+<p xml:id="GautSt_10.43" corresp="GautAA_2.1.43">nidhyadhigamo rājadhanam |</p>
+
+<p xml:id="GautSt_10.44" corresp="GautAA_2.1.44">brāhmaṇasyābhirūpasya |</p>
+<note>VAR_St: na brā-</note>
+
+<p xml:id="GautSt_10.45" corresp="GautAA_2.1.45">abrāhmaṇo 'py ākhyātā ṣaṣṭhaṃ labhetety eke |</p>
+
+<p xml:id="GautSt_10.46" corresp="GautAA_2.1.46">caurahṛtam apajitya yathāsthānam gamayet |</p>
+<note>VAR_St: avajitya</note>
+
+<p xml:id="GautSt_10.47" corresp="GautAA_2.1.47">kośād vā dadyāt |</p>
+
+<p xml:id="GautSt_10.48a" corresp="GautAA_2.1.48">rakṣyaṃ bāladhanam ā vyavahāraprāpaṇāt |</p>
+
+<p xml:id="GautSt_10.48b" corresp="GautAA_2.1.49">samāvṛtter vā |</p>
+
+<p xml:id="GautSt_10.49" corresp="GautAA_2.1.50">vaiśyasyādhikaṃ kṛṣivaṇikpāśupālyakusīdam |</p>
+
+<p xml:id="GautSt_10.50" corresp="GautAA_2.1.51">śūdraś caturtho varṇa ekajātiḥ |</p>
+
+<p xml:id="GautSt_10.51" corresp="GautAA_2.1.52">tasyāpi satyam akrodhaḥ śaucam |</p>
+
+<p xml:id="GautSt_10.52" corresp="GautAA_2.1.53">ācamanārthe pāṇipādaprakṣālanam evaike |</p>
+<note>VAR_St: ity eke</note>
+
+<p xml:id="GautSt_10.53" corresp="GautAA_2.1.54">śrāddhakarma |</p>
+
+<p xml:id="GautSt_10.54" corresp="GautAA_2.1.55">bhṛtyabharaṇam |</p>
+
+<p xml:id="GautSt_10.55" corresp="GautAA_2.1.56">svadāravṛttiḥ |</p>
+
+<p xml:id="GautSt_10.56" corresp="GautAA_2.1.57">paricaryā cottareṣām |</p>
+
+<p xml:id="GautSt_10.57" corresp="GautAA_2.1.58">tebhyo vṛttiṃ lipseta |</p>
+<note>GautSt 10.58 see GautAA 2,1.60</note>
+
+<p xml:id="GautAA_2.1.59">tatra pūrvaṃ pūrvaṃ paricaret |</p>
+
+<p xml:id="GautSt_10.58" corresp="GautAA_2.1.60">jīrṇāny upānacchatravāsaḥkūrcādīni |</p>
+<note>VAR_St: -kūrcāni</note>
+
+<p xml:id="GautSt_10.59" corresp="GautAA_2.1.61">ucchiṣṭāśanam |</p>
+
+<p xml:id="GautSt_10.60" corresp="GautAA_2.1.62">śilpavṛttiś ca |</p>
+
+<p xml:id="GautSt_10.61" corresp="GautAA_2.1.63">yaṃ cāryam āśrayed bhartavyas tena kṣīṇo 'pi |</p>
+<note>VAR_St: āśrayīta</note>
+
+<p xml:id="GautSt_10.62" corresp="GautAA_2.1.64">tena cottaraḥ |</p>
+
+<p xml:id="GautSt_10.63" corresp="GautAA_2.1.65">tadartho 'sya nicayaḥ syāt |</p>
+
+<p xml:id="GautSt_10.64" corresp="GautAA_2.1.66">anujñāto 'sya namaskāro mantraḥ |</p>
+
+<p xml:id="GautSt_10.65" corresp="GautAA_2.1.67">pākayajñaiḥ svayaṃ yajetety eke |</p>
+
+<p xml:id="GautSt_10.66" corresp="GautAA_2.1.68">sarve cottarottaraṃ paricareyuḥ |</p>
+
+<p xml:id="GautSt_10.67" corresp="GautAA_2.1.69">āryānāryayor vyatikṣepe karmaṇaḥ sāmyaṃ |</p>
+<note>VAR_St: sāmyam</note>
+
+
+
+<note>GautAA 2,2 = GautSt XI</note>
+
+<p xml:id="GautSt_11.1" corresp="GautAA_2.2.1">rājā sarvasyeṣṭe brāhmanavarjam |</p>
+
+<p xml:id="GautSt_11.2" corresp="GautAA_2.2.2">sādhukārī sādhuvādī |</p>
+<note>VAR_St: -rī syāt sā-</note>
+
+<p xml:id="GautSt_11.3" corresp="GautAA_2.2.3">trayyām ānvīkṣikyā vābhivinītaḥ |</p>
+<note>VAR_St: -kṣikyāṃ cā-</note>
+
+<p xml:id="GautSt_11.4" corresp="GautAA_2.2.4">śucir jitendriyo guṇavatsahāyopāyasaṃpannaḥ |</p>
+
+<p xml:id="GautSt_11.5" corresp="GautAA_2.2.5">samaḥ prajāsu syāt |</p>
+
+<p xml:id="GautSt_11.6" corresp="GautAA_2.2.6">hitam āsāṃ kurvīta |</p>
+<note>VAR_St: hitaṃ cāsāṃ</note>
+
+<p xml:id="GautSt_11.7" corresp="GautAA_2.2.7">tam uparyāsīnam adhastād upāsīrann anyebrāhmaṇebhyaḥ |</p>
+
+<p xml:id="GautSt_11.8" corresp="GautAA_2.2.8">te 'py enaṃ manyeran |</p>
+
+<p xml:id="GautSt_11.9" corresp="GautAA_2.2.9">varṇān āśramāṃś ca nyāyato 'bhirakṣet |</p>
+
+<p xml:id="GautSt_11.10" corresp="GautAA_2.2.10">calataś caitān svadharme sthāpayet |</p>
+<note>VAR_St: enān</note>
+
+<p xml:id="GautSt_11.11" corresp="GautAA_2.2.11">dharmasya hy aṃśabhāg bhavatīti |</p>
+<note>VAR_St: vijñāyate</note>
+
+<p xml:id="GautSt_11.12" corresp="GautAA_2.2.12">brāhmanaṃ ca purodadhītavidyābhijanavāgrūpavayaḥśīlasaṃpannaṃ nyāyavṛttaṃ tapasvinam |</p>
+<note>VAR_St: purodadhīta}(purohita</note>
+
+<p xml:id="GautSt_11.13" corresp="GautAA_2.2.13">tatprasūtaḥ karmāṇi kurvīta |</p>
+
+<p xml:id="GautSt_11.14" corresp="GautAA_2.2.14">brahmaprasūtaṃ hi kṣattram ṛdhyate na vyathata iti cavijñāyate |</p>
+<note>VAR_St: iti vijñāyate</note>
+
+<p xml:id="GautSt_11.15" corresp="GautAA_2.2.15">yāni ca daivotpātacintakāḥ prabrūyus tānyādriyeta |</p>
+
+<p xml:id="GautSt_11.16" corresp="GautAA_2.2.16">tadadhīnam api hy eke yogakṣemaṃ pratijānate |</p>
+
+<p xml:id="GautSt_11.17" corresp="GautAA_2.2.17">śāntipuṇyāhasvastyayanāyuṣmanmaṅgalasaṃyuktānyābhyudayikāni vidveṣaṇasaṃvananābhicāradviṣadvyṛddhiyuktāni caśālāgnau kuryāt |</p>
+<note>VAR_St: āyuṣyamaṅgala-</note>
+
+<p xml:id="GautSt_11.18" corresp="GautAA_2.2.18">yathoktam ṛtvijo 'nyāni |</p>
+
+<p xml:id="GautSt_11.19" corresp="GautAA_2.2.19">tasya ca vyavahāro vedo dharmaśāstrāṇy aṅgānyupavedāḥ purāṇam |</p>
+<note>VAR_St: omitt: ca; upavedāḥ</note>
+
+<p xml:id="GautSt_11.20" corresp="GautAA_2.2.20">deśajātikuladharmāś cāmnāyair aviruddhāḥ pramāṇam |</p>
+
+<p xml:id="GautSt_11.21" corresp="GautAA_2.2.21">karṣakavaṇikpaśupālakusīdikāravaḥ sve sve varge |</p>
+
+<p xml:id="GautSt_11.22" corresp="GautAA_2.2.22">tebhyo yathādhikāram arthān pratyavahṛtyadharmavyavasthā |</p>
+
+<p xml:id="GautSt_11.23" corresp="GautAA_2.2.23">nyāyādhigame tarko 'bhyupāyaḥ |</p>
+
+<p xml:id="GautSt_11.24" corresp="GautAA_2.2.24">tenābhyūhya yathāsthānaṃ gamayet |</p>
+
+<p xml:id="GautSt_11.25" corresp="GautAA_2.2.25">vipratipattau traividyavṛddhebhyaḥ pratyavahṛtyaniṣṭhāṃ gamayet |</p>
+
+<p xml:id="GautSt_11.26" corresp="GautAA_2.2.26">tathā hy asya niḥśreyasaṃ bhavati |</p>
+
+<p xml:id="GautSt_11.27" corresp="GautAA_2.2.27">brahma kṣattreṇa saṃpṛktaṃ devapitṛmanuṣyāndhārayatīti vijñāyate |</p>
+<note>VAR_St: pṛktaṃ</note>
+
+<p xml:id="GautSt_11.28" corresp="GautAA_2.2.28">daṇḍo damanād ity āhus tenādāntān damayet |</p>
+
+<p xml:id="GautSt_11.29a" corresp="GautAA_2.2.29a">varṇāśramāḥ svasvadharmaniṣṭhāḥ pretya karmaphalamanubhūya tataḥ śeṣena viśiṣṭadeśajātikularūpāyuḥśrutacitravittasukhamedhaso |</p>
+<note>VAR_St: varṇā āśramāś ca svadharma-;-śrutavṛtta-</note>
+
+<p xml:id="GautSt_11.29b" corresp="GautAA_2.2.29b">janma pratipadyante |</p>
+<note>VAR_St: prapadyante</note>
+
+<p xml:id="GautSt_11.30" corresp="GautAA_2.2.30">viṣvañco viparītā naśyanti |</p>
+
+<p xml:id="GautSt_11.31" corresp="GautAA_2.2.31">tān ācāryopadeśo daṇḍaś ca pālayate |</p>
+
+<p xml:id="GautSt_11.32" corresp="GautAA_2.2.32">tasmād rājācāryāv anindyāv anindyau |</p>
+
+
+
+<note>GautAA 2,3 = GautSt XII</note>
+
+<p xml:id="GautSt_12.1" corresp="GautAA_2.3.1">śūdro dvijātīn abhisaṃdhāyābhihatya cavāgdaṇḍapāruṣyābhyām aṅgamocyo yenopahanyāt |</p>
+<note>VAR_St: atisaṃdhāyābhihatya vāg-;aṅgaṃ mocyo</note>
+
+<p xml:id="GautSt_12.2" corresp="GautAA_2.3.2">āryastryabhigamane liṅgoddhāraḥ svaharaṇaṃ ca |</p>
+<note>VAR_St: sarvasvaharaṇaṃ ca</note>
+
+<p xml:id="GautSt_12.3" corresp="GautAA_2.3.3">goptā ced vadho 'dhikaḥ |</p>
+
+<p xml:id="GautSt_12.4" corresp="GautAA_2.3.4a">atha hāsya vedam upaśṛṇvatas trapujatubhyāṃśrotrapratipūraṇam |</p>
+
+<p xml:id="GautSt_12.5" corresp="GautAA_2.3.4b">udāharaṇe jihvācchedo |</p>
+
+<p xml:id="GautSt_12.6" corresp="GautAA_2.3.4c">dhāraṇeśarīrabhedaḥ |</p>
+
+<p xml:id="GautSt_12.7" corresp="GautAA_2.3.5">āsanaśayanavākpathiṣu samaprepsur daṇḍyaḥ |</p>
+
+<p xml:id="GautSt_12.8" corresp="GautAA_2.3.6">śataṃ kṣatriyo brāhmaṇākrośe |</p>
+
+ <p xml:id="GautSt_12.9" corresp="-">daṇḍapāruṣye dviguṇam |</p>
+
+<p xml:id="GautSt_12.10" corresp="GautAA_2.3.7">adhyardhaṃ vaiśyaḥ |</p>
+
+<p xml:id="GautSt_12.11" corresp="GautAA_2.3.8">brāhmaṇas tu kṣatriye pañcāśat |</p>
+
+<p xml:id="GautSt_12.12" corresp="GautAA_2.3.9">tadardhaṃ vaiśye |</p>
+
+<p xml:id="GautSt_12.13" corresp="GautAA_2.3.10">na śūdre kiṃcit |</p>
+
+<p xml:id="GautSt_12.14" corresp="GautAA_2.3.11">brāhmaṇarājanyavat kṣatriyavaiśyau |</p>
+
+<p xml:id="GautSt_12.15" corresp="GautAA_2.3.12">aṣṭāpādyaṃ steyakilbiṣaṃ śūdrasya |</p>
+
+<p xml:id="GautSt_12.16" corresp="GautAA_2.3.13">dviguṇottarāṇītareṣāṃ prativarṇam |</p>
+
+<p xml:id="GautSt_12.17" corresp="GautAA_2.3.14">viduṣo 'tikrame daṇḍabhūyastvam |</p>
+
+<p xml:id="GautSt_12.18" corresp="GautAA_2.3.15">phalaharitadhānyaśākādāne pañcakṛṣṇalam alpam |</p>
+<note>VAR_St: alpe</note>
+
+<p xml:id="GautSt_12.19" corresp="GautAA_2.3.16">paśupīḍite svāmidoṣaḥ |</p>
+
+<p xml:id="GautSt_12.20" corresp="GautAA_2.3.17">pālasaṃyukte tu tasmin |</p>
+
+<p xml:id="GautSt_12.21" corresp="GautAA_2.3.18">pathi kṣetre 'nāvṛte pālakṣetrikayoḥ |</p>
+
+<p xml:id="GautSt_12.22" corresp="GautAA_2.3.19">pañca māṣā gavi |</p>
+
+<p xml:id="GautSt_12.23" corresp="GautAA_2.3.20">ṣaḍ uṣṭrakhare |</p>
+
+<p xml:id="GautSt_12.24" corresp="GautAA_2.3.21">aśvamahiṣyor daśa |</p>
+<note>VAR_St: mahiṣayor</note>
+
+<p xml:id="GautSt_12.25" corresp="GautAA_2.3.22">ajāviṣu dvau dvau |</p>
+
+<p xml:id="GautSt_12.26" corresp="GautAA_2.3.23">sarvavināśe śadaḥ |</p>
+
+<p xml:id="GautSt_12.27" corresp="GautAA_2.3.24">śiṣṭākaraṇe pratiṣiddhasevāyāṃ ca nityaṃcailapiṇḍād ūrdhvaṃ svaharaṇam |</p>
+<note>VAR_St: cela</note>
+
+<p xml:id="GautSt_12.28" corresp="GautAA_2.3.25">go'gnyarthe tṛṇamedhān vīrudvanaspatīnāṃ capuṣpāṇi svavad ādadīta phalāni cāparivṛtānām |</p>
+
+<p xml:id="GautSt_12.29" corresp="GautAA_2.3.26">kusīdavṛddhir dharmyā viṃśatiḥ pañcamāṣikī māsam |</p>
+
+<p xml:id="GautSt_12.30" corresp="GautAA_2.3.27">nātisāṃvatsarīm eke |</p>
+
+<p xml:id="GautSt_12.31" corresp="GautAA_2.3.28">cirasthāne dvaiguṇyaṃ prayogasya |</p>
+
+<p xml:id="GautSt_12.32" corresp="GautAA_2.3.29">bhuktādhir na vardhate |</p>
+
+<p xml:id="GautSt_12.33" corresp="GautAA_2.3.30">ditsato 'varuddhasya ca |</p>
+
+<p xml:id="GautSt_12.34" corresp="GautAA_2.3.31">cakrakālavṛddhiḥ |</p>
+
+<p xml:id="GautSt_12.35" corresp="GautAA_2.3.32">kāritākāyikāśikhādhibhogāś ca |</p>
+
+<p xml:id="GautSt_12.36" corresp="GautAA_2.3.33">kusīdaṃ paśūpajalomakṣetraśadavāhyeṣu nātipañcaguṇam |</p>
+
+<p xml:id="GautSt_12.37" corresp="GautAA_2.3.34">ajaḍāpaugaṇḍadhanaṃ daśavarṣabhuktaṃ paraiḥ saṃnidhaubhoktuḥ |</p>
+<note>VAR_St: -pogaṇḍa-</note>
+
+<p xml:id="GautSt_12.38" corresp="GautAA_2.3.35">na śrotriyapravrajitarājapurṣaiḥ |</p>
+<note>VAR_St: -rājanya-</note>
+
+<p xml:id="GautSt_12.39" corresp="GautAA_2.3.36">paśubhūmistrīṇām anatibhogaḥ |</p>
+
+<p xml:id="GautSt_12.40" corresp="GautAA_2.3.37">rikthabhāja ṛṇaṃ pratikuryuḥ |</p>
+
+<p xml:id="GautSt_12.41" corresp="GautAA_2.3.38">prātibhāvyavaṇikśulkamadyadyūtadaṇḍāḥ putrānnābhyābhaveyuḥ |</p>
+<note>VAR_St: -daṇḍā na putrān adhyābhaveyuḥ</note>
+
+<p xml:id="GautSt_12.42" corresp="GautAA_2.3.39">nidhyanvādhiyācitāvakrītādhayo naṣṭāh sarvānaninditān puruṣāparādhena |</p>
+<note>VAR_St: aninditānapuruṣa-</note>
+
+<p xml:id="GautSt_12.43" corresp="GautAA_2.3.40">stenaḥ prakīrṇakeṣo musalī rājānam iyātkarmācakṣānaḥ |</p>
+
+<p xml:id="GautSt_12.44" corresp="GautAA_2.3.41">pūto vadhamokṣābhyām |</p>
+
+<p xml:id="GautSt_12.45" corresp="GautAA_2.3.42">aghnann enasvī rājā |</p>
+
+<p xml:id="GautSt_12.46" corresp="GautAA_2.3.43">na śārīro brāhmaṇadaṇḍaḥ |</p>
+
+<p xml:id="GautSt_12.47" corresp="GautAA_2.3.44">karmaviyogavikhyāpanavivāsanāṅkakaraṇāni |</p>
+
+<p xml:id="GautSt_12.48" corresp="GautAA_2.3.45">apravṛttau prāyaścittī saḥ |</p>
+<note>VAR_St: avṛttau</note>
+
+<p xml:id="GautSt_12.49" corresp="GautAA_2.3.46">corasamaḥ sacivo matipūrve |</p>
+
+<p xml:id="GautSt_12.50" corresp="GautAA_2.3.47">pratigrahītāpy adharmasaṃyukte |</p>
+
+<p xml:id="GautSt_12.51" corresp="GautAA_2.3.48">puruṣaśaktyaparādhānubandhavijñānād daṇḍaniyogaḥ |</p>
+
+<p xml:id="GautSt_12.52" corresp="GautAA_2.3.49">anujñānaṃ vā vedavitsamavāyavacanādvedavitsamavāyavacanāt |</p>
+
+
+
+<note>GautAA 2,4 = GautSt XIII</note>
+
+<p xml:id="GautSt_13.1" corresp="GautAA_2.4.1">vipratipattau sākṣinimittā satyavyavasthā |</p>
+
+<p xml:id="GautSt_13.2" corresp="GautAA_2.4.2">bahavaḥ syur aninditāḥ svakarmasu prātyayikā rājñāṃniṣprītyanabhitāpāś cānyatarasmin |</p>
+<note>VAR_St: rājñā niṣ-</note>
+
+<p xml:id="GautSt_13.3" corresp="GautAA_2.4.3">api śūdrāḥ |</p>
+
+<p xml:id="GautSt_13.4" corresp="GautAA_2.4.4">brāhmaṇas tv abrāhmaṇavacanād anavarodhyo 'nibaddhaścet |</p>
+
+<p xml:id="GautSt_13.5" corresp="GautAA_2.4.5">nāsamavetāpṛṣṭāḥ prabrūyuḥ |</p>
+<note>VAR_St: -tā apṛṣṭāḥ</note>
+
+<p xml:id="GautSt_13.6" corresp="GautAA_2.4.6">avacane 'nyathāvacane ca doṣiṇaḥ(doṣa-) syuḥ |</p>
+<note>VAR_St: avacaneca doṣiṇaḥ</note>
+
+<p xml:id="GautSt_13.7" corresp="GautAA_2.4.7">svargaḥ satyavacane viparyaye narakaḥ |</p>
+
+<p xml:id="GautSt_13.8" corresp="GautAA_2.4.8">anibaddhair api vaktavyam |</p>
+<p xml:id="GautSt_13.9" corresp="GautAA_2.4.9">na pīḍākṛte nibandhaḥ |</p>
+
+<p xml:id="GautSt_13.10" corresp="GautAA_2.4.10">pramattokte ca |</p>
+<note>VAR_St: pramāda-</note>
+
+<p xml:id="GautSt_13.11" corresp="GautAA_2.4.11">sākṣisabhyarājakartṛṣu doṣo dharmatantrapīḍāyām |</p>
+
+<p xml:id="GautSt_13.12" corresp="GautAA_2.4.12">śapathenaike satyakarma |</p>
+
+<p xml:id="GautSt_13.13" corresp="GautAA_2.4.13">taddevarājabrāhmaṇasaṃsadi syād abrāhmaṇānām |</p>
+
+<p xml:id="GautSt_13.14" corresp="GautAA_2.4.14">kṣudrapaśvanṛte sākṣī daśa hanti |</p>
+
+<p xml:id="GautSt_13.15" corresp="GautAA_2.4.15">gośvapuruṣabhūmiṣu daśaguṇottarān |</p>
+<note>VAR_St: go 'śva-</note>
+
+<p xml:id="GautSt_13.16" corresp="GautAA_2.4.16">sarvaṃ vā bhūmau |</p>
+
+<p xml:id="GautSt_13.17" corresp="GautAA_2.4.17">haraṇe narakaḥ |</p>
+
+<p xml:id="GautSt_13.18" corresp="GautAA_2.4.18">bhūmivad apsu |</p>
+
+<p xml:id="GautSt_13.19" corresp="GautAA_2.4.19">maithunasaṃyoge ca |</p>
+
+<p xml:id="GautSt_13.20" corresp="GautAA_2.4.20">paśuvan madhusarpiṣoḥ |</p>
+
+<p xml:id="GautSt_13.21" corresp="GautAA_2.4.21">govad vastrahiraṇyadhānyabrahmasu |</p>
+
+<p xml:id="GautSt_13.22" corresp="GautAA_2.4.22">yāneṣu aśvavat |</p>
+
+<p xml:id="GautSt_13.23" corresp="GautAA_2.4.23">mithyāvacane yāpyo daṇḍyaś ca sākṣī |</p>
+
+<p xml:id="GautSt_13.24" corresp="GautAA_2.4.24">nānṛtavacane doṣo jīvanaṃ cet tadadhīnam |</p>
+
+<p xml:id="GautSt_13.25" corresp="GautAA_2.4.25">na tu pāpīyaso jīvanam |</p>
+
+<p xml:id="GautSt_13.26" corresp="GautAA_2.4.26">rājā prāḍvivāko brāhmaṇo vā śāstravit |</p>
+
+<p xml:id="GautSt_13.27" corresp="GautAA_2.4.27">prāḍvivākam adhyābhavet |</p>
+
+<p xml:id="GautSt_13.28" corresp="GautAA_2.4.28">saṃvatsaraṃ pratīkṣetāpratibhāyām |</p>
+
+<p xml:id="GautSt_13.29" corresp="GautAA_2.4.29">dhenvanaḍutstrīprajananasaṃyuṃkte caśīghram |</p>
+
+<p xml:id="GautSt_13.30" corresp="GautAA_2.4.30">ātyayike ca |</p>
+
+<p xml:id="GautSt_13.31" corresp="GautAA_2.4.31">sarvadharmebhyo garīyaḥ prāḍvivāke satyavacanaṃsatyavacanam |</p>
+
+
+
+<note>GautAA 2,5 = GautSt XIV</note>
+
+<p xml:id="GautSt_14.1" corresp="GautAA_2.5.1">śāvam āśaucaṃ daśarātram anṛtvig(ṛtvij)dīkṣitabrahmacāriṇāṃ sapiṇḍānām |</p>
+
+<p xml:id="GautSt_14.2" corresp="GautAA_2.5.2">ekādaśarātraṃ kṣatriyasya |</p>
+
+<p xml:id="GautSt_14.3" corresp="GautAA_2.5.4a">dvādaśarātraṃ vaiśyasya |</p>
+
+<p xml:id="GautSt_14.4" corresp="GautAA_2.5.4b">ardhamāsam eke |</p>
+
+<p xml:id="GautSt_14.5" corresp="GautAA_2.5.4">māsam śūdrasya |</p>
+
+<p xml:id="GautSt_14.6" corresp="GautAA_2.5.5">tac ced antaḥ punar āpatec cheṣeṇa śudhyeran |</p>
+
+<p xml:id="GautSt_14.7" corresp="GautAA_2.5.6">rātriśeṣe dvābhyām |</p>
+
+<p xml:id="GautSt_14.8" corresp="GautAA_2.5.7">prabhāte tisṛbhiḥ |</p>
+
+<p xml:id="GautSt_14.9" corresp="GautAA_2.5.8">gobrāhmaṇahatānām anvakṣam |</p>
+
+<p xml:id="GautSt_14.10" corresp="GautAA_2.5.9">rājakrodhāc ca |</p>
+
+<p xml:id="GautSt_14.11" corresp="GautAA_2.5.10">yuddhe |</p>
+
+<p xml:id="GautSt_14.12" corresp="GautAA_2.5.11">prāyānāśakaśastrāgniviṣodakodbandhanaprapatanaiś cecchatām |</p>
+
+<p xml:id="GautSt_14.13" corresp="GautAA_2.5.12">piṇḍanivṛttiḥ saptame pañcame vā |</p>
+
+<p xml:id="GautSt_14.14" corresp="GautAA_2.5.13">janane 'py evam |</p>
+
+<p xml:id="GautSt_14.15" corresp="GautAA_2.5.14a">mātāpitros(pitṛ) tat |</p>
+
+<p xml:id="GautSt_14.16" corresp="GautAA_2.5.14b">mātur vā |</p>
+
+<p xml:id="GautSt_14.17" corresp="GautAA_2.5.15">garbhamāsasamārātrīḥ sraṃsane garbhasya |</p>
+
+<p xml:id="GautSt_14.18" corresp="GautAA_2.5.16">tryahaṃ vā |</p>
+
+<p xml:id="GautSt_14.19" corresp="GautAA_2.5.17">śrutvā cordhvaṃ daśamyāḥ pakṣiṇīm |</p>
+
+<p xml:id="GautSt_14.20" corresp="GautAA_2.5.18">asapiṇḍe yonisaṃbandhe sahādhyāyini ca |</p>
+
+<p xml:id="GautSt_14.21" corresp="GautAA_2.5.19">sabrahmacāriṇy ekāham |</p>
+
+<p xml:id="GautSt_14.22" corresp="GautAA_2.5.20">śrotriye copasaṃpanne |</p>
+
+<p xml:id="GautSt_14.23" corresp="GautAA_2.5.21">pretopasparśane daśarātram āśaucam abhisaṃdhāya cet |</p>
+
+<p xml:id="GautSt_14.24" corresp="GautAA_2.5.22">uktaṃ vaiśyaśūdrayoḥ |</p>
+
+<p xml:id="GautSt_14.25" corresp="GautAA_2.5.23">ārtavīr vā |</p>
+
+<p xml:id="GautSt_14.26" corresp="GautAA_2.5.24">pūrvayoś ca |</p>
+
+<p xml:id="GautSt_14.27" corresp="GautAA_2.5.25">tryahaṃ vā |</p>
+
+<p xml:id="GautSt_14.28" corresp="GautAA_2.5.26">ācāryatatputrastrīyājyaśiṣyeṣu caivam |</p>
+
+<p xml:id="GautSt_14.29" corresp="GautAA_2.5.27">avaraś ced varṇaḥ pūrvavarṇam upaspṛśet pūrvovāvaraṃ tatra śavoktam āśaucam |</p>
+<note>VAR_St: pūrvaṃ varṇam</note>
+
+<p xml:id="GautSt_14.30" corresp="GautAA_2.5.28">patitacaṇḍālasūtikodakyāśavaspṛṣṭitatspṛṣṭyupasparśanesacailodakopasparśanāc chudhyet |</p>
+<note>VAR_St: sacela-</note>
+
+<p xml:id="GautSt_14.31" corresp="GautAA_2.5.29">śavānugamane ca |</p>
+
+<p xml:id="GautSt_14.32" corresp="GautAA_2.5.30">śunaś ca |</p>
+
+<p xml:id="GautSt_14.32" corresp="GautAA_2.5.31">yad upahanyād ity eke |</p>
+
+<p xml:id="GautSt_14.34" corresp="GautAA_2.5.32">udakadānaṃ sapiṇḍaiḥ kṛtacūḍasya |</p>
+<note>VAR_St: kṛtajaṭasya</note>
+
+<p xml:id="GautSt_14.35" corresp="GautAA_2.5.33">tatstrīṇāṃ ca |</p>
+
+<p xml:id="GautSt_14.36" corresp="GautAA_2.5.34">eke prattānām |</p>
+
+<p xml:id="GautSt_14.37" corresp="GautAA_2.5.35">adhaḥśayyāsanino brahmacāriṇaḥ sarve |</p>
+
+<p xml:id="GautSt_14.38" corresp="GautAA_2.5.36">na mārjayīran |</p>
+
+<p xml:id="GautSt_14.39" corresp="GautAA_2.5.37">na māṃsaṃ bhakṣayeyur ā pradānāt |</p>
+
+<p xml:id="GautSt_14.40" corresp="GautAA_2.5.38">prathamatṛtīyasaptamanavameṣūdakakriyā |</p>
+<note>VAR_St: tṛtīyapañcama-</note>
+
+<p xml:id="GautSt_14.41" corresp="GautAA_2.5.39">vāsasāṃ ca tyāgaḥ |</p>
+
+<p xml:id="GautSt_14.42" corresp="GautAA_2.5.40">ante tv antyānām |</p>
+<note>VAR_St: antye</note>
+
+<p xml:id="GautSt_14.43" corresp="GautAA_2.5.41">dantajanmādi mātāpitṛbhyām |</p>
+
+<p xml:id="GautSt_14.44" corresp="GautAA_2.5.42">bāladeśāntaritapravrajitāsapiṇḍānāṃ sadyaḥ śaucam |</p>
+
+<p xml:id="GautSt_14.45" corresp="GautAA_2.5.43">rājñāṃ ca kāryavirodhāt |</p>
+
+<p xml:id="GautSt_14.46" corresp="GautAA_2.5.44">brāhmaṇasya ca svādhyāyanivṛttyarthamsvādhyāyanivṛttyartham |</p>
+<note>VAR_St: svādhyāyānivṛtty-</note>
+
+
+
+<note>GautAA 2,6 = GautSt XV</note>
+
+<p xml:id="GautSt_15.1" corresp="GautAA_2.6.1">atha śrāddham |</p>
+
+<p xml:id="GautSt_15.2" corresp="GautAA_2.6.2">amāvāsyāyāṃ pitṛbhyo dadyāt |</p>
+
+<p xml:id="GautSt_15.3" corresp="GautAA_2.6.3">pañcamīprabhṛtiṣu vāparapakṣasya |</p>
+<note>VAR_St: -prabhṛti vā-</note>
+
+<p xml:id="GautSt_15.4" corresp="GautAA_2.6.4">yathāśraddhaṃ sarvasmin vā |</p>
+
+<p xml:id="GautSt_15.5" corresp="GautAA_2.6.5">dravyadeśabrāhmaṇasaṃnidhāne vā kālaniyamaḥ |</p>
+<note>VAR_St: vākālaniyamaḥ</note>
+
+<p xml:id="GautSt_15.6" corresp="GautAA_2.6.6">śaktitaḥ prakarṣed guṇasaṃskāravidhir annasya |</p>
+<note>VAR_St: -vidhinānnasya</note>
+
+<p xml:id="GautSt_15.7" corresp="GautAA_2.6.7">navāvarān bhojayed ayujaḥ |</p>
+
+<p xml:id="GautSt_15.8" corresp="GautAA_2.6.8">yathotsāhaṃ vā |</p>
+
+<p xml:id="GautSt_15.9" corresp="GautAA_2.6.9">śrotriyān vāgrūpavayaḥśīlasaṃpannān |</p>
+
+<p xml:id="GautSt_15.10" corresp="GautAA_2.6.10">yuvabhyo dānaṃ prathamam |</p>
+
+<p xml:id="GautSt_15.11" corresp="GautAA_2.6.11">eke pitṛvat |</p>
+
+<p xml:id="GautSt_15.12" corresp="GautAA_2.6.12">na ca tena mitrakarma kuryāt |</p>
+
+<p xml:id="GautSt_15.13" corresp="GautAA_2.6.13">putrābhāve sapiṇḍā mātṛsapiṇḍāḥ śiṣyāś ca dadyuḥ |</p>
+
+<p xml:id="GautSt_15.14" corresp="GautAA_2.6.14a">tadabhāva ṛtvigācāryau |</p>
+
+ <p xml:id="GautSt_15.15" corresp="-">tilamāṣavrīhiyavodakadānair māsaṃ pitaraḥprīṇanti | matsyahariṇaruruśaśakūrmavarāhameṣamāṃsaiḥsaṃvatsarāṇi|gavyapayaḥpāyasair dvādaśa varṣāṇi|vārdhrīṇasenamāṃsena kālaśākacchāgalohakhaḍgamāṃsair madhumiśraiś cānantyam |</p>
+
+<p xml:id="GautSt_15.16" corresp="GautAA_2.6.15">na bhojayet stenaklībapatitanāstikatadvṛttivīrahāgredidhiṣupatistrīgrāmayājakājāpālotsṛṣṭāgnimadyapakucarakūṭasākṣiprātihārikān |</p>
+<note>VAR_St: -didhiṣūdidhiṣūpati-;-ajapāla-</note>
+
+<p xml:id="GautSt_15.17a" corresp="GautAA_2.6.16">upapatiḥ |</p>
+
+<p xml:id="GautSt_15.17b" corresp="GautAA_2.6.17">yasya ca saḥ |</p>
+<note>VAR_St: yasya ca</note>
+
+<p xml:id="GautSt_15.18" corresp="GautAA_2.6.18">kuṇḍāśisomavikrayyagāradāhigaradāvakīrṇigaṇapreṣyāgamyāgāmihiṃsraparivittiparivettṛparyāhitaparyādhātṛtyaktātmadurbālakunakhiśyāvadantaśvitripaunarbhavakitavājaparājapreṣyaprātirūpikaśūdrāpatinirākṛtikilāsikusīdivaṇikśilpopajīvijyāvāditratālanṛtyagītaśīlān |</p>
+<note>VAR_St: -parivitta-;śyāvadat-;nṛtta-</note>
+
+<p xml:id="GautSt_15.19" corresp="GautAA_2.6.19">pitrā(pitṛ) vākāmena vibhaktān |</p>
+<note>VAR_St: cākāmena</note>
+
+<p xml:id="GautSt_15.20" corresp="GautAA_2.6.20">śiṣyāṃś caike sagotrāṃś ca |</p>
+
+<p xml:id="GautSt_15.21a" corresp="GautAA_2.6.21">bhojayed ūrdhvaṃ tribhyaḥ |</p>
+
+<p xml:id="GautSt_15.21b" corresp="GautAA_2.6.22">guṇavantam |</p>
+
+<p xml:id="GautSt_15.22" corresp="GautAA_2.6.23">sadyaḥ śrāddhī śūdrātalpagas tatpurīṣe māsaṃnayati pitṛṛn |</p>
+
+<p xml:id="GautSt_15.23" corresp="GautAA_2.6.24">tasmāt tadaham brahmacārī ca syāt |</p>
+<note>VAR_St: -aharbrahmacārī syāt</note>
+
+<p xml:id="GautSt_15.24" corresp="GautAA_2.6.25">śvacāṇḍālapatitāvekṣaṇe duṣṭam |</p>
+<note>VAR_St: caṇdāla</note>
+
+<p xml:id="GautSt_15.25" corresp="GautAA_2.6.26">tasmāt pariśrite dadyāt |</p>
+
+<p xml:id="GautSt_15.26" corresp="GautAA_2.6.27">tilair vā vikiret |</p>
+
+<p xml:id="GautSt_15.27" corresp="GautAA_2.6.28">paṅktipāvano vā śamayet |</p>
+
+<p xml:id="GautSt_15.28" corresp="GautAA_2.6.29">paṅktipāvanaḥ ṣaḍaṅgavij jyeṣṭhasāmikas triṇāciketastrimadhus trisuparṇaḥ pañcāgniḥ snātako mantrabrāhmaṇavid dharmajñobrahmadeyānusaṃtāna iti |</p>
+<note>VAR_St: jyeṣṭhasāmagas</note>
+
+<p xml:id="GautSt_15.29" corresp="GautAA_2.6.30">haviḥṣu caivam |</p>
+
+<p xml:id="GautSt_15.30" corresp="GautAA_2.6.31">durbālādīn śrāddha ekaike |</p>
+<note>VAR_St: -eke śrāddha evaike</note>
+
+<p xml:id="GautAA_2.6.32">akṛtānnaśrāddhe caivaṃ caivam |</p>
+
+
+
+<note>GautAA 2,7 = GautSt XVI</note>
+
+<p xml:id="GautSt_16.1" corresp="GautAA_2.7.1">śrāvaṇādi vārṣikaṃ proṣṭhapadīṃvopākṛtyādhīyīta cchandāṃsi |</p>
+<note>VAR_St: śravaṇādi</note>
+
+<p xml:id="GautSt_16.2" corresp="GautAA_2.7.2">ardhapañcamān māsān pañca dakṣiṇāyanaṃ vā |</p>
+
+<p xml:id="GautSt_16.3" corresp="GautAA_2.7.3">brahmacāry utsṛṣṭalomā na māṃsaṃ bhuñjīta |</p>
+
+<p xml:id="GautSt_16.4" corresp="GautAA_2.7.4">dvaimāsyo vā niyamaḥ |</p>
+
+<p xml:id="GautSt_16.5" corresp="GautAA_2.7.5">nādhīyīta vāyau divā pāṃsuhare |</p>
+
+<p xml:id="GautSt_16.6" corresp="GautAA_2.7.6">karṇaśrāviṇi naktam |</p>
+
+<p xml:id="GautSt_16.7" corresp="GautAA_2.7.7">vāṇabherīmṛdaṅgagartārtaśabdeṣu |</p>
+
+<p xml:id="GautSt_16.8" corresp="GautAA_2.7.8">śvaśṛgālagardabhasaṃhrāde |</p>
+
+<p xml:id="GautSt_16.9" corresp="GautAA_2.7.9">rohitendradhanurnīhāreṣu |</p>
+<note>VAR_St: lohita-</note>
+
+<p xml:id="GautSt_16.10" corresp="GautAA_2.7.10">abhradarśane cāpartau(ṛtu) |</p>
+
+<p xml:id="GautSt_16.11" corresp="GautAA_2.7.11">mūtrita uccārite |</p>
+
+<p xml:id="GautSt_16.12" corresp="GautAA_2.7.12">niśāyāṃ saṃdhyodakeṣu |</p>
+<note>VAR_St: niśāsaṃdhyā-</note>
+
+<p xml:id="GautSt_16.13" corresp="GautAA_2.7.13">varṣati ca |</p>
+
+<p xml:id="GautSt_16.14" corresp="GautAA_2.7.14">eke valīkasaṃtānām |</p>
+
+<p xml:id="GautSt_16.15" corresp="GautAA_2.7.15">ācāryapariveṣaṇe |</p>
+
+<p xml:id="GautSt_16.16" corresp="GautAA_2.7.16">jyotiṣoś ca |</p>
+
+<p xml:id="GautSt_16.17" corresp="GautAA_2.7.17">bhīto yānasthaḥ śayānaḥ prauḍhapādaḥ |</p>
+
+<p xml:id="GautSt_16.18" corresp="GautAA_2.7.18">śmaśānagrāmāntamahāpathāśauceṣu |</p>
+
+<p xml:id="GautSt_16.19" corresp="GautAA_2.7.19">pūtigandhāntaḥśavadivākīrtya(cāṇḍāla)śūdrasaṃnidhāne |</p>
+
+<p xml:id="GautSt_16.20" corresp="GautAA_2.7.20">bhuktake codgāre |</p>
+
+<p xml:id="GautSt_16.21" corresp="GautAA_2.7.21">ṛgyajuṣaṃ ca sāmaśabdo yāvat |</p>
+
+<p xml:id="GautSt_16.22" corresp="GautAA_2.7.22">ākālikā nirghātabhūmikamparāhudarśanolkāḥ |</p>
+
+<p xml:id="GautSt_16.23" corresp="GautAA_2.7.23">stanayitnuvarṣavidyutaś ca prāduṣkṛtāgniṣu |</p>
+
+<p xml:id="GautSt_16.24" corresp="GautAA_2.7.24">ahar ṛtau(ṛtu) |</p>
+<note>VAR_St: apartau</note>
+
+<p xml:id="GautSt_16.25" corresp="GautAA_2.7.25">vidyuti naktaṃ cāpararātrāt |</p>
+
+<p xml:id="GautSt_16.26" corresp="GautAA_2.7.26">tribhāgādipravṛttau sarvam |</p>
+
+<p xml:id="GautSt_16.27" corresp="GautAA_2.7.27">ulkā vidyutsamety ekeṣām |</p>
+
+<p xml:id="GautSt_16.28" corresp="GautAA_2.7.28">stanayitnur aparāhṇe |</p>
+
+<p xml:id="GautSt_16.29" corresp="GautAA_2.7.29">api pradoṣe |</p>
+
+<p xml:id="GautSt_16.30" corresp="GautAA_2.7.30">sarvaṃ naktam ārdharātrāt |</p>
+
+<p xml:id="GautSt_16.31" corresp="GautAA_2.7.31">ahaś cet sajyotiḥ |</p>
+
+<p xml:id="GautSt_16.32" corresp="GautAA_2.7.32">viṣayasthe ca rājñi(rājan) prete |</p>
+
+<p xml:id="GautSt_16.33" corresp="GautAA_2.7.33">viproṣya cānyonyena saha |</p>
+
+<p xml:id="GautSt_16.34" corresp="GautAA_2.7.34">saṃkulopāhitavedasamāpticchardiśrāddhamanuṣyayajñabhojaneṣvahorātram |</p>
+
+<p xml:id="GautSt_16.35" corresp="GautAA_2.7.35">amāvāsyāyāṃ ca |</p>
+
+<p xml:id="GautSt_16.36" corresp="GautAA_2.7.36">dvyahaṃ vā |</p>
+
+<p xml:id="GautSt_16.37" corresp="GautAA_2.7.37">kārtikī phālgunīyṣāḍhī paurṇamāsī |</p>
+
+<p xml:id="GautSt_16.38" corresp="GautAA_2.7.38">tisro 'ṣṭakās trirātram |</p>
+
+<p xml:id="GautSt_16.39" corresp="GautAA_2.7.39">antyām eke |</p>
+
+<p xml:id="GautSt_16.40" corresp="GautAA_2.7.40">abhito vārṣikam |</p>
+
+<p xml:id="GautSt_16.41" corresp="GautAA_2.7.41">sarve varṣāvidyutstanayitnusaṃnipāte |</p>
+<note>VAR_St: varṣa-</note>
+
+<p xml:id="GautSt_16.42" corresp="GautAA_2.7.42">prasyandini |</p>
+
+<p xml:id="GautSt_16.43" corresp="GautAA_2.7.43">ūrdhvaṃ bhojanād utsave |</p>
+
+<p xml:id="GautSt_16.44" corresp="GautAA_2.7.44">prādhītasya ca niśāyāṃ caturmuhūrtam |</p>
+
+<p xml:id="GautSt_16.45" corresp="GautAA_2.7.45">nityam eke nagare |</p>
+
+<p xml:id="GautSt_16.46" corresp="GautAA_2.7.46">mānasam apy aśuciḥ |</p>
+
+<p xml:id="GautSt_16.47" corresp="GautAA_2.7.47">śrāddhinām(śrāddha) ākālikam |</p>
+
+<p xml:id="GautSt_16.48" corresp="GautAA_2.7.48">akṛtānnaśrāddhikasaṃyoge 'pi |</p>
+<note>VAR_St: -yoge ca</note>
+
+<p xml:id="GautSt_16.49" corresp="GautAA_2.7.49">pratividyaṃ ca yān smaranti |</p>
+<note>VAR_St: yān smaranti</note>
+
+
+
+<note>GautAA 2,8 = GautSt XVII</note>
+
+<p xml:id="GautSt_17.1" corresp="GautAA_2.8.1">praśastānāṃ svakarmasu dvijātīnāṃ brāhmaṇo bhuñjīta |</p>
+
+<p xml:id="GautSt_17.2" corresp="GautAA_2.8.2">pratigṛhṇīyāc ca |</p>
+
+<p xml:id="GautSt_17.3" corresp="GautAA_2.8.3">edhodakayavasamūlaphalamadhvabhayābhyudyataśayyāsanāvasathayānapayodadhidhānāśapharīpriyaṅgusragmārgaśākāny apraṇodyāni sarveṣām |</p>
+
+<p xml:id="GautSt_17.4" corresp="GautAA_2.8.4">pitṛdevagurubhṛtyabharaṇe 'py anyat |</p>
+<note>VAR_St: -ṇe cānyat</note>
+
+<p xml:id="GautSt_17.5" corresp="GautAA_2.8.5">vṛttiś cen nāntareṇa śūdrāt |</p>
+
+<p xml:id="GautSt_17.6" corresp="GautAA_2.8.6">paśupālakṣetrakarṣakakulasaṃgatakārayitṛparicārakāḥbhojyānnāḥ |</p>
+
+<p xml:id="GautSt_17.7" corresp="GautAA_2.8.7">vaṇik cāśilpī |</p>
+
+<p xml:id="GautSt_17.8" corresp="GautAA_2.8.8">nityam abhojyam |</p>
+
+<p xml:id="GautSt_17.9" corresp="GautAA_2.8.9">keśakīṭāvapannam |</p>
+
+<p xml:id="GautSt_17.10" corresp="GautAA_2.8.10">rajasvalākṛṣṇaśakunipadopahatam |</p>
+
+<p xml:id="GautSt_17.11" corresp="GautAA_2.8.11">bhrūṇaghnāvekṣitam |</p>
+<note>VAR_St: bhrūṇaghnā prekṣitam</note>
+<note>GautSt 17.12 see GautAA 2,8.13</note>
+
+<p xml:id="GautSt_17.13" corresp="GautAA_2.8.12">bhāvaduṣṭam |</p>
+
+<p xml:id="GautSt_17.12" corresp="GautAA_2.8.13">gavopaghrātam |</p>
+
+<p xml:id="GautSt_17.14" corresp="GautAA_2.8.14">śuktaṃ kevalam adadhi |</p>
+
+<p xml:id="GautSt_17.15" corresp="GautAA_2.8.15">punaḥ siddham |</p>
+
+<p xml:id="GautSt_17.16" corresp="GautAA_2.8.16">paryuṣitam aśākabhakṣasnehamāṃsamadhūni |</p>
+<note>VAR_St: -bhakṣya-</note>
+
+<p xml:id="GautSt_17.17" corresp="GautAA_2.8.17">utsṛṣṭapuṃścalyabhiśastānapadeśyadaṇḍikatakṣakadaryabandhanikacikitsakamṛgayvaniṣucāryucchiṣṭabhojigaṇavidviṣāṇānām |</p>
+
+<p xml:id="GautSt_17.18" corresp="GautAA_2.8.18">apaṅktyānāṃ prāgdurvālāt |</p>
+<note>VAR_St: apāṅkty-</note>
+
+<p xml:id="GautSt_17.19" corresp="GautAA_2.8.19">vṛthānnācamanotthānavyapetāni |</p>
+
+<p xml:id="GautSt_17.20" corresp="GautAA_2.8.20">samāsamābhyāṃ viṣamasame pūjātaḥ |</p>
+
+<p xml:id="GautSt_17.21" corresp="GautAA_2.8.21">anarcitaṃ ca |</p>
+
+<p xml:id="GautSt_17.22" corresp="GautAA_2.8.22">goś ca kṣīram anirdaśāyāḥ sūtake |</p>
+
+<p xml:id="GautSt_17.23" corresp="GautAA_2.8.23">ajāmahiṣyoś ca |</p>
+
+<p xml:id="GautSt_17.24" corresp="GautAA_2.8.24">nityam āvikam apeyam auṣṭram aikaśaphaṃ ca |</p>
+
+<p xml:id="GautSt_17.25" corresp="GautAA_2.8.25">syandinīyamasūsaṃdhinīnāṃ ca |</p>
+
+<p xml:id="GautSt_17.26" corresp="GautAA_2.8.26">vivatsāyāś ca |</p>
+
+<p xml:id="GautSt_17.27" corresp="GautAA_2.8.27">pañcanakhāś cāśalyakaśaśaśvāvidgodhākhaḍgakacchapāḥ |</p>
+
+<p xml:id="GautSt_17.28" corresp="GautAA_2.8.28">ubhayatodatkeśyalomaikaśaphakalaviṅkaplavacakravākahaṃsāḥ |</p>
+
+<p xml:id="GautSt_17.29" corresp="GautAA_2.8.29">kākakaṅkagṛdhraśyenā jalajā raktapādatuṇḍāgrāmyakukkuṭasūkarāḥ |</p>
+<note>VAR_St: -sūkarau</note>
+
+<p xml:id="GautSt_17.30" corresp="GautAA_2.8.30">dhenvanaḍuhau ca |</p>
+
+<p xml:id="GautSt_17.31" corresp="GautAA_2.8.31">apannadannavasannavṛthāmāṃsāni |</p>
+<note>VAR_St: apannadāvasanna-</note>
+
+<p xml:id="GautSt_17.32" corresp="GautAA_2.8.32">kisalayakyākulaśunaniryāsāḥ |</p>
+<note>VAR_AA: kimpāku for kyāku</note>
+
+<p xml:id="GautSt_17.33" corresp="GautAA_2.8.33">lohitā vraścanāḥ |</p>
+<note>VAR_St: -canāś ca</note>
+
+<p xml:id="GautSt_17.34" corresp="GautAA_2.8.34">nicudārubakabalākāśukamadguṭiṭṭibhamāndhālanaktacarāabhakṣyāḥ |</p>
+<note>VAR_St: balākaśuka-;-māndhālā naktaṃcarā</note>
+
+<p xml:id="GautSt_17.35" corresp="GautAA_2.8.35">bhakṣyāḥ pratudaviṣkirajālapādāḥ |</p>
+<note>VAR_St: -viṣkirājāla-</note>
+
+<p xml:id="GautSt_17.36" corresp="GautAA_2.8.36">matsyāś cāvikṛtāḥ |</p>
+
+<p xml:id="GautSt_17.37" corresp="GautAA_2.8.37">vadhyāś ca dharmārthe |</p>
+
+<p xml:id="GautSt_17.38" corresp="GautAA_2.8.38">vyālahatādṛṣṭadoṣavākpraśastānabhyukṣyopayuñjītopayuñjīta |</p>
+<note>VAR_St: -praśastāny</note>
+
+
+
+<note>GautAA 2,9 = GautSt XVIII</note>
+
+<p xml:id="GautSt_18.1" corresp="GautAA_2.9.1">asvatantrā dharme strī |</p>
+
+<p xml:id="GautSt_18.2" corresp="GautAA_2.9.2">nāticared bhartāram(bhartṛ) |</p>
+
+<p xml:id="GautSt_18.3" corresp="GautAA_2.9.3">vākcakṣuḥkarmasaṃyatā |</p>
+
+<p xml:id="GautSt_18.4" corresp="GautAA_2.9.4">apatir apatyalipsur devarāt |</p>
+
+<p xml:id="GautSt_18.5" corresp="GautAA_2.9.5">guruprasūtā nartum(ṛtu) atīyāt |</p>
+
+<p xml:id="GautSt_18.6" corresp="GautAA_2.9.6">piṇḍagotrarṣisaṃbandhebhyo yonimātrād vā |</p>
+
+<p xml:id="GautSt_18.7" corresp="GautAA_2.9.7">nādevarād ity eke |</p>
+
+<p xml:id="GautSt_18.8" corresp="GautAA_2.9.8">nātidvitīyam |</p>
+
+<p xml:id="GautSt_18.9" corresp="GautAA_2.9.9">janayitur apatyam |</p>
+
+<p xml:id="GautSt_18.10" corresp="GautAA_2.9.10">samayād anyasya |</p>
+<note>VAR_St: anyatra</note>
+
+<p xml:id="GautSt_18.11" corresp="GautAA_2.9.11">jīvataś ca kṣetre |</p>
+
+<p xml:id="GautSt_18.12" corresp="GautAA_2.9.12">parasmāt tasya |</p>
+
+<p xml:id="GautSt_18.13" corresp="GautAA_2.9.13">dvayor vā |</p>
+
+<p xml:id="GautSt_18.14" corresp="GautAA_2.9.14">rakṣaṇāt tu bhartur(bhartṛ) eva |</p>
+
+<p xml:id="GautSt_18.15" corresp="GautAA_2.9.15">śrūyamāṇe 'bhigamanam |</p>
+<note>VAR_St: naṣṭe bhartari ṣaḍvārṣikaṃkṣapaṇaṃ śrūyamāṇe</note>
+
+<p xml:id="GautSt_18.16" corresp="GautAA_2.9.16">pravrajite tu nivṛttiḥ prasaṅgāt |</p>
+
+<p xml:id="GautSt_18.17" corresp="GautAA_2.9.17">dvādaśa varṣāṇi brāhmaṇasya vidyāsaṃbandhe |</p>
+
+<p xml:id="GautSt_18.18" corresp="GautAA_2.9.18">bhrātari(bhrātṛ) caivam jyāyasi yavīyānkanyāgnyupayameṣu |</p>
+
+<p xml:id="GautSt_18.19" corresp="GautAA_2.9.19">ṣaḍ ity eke |</p>
+
+<p xml:id="GautSt_18.20" corresp="GautAA_2.9.20">trīn kumāry ṛtūn atītya svayaṃyujyetāninditenotsṛjya pitryān alaṃkārān |</p>
+<note>VAR_St: yuñjītā-</note>
+
+<p xml:id="GautSt_18.21" corresp="GautAA_2.9.21">pradānaṃ prāg ṛtoḥ(ṛtu) |</p>
+
+<p xml:id="GautSt_18.22" corresp="GautAA_2.9.22">aprayacchan doṣī |</p>
+
+<p xml:id="GautSt_18.23" corresp="GautAA_2.9.23">prāg vāsasaḥ pratipatter ity eke |</p>
+<note>VAR_St: vāsaḥ</note>
+
+<p xml:id="GautSt_18.24" corresp="GautAA_2.9.24">dravyādānaṃ vivāhasiddhyarthaṃ dharmatantrasaṃyogeca śūdrāt |</p>
+
+<p xml:id="GautSt_18.25" corresp="GautAA_2.9.25">anyatrāpi śūdrād bahupaśor hīnakarmaṇaḥ |</p>
+
+<p xml:id="GautSt_18.26" corresp="GautAA_2.9.26">śatagor anāhitāgneḥ |</p>
+
+<p xml:id="GautSt_18.27" corresp="GautAA_2.9.27">sahasragoś cāsomapāt |</p>
+
+<p xml:id="GautSt_18.28" corresp="GautAA_2.9.28">saptamīṃ cābhuktvāanicayāya |</p>
+
+<p xml:id="GautSt_18.29" corresp="GautAA_2.9.29">apy ahīnakarmabhyaḥ |</p>
+
+<p xml:id="GautSt_18.30" corresp="GautAA_2.9.30">ācakṣīta rājñā pṛṣṭaḥ |</p>
+
+<p xml:id="GautSt_18.31" corresp="GautAA_2.9.31">tena hi bhartavyaḥ śrutaśīlasaṃpannaś cet |</p>
+
+<p xml:id="GautSt_18.32" corresp="GautAA_2.9.32">dharmatantrapīḍāyām tasyākaraṇe doṣo |</p>
+<note>VAR_St: akaranedoṣaḥ; doṣo doṣaḥ</note>
+
+
+
+<note>GautAA 3,1 = GautSt XIX</note>
+
+<p xml:id="GautSt_19.1" corresp="GautAA_3.1.1">ukto varṇadharmaś cāśramadharmaś ca |</p>
+<note>VAR_St: -dharma āśrama-</note>
+
+<p xml:id="GautSt_19.2" corresp="GautAA_3.1.2">atha khalv ayaṃ puruṣo yāpyena karmaṇā lipyate yathaitad ayājyayājanam abhakṣyabhakṣaṇam avadyavadanaṃśiṣṭasyākriyā pratiṣiddhasevanam iti |</p>
+
+<p xml:id="GautSt_19.3" corresp="GautAA_3.1.3">tatra prāyaścittaṃ kuryāt na kuryād iti mīmāṃsante |</p>
+
+<p xml:id="GautSt_19.4" corresp="GautAA_3.1.4">na kuryād ity āhuḥ |</p>
+
+<p xml:id="GautSt_19.5" corresp="GautAA_3.1.5">na hi karma kṣīyata iti |</p>
+
+<p xml:id="GautSt_19.6" corresp="GautAA_3.1.6">kuryād ity aparam |</p>
+
+<p xml:id="GautSt_19.7" corresp="GautAA_3.1.7">punaḥstomeneṣṭvā punaḥ savanam āyāntīti vijñāyate |</p>
+
+<p xml:id="GautSt_19.8" corresp="GautAA_3.1.8">vrātyastomaiś ceṣṭvā |</p>
+
+<p xml:id="GautSt_19.9" corresp="GautAA_3.1.9">tarati sarvaṃ pāpmānaṃ tarati brahmahatyāṃyo,aśvamedhena yajate |</p>
+<note>VAR_St: yajata iti ca</note>
+
+<p xml:id="GautSt_19.10" corresp="GautAA_3.1.10">agniṣṭutābhiśasyamānaṃ yājayed iti ca |</p>
+
+<p xml:id="GautSt_19.11" corresp="GautAA_3.1.11">tasya niṣkrayaṇāni japas tapo homa upavāso dānam |</p>
+
+<p xml:id="GautSt_19.12" corresp="GautAA_3.1.12">upaniṣado vedāntaḥ sarvacchandaḥsu saṃhitā madhūnyaghamarṣaṇam atharvaśiro rudrāḥ puruṣasūktaṃ rājatarauhine sāmanībṛhadrathantare puruṣagatir mahānāmnyo mahāvairājaṃ mahādivākīrtyaṃjyeṣṭhasāmnām anyatamad bahiṣpavamānaṃ kūṣmāṇḍāni pāvamānyaḥsāvitrī ceti pāvamānāni |</p>
+<note>VAR_St: rājanarauhiṇe;iti pāvanāni</note>
+
+<p xml:id="GautSt_19.13" corresp="GautAA_3.1.13">payovratatā śākabhakṣatā phalabhakṣatāprasṛtayāvako hiraṇyaprāśanaṃ ghṛtaprāśanaṃ somapānam itimedhyāni |</p>
+<note>VAR_St: prasṛtiyāvako</note>
+
+<p xml:id="GautSt_19.14" corresp="GautAA_3.1.14">sarve śiloccayāḥ sarvāḥ sravantyaḥ puṇyā hradāstīrthāny ṛṣinivāsā goṣṭhapariskandhā iti deśāḥ |</p>
+<note>VAR_St: ṛṣinivāsagoṣṭha-</note>
+
+<p xml:id="GautSt_19.15" corresp="GautAA_3.1.15">brahmacaryaṃ satyavacanaṃ savaneṣūdakopasparśanamārdravastratādhaḥśāyitānāśaka iti tapāṃsi(tapas) |</p>
+
+<p xml:id="GautSt_19.16" corresp="GautAA_3.1.16">hiraṇyaṃ gaur vāso 'śvo bhūmis tilā ghṛtam annam itideyānīti |</p>
+<note>VAR_St: iti deyāni</note>
+
+<p xml:id="GautSt_19.17" corresp="GautAA_3.1.17">saṃvatsaraḥ ṣaṇmāsāś catvāras trayo vā dvauvaikaś caturviṃśatyaho dvādaśāhaḥ ṣaḍahas tryaho 'horātra itikālāḥ |</p>
+<note>VAR_St: trayo dvāv ekaś</note>
+
+<p xml:id="GautSt_19.18" corresp="GautAA_3.1.18">etāny evānādeśe vikalpena kriyeran |</p>
+
+<p xml:id="GautSt_19.19" corresp="GautAA_3.1.19">enaḥsu(enas) guruṣu gurūṇi laghuṣu laghūni |</p>
+
+<p xml:id="GautSt_19.20" corresp="GautAA_3.1.20">kṛcchrātikṛcchrau cāndrāyaṇam iti sarvaprāyaścittaṃ |</p>
+<note>VAR_St: sarvaprāyaścittam</note>
+
+
+
+<note>GautAA 3,2 = GautSt XX</note>
+
+<p xml:id="GautSt_20.1" corresp="GautAA_3.2.1">tyajet pitaraṃ(pitṛ) rājaghātakaṃ śūdrayājakaṃśūdrārthayājakaṃ vedaviplāvakaṃ bhrūṇahanaṃ yaś cāntyāvasāyibhiḥsaha saṃvased antyāvasāyinyāṃ ca |</p>
+<note>VAR_St: -antāvasāyibhiḥ;saṃvasedantāvasāyinyām</note>
+
+<p xml:id="GautSt_20.2" corresp="GautAA_3.2.2">tasya vidyāgurūn yonisaṃbandhāṃś ca saṃnipātyasarvāṇy udakādīni pretakāryāṇi kuryuḥ |</p>
+<note>VAR_St: pretakarmāṇi</note>
+
+<p xml:id="GautSt_20.3" corresp="GautAA_3.2.3">pātraṃ cāsya viparyasyeyuḥ |</p>
+
+<p xml:id="GautSt_20.4" corresp="GautAA_3.2.4">dāsaḥ karmakaro vāvakarād amedhyapātram ānīyadāsīghaṭāt pūrayitvā dakṣiṇāmukho yadā viparyasyed amukam anudakaṃkaromi iti nāmagrāham |</p>
+<note>VAR_St: dakṣiṇāmukhaḥ padā;viparyasyed amum</note>
+
+<p xml:id="GautSt_20.5" corresp="GautAA_3.2.5">taṃ sarve 'nvālabheran prācīnāvītino muktaśikhāḥ |</p>
+
+<p xml:id="GautSt_20.6" corresp="GautAA_3.2.6">vidyāguravo(guru) yonisaṃbandhāś ca vīkṣeran |</p>
+
+<p xml:id="GautSt_20.7" corresp="GautAA_3.2.7">apa upaspṛśya grāmaṃ praviśanti |</p>
+
+<p xml:id="GautSt_20.8" corresp="GautAA_3.2.8">ata uttaraṃ tena saṃbhāṣya tiṣṭhed ekarātraṃ japansāvitrīm ajñānapūrvam |</p>
+<note>VAR_St: ata ūrdhvaṃ</note>
+
+<p xml:id="GautSt_20.9" corresp="GautAA_3.2.9">jñānapūrvaṃ ca trirātram |</p>
+<note>VAR_St: -pūrvaṃ cet</note>
+
+<p xml:id="GautSt_20.10" corresp="GautAA_3.2.10">yas tu prāyaścittena śudhyet tasmiñ śuddheśātakumbhamayaṃ pātraṃ puṇyatamād dhradāt pūrayitvā sravantībhyovā tata enam apa upasparśayeyuḥ |</p>
+
+<p xml:id="GautSt_20.11" corresp="GautAA_3.2.11">athāsmai tatpātram dadyus tatapratigṛhya japecśāntā dyauḥ śāntā pṛthivī śāntaṃ śivam antarikṣaṃ yo rocanastābhamam gṛhṇāmiiti |</p>
+<note>VAR_St: rocanas tam iha gṛh-</note>
+
+<p xml:id="GautSt_20.12" corresp="GautAA_3.2.12a">etair yajurbhiḥ pāvamānībhis taratsamandībhiḥkūṣmāṇḍaiś cājyaṃ juhuyād |</p>
+
+<p xml:id="GautSt_20.13a" corresp="GautAA_3.2.12b">hiraṇyaṃ brāhmaṇāyadadyāt |</p>
+
+<p xml:id="GautSt_20.13b" corresp="GautAA_3.2.13">gāṃ vā |</p>
+
+<p xml:id="GautSt_20.14" corresp="GautAA_3.2.14">ācāryāya ca |</p>
+
+<p xml:id="GautSt_20.15" corresp="GautAA_3.2.15">yasya tu prāṇāntikaṃ prāyaścittaṃ sa mṛtaḥśudhyet |</p>
+<note>VAR_St: prāyaścittaṃ mṛtaḥ</note>
+
+<p xml:id="GautSt_20.16" corresp="GautAA_3.2.16">sarvāṇy eva tasminn udakādīni pretakarmāṇi kuryuḥ |</p>
+
+<p xml:id="GautSt_20.17" corresp="GautAA_3.2.17">etad eva śāntyudakaṃ sarveṣūpapātakeṣusarveṣūpapātakeṣu |</p>
+<note>VAR_St: upapātakeṣu upapātakeṣu</note>
+
+
+
+<note>GautAA 3,3 = GautSt XXI</note>
+
+<p xml:id="GautSt_21.1" corresp="GautAA_3.3.1">brahmahasurāpagurutalpagamātṛpitṛyonisaṃbandhāgastenanāstikaninditakarmābhyāsipatitātyāgyapatitatyāginaḥ patitāḥ |</p>
+<note>VAR_St: brahmahāsurāpa--saṃbandhaga-</note>
+
+<p xml:id="GautSt_21.2" corresp="GautAA_3.3.2">pātakasaṃyojakāś ca |</p>
+
+<p xml:id="GautSt_21.3" corresp="GautAA_3.3.3">taiś cābdaṃ samācaran |</p>
+
+<p xml:id="GautSt_21.4" corresp="GautAA_3.3.4">dvijātikarmabhyo hāniḥ patanam |</p>
+
+<p xml:id="GautSt_21.5" corresp="GautAA_3.3.5">tathā paratra cāsiddhiḥ |</p>
+<note>VAR_St: omitt: tathā</note>
+
+<p xml:id="GautSt_21.6" corresp="GautAA_3.3.6">tam eke narakam |</p>
+
+<p xml:id="GautSt_21.7" corresp="GautAA_3.3.7">trīṇi prathamāny anirdeśyāny anu |</p>
+<note>VAR_St: anirdeśyāni manuḥ</note>
+
+<p xml:id="GautSt_21.8" corresp="GautAA_3.3.8">na strīṣv agurutalpaṃ patatīty eke |</p>
+<note>VAR_St: agurutalpaḥ</note>
+
+<p xml:id="GautSt_21.9" corresp="GautAA_3.3.9">bhrūṇahani hīnavarṇasevāyāṃ ca strīpatati |</p>
+<note>VAR_St: hīnaśevāyāṃ</note>
+
+<p xml:id="GautSt_21.10" corresp="GautAA_3.3.10">kauṭasākṣyaṃ rājagāmi paiśunam guroranṛtābhiśaṃsanaṃ mahāpātakasamāni |</p>
+<note>VAR_St: -śaṃsanaṃ pātakasamāni</note>
+
+<p xml:id="GautSt_21.11" corresp="GautAA_3.3.11">apaṅktyānāṃ prāgdurbālādgohantṛbrahmaghnatanmātrakṛdavakīrṇipatitasāvitrīkeṣūpapātakam |</p>
+<note>VAR_St: apāṅkty-;-brahmojbhaktanmantra-</note>
+
+<p xml:id="GautSt_21.12" corresp="GautAA_3.3.12">ajñānād andhyāpanād ṛtvigācāryaupatanīyasevāyāṃ ca heyau |</p>
+<note>VAR_St: ajñānādhyāpanād</note>
+
+<p xml:id="GautSt_21.13" corresp="GautAA_3.3.13">anyatra hānāt patati |</p>
+
+<p xml:id="GautSt_21.14" corresp="GautAA_3.3.14">tasya ca pratigrahītety eke |</p>
+
+<p xml:id="GautSt_21.15" corresp="GautAA_3.3.15">na karhicin mātāpitror(mātṛpitṛ) avṛttiḥ |</p>
+
+<p xml:id="GautSt_21.16" corresp="GautAA_3.3.16">dāyaṃ tu na bhajeran |</p>
+
+<p xml:id="GautSt_21.17" corresp="GautAA_3.3.17">brāhmanābhiśaṃsane doṣas tāvān |</p>
+
+<p xml:id="GautSt_21.18" corresp="GautAA_3.3.18">dvir anenasi |</p>
+
+<p xml:id="GautSt_21.19" corresp="GautAA_3.3.19">durbalahiṃsāyāṃ ca vimocane śaktaś cet |</p>
+<note>VAR_St: cāvimocane</note>
+
+<p xml:id="GautSt_21.20" corresp="GautAA_3.3.20">abhikruddhāvagoraṇaṃ brāhmaṇasya varṣaśatamasvargyam |</p>
+<note>VAR_St: -avagoraṇe</note>
+
+<p xml:id="GautSt_21.21" corresp="GautAA_3.3.21">nighāte sahasram |</p>
+
+<p xml:id="GautSt_21.22" corresp="GautAA_3.3.22">lohitadarśane yāvatas tatpraskandya pāṃsūnsaṃgṛhṇīyāt |</p>
+<note>VAR_St: saṃgṛhṇīyāt</note>
+
+
+
+<note>GautAA 3,4 = GautSt XXII</note>
+
+<p xml:id="GautSt_22.1" corresp="GautAA_3.4.1">prāyaścittam |</p>
+
+<p xml:id="GautSt_22.2" corresp="GautAA_3.4.2">agnau saktir brahmaghnas trir avacchātasya |</p>
+
+<p xml:id="GautSt_22.3" corresp="GautAA_3.4.3">lakṣyaṃ vā syāt janye śastrabhṛtām |</p>
+
+<p xml:id="GautSt_22.4" corresp="GautAA_3.4.4">khaṭvāṅgakapālapāṇir vā dvādaśa saṃvatsarānbrahmacārī bhaikṣāya grāmaṃ praviśet karmācakṣāṇaḥ |</p>
+
+<p xml:id="GautSt_22.5" corresp="GautAA_3.4.5">patho 'pakrāmet saṃdarśanād āryasya |</p>
+
+<p xml:id="GautSt_22.6" corresp="GautAA_3.4.6">sthānāsanābhyāṃ viharan savaneṣūdakopasparśīśudhyet |</p>
+
+<p xml:id="GautSt_22.7" corresp="GautAA_3.4.7">prāṇalābhe vā tannimitte brāhmaṇasya |</p>
+
+<p xml:id="GautSt_22.8" corresp="GautAA_3.4.8">dravyāpacaye tryavaraṃ pratirāddhaḥ |</p>
+<note>VAR_St: -caye vā</note>
+
+<p xml:id="GautSt_22.9" corresp="GautAA_3.4.9">aśvamedhāvabhṛthe vā |</p>
+
+<p xml:id="GautSt_22.10" corresp="GautAA_3.4.10">anyayajñe 'py agniṣṭudantaś cet |</p>
+
+<p xml:id="GautSt_22.11" corresp="GautAA_3.4.11">sṛṣṭaś ced brāhmaṇavadhe 'hatvāpi |</p>
+
+<p xml:id="GautSt_22.12" corresp="GautAA_3.4.12">ātreyyāś caivam |</p>
+<note>VAR_St: ātreyīṃ</note>
+
+<p xml:id="GautSt_22.13" corresp="GautAA_3.4.13">garbhe cāvijñāte |</p>
+<note>VAR_St: brāhmaṇasya</note>
+
+<p xml:id="GautSt_22.14" corresp="GautAA_3.4.14">rājanyavadhe ṣaḍvārṣikaṃ prākṛtaṃ brahmacaryamṛṣabhaikasahasrāś ca gā dadyāt |</p>
+
+<p xml:id="GautSt_22.15" corresp="GautAA_3.4.15">vaiśye tu traivārṣikam ṛṣabhaikaśatāś ca gādadyād |</p>
+<note>VAR_St: omitt: tu</note>
+
+<p xml:id="GautSt_22.16" corresp="GautAA_3.4.16">śūdre saṃvatsaram ṛṣabhaikādaśāś ca gā dadyāt |</p>
+
+<p xml:id="GautSt_22.17" corresp="GautAA_3.4.17">anātreyyāṃ caivam |</p>
+
+<p xml:id="GautSt_22.18" corresp="GautAA_3.4.18">gāṃ ca vaiśyavat |</p>
+
+<p xml:id="GautSt_22.19" corresp="GautAA_3.4.19">maṇḍūkanakulakākabimbadaharamūṣakaśvahiṃsāsuca |</p>
+<note>VAR_St: -mūṣika-</note>
+
+<p xml:id="GautSt_22.20" corresp="GautAA_3.4.20">asthanvatām sahasraṃ hatvā |</p>
+
+<p xml:id="GautSt_22.21" corresp="GautAA_3.4.21">anasthimatām anaḍudbhāre(anaḍuh) ca |</p>
+
+<p xml:id="GautSt_22.22" corresp="GautAA_3.4.22">api vāsthanvatām ekaikasmin kiṃcid dadyāt |</p>
+
+<p xml:id="GautSt_22.23" corresp="GautAA_3.4.23">ṣaṇḍhe palālabhāraḥ sīsamāṣaś ca |</p>
+
+<p xml:id="GautSt_22.24" corresp="GautAA_3.4.24">varāhe ghṛtadhaṭaḥ |</p>
+<note>VAR_St: ghṛtaghaṭaḥ</note>
+
+<p xml:id="GautSt_22.25" corresp="GautAA_3.4.25">sarpe lohadaṇḍaḥ |</p>
+
+<p xml:id="GautSt_22.26" corresp="GautAA_3.4.26">brahmabandhvāṃ calanāyāṃ nīlaḥ |</p>
+<note>VAR_St: jīlaḥ</note>
+
+<p xml:id="GautSt_22.27" corresp="GautAA_3.4.27">vaiśikena kiṃcit |</p>
+
+<p xml:id="GautSt_22.28" corresp="GautAA_3.4.28">talpānnadhanalābhavadheṣu pṛthagvarṣāṇi |</p>
+
+<p xml:id="GautSt_22.29" corresp="GautAA_3.4.29">dve paradāre |</p>
+
+<p xml:id="GautSt_22.30" corresp="GautAA_3.4.30">trīṇi śrotriyasya |</p>
+
+<p xml:id="GautSt_22.31" corresp="GautAA_3.4.31">dravyalābhe cotsargaḥ |</p>
+
+<p xml:id="GautSt_22.32" corresp="GautAA_3.4.32">yathāsthānaṃ vā gamayet |</p>
+
+<p xml:id="GautSt_22.33" corresp="GautAA_3.4.33">pratiṣiddhamantrayoge sahasravākaś cet |</p>
+
+<p xml:id="GautSt_22.34" corresp="GautAA_3.4.34">agnyutsādinirākṛtyupapātakeṣu caivam |</p>
+
+<p xml:id="GautSt_22.35" corresp="GautAA_3.4.35">strī yāticāriṇī guptā piṇḍaṃ tu labheta |</p>
+<note>VAR_St: strīcāticāriṇī</note>
+
+<p xml:id="GautSt_22.36" corresp="GautAA_3.4.36">amānuṣīṣu govarjaṃ strīkṛte kūṣmāṇḍair ghṛtahomoghṛtahomaḥ |</p>
+
+
+
+<note>GautAA 3,5 = GautSt XXIII</note>
+
+<p xml:id="GautSt_23.1" corresp="GautAA_3.5.1">surāpasya brāhmaṇasyoṣṇām āsiñceyuḥ surām āsyemṛtaḥ śudhyet |</p>
+
+<p xml:id="GautSt_23.2" corresp="GautAA_3.5.2">amatyā pāne payo ghṛtam udakaṃ vāyuṃ pratitryahaṃtaptāni sa kṛcchras tato 'sya saṃskāraḥ |</p>
+
+<p xml:id="GautSt_23.3" corresp="GautAA_3.5.3">mūtrapurīṣaretasāṃ ca prāśane |</p>
+
+<p xml:id="GautSt_23.5" corresp="GautAA_3.5.4">śvāpadoṣṭrakharāṇāṃ cāṅgasya |</p>
+
+<p xml:id="GautSt_23.5" corresp="GautAA_3.5.5">grāmyakukkuṭasūkarayoś ca |</p>
+
+<p xml:id="GautSt_23.6" corresp="GautAA_3.5.6">gandhāghrāṇe surāpasya prāṇāyāmā ghṛtaprāśanaṃ ca |</p>
+
+<p xml:id="GautSt_23.7" corresp="GautAA_3.5.7">pūrvaiś ca daṣṭasya |</p>
+
+<p xml:id="GautSt_23.8" corresp="GautAA_3.5.8">tapte lohaśayane gurutalpagaḥ śayīta |</p>
+
+<p xml:id="GautSt_23.9" corresp="GautAA_3.5.9">sūrmīṃ vā śliṣyejjvalantīm |</p>
+<note>VAR_St: vāśliṣyet</note>
+
+<p xml:id="GautSt_23.10" corresp="GautAA_3.5.10">liṅgaṃ vā savṛṣaṇam utkṛtya añjalāv ādhāyadakṣiṇāpratīcīṃ vrajed ajihmam ā śarīranipātāt |</p>
+<note>VAR_St: vā utpāṭya</note>
+
+<p xml:id="GautSt_23.11" corresp="GautAA_3.5.11">mṛtaḥ śudhyet |</p>
+
+<p xml:id="GautSt_23.12" corresp="GautAA_3.5.12">sakhīsayonisagotrāśiṣyabhāryāsu sunuṣāyāṃ gavi cagurutalpasamaḥ |</p>
+<note>VAR_St: sakhi- ... gavi ca talpasamaḥ</note>
+<p xml:id="GautSt_23.13" corresp="GautAA_3.5.13">avakara ity eke |</p>
+
+<p xml:id="GautSt_23.14" corresp="GautAA_3.5.14">śvabhir ādayed rājā nihīnavarṇagamane striyaṃprakāśam |</p>
+<note>VAR_St: śvabhiḥ khādayed</note>
+
+<p xml:id="GautSt_23.15" corresp="GautAA_3.5.15">pumāṃsaṃ ghātayet(han) |</p>
+<note>VAR_St: khādayet</note>
+
+<p xml:id="GautSt_23.16" corresp="GautAA_3.5.16">yathoktaṃ vā |</p>
+
+<p xml:id="GautSt_23.17" corresp="GautAA_3.5.17">gardabhenāvakīrṇī nirṛtiṃ catuṣpathe yajet |</p>
+<note>VAR_St: yajeta</note>
+
+<p xml:id="GautSt_23.18" corresp="GautAA_3.5.18">tasyājinam ūrdhvabālaṃ paridhāya lohitapatraḥ saptagṛhān bhakṣaṃ caretkarmācakṣāṇaḥ |</p>
+<note>VAR_St: ūrdhvavālaṃ....lohitapātraḥ..bhaikṣaṃ</note>
+
+<p xml:id="GautSt_23.19" corresp="GautAA_3.5.19">saṃvatsareṇa śudhyet |</p>
+
+<p xml:id="GautSt_23.20" corresp="GautAA_3.5.20">retaḥskandane bhaye roge svapne 'gnīndhanabhaikṣacaraṇāni saptarātram akṛtvājyahomaḥ samidho vāretasyābhyām |</p>
+<note>VAR_St: samidhor</note>
+
+<p xml:id="GautSt_23.21" corresp="GautAA_3.5.21">sūryābhyudito brahmacārī tiṣṭhed(sthā) aharabhuñjāno 'bhyastamitaś ca rātriṃ japan sāvitrīm |</p>
+
+<p xml:id="GautSt_23.22" corresp="GautAA_3.5.22">aśuciṃ dṛṣṭvā ādityam īkṣeta prāṇāyāmaṃ kṛtvā |</p>
+
+<p xml:id="GautSt_23.23" corresp="GautAA_3.5.23">abhojyabhojane 'medhyaprāśane vā niṣpurīṣībhāvaḥ |</p>
+
+<p xml:id="GautSt_23.24" corresp="GautAA_3.5.24">trirātrāvaram abhojanam |</p>
+
+<p xml:id="GautSt_23.25" corresp="GautAA_3.5.25">saptarātraṃ vā svayaṃśīrṇāny upabhuñjānaḥphalāny anatikrāman |</p>
+<note>VAR_St: upayuñjānaḥ</note>
+
+<p xml:id="GautSt_23.26" corresp="GautAA_3.5.26">prākpañcanakhebhyaś chardanaṃ ghṛtaprāśanaṃ ca |</p>
+
+<p xml:id="GautSt_23.27" corresp="GautAA_3.5.27">ākrośānṛtahiṃsāsu trirātraṃ paramaṃ tapaḥ |</p>
+
+<p xml:id="GautSt_23.28" corresp="GautAA_3.5.28">satyavākye vāruṇīmānavībhir homaḥ |</p>
+<note>VAR_St: vāruṇībhirmāna-</note>
+
+<p xml:id="GautSt_23.29" corresp="GautAA_3.5.29">vivāhamaithunanarmārtasaṃyogeṣv adoṣam eke 'nṛtam |</p>
+
+<p xml:id="GautSt_23.30" corresp="GautAA_3.5.30">na tu khalu gurvartheṣu |</p>
+
+<p xml:id="GautSt_23.31" corresp="GautAA_3.5.31">sapta puruṣānitaś ca parataś ca hanti manasāpiguror(guru) anṛtaṃ vadann alpeṣv apy artheṣu |</p>
+<note>VAR_St: yasmāt sapta</note>
+
+<p xml:id="GautSt_23.32" corresp="GautAA_3.5.32">antyāvasāyinīgamane kṛcchrābdaḥ |</p>
+<note>VAR_St: antāvasāyinī-</note>
+
+<p xml:id="GautSt_23.33" corresp="GautAA_3.5.33">amatyā dvādaśarātraḥ |</p>
+
+<p xml:id="GautSt_23.34" corresp="GautAA_3.5.34">udakyāgamane trirātras |</p>
+<note>VAR_St: trirātraḥ</note>
+
+
+
+<note>GautAA 3,6 = GautSt XXIV</note>
+
+<p xml:id="GautSt_24.1" corresp="GautAA_3.6.1">rahasyaṃ prāyaścittam avikhyātadoṣasya |</p>
+
+<p xml:id="GautSt_24.2" corresp="GautAA_3.6.2">caturṛcaṃ taratsamandīty apsu japed apratigrāhyaṃpratijighṛkṣan pratigṛhya vā |</p>
+
+<p xml:id="GautSt_24.3" corresp="GautAA_3.6.3">abhojyaṃ bubhukṣamāṇaḥ pṛthivīm āvapet |</p>
+
+<p xml:id="GautSt_24.4" corresp="GautAA_3.6.4">ṛtvantarāramaṇa udakopasparśanāc chuddhim eke |</p>
+
+<p xml:id="GautSt_24.5" corresp="GautAA_3.6.5">strīṣu |</p>
+<note>VAR_St: eke strī-</note>
+
+<p xml:id="GautSt_24.6" corresp="GautAA_3.6.6">payovrato vā daśarātraṃ ghṛtena dvitīyam adbhistṛtīyaṃ divādiṣv ekabhaktiko jalaklinnavāsā lomāni nakhāni tvacammāṃsaṃ śoṇitaṃ snāyvasthi majjānam iti homā ātmano mukhe mṛtyor āsyejuhomīty antataḥ sarveṣāṃ prāyaścittaṃ bhrūṇahatyāyāḥ |</p>
+<note>VAR_St: iti homātmamukhe ...ity antaḥ</note>
+
+ <p xml:id="GautSt_24.7" corresp="-">athānyat |</p>
+
+<p xml:id="GautSt_24.8" corresp="GautAA_3.6.7">ukto niyamaḥ |</p>
+
+<p xml:id="GautSt_24.9" corresp="GautAA_3.6.8">agne tvaṃ pārayeti (RV 1,189.2) mahāvyāhṛtibhirjuhuyāt kūṣmāṇḍaiś cājyam |</p>
+
+<p xml:id="GautSt_24.10" corresp="GautAA_3.6.9">tadvrata eva vā brahmahatyāsurāpānasteyagurutalpeṣuprāṇāyāmais tānto 'ghamarṣaṇaṃ japan samam aśvamedhāvabhṛthenedaṃca prāyaścittam |</p>
+<note>VAR_St: japet; omitt: idaṃ ca prāyaścittam</note>
+
+<p xml:id="GautSt_24.11" corresp="GautAA_3.6.10">sāvitrīṃ vā sahasrakṛtva āvartayan punītehaivātmānam |</p>
+
+<p xml:id="GautSt_24.12" corresp="GautAA_3.6.11">antarjale vāghamarṣaṇaṃ trir āvartayansarvapāpebhyo vimucyate |</p>
+<note>VAR_St: mucyate mucyate</note>
+
+
+
+<note>GautAA 3,7 = GautSt XXV</note>
+
+<p xml:id="GautSt_25.1" corresp="GautAA_3.7.1">tad āhuḥ katidhāvakīrṇī praviśatīti |</p>
+
+<p xml:id="GautSt_25.2" corresp="GautAA_3.7.2">marutaḥ prāṇenendre balena bṛhaspatiṃbrahmavarcasenāgnim evetareṇa sarveṇeti |</p>
+<note>VAR_St: prāṇair indraṃ</note>
+
+<p xml:id="GautSt_25.3" corresp="GautAA_3.7.3">so 'māvāsyāyāṃ niśy agnim upasamādhāyaprāyaścittājyāhutīr juhoti |</p>
+<note>VAR_St: -āhutī juhoti</note>
+
+<p xml:id="GautSt_25.4" corresp="GautAA_3.7.4">kāmāvakīrṇo 'smy avakīrṇo 'smi kāmakāmāyasvāhā | kāmābhidugdho 'smi abhidugdho 'smi kāmakāmāya svāhetisamidham ādhāya anuparyukṣya yajñavāstu kṛtvopotthāyasamāsiñcatu ity etayā trir upatiṣṭheta |</p>
+<note>VAR_St: saṃ mā siñcantu ... upatiṣṭhet</note>
+
+<p xml:id="GautSt_25.5" corresp="GautAA_3.7.5">traya ime lokā eṣāṃ lokānām abhijityā abhikrāntyāiti |</p>
+<note>VAR_St: abhijityā eṣāṃ lokānām</note>
+
+<p xml:id="GautSt_25.6" corresp="GautAA_3.7.6">etad evaikeṣām karmādhikṛtya yo 'prayata iva syāt saitthaṃ juhuyād ittham anumantrayeta varo dakṣiṇeti prāyaścittamaviśeṣāt |</p>
+<note>VAR_St: yo 'pūta;ittham abhimantrayeta</note>
+
+<p xml:id="GautSt_25.7" corresp="GautAA_3.7.7">anārjavapaiśunapratiṣiddhācārānādyaprāśaneṣu śūdrāyāṃ ca retaḥ siktvā(sic) ayonau(yoni) ca doṣavati ca karmaṇy apisaṃdhipūrve 'bliṅgābhir apa upaspṛśed vāruṇībhir anyair vāpavitraiḥ |</p>
+<note>VAR_St: doṣavati karmaṇy abhisandhipūrve 'pi</note>
+
+<p xml:id="GautSt_25.8" corresp="GautAA_3.7.8">pratiṣiddhavāṅmanasāpacāre vyāhṛtayaḥ pañcasatyāntāḥ |</p>
+<note>VAR_St: omitt: satyāntāḥ</note>
+
+<p xml:id="GautSt_25.9" corresp="GautAA_3.7.9">sarvāsv apo vācāmed ahaś ca mādityāś ca punātuiti prātā rātriś ca mā varuṇaś ca punātv iti sāyam |</p>
+
+<p xml:id="GautSt_25.10" corresp="GautAA_3.7.10">aṣṭo vā samidha ādadhyād devakṛtasyeti hutvāeva sarvasmād enaso mucyate |</p>
+<note>VAR_St: mucyate</note>
+<note>VAR_St: aṣṭau</note>
+
+
+
+<note>GautAA 3,8 = GautSt XXVI</note>
+
+<p xml:id="GautSt_26.1" corresp="GautAA_3.8.1">athātaḥ kṛcchrān vyākhyāsyāmaḥ |</p>
+<note>VAR_St: athātas trīnkṛcchrān</note>
+
+<p xml:id="GautSt_26.2" corresp="GautAA_3.8.2">haviṣyān prātar āśān bhuktvā tisro rātrīrnāśnīyāt |</p>
+
+<p xml:id="GautSt_26.3" corresp="GautAA_3.8.3">athāparaṃ try ahaṃ naktaṃ bhuñjīta |</p>
+
+<p xml:id="GautSt_26.4" corresp="GautAA_3.8.4">athāparaṃ try ahaṃ na kaṃcana yāceta |</p>
+
+<p xml:id="GautSt_26.5" corresp="GautAA_3.8.5">athāparaṃ try aham upavaset |</p>
+
+<p xml:id="GautSt_26.6" corresp="GautAA_3.8.6">tiṣṭhed(sthā) ahani rātrāv āsīta kṣiprakāmaḥ |</p>
+
+<p xml:id="GautSt_26.7" corresp="GautAA_3.8.7">satyaṃ vadet |</p>
+
+<p xml:id="GautSt_26.8" corresp="GautAA_3.8.8">anāryair na saṃbhāṣeta |</p>
+
+<p xml:id="GautSt_26.9" corresp="GautAA_3.8.9">rauravayaudhājape nityaṃ prayuñjīta(prayuj) |</p>
+<note>VAR_St: -dhājaye</note>
+
+<p xml:id="GautSt_26.10" corresp="GautAA_3.8.10">anusavanam udakopasparśanam āpo hi ṣṭhetitisṛbhiḥ pavitravatībhir mārjayīta(mṛj) hiraṇyavarṇāḥ śucayaḥ(śuci)pāvakā ity aṣṭābhiḥ |</p>
+<note>VAR_St: hiraṇyavarṇā ity aṣṭābhiḥ</note>
+
+<p xml:id="GautSt_26.11" corresp="GautAA_3.8.11">athodakatarpaṇam |</p>
+
+<p xml:id="GautSt_26.12" corresp="GautAA_3.8.12">namo 'hamāya mohamāya maṃhamāya dhanvate tāpasāyapunarvasave namaḥ | namo mauñjyāyorvyāya vasuvindāya sārvavindāyanamaḥ | namaḥ pārāya supārāya mahāpārāya vārayiṣṇave namaḥ | namorudrāya paśupataye mahate devāya tryambakāyaikacarāyādhipatayeharāya(hari) śarvāyeśānāyogrāya vajriṇe ghṛṇine kapardine namaḥ | namaḥ sūryāyādityāya namaḥ | namo nīlagrīvāya śitikaṇṭhāya namaḥ | namaḥ kṛṣṇāya piṅgalāya namaḥ | namo jyeṣṭhāya vṛddhāyendrāyaharikeśāyordhvaretase namaḥ | namaḥ satyāya pāvakāya pāvakavarṇāyakāmāya kāmarūpiṇe namaḥ | namo dīptāya dīptarūpiṇe namaḥ | namastīkṣṇāya tīkṣṇarūpiṇe namaḥ | namaḥ sobhyāya supuruṣāyamahāpuruṣāya madhyamapuruṣāyottamapuruṣāya brahmacāriṇe namaḥ | namaścandralalāṭāya kṛttivāsase namaḥ |</p>
+<note>VAR_St: namohamāya;dhūnvate;urmyāya;sarvavindāya;pārayiṣṇave;haraye;jyeṣṭhāyaśreṣṭhāya vṛddhāya;-vāsase nama iti</note>
+
+<p xml:id="GautSt_26.13" corresp="GautAA_3.8.13">etad evādityopasthānam |</p>
+
+<p xml:id="GautSt_26.14" corresp="GautAA_3.8.14">etā evājyāhutayaḥ |</p>
+
+<p xml:id="GautSt_26.15" corresp="GautAA_3.8.15">dvādaśarātrasyānte caruṃ śrapayitvā(śrā) etābhyodevatābhyo juhuyāt |</p>
+
+<p xml:id="GautSt_26.16" corresp="GautAA_3.8.16">agnaye(agni) svāhā somāya svāhāgniṣomābhyāmindrāgnibhyām indrāya viśvebhyo devebhyo brahmaṇe prajāpataye 'gnayesviṣṭakṛta iti |</p>
+
+<p xml:id="GautSt_26.17" corresp="GautAA_3.8.17">tato brāhmaṇatarpaṇam |</p>
+
+<p xml:id="GautSt_26.18" corresp="GautAA_3.8.18">etenaivātikṛcchro vyākhyātaḥ |</p>
+
+<p xml:id="GautSt_26.19" corresp="GautAA_3.8.19">yāvat sakṛd ādadīta(ādā) tāvad aśnīyāt |</p>
+
+<p xml:id="GautSt_26.20" corresp="GautAA_3.8.20">abbhakṣas tṛtīyaḥ sa kṛcchrātikṛcchraḥ |</p>
+
+<p xml:id="GautSt_26.21" corresp="GautAA_3.8.21">prathamaṃ caritvā śuciḥ pūtaḥ karmaṇyo bhavati |</p>
+
+<p xml:id="GautSt_26.22" corresp="GautAA_3.8.22">dvitīyaṃ caritvā yatkiṃcid anyan mahāpātakebhyaḥpāpaṃ kurute tasmāt pramucyate |</p>
+
+<p xml:id="GautSt_26.23" corresp="GautAA_3.8.23">tṛtīyaṃ caritvā sarvasmād enaso mucyate |</p>
+<note>VAR_St: sarvameno vyapohati</note>
+
+<p xml:id="GautSt_26.24" corresp="GautAA_3.8.24">athaitāṃs trīn kṛcchrāṃś caritvā sarveṣu vedeṣusnāto bhavati sarvair devair jñāto bhavati |</p>
+
+<p xml:id="GautSt_26.25" corresp="GautAA_3.8.25">yaś caivaṃ veda |</p>
+<note>VAR_St: yaś caivaṃ veda</note>
+
+
+
+<note>GautAA 3,9 = GautSt XXVII</note>
+
+<p xml:id="GautSt_27.1" corresp="GautAA_3.9.1">athātaś cāndrāyaṇam |</p>
+
+<p xml:id="GautSt_27.2" corresp="GautAA_3.9.2">tasyokto vidhiḥ kṛcchre |</p>
+
+<p xml:id="GautSt_27.3" corresp="GautAA_3.9.3">vapanaṃ vrataṃ caret |</p>
+<note>VAR_St: vrataṃ cet</note>
+
+<p xml:id="GautSt_27.4" corresp="GautAA_3.9.4">śvobhūtāṃ paurṇamāsīm upavaset |</p>
+
+<p xml:id="GautSt_27.5" corresp="GautAA_3.9.5">āpyāyasva (RV 1,91.17) saṃ te payāṃsi (RV 1,91.18) navonava (RV 10,85.19) iti caitābhis tarpaṇam ājyahomo haviṣaś cānumantraṇamupasthānaṃ candramasaḥ |</p>
+
+<p xml:id="GautSt_27.6" corresp="GautAA_3.9.6">yad devā devaheḍanam iti catasṛbhirjuhuyāt |</p>
+<note>VAR_St: catasṛbhir ājyaṃ</note>
+
+<p xml:id="GautSt_27.7" corresp="GautAA_3.9.7">devakṛtasyeti cānte samidbhiḥ |</p>
+
+<p xml:id="GautSt_27.8" corresp="GautAA_3.9.8">oṃ bhūr bhuvaḥ svas tapaḥ satyaṃ yaśaḥ śrīr ūrgiḍaujas tejo varcaḥ puruṣo dharmaḥ śiva ity etair grāsānumantraṇaṃpratimantraṃ manasā |</p>
+<note>VAR_St: tejaḥ puruṣo</note>
+
+<p xml:id="GautSt_27.9" corresp="GautAA_3.9.9">namaḥ svāheti vā sarvān |</p>
+
+<p xml:id="GautSt_27.10" corresp="GautAA_3.9.10">grāsapramāṇam āsyāvikāreṇa |</p>
+
+<p xml:id="GautSt_27.11" corresp="GautAA_3.9.11">carubhaikṣasaktukaṇayāvakaśākapayodadhighṛtamūlaphalodakānihavīṃsyuttarottaraṃ praśastāni |</p>
+
+<p xml:id="GautSt_27.12" corresp="GautAA_3.9.12">paurṇamāsyāṃ pañcadaśa grāsān bhuktvāekāpacayenāparapakṣam aśnīyāt |</p>
+
+<p xml:id="GautSt_27.13" corresp="GautAA_3.9.13">amāvāsyāyām upoṣyaikopacayenapūrvapakṣam |</p>
+<note>VAR_St: ekoccayena</note>
+
+<p xml:id="GautSt_27.14" corresp="GautAA_3.9.14">viparītam ekeṣām |</p>
+
+<p xml:id="GautSt_27.15" corresp="GautAA_3.9.15">evaṃ cāndrāyaṇo māsaḥ |</p>
+<note>VAR_St: eṣa</note>
+
+<p xml:id="GautSt_27.16" corresp="GautAA_3.9.16">evam āptvā vipāpo vipāpmā sarvam eno(enas)hanti |</p>
+<note>VAR_St: etam</note>
+
+<p xml:id="GautSt_27.17" corresp="GautAA_3.9.17">dvitīyam āptvā daśa pūrvān daśa parān ātmānaṃcaikaviṃśaṃ paṅktiṃ ca punāti |</p>
+<note>VAR_St: daśāparān</note>
+
+<p xml:id="GautSt_27.18" corresp="GautAA_3.9.18">saṃvatsaraṃ cāptvā candramasaḥ salokatām āpnotisalokatām āpnoti |</p>
+<note>VAR_St: āpnoty āpnoti</note>
+
+
+
+<note>GautAA 3,10 = GautSt XXVIII</note>
+
+<p xml:id="GautSt_28.1" corresp="GautAA_3.10.1">ūrdhavaṃ pituḥ(pitṛ) putrā rikthaṃ bhajeran |</p>
+
+<p xml:id="GautSt_28.2" corresp="GautAA_3.10.2">nivṛtte rajasi mātur(mātṛ) jīvaticecchati |</p>
+<note>VAR_St: vecchati</note>
+
+<p xml:id="GautSt_28.3" corresp="GautAA_3.10.3">sarvaṃ vā pūrvajasyetarān bibhṛyāt pitṛvat |</p>
+
+<p xml:id="GautSt_28.4" corresp="GautAA_3.10.4">vibhāge tu dharmavṛddhiḥ |</p>
+
+<p xml:id="GautSt_28.5" corresp="GautAA_3.10.5">viṃśatibhāgo jyeṣṭhasya mithunam ubhayatodadyukto rathogovṛṣaḥ |</p>
+
+<p xml:id="GautSt_28.6" corresp="GautAA_3.10.6">kāṇakhorakūṭavaṇetā madhyamasyānekāścet |</p>
+<note>VAR_St: -kūṭavaṇṭā;anekaś cet</note>
+
+<p xml:id="GautSt_28.7" corresp="GautAA_3.10.7">avir dhānyāyasī gṛhamano yuktaṃ catuṣpādaṃcaikaikaṃ yavīyasaḥ |</p>
+<note>VAR_St: catuṣpadāṃ</note>
+
+<p xml:id="GautSt_28.8" corresp="GautAA_3.10.8">samadhā cetaratsarvam |</p>
+<note>VAR_St: samadhetarat-</note>
+
+ <p xml:id="GautSt_28.9" corresp="-">dvyaṃśī vā pūrvajasya |</p>
+
+ <p xml:id="GautSt_28.10" corresp="-">ekaikam itareṣām |</p>
+
+<p xml:id="GautSt_28.11" corresp="GautAA_3.10.9">ekaikaṃ vā dhanarūpaṃ kāmyaṃ pūrvaḥ pūrvolabhate |</p>
+<note>VAR_St: labheta</note>
+
+<p xml:id="GautSt_28.12" corresp="GautAA_3.10.10">daśakaṃ paśūnām |</p>
+<note>VAR_St: daśataṃ</note>
+
+<p xml:id="GautSt_28.13" corresp="GautAA_3.10.11">naikaśaphadvipadām |</p>
+
+<p xml:id="GautSt_28.14" corresp="GautAA_3.10.12">ṛṣabho 'dhiko jyeṣṭhasya |</p>
+
+<p xml:id="GautSt_28.15" corresp="GautAA_3.10.13">ṛṣabhaṣoḍaśā jyaiṣṭhineyasya |</p>
+
+<p xml:id="GautSt_28.16" corresp="GautAA_3.10.14">samadhā vājyaiṣṭhineyena yavīyasām |</p>
+
+<p xml:id="GautSt_28.17" corresp="GautAA_3.10.15">pratimātṛ vā svasvavarge bhāgaviśeṣaḥ |</p>
+<note>VAR_St: svavarge</note>
+
+<p xml:id="GautSt_28.18" corresp="GautAA_3.10.16">pitotsṛjet putrikāṃ anapatyo 'gniṃprajāpatiṃ ceṣṭvāsmadartham apatyam iti saṃvādya |</p>
+<note>VAR_St: pitrut-</note>
+
+<p xml:id="GautSt_28.19" corresp="GautAA_3.10.17">abhisaṃdhimātrāt putrikety ekeṣām |</p>
+
+<p xml:id="GautSt_28.20" corresp="GautAA_3.10.18">tatsaṃśayān nopayacched abhrātṛkām |</p>
+
+<p xml:id="GautSt_28.21" corresp="GautAA_3.10.19">piṇḍagotrarṣisaṃbandhā rikthaṃ bhajeran strīvānapatyasya |</p>
+<note>VAR_St: cānapatyasya</note>
+
+<p xml:id="GautSt_28.22" corresp="GautAA_3.10.20">bījaṃ vā lipseta |</p>
+
+<p xml:id="GautSt_28.23" corresp="GautAA_3.10.21">devaravatyām anyajātam abhāgam |</p>
+
+<p xml:id="GautSt_28.24" corresp="GautAA_3.10.22">strīdhanaṃ duhitṛṛṇām aprattānām apratiṣṭhitāṇāṃ ca |</p>
+
+<p xml:id="GautSt_28.25" corresp="GautAA_3.10.23">bhaginīśulkaḥ sodaryāṇām ūrdhvaṃ mātuḥ(mātṛ) |</p>
+
+<p xml:id="GautSt_28.26" corresp="GautAA_3.10.24">pūrvaṃ caike |</p>
+
+<p xml:id="GautSt_28.27" corresp="GautAA_3.10.25">asaṃsṛṣṭivibhāgaḥ pretānāṃ jyeṣṭhasya |</p>
+
+<p xml:id="GautSt_28.28" corresp="GautAA_3.10.26">saṃsṛṣṭini prete saṃsṛṣṭī rikthabhāk |</p>
+
+<p xml:id="GautSt_28.29" corresp="GautAA_3.10.27">vibhaktajaḥ pitryam eva |</p>
+
+<p xml:id="GautSt_28.30" corresp="GautAA_3.10.28">svayam arjitam avaidyebhyo vaidyaḥ kāmaṃ na dadyāt |</p>
+
+<p xml:id="GautSt_28.31" corresp="GautAA_3.10.29">avaidyāḥ samaṃ vibhajeran |</p>
+
+<p xml:id="GautSt_28.32" corresp="GautAA_3.10.30">putrāaurasakṣetrajadattakṛtrimagūḍhotpannāpaviddhā rikthabhājaḥ |</p>
+
+<p xml:id="GautSt_28.33" corresp="GautAA_3.10.31">kānīnasahoḍhapaunarbhavaputrikāputrasvayaṃdattakrītā gotrabhājaḥ |</p>
+
+<p xml:id="GautSt_28.34" corresp="GautAA_3.10.32">caturthāṃśina aurasādyabhāve |</p>
+
+<p xml:id="GautSt_28.35" corresp="GautAA_3.10.33">brāhmaṇasya rājanyāputro jyeṣṭho guṇasaṃpannastulyabhāk |</p>
+
+<p xml:id="GautSt_28.36" corresp="GautAA_3.10.34">jyeṣṭhāṃśahīnam anyat |</p>
+
+<p xml:id="GautSt_28.37" corresp="GautAA_3.10.35">rājanyāvaiśyāputrasamavāye yathā sabrāhmaṇīputreṇa |</p>
+
+<p xml:id="GautSt_28.38" corresp="GautAA_3.10.36">kṣatriyāc cet |</p>
+
+<p xml:id="GautSt_28.39" corresp="GautAA_3.10.37">śūdrāputro 'py anapatyasya śuśrūṣuś cel labhatevṛttimūlam antevāsividhinā |</p>
+<note>VAR_St: labheta</note>
+
+<p xml:id="GautSt_28.40" corresp="GautAA_3.10.38">savarṇāputro 'py anyāyyavṛtto na labhetaikeṣām |</p>
+
+<p xml:id="GautSt_28.41" corresp="GautAA_3.10.39">śrotriyā brāhmaṇasyānapatyasya rikthaṃ bhajeran |</p>
+
+<p xml:id="GautSt_28.42" corresp="GautAA_3.10.40">rājetareṣām |</p>
+
+<p xml:id="GautSt_28.43" corresp="GautAA_3.10.41">jaḍaklībau bhartavyau |</p>
+
+<p xml:id="GautSt_28.44" corresp="GautAA_3.10.42">apatyaṃ jaḍasya bhāgārham |</p>
+
+<p xml:id="GautSt_28.45" corresp="GautAA_3.10.43">śūdrāputravat pratilomāsu |</p>
+
+<p xml:id="GautSt_28.46" corresp="GautAA_3.10.44">udakayogakṣemakṛtānneṣv avibhāgaḥ |</p>
+
+<p xml:id="GautSt_28.47" corresp="GautAA_3.10.45">strīṣu ca saṃyuktāṣu |</p>
+
+<p xml:id="GautSt_28.48" corresp="GautAA_3.10.46">anājñāte daśāvaraiḥ śiṣṭair ūhavidbhir alubdhaiḥ praśastaṃ kāryam |</p>
+<note>VAR_St: ūhavadbhir</note>
+
+<p xml:id="GautSt_28.49" corresp="GautAA_3.10.47">catvāraś caturṇāṃ pāragā vedānāṃ prāg uttamāttraya āśramiṇaḥ pṛthag dharmavidas traya etān daśāvarān pariṣad ity ācakṣate |</p>
+<note>VAR_St: traya ity etān</note>
+
+<p xml:id="GautSt_28.50" corresp="GautAA_3.10.48">asambhave tv eteṣāṃ śrotriyo vedavicchiṣṭovipratipattau yad āha |</p>
+
+<p xml:id="GautSt_28.51" corresp="GautAA_3.10.49">yato 'yam aprabhavo bhūtānāṃ hiṃsānugrahayogeṣu |</p>
+
+<p xml:id="GautSt_28.52" corresp="GautAA_3.10.50">dharmiṇāṃ viśeṣeṇa svargaṃ lokaṃ dharmavid āpnotijñānābhiniveśābhyām |</p>
+
+<p xml:id="GautAA_3.10.51">iti dharmo dharmaḥ |</p>
+
+  </body>
+</text>
+</TEI>

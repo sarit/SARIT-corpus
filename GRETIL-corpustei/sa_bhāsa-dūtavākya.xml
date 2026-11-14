@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="sa_bhAsa-dUtavAkya">
+  <teiHeader xml:lang="en">
+  <fileDesc>
+  <titleStmt>
+	<title>Dūtavākya</title>
+	<author>Bhāsa</author>
+	<respStmt>
+	 <resp when-custom="June 2001 ">data entry</resp>
+	 <name>Yves Codet</name>
+	</respStmt>
+	<respStmt>
+	 <resp>contribution to GRETIL</resp>
+	 <name>Yves Codet</name>
+	</respStmt>
+	<respStmt>
+	 <resp>initial normalization and conversion to legacy GRETIL formats</resp>
+	 <name>Reinhold Grünendahl</name>
+	</respStmt>
+	<respStmt>
+	 <resp>normalization and conversion to TEI-conformant markup</resp>
+	 <name>Maximilian Mehner</name>
+	</respStmt>
+  </titleStmt>
+
+  <publicationStmt>
+	<publisher>Göttingen Register of Electronic Texts in Indian Languages (GRETIL), SUB Göttingen</publisher>
+	<availability>
+	 <p>This e-text was provided to GRETIL in good faith that no copyright rights have been infringed.
+	 If anyone wishes to assert copyright over this file, please contact the GRETIL management at <email>gretil(at)sub(dot)uni-goettingen(dot)de</email>.
+	 The file will be immediately removed pending resolution of the claim.</p>
+
+	 <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</licence>
+	</availability>
+	<date when-iso="2020-07-31"/>
+  </publicationStmt>
+
+  <notesStmt>
+	<note>This file has been created by mass conversion of GRETIL's Sanskrit corpus from <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/5_poetry/3_drama/bhasdutu.htm">bhasdutu.htm</ref>. Due to the heterogeneity of the sources the header markup might be suboptimal. For the sake of transparency the header of the legacy file is documented in the <gi>note</gi> element below:</note>
+	<note type="legacyheader">
+	 Bhasa: Dutavakya
+<lb/>
+<lb/>Input by Yves Codet, Toulouse, June 2001
+<lb/>T. K. Ramachandra Iyer Kalpathi: Palghat, S. India R. S.
+<lb/>Vadhyar and Sons 1981 C. R. Devadhar Delhi Motilal Banarsidass 1962, reprinted in
+<lb/>1987
+	</note>
+  </notesStmt>
+
+  <sourceDesc>
+	<bibl>T. K. Ramachandra Iyer Kalpathi: Palghat, S. India R. S. Vadhyar and Sons 1981 C. R. Devadhar Delhi Motilal Banarsidass 1962, reprinted in 1987 </bibl>
+  </sourceDesc>
+  </fileDesc>
+
+  <encodingDesc>
+  <projectDesc>
+	<p>The Göttingen Register of Electronic Texts in Indian Languages (GRETIL) is a resource platform providing standardized machine-readable texts in Indian languages that have been contributed by various individuals and institutions.</p>
+  </projectDesc>
+
+  <editorialDecl>
+	<correction>
+	 <p>Apparent errors have been silently corrected.</p>
+	</correction>
+
+	<normalization>
+	 <p>GRETIL normalizes all texts contributed consistently for each language.
+	 Sanskrit texts are normalized in accordance with the scheme of the International Alphabet of Sanskrit Transliteration (IAST) in order to facilitate word search across its corpus without additional transformations.</p>
+
+	 <p>All characters that were fully equivalent to an IAST-conformant character in the text file contributed have been made to conform to the character list below.
+	 Non-conformant characters with additional information including accents, capitalization, and whitespace have been preserved as <gi>orig</gi> elements inside <gi>choice</gi> elements with their IAST-conformant equivalent in <gi>reg</gi> elements for the creation of a plain text.
+	 These additional informations will be available only in those transformations of this file that display the original information.</p>
+
+	 <p><table>
+	 <head>Characters Used for the Transliteration of Sanskrit according to IAST</head>
+	 <row role="label">
+	 <cell>Character</cell>
+	 <cell>Character Name</cell>
+	 <cell>Unicode Code Point</cell>
+	 </row>
+	 <row>
+	 <cell>a</cell>
+	 <cell>LATIN SMALL LETTER A</cell>
+	 <cell>U+0061</cell>
+	 </row>
+	 <row>
+	 <cell>ā</cell>
+	 <cell>LATIN SMALL LETTER A WITH MACRON</cell>
+	 <cell>U+0101</cell>
+	 </row>
+	 <row>
+	 <cell>i</cell>
+	 <cell>LATIN SMALL LETTER I</cell>
+	 <cell>U+0069</cell>
+	 </row>
+	 <row>
+	 <cell>ī</cell>
+	 <cell>LATIN SMALL LETTER I WITH MACRON</cell>
+	 <cell>U+012B</cell>
+	 </row>
+	 <row>
+	 <cell>u</cell>
+	 <cell>LATIN SMALL LETTER U</cell>
+	 <cell>U+0075</cell>
+	 </row>
+	 <row>
+	 <cell>ū</cell>
+	 <cell>LATIN SMALL LETTER U WITH MACRON</cell>
+	 <cell>U+016B</cell>
+	 </row>
+	 <row>
+	 <cell>ṛ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW</cell>
+	 <cell>U+1E5B</cell>
+	 </row>
+	 <row>
+	 <cell>ṝ</cell>
+	 <cell>LATIN SMALL LETTER R WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E5D</cell>
+	 </row>
+	 <row>
+	 <cell>ḷ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW</cell>
+	 <cell>U+1E37</cell>
+	 </row>
+	 <row>
+	 <cell>ḹ</cell>
+	 <cell>LATIN SMALL LETTER L WITH DOT BELOW AND MACRON</cell>
+	 <cell>U+1E39</cell>
+	 </row>
+	 <row>
+	 <cell>e</cell>
+	 <cell>LATIN SMALL LETTER E</cell>
+	 <cell>U+0065</cell>
+	 </row>
+	 <row>
+	 <cell>o</cell>
+	 <cell>LATIN SMALL LETTER O</cell>
+	 <cell>U+006F</cell>
+	 </row>
+	 <row>
+	 <cell>ṃ</cell>
+	 <cell>LATIN SMALL LETTER M WITH DOT BELOW</cell>
+	 <cell>U+1E43</cell>
+	 </row>
+	 <row>
+	 <cell>ḥ</cell>
+	 <cell>LATIN SMALL LETTER H WITH DOT BELOW</cell>
+	 <cell>U+1E25</cell>
+	 </row>
+	 <row>
+	 <cell>'</cell>
+	 <cell>APOSTROPHE</cell>
+	 <cell>U+0027</cell>
+	 </row>
+	 <row>
+	 <cell>k</cell>
+	 <cell>LATIN SMALL LETTER K</cell>
+	 <cell>U+006B</cell>
+	 </row>
+	 <row>
+	 <cell>g</cell>
+	 <cell>LATIN SMALL LETTER G</cell>
+	 <cell>U+0067</cell>
+	 </row>
+	 <row>
+	 <cell>ṅ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT ABOVE</cell>
+	 <cell>U+1E45</cell>
+	 </row>
+	 <row>
+	 <cell>c</cell>
+	 <cell>LATIN SMALL LETTER C</cell>
+	 <cell>U+0063</cell>
+	 </row>
+	 <row>
+	 <cell>j</cell>
+	 <cell>LATIN SMALL LETTER J</cell>
+	 <cell>U+006A</cell>
+	 </row>
+	 <row>
+	 <cell>ñ</cell>
+	 <cell>LATIN SMALL LETTER N WITH TILDE</cell>
+	 <cell>U+00F1</cell>
+	 </row>
+	 <row>
+	 <cell>ṭ</cell>
+	 <cell>LATIN SMALL LETTER T WITH DOT BELOW</cell>
+	 <cell>U+1E6D</cell>
+	 </row>
+	 <row>
+	 <cell>ḍ</cell>
+	 <cell>LATIN SMALL LETTER D WITH DOT BELOW</cell>
+	 <cell>U+1E0D</cell>
+	 </row>
+	 <row>
+	 <cell>ṇ</cell>
+	 <cell>LATIN SMALL LETTER N WITH DOT BELOW</cell>
+	 <cell>U+1E47</cell>
+	 </row>
+	 <row>
+	 <cell>p</cell>
+	 <cell>LATIN SMALL LETTER P</cell>
+	 <cell>U+0070</cell>
+	 </row>
+	 <row>
+	 <cell>b</cell>
+	 <cell>LATIN SMALL LETTER B</cell>
+	 <cell>U+0062</cell>
+	 </row>
+	 <row>
+	 <cell>m</cell>
+	 <cell>LATIN SMALL LETTER M</cell>
+	 <cell>U+006D</cell>
+	 </row>
+	 <row>
+	 <cell>y</cell>
+	 <cell>LATIN SMALL LETTER Y</cell>
+	 <cell>U+0079</cell>
+	 </row>
+	 <row>
+	 <cell>r</cell>
+	 <cell>LATIN SMALL LETTER R</cell>
+	 <cell>U+0072</cell>
+	 </row>
+	 <row>
+	 <cell>l</cell>
+	 <cell>LATIN SMALL LETTER L</cell>
+	 <cell>U+006C</cell>
+	 </row>
+	 <row>
+	 <cell>v</cell>
+	 <cell>LATIN SMALL LETTER V</cell>
+	 <cell>U+0076</cell>
+	 </row>
+	 <row>
+	 <cell>ś</cell>
+	 <cell>LATIN SMALL LETTER S WITH ACUTE</cell>
+	 <cell>U+x015B</cell>
+	 </row>
+	 <row>
+	 <cell>ṣ</cell>
+	 <cell>LATIN SMALL LETTER S WITH DOT BELOW</cell>
+	 <cell>U+1E63</cell>
+	 </row>
+	 <row>
+	 <cell>s</cell>
+	 <cell>LATIN SMALL LETTER S</cell>
+	 <cell>U+0073</cell>
+	 </row>
+	 <row>
+	 <cell>h</cell>
+	 <cell>LATIN SMALL LETTER H</cell>
+	 <cell>U+0068</cell>
+	 </row>
+	 </table>
+	</p>
+  </normalization>
+
+  <quotation marks="some">
+	<p>If indicated unambiguously in the text file contributed quotation marks have been replaced with the <gi>q</gi> element and, in case a reference was provided, have been nested inside a <gi>cit</gi> with the respective reference provided in a <gi>ref</gi> element after the quote.</p>
+  </quotation>
+
+  <segmentation>
+	<p>Unnumbered <gi>div</gi> elements are used to structure the text, using the <att>type</att> and <att>n</att> attributes in accordance with the <gi>refsDecl</gi>.</p>
+  </segmentation>
+
+  <interpretation>
+	<p>Interpretive markup which is visible only in analytic transformations of this file consists of:
+	<list>
+	 <item>Highlighting in <gi>hi</gi> elements,</item>
+	 <item>Corruptions in <gi>sic</gi> elements,</item>
+	 <item>Remarks in <gi>note</gi> elements with the @resp attribute identifying the agency.</item>
+	</list></p>
+  </interpretation>
+  </editorialDecl>
+
+  <refsDecl>
+  <p>A reference is given in the <att>xml:id</att> attributes consisting of
+  <list>
+	<item>a pragmatic abbreviation of the <label>title</label>: Dūtavākya = <!-- abbreviation -->,</item>
+	<item>the number of the <label></label> in arabic numerals,</item>
+	<item>the number of the <label>verse</label> in arabic numerals.</item>
+  </list>
+  </p>
+  </refsDecl>
+  </encodingDesc>
+
+  <profileDesc>
+  <langUsage>
+  <language ident="en">English</language>
+  <language ident="sa-Latn">Sanskrit</language>
+  </langUsage>
+
+  <textClass>
+  <keywords scheme="http://gretil.sub.uni-goettingen.de/">
+	<term>Sanskrit -- Poetry -- Drama</term>
+  </keywords>
+  </textClass>
+  </profileDesc>
+
+  <revisionDesc>
+  <listChange>
+  <change when-iso="2020-07-31" who="Maximilian Mehner">TEI encoding by mass conversion of GRETIL's Sanskrit corpus</change>
+  </listChange>
+  </revisionDesc>
+
+</teiHeader>
+
+<text xml:lang="sa-Latn">
+  <body>
+
+<p>Stage director
+Chamberlain:
+Badarayana, a servant of Duryodhana
+Duryodhana: eldest son of Dhrtarastra
+Vasudeva: Krsna, incarnation of Visnu
+Sudarsana: Vasudeva's discus
+Dhrtarastra: king of Hastinapura</p>
+
+<p>dūtavākyam|
+nāndyante tataḥ praviśati sūtradhāraḥ|</p>
+
+<p>sūtradhāraḥ
+pādaḥ pāyādupendrasya sarvalokotsavaḥ sa vaḥ|
+vyāviddho namuciryena tanutāmranakhena khe|| 1||</p>
+
+<p>evamāryamiśrān vijñāpayāmi| aye kiṃ nu khalu mayi vijñāpanavyagre śabda iva
+śrūyate| aṅga
+paśyāmi|</p>
+
+<p>nepathye|</p>
+
+<p>bho bhoḥ pratihārādhikṛtāḥ mahārājo duryodhanaḥ samājñāpayati|</p>
+
+<p>sūtradhāraḥ</p>
+
+<p>bhavatu vijñātam|</p>
+
+<p>utpanne dhārtarāṣṭrāṇāṃ virodhe pāṇḍavaiḥ saha|
+mantraśālāṃ racayati bhṛtyo duryodhanājñayā|| 2||</p>
+
+<p>niṣkrāntaḥ| sthāpanā| tataḥ praviśati kāñcukīyaḥ| kāñcukīyaḥ</p>
+
+<p>bho bhoḥ pratihārādhikṛtāḥ mahārājo duryodhanaḥ samājñāpayati| adya
+sarvapārthivaiḥ saha
+mantrayitumicchāmi| tadāhūyantāṃ sarve rājāna iti|parikramyāvalokya|aye ayaṃ
+mahārājo
+duryodhana ita evābhivartate| ya eṣaḥ</p>
+
+<p>śyāmo yuvā sitadukūlakṛtottarīyaḥ sacchattracāmaravaro racitāṅgarāgaḥ|
+śrīmānvibhūṣaṇamaṇidyutirañjitāṅgo nakṣatramadhya iva parvagataḥ śaśāṅkaḥ|| 3||</p>
+
+<p>tataḥ praviśati yathānirdiṣṭo duryodhanaḥ| duryodhanaḥ uddhūtaroṣamiva me
+hṛdayaṃ saharṣaṃ prāptaṃ
+raṇotsavamimaṃ sahasā vicintya| icchāmi pāṇḍavabale varavāraṇānā-
+mutkṛttadantamusalāni
+mukhāni kartum|| 4|| kāñcukīyaḥ</p>
+
+<p>jayatu mahārājaḥ| mahārājaśāsanātsamānītaṃ sarvarājamaṇḍalam|</p>
+
+<p>duryodhanaḥ</p>
+
+<p>samyakkṛtam| praviśa tvamavarodhanam|</p>
+
+<p>kāñcukīyaḥ</p>
+
+<p>yadājñāpayati mahārājaḥ|</p>
+
+<p>niṣkrāntaḥ| duryodhanaḥ</p>
+
+<p>āryau vaikarṇavarṣadevau ucyatām| asti mamaikādaśākṣauhiṇībalasamudayaḥ| asya
+kaḥ
+senāpatirbhavitumarhatīti| kimāhaturbhavantau| mahānkhalvayamarthaḥ|
+mantrayitvā vaktavyamiti|
+sadṛśametat| tadāgamyatāṃ mantraśālāmeva praviśāmaḥ|</p>
+
+<p>ācārya abhivādaye| praviśatu bhavānmantraśālām| pitāmaha abhivādaye| praviśatu
+bhavānmantraśālām| mātula abhivādaye| praviśatu bhavānmantraśālām| āryau
+vaikarṇavarṣadevau praviśatāṃ bhavantau| bho bhoḥ sarvakṣatriyāḥ svairaṃ
+praviśantu bhavantaḥ|
+vayasya karṇa praviśāvastāvat|</p>
+
+<p>praviśya|ācārya etatkūrmāsanam| āsyatām| pitāmaha etatsiṃhāsanam| āsyatām| mātula
+etaccarmāsanam| āsyatām| āryau vaikarṇavarṣadevau āsātāṃ bhavantau| bho bhoḥ
+sarvakṣatriyāḥ
+svairamāsatāṃ bhavantaḥ| kimiti kimiti| mahārājo nāsta iti| aho sevādharmaḥ|
+nanvayamahamāse|
+vayasya karṇa tvamapyāssva|</p>
+
+<p>upaviśya|āryau vaikarṇavarṣadevau ucyatām| asti
+mamaikādaśākṣauhiṇībalasamudayaḥ| asya kaḥ
+senāpatirbhavitumarhatīti|</p>
+
+<p>kimāhaturbhavantau| atrabhavāngāndhārarājo vakṣyatīti| bhavatu
+mātulenābhidhīyatām|</p>
+
+<p>kimāha mātulaḥ| atrabhavati gāṅgeye sthite ko.anyaḥ senāpatirbhavitumarhatīti|
+samyagāha mātulaḥ|
+bhavatu bhavatu pitāmaha eva bhavatu| vayamapyetadabhilaṣāmaḥ|</p>
+
+<p>senāninādapaṭahasvanaśaṅkhanādai- ścaṇḍānilāhatamahodadhinādakalpaiḥ|
+gāṅgeyamūrdhni
+patitairabhiṣekatoyaiḥ sārdhaṃ patantu hṛdayāni narādhipānām|| 5|| praviśya|
+kāñcukīyaḥ</p>
+
+<p>jayatu mahārājaḥ| eṣa khalu pāṇḍavaskandhāvārāddautyenāgataḥ puruṣottamo
+nārāyaṇaḥ|</p>
+
+<p>duryodhanaḥ</p>
+
+<p>mā tāvat| bho bādarāyaṇa kiṃ kiṃ kaṃsabhṛtyo dāmodarastava puruṣottamaḥ| sa
+gopālakastava
+puruṣottamaḥ| bārhadrathāpahṛtaviṣayakīrtibhogastava puruṣottamaḥ| aho
+pārthivāsannamāśritya
+bhṛtyajanasya samudācāraḥ| sagarvaṃ khalvasya vacanam| ā apadhvaṃsa|</p>
+
+<p>kāñcukīyaḥ</p>
+
+<p>prasīdatu mahārājaḥ| saṃbhrameṇa samudācāro vismṛtaḥ|pādayoḥ patati|</p>
+
+<p>duryodhanaḥ</p>
+
+<p>saṃbhrama iti| ā manuṣyāṇāmastyeva saṃbhramaḥ| uttiṣṭhotiṣṭha|</p>
+
+<p>kāñcukīyaḥ</p>
+
+<p>anugṛhīto.asmi|</p>
+
+<p>duryodhanaḥ</p>
+
+<p>idānīṃ prasanno.asmi| ka eṣa dūtaḥ prāptaḥ|</p>
+
+<p>kāñcukīyaḥ</p>
+
+<p>dūtaḥ prāptaḥ keśavaḥ|</p>
+
+<p>duryodhanaḥ</p>
+
+<p>keśava iti| evameṣṭavyam| ayameva samudācāraḥ| bho bho rājānaḥ dautyenāgatasya
+keśavasya kiṃ
+yuktam|</p>
+
+<p>kimāhurbhavantaḥ| arghyapradānena pūjayitavyaḥ keśava iti| na me rocate|
+grahaṇamasyātra hitaṃ
+paśyāmi|</p>
+
+<p>grahaṇamupagate tu vāsubhadre hṛtanayanā iva pāṇḍavā bhaveyuḥ| gatimatirahiteṣu
+pāṇḍaveṣu
+kṣitirakhilāpi bhavenmamāsapatnā|| 6||</p>
+
+<p>api ca yo.atra keśavasya pratyutthāsyati sa mayā dvādaśasuvarṇabhāreṇa daṇḍyaḥ|
+tadapramattā
+bhavantu bhavantaḥ|ātmagatam|ko nu khalvidānīṃ mamāpratyutthānasyopāyaḥ| hanta
+dṛṣṭa
+upāyaḥ|prakāśam|bādarāyaṇa ānīyatāṃ sa citrapaṭo nanu yatra
+draupadīkeśāmbarāvakarṣaṇamālikhitam|ātmagatam|tasmindṛṣṭivinyāsaṃ
+kurvannotthāsyāmi
+keśavasya|</p>
+
+<p>kāñcukīyaḥ</p>
+
+<p>yadājñāpayati mahārājaḥ|niṣkramya praviśya|jayatu mahārājaḥ| ayaṃ sa citrapaṭaḥ|</p>
+
+<p>duryodhanaḥ</p>
+
+<p>mamāgrataḥ prasāraya|</p>
+
+<p>kāñcukīyaḥ</p>
+
+<p>yadājñāpayati mahārājaḥ|prasārayati|</p>
+
+<p>duryodhanaḥ</p>
+
+<p>aho darśanīyo.ayaṃ citrapaṭaḥ| eṣa duḥśāsano draupadīṃ keśahaste gṛhītavān| eṣā
+khalu
+draupadī|</p>
+
+<p>duḥśāsanaparāmṛṣṭā saṃbhramotphullalocanā| rāhuvaktrāntaragatā candralekheva
+śobhate|| 7||</p>
+
+<p>eṣa durātmā bhīmaḥ sarvarājasamakṣamavamānitāṃ draupadīṃ dṛṣṭvā
+pravṛddhāmarṣaḥ
+sabhāstambhaṃ tulayati| eṣa yudhiṣṭhiraḥ</p>
+
+<p>satyadharmaghṛṇāyukto dyūtavibhraṣṭacetanaḥ| karotyapāṅgavikṣepaiḥ śāntāmarṣaṃ
+vṛkodaram|| 8||</p>
+
+<p>eṣa idānīmarjunaḥ|</p>
+
+<p>roṣākulākṣaḥ sphuritādharoṣṭhastṛṇāya matvā ripumaṇḍalaṃ tat| utsādayiṣyanniva
+sarvarājñaḥ
+śanaiḥ samākarṣati gāṇḍivajyām|| 9||</p>
+
+<p>eṣa yudhiṣṭhiro.arjunaṃ nivārayati| etau nakulasahadevau</p>
+
+<p>kṛtaparikarabandhau carmanistriṃśahastau paruṣitamukharāgau
+spaṣṭadaṣṭādharoṣṭhau|
+vigatamaraṇaśaṅkau satvaraṃ bhrātaraṃ me harimiva mṛgapotau tejasābhiprayātau||</p>
+
+<p>10||</p>
+
+<p>eṣa yudhiṣṭhiraḥ kumārāvupetya nivārayati|</p>
+
+<p>nīco.ahameva viparītamatiḥ kathaṃ vā roṣaṃ parityajatamadya nayānayajñau|
+dyūtādhikāramavamānamamṛṣyamāṇāḥ sattvādhikeṣu vacanīyaparākramāḥ syuḥ|| 11||</p>
+
+<p>iti| eṣa gāndhārarājaḥ</p>
+
+<p>akṣānkṣipansa kitavaḥ prahasansagarvaṃ saṃkocayanniva mudaṃ dviṣatāṃ
+svakīrtyā| svairāsano
+drupadarājasutāṃ rudantīṃ kākṣeṇa paśyati likhatyapi gāṃ nayajñaḥ|| 12||</p>
+
+<p>etāvācāryapitāmahau tāṃ dṛṣṭvā lajjāyamānau paṭāntāntarhitamukhau sthitau| aho
+asya
+varṇāḍhyatā| aho bhāvopapannatā| aho yuktalekhatā| suvyaktamālikhito.ayaṃ
+citrapaṭaḥ|
+prīto.asmi| ko.atra|</p>
+
+<p>kāñcukīyaḥ</p>
+
+<p>jayatu mahārājaḥ|</p>
+
+<p>duryodhanaḥ</p>
+
+<p>bādarāyaṇa ānīyatāṃ sa vihagavāhanamātravismito dūtaḥ|</p>
+
+<p>kāñcukīyaḥ</p>
+
+<p>yadājñāpayati mahārājaḥ|</p>
+
+<p>niṣkrāntaḥ| duryodhanaḥ</p>
+
+<p>vayasya karṇa
+prāptaḥ kilādya vacanādiha pāṇḍavānāṃ dautyena bhṛtya iva kṛṣṇamatiḥ sa kṛṣṇaḥ|
+śrotuṃ
+sakhe tvamapi sajjaya karṇa karṇau nārīmṛdūni vacanāni yudhiṣṭhirasya|| 13|| tataḥ
+praviśati
+vāsudevaḥ kāñcukīyaśca| vāsudevaḥ</p>
+
+<p>adya khalu dharmarājavacanāddhanaṃjayākṛtrimamitratayā
+cāhavadarpamanuktagrāhiṇaṃ
+suyodhanaṃ prati mayāpyanucitadautyasamayo.anuṣṭhitaḥ| atha ca</p>
+
+<p>kṛṣṇāparābhavabhuvā ripuvāhinībha- kumbhasthalīdalanatīkṣṇagadādharasya|
+bhīmasya
+kopaśikhinā yudhi pārthapattri- caṇḍānilaiśca kuruvaṃśavanaṃ vinaṣṭam|| 14||</p>
+
+<p>idaṃ suyodhanaśibiram| iha hi</p>
+
+<p>āvāsāḥ pārthivānāṃ surapurasadṛśāḥ svacchandavihitā vistīrṇāḥ śastraśālā
+bahuvidhakaraṇaiḥ śastrairupacitāḥ| heṣante mandurāsthāsturagavaraghaṭā bṛṃhanti
+kariṇa
+aiśvaryaṃ sphītametatsvajanaparibhavādāsannavilayam|| 15||</p>
+
+<p>bhoḥ</p>
+
+<p>duṣṭavādī guṇadveṣī śaṭhaḥ svajananirdayaḥ| suyodhano hi māṃ dṛṣṭvā naiva
+kāryaṃ kariṣyati||</p>
+
+<p>16||</p>
+
+<p>bho bādarāyaṇa kiṃ praveṣṭavyam|</p>
+
+<p>kāñcukīyaḥ</p>
+
+<p>atha kimatha kim| praveṣṭumarhati padmanābhaḥ|</p>
+
+<p>vāsudevaḥ</p>
+
+<p>praviśya| kathaṃ kathaṃ māṃ dṛṣṭvā saṃbhrāntāḥ sarvakṣatriyāḥ| alamalaṃ
+saṃbhrameṇa|
+svairamāsatāṃ bhavantaḥ|</p>
+
+<p>duryodhanaḥ</p>
+
+<p>kathaṃ kathaṃ keśavaṃ dṛṣṭvā saṃbhrāntāḥ sarvakṣatriyāḥ| alamalaṃ saṃbhrameṇa|
+smaraṇīyaḥ pūrvamāśrāvito daṇḍaḥ| nanvahamājñaptā|</p>
+
+<p>vāsudevaḥ</p>
+
+<p>upagamya|bhoḥ suyodhana kimāsse|</p>
+
+<p>duryodhanaḥ</p>
+
+<p>āsanātpatitvātmagatam|suvyaktaṃ prāpta eva keśavaḥ|</p>
+
+<p>utsāhena matiṃ kṛtvāpyāsīno.asmi samāhitaḥ| keśavasya prabhāvena
+calito.asmyāsanādaham|| 17||</p>
+
+<p>aho bahumāyo.ayaṃ dūtaḥ|prakāśam|bho dūta etadāsanamāsyatām|</p>
+
+<p>vāsudevaḥ</p>
+
+<p>ācārya āsyatāṃ| gāṅgeyapramukhā rājānaḥ svairamāsatāṃ bhavantaḥ|
+vayamapyupaviśāmaḥ|upaviśya|aho darśanīyo.ayaṃ citrapaṭaḥ| mā tāvat|
+draupadīkeśāmbarākarṣaṇamatrālikhitam| aho nu khalu</p>
+
+<p>suyodhano.ayaṃ svajanāvamānaṃ parākramaṃ paśyati bāliśatvāt| ko nāma loke
+svayamātmadoṣamudghāṭayennaṣṭaghṛṇaḥ sabhāsu|| 18||</p>
+
+<p>āḥ apanīyatāmeṣa citrapaṭaḥ|</p>
+
+<p>duryodhanaḥ</p>
+
+<p>bādarāyaṇa apanīyatāṃ kila citrapaṭaḥ|</p>
+
+<p>kāñcukīyaḥ</p>
+
+<p>yadājñāpayati maharājaḥ|apanayati|</p>
+
+<p>duryodhanaḥ</p>
+
+<p>bho dūta</p>
+
+<p>dharmātmajo vāyusutaśca bhīmo bhrātārjuno me tridaśendrasūnuḥ| yamau ca
+tāvaśvisutau vinītau
+sarve sabhṛtyāḥ kuśalopapannāḥ|| 19|| vāsudevaḥ</p>
+
+<p>sadṛśametadgāndhārīputrasya| atha kimatha kim| kuśalinaḥ sarve| bhavato rājye
+śarīre
+bāhyābhyantare ca kuśalamanāmayaṃ ca pṛṣṭvā vijñāpayanti yudhiṣṭhirādayaḥ
+pāṇḍavāḥ|</p>
+
+<p>anubhūtaṃ mahadduḥkhaṃ saṃpūrṇaḥ samayaḥ sa ca| asmākamapi dharmyaṃ
+yaddāyādyaṃ
+tadvibhajyatām|| 20||</p>
+
+<p>iti|</p>
+
+<p>duryodhanaḥ</p>
+
+<p>kathaṃ kathaṃ dāyādyamiti| bhoḥ</p>
+
+<p>vane pitṛvyo mṛgayāprasaṃgataḥ kṛtāparādho muniśāpamāptavān| tadāprabhṛtyeva sa
+dāraniḥspṛhaḥ parātmajānāṃ pitṛtāṃ kathaṃ vrajet|| 21|| vāsudevaḥ</p>
+
+<p>purāvidaṃ bhavantaṃ pṛcchāmi|</p>
+
+<p>vicitravīryo viṣayī vipattiṃ kṣayeṇa yātaḥ punarambikāyām| vyāsena jāto
+dhṛtarāṣṭra eva labheta
+rājyaṃ janakaḥ kathaṃ te|| 22||</p>
+
+<p>mā mā bhavān|</p>
+
+<p>evaṃ parasparavirodhavivardhanena śīghraṃ bhavetkurukulaṃ nṛpa nāmaśeṣam|
+tatkartumarhati
+bhavānapakṛtya roṣaṃ yattvāṃ yudhiṣṭhiramukhāḥ praṇayādbruvanti|| 23||</p>
+
+<p>duryodhanaḥ</p>
+
+<p>bho dūta na jānāti bhavānrājyavyavahāram|</p>
+
+<p>rājyaṃ nāma nṛpātmajaiḥ sahṛdairjitvā ripūnbhujyate talloke na tu yācyate na tu
+punardīnāya vā
+dīyate| kāṅkṣā cennṛpatitvamāptumacirātkurvantu te sāhasaṃ svairaṃ vā praviśantu
+śāntamatibhirjuṣṭaṃ śamāyāśramam|| 24|| vāsudevaḥ</p>
+
+<p>bhoḥ suyodhana alaṃ bandhujane paruṣamabhidhātum|</p>
+
+<p>puṇyasaṃcayaprāptāmadhigamya nṛpaśriyam| vañcayedyaḥ suhṛdbandhūnsa
+bhavedviphalaśramaḥ|| 25|| duryodhanaḥ</p>
+
+<p>bho dūta</p>
+
+<p>syālaṃ tava gurorbhūpaṃ kaṃsaṃ na te dayā| kathamasmākamevaṃ syātteṣu
+nityāpakāriṣu|| 26||</p>
+
+<p>vāsudevaḥ</p>
+
+<p>alaṃ tanmaddoṣato jñātum|
+kṛtvā putraviyogārtāṃ bahuśo jananīṃ mama| vṛddhaṃ svapitaraṃ baddhvā hato.ayaṃ
+mṛtyunā
+svayam|| 27|| duryodhanaḥ</p>
+
+<p>sarvathā vañcitastvayā kaṃsaḥ| alamātmastavena| na śauryametat| paśya|</p>
+
+<p>jāmātṛnāśavyasanābhitapte roṣābhibhūte magadheśvare.atha| palāyamānasya
+bhayāturasya
+śauryaṃ tadetatkva gataṃ tavāsīt|| 28|| vāsudevaḥ</p>
+
+<p>bhoḥ suyodhana deśakālāvasthāpekṣitaṃ khalu śauryaṃ nayānugāminām| iha
+tiṣṭhatu
+tāvadasmadgataḥ parihāsaḥ| svakāryamanuṣṭhīyatām|</p>
+
+<p>kartavyo bhrātṛṣu sneho vismartavyā guṇetarāḥ| saṃbandho bandhubhiḥ
+śreyānlokayorubhayorapi||</p>
+
+<p>29|| duryodhanaḥ devātmajairmanuṣyāṇāṃ kathaṃ vā bandhutā bhavet|
+piṣṭapeṣaṇametāvatparyāptaṃ chidyatāṃ kathā|| 30|| vāsudevaḥ</p>
+
+<p>ātmagatam|</p>
+
+<p>prasādyamānaḥ sāmnāyaṃ na svabhāvaṃ vimuñcati| hanta saṃkṣobhayāmyenaṃ
+vacobhiḥ
+paruṣākṣaraiḥ|| 31||</p>
+
+<p>prakāśam|bhoḥ suyodhana kiṃ na jānīṣe.arjunasya balaparākramam|</p>
+
+<p>duryodhanaḥ</p>
+
+<p>na jāne|</p>
+
+<p>vāsudevaḥ</p>
+
+<p>bhoḥ śrūyatām|</p>
+
+<p>kairātaṃ vapurāsthitaḥ paśupatiryuddhena saṃtoṣito vahneḥ khāṇḍavamaśnataḥ
+sumahatī vṛṣṭiḥ
+śaraiśchāditā| devendrārtikarā nivātakavacā nītāḥ kṣayaṃ līlayā nanvekena tadā
+virāṭanagare
+bhīṣmādayo nirjitāḥ|| 32||</p>
+
+<p>api ca tavāpi pratyakṣamaparaṃ kathayāmi|</p>
+
+<p>nanu tvaṃ citrasenena nīyamāno nabhastalam| vikrośanghoṣayātrāyāṃ phalgunenaiva
+mokṣitaḥ|| 33||</p>
+
+<p>kiṃ bahunā|</p>
+
+<p>dātumarhasi madvākyādrājyārdhaṃ dhṛtarāṣṭraja| anyathā sāgarāntāṃ gāṃ hariṣyanti
+hi
+pāṇḍavāḥ|| 34|| duryodhanaḥ</p>
+
+<p>kathaṃ kathaṃ| hariṣyanti hi pāṇḍavāḥ|</p>
+
+<p>praharati yadi yuddhe māruto bhīmarūpī praharati yadi sākṣātpārtharūpeṇa śakraḥ|
+paruṣavacanadakṣa tvadvacobhirna dāsye tṛṇamapi pitṛbhukte vīryagupte svarājye||</p>
+
+<p>35|| vāsudevaḥ</p>
+
+<p>bhoḥ kurukulakalaṅkabhūta ayaśolubdha vayaṃ kila tṛṇāntarābhibhāṣakāḥ|</p>
+
+<p>duryodhanaḥ</p>
+
+<p>bho gopālaka tṛṇānyabhibhāṣyo bhavān|</p>
+
+<p>avadhyāṃ pramadāṃ hatvā hayaṃ govṛṣameva ca| mallānapi sunirlajjo vaktumicchasi
+sādhubhiḥ||</p>
+
+<p>36|| vāsudevaḥ</p>
+
+<p>bhoḥ suyodhana nanu kṣipasi mām|</p>
+
+<p>duryodhanaḥ</p>
+
+<p>nanu satyamevaitat|</p>
+
+<p>vāsudevaḥ</p>
+
+<p>gacchāmi tāvat|</p>
+
+<p>duryodhanaḥ</p>
+
+<p>gaccha gaccha paśukhuroddhatareṇurūpitāṅgo vrajameva| viphalīkṛtaḥ kālaḥ|</p>
+
+<p>vāsudevaḥ</p>
+
+<p>evamastu| na vayamanuktasaṃdeśā gantumicchāmaḥ| tadākarṇyatāṃ yudhiṣṭhirasya
+saṃdeśaḥ|</p>
+
+<p>duryodhanaḥ</p>
+
+<p>āḥ abhāṣyastvam|</p>
+
+<p>ahamavadhṛtapāṇḍarātapatro dvijavarahastadhṛtāmbusiktamūrdhā|
+avanatanṛpamaṇḍalānuyātraiḥ
+saha kathayāmi bhavadvidhairna bhāṣe|| 37|| vāsudevaḥ</p>
+
+<p>na vyāharati kila māṃ suyodhanaḥ| bhoḥ</p>
+
+<p>śaṭha bāndhavaniḥsneha kāka kekara piṅgala|
+tvadarthātkuruvaṃśo.ayamacirānnāśameṣyati|| 38||</p>
+
+<p>bho bho rājānaḥ gacchāmastāvat|</p>
+
+<p>duryodhanaḥ</p>
+
+<p>kathaṃ yāsyati kila keśavaḥ| duḥśāsana durmarṣaṇa durmukha durbuddhe
+duṣṭeśvara
+dūtasamudācāramatikrāntaḥ keśavo badhyatām| kathamaśaktāḥ| duḥśāsana na
+samarthaḥ
+khalvasi|</p>
+
+<p>karituraganihantā kaṃsahantā sa kṛṣṇaḥ paśupakulanivāsādānujīvyānabhijñaḥ|
+hṛtabhujabalavīryaḥ pārthivānāṃ samakṣaṃ svavacanakṛtadoṣo badhyatāmeṣa
+śīghram|| 39||</p>
+
+<p>ayamaśaktaḥ| mātula badhyatāmayaṃ keśavaḥ| kathaṃ parāṅmukhaḥ patati| bhavatu|
+ahameva
+pāśairbadhnāmi|pāśamudyamyopasarpati|</p>
+
+<p>vāsudevaḥ</p>
+
+<p>kathaṃ baddhukāmo māṃ kila suyodhanaḥ| bhavatu| suyodhanasya sāmarthyaṃ
+paśyāmi|viśvarūpamāsthitaḥ|</p>
+
+<p>duryodhanaḥ</p>
+
+<p>bho dūta</p>
+
+<p>sṛjasi yadi samantāddevamāyāḥ svamāyāḥ praharasi yadi vā tvaṃ durnivāraiḥ
+surāstraiḥ|
+hayagajavṛṣabhāṇāṃ pātanājjātadarpo narapatigaṇamadhye badhyase tvaṃ mayādya||</p>
+
+<p>40||</p>
+
+<p>āḥ tiṣṭhedānīm| kathaṃ na dṛṣṭaḥ keśavaḥ| ayaṃ keśavaḥ| aho hrasvatvaṃ keśavasya|
+āḥ
+tiṣṭhedānīm| kathaṃ na dṛṣṭaḥ keśavaḥ| ayaṃ keśavaḥ| aho dīrghatvaṃ keśavasya|
+kathaṃ na
+dṛṣṭaḥ keśavaḥ| ayaṃ keśavaḥ| sarvatra mantraśālāyāṃ keśavā bhavanti| kimidānīṃ
+kariṣye|
+bhavatu dṛṣṭam| bho bho rājānaḥ ekenaikaḥ keśavo badhyatām| kathaṃ svayameva
+pāśairbaddhāḥ
+patanti rājānaḥ| sādhu bho jambhaka sādhu|</p>
+
+<p>matkārmukodaraviniḥsṛtabāṇajālai- rviddhaṃ kṣaratkṣatajarañjitasarvagātram|
+paśyantu
+pāṇḍutanayāḥ śibiropanītaṃ tvāṃ bāṣparuddhanayanāḥ pariniśvasantaḥ|| 41||</p>
+
+<p>niṣkrāntaḥ|
+vāsudevaḥ</p>
+
+<p>bhavatu pāṇḍavānāṃ kāryamahameva sādhayāmi| bhoḥ sudarśana itastāvat|</p>
+
+<p>tataḥ praviśati sudarśanaḥ| sudarśanaḥ</p>
+
+<p>eṣa bhoḥ|</p>
+
+<p>śrutvā giraṃ bhagavato vipulaprasādā- nnirdhāvito.asmi parivāritatoyadaughaḥ|
+kasminkhalu
+prakupitaḥ kamalāyatākṣaḥ kasyādya mūrdhani mayā pravijṛmbhitavyam|| 42||</p>
+
+<p>kva nu khalu bhagavānnārāyaṇaḥ|</p>
+
+<p>avyaktādiracintyātmā lokasaṃrakṣaṇodyataḥ| eko.anekavapuḥ
+śrīmāndviṣadbalaniṣūdanaḥ|| 43||</p>
+
+<p>vilokya|aye ayaṃ bhagavānhastinapuradvāre dūtasamudācāreṇopasthitaḥ| kutaḥ
+khalvāpaḥ kutaḥ
+khalvāpaḥ| bhagavati ākāśagaṅge āpastāvat| hanta sravati|ācamyopasṛtya|jayatu
+bhagavānnārāyaṇaḥ|praṇamati|</p>
+
+<p>vāsudevaḥ</p>
+
+<p>sudarśana apratihataparākramo bhava|</p>
+
+<p>sudarśanaḥ</p>
+
+<p>anugṛhīto.asmi|</p>
+
+<p>vāsudevaḥ</p>
+
+<p>diṣṭyā bhavānkarmakāle prāptaḥ|</p>
+
+<p>sudarśanaḥ</p>
+
+<p>kathaṃ kathaṃ karmakāla iti| ājñāpayatu bhagavānājñāpayatu|</p>
+
+<p>kiṃ merumandarakulaṃ parivartayāmi saṃkṣobhayāmi sakalaṃ makarālayaṃ vā|
+nakṣatravaṃśamakhilaṃ bhuvi pātayāmi nāśakyamasti mama deva tava prasādāt|| 44||</p>
+
+<p>vāsudevaḥ</p>
+
+<p>bhoḥ sudarśana itastāvat| bhoḥ suyodhana</p>
+
+<p>yadi lavaṇajalaṃ vā kandaraṃ vā girīṇāṃ grahagaṇacaritaṃ vā vāyumārgaṃ prayāsi|
+mama
+bhujabalayogaprāptasaṃjātavegaṃ bhavatu capala cakraṃ kālacakraṃ tavādya|| 45||</p>
+
+<p>sudarśanaḥ</p>
+
+<p>bhoḥ suyodhanahataka tiṣṭha tiṣṭha|punarvicārya|prasīdatu bhagavānnārāyṇaḥ|</p>
+
+<p>mahībhārāpanayanaṃ kartuṃ jātasya bhūtale| asminnevaṃ gate deva nanu
+syādviphalaśramaḥ|| 46||</p>
+
+<p>vāsudevaḥ</p>
+
+<p>sudarśana roṣātsamudācāro nāvekṣitaḥ| gamyatāṃ svanilayameva|</p>
+
+<p>sudarśanaḥ</p>
+
+<p>yadājñāpayati bhagavānnārāyaṇaḥ| kathaṃ kathaṃ gopālaka iti| tricaraṇātikrāntatriloko
+nārāyaṇaḥ khalvatra bhagavān| śaraṇaṃ vrajantu bhavantaḥ| yāvadgacchāmi| aye
+etadbhagavadāyudhavaraṃ śārṅgaṃ prāptam|</p>
+
+<p>tanumṛdulalitāṅgaṃ strīsvabhāvopapannaṃ harikaradhṛtamadhyaṃ
+śatrusaṃghaikakālaḥ|
+kanakakhacitapṛṣṭhaṃ bhāti kṛṣṇasya pārśve navasaliladapārśve cāruvidyullekheva||</p>
+
+<p>47||</p>
+
+<p>bho bhoḥ śārṅga praśāntaroṣo bhagavānnārāyaṇaḥ| gamyatāṃ svanilayameva| hanta
+nivṛttaḥ|
+yāvadgacchāmi| aye iyaṃ kaumodakī prāptā|</p>
+
+<p>maṇikanakavicitrā citramālottarīyā suraripugaṇagātradhvaṃsane jātatṛṣṇā|
+girivarataṭarūpā
+durnivārātivīryā vrajati nabhasi śīghraṃ meghavṛndānuyātrā|| 48||</p>
+
+<p>he kaumodaki praśāntaroṣo bhagavānnārāyaṇaḥ| hanta nivṛttā| yāvadgacchāmi| aye
+ayaṃ
+pāñcajanyaḥ prāptaḥ|</p>
+
+<p>pūrṇendukundakumudodarahāragauro nārāyaṇānanasarojakṛtaprasādaḥ| yasya svanaṃ
+pralayasāgaraghoṣatulyaṃ garbhā niśamya nipatantyasurāṅganānām|| 49||</p>
+
+<p>he pāñcajanya praśāntaroṣo bhagavān| gamyatāṃ svanilayameva| hanta nivṛttaḥ| aye
+nandakāsiḥ
+prāptaḥ|</p>
+
+<p>vanitāvigraho yuddhe mahāsurabhayaṃkaraḥ| prayāti gagane śīghraṃ maholkeva
+vibhātyayam|| 50||</p>
+
+<p>he nandaka praśāntaroṣo bhagavān| gamyatāṃ svanilayameva| hanta nivṛttaḥ|
+yāvadgacchāmi| aye
+etāni bhagavadāyudhavarāṇi|</p>
+
+<p>so.ayaṃ khaḍgaḥ kharāṃśorapahasitatanuḥ svaiḥ karairnandakākhyaḥ seyaṃ
+kaumodakī yā
+suraripukaṭhinoraḥsthalakṣodadakṣā| saiṣā śārṅgābhidhānā pralayaghanaravajyāravā
+cāpayaṣṭiḥ so.ayaṃ gambhīraghoṣaḥ śaśikaraviśadaḥ śaṅkharāṭpāñcajanyaḥ|| 51|| he
+śārṅga kaumodaki pāñcajanya daityāntakṛnnandaka śatruvahne| praśāntaroṣo
+bhagavānmurāriḥ
+svasthānamevātra hi gaccha tāvat|| 52||</p>
+
+<p>hanta nivṛttāḥ| yāvadgacchāmi| aye atyuddhūto vāyuḥ| atitapatyādityaḥ| calitāḥ
+parvatāḥ|
+kṣubdhāḥ sāgarāḥ| patitā vṛkṣāḥ| bhrāntā meghāḥ| pralīnā vāsukiprabhṛtayo
+bhujaṃgeśvarāḥ| kiṃ nu khalvidam| aye ayaṃ bhagavato vāhanaḥ garuḍaḥ prāptaḥ|</p>
+
+<p>surāsurāṇāṃ parikhedalabdhaṃ yenāmṛtaṃ mātṛvimokṣaṇārthaṃ|
+ācchinnamāsīddviṣato
+murārestvāmudvahāmīti varo.api dattaḥ|| 53||</p>
+
+<p>he kāśyapapriyasuta garuḍa praśāntaroṣo bhagavāndevadeveśaḥ| gamyatāṃ
+svanilayameva| hanta
+nivṛttaḥ| yāvadgacchāmi|</p>
+
+<p>ete sthitā viyati kiṃnarayakṣasiddhāḥ devāśca saṃbhramacalanmukuṭottamāṅgāḥ|
+ruṣṭe.acyute
+vigatakāntiguṇāḥ praśāntaṃ śrutvā śrayanti sadanāni nivṛttatāpāḥ|| 54||</p>
+
+<p>yāvadahamapi kāntāṃ meruguhāmeva yāsyāmi|</p>
+
+<p>niṣkrāntaḥ| vāsudevaḥ</p>
+
+<p>yāvadahamapi pāṇḍavaśibirameva yāsyāmi|</p>
+
+<p>nepathye|</p>
+
+<p>na khalu na khalu gantavyam|</p>
+
+<p>vāsudevaḥ</p>
+
+<p>aye vṛddharājasvara iva| bho rājan eṣa sthito.asmi|</p>
+
+<p>tataḥ praviśati dhṛtarāṣṭraḥ| dhṛtarāṣṭraḥ</p>
+
+<p>kva nu khalu bhagavānnārāyaṇaḥ| kva nu khalu bhagavānpāṇḍavaśreyaskaraḥ| kva nu
+khalu
+bhagavānviprapriyaḥ| kva nu khalu bhagavāndevakīnandanaḥ|</p>
+
+<p>mama putrāparādhāttu śārṅgapāṇe tavādhunā| etanme tridaśādhyākṣa pādayoḥ
+patitaṃ
+śiraḥ|| 55|| patati| vāsudevaḥ</p>
+
+<p>hā dhik| patito.atrabhavān| uttiṣṭhottiṣṭha|</p>
+
+<p>dhṛtarāṣṭraḥ</p>
+
+<p>anugṛhīto.asmi| bhagavan idamarghyaṃ pādyaṃ ca pratigṛhyatām|</p>
+
+<p>vāsudevaḥ</p>
+
+<p>sarvaṃ gṛhṇāmi| kiṃ te bhūyaḥ priyamupaharāmi|</p>
+
+<p>dhṛtarāṣṭraḥ</p>
+
+<p>yadi me bhagavānprasannaḥ kimataḥ paramicchāmi|</p>
+
+<p>vāsudevaḥ</p>
+
+<p>gacchatu bhavānpunardarśanāya|</p>
+
+<p>dhṛtarāṣṭraḥ</p>
+
+<p>yadājñāpayati bhagavannārāyaṇaḥ|</p>
+
+<p>niṣkrāntaḥ| bharatavākyam| imāṃ sāgaraparyantāṃ himavadvindhyakuṇḍalām|
+mahīmekātapatrāṅkāṃ rājasiṃhaḥ praśāstu naḥ|| 56|| niṣkrāntāḥ sarve| dūtavākyaṃ
+samāptam|
+ka iti| tricaraṇātikrāntatriloko
+nārāyaṇaḥ khalvatra bhagavān| śaraṇaṃ vrajantu bhavantaḥ| yāvadga</p>
+
+  </body>
+</text>
+</TEI>

@@ -1,0 +1,30 @@
+---
+layout: default
+title: Read
+slug: read
+scripts:
+  - /assets/js/translit.js
+  - /assets/js/common.js
+  - /assets/js/read.js
+---
+<div id="r-head" class="r-head"><p class="muted">Loading…</p></div>
+<div class="r-tools" id="r-tools" hidden>
+  <form id="goto" class="goto">
+    <label>Go to reference <input id="goto-ref" type="search" placeholder="e.g. 1.1.5 or Ca.1.1.5"></label>
+    <button type="submit" class="btn-small">Go</button>
+  </form>
+  <label>Script
+    <select id="r-script">
+      <option value="orig">original</option>
+      <option value="iast">IAST</option>
+      <option value="deva">Devanagari</option>
+    </select>
+  </label>
+  <label><input type="checkbox" id="r-pages"> page/line marks</label>
+  <label><input type="checkbox" id="r-notes" checked> notes</label>
+  <a id="r-search" class="btn-small" href="#">Search this text</a>
+</div>
+<div id="r-status" class="status"></div>
+<button type="button" id="r-prev" class="btn-small r-more" hidden>↑ Earlier passages</button>
+<div id="r-body" class="r-body"></div>
+<button type="button" id="r-next" class="btn-small r-more" hidden>↓ Later passages</button>
